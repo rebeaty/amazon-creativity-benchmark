@@ -1,0 +1,42 @@
+# PDF cache is too large for GitHub (284 PDFs, ~1.9GB)
+data/pdf_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files
+*.jsonl
+output/
+*.log
+
+# Exclude large pipeline output CSVs
+harvest.csv
+screened_papers.csv
+verified_papers.csv
+extracted_benchmarks.csv
+
+# But keep the curated benchmark lists
+!data/onboarding_ready/*.csv
+
+# Checkpoints
+checkpoint*.json

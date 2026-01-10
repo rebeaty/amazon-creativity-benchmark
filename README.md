@@ -1,0 +1,133 @@
+# Amazon Creativity Benchmark
+
+A pipeline for curating AI creativity benchmarks from academic literature. This project systematically discovers, screens, and catalogs benchmarks that evaluate creative AI capabilities.
+
+## What This Is
+
+This repository contains tools and data for building a comprehensive catalog of AI creativity benchmarks. The pipeline:
+
+1. **Harvests** thousands of papers from Semantic Scholar using targeted queries
+2. **Screens** papers with GPT-4 to identify those presenting actual benchmarks
+3. **Verifies** that identified benchmarks have publicly accessible datasets
+4. **Downloads** PDFs of included papers for detailed analysis
+5. **Extracts** structured metadata about each benchmark
+
+The result is a curated collection of creativity benchmarks with their source papers, ready for further analysis or implementation.
+
+---
+
+## Directory Structure
+
+```
+amazon_creativity_benchmark/
+├── README.md
+├── .env.template
+│
+├── pipeline/                     # The curation pipeline (scripts 01-05)
+│
+├── data/
+│   ├── pdf_cache/               # 284 downloaded paper PDFs
+│   └── onboarding_ready/        # Final screened benchmark list
+│
+└── .claude/skills/benchmark-onboarder/
+    └── SKILL.md                 # Conceptual guide for benchmark onboarding
+```
+
+---
+
+## The Pipeline
+
+The pipeline consists of five scripts that run in sequence. Each script is checkpointed, so you can resume if interrupted.
+
+### Step 1: Harvest Papers
+```bash
+python pipeline/01_lit_harvester_s2.py
+```
+Queries Semantic Scholar for papers on AI creativity benchmarks (2018-2025). Uses the Graph API with rate limiting and pagination. Outputs `harvest.jsonl`.
+
+### Step 2: Screen for Benchmarks
+```bash
+python pipeline/02_paper_screener_gpt41.py
+```
+Uses GPT-4 to evaluate each paper: Does it present a benchmark? Is it about creativity/reasoning? Parallel async processing with checkpointing. Outputs `screened_papers.jsonl`.
+
+### Step 3: Verify Dataset Availability
+```bash
+python pipeline/03_dataset_verifier.py
+```
+For each screened paper, uses Gemini with Google Search grounding to verify the benchmark has a publicly accessible dataset. Outputs `verified_papers.jsonl`.
+
+### Step 4: Download PDFs
+```bash
+python pipeline/04_pdf_downloader_gemini.py
+```
+Downloads PDFs for all verified papers. Uses Gemini to find PDF links when direct URLs aren't available. Papers are saved to `data/pdf_cache/` named by their Semantic Scholar ID.
+
+### Step 5: Extract Benchmark Metadata
+```bash
+python pipeline/05_benchmark_extractor.py
+```
+Reads each PDF and extracts structured metadata: task description, dataset format, evaluation metrics, etc. Uses Gemini-2.5-Pro for extraction. Outputs `extracted_benchmarks.jsonl`.
+
+---
+
+## Data Included
+
+### pdf_cache/
+Contains 284 paper PDFs, indexed by Semantic Scholar paper ID. Example:
+```
+00900ed6f920fe788fcda25d4d81f5917c0710cd.pdf  → BRAINTEASER paper
+```
+
+### onboarding_ready/
+The final curated list of benchmarks ready for implementation:
+- `classified_benchmarks_full.csv` — Full benchmark metadata
+- `batch_test_10.json` — Sample batch for testing
+
+---
+
+## Setup
+
+### API Keys Required
+
+Copy `.env.template` to `.env` and add your keys:
+
+```bash
+OPENAI_API_KEY=sk-...      # For paper screening (GPT-4)
+GOOGLE_API_KEY=...         # For verification & extraction (Gemini)
+HF_TOKEN=hf_...            # Optional: for private HuggingFace datasets
+```
+
+### Dependencies
+
+```bash
+pip install openai google-generativeai httpx tenacity
+pip install datasets  # for HuggingFace integration
+```
+
+---
+
+## Conceptual: Benchmark Onboarding
+
+Once benchmarks are curated, the next step is **onboarding** them into standardized task implementations. The conceptual workflow for this is documented in:
+
+**[.claude/skills/benchmark-onboarder/SKILL.md](.claude/skills/benchmark-onboarder/SKILL.md)**
+
+This describes an 8-phase process for turning a paper + dataset into a working `task.py`:
+
+1. Paper metadata extraction
+2. Source discovery & validation
+3. Repository context ingestion
+4. Dataset loading with fallbacks
+5. Evaluation criteria extraction
+6. Task configuration extraction
+7. Code generation
+8. Validation & pilot testing
+
+The SKILL.md serves as a reference guide for the onboarding workflow.
+
+---
+
+## License
+
+MIT
