@@ -74,7 +74,8 @@ Reads each PDF and extracts structured metadata: task description, dataset forma
 ## Data Included
 
 ### pdf_cache/
-Contains 284 paper PDFs, indexed by Semantic Scholar paper ID. Example:
+Contains 284 paper PDFs, located here: https://drive.google.com/drive/folders/1-qgdOdmLhkuAdFeXCEBlmzr4kgbKvTaH?usp=sharing
+PDFS are indexed by Semantic Scholar paper ID. Example:
 ```
 00900ed6f920fe788fcda25d4d81f5917c0710cd.pdf  → BRAINTEASER paper
 ```
