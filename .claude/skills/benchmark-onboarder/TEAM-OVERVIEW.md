@@ -83,16 +83,7 @@ Each onboarded benchmark produces:
 
 ## Part 3: Team Workflow
 
-### Work Distribution
-
-| GA | Initials | Assigned |
-|----|----------|----------|
-| [Name] | CL | 70 |
-| [Name] | SM | 70 |
-| [Name] | VD | 70 |
-| [Name] | SA | 70 |
-
-Benchmarks are pre-assigned in `benchmarks.json` via the `assigned_to` field.
+Benchmarks are pre-assigned in `benchmarks.json` to GAs via the `assigned_to` field.
 
 ### Setup for Each GA
 
