@@ -47,17 +47,21 @@ User says things like:
 Before doing any work, check if this benchmark is suitable:
 
 **Ask yourself:**
-- Is this a creativity benchmark? (not safety, bias, hallucination, etc.)
+- Is this a creativity benchmark?
 - Is there a publicly available dataset?
 - Is there an evaluation method? (accuracy, human ratings, metrics)
 
 If the answer to any is NO, tell the user why this benchmark doesn't qualify and stop.
 
-**Red flags to skip:**
-- Benchmark name includes "safety", "toxicity", "bias", "hallucination"
-- Dataset only contains model-generated responses
-- No evaluation framework exists
-- Modality is "image" or "video" only (HELM is text-to-text)
+**Focus on primary creativity tasks.** Some papers include multiple tasks or secondary experiments (e.g., MMLU baselines, general QA comparisons). Identify and implement only the core creativity evaluation tasks described in the paper.
+
+### Handling Multi-Task Benchmarks
+
+Some papers contain multiple tasks, not all creativity-related. When onboarding:
+
+1. **Identify the primary creativity task(s)** - Read the paper abstract/introduction to understand the main contribution
+2. **Skip secondary experimental tasks** - Papers often include baseline comparisons (e.g., MMLU, general QA) that aren't creativity benchmarks
+3. **When unclear, ask the user** - If you can't determine which tasks are the main creativity evaluations, ask before proceeding
 
 ### Step 2: Examine the Dataset
 
@@ -75,10 +79,7 @@ print(ds[0])  # See field names and structure
 - **Answer/Label**: The correct answer or ground truth
 - **Metadata**: Split info, IDs, categories
 
-**Fields to SKIP:**
-- Anything with "response", "output", "generation" in the name
-- Anything with model names (gpt, claude, llama)
-- Very long text fields (>500 chars) - probably model outputs
+**Use judgment on fields:** Avoid fields that contain model-generated outputs (e.g., fields named "gpt_response" or containing experiment results). Long text fields may be legitimate inputs for evaluation tasks (e.g., stories to analyze, passages to read). When uncertain, check the paper to understand what each field represents.
 
 ### Step 3: Check for Task Instructions
 
@@ -164,7 +165,7 @@ Create `scenario.py` with:
 
 ### Auto-Generate Notes for CLAUDE.md
 
-When you encounter issues or discover patterns, output a note block for the RA to commit:
+When you encounter issues or discover patterns, output a note block for the GA to commit:
 
 ```markdown
 ## Add to CLAUDE.md:
@@ -178,7 +179,7 @@ When you encounter issues or discover patterns, output a note block for the RA t
 - Split issues (test has no labels, etc.)
 - Field name mismatches (docs say X, actual field is Y)
 - Special loading requirements (trust_remote_code, config names)
-- Skipped benchmarks (multimodal, no dataset, etc.)
+- Skipped tasks (secondary experiments, non-creativity baselines, etc.)
 
 This ensures team knowledge is captured automatically, not manually.
 
@@ -191,7 +192,7 @@ This ensures team knowledge is captured automatically, not manually.
 | Field names don't match docs | Print `ds[0]` to see actual field names |
 | Empty references | Wrong answer field - check the schema |
 | Very long prompts | Might be using wrong field (model outputs) |
-| Multimodal benchmark | Skip if image-only; otherwise extract text component |
+| Multimodal benchmark | Include if there's a text evaluation component; note modality in tags |
 | No explicit prompt in paper | Use standard formatting, note in header |
 
 ## Complex Benchmarks
