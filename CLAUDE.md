@@ -1,25 +1,13 @@
-# Project Context for Claude
+# Project Context
 
-## Benchmark Onboarding Learnings
+This repository contains tools for curating and onboarding AI creativity benchmarks.
 
-Add issues and patterns here as you discover them. Everyone on the team benefits.
+## Key Areas
 
-### Dataset Quirks
+- **curation/**: Pipeline scripts for harvesting and screening papers
+- **data/**: Curated benchmark lists ready for onboarding
+- **.claude/skills/benchmark-onboarder/**: Claude Code skill for converting benchmarks to HELM Scenarios
 
-| Benchmark | Issue | Solution |
-|-----------|-------|----------|
-| RiddleSense | Test split has no labels (empty `answerKey`) | Use validation split instead |
-| HumorDB | Multimodal (images + text) | Include text component; note `multimodal` in tags |
-| ANALOBENCH | Field is `Sentence` not `Story` | Check actual dataset keys before coding |
+## For Benchmark Onboarding
 
-### Common Patterns
-
-- **Datasets requiring `trust_remote_code`**: Add `trust_remote_code=True` to `load_dataset()`
-- **Suspected model output fields**: Check the paper to confirm field purpose before skipping
-
-### Style Conventions
-
-- Scenario class names: `{Benchmark}Scenario` (e.g., `RiddlesenseScenario`)
-- `name` field: lowercase with underscores (e.g., `riddlesense`)
-- `description` field: data source reference, not task description
-- Always include `tags = ["creativity", ...]`
+See `.claude/skills/benchmark-onboarder/LEARNINGS.md` for team-accumulated knowledge about dataset quirks and patterns.

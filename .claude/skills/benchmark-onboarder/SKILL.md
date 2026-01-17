@@ -23,6 +23,7 @@ Transform creativity benchmark datasets into HELM Scenario implementations.
   - [analobench.py](examples/analobench.py) - Analogical reasoning MC task
   - [riddlesense.py](examples/riddlesense.py) - Riddle QA with CommonsenseQA format
 - For benchmark queue, see [benchmarks.json](benchmarks.json)
+- For team-accumulated learnings, see [LEARNINGS.md](LEARNINGS.md)
 
 ## Tool Usage
 
@@ -163,11 +164,11 @@ Create `scenario.py` with:
 - Header comment noting prompt source, fields used/skipped, paper reference
 - Clean, minimal code following HELM patterns
 
-### Auto-Capture Notes to CLAUDE.md
+### Auto-Capture Notes to LEARNINGS.md
 
-When you encounter issues or discover patterns, append directly to CLAUDE.md:
+When you encounter issues or discover patterns, append directly to LEARNINGS.md (in this skill folder):
 
-1. Read the current CLAUDE.md file
+1. Read the current LEARNINGS.md file
 2. Add your note to the appropriate section (Dataset Quirks table, Common Patterns, etc.)
 3. Write the updated file
 

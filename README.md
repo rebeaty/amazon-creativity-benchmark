@@ -21,21 +21,26 @@ The result is a curated collection of creativity benchmarks with their source pa
 ```
 amazon_creativity_benchmark/
 ├── README.md
-├── CLAUDE.md                    # Shared team learnings
+├── CLAUDE.md                    # Project-wide Claude context
 ├── .env.template
 │
-├── pipeline/                    # The curation pipeline (scripts 01-05)
+├── curation/                    # 5-stage paper screening pipeline
+│   ├── 01_lit_harvester_s2.py      # Harvest from Semantic Scholar
+│   ├── 02_paper_screener_gpt41.py  # GPT-4 benchmark detection
+│   ├── 03_dataset_verifier.py      # Verify public datasets exist
+│   ├── 04_pdf_downloader_gemini.py # Download paper PDFs
+│   └── 05_benchmark_extractor.py   # Extract benchmark metadata
 │
 ├── data/
-│   ├── pdf_cache/              # 284 downloaded paper PDFs
-│   └── onboarding_ready/       # Final screened benchmark list
+│   └── onboarding_ready/        # Final screened benchmark list
 │
 └── .claude/skills/benchmark-onboarder/
-    ├── SKILL.md                # Claude Code skill instructions
-    ├── TEAM-OVERVIEW.md        # Human team orientation
-    ├── helm-template.md        # HELM Scenario code patterns
-    ├── benchmarks.json         # Benchmark queue with RA assignments
-    └── examples/               # Working scenario examples
+    ├── SKILL.md                 # Claude Code skill instructions
+    ├── LEARNINGS.md             # Team-accumulated benchmark quirks
+    ├── TEAM-OVERVIEW.md         # Human team orientation
+    ├── helm-template.md         # HELM Scenario code patterns
+    ├── benchmarks.json          # Benchmark queue with GA assignments
+    └── examples/                # Working scenario examples
         ├── brainteaser.py
         ├── analobench.py
         └── riddlesense.py
@@ -43,55 +48,39 @@ amazon_creativity_benchmark/
 
 ---
 
-## The Pipeline
+## The Curation Pipeline
 
-The pipeline consists of five scripts that run in sequence. Each script is checkpointed, so you can resume if interrupted.
+The curation pipeline consists of five scripts that run in sequence. Each script is checkpointed, so you can resume if interrupted.
 
 ### Step 1: Harvest Papers
 ```bash
-python pipeline/01_lit_harvester_s2.py
+python curation/01_lit_harvester_s2.py
 ```
 Queries Semantic Scholar for papers on AI creativity benchmarks (2018-2025). Uses the Graph API with rate limiting and pagination. Outputs `harvest.jsonl`.
 
 ### Step 2: Screen for Benchmarks
 ```bash
-python pipeline/02_paper_screener_gpt41.py
+python curation/02_paper_screener_gpt41.py
 ```
 Uses GPT-4 to evaluate each paper: Does it present a benchmark? Is it about creativity/reasoning? Parallel async processing with checkpointing. Outputs `screened_papers.jsonl`.
 
 ### Step 3: Verify Dataset Availability
 ```bash
-python pipeline/03_dataset_verifier.py
+python curation/03_dataset_verifier.py
 ```
 For each screened paper, uses Gemini with Google Search grounding to verify the benchmark has a publicly accessible dataset. Outputs `verified_papers.jsonl`.
 
 ### Step 4: Download PDFs
 ```bash
-python pipeline/04_pdf_downloader_gemini.py
+python curation/04_pdf_downloader_gemini.py
 ```
 Downloads PDFs for all verified papers. Uses Gemini to find PDF links when direct URLs aren't available. Papers are saved to `data/pdf_cache/` named by their Semantic Scholar ID.
 
 ### Step 5: Extract Benchmark Metadata
 ```bash
-python pipeline/05_benchmark_extractor.py
+python curation/05_benchmark_extractor.py
 ```
 Reads each PDF and extracts structured metadata: task description, dataset format, evaluation metrics, etc. Uses Gemini-2.5-Pro for extraction. Outputs `extracted_benchmarks.jsonl`.
-
----
-
-## Data Included
-
-### pdf_cache/
-Contains 284 paper PDFs, located here: https://drive.google.com/drive/folders/1-qgdOdmLhkuAdFeXCEBlmzr4kgbKvTaH?usp=sharing
-PDFS are indexed by Semantic Scholar paper ID. Example:
-```
-00900ed6f920fe788fcda25d4d81f5917c0710cd.pdf  → BRAINTEASER paper
-```
-
-### onboarding_ready/
-The final curated list of benchmarks ready for implementation:
-- `classified_benchmarks_full.csv` — Full benchmark metadata
-- `batch_test_10.json` — Sample batch for testing
 
 ---
 
@@ -130,7 +119,7 @@ The skill follows a 5-step workflow:
 4. **Generate scenario** — Produce standardized `scenario.py` following HELM patterns
 5. **Verify** — Confirm code runs, fields map correctly
 
-See [TEAM-OVERVIEW.md](.claude/skills/benchmark-onboarder/TEAM-OVERVIEW.md) for team workflow and RA assignments.
+See [TEAM-OVERVIEW.md](.claude/skills/benchmark-onboarder/TEAM-OVERVIEW.md) for team workflow and GA assignments.
 
 ---
 
