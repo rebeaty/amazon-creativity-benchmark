@@ -36,21 +36,13 @@ Each benchmark exists in different forms:
 
 ### Our Solution: The Benchmark Onboarder Skill
 
-The skill encodes a 5-step workflow:
+The skill encodes a 5-step workflow that Claude follows automatically. See SKILL.md for implementation details. Your role is quality control and decision-making, not executing these steps manually.
 
-| Step | Action |
-|------|--------|
-| **1. Qualify** | Verify it's a creativity benchmark with extractable prompts |
-| **2. Find Prompt** | Locate the exact prompt in the source paper (section/page citation required) |
-| **3. Examine Dataset** | Identify which fields to use vs. skip (e.g., exclude model outputs) |
-| **4. Generate Scenario** | Produce standardized Python code following HELM conventions |
-| **5. Verify** | Confirm prompt matches paper, code runs, no errors |
+### What Matters for GAs
 
-### Core Principles
+**Prompts are sacred.** Benchmark prompts must be extracted exactly from source papers — never generated or inferred. Your job is to verify Claude got this right by checking the cited section/page.
 
-**Prompts are sacred.** The skill enforces that benchmark prompts must be extracted exactly from source papers — never generated or inferred. This preserves benchmark validity and ensures reproducibility.
-
-**Use judgment on model outputs.** Many datasets include prior model responses. Claude uses judgment to identify and exclude fields containing experiment results, checking the paper when uncertain. Long text fields may be legitimate inputs (e.g., stories to evaluate).
+**Everything is traceable.** Every scenario must cite its source (paper, section, dataset). If you can't trace a prompt back to its origin, flag it.
 
 ### Example Workflow
 
