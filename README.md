@@ -7,7 +7,7 @@ A pipeline for curating AI creativity benchmarks from academic literature. This 
 This repository contains tools and data for building a comprehensive catalog of AI creativity benchmarks. The pipeline:
 
 1. **Harvests** thousands of papers from Semantic Scholar using targeted queries
-2. **Screens** papers with GPT-4 to identify those presenting actual benchmarks
+2. **Screens** papers to identify those presenting relevant benchmarks
 3. **Verifies** that identified benchmarks have publicly accessible datasets
 4. **Downloads** PDFs of included papers for detailed analysis
 5. **Extracts** structured metadata about each benchmark
