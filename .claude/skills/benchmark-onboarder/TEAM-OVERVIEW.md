@@ -50,7 +50,7 @@ The skill encodes a 5-step workflow:
 
 **Prompts are sacred.** The skill enforces that benchmark prompts must be extracted exactly from source papers — never generated or inferred. This preserves benchmark validity and ensures reproducibility.
 
-**Skip model outputs.** Many datasets include prior model responses. The skill teaches Claude to detect and exclude these fields (anything with "response", "generation", "gpt_" in the name, or unusually long text).
+**Use judgment on model outputs.** Many datasets include prior model responses. Claude uses judgment to identify and exclude fields containing experiment results, checking the paper when uncertain. Long text fields may be legitimate inputs (e.g., stories to evaluate).
 
 ### Example Workflow
 
@@ -85,7 +85,7 @@ Each onboarded benchmark produces:
 
 ### Work Distribution
 
-| RA | Initials | Assigned |
+| GA | Initials | Assigned |
 |----|----------|----------|
 | [Name] | CL | 70 |
 | [Name] | SM | 70 |
@@ -94,9 +94,9 @@ Each onboarded benchmark produces:
 
 Benchmarks are pre-assigned in `benchmarks.json` via the `assigned_to` field.
 
-### Setup for Each RA
+### Setup for Each GA
 
-1. **API Key**: Each RA gets their own Claude API key (usage trackable per key)
+1. **API Key**: Each GA gets their own Claude API key (usage trackable per key)
 2. **Clone repo**: `git clone https://github.com/rebeaty/amazon-creativity-benchmark`
 3. **Set key**: `export ANTHROPIC_API_KEY=sk-...`
 4. **Run**: `claude` in project directory
@@ -130,17 +130,15 @@ Simple rule: **Push when you take a break.**
 
 ### Sharing Learnings
 
-Claude auto-generates note blocks when it encounters issues:
+Claude automatically appends notes to CLAUDE.md when it encounters issues. No manual copy-paste needed — just commit and push so the team sees updates.
 
-```markdown
-## Add to CLAUDE.md:
+Example of what gets added:
 
 | Benchmark | Issue | Solution |
 |-----------|-------|----------|
 | RiddleSense | Test split has no labels | Use validation split |
-```
 
-Copy-paste these to CLAUDE.md and commit. Team knowledge builds automatically.
+Team knowledge builds automatically across sessions.
 
 ### Workflow Commands
 

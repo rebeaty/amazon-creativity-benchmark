@@ -163,25 +163,21 @@ Create `scenario.py` with:
 - Header comment noting prompt source, fields used/skipped, paper reference
 - Clean, minimal code following HELM patterns
 
-### Auto-Generate Notes for CLAUDE.md
+### Auto-Capture Notes to CLAUDE.md
 
-When you encounter issues or discover patterns, output a note block for the GA to commit:
+When you encounter issues or discover patterns, append directly to CLAUDE.md:
 
-```markdown
-## Add to CLAUDE.md:
+1. Read the current CLAUDE.md file
+2. Add your note to the appropriate section (Dataset Quirks table, Common Patterns, etc.)
+3. Write the updated file
 
-| Benchmark | Issue | Solution |
-|-----------|-------|----------|
-| BenchmarkName | [what you found] | [how you solved it] |
-```
-
-**Always generate notes for:**
+**Always capture notes for:**
 - Split issues (test has no labels, etc.)
 - Field name mismatches (docs say X, actual field is Y)
 - Special loading requirements (trust_remote_code, config names)
 - Skipped tasks (secondary experiments, non-creativity baselines, etc.)
 
-This ensures team knowledge is captured automatically, not manually.
+This ensures team knowledge is captured immediately without manual intervention.
 
 ## Common Issues
 
