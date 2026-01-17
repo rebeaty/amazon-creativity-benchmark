@@ -119,7 +119,7 @@ In `benchmarks.json`, each benchmark has:
 ### Git Push Policy
 
 **Push immediately:**
-- CLAUDE.md updates (team learns from issues right away)
+- LEARNINGS.md updates (team learns from issues right away)
 - Skipped/failed benchmarks (so others don't duplicate effort)
 
 **Batch (every 3-5 benchmarks or end of session):**
@@ -130,7 +130,7 @@ Simple rule: **Push when you take a break.**
 
 ### Sharing Learnings
 
-Claude automatically appends notes to CLAUDE.md when it encounters issues. No manual copy-paste needed — just commit and push so the team sees updates.
+Claude automatically appends notes to LEARNINGS.md when it encounters issues. No manual copy-paste needed — just commit and push so the team sees updates.
 
 Example of what gets added:
 
@@ -155,7 +155,7 @@ claude
 
 ### Weekly Sync
 
-1. Pull latest (especially CLAUDE.md)
+1. Pull latest (especially LEARNINGS.md)
 2. Push any uncommitted work
 3. Quick standup: blockers, patterns discovered
 4. Reassign if someone finishes early
