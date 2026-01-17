@@ -1,368 +1,233 @@
 ---
 name: benchmark-onboarder
-description: Onboard AI creativity benchmarks from academic papers into standardized task implementations. Use when the user wants to onboard a benchmark, create a task.py for a benchmark, process a paper into a benchmark task, or mentions benchmark onboarding.
-allowed-tools: Read, Write, Edit, Bash, Glob, Grep, WebSearch, WebFetch
+description: Onboard AI creativity benchmarks into HELM-compliant Scenario implementations. Use when asked to onboard a benchmark, create a HELM scenario, process a paper into evaluation code, convert a dataset to HELM format, or when the user mentions "creativity benchmark", "task.py", or "scenario.py".
+allowed-tools: Read, Write, WebFetch, Grep, Glob, Bash, Task
+user-invocable: true
 ---
 
-# Benchmark Onboarder
+# HELM Benchmark Onboarder
 
-Transform academic paper descriptions of AI benchmarks into fully functional, standardized Python task implementations.
+Transform creativity benchmark datasets into HELM Scenario implementations.
 
-## Overview
+## Core Principles
 
-This skill implements an 8-phase agentic workflow to onboard benchmarks:
+1. **Dataset-first** - The dataset defines what's possible; the paper provides context
+2. **Skip model outputs** - We want original prompts/stimuli, not what GPT-4 generated
+3. **Verify everything** - Every field must map to real data
 
-1. **Paper Metadata Extraction** - Extract task description, dataset names from PDF
-2. **Source Discovery & Validation** - Find and validate HuggingFace/GitHub sources
-3. **Repository Context Ingestion** - Extract code, README, evaluation scripts
-4. **Dataset Loading** - Load and semantically validate data samples
-5. **Evaluation Criteria Extraction** - Determine metrics and evaluation approach
-6. **Task Configuration Extraction** - Extract fields, prompts, task type
-7. **Code Generation** - Generate task.py with load_data, format_prompt, evaluate
-8. **Validation & Pilot Testing** - Test the generated code works correctly
+## Resources
 
-## Required Inputs
+- For HELM code patterns, see [helm-template.md](helm-template.md)
+- For working examples, see [examples/](examples/)
+  - [brainteaser.py](examples/brainteaser.py) - Multiple choice with distractor answers
+  - [analobench.py](examples/analobench.py) - Analogical reasoning MC task
+  - [riddlesense.py](examples/riddlesense.py) - Riddle QA with CommonsenseQA format
+- For benchmark queue, see [benchmarks.json](benchmarks.json)
 
-Before starting, gather:
-- **Benchmark name**: The name of the benchmark (e.g., "BRAINTEASER", "CreativeQA")
-- **Paper PDF path**: Path to the academic paper describing the benchmark
-- **Output directory**: Where to generate the task files (default: `abc_tasks/`)
-- **Optional URLs**: Any known HuggingFace or GitHub URLs for the benchmark
+## Tool Usage
 
-## Benchmark Registry Linkage
+- **WebFetch**: Read dataset documentation, READMEs, and papers
+- **Read**: Examine dataset files, existing scenarios, and example code
+- **Bash**: Load dataset samples to inspect field structure
+- **Glob**: Find relevant files in benchmark repos
+- **Task (Explore)**: For complex benchmarks, explore dataset structure first
+- **Write**: Generate the final scenario.py
 
-**Critical**: Always link benchmarks to their registry entries.
+## When to Use
 
-### Primary Sources
+User says things like:
+- "Onboard the BRAINTEASER benchmark"
+- "Create a HELM scenario for this paper"
+- "Process this benchmark into evaluation code"
 
-1. **batch_all.json** (`ai/harness/batch_all.json`): Master list of benchmarks to onboard
-   ```json
-   {
-     "name": "BRAINTEASER",
-     "paper_id": "00900ed6f920fe788fcda25d4d81f5917c0710cd",
-     "urls": ["https://github.com/..."]
-   }
-   ```
+## Workflow
 
-2. **benchmark_catalog.json** (`ai/review/benchmark_catalog/benchmark_catalog.json`): Rich metadata
-   ```json
-   {
-     "benchmark_id": "paper_id:BENCHMARK_NAME",
-     "benchmark_name": "BRAINTEASER",
-     "paper_id": "00900ed6f920fe788fcda25d4d81f5917c0710cd",
-     "paper_title": "Full Paper Title",
-     "paper_year": "2024",
-     "paper_doi": "10.48550/arXiv.xxxx.xxxxx",
-     "primary_domain": "Lateral Thinking & Creative Problem Solving",
-     "tier": 1
-   }
-   ```
+### Step 1: Qualify the Benchmark
 
-### Lookup Process
+Before doing any work, check if this benchmark is suitable:
 
-Before onboarding, look up the benchmark in these registries:
-1. Search `batch_all.json` by name to get `paper_id` and `urls`
-2. Search `benchmark_catalog.json` for richer metadata (domain, tier, DOI)
-3. Use the `paper_id` to find the PDF in `ai/review/pdf_cache/{paper_id}.pdf`
+**Ask yourself:**
+- Is this a creativity benchmark? (not safety, bias, hallucination, etc.)
+- Is there a publicly available dataset?
+- Is there an evaluation method? (accuracy, human ratings, metrics)
 
-### ID Linkage Requirements
+If the answer to any is NO, tell the user why this benchmark doesn't qualify and stop.
 
-The generated `manifest.json` MUST include:
-- `paper_id`: The Semantic Scholar paper ID (from registry)
-- `benchmark_id`: Composite `{paper_id}:{benchmark_name}`
-- `paper_title`: From catalog or extracted from PDF
-- `paper_doi`: If available in catalog
+**Red flags to skip:**
+- Benchmark name includes "safety", "toxicity", "bias", "hallucination"
+- Dataset only contains model-generated responses
+- No evaluation framework exists
+- Modality is "image" or "video" only (HELM is text-to-text)
 
-## Phase 1: Paper Metadata Extraction
+### Step 2: Examine the Dataset
 
-Extract key information from the paper PDF:
-
-```
-Read the paper and extract:
-- arxiv_id (if available)
-- paper_title
-- dataset_names (mentioned dataset identifiers)
-- task_description (what the benchmark measures)
-- expected_data_format (JSON, JSONL, CSV, etc.)
-```
-
-## Phase 2: Source Discovery & Validation
-
-Find official data sources:
-
-1. **Check provided URLs first** (most authoritative)
-2. **Search HuggingFace** for datasets matching benchmark name
-3. **Web search** for official GitHub repositories
-4. **Validate each source**:
-   - Does the dataset name match the benchmark?
-   - Is it from the paper authors?
-   - Does the domain match the paper description?
-
-**Critical**: Reject sources that don't match semantically. Example: "D-RAP" (rap lyrics) vs "Draper" (vulnerability detection) - same search term, different benchmarks.
-
-## Phase 3: Repository Context Ingestion
-
-From the GitHub repository, extract:
-
-1. README content
-2. Evaluation scripts (look for `eval*.py`, `evaluate*.py`)
-3. Data loading code
-4. **Sacred prompt**: The original prompt template used in the paper's evaluation
-
-Look for prompt templates in:
-- `prompts/`, `templates/` directories
-- Variables named `PROMPT`, `TEMPLATE`, `INSTRUCTION`
-- Docstrings describing the evaluation format
-
-## Phase 4: Dataset Loading (Agentic)
-
-This phase requires intelligent fallback:
-
-```
-Try loading in this order:
-1. HuggingFace datasets library (if HF ID found)
-2. HuggingFace Hub raw file download
-3. GitHub raw URLs for data files
-4. Git LFS clone (for large files)
-5. Smart fallback: Web search for alternative sources
-```
-
-**Semantic Validation**: After loading, verify the data matches the paper:
-- Check field names match expected structure
-- Verify sample content matches the task domain
-- If mismatch detected, try the next data file
-
-**Ground Truth Check**: Detect if labels are hidden (e.g., `"answer": "?"`)
-
-## Phase 5: Evaluation Criteria Extraction
-
-Determine how to evaluate predictions:
-
-| Evaluation Type | Description |
-|-----------------|-------------|
-| `automatic` | Exact match, F1, accuracy - computable without LLM |
-| `llm-judge` | Requires LLM to judge quality (creativity, coherence) |
-| `human` | Requires human evaluation |
-| `hybrid` | Combination of automatic metrics + LLM judge |
-
-Extract:
-- Primary metric (accuracy, F1, BLEU, etc.)
-- Secondary metrics
-- LLM judge prompt (if applicable)
-
-## Phase 6: Task Configuration Extraction
-
-From repo code and data sample, extract:
+Load a few examples and understand the structure:
 
 ```python
-TaskSpec:
-  class_name: str          # PascalCase class name
-  input_field: str         # Field(s) containing input data
-  label_field: str         # Field containing ground truth
-  prompt_template: str     # Template for formatting prompts
-  task_type: str           # classification|generation|ranking|open-ended
-  has_media: bool          # True if images/audio/video
-  media_type: str          # image|audio|video|mixed
-  media_field: str         # Field containing media data
+from datasets import load_dataset
+ds = load_dataset("org/dataset-name", split="test")
+print(ds[0])  # See field names and structure
 ```
 
-## Phase 7: Code Generation
+**Identify fields:**
+- **Stimulus/Question**: The input text (question, prompt, story, etc.)
+- **Choices**: For MC tasks, the answer options
+- **Answer/Label**: The correct answer or ground truth
+- **Metadata**: Split info, IDs, categories
 
-Generate `task.py` following this structure:
+**Fields to SKIP:**
+- Anything with "response", "output", "generation" in the name
+- Anything with model names (gpt, claude, llama)
+- Very long text fields (>500 chars) - probably model outputs
+
+### Step 3: Check for Task Instructions
+
+Some benchmarks have specific prompt wording. Check:
+
+1. **Dataset README** on HuggingFace/GitHub - often has example prompts
+2. **Paper Methods/Appendix** - if specific instructions were given to annotators/models
+
+**Priority order:**
+1. Explicit instructions from paper/README → use exactly as written
+2. Standard format for task type → note "Standard MC format" in header
+3. Unclear → ask user
+
+Many MC tasks work fine with standard formatting ("Question: X\n\nA. ... B. ..."), but when papers DO specify exact wording, use it.
+
+### Step 4: Generate the HELM Scenario
+
+Follow this structure:
 
 ```python
 """
-{benchmark_name} Benchmark Task
-Auto-generated by ABC Onboarder
+HELM Scenario: BENCHMARK_NAME
+
+Prompt source: [Paper Section X / Dataset README / Standard MC format]
+Fields used: field1, field2, field3
+Fields skipped: none / field4 (model outputs)
+
+Paper: [URL or citation]
 """
-from shared.abc_base import ABCTask
 
+from datasets import load_dataset
+from helm.benchmark.scenarios.scenario import (
+    Scenario, Instance, Input, Output, Reference,
+    CORRECT_TAG, TEST_SPLIT
+)
 
-class {ClassName}(ABCTask):
-    """
-    {task_description}
+class BenchmarkScenario(Scenario):
+    name = "benchmark_name"  # lowercase, underscores
+    description = "org/dataset-name"  # data source, not task description
+    tags = ["creativity", "relevant_tag"]
 
-    Task type: {task_type}
-    Input field: {input_field}
-    Label field: {label_field}
-    """
+    def get_instances(self, output_path):
+        dataset = load_dataset("org/dataset-name", split="test")
 
-    PROMPT_TEMPLATE = """{prompt_template}"""
+        instances = []
+        for item in dataset:
+            # Build prompt from dataset fields
+            prompt = f"Question: {item['question']}\n"
 
-    def __init__(self):
-        super().__init__(
-            name="{benchmark_name}",
-            task_type="{task_type}",
-            input_field="{input_field}",
-            label_field="{label_field}",
-        )
+            # Build references (all choices for MC, correct answer tagged)
+            references = [...]
 
-    def load_data(self, split: str = "test"):
-        """Load benchmark data from source."""
-        # Implementation varies by data source
-        pass
-
-    def format_prompt(self, instance: dict):
-        """Format prompt for a single instance.
-
-        Returns:
-            str for text-only tasks
-            List[dict] for multimodal tasks with content blocks
-        """
-        pass
-
-    def evaluate(self, prediction: str, reference: str) -> dict:
-        """Evaluate prediction against reference.
-
-        Returns:
-            dict with 'accuracy' key (0.0-1.0) and optional metrics
-        """
-        pass
+            instances.append(Instance(
+                input=Input(text=prompt),
+                references=references,
+                split=TEST_SPLIT
+            ))
+        return instances
 ```
 
-### Code Generation Rules
+**HELM conventions:**
+- For multiple choice: ALL choices become References, only correct one gets CORRECT_TAG
+- For binary (yes/no): Both options are References
+- For open-ended: Reference can be empty or contain gold response
+- `description` field = data source, not task description
 
-**load_data()**:
-- Must fetch from EXTERNAL source (URL, HuggingFace, API)
-- Never hardcode sample data
-- Return list of dict instances
+### Step 5: Verify Before Finishing
 
-**format_prompt()**:
-- For text-only: return formatted string
-- For multimodal: return list of content blocks
-  ```python
-  [{"type": "text", "text": "..."}, {"type": "image", "url": "..."}]
-  ```
+Check these before delivering:
 
-**evaluate()**:
-- MUST return dict with `"accuracy"` key
-- Handle hidden references: `if reference in ('?', '', 'hidden'): return {"accuracy": 0.0, "note": "hidden"}`
-- For classification: extract answer with regex from verbose responses
-- For generation: use lenient overlap scoring + `{"needs_judge": True}`
+- [ ] Dataset loads without errors
+- [ ] All template variables map to real data fields
+- [ ] No model output fields used as inputs
+- [ ] References have non-empty text (for MC/closed tasks)
+- [ ] Correct split used (test if labels available, validation otherwise)
+- [ ] Test with a few examples to confirm formatting
 
-## Phase 8: Validation & Pilot Testing
+## Output
 
-### Execution Pilot
-Run the generated code in a subprocess:
-1. Import the task class
-2. Call `load_data()` - verify returns list with 3+ instances
-3. Call `format_prompt()` on samples - verify valid output
-4. Call `evaluate()` - verify returns dict
+Create `scenario.py` with:
+- Header comment noting prompt source, fields used/skipped, paper reference
+- Clean, minimal code following HELM patterns
 
-### Live Pilot (if API available)
-Run actual LLM inference on 3 instances:
-1. Format prompts
-2. Get model predictions
-3. Evaluate predictions
-4. If all scores are 0, run diagnosis
+### Auto-Generate Notes for CLAUDE.md
 
-### Diagnosis & Fix Loop
-When evaluation fails:
-1. Analyze prediction vs reference pairs
-2. Identify root cause:
-   - `format_mismatch`: Model outputs "Option 1" but reference is "1"
-   - `label_field_mismatch`: Wrong field used for ground truth
-   - `held_out_test`: References are placeholders
-   - `rating_exact_match`: Using exact match for rating tasks
-3. Generate fix and re-run pilot
+When you encounter issues or discover patterns, output a note block for the RA to commit:
 
-## Output Structure
+```markdown
+## Add to CLAUDE.md:
 
-```
-{output_dir}/
-├── benchmarks/
-│   ├── __init__.py
-│   └── {benchmark_name}/
-│       ├── __init__.py
-│       ├── task.py          # Generated task implementation
-│       └── manifest.json    # Metadata and configuration
-├── shared/
-│   ├── __init__.py
-│   └── abc_base.py          # Base class (ABCTask)
-└── logs/
-    ├── {benchmark}_agent_log.json  # Detailed execution log
-    └── _batch_results.json         # Batch run summary
+| Benchmark | Issue | Solution |
+|-----------|-------|----------|
+| BenchmarkName | [what you found] | [how you solved it] |
 ```
 
-## Key Patterns
+**Always generate notes for:**
+- Split issues (test has no labels, etc.)
+- Field name mismatches (docs say X, actual field is Y)
+- Special loading requirements (trust_remote_code, config names)
+- Skipped benchmarks (multimodal, no dataset, etc.)
 
-### Multi-Source Fallback Chain
-Always try multiple sources before failing:
-1. Provided URLs (authoritative)
-2. HuggingFace search
-3. Web search for GitHub
-4. Git LFS clone
-5. Smart LLM-powered discovery
+This ensures team knowledge is captured automatically, not manually.
 
-### Semantic Validation Loop
-After loading data, always verify:
-1. Domain matches paper description
-2. Fields exist as expected
-3. Sample content is meaningful (not placeholders)
+## Common Issues
 
-### Error-Driven Fixing
-When code fails:
-1. Classify the error type
-2. Apply targeted fix (not full rewrite)
-3. Retry with exponential backoff for rate limits
+| Problem | Solution |
+|---------|----------|
+| Test split has no labels | Use validation split instead (see riddlesense.py) |
+| Dataset requires special loading | Add `trust_remote_code=True` to load_dataset() |
+| Field names don't match docs | Print `ds[0]` to see actual field names |
+| Empty references | Wrong answer field - check the schema |
+| Very long prompts | Might be using wrong field (model outputs) |
+| Multimodal benchmark | Skip if image-only; otherwise extract text component |
+| No explicit prompt in paper | Use standard formatting, note in header |
+
+## Complex Benchmarks
+
+For benchmarks with multiple subsets or complex evaluation:
+
+1. Use **Task tool with Explore agent** to understand the dataset structure first
+2. Break into sub-tasks if multiple scenario files are needed
+3. Use `/compact` between benchmarks if onboarding multiple in one session
 
 ## Examples
 
-### Example 1: Simple Classification Benchmark
+### Example A: Paper specifies instructions (ANALOBENCH)
 
-```
-User: Onboard the BRAINTEASER benchmark from papers/brainteaser.pdf
+1. **Qualify**: Creativity benchmark (analogical reasoning)? Yes. Dataset? Yes. Eval? Yes (accuracy).
 
-Steps:
-1. Read paper → Extract: lateral thinking puzzles, multiple choice
-2. Search HuggingFace → Find: "baber/brainteaser"
-3. Load dataset → Sample: {"question": "...", "answer": "B", "choices": [...]}
-4. Generate task.py with classification evaluation
-5. Pilot test → Verify works
-```
+2. **Examine dataset**:
+   ```python
+   ds = load_dataset("jhu-clsp/AnaloBench", "T1S1-Subset", split="train")
+   print(ds[0].keys())  # ['Index', 'Sentence', 'Options', 'Label']
+   ```
 
-### Example 2: Multimodal Benchmark
+3. **Check instructions**: Paper Section 3 specifies "Which of the following is the most analogous story?" → use exactly
 
-```
-User: Onboard the MM-Vet benchmark
+4. **Generate scenario**: Paper instruction + dataset fields, MC pattern
 
-Steps:
-1. Read paper → Extract: vision-language evaluation, image understanding
-2. Find source → GitHub with image URLs
-3. Detect multimodal → has_media=True, media_type="image"
-4. Generate format_prompt returning content blocks
-5. Pilot with multimodal model
-```
+5. **Verify**: 340 examples, Labels are A/B/C/D
 
-### Example 3: Generation Benchmark with LLM Judge
+### Example B: Standard format (RiddleSense)
 
-```
-User: Onboard CreativeWriting benchmark
+1. **Qualify**: Creativity benchmark (riddles + commonsense)? Yes. Dataset? Yes. Eval? Yes.
 
-Steps:
-1. Read paper → Extract: creative story generation, no ground truth
-2. Detect evaluation_type="llm-judge"
-3. Extract judge prompt from paper
-4. Generate evaluate() that returns {"accuracy": 0.0, "needs_judge": True}
-5. Store judge_prompt in manifest.json
-```
+2. **Examine dataset**: Fields are `question`, `choices`, `answerKey`
 
-## Troubleshooting
+3. **Check instructions**: No specific wording in paper → use standard MC format, note in header
 
-| Issue | Cause | Solution |
-|-------|-------|----------|
-| No sources found | Benchmark too new/obscure | Try web search with paper title + "dataset" |
-| Semantic mismatch | Wrong dataset with similar name | Try next data file, validate domain |
-| All scores 0 | Format mismatch or hidden labels | Run diagnosis, check reference values |
-| Import error | Missing package | Install required package and retry |
-| Timeout | Loading too much data | Add limit to load_data |
+4. **Generate scenario**: Standard "Question: X\n\nA. ..." format
 
-## Best Practices
-
-1. **Always read the paper first** - Understand what the benchmark measures
-2. **Validate semantically** - Don't trust dataset names alone
-3. **Use the sacred prompt** - Original prompts from papers are most reliable
-4. **Handle multimodal properly** - Return content blocks, not concatenated strings
-5. **Include needs_judge flag** - For subjective tasks requiring LLM evaluation
-6. **Log everything** - Save decisions and reasoning for debugging
-7. **Test with actual data** - Pilot testing catches issues early
+5. **Verify**: Test split has no labels → switch to validation split
