@@ -26,7 +26,7 @@ amazon_creativity_benchmark/
 │
 ├── curation/                    # 5-stage paper screening pipeline
 │   ├── 01_lit_harvester_s2.py      # Harvest from Semantic Scholar
-│   ├── 02_paper_screener_gpt41.py  # GPT-4 benchmark detection
+│   ├── 02_paper_screener_gpt41.py  # Screen benchmark for relevance
 │   ├── 03_dataset_verifier.py      # Verify public datasets exist
 │   ├── 04_pdf_downloader_gemini.py # Download paper PDFs
 │   └── 05_benchmark_extractor.py   # Extract benchmark metadata
