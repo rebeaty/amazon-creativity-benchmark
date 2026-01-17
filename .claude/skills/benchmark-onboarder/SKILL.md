@@ -200,6 +200,47 @@ For benchmarks with multiple subsets or complex evaluation:
 2. Break into sub-tasks if multiple scenario files are needed
 3. Use `/compact` between benchmarks if onboarding multiple in one session
 
+## Benchmarks with LLM-as-Judge Evaluation
+
+Many creativity benchmarks use LLM judges rather than accuracy against gold labels. In HELM, this is handled by **Annotators** (separate from Scenarios), but we still need to capture the requirements.
+
+**When you encounter an LLM-as-judge benchmark:**
+
+1. **Document in the scenario header:**
+   ```python
+   """
+   HELM Scenario: BENCHMARK_NAME
+
+   Prompt source: Paper Section 3
+   Eval type: LLM-as-judge
+   Judge requirements: GPT-4, rubric in Appendix B
+   Dimensions: novelty (1-5), usefulness (1-5), surprise (1-5)
+
+   Paper: [URL]
+   """
+   ```
+
+2. **Extract from the paper:**
+   - Which model(s) served as judge (GPT-4, Claude, multiple?)
+   - The judge prompt or rubric (often in Appendix)
+   - Scoring dimensions and scales
+   - Any calibration against human ratings
+
+3. **For the Scenario itself:**
+   - Still generate the standard `scenario.py` (loads data, formats prompts)
+   - References may be empty for open-ended tasks — that's fine
+   - The Annotator implementation is a separate task
+
+4. **Flag in benchmarks.json:**
+   - Set `"eval_type": "llm_judge"`
+   - Add `"judge_info"` with model and rubric source
+
+**Common eval types:**
+- `accuracy` — Gold labels exist, standard metrics
+- `llm_judge` — LLM evaluates outputs against rubric
+- `human_eval` — Human ratings (may have LLM proxy)
+- `hybrid` — Both accuracy and subjective dimensions
+
 ## Examples
 
 ### Example A: Paper specifies instructions (ANALOBENCH)

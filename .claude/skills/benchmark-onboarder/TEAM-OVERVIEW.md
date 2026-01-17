@@ -103,9 +103,17 @@ In `benchmarks.json`, each benchmark has:
   "status": "pending|in_progress|completed|failed|skipped",
   "assigned_to": "CL",
   "scenario_file": "scenarios/benchmark_name.py",
+  "eval_type": "accuracy|llm_judge|human_eval|hybrid",
+  "judge_info": "GPT-4, rubric in Appendix B (if applicable)",
   "notes": "Any issues encountered"
 }
 ```
+
+**Eval types:**
+- `accuracy` — Standard metrics against gold labels (default)
+- `llm_judge` — LLM evaluates outputs against a rubric
+- `human_eval` — Human ratings (may have LLM proxy)
+- `hybrid` — Both accuracy and subjective dimensions
 
 ### Git Push Policy
 
