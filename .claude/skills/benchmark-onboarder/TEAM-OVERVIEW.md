@@ -26,6 +26,10 @@ Claude Code supports custom "skills" — instruction files that teach it domain-
 
 We've developed a custom skill that automates the conversion of creativity benchmarks into a standardized evaluation format. This addresses a core challenge: our systematic review identified **283 unique benchmarks** across diverse formats, and manually writing integration code for each would be prohibitive.
 
+### Why HELM?
+
+We're standardizing benchmarks into [HELM](https://crfm.stanford.edu/helm/) (Holistic Evaluation of Language Models), Stanford's framework for systematic LLM evaluation. HELM provides infrastructure for running benchmarks at scale across many models with consistent metrics. By converting creativity benchmarks into HELM "Scenarios" (standardized data loaders), we can evaluate any model on any benchmark without per-benchmark custom code. The Scenario handles data loading and prompt formatting; HELM handles the rest (model calls, metrics, reporting).
+
 ### The Problem
 
 Each benchmark exists in different forms:
