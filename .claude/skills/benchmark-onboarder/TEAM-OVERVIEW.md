@@ -112,17 +112,21 @@ In `benchmarks.json`, each benchmark has:
   "status": "pending|in_progress|completed|failed|skipped",
   "assigned_to": "CL",
   "scenario_file": "scenarios/benchmark_name.py",
-  "eval_type": "accuracy|llm_judge|human_eval|hybrid",
-  "judge_info": "GPT-4, rubric in Appendix B (if applicable)",
+  "eval_type": "exact_match|open_ended|llm_judge|custom",
   "notes": "Any issues encountered"
 }
 ```
 
-**Eval types:**
-- `accuracy` — Standard metrics against gold labels (default)
-- `llm_judge` — LLM evaluates outputs against a rubric
-- `human_eval` — Human ratings (may have LLM proxy)
-- `hybrid` — Both accuracy and subjective dimensions
+**Eval types (aligned with HELM RunSpec patterns):**
+- `exact_match` — Gold labels, uses `get_exact_match_metric_specs()`
+- `open_ended` — Generation tasks, uses `get_open_ended_generation_metric_specs()` (includes BLEU, ROUGE, F1)
+- `summarization` — Uses `get_summarization_metric_specs()`
+- `llm_judge` — LLM evaluates outputs; requires `annotator_notes.md`
+- `custom` — Needs new metric implementation; requires `metric_notes.md`
+
+**Companion files (for non-standard eval):**
+- `scenarios/benchmark_name/annotator_notes.md` — LLM judge config (model, prompt, dimensions)
+- `scenarios/benchmark_name/metric_notes.md` — Custom metric requirements
 
 ### Git Push Policy
 

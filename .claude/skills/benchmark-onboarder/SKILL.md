@@ -82,33 +82,104 @@ print(ds[0])  # See field names and structure
 
 **Use judgment on fields:** Avoid fields that contain model-generated outputs (e.g., fields named "gpt_response" or containing experiment results). Long text fields may be legitimate inputs for evaluation tasks (e.g., stories to analyze, passages to read). When uncertain, check the paper to understand what each field represents.
 
-### Step 3: Check for Task Instructions
+### Step 3: Extract Task Instructions and Evaluation Setup
 
-Some benchmarks have specific prompt wording. Check:
+Read source materials **once** to extract both what goes into the Scenario and what's needed for evaluation configuration. This avoids redundant passes through papers.
 
-1. **Dataset README** on HuggingFace/GitHub - often has example prompts
-2. **Paper Methods/Appendix** - if specific instructions were given to annotators/models
+#### 3a. Task Instructions (→ Scenario)
 
-**Priority order:**
-1. Explicit instructions from paper/README → use exactly as written
+**Where to look (in order):**
+1. Dataset README on HuggingFace/GitHub
+2. Paper Methods section
+3. Paper Appendix (often has exact prompts)
+4. Codebase evaluation scripts (if available)
+
+**What to capture:**
+- Exact prompt wording given to models (if specified)
+- Input formatting requirements
+- Any few-shot examples used
+
+**Priority:**
+1. Explicit instructions from paper/README → use exactly as written, cite location
 2. Standard format for task type → note "Standard MC format" in header
-3. Unclear → ask user
+3. Unclear → ask user before proceeding
 
-Many MC tasks work fine with standard formatting ("Question: X\n\nA. ... B. ..."), but when papers DO specify exact wording, use it.
+**Critical:** Never invent or paraphrase prompts. If the paper doesn't specify exact wording, use standard formatting and note this in the header.
+
+#### 3b. Evaluation Setup (→ Companion files)
+
+While reading source materials, identify the evaluation approach. In HELM, Scenarios just load data—metrics are configured separately in RunSpecs.
+
+| Eval Type | HELM RunSpec Pattern | Additional Output |
+|-----------|---------------------|-------------------|
+| `exact_match` | `get_exact_match_metric_specs()` | None needed |
+| `open_ended` | `get_open_ended_generation_metric_specs()` | None (includes BLEU-1, BLEU-4, ROUGE-L, F1) |
+| `summarization` | `get_summarization_metric_specs()` | None needed |
+| `llm_judge` | Custom with Annotator | `annotator_notes.md` |
+| `custom` | Needs new metric implementation | `metric_notes.md` |
+
+**For standard metrics (exact_match, open_ended, summarization):**
+
+Just note the eval_type in benchmarks.json. The Scenario stays pure.
+
+**For LLM-as-judge benchmarks, extract and output to `scenarios/benchmark_name/annotator_notes.md`:**
+
+```markdown
+# Annotator Requirements: BenchmarkName
+
+Source: Paper Appendix B, Section 4.2
+
+## Configuration for LLMAsJuryAnnotator
+
+Judge model: GPT-4-turbo
+Dimensions: novelty, feasibility, significance
+Scale: 1-5 Likert per dimension
+
+## Judge Prompt Template
+
+Rate the following response on {dimension} from 1 to 5.
+
+Question: {QUESTION}
+Response: {RESPONSE}
+
+Provide your rating as a single number.
+
+## Notes
+- Human correlation: 0.82 (Paper Table 3)
+- Authors noted position bias in judge
+```
+
+**For custom metrics, output to `scenarios/benchmark_name/metric_notes.md`:**
+
+Document what the paper measured and how, for future metric implementation.
+
+**Update benchmarks.json:**
+```json
+{
+  "name": "BenchmarkName",
+  "eval_type": "open_ended|exact_match|llm_judge|custom",
+  "notes": "any special considerations"
+}
+```
 
 ### Step 4: Generate the HELM Scenario
 
-Follow this structure:
+Follow HELM's standard Scenario structure:
 
 ```python
 """
 HELM Scenario: BENCHMARK_NAME
 
-Prompt source: [Paper Section X / Dataset README / Standard MC format]
-Fields used: field1, field2, field3
-Fields skipped: none / field4 (model outputs)
+Paper: [citation or URL]
+Code: [GitHub repo if available]
 
-Paper: [URL or citation]
+Prompt format:
+  Question: {question}
+  A) {choice_a}  B) {choice_b}  C) {choice_c}  D) {choice_d}
+  Answer:
+
+Fields used: question, choices, answer
+Fields skipped: gpt4_response (model output)
 """
 
 from datasets import load_dataset
@@ -119,7 +190,7 @@ from helm.benchmark.scenarios.scenario import (
 
 class BenchmarkScenario(Scenario):
     name = "benchmark_name"  # lowercase, underscores
-    description = "org/dataset-name"  # data source, not task description
+    description = "org/dataset-name"  # data source, NOT task description
     tags = ["creativity", "relevant_tag"]
 
     def get_instances(self, output_path):
@@ -140,6 +211,8 @@ class BenchmarkScenario(Scenario):
             ))
         return instances
 ```
+
+**Note:** Evaluation configuration (metrics, annotators) is NOT part of the Scenario. Document those separately per Step 3b.
 
 **HELM conventions:**
 - For multiple choice: ALL choices become References, only correct one gets CORRECT_TAG
@@ -202,44 +275,21 @@ For benchmarks with multiple subsets or complex evaluation:
 
 ## Benchmarks with LLM-as-Judge Evaluation
 
-Many creativity benchmarks use LLM judges rather than accuracy against gold labels. In HELM, this is handled by **Annotators** (separate from Scenarios), but we still need to capture the requirements.
+In HELM's architecture:
+- **Scenarios** load data and format prompts
+- **Annotators** handle LLM-based judging (e.g., `LLMAsJuryAnnotator`)
+- **Metrics** compute final scores from annotations
+
+These are separate components. Your Scenario stays pure—evaluation config goes elsewhere.
 
 **When you encounter an LLM-as-judge benchmark:**
 
-1. **Document in the scenario header:**
-   ```python
-   """
-   HELM Scenario: BENCHMARK_NAME
+1. **Create the Scenario as normal** — data loading, prompt formatting
+2. **References may be empty** for open-ended generation tasks—that's fine
+3. **Extract annotator requirements per Step 3b** → output to `annotator_notes.md`
+4. **Flag in benchmarks.json** with `"eval_type": "llm_judge"`
 
-   Prompt source: Paper Section 3
-   Eval type: LLM-as-judge
-   Judge requirements: GPT-4, rubric in Appendix B
-   Dimensions: novelty (1-5), usefulness (1-5), surprise (1-5)
-
-   Paper: [URL]
-   """
-   ```
-
-2. **Extract from the paper:**
-   - Which model(s) served as judge (GPT-4, Claude, multiple?)
-   - The judge prompt or rubric (often in Appendix)
-   - Scoring dimensions and scales
-   - Any calibration against human ratings
-
-3. **For the Scenario itself:**
-   - Still generate the standard `scenario.py` (loads data, formats prompts)
-   - References may be empty for open-ended tasks — that's fine
-   - The Annotator implementation is a separate task
-
-4. **Flag in benchmarks.json:**
-   - Set `"eval_type": "llm_judge"`
-   - Add `"judge_info"` with model and rubric source
-
-**Common eval types:**
-- `accuracy` — Gold labels exist, standard metrics
-- `llm_judge` — LLM evaluates outputs against rubric
-- `human_eval` — Human ratings (may have LLM proxy)
-- `hybrid` — Both accuracy and subjective dimensions
+The `annotator_notes.md` file documents what's needed to implement the `LLMAsJuryAnnotator` configuration (judge model, prompt template, dimensions, scale). This is a separate implementation task from Scenario creation.
 
 ## Examples
 
