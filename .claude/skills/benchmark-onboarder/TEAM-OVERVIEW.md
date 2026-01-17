@@ -140,6 +140,42 @@ Example of what gets added:
 
 Team knowledge builds automatically across sessions.
 
+### What GAs Actually Do
+
+Running the skill is the easy part. Your job is quality control and decision-making.
+
+**Session Management**
+- Run 2-3 onboarding sessions in parallel using terminal tabs or tmux
+- Respond when Claude asks questions or hits issues
+- Use `/compact` between benchmarks to manage context
+
+**Quality Checks**
+
+For each completed scenario, verify:
+- Prompt text matches the source paper (check cited section/page)
+- Dataset fields are mapped correctly (no model outputs used as inputs)
+- Code loads without errors (Claude should test, but double-check)
+
+**Decision Points**
+
+Claude will ask for input when:
+- Multiple tasks exist and it's unclear which is the primary creativity task
+- Dataset has issues (missing labels, private access, unusual format)
+- Paper doesn't specify exact prompt wording
+
+Your judgment matters here — you know the project goals better than Claude does.
+
+**Knowledge Sharing**
+- Commit LEARNINGS.md updates promptly so the team benefits
+- Flag recurring patterns in weekly sync
+- Note any benchmarks that need PI review
+
+**Rough Time Allocation**
+- ~20% monitoring sessions, responding to prompts
+- ~40% reviewing generated scenarios against papers
+- ~20% making judgment calls on edge cases
+- ~20% tracking progress, committing, syncing
+
 ### Workflow Commands
 
 ```bash
