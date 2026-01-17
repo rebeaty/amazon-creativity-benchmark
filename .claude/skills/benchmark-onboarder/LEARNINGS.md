@@ -21,3 +21,14 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 - `name` field: lowercase with underscores (e.g., `riddlesense`)
 - `description` field: data source reference, not task description
 - Always include `tags = ["creativity", ...]`
+
+## LLM-as-Judge Benchmarks
+
+| Benchmark | Judge Model | Rubric Location | Dimensions |
+|-----------|-------------|-----------------|------------|
+| (add as discovered) | | | |
+
+**Notes:**
+- Document judge requirements in scenario header even though Annotator is separate
+- Set `eval_type: llm_judge` in benchmarks.json
+- Common dimensions: novelty, usefulness, fluency, coherence, surprise
