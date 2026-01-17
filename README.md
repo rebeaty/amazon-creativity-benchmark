@@ -21,16 +21,24 @@ The result is a curated collection of creativity benchmarks with their source pa
 ```
 amazon_creativity_benchmark/
 ├── README.md
+├── CLAUDE.md                    # Shared team learnings
 ├── .env.template
 │
-├── pipeline/                     # The curation pipeline (scripts 01-05)
+├── pipeline/                    # The curation pipeline (scripts 01-05)
 │
 ├── data/
-│   ├── pdf_cache/               # 284 downloaded paper PDFs
-│   └── onboarding_ready/        # Final screened benchmark list
+│   ├── pdf_cache/              # 284 downloaded paper PDFs
+│   └── onboarding_ready/       # Final screened benchmark list
 │
 └── .claude/skills/benchmark-onboarder/
-    └── SKILL.md                 # Conceptual guide for benchmark onboarding
+    ├── SKILL.md                # Claude Code skill instructions
+    ├── TEAM-OVERVIEW.md        # Human team orientation
+    ├── helm-template.md        # HELM Scenario code patterns
+    ├── benchmarks.json         # Benchmark queue with RA assignments
+    └── examples/               # Working scenario examples
+        ├── brainteaser.py
+        ├── analobench.py
+        └── riddlesense.py
 ```
 
 ---
@@ -108,24 +116,21 @@ pip install datasets  # for HuggingFace integration
 
 ---
 
-## Conceptual: Benchmark Onboarding
+## Benchmark Onboarding
 
-Once benchmarks are curated, the next step is **onboarding** them into standardized task implementations. The conceptual workflow for this is documented in:
+Once benchmarks are curated, the next step is **onboarding** them into HELM Scenario implementations. This is handled by a Claude Code skill documented in:
 
-**[.claude/skills/benchmark-onboarder/SKILL.md](.claude/skills/benchmark-onboarder/SKILL.md)**
+**[.claude/skills/benchmark-onboarder/](.claude/skills/benchmark-onboarder/)**
 
-This describes an 8-phase process for turning a paper + dataset into a working `task.py`:
+The skill follows a 5-step workflow:
 
-1. Paper metadata extraction
-2. Source discovery & validation
-3. Repository context ingestion
-4. Dataset loading with fallbacks
-5. Evaluation criteria extraction
-6. Task configuration extraction
-7. Code generation
-8. Validation & pilot testing
+1. **Qualify** — Verify it's a creativity benchmark with extractable prompts
+2. **Examine dataset** — Identify fields to use vs. skip
+3. **Check instructions** — Find task wording from paper/README if specified
+4. **Generate scenario** — Produce standardized `scenario.py` following HELM patterns
+5. **Verify** — Confirm code runs, fields map correctly
 
-The SKILL.md serves as a reference guide for the onboarding workflow.
+See [TEAM-OVERVIEW.md](.claude/skills/benchmark-onboarder/TEAM-OVERVIEW.md) for team workflow and RA assignments.
 
 ---
 
