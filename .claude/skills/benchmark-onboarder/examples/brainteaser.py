@@ -11,6 +11,7 @@ Prompt format:
   C. {choice_2}
   D. {choice_3}
 
+Prompt source: Standard MC format (paper Section 3.2 uses similar structure)
 Fields used: question, answer, distractor1, distractor2, distractor(unsure), label, choice_order
 Fields skipped: id, choice_list
 
