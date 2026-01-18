@@ -1,11 +1,20 @@
 """
 HELM Scenario: RIDDLESENSE
 
+Paper: https://aclanthology.org/2021.findings-acl.131/ (ACL-IJCNLP 2021)
+Code: https://github.com/INK-USC/RiddleSense
+
+Prompt format:
+  Question: {question}
+  A. {choice_0}
+  B. {choice_1}
+  ...
+
 Prompt source: Standard CommonsenseQA-style MC format (paper uses same approach)
 Fields used: question, choices (label + text), answerKey
 Fields skipped: none
 
-Paper: https://aclanthology.org/2021.findings-acl.131/ (ACL-IJCNLP 2021)
+Note: Test split has no labels; using validation split instead.
 """
 
 from datasets import load_dataset

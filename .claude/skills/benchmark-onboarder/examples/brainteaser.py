@@ -1,7 +1,16 @@
 """
 HELM Scenario: BRAINTEASER
 
-Prompt source: Paper Section 3.2, Figure 2
+Paper: https://arxiv.org/abs/2310.05057 (EMNLP 2023)
+Code: https://github.com/1171-jpg/BrainTeaser
+
+Prompt format:
+  Question: {question}
+  A. {choice_0}
+  B. {choice_1}
+  C. {choice_2}
+  D. {choice_3}
+
 Fields used: question, choices, answer
 Fields skipped: none
 """

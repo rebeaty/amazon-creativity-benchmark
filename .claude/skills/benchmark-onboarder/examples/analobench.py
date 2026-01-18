@@ -1,11 +1,19 @@
 """
 HELM Scenario: ANALOBENCH
 
-Prompt source: Paper Section 3, "Which of the following is the most analogous story?"
+Paper: https://arxiv.org/abs/2402.12370 (EMNLP 2024)
+Code: https://github.com/jhu-clsp/AnaloBench
+
+Prompt format:
+  Which of the following is the most analogous story to the target story?
+
+  Target story: {Sentence}
+
+  {Options}
+
+Prompt source: Paper Section 3
 Fields used: Sentence, Options, Label
 Fields skipped: Index
-
-Paper: https://arxiv.org/abs/2402.12370 (EMNLP 2024)
 """
 
 from datasets import load_dataset
