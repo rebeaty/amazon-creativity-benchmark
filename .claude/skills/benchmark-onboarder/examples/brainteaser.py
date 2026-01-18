@@ -11,8 +11,11 @@ Prompt format:
   C. {choice_2}
   D. {choice_3}
 
-Fields used: question, choices, answer
-Fields skipped: none
+Fields used: question, answer, distractor1, distractor2, distractor(unsure), label, choice_order
+Fields skipped: id, choice_list
+
+Note: Uses tasksource/brainteasers which has SP (Sentence Puzzle) and WP (Word Puzzle) configs.
+      This example uses SP; create separate scenario or add subset param for WP.
 """
 
 from datasets import load_dataset
@@ -23,24 +26,38 @@ from helm.benchmark.scenarios.scenario import (
 
 class BrainteaserScenario(Scenario):
     name = "brainteaser"
-    description = "yzha/R1_distilled_brain_teasers"
-    tags = ["creativity", "reasoning", "multiple_choice"]
+    description = "tasksource/brainteasers"
+    tags = ["creativity", "lateral_thinking", "multiple_choice"]
 
     def get_instances(self, output_path):
-        dataset = load_dataset("yzha/R1_distilled_brain_teasers", split="train")
+        # SP = Sentence Puzzle, WP = Word Puzzle
+        dataset = load_dataset("tasksource/brainteasers", "SP", split="train")
 
         instances = []
         for item in dataset:
-            # Format prompt (from paper Section 3.2)
+            # Original choices before shuffling
+            original_choices = [
+                item['answer'],
+                item['distractor1'],
+                item['distractor2'],
+                item['distractor(unsure)']
+            ]
+
+            # Use choice_order to get shuffled order, label indicates correct position
+            choice_order = item['choice_order']
+            shuffled_choices = [original_choices[i] for i in choice_order]
+            correct_idx = item['label']
+
+            # Format prompt
             prompt = f"Question: {item['question']}\n"
-            for i, choice in enumerate(item['choices']):
+            for i, choice in enumerate(shuffled_choices):
                 prompt += f"\n{chr(65+i)}. {choice}"
 
             # HELM MC pattern: all choices are References
             references = []
-            for i, choice in enumerate(item['choices']):
+            for i in range(4):
                 letter = chr(65 + i)
-                is_correct = (choice == item['answer'])
+                is_correct = (i == correct_idx)
                 tags = [CORRECT_TAG] if is_correct else []
                 references.append(Reference(Output(text=letter), tags=tags))
 

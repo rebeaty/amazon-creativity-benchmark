@@ -9,6 +9,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | RiddleSense | Test split has no labels (empty `answerKey`) | Use validation split instead |
 | HumorDB | Multimodal (images + text) | Include text component; note `multimodal` in tags |
 | ANALOBENCH | Field is `Sentence` not `Story` | Check actual dataset keys before coding |
+| BRAINTEASER | No official HF dataset; many unofficial versions | Use `tasksource/brainteasers` with SP/WP configs; use `choice_order` and `label` fields for correct shuffling |
 
 ## Common Patterns
 
