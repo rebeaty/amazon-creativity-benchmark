@@ -43,7 +43,9 @@
     "name": "CreataSet",
     "paper_id": "05b04bba9cbe127b4175906b57ce51e082fe3601",
     "url": "https://creval-creative-evaluation.github.io/",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Non-English (entire test set is Chinese); meta-evaluation benchmark for evaluating creativity evaluators, not direct generation"
   },
   {
     "name": "Open-ended Data-Driven Discovery Evaluation Framework",
@@ -67,7 +69,10 @@
     "name": "Pun2Pun",
     "paper_id": "07038bad5e5be59656343afdb0dce1cf7209cf43",
     "url": "https://github.com/rexera/Pun2Pun",
-    "assigned_to": "SA"
+    "status": "completed",
+    "scenario_file": "examples/pun2pun.py",
+    "assigned_to": "SA",
+    "notes": "Translation task only (primary creativity task). Requires repo clone. Evaluation: LLM-as-judge with Hit/Overlap metrics"
   },
   {
     "name": "Meta4XNLI",
@@ -91,7 +96,9 @@
     "name": "DeepMath-Creative",
     "paper_id": "0a5d466b39d5758e92b0a63fab6ca2c0ca9c74ea",
     "url": "https://github.com/DeepMathLLM/DeepMath",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Non-English (entirely in Chinese); 78 proof problems + 101 counterexample problems in advanced mathematics"
   },
   {
     "name": "Collaborative Neural Painting (CNP) Benchmark",
@@ -115,7 +122,9 @@
     "name": "Pron vs Prompt Creative Writing Contest",
     "paper_id": "187eefa5167705cf916751c135aa650c545a87a8",
     "url": "https://github.com/grmarco/pron-vs-prompt",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Research study dataset, not benchmark; contains fixed outputs from specific models (GPT-4, Claude) and human author with expert assessments; no test set for evaluating new models"
   },
   {
     "name": "",
@@ -139,7 +148,10 @@
     "name": "ProPara-Logy",
     "paper_id": "1f1093fbd6eb15b2a79e0e39d5e3621f8090fc84",
     "url": "https://github.com/orensul/ParallelPARC",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "completed",
+    "scenario_file": "examples/proparalogy.py",
+    "notes": "310 test examples; 3-choice MC (correct + challenging distractor + random); cross-domain analogical reasoning; close (60%) vs far (40%) analogies"
   },
   {
     "name": "MineAnyBuild",
@@ -163,7 +175,10 @@
     "name": "NEOCODER",
     "paper_id": "20be3ba3f361d9630cc0c17442a0d0132873e63d",
     "url": "https://github.com/JHU-CLSP/NeoCoder",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "completed",
+    "scenario_file": "examples/neocoder.py",
+    "notes": "199 problems with 6 constraint levels each (1194 instances); requires git clone; evaluation via NeoGauge@T (correctness + technique detection)"
   },
   {
     "name": "Humor Transfer Learning Framework",
@@ -187,7 +202,9 @@
     "name": "PACE (Parallel Association Chain Evaluation)",
     "paper_id": "1b1432e9a68eb0b56de584428b352adb377a53bd",
     "url": "https://github.com/ziliang6/PACE",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Evaluation metric/framework, not benchmark; 110 seed words without ground truth; pre-computed model outputs for comparison; measures creativity via association distance"
   },
   {
     "name": "Eval3DAIGC-198",
@@ -211,7 +228,9 @@
     "name": "Sonnet Generation",
     "paper_id": "256ac7f8b1b7fe81e41b5b2af28c179f56611576",
     "url": "https://github.com/ChorlingLau/PoetryDiffusion/",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Model training repository, not benchmark; contains training/validation splits for diffusion model, no evaluation framework for benchmarking arbitrary models"
   },
   {
     "name": "FigLang-2024 Multimodal Figurative Language Shared Task",
@@ -235,7 +254,9 @@
     "name": "TIGeR-Bench",
     "paper_id": "24599e9a55091d6f417e91799e63ff14797cf4be",
     "url": "https://tiger-t2i.github.io",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (text-to-image); evaluates image generation and retrieval; HELM is text-only"
   },
   {
     "name": "GuessBench",
@@ -283,7 +304,9 @@
     "name": "LayoutSAM-Eval",
     "paper_id": "2a5752c59f6a7e6175815db7b113d23a05271cce",
     "url": "https://creatilayout.github.io/",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (layout-to-image generation); HELM is text-only"
   },
   {
     "name": "Video Metaphor Captioning Dataset (VMCD)",
@@ -307,7 +330,9 @@
     "name": "Random Number Generation",
     "paper_id": "2d45cac81b28850a10f67fbd26928bab3bdd6342",
     "url": "https://arxiv.org/abs/2505.00047",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Research study without public benchmark dataset; no test set available for evaluation"
   },
   {
     "name": "Analogical Reasoning on Narratives (ARN)",
@@ -331,7 +356,9 @@
     "name": "Fann or Flop",
     "paper_id": "3410fd0fc85cb04be40e2dacc7f36668261f8620",
     "url": "https://huggingface.co/datasets/mbzuai-oryx/FannOrFlop",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Non-English (Arabic); entire benchmark is Arabic poetry with Arabic explanations"
   },
   {
     "name": "The AI Scientist",
@@ -1123,7 +1150,9 @@
     "name": "MEMECAP",
     "paper_id": "b82c1b0512d25307e3c81bb8d9df1607267a7a52",
     "url": "https://github.com/eujhwang/meme-cap",
-    "assigned_to": "SA"
+    "status": "not_suitable",
+    "assigned_to": "SA",
+    "notes": "Multimodal (vision-based). Requires image inputs from Google Drive. HELM is text-only."
   },
   {
     "name": "PuzzleWorld",
@@ -1219,7 +1248,9 @@
     "name": "ANALOGYKB",
     "paper_id": "bad287184c6739fd6f476f89cb83e09415982d9f",
     "url": "https://github.com/siyuyuan/analogykb",
-    "assigned_to": "SA"
+    "status": "not_suitable",
+    "assigned_to": "SA",
+    "notes": "Training data resource, not an evaluation benchmark. No test set or evaluation task. Authors evaluated on other existing benchmarks instead."
   },
   {
     "name": "Connections Puzzle Generation & Human Preference Study",
@@ -1246,7 +1277,7 @@
     "assigned_to": "SA"
   },
   {
-    "name": "F\u00f9x\u00ec",
+    "name": "Fùxì",
     "paper_id": "c44760d1864e62f09aed92bbe0a23d12b9d6983c",
     "url": "https://github.com/cubenlp/FuxiBench",
     "assigned_to": "CL"
@@ -1459,7 +1490,10 @@
     "name": "Sudoku-Bench",
     "paper_id": "eb16b5ac4035510a3c523114c3fd09ff4113f120",
     "url": "https://huggingface.co/datasets/SakanaAI/Sudoku-Bench",
-    "assigned_to": "SA"
+    "status": "completed",
+    "scenario_file": "examples/sudoku_bench.py",
+    "assigned_to": "SA",
+    "notes": "Three subsets: challenge_100, nikoli_100, ctc. Evaluation: exact_match on 81-digit solution"
   },
   {
     "name": "GraphicBench",
@@ -1675,7 +1709,10 @@
     "name": "SPLAT",
     "paper_id": "8f2da3a0775ec12983308c56a84cee38f02e799c",
     "url": "https://github.com/chenqi008/LateralThinking",
-    "assigned_to": "SA"
+    "status": "completed",
+    "scenario_file": "examples/splat.py",
+    "assigned_to": "SA",
+    "notes": "975 lateral thinking puzzles. Simplified from multi-turn interactive to single-turn inference. 3 difficulty levels (easy/medium/hard)"
   },
   {
     "name": "Metaphor Understanding Challenge Dataset (MUNCH)",
