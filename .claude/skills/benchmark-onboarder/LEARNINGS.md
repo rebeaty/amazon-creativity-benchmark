@@ -10,6 +10,9 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | HumorDB | Multimodal (images + text) | Include text component; note `multimodal` in tags |
 | ANALOBENCH | Field is `Sentence` not `Story` | Check actual dataset keys before coding |
 | BRAINTEASER | No official HF dataset; many unofficial versions | Use `tasksource/brainteasers` with SP/WP configs; use `choice_order` and `label` fields for correct shuffling |
+| HUMMUS | Multimodal benchmark (New Yorker cartoons + captions) | Use text-only ablation: `image_descriptions.csv` provides scene descriptions. Data in GitHub repo, not HuggingFace. |
+| HUMMUS | Label "WIDLII" means "While In Doubt, Leave It In" | Treat as positive class (metaphorical) along with "Yes"; "Discard" items excluded from test_set.json |
+| HUMMUS | Paper has 6 tasks; 4 are text-compatible | Tasks 3-4 (ImageBbox, ImageLabel) require visual grounding. Implemented: classification (940), naming (568), caption_highlight (568), explanation (568) |
 
 ## Common Patterns
 
@@ -27,7 +30,10 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 
 | Benchmark | Eval Type | HELM Pattern | Notes |
 |-----------|-----------|--------------|-------|
-| (add as discovered) | | | |
+| HUMMUS (classification) | exact_match | `get_exact_match_metric_specs()` | Binary Yes/No metaphor detection |
+| HUMMUS (naming) | open_ended | `get_open_ended_generation_metric_specs()` | Conceptual metaphor ID; paper uses sentence similarity (LaBSE) |
+| HUMMUS (caption_highlight) | exact_match | `get_exact_match_metric_specs()` | Tag metaphor text; paper uses Jaccard index |
+| HUMMUS (explanation) | open_ended | `get_open_ended_generation_metric_specs()` | <=30 word explanation; paper uses ROUGE |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
