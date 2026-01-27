@@ -280,7 +280,9 @@
     "name": "Comparative Artistic Generation from LDM Prompts",
     "paper_id": "2a9db8d5445cf3f078ec608966cac6e09597ce74",
     "url": "",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "No URL provided; no public information or dataset found; cannot verify benchmark existence or access data"
   },
   {
     "name": "Conceptual Design Generation Problems",
@@ -382,7 +384,9 @@
     "name": "HumorousAI Benchmark",
     "paper_id": "35a4557e99dd90821a18fe9076eabe1cb9c4b168",
     "url": "https://huggingface.co/datasets/yguooo/newyorker_caption_ranking",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (requires cartoon images for caption generation task); HELM is text-only"
   },
   {
     "name": "OpenAGI",
@@ -406,7 +410,9 @@
     "name": "PopBlends Evaluation Framework",
     "paper_id": "3cc4ad973029bdc4af58dc5038e92751b97073e0",
     "url": "https://arxiv.org/abs/2111.04920",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "No public dataset available; evaluation framework/method paper only"
   },
   {
     "name": "PressRelease Creative Planning Benchmark",
@@ -430,7 +436,9 @@
     "name": "Pun Understanding Evaluation",
     "paper_id": "4055e37ec2f1dd6c883001d12181a7131010882d",
     "url": "https://github.com/Zhijun-Xu/PunEval",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multi-task benchmark with complex evaluation; primary creativity tasks (explanation/generation) require LLM-as-judge and custom metrics not yet implemented in HELM; recognition task is just binary classification"
   },
   {
     "name": "MACGYVER",
@@ -454,7 +462,9 @@
     "name": "HumorDB",
     "paper_id": "4343df06633bb912116d12a38387a9bc83cb936f",
     "url": "https://huggingface.co/datasets/kreimanlab/HumorDB",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (requires images for visual humor understanding); HELM is text-only"
   },
   {
     "name": "Metaphoric Image Captioning Pretraining",
@@ -526,7 +536,9 @@
     "name": "RPGBENCH",
     "paper_id": "548ef466e61871aced22fd4cceaf4cc8348a9567",
     "url": "https://github.com/boson-ai/rpgbench-public",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Complex multi-turn interactive benchmark; requires LLM-as-judge for primary creativity evaluation; not compatible with HELM single-turn prompt-response architecture"
   },
   {
     "name": "GPT-WritingPrompts Dataset",
@@ -622,7 +634,9 @@
     "name": "QUDsim",
     "paper_id": "60b21c4f48daf76465365c45040bcf08c046c573",
     "url": "https://github.com/AlliteraryAlligator/QUDsim",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Evaluation methodology/framework for measuring discourse similarity, not a benchmark; no specific evaluation task with ground truth labels"
   },
   {
     "name": "GODBench",
@@ -646,7 +660,9 @@
     "name": "MIXASSIST",
     "paper_id": "62cfa51a4d32b311c1385afc2207c0056369e231",
     "url": "https://huggingface.co/datasets/mclemcrew/MixAssist",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (requires audio files for music mixing); conversational training dataset, not an evaluation benchmark"
   },
   {
     "name": "Arabic Story Generation Evaluation Framework",
@@ -670,7 +686,9 @@
     "name": "LLM-MA Balderdash",
     "paper_id": "69723e2a291b5944b58f0e2bdb8e832a1b3b49ef",
     "url": "https://github.com/ParsaHejabi/Simulation-Framework-for-Multi-Agent-Balderdash",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Simulation framework, not benchmark; no public dataset available (requires contacting authors for access)"
   },
   {
     "name": "BannerRequest400",
@@ -694,7 +712,9 @@
     "name": "Speak-to-Structure (S2-Bench)",
     "paper_id": "6b5a7f5a2edf0c752905a07ab83661ce7dc4954c",
     "url": "https://openreview.net/forum?id=V2K66z1k7a",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Domain-specific chemistry benchmark for molecule generation; requires specialized molecular structure validation and chemistry knowledge; not a general text creativity task"
   },
   {
     "name": "Creative Writing Tasks",
@@ -718,7 +738,9 @@
     "name": "ArenaHard v2.0",
     "paper_id": "6d6679bd5bf00db7ea3a8305c6db8c8e73a3997a",
     "url": "https://github.com/facebookresearch/darling",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "General LLM evaluation benchmark, not creativity-specific; evaluates diverse capabilities (software engineering, math, creative writing) but not designed for creativity evaluation"
   },
   {
     "name": "CM3D (Chinese Multimodal Metaphor Mapping Dataset)",
@@ -742,7 +764,9 @@
     "name": "Design Problems Task (DPT)",
     "paper_id": "760527bc3b5d9d4015b2d7ee72f900ff7a4c6927",
     "url": "https://github.com/Beaty-Lab/CogSci-2025-Scientific-Creativity",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Research study comparing human and LLM creativity reasoning, not a benchmark; contains human ratings and explanations of creative responses, not a task for evaluating model performance"
   },
   {
     "name": "MiQA (Metaphorical Inference Questions and Answers)",
@@ -766,7 +790,9 @@
     "name": "ROBOTOOLBENCH",
     "paper_id": "77a4a2791680d7651e11199b88e115361cb28c3f",
     "url": "https://vlmgineer.github.io/",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (requires images and environment source code); domain-specific robotics benchmark for tool design and manipulation; HELM is text-only; not a general text creativity task"
   },
   {
     "name": "Fable Generation Evaluation Framework",
@@ -790,7 +816,9 @@
     "name": "CoMPAS3D",
     "paper_id": "7a4f042ce29809ef9c2ddde9726b48c5a84feb5e",
     "url": "https://huggingface.co/datasets/Rosie-Lab/compas3d",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "reason": "Multimodal (requires 3D motion capture data, video, and audio); domain-specific dance/motion generation benchmark; HELM is text-only; not a text creativity task"
   },
   {
     "name": "LLM-SRBench",
@@ -1277,7 +1305,7 @@
     "assigned_to": "SA"
   },
   {
-    "name": "Fùxì",
+    "name": "F\u00f9x\u00ec",
     "paper_id": "c44760d1864e62f09aed92bbe0a23d12b9d6983c",
     "url": "https://github.com/cubenlp/FuxiBench",
     "assigned_to": "CL"
