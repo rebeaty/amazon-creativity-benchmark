@@ -25,7 +25,16 @@
     "name": "HUMMUS",
     "paper_id": "08faaa5de214ee965c20e2bbbd66bcc7cea21b12",
     "url": "https://github.com/xiaoyuisrain/humorous-multimodal-metaphor-use",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/hummus/scenario.py",
+    "subsets": {
+      "classification": {"instances": 940, "eval_type": "exact_match", "description": "Binary yes/no metaphor detection"},
+      "naming": {"instances": 568, "eval_type": "open_ended", "description": "Identify conceptual metaphor in TARGET IS SOURCE format"},
+      "caption_highlight": {"instances": 568, "eval_type": "exact_match", "description": "Highlight metaphor-related text with <i></i> tags"},
+      "explanation": {"instances": 568, "eval_type": "open_ended", "description": "Explain how metaphor contributes to humor (<=30 words)"}
+    },
+    "notes": "Text-only ablation using image descriptions from CapCon corpus. Tasks 3-4 (ImageBbox, ImageLabel) require visual grounding and are excluded."
   },
   {
     "name": "Chinese NM Corpus (CMC)",
