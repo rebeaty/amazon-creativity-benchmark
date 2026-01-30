@@ -22,6 +22,7 @@ Transform creativity benchmark datasets into HELM Scenario implementations.
   - [brainteaser.py](examples/brainteaser.py) - Multiple choice with distractor answers
   - [analobench.py](examples/analobench.py) - Analogical reasoning MC task
   - [riddlesense.py](examples/riddlesense.py) - Riddle QA with CommonsenseQA format
+  - [multimodal_visual_qa.py](examples/multimodal_visual_qa.py) - Vision-language task with images
 - For benchmark queue, see [benchmarks.json](benchmarks.json)
 - For team-accumulated learnings, see [LEARNINGS.md](LEARNINGS.md)
 
@@ -55,6 +56,8 @@ Before doing any work, check if this benchmark is suitable:
 If the answer to any is NO, tell the user why this benchmark doesn't qualify and stop.
 
 **Focus on primary creativity tasks.** Some papers include multiple tasks or secondary experiments (e.g., MMLU baselines, general QA comparisons). Identify and implement only the core creativity evaluation tasks described in the paper.
+
+**Multimodal benchmarks are supported!** HELM supports images, audio, and video through `MediaObject` and `MultimediaObject` classes. Vision-language tasks, audio understanding, and other multimodal creativity benchmarks can be onboarded.
 
 ### Handling Multi-Task Benchmarks
 
@@ -233,9 +236,15 @@ Check these before delivering:
 
 ## Output
 
+**IMPORTANT: Do NOT create README files for scenarios.** All documentation goes in the scenario.py header comment.
+
 Create `scenario.py` with:
 - Header comment noting prompt source, fields used/skipped, paper reference
 - Clean, minimal code following HELM patterns
+
+**Only create additional files for special evaluation cases:**
+- `scenarios/benchmark_name/annotator_notes.md` - for LLM-as-judge evaluation configuration
+- `scenarios/benchmark_name/metric_notes.md` - for custom metrics requiring implementation
 
 ### Auto-Capture Notes to LEARNINGS.md
 
@@ -262,7 +271,8 @@ This ensures team knowledge is captured immediately without manual intervention.
 | Field names don't match docs | Print `ds[0]` to see actual field names |
 | Empty references | Wrong answer field - check the schema |
 | Very long prompts | Might be using wrong field (model outputs) |
-| Multimodal benchmark | Include if there's a text evaluation component; note modality in tags |
+| Multimodal benchmark | Use MediaObject and MultimediaObject; see helm-template.md multimodal section |
+| Image/audio/video paths | Create MediaObject with content_type and location (file path or URL) |
 | No explicit prompt in paper | Use standard formatting, note in header |
 
 ## Complex Benchmarks
