@@ -13,6 +13,9 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | HUMMUS | Multimodal benchmark (New Yorker cartoons + captions) | Use text-only ablation: `image_descriptions.csv` provides scene descriptions. Data in GitHub repo, not HuggingFace. |
 | HUMMUS | Label "WIDLII" means "While In Doubt, Leave It In" | Treat as positive class (metaphorical) along with "Yes"; "Discard" items excluded from test_set.json |
 | HUMMUS | Paper has 6 tasks; 4 are text-compatible | Tasks 3-4 (ImageBbox, ImageLabel) require visual grounding. Implemented: classification (940), naming (568), caption_highlight (568), explanation (568) |
+| MACGYVER | Data in xlsx format on GitHub, not HuggingFace | Download xlsx via `?raw=true` URL suffix; load with pandas. File: `data/MacGyver/problem_solution_pair.xlsx` |
+| MACGYVER | Includes both solvable and unsolvable problems | For unsolvable problems (377 of 1683), expected response is to identify infeasibility. Include all in eval. |
+| MACGYVER | Human-annotated evaluation | Paper uses fine-grained categories (efficient, inefficient, infeasible, etc.). See `annotator_notes.md` for judge setup. |
 
 ## Common Patterns
 
@@ -34,6 +37,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | HUMMUS (naming) | open_ended | `get_open_ended_generation_metric_specs()` | Conceptual metaphor ID; paper uses sentence similarity (LaBSE) |
 | HUMMUS (caption_highlight) | exact_match | `get_exact_match_metric_specs()` | Tag metaphor text; paper uses Jaccard index |
 | HUMMUS (explanation) | open_ended | `get_open_ended_generation_metric_specs()` | <=30 word explanation; paper uses ROUGE |
+| MACGYVER (all) | open_ended | `get_open_ended_generation_metric_specs()` | Creative problem-solving; paper uses human annotation with fine-grained categories |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -46,10 +50,17 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 
 | Benchmark | Judge Model | Rubric Location | Dimensions | Annotator Notes |
 |-----------|-------------|-----------------|------------|-----------------|
-| (add as discovered) | | | | |
+| MACGYVER | GPT-4 (paper) | Paper Section 4.2, benchmark_results.json | correctness, feasibility, efficiency | `scenarios/macgyver/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
 2. Extract judge config per Step 3b → `scenarios/benchmark_name/annotator_notes.md`
 3. Set `eval_type: llm_judge` in benchmarks.json
 4. Common dimensions: novelty, usefulness, fluency, coherence, surprise
+
+## Benchmarks Reviewed but Not Onboarded
+
+| Benchmark | Reason | Notes |
+|-----------|--------|-------|
+| Open-ended Data-Driven Discovery (DiscoveryBench) | Scientific reasoning, not creativity | Task is discovering patterns in tabular data; evaluation is hypothesis correctness, not creative merit |
+| Meta4XNLI | Classification task, not generation | Metaphor detection (token tagging) and NLI classification; no creative generation component |

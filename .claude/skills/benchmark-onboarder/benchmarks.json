@@ -418,7 +418,21 @@
     "name": "MACGYVER",
     "paper_id": "437cbaee4eaee0bf84abbe11750b86b091b9b756",
     "url": "https://github.com/allenai/MacGyver",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/macgyver/scenario.py",
+    "subsets": {
+      "all": {"instances": 1683, "eval_type": "open_ended", "description": "All creative problem-solving problems"},
+      "solvable": {"instances": 1306, "eval_type": "open_ended", "description": "Solvable problems only"},
+      "unsolvable": {"instances": 377, "eval_type": "open_ended", "description": "Unsolvable problems (expect 'not possible' answer)"},
+      "unconventional": {"instances": 956, "eval_type": "open_ended", "description": "Problems requiring unconventional tool usage"}
+    },
+    "prompt_strategies": {
+      "vanilla": "Single-round basic prompt (default)",
+      "divergent_convergent": "Analyze tool affordances before solving (Figure 15, Appendix D.3)",
+      "reflection": "Multi-round iterative verification of physical feasibility (Figure 16, Appendix D.3)"
+    },
+    "notes": "Open-ended generation benchmark. Three prompt strategies from paper. Paper uses human annotation for evaluation (efficient/inefficient/infeasible categories). See annotator_notes.md for LLM-as-judge setup."
   },
   {
     "name": "Unconditional Protein Generation Evaluation",
