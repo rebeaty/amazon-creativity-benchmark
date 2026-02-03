@@ -13,18 +13,21 @@ Dataset:
   - Four partitions based on analogy type (near/far) and distractor similarity (high/low)
   - Human accuracy: 96%
 
-Prompt format (from Paper Appendix C.2):
-  Narratives can be mapped to each other in terms of the high-level message they
+Prompt format (from Paper Appendix C.2 - GPT/Llama format):
+  narratives can be mapped to each other in terms of the high-level message they
   strive to convey. These high-level messages can be related to traditions, common
-  knowledge, or moral principles. We call this mapping analogical mapping.
-  Which one of the two narratives (1, 2) can create a better analogical mapping
-  with the query narrative?
-
+  knowledge, or moral principles. We call this mapping analogical mapping. Which
+  one of the two narratives (1, 2) can create a better analogical mapping with the
+  query narrative? Answer in the template: {{narrative_x, because narrative_x and
+  query_narrative are ...}}
+  ———
   query_narrative: {query}
+  ———
   narrative_1: {choice1}
+  ———
   narrative_2: {choice2}
-
-  Answer:
+  ##########
+  narrative
 
 Subsets:
   "all" - Full benchmark (1,095 examples)
@@ -57,17 +60,16 @@ class ARNScenario(Scenario):
 
     SUBSETS = ["all", "near_high", "near_low", "far_high", "far_low"]
 
-    PROMPT_TEMPLATE = """Narratives can be mapped to each other in terms of the high-level message they strive to convey. These high-level messages can be related to traditions, common knowledge, or moral principles. We call this mapping analogical mapping.
-
-Which one of the two narratives (1, 2) can create a better analogical mapping with the query narrative?
-
+    # Exact prompt from Paper Appendix C.2 (GPT/Llama evaluation format)
+    PROMPT_TEMPLATE = """narratives can be mapped to each other in terms of the high-level message they strive to convey. These high-level messages can be related to traditions, common knowledge, or moral principles. We call this mapping analogical mapping. Which one of the two narratives (1, 2) can create a better analogical mapping with the query narrative? Answer in the template: {{{{narrative_x, because narrative_x and query_narrative are ...}}}}
+———
 query_narrative: {query}
-
+———
 narrative_1: {choice1}
-
+———
 narrative_2: {choice2}
-
-Answer:"""
+##########
+narrative"""
 
     def __init__(self, subset: str = "all"):
         super().__init__()
