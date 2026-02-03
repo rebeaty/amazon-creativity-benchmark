@@ -29,10 +29,26 @@
     "status": "completed",
     "scenario_file": "scenarios/hummus/scenario.py",
     "subsets": {
-      "classification": {"instances": 940, "eval_type": "exact_match", "description": "Binary yes/no metaphor detection"},
-      "naming": {"instances": 568, "eval_type": "open_ended", "description": "Identify conceptual metaphor in TARGET IS SOURCE format"},
-      "caption_highlight": {"instances": 568, "eval_type": "exact_match", "description": "Highlight metaphor-related text with <i></i> tags"},
-      "explanation": {"instances": 568, "eval_type": "open_ended", "description": "Explain how metaphor contributes to humor (<=30 words)"}
+      "classification": {
+        "instances": 940,
+        "eval_type": "exact_match",
+        "description": "Binary yes/no metaphor detection"
+      },
+      "naming": {
+        "instances": 568,
+        "eval_type": "open_ended",
+        "description": "Identify conceptual metaphor in TARGET IS SOURCE format"
+      },
+      "caption_highlight": {
+        "instances": 568,
+        "eval_type": "exact_match",
+        "description": "Highlight metaphor-related text with <i></i> tags"
+      },
+      "explanation": {
+        "instances": 568,
+        "eval_type": "open_ended",
+        "description": "Explain how metaphor contributes to humor (<=30 words)"
+      }
     },
     "notes": "Text-only ablation using image descriptions from CapCon corpus. Tasks 3-4 (ImageBbox, ImageLabel) require visual grounding and are excluded."
   },
@@ -82,7 +98,37 @@
     "name": "Meta4XNLI",
     "paper_id": "06a8a91b3f0d79e5919d7cf3ce2e5502636b9f35",
     "url": "https://huggingface.co/datasets/HiTZ/meta4xnli",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/meta4xnli/scenario.py",
+    "subsets": {
+      "interpretation_en": {
+        "instances": 580,
+        "eval_type": "exact_match",
+        "description": "NLI with metaphorical English sentences - zero-shot prompt (Table 29)"
+      },
+      "interpretation_es": {
+        "instances": 580,
+        "eval_type": "exact_match",
+        "description": "NLI with metaphorical Spanish sentences - zero-shot prompt (Table 29)"
+      },
+      "interpretation_en_cot": {
+        "instances": 580,
+        "eval_type": "exact_match",
+        "description": "NLI with metaphorical English sentences - chain-of-thought prompt (Table 29)"
+      },
+      "interpretation_es_cot": {
+        "instances": 580,
+        "eval_type": "exact_match",
+        "description": "NLI with metaphorical Spanish sentences - chain-of-thought prompt (Table 29)"
+      },
+      "detection_en": {
+        "instances": 3630,
+        "eval_type": "open_ended",
+        "description": "Token-level metaphor detection in English sentences"
+      }
+    },
+    "notes": "Interpretation subsets use xnli_test_met split filtered by language. Detection uses det_en_finetune test split."
   },
   {
     "name": "FSCG-8 (Few-Shot Creative Generation 8)",
@@ -422,10 +468,26 @@
     "status": "completed",
     "scenario_file": "scenarios/macgyver/scenario.py",
     "subsets": {
-      "all": {"instances": 1683, "eval_type": "open_ended", "description": "All creative problem-solving problems"},
-      "solvable": {"instances": 1306, "eval_type": "open_ended", "description": "Solvable problems only"},
-      "unsolvable": {"instances": 377, "eval_type": "open_ended", "description": "Unsolvable problems (expect 'not possible' answer)"},
-      "unconventional": {"instances": 956, "eval_type": "open_ended", "description": "Problems requiring unconventional tool usage"}
+      "all": {
+        "instances": 1683,
+        "eval_type": "open_ended",
+        "description": "All creative problem-solving problems"
+      },
+      "solvable": {
+        "instances": 1306,
+        "eval_type": "open_ended",
+        "description": "Solvable problems only"
+      },
+      "unsolvable": {
+        "instances": 377,
+        "eval_type": "open_ended",
+        "description": "Unsolvable problems (expect 'not possible' answer)"
+      },
+      "unconventional": {
+        "instances": 956,
+        "eval_type": "open_ended",
+        "description": "Problems requiring unconventional tool usage"
+      }
     },
     "prompt_strategies": {
       "vanilla": "Single-round basic prompt (default)",
@@ -1392,7 +1454,17 @@
     "name": "Simile Generation from Literal Sentences",
     "paper_id": "d45776f8d75b2505e5fd0349275896053f5a4ead",
     "url": "https://github.com/tuhinjubcse/SimileGeneration-EMNLP2020",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/simile_generation/scenario.py",
+    "subsets": {
+      "default": {
+        "instances": 150,
+        "eval_type": "open_ended",
+        "description": "Convert literal sentences to creative similes"
+      }
+    },
+    "notes": "Data from GitHub repo. Human-written similes as references. Eval uses BLEU/ROUGE."
   },
   {
     "name": "Fine-grained Scientific Hypothesis Discovery Benchmark",
