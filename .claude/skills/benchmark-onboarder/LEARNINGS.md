@@ -23,6 +23,9 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | ARN | GitHub link in benchmarks.json (404) | Correct data location is Google Drive via bit.ly/3t7qZ3S. Paper: arxiv.org/abs/2310.00996 |
 | MiQA | Data nested deep in Google Research monorepo | TSV at `language/miqa/data/metaphor_inference_qa.tsv`. Each row generates 2 question types. |
 | MUNCH | 4-way MC with apt/inapt labels | Correct answer depends on label combination: A-apt+B-inapt→A, etc. Prompts in `tasks/prompts.md`. |
+| LCC Metaphor | Span indices are word-level | Use `text.split()[span[0]:span[1]]` to extract target word. Labels: "Metaphor"/"Non-metaphor". |
+| LCC Metaphor | No paper-specified prompt | Original is probing study (ACL 2022), not LLM prompting. Using standard binary classification format. |
+| AnaloBench | Prompt in code/t1.py | S1 uses 'Sentence' field, S10/S30 use 'Story' field. Dataset on HuggingFace: jhu-clsp/AnaloBench. |
 
 ## Common Patterns
 
@@ -50,6 +53,9 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | ARN | exact_match | `get_exact_match_metric_specs()` | Binary choice (1 or 2). Supports subsets: all, near_high, near_low, far_high, far_low |
 | MiQA | exact_match | `get_exact_match_metric_specs()` | Binary choice (1 or 2). Subsets: all (300), implies (150), implied_by (150) |
 | MUNCH | exact_match | `get_exact_match_metric_specs()` | 4-way MC (A/B/C/D). Subsets: word_implicit, word_mword, sent_implicit, sent_mword (1,492 each) |
+| LCC Metaphor | exact_match | `get_exact_match_metric_specs()` | Binary (Yes/No). Multilingual subsets: en (8,028), es, ru, fa |
+| AnaloBench | exact_match | `get_exact_match_metric_specs()` | 4-way MC (A/B/C/D). Subsets by length: s1/s10/s30, subset (340) or full (24.4k) |
+| NYT Connections | exact_match | `get_exact_match_metric_specs()` | Word grouping (4 groups of 4 words). 652 puzzles. COLING 2025 Best Dataset Paper. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -75,3 +81,42 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | Benchmark | Reason | Notes |
 |-----------|--------|-------|
 | Open-ended Data-Driven Discovery (DiscoveryBench) | Scientific reasoning, not creativity | Task is discovering patterns in tabular data; evaluation is hypothesis correctness, not creative merit |
+| Collaborative Neural Painting (CNP) | Purely visual | No text component |
+| Humor Transfer Learning | No dataset | "Code will be uploaded soon" |
+| GuessBench | Multimodal | Minecraft images + text |
+| LitBench | Data access issues | Test set only has IDs, requires joining with Reddit data |
+| CreativeMath | Complex evaluation | 3-stage LLM-as-judge evaluation |
+| FigLang-2024 Multimodal | Multimodal | Images + text |
+| Eval3DAIGC-198 | Visual/3D | 3D generation evaluation |
+| MineAnyBuild | Visual | Minecraft building |
+| Video Metaphor Captioning (VMCD) | Video-based | Requires video understanding |
+| PuzzleWorld | Multimodal | Images + text, 1-2% model accuracy |
+| SciMuse | Private dataset | Contact authors to test |
+| GODBench | Multimodal + unreleased | Video-based, "datasets will soon be released" |
+| GPT-WritingPrompts | Not a benchmark | Analysis project comparing human vs GPT stories |
+| RFBench (Reality-Fantasy) | Image generation | Scene generation, not text evaluation |
+| CreativEval | Domain-specific | Hardware design creativity, not general |
+| Oogiri-GO | Multimodal + broken | Images + loading errors |
+| TRIG-Bench | Image generation | Text-to-image evaluation |
+| Conceptual Design Generation | Open-ended + LLM-judge | 12 design problems, requires human/LLM evaluation |
+| Creative Story Plan Generation (CritiCS) | Not a benchmark | Story generation system code |
+| Curated Sentence Analogy | Gated dataset | Requires HuggingFace authentication |
+| Standard Science Analogies (STD) | Open-ended generation | Analogy generation, not classification |
+| Creative Process (Verbal Fluency) | Custom metrics | Analyzes creative exploration patterns, not output quality |
+| DAT_GPT | Custom metrics | DAT scoring, compression-based DSI metrics |
+| C2-Eval | Empty repo | No content available |
+| FuxiBench (Fùxì) | Domain-specific | Chinese classical literature benchmark with 21 tasks; LLM-as-judge in Chinese |
+| ConstructiveBench | Dataset inaccessible | HuggingFace URL returns "dataset not found" |
+| PressRelease Creative Planning | Corpus, not benchmark | 656k articles corpus for research; no formal test set or evaluation metrics |
+| Fable Generation (ds-tf1-en-3m) | Training data | 3M fables for training; not an evaluation benchmark |
+| AraStories | No formal evaluation | Arabic story generation corpus; no defined test set or metrics |
+| LLM-SRBench | Scientific reasoning | Equation discovery from data; not creativity |
+| NeoCoder | Complex evaluation | Code execution + custom NeoGauge metric required |
+| Story Cloze Test | Manual download required | Requires Google Form registration for data access |
+| Passau-SFCH | Multimodal + restricted | Video+audio humor recognition; requires signed EULA |
+| subtleBias/CoGS | Bias detection | Creative tasks used for bias analysis, not creativity evaluation |
+| Persian Poem Generation | URL broken | resodate.com link redirects to landing page |
+| The AI Scientist | Research system | AI research automation framework, not a benchmark |
+| OpenAGI | Agent framework | Task composition framework, not creativity evaluation |
+| Persona Generation Task | Repo 404 | GitHub repository doesn't exist |
+| MuseScorer | Annotation pipeline | AUT scoring pipeline, no public evaluation data |
