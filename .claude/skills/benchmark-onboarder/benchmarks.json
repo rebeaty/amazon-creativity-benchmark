@@ -809,7 +809,10 @@
     "name": "MiQA (Metaphorical Inference Questions and Answers)",
     "paper_id": "777683db4795ff691533c2c4be3244fabd826842",
     "url": "https://github.com/google-research/language/tree/master/language/miqa",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "completed",
+    "eval_type": "exact_match",
+    "notes": "150 base examples generating 300 binary MC questions. Two question types: 'implies' (metaphor->conclusion) and 'implied_by' (conclusion->premise). Data in TSV from Google Research repo."
   },
   {
     "name": "VBench-2.0",
@@ -1779,7 +1782,10 @@
     "name": "Metaphor Understanding Challenge Dataset (MUNCH)",
     "paper_id": "9f06b3caa9bb8bcf35c5175ed65a5ac451d852c3",
     "url": "https://github.com/xiaoyuisrain/metaphor-understanding-challenge",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "completed",
+    "eval_type": "exact_match",
+    "notes": "1,492 examples of 4-way MC (A/B/Both/Neither). Word and sentence substitution tasks. Subsets: word_implicit, word_mword, sent_implicit, sent_mword. Prompts from prompts.md."
   },
   {
     "name": "D-HUMOR",
