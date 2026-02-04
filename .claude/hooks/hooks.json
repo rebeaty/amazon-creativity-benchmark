@@ -1,0 +1,11 @@
+{
+  "description": "Benchmark workflow reminder hook that injects workflow instructions on every user message",
+  "hooks": {
+    "user-prompt-submit": [
+      {
+        "type": "command",
+        "command": "${PROJECT_ROOT}/.claude/hooks/user-prompt-submit.sh"
+      }
+    ]
+  }
+}
