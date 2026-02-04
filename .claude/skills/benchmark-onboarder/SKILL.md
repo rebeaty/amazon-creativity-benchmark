@@ -156,14 +156,14 @@ Provide your rating as a single number.
 
 Document what the paper measured and how, for future metric implementation.
 
-**Update benchmarks.json:**
+<!-- **Update benchmarks.json:**
 ```json
 {
   "name": "BenchmarkName",
   "eval_type": "open_ended|exact_match|llm_judge|custom",
   "notes": "any special considerations"
 }
-```
+``` -->
 
 ### Step 4: Generate the HELM Scenario
 
@@ -246,13 +246,13 @@ Create `scenario.py` with:
 - `scenarios/benchmark_name/annotator_notes.md` - for LLM-as-judge evaluation configuration
 - `scenarios/benchmark_name/metric_notes.md` - for custom metrics requiring implementation
 
-### Auto-Capture Notes to LEARNINGS.md
+<!-- ### Auto-Capture Notes to LEARNINGS.md
 
 When you encounter issues or discover patterns, append directly to LEARNINGS.md (in this skill folder):
 
 1. Read the current LEARNINGS.md file
 2. Add your note to the appropriate section (Dataset Quirks table, Common Patterns, etc.)
-3. Write the updated file
+3. Write the updated file -->
 
 **Always capture notes for:**
 - Split issues (test has no labels, etc.)
