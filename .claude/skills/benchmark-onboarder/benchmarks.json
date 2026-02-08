@@ -514,10 +514,12 @@
     "assigned_to": "VD"
   },
   {
-    "name": "",
+    "name": "Hypothesis Search",
     "paper_id": "4cf527e9e0d68e3fc16d39fbcdb3869cd3ccf60f",
-    "url": "",
-    "assigned_to": "SA"
+    "url": "https://github.com/Relento/hypothesis_search",
+    "assigned_to": "SA",
+    "status": "not_creativity",
+    "notes": "Inductive reasoning benchmark, not creativity. Evaluates logical pattern discovery and systematic problem-solving (ARC, SyGuS tasks). Should be reclassified."
   },
   {
     "name": "ConstructiveBench",
@@ -850,10 +852,12 @@
     "assigned_to": "VD"
   },
   {
-    "name": "",
+    "name": "ProteinBench",
     "paper_id": "7c6729bd4b2b3bdf013482b499c7401ab6de44ef",
-    "url": "",
-    "assigned_to": "SA"
+    "url": "https://proteinbench.github.io/",
+    "assigned_to": "SA",
+    "status": "not_creativity",
+    "notes": "Domain-specific protein engineering benchmark. Evaluates biophysical plausibility, structural stability, and functional utility (inverse folding, motif scaffolding, antibody design). Novelty measured as distance from PDB, but primary focus is technical correctness within strict biophysical constraints. Code repository not publicly available despite paper claims."
   },
   {
     "name": "style-centric text customization benchmark",
@@ -1449,10 +1453,12 @@
     "assigned_to": "VD"
   },
   {
-    "name": "Conditional Story Generation Evaluation",
+    "name": "Conditional Story Generation Evaluation (TheNextChapter)",
     "paper_id": "d01f6e76e67a445f23f807c0d3e68fa0be9a2c9e",
     "url": "https://github.com/ZhuohanX/TheNextChapter",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Research study with pre-computed outputs, not reusable benchmark. Repository contains model-generated stories (BART, GPT-3, HINT, etc.) and human evaluation scores for those specific outputs. Uses ROCStories, WritingPrompts, CNN datasets - should onboard original datasets directly instead. No standardized test set for evaluating new models."
   },
   {
     "name": "",
@@ -1476,7 +1482,9 @@
     "name": "FilmScoreDB",
     "paper_id": "ce3af93ca7e04fbb7dfdf813f109655739433139",
     "url": "https://anonymous.4open.science/r/HPM",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Audio generation benchmark, outside HELM scope. Task is generating music (audio) from video clips for film scoring. Input: 10-second video clips. Output: instrumental music/audio files. Requires HEIM or audio generation evaluation framework. Valid creativity benchmark (32,520 video-music pairs from ~300 films, proper splits, FAD/IS/KLD metrics) but not for language model evaluation. Dataset only available via anonymous repository (paper Nov 2024)."
   },
   {
     "name": "Simile Generation from Literal Sentences",
@@ -1500,7 +1508,9 @@
     "name": "GAVEL Game Generation and Evaluation Framework",
     "paper_id": "db35bb43daad7d7f85dfbbe0f9cc7b77b6e57272",
     "url": "https://github.com/gdrtodd/gavel",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "System implementation requiring code execution, outside HELM scope. Generates board game rules in Ludii Game Description Language (L-GDL), a domain-specific language. Evaluation requires executing games in Ludii engine with gameplay simulation (UCT/Upper Confidence Trees, MCTS agents). Fitness metrics: Balance, Decisiveness, Completion, Agency, Coverage through actual gameplay. Uses MAP-Elites evolutionary algorithm + fine-tuned Code Llama 13B. Not a standardized benchmark for text generation. NeurIPS 2024. Dataset on HuggingFace. arXiv:2407.09388."
   },
   {
     "name": "Creative Story Plan Generation Evaluation",
@@ -1552,7 +1562,9 @@
     "name": "CLEF JOKER 2025 Task 2: Wordplay Translation",
     "paper_id": "e1612a809298c9cc9a70c3a17b1ddb7b5df9507e",
     "url": "https://github.com/dsgt-arc/joker-2025",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Cross-lingual translation task, outside HELM scope. English→French pun translation preserving humor and wordplay. 1,405 English puns, 5,838 French translations (training); 376 puns, 832 translations (test). Evaluates preservation of homographic/homophonic wordplay across languages. Metrics: BLEU, BERTScore, human evaluation (equivalence, authenticity, emotional resonance). Requires bilingual capabilities. HELM focuses on English-language text generation/understanding, not translation. CLEF 2025, Codabench platform. 9 teams, 52 runs. Valid creativity benchmark but different task category. arXiv:2507.06506."
   },
   {
     "name": "P4I (PoemForImage) Dataset",
@@ -1603,7 +1615,9 @@
     "name": "Codeforces",
     "paper_id": "ddcfc7b0fafbe8b47699f12c59772ccff11a4d32",
     "url": "https://github.com/aidanmclaughlin/AidanBench",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Multi-turn iterative generation benchmark, outside HELM scope. AidanBench measures creativity through successive response generation. Models generate multiple answers to same open-ended question until failure (coherence <15/100 or novelty <0.15). Score = count of valid responses. Uses LLM-as-judge (o1-mini) for coherence, embedding similarity for novelty. Requires state tracking across responses. Questions: 'Explain Japan's Lost Decades', 'Use a brick and blanket', design problems. HELM has single-turn architecture. NeurIPS 2024 Workshop. Note: GitHub focuses on creative questions, not Codeforces competitive programming."
   },
   {
     "name": "Standard Science Analogies (STD)",
@@ -1627,7 +1641,9 @@
     "name": "FIGR-8-SVG",
     "paper_id": "e7d8075e2c2b20faaeef7c8408abd9bddef80d18",
     "url": "https://github.com/kingnobro/IconShop",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Vector graphics generation benchmark, outside HELM scope. Text-to-SVG icon synthesis (IconShop, Siggraph Asia 2023). 1.5M monochromatic vector icons across 17,375 classes (pictograms, ideograms, emoticons). Input: text keywords/descriptions. Output: SVG vector graphics (geometric paths, commands). Evaluates semantic alignment, novelty, diversity, structural integrity. For visual autoregressive models (IconShop vs VectorFusion, SVGDreamer, Chat2SVG), not text-based LLMs. Requires image generation evaluation framework. arXiv:2304.14400."
   },
   {
     "name": "TRIG-Bench",
@@ -1651,7 +1667,9 @@
     "name": "ArtInsight Artwork Description Evaluation",
     "paper_id": "f1845b7e6255270b5b1505fffb85b3d004409cde",
     "url": "https://github.com/makeabilitylab/ArtInsight",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "System implementation with user study, not reusable benchmark. iOS app for generating descriptions of children's artwork for blind/low-vision (BLV) families. Evaluation rubric (0-4 scale) for interpretive depth, completeness, vividness exists. User study with 5 BLV family groups + 1 therapist. Limited example artwork in repo, no formal benchmark dataset. Focus is system validation (ArtInsight app effectiveness), not model benchmarking. No standardized test set for evaluating new models. Vision-language task (image→text) but designed for specific use case. UW Makeability Lab, ACM IUI 2025. arXiv:2502.19263."
   },
   {
     "name": "Text-guided Clothing Generation on VITON-HD",
@@ -1675,7 +1693,9 @@
     "name": "JAME",
     "paper_id": "f0378278a29a692c00e0db9674088825c5a36ef2",
     "url": "https://github.com/declare-lab/jamify",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Audio generation benchmark, outside HELM scope. Lyrics-to-song synthesis generating full-length audio songs with synthesized vocals and instrumental accompaniment. 250 tracks (50 per genre: Hip-Hop, Rock, Electronic, R&B, Country) for evaluating JAM (530M) vs DiffRhythm (1.1B) music generation models. Metrics: WER, PER, musicality, vocal naturalness, song structure clarity, rhythmic alignment. Input: text lyrics + style prompts. Output: audio songs. For audio generation models, not text-based LLMs. Requires audio generation evaluation framework. DeCLaRe Lab, 2025. arXiv:2507.20880. HuggingFace: declare-lab/JAME."
   },
   {
     "name": "Creativity-Oriented Generation Suite (CoGS)",
@@ -1699,7 +1719,9 @@
     "name": "Chinese Comical Crosstalk (C3) Generation Benchmark",
     "paper_id": "f7c49c6c322036e569816ea66585bf9d6ebdb07e",
     "url": "https://github.com/FreedomIntelligence/crosstalk-generation",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Non-English (Chinese). Traditional Chinese comedy dialogue generation (Xiangsheng/相声). 9,331 scripts, 16.48M words, 663K utterances. Task: generate 10 utterances given 10-utterance context. Metrics: BLEU, ROUGE, distinct-1/2, human ratings (quality, humor, coherence). Entire dataset in Chinese with cultural wordplay and comedic timing specific to Chinese crosstalk tradition. Valid creativity benchmark but outside scope of English-language evaluation. ACL 2023. arXiv:2207.00735."
   },
   {
     "name": "Story Ending Ranking Evaluation",
@@ -1722,8 +1744,10 @@
   {
     "name": "CSD-100",
     "paper_id": "fa9cc2ec4eba32b3f4ad89863fb894fed1775530",
-    "url": "",
-    "assigned_to": "SA"
+    "url": "https://huggingface.co/datasets/qualcomm/csd100",
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Image generation benchmark, outside HELM scope. Evaluates content-style decomposition in visual autoregressive models. 100 images (1024x1024 JPG) with 63 objects and 53 artistic styles. Task: decompose image into content+style, generate new styled images. For image generation models, not language models. Evaluation is qualitative (visual quality, content fidelity, style consistency), not text-based metrics. Requires HEIM or image generation evaluation framework. Qualcomm AI Research, July 2025. arXiv:2507.13984."
   },
   {
     "name": "LCC Metaphor Datasets",
@@ -1747,7 +1771,9 @@
     "name": "ConvBench",
     "paper_id": "fef461207f173c03231aa9a8ddf30c01bf4caca0",
     "url": "https://github.com/shirlyliu64/ConvBench",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Multi-turn vision-language conversation benchmark, outside HELM scope. Designed for Large Vision-Language Models (LVLMs), not text-only LLMs. 577 conversations with 3-turn hierarchy: Perception (71 tasks) → Reasoning (65 tasks) → Creation (79 tasks). Final turn generates creative content (stories, poems) from images. Requires multi-turn conversation support with context maintenance across turns. HELM is single-turn architecture. Would require VHELM or specialized multi-turn LVLM evaluation framework. NeurIPS 2024. Valid creativity benchmark but incompatible with HELM's architecture."
   },
   {
     "name": "Curated Sentence Analogy Datasets",
@@ -1771,7 +1797,9 @@
     "name": "Slang Generation Evaluative Framework",
     "paper_id": "f75eed717c978f385dd0e5fd6d58294f4e1bbc21",
     "url": "https://github.com/siyangwu1/LLM-Slang-Dictionary",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_suitable",
+    "notes": "Research study with pre-computed outputs, not reusable benchmark. Repository contains 58,197 slang entries generated by GPT-4o (30,050) and LLaMA-8B (19,032) across 6 conditions (Controlled/Uncontrolled × Freeform/Coinage/Reuse). Comparative study analyzing human vs machine slang generation. Human reference (9,115 OSD entries) mentioned but not included in repo. No standardized test set for evaluating new models. Format: CSV with word, definition, usage_context. Metrics: Semantic Novelty, Morphological Coherence. Similar to TheNextChapter - model outputs for analysis, not benchmark."
   },
   {
     "name": "ANALOGICAL",
@@ -1822,6 +1850,8 @@
     "name": "AAAR-1.0",
     "paper_id": "fc7e58340e84edf85023cac2894c51921ca8c501",
     "url": "https://github.com/RenzeLou/AAAR-1.0",
-    "assigned_to": "SA"
+    "assigned_to": "SA",
+    "status": "not_creativity",
+    "notes": "Research assistance benchmark, not creativity. Four tasks: EquationInference (MC correctness), ExperimentDesign (information extraction from papers, not novel generation), PaperWeakness (critical analysis), ReviewCritique (binary classification). Evaluates technical correctness and domain expertise, not creative generation. Dataset on HuggingFace (Reza8848/AAAR-1.0) with 1,049+100+993+11,376 instances. Metrics: S-F1, S-Match, En-F1, ITF-IDF."
   }
 ]
