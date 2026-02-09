@@ -1231,7 +1231,9 @@
     "name": "STORIUM Dataset",
     "paper_id": "a0035379f93e0e95bdadd77a1d8eb27ba89dcf60",
     "url": "https://huggingface.co/datasets/NewEden/Storium-5K",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "Training data only; evaluation requires human-in-the-loop interaction. Original paper (EMNLP 2020) uses machine-in-the-loop platform where authors edit AI continuations. HuggingFace dataset has only train split (5,743 examples), no test set. Incompatible with automated evaluation."
   },
   {
     "name": "IDRBench",
