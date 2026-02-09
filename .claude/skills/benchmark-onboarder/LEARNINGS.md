@@ -35,6 +35,17 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | LCC Metaphor | Span indices are word-level | Use `text.split()[span[0]:span[1]]` to extract target word. Labels: "Metaphor"/"Non-metaphor". |
 | LCC Metaphor | No paper-specified prompt | Original is probing study (ACL 2022), not LLM prompting. Using standard binary classification format. |
 | AnaloBench | Prompt in code/t1.py | S1 uses 'Sentence' field, S10/S30 use 'Story' field. Dataset on HuggingFace: jhu-clsp/AnaloBench. |
+| LiveIdeaBench | HuggingFace dataset (6cf/liveideabench-v2) is broken (parsing errors) and contains model outputs not test instances | Use keywords xlsx from GitHub repo directly; keywords in column B starting row 3; 1,180 keywords across 22 domains |
+| LiveIdeaBench | Prompt template not in config.py | Exact prompts in utils/prompts.json; idea_prompt.description has the generation prompt with {{keywords}} placeholder |
+| AssoCiAm | HuggingFace dataset (chandl2/AssoCiAm) has images only, no questions/labels | Download benchmark.zip from Google Drive (file ID: 1t30OAoYvz3rubPbLw18SCRpY0f19C9M0); contains question.json, gt.json, and images per subtask |
+| AssoCiAm | 225 unique images reused across 2,025 total entries | 225 images x 3 questions x 3 subtasks (4T1/7T1/10T1); each subtask has its own pic/ folder with 675 images |
+| AssoCiAm | Two-shot prompt template in Google Drive prompt_template.zip | Templates in question_4.txt, question_7.txt, question_10.txt; differ only in option count (A-D, A-G, A-J) |
+| YESBUT V2 | V2 dataset on different HF repo than V1 | V1: bansalaman18/yesbut (1,084 imgs). V2: zhehuderek/YESBUT_Benchmark_V2 (1,262 imgs). Different papers, different tasks. |
+| YESBUT V2 | HF dataset has no inline images, only Google Drive URLs | Images at `url` field (Drive view URLs); convert to direct download: `/d/{FILE_ID}/` → `uc?export=download&id={FILE_ID}` |
+| YESBUT V2 | Three prompt sets in Prompts.sh | Set 1 is paper's primary; Set 2/3 are alternatives. Each task has w_caption and wo_caption variants. |
+| VGSG | Test split has no ground truth (story=None) | Use val split (849 examples with stories). Same pattern as RiddleSense. |
+| VGSG | Multi-image instances (5-10 scene + character portraits) | Each instance has ~8 images on average. Total ~7K images from MPI-INF servers. Images accessible at datasets.d2.mpi-inf.mpg.de |
+| VGSG | No explicit prompt in paper | VGSG shared task used VWP dataset; stories were crowdsourced with image sequences + character names as input. Standard instruction used. |
 
 ## Common Patterns
 
@@ -183,6 +194,13 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | LCC Metaphor | exact_match | `get_exact_match_metric_specs()` | Binary (Yes/No). Multilingual subsets: en (8,028), es, ru, fa |
 | AnaloBench | exact_match | `get_exact_match_metric_specs()` | 4-way MC (A/B/C/D). Subsets by length: s1/s10/s30, subset (340) or full (24.4k) |
 | NYT Connections | exact_match | `get_exact_match_metric_specs()` | Word grouping (4 groups of 4 words). 652 puzzles. COLING 2025 Best Dataset Paper. |
+| LiveIdeaBench | llm_judge | Custom Annotator needed | Open-ended scientific idea generation. 1,180 keywords. Critic rates originality/feasibility/clarity (1-10). Fluency via pairwise A-D comparison. |
+| AssoCiAm | exact_match | `get_exact_match_metric_specs()` | Multimodal MC visual association. 3 subtasks: 4T1 (4 options), 7T1 (7), 10T1 (10). 675 questions each. Paper also uses weighted avg: (4*4T1 + 7*7T1 + 10*10T1)/21 |
+| YESBUT V2 (description) | open_ended | `get_open_ended_generation_metric_specs()` | Generate literal comic description. 1,262 examples. BERTScore, ROUGE-2. |
+| YESBUT V2 (contradiction) | open_ended | `get_open_ended_generation_metric_specs()` | Explain comic contradiction. 1,262 examples. BERTScore, ROUGE-2. |
+| YESBUT V2 (moral_mcq) | exact_match | `get_exact_match_metric_specs()` | 4-way MC: underlying philosophy. 1,262 examples. |
+| YESBUT V2 (title_mcq) | exact_match | `get_exact_match_metric_specs()` | 4-way MC: select best title. 1,262 examples. |
+| VGSG | open_ended | `get_open_ended_generation_metric_specs()` | Multimodal multi-image story generation. 849 val examples. BLEU, METEOR, ROUGE-L, CIDEr. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -197,6 +215,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 |-----------|-------------|-----------------|------------|-----------------|
 | Pun2Pun | GPT-4 or similar | eval/aacc_pun.py | Hit (binary: pun preserved?), Overlap (cosine similarity) | scenarios/pun2pun/annotator_notes.md |
 | MACGYVER | GPT-4 (paper) | Paper Section 4.2, benchmark_results.json | correctness, feasibility, efficiency | `scenarios/macgyver/annotator_notes.md` |
+| LiveIdeaBench | Dynamic panel (top-10 LiveBench models) | utils/prompts.json (critic_prompt) | originality, feasibility, clarity (1-10); fluency (A-D pairwise) | `scenarios/liveideabench/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
@@ -210,6 +229,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 |-----------|--------|-------|
 | Open-ended Data-Driven Discovery (DiscoveryBench) | Scientific reasoning, not creativity | Task is discovering patterns in tabular data; evaluation is hypothesis correctness, not creative merit |
 | Collaborative Neural Painting (CNP) | Purely visual | No text component |
+| Connections Puzzle Generation | Human-only evaluation | AIIDE 2024; ~20 puzzles evaluated via human preference (creativity/difficulty/enjoyment); no automatic quality metrics; methodology paper not reusable benchmark |
 | Humor Transfer Learning | No dataset | "Code will be uploaded soon" |
 | GuessBench | Multimodal | Minecraft images + text |
 | LitBench | Data access issues | Test set only has IDs, requires joining with Reddit data |

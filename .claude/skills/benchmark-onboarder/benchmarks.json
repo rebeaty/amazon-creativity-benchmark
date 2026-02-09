@@ -186,10 +186,35 @@
     "reason": "Research study dataset, not benchmark; contains fixed outputs from specific models (GPT-4, Claude) and human author with expert assessments; no test set for evaluating new models"
   },
   {
-    "name": "",
+    "name": "YESBUT V2",
     "paper_id": "144a5c14db46e76b7b762d64fe53cf5dfd95ffe4",
-    "url": "",
-    "assigned_to": "CL"
+    "url": "https://github.com/Tuo-Liang/YESBUT",
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/yesbut_v2/scenario.py",
+    "eval_type": "mixed",
+    "subsets": {
+      "description": {
+        "instances": 1262,
+        "eval_type": "open_ended",
+        "description": "Generate literal description of comic narrative"
+      },
+      "contradiction": {
+        "instances": 1262,
+        "eval_type": "open_ended",
+        "description": "Explain the contradiction between panels"
+      },
+      "moral_mcq": {
+        "instances": 1262,
+        "eval_type": "exact_match",
+        "description": "4-way MC: select underlying philosophy"
+      },
+      "title_mcq": {
+        "instances": 1262,
+        "eval_type": "exact_match",
+        "description": "4-way MC: select best title for comic"
+      }
+    }
   },
   {
     "name": "T2ICLP",
@@ -695,7 +720,9 @@
     "name": "Social Perception Sub-Challenge (MuSe-Perception)",
     "paper_id": "54f57b46db8caa48fcd8519b3bf081c4e4c0c2d6",
     "url": "https://www.muse-challenge.org/",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Audio/video social perception; not a creativity benchmark"
   },
   {
     "name": "Metaphor Generation from Literal Sentences",
@@ -720,8 +747,28 @@
   {
     "name": "AssoCiAm",
     "paper_id": "5642a971326526427844939355e9b0e6309ea748",
-    "url": "",
-    "assigned_to": "CL"
+    "url": "https://github.com/lyf15/AssoCiAm",
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/assocam/scenario.py",
+    "eval_type": "exact_match",
+    "subsets": {
+      "4T1": {
+        "instances": 675,
+        "eval_type": "exact_match",
+        "description": "4-option MC visual association (225 images x 3 questions)"
+      },
+      "7T1": {
+        "instances": 675,
+        "eval_type": "exact_match",
+        "description": "7-option MC visual association (225 images x 3 questions)"
+      },
+      "10T1": {
+        "instances": 675,
+        "eval_type": "exact_match",
+        "description": "10-option MC visual association (225 images x 3 questions)"
+      }
+    }
   },
   {
     "name": "Meme Humor Dataset (Ours)",
@@ -775,7 +822,9 @@
     "name": "GODBench",
     "paper_id": "611fcb2c87b53a0e4973e8c94bbda61f92018a9a",
     "url": "https://github.com/stan-lei/GODBench-ACL2025",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (video-based); dataset not released"
   },
   {
     "name": "Measuring LLM Novelty as the Frontier of Original and High-Quality Output",
@@ -857,7 +906,9 @@
     "name": "Creative Writing Tasks",
     "paper_id": "6c6cb32f026fccc11c98c36913651b992d477a56",
     "url": "https://github.com/AntoineBellemare/DAT_GPT",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Custom metrics required (GLoVe-based DAT scoring, compression-based DSI metrics)"
   },
   {
     "name": "Open-domain Dialogue Generation for Diversity",
@@ -1047,10 +1098,20 @@
     "reason": "Evaluation platform/leaderboard, not benchmark dataset; Springboards Creativity Benchmark with crowd voting on AI outputs; 678 ad professionals judged 16 AI systems via A/B comparisons; proprietary marketing challenges; no public test set or evaluation framework for new models"
   },
   {
-    "name": "",
+    "name": "LiveIdeaBench",
     "paper_id": "7fd30cd5552ae6e783d48e3cbeae6a63147b8a5f",
-    "url": "",
-    "assigned_to": "CL"
+    "url": "https://github.com/x66ccff/liveideabench",
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/liveideabench/scenario.py",
+    "eval_type": "llm_judge",
+    "subsets": {
+      "default": {
+        "instances": 1180,
+        "eval_type": "llm_judge",
+        "description": "Open-ended scientific idea generation from single-keyword prompts across 22 scientific domains"
+      }
+    }
   },
   {
     "name": "Alternative Uses Test (AUT)",
@@ -1129,10 +1190,21 @@
     "reason": "Method paper, not benchmark; LAG framework evaluated on existing datasets; MOH-X (647 sentences) is existing metaphor detection dataset from prior work; metaphor detection is linguistic analysis (binary classification), not creative generation; repository contains framework code"
   },
   {
-    "name": "",
+    "name": "VGSG (Visually Grounded Story Generation)",
     "paper_id": "9ab0e3fcf4ac34fbaf5e1d8c868c661da658305a",
-    "url": "",
-    "assigned_to": "CL"
+    "url": "https://huggingface.co/datasets/tonyhong/vwp",
+    "assigned_to": "CL",
+    "status": "completed",
+    "scenario_file": "scenarios/vgsg/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Uses VWP val split (849 examples, test has no labels). Multi-image: 5-10 scene images + character portraits per instance. ~7K images total.",
+    "subsets": {
+      "default": {
+        "instances": 849,
+        "eval_type": "open_ended",
+        "description": "Generate story from sequential movie images + character info"
+      }
+    }
   },
   {
     "name": "EmoArt",
@@ -1272,7 +1344,9 @@
     "name": "Minecraft Building Creation",
     "paper_id": "a8d81d868f408615255a253e8566ba05b9bc2ea6",
     "url": "https://doi.org/10.5281/zenodo.10275049",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (Minecraft images); visual domain"
   },
   {
     "name": "ModelingBench",
@@ -1495,7 +1569,9 @@
     "name": "Connections Puzzle Generation & Human Preference Study",
     "paper_id": "c59d685a21f5b8f4750a28a5733a80fbaa0f410b",
     "url": "https://anonymous.4open.science/r/making-new-connections-78D1",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Human-only scoring (creativity/difficulty/enjoyment preference study); no automatic metrics; only ~20 generated puzzles evaluated; methodology paper, not reusable benchmark"
   },
   {
     "name": "Relational Structure Identification (RSI) Test",
@@ -1631,7 +1707,9 @@
     "name": "",
     "paper_id": "d0e0942d5f2074227060c2dfdd6bdadb6b9f8ab8",
     "url": "",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Duplicate; MemeCap already onboarded (paper_id b82c1b0512d25307e3c81bb8d9df1607267a7a52)"
   },
   {
     "name": "HAIVMet (Human-AI Visual Metaphor)",
@@ -1800,7 +1878,9 @@
     "name": "Standard Science Analogies (STD)",
     "paper_id": "e8795958aad9c8514d5d7d28b022d42ca4a3a243",
     "url": "https://github.com/Bhaavya/InstructGPT-Analogies",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Open-ended generation with human-only scoring; no automatic metrics"
   },
   {
     "name": "Human Evaluation of Suspenseful Story Generation",
@@ -1850,7 +1930,9 @@
     "name": "Text-guided Clothing Generation on VITON-HD",
     "paper_id": "f1104653cea1d99cfdd6d9bf0f6105f2391af88f",
     "url": "https://github.com/ajdal/DiCTI",
-    "assigned_to": "CL"
+    "assigned_to": "CL",
+    "status": "rejected",
+    "rejection_reason": "Diffusion model benchmark; not applicable to LLM/VLM evaluation"
   },
   {
     "name": "GenEval",
