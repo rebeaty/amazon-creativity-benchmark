@@ -1064,10 +1064,14 @@
     "assigned_to": "CL"
   },
   {
-    "name": "Alternative Uses Test (AUT)",
+    "name": "LLM Discussion (AUT, Similarities, Instances, Scientific)",
     "paper_id": "83d721abd07298ef0f5d05575410ae386b77bb4a",
     "url": "https://github.com/lawraa/LLM-Discussion",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/llm_discussion_scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "4 classic divergent thinking creativity tests (120 total items). (1) AUT: 30 objects, creative uses. (2) Similarities: 30 pairs, ways two things are alike. (3) Instances: 30 categories, name things in category. (4) Scientific: 30 scientific creativity questions across 5 types. All use LLM-as-judge on 4 dimensions: Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). Judge: GPT-4 or GPT-3.5. Subsets: aut, similarities, instances, scientific, all. Paper: COLM 2024 (arXiv:2405.06373)."
   },
   {
     "name": "PoetMT",

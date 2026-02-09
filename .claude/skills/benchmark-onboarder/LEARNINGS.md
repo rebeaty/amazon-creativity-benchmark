@@ -191,6 +191,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | NYT Connections | exact_match | `get_exact_match_metric_specs()` | Word grouping (4 groups of 4 words). 652 puzzles. COLING 2025 Best Dataset Paper. |
 | TinyStories | llm_judge | Custom Annotator needed | Story completion task (44 test prompts). GPT-4 judges on Grammar, Creativity, Consistency (1-10 scale each). |
 | Puntuguese | exact_match | `get_exact_match_metric_specs()` | Binary humor recognition (Yes/No). Portuguese puns with micro-edited non-funny versions. 1,140 test examples. Paper reports 68.9% F1. |
+| LLM Discussion | llm_judge | Custom Annotator needed | 4 divergent thinking tests (120 items): AUT (30 objects), Similarities (30 pairs), Instances (30 categories), Scientific (30 questions). GPT-4 judges on Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -206,6 +207,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | Pun2Pun | GPT-4 or similar | eval/aacc_pun.py | Hit (binary: pun preserved?), Overlap (cosine similarity) | scenarios/pun2pun/annotator_notes.md |
 | MACGYVER | GPT-4 (paper) | Paper Section 4.2, benchmark_results.json | correctness, feasibility, efficiency | `scenarios/macgyver/annotator_notes.md` |
 | TinyStories | GPT-4 | Paper Section 3 | Grammar (1-10), Creativity (1-10), Consistency (1-10), Age group | `scenarios/tinystories/annotator_notes.md` |
+| LLM Discussion | GPT-4 or GPT-3.5 | Evaluation/eval_functions/eval_prompts.py | Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5) | `scenarios/llm_discussion/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
