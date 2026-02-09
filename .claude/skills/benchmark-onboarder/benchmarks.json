@@ -255,7 +255,9 @@
     "name": "CFunSet",
     "paper_id": "1acc80d5fd0ffd63a04951becda58b4626802e1d",
     "url": "https://huggingface.co/datasets/ZhenghanYU/CFunSet",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "Non-English (Chinese); training data only, no test set. 164,200 Chinese humor examples in instruction-tuning format. Only train split. Designed for fine-tuning CFunModel, not for evaluation."
   },
   {
     "name": "FutureGen",
