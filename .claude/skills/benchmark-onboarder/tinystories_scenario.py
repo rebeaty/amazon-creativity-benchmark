@@ -33,7 +33,7 @@ import os
 import yaml
 from urllib.request import urlretrieve
 from helm.benchmark.scenarios.scenario import (
-    Scenario, Instance, Input, Reference,
+    Scenario, Instance, Input,
     TEST_SPLIT
 )
 
@@ -64,7 +64,7 @@ class TinyStoriesScenario(Scenario):
             story_prompts = yaml.safe_load(f)
 
         instances = []
-        for idx, story_beginning in enumerate(story_prompts):
+        for story_beginning in story_prompts:
             # Each prompt is a story beginning that needs completion
             prompt = f"""Complete the following story. Continue from where it ends and provide a creative, coherent ending that makes sense with the beginning.
 

@@ -367,7 +367,12 @@
     "name": "TinyStories",
     "paper_id": "28085f480ce456a376ebace9b899e3bc93dbc048",
     "url": "https://huggingface.co/datasets/roneneldan/TinyStories",
-    "assigned_to": "SM"
+    "status": "completed",
+    "scenario_file": "tinystories_scenario.py",
+    "assigned_to": "SM",
+    "eval_type": "llm_judge",
+    "instances": 44,
+    "notes": "Story completion task with child-friendly language. GPT-4 judges on Grammar, Creativity, Consistency (1-10 each). Evaluation prompts in separate YAML file. See scenarios/tinystories/annotator_notes.md"
   },
   {
     "name": "CPers (Creativity in Persian)",
