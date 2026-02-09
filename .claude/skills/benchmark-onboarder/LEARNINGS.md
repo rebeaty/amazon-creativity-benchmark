@@ -187,6 +187,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | AnaloBench | exact_match | `get_exact_match_metric_specs()` | 4-way MC (A/B/C/D). Subsets by length: s1/s10/s30, subset (340) or full (24.4k) |
 | NYT Connections | exact_match | `get_exact_match_metric_specs()` | Word grouping (4 groups of 4 words). 652 puzzles. COLING 2025 Best Dataset Paper. |
 | TinyStories | llm_judge | Custom Annotator needed | Story completion task (44 test prompts). GPT-4 judges on Grammar, Creativity, Consistency (1-10 scale each). |
+| Puntuguese | exact_match | `get_exact_match_metric_specs()` | Binary humor recognition (Yes/No). Portuguese puns with micro-edited non-funny versions. 1,140 test examples. Paper reports 68.9% F1. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`

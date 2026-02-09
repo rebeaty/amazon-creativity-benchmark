@@ -1261,7 +1261,12 @@
     "name": "Puntuguese",
     "paper_id": "a85b39c1cb0ac7baad733aa6aab2c281a52485bf",
     "url": "https://huggingface.co/datasets/Superar/Puntuguese",
-    "assigned_to": "SM"
+    "status": "completed",
+    "scenario_file": "puntuguese_scenario.py",
+    "assigned_to": "SM",
+    "eval_type": "exact_match",
+    "instances": 1140,
+    "notes": "Binary humor recognition for Portuguese puns. Balanced dataset (50% humorous, 50% micro-edited non-humorous). LREC-COLING 2024. Paper baseline: 68.9% F1. Also includes token-level pun location annotations (auxiliary task)."
   },
   {
     "name": "CROWDCOUNTER",
