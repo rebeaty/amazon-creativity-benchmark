@@ -1953,7 +1953,9 @@
     "name": "YinYangAlign",
     "paper_id": "f88ab3ef0e3ef4dad581cf5f6dc04c0afcc116b6",
     "url": "https://huggingface.co/datasets/factsoverhallucinations/yinyang-dataset",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "notes": "Text-to-image (T2I) alignment benchmark; multimodal (requires image decoding); preference dataset format (chosen/rejected images); no evaluation task for text-only LLMs; only 205 training examples, no test split; designed for image generation alignment, not text creativity"
   },
   {
     "name": "MOF Crystal Structure Generation",
