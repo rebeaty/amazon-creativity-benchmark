@@ -1497,7 +1497,11 @@
     "name": "SchNovel",
     "paper_id": "c476c92f86c590ada95421cf597910259927771b",
     "url": "https://github.com/ethannlin/SchNovel",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/schnovel_scenario.py",
+    "eval_type": "exact_match",
+    "notes": "Scholarly novelty assessment. 15,000 paper pairs across 6 fields (CS, Math, Physics, QBio, QFin, Stat) from arXiv. Binary classification task: choose which of two papers is more novel. Paper1 (more recent) assumed more novel. Publication dates span 2-10 years apart. Inputs: title + abstract for each paper. Subsets: cs, math, physics, qbio, qfin, stat, all. Paper: AISD@ACL 2025 (arXiv:2409.16605)."
   },
   {
     "name": "AlpacaEval Creative Writing",

@@ -193,6 +193,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | TinyStories | llm_judge | Custom Annotator needed | Story completion task (44 test prompts). GPT-4 judges on Grammar, Creativity, Consistency (1-10 scale each). |
 | Puntuguese | exact_match | `get_exact_match_metric_specs()` | Binary humor recognition (Yes/No). Portuguese puns with micro-edited non-funny versions. 1,140 test examples. Paper reports 68.9% F1. |
 | LLM Discussion | llm_judge | Custom Annotator needed | 4 divergent thinking tests (120 items): AUT (30 objects), Similarities (30 pairs), Instances (30 categories), Scientific (30 questions). GPT-4 judges on Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). |
+| SchNovel | exact_match | `get_exact_match_metric_specs()` | Scholarly novelty assessment. Binary choice (1 or 2). 15,000 paper pairs across 6 fields (CS, Math, Physics, QBio, QFin, Stat). Choose more novel paper. Paper1 (more recent) assumed more novel. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
