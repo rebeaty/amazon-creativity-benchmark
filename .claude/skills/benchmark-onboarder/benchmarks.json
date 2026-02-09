@@ -1639,7 +1639,11 @@
     "name": "TwistList",
     "paper_id": "d3a95b0727ef67ef9264cd20da10a545977ace51",
     "url": "https://github.com/tangg555/TwistList",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/twistlist_scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Tongue twister generation from keywords. 2,125 human-authored examples: train (1,912), val (106), test (107). Open-ended generation task (RAKE keywords → tongue twister). Input: key words/phrases (e.g., 'scottish clan'). Output: phonetically challenging tongue twisters. Eval: BLEU, ROUGE, BERTScore. Paper also uses phonology metrics: PO (Phoneme Overlap), iPED/oPED (Phonemic Edit Distance). Dataset: Dropbox download + extract. Two versions: tt-data (keywords only), tt-prompt-data (with prompt prefix). Paper: ACL 2023 (arXiv:2306.03457)."
   },
   {
     "name": "Technical Evaluation of Chord Progression Generation",

@@ -36,6 +36,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | LCC Metaphor | No paper-specified prompt | Original is probing study (ACL 2022), not LLM prompting. Using standard binary classification format. |
 | AnaloBench | Prompt in code/t1.py | S1 uses 'Sentence' field, S10/S30 use 'Story' field. Dataset on HuggingFace: jhu-clsp/AnaloBench. |
 | TinyStories | Evaluation prompts in separate YAML file, not in main dataset | Download `Evaluation prompts.yaml` from HuggingFace dataset repo (44 story beginnings); main dataset (2.1M train, 22K validation) is for training only; LLM-as-judge evaluation with GPT-4 |
+| TwistList | Requires Dropbox download + extraction; two data versions available | Dataset hosted on Dropbox (not HuggingFace/GitHub directly); download datasets.zip, extract to get tt-data (keywords only) or tt-prompt-data (with prompt prefix); format: source.txt (RAKE keywords), target.txt (tongue twisters); train/val/test splits in separate .txt files; 2,125 human-authored examples total |
 
 ## Common Patterns
 
@@ -194,6 +195,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | Puntuguese | exact_match | `get_exact_match_metric_specs()` | Binary humor recognition (Yes/No). Portuguese puns with micro-edited non-funny versions. 1,140 test examples. Paper reports 68.9% F1. |
 | LLM Discussion | llm_judge | Custom Annotator needed | 4 divergent thinking tests (120 items): AUT (30 objects), Similarities (30 pairs), Instances (30 categories), Scientific (30 questions). GPT-4 judges on Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). |
 | SchNovel | exact_match | `get_exact_match_metric_specs()` | Scholarly novelty assessment. Binary choice (1 or 2). 15,000 paper pairs across 6 fields (CS, Math, Physics, QBio, QFin, Stat). Choose more novel paper. Paper1 (more recent) assumed more novel. |
+| TwistList | open_ended | `get_open_ended_generation_metric_specs()` | Tongue twister generation from keywords. 2,125 examples (train: 1,912, val: 106, test: 107). Input: RAKE-extracted keywords. Output: phonetically challenging tongue twisters. BLEU, ROUGE, BERTScore. Paper uses phonology metrics: PO, iPED/oPED. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
