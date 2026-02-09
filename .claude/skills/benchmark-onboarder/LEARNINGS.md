@@ -35,6 +35,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | LCC Metaphor | Span indices are word-level | Use `text.split()[span[0]:span[1]]` to extract target word. Labels: "Metaphor"/"Non-metaphor". |
 | LCC Metaphor | No paper-specified prompt | Original is probing study (ACL 2022), not LLM prompting. Using standard binary classification format. |
 | AnaloBench | Prompt in code/t1.py | S1 uses 'Sentence' field, S10/S30 use 'Story' field. Dataset on HuggingFace: jhu-clsp/AnaloBench. |
+| TinyStories | Evaluation prompts in separate YAML file, not in main dataset | Download `Evaluation prompts.yaml` from HuggingFace dataset repo (44 story beginnings); main dataset (2.1M train, 22K validation) is for training only; LLM-as-judge evaluation with GPT-4 |
 
 ## Common Patterns
 
@@ -184,6 +185,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | LCC Metaphor | exact_match | `get_exact_match_metric_specs()` | Binary (Yes/No). Multilingual subsets: en (8,028), es, ru, fa |
 | AnaloBench | exact_match | `get_exact_match_metric_specs()` | 4-way MC (A/B/C/D). Subsets by length: s1/s10/s30, subset (340) or full (24.4k) |
 | NYT Connections | exact_match | `get_exact_match_metric_specs()` | Word grouping (4 groups of 4 words). 652 puzzles. COLING 2025 Best Dataset Paper. |
+| TinyStories | llm_judge | Custom Annotator needed | Story completion task (44 test prompts). GPT-4 judges on Grammar, Creativity, Consistency (1-10 scale each). |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -198,6 +200,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 |-----------|-------------|-----------------|------------|-----------------|
 | Pun2Pun | GPT-4 or similar | eval/aacc_pun.py | Hit (binary: pun preserved?), Overlap (cosine similarity) | scenarios/pun2pun/annotator_notes.md |
 | MACGYVER | GPT-4 (paper) | Paper Section 4.2, benchmark_results.json | correctness, feasibility, efficiency | `scenarios/macgyver/annotator_notes.md` |
+| TinyStories | GPT-4 | Paper Section 3 | Grammar (1-10), Creativity (1-10), Consistency (1-10), Age group | `scenarios/tinystories/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
