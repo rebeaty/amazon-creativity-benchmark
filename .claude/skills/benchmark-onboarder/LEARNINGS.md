@@ -35,6 +35,17 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | LCC Metaphor | Span indices are word-level | Use `text.split()[span[0]:span[1]]` to extract target word. Labels: "Metaphor"/"Non-metaphor". |
 | LCC Metaphor | No paper-specified prompt | Original is probing study (ACL 2022), not LLM prompting. Using standard binary classification format. |
 | AnaloBench | Prompt in code/t1.py | S1 uses 'Sentence' field, S10/S30 use 'Story' field. Dataset on HuggingFace: jhu-clsp/AnaloBench. |
+| WebNovelBench | HuggingFace dataset has schema errors | Use raw JSON files from GitHub repo; 4 quality-gradient subsets (a/b/c/d); 100 novels × 10 chapters = 1,000 instances per subset |
+| WebNovelBench | Synopses are model-generated | Input synopses extracted by Doubao-pro-32k, not ground truth; no human-written reference continuations provided |
+| WebNovelBench | Chinese language benchmark | All data and evaluation in Chinese; requires Chinese-capable models for generation and DeepSeek-V3 for judging |
+| V-FLUTE | Gated dataset requires authentication | HuggingFace dataset ColumbiaNLP/V-FLUTE requires login; set HF_TOKEN or run `huggingface-cli login` |
+| V-FLUTE | 21 paraphrased instruction variants | Paper uses random sampling from 21 prompt templates (seed=42) to prevent instruction-specific overfitting |
+| V-FLUTE | Specific output format required | Expects "[explanation]\nLABEL: [entailment or contradiction]" format; label extraction has fallback patterns |
+| II-Bench | Test split has hidden answers | Test set (1,399 questions) answers marked with "?" for EvalAI leaderboard; use dev split (35 questions) for evaluation |
+| II-Bench | 6-option multiple choice | Each question has 6 options (A-F), unlike typical 4-option MC; answer field contains letter (A-F), correct_option contains full text |
+| StoryER | Dataset on Google Drive, not HuggingFace | Manual download required from Google Drive links; mixed format (pickle for ranking, JSON for rating/reasoning) |
+| StoryER | Meta-evaluation benchmark | Primarily evaluates existing stories (ranking/rating quality) rather than generating creative content; Task 3 (reasoning/comment generation) is the only generative component |
+| StoryER | Three distinct tasks with different formats | Task 1: binary preference (ranking pairs), Task 2: aspect ratings (0-1 scale), Task 3: comment generation (open-ended text) |
 
 ## Common Patterns
 
@@ -183,6 +194,10 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | LCC Metaphor | exact_match | `get_exact_match_metric_specs()` | Binary (Yes/No). Multilingual subsets: en (8,028), es, ru, fa |
 | AnaloBench | exact_match | `get_exact_match_metric_specs()` | 4-way MC (A/B/C/D). Subsets by length: s1/s10/s30, subset (340) or full (24.4k) |
 | NYT Connections | exact_match | `get_exact_match_metric_specs()` | Word grouping (4 groups of 4 words). 652 puzzles. COLING 2025 Best Dataset Paper. |
+| WebNovelBench | llm_judge | Custom Annotator with PCA aggregation | Chinese long-form narrative; 8 dimensions (1-5 scale); z-score normalization + PCA weights + percentile ranking; 1,000 instances per subset (a/b/c/d) |
+| V-FLUTE | custom | F1@ExplanationScore metric needed | Multimodal visual entailment; binary classification (entailment/contradiction) + explanation; combines BERTScore F1 + BLEURT; F1 at multiple thresholds (0, 50, 53, 60, 70, 80, 90); 6,027 instances (4,578 train, 726 valid, 723 test) |
+| II-Bench | exact_match | `get_exact_match_metric_specs()` | Multimodal image implication; 6-way MC (A-F); 35 dev instances (test answers hidden); domains: Life, Art, Society, Psychology, Environment, Others; paper evaluates with multiple prompt modes (zero-shot, CoT, few-shot, domain/emotion/rhetoric hints) |
+| StoryER | mixed | Task-dependent metrics | Meta-evaluation benchmark with 3 tasks: (1) Ranking - binary preference (exact_match), (2) Rating - aspect scores (correlation coefficients: Spearman, Pearson, Kendall), (3) Reasoning - comment generation (open_ended: BLEU, ROUGE); 100k ranked pairs, 46k ratings/comments; 10 story aspects evaluated |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -197,6 +212,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 |-----------|-------------|-----------------|------------|-----------------|
 | Pun2Pun | GPT-4 or similar | eval/aacc_pun.py | Hit (binary: pun preserved?), Overlap (cosine similarity) | scenarios/pun2pun/annotator_notes.md |
 | MACGYVER | GPT-4 (paper) | Paper Section 4.2, benchmark_results.json | correctness, feasibility, efficiency | `scenarios/macgyver/annotator_notes.md` |
+| WebNovelBench | DeepSeek-V3 | Paper Section 3.2, novel_original_critic.py | 8 narrative dimensions (literary devices, sensory detail, character balance/distinctiveness/consistency, thematic/contextual alignment, scene coherence); PCA-weighted aggregation + percentile ranking | `scenarios/webnovelbench/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
@@ -248,3 +264,6 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | OpenAGI | Agent framework | Task composition framework, not creativity evaluation |
 | Persona Generation Task | Repo 404 | GitHub repository doesn't exist |
 | MuseScorer | Annotation pipeline | AUT scoring pipeline, no public evaluation data |
+| FutureGen | Not a creativity benchmark | Scientific text generation (future work sections); evaluates NLG quality using standard metrics (ROUGE, BLEU, BERTScore) rather than creative capacity; closer to academic writing assistance than creativity evaluation; arXiv:2503.16561; dataset iaadlab/FutureGen has structural issues (inconsistent columns across CSV files) |
+| IdeaBench | Dataset unavailable | KDD 2025 research idea generation benchmark; dataset hosted on anonymous.4open.science (403 Forbidden); 2,374 papers + 29,408 references; evaluation via GPT-4o ranking and Insight Score; no public GitHub/HuggingFace release; requires contacting authors; arXiv:2411.02429 |
+| D-RAP (DRAP) | Dataset unavailable | DeepRapper rap generation dataset (ACL 2021); training dataset not publicly released; only sample data in Microsoft Muzic GitHub repo; no formal evaluation benchmark or test set; evaluation done on 5,000 randomly generated samples; arXiv:2107.01875 |

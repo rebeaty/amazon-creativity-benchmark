@@ -259,7 +259,10 @@
     "name": "FutureGen",
     "paper_id": "1c3a3c217a1deab466bd1db854e33aed3ff8880d",
     "url": "https://huggingface.co/datasets/iaadlab/FutureGen",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "skipped",
+    "skip_reason": "Not a creativity benchmark - focuses on scientific text generation/NLG evaluation with standard metrics (ROUGE, BLEU, BERTScore). Task is academic writing assistance rather than creativity evaluation.",
+    "eval_type": "open_ended"
   },
   {
     "name": "PACE (Parallel Association Chain Evaluation)",
@@ -466,7 +469,7 @@
     "status": "completed",
     "scenario_file": "scenarios/newyorker_caption.py",
     "eval_type": "exact_match",
-    "notes": "New Yorker Caption Contest; multimodal (cartoon→caption selection); 47 test contests; 4-way MC (top-ranked caption + 3 distractors from ranks 10-50); cartoon images stored as bytes in parquet files; NeurIPS 2024"
+    "notes": "New Yorker Caption Contest; multimodal (cartoon\u2192caption selection); 47 test contests; 4-way MC (top-ranked caption + 3 distractors from ranks 10-50); cartoon images stored as bytes in parquet files; NeurIPS 2024"
   },
   {
     "name": "OpenAGI",
@@ -2047,5 +2050,90 @@
       }
     },
     "notes": "COLING 2025 Best Dataset Paper. Tests abstract reasoning and wordplay."
+  },
+  {
+    "name": "WebNovelBench",
+    "paper_id": "2505.14818",
+    "url": "https://github.com/OedonLestrange42/webnovelbench",
+    "status": "completed",
+    "scenario_file": "scenarios/webnovelbench/scenario.py",
+    "subsets": {
+      "subset_a": {
+        "instances": 1000,
+        "eval_type": "llm_judge",
+        "description": "High-quality web novel tier (100 novels \u00d7 10 chapters)"
+      },
+      "subset_b": {
+        "instances": 1000,
+        "eval_type": "llm_judge",
+        "description": "Medium-high quality web novel tier"
+      },
+      "subset_c": {
+        "instances": 1000,
+        "eval_type": "llm_judge",
+        "description": "Medium-low quality web novel tier"
+      },
+      "subset_d": {
+        "instances": 1000,
+        "eval_type": "llm_judge",
+        "description": "Low-quality web novel tier (default)"
+      }
+    },
+    "notes": "Chinese long-form narrative generation. LLM-as-judge with 8 dimensions. HuggingFace dataset has schema errors - requires manual JSON file download from GitHub. See annotator_notes.md for evaluation setup."
+  },
+  {
+    "name": "V-FLUTE",
+    "paper_id": "2405.01474",
+    "url": "https://github.com/asaakyan/V-FLUTE",
+    "status": "completed",
+    "scenario_file": "scenarios/vflute/scenario.py",
+    "subsets": {
+      "all": {
+        "instances": 6027,
+        "eval_type": "custom",
+        "description": "Visual figurative language entailment across 5 phenomena (metaphor, simile, idiom, sarcasm, humor)"
+      }
+    },
+    "notes": "Multimodal (vision-language). Dataset is gated on HuggingFace - requires authentication. Evaluation uses F1@ExplanationScore (BERTScore + BLEURT). See metric_notes.md for implementation. Splits: 4,578 train, 726 valid, 723 test."
+  },
+  {
+    "name": "II-Bench",
+    "paper_id": "2406.05862",
+    "url": "https://github.com/II-Bench/II-Bench",
+    "status": "completed",
+    "scenario_file": "scenarios/ii_bench/scenario.py",
+    "subsets": {
+      "dev": {
+        "instances": 35,
+        "eval_type": "exact_match",
+        "description": "Image implication understanding (6-way MC) - using dev split as test answers are hidden"
+      }
+    },
+    "notes": "Multimodal (vision-language). Evaluates higher-order perception of complex implication images (art, comics, posters). 1,222 images, 1,434 questions total. Test split (1,399 questions) has hidden answers for EvalAI leaderboard. Paper: NeurIPS 2024 D&B. Domains: Life, Art, Society, Psychology, Environment, Others."
+  },
+  {
+    "name": "StoryER",
+    "paper_id": "2210.08459",
+    "url": "https://github.com/sairin1202/StoryER",
+    "status": "completed",
+    "scenario_file": "scenarios/storyer/scenario.py",
+    "subsets": {
+      "ranking_test": {
+        "instances": "~100k pairs (test set size varies)",
+        "eval_type": "exact_match",
+        "description": "Task 1: Binary preference between story pairs"
+      },
+      "rating_test": {
+        "instances": "~46k",
+        "eval_type": "open_ended",
+        "description": "Task 2: Aspect-based quality ratings (0-1 scale) across 10 dimensions"
+      },
+      "reasoning_test": {
+        "instances": "~46k",
+        "eval_type": "open_ended",
+        "description": "Task 3: Natural language comment generation explaining story evaluations"
+      }
+    },
+    "notes": "Meta-evaluation benchmark (evaluates stories rather than generates them). Dataset on Google Drive (not HuggingFace) - requires manual download. Three tasks: Ranking (preference), Rating (aspect scores), Reasoning (comments). Uses WritingPrompts and ScaryStories corpora. EMNLP 2022. Task 3 (Reasoning) is the primary creative generation component."
   }
 ]
