@@ -38,7 +38,6 @@ Note: Dataset is gated on HuggingFace and requires authentication.
 """
 
 import os
-import random
 from typing import List
 from datasets import load_dataset
 from helm.benchmark.scenarios.scenario import (
