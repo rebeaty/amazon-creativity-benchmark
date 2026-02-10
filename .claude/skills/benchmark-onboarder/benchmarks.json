@@ -162,8 +162,9 @@
     "paper_id": "0a6e71c671c50dc7e6c8ccd0e0b2f5e63801afed",
     "url": "https://ldm.tib.eu/dataset/collaborative-neural-painting",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Purely visual"
+    "status": "not_suitable",
+    "rejection_reason": "Pure stroke-based painting generation; evaluates visual generation models, not VLMs",
+    "benchmark_name": "CNP"
   },
   {
     "name": "MIRROR (Multi-LLM Iterative Review and Response for Optimized Rating)",
@@ -242,8 +243,9 @@
     "paper_id": "197f69ecbf5eb0113e6cf817a77bed805985e043",
     "url": "https://huggingface.co/datasets/SaDil/MineAnyBuild",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Visual (Minecraft)"
+    "status": "not_suitable",
+    "rejection_reason": "Spatial planning agent benchmark; creativity is minor sub-dimension of 4; core task is executable 3D plan generation",
+    "benchmark_name": "MineAnyBuild"
   },
   {
     "name": "Stylized Image Generation Evaluation",
@@ -299,8 +301,9 @@
     "paper_id": "2108eec365e3e4eee42de37addd6d10b1eeb17ca",
     "url": "https://idea23d.github.io/",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Visual/3D generation"
+    "status": "not_suitable",
+    "rejection_reason": "3D generation quality evaluation (CVPR 2025); evaluates 3D generative models, not VLMs",
+    "benchmark_name": "Eval3DAIGC"
   },
   {
     "name": "LLM4BioHypoGen",
@@ -325,10 +328,13 @@
   {
     "name": "FigLang-2024 Multimodal Figurative Language Shared Task",
     "paper_id": "269e13fb1fd065ddcf1d79547f6a58ea846b5f8a",
-    "url": "https://huggingface.co/datasets/ColumbiaNLP/V-FLUTE",
+    "url": "https://arxiv.org/abs/2405.01474",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (images + text)"
+    "status": "completed",
+    "rejection_reason": "",
+    "benchmark_name": "V-FLUTE",
+    "eval_type": "mixed",
+    "notes": "Two subsets: classification (exact_match) and explanation (open_ended). Gated HF dataset requires HF_TOKEN. Images as PIL objects saved to temp files."
   },
   {
     "name": "Recombination Extraction",
@@ -355,8 +361,9 @@
     "paper_id": "2445bf811a2d2249ee55fa1bdcadedca9aada66b",
     "url": "https://arxiv.org/abs/2506.00814",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (Minecraft)"
+    "status": "not_suitable",
+    "rejection_reason": "Dataset not publicly released (paper June 2025, no GitHub/HuggingFace link found)",
+    "benchmark_name": "GuessBench"
   },
   {
     "name": "ConlangCrafter Evaluation Framework",
@@ -409,10 +416,11 @@
   {
     "name": "Video Metaphor Captioning Dataset (VMCD)",
     "paper_id": "2b070923f46f1a6592e7975cfb01bcd4ba911b96",
-    "url": "https://github.com/abisekrk/video-metaphor-captioning",
+    "url": "https://arxiv.org/abs/2406.04886",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Video-based"
+    "status": "not_suitable",
+    "rejection_reason": "Video-based + dataset not publicly downloadable. GitHub repo lacks download links; says \"Download from external links\" but provides none. Must contact author.",
+    "benchmark_name": "VMCD"
   },
   {
     "name": "CoAuthor",
@@ -491,7 +499,7 @@
     "status": "completed",
     "scenario_file": "scenarios/newyorker_caption.py",
     "eval_type": "exact_match",
-    "notes": "New Yorker Caption Contest; multimodal (cartoon→caption selection); 47 test contests; 4-way MC (top-ranked caption + 3 distractors from ranks 10-50); cartoon images stored as bytes in parquet files; NeurIPS 2024"
+    "notes": "New Yorker Caption Contest; multimodal (cartoon\u2192caption selection); 47 test contests; 4-way MC (top-ranked caption + 3 distractors from ranks 10-50); cartoon images stored as bytes in parquet files; NeurIPS 2024"
   },
   {
     "name": "OpenAGI",
@@ -611,8 +619,9 @@
     "paper_id": "38558608dedc495dd748ea3381b08b0d2ffccf56",
     "url": "https://github.com/abisekrk/video-metaphor-captioning",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Video-based"
+    "status": "not_suitable",
+    "rejection_reason": "Video-based metaphor captioning. Related to VMCD. Dataset accessibility unverified; video benchmarks require significant infrastructure.",
+    "benchmark_name": "VMC"
   },
   {
     "name": "SVGX-DwT-10k Evaluation Set (DEval)",
@@ -721,8 +730,9 @@
     "paper_id": "54f57b46db8caa48fcd8519b3bf081c4e4c0c2d6",
     "url": "https://www.muse-challenge.org/",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Audio/video social perception; not a creativity benchmark"
+    "status": "not_suitable",
+    "rejection_reason": "Audio/video sentiment analysis challenge; humor sub-task is detection in video, not VLM creative output",
+    "benchmark_name": "MuSe-Perception"
   },
   {
     "name": "Metaphor Generation from Literal Sentences",
@@ -795,8 +805,9 @@
     "paper_id": "5b9f4feec0a7305574dbdd8529ebae523e2be3e9",
     "url": "https://github.com/yizhiwang96/TextLogoLayout",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Visual (logo design)"
+    "status": "not_suitable",
+    "rejection_reason": "Text logo image synthesis benchmark; evaluates visual generation, not VLM creativity",
+    "benchmark_name": "TextLogo3K"
   },
   {
     "name": "ZeroSumEval",
@@ -879,8 +890,9 @@
     "paper_id": "6cf85f6782322e4669deb1eefda341c31b93ca9b",
     "url": "https://github.com/sony/BannerAgency",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Visual (banner design)"
+    "status": "not_suitable",
+    "rejection_reason": "Banner image generation evaluation; measures visual design output quality, not text-based creative reasoning",
+    "benchmark_name": "BannerRequest400"
   },
   {
     "name": "",
@@ -933,10 +945,13 @@
   {
     "name": "CM3D (Chinese Multimodal Metaphor Mapping Dataset)",
     "paper_id": "7327aa95a364a34f1ab72914f81f8c702a4b7a65",
-    "url": "https://github.com/DUTIR-YSQ/MultiMM",
+    "url": "https://arxiv.org/abs/2501.02434",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (Chinese)"
+    "status": "completed",
+    "rejection_reason": "",
+    "benchmark_name": "CM3D",
+    "eval_type": "mixed",
+    "notes": "Two subsets: detection (exact_match) and mapping (open_ended). Chinese-language. Images on Kaggle (743 MB, requires account). Annotations on gitfront."
   },
   {
     "name": "LiveIdeaBench",
@@ -1261,8 +1276,9 @@
     "paper_id": "9ed9ee4b06249147adc5bee1aabaf86cb309bdc4",
     "url": "https://github.com/leo81005/Reality-and-Fantasy",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Image generation"
+    "status": "not_suitable",
+    "rejection_reason": "Text-to-image diffusion model benchmark (ECCV 2024); evaluates image generation quality, not VLMs",
+    "benchmark_name": "RFBench"
   },
   {
     "name": "Chinese Essay Rhetoric Dataset (CERD)",
@@ -1315,10 +1331,11 @@
   {
     "name": "MSCOCO with Abstract Visual Associations and Creative Captions",
     "paper_id": "a15e0f13aecab1f376371cfa46f96a4c8d58434e",
-    "url": "https://github.com/ananya-sahu/mining_visual_associations",
+    "url": "https://arxiv.org/abs/2507.18915",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal"
+    "status": "not_suitable",
+    "rejection_reason": "Not a benchmark; data generation pipeline for creative captions. Evaluations use existing benchmarks (img2poem, VisualMetaphors).",
+    "benchmark_name": "MSCOCO Visual Associations"
   },
   {
     "name": "Puntuguese",
@@ -1345,8 +1362,9 @@
     "paper_id": "a8d81d868f408615255a253e8566ba05b9bc2ea6",
     "url": "https://doi.org/10.5281/zenodo.10275049",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (Minecraft images); visual domain"
+    "status": "not_suitable",
+    "rejection_reason": "LLM spatial instruction-following for Minecraft block placement; not a creativity benchmark",
+    "benchmark_name": "Minecraft Building"
   },
   {
     "name": "ModelingBench",
@@ -1373,8 +1391,9 @@
     "paper_id": "ad0c8f7b318178626baceb82330cacb8742ac54b",
     "url": "https://github.com/liaolianfoka/MET-Meme-A-Multi-modal-Meme-Dataset-Rich-in-Metaphors",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (memes)"
+    "status": "not_suitable",
+    "rejection_reason": "Annotation files not clearly accessible. GitHub code.rar only has pre-extracted features. Kaggle has image archives (RAR) but no clear annotation CSVs. Cannot verify image-to-label mapping without downloading full Kaggle dataset.",
+    "benchmark_name": "MET-Meme"
   },
   {
     "name": "RICO",
@@ -1401,8 +1420,9 @@
     "paper_id": "aba38a6352977bb696346773c1418f7a2bb1d400",
     "url": "https://github.com/hzphzp/WeGen",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal"
+    "status": "not_suitable",
+    "rejection_reason": "Standard object detection/captioning dataset used for FID/CLIP evaluation of image generation model; not a creativity benchmark",
+    "benchmark_name": "COCO2014 (WeGen)"
   },
   {
     "name": "In-the-Wild Study",
@@ -1456,10 +1476,13 @@
   {
     "name": "PuzzleWorld",
     "paper_id": "b74d2a4b205c66b9520b1c71e7a167977696e9f5",
-    "url": "https://github.com/MIT-MI/PuzzleWorld",
+    "url": "https://arxiv.org/abs/2506.06211",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal"
+    "status": "completed",
+    "rejection_reason": "",
+    "benchmark_name": "PuzzleWorld",
+    "eval_type": "exact_match",
+    "notes": "667 puzzlehunt puzzles. Multimodal (text+visual+structured). Content images on HF. Single split used as test. Difficulty filter: easy/medium/hard/all. SOTA only 14% accuracy."
   },
   {
     "name": "Showerthoughts Generation and Evaluation",
@@ -1682,8 +1705,9 @@
     "paper_id": "cfda60d69d39674549d15a78e65fc5ec2f81de7f",
     "url": "https://github.com/vwprompt/vwp",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal"
+    "status": "not_suitable",
+    "rejection_reason": "Duplicate of VGSG (already onboarded as scenarios/vgsg/scenario.py using VWP dataset)",
+    "benchmark_name": "VGSG Challenge"
   },
   {
     "name": "TwistList",
@@ -1708,8 +1732,9 @@
     "paper_id": "d0e0942d5f2074227060c2dfdd6bdadb6b9f8ab8",
     "url": "",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Duplicate; MemeCap already onboarded (paper_id b82c1b0512d25307e3c81bb8d9df1607267a7a52)"
+    "status": "not_suitable",
+    "rejection_reason": "Duplicate; MemeCap already onboarded",
+    "benchmark_name": "MemeCap"
   },
   {
     "name": "HAIVMet (Human-AI Visual Metaphor)",
@@ -1824,8 +1849,9 @@
     "paper_id": "decb581f0c991693a687221be39877791285de1a",
     "url": "https://github.com/SofeeyaJ/PoemTale-Diffusion",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (poem for image)"
+    "status": "not_suitable",
+    "rejection_reason": "Poem-to-image generation (wrong direction); evaluates diffusion models, not VLMs",
+    "benchmark_name": "P4I"
   },
   {
     "name": "Diversity vs. Recognizability Framework",
@@ -1905,8 +1931,9 @@
     "paper_id": "e7eb216744470319ddc6b1ff630b81f07a564fca",
     "url": "https://github.com/fesvhtr/TRIG",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Image generation"
+    "status": "not_suitable",
+    "rejection_reason": "Text-to-image generation benchmark; evaluates image generation with text rendering, not VLM creativity",
+    "benchmark_name": "TRIG-Bench"
   },
   {
     "name": "Imitative Editing Benchmark",
