@@ -37,6 +37,8 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | AnaloBench | Prompt in code/t1.py | S1 uses 'Sentence' field, S10/S30 use 'Story' field. Dataset on HuggingFace: jhu-clsp/AnaloBench. |
 | TinyStories | Evaluation prompts in separate YAML file, not in main dataset | Download `Evaluation prompts.yaml` from HuggingFace dataset repo (44 story beginnings); main dataset (2.1M train, 22K validation) is for training only; LLM-as-judge evaluation with GPT-4 |
 | TwistList | Requires Dropbox download + extraction; two data versions available | Dataset hosted on Dropbox (not HuggingFace/GitHub directly); download datasets.zip, extract to get tt-data (keywords only) or tt-prompt-data (with prompt prefix); format: source.txt (RAKE keywords), target.txt (tongue twisters); train/val/test splits in separate .txt files; 2,125 human-authored examples total |
+| Showerthoughts | Test data has mixed genuine/generated examples; need to filter by label field | Data in NDJSON format (roberta_test_data_mixed.ndjson); 6K total examples with 50/50 genuine/generated split; filter for `label == "genuine"` to get human-written Showerthoughts; 3K genuine examples available; unconditional generation task; LLM-as-judge evaluation on 5 dimensions (logical validity, creativity, humor, cleverness, general score) |
+| Showerthoughts | Paper's prompt designed for batch generation (100 at once) | Original prompt: "Please generate 100 Showerthoughts...Vary the sentence structure between the different sentences..."; adapted for HELM single-generation by changing to "generate a Showerthought" (singular) and removing sentence variety instruction; kept all other wording exact from Section 4.1 |
 
 ## Common Patterns
 

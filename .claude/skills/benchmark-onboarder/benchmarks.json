@@ -1413,7 +1413,11 @@
     "name": "Showerthoughts Generation and Evaluation",
     "paper_id": "b4eea0939283ed47552484a673c86cdf1cf268e1",
     "url": "https://github.com/aiintelligentsystems/showerthoughts-dataset",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/showerthoughts/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "Creative generation of Reddit Showerthoughts - witty, clever observations about everyday life. 411K human-written examples from Reddit (April 2020-Nov 2022). Using 300 genuine examples from test set (roberta_test_data_mixed.ndjson with 3K genuine/3K generated split). Unconditional generation task with prompt adapted from paper's ChatGPT zero-shot approach. Eval: LLM-as-judge on 5 dimensions (6-point Likert): logical validity, creativity, humor, cleverness, general score. See annotator_notes.md for detailed judge configuration. Paper: *SEM 2024 (https://aclanthology.org/2024.starsem-1.23/). Key finding: GPT-Neo (fine-tuned) and ChatGPT achieve ~6-7% below human level, humans cannot reliably detect AI-generated Showerthoughts."
   },
   {
     "name": "APT Minecraft Construction Benchmark",
