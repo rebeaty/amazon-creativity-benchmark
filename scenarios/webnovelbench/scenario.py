@@ -51,7 +51,7 @@ import json
 import os
 from typing import List
 from helm.benchmark.scenarios.scenario import (
-    Scenario, Instance, Input, Output, Reference,
+    Scenario, Instance, Input,
     TEST_SPLIT
 )
 
