@@ -207,9 +207,9 @@ class StoryERScenario(Scenario):
                     f"Rating for {aspect_name}:"
                 )
 
-                # Reference is the normalized rating value
+                # Reference is the normalized rating value (preserve full precision)
                 references = [
-                    Reference(Output(text=f"{aspect_rate:.2f}"), tags=[CORRECT_TAG])
+                    Reference(Output(text=repr(aspect_rate)), tags=[CORRECT_TAG])
                 ]
 
             else:  # self.task == "reasoning"
