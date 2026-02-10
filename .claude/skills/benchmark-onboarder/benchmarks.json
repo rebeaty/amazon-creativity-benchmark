@@ -728,11 +728,13 @@
   {
     "name": "Social Perception Sub-Challenge (MuSe-Perception)",
     "paper_id": "54f57b46db8caa48fcd8519b3bf081c4e4c0c2d6",
-    "url": "https://www.muse-challenge.org/",
+    "url": "https://arxiv.org/abs/2406.07753",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "rejection_reason": "Audio/video sentiment analysis challenge; humor sub-task is detection in video, not VLM creative output",
-    "benchmark_name": "MuSe-Perception"
+    "status": "completed",
+    "rejection_reason": "",
+    "benchmark_name": "MuSe-Perception",
+    "eval_type": "mixed",
+    "notes": "Two subsets: perception (social attributes, open_ended/Pearson correlation) and humor (binary detection, exact_match/AUC). Requires EULA from muse-challenge.org. Data must be pre-downloaded. Multimodal: video + audio + text."
   },
   {
     "name": "Metaphor Generation from Literal Sentences",
