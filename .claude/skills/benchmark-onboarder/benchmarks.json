@@ -402,7 +402,9 @@
     "name": "CoAuthor",
     "paper_id": "2b5d234efd26e7377698cf16c901601a3d3c4e56",
     "url": "https://cs.stanford.edu/~minalee/zip/chi2022-coauthor-v1.0.zip",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "notes": "Research dataset, not evaluation benchmark. Captures 1,445 past human-AI collaborative writing sessions between 63 writers and GPT-3 (830 creative stories, 615 argumentative essays). No evaluation task for testing new models; no ground truth or standardized metrics. Designed for analyzing human-AI interaction patterns, acceptance rates (72.3%), and collaboration dynamics. CHI 2022. Website: https://coauthor.stanford.edu/"
   },
   {
     "name": "YESBUT",
@@ -459,7 +461,11 @@
     "name": "MusicTheoryBench",
     "paper_id": "33313b413695dcd396c6f558a3153cc6a572d5c1",
     "url": "https://github.com/hf-lin/ChatMusician",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "music_theory_bench_scenario.py",
+    "eval_type": "exact_match",
+    "notes": "372 questions (367 test, 5 dev); music knowledge (269) + reasoning (98); multiple choice; includes ABC notation"
   },
   {
     "name": "GAUSS (General Assessment of Underlying Structured Skills in Mathematics)",
