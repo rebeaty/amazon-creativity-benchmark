@@ -285,7 +285,11 @@
     "name": "LLM4BioHypoGen",
     "paper_id": "2171d913a9845de4da95a90b1ca3bbcb8194b72a",
     "url": "https://github.com/TsinghuaC3I/LLM4BioHypoGen",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "llm4biohypogen_scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "787 test examples (4 configs: gpt-3.5/gpt-4 × seen/unseen); COLM 2024; GPT-4 judge on 4 dimensions (novelty, relevance, significance, verifiability) + BLEU/ROUGE; annotator_notes.md included"
   },
   {
     "name": "Image Recognition of Figurative Language (IRFL)",
@@ -433,7 +437,9 @@
     "name": "MOOSE",
     "paper_id": "31eb5852bf31206d247bef22c8636f48b0c25fe9",
     "url": "https://github.com/ZonglinY/MOOSE",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "notes": "Hypothesis generation framework, not evaluation benchmark. Multi-module system for generating scientific hypotheses from research backgrounds. Dataset: 50 social science paper backgrounds as inputs to generation system. Evaluation via GPT-4 or human experts on system-generated hypotheses, not standardized test set for evaluating new models. ACL 2024 Findings; ICML 2024 AI4Science best poster. Similar to SciMON and HypoGen - method paper, not reusable benchmark."
   },
   {
     "name": "WebNovelBench",
@@ -1457,7 +1463,9 @@
     "name": "Scientific Hypothesis Generation Dataset",
     "paper_id": "bb5f873632616c2cdc07ef1bb139db0c96c8e5f6",
     "url": "https://arxiv.org/abs/2411.02382",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Dataset not publicly accessible (anonymous.4open.science/r/KG-CoI-C203/ returns 403)"
   },
   {
     "name": "DataNarrative",
