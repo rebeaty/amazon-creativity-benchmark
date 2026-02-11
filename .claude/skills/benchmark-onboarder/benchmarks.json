@@ -602,7 +602,11 @@
     "name": "ESP dataset",
     "paper_id": "43c81cd19ffd3170be14407e10e0229f879a8647",
     "url": "https://github.com/JiwanChung/esper",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_path": "scenarios/esp_dataset/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Style-conditioned image captioning; 996 images, ~4,373 instances across 5 styles (sns, blog, news, story, instruction); uses COCO 2014 val images; evaluated with BLEU-4, METEOR, CIDEr"
   },
   {
     "name": "Co-Creative Meme Generation and Evaluation",
@@ -656,7 +660,11 @@
     "name": "Unfun Corpus",
     "paper_id": "50e66c2b936b6487b857af18596f5ce3a8ec4f59",
     "url": "https://github.com/zacharyhorvitz/Getting-Serious-With-LLMs",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_path": "scenarios/unfun_corpus/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Humor manipulation benchmark; edit satirical headlines to be realistic; 375 test + 186 val = 561 instances; tests humor understanding/removal (not generation); evaluated with BLEU/ROUGE + optionally edit distance and humor classifier accuracy"
   },
   {
     "name": "RPGBENCH",
@@ -684,7 +692,9 @@
     "name": "BalanceCC",
     "paper_id": "53d193a9fb82ce0c2b5d368071b405f63dd98c90",
     "url": "https://github.com/RuoyuFeng/CCEdit",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "not_suitable",
+    "reason": "Video editing benchmark for diffusion models, not LLM/VLM evaluation; evaluates video-to-video editing quality (style/object/background changes) for generative video models, not language model creativity"
   },
   {
     "name": "CLAP-based Novelty and Relevance Metrics",
@@ -2135,5 +2145,53 @@
       }
     },
     "notes": "Meta-evaluation benchmark (evaluates stories rather than generates them). Dataset on Google Drive (not HuggingFace) - requires manual download. Three tasks: Ranking (preference), Rating (aspect scores), Reasoning (comments). Uses WritingPrompts and ScaryStories corpora. EMNLP 2022. Task 3 (Reasoning) is the primary creative generation component."
+  },
+  {
+    "name": "IRFL",
+    "paper_id": "2303.15445",
+    "url": "https://github.com/irfl-dataset/IRFL",
+    "status": "completed",
+    "scenario_file": "scenarios/irfl/scenario.py",
+    "subsets": {
+      "idiom-detection-task": {
+        "instances": 200,
+        "eval_type": "exact_match",
+        "description": "Choose image that visualizes figurative meaning of idiom (4-way MC)"
+      },
+      "metaphor-detection-task": {
+        "instances": 333,
+        "eval_type": "exact_match",
+        "description": "Choose image that visualizes figurative meaning of metaphor (4-way MC)"
+      },
+      "simile-detection-task": {
+        "instances": 277,
+        "eval_type": "exact_match",
+        "description": "Choose image that visualizes figurative meaning of simile (4-way MC)"
+      }
+    },
+    "notes": "Multimodal (vision-language). Requires downloading IRFL_images.zip (1.6GB, 10,062 images) from HuggingFace on first run. Scenario auto-downloads images to output_path/images/. Human performance: 97% (idioms), 99.7% (metaphors), 100% (similes). SOTA (2023): 22% (idioms), 30% (metaphors), 66% (similes). EMNLP 2023 Findings. Paper citation: Yosef et al."
+  },
+  {
+    "name": "Creation-MMBench",
+    "paper_id": "arxiv:2503.14478",
+    "url": "https://arxiv.org/abs/2503.14478",
+    "status": "onboarded",
+    "scenario_file": "scenarios/creation_mmbench/scenario.py",
+    "dataset_url": "https://huggingface.co/datasets/opencompass/Creation-MMBench",
+    "code_url": "https://github.com/open-compass/Creation-MMBench",
+    "venue": "ICCV 2025",
+    "eval_type": "llm_judge",
+    "instance_counts": {
+      "test": 765
+    },
+    "subsets": [
+      "all (765 examples)",
+      "literary (8 tasks)",
+      "common (18 tasks)",
+      "professional (19 tasks)",
+      "creative_understanding (6 tasks)",
+      "51 fine-grained task names"
+    ],
+    "notes": "Multimodal creative generation; 1-9 images per question; GPT-4o judge with instance-specific criteria; dual evaluation; 356/765 human ground_truth, rest GPT-4o references"
   }
 ]
