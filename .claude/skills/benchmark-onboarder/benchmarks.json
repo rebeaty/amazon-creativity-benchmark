@@ -501,7 +501,11 @@
     "name": "MATDESIGN",
     "paper_id": "38d45590794eda4d6d3bb1f15c293dd6911fac50",
     "url": "https://github.com/shri071/Hypothesis-Generation-for-Materials-Discovery-and-Design-Using-Goal-Driven-and-Constraint-Guided-LLM",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "matdesign_scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "51 test examples from materials science papers (2024); ArXiv 2501.13299; AccelMat multi-agent framework (HGA + 3 Critics: GPT-4o/Claude-3.5/Gemini-1.5 + Summarizer + o1-preview evaluator); iterative refinement; generates 20 material suggestions with reasoning; annotator_notes.md included; NOTE: Dataset requires Excel→JSON conversion"
   },
   {
     "name": "Focus-Level Evaluation Framework for LLM Reviews",
@@ -1583,7 +1587,10 @@
     "name": "Scientific Novelty Detection Datasets (Marketing & NLP)",
     "paper_id": "c863800ec76e62fed66bbf5ec84ceae8642fd910",
     "url": "https://anonymous.4open.science/r/NoveltyDetection-10FB/",
-    "assigned_to": "SM"
+    "arxiv": "2505.24615",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Dataset not publicly accessible (anonymous.4open.science/r/NoveltyDetection-10FB/ returns 403)"
   },
   {
     "name": "Per-MPST",
@@ -1729,7 +1736,9 @@
     "name": "Fine-grained Scientific Hypothesis Discovery Benchmark",
     "paper_id": "d948d316bc2c74d8d31d0128e68e1e813642fb40",
     "url": "https://github.com/ZonglinY/MOOSE-Chem2",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "notes": "Hypothesis generation framework, not evaluation benchmark. MOOSE-Chem2 introduces task of fine-grained scientific hypothesis discovery via hierarchical search. Dataset: expert-annotated fine-grained chemistry hypotheses from post-2024 papers; 50+ research directions with coarse-grained hypotheses as inputs. Evaluation via pairwise comparison and recall on system-generated hypotheses, not standardized test set for evaluating new models. NeurIPS 2025. Same category as MOOSE (ACL 2024) - method paper, not reusable benchmark."
   },
   {
     "name": "Hakka Cultural Knowledge Cognitive Domain Dataset",
