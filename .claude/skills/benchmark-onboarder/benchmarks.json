@@ -56,7 +56,9 @@
     "name": "Chinese NM Corpus (CMC)",
     "paper_id": "0232c9163970edebaa20003238d8b5c66caa4452",
     "url": "https://github.com/liyucheng09/Metaphor_Generator",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "Non-English (Chinese); training corpus not evaluation benchmark; no standardized test set for evaluating external models"
   },
   {
     "name": "V-FLUTE",
@@ -280,7 +282,9 @@
     "name": "CFunSet",
     "paper_id": "1acc80d5fd0ffd63a04951becda58b4626802e1d",
     "url": "https://huggingface.co/datasets/ZhenghanYU/CFunSet",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "Non-English (Chinese); training data only, no test set. 164,200 Chinese humor examples in instruction-tuning format. Only train split. Designed for fine-tuning CFunModel, not for evaluation."
   },
   {
     "name": "FutureGen",
@@ -397,7 +401,12 @@
     "name": "TinyStories",
     "paper_id": "28085f480ce456a376ebace9b899e3bc93dbc048",
     "url": "https://huggingface.co/datasets/roneneldan/TinyStories",
-    "assigned_to": "SM"
+    "status": "completed",
+    "scenario_file": "scenarios/tinystories_scenario.py",
+    "assigned_to": "SM",
+    "eval_type": "llm_judge",
+    "instances": 44,
+    "notes": "Story completion task with child-friendly language. GPT-4 judges on Grammar, Creativity, Consistency (1-10 each). Evaluation prompts in separate YAML file. See scenarios/tinystories/annotator_notes.md"
   },
   {
     "name": "CPers (Creativity in Persian)",
@@ -959,7 +968,9 @@
     "name": "LiveIdeaBench",
     "paper_id": "72faa912691bc2d8dc342fc1c9b53cccc9ba56fc",
     "url": "https://huggingface.co/datasets/6cf/liveideabench-v2",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "No ground truth; dataset contains model outputs with LLM-judge scores, not test instances. Evaluates scientific idea generation using 1,180 keywords, but dataset has model-generated ideas with comparative LLM-judged scores only. No reference ideas. Evaluation is comparative only, not absolute. Updates monthly (dynamic benchmark)."
   },
   {
     "name": "IGA Intent-Guided Generation Evaluation",
@@ -1131,10 +1142,14 @@
     }
   },
   {
-    "name": "Alternative Uses Test (AUT)",
+    "name": "LLM Discussion (AUT, Similarities, Instances, Scientific)",
     "paper_id": "83d721abd07298ef0f5d05575410ae386b77bb4a",
     "url": "https://github.com/lawraa/LLM-Discussion",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/llm_discussion_scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "4 classic divergent thinking creativity tests (120 total items). (1) AUT: 30 objects, creative uses. (2) Similarities: 30 pairs, ways two things are alike. (3) Instances: 30 categories, name things in category. (4) Scientific: 30 scientific creativity questions across 5 types. All use LLM-as-judge on 4 dimensions: Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). Judge: GPT-4 or GPT-3.5. Subsets: aut, similarities, instances, scientific, all. Paper: COLM 2024 (arXiv:2405.06373)."
   },
   {
     "name": "PoetMT",
@@ -1314,7 +1329,9 @@
     "name": "STORIUM Dataset",
     "paper_id": "a0035379f93e0e95bdadd77a1d8eb27ba89dcf60",
     "url": "https://huggingface.co/datasets/NewEden/Storium-5K",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "Training data only; evaluation requires human-in-the-loop interaction. Original paper (EMNLP 2020) uses machine-in-the-loop platform where authors edit AI continuations. HuggingFace dataset has only train split (5,743 examples), no test set. Incompatible with automated evaluation."
   },
   {
     "name": "IDRBench",
@@ -1343,7 +1360,12 @@
     "name": "Puntuguese",
     "paper_id": "a85b39c1cb0ac7baad733aa6aab2c281a52485bf",
     "url": "https://huggingface.co/datasets/Superar/Puntuguese",
-    "assigned_to": "SM"
+    "status": "completed",
+    "scenario_file": "scenarios/puntuguese_scenario.py",
+    "assigned_to": "SM",
+    "eval_type": "exact_match",
+    "instances": 1140,
+    "notes": "Binary humor recognition for Portuguese puns. Balanced dataset (50% humorous, 50% micro-edited non-humorous). LREC-COLING 2024. Paper baseline: 68.9% F1. Also includes token-level pun location annotations (auxiliary task)."
   },
   {
     "name": "CROWDCOUNTER",
@@ -1574,7 +1596,11 @@
     "name": "SchNovel",
     "paper_id": "c476c92f86c590ada95421cf597910259927771b",
     "url": "https://github.com/ethannlin/SchNovel",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/schnovel_scenario.py",
+    "eval_type": "exact_match",
+    "notes": "Scholarly novelty assessment. 15,000 paper pairs across 6 fields (CS, Math, Physics, QBio, QFin, Stat) from arXiv. Binary classification task: choose which of two papers is more novel. Paper1 (more recent) assumed more novel. Publication dates span 2-10 years apart. Inputs: title + abstract for each paper. Subsets: cs, math, physics, qbio, qfin, stat, all. Paper: AISD@ACL 2025 (arXiv:2409.16605)."
   },
   {
     "name": "AlpacaEval Creative Writing",
@@ -1715,7 +1741,11 @@
     "name": "TwistList",
     "paper_id": "d3a95b0727ef67ef9264cd20da10a545977ace51",
     "url": "https://github.com/tangg555/TwistList",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/twistlist_scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Tongue twister generation from keywords. 2,125 human-authored examples: train (1,912), val (106), test (107). Open-ended generation task (RAKE keywords → tongue twister). Input: key words/phrases (e.g., 'scottish clan'). Output: phonetically challenging tongue twisters. Eval: BLEU, ROUGE, BERTScore. Paper also uses phonology metrics: PO (Phoneme Overlap), iPED/oPED (Phonemic Edit Distance). Dataset: Dropbox download + extract. Two versions: tt-data (keywords only), tt-prompt-data (with prompt prefix). Paper: ACL 2023 (arXiv:2306.03457)."
   },
   {
     "name": "Technical Evaluation of Chord Progression Generation",
@@ -2046,7 +2076,9 @@
     "name": "YinYangAlign",
     "paper_id": "f88ab3ef0e3ef4dad581cf5f6dc04c0afcc116b6",
     "url": "https://huggingface.co/datasets/factsoverhallucinations/yinyang-dataset",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "notes": "Text-to-image (T2I) alignment benchmark; multimodal (requires image decoding); preference dataset format (chosen/rejected images); no evaluation task for text-only LLMs; only 205 training examples, no test split; designed for image generation alignment, not text creativity"
   },
   {
     "name": "MOF Crystal Structure Generation",
@@ -2072,7 +2104,9 @@
     "name": "PunchBench",
     "paper_id": "fd72ab9fc32effaa17213a1296671a9ac62040d4",
     "url": "https://github.com/OuyangKun10/PunchBench",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "notes": "Multimodal benchmark requiring images; dataset not publicly available. Multimodal punchline comprehension across cartoons, posts, comments, and memes with image-caption pairs. Requires vision-language models (VHELM/HEIM framework). GitHub repo only contains README; dataset was announced for HuggingFace release (dev0610) but not found. Paper: ACL 2025 (arXiv:2412.11906)."
   },
   {
     "name": "FLUTE (filtered)",
