@@ -791,7 +791,10 @@
     "name": "ZeroSumEval",
     "paper_id": "5e2fabb7105edb8a904c7a984c3009a5ab34eaf7",
     "url": "https://github.com/facebookresearch/ZeroSumEval",
-    "assigned_to": "SM"
+    "arxiv": "2503.10673",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Competitive evaluation framework, not a benchmark - requires head-to-head matches between models, incompatible with HELM's single-model evaluation pattern"
   },
   {
     "name": "CodeScientist Scientific Discovery Evaluation",
@@ -1163,7 +1166,9 @@
     "name": "Time-Bench",
     "paper_id": "8f047a824ed8b5afc28715a552bcda9126fa7ef9",
     "url": "https://github.com/ulab-uiuc/Time-R1",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Method paper for RL training framework; not a creativity benchmark. arXiv 2505.13508 (May 2025); Time-R1 is a 3-stage RL curriculum for temporal reasoning; Time-Bench dataset (200K+ examples) for training on timestamp inference, time-gap estimation, event ordering, masked time entity completion; Stage 3 'creative generation' is future news scenario prediction (temporal forecasting, not general creativity); evaluation tied to RL framework with custom reward functions (1200+ lines in time_reasoning.py); requires veRL infrastructure and PPO training; HuggingFace dataset (ulab-ai/Time-Bench) exists but designed for RL training, not standalone evaluation; primary contribution is training methodology, not a reusable benchmark for evaluating arbitrary models on creative tasks"
   },
   {
     "name": "",
