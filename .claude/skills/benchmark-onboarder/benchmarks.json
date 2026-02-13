@@ -199,7 +199,9 @@
     "name": "T2ICLP",
     "paper_id": "14549416485dcee89d257eb8e37e1ad83b925d12",
     "url": "https://github.com/T2ICLP/t2iclp",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (text-to-image generation); requires HEIM framework. npj Heritage Science (July 2024); FHS-Adapter (Fine-grained Hierarchical Semantic Adapter) method for generating Chinese landscape paintings using diffusion models; T2ICLP dataset contains 10,000 high-quality image-text pairs with four types of fine-grained descriptions per image: History (historical background), Content (picture description), Emotion (embedded emotions), Poem (traditional Chinese poems summarizing the image); task is text-to-image generation from multi-perspective text inputs; uses Taiyi-CLIP encoder adapted for Chinese text; diffusion process guided batch-wise by four prompts in various sequences; evaluation measures brushwork (e.g., 'Chafing, Rubbing, Dabbing and Colouring'), compositional space, elemental proportions, color usage across different painting genres and artists; repository contains 50 sample images with corresponding Excel files (Chinese/English versions) containing the four text descriptions; full dataset of 10,000 pairs mentioned but not yet released; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework"
   },
   {
     "name": "Rap Generation Evaluation on D-RAP",
@@ -228,7 +230,10 @@
     "name": "Stylized Image Generation Evaluation",
     "paper_id": "1a4b3d0814833bd0c011bf25d036e877d479d90c",
     "url": "https://github.com/cuixing100876/InstaStyle",
-    "assigned_to": "SM"
+    "arxiv": "2311.15040",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - stylized text-to-image generation using diffusion models, requires image generation capabilities"
   },
   {
     "name": "ThemeVlogEval",
