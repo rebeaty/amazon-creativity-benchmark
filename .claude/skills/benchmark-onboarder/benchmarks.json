@@ -1062,7 +1062,11 @@
     "name": "WikiArt (ArtGraph)",
     "paper_id": "7edc82ab56792e72ded0cd4204f9a72fdce5a92f",
     "url": "https://github.com/cilabuniba/i-dream-my-painting",
-    "assigned_to": "SM"
+    "arxiv": "2105.15028",
+    "zenodo": "10.5281/zenodo.6337958",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - fine art classification requiring visual features and graph embeddings, cannot be evaluated with text-only models"
   },
   {
     "name": "",
@@ -1867,8 +1871,10 @@
   {
     "name": "Diversity vs. Recognizability Framework",
     "paper_id": "d5d661b43692a79d760e0b2011f056a459eb374c",
-    "url": "https://github.com/VictorBoutin/DiffusionModelsAsArtists",
-    "assigned_to": "SM"
+    "url": "https://github.com/serre-lab/diffusion_as_artist",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (image generation); requires HEIM framework. ICML 2023, arXiv:2301.11722; 'Diffusion Models as Artists: Are we Closing the Gap between Humans and Machines?'; evaluation framework for one-shot generative models comparing humans and machines on one-shot image generation task; extends 'diversity vs. recognizability' framework (Boutin et al., 2022, arXiv:2205.10370) to evaluate diffusion models (DDPM, CFGDM, FSDM) alongside GANs and VAEs; three evaluation metrics: (1) Recognizability - how recognizable generated images are, (2) Diversity - intra-class variability in generated samples, (3) Originality - measured via generalization curves showing evolution of recognizability as function of originality; evaluated on Omniglot dataset (handwritten characters, 1,320 models tested) and QuickDraw dataset (hand-drawn sketches, 1,212 models tested); task: given one example of handwritten character or sketch, generate diverse yet recognizable variations; findings show diffusion models have closed gap between humans and machines but humans still produce more recognizable samples at higher originality levels; human features are fewer and more localized than diffusion model features; requires training diffusion models on image datasets and evaluating generated images; datasets available via Google Drive; outside HELM's text-only scope; would need HEIM framework; GitHub: serre-lab/diffusion_as_artist"
   },
   {
     "name": "POLLUX",
@@ -1949,7 +1955,9 @@
     "name": "Imitative Editing Benchmark",
     "paper_id": "ee7f769a73a533a871cd5fd9cd566d96a3f09107",
     "url": "https://github.com/ali-vilab/MimicBrush",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (image editing); requires HEIM framework; dataset not yet released. NeurIPS 2024, arXiv:2406.07547; MimicBrush method for zero-shot image editing with reference imitation; introduces 'imitative editing' task where users draw inspiration from in-the-wild references to edit image regions; benchmark has 120 samples collected from Pexels across 4 topics (fashion, animals, products, scenarios) with 30 samples per topic; two main tasks: (1) Part Composition - discovering semantic correspondence between source and reference images and compositing local parts, (2) Texture Transfer - transferring texture from reference to source image; each task has inter-ID and inner-ID tracks; task format: given source image, reference image, and mask indicating to-edit region, generate edited version of source image that imitates style/texture/parts from reference; evaluation metrics: fidelity (reference region retains distinctiveness), harmonization (generated region naturally combines with background), quality (high-quality details); uses Stable Diffusion with custom ReferenceNet, DepthGuider, VAE; README states 'Download our evaluation benchmark at Google Drive: URL: [to be released]' indicating dataset not yet publicly available; requires vision models and image generation/editing evaluation; outside HELM's text-only scope; would need HEIM framework; GitHub: ali-vilab/MimicBrush"
   },
   {
     "name": "STYLEBREEDER",
@@ -2028,7 +2036,11 @@
     "name": "Prompt Embedding Manipulation Evaluation",
     "paper_id": "f75da65c02872ef7378cae9fa100d5dd33811fe3",
     "url": "https://doi.org/10.5281/zenodo.8274625",
-    "assigned_to": "SM"
+    "arxiv": "2308.12059",
+    "github": "https://github.com/webis-de/ijcai24-manipulating-embeddings-stable-diffusion",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - text-to-image generation benchmark requiring Stable Diffusion for embedding manipulation and image generation evaluation"
   },
   {
     "name": "S-DAT (Synthetic-Divergent Association Task)",
