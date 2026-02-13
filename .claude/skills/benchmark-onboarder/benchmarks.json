@@ -143,7 +143,9 @@
     "name": "FSCG-8 (Few-Shot Creative Generation 8)",
     "paper_id": "0e42d4694acc559ac22d1ea280f4a6d7f9878f0f",
     "url": "https://github.com/Agentic-Learning-AI-Lab/procreate-diffusion-public",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (text-to-image generation); requires HEIM framework. ECCV 2024, arXiv:2408.02226; ProCreate Diffusion method for few-shot creative image generation; FSCG-8 dataset has 8 categories (Amedeo Modigliani paintings, Apple products, Burberry, Frank Gehry architecture, Nouns characters, One Piece anime, Pokemon, Rococo) with ~50 image-caption pairs each (400 total); task is text-to-image generation (e.g., 'a jellyfish Pokemon' → generate Pokemon-style image); uses Stable Diffusion fine-tuning; propulsive energy diffusion to prevent training data reproduction; evaluation measures sample diversity, fidelity, and creativity of generated images; HuggingFace dataset (Jacklu0831/few-shot-creative-generation-8) contains .jpg image files paired with text captions; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework"
   },
   {
     "name": "StoryER",
@@ -1199,7 +1201,10 @@
     "name": "EmoArt",
     "paper_id": "9d84da449502cca33edc2b3fa59fb7b5ae44a0f5",
     "url": "https://huggingface.co/datasets/printblue/EmoArt-130k",
-    "assigned_to": "SM"
+    "arxiv": "2506.03652",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - text-to-image generation benchmark for diffusion models, requires image generation capabilities"
   },
   {
     "name": "Outline to Story (O2S)",
