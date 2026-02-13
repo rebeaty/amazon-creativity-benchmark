@@ -344,8 +344,12 @@
   {
     "name": "ConlangCrafter Evaluation Framework",
     "paper_id": "2af6b9d54651808f87afc7030ab93c0baaf68989",
-    "url": "https://github.com/m-alper/conlangcrafter",
-    "assigned_to": "SM"
+    "url": "https://github.com/morrisalp/ConlangCrafter",
+    "arxiv": "2508.06094",
+    "huggingface": "malper/ConlangCrafter",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Not a benchmark - corpus of LLM-generated languages with no evaluation tasks or prompts"
   },
   {
     "name": "IdeaBench",
@@ -892,7 +896,11 @@
     "name": "Open-domain Dialogue Generation for Diversity",
     "paper_id": "706e82e7d10541e8e495def9dfc23aba461bbf9e",
     "url": "https://github.com/mailong25/peft_diversity",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "dialogue_diversity_scenario.py",
+    "eval_type": "open_ended",
+    "notes": "300 test examples; ArXiv 2412.03343; Multiple responses per context (default 5); Evaluation: semantic diversity (embedding similarity), n-gram diversity (Distinct-1/2), coherence (LLM judge 1-10 scale via Llama/GPT-4); PEFT framework for diverse response generation; annotator_notes.md included"
   },
   {
     "name": "Background and Hypothesis Pairs (BHP) dataset",

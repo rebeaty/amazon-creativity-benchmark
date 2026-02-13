@@ -40,11 +40,15 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | Showerthoughts | Test data has mixed genuine/generated examples; need to filter by label field | Data in NDJSON format (roberta_test_data_mixed.ndjson); 6K total examples with 50/50 genuine/generated split; filter for `label == "genuine"` to get human-written Showerthoughts; 3K genuine examples available; unconditional generation task; LLM-as-judge evaluation on 5 dimensions (logical validity, creativity, humor, cleverness, general score) |
 | Showerthoughts | Paper's prompt designed for batch generation (100 at once) | Original prompt: "Please generate 100 Showerthoughts...Vary the sentence structure between the different sentences..."; adapted for HELM single-generation by changing to "generate a Showerthought" (singular) and removing sentence variety instruction; kept all other wording exact from Section 4.1 |
 | Only Connect Wall (OCW) | Two tasks; prompts in notebook not main code | Task 1 (Grouping): group 16 words into 4 groups of 4 - primary creative problem-solving task. Task 2 (Connections): name the connection for each group - auxiliary articulation task. Implemented both as separate scenarios (scenarios/ocw/ and scenarios/ocw_connections/). Prompts found in notebooks/run_openai.ipynb, not in main evaluation scripts. Dataset: TaatiTeam/OCW_main on HuggingFace. |
+| MATDESIGN | Data in Excel format; requires conversion to JSON | Dataset in Excel file `Materials Discovery & Design Dataset.xlsx` (51 examples); requires pandas + openpyxl; convert to JSON for HELM compatibility; each example has Goal Statement, Constraints (4-6 numbered), Materials (reference), Methods (reference); prompt from `agent_framework_materials_discovery.py` includes trailing spaces after "strictly. " and after colons in JSON template; ArXiv 2501.13299 |
+| Open-domain Dialogue Generation | Dataset counts off by 1; person labeling order | Test file has 300 examples (not 299); context is newline-separated dialogue, needs Person A/B labels alternating from bottom up (reversed order); prompt format from `prompt_generator.py` with exact `[INST]` and `[/INST]` markers; each context generates multiple responses (5-10) with different possibility numbers; ArXiv 2412.03343 |
 
 ## Common Patterns
 
 - **Datasets requiring `trust_remote_code`**: Add `trust_remote_code=True` to `load_dataset()`
 - **Suspected model output fields**: Check the paper to confirm field purpose before skipping
+- **Prompt format precision**: Always verify exact prompts from repository code, including trailing spaces; use character-by-character comparison to ensure match (see MATDESIGN, LLM4BioHypoGen examples)
+- **Excel datasets**: Convert to JSON using pandas + openpyxl; host JSON on stable URL for production use (see MATDESIGN, SPLAT, MACGYVER, ARN examples)
 
 ## Multimodal Support in HELM
 
@@ -205,6 +209,8 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | TwistList | open_ended | `get_open_ended_generation_metric_specs()` | Tongue twister generation from keywords. 2,125 examples (train: 1,912, val: 106, test: 107). Input: RAKE-extracted keywords. Output: phonetically challenging tongue twisters. BLEU, ROUGE, BERTScore. Paper uses phonology metrics: PO, iPED/oPED. |
 | Only Connect Wall (OCW) - Task 1 | custom | Custom metric needed | Word grouping puzzle. 618 puzzles (62 train, 62 val, 494 test). Given 16 shuffled words, group into 4 groups of 4 based on thematic connections. Puzzles designed with red herrings. Evaluation: set-based group matching (order-invariant). Metrics: per-group accuracy, wall-level accuracy. See scenarios/ocw/metric_notes.md. NeurIPS 2023. |
 | Only Connect Wall (OCW) - Task 2 | open_ended | `get_open_ended_generation_metric_specs()` | Connection naming task. 618 puzzles (62 train, 62 val, 494 test). Given 4 already-solved groups of words, name the thematic connection for each group. Tests language articulation. Evaluation: exact match, ROUGE-1 F1, BERTScore F1. NeurIPS 2023. |
+| MATDESIGN | llm_judge | Custom Annotator needed (multi-agent) | Materials hypothesis generation. 51 test examples. Generate 20 material suggestions with materials/methods/reasoning. Multi-agent critic system (GPT-4o + Claude-3.5-Sonnet + Gemini-1.5-Flash) evaluates each suggestion: Meets_goal_and_satisfies_constraints (YES/NO) with detailed reasoning. Iterative refinement (up to 5 cycles) until unanimous approval. Final evaluation by o1-preview. AccelMat framework. ArXiv 2501.13299. |
+| Open-domain Dialogue Generation | open_ended | `get_open_ended_generation_metric_specs()` + llm_judge coherence | Diverse dialogue response generation. 300 test contexts × 5 possibilities = 1,500 instances. Evaluation: (1) Semantic diversity via embedding similarity between responses for same context (lower = better), (2) N-gram diversity (Distinct-1/2 across all responses), (3) Coherence via LLM judge (Llama/GPT-4) rating 1-10 scale, (4) Incoherence rate (% with score ≤5, target <10%). PEFT framework. ArXiv 2412.03343. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -221,6 +227,8 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | MACGYVER | GPT-4 (paper) | Paper Section 4.2, benchmark_results.json | correctness, feasibility, efficiency | `scenarios/macgyver/annotator_notes.md` |
 | TinyStories | GPT-4 | Paper Section 3 | Grammar (1-10), Creativity (1-10), Consistency (1-10), Age group | `scenarios/tinystories/annotator_notes.md` |
 | LLM Discussion | GPT-4 or GPT-3.5 | Evaluation/eval_functions/eval_prompts.py | Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5) | `scenarios/llm_discussion/annotator_notes.md` |
+| MATDESIGN | GPT-4o, Claude-3.5-Sonnet, Gemini-1.5-Flash (critics), o1-preview (evaluator) | agent_framework_materials_discovery.py, agent_framework_final.ipynb | Multi-agent AccelMat framework: 3 critics independently judge each of 20 suggestions (Meets_goal_and_satisfies_constraints: YES/NO + Reasoning); Summarizer consolidates feedback; iterative refinement (max 5 cycles); unanimous approval required | `scenarios/matdesign/annotator_notes.md` |
+| Open-domain Dialogue Generation | Llama (via Together AI), GPT-4 (fallback) | utils.py eval_dialog function | Coherence rating (1-10 scale): "Does this next response from Person B make coherent sense?"; GPT-4 fallback for low scores (<6); incoherence rate metric (% with score ≤5) | `scenarios/dialogue_diversity/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
