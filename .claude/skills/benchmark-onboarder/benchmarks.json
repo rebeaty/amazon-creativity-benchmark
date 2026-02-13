@@ -631,7 +631,9 @@
     "name": "SVGX-DwT-10k Evaluation Set (DEval)",
     "paper_id": "44c717ce0ec31ff828c06abca417fea83421d256",
     "url": "https://huggingface.co/xingxm",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (SVG generation); benchmark not found; requires HEIM framework. Related to LLM4SVG project (CVPR 2025, arXiv:2412.11102) 'Empowering LLMs to Understand and Generate Complex Vector Graphics'; extensive search found no specific benchmark called 'SVGX-DwT-10k' or 'DEval' as standalone evaluation set; HuggingFace profile xingxm has SVGX-Core-250k (250k pretraining examples) and SVGX-SFT-1M (1M SFT examples) but no DwT-10k or DEval mentioned; LLM4SVG GitHub repository has no references to these terms; web searches return no results; SVG (Scalable Vector Graphics) generation is inherently multimodal - involves generating code that renders as visual output; tasks include text-to-SVG generation, SVG-to-text description, image-to-SVG reasoning, SVG editing; evaluation requires assessing visual quality of rendered graphics, not just text; uses specialized SVGX datasets with SVG code paired with visual representations; supports multimodal training on models like Qwen2.5-VL, Llama 3.2, DeepSeek, GPT2-XL; requires vision models and graphics evaluation; outside HELM's text-only scope; would need HEIM framework for image/graphics evaluation; GitHub: ximinng/LLM4SVG; HuggingFace: xingxm"
   },
   {
     "name": "ESP dataset",
@@ -1011,7 +1013,13 @@
     "name": "New Yorker Cartoon Caption Contest Humor 'Understanding' Benchmarks",
     "paper_id": "79914b8f022a2e4b522d890cbaf001842a116df0",
     "url": "https://huggingface.co/datasets/jmhessel/newyorker_caption_contest",
-    "assigned_to": "SM"
+    "arxiv": "2209.06293",
+    "github": "https://github.com/jmhessel/caption_contest_corpus",
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_path": "scenarios/newyorker_humor",
+    "eval_type": "exact_match",
+    "notes": "ACL 2023 Best Paper; 3 tasks (matching, ranking, explanation); text-only eval using cartoon descriptions; Matching: 5-way MC (9,792 train, 531 val, 528 test); Ranking: 2-way MC (9,576 train); Explanation: open-ended (2,340 train); Human 94% vs best model 62% on matching"
   },
   {
     "name": "Word2Minecraft",
