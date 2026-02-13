@@ -537,7 +537,9 @@
     "name": "Close Reading Annotation Dataset",
     "paper_id": "3c8e90d2c4a3f4f69689e0bb782ad03b175c8353",
     "url": "https://github.com/asaakyan/ngram-creativity",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Data access barrier - benchmark not ready. arXiv 2509.22641 (Sept 2025); paper titled 'Death of the Novel(ty): Beyond n-Gram Novelty as a Metric for Textual Creativity'; 7,542 expert annotations from 26 writers rating expressions on novelty/pragmaticality/meaningfulness; intended benchmark tasks: (1) novel expression identification, (2) non-pragmatic expression identification; repository README explicitly states files 'will be used for benchmarking'; however, test data (all_novel_expressions_main.csv, all_nonprag_expressions_main.csv) locked in password-protected raw_data.zip requiring Google Form submission; publicly available CSV files in for_linear_models/ contain labels but NOT actual text expressions; README mentions 'TBD: for_models folder contains the data processed for fine-tuning and few-shot evaluation' but this folder doesn't exist yet; once authors release benchmark-ready 'for_models' folder with public access, this would be a good candidate for onboarding"
   },
   {
     "name": "Creation-MMBench",
@@ -1024,7 +1026,10 @@
     "name": "Vietnamese Poem Quality Scoring System",
     "paper_id": "7d4676c00282c04da5df5d5ad2273a42004021be",
     "url": "https://github.com/Anshler/poem_generator",
-    "assigned_to": "SM"
+    "arxiv": "2401.01078",
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_path": "scenarios/vietnamese_poem"
   },
   {
     "name": "Style-conditioned Quatrain Generation Evaluation",
