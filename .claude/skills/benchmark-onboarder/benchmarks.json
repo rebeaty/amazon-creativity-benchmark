@@ -1857,7 +1857,9 @@
     "name": "Outline-Conditioned Story Generation",
     "paper_id": "e7c698bdace380f7183dedbe657686f1885f615c",
     "url": "https://github.com/hrashkin/plotmachines",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Method paper, not a reusable benchmark. PlotMachines (EMNLP 2020) is a model architecture paper; no publicly available preprocessed test data with outlines; requires downloading WikiPlots/WritingPrompts/NYT and running complex preprocessing pipeline (RAKE outline extraction); no standardized evaluation protocol that other papers follow. Better-defined benchmarks exist for this task (e.g., 'Outline to Story (O2S)' assigned to VD with actual benchmark dataset)."
   },
   {
     "name": "Poetry Generation Evaluation",
@@ -1957,7 +1959,10 @@
     "name": "Next-Chapter Prediction (NCP)",
     "paper_id": "f32f1e5081ade1b0d82d588734b5c40537718a94",
     "url": "https://github.com/Alex-Gurung/ReasoningNCP",
-    "assigned_to": "SM"
+    "arxiv": "2503.22828",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Dataset not publicly available - authors cannot release due to copyright (purchased books)"
   },
   {
     "name": "Cue-word-based Creative Story Generation and Evaluation",
