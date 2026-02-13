@@ -817,7 +817,10 @@
     "name": "Measuring LLM Novelty as the Frontier of Original and High-Quality Output",
     "paper_id": "6368da8af071a063f92b03460b5f1cf97338950a",
     "url": "https://github.com/YuehHanChen/quantifying-novelty",
-    "assigned_to": "SM"
+    "arxiv": "2504.09389",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Dataset not yet publicly available - repository states 'Full code and data are coming soon'"
   },
   {
     "name": "Story Generation Evaluation on ROCStories and WritingPrompts",
@@ -1072,7 +1075,9 @@
     "name": "Credal Set Analysis for Creative Variability",
     "paper_id": "83f969aea328a954f8714e273b7d1a72bf7656c0",
     "url": "https://github.com/EstebanGarces/uncertainHuman",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Methodology paper, not a reusable benchmark. arXiv 2509.23088; proposes credal set geometric framework for analyzing creative variability and uncertainty calibration; repository contains only analysis results (uncertainty_analysis.csv with 10K rows: 500 prompts × 20 model-strategy combinations) and summary tables; does not provide the actual 500 WritingPrompts used, the 10 human continuations per prompt, or any way to evaluate new models on same data; primary contribution is the analysis methodology (decomposing epistemic vs aleatoric uncertainty, calibration measurement) not a standardized benchmark; results show best model-human calibration of 0.434 (Gemma-2B); would need to reproduce their WritingPrompts selection process to use as benchmark"
   },
   {
     "name": "Scientist-Bench",
