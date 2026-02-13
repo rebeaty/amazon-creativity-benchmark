@@ -659,7 +659,11 @@
     "name": "StoryStream",
     "paper_id": "466dce99f8226de1cc9557bceb8069934114deaf",
     "url": "https://github.com/TencentARC/SEED-Story",
-    "assigned_to": "SM"
+    "arxiv": "2407.08683",
+    "huggingface": "TencentARC/StoryStream",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - long story generation requiring interleaved text and image generation, evaluation requires assessing both narrative coherence and visual consistency"
   },
   {
     "name": "DesignHelper",
@@ -977,7 +981,9 @@
     "name": "VBench-2.0",
     "paper_id": "6d4def9e60c21ccf6e7620f619cd621b50363c5b",
     "url": "https://github.com/Vchitect/VBench",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (video generation); requires HEIM framework. arXiv:2503.21755 (March 2025); part of VBench series (VBench CVPR 2024, VBench++ TPAMI 2025, VBench-2.0); comprehensive evaluation benchmark for video generative models covering text-to-video (T2V) and image-to-video (I2V) generation; VBench-2.0 extends VBench to evaluate intrinsic faithfulness for next-generation video models including commonsense reasoning, physics-based realism, human motion, creative composition; 5 broad categories and 18 fine-grained capability dimensions; original VBench has 16 dimensions: Quality (subject_consistency, background_consistency, temporal_flickering, motion_smoothness, aesthetic_quality, imaging_quality, dynamic_degree), Semantic (object_class, multiple_objects, human_action, color, spatial_relationship, scene, appearance_style, temporal_style, overall_consistency); evaluates video generation models like Gen-3, Kling, Pika, Sora, CogVideo across prompt suites; task: generate videos from text/image prompts and evaluate across multiple dimensions; uses automatic evaluation methods with alignment to human preferences; HuggingFace leaderboard with 40+ T2V models and 10+ long video models; requires vision models and video generation evaluation; outside HELM's text-only scope; would need HEIM framework for video evaluation; GitHub: Vchitect/VBench; PyPI package available"
   },
   {
     "name": "VideoCanvasBench",
@@ -1660,7 +1666,9 @@
     "name": "ExFunTube",
     "paper_id": "ca1261a7e058ea3339fbdaec07ffcf6d0b617c8d",
     "url": "https://github.com/dayoon-ko/ExFunTube",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (video understanding); requires HEIM/VHELM framework. EMNLP 2023, arXiv:2310.14159; 'Can Language Models Laugh at YouTube Short-form Videos?'; multimodal video humor understanding dataset with 10,136 user-generated funny YouTube short-form videos; 11,166 funny moments annotated with start/end timestamps and text explanations (avg 44.3 words); covers 20 humor types across wide range of domains; requires understanding both verbal and visual elements to comprehend humor; task: identify funny moments in videos and explain why they are humorous; paper develops zero-shot video-to-text prompting framework to make videos consumable by text-only LLMs by converting video into text (visual descriptions via BLIP, audio transcripts, sound tags, frame sequences); however, core evaluation is understanding video humor, not text humor; uses video filtering pipeline with GPT-3.5 to verify both verbal and visual humor elements; evaluated using automatic scores, rationale quality experiments, and human evaluations; dataset publicly available via Google Drive (JSON format with YouTube URLs, timestamps, explanations); requires video processing models (BLIP for visual, audio models, etc.); outside HELM's text-only scope; would need HEIM/VHELM framework for video-language evaluation; GitHub: dayoon-ko/ExFunTube; dataset page: exfuntube.github.io"
   },
   {
     "name": "",
@@ -2168,7 +2176,10 @@
     "name": "D-HUMOR",
     "paper_id": "98b1f8601799d84885b3f7ed1f72441811517df1",
     "url": "https://github.com/Sai-Kartheek-Reddy/D-Humor-Dark-Humor-Understanding-via-Multimodal-Open-ended-Reasoning",
-    "assigned_to": "SM"
+    "arxiv": "2509.06771",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - dark humor detection in memes requiring both image understanding (ViT) and text analysis, evaluation requires multimodal inputs"
   },
   {
     "name": "VOILA",
