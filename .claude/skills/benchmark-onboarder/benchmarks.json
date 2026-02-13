@@ -1740,7 +1740,11 @@
     "name": "HAIVMet (Human-AI Visual Metaphor)",
     "paper_id": "cdb0e126f03caeb95ad947e13180d3219a2ffe04",
     "url": "https://zenodo.org/record/7965907",
-    "assigned_to": "SM"
+    "arxiv": "2305.14724",
+    "github": "https://github.com/tuhinjubcse/VisualMetaphors",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - visual metaphor generation requiring LLM+diffusion model pipeline, evaluation requires assessing generated images"
   },
   {
     "name": "FunQA",
@@ -1801,8 +1805,12 @@
   {
     "name": "Fig-QA",
     "paper_id": "d85d49d4429a63244286f7def1ec5c09490d6cc7",
-    "url": "https://github.com/Hazel1994/ViPE",
-    "assigned_to": "SM"
+    "url": "https://github.com/nightingal3/Fig-QA",
+    "arxiv": "2204.12632",
+    "huggingface": "nightingal3/fig-qa",
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_path": "scenarios/fig_qa"
   },
   {
     "name": "Style-Consistent Character Generation",
@@ -1832,7 +1840,9 @@
     "name": "KiVA (Kid-inspired Visual Analogies)",
     "paper_id": "df15665ebb3896cb9bb296535af14e9065b4ba29",
     "url": "https://github.com/ey242/KiVA",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (vision-language); requires HEIM/VHELM framework. ICLR 2025, arXiv:2407.17773; visual analogical reasoning benchmark with 4,300 visual transformations of everyday objects; tests fundamental visual pattern recognition skills solvable by children ages 3-5; 5 transformation domains (2D Rotation, Color, Resize, Reflection, Counting) with 14-29 subdomains; two difficulty levels: KiVA (easy, solvable by 3-year-olds) and KiVA-adults (hard, different input values requiring further abstraction); task format: given images showing object transformation (e.g., blue dog → red dog), identify which option (A/B/C) applies the same transformation to a new object; three evaluation stages: identify what changed, how it changed, apply rule to new scenarios; evaluates large multimodal models (GPT-4V, GPT-o1, LLaVA-1.5, MANTIS) compared to human children and adults; findings show models identify 'what' changed but struggle with quantifying 'how' and extrapolating rules; repository contains 96K+ files including transformed object images in both stitched format (single image) and individual format (multiple images); requires vision-language models and visual processing; outside HELM's text-only scope; would need HEIM/VHELM framework; GitHub: ey242/KiVA"
   },
   {
     "name": "Mathematical Framework for Objective Characterization of Ideas",
