@@ -782,8 +782,10 @@
   {
     "name": "Meme Humor Dataset (Ours)",
     "paper_id": "5bd0fa95a23e23259e2a5df187d69fe9da6ff290",
-    "url": "",
-    "assigned_to": "SM"
+    "url": "https://aclanthology.org/2022.cai-1.9/",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (image + text → humor classification); requires vision-language understanding. ACL 2022 Workshop on When Creative AI Meets Conversational AI; 'Learning to Evaluate Humor in Memes Based on the Incongruity Theory'; authors: Kohtaro Tanaka, Hiroaki Yamane, Yusuke Mori, Yusuke Mukuta, Tatsuya Harada; dataset: 7,500 memes with real-valued humor annotations collected via crowdwork platform, refined to 1,411 memes after removing items with ambiguous ratings; task: binary classification to determine whether a given meme (image + caption) is humorous; based on incongruity theory which posits humor arises from incongruity between images and captions; models: based on ViLT and CLIP vision-language pretrained models; evaluation: classification accuracy using 10-fold cross-validation with 8 runs; key contribution: proposed refinement process to extract memes not influenced by interpersonal differences in humor perception, and method to explicitly extract and utilize incongruities between images and captions; findings: proposed approach outperformed other vision-language models in humor classification; requires processing both image and text modalities simultaneously to understand visual-textual incongruity; outside HELM's text-only scope; would need vision-language evaluation framework like VHELM; no public dataset release or GitHub repository found; ACL Anthology: aclanthology.org/2022.cai-1.9/"
   },
   {
     "name": "EXPOTION Multimodal Music Generation",
@@ -1175,7 +1177,9 @@
     "name": "Human Evaluation of Generated Prose for Paintings",
     "paper_id": "8e3a1df364aa8429d8e04015dfb95145a860ebcb",
     "url": "https://github.com/prerna135/prose-for-a-painting",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "rejection_reason": "Method paper, not a reusable benchmark. ICCV Workshop 2019, arXiv:1910.03634; 'Prose for a Painting'; proposes pipeline for generating Shakespearean prose descriptions of paintings using intermediate poem generation (image \u2192 poem via img2poem model) then language style transfer (poem \u2192 Shakespearean prose via text style transfer model); demonstrates approach on unspecified number of 'famous paintings'; evaluation mentions human ratings on Likert scale and BLEU score 'as a function of prose length' but provides no specifics (number of raters, scale range, rating criteria); **Key issues**: (a) No publicly available test dataset of paintings with ground truth Shakespearean prose, (b) Paper explicitly states 'there does not exist a large supervised dataset from paintings to Shakespearean prose', (c) Repository contains only demonstration notebook with single test image, no benchmark data, (d) No standardized evaluation protocol that other papers can follow, (e) Primary contribution is the method/pipeline architecture, not a dataset for evaluating other models; **Precedent**: Similar to PlotMachines (line 168 in LEARNINGS.md) rejected as 'Method paper, not a reusable benchmark'; requires downloading and training two separate models (img2poem + style transfer) from external repos with Dropbox models; if authors later release curated test set with human-written Shakespearean prose for paintings plus standardized evaluation, this could become a valid benchmark; GitHub: prerna135/prose-for-a-painting",
+    "notes": "Method paper demonstrating image\u2192poem\u2192Shakespearean prose pipeline; no test dataset or standardized evaluation"
   },
   {
     "name": "Metaphoric Analogies from Literary Texts Dataset",
@@ -1415,7 +1419,9 @@
     "name": "RICO",
     "paper_id": "a845a0b142944b02e1a55ce0dfec8519b9f3f58c",
     "url": "",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "not_suitable",
+    "reason": "Multimodal UI layout generation requiring visual processing; model architecture uses GNN+MLLM+ViT to process icons and images; evaluation metric FID requires rendering layouts as images and computing visual features; output is JSON but task fundamentally requires visual understanding; dataset and code not yet publicly available (paper May 2025); incompatible with HELM's text-only LLM evaluation architecture"
   },
   {
     "name": "AVA Score",
@@ -1717,7 +1723,9 @@
     "name": "LLM-based VLM Quality Evaluation",
     "paper_id": "c959d653bfea954bc779a5acd6feacd6d45fdb15",
     "url": "https://github.com/huggingface/nanoVLM",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Not a benchmark - nanoVLM is a Vision-Language Model training framework/implementation (like nanoGPT), not an evaluation benchmark or dataset"
   },
   {
     "name": "HumorBench",
@@ -1958,7 +1966,9 @@
     "name": "Human Evaluation of Suspenseful Story Generation",
     "paper_id": "ea6b0b5904d6e8eccbccb609ac35911ae967cd2c",
     "url": "",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Methodology paper with human evaluation, not a benchmark dataset. EACL 2024, arXiv:2402.17119; paper titled 'Creating Suspenseful Stories: Iterative Planning with Large Language Models' by Kaige Xie and Mark Riedl; proposes novel iterative-prompting-based planning method grounded in cognitive psychology and narratology theories of suspense; zero-shot approach using ChatGPT (gpt-3.5-turbo-0613) and Llama 2 (Llama-2-13b-chat); conducted human evaluation study on Prolific with 90 participants evaluating 30 story pairs (10 pairs each) on 5 criteria: Suspense, Novelty, Enjoyment, Logical Sense, Naturalness; compared proposed method against baselines (vanilla ChatGPT/Llama2, Re3) and ablations; no public dataset or code repository found (author GitHub: lightyear0117 has no related repos); no test prompts, story examples, or evaluation protocols released; evaluation was one-time human study to validate their specific method, not a reusable benchmark for comparing arbitrary LLMs; paper provides detailed prompts in tables but these are method-specific; similar to In-the-Wild Study - evaluates a proposed method rather than providing standardized benchmark for LLM comparison"
   },
   {
     "name": "Divergent Association Task (DAT)",
