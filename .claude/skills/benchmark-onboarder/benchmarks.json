@@ -866,7 +866,9 @@
     "name": "MARS",
     "paper_id": "6394296dd9ac7265b9854d929a6b6f5515b7acb0",
     "url": "https://github.com/Remwlp/MLLM_Analogy",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (vision-language); requires HEIM/VHELM framework; images not yet released. ICONIP 2024, arXiv:2411.01307; 'Can Multimodal Large Language Model Think Analogically?'; MARS (Multimodal Analogical Reasoning System) benchmark tests analogical reasoning capabilities of MLLMs; 10,641 training questions, 1,362 test questions; task format: analogical reasoning problems 'X':'Y'::'O':? where one entity (usually 'O') is shown in image and model must identify relation between X and Y plus predict '?' from candidate entity set; example: 'Calcium Supplementation':'calcium deficiency'::'exposure':? with 'exposure' shown in image test/0.jpg; uses MarKG background knowledge graph with 34,420 triplets providing prior knowledge of analogous entities and relations; two evaluation modes: MLLM as explainer (comprehending multimodal analogical reasoning problems) and MLLM as predictor (directly solving problems); evaluated on LLaVA-13b achieving 56.2% accuracy; repository README states 'Checkpoints, complete code and data will be uploaded after organizing' indicating incomplete data release; image files referenced in data (e.g., test/0.jpg, train/*.jpg) not present in repository; requires understanding visual information to solve analogical reasoning; requires vision-language models and multimodal understanding; outside HELM's text-only scope; would need HEIM/VHELM framework for vision-language evaluation; GitHub: Remwlp/MLLM_Analogy"
   },
   {
     "name": "MLLM-Bench",
@@ -1997,7 +1999,10 @@
     "name": "GenEval",
     "paper_id": "f00999d63d4224c2d996b2e5a2dd58c56a49738b",
     "url": "https://github.com/djghosh13/geneval",
-    "assigned_to": "SM"
+    "arxiv": "2310.11513",
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal - text-to-image generation evaluation framework requiring image generation and object detection models to assess compositional alignment"
   },
   {
     "name": "InfoChartQA",
