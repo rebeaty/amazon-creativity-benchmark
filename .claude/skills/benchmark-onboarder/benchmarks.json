@@ -867,8 +867,10 @@
     "paper_id": "aa7d95b8527d67db1d053e3f57109212b5d1d3ee",
     "url": "https://github.com/yizhiwang96/TextLogoLayout",
     "assigned_to": "CL",
-    "status": "pending",
-    "notes": "Reconsidered: LLM-based layout generation is now standard (GLDesigner, PosterLLaVa, LaySPA). Task: predict JSON bounding boxes [left,top,right,bottom] in [0,1] for character placement. Metrics: overlap IoU, visual balance, alignment, MaxIoU (all text-computable, no rendering needed). 300 test samples. Data on Google Drive/PKU Disk (.npy, convertible to JSON). Academic-use license.",
+    "status": "completed",
+    "scenario_file": "scenarios/textlogo3k/scenario.py",
+    "eval_type": "custom",
+    "notes": "CVPR 2022 text logo layout generation benchmark. Multimodal: glyph images + character text → JSON bounding boxes [left,top,right,bottom] normalized to [0,1]. 300 test samples with 2-11 Chinese characters each (mean 4.8). 6 custom metrics (overlap, visual balance, alignment, MaxIoU, coordinate MSE, canvas utilization) all computable from JSON coordinates without rendering. Data on Google Drive (981MB zip, downloaded via gdown). Academic-use license.",
     "benchmark_name": "TextLogo3K"
   },
   {
