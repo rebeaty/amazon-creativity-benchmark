@@ -33,6 +33,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | Meta4XNLI | Exact prompts in Appendix Table 29 | Zero-shot: "Say which is the inference relationship...answer only with one word between 'entailment', 'neutral' or 'contradiction'." Format: `{Premise} -> {Hypothesis}:` |
 | Simile Generation | Data in CSV on GitHub, not HuggingFace | Download SimileEMNLP.csv from repo. Input: literal sentence, Output: simile. Human1/Human2 columns are references. |
 | MET-Meme | PIL images in HF dataset; labels use "N(description)" format; 1 Chinese label "表达情感" in intention field; bilingual (Chinese + English) | Save PIL images to temp files; clean label format via label_map; map Chinese label to "Expressive"; HF mirror: Anthony3456347095/MET-Meme (third-party upload) |
+| LitBench | Test set contains only Reddit comment IDs (copyright compliance); 21 of 2,381 pairs have deleted comments | Rehydrate via PullPush API (api.pullpush.io, no credentials); cache rehydrated JSON to disk; fetch parent submissions for writing prompts; ~99.1% recovery rate |
 | MACGYVER | Includes both solvable and unsolvable problems | For unsolvable problems (377 of 1683), expected response is to identify infeasibility. Include all in eval. |
 | MACGYVER | Human-annotated evaluation | Paper uses fine-grained categories (efficient, inefficient, infeasible, etc.). See `annotator_notes.md` for judge setup. |
 | ARN | Data on Google Drive (xlsx), not HuggingFace/GitHub | Use gdown to download from folder ID `1itOPXtorFEgweQCd71m2bIRwWAUHcXuf`. Prompt template in Appendix C.2. |
@@ -273,6 +274,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | MET-Meme (sentiment) | exact_match | `get_exact_match_metric_specs()` | 7-way sentiment classification (A-G). 2,007 instances. |
 | MET-Meme (intention) | exact_match | `get_exact_match_metric_specs()` | 5-way communicative intention (A-E). 2,007 instances. 1 Chinese label mapped. |
 | MET-Meme (offensiveness) | exact_match | `get_exact_match_metric_specs()` | 4-way offensiveness level (A-D). 2,007 instances. |
+| LitBench | exact_match | `get_exact_match_metric_specs()` | Pairwise creative writing preference (A/B). 2,360 test pairs. Position-randomized. Rehydrated from Reddit via PullPush. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
