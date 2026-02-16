@@ -8,6 +8,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 |-----------|-------|----------|
 | RiddleSense | Test split has no labels (empty `answerKey`) | Use validation split instead |
 | DiscoveryBench | Real test (239) has no ground truth (held out for leaderboard); real train has only 25 instances | Use train split (25 instances); `datasets` and `queries` fields are JSON strings needing `json.loads()`; 3 domains in train (sociology, biology, economics); original benchmark gives models code execution on CSVs but HELM evaluates from metadata alone |
+| LLM-SRBench | Gated HF dataset + HDF5 for numerical samples; original methods use iterative code generation not single-turn prompting | Requires `HF_TOKEN`; `snapshot_download` for HDF5 + `load_dataset` for metadata; HDF5 keys differ: transform uses `train`/`test`/`ood_test`, synth uses `train_data`/`id_test_data`/`ood_test_data`; column 0 is always output variable; `symbol_properties` "V" means variable (input), "T" means target (output); text-based evaluation inadequate (equivalent equations differ as strings), needs custom NMSE/R² metric |
 | ANALOBENCH | Field is `Sentence` not `Story` | Check actual dataset keys before coding |
 | BRAINTEASER | No official HF dataset; many unofficial versions | Use `tasksource/brainteasers` with SP/WP configs; use `choice_order` and `label` fields for correct shuffling |
 | Sudoku-Bench | Three subsets (challenge_100, nikoli_100, ctc); requires config name | Pass subset as parameter to scenario; visual_elements is JSON string needing parsing |
@@ -252,6 +253,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | LLM Discussion | llm_judge | Custom Annotator needed | 4 divergent thinking tests (120 items): AUT (30 objects), Similarities (30 pairs), Instances (30 categories), Scientific (30 questions). GPT-4 judges on Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). |
 | SchNovel | exact_match | `get_exact_match_metric_specs()` | Scholarly novelty assessment. Binary choice (1 or 2). 15,000 paper pairs across 6 fields (CS, Math, Physics, QBio, QFin, Stat). Choose more novel paper. Paper1 (more recent) assumed more novel. |
 | DiscoveryBench | llm_judge | Custom Annotator (HMS metric) | Scientific hypothesis generation. 25 real train instances. Open-ended: generate hypothesis from dataset metadata + domain knowledge. HMS metric decomposes hypotheses into context/variables/relationship via GPT-4. Best baseline ~25% HMS. |
+| LLM-SRBench | custom | Custom metric (NMSE/R²) | Scientific equation discovery. 239 problems across 5 subsets. Model outputs symbolic equation; must be parsed (sympy) and executed on held-out test data. Metrics: NMSE, R², Kendall's tau, MAPE. Best LLM ~15% R²>0.99. ICML 2025 Oral. |
 | TwistList | open_ended | `get_open_ended_generation_metric_specs()` | Tongue twister generation from keywords. 2,125 examples (train: 1,912, val: 106, test: 107). Input: RAKE-extracted keywords. Output: phonetically challenging tongue twisters. BLEU, ROUGE, BERTScore. Paper uses phonology metrics: PO, iPED/oPED. |
 | Only Connect Wall (OCW) - Task 1 | custom | Custom metric needed | Word grouping puzzle. 618 puzzles (62 train, 62 val, 494 test). Given 16 shuffled words, group into 4 groups of 4 based on thematic connections. Puzzles designed with red herrings. Evaluation: set-based group matching (order-invariant). Metrics: per-group accuracy, wall-level accuracy. See scenarios/ocw/metric_notes.md. NeurIPS 2023. |
 | Only Connect Wall (OCW) - Task 2 | open_ended | `get_open_ended_generation_metric_specs()` | Connection naming task. 618 puzzles (62 train, 62 val, 494 test). Given 4 already-solved groups of words, name the thematic connection for each group. Tests language articulation. Evaluation: exact match, ROUGE-1 F1, BERTScore F1. NeurIPS 2023. |
@@ -319,7 +321,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | PressRelease Creative Planning | Corpus, not benchmark | 656k articles corpus for research; no formal test set or evaluation metrics |
 | Fable Generation (ds-tf1-en-3m) | Training data | 3M fables for training; not an evaluation benchmark |
 | AraStories | No formal evaluation | Arabic story generation corpus; no defined test set or metrics |
-| LLM-SRBench | Scientific reasoning | Equation discovery from data; not creativity |
+| LLM-SRBench | Previously rejected as "scientific reasoning" | Onboarded: scientific equation discovery IS scientific creativity; 239 problems, 5 subsets; gated HF + HDF5 data; custom NMSE/R² metric |
 | NeoCoder | Complex evaluation | Code execution + custom NeoGauge metric required |
 | Story Cloze Test | Manual download required | Requires Google Form registration for data access |
 | Passau-SFCH | Multimodal + restricted | Video+audio humor recognition; requires signed EULA |

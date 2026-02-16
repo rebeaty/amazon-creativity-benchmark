@@ -1119,7 +1119,10 @@
     "paper_id": "79d455c55401734971aba42a76204f973980ed04",
     "url": "https://github.com/deep-symbolic-mathematics/llm-srbench",
     "assigned_to": "CL",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/llm_srbench/scenario.py",
+    "eval_type": "custom",
+    "notes": "ICML 2025 Oral; 239 scientific equation discovery problems across 5 subsets; gated HF dataset (nnheui/llm-srbench) requires HF_TOKEN; data in HDF5; evaluation requires executing predicted equations against test data (NMSE/R²); original benchmark uses iterative code generation, adapted for single-turn text equation output"
   },
   {
     "name": "Vietnamese Poem Quality Scoring System",
