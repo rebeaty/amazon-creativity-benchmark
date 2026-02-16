@@ -729,10 +729,10 @@
   {
     "name": "ConstructiveBench",
     "paper_id": "4c6f256693479c20141abf3a0f7865773da69571",
-    "url": "https://huggingface.co/datasets/JackSun200312/ConstructiveBench",
+    "url": "https://huggingface.co/datasets/sunjia72/ConstructiveBench",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Dataset inaccessible"
+    "status": "not_suitable",
+    "rejection_reason": "Formal theorem proving benchmark, not a creativity benchmark. 5,316 competition math problems with Lean formalization. Evaluation is purely correctness-based (does the formal answer verify in Lean?), with no novelty or creativity metrics. Data is accessible at sunjia72/ConstructiveBench on HuggingFace. Original HF link (JackSun200312) is dead; correct link updated."
   },
   {
     "name": "CS4 (Comparing the Skill of Creating Stories by Controlling the Synthesized Constraint Specificity)",
@@ -1000,8 +1000,10 @@
     "paper_id": "6c6cb32f026fccc11c98c36913651b992d477a56",
     "url": "https://github.com/AntoineBellemare/DAT_GPT",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Custom metrics required (GLoVe-based DAT scoring, compression-based DSI metrics)"
+    "status": "completed",
+    "scenario_file": "scenarios/dat_creative_writing/scenario.py",
+    "eval_type": "custom",
+    "notes": "9 subsets: dat (base), dat_thesaurus/etymology/opposites/random/young (5 strategies), synopsis, flash_fiction, haiku. 100 instances each (configurable). Same prompt repeated — measures creative output diversity. Custom metrics: GLoVe DAT score, BERT DSI, Lziv complexity. Nature Human Behaviour 2024."
   },
   {
     "name": "Open-domain Dialogue Generation for Diversity",
@@ -1654,8 +1656,10 @@
     "paper_id": "b931ce81c7ced2cf7b5b049836be06af5c049c00",
     "url": "https://github.com/JunyiYe/CreativeMath",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Complex evaluation"
+    "status": "completed",
+    "scenario_file": "scenarios/creativemath/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "Novel math solution generation. 400 problems (8 competition levels, 50 each), 605 instances (k=1..n per problem). 3-stage LLM-as-judge: correctness (unanimous 3 judges) → coarse novelty (majority) → fine novelty (majority). Exact prompt from paper. Data from GitHub JSON. AAAI 2025."
   },
   {
     "name": "Scientific Hypothesis Generation Dataset",

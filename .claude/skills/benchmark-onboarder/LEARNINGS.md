@@ -34,6 +34,8 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | Simile Generation | Data in CSV on GitHub, not HuggingFace | Download SimileEMNLP.csv from repo. Input: literal sentence, Output: simile. Human1/Human2 columns are references. |
 | MET-Meme | PIL images in HF dataset; labels use "N(description)" format; 1 Chinese label "表达情感" in intention field; bilingual (Chinese + English) | Save PIL images to temp files; clean label format via label_map; map Chinese label to "Expressive"; HF mirror: Anthony3456347095/MET-Meme (third-party upload) |
 | LitBench | Test set contains only Reddit comment IDs (copyright compliance); 21 of 2,381 pairs have deleted comments | Rehydrate via PullPush API (api.pullpush.io, no credentials); cache rehydrated JSON to disk; fetch parent submissions for writing prompts; ~99.1% recovery rate |
+| CreativeMath | Data on GitHub only (no HuggingFace); 50 of 400 problems lack difficulty field; solutions dict keys are string ints ("1", "2") | Download subset.json from GitHub raw URL; iterate k=1..n per problem for 605 total instances; withheld solutions (k+1..n) stored as references for annotator use |
+| DAT Creative Writing | No dataset — fixed prompts repeated N times; DAT has 6 prompt variants (base + 5 strategies); writing has 3 conditions | Create N instances with same prompt; num_instances parameter (default 100); requires non-zero temperature for output diversity; GLoVe 840B for DAT metric, BERT-large for DSI |
 | MACGYVER | Includes both solvable and unsolvable problems | For unsolvable problems (377 of 1683), expected response is to identify infeasibility. Include all in eval. |
 | MACGYVER | Human-annotated evaluation | Paper uses fine-grained categories (efficient, inefficient, infeasible, etc.). See `annotator_notes.md` for judge setup. |
 | ARN | Data on Google Drive (xlsx), not HuggingFace/GitHub | Use gdown to download from folder ID `1itOPXtorFEgweQCd71m2bIRwWAUHcXuf`. Prompt template in Appendix C.2. |
@@ -275,6 +277,9 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | MET-Meme (intention) | exact_match | `get_exact_match_metric_specs()` | 5-way communicative intention (A-E). 2,007 instances. 1 Chinese label mapped. |
 | MET-Meme (offensiveness) | exact_match | `get_exact_match_metric_specs()` | 4-way offensiveness level (A-D). 2,007 instances. |
 | LitBench | exact_match | `get_exact_match_metric_specs()` | Pairwise creative writing preference (A/B). 2,360 test pairs. Position-randomized. Rehydrated from Reddit via PullPush. |
+| CreativeMath | llm_judge | Custom Annotator needed (3-stage) | Novel math solution generation. 605 instances. 3-stage eval: correctness (unanimous 3 judges) → coarse novelty (majority) → fine novelty (majority). YES/NO output per stage. AAAI 2025. |
+| DAT Creative Writing (dat) | custom | Custom metric (GLoVe DAT) | Divergent word generation. 100 instances (same prompt). GLoVe 840B pairwise cosine distance × 100. Human baseline mean ~78. Nature Human Behaviour 2024. |
+| DAT Creative Writing (writing) | custom | Custom metric (DSI + Lziv) | Creative writing (synopsis/flash_fiction/haiku). 100 instances each. BERT-large DSI + Lempel-Ziv complexity. GPT-4 quality ratings available for flash fiction. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
@@ -299,6 +304,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | MineAnyBuild (creativity) | GPT-4.1 | mineanybuild/evaluator.py | 5 dims: Creativity (1-10, weight 0.8), Completeness (1-10, 0.05), Complexity (1-10, 0.05), Architecture Structure (1-10, 0.05), Overall Aesthetic (1-10, 0.05); original eval on Minecraft screenshots; adaptable to blueprint text | `scenarios/mineanybuild/annotator_notes.md` |
 | MineAnyBuild (spatial_plan) | GPT-4.1 | mineanybuild/evaluator.py | 3 dims: Completeness/Instruction Following (1-10, weight 0.3), Complexity (1-10, 0.3), Overall Aesthetic (1-10, 0.4); reference architecture score defaults to 8; includes ground-truth reference image | `scenarios/mineanybuild/annotator_notes.md` |
 | MineAnyBuild (spatial_commonsense) | GPT-4.1 | mineanybuild/evaluator.py | Matching degree score (0-10); correct match ≥8, wrong match ≤3; success rate = score ≥7; 50 instances | `scenarios/mineanybuild/annotator_notes.md` |
+| CreativeMath | Claude-3-Opus, Gemini-1.5-Pro, GPT-4 (3 judges) | src/prompts/prompts.py, src/evaluation.py | 3-stage: correctness (unanimous YES), coarse novelty (majority YES/NO), fine novelty (majority YES/NO vs withheld solutions); 5 novelty criteria in prompt | `scenarios/creativemath/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
