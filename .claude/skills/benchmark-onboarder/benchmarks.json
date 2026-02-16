@@ -1455,7 +1455,7 @@
     "url": "https://arxiv.org/abs/2507.18915",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Not a benchmark; data generation pipeline for creative captions. Evaluations use existing benchmarks (img2poem, VisualMetaphors).",
+    "rejection_reason": "Training data pipeline, not evaluation benchmark (Columbia University, July 2025). Uses GPT-4o-mini to generate 1.71M creative captions for MSCOCO images at 5 abstraction levels (Hayakawa's Ladder of Abstraction). Designed for fine-tuning OpenCLIP, not for evaluating models. No dedicated test set or scoring rubric — evaluation is zero-shot retrieval on existing external benchmarks (MultiM-Poem for poetry, HAIVMet/VisualMetaphors for metaphors). Data on GitHub + Google Drive.",
     "benchmark_name": "MSCOCO Visual Associations"
   },
   {
