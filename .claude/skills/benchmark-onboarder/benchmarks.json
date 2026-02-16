@@ -254,8 +254,10 @@
     "paper_id": "197f69ecbf5eb0113e6cf817a77bed805985e043",
     "url": "https://huggingface.co/datasets/SaDil/MineAnyBuild",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "rejection_reason": "Spatial planning agent benchmark; creativity is minor sub-dimension of 4; core task is executable 3D plan generation",
+    "status": "completed",
+    "scenario_file": "scenarios/mineanybuild/scenario.py",
+    "eval_type": "custom",
+    "notes": "NeurIPS 2025 D&B Minecraft architecture generation. 5 subsets: creativity (1,419, text-only, creativity weighted 80%), spatial_planning (946, multimodal), spatial_understanding (473, multimodal), spatial_reasoning (1,728, multimodal VQA exact match), spatial_commonsense (50, multimodal QA). Output: JSON 3D blueprint matrix [height x depth x width]. 473 base architectures from Grabcraft/Wiki/Reakon. Block matching for direct comparison + GPT-4.1 critic on screenshots. Known typo: 144 'Ture' answers in spatial_reasoning (corrected in scenario).",
     "benchmark_name": "MineAnyBuild"
   },
   {
@@ -867,15 +869,10 @@
     "paper_id": "aa7d95b8527d67db1d053e3f57109212b5d1d3ee",
     "url": "https://github.com/yizhiwang96/TextLogoLayout",
     "assigned_to": "CL",
-<<<<<<< HEAD
     "status": "completed",
     "scenario_file": "scenarios/textlogo3k/scenario.py",
     "eval_type": "custom",
     "notes": "CVPR 2022 text logo layout generation benchmark. Multimodal: glyph images + character text → JSON bounding boxes [left,top,right,bottom] normalized to [0,1]. 300 test samples with 2-11 Chinese characters each (mean 4.8). 6 custom metrics (overlap, visual balance, alignment, MaxIoU, coordinate MSE, canvas utilization) all computable from JSON coordinates without rendering. Data on Google Drive (981MB zip, downloaded via gdown). Academic-use license.",
-=======
-    "status": "pending",
-    "notes": "Reconsidered: LLM-based layout generation is now standard (GLDesigner, PosterLLaVa, LaySPA). Task: predict JSON bounding boxes [left,top,right,bottom] in [0,1] for character placement. Metrics: overlap IoU, visual balance, alignment, MaxIoU (all text-computable, no rendering needed). 300 test samples. Data on Google Drive/PKU Disk (.npy, convertible to JSON). Academic-use license.",
->>>>>>> eb5ae53856a824519b0fc90eef2eb375cd9c9124
     "benchmark_name": "TextLogo3K"
   },
   {
@@ -1455,7 +1452,7 @@
     "url": "https://arxiv.org/abs/2507.18915",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Training data pipeline, not evaluation benchmark (Columbia University, July 2025). Uses GPT-4o-mini to generate 1.71M creative captions for MSCOCO images at 5 abstraction levels (Hayakawa's Ladder of Abstraction). Designed for fine-tuning OpenCLIP, not for evaluating models. No dedicated test set or scoring rubric — evaluation is zero-shot retrieval on existing external benchmarks (MultiM-Poem for poetry, HAIVMet/VisualMetaphors for metaphors). Data on GitHub + Google Drive.",
+    "rejection_reason": "Valuable creativity resource but not an onboardable benchmark (Columbia University, July 2025). Introduces a principled 5-level abstraction ladder (Hayakawa's framework) for creative captioning and produces 1.71M creative captions for MSCOCO via GPT-4o-mini, plus creativity-aware fine-tuned CLIP models. However, it's a training data pipeline — no dedicated test instances to evaluate models against. Downstream creativity evaluation happens on existing external benchmarks (MultiM-Poem, HAIVMet/VisualMetaphors) which could potentially be onboarded separately. Data on GitHub + Google Drive.",
     "benchmark_name": "MSCOCO Visual Associations"
   },
   {
@@ -1489,7 +1486,7 @@
     "url": "https://doi.org/10.5281/zenodo.10275049",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "LLM spatial instruction-following for Minecraft block placement; not a creativity benchmark",
+    "rejection_reason": "Genuine creative building design benchmark (UAI 2025, Peking University). Agents receive natural language descriptions and must imagine and construct buildings in Minecraft survival mode. GPT-4V evaluates screenshots on Correctness, Complexity, Quality, Functionality (validated against 49 human participants). However, requires embodied execution in a running Minecraft instance — no text-representable output format (unlike JSON coordinates in layout tasks). Only 20 test instructions. 29.4 GB training data on Zenodo. Related but separate from MineAnyBuild (NeurIPS 2025).",
     "benchmark_name": "Minecraft Building"
   },
   {
