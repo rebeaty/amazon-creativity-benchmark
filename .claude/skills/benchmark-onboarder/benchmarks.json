@@ -79,8 +79,10 @@
     "paper_id": "04a8d300d3ff12e94bff022f046d608e7fe66787",
     "url": "https://github.com/allenai/autods",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Scientific reasoning, not creativity"
+    "status": "completed",
+    "scenario_file": "scenarios/discovery_bench/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "DiscoveryBench (ICLR 2024); real test has no labels, using train split (25 instances); 3 domains (sociology, biology, economics); HMS metric requires LLM decomposition; text-only eval from dataset metadata (original benchmark uses code execution)"
   },
   {
     "name": "HypoBench",
@@ -1117,8 +1119,7 @@
     "paper_id": "79d455c55401734971aba42a76204f973980ed04",
     "url": "https://github.com/deep-symbolic-mathematics/llm-srbench",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Scientific reasoning, not creativity"
+    "status": "pending"
   },
   {
     "name": "Vietnamese Poem Quality Scoring System",
@@ -1874,7 +1875,7 @@
     "assigned_to": "SA"
   },
   {
-    "name": "",
+    "name": "MemeCap",
     "paper_id": "d0e0942d5f2074227060c2dfdd6bdadb6b9f8ab8",
     "url": "",
     "assigned_to": "CL",
