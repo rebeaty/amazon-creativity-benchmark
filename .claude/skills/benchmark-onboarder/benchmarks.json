@@ -660,12 +660,12 @@
     "notes": "Multimodal vision-language task; binary classification of visual humor"
   },
   {
-    "name": "Metaphoric Image Captioning Pretraining",
+    "name": "Video Metaphor Captioning (VMC) [Duplicate of VMCD]",
     "paper_id": "38558608dedc495dd748ea3381b08b0d2ffccf56",
     "url": "https://github.com/abisekrk/video-metaphor-captioning",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Video-based metaphor captioning. Related to VMCD. Dataset accessibility unverified; video benchmarks require significant infrastructure.",
+    "rejection_reason": "Duplicate of VMCD (same paper arXiv:2406.04886, different Semantic Scholar ID due to title rename from v1 'Seeing the Unseen' to v2 'Unveiling the Invisible')",
     "benchmark_name": "VMC"
   },
   {
@@ -864,11 +864,11 @@
   },
   {
     "name": "TextLogo3K",
-    "paper_id": "5b9f4feec0a7305574dbdd8529ebae523e2be3e9",
+    "paper_id": "aa7d95b8527d67db1d053e3f57109212b5d1d3ee",
     "url": "https://github.com/yizhiwang96/TextLogoLayout",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "rejection_reason": "Text logo image synthesis benchmark; evaluates visual generation, not VLM creativity",
+    "status": "pending",
+    "notes": "Reconsidered: LLM-based layout generation is now standard (GLDesigner, PosterLLaVa, LaySPA). Task: predict JSON bounding boxes [left,top,right,bottom] in [0,1] for character placement. Metrics: overlap IoU, visual balance, alignment, MaxIoU (all text-computable, no rendering needed). 300 test samples. Data on Google Drive/PKU Disk (.npy, convertible to JSON). Academic-use license.",
     "benchmark_name": "TextLogo3K"
   },
   {
@@ -960,8 +960,10 @@
     "paper_id": "6cf85f6782322e4669deb1eefda341c31b93ca9b",
     "url": "https://github.com/sony/BannerAgency",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "rejection_reason": "Banner image generation evaluation; measures visual design output quality, not text-based creative reasoning",
+    "status": "completed",
+    "scenario_file": "scenarios/banner_request_400/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "EMNLP 2025 multi-agent banner design benchmark (Sony). Multimodal: logo image + concrete request → JSON foreground design blueprint. 400 instances (100 advertisers × 4 audience/purpose pairs, 300x250 size). 6 LLM-as-judge metrics (TAA, LPS, AQS, CTAE, CPYQ, BIS) with strong human correlation (Pearson 0.854-0.955). Data downloaded from GitHub repo zip.",
     "benchmark_name": "BannerRequest400"
   },
   {
@@ -1119,7 +1121,10 @@
     "paper_id": "79d455c55401734971aba42a76204f973980ed04",
     "url": "https://github.com/deep-symbolic-mathematics/llm-srbench",
     "assigned_to": "CL",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/llm_srbench/scenario.py",
+    "eval_type": "custom",
+    "notes": "ICML 2025 Oral; 239 scientific equation discovery problems across 5 subsets; gated HF dataset (nnheui/llm-srbench) requires HF_TOKEN; data in HDF5; evaluation requires executing predicted equations against test data (NMSE/R²); original benchmark uses iterative code generation, adapted for single-turn text equation output"
   },
   {
     "name": "Vietnamese Poem Quality Scoring System",
@@ -1382,7 +1387,7 @@
     "url": "https://github.com/leo81005/Reality-and-Fantasy",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Text-to-image diffusion model benchmark (ECCV 2024); evaluates image generation quality, not VLMs",
+    "rejection_reason": "Creativity benchmark for text-to-image diffusion models (ECCV 2024). 229 prompts with a strong creativity taxonomy (metaphorical thinking, counterfactual scenarios, anthropomorphism, role reversal). However, the creative output being evaluated is generated images, not text. Dataset contains only prompts + category labels — no ground-truth outputs, annotations, or rubrics to evaluate LLM/VLM responses against. Prompts could theoretically be repurposed for text tasks, but that would require building a new benchmark, not onboarding this one.",
     "benchmark_name": "RFBench"
   },
   {
