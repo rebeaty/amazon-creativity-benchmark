@@ -7,6 +7,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | Benchmark | Issue | Solution |
 |-----------|-------|----------|
 | RiddleSense | Test split has no labels (empty `answerKey`) | Use validation split instead |
+| DiscoveryBench | Real test (239) has no ground truth (held out for leaderboard); real train has only 25 instances | Use train split (25 instances); `datasets` and `queries` fields are JSON strings needing `json.loads()`; 3 domains in train (sociology, biology, economics); original benchmark gives models code execution on CSVs but HELM evaluates from metadata alone |
 | ANALOBENCH | Field is `Sentence` not `Story` | Check actual dataset keys before coding |
 | BRAINTEASER | No official HF dataset; many unofficial versions | Use `tasksource/brainteasers` with SP/WP configs; use `choice_order` and `label` fields for correct shuffling |
 | Sudoku-Bench | Three subsets (challenge_100, nikoli_100, ctc); requires config name | Pass subset as parameter to scenario; visual_elements is JSON string needing parsing |
@@ -250,6 +251,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | Puntuguese | exact_match | `get_exact_match_metric_specs()` | Binary humor recognition (Yes/No). Portuguese puns with micro-edited non-funny versions. 1,140 test examples. Paper reports 68.9% F1. |
 | LLM Discussion | llm_judge | Custom Annotator needed | 4 divergent thinking tests (120 items): AUT (30 objects), Similarities (30 pairs), Instances (30 categories), Scientific (30 questions). GPT-4 judges on Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). |
 | SchNovel | exact_match | `get_exact_match_metric_specs()` | Scholarly novelty assessment. Binary choice (1 or 2). 15,000 paper pairs across 6 fields (CS, Math, Physics, QBio, QFin, Stat). Choose more novel paper. Paper1 (more recent) assumed more novel. |
+| DiscoveryBench | llm_judge | Custom Annotator (HMS metric) | Scientific hypothesis generation. 25 real train instances. Open-ended: generate hypothesis from dataset metadata + domain knowledge. HMS metric decomposes hypotheses into context/variables/relationship via GPT-4. Best baseline ~25% HMS. |
 | TwistList | open_ended | `get_open_ended_generation_metric_specs()` | Tongue twister generation from keywords. 2,125 examples (train: 1,912, val: 106, test: 107). Input: RAKE-extracted keywords. Output: phonetically challenging tongue twisters. BLEU, ROUGE, BERTScore. Paper uses phonology metrics: PO, iPED/oPED. |
 | Only Connect Wall (OCW) - Task 1 | custom | Custom metric needed | Word grouping puzzle. 618 puzzles (62 train, 62 val, 494 test). Given 16 shuffled words, group into 4 groups of 4 based on thematic connections. Puzzles designed with red herrings. Evaluation: set-based group matching (order-invariant). Metrics: per-group accuracy, wall-level accuracy. See scenarios/ocw/metric_notes.md. NeurIPS 2023. |
 | Only Connect Wall (OCW) - Task 2 | open_ended | `get_open_ended_generation_metric_specs()` | Connection naming task. 618 puzzles (62 train, 62 val, 494 test). Given 4 already-solved groups of words, name the thematic connection for each group. Tests language articulation. Evaluation: exact match, ROUGE-1 F1, BERTScore F1. NeurIPS 2023. |
@@ -274,6 +276,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | LLM Discussion | GPT-4 or GPT-3.5 | Evaluation/eval_functions/eval_prompts.py | Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5) | `scenarios/llm_discussion/annotator_notes.md` |
 | MATDESIGN | GPT-4o, Claude-3.5-Sonnet, Gemini-1.5-Flash (critics), o1-preview (evaluator) | agent_framework_materials_discovery.py, agent_framework_final.ipynb | Multi-agent AccelMat framework: 3 critics independently judge each of 20 suggestions (Meets_goal_and_satisfies_constraints: YES/NO + Reasoning); Summarizer consolidates feedback; iterative refinement (max 5 cycles); unanimous approval required | `scenarios/matdesign/annotator_notes.md` |
 | Open-domain Dialogue Generation | Llama (via Together AI), GPT-4 (fallback) | utils.py eval_dialog function | Coherence rating (1-10 scale): "Does this next response from Person B make coherent sense?"; GPT-4 fallback for low scores (<6); incoherence rate metric (% with score ≤5) | `scenarios/dialogue_diversity/annotator_notes.md` |
+| DiscoveryBench | GPT-4 (decomposition) | discovery_eval.py | HMS (Hypothesis Matching Score): LLM decomposes gold + predicted into sub-hypotheses (context, variables, relationship); computes ctxF1 × varF1 × rel_acc; score 0-100; best baseline ~25% | `scenarios/discovery_bench/annotator_notes.md` |
 
 **Workflow:**
 1. Create Scenario as normal (Scenario stays pure—no eval info)
@@ -285,7 +288,7 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 
 | Benchmark | Reason | Notes |
 |-----------|--------|-------|
-| Open-ended Data-Driven Discovery (DiscoveryBench) | Scientific reasoning, not creativity | Task is discovering patterns in tabular data; evaluation is hypothesis correctness, not creative merit |
+| Open-ended Data-Driven Discovery (DiscoveryBench) | Previously rejected as "scientific reasoning" | Onboarded: scientific creativity IS creativity; 25 real train instances with gold hypotheses; HMS metric with LLM decomposition |
 | Collaborative Neural Painting (CNP) | Purely visual | No text component |
 | Connections Puzzle Generation | Human-only evaluation | AIIDE 2024; ~20 puzzles evaluated via human preference (creativity/difficulty/enjoyment); no automatic quality metrics; methodology paper not reusable benchmark |
 | Humor Transfer Learning | No dataset | "Code will be uploaded soon" |
