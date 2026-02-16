@@ -1513,11 +1513,13 @@
   },
   {
     "name": "MET-Meme",
-    "paper_id": "ad0c8f7b318178626baceb82330cacb8742ac54b",
+    "paper_id": "4711896d3700e11520229e8831c292cf945e489d",
     "url": "https://github.com/liaolianfoka/MET-Meme-A-Multi-modal-Meme-Dataset-Rich-in-Metaphors",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "rejection_reason": "Annotation files not clearly accessible. GitHub code.rar only has pre-extracted features. Kaggle has image archives (RAR) but no clear annotation CSVs. Cannot verify image-to-label mapping without downloading full Kaggle dataset.",
+    "status": "completed",
+    "scenario_file": "scenarios/met_meme/scenario.py",
+    "eval_type": "exact_match",
+    "notes": "5 classification subsets: metaphor_occurrence (binary, 2007 test), metaphor_category (3-way, 688 test), sentiment (7-way), intention (5-way), offensiveness (4-way). Multimodal: meme image + text. Data via HuggingFace mirror (Anthony3456347095/MET-Meme). Bilingual (Chinese + English). 1 Chinese label in intention field mapped to Expressive.",
     "benchmark_name": "MET-Meme"
   },
   {

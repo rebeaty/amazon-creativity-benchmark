@@ -32,6 +32,7 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | Meta4XNLI | Multiple configs with language-specific splits | Use `int_eval` config with `xnli_test_met` split; filter by `language` field for EN/ES. Detection uses `det_en_finetune` config. |
 | Meta4XNLI | Exact prompts in Appendix Table 29 | Zero-shot: "Say which is the inference relationship...answer only with one word between 'entailment', 'neutral' or 'contradiction'." Format: `{Premise} -> {Hypothesis}:` |
 | Simile Generation | Data in CSV on GitHub, not HuggingFace | Download SimileEMNLP.csv from repo. Input: literal sentence, Output: simile. Human1/Human2 columns are references. |
+| MET-Meme | PIL images in HF dataset; labels use "N(description)" format; 1 Chinese label "表达情感" in intention field; bilingual (Chinese + English) | Save PIL images to temp files; clean label format via label_map; map Chinese label to "Expressive"; HF mirror: Anthony3456347095/MET-Meme (third-party upload) |
 | MACGYVER | Includes both solvable and unsolvable problems | For unsolvable problems (377 of 1683), expected response is to identify infeasibility. Include all in eval. |
 | MACGYVER | Human-annotated evaluation | Paper uses fine-grained categories (efficient, inefficient, infeasible, etc.). See `annotator_notes.md` for judge setup. |
 | ARN | Data on Google Drive (xlsx), not HuggingFace/GitHub | Use gdown to download from folder ID `1itOPXtorFEgweQCd71m2bIRwWAUHcXuf`. Prompt template in Appendix C.2. |
@@ -267,6 +268,11 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | MineAnyBuild (creativity) | custom + llm_judge | Custom metric + Annotator | Creative Minecraft architecture. 1,419 text-only instances. Output: JSON 3D blueprint matrix. LLM-as-judge (GPT-4.1) on 5 dims: Creativity (0.8 weight), Completeness, Complexity, Architecture Structure, Overall Aesthetic (0.05 each). Block matching for direct comparison. NeurIPS 2025. |
 | MineAnyBuild (spatial_planning) | custom + llm_judge | Custom metric + Annotator | Spatial plan generation. 946 multimodal instances (concrete + simple). Output: JSON 3D blueprint. LLM-as-judge on 3 dims: Completeness (0.3), Complexity (0.3), Aesthetic (0.4). Block matching available. |
 | MineAnyBuild (spatial_reasoning) | exact_match | `get_exact_match_metric_specs()` | Mental rotation VQA. 1,728 multimodal instances. A/B/C/D/True/False. Known "Ture" typo in 144 instances (corrected). |
+| MET-Meme (metaphor_occurrence) | exact_match | `get_exact_match_metric_specs()` | Binary metaphor detection (A/B). 2,007 multimodal instances. Bilingual (Chinese + English). |
+| MET-Meme (metaphor_category) | exact_match | `get_exact_match_metric_specs()` | 3-way metaphor type (A/B/C). 688 instances (metaphor-positive subset). |
+| MET-Meme (sentiment) | exact_match | `get_exact_match_metric_specs()` | 7-way sentiment classification (A-G). 2,007 instances. |
+| MET-Meme (intention) | exact_match | `get_exact_match_metric_specs()` | 5-way communicative intention (A-E). 2,007 instances. 1 Chinese label mapped. |
+| MET-Meme (offensiveness) | exact_match | `get_exact_match_metric_specs()` | 4-way offensiveness level (A-D). 2,007 instances. |
 
 **HELM RunSpec patterns:**
 - `exact_match` → `get_exact_match_metric_specs()`
