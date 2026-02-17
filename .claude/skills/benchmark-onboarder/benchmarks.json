@@ -289,8 +289,10 @@
     "paper_id": "20ad9e51e946d283f3da93ea1d7a35b01b27a5e1",
     "url": "https://github.com/morturr/HumorTransferLearning.git",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "No dataset available"
+    "status": "completed",
+    "scenario_file": "scenarios/humor_transfer/scenario.py",
+    "eval_type": "exact_match",
+    "notes": "Binary humor detection. 2 of 4 paper datasets onboarded (others unavailable). sarcasm_headlines: 26,709 test (Misra & Arora 2023, HuggingFace). amazon_questions: 19,142 (Ziser et al. 2020, AWS S3). Prompt from paper Appendix C."
   },
   {
     "name": "CFunSet",
@@ -417,8 +419,10 @@
     "paper_id": "29203f0b8b9be7fd70d99bf7390c6a78b68a9289",
     "url": "https://github.com/kevinma1515/gpt_idetc",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Open-ended + LLM-judge"
+    "status": "completed",
+    "scenario_file": "scenarios/conceptual_design/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "IDETC 2023. 12 open-ended engineering design problems (problem 11 excluded — no human refs). 100 crowdsourced human reference solutions each. 4 prompt variants: base/novel/diverse/unique. Data cloned from GitHub at runtime."
   },
   {
     "name": "TinyStories",
