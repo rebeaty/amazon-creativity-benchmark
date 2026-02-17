@@ -165,48 +165,63 @@ These apply across creative and non-creative tasks:
 - No hallucinations or factual errors
 - No inappropriate content
 
-## Judge Prompt Template
+## Judge Prompt Template (Exact from Paper - Appendix, Pages 16-17)
 
+### For Model Training/Usage
+
+**Training prompt (for judge models):**
 ```
-Оцените ответ модели по следующим критериям:
+### The task for the evaluation:
+{instruction}
 
-Задание: {instruction}
-Ответ модели: {model_output}
+### Gold answer:
+{reference_answer}
 
-Критерий оценки: {criteria_name}
-Описание критерия: {criteria_description}
+### Generated answer:
+{answer}
 
-Рубрика:
-{rubrics}
+### Criteria:
+{criteria.name}
 
-Пример применения:
-{rubrics_example}
-
-Оцените ответ по шкале от 0 до 4 и объясните вашу оценку.
-
-Оценка:
+### Rating scale for the criterion:
+{criteria.rubrics}
 ```
 
-**Translation:**
+**Syntactic Data Prompt (for LLM-as-a-Judge evaluation):**
 ```
-Evaluate the model's response according to the following criteria:
+### Task Description:
+You are provided with the following: an instruction (which may include an input), a response to evaluate, a reference answer and an evaluation criterion with a detailed scale.
+1. Write detailed feedback assessing the quality of the response strictly according to the provided evaluation scale. Do not give a general evaluation, base your assessment entirely on the scale.
+2. Assign a score to the response by referring to the scale. The score must correspond to a single scale point and its description.
+3. Format your output as follows: "[FEEDBACK] (Write detailed feedback regarding the evaluated response and the assigned score, reason step by step and explain each point.) [RESULT] (An integer score within the boundaries of the criterion scale.)"
+4. Do not include any additional openings, closings, or explanations.
+5. Write feedback in Russian.
+6. Write [END] after you are done.
 
-Task: {instruction}
-Model response: {model_output}
+### The instruction to evaluate:
+{instruction}
 
-Evaluation criterion: {criteria_name}
-Criterion description: {criteria_description}
+### Reference answer:
+{reference_answer}
 
-Rubric:
-{rubrics}
+### Response to evaluate:
+{answer}
 
-Application example:
-{rubrics_example}
+### Score name
+{criteria.name}
 
-Rate the response on a scale from 0 to 4 and explain your rating.
-
-Score:
+### Score Rubrics:
+{criteria.rubrics}
 ```
+
+**Expected Output Format:**
+```
+[FEEDBACK] {detailed feedback in Russian explaining the rating step by step} [RESULT] {integer score from 0 to 4} [END]
+```
+
+### Original Russian Version (from paper)
+
+**Note:** The above is the English translation. The original paper prompt is in Russian. When implementing, use the Russian version for native evaluation.
 
 ## Implementation for HELM
 
@@ -222,39 +237,68 @@ criteria_name = instance.extra_data['criteria_name']
 
 ### Option 2: Use LLM-as-a-Judge
 
-Implement `LLMAsJuryAnnotator` using the POLLUX judge models or GPT-4:
+Implement `LLMAsJuryAnnotator` using the POLLUX judge models or GPT-4 with the exact prompt from the paper:
 
 ```python
 class POLLUXCreativityAnnotator(Annotator):
     def annotate(self, request: Request, completion: str) -> Annotation:
         # Load criteria from instance metadata
         criteria_name = request.instance.extra_data['criteria_name']
-        criteria_description = request.instance.extra_data['criteria_description']
         rubrics = request.instance.extra_data['rubrics']
+        reference_answer = request.instance.references[0].output.text if request.instance.references else ""
+        instruction = request.instance.input.text
 
-        # Build judge prompt in Russian
-        judge_prompt = f"""
-        Оцените ответ модели по критерию "{criteria_name}".
+        # Build judge prompt - EXACT format from paper (Appendix, pages 16-17)
+        judge_prompt = f"""### Task Description:
+You are provided with the following: an instruction (which may include an input), a response to evaluate, a reference answer and an evaluation criterion with a detailed scale.
+1. Write detailed feedback assessing the quality of the response strictly according to the provided evaluation scale. Do not give a general evaluation, base your assessment entirely on the scale.
+2. Assign a score to the response by referring to the scale. The score must correspond to a single scale point and its description.
+3. Format your output as follows: "[FEEDBACK] (Write detailed feedback regarding the evaluated response and the assigned score, reason step by step and explain each point.) [RESULT] (An integer score within the boundaries of the criterion scale.)"
+4. Do not include any additional openings, closings, or explanations.
+5. Write feedback in Russian.
+6. Write [END] after you are done.
 
-        Задание: {request.instance.input.text}
-        Ответ модели: {completion}
+### The instruction to evaluate:
+{instruction}
 
-        Описание критерия: {criteria_description}
-        Рубрика: {rubrics}
+### Reference answer:
+{reference_answer}
 
-        Оцените по шкале от 0 до 4.
-        """
+### Response to evaluate:
+{completion}
 
-        # Query judge model
+### Score name
+{criteria_name}
+
+### Score Rubrics:
+{rubrics}
+"""
+
+        # Query judge model (use ai-forever/pollux-judge-32b-r or GPT-4)
         judge_response = self.query_judge(judge_prompt)
 
-        # Parse score and justification
-        score = self.extract_score(judge_response)
+        # Parse score from [RESULT] tag
+        score = self.extract_score_from_result_tag(judge_response)
 
         return Annotation(
             score=score,
-            metadata={'judge_response': judge_response}
+            metadata={
+                'judge_response': judge_response,
+                'criteria_name': criteria_name
+            }
         )
+
+    def extract_score_from_result_tag(self, response: str) -> int:
+        """Extract score from [RESULT] {score} [END] format"""
+        import re
+        match = re.search(r'\[RESULT\]\s*(\d+)\s*\[END\]', response)
+        if match:
+            return int(match.group(1))
+        # Fallback: try to find any number between RESULT and END
+        match = re.search(r'\[RESULT\].*?(\d+).*?\[END\]', response, re.DOTALL)
+        if match:
+            return int(match.group(1))
+        raise ValueError(f"Could not parse score from response: {response}")
 ```
 
 ## Dataset Statistics

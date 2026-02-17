@@ -13,12 +13,12 @@ Task: Translate classical Chinese poems into English while preserving:
 This is a creativity benchmark focused on the "elegance" dimension - the ability
 to produce poetically beautiful, creative translations that preserve aesthetic value.
 
-Prompt format:
-  Translate the following classical Chinese poem into English:
+Prompt format (from paper Appendix B.2):
+  Please translate this classical Chinese poem {translate_type} into an English poem {translate_type}:
+  Poem:{chinese_poem}
 
-  {chinese_poem}
-
-  Translation:
+Note: Paper uses RAG context ("Explanation:{rag_context}") which is not available in dataset.
+We omit this field for baseline evaluation without retrieval augmentation.
 
 Evaluation: Open-ended generation (BLEU, ROUGE, F1) + custom GPT-4 metrics
 for Beauty of Sound (BS), Beauty of Form (BF), Beauty of Meaning (BM).
@@ -139,15 +139,18 @@ class PoetMTScenario(Scenario):
         data_dir = self._download_data(output_path)
 
         # Load poems based on dynasty selection
+        # Store tuples of (poem, dynasty_name) to track origin
         all_poems = []
         if self.dynasty == "all":
             for dynasty in ["tang", "song", "yuan"]:
-                all_poems.extend(self._load_poems(data_dir, dynasty))
+                poems = self._load_poems(data_dir, dynasty)
+                all_poems.extend([(poem, dynasty) for poem in poems])
         else:
-            all_poems = self._load_poems(data_dir, self.dynasty)
+            poems = self._load_poems(data_dir, self.dynasty)
+            all_poems = [(poem, self.dynasty) for poem in poems]
 
         instances = []
-        for idx, poem in enumerate(all_poems):
+        for idx, (poem, dynasty_name) in enumerate(all_poems):
             # Extract fields
             chinese_poem = poem['src']
             reference_translation = poem['ref']
@@ -156,11 +159,15 @@ class PoetMTScenario(Scenario):
             if not chinese_poem or not reference_translation:
                 continue
 
-            # Build prompt
+            # Determine translate type based on dynasty
+            translate_type = f"{dynasty_name.capitalize()} poetry"
+
+            # Build prompt following paper's Appendix B.2 format
+            # Note: Paper includes RAG context ("Explanation:{rag_context}") which we omit
             prompt = (
-                "Translate the following classical Chinese poem into English:\n\n"
-                f"{chinese_poem}\n\n"
-                "Translation:"
+                f"Please translate this classical Chinese poem {translate_type} "
+                f"into an English poem {translate_type}: "
+                f"Poem:{chinese_poem}"
             )
 
             # Create reference
@@ -172,7 +179,7 @@ class PoetMTScenario(Scenario):
             ]
 
             # Create instance
-            instance_id = f"{self.dynasty}_{idx}"
+            instance_id = f"poetmt_{dynasty_name}_{idx}"
             instances.append(
                 Instance(
                     input=Input(text=prompt),

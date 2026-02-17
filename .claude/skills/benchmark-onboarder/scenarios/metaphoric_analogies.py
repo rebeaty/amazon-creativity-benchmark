@@ -18,21 +18,35 @@ literary texts.
 
 The relation between T1 and T2 is analogous to the relation between S1 and S2.
 
-Prompt format (adapted from paper experiments):
-  Text: [literary text with metaphor]
+Prompt format (exact from experiments/openai_models.py, lines 55-72):
+  Preamble explaining T1, T2, S1, S2 and their relations
+  + Text containing a metaphor
+  + ONE concept provided (T1, T2, S1, or S2)
+  + Task: Find the THREE other concepts
 
-  Extract the four concepts forming the metaphoric analogy:
-  T1 (target entity):
-  T2 (target category):
-  S1 (source entity):
-  S2 (source category):
+  "Let T1, T2, S1 and S2 be four concepts forming a metaphor in a short text.
+   The relation between the concepts T1 and T2 is analogous to the relation
+   between the concepts S1 and S2. The two concepts T1 and T2 belong to the
+   target domain of the metaphor, they express the main topic discussed in the
+   text. The two concepts S1 and S2 belong to the source domain of the metaphor,
+   they express the image of the metaphor. Given a short text that contains a
+   metaphor, and one of the four concepts, your task is to find three other
+   concepts forming a metaphor with it in the text. The provided concept and
+   the three extracted concepts must together form an analogy. Sometimes, T1,
+   T2, S1 or S2 might be implicit in the text (the word might not appear in
+   the text), and in this case you should infer a correct concept.
 
-Example:
-  Text: "A skyscraper is in architecture as a boast is in interpersonal relations."
-  T1: skyscraper
-  T2: architecture
-  S1: boast
-  S2: interpersonal-relations
+   Now it is your turn. Here is a sentence containing a metaphor: [text]
+   Here is a concept [T1/T2/S1/S2]: [concept]
+
+   Answer:
+   T1:
+   T2:
+   S1:
+   S2:"
+
+  Note: Paper uses few-shot with examples. This scenario uses zero-shot.
+  Paper tests each example 4 times (once with each concept provided).
 
 Fields used: tagged_sentence, T1, T2, S1, S2
 Fields skipped: id, n. implicit term (requires manual evaluation), Author,
@@ -67,11 +81,30 @@ class MetaphoricAnalogiesScenario(Scenario):
     Evaluates models' ability to extract metaphoric analogies (4-term proportional
     analogies) from literary texts, requiring understanding of figurative language
     and conceptual mappings.
+
+    Following the paper's methodology, each example generates 4 test instances:
+    - Instance 1: Given T1, extract T2, S1, S2
+    - Instance 2: Given T2, extract T1, S1, S2
+    - Instance 3: Given S1, extract T1, T2, S2
+    - Instance 4: Given S2, extract T1, T2, S1
     """
 
     name = "metaphoric_analogies"
     description = "github.com/Mionies/metaphoric-analogies-extraction"
     tags = ["creativity", "metaphor", "analogy", "figurative_language"]
+
+    # Exact preamble from experiments/openai_models.py (lines 55-64)
+    PREAMBLE = (
+        "Let T1, T2, S1 and S2 be four concepts forming a metaphor in a short text. "
+        "The relation between the concepts T1 and T2 is analogous to the relation between the concepts S1 and S2. "
+        "The two concepts T1 and T2 belong to the target domain of the metaphor, they express the main topic discussed in the text. "
+        "The two concepts S1 and S2 belong to the source domain of the metaphor, they express the image of the metaphor."
+        "Given a short text that contains a metaphor, and one of the four concepts, "
+        "your task is to find three other concepts forming a metaphor with it in the text. "
+        "The provided concept and the three extracted concepts must together form an analogy."
+        "Sometimes, T1, T2, S1 or S2 might be implicit in the text (the word might not appear in the text),"
+        "and in this case you should infer a correct concept.\n\n"
+    )
 
     def get_instances(self, output_path: str) -> List[Instance]:
         """
@@ -94,48 +127,57 @@ class MetaphoricAnalogiesScenario(Scenario):
         df = pd.read_csv(data_path)
 
         instances = []
+        concept_names = ["T1", "T2", "S1", "S2"]
+
         for idx, row in df.iterrows():
             # Remove XML tags from text for cleaner input
             text = row['tagged_sentence']
             text = text.replace('<t>', '').replace('</t>', '')
             text = text.replace('<m>', '').replace('</m>', '')
 
-            # Build prompt
-            prompt = (
-                f"Text: {text}\n\n"
-                "Extract the four concepts forming the metaphoric analogy. "
-                "T1 and T2 are the target domain (main topic), "
-                "S1 and S2 are the source domain (metaphor/image).\n\n"
-                "T1 (target entity):\n"
-                "T2 (target category):\n"
-                "S1 (source entity):\n"
-                "S2 (source category):"
-            )
+            # Get the four concepts
+            concepts = [row['T1'], row['T2'], row['S1'], row['S2']]
 
-            # Build reference answer
-            # Format: "T1: [term]\nT2: [term]\nS1: [term]\nS2: [term]"
-            reference_text = (
-                f"T1: {row['T1']}\n"
-                f"T2: {row['T2']}\n"
-                f"S1: {row['S1']}\n"
-                f"S2: {row['S2']}"
-            )
+            # Following paper methodology: create 4 instances per example
+            # Each instance provides one concept and asks for the other three
+            for concept_idx in range(4):
+                given_concept_name = concept_names[concept_idx]
+                given_concept_value = concepts[concept_idx]
 
-            references = [
-                Reference(
-                    Output(text=reference_text),
-                    tags=[CORRECT_TAG]
+                # Build prompt using format consistent with paper's few-shot examples (lines 66-68)
+                prompt = (
+                    f"{self.PREAMBLE}"
+                    f"Now it is your turn.\n"
+                    f"Text containing a metaphor: \"{text}\"\n"
+                    f"Concept {given_concept_name}: \"{given_concept_value}\"\n\n"
+                    "Answer:\n"
+                    "T1: "
                 )
-            ]
 
-            # Create instance
-            instances.append(
-                Instance(
-                    input=Input(text=prompt),
-                    references=references,
-                    split=TEST_SPLIT,
-                    id=f"metaphoric_analogy_{idx}"
+                # Reference answer includes all four concepts
+                # (even though one is given, the model should reproduce it)
+                reference_text = (
+                    f"T1: {row['T1']}\n"
+                    f"T2: {row['T2']}\n"
+                    f"S1: {row['S1']}\n"
+                    f"S2: {row['S2']}"
                 )
-            )
+
+                references = [
+                    Reference(
+                        Output(text=reference_text),
+                        tags=[CORRECT_TAG]
+                    )
+                ]
+
+                # Create instance
+                instances.append(
+                    Instance(
+                        input=Input(text=prompt),
+                        references=references,
+                        split=TEST_SPLIT,
+                        id=f"metaphoric_analogy_{idx}_given_{given_concept_name}"
+                    )
+                )
 
         return instances

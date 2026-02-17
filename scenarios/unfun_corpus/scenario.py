@@ -18,18 +18,19 @@ Task: "Unfunning" - Edit satirical headlines to make them realistic/serious.
       This benchmark evaluates humor understanding and manipulation (removing humor)
       rather than humor generation.
 
-Prompt format (from data_generation/prompts/unfun_dataset/few-shot/):
+Prompt format (from data_generation/prompts/unfun_dataset/few-shot/ and hit_llm_generation_v2.py):
   Chat-style (primary):
-    "You are a helpful assistant that edits humorous headlines to make them realistic.
-
-    Humorous headline: {satirical_headline}
-
-    Realistic headline:"
+    System: "You are a helpful assistant that edits humorous headlines to make them realistic."
+    User: {satirical_headline}
+    (No explicit "Humorous headline:" or "Realistic headline:" labels)
 
   Completion-style (alternative):
     "The following humorous headlines can be edited to be realistic:
+    {satirical_headline} ->"
+    (Uses " ->" separator, not "Realistic version:")
 
-    {satirical_headline}"
+  Note: Paper uses 8-shot prompts with randomly sampled examples. This scenario uses
+        zero-shot for simplicity. For few-shot evaluation, sample 8 examples from training data.
 
 Evaluation:
   - Primary: Open-ended generation compared to human-created unfunned headlines
@@ -121,18 +122,27 @@ class UnfunCorpusScenario(Scenario):
         return examples
 
     def create_prompt(self, satirical_headline: str) -> str:
-        """Create the prompt based on the selected style."""
+        """
+        Create the prompt based on the selected style.
+
+        Note: This uses zero-shot prompts. The paper uses 8-shot prompts with
+        randomly sampled examples from high-quality human edits.
+
+        Chat format: System message + user message (no explicit labels)
+        Completion format: Preamble + input with " ->" separator
+        """
         if self.prompt_style == "chat":
+            # For chat models: System message followed by user message
+            # In HELM, we simulate this as a single prompt with instruction + input
             return (
                 "You are a helpful assistant that edits humorous headlines to make them realistic.\n\n"
-                f"Humorous headline: {satirical_headline}\n\n"
-                "Realistic headline:"
+                f"{satirical_headline}"
             )
         else:  # completion
+            # For completion models: preamble + input + " ->" separator
             return (
-                "The following humorous headlines can be edited to be realistic:\n\n"
-                f"{satirical_headline}\n\n"
-                "Realistic version:"
+                "The following humorous headlines can be edited to be realistic:\n"
+                f"{satirical_headline} ->"
             )
 
     def get_instances(self, output_path: str) -> List[Instance]:

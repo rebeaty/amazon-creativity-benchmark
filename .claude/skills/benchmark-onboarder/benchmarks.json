@@ -230,7 +230,9 @@
     "name": "ThemeVlogEval",
     "paper_id": "20f408f62be92cd36bbcbdff4ceda7409baf9262",
     "url": "https://personavlog-paper.github.io/",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "not_suitable",
+    "notes": "Dataset not publicly available; paper states data will be released but no GitHub repo or HuggingFace dataset exists as of Feb 2025; multimodal video generation benchmark evaluating vlog creation from theme+style+reference_image; outputs: stories, storyboards, videos, images, audio; evaluation requires MLLM judges (story quality 1-5), CLIP scores (image), video quality metrics (consistency, smoothness, aesthetics); would need custom annotators and video infrastructure; arXiv:2508.13602 PersonaVlog"
   },
   {
     "name": "NEOCODER",
@@ -260,9 +262,10 @@
     "paper_id": "1c3a3c217a1deab466bd1db854e33aed3ff8880d",
     "url": "https://huggingface.co/datasets/iaadlab/FutureGen",
     "assigned_to": "VD",
-    "status": "skipped",
-    "skip_reason": "Not a creativity benchmark - focuses on scientific text generation/NLG evaluation with standard metrics (ROUGE, BLEU, BERTScore). Task is academic writing assistance rather than creativity evaluation.",
-    "eval_type": "open_ended"
+    "status": "completed",
+    "scenario_file": "scenarios/futuregen/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "278 NeurIPS papers (2021-2022); ground truth from author-mentioned future work + OpenReview peer suggestions; uses df_neurips_future_work_dataset.csv only (ACL files lack ground truth); future_work_combined field is JSON list requiring parsing; long-context inputs (full paper text); arXiv:2503.16561"
   },
   {
     "name": "PACE (Parallel Association Chain Evaluation)",
@@ -374,7 +377,11 @@
     "name": "CPers (Creativity in Persian)",
     "paper_id": "26c397ae35fa0d521a6b30e578924861a06d8cdd",
     "url": "https://huggingface.co/datasets/teias-ai/CPers",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_path": "scenarios/cpers/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "Persian literary text generation across 20 cultural topics; 4,371 examples; single-sentence literary texts; TTCT-based evaluation (originality, fluency, flexibility, elaboration) using Claude 3.7 Sonnet as judge; 3 questions per dimension on 1-5 scale; also evaluates 4 rhetorical devices (simile, metaphor, hyperbole, antithesis); validated with human annotators (ICC strong agreement); prompt: '\u062f\u0631\u0628\u0627\u0631\u0647 {topic} \u06cc\u06a9 \u0645\u062a\u0646 \u0627\u062f\u0628\u06cc \u062f\u0631 \u06cc\u06a9 \u062c\u0645\u0644\u0647 \u0628\u0646\u0648\u06cc\u0633'; arXiv:2509.18401; Sep 2025"
   },
   {
     "name": "LayoutSAM-Eval",
@@ -459,7 +466,10 @@
     "name": "GAUSS (General Assessment of Underlying Structured Skills in Mathematics)",
     "paper_id": "2fd0be13706830299fd92d78795afde3b53cec35",
     "url": "https://gaussmath.ai",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "reason": "Not a creativity benchmark; Mathematical reasoning benchmark evaluating 12 cognitive dimensions in mathematics, only 1 is creativity ('Novel Approach'); primary focus is mathematical proficiency (knowledge, problem-solving, logical reasoning); 12 dimensions across 3 domains: Mathematical Knowledge and Understanding (3), Problem Solving and Communication (3), Learning/Meta Skills/Creativity (6); domain-specific expertise evaluation, not creative thinking; dataset: GaussMath/GAUSS on HuggingFace; hyperbolic.ai; arXiv:2509.18122",
+    "notes": "Graduate-level mathematics problems across 12 skill dimensions; creativity dimension (12) has 3 problems; supports dimension parameter ('12' for creativity only, 'all' for all 41 problems); includes rubrics for LLM-as-judge evaluation; open-ended generation with expert-written standard solutions as references"
   },
   {
     "name": "HumorousAI Benchmark",
@@ -489,7 +499,11 @@
     "name": "Focus-Level Evaluation Framework for LLM Reviews",
     "paper_id": "37841d9036313b43d2a4069bc3f1493e9dc598da",
     "url": "https://figshare.com/s/d5adf26c802527dd0f62",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_path": "scenarios/llm_review_focus/scenario.py",
+    "eval_type": "custom",
+    "notes": "Academic peer review generation for ICLR papers; 676 papers with expert reviews from OpenReview (2021-2024); focus-level evaluation measuring attention distribution across 7 target facets (Problem, Prior Research, Method, Theory, Experiment, Conclusion, Paper) and 5 aspect facets (Impact, Novelty, Clarity, Validity, Not-specific); evaluation via KL divergence, F1 for facet coverage, ROUGE-L, BERTScore; requires manual dataset download from Figshare; includes 582 train, 98 test split; 3,657 annotated human review points; requires fine-tuned annotator model for facet labeling; paper finding: LLMs biased toward validity, overlook novelty; arXiv:2502.17086; EMNLP 2025"
   },
   {
     "name": "PopBlends Evaluation Framework",
@@ -573,7 +587,11 @@
     "name": "GraphRAG-Bench",
     "paper_id": "40de5fd0c5b9d1fdc890b4b100845b716b676759",
     "url": "https://github.com/GraphRAG-Bench/GraphRAG-Benchmark",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "wrong_dataset_onboarded",
+    "eval_type": "mixed",
+    "notes": "",
+    "reason": "Mistakenly onboarded wrong dataset; The dataset we used (jeremycp3/GraphRAG-Bench) is not the correct dataset for the paper we intended to onboard; Need to identify correct dataset and re-onboard; Original notes: 1,018 questions across 5 types from 20 CS textbooks"
   },
   {
     "name": "HumorDB",
@@ -1189,7 +1207,9 @@
     "name": "Outline to Story (O2S)",
     "paper_id": "93bd60ce85fed4ccc7c7a6f05b90a1cb1e990eac",
     "url": "https://github.com/fangleai/Outline22Story",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "notes": "Controllable story generation from writing prompts; uses WritingPrompts dataset (euclaise/writingprompts); 15,138 test examples, 15,620 validation; prompts serve as outlines/guidance for multi-paragraph story generation; stories typically 500-2000 words; supports max_instances parameter to limit dataset size; open-ended generation evaluation"
   },
   {
     "name": "Real Satirical Photographs Dataset",
@@ -2092,26 +2112,7 @@
     "name": "FLUTE (Filtered) - Rhetorical Language",
     "paper_id": "arxiv-2505.22792",
     "url": "https://arxiv.org/abs/2505.22792",
-    "status": "completed",
-    "scenario_file": "scenarios/flute_filtered/scenario.py",
-    "subsets": {
-      "metaphor": {
-        "instances": 1250,
-        "eval_type": "exact_match",
-        "description": "Metaphorical comparisons with NLI and explanations"
-      },
-      "simile": {
-        "instances": 1250,
-        "eval_type": "exact_match",
-        "description": "Explicit comparisons ('like/as') with NLI and explanations"
-      },
-      "combined": {
-        "instances": 2500,
-        "eval_type": "exact_match",
-        "description": "All metaphors and similes combined"
-      }
-    },
-    "notes": "Filtered version of FLUTE dataset (EMNLP 2022) selecting only metaphors (1,250) and similes (1,250) from 7,534 total examples. Used in Rhet2Pix paper (May 2025) for rhetorical text-to-image generation. Task: Figurative NLI - given premise and hypothesis with figurative language, predict Entailment/Contradiction and generate textual explanation. Filtering criteria: rhetorical clarity + visual interpretability. Excludes Sarcasm, Idioms, CreativeParaphrase (less visually interpretable). Paper extracts 7 semantic dimensions: rhetorical device, literal subject, metaphorical vehicle, theme, emotional tone, subject/vehicle keywords. Original FLUTE dataset on HuggingFace: ColumbiaNLP/FLUTE. Evaluation: Exact match for classification + BLEU/ROUGE/METEOR/BERTScore for explanations. Rhet2Pix code: github.com/zyxxxxx-39/Rhet2Pix. Scenario filters type='Metaphor' or type='Simile' from full FLUTE dataset."
+    "assigned_to": "VD"
   },
   {
     "name": "Slang Generation Evaluative Framework",

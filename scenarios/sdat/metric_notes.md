@@ -144,20 +144,33 @@ def calibrate_to_dat_scale(raw_score: float) -> float:
 
 ## Validation Data
 
-### Human Baseline
+### Human Baseline (from S-DAT Validation)
 
-- **Dataset**: 8,900+ human participants (98 countries)
-- **Location**: https://osf.io/kbeq6/
-- **Statistics**: Mean=78.5, SD=15.2 (calibrated DAT scale)
-- **Use**: Compare LLM performance to human distribution
+- **Source**: Haase et al. (2025) S-DAT validation using Olson et al. (2021) datasets
+- **Datasets**:
+  - Study 1a: 141 undergraduates (Melbourne)
+  - Study 1b: 285 undergraduates (Melbourne)
+  - Study 2: 8,572 participants (Australia national sample, ages 7-70+)
+- **Location**: https://osf.io/pv84c/ (S-DAT data), https://osf.io/kbeq6/ (original DAT)
+- **Statistics**:
+  - Original DAT: Mean=78.5, SD=15.2
+  - S-DAT: Mean=79.1, SD=slightly lower (fewer outliers)
+  - Percentiles (S-DAT): 5%=72.17, 25%=76.44, 50%=79.11, 75%=82.03, 95%=86.59
+- **Correlations**:
+  - S-DAT vs. DAT: r=.60-.67 (high agreement)
+  - S-DAT vs. AUT originality: r=.13-.27 (convergent validity)
+  - S-DAT vs. Bridge-the-Associative-Gap: r=.08-.11, non-significant (discriminant validity)
+- **Use**: Compare LLM performance to human distribution across multiple demographics
 
-### LLM Baseline
+### LLM Performance Studies
 
-- **Study**: Bellemare et al. (2025) - "Divergent Creativity in Humans and Large Language Models"
-- **Models tested**: GPT-3.5, GPT-4, Claude, Gemini, Falcon, StableLM, Vicuna, others
-- **Dataset**: 500+ responses per model
-- **Location**: https://github.com/AntoineBellemare/DAT_GPT
-- **Finding**: Some LLMs exceed human performance on DAT but struggle with narrative creativity
+Multiple studies have evaluated LLMs on divergent thinking tasks:
+
+- **Bellemare et al. (2025)**: "Divergent Creativity in Humans and Large Language Models"
+  - Models: GPT-3.5, GPT-4, Claude, Gemini, Falcon, StableLM, Vicuna
+  - Method: DAT using GloVe embeddings
+  - Finding: Some LLMs exceed human DAT scores but show limitations in narrative creativity
+  - Location: https://github.com/AntoineBellemare/DAT_GPT
 
 ## Integration into HELM
 
@@ -207,23 +220,26 @@ def get_sdat_metric_specs() -> list[MetricSpec]:
 
 ### Papers
 
-1. **S-DAT Framework**
+1. **S-DAT Framework (PRIMARY)**
    - Haase, J., Hanel, P. H. P., & Pokutta, S. (2025)
    - "S-DAT: A Multilingual, GenAI-Driven Framework for Automated Divergent Thinking Assessment"
-   - AAAI/ACM Conference on AI, Ethics, and Society
+   - AAAI/ACM Conference on AI, Ethics, and Society (AIES)
    - https://arxiv.org/abs/2505.09068
+   - **Key contribution**: Extends DAT to multilingual contexts using transformer-based embeddings
 
 2. **Original DAT**
    - Olson, J. A., Nahas, J., Chmoulevitch, D., Cropper, S. J., & Webb, M. E. (2021)
    - "Naming unrelated words predicts creativity"
    - PNAS, 118(25)
    - https://www.pnas.org/doi/10.1073/pnas.2022340118
+   - **Key contribution**: Established DAT task and validation with human creativity measures
 
-3. **LLM Evaluation Study**
+3. **Related LLM Studies**
    - Bellemare, A., et al. (2025)
    - "Divergent Creativity in Humans and Large Language Models"
    - Scientific Reports
    - https://arxiv.org/abs/2405.13012
+   - **Key contribution**: Demonstrated LLMs can match/exceed human DAT performance
 
 ### Code Repositories
 

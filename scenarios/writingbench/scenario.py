@@ -1,9 +1,11 @@
 """
 HELM Scenario: WritingBench
 
-Paper: Not yet published (from X-PLUG team)
+Paper: WritingBench: A Comprehensive Benchmark for Generative Writing
+       https://arxiv.org/abs/2503.05244
+       Yuning Wu, Jiahao Mei, Ming Yan, et al.
 Code: https://github.com/X-PLUG/WritingBench
-Dataset: GitHub repository (no HuggingFace dataset available)
+Dataset: GitHub repository (benchmark_query/benchmark_all.jsonl)
 
 Task: Evaluates LLM writing capabilities across 1,000 real-world queries spanning
 6 primary domains and 100 fine-grained subdomains. Covers diverse writing scenarios
@@ -22,18 +24,28 @@ Dataset composition:
   - 100 fine-grained subdomains (e.g., Paper Outline, Abstract, Introduction,
     Contract Drafting, Literary Analysis, etc.)
 
+Generation prompt format (from repository generate_response.py, lines 35-39):
+  No system prompt - queries are passed directly as user messages.
+  Each query is a complete writing task request in natural language with
+  domain-specific context, requirements, and constraints.
+
+  messages=[{"role": "user", "content": query}]
+
+Generation parameters (from README):
+  top_p: 0.8, top_k: 20, temperature: 0.7, max_length: 16000
+
 Evaluation: LLM-as-judge using rubric-based scoring. Each query has 5 instance-specific
 evaluation criteria with detailed scoring rubrics (1-2, 3-4, 5-6, 7-8, 9-10 point ranges).
 Evaluators assign a 10-point scale score per criterion with justifications.
 
-Judge models: Claude models (LLM-as-a-Judge) or finetuned critic model (paper provides both)
+Evaluation prompt (from Paper Appendix C.6, pages 32-33):
+  System: "You are an expert evaluator with extensive experience in evaluating the
+          response of a given query."
 
-Prompt format:
-  No standardized template - each query is a complete writing task request in natural language.
-  Queries are domain-specific and include context, requirements, and constraints.
+  User: Rubric-based scoring prompt with strict evaluation guidelines.
+        See annotator_notes.md for complete evaluation prompt template.
 
-Prompt source: Queries are original contributions from the benchmark paper, designed to
-reflect real-world writing scenarios across multiple domains.
+Judge models: Claude models (LLM-as-a-Judge) or finetuned critic model
 
 Fields used: index, domain1, domain2, lang, query, checklist
 Fields skipped: None (all fields are metadata or evaluation criteria)
@@ -43,7 +55,10 @@ The 'checklist' field contains 5 criteria per query, each with a name, descripti
 and detailed scoring rubrics for 5 score ranges (1-2, 3-4, 5-6, 7-8, 9-10).
 References are empty as this is a pure generation task evaluated by judges.
 
-Evaluation methodology detailed in repository's prompt.py and evaluate_benchmark.py files.
+IMPORTANT: Paper Appendix C (pages 29-33) contains prompts for benchmark construction
+(C.1-C.4) and evaluation (C.5-C.6), NOT for generation. The generation prompt is simply
+the query itself passed as a user message without any system prompt, as confirmed by
+the repository's generate_response.py code.
 """
 
 import json

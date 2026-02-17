@@ -1,6 +1,7 @@
 # Annotator Requirements: WritingBench
 
-Source: Repository's `prompt.py` file, `evaluate_benchmark.py` script
+Source: Paper Appendix C.6 (pages 32-33), https://arxiv.org/pdf/2503.05244
+Repository: `prompt.py` file, `evaluate_benchmark.py` script
 
 ## Configuration for LLMAsJuryAnnotator
 

@@ -16,9 +16,17 @@ Cue word sets (from paper):
 - Low semantic distance: "stamp, letter, send" and "petrol, diesel, pump"
 - High semantic distance: "gloom, payment, exist" and "organ, empire, comply"
 
-Prompt format (from paper Section 3.1):
-  Write a creative short story using a maximum of five sentences.
-  The story must include the following three words: {cue_words}.
+Prompt format (from repository src/prompts.py):
+  System: You are an expert creative story writer. You will be given three words
+  (e.g., car, wheel, drive) and then asked to write a creative short story that
+  contains these three words. The idea is that instead of writing a standard story
+  such as "I went for a drive in my car with my hands on the steering wheel.", you
+  come up with a novel and unique story that uses the required words in unconventional
+  ways or settings.
+
+  User: Write a creative short story using a maximum of five sentences. The story must
+  include the following three words: {cue_words}. However, the story should not be
+  about {boring_theme}.
 
 Dataset contains 479 pre-generated stories (236 human, 243 AI) with expert and non-expert
 ratings on creativity, originality, surprise, and value. We use human-written stories
@@ -58,6 +66,22 @@ class CueWordStoryScenario(Scenario):
     description = "mismayil/creative_story_generation_dataset"
     tags = ["creativity", "story_generation", "creative_writing"]
 
+    # Exact prompts from repository (src/prompts.py)
+    SYSTEM_INSTRUCTION = (
+        "You are an expert creative story writer. You will be given three words "
+        "(e.g., car, wheel, drive) and then asked to write a creative short story that "
+        "contains these three words. The idea is that instead of writing a standard story "
+        "such as \"I went for a drive in my car with my hands on the steering wheel.\", you "
+        "come up with a novel and unique story that uses the required words in unconventional "
+        "ways or settings."
+    )
+
+    USER_INSTRUCTION_TEMPLATE = (
+        "Write a creative short story using a maximum of five sentences. "
+        "The story must include the following three words: {items}. "
+        "However, the story should not be about {boring_theme}."
+    )
+
     def __init__(self, semantic_distance: str = "all"):
         """
         Args:
@@ -80,13 +104,29 @@ class CueWordStoryScenario(Scenario):
         # Load dataset from HuggingFace
         dataset = load_dataset("mismayil/creative_story_generation_dataset", split="train")
 
-        # Cue word sets with semantic distance classification
-        # From paper Section 3.1
+        # Cue word sets with semantic distance classification and boring themes
+        # From repository data/pilot_data.json
         cue_word_sets = {
-            "stamp-letter-send": {"words": ["stamp", "letter", "send"], "distance": "low"},
-            "petrol-diesel-pump": {"words": ["petrol", "diesel", "pump"], "distance": "low"},
-            "gloom-payment-exist": {"words": ["gloom", "payment", "exist"], "distance": "high"},
-            "organ-empire-comply": {"words": ["organ", "empire", "comply"], "distance": "high"},
+            "stamp-letter-send": {
+                "words": ["stamp", "letter", "send"],
+                "distance": "low",
+                "boring_theme": "putting a stamp on the envelop containing a letter to send it"
+            },
+            "petrol-diesel-pump": {
+                "words": ["petrol", "diesel", "pump"],
+                "distance": "low",
+                "boring_theme": "going to the petrol station to pump diesel into a vehicle"
+            },
+            "gloom-payment-exist": {
+                "words": ["gloom", "payment", "exist"],
+                "distance": "high",
+                "boring_theme": "the feeling of gloom you have about an existing payment"
+            },
+            "organ-empire-comply": {
+                "words": ["organ", "empire", "comply"],
+                "distance": "high",
+                "boring_theme": "having an organ empire and complying with regulations"
+            },
         }
 
         # Filter cue word sets based on semantic_distance parameter
@@ -109,11 +149,13 @@ class CueWordStoryScenario(Scenario):
         for item_id, cue_info in selected_sets.items():
             cue_words = cue_info["words"]
             cue_words_str = ", ".join(cue_words)
+            boring_theme = cue_info["boring_theme"]
 
-            # Build prompt based on paper instructions (Section 3.1)
+            # Build prompt based on repository prompts (src/prompts.py)
+            # Combine system and user instructions as single prompt for HELM
             prompt = (
-                f"Write a creative short story using a maximum of five sentences. "
-                f"The story must include the following three words: {cue_words_str}."
+                f"{self.SYSTEM_INSTRUCTION}\n\n"
+                f"{self.USER_INSTRUCTION_TEMPLATE.format(items=cue_words_str, boring_theme=boring_theme)}"
             )
 
             # Get human-written reference stories
