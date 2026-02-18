@@ -144,10 +144,47 @@
   {
     "name": "FSCG-8 (Few-Shot Creative Generation 8)",
     "paper_id": "0e42d4694acc559ac22d1ea280f4a6d7f9878f0f",
-    "url": "https://github.com/Agentic-Learning-AI-Lab/procreate-diffusion-public",
+    "url": "https://huggingface.co/datasets/Jacklu0831/few-shot-creative-generation-8",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (text-to-image generation); requires HEIM framework. ECCV 2024, arXiv:2408.02226; ProCreate Diffusion method for few-shot creative image generation; FSCG-8 dataset has 8 categories (Amedeo Modigliani paintings, Apple products, Burberry, Frank Gehry architecture, Nouns characters, One Piece anime, Pokemon, Rococo) with ~50 image-caption pairs each (400 total); task is text-to-image generation (e.g., 'a jellyfish Pokemon' → generate Pokemon-style image); uses Stable Diffusion fine-tuning; propulsive energy diffusion to prevent training data reproduction; evaluation measures sample diversity, fidelity, and creativity of generated images; HuggingFace dataset (Jacklu0831/few-shot-creative-generation-8) contains .jpg image files paired with text captions; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework"
+    "status": "completed",
+    "scenario_file": "scenarios/fscg8_scenario.py",
+    "eval_type": "custom",
+    "subsets": {
+      "pokemon": {
+        "instances": 50,
+        "description": "Creative Pokemon character designs"
+      },
+      "one_piece": {
+        "instances": 50,
+        "description": "One Piece anime character styles"
+      },
+      "amedeo_modigliani": {
+        "instances": 50,
+        "description": "Paintings in Amedeo Modigliani's artistic style"
+      },
+      "apple": {
+        "instances": 50,
+        "description": "Apple product designs"
+      },
+      "frank_gehry": {
+        "instances": 50,
+        "description": "Architecture in Frank Gehry's style"
+      },
+      "burberry": {
+        "instances": 50,
+        "description": "Burberry fashion items"
+      },
+      "nouns": {
+        "instances": 50,
+        "description": "Nouns DAO character designs"
+      },
+      "rococo": {
+        "instances": 50,
+        "description": "Rococo style objects and decorations"
+      }
+    },
+    "notes": "ECCV 2024 text-to-image creative generation benchmark. 400 total instances (50 per category). ⚠️ REQUIRES IMAGE GENERATION MODELS (Stable Diffusion, DALL-E), NOT LLMs. Scenario loads prompts and reference images. Full evaluation requires: (1) Diffusion model adapter, (2) Custom metrics (FID, KID, Vendi score, CLIP similarity, SSCD for copy detection), (3) Image generation pipeline. See scenarios/fscg8/metric_notes.md for detailed implementation requirements and example_evaluation.py for reference workflow. Metrics measure both creativity (diversity via Vendi/MSS) and quality (fidelity via FID/KID/CLIP). Can be evaluated standalone with external diffusion models. Alternative: Use vision-LLMs to describe/rate images (different task).",
+    "benchmark_name": "FSCG-8"
   },
   {
     "name": "StoryER",
@@ -232,7 +269,7 @@
     "url": "https://github.com/T2ICLP/t2iclp",
     "assigned_to": "SM",
     "status": "rejected",
-    "rejection_reason": "Multimodal (text-to-image generation); requires HEIM framework. npj Heritage Science (July 2024); FHS-Adapter (Fine-grained Hierarchical Semantic Adapter) method for generating Chinese landscape paintings using diffusion models; T2ICLP dataset contains 10,000 high-quality image-text pairs with four types of fine-grained descriptions per image: History (historical background), Content (picture description), Emotion (embedded emotions), Poem (traditional Chinese poems summarizing the image); task is text-to-image generation from multi-perspective text inputs; uses Taiyi-CLIP encoder adapted for Chinese text; diffusion process guided batch-wise by four prompts in various sequences; evaluation measures brushwork (e.g., 'Chafing, Rubbing, Dabbing and Colouring'), compositional space, elemental proportions, color usage across different painting genres and artists; repository contains 50 sample images with corresponding Excel files (Chinese/English versions) containing the four text descriptions; full dataset of 10,000 pairs mentioned but not yet released; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework"
+    "rejection_reason": "Dataset not publicly available. npj Heritage Science (July 2024); FHS-Adapter (Fine-grained Hierarchical Semantic Adapter) method for generating Chinese landscape paintings using diffusion models; T2ICLP dataset contains 10,000 high-quality image-text pairs with four types of fine-grained descriptions per image: History (historical background), Content (picture description), Emotion (embedded emotions), Poem (traditional Chinese poems summarizing the image); task is text-to-image generation from multi-perspective text inputs; uses Taiyi-CLIP encoder adapted for Chinese text; diffusion process guided batch-wise by four prompts in various sequences; evaluation measures brushwork (e.g., 'Chafing, Rubbing, Dabbing and Colouring'), compositional space, elemental proportions, color usage across different painting genres and artists; repository (T2ICLP/t2iclp) contains only 50 sample images with corresponding Excel files (Chinese/English versions); README explicitly states 'We will upload the training as well as the test code and the full dataset at an appropriate time!' — full dataset of 10,000 pairs not yet released. NOTE: This is a multimodal text-to-image benchmark; HELM does support multimodal evaluation through MediaObject/MultimediaObject classes; rejection is solely due to dataset unavailability, not modality; future candidate for onboarding once full dataset is released"
   },
   {
     "name": "Rap Generation Evaluation on D-RAP",
@@ -267,7 +304,7 @@
     "arxiv": "2311.15040",
     "assigned_to": "SM",
     "status": "rejected",
-    "rejection_reason": "Multimodal - stylized text-to-image generation using diffusion models, requires image generation capabilities"
+    "rejection_reason": "Method paper (InstaStyle), not evaluation benchmark - no test dataset, evaluation protocol, or metrics implementation. Repository contains only inference/training code and 11 style reference image categories for demonstrating the generation technique. No test prompts or ground truth outputs for evaluating other models."
   },
   {
     "name": "ThemeVlogEval",
@@ -449,7 +486,7 @@
     "status": "completed",
     "scenario_path": "scenarios/cpers/scenario.py",
     "eval_type": "llm_judge",
-    "notes": "Persian literary text generation across 20 cultural topics; 4,371 examples; single-sentence literary texts; TTCT-based evaluation (originality, fluency, flexibility, elaboration) using Claude 3.7 Sonnet as judge; 3 questions per dimension on 1-5 scale; also evaluates 4 rhetorical devices (simile, metaphor, hyperbole, antithesis); validated with human annotators (ICC strong agreement); prompt: '\u062f\u0631\u0628\u0627\u0631\u0647 {topic} \u06cc\u06a9 \u0645\u062a\u0646 \u0627\u062f\u0628\u06cc \u062f\u0631 \u06cc\u06a9 \u062c\u0645\u0644\u0647 \u0628\u0646\u0648\u06cc\u0633'; arXiv:2509.18401; Sep 2025"
+    "notes": "Persian literary text generation across 20 cultural topics; 4,371 examples; single-sentence literary texts; TTCT-based evaluation (originality, fluency, flexibility, elaboration) using Claude 3.7 Sonnet as judge; 3 questions per dimension on 1-5 scale; also evaluates 4 rhetorical devices (simile, metaphor, hyperbole, antithesis); validated with human annotators (ICC strong agreement); prompt: 'درباره {topic} یک متن ادبی در یک جمله بنویس'; arXiv:2509.18401; Sep 2025"
   },
   {
     "name": "LayoutSAM-Eval",
@@ -557,7 +594,7 @@
     "status": "completed",
     "scenario_file": "scenarios/newyorker_caption.py",
     "eval_type": "exact_match",
-    "notes": "New Yorker Caption Contest; multimodal (cartoon\u2192caption selection); 47 test contests; 4-way MC (top-ranked caption + 3 distractors from ranks 10-50); cartoon images stored as bytes in parquet files; NeurIPS 2024"
+    "notes": "New Yorker Caption Contest; multimodal (cartoon→caption selection); 47 test contests; 4-way MC (top-ranked caption + 3 distractors from ranks 10-50); cartoon images stored as bytes in parquet files; NeurIPS 2024"
   },
   {
     "name": "OpenAGI",
@@ -1412,8 +1449,22 @@
     "url": "https://huggingface.co/datasets/printblue/EmoArt-130k",
     "arxiv": "2506.03652",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal - text-to-image generation benchmark for diffusion models, requires image generation capabilities"
+    "status": "completed",
+    "notes": "Emotion classification from artistic images. Vision-language task where models classify the dominant emotion (12 categories: Alarmed, Annoyed, Aroused, Bored, Calm, Contentment, Excited, Frustrated, Glad, Happy, Sad, Tired) evoked by artwork. 132,664 artworks across 56 artistic styles; preview dataset EmoArt-5k has 5,532 examples. Images distributed in category-specific .tar.gz archives on HuggingFace - must be downloaded separately. Adapted from text-to-image generation benchmark to vision-language classification task. Evaluates models' understanding of emotional content in artistic creativity. See scenarios/emoart/evaluation_notes.md for detailed methodology.",
+    "scenario_file": "scenarios/emoart/emoart_scenario.py",
+    "implementation_details": {
+      "task_type": "multimodal_classification",
+      "modality": "vision-language",
+      "num_classes": 12,
+      "dataset_size": {
+        "full": 132664,
+        "preview": 5532
+      },
+      "eval_type": "exact_match",
+      "requires_image_download": true,
+      "image_download_url": "https://huggingface.co/datasets/printblue/EmoArt-130k/tree/main",
+      "evaluation_notes": "scenarios/emoart/evaluation_notes.md"
+    }
   },
   {
     "name": "Outline to Story (O2S)",
@@ -1765,7 +1816,7 @@
     "url": "https://github.com/saidul-islam98/DataNarrative",
     "assigned_to": "VD",
     "status": "not_suitable",
-    "reason": "No standardized evaluation method. Dataset is designed for demonstrating multi-agent framework rather than providing a reusable benchmark with clear metrics; paper uses unspecified 'model-based and human evaluations' with no automatic metrics (BLEU, ROUGE, etc.); requires complex multi-step agentic workflow (reflection \u2192 outline \u2192 narration with verification/revision loops); no clear ground truth comparison or evaluation rubrics provided; human evaluation mentioned but without standardized dimensions or scoring guidelines; cannot be integrated into HELM's automated evaluation pipeline; arXiv:2408.05346; EMNLP 2024"
+    "reason": "No standardized evaluation method. Dataset is designed for demonstrating multi-agent framework rather than providing a reusable benchmark with clear metrics; paper uses unspecified 'model-based and human evaluations' with no automatic metrics (BLEU, ROUGE, etc.); requires complex multi-step agentic workflow (reflection → outline → narration with verification/revision loops); no clear ground truth comparison or evaluation rubrics provided; human evaluation mentioned but without standardized dimensions or scoring guidelines; cannot be integrated into HELM's automated evaluation pipeline; arXiv:2408.05346; EMNLP 2024"
   },
   {
     "name": "LLM Story Co-Creator Model Evaluation",
@@ -1926,7 +1977,7 @@
         "description": "5 historical reviews (richest context)"
       }
     },
-    "notes": "Personalized story evaluation benchmark. Task: Predict reviewer-specific scores (1-10) for movie plots based on reviewer's historical ratings and reviews. Tests ability to learn individual preferences. 915 validation examples across 92 unique reviewers (~10 per reviewer). Evaluation: Correlation metrics (Pearson r, Spearman \u03c1, Kendall \u03c4) - see metric_notes.md. Parameter k controls historical context (0-5 reviews). Dataset auto-downloads from Facebook Research (236MB tar.gz). EMNLP 2023. Rao et al."
+    "notes": "Personalized story evaluation benchmark. Task: Predict reviewer-specific scores (1-10) for movie plots based on reviewer's historical ratings and reviews. Tests ability to learn individual preferences. 915 validation examples across 92 unique reviewers (~10 per reviewer). Evaluation: Correlation metrics (Pearson r, Spearman ρ, Kendall τ) - see metric_notes.md. Parameter k controls historical context (0-5 reviews). Dataset auto-downloads from Facebook Research (236MB tar.gz). EMNLP 2023. Rao et al."
   },
   {
     "name": "AI Idea Bench 2025",
@@ -2546,7 +2597,7 @@
       "subset_a": {
         "instances": 1000,
         "eval_type": "llm_judge",
-        "description": "High-quality web novel tier (100 novels \u00d7 10 chapters)"
+        "description": "High-quality web novel tier (100 novels × 10 chapters)"
       },
       "subset_b": {
         "instances": 1000,
@@ -2706,7 +2757,7 @@
         "description": "All dynasties combined (Tang, Song, Yuan)"
       }
     },
-    "notes": "Classical Chinese poetry translation benchmark. Evaluates adequacy (\u4fe1), fluency (\u8fbe), and elegance (\u96c5). Creativity focus: 'elegance' dimension measures poetic beauty and aesthetic depth. Standard metrics: BLEU, ROUGE, F1. Custom metrics (see metric_notes.md): GPT-4-based Beauty of Sound (BS), Beauty of Form (BF), Beauty of Meaning (BM). Dataset auto-downloads from GitHub on first run. EMNLP 2025."
+    "notes": "Classical Chinese poetry translation benchmark. Evaluates adequacy (信), fluency (达), and elegance (雅). Creativity focus: 'elegance' dimension measures poetic beauty and aesthetic depth. Standard metrics: BLEU, ROUGE, F1. Custom metrics (see metric_notes.md): GPT-4-based Beauty of Sound (BS), Beauty of Form (BF), Beauty of Meaning (BM). Dataset auto-downloads from GitHub on first run. EMNLP 2025."
   },
   {
     "name": "IDRBench",
@@ -2819,7 +2870,7 @@
         "description": "Diversity evaluation: Generate 30 diverse 4-bar chord progressions per music keyword"
       }
     },
-    "notes": "Music chord progression generation from keywords. Task: Generate diverse chord progressions given music keywords (e.g., 'Groovy', 'Melancholy'), musical key, and mode. 254 music keywords from suno.wiki. Evaluation: Custom diversity metrics (Self-BLEU - lower = more diverse) and coherence metrics (Jensen-Shannon Divergence against Hooktheory dataset). Paper evaluates batch prompting (30 progressions at once) vs. conventional prompting (iterative). Amuse achieves Self-BLEU 0.30\u00b10.12 vs. baseline 0.61\u00b10.18. No ground truth references - generative task evaluated by distributional metrics. Requires Hooktheory dataset (26,175 songs) for JSD calculation. CHI 2025 paper. See metric_notes.md for Self-BLEU and JSD implementation."
+    "notes": "Music chord progression generation from keywords. Task: Generate diverse chord progressions given music keywords (e.g., 'Groovy', 'Melancholy'), musical key, and mode. 254 music keywords from suno.wiki. Evaluation: Custom diversity metrics (Self-BLEU - lower = more diverse) and coherence metrics (Jensen-Shannon Divergence against Hooktheory dataset). Paper evaluates batch prompting (30 progressions at once) vs. conventional prompting (iterative). Amuse achieves Self-BLEU 0.30±0.12 vs. baseline 0.61±0.18. No ground truth references - generative task evaluated by distributional metrics. Requires Hooktheory dataset (26,175 songs) for JSD calculation. CHI 2025 paper. See metric_notes.md for Self-BLEU and JSD implementation."
   },
   {
     "name": "FunQA",
@@ -2827,7 +2878,7 @@
     "url": "https://arxiv.org/abs/2306.14899",
     "status": "not_suitable",
     "reason": "Video-based benchmark; outside HELM scope",
-    "notes": "Video question-answering benchmark requiring actual video files. 4.3K video clips (24 hours) with 312K free-text QA pairs across HumorQA (1,769 clips), CreativeQA (927 clips), and MagicQA (1,672 clips). Tasks: timestamp localization, video description, reasoning, title generation, creativity scoring (1-20 scale). Paper states '86% thought FunQA cannot be solved only by images.' HELM doesn't support video understanding tasks\u2014requires video processing infrastructure. Dataset: fesvhtr/FunQA on HuggingFace, GitHub: Jingkang50/FunQA. License: CC-BY-NC-SA-4.0. ECCV 2024. CreativeQA has creativity components but benchmark fundamentally requires video modality."
+    "notes": "Video question-answering benchmark requiring actual video files. 4.3K video clips (24 hours) with 312K free-text QA pairs across HumorQA (1,769 clips), CreativeQA (927 clips), and MagicQA (1,672 clips). Tasks: timestamp localization, video description, reasoning, title generation, creativity scoring (1-20 scale). Paper states '86% thought FunQA cannot be solved only by images.' HELM doesn't support video understanding tasks—requires video processing infrastructure. Dataset: fesvhtr/FunQA on HuggingFace, GitHub: Jingkang50/FunQA. License: CC-BY-NC-SA-4.0. ECCV 2024. CreativeQA has creativity components but benchmark fundamentally requires video modality."
   },
   {
     "name": "Sonnet or Not, Bot?",
@@ -2933,6 +2984,6 @@
     "url": "https://arxiv.org/abs/2510.20976",
     "status": "not_suitable",
     "reason": "Model paper, not creativity benchmark",
-    "notes": "Multimodal LLM for Metal-Organic Frameworks (MOFs). Introduces MOF-SPK dataset (133,737 MOF structures from CCDC, 35,000+ publications). Four tasks: property prediction, structure extraction (SMILES), description generation, Q&A. Evaluates scientific understanding and property prediction NOT creative generation. Temporal split (pre-2020 train, post-2022 test). Evaluation: MAE for properties, BLEU/EXACT for structures, GPT-4-mini for head-to-head comparisons. Borderline creativity\u2014focuses on knowledge extraction and prediction rather than creative synthesis. Requires molecular encoders for multimodal components. October 2024."
+    "notes": "Multimodal LLM for Metal-Organic Frameworks (MOFs). Introduces MOF-SPK dataset (133,737 MOF structures from CCDC, 35,000+ publications). Four tasks: property prediction, structure extraction (SMILES), description generation, Q&A. Evaluates scientific understanding and property prediction NOT creative generation. Temporal split (pre-2020 train, post-2022 test). Evaluation: MAE for properties, BLEU/EXACT for structures, GPT-4-mini for head-to-head comparisons. Borderline creativity—focuses on knowledge extraction and prediction rather than creative synthesis. Requires molecular encoders for multimodal components. October 2024."
   }
 ]
