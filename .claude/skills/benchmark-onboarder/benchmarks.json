@@ -2465,14 +2465,40 @@
     "rejection_reason": "Not a benchmark"
   },
   {
-    "name": "Prompt Embedding Manipulation Evaluation",
+    "name": "Prompt Embedding Manipulation Evaluation / Aesthetic Quality Benchmark",
     "paper_id": "f75da65c02872ef7378cae9fa100d5dd33811fe3",
     "url": "https://doi.org/10.5281/zenodo.8274625",
     "arxiv": "2308.12059",
     "github": "https://github.com/webis-de/ijcai24-manipulating-embeddings-stable-diffusion",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal - text-to-image generation benchmark requiring Stable Diffusion for embedding manipulation and image generation evaluation"
+    "status": "completed",
+    "notes": "Text-to-image aesthetic quality evaluation using curated prompts from DiffusionDB and LAION-Aesthetics-V2. While the original paper focused on embedding manipulation techniques, we adapted it into a HEIM benchmark by using their curated prompts (149 DiffusionDB + 13 LAION = 162 total) as a test set for evaluating aesthetic quality in text-to-image generation. Prompts are highly detailed, creative, and span diverse artistic styles (fantasy art, concept design, landscapes, character illustration, photorealistic scenes). Evaluation metrics: LAION Aesthetic Predictor V2 (primary), image quality (sharpness/blurriness), CLIP score (alignment). Tests models' ability to generate aesthetically pleasing, high-quality creative outputs. Model-agnostic - works with any text-to-image model (Stable Diffusion, DALL-E, Midjourney, etc.). See scenarios/prompt_embedding_manipulation/evaluation_notes.md for detailed methodology.",
+    "scenario_file": "scenarios/prompt_embedding_manipulation/aesthetic_quality_scenario.py",
+    "implementation_details": {
+      "task_type": "text_to_image_generation",
+      "modality": "heim",
+      "framework": "HEIM (Holistic Evaluation of Image Models)",
+      "num_prompts": {
+        "total": 162,
+        "diffusiondb": 149,
+        "laion_aesthetic": 13
+      },
+      "eval_type": "aesthetic_quality",
+      "primary_metric": "aesthetic_score",
+      "secondary_metrics": ["image_quality", "clip_score", "sharpness", "blurriness"],
+      "prompt_sources": ["DiffusionDB (large_random_100k, large_random_1k)", "LAION-Aesthetics-V2"],
+      "creativity_dimensions": ["aesthetic_merit", "artistic_quality", "visual_appeal", "compositional_skill", "style_mastery"],
+      "evaluation_notes": "scenarios/prompt_embedding_manipulation/evaluation_notes.md",
+      "data_files": {
+        "diffusiondb_prompts": "scenarios/prompt_embedding_manipulation/diffusiondb_prompts.txt",
+        "laion_prompts": "scenarios/prompt_embedding_manipulation/laion_aesthetic_prompts.txt"
+      },
+      "aesthetic_predictor": {
+        "model": "LAION Aesthetic Predictor V2",
+        "weights_url": "https://github.com/christophschuhmann/improved-aesthetic-predictor",
+        "training_data": "SAC + Logos + AVA datasets"
+      }
+    }
   },
   {
     "name": "S-DAT (Synthetic-Divergent Association Task)",
