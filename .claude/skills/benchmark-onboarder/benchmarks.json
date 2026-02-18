@@ -1268,14 +1268,13 @@
     "rejection_reason": "Model weights, not benchmark"
   },
   {
-    "name": "WikiArt (ArtGraph)",
+    "name": "WikiArt (I Dream My Painting)",
     "paper_id": "7edc82ab56792e72ded0cd4204f9a72fdce5a92f",
     "url": "https://github.com/cilabuniba/i-dream-my-painting",
-    "arxiv": "2105.15028",
-    "zenodo": "10.5281/zenodo.6337958",
+    "arxiv": "2411.19050",
     "assigned_to": "SM",
     "status": "rejected",
-    "rejection_reason": "Multimodal - fine art classification requiring visual features and graph embeddings, cannot be evaluated with text-only models"
+    "rejection_reason": "Method paper, not a reusable benchmark. WACV 2025; introduces multi-mask inpainting method connecting MLLMs with diffusion models; task is text-guided multi-mask inpainting (image generation) requiring HEIM framework; uses WikiArt dataset (116,475 images) with automatic annotations from Kosmos-2 (global) and LLaVA (object-level), not human ground truth; evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) measure image generation quality; no standardized protocol for evaluating arbitrary models; primary contribution is method architecture (fine-tuned LLaVA for prompt generation + Stable Diffusion with rectified cross-attention for inpainting), not benchmark dataset; requires vision models and image generation evaluation capabilities outside HELM's text-only scope; would need HEIM for image generation evaluation; GitHub: cilabuniba/i-dream-my-painting"
   },
   {
     "name": "",
@@ -2095,9 +2094,40 @@
     "url": "https://zenodo.org/record/7965907",
     "arxiv": "2305.14724",
     "github": "https://github.com/tuhinjubcse/VisualMetaphors",
+    "vflute_url": "https://huggingface.co/datasets/ColumbiaNLP/V-FLUTE",
+    "vflute_arxiv": "2405.01474",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal - visual metaphor generation requiring LLM+diffusion model pipeline, evaluation requires assessing generated images"
+    "status": "completed",
+    "notes": "Visual entailment for visual metaphors. Given an image containing a visual metaphor and a textual claim, determine whether the claim is entailed by or contradicts the image (binary classification). HAIVMet dataset (6,476 images, 1,540 metaphors) created via Human-AI collaboration (GPT-3 + DALL-E 2) with expert validation. Available through V-FLUTE dataset (ColumbiaNLP/V-FLUTE on HuggingFace - gated, requires authentication). HAIVMet subset: 857 metaphor/simile instances in V-FLUTE. Original ACL 2023 paper evaluated 3-way classification (entailment/contradiction/neutral); V-FLUTE (NAACL 2024) extends to binary classification with explanations. HELM implementation: binary classification without explanations. Tests models' understanding of figurative visual content and conceptual metaphorical mappings. See scenarios/haivmet/evaluation_notes.md for detailed methodology.",
+    "scenario_file": "scenarios/haivmet/haivmet_scenario.py",
+    "implementation_details": {
+      "task_type": "multimodal_classification",
+      "modality": "vision-language",
+      "num_classes": 2,
+      "labels": [
+        "entailment",
+        "contradiction"
+      ],
+      "dataset_size": {
+        "vflute_total": 6027,
+        "haivmet_subset": 857,
+        "haivmet_original": 6476
+      },
+      "splits": {
+        "train": 4578,
+        "validation": 726,
+        "test": 723
+      },
+      "eval_type": "exact_match",
+      "requires_authentication": true,
+      "dataset_source": "ColumbiaNLP/V-FLUTE (gated)",
+      "filter_field": "source_dataset",
+      "phenomena": [
+        "metaphor",
+        "simile"
+      ],
+      "evaluation_notes": "scenarios/haivmet/evaluation_notes.md"
+    }
   },
   {
     "name": "FunQA",
@@ -2198,8 +2228,38 @@
     "paper_id": "df15665ebb3896cb9bb296535af14e9065b4ba29",
     "url": "https://github.com/ey242/KiVA",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (vision-language); requires HEIM/VHELM framework. ICLR 2025, arXiv:2407.17773; visual analogical reasoning benchmark with 4,300 visual transformations of everyday objects; tests fundamental visual pattern recognition skills solvable by children ages 3-5; 5 transformation domains (2D Rotation, Color, Resize, Reflection, Counting) with 14-29 subdomains; two difficulty levels: KiVA (easy, solvable by 3-year-olds) and KiVA-adults (hard, different input values requiring further abstraction); task format: given images showing object transformation (e.g., blue dog → red dog), identify which option (A/B/C) applies the same transformation to a new object; three evaluation stages: identify what changed, how it changed, apply rule to new scenarios; evaluates large multimodal models (GPT-4V, GPT-o1, LLaVA-1.5, MANTIS) compared to human children and adults; findings show models identify 'what' changed but struggle with quantifying 'how' and extrapolating rules; repository contains 96K+ files including transformed object images in both stitched format (single image) and individual format (multiple images); requires vision-language models and visual processing; outside HELM's text-only scope; would need HEIM/VHELM framework; GitHub: ey242/KiVA"
+    "status": "completed",
+    "scenario_file": "scenarios/kiva_scenario.py",
+    "eval_type": "exact_match",
+    "subsets": {
+      "2DRotation": {
+        "instances": 450,
+        "unique_trials": 150,
+        "description": "Rotational transformations (90\u00b0, 180\u00b0, 270\u00b0, 360\u00b0)"
+      },
+      "Colour": {
+        "instances": 450,
+        "unique_trials": 150,
+        "description": "Color changes (Blue, Green, Red)"
+      },
+      "Counting": {
+        "instances": 600,
+        "unique_trials": 200,
+        "description": "Quantity changes (adding/removing objects)"
+      },
+      "Reflect": {
+        "instances": 300,
+        "unique_trials": 100,
+        "description": "Reflection transformations"
+      },
+      "Resize": {
+        "instances": 300,
+        "unique_trials": 100,
+        "description": "Size changes"
+      }
+    },
+    "notes": "ICLR 2025 visual analogical reasoning benchmark. 2,100 total instances (700 unique trials \u00d7 3 repetitions). Each trial repeated 3 times with randomized answer positions. Multimodal (vision-language) 3-way MC task testing fundamental pattern recognition skills solvable by 3-5 year old children. Scenario supports deduplicate=True to use only unique trials (700 instances) and avoid position bias. Evaluation: exact_match accuracy. Human baseline (children ages 3-5): ~80-90%. Best LMM (GPT-o1): ~60-70%. Data auto-downloaded from GitHub release (single_image.zip, 77MB). Standard prompt: 'Which one of three transformations is the same as the top transformation?' Test split only.",
+    "benchmark_name": "KiVA"
   },
   {
     "name": "Mathematical Framework for Objective Characterization of Ideas",
@@ -2318,7 +2378,7 @@
     "url": "https://github.com/ali-vilab/MimicBrush",
     "assigned_to": "SM",
     "status": "rejected",
-    "rejection_reason": "Multimodal (image editing); requires HEIM framework; dataset not yet released. NeurIPS 2024, arXiv:2406.07547; MimicBrush method for zero-shot image editing with reference imitation; introduces 'imitative editing' task where users draw inspiration from in-the-wild references to edit image regions; benchmark has 120 samples collected from Pexels across 4 topics (fashion, animals, products, scenarios) with 30 samples per topic; two main tasks: (1) Part Composition - discovering semantic correspondence between source and reference images and compositing local parts, (2) Texture Transfer - transferring texture from reference to source image; each task has inter-ID and inner-ID tracks; task format: given source image, reference image, and mask indicating to-edit region, generate edited version of source image that imitates style/texture/parts from reference; evaluation metrics: fidelity (reference region retains distinctiveness), harmonization (generated region naturally combines with background), quality (high-quality details); uses Stable Diffusion with custom ReferenceNet, DepthGuider, VAE; README states 'Download our evaluation benchmark at Google Drive: URL: [to be released]' indicating dataset not yet publicly available; requires vision models and image generation/editing evaluation; outside HELM's text-only scope; would need HEIM framework; GitHub: ali-vilab/MimicBrush"
+    "rejection_reason": "Image-to-image task (outputs edited images, not text); dataset not yet released (verified Feb 2026). NeurIPS 2024, arXiv:2406.07547; MimicBrush method for zero-shot image editing with reference imitation; introduces 'imitative editing' task where users draw inspiration from in-the-wild references to edit image regions; benchmark has 120 samples collected from Pexels across 4 topics (fashion, animals, products, scenarios) with 30 samples per topic; two main tasks: (1) Part Composition - discovering semantic correspondence between source and reference images and compositing local parts, (2) Texture Transfer - transferring texture from reference to source image; each task has inter-ID and inner-ID tracks; task format: INPUT (source image + reference image + mask) \u2192 OUTPUT (edited image that imitates reference); evaluation metrics: fidelity (DINO/CLIP similarity), harmonization (blending quality), visual quality; GitHub README still states 'Download our evaluation benchmark at Google Drive: URL: [to be released]' as of Feb 2026 (repo last pushed June 2024); Note: Image INPUT is supported by HELM (see EmoArt scenario using MediaObject), but this task requires IMAGE GENERATION output, not text output; original evaluation requires comparing generated edited images to references using visual similarity metrics; could potentially be adapted to text-based task (e.g., edit description generation, edit quality classification) if dataset becomes available; GitHub: ali-vilab/MimicBrush"
   },
   {
     "name": "STYLEBREEDER",
