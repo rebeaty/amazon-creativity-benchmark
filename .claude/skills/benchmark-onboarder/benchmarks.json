@@ -839,7 +839,9 @@
     "name": "PoemSum",
     "paper_id": "53a64d333bb5033bc1e9f7bcfd166249ef7b7b0c",
     "url": "https://github.com/SofeeyaJ/Poetry-In-Pixels-Coling2025",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Dataset not publicly available. The PoemSum dataset (3,011 poem-summary pairs from EMNLP 2023 paper 'Unveiling the Essence of Poetry') is not accessible despite paper claiming public availability. Extensive search found no GitHub repository, HuggingFace dataset, or data repository links. The Poetry-in-Pixels repo only contains the related MiniPo dataset (2,016 children's poems), not the original PoemSum data."
   },
   {
     "name": "BalanceCC",
@@ -1028,10 +1030,22 @@
   {
     "name": "MARS",
     "paper_id": "6394296dd9ac7265b9854d929a6b6f5515b7acb0",
-    "url": "https://github.com/Remwlp/MLLM_Analogy",
+    "url": "https://github.com/zjunlp/MKG_Analogy",
+    "arxiv": "2210.00312",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (vision-language); requires HEIM/VHELM framework; images not yet released. ICONIP 2024, arXiv:2411.01307; 'Can Multimodal Large Language Model Think Analogically?'; MARS (Multimodal Analogical Reasoning System) benchmark tests analogical reasoning capabilities of MLLMs; 10,641 training questions, 1,362 test questions; task format: analogical reasoning problems 'X':'Y'::'O':? where one entity (usually 'O') is shown in image and model must identify relation between X and Y plus predict '?' from candidate entity set; example: 'Calcium Supplementation':'calcium deficiency'::'exposure':? with 'exposure' shown in image test/0.jpg; uses MarKG background knowledge graph with 34,420 triplets providing prior knowledge of analogous entities and relations; two evaluation modes: MLLM as explainer (comprehending multimodal analogical reasoning problems) and MLLM as predictor (directly solving problems); evaluated on LLaVA-13b achieving 56.2% accuracy; repository README states 'Checkpoints, complete code and data will be uploaded after organizing' indicating incomplete data release; image files referenced in data (e.g., test/0.jpg, train/*.jpg) not present in repository; requires understanding visual information to solve analogical reasoning; requires vision-language models and multimodal understanding; outside HELM's text-only scope; would need HEIM/VHELM framework for vision-language evaluation; GitHub: Remwlp/MLLM_Analogy"
+    "status": "completed",
+    "scenario_file": "scenarios/mars/scenario.py",
+    "annotator_notes": "scenarios/mars/annotator_notes.md",
+    "dataset_access": "public",
+    "images_download": "https://drive.google.com/file/d/1AqnyrA05vKngfEbhw1mxY5qEoaqiKsC1/view",
+    "notes": "Multimodal analogical reasoning over knowledge graphs (ICLR 2023). Images (76,424) require separate download from Google Drive or Baidu Pan. Text-only mode available using entity descriptions. 10,641 train, 1,020 dev, 1,362 test instances.",
+    "instances": {
+      "train": 10641,
+      "validation": 1020,
+      "test": 1362
+    },
+    "eval_type": "open_ended",
+    "modalities": "text+images"
   },
   {
     "name": "MLLM-Bench",
@@ -1668,8 +1682,8 @@
     "paper_id": "a845a0b142944b02e1a55ce0dfec8519b9f3f58c",
     "url": "",
     "assigned_to": "SM",
-    "status": "not_suitable",
-    "reason": "Multimodal UI layout generation requiring visual processing; model architecture uses GNN+MLLM+ViT to process icons and images; evaluation metric FID requires rendering layouts as images and computing visual features; output is JSON but task fundamentally requires visual understanding; dataset and code not yet publicly available (paper May 2025); incompatible with HELM's text-only LLM evaluation architecture"
+    "status": "rejected",
+    "rejection_reason": "Dataset and code not publicly available. Paper: 'Aggregated Structural Representation with Large Language Models for Human-Centric Layout Generation' (arXiv:2505.19554, May 26, 2025). Uses filtered RICO dataset with 68,475 UI structures but filtering process and preprocessing code not released. Original RICO dataset exists (HuggingFace: Voxel51/rico, shunk031/Rico) but paper's filtered version with specific preprocessing is unavailable. No GitHub repository found (authors from Ant Group, A*STAR). Task: UI layout generation from graph structures with nodes (UI components: background, image, text, input, sliding bar, icon) and edges (positional relations: TOP, LEFT; semantic relations: PARALLEL, CONTAIN). Output format: JSON with node_id, category, coordinates [X,Y,W,H], and relation arrays. Three subtasks: (1) UI-Gen: direct generation from scratch, (2) Completion: generate with node/edge constraints, (3) Graph Editing: human-in-the-loop editing. Evaluation metrics: mIoU, Relation Error (RE), FID, Overlap (OL), human study (50 participants, 0-5 Likert scale on reasonableness). Model: ASR combines GNN (graph representation) + Intern-VL (MLLM) with relation matrix decoder. Multimodal benchmark (processes icon images, component images, text) - can be onboarded with HEIM once dataset/code released. Contact: jin_jiongchao@ihpc.a-star.edu.sg. Monitor for release."
   },
   {
     "name": "AVA Score",
