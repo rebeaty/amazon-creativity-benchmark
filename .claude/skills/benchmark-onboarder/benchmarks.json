@@ -1919,7 +1919,17 @@
     "name": "Relational Structure Identification (RSI) Test",
     "paper_id": "c10ce97f538adecfc0bc15e6ca39dd5d5f002bc1",
     "url": "https://github.com/siyuyuan/scar",
-    "assigned_to": "SM"
+    "assigned_to": "SM",
+    "status": "completed",
+    "scenario_file": "scenarios/scar/scenario.py",
+    "annotator_notes": "scenarios/scar/annotator_notes.md",
+    "arxiv": "2310.05087",
+    "aclanthology": "2023.findings-emnlp.160",
+    "eval_type": "open_ended",
+    "instances": 400,
+    "domains": 13,
+    "notes": "SCAR (Scientific Analogical Reasoning with Structure Abduction); 400 scientific analogies across 13 domains (Biology, Physics, Chemistry, Computer, Math, Engineering, Geography, History, Literature, Philosophy, Economics, Art, Sport); task: identify term mappings between two systems; 2-14 mappings per analogy (avg 4.0); output format: list of pairs [['item_a1', 'item_b1'], ...]; EMNLP 2023 Findings; Also known as RSI (Relational Structure Identification) Test",
+    "benchmark_name": "SCAR"
   },
   {
     "name": "Patent Novelty Evaluation Dataset",
