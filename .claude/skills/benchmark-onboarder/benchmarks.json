@@ -1596,8 +1596,10 @@
     "paper_id": "a1073c76108408dedac030ddd8f89c0b970e22d2",
     "url": "https://github.com/surabhisnath/Creative_Process",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Custom metrics"
+    "status": "completed",
+    "scenario_file": "scenarios/creative_process/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Paper: 'Characterising the Creative Process in Humans and LLMs' (ICCC 2024, arXiv:2405.00899). Three tasks: VF (30 animals), AUT brick (30 uses), AUT paperclip (20 uses). Each is a single prompt repeated N times (default 5, matching paper's 5 reps). Process analysis via gte-large embeddings: semantic similarity chains, category clustering, jump profiles. Human baseline: 219 Dutch participants. 8 LLM baselines at multiple temperatures."
   },
   {
     "name": "STORIUM Dataset",
