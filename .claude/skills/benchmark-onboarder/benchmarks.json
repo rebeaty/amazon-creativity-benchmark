@@ -1291,12 +1291,15 @@
     "assigned_to": "SA"
   },
   {
-    "name": "style-centric text customization benchmark",
+    "name": "Calligrapher Typography Benchmark",
     "paper_id": "7d9d41d90f13d75467ed1bd1c322d95449cd421e",
     "url": "https://huggingface.co/Calligrapher2025/Calligrapher",
+    "arxiv": "2506.24123",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Model weights, not benchmark"
+    "status": "completed",
+    "scenario_file": "scenarios/calligrapher/scenario.py",
+    "eval_type": "custom",
+    "notes": "100 test images; diffusion model benchmark for text style customization; metrics: FID, CLIP, DINO, OCR accuracy; self-reference and cross-reference tasks; data in Calligrapher_bench_testing.zip on HuggingFace"
   },
   {
     "name": "WikiArt (I Dream My Painting)",
@@ -1325,9 +1328,12 @@
     "name": "Oogiri-GO Standard Evaluation",
     "paper_id": "7ec9a50b9a91b2d0ec60a335396d0d2daedb5c6b",
     "url": "https://huggingface.co/datasets/zhongshsh/CLoT-Oogiri-GO",
+    "arxiv": "2312.02439",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal + broken"
+    "status": "completed",
+    "scenario_file": "scenarios/oogiri_go/scenario.py",
+    "eval_type": "exact_match",
+    "notes": "CVPR 2024; HF dataset viewer broken (encoding error on images.zip) but JSONL files load fine; 130K+ samples EN/CN/JP; MC humor discrimination from star-rated multi-response groups; images.zip 1.3GB; 1020 EN groups with 4+ star-rated responses"
   },
   {
     "name": "Credal Set Analysis for Creative Variability",
@@ -1397,9 +1403,10 @@
     "name": "JUDGE Model Evaluation on OpenReview",
     "paper_id": "8c99873106d3f2bf649c85bb5f72aa7fe1c9e19c",
     "url": "https://huggingface.co/datasets/spiralworks/openreview_wildcard_2025_v2",
+    "arxiv": "2504.20090",
     "assigned_to": "CL",
     "status": "rejected",
-    "rejection_reason": "Meta-evaluation, not creativity"
+    "rejection_reason": "Meta-evaluation, not creativity. Paper is 'Spark: A System for Scientifically Creative Idea Generation' (arXiv:2504.20090). Judge is a reviewer model trained on 600K OpenReview reviews to predict accept/reject. Original dataset (spiralworks/openreview_wildcard_2025_v2) deleted; spiralworks has 0 public datasets. Author's archive has fragments: sumukshashidhar-archive/openreview-100k (98K reviews with idea_only_review_* fields from DeepSeek-V3 transforms, ICLR+NeurIPS 2017-2023), sumukshashidhar-archive/openreview-classification (2009 train/503 test, full paper text→accept/reject), sumukshashidhar-archive/openreview-decision-classification-benchmark (1284 train/321 test, abstract→accept/reject). Task is review prediction, not creative generation."
   },
   {
     "name": "Human Evaluation of Generated Prose for Paintings",
@@ -1430,9 +1437,10 @@
     "name": "CreativEval",
     "paper_id": "8c5aab75826620559d33e99652f4cac9f6efd2fc",
     "url": "https://github.com/matthewdelorenzo/CreativEval/",
+    "arxiv": "2404.08806",
     "assigned_to": "CL",
     "status": "rejected",
-    "rejection_reason": "Domain-specific (hardware)"
+    "rejection_reason": "Domain-specific (Verilog hardware) with impractical eval pipeline. IEEE LAD 2024. 120 HDLBits prompts (111 single-module + 9 multi-module). TTCT-based creativity framework (fluency, flexibility, originality, elaboration) is sound, but evaluation requires GNN4IP (circuit similarity via graph neural network) and Icarus Verilog (simulator for functionality testing), plus multi-generation per prompt (t=10). Does not fit HELM single-turn architecture. Repo is WIP."
   },
   {
     "name": "Time-Bench",
@@ -1517,10 +1525,12 @@
   {
     "name": "Persona Generation Task",
     "paper_id": "9bd723ac16fab44267211f93442153626aac8ccd",
-    "url": "https://github.com/vijetadeshpande/Diverse-NS",
+    "url": "https://github.com/text-machine-lab/diverse-not-short",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Repo 404"
+    "status": "completed",
+    "scenario_file": "scenarios/diverse_not_short/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Original URL (vijetadeshpande/Diverse-NS) was 404; correct repo: text-machine-lab/diverse-not-short. Paper: 'Diverse, not Short' (EMNLP 2025, arXiv:2505.16245). Six creativity tasks: RAT (144 items, exact_match), AUT (15 objects), CWT (7 word-triplets), DAT (1 prompt), C-DAT (15 words), PGT (1 prompt). RAT has labeled answers; others are open-ended. Multi-seed diversity evaluation (100 seeds for DAT/PGT, 10 for CWT/AUT). HF dataset: text-machine-lab/diverse-not-short (6K preference pairs for DPO training). Note: DAT/C-DAT tasks overlap with existing dat_creative_writing and cdat scenarios but use different prompts/test sets from this paper's framework."
   },
   {
     "name": "MeLBench",
