@@ -1023,9 +1023,18 @@
     "name": "Arabic Story Generation Evaluation Framework",
     "paper_id": "6784651527c5c25cf7c202124ef55e2fcea58a96",
     "url": "https://github.com/UBC-NLP/arastories",
+    "arxiv": "2407.07551",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "No formal evaluation"
+    "status": "completed",
+    "scenario_file": "scenarios/arastories/scenario.py",
+    "annotator_notes": "scenarios/arastories/annotator_notes.md",
+    "eval_type": "llm_judge",
+    "subsets": {
+      "msa": 996,
+      "egyptian": 1000,
+      "moroccan": 1000
+    },
+    "notes": "Previously rejected as 'no formal evaluation' but paper has well-defined GPT-4-as-judge protocol with 5 dimensions (fluency, coherence, instruction following, consistency, variety) on 1-5 scale. Exact judge prompt in repo. Structured constraint-based prompts for children's story generation across 3 Arabic varieties. Supports dialect parameter (msa, egyptian, moroccan, all)."
   },
   {
     "name": "MARS",
@@ -1206,9 +1215,17 @@
     "name": "Fable Generation Evaluation Framework",
     "paper_id": "78a4ecbb479be5e0ae6f5c081718506ce2f8ed98",
     "url": "https://huggingface.co/datasets/klusai/ds-tf1-en-3m",
+    "arxiv": "2504.20605",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Training data, not benchmark"
+    "status": "completed",
+    "scenario_file": "scenarios/tinyfabulist/scenario.py",
+    "annotator_notes": "scenarios/tinyfabulist/annotator_notes.md",
+    "eval_type": "llm_judge",
+    "subsets": {
+      "benchmark": 100,
+      "full": 100000
+    },
+    "notes": "Previously rejected as 'training data, not benchmark' but the GitHub repo (klusai/tinyfabulist) contains a well-defined 100-prompt benchmark set with published baselines for 11 models. Evaluation uses o3-mini as judge on 4 dimensions (grammar, creativity, moral_clarity, adherence_to_prompt) on 1-10 scale plus age group classification. Prompts are combinatorial from 100+ characters/traits/settings/conflicts/resolutions/morals. Supports source parameter: 'benchmark' (100 prompts from paper) or 'full' (100K HF test split)."
   },
   {
     "name": "New Yorker Cartoon Caption Contest Humor 'Understanding' Benchmarks",
