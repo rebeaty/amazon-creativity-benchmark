@@ -2296,8 +2296,23 @@
     "paper_id": "db82caf8d2bab9decfc863e711735839807fa6b8",
     "url": "https://github.com/EMNLP-2024-CritiCS/Collective-Critics-for-Creative-Story-Generation",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Not a benchmark (system code)"
+    "status": "completed",
+    "scenario_file": "scenarios/critics_story/scenario.py",
+    "eval_type": "mixed",
+    "benchmark_name": "CritiCS Story",
+    "subsets": {
+      "generation": {
+        "instances": 6931,
+        "eval_type": "llm_judge",
+        "description": "Open-ended story plan generation from narrative premises (doc-storygen-v2 premises)"
+      },
+      "judgment": {
+        "instances": 5141,
+        "eval_type": "exact_match",
+        "description": "Pairwise story plan quality judgment with human ground truth (A/B preference from Q1)"
+      }
+    },
+    "notes": "CritiCS is a multi-agent story generation system (EMNLP 2024). Scenario uses doc-storygen-v2 dataset (llm-aes/doc-storygen-v2 on HF) which provides 6,931 unique premises and 7,000 plan pairs with human pairwise annotations on 6 dimensions. Generation subset: premise -> story plan (LLM-as-judge on Interesting/Coherent/Creative). Judgment subset: given 2 plans, pick the better one (exact_match vs human labels, 'Both'/'Neither' filtered out)."
   },
   {
     "name": "Fig-QA",
@@ -2333,7 +2348,7 @@
     "url": "",
     "assigned_to": "CL",
     "status": "rejected",
-    "rejection_reason": "Multimodal + restricted access"
+    "rejection_reason": "Restricted access (professor-signed EULA required); incomplete transcripts (missing journalist questions per Section 5.1); German-only; low inter-annotator agreement (Krippendorff's alpha 0.16-0.19)"
   },
   {
     "name": "KiVA (Kid-inspired Visual Analogies)",
@@ -2425,7 +2440,7 @@
     "url": "https://github.com/adobe-research/GraphicBench",
     "assigned_to": "CL",
     "status": "rejected",
-    "rejection_reason": "Repo 404"
+    "rejection_reason": "Original adobe-research repo still 404. Repo exists at github.com/dayeonki/graphicbench (personal account) but has no LICENSE file. Work done during Adobe Research internship; never published under Adobe's org, likely missing open-source approval. No license = all rights reserved by default."
   },
   {
     "name": "Outline-Conditioned Story Generation",
@@ -2452,8 +2467,11 @@
     "paper_id": "e8795958aad9c8514d5d7d28b022d42ca4a3a243",
     "url": "https://github.com/Bhaavya/InstructGPT-Analogies",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Open-ended generation with human-only scoring; no automatic metrics"
+    "status": "completed",
+    "scenario_file": "scenarios/science_analogies/scenario.py",
+    "eval_type": "open_ended",
+    "subsets": ["nosrc", "wsrc"],
+    "notes": "SAQA dataset: 109 unique science concepts, 148 reference analogies from Q&A sites. nosrc: generate analogy without source (109 instances). wsrc: generate analogy with given source concept (148 instances). Data downloaded from GitHub repo at runtime."
   },
   {
     "name": "Human Evaluation of Suspenseful Story Generation",
@@ -2512,7 +2530,7 @@
     "url": "https://github.com/ajdal/DiCTI",
     "assigned_to": "CL",
     "status": "rejected",
-    "rejection_reason": "Diffusion model benchmark; not applicable to LLM/VLM evaluation"
+    "rejection_reason": "No reusable benchmark data. DiCTI used only 9 text prompts, none published (not in repo or paper). VITON-HD dataset has no text descriptions (image pairs only). Third-party captions exist (TryOnVirtual/VITON-HD-Captions, PromptDresser) but would require assembling a new benchmark rather than onboarding an existing one."
   },
   {
     "name": "GenEval",
@@ -2573,8 +2591,11 @@
     "paper_id": "f3c3c22716629df9f5353956461222ffc8e5e802",
     "url": "https://github.com/YipingNUS/scratchplot-story-generation",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Not a benchmark"
+    "status": "completed",
+    "scenario_file": "scenarios/story_quality/scenario.py",
+    "eval_type": "exact_match",
+    "subsets": ["interestingness", "coherence", "naturalness"],
+    "notes": "100 stories (50 content plans x 2 systems), 3 annotators each on 1-5 Likert scale. Ground truth: rounded average. Data downloaded from GitHub repo crowdsource/ TSVs. Originally rejected as 'not a benchmark' but crowdsource annotations are usable for quality judgment."
   },
   {
     "name": "Prompt Embedding Manipulation Evaluation / Aesthetic Quality Benchmark",
