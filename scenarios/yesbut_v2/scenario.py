@@ -15,14 +15,15 @@ and multicultural contexts.
 Four tasks (implemented as subsets):
   - description: Generate literal description of comic narrative (open_ended)
   - contradiction: Explain the contradiction between panels (open_ended)
-  - moral_mcq: Select underlying philosophy from 4 options (exact_match)
+  - moral_mcq: Select underlying symbolism from 4 options (exact_match)
   - title_mcq: Select best title from 4 options (exact_match)
 
 Each task supports two variants:
   - w_caption: Image + oracle caption provided as context
   - wo_caption: Image only (default, harder)
 
-Prompt source: Prompts.sh in GitHub repo. Uses Set 1 prompts (paper's primary).
+Three prompt sets from Table 7 (paper averages across all three to reduce bias).
+Prompt source: Table 7 evaluation prompts from the paper.
 Fields used: description, caption, contradiction, moral_mcq, moral_mcq_answer,
   title_mcq, title_mcq_answer, url (Google Drive image links)
 Fields skipped: social_info, Linguistic_context, Panel_Bounding_Boxes,
@@ -47,76 +48,216 @@ class YesButV2Scenario(Scenario):
 
     TASKS = ["description", "contradiction", "moral_mcq", "title_mcq"]
 
-    # Prompts Set 1 from Prompts.sh (paper's primary prompt set)
+    # Evaluation prompts from Table 7 — three prompt sets per task.
+    # Paper averages results across all three to reduce prompt bias.
     PROMPTS = {
         "description": {
-            "wo_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions. Write a one-paragraph literal "
-                "description to describe the narrative of the comic."
-            ),
+            1: {
+                "wo_caption": (
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions. Write a "
+                    "one-paragraph literal description to describe the "
+                    "narrative of the comic."
+                ),
+            },
+            2: {
+                "wo_caption": (
+                    "Please literally describe the context of the image "
+                    "in detail."
+                ),
+            },
+            3: {
+                "wo_caption": (
+                    "Give me a detailed literal description of the image."
+                ),
+            },
         },
         "contradiction": {
-            "w_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions.\n"
-                "The literal caption of the comic is: {image_caption}\n"
-                "Write a short explanation to illustrate the contradiction "
-                "of the two sides."
-            ),
-            "wo_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions. Write a short explanation to "
-                "illustrate the contradiction of the two sides."
-            ),
+            1: {
+                "w_caption": (
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions.\n"
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Write a short explanation to illustrate the "
+                    "contradiction of the two sides."
+                ),
+                "wo_caption": (
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions. Write a short "
+                    "explanation to illustrate the contradiction of the "
+                    "two sides."
+                ),
+            },
+            2: {
+                "w_caption": (
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Analyze the provided image, which is divided into "
+                    "two or more panels, each illustrating contrasting "
+                    "views of the same scenario. Describe the elements "
+                    "visible in each panel. Then concisely interpret how "
+                    "these elements convey contrasting perspectives in "
+                    "one or two sentences. Focus and only output the "
+                    "contradiction."
+                ),
+                "wo_caption": (
+                    "Analyze the provided image, which is divided into "
+                    "two or more panels, each illustrating contrasting "
+                    "views of the same scenario. Describe the elements "
+                    "visible in each panel. Then concisely interpret how "
+                    "these elements convey contrasting perspectives in "
+                    "one or two sentences. Focus and only output the "
+                    "contradiction."
+                ),
+            },
+            3: {
+                "w_caption": (
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Given an image with two or more panels showing a "
+                    "contrast relationship, describe the elements visible "
+                    "in each panel and concisely interpret the "
+                    "contradiction in one or two sentences."
+                ),
+                "wo_caption": (
+                    "Given an image with two or more panels showing a "
+                    "contrast relationship, describe the elements visible "
+                    "in each panel and concisely interpret the "
+                    "contradiction in one or two sentences."
+                ),
+            },
         },
         "moral_mcq": {
-            "w_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions.\n"
-                "The literal caption of the comic is: {image_caption}\n"
-                "Which of the following options best represents the "
-                "underlying philosophy of the comic?\n"
-                "{options}\n\nJust output the choice:"
-            ),
-            "wo_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions.\n"
-                "Which of the following options best represents the "
-                "underlying philosophy of the comic?\n"
-                "{options}\n\nJust output the choice:"
-            ),
+            1: {
+                "w_caption": (
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions.\n"
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Which of the following options best represents the "
+                    "underlying Symbolism of the comic?\n"
+                    "{options}\n\nJust output the choice."
+                ),
+                "wo_caption": (
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions. Which of the "
+                    "following options best represents the underlying "
+                    "Symbolism of the comic?\n"
+                    "{options}\n\nJust output the choice."
+                ),
+            },
+            2: {
+                "w_caption": (
+                    "You are presented with an image divided into panels, "
+                    "each illustrating contrasting views of the same "
+                    "scenario.\n"
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Which of the following options best represents the "
+                    "Symbolism of the image provided?\n"
+                    "{options}\n\nSelect the correct option by typing the "
+                    "corresponding letter (A, B, C, or D)."
+                ),
+                "wo_caption": (
+                    "You are presented with an image divided into panels, "
+                    "each illustrating contrasting views of the same "
+                    "scenario. Which of the following options best "
+                    "represents the Symbolism of the image provided?\n"
+                    "{options}\n\nSelect the correct option by typing the "
+                    "corresponding letter (A, B, C, or D)."
+                ),
+            },
+            3: {
+                "w_caption": (
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Given an image with two or more panels showing "
+                    "contrast, select the best option representing the "
+                    "deep semantic of the image.\n"
+                    "{options}\n\nJust output the correct option as "
+                    "(A, B, C, or D), no more explanation."
+                ),
+                "wo_caption": (
+                    "Given an image with two or more panels showing "
+                    "contrast, select the best option representing the "
+                    "deep semantic of the image.\n"
+                    "{options}\n\nJust output the correct option as "
+                    "(A, B, C, or D), no more explanation."
+                ),
+            },
         },
         "title_mcq": {
-            "w_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions.\n"
-                "The literal caption of the comic is: {image_caption}\n"
-                "Which of the following titles are the most suitable for "
-                "the comic?\n"
-                "{options}\n\nJust output the choice:"
-            ),
-            "wo_caption": (
-                "The given comic shows the same situation from two opposite "
-                "sides with contradictions.\n"
-                "Which of the following titles are the most suitable for "
-                "the comic?\n"
-                "{options}\n\nJust output the choice:"
-            ),
+            1: {
+                "w_caption": (
+                    "The given comic presents the same situation from "
+                    "two opposing perspectives, highlighting "
+                    "contradictions.\n"
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Which of the following titles is most suitable for "
+                    "the comic?\n"
+                    "{options}\n\nOutput only the selected choice."
+                ),
+                "wo_caption": (
+                    "The given comic presents the same situation from "
+                    "two opposing perspectives, highlighting "
+                    "contradictions. Which of the following titles is "
+                    "most suitable for the comic?\n"
+                    "{options}\n\nOutput only the selected choice."
+                ),
+            },
+            2: {
+                "w_caption": (
+                    "You are presented with an image divided into two or "
+                    "more panels, each depicting contrasting perspectives "
+                    "of the same scenario.\n"
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Which of the following title options best represents "
+                    "the given image?\n"
+                    "{options}\n\nSelect the correct option by typing the "
+                    "corresponding letter (A, B, C, or D)."
+                ),
+                "wo_caption": (
+                    "You are presented with an image divided into two or "
+                    "more panels, each depicting contrasting perspectives "
+                    "of the same scenario. Which of the following title "
+                    "options best represents the given image?\n"
+                    "{options}\n\nSelect the correct option by typing the "
+                    "corresponding letter (A, B, C, or D)."
+                ),
+            },
+            3: {
+                "w_caption": (
+                    "The literal caption of the comic is: {image_caption}\n"
+                    "Given an image divided into two or more panels, a "
+                    "contrast relationship exists between the panels. "
+                    "Identify the best title from the following options "
+                    "that represents the image.\n"
+                    "{options}\n\nOutput only the corresponding letter "
+                    "(A, B, C, or D) without any additional explanation."
+                ),
+                "wo_caption": (
+                    "Given an image divided into two or more panels, a "
+                    "contrast relationship exists between the panels. "
+                    "Identify the best title from the following options "
+                    "that represents the image.\n"
+                    "{options}\n\nOutput only the corresponding letter "
+                    "(A, B, C, or D) without any additional explanation."
+                ),
+            },
         },
     }
 
-    def __init__(self, task: str = "moral_mcq", use_caption: bool = False):
+    def __init__(self, task: str = "moral_mcq", use_caption: bool = False,
+                 prompt_set: int = 1):
         """
         Args:
             task: One of "description", "contradiction", "moral_mcq", "title_mcq"
             use_caption: If True, include oracle caption in prompt (w_caption variant)
+            prompt_set: Prompt variant 1-3 from Table 7 (paper averages all three)
         """
         super().__init__()
         if task not in self.TASKS:
             raise ValueError(f"task must be one of {self.TASKS}, got '{task}'")
+        if prompt_set not in (1, 2, 3):
+            raise ValueError(f"prompt_set must be 1, 2, or 3, got {prompt_set}")
         self.task = task
         self.use_caption = use_caption
+        self.prompt_set = prompt_set
 
     @staticmethod
     def _gdrive_direct_url(view_url: str) -> str:
@@ -142,12 +283,12 @@ class YesButV2Scenario(Scenario):
         return filepath
 
     def _build_prompt(self, item: dict) -> str:
-        """Build text prompt for the given task and caption setting."""
+        """Build text prompt for the given task, prompt set, and caption setting."""
         variant = "w_caption" if self.use_caption else "wo_caption"
         # description task only has wo_caption variant
         if self.task == "description":
             variant = "wo_caption"
-        template = self.PROMPTS[self.task][variant]
+        template = self.PROMPTS[self.task][self.prompt_set][variant]
 
         kwargs = {}
         if "{image_caption}" in template:
