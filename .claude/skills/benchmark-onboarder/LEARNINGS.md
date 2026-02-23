@@ -422,7 +422,8 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | Creative Process (Verbal Fluency) | Custom metrics | Analyzes creative exploration patterns, not output quality |
 | DAT_GPT | Custom metrics | DAT scoring, compression-based DSI metrics |
 | C2-Eval | Empty repo | No content available |
-| FuxiBench (Fùxì) | Domain-specific | Chinese classical literature benchmark with 21 tasks; LLM-as-judge in Chinese |
+| FuxiBench (Fùxì) | Partial onboard | 21 tasks total but only 5 creative subtasks onboarded (ci_gen, couplet_gen, poem_gen, poem_nmt_inv, poem_appre). Non-creative tasks (knowledge recall, TCM, source tracing) skipped. Data hosted as JSON on GitHub (no HF dataset). Format metrics (pacc/cacc) check structure only, not aesthetics. |
+| GeoStory (Geographical Disparity) | No reference outputs | Purely generative benchmark (no gold answers). Data from GeoNames cities1000.zip + countryInfo.txt downloaded at runtime. 5,185 locations across 245 countries. Custom corpus-level metrics (IDF uniqueness, NER count, emotion via GPT-4). Originally rejected as "not creativity" but onboarded for geo-anchored story generation. |
 | ConstructiveBench | Dataset inaccessible | HuggingFace URL returns "dataset not found" |
 | PressRelease Creative Planning | Corpus, not benchmark | 656k articles corpus for research; no formal test set or evaluation metrics |
 | Fable Generation (ds-tf1-en-3m) | Training data | 3M fables for training; not an evaluation benchmark |

@@ -1908,7 +1908,7 @@
     "url": "https://github.com/artificial-scientist-lab/SciMuse",
     "assigned_to": "CL",
     "status": "rejected",
-    "rejection_reason": "Private dataset"
+    "rejection_reason": "Core LLM task requires private research idea texts held by authors; no self-serve evaluation pathway. Public data (feature vectors + ratings) only supports supervised ML, not LLM evaluation."
   },
   {
     "name": "SchNovel",
@@ -1979,8 +1979,38 @@
     "paper_id": "c44760d1864e62f09aed92bbe0a23d12b9d6983c",
     "url": "https://github.com/cubenlp/FuxiBench",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Domain-specific (Chinese classical literature)"
+    "status": "completed",
+    "scenario_file": "scenarios/fuxibench/scenario.py",
+    "eval_type": "mixed",
+    "benchmark_name": "FuxiBench",
+    "subsets": {
+      "ci_gen": {
+        "instances": 300,
+        "eval_type": "custom",
+        "description": "Compose ci poetry following strict cipai tonal patterns (pacc format metric)"
+      },
+      "couplet_gen": {
+        "instances": 500,
+        "eval_type": "custom",
+        "description": "Generate matching second line for couplets with parallel structure (cacc format metric)"
+      },
+      "poem_gen": {
+        "instances": 300,
+        "eval_type": "llm_judge",
+        "description": "Compose original poetry from thematic keywords (lacc via Qwen2-7B judge)"
+      },
+      "poem_nmt_inv": {
+        "instances": 300,
+        "eval_type": "llm_judge",
+        "description": "Reconstruct classical poems from modern Chinese translations (lacc)"
+      },
+      "poem_appre": {
+        "instances": 109,
+        "eval_type": "open_ended",
+        "description": "Write literary appreciation/analysis of given poems (BLEU)"
+      }
+    },
+    "notes": "FuxiBench has 21 tasks total but only 5 creative generation subtasks onboarded (1,509 instances). Skipped: knowledge recall (RC, source tracing, book ID), translation, TCM tasks. Chinese language throughout. Format metrics (pacc, cacc) check structural compliance only, not aesthetic quality. Paper acknowledges aesthetic eval is future work."
   },
   {
     "name": "Scientific Novelty Detection Datasets (Marketing & NLP)",
@@ -2074,8 +2104,37 @@
     "paper_id": "ccdfb2af92259f84c3cef8f7b9f79b0b988f3780",
     "url": "https://github.com/FLAIR-IISc/richer-countries-have-richer-output",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Not creativity"
+    "status": "completed",
+    "scenario_file": "scenarios/geo_story/scenario.py",
+    "eval_type": "custom",
+    "benchmark_name": "GeoStory",
+    "subsets": {
+      "story": {
+        "instances": 5185,
+        "description": "All 4 story prompt types combined (21 templates)"
+      },
+      "story_childhood": {
+        "instances": 5185,
+        "description": "Childhood experience narratives (5 templates)"
+      },
+      "story_character": {
+        "instances": 5185,
+        "description": "Character-based stories: child/young/middle-aged/old/family/couple (6 templates)"
+      },
+      "story_profession": {
+        "instances": 5185,
+        "description": "Profession-based stories: gardener/social worker/writer/teacher/shopkeeper (5 templates)"
+      },
+      "story_daily_life": {
+        "instances": 5185,
+        "description": "Daily life/routine descriptions (5 templates)"
+      },
+      "travel": {
+        "instances": 5185,
+        "description": "Travel recommendations: itineraries and attractions (11 templates)"
+      }
+    },
+    "notes": "NAACL 2025 Findings. Geo-anchored creative generation across 5,185 locations in 245 countries (25 per country from GeoNames cities1000). No reference outputs — purely generative. Custom metrics: lexical uniqueness (IDF), informativeness (NER count), emotion classification (GPT-4). Paper studies geographical disparity in output quality correlated with GDP."
   },
   {
     "name": "LLM-based VLM Quality Evaluation",
