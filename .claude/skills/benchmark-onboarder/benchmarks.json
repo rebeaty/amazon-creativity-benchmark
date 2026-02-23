@@ -147,6 +147,8 @@
     "paper_id": "0e42d4694acc559ac22d1ea280f4a6d7f9878f0f",
     "url": "https://huggingface.co/datasets/Jacklu0831/few-shot-creative-generation-8",
     "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (text-to-image generation); requires HEIM framework. ECCV 2024, arXiv:2408.02226; ProCreate Diffusion method for few-shot creative image generation; FSCG-8 dataset has 8 categories (Amedeo Modigliani paintings, Apple products, Burberry, Frank Gehry architecture, Nouns characters, One Piece anime, Pokemon, Rococo) with ~50 image-caption pairs each (400 total); task is text-to-image generation (e.g., 'a jellyfish Pokemon' \u2192 generate Pokemon-style image); uses Stable Diffusion fine-tuning; propulsive energy diffusion to prevent training data reproduction; evaluation measures sample diversity, fidelity, and creativity of generated images; HuggingFace dataset (Jacklu0831/few-shot-creative-generation-8) contains .jpg image files paired with text captions; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework"
     "status": "completed",
     "scenario_file": "scenarios/fscg8_scenario.py",
     "eval_type": "custom",
@@ -415,10 +417,14 @@
     "assigned_to": "SM"
   },
   {
-    "name": "ICLR Papers",
+    "name": "GraphEval",
     "paper_id": "236c90554273ca3e07fff78bd9b2d9c50de2cf74",
     "url": "https://github.com/ulab-uiuc/GraphEval",
-    "assigned_to": "VD"
+    "arxiv": "https://arxiv.org/abs/2503.12600",
+    "assigned_to": "VD",
+    "status": "completed",
+    "eval_type": "open_ended",
+    "notes": "Three datasets: ICLR_Dataset (50 test, 4 classes), AI_Researcher (9 test, 3 classes), Review_Advisor (1,025 test, 4 classes). Uses exact prompt from repository (Baselines/Prompt/basic_prompt.txt) with 6 evaluation dimensions and few-shot examples. Output format: \"Overall Score (0-100)= {score}\\n{decision}\". Created separate scenarios for each dataset."
   },
   {
     "name": "TIGeR-Bench",
@@ -939,6 +945,7 @@
     "url": "https://aclanthology.org/2022.cai-1.9/",
     "assigned_to": "SM",
     "status": "rejected",
+    "rejection_reason": "Multimodal (image + text \u2192 humor classification); requires vision-language understanding. ACL 2022 Workshop on When Creative AI Meets Conversational AI; 'Learning to Evaluate Humor in Memes Based on the Incongruity Theory'; authors: Kohtaro Tanaka, Hiroaki Yamane, Yusuke Mori, Yusuke Mukuta, Tatsuya Harada; dataset: 7,500 memes with real-valued humor annotations collected via crowdwork platform, refined to 1,411 memes after removing items with ambiguous ratings; task: binary classification to determine whether a given meme (image + caption) is humorous; based on incongruity theory which posits humor arises from incongruity between images and captions; models: based on ViLT and CLIP vision-language pretrained models; evaluation: classification accuracy using 10-fold cross-validation with 8 runs; key contribution: proposed refinement process to extract memes not influenced by interpersonal differences in humor perception, and method to explicitly extract and utilize incongruities between images and captions; findings: proposed approach outperformed other vision-language models in humor classification; requires processing both image and text modalities simultaneously to understand visual-textual incongruity; outside HELM's text-only scope; would need vision-language evaluation framework like VHELM; no public dataset release or GitHub repository found; ACL Anthology: aclanthology.org/2022.cai-1.9/"
     "rejection_reason": "Dataset not publicly available. ACL 2022 Workshop on When Creative AI Meets Conversational AI; 'Learning to Evaluate Humor in Memes Based on the Incongruity Theory'; authors: Kohtaro Tanaka, Hiroaki Yamane, Yusuke Mori, Yusuke Mukuta, Tatsuya Harada (University of Tokyo); dataset: 7,500 memes with real-valued humor annotations collected via crowdwork platform, refined to 1,411 memes after removing items with ambiguous ratings; task: binary classification to determine whether a given meme (image + caption) is humorous; based on incongruity theory which posits humor arises from incongruity between images and captions; models: based on ViLT and CLIP vision-language pretrained models; evaluation: classification accuracy using 10-fold cross-validation with 8 runs; key contribution: proposed refinement process to extract memes not influenced by interpersonal differences in humor perception, and method to explicitly extract and utilize incongruities between images and captions; findings: proposed approach outperformed other vision-language models in humor classification; no public dataset release found - Papers with Code lists 'No code available yet'; no GitHub repository or download links found; author website: https://kohtaro246.github.io/; NOTE: This is a multimodal vision-language task (image + text \u2192 humor classification); HELM supports multimodal evaluation through VHELM (Vision-Language HELM); rejection is solely due to dataset unavailability, not modality; future candidate for onboarding via VHELM if dataset becomes publicly available; ACL Anthology: aclanthology.org/2022.cai-1.9/"
   },
   {
@@ -2091,10 +2098,13 @@
     "rejection_reason": "Multimodal (video understanding); requires HEIM/VHELM framework. EMNLP 2023, arXiv:2310.14159; 'Can Language Models Laugh at YouTube Short-form Videos?'; multimodal video humor understanding dataset with 10,136 user-generated funny YouTube short-form videos; 11,166 funny moments annotated with start/end timestamps and text explanations (avg 44.3 words); covers 20 humor types across wide range of domains; requires understanding both verbal and visual elements to comprehend humor; task: identify funny moments in videos and explain why they are humorous; paper develops zero-shot video-to-text prompting framework to make videos consumable by text-only LLMs by converting video into text (visual descriptions via BLIP, audio transcripts, sound tags, frame sequences); however, core evaluation is understanding video humor, not text humor; uses video filtering pipeline with GPT-3.5 to verify both verbal and visual humor elements; evaluated using automatic scores, rationale quality experiments, and human evaluations; dataset publicly available via Google Drive (JSON format with YouTube URLs, timestamps, explanations); requires video processing models (BLIP for visual, audio models, etc.); outside HELM's text-only scope; would need HEIM/VHELM framework for video-language evaluation; GitHub: dayoon-ko/ExFunTube; dataset page: exfuntube.github.io"
   },
   {
-    "name": "",
+    "name": "TTCW (Torrance Test of Creative Writing)",
     "paper_id": "ca8441db8a31988a7add559ae86db3f522eac81f",
-    "url": "",
-    "assigned_to": "VD"
+    "url": "https://huggingface.co/datasets/Salesforce/ttcw_creativity_eval",
+    "assigned_to": "VD",
+    "status": "completed",
+    "eval_type": "exact_match",
+    "notes": "Binary classification task predicting expert judgments on 14 creativity dimensions; uses plot summaries (full stories at external URLs)"
   },
   {
     "name": "HypoGen",
@@ -2340,6 +2350,8 @@
     "paper_id": "df15665ebb3896cb9bb296535af14e9065b4ba29",
     "url": "https://github.com/ey242/KiVA",
     "assigned_to": "SM",
+    "status": "rejected",
+    "rejection_reason": "Multimodal (vision-language); requires HEIM/VHELM framework. ICLR 2025, arXiv:2407.17773; visual analogical reasoning benchmark with 4,300 visual transformations of everyday objects; tests fundamental visual pattern recognition skills solvable by children ages 3-5; 5 transformation domains (2D Rotation, Color, Resize, Reflection, Counting) with 14-29 subdomains; two difficulty levels: KiVA (easy, solvable by 3-year-olds) and KiVA-adults (hard, different input values requiring further abstraction); task format: given images showing object transformation (e.g., blue dog \u2192 red dog), identify which option (A/B/C) applies the same transformation to a new object; three evaluation stages: identify what changed, how it changed, apply rule to new scenarios; evaluates large multimodal models (GPT-4V, GPT-o1, LLaVA-1.5, MANTIS) compared to human children and adults; findings show models identify 'what' changed but struggle with quantifying 'how' and extrapolating rules; repository contains 96K+ files including transformed object images in both stitched format (single image) and individual format (multiple images); requires vision-language models and visual processing; outside HELM's text-only scope; would need HEIM/VHELM framework; GitHub: ey242/KiVA"
     "status": "completed",
     "scenario_file": "scenarios/kiva_scenario.py",
     "eval_type": "exact_match",
