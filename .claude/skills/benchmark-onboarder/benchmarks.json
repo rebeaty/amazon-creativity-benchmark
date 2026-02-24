@@ -223,10 +223,14 @@
     "rejection_reason": "Evaluation methodology, not a benchmark - MIRROR is a multi-LLM iterative framework for evaluating generated questions, not a dataset for evaluating LLMs"
   },
   {
-    "name": "",
+    "name": "HW-TSC at SemEval-2024 Task 9 (BRAINTEASER)",
     "paper_id": "1600f96cb9d67221b3a55de817182a718d67942f",
-    "url": "",
-    "assigned_to": "VD"
+    "url": "https://aclanthology.org/2024.semeval-1.234/",
+    "dataset_url": "https://github.com/alvin-pc-chen/semeval_brainteaser",
+    "assigned_to": "VD",
+    "status": "completed",
+    "notes": "Participation paper in SemEval-2024 Task 9. Uses BRAINTEASER benchmark (already onboarded at scenarios/brainteaser/scenario.py). Paper explores prompt engineering strategies: reasoning clues, chain-of-thought examples, and fine-tuning Mixtral 7x8b. Achieved 2nd and 3rd place in word-type and sentence-type brain teasers. Not a new benchmark - refers to existing BRAINTEASER dataset.",
+    "scenario_file": ".claude/skills/benchmark-onboarder/examples/brainteaser.py"
   },
   {
     "name": "Pron vs Prompt Creative Writing Contest",
@@ -859,12 +863,14 @@
     "rejection_reason": "Dataset not publicly available. The PoemSum dataset (3,011 poem-summary pairs from EMNLP 2023 paper 'Unveiling the Essence of Poetry') is not accessible despite paper claiming public availability. Extensive search found no GitHub repository, HuggingFace dataset, or data repository links. The Poetry-in-Pixels repo only contains the related MiniPo dataset (2,016 children's poems), not the original PoemSum data."
   },
   {
-    "name": "BalanceCC",
+    "name": "BalanceCC (Prompt Generation)",
     "paper_id": "53d193a9fb82ce0c2b5d368071b405f63dd98c90",
-    "url": "https://github.com/RuoyuFeng/CCEdit",
+    "url": "https://huggingface.co/datasets/RuoyuFeng/BalanceCC",
+    "arxiv": "https://arxiv.org/abs/2309.16496",
     "assigned_to": "VD",
-    "status": "not_suitable",
-    "reason": "Video editing benchmark for diffusion models, not LLM/VLM evaluation; evaluates video-to-video editing quality (style/object/background changes) for generative video models, not language model creativity"
+    "status": "completed",
+    "eval_type": "open_ended",
+    "notes": "Text-based proxy task for video editing benchmark. 400 instances (100 videos \u00d7 4 editing types). Task: Generate target prompt given original scene description, editing type (Style/Object/Background/Multiple Change), and fantasy level. Original benchmark evaluates video generation systems."
   },
   {
     "name": "CLAP-based Novelty and Relevance Metrics",
@@ -1223,9 +1229,11 @@
     "name": "VideoCanvasBench",
     "paper_id": "7455c15acdea4beafa9fc50f3f4225cf10b4f971",
     "url": "https://github.com/KwaiVGI/VideoCanvas",
+    "arxiv": "https://arxiv.org/abs/2510.08555",
     "assigned_to": "VD",
-    "status": "not_suitable",
-    "reason": "Video generation benchmark, not text-based; evaluates video diffusion models on arbitrary spatio-temporal video completion (inpainting, outpainting, extension, interpolation); visual modality only, no language model evaluation; outside HELM scope (requires video generation infrastructure); beyond even HEIM scope (which handles text-to-image, not video); October 2025; arXiv:2510.08555"
+    "status": "pending_release",
+    "reason": "Dataset not yet released - repository states \"Code (Coming soon)\" and \"We will release this benchmark\". Video generation task (arbitrary spatio-temporal video completion) not video understanding. Evaluates video diffusion models on visual quality metrics (FVD, PSNR, aesthetic quality). REVISIT when dataset released to assess text-based proxy tasks (e.g., describing completion strategies, predicting patch placement). Monitor: https://github.com/KwaiVGI/VideoCanvas",
+    "notes": "Over 2,000 test cases (AnyP2V, AnyI2V, AnyV2V tasks). 100 high-quality videos from Pexels. Metrics: FVD, PSNR, temporal coherence, aesthetic quality. October 2025 paper."
   },
   {
     "name": "ROBOTOOLBENCH",
@@ -2250,8 +2258,12 @@
   {
     "name": "FunQA",
     "paper_id": "cbf052125c90f78d8750f7d447121193ef53d2f8",
-    "url": "https://github.com/Fun-QA/FunQA",
-    "assigned_to": "VD"
+    "url": "https://huggingface.co/datasets/fesvhtr/FunQA",
+    "arxiv": "https://arxiv.org/abs/2306.14899",
+    "assigned_to": "VD",
+    "status": "completed",
+    "eval_type": "open_ended",
+    "notes": "MULTIMODAL benchmark (video QA). 30,170 test examples, 424 videos. Three subsets: HumorQA, CreativeQA, MagicQA. Tasks: timestamp localization, description, reasoning. Avg video 19 sec, avg answer 34.2 words. Metrics: BLEU-4, ROUGE-L, CIDEr, BLEURT. Uses MediaObject for video input. Videos must be downloaded via YouTube IDs."
   },
   {
     "name": "FilmScoreDB",
@@ -2481,9 +2493,19 @@
   },
   {
     "name": "Divergent Association Task (DAT)",
-    "paper_id": "ed7172b60ad1dc21d27243d99692198c261c3047",
+    "paper_id": "2023.findings-emnlp.858",
     "url": "https://github.com/DingNLab/probing_creativity",
-    "assigned_to": "VD"
+    "status": "completed",
+    "scenario_file": "scenarios/dat/scenario.py",
+    "assigned_to": "VD",
+    "subsets": {
+      "all": {
+        "instances": 100,
+        "eval_type": "custom",
+        "description": "Generate 10 semantically unrelated nouns"
+      }
+    },
+    "notes": "Divergent Association Task - measures verbal creativity through semantic diversity. Task: Generate 10 unrelated nouns (no proper nouns). Evaluation: Custom DATMetric using GloVe 840B 300d embeddings to compute average pairwise cosine distance (0-100 scale, higher = more creative). See metric_notes.md. Human baseline (8,572 participants): mean ~78, SD ~10. GPT-4 greedy: ~90 (96th percentile). Temperature scaling improves most models except GPT-4. Original DAT: Olson et al. (2021) PNAS. LLM evaluation: Chen & Ding, EMNLP 2023 Findings. Configurable num_trials parameter (default: 100)."
   },
   {
     "name": "FIGR-8-SVG",
@@ -3173,7 +3195,7 @@
     "name": "Sonnet or Not, Bot?",
     "paper_id": "2406.18906",
     "url": "https://arxiv.org/abs/2406.18906",
-    "status": "completed",
+    "status": "onboarded",
     "scenario_file": "scenarios/sonnet_or_not_bot/scenario.py",
     "subsets": {
       "all": {
@@ -3202,7 +3224,8 @@
         "description": "Recognize metrical forms: common measure, blank verse, free verse"
       }
     },
-    "notes": "Poetry form classification task. Given a poem, identify its form (e.g., sonnet, ballad, haiku) from a list of forms in the same category. 1,453 public domain poems from Poetry Foundation and Academy of American Poets with expert annotations. Task tests understanding of poetic structure, meter, rhyme schemes, and formal devices. Prompt format from paper's evaluation scripts. Dataset auto-downloads from GitHub (maria-antoniak/poetry-eval). Evaluation: Classification accuracy using exact match. EMNLP Findings 2024. Authors: Walsh, Preus, Antoniak."
+    "notes": "Poetry form recognition task. Models classify poems into poetic forms (sonnet, haiku, ballad, etc.) across 4 form groups: verse forms (8 types), stanza forms (2 types), types/modes (9 types), meters (3 types). 1,453 public domain poems with expert annotations. EMNLP Findings 2024. Evaluation: F1, precision, recall. Human baseline: 67% accuracy on sonnets, 53% on ballads. GitHub: https://github.com/maria-antoniak/poetry-eval",
+    "eval_type": "exact_match"
   },
   {
     "name": "POLLUX - Russian Creativity",
@@ -3274,5 +3297,13 @@
     "status": "not_suitable",
     "reason": "Model paper, not creativity benchmark",
     "notes": "Multimodal LLM for Metal-Organic Frameworks (MOFs). Introduces MOF-SPK dataset (133,737 MOF structures from CCDC, 35,000+ publications). Four tasks: property prediction, structure extraction (SMILES), description generation, Q&A. Evaluates scientific understanding and property prediction NOT creative generation. Temporal split (pre-2020 train, post-2022 test). Evaluation: MAE for properties, BLEU/EXACT for structures, GPT-4-mini for head-to-head comparisons. Borderline creativity—focuses on knowledge extraction and prediction rather than creative synthesis. Requires molecular encoders for multimodal components. October 2024."
+  },
+  {
+    "name": "Thinking Outside the (Gray) Box",
+    "paper_id": "2502.13207",
+    "url": "https://arxiv.org/abs/2502.13207",
+    "status": "not_suitable",
+    "rejection_reason": "Methods paper, not a benchmark. Paper by Franceschelli & Musolesi proposes CoVO (Context-based Value and Originality) score as a reward signal for RL fine-tuning. Introduces GutenVerse (~84k poems from Project Gutenberg) as a reference corpus for measuring originality via T-LCS, not as an evaluation benchmark with test prompts. Paper evaluates their training method on existing benchmarks: NoveltyBench (Zhang et al. 2025), GSM8K, and MATH. GutenVerse is similar to using a large corpus for perplexity - it's a resource for computing metrics, not a benchmark itself. No standardized test set or evaluation protocol released. Note: NoveltyBench (separate benchmark) could be onboarded separately.",
+    "notes": "GutenVerse corpus buildable from https://anonymous.4open.science/r/GutenVerse-DD32/"
   }
 ]
