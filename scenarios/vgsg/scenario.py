@@ -96,7 +96,7 @@ class VGSGScenario(Scenario):
             for c in range(5):
                 name = item[f"char{c}"]
                 char_url = item[f"char{c}_url"]
-                if name and name != "{}" and char_url and char_url != "{}":
+                if isinstance(name, str) and name and name != "{}" and isinstance(char_url, str) and char_url and char_url != "{}":
                     characters.append((name, char_url))
 
             # Choose prompt based on whether characters exist
@@ -145,7 +145,7 @@ class VGSGScenario(Scenario):
             )
             for i in range(10):
                 link = item[f"link{i}"]
-                if link is not None:
+                if isinstance(link, str) and link:
                     img_path = self._download_image(link, images_dir)
                     media_objects.append(
                         MediaObject(

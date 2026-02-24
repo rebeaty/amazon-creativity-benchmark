@@ -1,7 +1,7 @@
 """
 HELM Scenario: Meta4XNLI
 
-Paper: https://arxiv.org/abs/2404.07053 (LREC-COLING 2024)
+Paper: https://arxiv.org/abs/2404.07053 (LREC-COLING 2024; extended: Computational Linguistics)
 Code: https://github.com/elisanchez-beep/meta4xnli
 
 A crosslingual parallel corpus for metaphor detection and interpretation in
@@ -23,14 +23,14 @@ Subsets:
     - 3630 instances (test split), eval: open_ended
     - Tags: 0=literal, 1=metaphor
 
-Prompt formats (from Paper Appendix Table 29):
+Prompt formats:
 
-  Zero-shot:
+  Zero-shot (from Paper Appendix Table 29):
     Say which is the inference relationship between these two sentences.
     Please, answer only with one word between 'entailment', 'neutral' or 'contradiction'.
     {Premise} -> {Hypothesis}:
 
-  Chain-of-thought:
+  Chain-of-thought (from Paper Appendix Table 29):
     You are an expert linguist and your task is to annotate sentences for
     the task of Natural Language Inference. This task consists in determining
     if a first sentence (premise) entails, contradicts or does not entail nor
@@ -47,7 +47,12 @@ Prompt formats (from Paper Appendix Table 29):
     Hypothesis: {hypothesis}
     Answer:
 
-Prompt source: Paper Appendix Table 29
+  Detection (custom prompt for generative LLM evaluation):
+    The original paper used fine-tuned encoder models (mDeBERTa, XLM-RoBERTa)
+    with BIO tagging for detection. This prompt is custom-written for the
+    HELM generative evaluation setting and is NOT from Table 29.
+
+Prompt source: NLI prompts from Paper Appendix Table 29; detection prompt custom
 Fields used: sentence1, sentence2, gold_label, language
 Fields skipped: promptID, pairID, genre, source_dataset
 """
@@ -72,7 +77,7 @@ class Meta4XNLIScenario(Scenario):
         "detection_en"
     ]
 
-    # Chain-of-thought prompt from Table 29
+    # Chain-of-thought prompt from Table 29 (verbatim, including trailing periods)
     COT_PROMPT = """You are an expert linguist and your task is to annotate sentences for the task of Natural Language Inference. This task consists in determining if a first sentence (premise) entails, contradicts or does not entail nor contradict the second sentence (hypothesis). Please, answer with one of the following labels: 'entailment', 'contradiction' or 'neutral'.
 
 Here you have a few examples:
@@ -82,11 +87,11 @@ Answer: entailment
 
 Premise: My heart is broken.
 Hypothesis: I am happy.
-Answer: contradiction
+Answer: contradiction.
 
 Premise: You are a close friend.
 Hypothesis: I like your eyes.
-Answer: neutral
+Answer: neutral.
 
 Premise: {premise}
 Hypothesis: {hypothesis}

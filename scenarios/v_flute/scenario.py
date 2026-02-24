@@ -2,7 +2,7 @@
 HELM Scenario: V-FLUTE (Visual Figurative Language Understanding
                         with Textual Explanations)
 
-Paper: https://arxiv.org/abs/2405.01474 (NAACL 2024 FigLang Workshop)
+Paper: https://arxiv.org/abs/2405.01474 (NAACL 2025 Main Conference)
 Code: https://github.com/asaakyan/V-FLUTE
 Dataset: https://huggingface.co/datasets/ColumbiaNLP/V-FLUTE (gated, requires HF login)
 
@@ -19,9 +19,12 @@ Two subsets:
   - explanation: Generate textual explanation for the relationship (open_ended)
     723 test instances
 
-Prompt source: Paper Section 4 / Appendix (21 paraphrased prompt variants).
-  Representative prompt used here; paper notes models received instruction
-  to predict label and provide explanation.
+Prompt source: 21 paraphrased prompt variants from
+  data_processing/convert_to_llava_format.ipynb in the V-FLUTE repo.
+  Each prompt is a single combined instruction asking the model to both
+  classify (entailment/contradiction) and explain its reasoning.
+  The first prompt variant is used as the representative prompt here.
+  Expected response format: "{explanation}\nLABEL: {label}"
 
 Fields used: image, claim, label, explanation, phenomenon
 Fields skipped: source_dataset (metadata only)
@@ -45,6 +48,17 @@ class VFluteScenario(Scenario):
     tags = ["creativity", "multimodal", "vision", "figurative_language"]
 
     SUBSETS = ["classification", "explanation"]
+
+    # Representative prompt (first of 21 variants from the repo).
+    # All variants follow the same structure: ask about image-claim
+    # relationship, request explanation, and ask for entailment/contradiction
+    # label. The repo applies: .replace('Entails or Contradicts',
+    # 'entailment or contradiction') to all prompts.
+    PROMPT_TEMPLATE = (
+        "Does the image entail or contradict the claim {claim}? "
+        "Explain your reasoning and provide a label between "
+        "entailment or contradiction."
+    )
 
     def __init__(self, subset: str = "classification"):
         super().__init__()
@@ -74,39 +88,30 @@ class VFluteScenario(Scenario):
                     item["image"], images_dir, hash(f"{split_name}_{idx}")
                 )
 
-                if self.subset == "classification":
-                    prompt_text = (
-                        f"Look at the image and consider the following claim:\n"
-                        f"\"{item['claim']}\"\n\n"
-                        f"Does the image entail or contradict this claim? "
-                        f"Answer with: Entailment or Contradiction."
-                    )
+                claim = item["claim"].strip()
+                prompt_text = self.PROMPT_TEMPLATE.format(
+                    claim=f'"{claim}"'
+                )
 
+                if self.subset == "classification":
+                    # Extract just the label from the combined response
                     correct_label = item["label"]
                     references = [
                         Reference(
-                            Output(text="Entailment"),
-                            tags=[CORRECT_TAG] if correct_label == "Entailment" else [],
+                            Output(text="entailment"),
+                            tags=[CORRECT_TAG] if correct_label == "entailment" else [],
                         ),
                         Reference(
-                            Output(text="Contradiction"),
-                            tags=[CORRECT_TAG] if correct_label == "Contradiction" else [],
+                            Output(text="contradiction"),
+                            tags=[CORRECT_TAG] if correct_label == "contradiction" else [],
                         ),
                     ]
-
                 else:  # explanation
-                    prompt_text = (
-                        f"Look at the image and consider the following claim:\n"
-                        f"\"{item['claim']}\"\n\n"
-                        f"The relationship between the image and claim is: "
-                        f"{item['label']}.\n"
-                        f"Explain why the image {item['label'].lower()}s "
-                        f"this claim. Focus on the figurative language used."
-                    )
-
+                    # Expected response format: "{explanation}\nLABEL: {label}"
+                    expected = f"{item['explanation'].strip()}\nLABEL: {item['label']}"
                     references = [
                         Reference(
-                            Output(text=item["explanation"]),
+                            Output(text=expected),
                             tags=[CORRECT_TAG],
                         )
                     ]

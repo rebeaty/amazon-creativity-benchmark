@@ -166,7 +166,7 @@
     "url": "https://huggingface.co/datasets/Jacklu0831/few-shot-creative-generation-8",
     "assigned_to": "SM",
     "status": "completed",
-    "rejection_reason": "Multimodal (text-to-image generation); requires HEIM framework. ECCV 2024, arXiv:2408.02226; ProCreate Diffusion method for few-shot creative image generation; FSCG-8 dataset has 8 categories (Amedeo Modigliani paintings, Apple products, Burberry, Frank Gehry architecture, Nouns characters, One Piece anime, Pokemon, Rococo) with ~50 image-caption pairs each (400 total); task is text-to-image generation (e.g., 'a jellyfish Pokemon' → generate Pokemon-style image); uses Stable Diffusion fine-tuning; propulsive energy diffusion to prevent training data reproduction; evaluation measures sample diversity, fidelity, and creativity of generated images; HuggingFace dataset (Jacklu0831/few-shot-creative-generation-8) contains .jpg image files paired with text captions; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework",
+    "reason": "Multimodal (text-to-image generation); requires HEIM framework. ECCV 2024, arXiv:2408.02226; ProCreate Diffusion method for few-shot creative image generation; FSCG-8 dataset has 8 categories (Amedeo Modigliani paintings, Apple products, Burberry, Frank Gehry architecture, Nouns characters, One Piece anime, Pokemon, Rococo) with ~50 image-caption pairs each (400 total); task is text-to-image generation (e.g., 'a jellyfish Pokemon' → generate Pokemon-style image); uses Stable Diffusion fine-tuning; propulsive energy diffusion to prevent training data reproduction; evaluation measures sample diversity, fidelity, and creativity of generated images; HuggingFace dataset (Jacklu0831/few-shot-creative-generation-8) contains .jpg image files paired with text captions; requires vision models and image generation evaluation; outside HELM's text-only scope; would need HEIM (Holistic Evaluation of Image Models) framework",
     "scenario_file": "scenarios/fscg8_scenario.py",
     "eval_type": "custom",
     "subsets": {
@@ -228,7 +228,7 @@
     "url": "https://ldm.tib.eu/dataset/collaborative-neural-painting",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Pure stroke-based painting generation; evaluates visual generation models, not VLMs",
+    "reason": "Pure stroke-based painting generation; evaluates visual generation models, not VLMs",
     "benchmark_name": "CNP"
   },
   {
@@ -237,8 +237,8 @@
     "url": "https://github.com/my625/PromptQG",
     "arxiv": "2410.12893",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Evaluation methodology, not a benchmark - MIRROR is a multi-LLM iterative framework for evaluating generated questions, not a dataset for evaluating LLMs"
+    "status": "not_suitable",
+    "reason": "Evaluation methodology, not a benchmark - MIRROR is a multi-LLM iterative framework for evaluating generated questions, not a dataset for evaluating LLMs"
   },
   {
     "name": "HW-TSC at SemEval-2024 Task 9 (BRAINTEASER)",
@@ -262,7 +262,7 @@
   {
     "name": "YESBUT V2",
     "paper_id": "144a5c14db46e76b7b762d64fe53cf5dfd95ffe4",
-    "url": "https://github.com/Tuo-Liang/YESBUT",
+    "url": "https://github.com/Tuo-Liang/YESBUT_V2",
     "assigned_to": "CL",
     "status": "completed",
     "scenario_file": "scenarios/yesbut_v2/scenario.py",
@@ -295,8 +295,8 @@
     "paper_id": "14549416485dcee89d257eb8e37e1ad83b925d12",
     "url": "https://github.com/T2ICLP/t2iclp",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly available. npj Heritage Science (July 2024); FHS-Adapter (Fine-grained Hierarchical Semantic Adapter) method for generating Chinese landscape paintings using diffusion models; T2ICLP dataset contains 10,000 high-quality image-text pairs with four types of fine-grained descriptions per image: History (historical background), Content (picture description), Emotion (embedded emotions), Poem (traditional Chinese poems summarizing the image); task is text-to-image generation from multi-perspective text inputs; uses Taiyi-CLIP encoder adapted for Chinese text; diffusion process guided batch-wise by four prompts in various sequences; evaluation measures brushwork (e.g., 'Chafing, Rubbing, Dabbing and Colouring'), compositional space, elemental proportions, color usage across different painting genres and artists; repository (T2ICLP/t2iclp) contains only 50 sample images with corresponding Excel files (Chinese/English versions); README explicitly states 'We will upload the training as well as the test code and the full dataset at an appropriate time!' — full dataset of 10,000 pairs not yet released. NOTE: This is a multimodal text-to-image benchmark; HELM does support multimodal evaluation through MediaObject/MultimediaObject classes; rejection is solely due to dataset unavailability, not modality; future candidate for onboarding once full dataset is released"
+    "status": "not_suitable",
+    "reason": "Dataset not publicly available. npj Heritage Science (July 2024); FHS-Adapter (Fine-grained Hierarchical Semantic Adapter) method for generating Chinese landscape paintings using diffusion models; T2ICLP dataset contains 10,000 high-quality image-text pairs with four types of fine-grained descriptions per image: History (historical background), Content (picture description), Emotion (embedded emotions), Poem (traditional Chinese poems summarizing the image); task is text-to-image generation from multi-perspective text inputs; uses Taiyi-CLIP encoder adapted for Chinese text; diffusion process guided batch-wise by four prompts in various sequences; evaluation measures brushwork (e.g., 'Chafing, Rubbing, Dabbing and Colouring'), compositional space, elemental proportions, color usage across different painting genres and artists; repository (T2ICLP/t2iclp) contains only 50 sample images with corresponding Excel files (Chinese/English versions); README explicitly states 'We will upload the training as well as the test code and the full dataset at an appropriate time!' — full dataset of 10,000 pairs not yet released. NOTE: This is a multimodal text-to-image benchmark; HELM does support multimodal evaluation through MediaObject/MultimediaObject classes; rejection is solely due to dataset unavailability, not modality; future candidate for onboarding once full dataset is released"
   },
   {
     "name": "Rap Generation Evaluation on D-RAP",
@@ -331,8 +331,8 @@
     "url": "https://github.com/cuixing100876/InstaStyle",
     "arxiv": "2311.15040",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Method paper (InstaStyle), not evaluation benchmark - no test dataset, evaluation protocol, or metrics implementation. Repository contains only inference/training code and 11 style reference image categories for demonstrating the generation technique. No test prompts or ground truth outputs for evaluating other models."
+    "status": "not_suitable",
+    "reason": "Method paper (InstaStyle), not evaluation benchmark - no test dataset, evaluation protocol, or metrics implementation. Repository contains only inference/training code and 11 style reference image categories for demonstrating the generation technique. No test prompts or ground truth outputs for evaluating other models."
   },
   {
     "name": "ThemeVlogEval",
@@ -394,7 +394,7 @@
     "url": "https://idea23d.github.io/",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "3D generation quality evaluation (CVPR 2025); evaluates 3D generative models, not VLMs",
+    "reason": "3D generation quality evaluation (CVPR 2025); evaluates 3D generative models, not VLMs",
     "benchmark_name": "Eval3DAIGC"
   },
   {
@@ -428,7 +428,7 @@
     "url": "https://arxiv.org/abs/2405.01474",
     "assigned_to": "CL",
     "status": "completed",
-    "rejection_reason": "",
+    "reason": "",
     "benchmark_name": "V-FLUTE",
     "eval_type": "mixed",
     "notes": "Two subsets: classification (exact_match) and explanation (open_ended). Gated HF dataset requires HF_TOKEN. Images as PIL objects saved to temp files.",
@@ -469,7 +469,7 @@
     "url": "https://arxiv.org/abs/2506.00814",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Dataset not publicly released (paper June 2025, no GitHub/HuggingFace link found)",
+    "reason": "Dataset not publicly released (paper June 2025, no GitHub/HuggingFace link found)",
     "benchmark_name": "GuessBench"
   },
   {
@@ -479,8 +479,8 @@
     "arxiv": "2508.06094",
     "huggingface": "malper/ConlangCrafter",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Not a benchmark - corpus of LLM-generated languages with no evaluation tasks or prompts"
+    "status": "not_suitable",
+    "reason": "Not a benchmark - corpus of LLM-generated languages with no evaluation tasks or prompts"
   },
   {
     "name": "IdeaBench",
@@ -542,7 +542,7 @@
     "url": "https://arxiv.org/abs/2406.04886",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Video-based + dataset not publicly downloadable. GitHub repo lacks download links; says \"Download from external links\" but provides none. Must contact author.",
+    "reason": "Video-based + dataset not publicly downloadable. GitHub repo lacks download links; says \"Download from external links\" but provides none. Must contact author.",
     "benchmark_name": "VMCD"
   },
   {
@@ -571,7 +571,7 @@
   {
     "name": "Analogical Reasoning on Narratives (ARN)",
     "paper_id": "3301fc6a084c7b09a60f24edcf5502c00e421989",
-    "url": "https://github.com/zhivarsourati/ARN",
+    "url": "https://bit.ly/3t7qZ3S",
     "assigned_to": "CL",
     "status": "completed",
     "eval_type": "exact_match",
@@ -607,8 +607,8 @@
     "paper_id": "33161a5a9b5dcb635b5a97475e6a6209a69ada7d",
     "url": "https://github.com/SakanaAI/AI-Scientist",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Research system, not benchmark"
+    "status": "not_suitable",
+    "reason": "Research system, not benchmark"
   },
   {
     "name": "MusicTheoryBench",
@@ -644,8 +644,8 @@
     "paper_id": "38179848e2d6a3ad373b1793848816111428ac36",
     "url": "https://github.com/agiresearch/OpenAGI",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Agent framework, not creativity evaluation"
+    "status": "not_suitable",
+    "reason": "Agent framework, not creativity evaluation"
   },
   {
     "name": "MATDESIGN",
@@ -680,16 +680,16 @@
     "paper_id": "3e3f3617c9ab9ce815b2be871c192f13bab5cf0f",
     "url": "https://github.com/alex2awesome/press-releases-emnlp",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Corpus, not benchmark"
+    "status": "not_suitable",
+    "reason": "Corpus, not benchmark"
   },
   {
     "name": "Close Reading Annotation Dataset",
     "paper_id": "3c8e90d2c4a3f4f69689e0bb782ad03b175c8353",
     "url": "https://github.com/asaakyan/ngram-creativity",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Data access barrier - benchmark not ready. arXiv 2509.22641 (Sept 2025); paper titled 'Death of the Novel(ty): Beyond n-Gram Novelty as a Metric for Textual Creativity'; 7,542 expert annotations from 26 writers rating expressions on novelty/pragmaticality/meaningfulness; intended benchmark tasks: (1) novel expression identification, (2) non-pragmatic expression identification; repository README explicitly states files 'will be used for benchmarking'; however, test data (all_novel_expressions_main.csv, all_nonprag_expressions_main.csv) locked in password-protected raw_data.zip requiring Google Form submission; publicly available CSV files in for_linear_models/ contain labels but NOT actual text expressions; README mentions 'TBD: for_models folder contains the data processed for fine-tuning and few-shot evaluation' but this folder doesn't exist yet; once authors release benchmark-ready 'for_models' folder with public access, this would be a good candidate for onboarding"
+    "status": "not_suitable",
+    "reason": "Data access barrier - benchmark not ready. arXiv 2509.22641 (Sept 2025); paper titled 'Death of the Novel(ty): Beyond n-Gram Novelty as a Metric for Textual Creativity'; 7,542 expert annotations from 26 writers rating expressions on novelty/pragmaticality/meaningfulness; intended benchmark tasks: (1) novel expression identification, (2) non-pragmatic expression identification; repository README explicitly states files 'will be used for benchmarking'; however, test data (all_novel_expressions_main.csv, all_nonprag_expressions_main.csv) locked in password-protected raw_data.zip requiring Google Form submission; publicly available CSV files in for_linear_models/ contain labels but NOT actual text expressions; README mentions 'TBD: for_models folder contains the data processed for fine-tuning and few-shot evaluation' but this folder doesn't exist yet; once authors release benchmark-ready 'for_models' folder with public access, this would be a good candidate for onboarding"
   },
   {
     "name": "Creation-MMBench",
@@ -777,7 +777,7 @@
     "url": "https://github.com/abisekrk/video-metaphor-captioning",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Duplicate of VMCD (same paper arXiv:2406.04886, different Semantic Scholar ID due to title rename from v1 'Seeing the Unseen' to v2 'Unveiling the Invisible')",
+    "reason": "Duplicate of VMCD (same paper arXiv:2406.04886, different Semantic Scholar ID due to title rename from v1 'Seeing the Unseen' to v2 'Unveiling the Invisible')",
     "benchmark_name": "VMC"
   },
   {
@@ -785,8 +785,8 @@
     "paper_id": "44c717ce0ec31ff828c06abca417fea83421d256",
     "url": "https://huggingface.co/xingxm",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly available. Paper: 'Reason-SVG: Hybrid Reward RL for Aha-Moments in Vector Graphics Generation' (arXiv:2505.24499, published May 30, 2025). SVGX-DwT-10k dataset described in paper (10,000 SVG-DwT pairs with Drawing-with-Thought reasoning sequences) has not been released. HuggingFace profile xingxm has SVGX-Core-250k and SVGX-SFT-1M datasets but these lack the DwT reasoning component. SVGX-DwT-10k requires (T, C, O) triplets where T=text prompt, C=DwT reasoning (6-stage design process: concept sketching, canvas planning, shape decomposition, coordinate calculation, styling/color, final assembly), O=SVG code. Existing datasets only have (T, O) pairs without intermediate reasoning. Checked: no GitHub repo for Reason-SVG (author ximinng has other SVG projects but not this one); HuggingFace API confirms xingxm/SVGX-DwT-10k does not exist (401/404). Evaluation: DEval is 1,000-prompt held-out test set; metrics include FID, CLIPScore, HPSv2, SVG Validity, DwT Adherence, human evaluation. Multimodal benchmark (text-to-SVG with visual rendering evaluation) - can be onboarded with HEIM once dataset is released. Author likely preparing code/data release. Monitor: github.com/ximinng and huggingface.co/xingxm for updates."
+    "status": "not_suitable",
+    "reason": "Dataset not publicly available. Paper: 'Reason-SVG: Hybrid Reward RL for Aha-Moments in Vector Graphics Generation' (arXiv:2505.24499, published May 30, 2025). SVGX-DwT-10k dataset described in paper (10,000 SVG-DwT pairs with Drawing-with-Thought reasoning sequences) has not been released. HuggingFace profile xingxm has SVGX-Core-250k and SVGX-SFT-1M datasets but these lack the DwT reasoning component. SVGX-DwT-10k requires (T, C, O) triplets where T=text prompt, C=DwT reasoning (6-stage design process: concept sketching, canvas planning, shape decomposition, coordinate calculation, styling/color, final assembly), O=SVG code. Existing datasets only have (T, O) pairs without intermediate reasoning. Checked: no GitHub repo for Reason-SVG (author ximinng has other SVG projects but not this one); HuggingFace API confirms xingxm/SVGX-DwT-10k does not exist (401/404). Evaluation: DEval is 1,000-prompt held-out test set; metrics include FID, CLIPScore, HPSv2, SVG Validity, DwT Adherence, human evaluation. Multimodal benchmark (text-to-SVG with visual rendering evaluation) - can be onboarded with HEIM once dataset is released. Author likely preparing code/data release. Monitor: github.com/ximinng and huggingface.co/xingxm for updates."
   },
   {
     "name": "ESP dataset",
@@ -823,8 +823,8 @@
     "arxiv": "2407.08683",
     "huggingface": "TencentARC/StoryStream",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal - long story generation requiring interleaved text and image generation, evaluation requires assessing both narrative coherence and visual consistency"
+    "status": "not_suitable",
+    "reason": "Multimodal - long story generation requiring interleaved text and image generation, evaluation requires assessing both narrative coherence and visual consistency"
   },
   {
     "name": "DesignHelper",
@@ -838,7 +838,7 @@
     "paper_id": "4cf527e9e0d68e3fc16d39fbcdb3869cd3ccf60f",
     "url": "https://github.com/Relento/hypothesis_search",
     "assigned_to": "SA",
-    "status": "rejected",
+    "status": "not_suitable",
     "notes": "Inductive reasoning benchmark, not creativity. Evaluates logical pattern discovery and systematic problem-solving (ARC, SyGuS tasks). Should be reclassified."
   },
   {
@@ -847,7 +847,7 @@
     "url": "https://huggingface.co/datasets/sunjia72/ConstructiveBench",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Formal theorem proving benchmark, not a creativity benchmark. 5,316 competition math problems with Lean formalization. Evaluation is purely correctness-based (does the formal answer verify in Lean?), with no novelty or creativity metrics. Data is accessible at sunjia72/ConstructiveBench on HuggingFace. Original HF link (JackSun200312) is dead; correct link updated."
+    "reason": "Formal theorem proving benchmark, not a creativity benchmark. 5,316 competition math problems with Lean formalization. Evaluation is purely correctness-based (does the formal answer verify in Lean?), with no novelty or creativity metrics. Data is accessible at sunjia72/ConstructiveBench on HuggingFace. Original HF link (JackSun200312) is dead; correct link updated."
   },
   {
     "name": "CS4 (Comparing the Skill of Creating Stories by Controlling the Synthesized Constraint Specificity)",
@@ -882,16 +882,16 @@
     "paper_id": "4d37c6d51dc01309a5e4fe59d90a9b648f909eb5",
     "url": "https://github.com/KristinHuangg/gpt-writing-prompts",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Not a benchmark"
+    "status": "not_suitable",
+    "reason": "Not a benchmark"
   },
   {
     "name": "PoemSum",
     "paper_id": "53a64d333bb5033bc1e9f7bcfd166249ef7b7b0c",
     "url": "https://github.com/SofeeyaJ/Poetry-In-Pixels-Coling2025",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly available. The PoemSum dataset (3,011 poem-summary pairs from EMNLP 2023 paper 'Unveiling the Essence of Poetry') is not accessible despite paper claiming public availability. Extensive search found no GitHub repository, HuggingFace dataset, or data repository links. The Poetry-in-Pixels repo only contains the related MiniPo dataset (2,016 children's poems), not the original PoemSum data."
+    "status": "not_suitable",
+    "reason": "Dataset not publicly available. The PoemSum dataset (3,011 poem-summary pairs from EMNLP 2023 paper 'Unveiling the Essence of Poetry') is not accessible despite paper claiming public availability. Extensive search found no GitHub repository, HuggingFace dataset, or data repository links. The Poetry-in-Pixels repo only contains the related MiniPo dataset (2,016 children's poems), not the original PoemSum data."
   },
   {
     "name": "BalanceCC (Prompt Generation)",
@@ -917,7 +917,7 @@
     "url": "https://arxiv.org/abs/2406.07753",
     "assigned_to": "CL",
     "status": "completed",
-    "rejection_reason": "",
+    "reason": "",
     "benchmark_name": "MuSe-Perception",
     "eval_type": "mixed",
     "notes": "Two subsets: perception (social attributes, open_ended/Pearson correlation) and humor (binary detection, exact_match/AUC). Requires EULA from muse-challenge.org. Data must be pre-downloaded. Multimodal: video + audio + text.",
@@ -981,8 +981,8 @@
     "paper_id": "5bd0fa95a23e23259e2a5df187d69fe9da6ff290",
     "url": "https://aclanthology.org/2022.cai-1.9/",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly available. ACL 2022 Workshop on When Creative AI Meets Conversational AI; 'Learning to Evaluate Humor in Memes Based on the Incongruity Theory'; authors: Kohtaro Tanaka, Hiroaki Yamane, Yusuke Mori, Yusuke Mukuta, Tatsuya Harada (University of Tokyo); dataset: 7,500 memes with real-valued humor annotations collected via crowdwork platform, refined to 1,411 memes after removing items with ambiguous ratings; task: binary classification to determine whether a given meme (image + caption) is humorous; based on incongruity theory which posits humor arises from incongruity between images and captions; models: based on ViLT and CLIP vision-language pretrained models; evaluation: classification accuracy using 10-fold cross-validation with 8 runs; key contribution: proposed refinement process to extract memes not influenced by interpersonal differences in humor perception, and method to explicitly extract and utilize incongruities between images and captions; findings: proposed approach outperformed other vision-language models in humor classification; no public dataset release found - Papers with Code lists 'No code available yet'; no GitHub repository or download links found; author website: https://kohtaro246.github.io/; NOTE: This is a multimodal vision-language task (image + text → humor classification); HELM supports multimodal evaluation through VHELM (Vision-Language HELM); rejection is solely due to dataset unavailability, not modality; future candidate for onboarding via VHELM if dataset becomes publicly available; ACL Anthology: aclanthology.org/2022.cai-1.9/"
+    "status": "not_suitable",
+    "reason": "Dataset not publicly available. ACL 2022 Workshop on When Creative AI Meets Conversational AI; 'Learning to Evaluate Humor in Memes Based on the Incongruity Theory'; authors: Kohtaro Tanaka, Hiroaki Yamane, Yusuke Mori, Yusuke Mukuta, Tatsuya Harada (University of Tokyo); dataset: 7,500 memes with real-valued humor annotations collected via crowdwork platform, refined to 1,411 memes after removing items with ambiguous ratings; task: binary classification to determine whether a given meme (image + caption) is humorous; based on incongruity theory which posits humor arises from incongruity between images and captions; models: based on ViLT and CLIP vision-language pretrained models; evaluation: classification accuracy using 10-fold cross-validation with 8 runs; key contribution: proposed refinement process to extract memes not influenced by interpersonal differences in humor perception, and method to explicitly extract and utilize incongruities between images and captions; findings: proposed approach outperformed other vision-language models in humor classification; no public dataset release found - Papers with Code lists 'No code available yet'; no GitHub repository or download links found; author website: https://kohtaro246.github.io/; NOTE: This is a multimodal vision-language task (image + text → humor classification); HELM supports multimodal evaluation through VHELM (Vision-Language HELM); rejection is solely due to dataset unavailability, not modality; future candidate for onboarding via VHELM if dataset becomes publicly available; ACL Anthology: aclanthology.org/2022.cai-1.9/"
   },
   {
     "name": "EXPOTION Multimodal Music Generation",
@@ -1019,8 +1019,8 @@
     "url": "https://github.com/facebookresearch/ZeroSumEval",
     "arxiv": "2503.10673",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Competitive evaluation framework, not a benchmark - requires head-to-head matches between models, incompatible with HELM's single-model evaluation pattern"
+    "status": "not_suitable",
+    "reason": "Competitive evaluation framework, not a benchmark - requires head-to-head matches between models, incompatible with HELM's single-model evaluation pattern"
   },
   {
     "name": "CodeScientist Scientific Discovery Evaluation",
@@ -1043,8 +1043,8 @@
     "paper_id": "611fcb2c87b53a0e4973e8c94bbda61f92018a9a",
     "url": "https://github.com/stan-lei/GODBench-ACL2025",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (video-based); dataset not released"
+    "status": "not_suitable",
+    "reason": "Multimodal (video-based); dataset not released"
   },
   {
     "name": "Measuring LLM Novelty as the Frontier of Original and High-Quality Output",
@@ -1052,8 +1052,8 @@
     "url": "https://github.com/YuehHanChen/quantifying-novelty",
     "arxiv": "2504.09389",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not yet publicly available - repository states 'Full code and data are coming soon'"
+    "status": "not_suitable",
+    "reason": "Dataset not yet publicly available - repository states 'Full code and data are coming soon'"
   },
   {
     "name": "Story Generation Evaluation on ROCStories and WritingPrompts",
@@ -1143,8 +1143,8 @@
     "paper_id": "701658eaa26a9350792b88cc07fea98399a94791",
     "url": "https://github.com/yujxx/PodEval",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Evaluation framework, not a reusable benchmark. arXiv:2510.00485; 'PodEval: A Multimodal Evaluation Framework for Podcast Audio Generation'; provides a toolkit for evaluating podcast generation systems, not a fixed stimulus-response dataset; no standardized input prompts or ground truth labels; audio files not directly hosted (download links only, no programmatic access); evaluation metrics are audio-specific (DNSMOS, WER, speaker similarity, timbre) and not HELM-compatible; primary contribution is the evaluation pipeline architecture, not a benchmark for evaluating arbitrary LLMs."
+    "status": "not_suitable",
+    "reason": "Evaluation framework, not a reusable benchmark. arXiv:2510.00485; 'PodEval: A Multimodal Evaluation Framework for Podcast Audio Generation'; provides a toolkit for evaluating podcast generation systems, not a fixed stimulus-response dataset; no standardized input prompts or ground truth labels; audio files not directly hosted (download links only, no programmatic access); evaluation metrics are audio-specific (DNSMOS, WER, speaker similarity, timbre) and not HELM-compatible; primary contribution is the evaluation pipeline architecture, not a benchmark for evaluating arbitrary LLMs."
   },
   {
     "name": "SS-GEN",
@@ -1210,7 +1210,7 @@
     "url": "https://arxiv.org/abs/2501.02434",
     "assigned_to": "CL",
     "status": "completed",
-    "rejection_reason": "",
+    "reason": "",
     "benchmark_name": "CM3D",
     "eval_type": "mixed",
     "notes": "Two subsets: detection (exact_match) and mapping (open_ended). Chinese-language. Images on Kaggle (743 MB, requires account). Annotations on gitfront.",
@@ -1257,8 +1257,8 @@
     "paper_id": "6d4def9e60c21ccf6e7620f619cd621b50363c5b",
     "url": "https://github.com/Vchitect/VBench",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (video generation); requires HEIM framework. arXiv:2503.21755 (March 2025); part of VBench series (VBench CVPR 2024, VBench++ TPAMI 2025, VBench-2.0); comprehensive evaluation benchmark for video generative models covering text-to-video (T2V) and image-to-video (I2V) generation; VBench-2.0 extends VBench to evaluate intrinsic faithfulness for next-generation video models including commonsense reasoning, physics-based realism, human motion, creative composition; 5 broad categories and 18 fine-grained capability dimensions; original VBench has 16 dimensions: Quality (subject_consistency, background_consistency, temporal_flickering, motion_smoothness, aesthetic_quality, imaging_quality, dynamic_degree), Semantic (object_class, multiple_objects, human_action, color, spatial_relationship, scene, appearance_style, temporal_style, overall_consistency); evaluates video generation models like Gen-3, Kling, Pika, Sora, CogVideo across prompt suites; task: generate videos from text/image prompts and evaluate across multiple dimensions; uses automatic evaluation methods with alignment to human preferences; HuggingFace leaderboard with 40+ T2V models and 10+ long video models; requires vision models and video generation evaluation; outside HELM's text-only scope; would need HEIM framework for video evaluation; GitHub: Vchitect/VBench; PyPI package available"
+    "status": "not_suitable",
+    "reason": "Multimodal (video generation); requires HEIM framework. arXiv:2503.21755 (March 2025); part of VBench series (VBench CVPR 2024, VBench++ TPAMI 2025, VBench-2.0); comprehensive evaluation benchmark for video generative models covering text-to-video (T2V) and image-to-video (I2V) generation; VBench-2.0 extends VBench to evaluate intrinsic faithfulness for next-generation video models including commonsense reasoning, physics-based realism, human motion, creative composition; 5 broad categories and 18 fine-grained capability dimensions; original VBench has 16 dimensions: Quality (subject_consistency, background_consistency, temporal_flickering, motion_smoothness, aesthetic_quality, imaging_quality, dynamic_degree), Semantic (object_class, multiple_objects, human_action, color, spatial_relationship, scene, appearance_style, temporal_style, overall_consistency); evaluates video generation models like Gen-3, Kling, Pika, Sora, CogVideo across prompt suites; task: generate videos from text/image prompts and evaluate across multiple dimensions; uses automatic evaluation methods with alignment to human preferences; HuggingFace leaderboard with 40+ T2V models and 10+ long video models; requires vision models and video generation evaluation; outside HELM's text-only scope; would need HEIM framework for video evaluation; GitHub: Vchitect/VBench; PyPI package available"
   },
   {
     "name": "VideoCanvasBench",
@@ -1266,7 +1266,7 @@
     "url": "https://github.com/KwaiVGI/VideoCanvas",
     "arxiv": "https://arxiv.org/abs/2510.08555",
     "assigned_to": "VD",
-    "status": "rejected",
+    "status": "not_suitable",
     "reason": "Dataset not yet released - repository states \"Code (Coming soon)\" and \"We will release this benchmark\". Video generation task (arbitrary spatio-temporal video completion) not video understanding. Evaluates video diffusion models on visual quality metrics (FVD, PSNR, aesthetic quality). REVISIT when dataset released to assess text-based proxy tasks (e.g., describing completion strategies, predicting patch placement). Monitor: https://github.com/KwaiVGI/VideoCanvas",
     "notes": "Over 2,000 test cases (AnyP2V, AnyI2V, AnyV2V tasks). 100 high-quality videos from Pexels. Metrics: FVD, PSNR, temporal coherence, aesthetic quality. October 2025 paper."
   },
@@ -1380,8 +1380,8 @@
     "url": "https://github.com/cilabuniba/i-dream-my-painting",
     "arxiv": "2411.19050",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Method paper, not a reusable benchmark. WACV 2025; introduces multi-mask inpainting method connecting MLLMs with diffusion models; task is text-guided multi-mask inpainting (image generation) requiring HEIM framework; uses WikiArt dataset (116,475 images) with automatic annotations from Kosmos-2 (global) and LLaVA (object-level), not human ground truth; evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) measure image generation quality; no standardized protocol for evaluating arbitrary models; primary contribution is method architecture (fine-tuned LLaVA for prompt generation + Stable Diffusion with rectified cross-attention for inpainting), not benchmark dataset; requires vision models and image generation evaluation capabilities outside HELM's text-only scope; would need HEIM for image generation evaluation; GitHub: cilabuniba/i-dream-my-painting"
+    "status": "not_suitable",
+    "reason": "Method paper, not a reusable benchmark. WACV 2025; introduces multi-mask inpainting method connecting MLLMs with diffusion models; task is text-guided multi-mask inpainting (image generation) requiring HEIM framework; uses WikiArt dataset (116,475 images) with automatic annotations from Kosmos-2 (global) and LLaVA (object-level), not human ground truth; evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) measure image generation quality; no standardized protocol for evaluating arbitrary models; primary contribution is method architecture (fine-tuned LLaVA for prompt generation + Stable Diffusion with rectified cross-attention for inpainting), not benchmark dataset; requires vision models and image generation evaluation capabilities outside HELM's text-only scope; would need HEIM for image generation evaluation; GitHub: cilabuniba/i-dream-my-painting"
   },
   {
     "name": "",
@@ -1416,8 +1416,8 @@
     "paper_id": "83f969aea328a954f8714e273b7d1a72bf7656c0",
     "url": "https://github.com/EstebanGarces/uncertainHuman",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Methodology paper, not a reusable benchmark. arXiv 2509.23088; proposes credal set geometric framework for analyzing creative variability and uncertainty calibration; repository contains only analysis results (uncertainty_analysis.csv with 10K rows: 500 prompts × 20 model-strategy combinations) and summary tables; does not provide the actual 500 WritingPrompts used, the 10 human continuations per prompt, or any way to evaluate new models on same data; primary contribution is the analysis methodology (decomposing epistemic vs aleatoric uncertainty, calibration measurement) not a standardized benchmark; results show best model-human calibration of 0.434 (Gemma-2B); would need to reproduce their WritingPrompts selection process to use as benchmark"
+    "status": "not_suitable",
+    "reason": "Methodology paper, not a reusable benchmark. arXiv 2509.23088; proposes credal set geometric framework for analyzing creative variability and uncertainty calibration; repository contains only analysis results (uncertainty_analysis.csv with 10K rows: 500 prompts × 20 model-strategy combinations) and summary tables; does not provide the actual 500 WritingPrompts used, the 10 human continuations per prompt, or any way to evaluate new models on same data; primary contribution is the analysis methodology (decomposing epistemic vs aleatoric uncertainty, calibration measurement) not a standardized benchmark; results show best model-human calibration of 0.434 (Gemma-2B); would need to reproduce their WritingPrompts selection process to use as benchmark"
   },
   {
     "name": "Scientist-Bench",
@@ -1486,17 +1486,17 @@
     "url": "https://huggingface.co/datasets/spiralworks/openreview_wildcard_2025_v2",
     "arxiv": "2504.20090",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Meta-evaluation, not creativity. Paper is 'Spark: A System for Scientifically Creative Idea Generation' (arXiv:2504.20090). Judge is a reviewer model trained on 600K OpenReview reviews to predict accept/reject. Original dataset (spiralworks/openreview_wildcard_2025_v2) deleted; spiralworks has 0 public datasets. Author's archive has fragments: sumukshashidhar-archive/openreview-100k (98K reviews with idea_only_review_* fields from DeepSeek-V3 transforms, ICLR+NeurIPS 2017-2023), sumukshashidhar-archive/openreview-classification (2009 train/503 test, full paper text→accept/reject), sumukshashidhar-archive/openreview-decision-classification-benchmark (1284 train/321 test, abstract→accept/reject). Task is review prediction, not creative generation."
+    "status": "not_suitable",
+    "reason": "Meta-evaluation, not creativity. Paper is 'Spark: A System for Scientifically Creative Idea Generation' (arXiv:2504.20090). Judge is a reviewer model trained on 600K OpenReview reviews to predict accept/reject. Original dataset (spiralworks/openreview_wildcard_2025_v2) deleted; spiralworks has 0 public datasets. Author's archive has fragments: sumukshashidhar-archive/openreview-100k (98K reviews with idea_only_review_* fields from DeepSeek-V3 transforms, ICLR+NeurIPS 2017-2023), sumukshashidhar-archive/openreview-classification (2009 train/503 test, full paper text→accept/reject), sumukshashidhar-archive/openreview-decision-classification-benchmark (1284 train/321 test, abstract→accept/reject). Task is review prediction, not creative generation."
   },
   {
     "name": "Human Evaluation of Generated Prose for Paintings",
     "paper_id": "8e3a1df364aa8429d8e04015dfb95145a860ebcb",
     "url": "https://github.com/prerna135/prose-for-a-painting",
     "assigned_to": "SM",
-    "rejection_reason": "Method paper, not a reusable benchmark. ICCV Workshop 2019, arXiv:1910.03634; 'Prose for a Painting'; proposes pipeline for generating Shakespearean prose descriptions of paintings using intermediate poem generation (image → poem via img2poem model) then language style transfer (poem → Shakespearean prose via text style transfer model); demonstrates approach on unspecified number of 'famous paintings'; evaluation mentions human ratings on Likert scale and BLEU score 'as a function of prose length' but provides no specifics (number of raters, scale range, rating criteria); **Key issues**: (a) No publicly available test dataset of paintings with ground truth Shakespearean prose, (b) Paper explicitly states 'there does not exist a large supervised dataset from paintings to Shakespearean prose', (c) Repository contains only demonstration notebook with single test image, no benchmark data, (d) No standardized evaluation protocol that other papers can follow, (e) Primary contribution is the method/pipeline architecture, not a dataset for evaluating other models; **Precedent**: Similar to PlotMachines (line 168 in LEARNINGS.md) rejected as 'Method paper, not a reusable benchmark'; requires downloading and training two separate models (img2poem + style transfer) from external repos with Dropbox models; if authors later release curated test set with human-written Shakespearean prose for paintings plus standardized evaluation, this could become a valid benchmark; GitHub: prerna135/prose-for-a-painting",
+    "reason": "Method paper, not a reusable benchmark. ICCV Workshop 2019, arXiv:1910.03634; 'Prose for a Painting'; proposes pipeline for generating Shakespearean prose descriptions of paintings using intermediate poem generation (image → poem via img2poem model) then language style transfer (poem → Shakespearean prose via text style transfer model); demonstrates approach on unspecified number of 'famous paintings'; evaluation mentions human ratings on Likert scale and BLEU score 'as a function of prose length' but provides no specifics (number of raters, scale range, rating criteria); **Key issues**: (a) No publicly available test dataset of paintings with ground truth Shakespearean prose, (b) Paper explicitly states 'there does not exist a large supervised dataset from paintings to Shakespearean prose', (c) Repository contains only demonstration notebook with single test image, no benchmark data, (d) No standardized evaluation protocol that other papers can follow, (e) Primary contribution is the method/pipeline architecture, not a dataset for evaluating other models; **Precedent**: Similar to PlotMachines (line 168 in LEARNINGS.md) rejected as 'Method paper, not a reusable benchmark'; requires downloading and training two separate models (img2poem + style transfer) from external repos with Dropbox models; if authors later release curated test set with human-written Shakespearean prose for paintings plus standardized evaluation, this could become a valid benchmark; GitHub: prerna135/prose-for-a-painting",
     "notes": "Method paper demonstrating image→poem→Shakespearean prose pipeline; no test dataset or standardized evaluation",
-    "status": "rejected"
+    "status": "not_suitable"
   },
   {
     "name": "Metaphoric Analogies from Literary Texts Dataset",
@@ -1521,16 +1521,16 @@
     "url": "https://github.com/matthewdelorenzo/CreativEval/",
     "arxiv": "2404.08806",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Domain-specific (Verilog hardware) with impractical eval pipeline. IEEE LAD 2024. 120 HDLBits prompts (111 single-module + 9 multi-module). TTCT-based creativity framework (fluency, flexibility, originality, elaboration) is sound, but evaluation requires GNN4IP (circuit similarity via graph neural network) and Icarus Verilog (simulator for functionality testing), plus multi-generation per prompt (t=10). Does not fit HELM single-turn architecture. Repo is WIP."
+    "status": "not_suitable",
+    "reason": "Domain-specific (Verilog hardware) with impractical eval pipeline. IEEE LAD 2024. 120 HDLBits prompts (111 single-module + 9 multi-module). TTCT-based creativity framework (fluency, flexibility, originality, elaboration) is sound, but evaluation requires GNN4IP (circuit similarity via graph neural network) and Icarus Verilog (simulator for functionality testing), plus multi-generation per prompt (t=10). Does not fit HELM single-turn architecture. Repo is WIP."
   },
   {
     "name": "Time-Bench",
     "paper_id": "8f047a824ed8b5afc28715a552bcda9126fa7ef9",
     "url": "https://github.com/ulab-uiuc/Time-R1",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Method paper for RL training framework; not a creativity benchmark. arXiv 2505.13508 (May 2025); Time-R1 is a 3-stage RL curriculum for temporal reasoning; Time-Bench dataset (200K+ examples) for training on timestamp inference, time-gap estimation, event ordering, masked time entity completion; Stage 3 'creative generation' is future news scenario prediction (temporal forecasting, not general creativity); evaluation tied to RL framework with custom reward functions (1200+ lines in time_reasoning.py); requires veRL infrastructure and PPO training; HuggingFace dataset (ulab-ai/Time-Bench) exists but designed for RL training, not standalone evaluation; primary contribution is training methodology, not a reusable benchmark for evaluating arbitrary models on creative tasks"
+    "status": "not_suitable",
+    "reason": "Method paper for RL training framework; not a creativity benchmark. arXiv 2505.13508 (May 2025); Time-R1 is a 3-stage RL curriculum for temporal reasoning; Time-Bench dataset (200K+ examples) for training on timestamp inference, time-gap estimation, event ordering, masked time entity completion; Stage 3 'creative generation' is future news scenario prediction (temporal forecasting, not general creativity); evaluation tied to RL framework with custom reward functions (1200+ lines in time_reasoning.py); requires veRL infrastructure and PPO training; HuggingFace dataset (ulab-ai/Time-Bench) exists but designed for RL training, not standalone evaluation; primary contribution is training methodology, not a reusable benchmark for evaluating arbitrary models on creative tasks"
   },
   {
     "name": "",
@@ -1622,8 +1622,8 @@
     "paper_id": "999d9248eaf9d077044c943c77ae2d1de1041fbf",
     "url": "https://github.com/schowdhury671/melfusion",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (image + text → audio); requires audio evaluation framework. CVPR 2024, arXiv:2406.04673; 'MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models'; MeLBench is dataset introduced to facilitate music synthesis research supporting MeLFusion multimodal music generation system; task: synthesize music from both image and language cues; input format: image + text description; output: generated music/audio files; example: given image of sunset and text 'calm evening music', generate appropriate music; uses diffusion model with novel 'visual synapse' that infuses visual semantics into music generation; built on AudioLDM and Tango architectures; evaluation metrics: IMSM (Image-Music Similarity Metric, newly proposed), FAD (Fréchet Audio Distance for audio quality), plus objective and subjective assessments; performance: adding visual information improves music quality by up to 67.98% on FAD score; compared against MusicLM, Moûsai, MusicGen; requires processing images and text to generate audio; requires audio generation diffusion models and audio quality evaluation; outside HELM's text-only scope; would need audio generation evaluation framework; GitHub: schowdhury671/melfusion; project page: schowdhury671.github.io/melfusion_cvpr2024; dataset available via OneDrive link"
+    "status": "not_suitable",
+    "reason": "Multimodal (image + text → audio); requires audio evaluation framework. CVPR 2024, arXiv:2406.04673; 'MeLFusion: Synthesizing Music from Image and Language Cues using Diffusion Models'; MeLBench is dataset introduced to facilitate music synthesis research supporting MeLFusion multimodal music generation system; task: synthesize music from both image and language cues; input format: image + text description; output: generated music/audio files; example: given image of sunset and text 'calm evening music', generate appropriate music; uses diffusion model with novel 'visual synapse' that infuses visual semantics into music generation; built on AudioLDM and Tango architectures; evaluation metrics: IMSM (Image-Music Similarity Metric, newly proposed), FAD (Fréchet Audio Distance for audio quality), plus objective and subjective assessments; performance: adding visual information improves music quality by up to 67.98% on FAD score; compared against MusicLM, Moûsai, MusicGen; requires processing images and text to generate audio; requires audio generation diffusion models and audio quality evaluation; outside HELM's text-only scope; would need audio generation evaluation framework; GitHub: schowdhury671/melfusion; project page: schowdhury671.github.io/melfusion_cvpr2024; dataset available via OneDrive link"
   },
   {
     "name": "Learn2Gen",
@@ -1649,7 +1649,7 @@
     "url": "https://github.com/leo81005/Reality-and-Fantasy",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Creativity benchmark for text-to-image diffusion models (ECCV 2024). 229 prompts with a strong creativity taxonomy (metaphorical thinking, counterfactual scenarios, anthropomorphism, role reversal). However, the creative output being evaluated is generated images, not text. Dataset contains only prompts + category labels — no ground-truth outputs, annotations, or rubrics to evaluate LLM/VLM responses against. Prompts could theoretically be repurposed for text tasks, but that would require building a new benchmark, not onboarding this one.",
+    "reason": "Creativity benchmark for text-to-image diffusion models (ECCV 2024). 229 prompts with a strong creativity taxonomy (metaphorical thinking, counterfactual scenarios, anthropomorphism, role reversal). However, the creative output being evaluated is generated images, not text. Dataset contains only prompts + category labels — no ground-truth outputs, annotations, or rubrics to evaluate LLM/VLM responses against. Prompts could theoretically be repurposed for text tasks, but that would require building a new benchmark, not onboarding this one.",
     "benchmark_name": "RFBench"
   },
   {
@@ -1715,7 +1715,7 @@
     "url": "https://arxiv.org/abs/2507.18915",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Valuable creativity resource but not an onboardable benchmark (Columbia University, July 2025). Introduces a principled 5-level abstraction ladder (Hayakawa's framework) for creative captioning and produces 1.71M creative captions for MSCOCO via GPT-4o-mini, plus creativity-aware fine-tuned CLIP models. However, it's a training data pipeline — no dedicated test instances to evaluate models against. Downstream creativity evaluation happens on existing external benchmarks (MultiM-Poem, HAIVMet/VisualMetaphors) which could potentially be onboarded separately. Data on GitHub + Google Drive.",
+    "reason": "Valuable creativity resource but not an onboardable benchmark (Columbia University, July 2025). Introduces a principled 5-level abstraction ladder (Hayakawa's framework) for creative captioning and produces 1.71M creative captions for MSCOCO via GPT-4o-mini, plus creativity-aware fine-tuned CLIP models. However, it's a training data pipeline — no dedicated test instances to evaluate models against. Downstream creativity evaluation happens on existing external benchmarks (MultiM-Poem, HAIVMet/VisualMetaphors) which could potentially be onboarded separately. Data on GitHub + Google Drive.",
     "benchmark_name": "MSCOCO Visual Associations"
   },
   {
@@ -1756,7 +1756,7 @@
     "url": "https://doi.org/10.5281/zenodo.10275049",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Genuine creative building design benchmark (UAI 2025, Peking University). Agents receive natural language descriptions and must imagine and construct buildings in Minecraft survival mode. GPT-4V evaluates screenshots on Correctness, Complexity, Quality, Functionality (validated against 49 human participants). However, requires embodied execution in a running Minecraft instance — no text-representable output format (unlike JSON coordinates in layout tasks). Only 20 test instructions. 29.4 GB training data on Zenodo. Related but separate from MineAnyBuild (NeurIPS 2025).",
+    "reason": "Genuine creative building design benchmark (UAI 2025, Peking University). Agents receive natural language descriptions and must imagine and construct buildings in Minecraft survival mode. GPT-4V evaluates screenshots on Correctness, Complexity, Quality, Functionality (validated against 49 human participants). However, requires embodied execution in a running Minecraft instance — no text-representable output format (unlike JSON coordinates in layout tasks). Only 20 test instructions. 29.4 GB training data on Zenodo. Related but separate from MineAnyBuild (NeurIPS 2025).",
     "benchmark_name": "Minecraft Building"
   },
   {
@@ -1764,8 +1764,8 @@
     "paper_id": "a9fcbfe0ef7c3ba4787890995d7e0231abc9f6cf",
     "url": "https://github.com/qiancheng0/ModelingAgent",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Method paper for multi-agent system; evaluation too complex for HELM. arXiv 2505.15068 (May 2025); ModelingBench has 68 math modeling problems from COMAP competitions; requires ModelingAgent multi-agent framework (4 agents: Idea Proposer, Data Searcher, Modeling Implementor, Report Writer); long-form report generation (full research papers); complex ModelingJudge evaluation with 6 dimensions (structural_coherency, scoring_decomposition, modeling_groundedness, data_groundedness, analysis_groundedness, innovativeness) × 4 expert roles per problem = 24 LLM judge calls per problem; multimodal (images with data tables); requires external tools (search API, data analysis); primary contribution is the multi-agent system, not a reusable benchmark for evaluating other models"
+    "status": "not_suitable",
+    "reason": "Method paper for multi-agent system; evaluation too complex for HELM. arXiv 2505.15068 (May 2025); ModelingBench has 68 math modeling problems from COMAP competitions; requires ModelingAgent multi-agent framework (4 agents: Idea Proposer, Data Searcher, Modeling Implementor, Report Writer); long-form report generation (full research papers); complex ModelingJudge evaluation with 6 dimensions (structural_coherency, scoring_decomposition, modeling_groundedness, data_groundedness, analysis_groundedness, innovativeness) × 4 expert roles per problem = 24 LLM judge calls per problem; multimodal (images with data tables); requires external tools (search API, data analysis); primary contribution is the multi-agent system, not a reusable benchmark for evaluating other models"
   },
   {
     "name": "Listening Test for Agent-based Lyric Generation",
@@ -1800,8 +1800,8 @@
     "paper_id": "a845a0b142944b02e1a55ce0dfec8519b9f3f58c",
     "url": "",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset and code not publicly available. Paper: 'Aggregated Structural Representation with Large Language Models for Human-Centric Layout Generation' (arXiv:2505.19554, May 26, 2025). Uses filtered RICO dataset with 68,475 UI structures but filtering process and preprocessing code not released. Original RICO dataset exists (HuggingFace: Voxel51/rico, shunk031/Rico) but paper's filtered version with specific preprocessing is unavailable. No GitHub repository found (authors from Ant Group, A*STAR). Task: UI layout generation from graph structures with nodes (UI components: background, image, text, input, sliding bar, icon) and edges (positional relations: TOP, LEFT; semantic relations: PARALLEL, CONTAIN). Output format: JSON with node_id, category, coordinates [X,Y,W,H], and relation arrays. Three subtasks: (1) UI-Gen: direct generation from scratch, (2) Completion: generate with node/edge constraints, (3) Graph Editing: human-in-the-loop editing. Evaluation metrics: mIoU, Relation Error (RE), FID, Overlap (OL), human study (50 participants, 0-5 Likert scale on reasonableness). Model: ASR combines GNN (graph representation) + Intern-VL (MLLM) with relation matrix decoder. Multimodal benchmark (processes icon images, component images, text) - can be onboarded with HEIM once dataset/code released. Contact: jin_jiongchao@ihpc.a-star.edu.sg. Monitor for release."
+    "status": "not_suitable",
+    "reason": "Dataset and code not publicly available. Paper: 'Aggregated Structural Representation with Large Language Models for Human-Centric Layout Generation' (arXiv:2505.19554, May 26, 2025). Uses filtered RICO dataset with 68,475 UI structures but filtering process and preprocessing code not released. Original RICO dataset exists (HuggingFace: Voxel51/rico, shunk031/Rico) but paper's filtered version with specific preprocessing is unavailable. No GitHub repository found (authors from Ant Group, A*STAR). Task: UI layout generation from graph structures with nodes (UI components: background, image, text, input, sliding bar, icon) and edges (positional relations: TOP, LEFT; semantic relations: PARALLEL, CONTAIN). Output format: JSON with node_id, category, coordinates [X,Y,W,H], and relation arrays. Three subtasks: (1) UI-Gen: direct generation from scratch, (2) Completion: generate with node/edge constraints, (3) Graph Editing: human-in-the-loop editing. Evaluation metrics: mIoU, Relation Error (RE), FID, Overlap (OL), human study (50 participants, 0-5 Likert scale on reasonableness). Model: ASR combines GNN (graph representation) + Intern-VL (MLLM) with relation matrix decoder. Multimodal benchmark (processes icon images, component images, text) - can be onboarded with HEIM once dataset/code released. Contact: jin_jiongchao@ihpc.a-star.edu.sg. Monitor for release."
   },
   {
     "name": "AVA Score",
@@ -1824,7 +1824,7 @@
     "url": "https://github.com/hzphzp/WeGen",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Standard object detection/captioning dataset used for FID/CLIP evaluation of image generation model; not a creativity benchmark",
+    "reason": "Standard object detection/captioning dataset used for FID/CLIP evaluation of image generation model; not a creativity benchmark",
     "benchmark_name": "COCO2014 (WeGen)"
   },
   {
@@ -1832,8 +1832,8 @@
     "paper_id": "add949bdb6beb0dfd7d54efd15db23e79c72e3b8",
     "url": "https://github.com/AI-Sketchpad/Luminate",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "User study evaluation of system, not an LLM benchmark. CHI 2024, arXiv:2310.12953; Luminate system for structured generation and exploration of design space with LLMs for human-AI co-creation; conducted controlled user study with 14 professional writers (80 min sessions: pre-survey, tutorial, creative writing task, exit interview); participants performed various creative writing tasks (copywriting, short stories, emails, poems, video game scenes, song lyrics); evaluation focused on the Luminate interface using Creativity Support Index (CSI) and qualitative feedback; collected screen/audio recordings and survey data for system evaluation; no public dataset of LLM prompts/tasks available; GitHub repo returns 404; no standardized benchmark tasks or ground truth for LLM evaluation; this is a human-centered system evaluation study, not a model benchmark"
+    "status": "not_suitable",
+    "reason": "User study evaluation of system, not an LLM benchmark. CHI 2024, arXiv:2310.12953; Luminate system for structured generation and exploration of design space with LLMs for human-AI co-creation; conducted controlled user study with 14 professional writers (80 min sessions: pre-survey, tutorial, creative writing task, exit interview); participants performed various creative writing tasks (copywriting, short stories, emails, poems, video game scenes, song lyrics); evaluation focused on the Luminate interface using Creativity Support Index (CSI) and qualitative feedback; collected screen/audio recordings and survey data for system evaluation; no public dataset of LLM prompts/tasks available; GitHub repo returns 404; no standardized benchmark tasks or ground truth for LLM evaluation; this is a human-centered system evaluation study, not a model benchmark"
   },
   {
     "name": "HCL (Hallucination-Creativity Layerwise)",
@@ -1856,17 +1856,17 @@
     "paper_id": "afcb783b1e67c6d4afcb8678246173472ccd1144",
     "url": "https://github.com/cssai-research/MuseScorer",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Annotation pipeline, no public data"
+    "status": "not_suitable",
+    "reason": "Annotation pipeline, no public data"
   },
   {
     "name": "CreativeMashup",
     "paper_id": "b5403b14ae498e66eb19a110277f55852a3bed3d",
     "url": "https://github.com/PPYYQQ/aicc-code",
     "assigned_to": "SM",
-    "rejection_reason": "Data access barrier - benchmark not ready for automated evaluation. CogSci 2025, arXiv:2504.13120; 'Probing and Inducing Combinational Creativity in Vision-Language Models'; CreativeMashup benchmark tests VLMs' understanding of combinational creativity through 666 artist-generated visual mashups; uses Identification-Explanation-Implication (IEI) framework with three task levels: (1) Identification - identify two primary objects combined in mashup, (2) Explanation - identify attributes enabling combination, (3) Implication - interpret semantic meaning/message; evaluation uses open-ended responses evaluated by GPT-4o as judge (85.1% and 81.6% consistency with human experts); **Key blockers**: (a) Full dataset (666 examples) only available via Google Drive manual download at https://drive.google.com/drive/folders/1XIvOVwP0eVX60L-STugt_vi19Q_kAEMW, not programmatically accessible; (b) GitHub repo (PPYYQQ/aicc-code) contains only 40 examples used for generation task human study, not the comprehension task; (c) No JSON annotations file with prompts/ground truth for the 666-example comprehension benchmark; (d) Paper does not specify exact prompt templates for the three IEI task levels, only conceptual descriptions; (e) Evaluation requires LLM-as-judge implementation (GPT-4o adjudicator) not yet configured; (f) Images are visual mashups combining objects (e.g., pepper + fire extinguisher), requiring multimodal evaluation; **Precedent**: Similar to MARS benchmark (line 874 in LEARNINGS.md) rejected for 'images not yet released'; **Future potential**: Once authors release full dataset with annotations on HuggingFace or provide programmatic Google Drive access (like ARN using gdown), and specify exact prompts, this would be a strong candidate for multimodal onboarding using MediaObject pattern (like MEMECAP); Multimodal (vision-language); requires HEIM/VHELM framework; GitHub: PPYYQQ/aicc-code; Project page: ppyyqq.github.io/aicc",
+    "reason": "Data access barrier - benchmark not ready for automated evaluation. CogSci 2025, arXiv:2504.13120; 'Probing and Inducing Combinational Creativity in Vision-Language Models'; CreativeMashup benchmark tests VLMs' understanding of combinational creativity through 666 artist-generated visual mashups; uses Identification-Explanation-Implication (IEI) framework with three task levels: (1) Identification - identify two primary objects combined in mashup, (2) Explanation - identify attributes enabling combination, (3) Implication - interpret semantic meaning/message; evaluation uses open-ended responses evaluated by GPT-4o as judge (85.1% and 81.6% consistency with human experts); **Key blockers**: (a) Full dataset (666 examples) only available via Google Drive manual download at https://drive.google.com/drive/folders/1XIvOVwP0eVX60L-STugt_vi19Q_kAEMW, not programmatically accessible; (b) GitHub repo (PPYYQQ/aicc-code) contains only 40 examples used for generation task human study, not the comprehension task; (c) No JSON annotations file with prompts/ground truth for the 666-example comprehension benchmark; (d) Paper does not specify exact prompt templates for the three IEI task levels, only conceptual descriptions; (e) Evaluation requires LLM-as-judge implementation (GPT-4o adjudicator) not yet configured; (f) Images are visual mashups combining objects (e.g., pepper + fire extinguisher), requiring multimodal evaluation; **Precedent**: Similar to MARS benchmark (line 874 in LEARNINGS.md) rejected for 'images not yet released'; **Future potential**: Once authors release full dataset with annotations on HuggingFace or provide programmatic Google Drive access (like ARN using gdown), and specify exact prompts, this would be a strong candidate for multimodal onboarding using MediaObject pattern (like MEMECAP); Multimodal (vision-language); requires HEIM/VHELM framework; GitHub: PPYYQQ/aicc-code; Project page: ppyyqq.github.io/aicc",
     "notes": "Dataset only available via Google Drive; needs programmatic access and exact prompts before onboarding",
-    "status": "rejected"
+    "status": "not_suitable"
   },
   {
     "name": "Generative Materials Design Benchmark",
@@ -1893,7 +1893,7 @@
     "url": "https://arxiv.org/abs/2506.06211",
     "assigned_to": "CL",
     "status": "completed",
-    "rejection_reason": "",
+    "reason": "",
     "benchmark_name": "PuzzleWorld",
     "eval_type": "exact_match",
     "notes": "667 puzzlehunt puzzles. Multimodal (text+visual+structured). Content images on HF. Single split used as test. Difficulty filter: easy/medium/hard/all. SOTA only 14% accuracy.",
@@ -1940,8 +1940,8 @@
     "paper_id": "bb5f873632616c2cdc07ef1bb139db0c96c8e5f6",
     "url": "https://arxiv.org/abs/2411.02382",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly accessible (anonymous.4open.science/r/KG-CoI-C203/ returns 403)"
+    "status": "not_suitable",
+    "reason": "Dataset not publicly accessible (anonymous.4open.science/r/KG-CoI-C203/ returns 403)"
   },
   {
     "name": "DataNarrative",
@@ -1964,8 +1964,8 @@
     "paper_id": "b99973ab1c714c2da29334d113be348477426743",
     "url": "https://github.com/ZicongHe2002/LLM-Creativity-Benchmarking",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Empty repo"
+    "status": "not_suitable",
+    "reason": "Empty repo"
   },
   {
     "name": "Historical Analogy Acquisition",
@@ -1999,8 +1999,8 @@
     "paper_id": "c1202ab1afd2cc2103b4a9efc1844524015535be",
     "url": "https://github.com/artificial-scientist-lab/SciMuse",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Core LLM task requires private research idea texts held by authors; no self-serve evaluation pathway. Public data (feature vectors + ratings) only supports supervised ML, not LLM evaluation."
+    "status": "not_suitable",
+    "reason": "Core LLM task requires private research idea texts held by authors; no self-serve evaluation pathway. Public data (feature vectors + ratings) only supports supervised ML, not LLM evaluation."
   },
   {
     "name": "SchNovel",
@@ -2033,8 +2033,8 @@
     "paper_id": "c59d685a21f5b8f4750a28a5733a80fbaa0f410b",
     "url": "https://anonymous.4open.science/r/making-new-connections-78D1",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Human-only scoring (creativity/difficulty/enjoyment preference study); no automatic metrics; only ~20 generated puzzles evaluated; methodology paper, not reusable benchmark"
+    "status": "not_suitable",
+    "reason": "Human-only scoring (creativity/difficulty/enjoyment preference study); no automatic metrics; only ~20 generated puzzles evaluated; methodology paper, not reusable benchmark"
   },
   {
     "name": "Relational Structure Identification (RSI) Test",
@@ -2111,8 +2111,8 @@
     "url": "https://anonymous.4open.science/r/NoveltyDetection-10FB/",
     "arxiv": "2505.24615",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly accessible (anonymous.4open.science/r/NoveltyDetection-10FB/ returns 403)"
+    "status": "not_suitable",
+    "reason": "Dataset not publicly accessible (anonymous.4open.science/r/NoveltyDetection-10FB/ returns 403)"
   },
   {
     "name": "PerMPST",
@@ -2167,16 +2167,16 @@
     "paper_id": "caa098989011d7fdfe21ae7a08796cfb5942e64d",
     "url": "https://resodate.com/item/TPPoet",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "URL broken"
+    "status": "not_suitable",
+    "reason": "URL broken"
   },
   {
     "name": "ExFunTube",
     "paper_id": "ca1261a7e058ea3339fbdaec07ffcf6d0b617c8d",
     "url": "https://github.com/dayoon-ko/ExFunTube",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (video understanding); requires HEIM/VHELM framework. EMNLP 2023, arXiv:2310.14159; 'Can Language Models Laugh at YouTube Short-form Videos?'; multimodal video humor understanding dataset with 10,136 user-generated funny YouTube short-form videos; 11,166 funny moments annotated with start/end timestamps and text explanations (avg 44.3 words); covers 20 humor types across wide range of domains; requires understanding both verbal and visual elements to comprehend humor; task: identify funny moments in videos and explain why they are humorous; paper develops zero-shot video-to-text prompting framework to make videos consumable by text-only LLMs by converting video into text (visual descriptions via BLIP, audio transcripts, sound tags, frame sequences); however, core evaluation is understanding video humor, not text humor; uses video filtering pipeline with GPT-3.5 to verify both verbal and visual humor elements; evaluated using automatic scores, rationale quality experiments, and human evaluations; dataset publicly available via Google Drive (JSON format with YouTube URLs, timestamps, explanations); requires video processing models (BLIP for visual, audio models, etc.); outside HELM's text-only scope; would need HEIM/VHELM framework for video-language evaluation; GitHub: dayoon-ko/ExFunTube; dataset page: exfuntube.github.io"
+    "status": "not_suitable",
+    "reason": "Multimodal (video understanding); requires HEIM/VHELM framework. EMNLP 2023, arXiv:2310.14159; 'Can Language Models Laugh at YouTube Short-form Videos?'; multimodal video humor understanding dataset with 10,136 user-generated funny YouTube short-form videos; 11,166 funny moments annotated with start/end timestamps and text explanations (avg 44.3 words); covers 20 humor types across wide range of domains; requires understanding both verbal and visual elements to comprehend humor; task: identify funny moments in videos and explain why they are humorous; paper develops zero-shot video-to-text prompting framework to make videos consumable by text-only LLMs by converting video into text (visual descriptions via BLIP, audio transcripts, sound tags, frame sequences); however, core evaluation is understanding video humor, not text humor; uses video filtering pipeline with GPT-3.5 to verify both verbal and visual humor elements; evaluated using automatic scores, rationale quality experiments, and human evaluations; dataset publicly available via Google Drive (JSON format with YouTube URLs, timestamps, explanations); requires video processing models (BLIP for visual, audio models, etc.); outside HELM's text-only scope; would need HEIM/VHELM framework for video-language evaluation; GitHub: dayoon-ko/ExFunTube; dataset page: exfuntube.github.io"
   },
   {
     "name": "TTCW (Torrance Test of Creative Writing)",
@@ -2239,8 +2239,8 @@
     "paper_id": "c959d653bfea954bc779a5acd6feacd6d45fdb15",
     "url": "https://github.com/huggingface/nanoVLM",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Not a benchmark - nanoVLM is a Vision-Language Model training framework/implementation (like nanoGPT), not an evaluation benchmark or dataset"
+    "status": "not_suitable",
+    "reason": "Not a benchmark - nanoVLM is a Vision-Language Model training framework/implementation (like nanoGPT), not an evaluation benchmark or dataset"
   },
   {
     "name": "HumorBench",
@@ -2283,7 +2283,7 @@
     "url": "https://github.com/vwprompt/vwp",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Duplicate of VGSG (already onboarded as scenarios/vgsg/scenario.py using VWP dataset)",
+    "reason": "Duplicate of VGSG (already onboarded as scenarios/vgsg/scenario.py using VWP dataset)",
     "benchmark_name": "VGSG Challenge"
   },
   {
@@ -2333,7 +2333,7 @@
     "url": "",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Duplicate; MemeCap already onboarded",
+    "reason": "Duplicate; MemeCap already onboarded",
     "benchmark_name": "MemeCap"
   },
   {
@@ -2491,8 +2491,8 @@
     "paper_id": "e030d0ee02b101ebd467d61684c0ff86ab782258",
     "url": "",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Restricted access (professor-signed EULA required); incomplete transcripts (missing journalist questions per Section 5.1); German-only; low inter-annotator agreement (Krippendorff's alpha 0.16-0.19)"
+    "status": "not_suitable",
+    "reason": "Restricted access (professor-signed EULA required); incomplete transcripts (missing journalist questions per Section 5.1); German-only; low inter-annotator agreement (Krippendorff's alpha 0.16-0.19)"
   },
   {
     "name": "KiVA (Kid-inspired Visual Analogies)",
@@ -2500,7 +2500,7 @@
     "url": "https://github.com/ey242/KiVA",
     "assigned_to": "SM",
     "status": "completed",
-    "rejection_reason": "Multimodal (vision-language); requires HEIM/VHELM framework. ICLR 2025, arXiv:2407.17773; visual analogical reasoning benchmark with 4,300 visual transformations of everyday objects; tests fundamental visual pattern recognition skills solvable by children ages 3-5; 5 transformation domains (2D Rotation, Color, Resize, Reflection, Counting) with 14-29 subdomains; two difficulty levels: KiVA (easy, solvable by 3-year-olds) and KiVA-adults (hard, different input values requiring further abstraction); task format: given images showing object transformation (e.g., blue dog → red dog), identify which option (A/B/C) applies the same transformation to a new object; three evaluation stages: identify what changed, how it changed, apply rule to new scenarios; evaluates large multimodal models (GPT-4V, GPT-o1, LLaVA-1.5, MANTIS) compared to human children and adults; findings show models identify 'what' changed but struggle with quantifying 'how' and extrapolating rules; repository contains 96K+ files including transformed object images in both stitched format (single image) and individual format (multiple images); requires vision-language models and visual processing; outside HELM's text-only scope; would need HEIM/VHELM framework; GitHub: ey242/KiVA",
+    "reason": "Multimodal (vision-language); requires HEIM/VHELM framework. ICLR 2025, arXiv:2407.17773; visual analogical reasoning benchmark with 4,300 visual transformations of everyday objects; tests fundamental visual pattern recognition skills solvable by children ages 3-5; 5 transformation domains (2D Rotation, Color, Resize, Reflection, Counting) with 14-29 subdomains; two difficulty levels: KiVA (easy, solvable by 3-year-olds) and KiVA-adults (hard, different input values requiring further abstraction); task format: given images showing object transformation (e.g., blue dog → red dog), identify which option (A/B/C) applies the same transformation to a new object; three evaluation stages: identify what changed, how it changed, apply rule to new scenarios; evaluates large multimodal models (GPT-4V, GPT-o1, LLaVA-1.5, MANTIS) compared to human children and adults; findings show models identify 'what' changed but struggle with quantifying 'how' and extrapolating rules; repository contains 96K+ files including transformed object images in both stitched format (single image) and individual format (multiple images); requires vision-language models and visual processing; outside HELM's text-only scope; would need HEIM/VHELM framework; GitHub: ey242/KiVA",
     "scenario_file": "scenarios/kiva_scenario.py",
     "eval_type": "exact_match",
     "subsets": {
@@ -2555,7 +2555,7 @@
     "url": "https://github.com/SofeeyaJ/PoemTale-Diffusion",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Poem-to-image generation (wrong direction); evaluates diffusion models, not VLMs",
+    "reason": "Poem-to-image generation (wrong direction); evaluates diffusion models, not VLMs",
     "benchmark_name": "P4I"
   },
   {
@@ -2563,8 +2563,8 @@
     "paper_id": "d5d661b43692a79d760e0b2011f056a459eb374c",
     "url": "https://github.com/serre-lab/diffusion_as_artist",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal (image generation); requires HEIM framework. ICML 2023, arXiv:2301.11722; 'Diffusion Models as Artists: Are we Closing the Gap between Humans and Machines?'; evaluation framework for one-shot generative models comparing humans and machines on one-shot image generation task; extends 'diversity vs. recognizability' framework (Boutin et al., 2022, arXiv:2205.10370) to evaluate diffusion models (DDPM, CFGDM, FSDM) alongside GANs and VAEs; three evaluation metrics: (1) Recognizability - how recognizable generated images are, (2) Diversity - intra-class variability in generated samples, (3) Originality - measured via generalization curves showing evolution of recognizability as function of originality; evaluated on Omniglot dataset (handwritten characters, 1,320 models tested) and QuickDraw dataset (hand-drawn sketches, 1,212 models tested); task: given one example of handwritten character or sketch, generate diverse yet recognizable variations; findings show diffusion models have closed gap between humans and machines but humans still produce more recognizable samples at higher originality levels; human features are fewer and more localized than diffusion model features; requires training diffusion models on image datasets and evaluating generated images; datasets available via Google Drive; outside HELM's text-only scope; would need HEIM framework; GitHub: serre-lab/diffusion_as_artist"
+    "status": "not_suitable",
+    "reason": "Multimodal (image generation); requires HEIM framework. ICML 2023, arXiv:2301.11722; 'Diffusion Models as Artists: Are we Closing the Gap between Humans and Machines?'; evaluation framework for one-shot generative models comparing humans and machines on one-shot image generation task; extends 'diversity vs. recognizability' framework (Boutin et al., 2022, arXiv:2205.10370) to evaluate diffusion models (DDPM, CFGDM, FSDM) alongside GANs and VAEs; three evaluation metrics: (1) Recognizability - how recognizable generated images are, (2) Diversity - intra-class variability in generated samples, (3) Originality - measured via generalization curves showing evolution of recognizability as function of originality; evaluated on Omniglot dataset (handwritten characters, 1,320 models tested) and QuickDraw dataset (hand-drawn sketches, 1,212 models tested); task: given one example of handwritten character or sketch, generate diverse yet recognizable variations; findings show diffusion models have closed gap between humans and machines but humans still produce more recognizable samples at higher originality levels; human features are fewer and more localized than diffusion model features; requires training diffusion models on image datasets and evaluating generated images; datasets available via Google Drive; outside HELM's text-only scope; would need HEIM framework; GitHub: serre-lab/diffusion_as_artist"
   },
   {
     "name": "POLLUX",
@@ -2587,16 +2587,16 @@
     "paper_id": "e446951ee5f4f558b27b3852b8b1fdeb0b7d45c8",
     "url": "https://github.com/adobe-research/GraphicBench",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Original adobe-research repo still 404. Repo exists at github.com/dayeonki/graphicbench (personal account) but has no LICENSE file. Work done during Adobe Research internship; never published under Adobe's org, likely missing open-source approval. No license = all rights reserved by default."
+    "status": "not_suitable",
+    "reason": "Original adobe-research repo still 404. Repo exists at github.com/dayeonki/graphicbench (personal account) but has no LICENSE file. Work done during Adobe Research internship; never published under Adobe's org, likely missing open-source approval. No license = all rights reserved by default."
   },
   {
     "name": "Outline-Conditioned Story Generation",
     "paper_id": "e7c698bdace380f7183dedbe657686f1885f615c",
     "url": "https://github.com/hrashkin/plotmachines",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Method paper, not a reusable benchmark. PlotMachines (EMNLP 2020) is a model architecture paper; no publicly available preprocessed test data with outlines; requires downloading WikiPlots/WritingPrompts/NYT and running complex preprocessing pipeline (RAKE outline extraction); no standardized evaluation protocol that other papers follow. Better-defined benchmarks exist for this task (e.g., 'Outline to Story (O2S)' assigned to VD with actual benchmark dataset)."
+    "status": "not_suitable",
+    "reason": "Method paper, not a reusable benchmark. PlotMachines (EMNLP 2020) is a model architecture paper; no publicly available preprocessed test data with outlines; requires downloading WikiPlots/WritingPrompts/NYT and running complex preprocessing pipeline (RAKE outline extraction); no standardized evaluation protocol that other papers follow. Better-defined benchmarks exist for this task (e.g., 'Outline to Story (O2S)' assigned to VD with actual benchmark dataset)."
   },
   {
     "name": "Poetry Generation Evaluation",
@@ -2629,8 +2629,8 @@
     "paper_id": "ea6b0b5904d6e8eccbccb609ac35911ae967cd2c",
     "url": "",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Methodology paper with human evaluation, not a benchmark dataset. EACL 2024, arXiv:2402.17119; paper titled 'Creating Suspenseful Stories: Iterative Planning with Large Language Models' by Kaige Xie and Mark Riedl; proposes novel iterative-prompting-based planning method grounded in cognitive psychology and narratology theories of suspense; zero-shot approach using ChatGPT (gpt-3.5-turbo-0613) and Llama 2 (Llama-2-13b-chat); conducted human evaluation study on Prolific with 90 participants evaluating 30 story pairs (10 pairs each) on 5 criteria: Suspense, Novelty, Enjoyment, Logical Sense, Naturalness; compared proposed method against baselines (vanilla ChatGPT/Llama2, Re3) and ablations; no public dataset or code repository found (author GitHub: lightyear0117 has no related repos); no test prompts, story examples, or evaluation protocols released; evaluation was one-time human study to validate their specific method, not a reusable benchmark for comparing arbitrary LLMs; paper provides detailed prompts in tables but these are method-specific; similar to In-the-Wild Study - evaluates a proposed method rather than providing standardized benchmark for LLM comparison"
+    "status": "not_suitable",
+    "reason": "Methodology paper with human evaluation, not a benchmark dataset. EACL 2024, arXiv:2402.17119; paper titled 'Creating Suspenseful Stories: Iterative Planning with Large Language Models' by Kaige Xie and Mark Riedl; proposes novel iterative-prompting-based planning method grounded in cognitive psychology and narratology theories of suspense; zero-shot approach using ChatGPT (gpt-3.5-turbo-0613) and Llama 2 (Llama-2-13b-chat); conducted human evaluation study on Prolific with 90 participants evaluating 30 story pairs (10 pairs each) on 5 criteria: Suspense, Novelty, Enjoyment, Logical Sense, Naturalness; compared proposed method against baselines (vanilla ChatGPT/Llama2, Re3) and ablations; no public dataset or code repository found (author GitHub: lightyear0117 has no related repos); no test prompts, story examples, or evaluation protocols released; evaluation was one-time human study to validate their specific method, not a reusable benchmark for comparing arbitrary LLMs; paper provides detailed prompts in tables but these are method-specific; similar to In-the-Wild Study - evaluates a proposed method rather than providing standardized benchmark for LLM comparison"
   },
   {
     "name": "Divergent Association Task (DAT)",
@@ -2656,7 +2656,7 @@
     "url": "https://github.com/fesvhtr/TRIG",
     "assigned_to": "CL",
     "status": "not_suitable",
-    "rejection_reason": "Text-to-image generation benchmark; evaluates image generation with text rendering, not VLM creativity",
+    "reason": "Text-to-image generation benchmark; evaluates image generation with text rendering, not VLM creativity",
     "benchmark_name": "TRIG-Bench"
   },
   {
@@ -2664,8 +2664,8 @@
     "paper_id": "ee7f769a73a533a871cd5fd9cd566d96a3f09107",
     "url": "https://github.com/ali-vilab/MimicBrush",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Image-to-image task (outputs edited images, not text); dataset not yet released (verified Feb 2026). NeurIPS 2024, arXiv:2406.07547; MimicBrush method for zero-shot image editing with reference imitation; introduces 'imitative editing' task where users draw inspiration from in-the-wild references to edit image regions; benchmark has 120 samples collected from Pexels across 4 topics (fashion, animals, products, scenarios) with 30 samples per topic; two main tasks: (1) Part Composition - discovering semantic correspondence between source and reference images and compositing local parts, (2) Texture Transfer - transferring texture from reference to source image; each task has inter-ID and inner-ID tracks; task format: INPUT (source image + reference image + mask) → OUTPUT (edited image that imitates reference); evaluation metrics: fidelity (DINO/CLIP similarity), harmonization (blending quality), visual quality; GitHub README still states 'Download our evaluation benchmark at Google Drive: URL: [to be released]' as of Feb 2026 (repo last pushed June 2024); Note: Image INPUT is supported by HELM (see EmoArt scenario using MediaObject), but this task requires IMAGE GENERATION output, not text output; original evaluation requires comparing generated edited images to references using visual similarity metrics; could potentially be adapted to text-based task (e.g., edit description generation, edit quality classification) if dataset becomes available; GitHub: ali-vilab/MimicBrush"
+    "status": "not_suitable",
+    "reason": "Image-to-image task (outputs edited images, not text); dataset not yet released (verified Feb 2026). NeurIPS 2024, arXiv:2406.07547; MimicBrush method for zero-shot image editing with reference imitation; introduces 'imitative editing' task where users draw inspiration from in-the-wild references to edit image regions; benchmark has 120 samples collected from Pexels across 4 topics (fashion, animals, products, scenarios) with 30 samples per topic; two main tasks: (1) Part Composition - discovering semantic correspondence between source and reference images and compositing local parts, (2) Texture Transfer - transferring texture from reference to source image; each task has inter-ID and inner-ID tracks; task format: INPUT (source image + reference image + mask) → OUTPUT (edited image that imitates reference); evaluation metrics: fidelity (DINO/CLIP similarity), harmonization (blending quality), visual quality; GitHub README still states 'Download our evaluation benchmark at Google Drive: URL: [to be released]' as of Feb 2026 (repo last pushed June 2024); Note: Image INPUT is supported by HELM (see EmoArt scenario using MediaObject), but this task requires IMAGE GENERATION output, not text output; original evaluation requires comparing generated edited images to references using visual similarity metrics; could potentially be adapted to text-based task (e.g., edit description generation, edit quality classification) if dataset becomes available; GitHub: ali-vilab/MimicBrush"
   },
   {
     "name": "STYLEBREEDER",
@@ -2690,8 +2690,8 @@
     "paper_id": "f1104653cea1d99cfdd6d9bf0f6105f2391af88f",
     "url": "https://github.com/ajdal/DiCTI",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "No reusable benchmark data. DiCTI used only 9 text prompts, none published (not in repo or paper). VITON-HD dataset has no text descriptions (image pairs only). Third-party captions exist (TryOnVirtual/VITON-HD-Captions, PromptDresser) but would require assembling a new benchmark rather than onboarding an existing one."
+    "status": "not_suitable",
+    "reason": "No reusable benchmark data. DiCTI used only 9 text prompts, none published (not in repo or paper). VITON-HD dataset has no text descriptions (image pairs only). Third-party captions exist (TryOnVirtual/VITON-HD-Captions, PromptDresser) but would require assembling a new benchmark rather than onboarding an existing one."
   },
   {
     "name": "GenEval",
@@ -2699,8 +2699,8 @@
     "url": "https://github.com/djghosh13/geneval",
     "arxiv": "2310.11513",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Multimodal - text-to-image generation evaluation framework requiring image generation and object detection models to assess compositional alignment"
+    "status": "not_suitable",
+    "reason": "Multimodal - text-to-image generation evaluation framework requiring image generation and object detection models to assess compositional alignment"
   },
   {
     "name": "InfoChartQA",
@@ -2723,8 +2723,8 @@
     "paper_id": "f274f97ca7445b6ea3cdf9c398ea44449c627e02",
     "url": "https://github.com/akkeshav/subtleBias",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Bias detection, not creativity"
+    "status": "not_suitable",
+    "reason": "Bias detection, not creativity"
   },
   {
     "name": "Next-Chapter Prediction (NCP)",
@@ -2732,8 +2732,8 @@
     "url": "https://github.com/Alex-Gurung/ReasoningNCP",
     "arxiv": "2503.22828",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Dataset not publicly available - authors cannot release due to copyright (purchased books)"
+    "status": "not_suitable",
+    "reason": "Dataset not publicly available - authors cannot release due to copyright (purchased books)"
   },
   {
     "name": "Cue-word-based Creative Story Generation and Evaluation",
@@ -2873,8 +2873,8 @@
     "paper_id": "fd463896e627d5690b842b3d7d97d76908edaead",
     "url": "https://huggingface.co/datasets/liyannn/sentence_analogy",
     "assigned_to": "CL",
-    "status": "rejected",
-    "rejection_reason": "Gated dataset"
+    "status": "not_suitable",
+    "reason": "Gated dataset"
   },
   {
     "name": "PunchBench",
@@ -3451,7 +3451,7 @@
     "paper_id": "2502.13207",
     "url": "https://arxiv.org/abs/2502.13207",
     "status": "not_suitable",
-    "rejection_reason": "Methods paper, not a benchmark. Paper by Franceschelli & Musolesi proposes CoVO (Context-based Value and Originality) score as a reward signal for RL fine-tuning. Introduces GutenVerse (~84k poems from Project Gutenberg) as a reference corpus for measuring originality via T-LCS, not as an evaluation benchmark with test prompts. Paper evaluates their training method on existing benchmarks: NoveltyBench (Zhang et al. 2025), GSM8K, and MATH. GutenVerse is similar to using a large corpus for perplexity - it's a resource for computing metrics, not a benchmark itself. No standardized test set or evaluation protocol released. Note: NoveltyBench (separate benchmark) could be onboarded separately.",
+    "reason": "Methods paper, not a benchmark. Paper by Franceschelli & Musolesi proposes CoVO (Context-based Value and Originality) score as a reward signal for RL fine-tuning. Introduces GutenVerse (~84k poems from Project Gutenberg) as a reference corpus for measuring originality via T-LCS, not as an evaluation benchmark with test prompts. Paper evaluates their training method on existing benchmarks: NoveltyBench (Zhang et al. 2025), GSM8K, and MATH. GutenVerse is similar to using a large corpus for perplexity - it's a resource for computing metrics, not a benchmark itself. No standardized test set or evaluation protocol released. Note: NoveltyBench (separate benchmark) could be onboarded separately.",
     "notes": "GutenVerse corpus buildable from https://anonymous.4open.science/r/GutenVerse-DD32/"
   }
 ]
