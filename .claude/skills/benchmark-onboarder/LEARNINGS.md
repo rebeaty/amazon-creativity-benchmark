@@ -489,7 +489,11 @@ Some papers/repos don't meet the criteria for benchmark onboarding:
 | Creative Process (Verbal Fluency) | Custom metrics | Analyzes creative exploration patterns, not output quality |
 | DAT_GPT | Custom metrics | DAT scoring, compression-based DSI metrics |
 | C2-Eval | Empty repo | No content available |
-| FuxiBench (Fùxì) | Domain-specific | Chinese classical literature benchmark with 21 tasks; LLM-as-judge in Chinese |
+| FuxiBench (Fùxì) | Partial onboard | 21 tasks total but only 5 creative subtasks onboarded (ci_gen, couplet_gen, poem_gen, poem_nmt_inv, poem_appre). Non-creative tasks (knowledge recall, TCM, source tracing) skipped. Data hosted as JSON on GitHub (no HF dataset). Format metrics (pacc/cacc) check structure only, not aesthetics. |
+| GeoStory (Geographical Disparity) | No reference outputs | Purely generative benchmark (no gold answers). Data from GeoNames cities1000.zip + countryInfo.txt downloaded at runtime. 5,185 locations across 245 countries. Custom corpus-level metrics (IDF uniqueness, NER count, emotion via GPT-4). Originally rejected as "not creativity" but onboarded for geo-anchored story generation. |
+| CritiCS Story | System + external dataset | CritiCS paper is a multi-agent system, not a benchmark. But doc-storygen-v2 (llm-aes/doc-storygen-v2 on HF) provides 6,931 premises + 7K plan pairs with human pairwise annotations. Some premises/Q1 values are None — guard with (x or ""). Originally rejected as "system code" but onboarded using the companion dataset. |
+| Science Analogies (SAQA) | No HF dataset; tab-separated files on GitHub | Download saqa.txt from raw GitHub URL; TSV with header (Source, Target, Explanation). 148 rows, 109 unique targets. Multiple references per target in nosrc subset. Originally rejected as "human-only scoring" but paper does use BLEURT/METEOR/ROUGE-L. |
+| Story Quality (ScratchPlot) | Method paper with usable crowdsource data | Not a benchmark per se, but crowdsource/ directory has Toloka annotations: 300 rows per dimension (interestingness, coherence, naturalness), 100 unique stories (50 plans x 2 systems), 3 annotators each. TSVs on GitHub master branch. Column names use colon namespace (INPUT:story, OUTPUT:category). |
 | ConstructiveBench | Dataset inaccessible | HuggingFace URL returns "dataset not found" |
 | PressRelease Creative Planning | Corpus, not benchmark | 656k articles corpus for research; no formal test set or evaluation metrics |
 | Fable Generation (ds-tf1-en-3m) | Training data | 3M fables for training; not an evaluation benchmark |
