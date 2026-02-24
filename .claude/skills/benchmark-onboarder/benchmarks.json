@@ -65,7 +65,10 @@
     "paper_id": "0125e4f8d35544737086549b1dd894855e0cc5e7",
     "url": "https://github.com/asaakyan/V-FLUTE",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/v_flute/scenario.py",
+    "eval_type": "custom",
+    "notes": "Duplicate entry — same paper as paper_id 2405.01474. Scenario already implemented at scenarios/v_flute/scenario.py (classification + explanation subsets). Note: scenarios/vflute/scenario.py has a bug (PIL Image passed as MediaObject location instead of file path); v_flute version is the correct implementation."
   },
   {
     "name": "CreataSet",
@@ -91,7 +94,19 @@
     "paper_id": "0251d301230802e2189e8721745b3a9f90d48386",
     "url": "https://chicagohai.github.io/HypoBench/",
     "assigned_to": "SM",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/hypobench/scenario.py",
+    "eval_type": "open_ended",
+    "subsets": {
+      "deceptive_reviews": {"instances": 1, "description": "Truthful vs. deceptive hotel reviews"},
+      "headline_binary": {"instances": 1, "description": "Which of two news headlines gets more clicks"},
+      "gptgc_detect": {"instances": 1, "description": "GPT-generated vs. human-written story detection"},
+      "llamagc_detect": {"instances": 1, "description": "LLaMA-generated vs. human-written story detection"},
+      "dreaddit": {"instances": 1, "description": "Stress detection from Reddit posts"},
+      "persuasive_pairs": {"instances": 1, "description": "Which of two arguments is more persuasive"},
+      "retweet": {"instances": 1, "description": "Which of two tweets gets more retweets"}
+    },
+    "notes": "Data from GitHub (ChicagoHAI/HypoBench-datasets). One instance per task; each instance prompts the model with 10 sampled training observations and asks for 5 hypotheses. References are known_hypotheses from literature (metadata.json). Eval is ROUGE/BERTScore as proxy; paper's actual eval is two-step (generate hypotheses → classify test set). Synthetic tasks (admission, election, preference, shoe, marine) excluded — require HDR metric; see metric_notes.md. journal_cross/journal_same excluded — nested directory structure."
   },
   {
     "name": "Image Implication Benchmark",
@@ -424,7 +439,11 @@
     "paper_id": "234d5dc1fe156c8d79beb373525d4b1bc177db9d",
     "url": "https://github.com/noy-sternlicht/CHIMERA-KB",
     "assigned_to": "SM",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/recombination_extraction/scenario.py",
+    "eval_type": "custom",
+    "dataset_url": "https://huggingface.co/datasets/noystl/Recombination-Extraction",
+    "notes": "216 test / 362 train instances. Prompt is verbatim PROMPT_E2E from src/util.py. Single unified prompt for all 3 evaluation levels (classification, entity extraction, relation extraction). Reference is gold JSON from readable_relations field ({} for irrelevant, relation dict for relevant). Eval requires JSON parsing + soft entity matching with LLM judge (GPT-4o-mini). Note: dataset uses 'analogy'/'analogy-src'/'analogy-target' keys; prompt instructs model to use 'inspiration'/'inspiration-src'/'inspiration-target' — custom metric must handle this mapping. See metric_notes.md."
   },
   {
     "name": "GraphEval",
@@ -978,9 +997,10 @@
     "paper_id": "5ac80c35214f8d49625cb1c1d899846a65ef0599",
     "url": "https://arxiv.org/abs/2305.14259",
     "assigned_to": "SA",
+    "status": "completed",
+    "scenario_file": "scenarios/scimon/scenario.py",
     "eval_type": "open_ended",
-    "notes": "Scientific inspiration sentence generation; 194 human-verified gold subset from 2022 ACL papers; ROUGE-L/BERTScore against rel_sent references; repo renamed to EagleW/Scientific-Inspiration-Machines-Optimized-for-Novelty",
-    "status": "pending"
+    "notes": "Scientific inspiration sentence generation; 194 human-verified gold subset from 2022 ACL papers; ROUGE-L/BERTScore against rel_sent references; repo renamed to EagleW/Scientific-Inspiration-Machines-Optimized-for-Novelty"
   },
   {
     "name": "TextLogo3K",
@@ -1119,11 +1139,12 @@
     "benchmark_name": "BannerRequest400"
   },
   {
-    "name": "",
+    "name": "PodEval",
     "paper_id": "701658eaa26a9350792b88cc07fea98399a94791",
-    "url": "",
+    "url": "https://github.com/yujxx/PodEval",
     "assigned_to": "SM",
-    "status": "pending"
+    "status": "rejected",
+    "rejection_reason": "Evaluation framework, not a reusable benchmark. arXiv:2510.00485; 'PodEval: A Multimodal Evaluation Framework for Podcast Audio Generation'; provides a toolkit for evaluating podcast generation systems, not a fixed stimulus-response dataset; no standardized input prompts or ground truth labels; audio files not directly hosted (download links only, no programmatic access); evaluation metrics are audio-specific (DNSMOS, WER, speaker similarity, timbre) and not HELM-compatible; primary contribution is the evaluation pipeline architecture, not a benchmark for evaluating arbitrary LLMs."
   },
   {
     "name": "SS-GEN",
@@ -1245,7 +1266,7 @@
     "url": "https://github.com/KwaiVGI/VideoCanvas",
     "arxiv": "https://arxiv.org/abs/2510.08555",
     "assigned_to": "VD",
-    "status": "pending_release",
+    "status": "rejected",
     "reason": "Dataset not yet released - repository states \"Code (Coming soon)\" and \"We will release this benchmark\". Video generation task (arbitrary spatio-temporal video completion) not video understanding. Evaluates video diffusion models on visual quality metrics (FVD, PSNR, aesthetic quality). REVISIT when dataset released to assess text-based proxy tasks (e.g., describing completion strategies, predicting patch placement). Monitor: https://github.com/KwaiVGI/VideoCanvas",
     "notes": "Over 2,000 test cases (AnyP2V, AnyI2V, AnyV2V tasks). 100 high-quality videos from Pexels. Metrics: FVD, PSNR, temporal coherence, aesthetic quality. October 2025 paper."
   },
@@ -1475,7 +1496,7 @@
     "assigned_to": "SM",
     "rejection_reason": "Method paper, not a reusable benchmark. ICCV Workshop 2019, arXiv:1910.03634; 'Prose for a Painting'; proposes pipeline for generating Shakespearean prose descriptions of paintings using intermediate poem generation (image → poem via img2poem model) then language style transfer (poem → Shakespearean prose via text style transfer model); demonstrates approach on unspecified number of 'famous paintings'; evaluation mentions human ratings on Likert scale and BLEU score 'as a function of prose length' but provides no specifics (number of raters, scale range, rating criteria); **Key issues**: (a) No publicly available test dataset of paintings with ground truth Shakespearean prose, (b) Paper explicitly states 'there does not exist a large supervised dataset from paintings to Shakespearean prose', (c) Repository contains only demonstration notebook with single test image, no benchmark data, (d) No standardized evaluation protocol that other papers can follow, (e) Primary contribution is the method/pipeline architecture, not a dataset for evaluating other models; **Precedent**: Similar to PlotMachines (line 168 in LEARNINGS.md) rejected as 'Method paper, not a reusable benchmark'; requires downloading and training two separate models (img2poem + style transfer) from external repos with Dropbox models; if authors later release curated test set with human-written Shakespearean prose for paintings plus standardized evaluation, this could become a valid benchmark; GitHub: prerna135/prose-for-a-painting",
     "notes": "Method paper demonstrating image→poem→Shakespearean prose pipeline; no test dataset or standardized evaluation",
-    "status": "pending"
+    "status": "rejected"
   },
   {
     "name": "Metaphoric Analogies from Literary Texts Dataset",
@@ -1845,7 +1866,7 @@
     "assigned_to": "SM",
     "rejection_reason": "Data access barrier - benchmark not ready for automated evaluation. CogSci 2025, arXiv:2504.13120; 'Probing and Inducing Combinational Creativity in Vision-Language Models'; CreativeMashup benchmark tests VLMs' understanding of combinational creativity through 666 artist-generated visual mashups; uses Identification-Explanation-Implication (IEI) framework with three task levels: (1) Identification - identify two primary objects combined in mashup, (2) Explanation - identify attributes enabling combination, (3) Implication - interpret semantic meaning/message; evaluation uses open-ended responses evaluated by GPT-4o as judge (85.1% and 81.6% consistency with human experts); **Key blockers**: (a) Full dataset (666 examples) only available via Google Drive manual download at https://drive.google.com/drive/folders/1XIvOVwP0eVX60L-STugt_vi19Q_kAEMW, not programmatically accessible; (b) GitHub repo (PPYYQQ/aicc-code) contains only 40 examples used for generation task human study, not the comprehension task; (c) No JSON annotations file with prompts/ground truth for the 666-example comprehension benchmark; (d) Paper does not specify exact prompt templates for the three IEI task levels, only conceptual descriptions; (e) Evaluation requires LLM-as-judge implementation (GPT-4o adjudicator) not yet configured; (f) Images are visual mashups combining objects (e.g., pepper + fire extinguisher), requiring multimodal evaluation; **Precedent**: Similar to MARS benchmark (line 874 in LEARNINGS.md) rejected for 'images not yet released'; **Future potential**: Once authors release full dataset with annotations on HuggingFace or provide programmatic Google Drive access (like ARN using gdown), and specify exact prompts, this would be a strong candidate for multimodal onboarding using MediaObject pattern (like MEMECAP); Multimodal (vision-language); requires HEIM/VHELM framework; GitHub: PPYYQQ/aicc-code; Project page: ppyyqq.github.io/aicc",
     "notes": "Dataset only available via Google Drive; needs programmatic access and exact prompts before onboarding",
-    "status": "pending"
+    "status": "rejected"
   },
   {
     "name": "Generative Materials Design Benchmark",
@@ -2301,7 +2322,11 @@
     "name": "FunQA",
     "paper_id": "cbf052125c90f78d8750f7d447121193ef53d2f8",
     "url": "https://github.com/Fun-QA/FunQA",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_file": "scenarios/funqa/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "Duplicate entry — same paper as paper_id 2306.14899 (ECCV 2024). Video QA benchmark; scenario uses HELM MediaObject for video input. Requires videos to be pre-downloaded via YouTube IDs provided by dataset. Dataset: fesvhtr/FunQA on HuggingFace. 30,170 test instances across HumorQA, CreativeQA, MagicQA subsets."
   },
   {
     "name": "FilmScoreDB",
@@ -2534,7 +2559,11 @@
     "name": "Divergent Association Task (DAT)",
     "paper_id": "2023.findings-emnlp.858",
     "url": "https://github.com/DingNLab/probing_creativity",
-    "assigned_to": "VD"
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_file": "scenarios/dat/scenario.py",
+    "eval_type": "custom",
+    "notes": "Models generate 10 unrelated nouns; creativity scored by average cosine distance between word pairs using GloVe 840B embeddings. 100 independent trials by default (same prompt repeated). No ground truth references — evaluated entirely by custom DATMetric. Human baseline mean DAT ~78, SD ~10 (8,572 responses). Requires custom metric implementation; see metric_notes.md."
   },
   {
     "name": "FIGR-8-SVG",
@@ -3234,7 +3263,7 @@
     "name": "Sonnet or Not, Bot?",
     "paper_id": "2406.18906",
     "url": "https://arxiv.org/abs/2406.18906",
-    "status": "onboarded",
+    "status": "completed",
     "scenario_file": "scenarios/sonnet_or_not_bot/scenario.py",
     "subsets": {
       "all": {
