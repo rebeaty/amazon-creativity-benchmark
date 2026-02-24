@@ -4,7 +4,7 @@ HELM Scenario: YESBUT V2
 Paper: "When 'YES' Meets 'BUT': Can Large Models Comprehend Contradictory
        Humor Through Comparative Reasoning?"
        https://arxiv.org/abs/2503.23137
-Code: https://github.com/Tuo-Liang/YESBUT
+Code: https://github.com/Tuo-Liang/YESBUT_V2
 Dataset: https://huggingface.co/datasets/zhehuderek/YESBUT_Benchmark_V2
 Website: https://vulab-ai.github.io/YESBUT-v2/
 
@@ -15,7 +15,7 @@ and multicultural contexts.
 Four tasks (implemented as subsets):
   - description: Generate literal description of comic narrative (open_ended)
   - contradiction: Explain the contradiction between panels (open_ended)
-  - moral_mcq: Select underlying symbolism from 4 options (exact_match)
+  - moral_mcq: Select underlying philosophy from 4 options (exact_match)
   - title_mcq: Select best title from 4 options (exact_match)
 
 Each task supports two variants:
@@ -23,7 +23,7 @@ Each task supports two variants:
   - wo_caption: Image only (default, harder)
 
 Three prompt sets from Table 7 (paper averages across all three to reduce bias).
-Prompt source: Table 7 evaluation prompts from the paper.
+Prompt source: Prompts.sh from the V2 GitHub repo (Table 7 in paper).
 Fields used: description, caption, contradiction, moral_mcq, moral_mcq_answer,
   title_mcq, title_mcq_answer, url (Google Drive image links)
 Fields skipped: social_info, Linguistic_context, Panel_Bounding_Boxes,
@@ -48,8 +48,9 @@ class YesButV2Scenario(Scenario):
 
     TASKS = ["description", "contradiction", "moral_mcq", "title_mcq"]
 
-    # Evaluation prompts from Table 7 — three prompt sets per task.
+    # Evaluation prompts from Prompts.sh in V2 repo — three prompt sets per task.
     # Paper averages results across all three to reduce prompt bias.
+    # Prompts are reproduced verbatim (including original grammar).
     PROMPTS = {
         "description": {
             1: {
@@ -68,7 +69,7 @@ class YesButV2Scenario(Scenario):
             },
             3: {
                 "wo_caption": (
-                    "Give me a detailed literal description of the image."
+                    "Give me a detailed literally description of the image."
                 ),
             },
         },
@@ -90,14 +91,10 @@ class YesButV2Scenario(Scenario):
             },
             2: {
                 "w_caption": (
-                    "The literal caption of the comic is: {image_caption}\n"
-                    "Analyze the provided image, which is divided into "
-                    "two or more panels, each illustrating contrasting "
-                    "views of the same scenario. Describe the elements "
-                    "visible in each panel. Then concisely interpret how "
-                    "these elements convey contrasting perspectives in "
-                    "one or two sentences. Focus and only output the "
-                    "contradiction."
+                    "Analyze the provided image with the following "
+                    "description: {image_caption}. Identify and concisely "
+                    "describe the contradiction depicted in the image in "
+                    "one or two sentences."
                 ),
                 "wo_caption": (
                     "Analyze the provided image, which is divided into "
@@ -111,16 +108,17 @@ class YesButV2Scenario(Scenario):
             },
             3: {
                 "w_caption": (
-                    "The literal caption of the comic is: {image_caption}\n"
-                    "Given an image with two or more panels showing a "
-                    "contrast relationship, describe the elements visible "
-                    "in each panel and concisely interpret the "
-                    "contradiction in one or two sentences."
+                    "Based on the following image's description: "
+                    "{image_caption}. Give me the concise contradiction "
+                    "depicted in the image in one or two sentences."
                 ),
                 "wo_caption": (
-                    "Given an image with two or more panels showing a "
-                    "contrast relationship, describe the elements visible "
-                    "in each panel and concisely interpret the "
+                    "Given an image, the image is divided into two or "
+                    "more panels. There is the contrast relationship in "
+                    "the image through panels. Describe the elements "
+                    "visible in each panel. Give me the concise "
+                    "interpretation how these panels convey contrasting "
+                    "perspectives, which you only need to output the "
                     "contradiction in one or two sentences."
                 ),
             },
@@ -132,111 +130,121 @@ class YesButV2Scenario(Scenario):
                     "opposite sides with contradictions.\n"
                     "The literal caption of the comic is: {image_caption}\n"
                     "Which of the following options best represents the "
-                    "underlying Symbolism of the comic?\n"
-                    "{options}\n\nJust output the choice."
+                    "underlying philosophy of the comic?\n"
+                    "{philosophy_options}\n\nJust output the choice:"
                 ),
                 "wo_caption": (
                     "The given comic shows the same situation from two "
-                    "opposite sides with contradictions. Which of the "
-                    "following options best represents the underlying "
-                    "Symbolism of the comic?\n"
-                    "{options}\n\nJust output the choice."
+                    "opposite sides with contradictions.\n"
+                    "Which of the following options best represents the "
+                    "underlying philosophy of the comic?\n"
+                    "{philosophy_options}\n\nJust output the choice:"
                 ),
             },
             2: {
                 "w_caption": (
-                    "You are presented with an image divided into panels, "
-                    "each illustrating contrasting views of the same "
-                    "scenario.\n"
-                    "The literal caption of the comic is: {image_caption}\n"
+                    "You are presented with an image with the following "
+                    "description: {image_caption}. \n"
                     "Which of the following options best represents the "
-                    "Symbolism of the image provided?\n"
-                    "{options}\n\nSelect the correct option by typing the "
+                    "philosophy of the image provided? \n"
+                    "{philosophy_options} \n"
+                    "Select the correct option by typing the "
                     "corresponding letter (A, B, C, or D)."
                 ),
                 "wo_caption": (
-                    "You are presented with an image divided into panels, "
-                    "each illustrating contrasting views of the same "
-                    "scenario. Which of the following options best "
-                    "represents the Symbolism of the image provided?\n"
-                    "{options}\n\nSelect the correct option by typing the "
+                    "You are presented with an image, which is divided "
+                    "into two or more panels, each illustrating "
+                    "contrasting views of the same scenario. \n"
+                    "Which of the following options best represents the "
+                    "philosophy of the image provided? \n"
+                    "{philosophy_options} \n"
+                    "Select the correct option by typing the "
                     "corresponding letter (A, B, C, or D)."
                 ),
             },
             3: {
                 "w_caption": (
-                    "The literal caption of the comic is: {image_caption}\n"
-                    "Given an image with two or more panels showing "
-                    "contrast, select the best option representing the "
-                    "deep semantic of the image.\n"
-                    "{options}\n\nJust output the correct option as "
-                    "(A, B, C, or D), no more explanation."
+                    "Given an image with the following description: "
+                    "{image_caption}. \n"
+                    "Tell me the best option in the following options "
+                    "who represents the deep semantic of the image? \n"
+                    "{philosophy_options} \n"
+                    "Just tell me the correct option by outputing "
+                    "corresponding letter (A, B, C, or D), no more "
+                    "explanation."
                 ),
                 "wo_caption": (
-                    "Given an image with two or more panels showing "
-                    "contrast, select the best option representing the "
-                    "deep semantic of the image.\n"
-                    "{options}\n\nJust output the correct option as "
-                    "(A, B, C, or D), no more explanation."
+                    "Given an image, which has two or more panels. "
+                    "There is contrast in these panels. \n"
+                    "Tell me the best option in the following options "
+                    "who represents the deep semantic of the image? \n"
+                    "{philosophy_options} \n"
+                    "Just tell me the correct option by outputing "
+                    "corresponding letter (A, B, C, or D), no more "
+                    "explanation."
                 ),
             },
         },
         "title_mcq": {
             1: {
                 "w_caption": (
-                    "The given comic presents the same situation from "
-                    "two opposing perspectives, highlighting "
-                    "contradictions.\n"
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions.\n"
                     "The literal caption of the comic is: {image_caption}\n"
-                    "Which of the following titles is most suitable for "
-                    "the comic?\n"
-                    "{options}\n\nOutput only the selected choice."
+                    "Which of the following titles are the most suitable "
+                    "for the comic?\n"
+                    "{title_options}\n\nJust output the choice:"
                 ),
                 "wo_caption": (
-                    "The given comic presents the same situation from "
-                    "two opposing perspectives, highlighting "
-                    "contradictions. Which of the following titles is "
-                    "most suitable for the comic?\n"
-                    "{options}\n\nOutput only the selected choice."
+                    "The given comic shows the same situation from two "
+                    "opposite sides with contradictions.\n"
+                    "Which of the following titles are the most suitable "
+                    "for the comic?\n"
+                    "{title_options}\n\nJust output the choice:"
                 ),
             },
             2: {
                 "w_caption": (
-                    "You are presented with an image divided into two or "
-                    "more panels, each depicting contrasting perspectives "
-                    "of the same scenario.\n"
-                    "The literal caption of the comic is: {image_caption}\n"
+                    "You are presented with an image with the following "
+                    "description: {image_caption}. \n"
                     "Which of the following title options best represents "
-                    "the given image?\n"
-                    "{options}\n\nSelect the correct option by typing the "
+                    "the image provided? \n"
+                    "{title_options} \n"
+                    "Select the correct option by typing the "
                     "corresponding letter (A, B, C, or D)."
                 ),
                 "wo_caption": (
-                    "You are presented with an image divided into two or "
-                    "more panels, each depicting contrasting perspectives "
-                    "of the same scenario. Which of the following title "
-                    "options best represents the given image?\n"
-                    "{options}\n\nSelect the correct option by typing the "
+                    "You are presented with an image, which is divided "
+                    "into two or more panels, each illustrating "
+                    "contrasting views of the same scenario. \n"
+                    "Which of the following title options best represents "
+                    "the image provided? \n"
+                    "{title_options} \n"
+                    "Select the correct option by typing the "
                     "corresponding letter (A, B, C, or D)."
                 ),
             },
             3: {
                 "w_caption": (
-                    "The literal caption of the comic is: {image_caption}\n"
-                    "Given an image divided into two or more panels, a "
-                    "contrast relationship exists between the panels. "
-                    "Identify the best title from the following options "
-                    "that represents the image.\n"
-                    "{options}\n\nOutput only the corresponding letter "
-                    "(A, B, C, or D) without any additional explanation."
+                    "Given an image with the following description: "
+                    "{image_caption}. \n"
+                    "Tell me the best title in the following title "
+                    "options who represents the image? \n"
+                    "{title_options} \n"
+                    " Just tell me the correct option by outputing "
+                    "corresponding letter (A, B, C, or D), no more "
+                    "explanation."
                 ),
                 "wo_caption": (
-                    "Given an image divided into two or more panels, a "
-                    "contrast relationship exists between the panels. "
-                    "Identify the best title from the following options "
-                    "that represents the image.\n"
-                    "{options}\n\nOutput only the corresponding letter "
-                    "(A, B, C, or D) without any additional explanation."
+                    "Given an image, the image is divided into two or "
+                    "more panels. There is the contrast relationship in "
+                    "the image through panels. \n"
+                    "Tell me the best title in the following title "
+                    "options who represents the image? \n"
+                    "{title_options} \n"
+                    "Just tell me the correct option by outputing "
+                    "corresponding letter (A, B, C, or D), no more "
+                    "explanation."
                 ),
             },
         },
@@ -293,9 +301,10 @@ class YesButV2Scenario(Scenario):
         kwargs = {}
         if "{image_caption}" in template:
             kwargs["image_caption"] = item["caption"]
-        if "{options}" in template:
-            field = "moral_mcq" if self.task == "moral_mcq" else "title_mcq"
-            kwargs["options"] = item[field]
+        if "{philosophy_options}" in template:
+            kwargs["philosophy_options"] = item["moral_mcq"]
+        if "{title_options}" in template:
+            kwargs["title_options"] = item["title_mcq"]
 
         return template.format(**kwargs) if kwargs else template
 

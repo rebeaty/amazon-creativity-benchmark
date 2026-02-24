@@ -17,9 +17,14 @@ Two subsets:
   - mapping: Open-ended target/source domain identification (open_ended)
     For metaphorical ads, identify Target and Source domains.
 
-Prompt source: Paper Section 4. Stage 1 (target): "Briefly describe the
-  purpose of the text-image pair." Stage 2 (source): identify incongruent
-  elements. Simplified to single-turn format for HELM.
+Prompt source:
+  - detection: Custom prompt for HELM (not from paper). The paper does not
+    define a binary metaphor detection task; its Stage 1 asks to "Briefly
+    describe the purpose of the text-image pair."
+  - mapping: Simplified single-turn adaptation of the paper's two-stage
+    pipeline (Section 4). Paper Stage 1 identifies the target domain, then
+    Stage 2 uses the target to identify incongruent source elements. Here
+    both are requested in one turn for HELM compatibility.
 
 Fields used: Pic_id, MetaphorOccurrence, Target, Source, Type
 Fields skipped: None
@@ -47,9 +52,7 @@ class CM3DScenario(Scenario):
     tags = ["creativity", "multimodal", "vision", "figurative_language", "chinese"]
 
     SUBSETS = ["detection", "mapping"]
-    ANNOTATIONS_URL = (
-        "https://gitfront.io/r/GiveATry/nNCeJacwmNpG/C3MD/blob/data.json"
-    )
+    REPO_URL = "https://gitfront.io/r/GiveATry/nNCeJacwmNpG/C3MD.git"
     KAGGLE_DATASET = "ec70ddcbb3913b970f69e12fb2a0cc9254ccec95534542840d11b4fc373819ed"
 
     # Split sizes from paper: train 4888, val 610, test 610
@@ -70,9 +73,7 @@ class CM3DScenario(Scenario):
             repo_dir = os.path.join(output_path, "cm3d_repo")
             if not os.path.exists(repo_dir):
                 subprocess.run(
-                    ["git", "clone",
-                     "https://gitfront.io/r/GiveATry/nNCeJacwmNpG/C3MD.git",
-                     repo_dir],
+                    ["git", "clone", self.REPO_URL, repo_dir],
                     check=True, capture_output=True
                 )
             src = os.path.join(repo_dir, "data.json")
