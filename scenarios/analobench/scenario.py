@@ -4,14 +4,20 @@ HELM Scenario: ANALOBENCH
 Paper: https://arxiv.org/abs/2402.12370 (EMNLP 2024)
 Code: https://github.com/jhu-clsp/AnaloBench
 
-Prompt format:
+Prompt format (from code/t1.py):
   Which of the following is the most analogous story to the target story?
 
-  Target story: {Sentence}
+  Note: Only generate the index without any additional text.
 
+  Target Story:
+  {Sentence}
+
+  Options:
   {Options}
 
-Prompt source: Paper Section 3
+  Answer:
+
+Prompt source: code/t1.py (Paper Section 3 / Appendix D)
 Fields used: Sentence, Options, Label
 Fields skipped: Index
 """
@@ -32,10 +38,16 @@ class AnalobenchScenario(Scenario):
 
         instances = []
         for item in dataset:
-            # Format prompt (from paper Section 3)
-            prompt = f"Which of the following is the most analogous story to the target story?\n\n"
-            prompt += f"Target story: {item['Sentence']}\n\n"
-            prompt += item['Options']
+            # Format prompt (from code/t1.py)
+            prompt = (
+                f"Which of the following is the most analogous story to the target story?\n\n"
+                f"Note: Only generate the index without any additional text. \n\n"
+                f"Target Story:\n"
+                f"{item['Sentence']}\n\n"
+                f"Options:\n"
+                f"{item['Options']}\n\n"
+                f"Answer:"
+            )
 
             # HELM MC pattern: all choices become References
             references = []

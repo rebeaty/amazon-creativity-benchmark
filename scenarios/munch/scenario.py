@@ -1,7 +1,9 @@
 """
 HELM Scenario: MUNCH (Metaphor Understanding Challenge)
 
-Paper: https://github.com/xiaoyuisrain/metaphor-understanding-challenge
+Paper: https://arxiv.org/abs/2403.11810 (ACL 2024)
+       "Metaphor Understanding Challenge Dataset for LLMs"
+Code: https://github.com/xiaoyuisrain/metaphor-understanding-challenge
 License: CC-BY-4.0
 
 Task: Evaluate metaphor understanding through word/sentence substitution judgement.
@@ -12,7 +14,7 @@ Dataset:
   - 1,492 examples for judgement tasks
   - Each example has two options labeled 'apt' (correct) or 'inapt' (incorrect)
 
-Prompt format (from prompts.md - WOTG variants):
+Prompt format (from prompts.md - WOTG20/WOTG33 for word, SSTA94/GASW94 for sentence):
   Word judgement (implicit):
     Which of the given options can replace the highlighted word in the given
     sentence without altering the sentence's meaning?

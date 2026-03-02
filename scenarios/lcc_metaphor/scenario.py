@@ -1,8 +1,8 @@
 """
 HELM Scenario: LCC Metaphor Detection
 
-Paper: https://aclanthology.org/P13-1024/ (ACL 2013, original LCC)
-       https://aclanthology.org/2022.acl-long.211/ (ACL 2022, probing study)
+Paper: https://aclanthology.org/L16-1668/ (LREC 2016, original LCC)
+       https://aclanthology.org/2022.acl-long.144/ (ACL 2022, probing study)
 Code: https://github.com/EhsanAghazadeh/Metaphors_in_PLMs
 
 Task: Binary classification of whether a target word in a sentence is used

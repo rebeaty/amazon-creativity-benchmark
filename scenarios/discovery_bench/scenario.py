@@ -1,7 +1,7 @@
 """
 HELM Scenario: DiscoveryBench
 
-Paper: DiscoveryBench: Towards Data-Driven Discovery with Large Language Models (ICLR 2024)
+Paper: DiscoveryBench: Towards Data-Driven Discovery with Large Language Models (ICLR 2025)
        https://arxiv.org/abs/2407.01725
 Code: https://github.com/allenai/discoverybench
 

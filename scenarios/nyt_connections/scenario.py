@@ -38,10 +38,8 @@ class NYTConnectionsScenario(Scenario):
     description = "tm21cy/NYT-Connections"
     tags = ["creativity", "abstract_reasoning", "word_puzzles", "semantic_knowledge"]
 
-    # Prompt adapted from lechmazur/nyt-connections benchmark
-    PROMPT_TEMPLATE = """Find groups of four items that share something in common.
-
-Output them in the following format: four total lines. On each line, there should be four comma-separated items. No additional text (like group titles or descriptions) should be in the output.
+    # Prompt from lechmazur/nyt-connections benchmark (p1.txt)
+    PROMPT_TEMPLATE = """Find groups of four items that share something in common. Output them in the following format: four total lines. On each line, there should be four comma-separated items. No additional text (like group titles or descriptions) should be in the output. Also, there should not be anything in your output before or after the solution.
 
 Words: {words}
 
