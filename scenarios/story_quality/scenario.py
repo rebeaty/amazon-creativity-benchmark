@@ -19,8 +19,10 @@ Subsets:
 
 Ground truth: Rounded average of 3 annotator ratings per story.
 
-Prompt source: Standard rating instruction (paper specifies 1-5 Likert scale
-  but does not publish exact annotator instructions).
+Prompt source: Standard rating instruction. The paper publishes dimension-specific
+  annotation guidelines in Appendix D (naturalness, interestingness, cohesiveness),
+  but the full Toloka task template is not in the repo. This scenario uses a
+  simplified single-prompt format inspired by the paper's 1-5 Likert scale.
 
 Fields used: INPUT:story, INPUT:content_plan_id, INPUT:system, OUTPUT:category
 Fields skipped: GOLDEN:category (empty), HINT:* (empty), ASSIGNMENT:* (worker metadata)

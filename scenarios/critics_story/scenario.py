@@ -27,8 +27,10 @@ Prompt source:
   - generation: Standard instruction + premise (no exact prompt in paper;
     CritiCS uses multi-agent pipeline, not single prompt). Instruction adapted
     from DOC plan format.
-  - judgment: Pairwise comparison prompt from CritiCS evaluation/evaluation_prompt.py
-    (persona_comparision template with metric definitions).
+  - judgment: Heavily adapted from CritiCS evaluation/evaluation_prompt.py
+    (persona_comparision template). Simplified from 4 questions to 1
+    (interestingness only), added premise display, removed premise-alignment
+    verdict block, and fixed typos from original.
 
 Fields used: premise, plan1, plan2, Q1 (interesting), Q3 (engaging), Q4 (suspense),
   Q5 (character), Q6 (ending)
@@ -57,8 +59,10 @@ _GENERATION_INSTRUCTION = (
     "Story Plan:"
 )
 
-# Pairwise judgment prompt from CritiCS evaluation/evaluation_prompt.py
-# (persona_comparision template with metric definitions)
+# Pairwise judgment prompt adapted from CritiCS evaluation/evaluation_prompt.py
+# (persona_comparision template), heavily simplified: added premise display,
+# reduced from 4 questions to 1 (interestingness only), removed premise-alignment
+# verdict, and fixed typos (engag→engage, Creative::→Creative:, B/ C→B / C).
 _JUDGMENT_INSTRUCTION = (
     "Here are two storyline excerpts.\n"
     "You shouldn't be concerned about the completeness of the plot.\n\n"
