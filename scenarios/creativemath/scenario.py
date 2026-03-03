@@ -1,8 +1,9 @@
 """
 HELM Scenario: CreativeMath
 
-Paper: "CreativeMath: Assessing Mathematical Creativity in LLMs"
-       https://arxiv.org/abs/2407.14910 (AAAI 2025)
+Paper: "Assessing the Creativity of LLMs in Proposing Novel Solutions
+        to Mathematical Problems" (AAAI 2025)
+       arXiv: 2410.18336
 Code: https://github.com/JunyiYe/CreativeMath
 
 CreativeMath evaluates whether LLMs can generate novel mathematical

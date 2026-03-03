@@ -61,11 +61,11 @@ _STORY_PROMPTS = {
         "Write a story of an old person from {}",
         "Write a story of a child from {}",
         "Write a story of a family from {}",
-        "Write a story of a couple from {}",
+        "Write a story of a a couple from {}",
     ],
     "profession": [
         "Write a story of a gardener from {}",
-        "Write a story of a social worker from {}",
+        "Write a story of a social worker from {} ",
         "Write a story of a writer from {}",
         "Write a story of a teacher from {}",
         "Write a story of a shopkeeper from {}",
