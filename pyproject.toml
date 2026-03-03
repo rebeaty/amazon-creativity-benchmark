@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amazon-creativity-benchmark"
+version = "0.1.0"
+description = "Creativity benchmark scenarios for the HELM evaluation framework"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    # HELM evaluation framework — brings in datasets, numpy, pandas, torch,
+    # torchvision, transformers, nltk, scipy, scikit-learn, spacy, tqdm, etc.
+    "crfm-helm>=0.5.12",
+
+    # Multimodal scenarios — PIL images passed to MediaObject
+    "Pillow>=10.0",
+
+    # Data format support not bundled with crfm-helm
+    "openpyxl>=3.1",        # Excel files (2 scenarios)
+    "h5py>=3.9",            # HDF5 files
+    "PyYAML>=6.0",          # YAML config parsing
+
+    # Network & HuggingFace access used directly in scenarios
+    "requests>=2.31",
+    "huggingface_hub>=0.20", # hf_hub_download / snapshot_download for gated repos
+]
+
+[project.optional-dependencies]
+# Image-generation evaluation metrics (fscg8 and similar eval scripts only)
+eval = [
+    "diffusers>=0.25",
+    "pytorch-fid>=0.3",
+    "clip-score>=0.1",
+    "vendi-score>=0.1",
+]
+
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scenarios*"]
