@@ -1408,8 +1408,14 @@
     "reason": "Method paper, not a reusable benchmark. WACV 2025; introduces multi-mask inpainting method connecting MLLMs with diffusion models; task is text-guided multi-mask inpainting (image generation) requiring HEIM framework; uses WikiArt dataset (116,475 images) with automatic annotations from Kosmos-2 (global) and LLaVA (object-level), not human ground truth; evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) measure image generation quality; no standardized protocol for evaluating arbitrary models; primary contribution is method architecture (fine-tuned LLaVA for prompt generation + Stable Diffusion with rectified cross-attention for inpainting), not benchmark dataset; requires vision models and image generation evaluation capabilities outside HELM's text-only scope; would need HEIM for image generation evaluation; GitHub: cilabuniba/i-dream-my-painting"
   },
   {
-    "name": "",
+    "name": "CreativeMath",
     "paper_id": "7f711911c4cf3180d6a1fed0ced88a2749b0b7a5",
+    "url": "https://arxiv.org/abs/2410.18336",
+    "assigned_to": "VD",
+    "status": "completed",
+    "scenario_file": "scenarios/creativemath/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "Novel solution generation for competition math problems; 400 problems across 8 levels (AMC 8/10/12, AHSME, AIME, USAJMO, USAMO, IMO), 50 each; 605 instances total (k=1..n reference solutions per problem); 3-stage LLM-as-judge evaluation: (1) correctness (unanimous vote from 3 judges), (2) coarse-grained novelty vs shown solutions (majority vote), (3) fine-grained novelty vs withheld solutions (majority vote); dataset: windchimeran/creativemath_full on HuggingFace; GitHub: JunyiYe/CreativeMath; AAAI 2025"
     "url": "",
     "assigned_to": "VD",
     "status": "pending"
@@ -1557,11 +1563,13 @@
     "reason": "Method paper for RL training framework; not a creativity benchmark. arXiv 2505.13508 (May 2025); Time-R1 is a 3-stage RL curriculum for temporal reasoning; Time-Bench dataset (200K+ examples) for training on timestamp inference, time-gap estimation, event ordering, masked time entity completion; Stage 3 'creative generation' is future news scenario prediction (temporal forecasting, not general creativity); evaluation tied to RL framework with custom reward functions (1200+ lines in time_reasoning.py); requires veRL infrastructure and PPO training; HuggingFace dataset (ulab-ai/Time-Bench) exists but designed for RL training, not standalone evaluation; primary contribution is training methodology, not a reusable benchmark for evaluating arbitrary models on creative tasks"
   },
   {
-    "name": "",
+    "name": "Another Turn, Better Output?",
     "paper_id": "90777a2cfa8a6e860244dd8c1f8027961bc561f5",
-    "url": "",
+    "url": "https://arxiv.org/abs/2509.06770",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "Dataset not publicly available",
+    "notes": "Evaluation framework for iterative LLM prompting across ideation, code, and math domains. 12-turn conversations per task with vague/targeted feedback. Ideation domain evaluates originality and feasibility (creativity-relevant), but no public dataset found. No GitHub repo, HuggingFace dataset, or data availability statement. Only supplementary materials on OpenReview (openreview.net/forum?id=nPgh13kzhW). NeurIPS 2025 Workshop (Multi-Turn Interactions). If dataset becomes available, ideation domain could be onboarded."
   },
   {
     "name": "MOH-X",
@@ -1832,6 +1840,7 @@
     "paper_id": "ab093afc8fc9619a3331b7e59539f67707e78f53",
     "url": "https://github.com/jamesBaker361/clipcreate",
     "assigned_to": "VD",
+    "notes": "dataset used in this paper are repeated"
     "status": "pending"
   },
   {
@@ -2042,7 +2051,80 @@
     "url": "https://github.com/menhguin/minp_paper",
     "assigned_to": "VD",
     "status": "not_suitable",
-    "reason": "Method paper, not benchmark; Min-p sampling technique paper using AlpacaEval for validation; \"AlpacaEval Creative Writing\" appears to be unofficial subset used in Min-p paper; AlpacaEval is instruction-following benchmark (805 examples from AlpacaFarm), not creativity-specific; uses GPT-4 judge for pairwise comparisons; no standardized creative writing subset officially released; evaluation logs in external repo (IlyaGusev/quest); arXiv:2407.01082"
+    "reason": "Method paper, not benchmark; Min-p sampling technique paper using AlpacaEval for validation; \"AlpacaEval Creative Writing\" appears to be unofficial subset used in Min-p paper; AlpacaEval is instruction-following benchmark (805 examples from AlpacaFarm), not creativity-specific; uses GPT-4 judge for pairwise comparisons; no standardized creative writing subset officially released; evaluation logs in external repo (IlyaGusev/quest); arXiv:2407.01082",
+    "related_benchmarks": {
+      "AlpacaEval 2.0": {
+        "description": "805 prompts paired with GPT-4-turbo responses. Judge compares model responses against baseline. Win Rate (WR) and Length-Controlled Win Rate (LCWR) metrics.",
+        "paper": "Dubois et al., 2024 - Length-Controlled AlpacaEval (arXiv:2404.04475)",
+        "url": "https://github.com/tatsu-lab/alpaca_eval",
+        "dataset": "tatsu-lab/alpaca_eval on HuggingFace",
+        "used_in": "DARLING paper (arXiv:2509.02534) for creative writing evaluation"
+      },
+      "Arena-Hard v1.0/v2.0": {
+        "description": "750 prompts (500 challenging math/coding + 250 creative writing). Judge compares against baseline, higher win rate = better performance.",
+        "paper": "Li et al., 2025a",
+        "url": "https://github.com/lmarena/arena-hard-auto",
+        "creative_writing_subset": "250 prompts from Chatbot Arena",
+        "used_in": "DARLING paper (arXiv:2509.02534)"
+      },
+      "EQBench Creative Writing v3": {
+        "description": "32 creative writing prompts, judged by Claude Sonnet. 3 iterations per prompt (96 items total). Scored by rubric and pairwise comparisons with Elo ratings. Emphasizes challenging prompts (humor, romance, unusual perspectives).",
+        "author": "Paech, 2023",
+        "url": "https://github.com/EQ-bench/creative-writing-bench",
+        "leaderboard": "https://eqbench.com/creative_writing_longform.html",
+        "judge": "Claude Sonnet 4",
+        "metrics": "Elo score from pairwise comparisons",
+        "used_in": "DARLING paper (arXiv:2509.02534)"
+      },
+      "NoveltyBench": {
+        "description": "1,100 prompts from WildChat requiring diverse responses. Diversity measured with partition classifier (deberta-v3-large-generation-similarity). Quality assessed with reward model (Skywork/Skywork-Reward-Gemma-2-27B-v0.2).",
+        "paper": "Zhang et al., 2025b (arXiv:2504.05228)",
+        "url": "https://novelty-bench.github.io/",
+        "dataset": "NB-Curated (100 manual) + NB-WildChat (1,000 from ChatGPT users)",
+        "classifier": "deberta-v3-large trained on 1,000 human annotations",
+        "used_in": "DARLING paper (arXiv:2509.02534) - primarily uses distinct classifier (human-annotated)"
+      }
+    }
+  },
+  {
+    "name": "AlpacaEval 2.0",
+    "paper_id": "arxiv-2404.04475",
+    "url": "https://arxiv.org/abs/2404.04475",
+    "github": "https://github.com/tatsu-lab/alpaca_eval",
+    "status": "completed",
+    "scenario_file": "scenarios/alpaca_eval_2/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "LLM-based instruction-following benchmark. 805 diverse prompts from AlpacaFarm. Models generate responses compared against GPT-4-turbo baseline by LLM judge. Metrics: Win Rate (WR) and Length-Controlled Win Rate (LCWR) addressing length bias. Spearman correlation with Chatbot Arena: 0.94 (WR), 0.98 (LCWR). Dataset: tatsu-lab/alpaca_eval on HuggingFace. Judge: GPT-4-turbo pairwise comparison. Used in DARLING paper (arXiv:2509.02534) for creative writing evaluation. Paper: Dubois et al., 2024."
+  },
+  {
+    "name": "Arena-Hard v0.1",
+    "paper_id": "arena-hard-2024",
+    "url": "https://github.com/lmarena/arena-hard-auto",
+    "status": "completed",
+    "scenario_file": "scenarios/arena_hard_v01/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "500 challenging user queries from Chatbot Arena. Hard problems including coding, math, creative tasks across 250 topic clusters. LLM-judge pairwise comparison against GPT-4-turbo baseline. Metric: Win Rate. Dataset: lmarena-ai/arena-hard-auto-v0.1 on HuggingFace. Note: DARLING paper references v2.0 (750 prompts with 250 creative writing subset) which may not be publicly released yet. This implements v0.1. Judge: GPT-4-turbo or Gemini-1.5-Pro. Paper: Li et al., 2024."
+  },
+  {
+    "name": "EQBench Creative Writing v3",
+    "paper_id": "eqbench-cw-v3-2023",
+    "url": "https://github.com/EQ-bench/creative-writing-bench",
+    "leaderboard": "https://eqbench.com/creative_writing_longform.html",
+    "status": "completed",
+    "scenario_file": "scenarios/eqbench_creative_writing_v3/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "32 challenging creative writing prompts across diverse genres (historical fiction, sci-fi, fantasy, romance, humor, horror, etc.). 3 iterations per prompt = 96 total outputs. Generation: temperature=0.7, min_p=0.1, ~1000 words. Judge: Claude Sonnet 4 pairwise comparisons. Metrics: Elo ratings (Glicko system), rubric scores (1-10 across 5 criteria: character authenticity, originality, plot coherence, emotional engagement, prose quality). Emphasizes difficult prompts exposing weaknesses. Includes slop detection for generic AI writing. Dataset: EQ-bench/creative-writing-bench on GitHub. Used in DARLING paper (arXiv:2509.02534). Author: Samuel J. Paech, 2023."
+  },
+  {
+    "name": "NoveltyBench",
+    "paper_id": "arxiv-2504.05228",
+    "url": "https://arxiv.org/abs/2504.05228",
+    "github": "https://github.com/novelty-bench/novelty-bench",
+    "website": "https://novelty-bench.github.io/",
+    "status": "completed",
+    "scenario_file": "scenarios/noveltybench/scenario.py",
+    "eval_type": "custom",
+    "notes": "Evaluates LLMs' ability to produce multiple distinct and high-quality outputs for same prompt. 1,100 prompts: NB-Curated (100 manual: randomness, factual knowledge, creative writing, subjectivity) + NB-WildChat (1,000 from real ChatGPT users). Models generate N outputs per prompt (typically 5-10). Diversity: measured with deberta-v3-large classifier trained on 1,000 human annotations (binary functional equivalence). Quality: Skywork-Reward-Gemma-2-27B-v0.2 reward model (note: vulnerable to reward hacking per DARLING paper). Key finding: State-of-the-art models significantly less diverse than humans; larger models often less diverse than smaller ones. Dataset: yimingzhang/novelty-bench on HuggingFace. Used in DARLING paper (arXiv:2509.02534). Paper: Zhang et al., 2025."
   },
   {
     "name": "ANALOGYKB",
@@ -2081,6 +2163,7 @@
     "paper_id": "c7d2c6b926fc2c2971b7c6c440658fe117d41062",
     "url": "",
     "assigned_to": "VD",
+    "notes": "Added by NS - I couldn't find the dataset url"
     "status": "pending"
   },
   {
@@ -3346,6 +3429,87 @@
     "notes": "Text-to-structure generation for carbon allotropes. Carbon-24 dataset: 10,153 carbon structures with 6-24 atoms per unit cell from AIRSS at 10 GPa. LLMs generate CIF structures given energy per atom. Evaluation: Same custom metrics as MP-20. Data source: CDVAE repo. Paper: MGB (OpenReview 2025)."
   },
   {
+    "name": "Material Generation Benchmark (MOF)",
+    "paper_id": "arxiv-2410.17270",
+    "url": "https://arxiv.org/abs/2410.17270",
+    "github": "https://github.com/nayoung10/MOFFlow",
+    "status": "completed",
+    "scenario_file": "scenarios/material_generation_benchmark/mof_scenario.py",
+    "subsets": {
+      "test": {
+        "instances": "~32443",
+        "eval_type": "custom",
+        "description": "MOF (Metal-Organic Framework) structure generation from building blocks"
+      },
+      "validation": {
+        "instances": "~32443",
+        "eval_type": "custom",
+        "description": "MOF validation set"
+      }
+    },
+    "notes": "Text-to-structure generation for Metal-Organic Frameworks. MOFFlow dataset: 324,426 MOF structures from Boyd et al. (2019), filtered for ≥200 blocks, split 8:1:1 train/valid/test. LLMs generate CIF structures given metal nodes, organic linkers, and topology. More complex than simple crystals (hundreds of atoms, rigid building blocks). Baseline: MOFFlow achieves 31.69% match rate on unseen structures. Evaluation: Structural matching, validity, physical plausibility. Data source: Zenodo (15187230). Paper: MOFFlow (ICLR 2025). Used in MGB paper for MOF structure prediction task."
+  },
+  {
+    "name": "Materials Transformers (ICSD-mix)",
+    "paper_id": "arxiv-2206.13578",
+    "url": "https://arxiv.org/abs/2206.13578",
+    "github": "https://github.com/usccolumbia/mtransformer",
+    "status": "completed",
+    "scenario_file": "scenarios/materials_transformers/icsd_mix_scenario.py",
+    "eval_type": "custom",
+    "notes": "Chemical formula generation in expanded element form. ICSD-mix: 52,317 materials from Inorganic Crystal Structure Database with mixed purity (includes charge-imbalanced samples). Task: Open-ended generation of compositions like 'Li Li O .' (Li₂O). Evaluation: Validity (charge neutrality 97.54%, electronegativity balance 91.40%), uniqueness, recovery rate, novelty (6x better than random). Dataset: Figshare MT_dataset. Paper: Fu et al. 2022 Materials Transformers."
+  },
+  {
+    "name": "Materials Transformers (ICSD-pure)",
+    "paper_id": "arxiv-2206.13578",
+    "url": "https://arxiv.org/abs/2206.13578",
+    "github": "https://github.com/usccolumbia/mtransformer",
+    "status": "completed",
+    "scenario_file": "scenarios/materials_transformers/icsd_pure_scenario.py",
+    "eval_type": "custom",
+    "notes": "Chemical formula generation (filtered for charge neutrality). ICSD-pure: 39,431 charge-neutral materials from ICSD. Task: Generate valid formulas in expanded element form. Evaluation: Same metrics as ICSD-mix (validity, uniqueness, novelty). Cleaner dataset for testing model performance on well-formed compositions. Dataset: Figshare MT_dataset."
+  },
+  {
+    "name": "Materials Transformers (Hybrid-mix)",
+    "paper_id": "arxiv-2206.13578",
+    "url": "https://arxiv.org/abs/2206.13578",
+    "github": "https://github.com/usccolumbia/mtransformer",
+    "status": "completed",
+    "scenario_file": "scenarios/materials_transformers/hybrid_mix_scenario.py",
+    "eval_type": "custom",
+    "notes": "Chemical formula generation (largest dataset). Hybrid-mix: 418,983 materials from ICSD+Materials Project+OQMD, mixed purity. Most diverse benchmark combining multiple materials databases. Task: Generate novel material compositions. Evaluation: Validity, uniqueness, recovery rate, novelty. Tests generalization across different data sources. Dataset: Figshare MT_dataset."
+  },
+  {
+    "name": "Materials Transformers (Hybrid-pure)",
+    "paper_id": "arxiv-2206.13578",
+    "url": "https://arxiv.org/abs/2206.13578",
+    "github": "https://github.com/usccolumbia/mtransformer",
+    "status": "completed",
+    "scenario_file": "scenarios/materials_transformers/hybrid_pure_scenario.py",
+    "eval_type": "custom",
+    "notes": "Chemical formula generation (charge-neutral hybrid). Hybrid-pure: 257,138 materials from ICSD+MP+OQMD filtered for charge neutrality. Large, clean dataset for testing compositional generation. Evaluation: Validity, uniqueness, novelty. Dataset: Figshare MT_dataset."
+  },
+  {
+    "name": "Materials Transformers (Hybrid-strict)",
+    "paper_id": "arxiv-2206.13578",
+    "url": "https://arxiv.org/abs/2206.13578",
+    "github": "https://github.com/usccolumbia/mtransformer",
+    "status": "completed",
+    "scenario_file": "scenarios/materials_transformers/hybrid_strict_scenario.py",
+    "eval_type": "custom",
+    "notes": "Chemical formula generation (strictest filtering). Hybrid-strict: 212,778 materials from ICSD+MP+OQMD with strict quality filters (charge neutrality + electronegativity balance). Highest quality subset for testing model on well-validated compositions. Evaluation: Validity, uniqueness, novelty. Dataset: Figshare MT_dataset."
+  },
+  {
+    "name": "Materials Transformers (Bandgap-30K)",
+    "paper_id": "arxiv-2206.13578",
+    "url": "https://arxiv.org/abs/2206.13578",
+    "github": "https://github.com/usccolumbia/mtransformer",
+    "status": "completed",
+    "scenario_file": "scenarios/materials_transformers/bandgap_30k_scenario.py",
+    "eval_type": "custom",
+    "notes": "Property-conditional formula generation (wide-bandgap materials). Bandgap-30K: ~30K materials from Materials Project with bandgap > 1.98 eV. Task: Generate high-bandgap material compositions. Tests property-targeted generation and bandgap prediction capability. Evaluation: Validity, uniqueness, novelty, plus optional bandgap validation. Dataset: Figshare MT_dataset (mp/ folder)."
+  },
+  {
     "name": "Patent Novelty Evaluation Dataset",
     "paper_id": "2502.06316",
     "url": "https://arxiv.org/abs/2502.06316",
@@ -3490,5 +3654,54 @@
     "status": "not_suitable",
     "reason": "Methods paper, not a benchmark. Paper by Franceschelli & Musolesi proposes CoVO (Context-based Value and Originality) score as a reward signal for RL fine-tuning. Introduces GutenVerse (~84k poems from Project Gutenberg) as a reference corpus for measuring originality via T-LCS, not as an evaluation benchmark with test prompts. Paper evaluates their training method on existing benchmarks: NoveltyBench (Zhang et al. 2025), GSM8K, and MATH. GutenVerse is similar to using a large corpus for perplexity - it's a resource for computing metrics, not a benchmark itself. No standardized test set or evaluation protocol released. Note: NoveltyBench (separate benchmark) could be onboarded separately.",
     "notes": "GutenVerse corpus buildable from https://anonymous.4open.science/r/GutenVerse-DD32/"
+  },
+  {
+    "name": "SS-GEN",
+    "paper_id": "2406.15695",
+    "url": "https://arxiv.org/abs/2406.15695",
+    "github": "https://github.com/MIMIFY/SS-GEN",
+    "status": "completed",
+    "scenario_file": "scenarios/ss_gen/scenario.py",
+    "eval_type": "open_ended + llm_judge",
+    "instances": {
+      "train": 4068,
+      "dev": 509,
+      "test": 508,
+      "total": 5085
+    },
+    "notes": "Social Story generation for children with autism. Constrained creative writing (200-300 words) with 8 therapeutic criteria. Evaluation: BLEU/ROUGE metrics + human evaluation (Structural Clarity, Descriptive Orientation, Situational Safety) + GPT-4 judge (Coherence, Descriptiveness, Empathy, Grammaticality, Relevance). Dataset on GitHub in JSONL format. AAAI 2025 Oral presentation."
+  },
+  {
+    "name": "DataNarrative",
+    "paper_id": "2408.05346",
+    "url": "https://arxiv.org/abs/2408.05346",
+    "github": "https://github.com/saidul-islam98/DataNarrative",
+    "status": "completed",
+    "scenario_file": "scenarios/data_narrative/scenario.py",
+    "eval_type": "open_ended + llm_judge",
+    "instances": {
+      "train": 226,
+      "test": 1691,
+      "total": 1917
+    },
+    "subsets": {
+      "all": {
+        "instances": 1691,
+        "description": "All test sources (GapMinder + Pew + Tableau)"
+      },
+      "gapminder": {
+        "instances": 42,
+        "description": "GapMinder demographic/economic trends"
+      },
+      "pew": {
+        "instances": 1590,
+        "description": "Pew Research social/political topics"
+      },
+      "tableau": {
+        "instances": 59,
+        "description": "Tableau mixed domains"
+      }
+    },
+    "notes": "Data-driven storytelling benchmark. Task: Generate narrative paragraphs from tabular data, describing trends, patterns, and insights. Multi-agent framework with iterative refinement: Reflection (analyze data) → Outline (structure story) → Narration (write story), each with critique and revision stages. Prompts from Figures 18-26 in appendix. Evaluation: BLEU/ROUGE + GPT-4 judge (factual accuracy, coherence, comprehensiveness, theme consistency) + human evaluation. Sources: Tableau (226 train, 59 test), Pew Research (1,590 test), GapMinder (42 test). Each story has multiple paragraph-table segments. Scenario creates one instance per segment. EMNLP 2024. See annotator_notes.md for multi-stage framework details."
   }
 ]
