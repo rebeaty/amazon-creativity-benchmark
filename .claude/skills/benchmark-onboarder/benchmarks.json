@@ -98,13 +98,34 @@
     "scenario_file": "scenarios/hypobench/scenario.py",
     "eval_type": "open_ended",
     "subsets": {
-      "deceptive_reviews": {"instances": 1, "description": "Truthful vs. deceptive hotel reviews"},
-      "headline_binary": {"instances": 1, "description": "Which of two news headlines gets more clicks"},
-      "gptgc_detect": {"instances": 1, "description": "GPT-generated vs. human-written story detection"},
-      "llamagc_detect": {"instances": 1, "description": "LLaMA-generated vs. human-written story detection"},
-      "dreaddit": {"instances": 1, "description": "Stress detection from Reddit posts"},
-      "persuasive_pairs": {"instances": 1, "description": "Which of two arguments is more persuasive"},
-      "retweet": {"instances": 1, "description": "Which of two tweets gets more retweets"}
+      "deceptive_reviews": {
+        "instances": 1,
+        "description": "Truthful vs. deceptive hotel reviews"
+      },
+      "headline_binary": {
+        "instances": 1,
+        "description": "Which of two news headlines gets more clicks"
+      },
+      "gptgc_detect": {
+        "instances": 1,
+        "description": "GPT-generated vs. human-written story detection"
+      },
+      "llamagc_detect": {
+        "instances": 1,
+        "description": "LLaMA-generated vs. human-written story detection"
+      },
+      "dreaddit": {
+        "instances": 1,
+        "description": "Stress detection from Reddit posts"
+      },
+      "persuasive_pairs": {
+        "instances": 1,
+        "description": "Which of two arguments is more persuasive"
+      },
+      "retweet": {
+        "instances": 1,
+        "description": "Which of two tweets gets more retweets"
+      }
     },
     "notes": "Data from GitHub (ChicagoHAI/HypoBench-datasets). One instance per task; each instance prompts the model with 10 sampled training observations and asks for 5 hypotheses. References are known_hypotheses from literature (metadata.json). Eval is ROUGE/BERTScore as proxy; paper's actual eval is two-step (generate hypotheses → classify test set). Synthetic tasks (admission, election, preference, shoe, marine) excluded — require HDR metric; see metric_notes.md. journal_cross/journal_same excluded — nested directory structure."
   },
@@ -460,8 +481,9 @@
     "paper_id": "24599e9a55091d6f417e91799e63ff14797cf4be",
     "url": "https://tiger-t2i.github.io",
     "assigned_to": "SA",
-    "status": "not_suitable",
-    "reason": "Multimodal (text-to-image generation and retrieval); HELM is text-only. Limited decision-making version explored but not feasible: dataset lacks ground-truth labels for 'generate vs retrieve' decisions; only has creative/knowledge domain splits without explicit decision annotations"
+    "status": "completed",
+    "eval_type": "exact_match",
+    "notes": "Reframed as text-only binary classification: given a text query, predict Generate (A) vs Retrieve (B). Labels derived from split membership — creative splits (pick_a_pic, whoops) → Generate; knowledge splits (food2k, google_landmark, inaturalist, logo2k, visual_news, wit) → Retrieve. 6,000 instances across 8 domains. Subsets: all / creative / knowledge. scenario: scenarios/tiger_bench/scenario.py"
   },
   {
     "name": "GuessBench",
@@ -533,8 +555,9 @@
     "paper_id": "2a5752c59f6a7e6175815db7b113d23a05271cce",
     "url": "https://creatilayout.github.io/",
     "assigned_to": "SA",
-    "status": "not_suitable",
-    "reason": "Multimodal (layout-to-image generation); HELM is text-only"
+    "status": "completed",
+    "eval_type": "open_ended",
+    "notes": "Reframed as text-only layout-to-caption task: given image dimensions + bounding boxes + short region labels, generate a one-paragraph global scene description. Reference = global_caption. 5,000 test instances. region_captions and bbox_list are JSON-encoded strings needing json.loads(). scenario: scenarios/layoutsam_eval/scenario.py"
   },
   {
     "name": "Video Metaphor Captioning Dataset (VMCD)",
@@ -901,7 +924,7 @@
     "assigned_to": "VD",
     "status": "completed",
     "eval_type": "open_ended",
-    "notes": "Text-based proxy task for video editing benchmark. 400 instances (100 videos \u00d7 4 editing types). Task: Generate target prompt given original scene description, editing type (Style/Object/Background/Multiple Change), and fantasy level. Original benchmark evaluates video generation systems."
+    "notes": "Text-based proxy task for video editing benchmark. 400 instances (100 videos × 4 editing types). Task: Generate target prompt given original scene description, editing type (Style/Object/Background/Multiple Change), and fantasy level. Original benchmark evaluates video generation systems."
   },
   {
     "name": "CLAP-based Novelty and Relevance Metrics",
@@ -1070,8 +1093,9 @@
     "paper_id": "62cfa51a4d32b311c1385afc2207c0056369e231",
     "url": "https://huggingface.co/datasets/mclemcrew/MixAssist",
     "assigned_to": "SA",
-    "status": "not_suitable",
-    "reason": "Multimodal (requires audio files for music mixing); conversational training dataset, not an evaluation benchmark"
+    "status": "completed",
+    "eval_type": "open_ended",
+    "notes": "Reframed as text-only multi-turn dialogue: given conversation history + current user turn, predict assistant response. Filter has_content=True (156/250 test instances). audio_file paths skipped. input_history is a native Python list (no json.loads needed). Topics: drums(61), overall_mix(36), guitars(29), vocals(16), bass(10), keys(4). No associated paper. scenario: scenarios/mixassist/scenario.py"
   },
   {
     "name": "Arabic Story Generation Evaluation Framework",
@@ -2546,8 +2570,10 @@
     "paper_id": "e1612a809298c9cc9a70c3a17b1ddb7b5df9507e",
     "url": "https://github.com/dsgt-arc/joker-2025",
     "assigned_to": "SA",
-    "status": "not_suitable",
-    "notes": "Dataset not publicly available — gated behind CLEF 2025 registration portal (Codabench). No HuggingFace release found. Participant repo (dsgt-arc/joker-2025) contains only derived artifacts (French IPA dict, embeddings), not the pun pairs. Task DOES qualify (English→French pun translation preserving wordplay is creative); HELM CAN support it (multilingual translation is fine). Revisit when official data is released. 1,405 train / 376 test English puns with French translations. Metrics: BLEU, BERTScore, human eval (equivalence, authenticity, emotional resonance). arXiv:2507.06506."
+    "status": "completed",
+    "notes": "English→French pun translation preserving wordplay. Dataset gated behind CLEF 2025 registration (Codabench) — not on HuggingFace. Load from local JSON (output_path/joker_2025_task2_train.json). Train split used as TEST_SPLIT (1,405 puns / 5,838 French translations); test French translations not publicly released. JSON fields: id_en, en, fr — multiple objects per pun grouped by en. Prompt avoids 'translate'; asks for French pun reconstruction. Official metric: BLEU; BERTScore + human eval in metric_notes.md. arXiv:2507.06506; CEUR-WS Vol-4038 paper_219.",
+    "scenario_file": "scenarios/clef_joker_2025_task2/scenario.py",
+    "eval_type": "open_ended"
   },
   {
     "name": "P4I (PoemForImage) Dataset",
@@ -2610,8 +2636,10 @@
     "paper_id": "ddcfc7b0fafbe8b47699f12c59772ccff11a4d32",
     "url": "https://github.com/aidanmclaughlin/AidanBench",
     "assigned_to": "SA",
-    "status": "not_suitable",
-    "notes": "Multi-turn iterative generation benchmark, outside HELM scope. AidanBench measures creativity through successive response generation. Models generate multiple answers to same open-ended question until failure (coherence <15/100 or novelty <0.15). Score = count of valid responses. Uses LLM-as-judge (o1-mini) for coherence, embedding similarity for novelty. Requires state tracking across responses. Questions: 'Explain Japan's Lost Decades', 'Use a brick and blanket', design problems. HELM has single-turn architecture. NeurIPS 2024 Workshop. Note: GitHub focuses on creative questions, not Codeforces competitive programming."
+    "status": "completed",
+    "notes": "Mislabeled entry — actual benchmark is AidanBench (NeurIPS 2024 Workshop), not Codeforces; no competitive programming content. 66 open-ended creativity questions hardcoded from GitHub. Original protocol is multi-turn (sequential generation until coherence ≤15/100 or novelty ≤0.15); adapted to single-turn batch prompting (N=30 responses). Empty references; custom metrics required: Self-BLEU (diversity), LLM coherence judge (o1-mini), embedding novelty — see metric_notes.md. OpenReview: fz969ahcvJ.",
+    "scenario_file": "scenarios/aidanbench/scenario.py",
+    "eval_type": "custom"
   },
   {
     "name": "Standard Science Analogies (STD)",
@@ -2621,7 +2649,10 @@
     "status": "completed",
     "scenario_file": "scenarios/science_analogies/scenario.py",
     "eval_type": "open_ended",
-    "subsets": ["nosrc", "wsrc"],
+    "subsets": [
+      "nosrc",
+      "wsrc"
+    ],
     "notes": "SAQA dataset: 109 unique science concepts, 148 reference analogies from Q&A sites. nosrc: generate analogy without source (109 instances). wsrc: generate analogy with given source concept (148 instances). Data downloaded from GitHub repo at runtime."
   },
   {
@@ -2761,7 +2792,11 @@
     "status": "completed",
     "scenario_file": "scenarios/story_quality/scenario.py",
     "eval_type": "exact_match",
-    "subsets": ["interestingness", "coherence", "naturalness"],
+    "subsets": [
+      "interestingness",
+      "coherence",
+      "naturalness"
+    ],
     "notes": "100 stories (50 content plans x 2 systems), 3 annotators each on 1-5 Likert scale. Ground truth: rounded average. Data downloaded from GitHub repo crowdsource/ TSVs. Originally rejected as 'not a benchmark' but crowdsource annotations are usable for quality judgment."
   },
   {
@@ -2830,8 +2865,10 @@
     "paper_id": "fa9cc2ec4eba32b3f4ad89863fb894fed1775530",
     "url": "https://huggingface.co/datasets/qualcomm/csd100",
     "assigned_to": "SA",
-    "status": "not_suitable",
-    "notes": "Image generation benchmark, outside HELM scope. Evaluates content-style decomposition in visual autoregressive models. 100 images (1024x1024 JPG) with 63 objects and 53 artistic styles. Task: decompose image into content+style, generate new styled images. For image generation models, not language models. Evaluation is qualitative (visual quality, content fidelity, style consistency), not text-based metrics. Requires HEIM or image generation evaluation framework. Qualcomm AI Research, July 2025. arXiv:2507.13984."
+    "status": "completed",
+    "notes": "Reframed as VLM content+style recognition task. HuggingFace ClassLabel names encode '{content}+{style}' pairs (e.g. 'balloon+mosaic', 'robot+woodcut'). Two instances per image: content identification + style identification. 100 images → 200 total instances. Label parsed by splitting on first '+'; underscores replaced with spaces in style. PIL image passed directly to MediaObject(location=image). Only 'train' split available — used as TEST_SPLIT. 63 unique content objects, 53 unique artistic styles. arXiv:2507.13984.",
+    "scenario_file": "scenarios/csd100/scenario.py",
+    "eval_type": "exact_match"
   },
   {
     "name": "LCC Metaphor Datasets",
