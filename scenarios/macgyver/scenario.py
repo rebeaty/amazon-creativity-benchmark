@@ -82,6 +82,7 @@ class MacgyverScenario(Scenario):
 
     # Source: code/improving_LLM_via_prompting/improve_prompts.json (instructions_reflect)
     # Paper: Figure 16, Appendix D.3 - Iterative Step-Wise Reflection (Round 2)
+    # Note: Original has "Conclusioin 2" (typo); corrected to "Conclusion 2" here.
     INSTRUCTION_REFLECTION_ROUND2 = (
         "Now, please verify if each step is physically feasible and afforded. "
         "After that, modify the solution if needed.\n"

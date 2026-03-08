@@ -55,12 +55,12 @@ from helm.benchmark.scenarios.scenario import (
 from helm.common.media_object import MediaObject, MultimediaObject
 
 
-# 16 primary perception dimensions (from config.py in baseline)
+# 16 challenge perception dimensions (from perception_full.sh in baseline).
+# Note: config.py lists all 35 LMU-ELP attributes; the challenge uses only these 16.
 PERCEPTION_LABELS = [
-    "assertiv", "competent", "dominant", "confident", "independent",
-    "enthusiastic", "good_natured", "sincere", "collaborative", "friendly",
-    "forceful", "aggressive", "expressive", "likeable", "trustworthy",
-    "intelligent",
+    "aggressive", "arrogant", "dominant", "enthusiastic", "friendly",
+    "leader_like", "likeable", "assertiv", "confident", "independent",
+    "risk", "sincere", "collaborative", "kind", "warm", "good_natured",
 ]
 
 
@@ -126,10 +126,9 @@ class MuSePerceptionScenario(Scenario):
                 "Watch the video of a CEO presenting their firm to investors.\n\n"
                 "Rate this person on the following social perception attributes "
                 "using a scale from 1 (low) to 7 (high):\n"
-                "assertive, competent, dominant, confident, independent, "
-                "enthusiastic, good-natured, sincere, collaborative, friendly, "
-                "forceful, aggressive, expressive, likeable, trustworthy, "
-                "intelligent\n\n"
+                "aggressive, arrogant, dominant, enthusiastic, friendly, "
+                "leader-like, likeable, assertive, confident, independent, "
+                "risk-taking, sincere, collaborative, kind, warm, good-natured\n\n"
                 "Provide your ratings as: attribute1: X, attribute2: Y, ..."
             )
 

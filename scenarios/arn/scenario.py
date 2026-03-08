@@ -4,8 +4,11 @@ HELM Scenario: ARN (Analogical Reasoning on Narratives)
 Paper: https://arxiv.org/abs/2310.00996 (TACL 2024)
 Data: https://bit.ly/3t7qZ3S (Google Drive)
 
+Note: No public code repository exists for this benchmark. The paper does not
+      provide a GitHub link; only the dataset is available via Google Drive.
+
 Task: Given a query narrative and two candidate narratives, select the one that
-forms a better analogical mapping with the query based on high-level message
+forms a better analogical mapping with the query based on proverbial message
 (system similarity) rather than surface features.
 
 Dataset:
@@ -13,9 +16,9 @@ Dataset:
   - Four partitions based on analogy type (near/far) and distractor similarity (high/low)
   - Human accuracy: 96%
 
-Prompt format (from Paper Appendix C.2 - GPT/Llama format):
-  narratives can be mapped to each other in terms of the high-level message they
-  strive to convey. These high-level messages can be related to traditions, common
+Prompt format (from Paper Appendix E.2 - GPT/Llama format):
+  narratives can be mapped to each other in terms of the proverbial message they
+  strive to convey. These proverbial messages can be related to traditions, common
   knowledge, or moral principles. We call this mapping analogical mapping. Which
   one of the two narratives (1, 2) can create a better analogical mapping with the
   query narrative? Answer in the template: {{narrative_x, because narrative_x and
@@ -60,8 +63,8 @@ class ARNScenario(Scenario):
 
     SUBSETS = ["all", "near_high", "near_low", "far_high", "far_low"]
 
-    # Exact prompt from Paper Appendix C.2 (GPT/Llama evaluation format)
-    PROMPT_TEMPLATE = """narratives can be mapped to each other in terms of the high-level message they strive to convey. These high-level messages can be related to traditions, common knowledge, or moral principles. We call this mapping analogical mapping. Which one of the two narratives (1, 2) can create a better analogical mapping with the query narrative? Answer in the template: {{{{narrative_x, because narrative_x and query_narrative are ...}}}}
+    # Exact prompt from Paper Appendix E.2 (GPT/Llama evaluation format)
+    PROMPT_TEMPLATE = """narratives can be mapped to each other in terms of the proverbial message they strive to convey. These proverbial messages can be related to traditions, common knowledge, or moral principles. We call this mapping analogical mapping. Which one of the two narratives (1, 2) can create a better analogical mapping with the query narrative? Answer in the template: {{{{narrative_x, because narrative_x and query_narrative are ...}}}}
 ———
 query_narrative: {query}
 ———

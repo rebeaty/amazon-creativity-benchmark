@@ -10,8 +10,11 @@ generate a novel conceptual solution. 13 design problems from the IDETC 2023
 paper, 12 with 100 crowdsourced human reference solutions each (Amazon
 Mechanical Turk). Problem 11 (peanut shell removal) excluded — no human refs.
 
-Prompt source: zero_shot.py in the GitHub repo. Four prompt variants:
-  base, novel, diverse, unique (paper's zero-shot conditions).
+Prompt source: prompt_engineering/zero_shot.py in the GitHub repo. Four
+  prompt variants: base, novel, diverse, unique (paper's zero-shot conditions).
+  Note: The original prompts request "100 design solutions" (batch generation
+  for statistical analysis). Adapted here to request a single solution per
+  call ("Generate a [qualifier] design solution for ...") for LLM evaluation.
 Fields used: design problem text, human reference solutions (CSV files)
 Fields skipped: GPT-3 generated outputs, image_url, few-shot data
 

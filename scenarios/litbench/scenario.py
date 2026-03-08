@@ -15,9 +15,14 @@ The test set on HuggingFace stores only Reddit comment IDs (for copyright
 compliance). This scenario rehydrates them via the PullPush API
 (api.pullpush.io), which requires no credentials.
 
-Prompt format: Based on the paper's evaluation prompt (src/dataloader.py).
+Prompt format: Based on the LLAMA_PROMPT Direct variant from
+  src/dataloader.py (SFTDataLoaderDirect class). Writing prompt context
+  prepended for richer evaluation signal (not in original template, which
+  only takes story_a/story_b).
 
   Writing prompt: {prompt}
+
+  Evaluate creative writing responses A and B.
 
   Story A:
   {story_a}
@@ -25,12 +30,15 @@ Prompt format: Based on the paper's evaluation prompt (src/dataloader.py).
   Story B:
   {story_b}
 
-  Which story is better written and more engaging? Consider originality,
-  imagery, emotional impact, coherence, and technical skill.
+  Consider these aspects:
+  - Originality: unique concepts, unexpected elements
+  - Imagery: sensory language and descriptions
+  - Emotional impact: how the writing affects the reader
+  - Coherence: logical flow and narrative structure
+  - Technical skill: language use and style
 
-  A) Story A
-  B) Story B
-  Answer:
+  FORMAT REQUIRED:
+  Preferred: [A or B]
 
 Fields used: chosen_comment_id, rejected_comment_id (from LitBench-Test)
   → rehydrated to: body (story text), link_id → submission title (prompt)
@@ -115,16 +123,21 @@ class LitBenchScenario(Scenario):
     description = "SAA-Lab/LitBench-Test"
     tags = ["creativity", "writing", "preference"]
 
+    # Based on LLAMA_PROMPT Direct variant from src/dataloader.py
+    # (SFTDataLoaderDirect class). Writing prompt context prepended.
     PROMPT_TEMPLATE = (
         "Writing prompt: {prompt}\n\n"
+        "Evaluate creative writing responses A and B.\n\n"
         "Story A:\n{story_a}\n\n"
         "Story B:\n{story_b}\n\n"
-        "Which story is better written and more engaging? Consider "
-        "originality, imagery, emotional impact, coherence, and "
-        "technical skill.\n\n"
-        "A) Story A\n"
-        "B) Story B\n"
-        "Answer:"
+        "Consider these aspects:\n"
+        "- Originality: unique concepts, unexpected elements\n"
+        "- Imagery: sensory language and descriptions\n"
+        "- Emotional impact: how the writing affects the reader\n"
+        "- Coherence: logical flow and narrative structure\n"
+        "- Technical skill: language use and style\n\n"
+        "FORMAT REQUIRED:\n"
+        "Preferred: [A or B]"
     )
 
     def _rehydrate(self, output_path: str) -> List[dict]:

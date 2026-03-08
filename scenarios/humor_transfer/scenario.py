@@ -13,7 +13,9 @@ binary humor classification tasks:
   - amazon_questions: Humorous vs non-humorous product questions from Amazon.
     Source: Ziser et al., 2020. AWS S3: humor-detection-pds
 
-Prompt source: Paper Appendix C instruction fine-tuning prompt (exact wording).
+Prompt source: Paper Appendix C instruction fine-tuning prompt (full template).
+  Uses the complete Alpaca-style format with preamble, ### Instruction,
+  ### Input, and ### Response sections. Labels: Yes/No per the paper.
 Fields used:
   sarcasm_headlines — headline, is_sarcastic
   amazon_questions — question, product_description, label
@@ -39,11 +41,16 @@ class HumorTransferScenario(Scenario):
 
     SUBSETS = ["sarcasm_headlines", "amazon_questions"]
 
-    # Paper Appendix C: instruction fine-tuning prompt
-    INSTRUCTION = (
+    # Paper Appendix C: full instruction fine-tuning prompt (Alpaca-style)
+    PROMPT_TEMPLATE = (
+        "Below is an instruction that describes a sentiment analysis task.\n\n"
+        "### Instruction:\n"
         "Given the following text, please determine if it should be "
         "classified as funny or not funny. Base your classification on "
-        "humor elements such as wit, irony, absurdity, or comedic timing."
+        "humor elements such as wit, irony, absurdity, or comedic timing.\n\n"
+        "### Input:\n"
+        "{text}\n\n"
+        "### Response:"
     )
 
     def __init__(self, subset: str = "sarcasm_headlines"):
@@ -103,16 +110,16 @@ class HumorTransferScenario(Scenario):
 
         instances = []
         for item in items:
-            prompt = f"{self.INSTRUCTION}\n\nText: {item['text']}"
+            prompt = self.PROMPT_TEMPLATE.format(text=item["text"])
 
             label = item["label"]
             references = [
                 Reference(
-                    Output(text="Funny"),
+                    Output(text="Yes"),
                     tags=[CORRECT_TAG] if label == 1 else [],
                 ),
                 Reference(
-                    Output(text="Not funny"),
+                    Output(text="No"),
                     tags=[CORRECT_TAG] if label == 0 else [],
                 ),
             ]

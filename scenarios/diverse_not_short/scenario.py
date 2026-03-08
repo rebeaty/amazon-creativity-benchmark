@@ -1,8 +1,8 @@
 """
 HELM Scenario: Diverse-not-Short Creativity Evaluation Suite
 
-Paper: "Diverse, not Short: Improving Length-Robustness of DPO-Based
-        Diverse Creative Writing" (EMNLP 2025)
+Paper: "Diverse, not Short: A Length-Controlled Data Selection Strategy
+        for Improving Response Diversity of Language Models" (EMNLP 2025)
        arXiv: 2505.16245
 Code: https://github.com/text-machine-lab/diverse-not-short
 
