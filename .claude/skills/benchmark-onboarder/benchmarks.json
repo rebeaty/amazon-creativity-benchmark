@@ -61,16 +61,6 @@
     "reason": "Non-English (Chinese); training corpus not evaluation benchmark; no standardized test set for evaluating external models"
   },
   {
-    "name": "V-FLUTE",
-    "paper_id": "0125e4f8d35544737086549b1dd894855e0cc5e7",
-    "url": "https://github.com/asaakyan/V-FLUTE",
-    "assigned_to": "VD",
-    "status": "completed",
-    "scenario_file": "scenarios/v_flute/scenario.py",
-    "eval_type": "custom",
-    "notes": "Duplicate entry — same paper as paper_id 2405.01474. Scenario already implemented at scenarios/v_flute/scenario.py (classification + explanation subsets). Note: scenarios/vflute/scenario.py has a bug (PIL Image passed as MediaObject location instead of file path); v_flute version is the correct implementation."
-  },
-  {
     "name": "CreataSet",
     "paper_id": "05b04bba9cbe127b4175906b57ce51e082fe3601",
     "url": "https://creval-creative-evaluation.github.io/",
@@ -134,7 +124,10 @@
     "paper_id": "06424848967aec352e1b5c3fcd8a414934e300a5",
     "url": "https://github.com/MING-ZCH/Let-Androids-Dream-of-Electric-Sheep",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/cii_bench/scenario.py",
+    "eval_type": "exact_match",
+    "notes": "Implemented as CII-Bench (Chinese Image Implication Benchmark) — the Chinese counterpart to ii_bench. The paper URL points to 'Let Androids Dream of Electric Sheep' which evaluates on CII-Bench (m-a-p/CII-Bench on HuggingFace). II-Bench (English) already exists as scenarios/ii_bench/. CII-Bench: 765 test instances, 6-choice MCQ with Chinese images (posters, comics, artworks, memes); test split has labels available; multimodal using MultimediaObject."
   },
   {
     "name": "Pun2Pun",
@@ -228,13 +221,6 @@
     "benchmark_name": "FSCG-8"
   },
   {
-    "name": "StoryER",
-    "paper_id": "0a3a8a54ba7c7e1dd05539a772b4c798c91fa683",
-    "url": "https://github.com/xindaaW/EvolvR",
-    "assigned_to": "VD",
-    "status": "pending"
-  },
-  {
     "name": "DeepMath-Creative",
     "paper_id": "0a5d466b39d5758e92b0a63fab6ca2c0ca9c74ea",
     "url": "https://github.com/DeepMathLLM/DeepMath",
@@ -324,7 +310,8 @@
     "paper_id": "19a9937a1029ee5b1f6da8a945ed9a5c5a029c57",
     "url": "https://github.com/microsoft/muzic/tree/master/DeepRapper/data",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "Not suitable for HELM onboarding: (1) No structured public dataset — only raw Chinese lyrics text files in a GitHub folder hierarchy (singer/album/song/), no HuggingFace release; (2) Evaluation requires Wasserstein Distance on beat distributions (FOD/SOD) — custom metric incompatible with standard LLM evaluation; (3) Task designed for DeepRapper (a specialized trained system), not general LLM prompting; (4) Output format requires Chinese rap with [BEAT] symbols and pinyin phonetic annotations — beyond standard LLM capabilities. Paper: ACL 2021, Microsoft Research Asia. Note: original URL (master/DeepRapper/data) is broken; repo restructured to main/deeprapper/data."
   },
   {
     "name": "ProPara-Logy",
@@ -433,7 +420,10 @@
     "paper_id": "222715cde1948ebe255099084c83f24c719fc917",
     "url": "https://huggingface.co/datasets/lampent/IRFL",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/irfl/scenario.py",
+    "eval_type": "exact_match",
+    "notes": "Duplicate entry — already fully onboarded under name 'IRFL' (see completed entry with url https://github.com/irfl-dataset/IRFL). Multimodal 4-way MC: given a figurative phrase + definition, choose the image that best visualizes its meaning. 3 figurative types: idioms, metaphors, similes. Requires downloading IRFL_images.zip (1.6GB) from HuggingFace on first run."
   },
   {
     "name": "Sonnet Generation",
@@ -509,7 +499,8 @@
     "paper_id": "28a3582ecab72e2a91ec9004075d744b8bac4640",
     "url": "https://anonymous.4open.science/r/IdeaBench-2747/",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "Dataset inaccessible — only available via anonymous review link (anonymous.4open.science/r/IdeaBench-2747/) which returns JavaScript challenge pages, not actual content. No public GitHub or HuggingFace repository found despite KDD 2025 publication (Aug 2025). Dataset: 2,374 target paper abstracts + 29,408 reference abstracts across 8 biomedical domains. Task: given reference abstracts, generate a novel research hypothesis. Evaluation: LLM-as-judge (GPT-4o) with custom two-stage 'Insight Score' (novelty + feasibility ranking). Future candidate if dataset is publicly released. Note: distinct from LiveIdeaBench (scenarios/liveideabench/) which is a different benchmark."
   },
   {
     "name": "Comparative Artistic Generation from LDM Prompts",
@@ -581,7 +572,10 @@
     "paper_id": "31710aec2104caeec51e15c2af9669aa38da97aa",
     "url": "https://vulab-ai.github.io/YESBUT_Homepage/",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/yesbut.py",
+    "eval_type": "open_ended",
+    "notes": "Duplicate entry pointing to YESBUT homepage. Both versions already onboarded: V1 (YesBut / Real Satirical Photographs Dataset) at scenarios/yesbut.py (HF: bansalaman18/yesbut, 1,075 examples, open-ended satire explanation); V2 (YESBUT V2) at scenarios/yesbut_v2/scenario.py (HF: zhehuderek/YESBUT_Benchmark_V2, 1,262 comics, 4 tasks: description/contradiction/moral_mcq/title_mcq)."
   },
   {
     "name": "Random Number Generation",
@@ -614,7 +608,10 @@
     "paper_id": "33fa4ce42102b19a6a6fe8a8e14ba8ab1e1c7c7a",
     "url": "https://huggingface.co/datasets/Oedon42/webnovelbench",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/webnovelbench/scenario.py",
+    "eval_type": "llm_judge",
+    "notes": "Duplicate entry — already fully onboarded (see completed entry at line ~3182 with url https://github.com/OedonLestrange42/webnovelbench). Chinese web novel synopsis-to-story generation; 4 quality-gradient subsets (a/b/c/d); 1,000 instances per subset; LLM-as-judge (DeepSeek-V3) on 8 narrative dimensions."
   },
   {
     "name": "Fann or Flop",
@@ -713,13 +710,6 @@
     "assigned_to": "SM",
     "status": "not_suitable",
     "reason": "Data access barrier - benchmark not ready. arXiv 2509.22641 (Sept 2025); paper titled 'Death of the Novel(ty): Beyond n-Gram Novelty as a Metric for Textual Creativity'; 7,542 expert annotations from 26 writers rating expressions on novelty/pragmaticality/meaningfulness; intended benchmark tasks: (1) novel expression identification, (2) non-pragmatic expression identification; repository README explicitly states files 'will be used for benchmarking'; however, test data (all_novel_expressions_main.csv, all_nonprag_expressions_main.csv) locked in password-protected raw_data.zip requiring Google Form submission; publicly available CSV files in for_linear_models/ contain labels but NOT actual text expressions; README mentions 'TBD: for_models folder contains the data processed for fine-tuning and few-shot evaluation' but this folder doesn't exist yet; once authors release benchmark-ready 'for_models' folder with public access, this would be a good candidate for onboarding"
-  },
-  {
-    "name": "Creation-MMBench",
-    "paper_id": "40fdf6a797754d0b09999ed44fa839c485d0f4ab",
-    "url": "https://github.com/open-compass/Creation-MMBench",
-    "assigned_to": "VD",
-    "status": "pending"
   },
   {
     "name": "Pun Understanding Evaluation",
@@ -854,7 +844,8 @@
     "paper_id": "442e3bc6b9773ed90faea2dfbbbd441d2c8108d0",
     "url": "https://github.com/Awesome-AutoDesign/DiffDesign",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "Image generation benchmark, not LLM benchmark. DiffDesign is a controllable diffusion model for interior design generation; DesignHelper dataset has 600+ design solution pairs (floor plans + renderings + JSON descriptions). Evaluation uses CLIP score and human judgment on generated images — not applicable to LLM text evaluation. Dataset also requires permission to download. Paper: PLOS One 2024 (arXiv:2411.16301)."
   },
   {
     "name": "Hypothesis Search",
@@ -1135,13 +1126,6 @@
     "modalities": "text+images"
   },
   {
-    "name": "MLLM-Bench",
-    "paper_id": "658a67be17e32998480ff51ba4c0d832e86db441",
-    "url": "https://github.com/FreedomIntelligence/MLLM-Bench",
-    "assigned_to": "VD",
-    "status": "pending"
-  },
-  {
     "name": "LLM-MA Balderdash",
     "paper_id": "69723e2a291b5944b58f0e2bdb8e832a1b3b49ef",
     "url": "https://github.com/ParsaHejabi/Simulation-Framework-for-Multi-Agent-Balderdash",
@@ -1408,19 +1392,6 @@
     "reason": "Method paper, not a reusable benchmark. WACV 2025; introduces multi-mask inpainting method connecting MLLMs with diffusion models; task is text-guided multi-mask inpainting (image generation) requiring HEIM framework; uses WikiArt dataset (116,475 images) with automatic annotations from Kosmos-2 (global) and LLaVA (object-level), not human ground truth; evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) measure image generation quality; no standardized protocol for evaluating arbitrary models; primary contribution is method architecture (fine-tuned LLaVA for prompt generation + Stable Diffusion with rectified cross-attention for inpainting), not benchmark dataset; requires vision models and image generation evaluation capabilities outside HELM's text-only scope; would need HEIM for image generation evaluation; GitHub: cilabuniba/i-dream-my-painting"
   },
   {
-    "name": "CreativeMath",
-    "paper_id": "7f711911c4cf3180d6a1fed0ced88a2749b0b7a5",
-    "url": "https://arxiv.org/abs/2410.18336",
-    "assigned_to": "VD",
-    "status": "completed",
-    "scenario_file": "scenarios/creativemath/scenario.py",
-    "eval_type": "llm_judge",
-    "notes": "Novel solution generation for competition math problems; 400 problems across 8 levels (AMC 8/10/12, AHSME, AIME, USAJMO, USAMO, IMO), 50 each; 605 instances total (k=1..n reference solutions per problem); 3-stage LLM-as-judge evaluation: (1) correctness (unanimous vote from 3 judges), (2) coarse-grained novelty vs shown solutions (majority vote), (3) fine-grained novelty vs withheld solutions (majority vote); dataset: windchimeran/creativemath_full on HuggingFace; GitHub: JunyiYe/CreativeMath; AAAI 2025"
-    "url": "",
-    "assigned_to": "VD",
-    "status": "pending"
-  },
-  {
     "name": "CreativePair",
     "paper_id": "81aa8d0c94bbf8b928f9e946140b3af2bcddec17",
     "url": "https://arxiv.org/abs/2508.12628",
@@ -1492,13 +1463,6 @@
     "scenario_file": "scenarios/llm_discussion_scenario.py",
     "eval_type": "llm_judge",
     "notes": "4 classic divergent thinking creativity tests (120 total items). (1) AUT: 30 objects, creative uses. (2) Similarities: 30 pairs, ways two things are alike. (3) Instances: 30 categories, name things in category. (4) Scientific: 30 scientific creativity questions across 5 types. All use LLM-as-judge on 4 dimensions: Fluency (count), Flexibility (count), Originality (1-5), Elaboration (1-5). Judge: GPT-4 or GPT-3.5. Subsets: aut, similarities, instances, scientific, all. Paper: COLM 2024 (arXiv:2405.06373)."
-  },
-  {
-    "name": "PoetMT",
-    "paper_id": "85f22e830bedbae809c6e57d374f4ad3cd2f76e5",
-    "url": "https://github.com/andongBlue/PoetMT",
-    "assigned_to": "VD",
-    "status": "pending"
   },
   {
     "name": "Research Idea Execution Study",
@@ -1727,13 +1691,6 @@
     "reason": "Training data only; evaluation requires human-in-the-loop interaction. Original paper (EMNLP 2020) uses machine-in-the-loop platform where authors edit AI continuations. HuggingFace dataset has only train split (5,743 examples), no test set. Incompatible with automated evaluation."
   },
   {
-    "name": "IDRBench",
-    "paper_id": "a54e0011f478d476f4582ce1234d56d1974729fe",
-    "url": "",
-    "assigned_to": "VD",
-    "status": "pending"
-  },
-  {
     "name": "Human Evaluation of Fashion Generation",
     "paper_id": "a33ba08c5f7f4c11205ea19d4a8718cc5bb5de98",
     "url": "https://arxiv.org/abs/2407.14944",
@@ -1840,8 +1797,8 @@
     "paper_id": "ab093afc8fc9619a3331b7e59539f67707e78f53",
     "url": "https://github.com/jamesBaker361/clipcreate",
     "assigned_to": "VD",
-    "notes": "dataset used in this paper are repeated"
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "Not a benchmark — clipcreate is a generative model training toolkit (KMeans + GANs + diffusion models) that uses AVA as a training dataset. Introduces no new evaluation tasks or dataset. The AVA benchmark itself is already onboarded at scenarios/ava/scenario.py (CVPR 2012, 255,500 images, aesthetic score prediction)."
   },
   {
     "name": "FlickrStyle10k",
@@ -2163,8 +2120,8 @@
     "paper_id": "c7d2c6b926fc2c2971b7c6c440658fe117d41062",
     "url": "",
     "assigned_to": "VD",
-    "notes": "Added by NS - I couldn't find the dataset url"
-    "status": "pending"
+    "notes": "Added by NS - I couldn't find the dataset url",
+    "status": "not_suitable"
   },
   {
     "name": "Beyond Memorization: Originality-Quality Frontier",
@@ -2408,7 +2365,10 @@
     "paper_id": "d0653e0910d34f34c24f97052886bed5067eb64f",
     "url": "https://github.com/elianakim/Amuse",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "completed",
+    "scenario_file": "scenarios/amuse_chord_generation/scenario.py",
+    "eval_type": "custom",
+    "notes": "Duplicate entry — already fully onboarded as 'Amuse - Chord Progression Generation' (see completed entry ~line 3460, same GitHub URL). Music chord progression generation from keywords; 254 music keywords; batch prompting (30 progressions at once); evaluation via Self-BLEU diversity + Jensen-Shannon Divergence against Hooktheory dataset. CHI 2025."
   },
   {
     "name": "Conditional Story Generation Evaluation (TheNextChapter)",
@@ -2483,16 +2443,6 @@
       ],
       "evaluation_notes": "scenarios/haivmet/evaluation_notes.md"
     }
-  },
-  {
-    "name": "FunQA",
-    "paper_id": "cbf052125c90f78d8750f7d447121193ef53d2f8",
-    "url": "https://github.com/Fun-QA/FunQA",
-    "assigned_to": "VD",
-    "status": "completed",
-    "scenario_file": "scenarios/funqa/scenario.py",
-    "eval_type": "open_ended",
-    "notes": "Duplicate entry — same paper as paper_id 2306.14899 (ECCV 2024). Video QA benchmark; scenario uses HELM MediaObject for video input. Requires videos to be pre-downloaded via YouTube IDs provided by dataset. Dataset: fesvhtr/FunQA on HuggingFace. 30,170 test instances across HumorQA, CreativeQA, MagicQA subsets."
   },
   {
     "name": "FilmScoreDB",
@@ -2676,13 +2626,6 @@
     "reason": "Multimodal (image generation); requires HEIM framework. ICML 2023, arXiv:2301.11722; 'Diffusion Models as Artists: Are we Closing the Gap between Humans and Machines?'; evaluation framework for one-shot generative models comparing humans and machines on one-shot image generation task; extends 'diversity vs. recognizability' framework (Boutin et al., 2022, arXiv:2205.10370) to evaluate diffusion models (DDPM, CFGDM, FSDM) alongside GANs and VAEs; three evaluation metrics: (1) Recognizability - how recognizable generated images are, (2) Diversity - intra-class variability in generated samples, (3) Originality - measured via generalization curves showing evolution of recognizability as function of originality; evaluated on Omniglot dataset (handwritten characters, 1,320 models tested) and QuickDraw dataset (hand-drawn sketches, 1,212 models tested); task: given one example of handwritten character or sketch, generate diverse yet recognizable variations; findings show diffusion models have closed gap between humans and machines but humans still produce more recognizable samples at higher originality levels; human features are fewer and more localized than diffusion model features; requires training diffusion models on image datasets and evaluating generated images; datasets available via Google Drive; outside HELM's text-only scope; would need HEIM framework; GitHub: serre-lab/diffusion_as_artist"
   },
   {
-    "name": "POLLUX",
-    "paper_id": "d607efe5c974cf8ce06cfee60103417f0de4c25b",
-    "url": "https://huggingface.co/datasets/ai-forever/POLLUX",
-    "assigned_to": "VD",
-    "status": "pending"
-  },
-  {
     "name": "Sudoku-Bench",
     "paper_id": "eb16b5ac4035510a3c523114c3fd09ff4113f120",
     "url": "https://huggingface.co/datasets/SakanaAI/Sudoku-Bench",
@@ -2712,7 +2655,8 @@
     "paper_id": "e2f05b7885ec5295e80a51d7264adc08681d9f14",
     "url": "https://anonymous.4open.science/r/CoVO-grpo/",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "Duplicate entry — same anonymous URL as 'Thinking Outside the (Gray) Box' (line ~3586, already marked not_suitable). Methods paper by Franceschelli & Musolesi proposing CoVO (Context-based Value and Originality) score as RL reward signal. Introduces GutenVerse (~84k poems) as reference corpus for originality metric, not an evaluation benchmark. No standardized test set or evaluation protocol. Evaluates on existing benchmarks (NoveltyBench, GSM8K, MATH). Anonymous link also inaccessible."
   },
   {
     "name": "Codeforces",
@@ -2976,7 +2920,8 @@
     "paper_id": "fc3ddf3292653047b6cf0f33b739e7af299191ad",
     "url": "https://arxiv.org/abs/2505.08531",
     "assigned_to": "VD",
-    "status": "pending"
+    "status": "not_suitable",
+    "reason": "3D crystal structure generation model, not an LLM benchmark. BBA MOF Diffusion is an SE(3)-equivariant diffusion model that generates 3D all-atom metal-organic framework (MOF) crystal structures trained on CoRE-MOF database. Task is generating 3D atom coordinates (unit cells up to 1,000 atoms), not text. Evaluation uses geometric validity, novelty, and diversity of 3D structures — not applicable to LLM text evaluation. No public GitHub/HuggingFace dataset. Paper: arXiv:2505.08531, May 2025."
   },
   {
     "name": "ConvBench",
@@ -3508,14 +3453,6 @@
     "scenario_file": "scenarios/materials_transformers/bandgap_30k_scenario.py",
     "eval_type": "custom",
     "notes": "Property-conditional formula generation (wide-bandgap materials). Bandgap-30K: ~30K materials from Materials Project with bandgap > 1.98 eV. Task: Generate high-bandgap material compositions. Tests property-targeted generation and bandgap prediction capability. Evaluation: Validity, uniqueness, novelty, plus optional bandgap validation. Dataset: Figshare MT_dataset (mp/ folder)."
-  },
-  {
-    "name": "Patent Novelty Evaluation Dataset",
-    "paper_id": "2502.06316",
-    "url": "https://arxiv.org/abs/2502.06316",
-    "status": "not_suitable",
-    "reason": "Not a creativity benchmark; dataset unavailable",
-    "notes": "Binary classification task (Novel vs Non-Novel) comparing patent claims against prior art. 3,975 USPTO patents from 2014-2015 (1,396 train, 166 val, 398 test). Evaluates legal/technical judgment for patent examination, NOT creative generation or thinking. Dataset not publicly released (no GitHub/HuggingFace as of Feb 2025). Authors: Ikoma & Mitamura. IPC G06F domain only."
   },
   {
     "name": "Amuse - Chord Progression Generation",
