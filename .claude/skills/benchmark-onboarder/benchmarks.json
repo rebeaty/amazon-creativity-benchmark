@@ -1150,7 +1150,7 @@
     "url": "https://huggingface.co/datasets/6cf/liveideabench-v2",
     "assigned_to": "SM",
     "status": "not_suitable",
-    "reason": "No ground truth; dataset contains model outputs with LLM-judge scores, not test instances. Evaluates scientific idea generation using 1,180 keywords, but dataset has model-generated ideas with comparative LLM-judged scores only. No reference ideas. Evaluation is comparative only, not absolute. Updates monthly (dynamic benchmark)."
+    "reason": "Dataset only has a train split; no test split available for evaluation."
   },
   {
     "name": "IGA Intent-Guided Generation Evaluation",
