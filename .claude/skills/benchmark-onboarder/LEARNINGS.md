@@ -55,6 +55,10 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | II-Bench | 6-option multiple choice | Each question has 6 options (A-F), unlike typical 4-option MC; answer field contains letter (A-F), correct_option contains full text |
 | StoryER | Dataset on Google Drive, not HuggingFace | Manual download required from Google Drive links; mixed format (pickle for ranking, JSON for rating/reasoning) |
 | StoryER | Meta-evaluation benchmark | Primarily evaluates existing stories (ranking/rating quality) rather than generating creative content; Task 3 (reasoning/comment generation) is the only generative component |
+| MOOSE | Data in xlsx on GitHub, not HuggingFace | Download `Data/business_research.xlsx` via raw GitHub URL; columns are `background_1_title`, `background_1_passage`, `background_2_title`, `background_2_passage`, `Main hypotheis` (typo); requires openpyxl |
+| MOOSE | Gold hypothesis column has typo | Column name is `Main hypotheis` (missing 's') — not `Main hypothesis` |
+| MOOSE | Original evaluator omits background from judge prompt | `evaluator.py` passes only `pre_prompt + cur_hyp + post_prompt` to GPT-4; background not included. HELM annotator_notes.md extends this to include background for grounded evaluation |
+| MOOSE | 3 eval dimensions, not 4 | CSV summary incorrectly lists Novelty/Clarity/Significance/Verifiability; actual evaluate_utils.py uses Validness/Novelty/Helpfulness on 1-5 scale |
 | StoryER | Three distinct tasks with different formats | Task 1: binary preference (ranking pairs), Task 2: aspect ratings (0-1 scale), Task 3: comment generation (open-ended text) |
 | Creation-MMBench | Multi-image multimodal benchmark | 1-9 images per question (most have 1: 677/765); images stored as list of PIL objects in 'image' field; instance-specific evaluation criteria stored as Python dict string in 'criteria' field (parse with ast.literal_eval) |
 | Creation-MMBench | Mixed reference sources | 356/765 examples have human 'ground_truth', remaining 409 use 'reference_answer_by_gpt4o'; prefer ground_truth when available |

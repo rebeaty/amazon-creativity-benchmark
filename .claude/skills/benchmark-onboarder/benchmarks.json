@@ -542,8 +542,10 @@
     "paper_id": "31eb5852bf31206d247bef22c8636f48b0c25fe9",
     "url": "https://github.com/ZonglinY/MOOSE",
     "assigned_to": "SM",
-    "status": "not_suitable",
-    "notes": "Hypothesis generation framework, not evaluation benchmark. Multi-module system for generating scientific hypotheses from research backgrounds. Dataset: 50 social science paper backgrounds as inputs to generation system. Evaluation via GPT-4 or human experts on system-generated hypotheses, not standardized test set for evaluating new models. ACL 2024 Findings; ICML 2024 AI4Science best poster. Similar to SciMON and HypoGen - method paper, not reusable benchmark."
+    "status": "completed",
+    "eval_type": "llm_judge",
+    "scenario_file": "scenarios/moose_scenario.py",
+    "notes": "50 social science background pairs from business_research.xlsx (GitHub raw download). Task: generate hypothesis from 2 background documents. GPT-4 judge on Validness/Novelty/Helpfulness (1-5). Gold hypotheses in 'Main hypotheis' column (typo in source). See scenarios/moose/annotator_notes.md."
   },
   {
     "name": "WebNovelBench",
