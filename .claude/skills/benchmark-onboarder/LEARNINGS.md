@@ -59,6 +59,11 @@ Add issues and patterns here as you discover them. Everyone on the team benefits
 | MOOSE | Gold hypothesis column has typo | Column name is `Main hypotheis` (missing 's') — not `Main hypothesis` |
 | MOOSE | Original evaluator omits background from judge prompt | `evaluator.py` passes only `pre_prompt + cur_hyp + post_prompt` to GPT-4; background not included. HELM annotator_notes.md extends this to include background for grounded evaluation |
 | MOOSE | 3 eval dimensions, not 4 | CSV summary incorrectly lists Novelty/Clarity/Significance/Verifiability; actual evaluate_utils.py uses Validness/Novelty/Helpfulness on 1-5 scale |
+| MOOSE-Chem2 | Branch is `master`, not `main` | Raw URLs need `/master/` not `/main/`; e.g. `https://github.com/ZonglinY/MOOSE-Chem2/raw/master/Data/...` |
+| MOOSE-Chem2 | 51 rows in xlsx, 38 entries in processed_research_direction.json | Use xlsx directly (51 complete instances); json file is a subset used internally by the method |
+| MOOSE-Chem2 | Input includes coarse hypothesis as hint | Columns: Background Question + Background Little Survey + Main hypothesis → generate Finegrained Hypothesis |
+| MOOSE-Chem2 | Two-stage component recall evaluation | (1) Extract components from generated + ground-truth with LLM; (2) Score coverage 0-3 per ground-truth component; Soft Recall = coverage>0, Hard Recall = coverage==3 |
+| MOOSE-Chem2 | Pairwise comparison uses 5 dimensions | Overall, Effectiveness, Novelty, Detailedness, Feasibility; judge model is GPT-4o-mini |
 | StoryER | Three distinct tasks with different formats | Task 1: binary preference (ranking pairs), Task 2: aspect ratings (0-1 scale), Task 3: comment generation (open-ended text) |
 | Creation-MMBench | Multi-image multimodal benchmark | 1-9 images per question (most have 1: 677/765); images stored as list of PIL objects in 'image' field; instance-specific evaluation criteria stored as Python dict string in 'criteria' field (parse with ast.literal_eval) |
 | Creation-MMBench | Mixed reference sources | 356/765 examples have human 'ground_truth', remaining 409 use 'reference_answer_by_gpt4o'; prefer ground_truth when available |

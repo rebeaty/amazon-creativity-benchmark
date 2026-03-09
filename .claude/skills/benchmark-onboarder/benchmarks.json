@@ -2188,8 +2188,10 @@
     "paper_id": "d948d316bc2c74d8d31d0128e68e1e813642fb40",
     "url": "https://github.com/ZonglinY/MOOSE-Chem2",
     "assigned_to": "SM",
-    "status": "not_suitable",
-    "notes": "Hypothesis generation framework, not evaluation benchmark. MOOSE-Chem2 introduces task of fine-grained scientific hypothesis discovery via hierarchical search. Dataset: expert-annotated fine-grained chemistry hypotheses from post-2024 papers; 50+ research directions with coarse-grained hypotheses as inputs. Evaluation via pairwise comparison and recall on system-generated hypotheses, not standardized test set for evaluating new models. NeurIPS 2025. Same category as MOOSE (ACL 2024) - method paper, not reusable benchmark."
+    "status": "completed",
+    "eval_type": "llm_judge",
+    "scenario_file": "scenarios/moose_chem2_scenario.py",
+    "notes": "51 chemistry instances from chem_research_2024_finegrained.xlsx (GitHub raw download, master branch). Input: Background Question + Background Little Survey + Main hypothesis (coarse). Reference: Finegrained Hypothesis. Two eval modes: component-based Soft/Hard Recall and pairwise comparison (Overall, Effectiveness, Novelty, Detailedness, Feasibility). See scenarios/moose_chem2/annotator_notes.md."
   },
   {
     "name": "Hakka Cultural Knowledge Cognitive Domain Dataset",
