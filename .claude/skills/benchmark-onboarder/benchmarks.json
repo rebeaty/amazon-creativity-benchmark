@@ -1649,8 +1649,10 @@
     "paper_id": "a9fcbfe0ef7c3ba4787890995d7e0231abc9f6cf",
     "url": "https://github.com/qiancheng0/ModelingAgent",
     "assigned_to": "SM",
-    "status": "rejected",
-    "rejection_reason": "Method paper for multi-agent system; evaluation too complex for HELM. arXiv 2505.15068 (May 2025); ModelingBench has 68 math modeling problems from COMAP competitions; requires ModelingAgent multi-agent framework (4 agents: Idea Proposer, Data Searcher, Modeling Implementor, Report Writer); long-form report generation (full research papers); complex ModelingJudge evaluation with 6 dimensions (structural_coherency, scoring_decomposition, modeling_groundedness, data_groundedness, analysis_groundedness, innovativeness) \u00d7 4 expert roles per problem = 24 LLM judge calls per problem; multimodal (images with data tables); requires external tools (search API, data analysis); primary contribution is the multi-agent system, not a reusable benchmark for evaluating other models"
+    "status": "onboarded",
+    "eval_type": "llm_judge",
+    "scenario_path": "scenarios/modeling_bench/scenario.py",
+    "notes": "11 problems from GitHub JSON (no HuggingFace); question field has <img> tags stripped; 6-dimension ModelingJudge with role-based evaluation; see annotator_notes.md"
   },
   {
     "name": "Listening Test for Agent-based Lyric Generation",
