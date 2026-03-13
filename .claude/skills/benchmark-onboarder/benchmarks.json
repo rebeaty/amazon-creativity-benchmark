@@ -1290,7 +1290,7 @@
     "arxiv": "2411.19050",
     "assigned_to": "SM",
     "status": "rejected",
-    "rejection_reason": "Method paper, not a reusable benchmark. WACV 2025; introduces multi-mask inpainting method connecting MLLMs with diffusion models; task is text-guided multi-mask inpainting (image generation) requiring HEIM framework; uses WikiArt dataset (116,475 images) with automatic annotations from Kosmos-2 (global) and LLaVA (object-level), not human ground truth; evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) measure image generation quality; no standardized protocol for evaluating arbitrary models; primary contribution is method architecture (fine-tuned LLaVA for prompt generation + Stable Diffusion with rectified cross-attention for inpainting), not benchmark dataset; requires vision models and image generation evaluation capabilities outside HELM's text-only scope; would need HEIM for image generation evaluation; GitHub: cilabuniba/i-dream-my-painting"
+    "rejection_reason": "Method paper, not a reusable creativity benchmark. WACV 2025; primary task is text-guided multi-mask inpainting (image generation); evaluation metrics (FID, LPIPS, PSNR, CLIP-IQA) require pixel-level comparison of generated images - HELM/HEIM evaluate text outputs only, not generated images. Prompt generation subtask (image → text description) is captioning, not creativity evaluation, and ground truth annotations are machine-generated (Kosmos-2, LLaVA) not human-labeled. Primary contribution is the inpainting method architecture, not a benchmark dataset."
   },
   {
     "name": "",
