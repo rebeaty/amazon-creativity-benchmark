@@ -33,6 +33,15 @@ The Material Generation Benchmark evaluates LLMs on generating crystal structure
 - **Input properties:** Material ID, energy per atom, pressure (10 GPa)
 - **Source:** AIRSS (ab initio random structure searching)
 
+### 4. MOF (Metal-Organic Frameworks) (`mof_scenario.py`)
+- **Size:** 324,426 MOF structures from Boyd et al. (2019)
+- **Atoms:** Hundreds of atoms per structure (complex porous materials)
+- **Components:** Metal nodes + organic linkers
+- **Test set:** ~32,443 instances (10% split, 8:1:1 train/valid/test)
+- **Input properties:** Metal nodes, organic linkers, topology
+- **Source:** Zenodo (15187230), MOFFlow (ICLR 2025)
+- **Benchmark:** MOFFlow baseline achieves 31.69% match rate
+
 ## Task Format
 
 **Input (Prompt):**

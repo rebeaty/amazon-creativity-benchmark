@@ -13,7 +13,7 @@ Claude Code has a **memory hierarchy** that loads context every time you start a
 | `~/.claude/CLAUDE.md` | Personal (all projects) | Your initials, preferred style, personal shortcuts |
 | `CLAUDE.md` | This project | Project overview, key commands, conventions |
 | `.claude/skills/*/SKILL.md` | Specific workflows | Task-specific instructions (like benchmark onboarding) |
-| `.claude/skills/*/LEARNINGS.md` | Team knowledge | Mistakes we've caught, patterns that work |
+| `.claude/skills/*/LEARNINGS.md` | Team knowledge | Mistakes we've caught, patterns that work — **read before every benchmark** |
 
 **Key insight**: Claude reads these files automatically. When you teach Claude something once and add it to the right file, it remembers forever.
 

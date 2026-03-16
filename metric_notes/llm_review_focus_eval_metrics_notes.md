@@ -1,0 +1,378 @@
+# Metric Implementation Notes: LLM Review Focus
+
+## Overview
+
+The Focus-Level Evaluation Framework measures whether LLM-generated reviews attend to the same critical facets that human expert reviewers prioritize. Unlike surface-level metrics (BLEU, ROUGE) or content-level metrics (specificity, factual accuracy), this framework evaluates the **distribution of attention** across predefined review facets.
+
+## Paper Reference
+
+- **Title**: Mind the Blind Spots: A Focus-Level Evaluation Framework for LLM Reviews
+- **Authors**: Hyungyu Shin, et al.
+- **Venue**: EMNLP 2025
+- **URL**: https://arxiv.org/abs/2502.17086
+- **Paper ID**: 37841d9036313b43d2a4069bc3f1493e9dc598da
+
+## Evaluation Framework
+
+### Target Facets (7 categories)
+
+What aspects of the paper are being discussed:
+
+1. **Problem**: Research problem formulation and motivation
+2. **Prior Research**: Related work and positioning in the literature
+3. **Method**: Proposed approach, algorithm, or technique
+4. **Theory**: Theoretical foundations and analysis
+5. **Experiment**: Experimental design, setup, and results
+6. **Conclusion**: Findings, implications, and future work
+7. **Paper**: Overall presentation, writing quality, organization
+
+### Aspect Facets (5 categories)
+
+How the target is being evaluated:
+
+1. **Impact**: Significance and potential contribution to the field
+2. **Novelty**: Originality and innovation
+3. **Clarity**: Presentation quality and understandability
+4. **Validity**: Technical correctness and soundness
+5. **Not-specific**: General comments not fitting other categories
+
+### Focus Operationalization
+
+**Focus** = normalized distribution of attention across facets
+
+For a review with N review points (strengths/weaknesses):
+```
+focus_distribution[facet] = count(facet) / N
+```
+
+Where each review point is annotated with target and aspect labels.
+
+## Evaluation Metrics
+
+### 1. Focus Distribution Analysis (Primary Metric)
+
+**Measure**: KL Divergence between LLM and human expert focus distributions
+
+```python
+def kl_divergence(P_human, P_llm):
+    """
+    Compute KL divergence between human and LLM focus distributions.
+
+    Args:
+        P_human: Human expert focus distribution (dict or array)
+        P_llm: LLM focus distribution (dict or array)
+
+    Returns:
+        KL divergence score (lower is better)
+    """
+    kl_div = 0
+    for facet in P_human.keys():
+        if P_human[facet] > 0:
+            kl_div += P_human[facet] * log(P_human[facet] / (P_llm[facet] + epsilon))
+    return kl_div
+```
+
+**Interpretation**:
+- **Lower KL divergence** = LLM focus aligns better with human experts
+- **Higher KL divergence** = LLM has different focus priorities
+
+### 2. Facet Coverage (F1 Score)
+
+**Measure**: F1 score for identifying which targets and aspects appear in reviews
+
+```python
+def compute_facet_f1(human_facets, llm_facets):
+    """
+    Compute F1 score for facet identification.
+
+    Args:
+        human_facets: Set of (target, aspect) tuples from human review
+        llm_facets: Set of (target, aspect) tuples from LLM review
+
+    Returns:
+        F1 score for facet matching
+    """
+    true_positives = len(human_facets & llm_facets)
+    precision = true_positives / len(llm_facets) if llm_facets else 0
+    recall = true_positives / len(human_facets) if human_facets else 0
+    f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0
+    return f1
+```
+
+**Paper Result**: Best model (GPT-4o) achieved F1=0.373
+
+### 3. Content Quality Metrics (Secondary)
+
+Standard text generation metrics as baselines:
+
+- **ROUGE-L**: Longest common subsequence overlap with expert reviews
+- **BERTScore**: Semantic similarity using BERT embeddings
+- **Length Ratio**: Generated review length vs. expert review length
+
+## Implementation Requirements
+
+### Step 1: Automatic Facet Annotation
+
+The framework uses an **automatic annotation pipeline** to label review points with targets and aspects.
+
+**Annotation Model**: Fine-tuned classifier (details in paper Section 3.2)
+- Input: Individual review point (strength or weakness)
+- Output: Target label + Aspect label
+
+```python
+def annotate_review_point(review_point: str, annotator_model) -> tuple:
+    """
+    Automatically annotate a review point with target and aspect.
+
+    Args:
+        review_point: Single strength or weakness statement
+        annotator_model: Fine-tuned classifier
+
+    Returns:
+        (target_label, aspect_label) tuple
+    """
+    target = annotator_model.predict_target(review_point)
+    aspect = annotator_model.predict_aspect(review_point)
+    return (target, aspect)
+```
+
+**Training Data**:
+- 3,657 annotated strengths/weaknesses from human experts
+- 582 training samples, 98 test samples
+
+### Step 2: Review Point Extraction
+
+Parse generated reviews into individual strengths and weaknesses:
+
+```python
+def extract_review_points(review_text: str) -> dict:
+    """
+    Extract structured review points from generated text.
+
+    Args:
+        review_text: Full review generated by LLM
+
+    Returns:
+        {
+            'strengths': List[str],
+            'weaknesses': List[str]
+        }
+    """
+    # Use heuristics or LLM to parse review structure
+    # Look for sections like "Strengths:", "Weaknesses:", etc.
+    # Return individual bullet points or sentences
+    pass
+```
+
+### Step 3: Compute Focus Distribution
+
+```python
+from collections import Counter
+
+def compute_focus_distribution(review_points: List[tuple]) -> dict:
+    """
+    Compute normalized focus distribution across facets.
+
+    Args:
+        review_points: List of (target, aspect) tuples
+
+    Returns:
+        Distribution dict with normalized counts
+    """
+    target_counts = Counter([target for target, aspect in review_points])
+    aspect_counts = Counter([aspect for target, aspect in review_points])
+
+    total = len(review_points)
+
+    target_dist = {t: count / total for t, count in target_counts.items()}
+    aspect_dist = {a: count / total for a, count in aspect_counts.items()}
+
+    return {
+        'target_distribution': target_dist,
+        'aspect_distribution': aspect_dist
+    }
+```
+
+### Step 4: Compare Distributions
+
+```python
+import numpy as np
+
+def evaluate_focus_alignment(llm_reviews, human_reviews):
+    """
+    Evaluate LLM focus alignment with human experts.
+
+    Args:
+        llm_reviews: List of LLM-generated reviews with annotations
+        human_reviews: List of human expert reviews with annotations
+
+    Returns:
+        Evaluation metrics dict
+    """
+    # Aggregate distributions
+    llm_dist = aggregate_distributions(llm_reviews)
+    human_dist = aggregate_distributions(human_reviews)
+
+    # Compute KL divergence
+    kl_target = kl_divergence(human_dist['target'], llm_dist['target'])
+    kl_aspect = kl_divergence(human_dist['aspect'], llm_dist['aspect'])
+
+    # Compute F1 for facet coverage
+    f1_scores = [
+        compute_facet_f1(
+            set(human_facets),
+            set(llm_facets)
+        )
+        for human_facets, llm_facets in zip(human_reviews, llm_reviews)
+    ]
+    mean_f1 = np.mean(f1_scores)
+
+    return {
+        'kl_divergence_target': kl_target,
+        'kl_divergence_aspect': kl_aspect,
+        'mean_f1_facet_coverage': mean_f1,
+        'target_distribution_llm': llm_dist['target'],
+        'target_distribution_human': human_dist['target'],
+        'aspect_distribution_llm': llm_dist['aspect'],
+        'aspect_distribution_human': human_dist['aspect']
+    }
+```
+
+## Key Findings from Paper
+
+### Focus Bias in LLMs
+
+**Target Facets**:
+- LLMs focus heavily on **Method** and **Experiment**
+- Underrepresent **Problem** and **Prior Research**
+
+**Aspect Facets**:
+- LLMs overemphasize **Validity** (technical correctness)
+- Significantly overlook **Novelty** assessment
+- Finding: "LLMs show biased focus towards technical validity while significantly overlooking novelty assessment"
+
+### Performance by Model
+
+**Best Performing**: GPT-4o
+- F1 Score: 0.373 (facet matching)
+- Still substantial gap from human expert focus
+
+**Model Ranking** (8 LLMs evaluated):
+1. GPT-4o
+2. GPT-4-turbo
+3. DeepSeek-V2.5
+4. Llama-3.1-70B
+5. (Others)
+
+### Fine-tuning Results
+
+- **Fine-tuned GPT-4o** on 582 training samples improved focus alignment
+- KL divergence decreased (better alignment with experts)
+- F1 score increased (better facet coverage)
+
+## Integration into HELM
+
+### Metric Class Structure
+
+```python
+from helm.benchmark.metrics.metric import Metric
+from helm.benchmark.metrics.metric_name import MetricName
+from helm.benchmark.metrics.statistic import Stat
+
+class ReviewFocusMetric(Metric):
+    """
+    Computes focus-level evaluation metrics for review generation.
+    """
+
+    def __init__(self, annotator_model_path: str):
+        """
+        Initialize with path to facet annotator model.
+        """
+        self.annotator = load_annotator(annotator_model_path)
+
+    def evaluate_generation(
+        self,
+        adapter_spec,
+        request_state,
+        metric_service,
+        eval_cache_path,
+    ) -> List[Stat]:
+        """
+        Evaluate generated review against expert review.
+
+        Steps:
+        1. Extract review points from generation
+        2. Annotate each point with target/aspect
+        3. Compute focus distribution
+        4. Compare to human expert distribution
+        5. Return KL divergence, F1, and distribution stats
+        """
+        # Implementation here
+        pass
+```
+
+### Dependencies
+
+- **Annotator Model**: Fine-tuned classifier for target/aspect labeling
+  - Training data: 3,657 annotated review points
+  - Architecture: Likely transformer-based (BERT/RoBERTa)
+  - Available in Figshare dataset (check for model checkpoint)
+
+- **Python Packages**:
+  ```
+  scipy  # for KL divergence
+  sklearn  # for F1 score
+  transformers  # for annotator model
+  ```
+
+## Validation Data
+
+**Dataset**: 676 papers from ICLR (2021-2024)
+- **Source**: OpenReview meta-reviews
+- **Location**: https://figshare.com/s/d5adf26c802527dd0f62
+- **Splits**: 582 train, 98 test
+
+**Annotations**:
+- 3,657 human expert review points (targets + aspects)
+- 43,042 LLM-generated review points (8 models)
+
+**Inter-Annotator Agreement**:
+- Reported in paper for validation of automatic annotation pipeline
+- Human annotations used as gold standard
+
+## Alternative Evaluation Approaches
+
+If full focus-level evaluation is not feasible:
+
+1. **Simplified Metrics**:
+   - Count mentions of each facet using keyword matching
+   - Approximate focus distribution without fine-grained annotation
+
+2. **Proxy Metrics**:
+   - ROUGE/BERTScore for overall review quality
+   - Length and structure similarity to expert reviews
+
+3. **Human Evaluation**:
+   - Ask human reviewers to rate LLM reviews
+   - Collect focus distribution annotations from humans
+
+## Implementation Priority
+
+**Medium Priority**: This is a specialized evaluation framework for a specific domain (academic review generation).
+
+**Pros**:
+- Novel evaluation perspective (focus-level vs. content-level)
+- Validated methodology with published results
+- Addresses real problem (LLM bias in review writing)
+
+**Cons**:
+- Requires domain-specific annotator model
+- Limited to academic review genre
+- Complex metric implementation
+
+**Recommended Next Steps**:
+1. Download and explore Figshare dataset
+2. Locate or retrain facet annotation model
+3. Implement annotation pipeline
+4. Build metric class for HELM integration
+5. Validate on paper's reported results
