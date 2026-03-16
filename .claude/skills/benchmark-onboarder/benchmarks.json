@@ -58,7 +58,7 @@
     "url": "https://github.com/liyucheng09/Metaphor_Generator",
     "assigned_to": "SM",
     "status": "not_suitable",
-    "reason": "Non-English (Chinese); training corpus not evaluation benchmark; no standardized test set for evaluating external models"
+    "reason": "No standardized train/test split; data used as training corpus in paper with no held-out evaluation set for external models"
   },
   {
     "name": "CreataSet",
@@ -241,7 +241,7 @@
   {
     "name": "MIRROR (Multi-LLM Iterative Review and Response for Optimized Rating)",
     "paper_id": "1026b46b64d4c49776b82cddd54923a55f87679b",
-    "url": "https://github.com/my625/PromptQG",
+    "url": "",
     "arxiv": "2410.12893",
     "assigned_to": "SM",
     "status": "not_suitable",
@@ -565,7 +565,7 @@
     "url": "https://cs.stanford.edu/~minalee/zip/chi2022-coauthor-v1.0.zip",
     "assigned_to": "SM",
     "status": "not_suitable",
-    "notes": "Research dataset, not evaluation benchmark. Captures 1,445 past human-AI collaborative writing sessions between 63 writers and GPT-3 (830 creative stories, 615 argumentative essays). No evaluation task for testing new models; no ground truth or standardized metrics. Designed for analyzing human-AI interaction patterns, acceptance rates (72.3%), and collaboration dynamics. CHI 2022. Website: https://coauthor.stanford.edu/"
+    "notes": "Not an evaluation dataset — no train/test split. Captures 1,445 past human-AI collaborative writing sessions between 63 writers and GPT-3 (830 creative stories, 615 argumentative essays). Designed for analyzing human-AI interaction patterns, not for evaluating new models. No evaluation task, ground truth, or standardized metrics. CHI 2022. Website: https://coauthor.stanford.edu/"
   },
   {
     "name": "YESBUT",
@@ -600,8 +600,10 @@
     "paper_id": "31eb5852bf31206d247bef22c8636f48b0c25fe9",
     "url": "https://github.com/ZonglinY/MOOSE",
     "assigned_to": "SM",
-    "status": "not_suitable",
-    "notes": "Hypothesis generation framework, not evaluation benchmark. Multi-module system for generating scientific hypotheses from research backgrounds. Dataset: 50 social science paper backgrounds as inputs to generation system. Evaluation via GPT-4 or human experts on system-generated hypotheses, not standardized test set for evaluating new models. ACL 2024 Findings; ICML 2024 AI4Science best poster. Similar to SciMON and HypoGen - method paper, not reusable benchmark."
+    "status": "completed",
+    "eval_type": "llm_judge",
+    "scenario_file": "scenarios/moose_scenario.py",
+    "notes": "50 social science background pairs from business_research.xlsx (GitHub raw download). Task: generate hypothesis from 2 background documents. GPT-4 judge on Validness/Novelty/Helpfulness (1-5). Gold hypotheses in 'Main hypotheis' column (typo in source). See scenarios/moose/annotator_notes.md."
   },
   {
     "name": "WebNovelBench",
@@ -1230,7 +1232,7 @@
     "url": "https://huggingface.co/datasets/6cf/liveideabench-v2",
     "assigned_to": "SM",
     "status": "not_suitable",
-    "reason": "No ground truth; dataset contains model outputs with LLM-judge scores, not test instances. Evaluates scientific idea generation using 1,180 keywords, but dataset has model-generated ideas with comparative LLM-judged scores only. No reference ideas. Evaluation is comparative only, not absolute. Updates monthly (dynamic benchmark)."
+    "reason": "Dataset only has a train split; no test split available for evaluation."
   },
   {
     "name": "IGA Intent-Guided Generation Evaluation",
@@ -2473,8 +2475,10 @@
     "paper_id": "d948d316bc2c74d8d31d0128e68e1e813642fb40",
     "url": "https://github.com/ZonglinY/MOOSE-Chem2",
     "assigned_to": "SM",
-    "status": "not_suitable",
-    "notes": "Hypothesis generation framework, not evaluation benchmark. MOOSE-Chem2 introduces task of fine-grained scientific hypothesis discovery via hierarchical search. Dataset: expert-annotated fine-grained chemistry hypotheses from post-2024 papers; 50+ research directions with coarse-grained hypotheses as inputs. Evaluation via pairwise comparison and recall on system-generated hypotheses, not standardized test set for evaluating new models. NeurIPS 2025. Same category as MOOSE (ACL 2024) - method paper, not reusable benchmark."
+    "status": "completed",
+    "eval_type": "llm_judge",
+    "scenario_file": "scenarios/moose_chem2_scenario.py",
+    "notes": "51 chemistry instances from chem_research_2024_finegrained.xlsx (GitHub raw download, master branch). Input: Background Question + Background Little Survey + Main hypothesis (coarse). Reference: Finegrained Hypothesis. Two eval modes: component-based Soft/Hard Recall and pairwise comparison (Overall, Effectiveness, Novelty, Detailedness, Feasibility). See scenarios/moose_chem2/annotator_notes.md."
   },
   {
     "name": "Hakka Cultural Knowledge Cognitive Domain Dataset",
