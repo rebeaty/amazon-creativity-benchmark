@@ -401,8 +401,10 @@
     "paper_id": "2108eec365e3e4eee42de37addd6d10b1eeb17ca",
     "url": "https://idea23d.github.io/",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "reason": "3D generation quality evaluation (CVPR 2025); evaluates 3D generative models, not VLMs",
+    "status": "completed",
+    "scenario_file": "scenarios/eval3daigc/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "132 instances (of 198 total; 66 text-only/text+image cases lack rendered views). VLM adaptation: describe 3D objects from multi-view renders. Dataset from HuggingFace model repo (yisuanwang/Idea23D, dataset.zip ~600MB). Subsets: text_3d (68), text_image_3d (64). Multi-object cases (31) show multiple view composites. COLING 2025 (not CVPR).",
     "benchmark_name": "Eval3DAIGC"
   },
   {
@@ -2617,8 +2619,10 @@
     "paper_id": "decb581f0c991693a687221be39877791285de1a",
     "url": "https://github.com/SofeeyaJ/PoemTale-Diffusion",
     "assigned_to": "CL",
-    "status": "not_suitable",
-    "reason": "Poem-to-image generation (wrong direction); evaluates diffusion models, not VLMs",
+    "status": "completed",
+    "scenario_file": "scenarios/p4i/scenario.py",
+    "eval_type": "open_ended",
+    "notes": "3,008 poems with summaries and per-segment emotion annotations. Adapted as text-only: summary+emotions -> poem generation (original image outputs not published). Data in Segmented_Poems.csv via git clone. max_instances parameter for subsampling.",
     "benchmark_name": "P4I"
   },
   {
