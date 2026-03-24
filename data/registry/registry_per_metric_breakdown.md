@@ -12,31 +12,31 @@
 | rouge_1 | formula_based | helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics | ocw_connections |
 | f1 | formula_based | helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics | fann_or_flop, flute_filtered, lcc_metaphor, memecap, metaphor_generation, metaphoric_analogies, moh_x, outline_to_story, puntuguese, recombination_extraction, scar, ttcw, yesbut |
 | self_bleu | formula_based | helm.benchmark.metrics.disinformation_metrics.DisinformationMetric | aidanbench, amuse_chord_generation, llm_discussion |
-| distinct_1 | formula_based | null | dialogue_diversity, diverse_not_short, llm_discussion |
-| distinct_2 | formula_based | null | dialogue_diversity, diverse_not_short, llm_discussion |
-| jensen_shannon_divergence_unigram | formula_based | null | amuse_chord_generation |
-| jensen_shannon_divergence_bigram | formula_based | null | amuse_chord_generation |
-| mean_absolute_error | formula_based | null | ava |
-| pearson_correlation | formula_based | null | ava, muse_perception, story_quality |
-| spearman_correlation | formula_based | null | ava, story_quality, storyer |
-| group_match_score | formula_based | null | nyt_connections, ocw |
-| classification_accuracy | formula_based | null | recombination_extraction |
-| validity | formula_based | null | neocoder, speak_to_structure |
-| constraint_satisfaction | formula_based | null | neocoder |
-| pass_at_1 | formula_based | null | neocoder |
-| xml_validity | formula_based | null | robotoolbench |
-| array_dimensions | formula_based | null | robotoolbench |
-| json_validity | formula_based | null | rpgbench |
-| creativity_score | formula_based | null | cdat |
-| iou_score | formula_based | null | textlogo3k |
-| layout_quality | formula_based | null | textlogo3k |
-| type_token_ratio | formula_based | null | pace |
-| poem_score | formula_based | null | vietnamese_poem |
-| length_score | formula_based | null | vietnamese_poem |
-| tone_score | formula_based | null | vietnamese_poem |
-| rhyme_score | formula_based | null | vietnamese_poem |
-| validity_score | formula_based | null | mineanybuild |
-| percentile_rank | formula_based | null | webnovelbench |
+| distinct_1 | formula_based | metrics.distinct_n_metric.DistinctNMetric | dialogue_diversity, diverse_not_short, llm_discussion |
+| distinct_2 | formula_based | metrics.distinct_n_metric.DistinctNMetric | dialogue_diversity, diverse_not_short, llm_discussion |
+| jensen_shannon_divergence_unigram | formula_based | metrics.jsd_metric.JSDMetric | amuse_chord_generation |
+| jensen_shannon_divergence_bigram | formula_based | metrics.jsd_metric.JSDMetric | amuse_chord_generation |
+| mean_absolute_error | formula_based | metrics.mean_absolute_error_metric.MeanAbsoluteErrorMetric | ava |
+| pearson_correlation | formula_based | metrics.correlation_metric.CorrelationMetric | ava, muse_perception, story_quality |
+| spearman_correlation | formula_based | metrics.correlation_metric.CorrelationMetric | ava, story_quality, storyer |
+| group_match_score | formula_based | metrics.group_match_score_metric.GroupMatchScoreMetric | nyt_connections, ocw |
+| classification_accuracy | formula_based | metrics.classification_accuracy_metric.ClassificationAccuracyMetric | recombination_extraction |
+| validity | formula_based | metrics.validity_metric.ValidityMetric | neocoder, speak_to_structure |
+| constraint_satisfaction | formula_based | metrics.constraint_satisfaction_metric.ConstraintSatisfactionMetric | neocoder |
+| pass_at_1 | formula_based | metrics.pass_at_1_metric.PassAt1Metric | neocoder |
+| xml_validity | formula_based | metrics.xml_validity_metric.XmlValidityMetric | robotoolbench |
+| array_dimensions | formula_based | metrics.array_dimensions_metric.ArrayDimensionsMetric | robotoolbench |
+| json_validity | formula_based | metrics.json_validity_metric.JsonValidityMetric | rpgbench |
+| creativity_score | formula_based | metrics.creativity_score_metric.CreativityScoreMetric | cdat |
+| iou_score | formula_based | metrics.iou_score_metric.IoUScoreMetric | textlogo3k |
+| layout_quality | formula_based | metrics.layout_quality_metric.LayoutQualityMetric | textlogo3k |
+| type_token_ratio | formula_based | metrics.type_token_ratio_metric.TypeTokenRatioMetric | pace |
+| poem_score | formula_based | metrics.vietnamese_poem_metric.VietnamesePoemMetric | vietnamese_poem |
+| length_score | formula_based | metrics.vietnamese_poem_metric.VietnamesePoemMetric | vietnamese_poem |
+| tone_score | formula_based | metrics.vietnamese_poem_metric.VietnamesePoemMetric | vietnamese_poem |
+| rhyme_score | formula_based | metrics.vietnamese_poem_metric.VietnamesePoemMetric | vietnamese_poem |
+| validity_score | formula_based | metrics.validity_score_metric.ValidityScoreMetric | mineanybuild |
+| percentile_rank | formula_based | metrics.percentile_rank_metric.PercentileRankMetric | webnovelbench |
 
 ## Model-Based Metrics
 
