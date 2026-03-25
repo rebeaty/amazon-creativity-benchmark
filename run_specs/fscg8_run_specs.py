@@ -1,0 +1,73 @@
+"""HELM Run Specs for fscg8."""
+
+from helm.benchmark.adaptation.adapter_spec import AdapterSpec
+from helm.benchmark.adaptation.adapters.adapter_factory import (
+    ADAPT_GENERATION,
+)
+from helm.benchmark.annotation.annotator import AnnotatorSpec
+from helm.benchmark.metrics.metric import MetricSpec
+from helm.benchmark.run_spec import RunSpec, run_spec_function
+from helm.benchmark.scenarios.scenario import ScenarioSpec
+
+
+# ── Rubrics ──────────────────────────────────────────────────────────────────
+
+_RUBRIC_LLM_JUDGE_QUALITY = """\
+Evaluate the quality of the generated fine-grained story completion.
+Consider narrative coherence, consistency with the story context, creativity, and overall writing quality.
+
+Score 1: Completion is incoherent or contradicts the story context
+Score 2: Poor completion with major inconsistencies or quality issues
+Score 3: Adequate completion that fits the story at a basic level
+Score 4: Good quality completion that is consistent and creatively engaging
+Score 5: Excellent completion that seamlessly continues the story with high creativity and quality
+"""
+
+
+@run_spec_function("fscg8")
+def get_fscg8_spec() -> RunSpec:
+
+    scenario_spec = ScenarioSpec(
+        class_name="scenarios_new.fscg8_scenario.FSCG8Scenario",
+        args={},
+    )
+
+    adapter_spec = AdapterSpec(
+        method=ADAPT_GENERATION,
+        instructions="",  # NOTE: scenario handles prompting internally
+        input_prefix="",
+        input_suffix="\n",
+        output_prefix="",
+        output_suffix="\n",
+        max_train_instances=0,  # ASSUMPTION: zero-shot, no TRAIN_SPLIT seen
+        num_outputs=1,
+        max_tokens=512,
+        temperature=0.7,
+        stop_sequences=[],
+    )
+
+    metric_specs = [
+        MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "llm_judge_quality"}),
+    ]
+
+    annotators = [
+        AnnotatorSpec(
+            class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+            args={
+                "judge_model_name": "openai/gpt-4o",
+                "judge_temperature": 0.0,
+                "judge_max_new_tokens": 512,
+                "metric_name": "llm_judge_quality",
+                "rubric": _RUBRIC_LLM_JUDGE_QUALITY,
+            },
+        ),
+    ]
+
+    return RunSpec(
+        name="fscg8",
+        scenario_spec=scenario_spec,
+        adapter_spec=adapter_spec,
+        metric_specs=metric_specs,
+        groups=["creativity", "fscg8"],
+        annotators=annotators,
+    )
