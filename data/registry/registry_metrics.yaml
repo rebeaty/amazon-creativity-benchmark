@@ -81,11 +81,11 @@ datasets:
       - name: "jensen_shannon_divergence_unigram"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.jsd_metric.JSDMetric"
       - name: "jensen_shannon_divergence_bigram"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.jsd_metric.JSDMetric"
 
   analobench:
     metrics:
@@ -189,15 +189,15 @@ datasets:
       - name: "mean_absolute_error"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.mean_absolute_error_metric.MeanAbsoluteErrorMetric"
       - name: "pearson_correlation"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
       - name: "spearman_correlation"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
 
   balancecc_prompt_generation:
     metrics:
@@ -286,7 +286,7 @@ datasets:
       - name: "creativity_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.creativity_score_metric.CreativityScoreMetric"
 
   chinese_homophonic_puns:
     metrics:
@@ -571,11 +571,11 @@ datasets:
       - name: "distinct_1"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.distinct_n_metric.DistinctNMetric"
       - name: "distinct_2"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.distinct_n_metric.DistinctNMetric"
       - name: "semantic_diversity"
         in_helm: false
         type: "model_based"
@@ -616,11 +616,11 @@ datasets:
       - name: "distinct_1"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.distinct_n_metric.DistinctNMetric"
       - name: "distinct_2"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.distinct_n_metric.DistinctNMetric"
 
   dpt:
     metrics:
@@ -1043,11 +1043,11 @@ datasets:
       - name: "distinct_1"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.distinct_n_metric.DistinctNMetric"
       - name: "distinct_2"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.distinct_n_metric.DistinctNMetric"
 
   llm_review_focus:
     metrics:
@@ -1164,7 +1164,7 @@ datasets:
       - name: "validity_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.validity_score_metric.ValidityScoreMetric"
       - name: "llm_judge_creativity"
         in_helm: false
         type: "llm_judge"
@@ -1243,7 +1243,7 @@ datasets:
       - name: "pearson_correlation"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
       - name: "accuracy"
         in_helm: true
         type: "formula_based"
@@ -1265,11 +1265,11 @@ datasets:
       - name: "pass_at_1"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.pass_at_1_metric.PassAt1Metric"
       - name: "constraint_satisfaction"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.constraint_satisfaction_metric.ConstraintSatisfactionMetric"
 
   newyorker_caption:
     metrics:
@@ -1307,14 +1307,14 @@ datasets:
       - name: "group_match_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.group_match_score_metric.GroupMatchScoreMetric"
 
   ocw:
     metrics:
       - name: "group_match_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.group_match_score_metric.GroupMatchScoreMetric"
 
   ocw_connections:
     metrics:
@@ -1359,7 +1359,7 @@ datasets:
       - name: "type_token_ratio"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.type_token_ratio_metric.TypeTokenRatioMetric"
       - name: "association_distance"
         in_helm: false
         type: "model_based"
@@ -1465,7 +1465,7 @@ datasets:
       - name: "validity"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.validity_metric.ValidityMetric"
       - name: "plddt_score"
         in_helm: false
         type: "model_based"
@@ -1583,18 +1583,18 @@ datasets:
       - name: "xml_validity"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.xml_validity_metric.XmlValidityMetric"
       - name: "array_dimensions"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.array_dimensions_metric.ArrayDimensionsMetric"
 
   rpgbench:
     metrics:
       - name: "json_validity"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.json_validity_metric.JsonValidityMetric"
       - name: "interestingness"
         in_helm: false
         type: "llm_judge"
@@ -1731,7 +1731,7 @@ datasets:
       - name: "validity"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.validity_metric.ValidityMetric"
       - name: "llm_judge_correctness"
         in_helm: false
         type: "llm_judge"
@@ -1790,11 +1790,11 @@ datasets:
       - name: "spearman_correlation"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
       - name: "pearson_correlation"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
 
   storyer:
     metrics:
@@ -1805,7 +1805,7 @@ datasets:
       - name: "spearman_correlation"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
@@ -1823,11 +1823,11 @@ datasets:
       - name: "iou_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.iou_score_metric.IoUScoreMetric"
       - name: "layout_quality"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.layout_quality_metric.LayoutQualityMetric"
 
   thenextchapter:
     metrics:
@@ -1991,19 +1991,19 @@ datasets:
       - name: "poem_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.vietnamese_poem_metric.VietnamesePoemMetric"
       - name: "length_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.vietnamese_poem_metric.VietnamesePoemMetric"
       - name: "tone_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.vietnamese_poem_metric.VietnamesePoemMetric"
       - name: "rhyme_score"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.vietnamese_poem_metric.VietnamesePoemMetric"
 
   webnovelbench:
     metrics:
@@ -2024,7 +2024,7 @@ datasets:
       - name: "percentile_rank"
         in_helm: false
         type: "formula_based"
-        helm_class: null
+        helm_class: "metrics.percentile_rank_metric.PercentileRankMetric"
 
   writingbench:
     metrics:
