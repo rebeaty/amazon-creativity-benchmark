@@ -31,3 +31,9 @@ When debugging a dataset, follow this exact checklist IN ORDER:
 - On failure after 10 attempts: log the last error encountered and mark as FAILED.
 - Always read `scenarios/subsampled_list.json` for the dataset list — no other source.
 - When fixing bugs, ONLY fix issues specific to the current dataset — do not make breaking changes to shared code without noting it.
+
+## Model Configuration
+- The evaluation model may be an API model (e.g. `claude-haiku-4-5-20251001`, `gpt-4o`) or a local HuggingFace model.
+- For API models: verify that `data/registry/registry_inference.yaml` uses the correct API backend, endpoint URL, and model name. Ensure the appropriate API key env var is set (e.g., `ANTHROPIC_API_KEY`, `OPENAI_API_KEY`).
+- For HuggingFace models: verify the model path is correct and the model can be loaded.
+- The model to evaluate will be specified in the prompt. If not specified, use whatever is already configured in the inference registry.
