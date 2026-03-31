@@ -1,13 +1,33 @@
-# Project Context
+# HELM Evaluation Pipeline - Debugging Context
 
-This repository contains tools for curating and onboarding AI creativity benchmarks.
+## Project Structure
+- **Evaluation bash scripts**: `eval_scripts/`
+- **Scenario files**: `scenarios_new/`
+- **Run specifications**: `run_specs/`
+- **Dataset-to-metric map**: `data/registry/registry_metrics.yaml`
+- **Dataset-to-inference config map**: `data/registry/registry_inference.yaml`
+- **Dataset-to-master info (links, modality, etc.)**: `data/registry/registry_master.yaml`
+- **Dataset list**: `scenarios/subsampled_list.json` ← ONLY use this list
 
-## Key Areas
+## Debugging Protocol for Each Dataset
 
-- **curation/**: Pipeline scripts for harvesting and screening papers
-- **data/**: Curated benchmark lists ready for onboarding
-- **.claude/skills/benchmark-onboarder/**: Claude Code skill for converting benchmarks to HELM Scenarios
+When debugging a dataset, follow this exact checklist IN ORDER:
 
-## For Benchmark Onboarding
+1. **Data availability**: Check if evaluation data exists locally. If not, download it.
+2. **Prompt sanity check**: Verify the input query (test instance wrapped in prompt template) makes sense. Cross-reference with any examples from the paper (find paper link in `data/registry/registry_master.yaml`).
+3. **Generation config check**: Verify inference config is logically sound:
+   - MCQ/classification → low temperature (0.0–0.3)
+   - Open-ended generation → higher temperature (0.5–1.0)
+   - Check max tokens, stop sequences, etc.
+4. **Raw generation check**: Run a small sample and verify model outputs look reasonable.
+5. **Metric selection check**: Verify the correct metric is mapped for this dataset in `registry_metrics.yaml`.
+6. **Evaluation execution**: Run the evaluation metric on the generated responses. Debug any errors.
+7. **Aggregation check**: Verify metric aggregation is computed correctly.
+8. **Results saving**: Verify results are saved correctly to the expected output location.
 
-See `.claude/skills/benchmark-onboarder/LEARNINGS.md` for team-accumulated knowledge about dataset quirks and patterns.
+## Rules
+- Maximum 10 debugging attempts per dataset before giving up.
+- On success: save results and mark dataset as PASSED.
+- On failure after 10 attempts: log the last error encountered and mark as FAILED.
+- Always read `scenarios/subsampled_list.json` for the dataset list — no other source.
+- When fixing bugs, ONLY fix issues specific to the current dataset — do not make breaking changes to shared code without noting it.
