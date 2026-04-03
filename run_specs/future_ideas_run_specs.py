@@ -40,7 +40,7 @@ def get_future_ideas_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
         class_name="scenarios_new.future_ideas_scenario.FutureIdeasScenario",
-        args={},
+        args={"domain": "computer"},
     )
 
     adapter_spec = AdapterSpec(
@@ -66,7 +66,7 @@ def get_future_ideas_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "llm_judge_novelty",
@@ -76,7 +76,7 @@ def get_future_ideas_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "llm_judge_relevance",

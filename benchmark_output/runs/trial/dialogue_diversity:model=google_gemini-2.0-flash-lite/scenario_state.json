@@ -1,0 +1,1364 @@
+{
+  "adapter_spec": {
+    "method": "generation",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 1,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [],
+    "multi_label": false
+  },
+  "request_states": [
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: I need a B average to stay in my major, and I'm struggling in a course.\nPerson A: Are you able to get some tutoring or find a study buddy?\nPerson B: I found a study group. I didn't flunk the class, but I made an 84 on my physics test and need an 86.\nPerson A: That's good. Well, you are on your way up!\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #2. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Yeah, I'm getting there. Just need to figure out how to boost my score a bit more."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Thanks, I hope I can keep improving. Just gotta stay focused."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "True, but it's still frustrating. Do you know any good physics resources?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I appreciate the encouragement. Maybe I'll ask the group for extra sessions."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "It's a start, but I'm kind of worried. Any tips on how to nail the next one?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "On the bright side, I understand the material better now. Let's hope it reflects in my grades."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I guess it's progress. I just wish that progress was a little faster, you know?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I'm trying not to let it get me down. Got to keep pushing, right?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Thanks for the positivity. It's just that an 84 isn't quite good enough for me."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "It feels like a small victory. I'm determined to make that 86 next time."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id471"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: I need a B average to stay in my major, and I'm struggling in a course.\nPerson A: Are you able to get some tutoring or find a study buddy?\nPerson B: I found a study group. I didn't flunk the class, but I made an 84 on my physics test and need an 86.\nPerson A: That's good. Well, you are on your way up!\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #2. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Okay, here's my response as Person B, following the scenario and focusing on possibility #2:\n\n\"Thanks! I'm hoping so. I'm just worried about the final exam, it's weighted heavily.\"\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.9798800945281982,
+        "request_datetime": 1775240599
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: Hi, want to get to know each other?\nPerson A: Hi, how old are you?\nPerson B: I am in my twenties. You?\nPerson A: Older than you. Wanna guess?\nPerson B: 50? I need something to go on here.\nPerson A: Not that old, mid-20s. How is your day, anyway?\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #5. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Oh, we're actually close in age then! My day's going pretty well, thanks. Did anything interesting happen in your day so far?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Mid-20s, huh? Just a bit mysterious there! My day's been decent, just the usual work stuff. What about you?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Haha, not too far off with my guess. My day's been alright, just busy with school. Do you work or study?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Close in age then\u2014cool! I'm doing well, just took a nice walk in the park. How's your day shaping up?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Sorry for the overestimate! I've had a good day, actually. Hit the gym earlier. Do you enjoy any sports or workouts?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Ah, should've aimed lower. My day's been hectic but productive at work. What do you usually do during the day?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Well, that was a swing and a miss! My day's been relaxing, did some reading. Are you a book person, by chance?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Mid-20s, nice. My day's been long; I'm looking forward to the weekend. Got any exciting plans coming up?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Pretty close in age then, cool. I've just been chilling with some music today. What kind of music are you into?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Ha, I was off by a bit. My day's been good, busy with projects. Do you like your job, or whatever you do daily?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id9"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: Hi, want to get to know each other?\nPerson A: Hi, how old are you?\nPerson B: I am in my twenties. You?\nPerson A: Older than you. Wanna guess?\nPerson B: 50? I need something to go on here.\nPerson A: Not that old, mid-20s. How is your day, anyway?\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #5. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Okay, my response for possibility #5 is:\n\nHmm, mid-twenties! My day is good, just relaxing at home. What about yours?\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.6424846649169922,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson A: I stole a candy and a drink from the gas station once. I felt terrible about the whole ordeal.\nPerson B: How old were you? If you were a kid, that deserves a pass!\nPerson A: I was 17. At that age, I should have known better.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #5. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "17 is still pretty young, though. Have you ever thought of going back and paying for them?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Well, the important thing is you learned from it. Have you ever stolen anything since?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "We all make mistakes. Have you made amends or done something to make up for it?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's a tough age\u2014still learning about consequences. Do you think that experience changed how you act now?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Everybody has a moment of poor judgment. What matters is how you moved forward. Do you feel like you've grown since then?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "You were almost an adult, but we all slip up. Have you forgiven yourself for that mistake?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I get that you feel bad, but it's not like you can't fix it. Maybe you could donate to a charity to balance it out?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Mistakes happen; what's done is done. Did you ever go back and apologize or set things right?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "It's good you feel remorse; it shows character. Has that feeling influenced your decisions after that event?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "We've all had lapses in judgment. Are you still carrying that guilt or have you found a way to let it go?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id1499"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson A: I stole a candy and a drink from the gas station once. I felt terrible about the whole ordeal.\nPerson B: How old were you? If you were a kid, that deserves a pass!\nPerson A: I was 17. At that age, I should have known better.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #5. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Okay, here we go...\n\n#5: Yeah, you're right. Still, everyone makes mistakes. Learn from it, and don't do it again.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7136852741241455,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson A: Hey there. Just got back from my economics class. How are you?\nPerson B: Hello, I am doing alright, getting ready to head to class myself.\nPerson A: Do you enjoy school? I don't mind it. I'm married. You?\nPerson B: I do. I'm hoping to go to law school. Not married, engaged.\nPerson A: Marriage is fun. We just bought our first house.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #5. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Wow, congratulations on the house! How is the transition from renting to owning?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Buying a house is a big step! How are you finding the housing market these days?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Marriage and a new house? Sounds like a lot's happening for you. How's married life treating you?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's amazing! What was the house-hunting process like for you?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Congrats! Homeownership is a dream of mine after law school. Any tips for a first-time buyer?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Buying a house sounds exciting! Did you go for something big, or are you starting small?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's fantastic! Did you get a place close to work or somewhere more peaceful?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Congrats on the new house! Is it a fixer-upper or move-in ready?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Must be nice to settle down in your own place. Do you have any renovation plans?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's a major milestone; well done! How are you planning to celebrate the new home?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id54"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson A: Hey there. Just got back from my economics class. How are you?\nPerson B: Hello, I am doing alright, getting ready to head to class myself.\nPerson A: Do you enjoy school? I don't mind it. I'm married. You?\nPerson B: I do. I'm hoping to go to law school. Not married, engaged.\nPerson A: Marriage is fun. We just bought our first house.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #5. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "That's exciting! Congratulations on the house. Law school and wedding planning keep me busy.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.8061771392822266,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: Do you watch football religiously?\nPerson A: I love football! The world loves football! It is played around the world!\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #2. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "True, it's a global passion. Who's your favorite team?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "So, who do you think will win the next World Cup?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's great! Do you also play, or just enjoy watching?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Ha! I can tell you're a fan. Ever been to a live match?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Definitely a popular sport! Which league do you usually follow?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I can see the enthusiasm! Do any particular players inspire you?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "It's like a universal language, isn't it? How did you get into it?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "You're not alone! How do you feel about the current state of the sport?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Yes, it's a beautiful game. Ever experienced a game that completely blew your mind?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "The energy is contagious! How do you celebrate when your team scores?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id1411"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: Do you watch football religiously?\nPerson A: I love football! The world loves football! It is played around the world!\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #2. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Okay, here's my response as Person B, considering possible next replies from Person A:\n\n#2: \"That's great! What's your favorite team then?\"\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7426633834838867,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: I've been working hard as a waiter this summer. Kind of fun since it's helped me develop social skills. One person even tipped me $25 when their order was only like $8. Caught me off-guard that someone wanted to be that nice to me.\nPerson A: I had someone tip me a $25 chip at the casino after seeing a pic of my daughter in my locket. I cried, lol.\nPerson B: It's amazing how a little kindness from strangers can go such a long way.\nPerson A: He thought I was cute and old-fashioned since I wore a locket. I still love to line dry my clothes! Nothing better, I say!\nPerson B: I agree with you! The way linens smell after being air-dried is way better than any dryer sheet.\nPerson A: A word of advice, always hang your clothes higher than your goats can reach! I learned that early on living on a homestead! Explains the missing socks!\nPerson B: Oh wow, yeah! I never thought about that. I don't raise animals, but my neighbor does. I do like to hunt deer from time to time.\nPerson A: We've had so many animals, but they're all for slaughter or use on the farm, chickens for eggs, goats for milk, you know... We hunt a lot as well.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #3. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "That's a sustainable way to live. Farming and hunting surely teach the value of hard work and self-reliance."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Raising animals sounds like a huge responsibility. Do you ever get attached to them, even if they're for farm use?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Homesteading sounds intense. I respect the commitment to live off the land. It's like every day is an adventure."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Wow, owning and working on a farm seems like a full-time job. Do you ever take vacations?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "The self-sufficiency of a homestead is admirable. Curious, though, how do you deal with veterinary care on the farm?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Fresh eggs and goat milk sound awesome! Ever tried making cheese or other products from your goats' milk?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's eco-friendly living right there! Do you grow your own crops too, or primarily focus on the animals?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "How do you manage hunting season with the farm workload? Is it a family activity?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "It's cool how our worlds are so different. Your life on the farm must be grounding compared to my urban waitering."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Your lifestyle sounds like it's filled with practical skills. Ever considered teaching workshops or farm stays to city folks?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id1157"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: I've been working hard as a waiter this summer. Kind of fun since it's helped me develop social skills. One person even tipped me $25 when their order was only like $8. Caught me off-guard that someone wanted to be that nice to me.\nPerson A: I had someone tip me a $25 chip at the casino after seeing a pic of my daughter in my locket. I cried, lol.\nPerson B: It's amazing how a little kindness from strangers can go such a long way.\nPerson A: He thought I was cute and old-fashioned since I wore a locket. I still love to line dry my clothes! Nothing better, I say!\nPerson B: I agree with you! The way linens smell after being air-dried is way better than any dryer sheet.\nPerson A: A word of advice, always hang your clothes higher than your goats can reach! I learned that early on living on a homestead! Explains the missing socks!\nPerson B: Oh wow, yeah! I never thought about that. I don't raise animals, but my neighbor does. I do like to hunt deer from time to time.\nPerson A: We've had so many animals, but they're all for slaughter or use on the farm, chickens for eggs, goats for milk, you know... We hunt a lot as well.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #3. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "That's interesting! I never considered the farm life aspect of raising animals. It's a different world.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.6163549423217773,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: Do you like cats?\nPerson A: Yeah, cats are cool. Do you own one?\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #3. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Sure do! I've got an adorable tabby named Whiskers."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "No, but I've been thinking about adopting."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Actually, I'm more of a dog person, but I like them."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Yes, two Siamese cats. They're quite the handful!"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I wish! My apartment doesn't allow pets, unfortunately."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I don't, but I volunteer at the local cat shelter."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Not right now. Used to have one, though."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Nope, I'm allergic, but they're nice from a distance."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Not yet, but my roommate's cat has sort of adopted me."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Yes, my cat is a rescue and has the quirkiest personality!"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id737"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: Do you like cats?\nPerson A: Yeah, cats are cool. Do you own one?\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #3. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Actually, no. I used to be allergic, but I always thought they were neat.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7700271606445312,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 4
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson A: Running my first (and maybe only!) marathon felt like such a huge accomplishment!\nPerson B: Wow, that is an amazing accomplishment! Congratulations! You've got to be feeling like you're on top of the world after that!\nPerson A: Ah, it was the best! Plus, it helped that I purposely chose an amazing destination in which to run it -- it was the Venice Marathon!\nPerson B: My first thought was \"California,\" but then there's Venice, Italy, and either way, that's an amazing destination!\nPerson A: We were living overseas at the time -- the most impressive part was crossing the Grand Canal over a pontoon of boats to finish the marathon ;-)\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #1. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Crossing the Grand Canal on a pontoon sounds surreal! How was the atmosphere there with the crowd and the scenery?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Incredible! Did running over the water give you extra motivation during those final miles?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "That's a unique twist to a marathon! How did you prepare for the different terrain?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Finishing on pontoons, so cool! Did that make the ending more challenging or was it a welcome distraction?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Pontoons over the Grand Canal? That must have been a photographer's dream! Did you manage to get a snapshot?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Venice sounds like a runner's paradise. Would you recommend it to other marathon newbies, or was it quite challenging?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I'm envious! Venice is already so magical, but experiencing it in a marathon must be unforgettable. Did it inspire you for another run?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "What an ending! Were the pontoons stable or did they make you feel a bit wobbly after all those miles?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "The Grand Canal finish sounds like a fairy tale. Was it difficult to focus on running with all that beauty around you?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Running a marathon in Venice is bucket-list level cool. Did they have any special events or celebrations for the runners?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id175"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson A: Running my first (and maybe only!) marathon felt like such a huge accomplishment!\nPerson B: Wow, that is an amazing accomplishment! Congratulations! You've got to be feeling like you're on top of the world after that!\nPerson A: Ah, it was the best! Plus, it helped that I purposely chose an amazing destination in which to run it -- it was the Venice Marathon!\nPerson B: My first thought was \"California,\" but then there's Venice, Italy, and either way, that's an amazing destination!\nPerson A: We were living overseas at the time -- the most impressive part was crossing the Grand Canal over a pontoon of boats to finish the marathon ;-)\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #1. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Wow, crossing the Grand Canal sounds incredible! What an unforgettable way to finish a marathon!\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7131695747375488,
+        "request_datetime": 1775240600
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: Hi, are you a fan of pianos?\nPerson A: I know how to play one. I am not great, though.\nPerson B: That's awesome! I could never play. I've played around with them when I've been around them, and my fingers just don't work the keys anywhere near remotely close to how they should. Lol. An aluminum grand piano was built for the lounge of the airship Hindenburg. It weighed only 356 pounds.\nPerson A: I would have thought it would have been a lot more.\nPerson B: I know, right? In 2006, a group of climbers reached the top of Britain's highest mountain and found a piano. Lol. Wonder how it got there?\nPerson A: Someone must have been playing a trick on someone else. That's what I would bet.\nPerson B: That had to have been a task for sure, getting up there. Lol. Freddie Mercury used the same piano to record \"Bohemian Rhapsody\" as Paul McCartney used to record \"Hey Jude\". That's kind of neat.\nPerson A: That is kind of neat. I wonder what other stars used the same instruments?\nPerson B: I'm not sure. On April 18, 1930, the BBC decided there was no news worth reporting, so they just broadcast piano music instead!\nPerson A: I bet that was funny to people. There exists a song composed solely for stress testing auto-pianos, and it is not remotely playable by humans - \"Circus Galop\".\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #1. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "Circus Galop\" sounds intense! Ever wondered how those auto-pianos manage it without breaking down"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Wow, \"Circus Galop\" must be quite the piece! Have you heard it before? I can only imagine the tempo!"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Stress testing with \"Circus Galop\" sounds wild. Makes me think of other songs that push instruments to their limits."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Circus Galop\"? That's fascinating! Now I'm curious about music written for humans that's nearly impossible to play"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Auto-pianos get their own impossible song! I wonder if any pianist has ever attempted the \"Circus Galop\"."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "A song just for pianos? That's clever. I bet it would make a mechanical ballet out of the keys."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "The \"Circus Galop\" sounds like a challenge for any instrument. Maybe there's a repertoire of mechanical-only music out there!"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I'd love to see an auto-piano tackle \"Circus Galop.\" It's like robot Olympics for musical instruments!"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Haha, \"Circus Galop\" \u2013 the ultimate piano stress test! Do you think robots will ever compose their own music then?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Circus Galop\" being unplayable is oddly charming. It's like a secret language between pianos and their mechanics"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id260"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: Hi, are you a fan of pianos?\nPerson A: I know how to play one. I am not great, though.\nPerson B: That's awesome! I could never play. I've played around with them when I've been around them, and my fingers just don't work the keys anywhere near remotely close to how they should. Lol. An aluminum grand piano was built for the lounge of the airship Hindenburg. It weighed only 356 pounds.\nPerson A: I would have thought it would have been a lot more.\nPerson B: I know, right? In 2006, a group of climbers reached the top of Britain's highest mountain and found a piano. Lol. Wonder how it got there?\nPerson A: Someone must have been playing a trick on someone else. That's what I would bet.\nPerson B: That had to have been a task for sure, getting up there. Lol. Freddie Mercury used the same piano to record \"Bohemian Rhapsody\" as Paul McCartney used to record \"Hey Jude\". That's kind of neat.\nPerson A: That is kind of neat. I wonder what other stars used the same instruments?\nPerson B: I'm not sure. On April 18, 1930, the BBC decided there was no news worth reporting, so they just broadcast piano music instead!\nPerson A: I bet that was funny to people. There exists a song composed solely for stress testing auto-pianos, and it is not remotely playable by humans - \"Circus Galop\".\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #1. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Wow, that's fascinating! A song *designed* to be unplayable? I'd love to hear it, even if I couldn't play it.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7180294990539551,
+        "request_datetime": 1775240601
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 5
+        }
+      }
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "[INST] Given this conversation:\n\nPerson B: Hi, I work in a shipyard.\nPerson A: Hi! That sounds fun. In WWI, my relative was on a ship.\nPerson B: What a coincidence, I'm ex-military.\nPerson A: I'm currently in the military. Army, to be exact.\nPerson B: Me, I was in the Navy, like my favorite color, navy blue.\nPerson A: I like the color blue. My high school's color was blue.\nPerson B: Did you do charities in HS? I am volunteering at a bunny rescue center.\nPerson A: No, I dropped out before I finished. I donate to some now.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #3. Keep the response short with no more than 25 words. [/INST] Person B:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "That's great that you're making a positive impact now. What kind of charities do you support?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I'm sorry to hear about high school, but it's admirable you're contributing to causes. Any in particular?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Dropping out must have been tough. Are your donations focused on military charities?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "It's never too late for education. Ever thought of going back to school?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "I've often found that the military can be like a second chance at education. Have you had a similar experience?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Donations are so important. Does your military background influence the charities you choose?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "There's something rewarding about being able to give back. What inspired you to start donating?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "Lifelong learning is valuable, formal education or not. Your service and donations reflect that."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "High school isn't the only path to success. Your service and generosity speak volumes."
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          },
+          {
+            "output": {
+              "text": "The decision to serve and to give suggests a strong character. How has the military shaped your perspective on giving?"
+            },
+            "tags": [
+              "diverse_response"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id1417"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "[INST] Given this conversation:\n\nPerson B: Hi, I work in a shipyard.\nPerson A: Hi! That sounds fun. In WWI, my relative was on a ship.\nPerson B: What a coincidence, I'm ex-military.\nPerson A: I'm currently in the military. Army, to be exact.\nPerson B: Me, I was in the Navy, like my favorite color, navy blue.\nPerson A: I like the color blue. My high school's color was blue.\nPerson B: Did you do charities in HS? I am volunteering at a bunny rescue center.\nPerson A: No, I dropped out before I finished. I donate to some now.\n\nImagine you are person B and act as if you were a real individual. Think about all the possibilities in which person B might respond next and then provide the response that corresponds to possibility number #3. Keep the response short with no more than 25 words. [/INST] Person B:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Ah, that's too bad. I was a bit of a bookworm, always studying. What do you donate to?\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7258408069610596,
+        "request_datetime": 1775240601
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0,
+      "annotations": {
+        "generic_llm_judge": {
+          "coherence_score": 4
+        }
+      }
+    }
+  ],
+  "annotator_specs": [
+    {
+      "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+      "args": {
+        "judge_model_name": "google/gemini-2.0-flash-lite",
+        "judge_temperature": 0.0,
+        "judge_max_new_tokens": 64,
+        "metric_name": "coherence_score",
+        "rubric": "Evaluate the COHERENCE of the generated dialogue response.\nConsider whether the response logically follows from the conversation context and maintains conversational coherence.\n\nScore 1: Response is completely incoherent or off-topic for the dialogue\nScore 2: Response has major coherence issues with the preceding conversation\nScore 3: Response is somewhat coherent but with noticeable gaps\nScore 4: Response is coherent and follows naturally from the dialogue\nScore 5: Response is perfectly coherent, natural, and contextually appropriate\n"
+      }
+    }
+  ]
+}

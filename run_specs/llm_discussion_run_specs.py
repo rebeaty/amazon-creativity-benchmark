@@ -33,7 +33,7 @@ def get_llm_discussion_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={}),
-        MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={}),
+        MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 2}),
     ]
 
     return RunSpec(

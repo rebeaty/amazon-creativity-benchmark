@@ -1,0 +1,314 @@
+[
+  {
+    "input": {
+      "text": "Suppose that the last SampleRTT in a TCP connection is equal to 1 sec. The current value of TimeoutInterval for the connection will necessarily be \u22651 sec.\n\nAnswer (True or False):"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "True"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "False"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "id478",
+    "extra_data": {
+      "id": "TF_45",
+      "level_1_topic": "Computer networks",
+      "level_2_topic": "Network protocols and architectures",
+      "rationale": "The TimeoutInterval is typically greater than the SampleRTT to accommodate variations in network conditions.",
+      "question_type": "true_false"
+    }
+  },
+  {
+    "input": {
+      "text": "The following activity is a data mining task: predicting the future stock price of a company using historical records.\n\nAnswer (True or False):"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "True"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "False"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id635",
+    "extra_data": {
+      "id": "TF_202",
+      "level_1_topic": "Data science and big data",
+      "level_2_topic": "Data mining",
+      "rationale": "Data mining involves analyzing historical data to predict future trends, as seen in stock price forecasting.",
+      "question_type": "true_false"
+    }
+  },
+  {
+    "input": {
+      "text": "For a depthwise 3x3 convolution, the number of input channels and output channels are both 32, how many parameters does this convolution layer have\n\nA) 96\nB) 288\nC) 576\nD) 9216\n\nAnswer:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "A"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "B"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "C"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "D"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id247",
+    "extra_data": {
+      "id": "MC_142",
+      "level_1_topic": "Machine learning",
+      "level_2_topic": "Artificial neural network",
+      "rationale": "For a depthwise 3x3 convolution with 32 input channels and 32 output channels, each input channel has its own 3x3 filter, resulting in 9\u00d732=288 parameters in total.",
+      "question_type": "multiple_choice"
+    }
+  },
+  {
+    "input": {
+      "text": "A database schema is given below.\n \n EMPLOYEES(ENO, FNAME, M, INIT, LNAME, BYEAR, SEX, SALARY,DNO)\n DEPARTMENT(DNO, DNAME, MGR_ENO, ENO)\n \n PLOC are referring to names of cities, such as Hong Kong, Shanghai, etc. DYEAR is in the format of YYYY (integer).\n \n Write a SQL statement to provide the department number for departments only have male employees."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "SELECT dno \n FROM department\n WHERE dno not IN (SELECT distinct dno FROM employees where sex = \u2018f\u2019)"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "id783",
+    "extra_data": {
+      "id": "OE_34",
+      "level_1_topic": "Database",
+      "level_2_topic": "SQL",
+      "rationale": "The SQL statement first finds departments with any non-male employees and excludes these departments from the results. The remaining departments are those with only male employees. This approach ensures departments with mixed or female employees are filtered out.",
+      "question_type": "open_ended"
+    }
+  },
+  {
+    "input": {
+      "text": "In quicksort, for an array of N elements, the partitionIt() method will examine each element approximately ______ times."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "log2(N)"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "id27",
+    "extra_data": {
+      "id": "FB_27",
+      "level_1_topic": "Data structures and algorithms",
+      "level_2_topic": "Time and space complexity analysis",
+      "rationale": "In quicksort, each element is examined once per level of recursion, which is log_2(N) levels for an array of N elements.",
+      "question_type": "fill_in_blank"
+    }
+  },
+  {
+    "input": {
+      "text": "In Java, accessing an object\u2019s methods requires the _____ operator."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "dot"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "id1",
+    "extra_data": {
+      "id": "FB_1",
+      "level_1_topic": "Programming languages and compilers",
+      "level_2_topic": "Language paradigms (imperative, functional, logic)",
+      "rationale": "The dot operator is used in Java to access an object's methods, properties, or inner classes, as it references the object's members.",
+      "question_type": "fill_in_blank"
+    }
+  },
+  {
+    "input": {
+      "text": "Which are not strategies  for data transformation?\n\nA) Normalization\nB) Clustering\nC) Discretization\nD) Concept hierarchy generation for nominal data\n\nAnswer:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "A"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "B"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "C"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "D"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id261",
+    "extra_data": {
+      "id": "MC_156",
+      "level_1_topic": "Data science and big data",
+      "level_2_topic": "Data mining",
+      "rationale": "Clustering is not for data transformation but for data reduction. ",
+      "question_type": "multiple_choice"
+    }
+  },
+  {
+    "input": {
+      "text": "The least squares parameter estimation involves differentiating the formula $$E_{(w,b)}= {\\textstyle \\sum_{i=1}^{m}} (y_{i}-wx_{i}-b)^{2}$$ with respect to \ud835\udc64 and \ud835\udc4f, and setting the derivative to zero to obtain the optimal closed-form solution.\n\nAnswer (True or False):"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "True"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "False"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id644",
+    "extra_data": {
+      "id": "TF_211",
+      "level_1_topic": "Machine learning",
+      "level_2_topic": "Supervised learning",
+      "rationale": "Differentiating and setting the derivatives to zero finds the values of \ud835\udc64 and \ud835\udc4f that minimize error.",
+      "question_type": "true_false"
+    }
+  },
+  {
+    "input": {
+      "text": "Which of the following is true?\n\nA) The pop operation on a stack is considerably simpler than the remove\noperation on a queue.\nB) The contents of a queue can wrap around, while those of a stack cannot.\nC) The top of a stack corresponds to the front of a queue.\nD) In both the stack and the queue, items removed in sequence are taken\nfrom increasingly high index cells in the array.\n\nAnswer:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "A"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "B"
+        },
+        "tags": [
+          "correct"
+        ]
+      },
+      {
+        "output": {
+          "text": "C"
+        },
+        "tags": []
+      },
+      {
+        "output": {
+          "text": "D"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "id142",
+    "extra_data": {
+      "id": "MC_37",
+      "level_1_topic": "Data structures and algorithms",
+      "level_2_topic": "Data structure",
+      "rationale": "Queues can use circular buffers, allowing contents to wrap around, while stacks typically operate in a linear fashion without wrapping.",
+      "question_type": "multiple_choice"
+    }
+  },
+  {
+    "input": {
+      "text": "In key exchange protocols, Perfect Forward Secrecy (PFS) is a security property that protects past sessions against future compromise of the private key(s). Explain why the Diffie-Hellman Key Exchange protocol satisfies PFS. State the assumption(s)."
+    },
+    "references": [
+      {
+        "output": {
+          "text": "In DH Key exchange, Alice and Bob generate their private keys, a and b, randomly to calculate g^a mod p and g^b mod p respectively for each session. If a and b of one session \n are comprised, the attacker can only decrypt the messages of that session, but not those in the past, when another sets of a and b are used. Assumption: Alice and Bob must use a new a and b as their private keys respectively for each session. (It is ok to have new private keys generated because they are not used to encrypt/decrypt of the messages directly, but the generation of the session keys)"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "id876",
+    "extra_data": {
+      "id": "OE_127",
+      "level_1_topic": "Cybersecurity",
+      "level_2_topic": "Cryptography",
+      "rationale": "Diffie-Hellman Key Exchange achieves Perfect Forward Secrecy by generating new private keys for each session, which ensures that past sessions remain secure even if current session keys are compromised. The security relies on using different private keys for different sessions and the assumption that private keys are not reused.",
+      "question_type": "open_ended"
+    }
+  }
+]

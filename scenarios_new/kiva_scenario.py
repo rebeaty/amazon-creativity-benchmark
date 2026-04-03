@@ -102,10 +102,11 @@ class KiVAScenario(Scenario):
     def _download_and_extract_data(self, output_path: str) -> str:
         """Download and extract KiVA test data if not already present."""
         data_dir = os.path.join(output_path, "kiva_data")
+        inner_dir = os.path.join(data_dir, "single_image")
 
-        if os.path.exists(data_dir) and os.path.isdir(data_dir):
+        if os.path.exists(inner_dir) and os.path.isdir(inner_dir):
             # Data already downloaded
-            return data_dir
+            return inner_dir
 
         # Download ZIP file
         zip_path = os.path.join(output_path, "single_image.zip")

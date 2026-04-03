@@ -1,0 +1,85 @@
+{
+  "name": "eqbench_creative_writing_v3:model=google_gemini-2.0-flash-lite",
+  "scenario_spec": {
+    "class_name": "scenarios_new.eqbench_creative_writing_v3_scenario.EQBenchCreativeWritingV3Scenario",
+    "args": {}
+  },
+  "adapter_spec": {
+    "method": "generation",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 3,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 2048,
+    "stop_sequences": [],
+    "multi_label": false
+  },
+  "metric_specs": [
+    {
+      "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+      "args": {
+        "metric_name": "elo_rating"
+      }
+    },
+    {
+      "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+      "args": {
+        "metric_name": "rubric_score"
+      }
+    }
+  ],
+  "data_augmenter_spec": {
+    "perturbation_specs": [],
+    "should_augment_train_instances": false,
+    "should_include_original_train": false,
+    "should_skip_unchanged_train": false,
+    "should_augment_eval_instances": false,
+    "should_include_original_eval": false,
+    "should_skip_unchanged_eval": false,
+    "seeds_per_instance": 1
+  },
+  "groups": [
+    "creativity",
+    "eqbench_creative_writing_v3"
+  ],
+  "annotators": [
+    {
+      "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+      "args": {
+        "judge_model_name": "anthropic/claude-sonnet-4",
+        "judge_temperature": 0.0,
+        "judge_max_new_tokens": 1024,
+        "metric_name": "elo_rating",
+        "rubric": "Compare the creative writing piece against a reference to determine relative quality.\nEvaluate based on literary craft, originality, emotional resonance, and overall writing quality.\n\nScore 1: The generated piece is substantially inferior in literary quality\nScore 2: The generated piece is somewhat weaker in creative craft\nScore 3: Both pieces are of roughly equal creative quality\nScore 4: The generated piece shows stronger creative craft and quality\nScore 5: The generated piece is substantially superior in literary excellence\n"
+      }
+    },
+    {
+      "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+      "args": {
+        "judge_model_name": "anthropic/claude-sonnet-4",
+        "judge_temperature": 0.0,
+        "judge_max_new_tokens": 512,
+        "metric_name": "rubric_score",
+        "rubric": "Evaluate the creative writing piece according to the detailed EQBench rubric criteria.\nConsider creativity, emotional depth, narrative craft, character, and overall literary merit.\n\nScore 1: Fails on nearly all rubric criteria\nScore 2: Meets only minimal rubric criteria\nScore 3: Meets most rubric criteria adequately\nScore 4: Meets all rubric criteria well\nScore 5: Exceeds all rubric criteria with exceptional literary quality\n"
+      }
+    }
+  ]
+}

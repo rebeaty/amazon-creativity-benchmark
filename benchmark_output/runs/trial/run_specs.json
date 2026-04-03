@@ -507,5 +507,679 @@
       "creativity",
       "csd100"
     ]
+  },
+  {
+    "name": "data_narrative:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.data_narrative_scenario.DataNarrativeScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 5,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "narrative_quality"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "data_narrative"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "narrative_quality",
+          "rubric": "Evaluate the quality of the generated data narrative based on the given data table and topic.\nConsider accuracy of data interpretation, insightfulness, clarity, and narrative coherence.\n\nScore 1: Narrative is factually wrong, irrelevant, or nonsensical\nScore 2: Narrative mentions the topic but misinterprets data or lacks insight\nScore 3: Narrative is reasonable but generic, missing key trends or patterns\nScore 4: Narrative accurately describes key trends with good insight and clarity\nScore 5: Narrative is excellent \u2014 insightful, accurate, well-structured, and highlights significant patterns\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "dialogue_diversity:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.dialogue_diversity_scenario.DialogueDiversityScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "metrics.distinct_n_metric.DistinctNMetric",
+        "args": {
+          "n": 2
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "coherence_score"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "dialogue_diversity"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 64,
+          "metric_name": "coherence_score",
+          "rubric": "Evaluate the COHERENCE of the generated dialogue response.\nConsider whether the response logically follows from the conversation context and maintains conversational coherence.\n\nScore 1: Response is completely incoherent or off-topic for the dialogue\nScore 2: Response has major coherence issues with the preceding conversation\nScore 3: Response is somewhat coherent but with noticeable gaps\nScore 4: Response is coherent and follows naturally from the dialogue\nScore 5: Response is perfectly coherent, natural, and contextually appropriate\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "diverse_not_short:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.diverse_not_short_scenario.DiverseNotShortScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      },
+      {
+        "class_name": "metrics.distinct_n_metric.DistinctNMetric",
+        "args": {
+          "n": 2
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "diverse_not_short"
+    ]
+  },
+  {
+    "name": "eqbench_creative_writing_v3:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.eqbench_creative_writing_v3_scenario.EQBenchCreativeWritingV3Scenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 3,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 2048,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "elo_rating"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "rubric_score"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "eqbench_creative_writing_v3"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "anthropic/claude-sonnet-4",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 1024,
+          "metric_name": "elo_rating",
+          "rubric": "Compare the creative writing piece against a reference to determine relative quality.\nEvaluate based on literary craft, originality, emotional resonance, and overall writing quality.\n\nScore 1: The generated piece is substantially inferior in literary quality\nScore 2: The generated piece is somewhat weaker in creative craft\nScore 3: Both pieces are of roughly equal creative quality\nScore 4: The generated piece shows stronger creative craft and quality\nScore 5: The generated piece is substantially superior in literary excellence\n"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "anthropic/claude-sonnet-4",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 512,
+          "metric_name": "rubric_score",
+          "rubric": "Evaluate the creative writing piece according to the detailed EQBench rubric criteria.\nConsider creativity, emotional depth, narrative craft, character, and overall literary merit.\n\nScore 1: Fails on nearly all rubric criteria\nScore 2: Meets only minimal rubric criteria\nScore 3: Meets most rubric criteria adequately\nScore 4: Meets all rubric criteria well\nScore 5: Exceeds all rubric criteria with exceptional literary quality\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "fann_or_flop:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.fann_or_flop_scenario.FannOrFlopScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "fann_or_flop"
+    ]
+  },
+  {
+    "name": "future_ideas:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.future_ideas_scenario.FutureIdeasScenario",
+      "args": {
+        "domain": "computer"
+      }
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "llm_judge_novelty"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "llm_judge_relevance"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "future_ideas"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "llm_judge_novelty",
+          "rubric": "Evaluate the NOVELTY of the generated future scientific or technological idea.\nConsider how unprecedented, original, and forward-thinking the idea is.\n\nScore 1: Idea is entirely conventional or already widely known\nScore 2: Mostly incremental with minimal novelty\nScore 3: Somewhat novel with some original elements\nScore 4: Notably novel idea that goes beyond current common thinking\nScore 5: Highly novel, unprecedented idea demonstrating exceptional forward-thinking creativity\n"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "llm_judge_relevance",
+          "rubric": "Evaluate the RELEVANCE of the generated future idea to the given domain or topic.\nConsider how well the idea addresses the specified area and aligns with the domain's challenges.\n\nScore 1: Idea has no relevance to the specified domain or topic\nScore 2: Minimal relevance with major off-topic elements\nScore 3: Somewhat relevant but with notable gaps or off-topic elements\nScore 4: Mostly relevant and well-aligned with the domain\nScore 5: Perfectly relevant and highly focused on the domain's core challenges\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "grapheval_ai_researcher:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.grapheval_ai_researcher_scenario.GraphEvalAIResearcherScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "llm_judge_quality"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "grapheval_ai_researcher"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "openai/gpt-4",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 512,
+          "metric_name": "llm_judge_quality",
+          "rubric": "Evaluate the quality of the AI researcher decision or analysis generated for the graph evaluation task.\nConsider accuracy, depth of reasoning, relevance, and quality of the research evaluation.\n\nScore 1: Analysis is incorrect, irrelevant, or shows no research understanding\nScore 2: Poor analysis with major gaps in research reasoning\nScore 3: Adequate analysis meeting basic research evaluation criteria\nScore 4: Good analysis with sound research reasoning and relevant insights\nScore 5: Excellent analysis demonstrating expert-level research judgment and depth\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "graphragbench-wrongone:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.graphragbench-wrongone_scenario.GraphRAGBenchScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "graphragbench-wrongone"
+    ]
+  },
+  {
+    "name": "kiva:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.kiva_scenario.KiVAScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "multiple_choice_joint",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "Answer: ",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [
+        "\n"
+      ],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "kiva"
+    ]
+  },
+  {
+    "name": "miqa:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.miqa_scenario.MiQAScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "multiple_choice_joint",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "Answer: ",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [
+        "\n"
+      ],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      },
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "miqa"
+    ]
   }
 ]

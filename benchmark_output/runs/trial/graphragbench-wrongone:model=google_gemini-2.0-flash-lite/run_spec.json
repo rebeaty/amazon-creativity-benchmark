@@ -1,0 +1,55 @@
+{
+  "name": "graphragbench-wrongone:model=google_gemini-2.0-flash-lite",
+  "scenario_spec": {
+    "class_name": "scenarios_new.graphragbench-wrongone_scenario.GraphRAGBenchScenario",
+    "args": {}
+  },
+  "adapter_spec": {
+    "method": "generation",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 1,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [],
+    "multi_label": false
+  },
+  "metric_specs": [
+    {
+      "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+      "args": {}
+    }
+  ],
+  "data_augmenter_spec": {
+    "perturbation_specs": [],
+    "should_augment_train_instances": false,
+    "should_include_original_train": false,
+    "should_skip_unchanged_train": false,
+    "should_augment_eval_instances": false,
+    "should_include_original_eval": false,
+    "should_skip_unchanged_eval": false,
+    "seeds_per_instance": 1
+  },
+  "groups": [
+    "creativity",
+    "graphragbench-wrongone"
+  ]
+}

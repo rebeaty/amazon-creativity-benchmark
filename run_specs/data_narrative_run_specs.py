@@ -4,9 +4,22 @@ from helm.benchmark.adaptation.adapter_spec import AdapterSpec
 from helm.benchmark.adaptation.adapters.adapter_factory import (
     ADAPT_GENERATION,
 )
+from helm.benchmark.annotation.annotator import AnnotatorSpec
 from helm.benchmark.metrics.metric import MetricSpec
 from helm.benchmark.run_spec import RunSpec, run_spec_function
 from helm.benchmark.scenarios.scenario import ScenarioSpec
+
+
+_RUBRIC_NARRATIVE_QUALITY = """\
+Evaluate the quality of the generated data narrative based on the given data table and topic.
+Consider accuracy of data interpretation, insightfulness, clarity, and narrative coherence.
+
+Score 1: Narrative is factually wrong, irrelevant, or nonsensical
+Score 2: Narrative mentions the topic but misinterprets data or lacks insight
+Score 3: Narrative is reasonable but generic, missing key trends or patterns
+Score 4: Narrative accurately describes key trends with good insight and clarity
+Score 5: Narrative is excellent — insightful, accurate, well-structured, and highlights significant patterns
+"""
 
 
 @run_spec_function("data_narrative")
@@ -32,8 +45,20 @@ def get_data_narrative_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics", args={}),
-        MetricSpec(class_name="helm.benchmark.metrics.summarization_metrics.SummarizationMetric", args={"model_name": "bert-base-uncased"}),
+        MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "narrative_quality"}),
+    ]
+
+    annotators = [
+        AnnotatorSpec(
+            class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+            args={
+                "judge_model_name": "google/gemini-2.0-flash-lite",
+                "judge_temperature": 0.0,
+                "judge_max_new_tokens": 256,
+                "metric_name": "narrative_quality",
+                "rubric": _RUBRIC_NARRATIVE_QUALITY,
+            },
+        ),
     ]
 
     return RunSpec(
@@ -42,5 +67,5 @@ def get_data_narrative_spec() -> RunSpec:
         adapter_spec=adapter_spec,
         metric_specs=metric_specs,
         groups=["creativity", "data_narrative"],
-        annotators=None,
+        annotators=annotators,
     )

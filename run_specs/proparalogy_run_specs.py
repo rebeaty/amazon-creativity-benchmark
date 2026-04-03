@@ -32,7 +32,7 @@ def get_proparalogy_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicReferenceMetric", args={}),
     ]
 
     return RunSpec(

@@ -1,0 +1,582 @@
+{
+  "adapter_spec": {
+    "method": "generation",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 1,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [],
+    "multi_label": false
+  },
+  "request_states": [
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: dew, comb, bee,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "honey"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_7"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: dew, comb, bee,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: Honey\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.6200594902038574,
+        "request_datetime": 1775240908
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: keg, puff, room,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "powder"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_89"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: keg, puff, room,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: Party\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.506305456161499,
+        "request_datetime": 1775240908
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: illness, bus, computer,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "terminal"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_97"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: illness, bus, computer,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: terminal\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.49312591552734375,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: pie, luck, belly,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "pot"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_26"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: pie, luck, belly,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: Fortune\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.6144523620605469,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: grass, king, meat,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "crab"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_110"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: grass, king, meat,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: steak\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.652296781539917,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: control, place, rate,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "birth"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_128"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: control, place, rate,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: SPEED\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.6589434146881104,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: catcher, food, hot,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "dog"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_59"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: catcher, food, hot,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "dog\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.42632246017456055,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: piece, mind, dating,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "game"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_22"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: piece, mind, dating,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: match\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.5699315071105957,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: lounge, hour, napkin,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "cocktail"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_129"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: lounge, hour, napkin,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: cocktail\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.42919087409973145,
+        "request_datetime": 1775240909
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: fish, mine, rush,\nSolution:"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "gold"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "rat_16"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Task Description: For this task, you'll be shown 3 unrelated cue words, and you must find a 4th word that relates to all 3 words shown.\nThe generation should be restricted only one word (the 4th word) and the format of the generation of the 4th word should be: \"Solution: [WORD]\". Do not generated anything else.\n\nCue Words: fish, mine, rush,\nSolution:\n",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Solution: Gold\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.4267892837524414,
+        "request_datetime": 1775240910
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    }
+  ]
+}

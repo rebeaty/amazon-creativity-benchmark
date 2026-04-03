@@ -1,0 +1,192 @@
+[
+  {
+    "instance_id": "id478",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Suppose that the last SampleRTT in a TCP connection is equal to 1 sec. The current value of TimeoutInterval for the connection will necessarily be \u22651 sec.\n\nAnswer (True or False):\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id635",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "The following activity is a data mining task: predicting the future stock price of a company using historical records.\n\nAnswer (True or False):\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id247",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "For a depthwise 3x3 convolution, the number of input channels and output channels are both 32, how many parameters does this convolution layer have\n\nA) 96\nB) 288\nC) 576\nD) 9216\n\nAnswer:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id783",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "A database schema is given below.\n \n EMPLOYEES(ENO, FNAME, M, INIT, LNAME, BYEAR, SEX, SALARY,DNO)\n DEPARTMENT(DNO, DNAME, MGR_ENO, ENO)\n \n PLOC are referring to names of cities, such as Hong Kong, Shanghai, etc. DYEAR is in the format of YYYY (integer).\n \n Write a SQL statement to provide the department number for departments only have male employees.\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id27",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "In quicksort, for an array of N elements, the partitionIt() method will examine each element approximately ______ times.\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id1",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "In Java, accessing an object\u2019s methods requires the _____ operator.\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id261",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Which are not strategies  for data transformation?\n\nA) Normalization\nB) Clustering\nC) Discretization\nD) Concept hierarchy generation for nominal data\n\nAnswer:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id644",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "The least squares parameter estimation involves differentiating the formula $$E_{(w,b)}= {\\textstyle \\sum_{i=1}^{m}} (y_{i}-wx_{i}-b)^{2}$$ with respect to \ud835\udc64 and \ud835\udc4f, and setting the derivative to zero to obtain the optimal closed-form solution.\n\nAnswer (True or False):\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id142",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Which of the following is true?\n\nA) The pop operation on a stack is considerably simpler than the remove\noperation on a queue.\nB) The contents of a queue can wrap around, while those of a stack cannot.\nC) The top of a stack corresponds to the front of a queue.\nD) In both the stack and the queue, items removed in sequence are taken\nfrom increasingly high index cells in the array.\n\nAnswer:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "id876",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "In key exchange protocols, Perfect Forward Secrecy (PFS) is a security property that protects past sessions against future compromise of the private key(s). Explain why the Diffie-Hellman Key Exchange protocol satisfies PFS. State the assumption(s).\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  }
+]

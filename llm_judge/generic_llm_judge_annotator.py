@@ -44,7 +44,11 @@ class GenericLLMJudgeAnnotator(Annotator):
         # Include reference (baseline) for pairwise comparison if available
         reference_text = ""
         if request_state.instance.references:
-            reference_text = request_state.instance.references[0].output.text
+            ref_output = request_state.instance.references[0].output
+            if hasattr(ref_output, 'text'):
+                reference_text = ref_output.text
+            elif isinstance(ref_output, dict):
+                reference_text = ref_output.get('text', '')
 
         prompt = (
             f"{self.rubric}\n\n"

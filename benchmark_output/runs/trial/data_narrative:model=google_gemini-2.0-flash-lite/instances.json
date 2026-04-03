@@ -1,0 +1,152 @@
+[
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "On the low income, there\u2019s no country with life expectancy above 64."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_3_8"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population Forecast\nIntent: How reliable is the world population forecast? Short answer \u2014 Very reliable\n\nData Table:\nworld-population-projections-by-un-prospects-revision.csv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "And one more in 1978."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_4_3"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "The countries in the bottom left of the chart have the lowest income and the shortest life expectancy."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_3_5"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population\nIntent: How Did Babies per Woman Change in Different Regions? Short answer \u2014 It dropped everywhere\n\nData Table:\nEntity\tYear\tFertility rate - Sex: all - Age: all - Variant: estimates\nAfrica (UN)\t1950\t6.5856\nAsia (UN)\t1950\t5.7054\nEurope (UN)\t1950\t2.6966\nLatin America and the Caribbean (UN)\t1950\t5.7971\nNorthern America (UN)\t1950\t2.9742\nOceania (UN)\t1950\t3.672\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "The number of babies born per woman has dropped across the world. Back in the year 1950, it was about 4.5 babies per woman in all regions on average."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_1_0"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population\nIntent: How Did Babies per Woman Change in Different Regions? Short answer \u2014 It dropped everywhere\n\nData Table:\nEntity\tYear\tFertility rate - Sex: all - Age: all - Variant: estimates\nAfrica (UN)\t1950\t6.5856\nAfrica (UN)\t1960\t6.6743\nAfrica (UN)\t1970\t6.709\nAfrica (UN)\t1980\t6.598\nAfrica (UN)\t1990\t5.9145\nAfrica (UN)\t2000\t5.1759\nAfrica (UN)\t2010\t4.8588\nAfrica (UN)\t2020\t4.3614\nAfrica (UN)\t2021\t4.305\nAsia (UN)\t1950\t5.7054\nAsia (UN)\t1960\t5.1942\nAsia (UN)\t1970\t5.5865\nAsia (UN)\t1980\t3.9139\nAsia (UN)\t1990\t3.3146\nAsia (UN)\t2000\t2.5652\nAsia (UN)\t2010\t2.3094\nAsia (UN)\t2020\t1.9836\nAsia (UN)\t2021\t1.9414\nEurope (UN)\t1950\t2.6966\nEurope (UN)\t1960\t2.5772\nEurope (UN)\t1970\t2.2814\nEurope (UN)\t1980\t1.9252\nEurope (UN)\t1990\t1.7173\nEurope (UN)\t2000\t1.418\nEurope (UN)\t2010\t1.6085\nEurope (UN)\t2020\t1.4732\nEurope (UN)\t2021\t1.4833\nLatin America and the Caribbean (UN)\t1950\t5.7971\nLatin America and the Caribbean (UN)\t1960\t5.8649\nLatin America and the Caribbean (UN)\t1970\t5.1856\nLatin America and the Caribbean (UN)\t1980\t4.1604\nLatin America and the Caribbean (UN)\t1990\t3.2525\nLatin America and the Caribbean (UN)\t2000\t2.6086\nLatin America and the Caribbean (UN)\t2010\t2.1915\nLatin America and the Caribbean (UN)\t2020\t1.895\nLatin America and the Caribbean (UN)\t2021\t1.8641\nNorthern America (UN)\t1950\t2.9742\nNorthern America (UN)\t1960\t3.5827\nNorthern America (UN)\t1970\t2.4529\nNorthern America (UN)\t1980\t1.8213\nNorthern America (UN)\t1990\t2.0445\nNorthern America (UN)\t2000\t1.9933\nNorthern America (UN)\t2010\t1.9039\nNorthern America (UN)\t2020\t1.6252\nNorthern America (UN)\t2021\t1.6431\nOceania (UN)\t1950\t3.672\nOceania (UN)\t1960\t4.1113\nOceania (UN)\t1970\t3.5548\nOceania (UN)\t1980\t2.6046\nOceania (UN)\t1990\t2.5422\nOceania (UN)\t2000\t2.4478\nOceania (UN)\t2010\t2.5248\nOceania (UN)\t2020\t2.1606\nOceania (UN)\t2021\t2.1504\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "When trends continue, we will reach down to 2 babies per woman during this century"
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_1_6"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Africa."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_3_3"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "The countries in the top right of the chart have the highest income and the longest life expectancy."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_3_6"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population\nIntent: How Did the World Population Change Historically? Short answer \u2014 First slowly. Then fast\n\nData Table:\nEntity Year \"Population (historical estimates)\"\nWorld -10000 4432266\nWorld -9000 5616996\nWorld -8000 7242892\nWorld -7000 9577918\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "By the time agriculture was invented the total number of people on earth was just like one of the big cities today: Bangkok, London or Rio de Janeiro."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_2_0"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population Forecast\nIntent: How reliable is the world population forecast? Short answer \u2014 Very reliable\n\nData Table:\nworld-population-projections-by-un-prospects-revision.csv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Now we know the number. Already the very first forecast back in 1958 was quite good."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_4_4"
+  },
+  {
+    "input": {
+      "text": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Most people live in middle income countries. From 50 all the way up to 75 years, depending on how the money is distributed and how it\u2019s used."
+        },
+        "tags": []
+      }
+    ],
+    "split": "test",
+    "id": "test_gapminder_3_9"
+  }
+]

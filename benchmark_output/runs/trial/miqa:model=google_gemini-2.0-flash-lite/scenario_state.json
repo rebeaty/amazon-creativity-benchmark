@@ -1,0 +1,684 @@
+{
+  "adapter_spec": {
+    "method": "multiple_choice_joint",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "Answer: ",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 1,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [
+      "\n"
+    ],
+    "multi_label": false
+  },
+  "request_states": [
+    {
+      "instance": {
+        "input": {
+          "text": "\"A school teacher forced a new curriculum down the throat of the student\". Which of the following two statements could that imply? (1) the student was physically uncomfortable (2) the student was forced to learn something"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id208"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"A school teacher forced a new curriculum down the throat of the student\". Which of the following two statements could that imply? (1) the student was physically uncomfortable (2) the student was forced to learn something\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. 2**\n\nThe phrase \"forced a new curriculum down the throat\" is a figure of speech. It means the teacher made the students learn the curriculum whether they wanted to or not. It doesn't literally mean the student was physically uncomfortable.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.9839255809783936,
+        "request_datetime": 1775241816
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"My friend has driven me apart with his remarks\". Which of the following two statements could that imply? (1) my friend has a driver's licence (2) we talk less than before"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id188"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"My friend has driven me apart with his remarks\". Which of the following two statements could that imply? (1) my friend has a driver's licence (2) we talk less than before\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. 2**\n\nThe phrase \"driven me apart\" is a figurative expression meaning that the friend's remarks have caused a rift or distance in the relationship. This implies that the speaker and their friend now communicate less than they did previously.\n\nStatement 1, the friend having a driver's license, is irrelevant to the meaning of the phrase.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.2788660526275635,
+        "request_datetime": 1775241816
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"A plan is not solid\". Which of the following two statements could that imply? (1) a hammer could be used to break it (2) we should not follow it"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id12"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"A plan is not solid\". Which of the following two statements could that imply? (1) a hammer could be used to break it (2) we should not follow it\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The statement \"A plan is not solid\" implies that the plan is weak or unstable. Therefore, the statement \"we should not follow it\" is a reasonable implication.\n\nSo, the answer is B.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7532341480255127,
+        "request_datetime": 1775241816
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"Cold water could change this\". Which of the following two statements could imply that? (1) the rail is fiery during hot summers (2) my friend is a man of fiery passions"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id221"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"Cold water could change this\". Which of the following two statements could imply that? (1) the rail is fiery during hot summers (2) my friend is a man of fiery passions\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **A. 1**\n\nHere's why:\n\n*   **\"Cold water could change this\"** suggests that something is currently in a state that can be altered by cold water.\n\n*   **Statement 1: \"the rail is fiery during hot summers\"** Implies that the rail is hot, and that condition (being fiery) could be changed by cold water.\n\n*   **Statement 2: \"my friend is a man of fiery passions\"** implies that the friend is passionate, but it does not specify any physical state that could be changed by cold water.",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.1419932842254639,
+        "request_datetime": 1775241816
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"They will be outside\". Which of the following two statements could imply that? (1) my friends will come out of the house sooner or later (2) the facts will come out sooner or later"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id239"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"They will be outside\". Which of the following two statements could imply that? (1) my friends will come out of the house sooner or later (2) the facts will come out sooner or later\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **A. 1**\n\n*   \"They will be outside\" means the subjects (presumably people) will be located outdoors.\n*   Statement 1, \"my friends will come out of the house sooner or later,\" directly implies that the friends *will* eventually be outside.\n*   Statement 2, \"the facts will come out sooner or later,\" uses the idiom \"come out\" to mean \"become known\" or \"be revealed,\" not to describe a physical location.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.3999431133270264,
+        "request_datetime": 1775241817
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"An argument has cooled down\". Which of the following two statements could that imply? (1) winter is closer (2) we are no longer arguing"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id136"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"An argument has cooled down\". Which of the following two statements could that imply? (1) winter is closer (2) we are no longer arguing\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. 2**\n\nThe phrase \"An argument has cooled down\" is an idiom that means the argument is no longer heated or intense; in other words, the people involved have stopped arguing.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.6650741100311279,
+        "request_datetime": 1775241817
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"I see what you mean\". Which of the following two statements could that imply? (1) my eyes are working well (2) I understand you"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id230"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"I see what you mean\". Which of the following two statements could that imply? (1) my eyes are working well (2) I understand you\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. 2**\n\n\"I see what you mean\" is a figure of speech that means \"I understand you.\" It doesn't literally refer to the ability to see with one's eyes.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.9170875549316406,
+        "request_datetime": 1775241817
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"The new regulations are hard for me to swallow\". Which of the following two statements could that imply? (1) a glass of water could help (2) different regulations could help"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id206"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"The new regulations are hard for me to swallow\". Which of the following two statements could that imply? (1) a glass of water could help (2) different regulations could help\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The phrase \"hard to swallow\" is an idiom that means something is difficult to accept or believe.\n\nTherefore, the phrase implies that the speaker is having difficulty accepting or dealing with the new regulations. Neither a glass of water nor different regulations would directly address the problem. So the answer is none of the above.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.8377161026000977,
+        "request_datetime": 1775241817
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"Education is at the heart of a societal problem\". Which of the following two statements could that imply? (1) a cardiologist could help (2) schools could help"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id52"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"Education is at the heart of a societal problem\". Which of the following two statements could that imply? (1) a cardiologist could help (2) schools could help\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The statement \"Education is at the heart of a societal problem\" implies that the problem is related to education. Therefore, the statement \"schools could help\" is a logical implication. A cardiologist's expertise is not directly related to education.\n\nSo the answer is B.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7632932662963867,
+        "request_datetime": 1775241818
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "\"I have reached the top of my career path\". Which of the following two statements could that imply? (1) I am at high altitude (2) I am successful"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test",
+        "id": "id108"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "1",
+        "B": "2"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "\"I have reached the top of my career path\". Which of the following two statements could that imply? (1) I am at high altitude (2) I am successful\nA. 1\nB. 2\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. 2**\n\nThe phrase \"top of my career path\" is a metaphor for achieving the highest level of success in one's profession. It doesn't literally mean being at a high altitude.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.7624249458312988,
+        "request_datetime": 1775241818
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    }
+  ]
+}

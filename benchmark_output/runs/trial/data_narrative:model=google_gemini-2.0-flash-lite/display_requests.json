@@ -1,0 +1,192 @@
+[
+  {
+    "instance_id": "test_gapminder_3_8",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_4_3",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population Forecast\nIntent: How reliable is the world population forecast? Short answer \u2014 Very reliable\n\nData Table:\nworld-population-projections-by-un-prospects-revision.csv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_3_5",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_1_0",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population\nIntent: How Did Babies per Woman Change in Different Regions? Short answer \u2014 It dropped everywhere\n\nData Table:\nEntity\tYear\tFertility rate - Sex: all - Age: all - Variant: estimates\nAfrica (UN)\t1950\t6.5856\nAsia (UN)\t1950\t5.7054\nEurope (UN)\t1950\t2.6966\nLatin America and the Caribbean (UN)\t1950\t5.7971\nNorthern America (UN)\t1950\t2.9742\nOceania (UN)\t1950\t3.672\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_1_6",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population\nIntent: How Did Babies per Woman Change in Different Regions? Short answer \u2014 It dropped everywhere\n\nData Table:\nEntity\tYear\tFertility rate - Sex: all - Age: all - Variant: estimates\nAfrica (UN)\t1950\t6.5856\nAfrica (UN)\t1960\t6.6743\nAfrica (UN)\t1970\t6.709\nAfrica (UN)\t1980\t6.598\nAfrica (UN)\t1990\t5.9145\nAfrica (UN)\t2000\t5.1759\nAfrica (UN)\t2010\t4.8588\nAfrica (UN)\t2020\t4.3614\nAfrica (UN)\t2021\t4.305\nAsia (UN)\t1950\t5.7054\nAsia (UN)\t1960\t5.1942\nAsia (UN)\t1970\t5.5865\nAsia (UN)\t1980\t3.9139\nAsia (UN)\t1990\t3.3146\nAsia (UN)\t2000\t2.5652\nAsia (UN)\t2010\t2.3094\nAsia (UN)\t2020\t1.9836\nAsia (UN)\t2021\t1.9414\nEurope (UN)\t1950\t2.6966\nEurope (UN)\t1960\t2.5772\nEurope (UN)\t1970\t2.2814\nEurope (UN)\t1980\t1.9252\nEurope (UN)\t1990\t1.7173\nEurope (UN)\t2000\t1.418\nEurope (UN)\t2010\t1.6085\nEurope (UN)\t2020\t1.4732\nEurope (UN)\t2021\t1.4833\nLatin America and the Caribbean (UN)\t1950\t5.7971\nLatin America and the Caribbean (UN)\t1960\t5.8649\nLatin America and the Caribbean (UN)\t1970\t5.1856\nLatin America and the Caribbean (UN)\t1980\t4.1604\nLatin America and the Caribbean (UN)\t1990\t3.2525\nLatin America and the Caribbean (UN)\t2000\t2.6086\nLatin America and the Caribbean (UN)\t2010\t2.1915\nLatin America and the Caribbean (UN)\t2020\t1.895\nLatin America and the Caribbean (UN)\t2021\t1.8641\nNorthern America (UN)\t1950\t2.9742\nNorthern America (UN)\t1960\t3.5827\nNorthern America (UN)\t1970\t2.4529\nNorthern America (UN)\t1980\t1.8213\nNorthern America (UN)\t1990\t2.0445\nNorthern America (UN)\t2000\t1.9933\nNorthern America (UN)\t2010\t1.9039\nNorthern America (UN)\t2020\t1.6252\nNorthern America (UN)\t2021\t1.6431\nOceania (UN)\t1950\t3.672\nOceania (UN)\t1960\t4.1113\nOceania (UN)\t1970\t3.5548\nOceania (UN)\t1980\t2.6046\nOceania (UN)\t1990\t2.5422\nOceania (UN)\t2000\t2.4478\nOceania (UN)\t2010\t2.5248\nOceania (UN)\t2020\t2.1606\nOceania (UN)\t2021\t2.1504\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_3_3",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_3_6",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_2_0",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population\nIntent: How Did the World Population Change Historically? Short answer \u2014 First slowly. Then fast\n\nData Table:\nEntity Year \"Population (historical estimates)\"\nWorld -10000 4432266\nWorld -9000 5616996\nWorld -8000 7242892\nWorld -7000 9577918\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_4_4",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: World Population Forecast\nIntent: How reliable is the world population forecast? Short answer \u2014 Very reliable\n\nData Table:\nworld-population-projections-by-un-prospects-revision.csv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  },
+  {
+    "instance_id": "test_gapminder_3_9",
+    "train_trial_index": 0,
+    "request": {
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "embedding": false,
+      "prompt": "Generate a narrative paragraph describing insights from the following data table.\nFocus on key trends, patterns, and significant data points.\n\nTopic: Life Expectancy and Population\nIntent: How Does Income Relate to Life Expectancy?\n\nData Table:\nincome_lifeexpt_gdp.tsv\n\nNarrative:\n",
+      "temperature": 0.7,
+      "num_completions": 1,
+      "top_k_per_token": 1,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "echo_prompt": false,
+      "top_p": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0
+    }
+  }
+]
