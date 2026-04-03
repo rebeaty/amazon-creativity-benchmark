@@ -30,7 +30,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
-    Reference,
+    Output, Reference,
     TEST_SPLIT,
     VALID_SPLIT,
     TRAIN_SPLIT,
@@ -108,7 +108,7 @@ class TwistListScenario(Scenario):
             prompt = f"Generate a tongue twister using these key words: {keywords}"
 
         # Create reference with the ground truth tongue twister
-        references = [Reference(output={"text": tongue_twister}, tags=[])]
+        references = [Reference(output=Output(text=tongue_twister), tags=[])]
 
         return Instance(input=Input(text=prompt), references=references, split=split)
 

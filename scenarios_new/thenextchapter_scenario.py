@@ -60,7 +60,7 @@ from helm.benchmark.scenarios.scenario import (
 )
 
 _BASE_URL = (
-    "https://raw.githubusercontent.com/ZhuohanX/TheNextChapter/main"
+    "https://raw.githubusercontent.com/ZhuohanX/TheNextChapter/master"
     "/GeneratedStories"
 )
 

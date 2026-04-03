@@ -43,6 +43,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
+    Output,
     Reference,
     CORRECT_TAG,
     TEST_SPLIT,
@@ -92,9 +93,18 @@ class InfoChartQAScenario(Scenario):
                     question_text += "\n\n" + item['instructions']
 
                 # Create MediaObject for the chart image
+                # Fix malformed URLs in the dataset
+                url = item['url']
+                # Strip repeated leading "h"s (e.g. "hhttps://" → "https://")
+                while url.startswith("hhttp"):
+                    url = url[1:]
+                # Add scheme if missing entirely (e.g. "preview.redd.it/...")
+                if not url.startswith(("http://", "https://")):
+                    url = "https://" + url
+
                 chart_image = MediaObject(
                     content_type="image/png",
-                    location=item['url']
+                    location=url
                 )
 
                 # For visual_basic split, some questions include cropped sections
@@ -109,7 +119,7 @@ class InfoChartQAScenario(Scenario):
                 # Create reference with the ground truth answer
                 references = [
                     Reference(
-                        output=item['answer'],
+                        output=Output(text=item['answer']),
                         tags=[CORRECT_TAG]
                     )
                 ]

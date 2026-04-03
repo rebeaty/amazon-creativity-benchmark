@@ -42,6 +42,7 @@ Fields skipped: id, image_type, difficulty, domain, emotion, rhetoric,
                explanation, metaphorical_meaning, local_path (metadata)
 """
 
+import os
 from typing import List
 from datasets import load_dataset
 from helm.benchmark.scenarios.scenario import (
@@ -60,13 +61,20 @@ class CIIBenchScenario(Scenario):
     def get_instances(self, output_path: str) -> List[Instance]:
         dataset = load_dataset("m-a-p/CII-Bench", split="test")
 
+        self._images_dir = os.path.join(output_path, "images")
+        os.makedirs(self._images_dir, exist_ok=True)
+
         instances = []
-        for item in dataset:
-            instances.append(self._create_instance(item))
+        for idx, item in enumerate(dataset):
+            instances.append(self._create_instance(item, idx))
         return instances
 
-    def _create_instance(self, item: dict) -> Instance:
-        image = item["image"]  # PIL Image object
+    def _create_instance(self, item: dict, idx: int) -> Instance:
+        pil_image = item["image"]  # PIL Image object
+        image_path = os.path.join(self._images_dir, f"{idx}.jpg")
+        if not os.path.exists(image_path):
+            pil_image.convert("RGB").save(image_path, "JPEG")
+
         question = item["question"]
         options = [
             item["option1"],
@@ -88,7 +96,7 @@ class CIIBenchScenario(Scenario):
         multimedia_content = MultimediaObject([
             MediaObject(
                 content_type="image/jpeg",
-                location=image
+                location=image_path
             ),
             MediaObject(
                 content_type="text/plain",

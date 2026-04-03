@@ -30,10 +30,11 @@ SUITE="${2:-creativity-benchmark}"
 MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
-RUN_ENTRY="story_generation_rocstories,model=${MODEL}"
+RUN_ENTRY="story_generation_rocstories:model=${MODEL}"
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "$RUN_ENTRY" --suite "$SUITE")
+source "$(dirname "$0")/_helm_run.sh"
+CMD=(--run-entries "$RUN_ENTRY" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi
@@ -48,7 +49,7 @@ echo ""
 echo "Running: ${CMD[*]}"
 echo ""
 
-"${CMD[@]}"
+helm_run "${CMD[@]}"
 
 # ── Summarize results ──────────────────────────────────────────────────────
 echo ""

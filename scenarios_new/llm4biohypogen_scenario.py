@@ -48,7 +48,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
-    Reference,
+    Output, Reference,
     TEST_SPLIT,
 )
 
@@ -151,7 +151,7 @@ Hypothesis:
         prompt = prompt.format(background=background)
 
         # Create reference with ground truth hypothesis
-        references = [Reference(output={"text": hypothesis}, tags=[])]
+        references = [Reference(output=Output(text=hypothesis), tags=[])]
 
         return Instance(
             input=Input(text=prompt),

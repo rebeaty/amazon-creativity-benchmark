@@ -78,6 +78,10 @@ class FunQAScenario(Scenario):
             # Construct video path
             video_path = os.path.join(videos_dir, video_file)
 
+            # Skip instances whose video files have not been downloaded
+            if not os.path.exists(video_path):
+                continue
+
             # Create multimodal input with video + text question
             multimedia_content = MultimediaObject([
                 MediaObject(

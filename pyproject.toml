@@ -25,6 +25,9 @@ dependencies = [
     # Network & HuggingFace access used directly in scenarios
     "requests>=2.31",
     "huggingface_hub>=0.20", # hf_hub_download / snapshot_download for gated repos
+
+    # Google Gemini API access (used by HELM's GoogleGenAIClient)
+    "google-genai>=1.0",
 ]
 
 [project.optional-dependencies]

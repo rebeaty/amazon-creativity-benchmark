@@ -45,7 +45,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
-    Reference,
+    Output, Reference,
     TEST_SPLIT,
 )
 
@@ -102,6 +102,6 @@ Historical Analogies Events:
 
         # Create reference with the ground truth analogous event
         # For LLM-as-judge evaluation, we include the target event as reference
-        references = [Reference(output={"text": target_event}, tags=[])]
+        references = [Reference(output=Output(text=target_event), tags=[])]
 
         return Instance(input=Input(text=prompt), references=references, split=TEST_SPLIT)

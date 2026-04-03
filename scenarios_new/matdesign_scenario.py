@@ -44,6 +44,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
+    Output,
     Reference,
     TEST_SPLIT,
 )
@@ -134,7 +135,7 @@ Suggestion_20:
         # Note: The ground truth represents ONE working solution from the paper,
         # but the model should generate NOVEL suggestions
         reference_text = f"Reference Materials: {materials}\n\nReference Methods: {methods}"
-        references = [Reference(output={"text": reference_text}, tags=["reference_only"])]
+        references = [Reference(output=Output(text=reference_text), tags=["reference_only"])]
 
         return Instance(
             input=Input(text=prompt),
