@@ -32,7 +32,10 @@ def get_vietnamese_poem_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="metrics.vietnamese_poem_metric.VietnamesePoemMetric", args={}),
+        MetricSpec(class_name="metrics.vietnamese_poem_metric.VietnamesePoemMetric", args={"metric": "poem_score"}),
+        MetricSpec(class_name="metrics.vietnamese_poem_metric.VietnamesePoemMetric", args={"metric": "length_score"}),
+        MetricSpec(class_name="metrics.vietnamese_poem_metric.VietnamesePoemMetric", args={"metric": "tone_score"}),
+        MetricSpec(class_name="metrics.vietnamese_poem_metric.VietnamesePoemMetric", args={"metric": "rhyme_score"}),
     ]
 
     return RunSpec(

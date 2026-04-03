@@ -45,7 +45,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
-    Reference,
+    Output, Reference,
     TEST_SPLIT,
 )
 
@@ -120,7 +120,7 @@ Imagine you are person B and act as if you were a real individual. Think about a
         references = []
         for candidate in candidates:
             references.append(Reference(
-                output={"text": candidate},
+                output=Output(text=candidate),
                 tags=["diverse_response"]
             ))
 

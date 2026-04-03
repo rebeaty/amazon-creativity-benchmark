@@ -30,10 +30,11 @@ SUITE="${2:-creativity-benchmark}"
 MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
-RUN_ENTRY="alpaca_eval_2,model=${MODEL}"
+RUN_ENTRY="alpaca_eval_2:model=${MODEL}"
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "$RUN_ENTRY" --suite "$SUITE")
+source "$(dirname "$0")/_helm_run.sh"
+CMD=(--run-entries "$RUN_ENTRY" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi
@@ -45,10 +46,10 @@ echo "  Suite:    $SUITE"
 [ -n "$MAX_INSTANCES" ] && echo "  Max instances: $MAX_INSTANCES"
 echo "================================================================"
 echo ""
-echo "Running: ${CMD[*]}"
+echo "Running: helm-run ${CMD[*]}"
 echo ""
 
-"${CMD[@]}"
+helm_run "${CMD[@]}"
 
 # ── Summarize results ──────────────────────────────────────────────────────
 echo ""

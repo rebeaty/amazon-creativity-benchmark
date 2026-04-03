@@ -243,7 +243,7 @@ Chain 3: [word1] (reason) → [word2] (reason) → ... → [word20] (reason)"""
             instances.append(
                 Instance(
                     input=Input(text=prompt),
-                    references=[Reference(output=Reference.CORRECT_TAG, tags=[])],
+                    references=[],
                     split=TEST_SPLIT,
                 )
             )

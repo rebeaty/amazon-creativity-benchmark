@@ -30,7 +30,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
-    Reference,
+    Output, Reference,
     CORRECT_TAG,
     TEST_SPLIT,
 )
@@ -118,8 +118,8 @@ User Prompt:
 
         # Paper 1 is always the more recent paper and assumed to be more novel
         references = [
-            Reference(output={"text": "1"}, tags=[CORRECT_TAG]),
-            Reference(output={"text": "2"}, tags=[]),
+            Reference(output=Output(text="1"), tags=[CORRECT_TAG]),
+            Reference(output=Output(text="2"), tags=[]),
         ]
 
         return Instance(

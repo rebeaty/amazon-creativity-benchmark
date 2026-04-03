@@ -27,7 +27,7 @@ Note: The dataset also includes token-level pun location annotations, but the pr
 
 from datasets import load_dataset
 from helm.benchmark.scenarios.scenario import (
-    Scenario, Instance, Input, Reference,
+    Scenario, Instance, Input, Output, Reference,
     CORRECT_TAG, TEST_SPLIT
 )
 
@@ -55,11 +55,11 @@ Is this text humorous?"""
             # Tag the correct answer based on label
             references = [
                 Reference(
-                    output={"text": "Yes"},
+                    output=Output(text="Yes"),
                     tags=[CORRECT_TAG] if label == 1 else []
                 ),
                 Reference(
-                    output={"text": "No"},
+                    output=Output(text="No"),
                     tags=[CORRECT_TAG] if label == 0 else []
                 )
             ]

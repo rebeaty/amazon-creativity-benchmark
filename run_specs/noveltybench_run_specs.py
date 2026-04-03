@@ -33,7 +33,7 @@ def get_noveltybench_spec() -> RunSpec:
 
     metric_specs = [
         # TODO: no metrics in registry, using fallback
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicMetric", args={"names": ["exact_match"]}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match"]}),
     ]
 
     return RunSpec(

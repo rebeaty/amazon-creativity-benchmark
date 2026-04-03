@@ -150,7 +150,7 @@ from .pron_vs_prompt.scenario import PronVsPromptScenario
 from .proparalogy.scenario import ProparaLogyScenario
 from .protein_bench.scenario import ProteinBenchScenario
 from .pun_eval.scenario import PunEvalScenario
-from .pun2pun.scenario import Pun2PunScenario
+#from .pun2pun.scenario import Pun2PunScenario
 from .puzzleworld.scenario import PuzzleWorldScenario
 # recombination_extraction: prefer subdirectory over top-level duplicate
 from .recombination_extraction.scenario import RecombinationExtractionScenario
@@ -348,7 +348,7 @@ _ALL_CLASSES: list = [
     ProparaLogyScenario,
     ProteinBenchScenario,
     PunEvalScenario,
-    Pun2PunScenario,
+    #Pun2PunScenario,
     PuzzleWorldScenario,
     # R
     RecombinationExtractionScenario,
@@ -411,4 +411,7 @@ __all__ = sorted(
         and obj is not Scenario
         and not name.startswith("_")
     )
-) + ["SCENARIO_REGISTRY"]
+) + ["SCENARIO_REGISTRY", "scenario_registry"]
+
+# Convenience alias (lowercase)
+scenario_registry = SCENARIO_REGISTRY

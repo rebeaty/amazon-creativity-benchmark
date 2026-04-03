@@ -10,11 +10,11 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 
 
 @run_spec_function("thenextchapter")
-def get_thenextchapter_spec() -> RunSpec:
+def get_thenextchapter_spec(subset: str = "roc") -> RunSpec:
 
     scenario_spec = ScenarioSpec(
         class_name="scenarios_new.thenextchapter_scenario.TheNextChapterScenario",
-        args={},
+        args={"subset": subset},
     )
 
     adapter_spec = AdapterSpec(
@@ -32,7 +32,7 @@ def get_thenextchapter_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
     ]
 
     return RunSpec(

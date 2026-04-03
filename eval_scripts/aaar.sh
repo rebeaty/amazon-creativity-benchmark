@@ -31,11 +31,12 @@ MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
 RUN_ENTRIES=()
-RUN_ENTRIES+=("aaar_experiment_design,model=${MODEL}")
-RUN_ENTRIES+=("aaar_paper_weakness,model=${MODEL}")
+RUN_ENTRIES+=("aaar_experiment_design:model=${MODEL}")
+RUN_ENTRIES+=("aaar_paper_weakness:model=${MODEL}")
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "${RUN_ENTRIES[@]}" --suite "$SUITE")
+source "$(dirname "$0")/_helm_run.sh"
+CMD=(--run-entries "${RUN_ENTRIES[@]}" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi
@@ -50,7 +51,7 @@ echo ""
 echo "Running: ${CMD[*]}"
 echo ""
 
-"${CMD[@]}"
+helm_run "${CMD[@]}"
 
 # ── Summarize results ──────────────────────────────────────────────────────
 echo ""
