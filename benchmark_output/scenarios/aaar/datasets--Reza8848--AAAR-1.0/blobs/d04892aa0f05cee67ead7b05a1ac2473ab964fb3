@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 4: Manifold Embeddings (EMNIST)",
+  "captionBoundary": {
+    "x1": 218.53399658203125,
+    "x2": 393.46722412109375,
+    "y1": 599.7355346679688,
+    "y2": 605.7379760742188
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "dCVAE", "(b)", "VAE", "(c)", "CVAE", "(d)", "FactorVAE", "(e)", "β-VAE", "(f)", "RFVAE"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 508.79999999999995,
+    "y2": 586.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D__ipVB0Z7-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Manifold Embeddings (KMNIST)",
+  "captionBoundary": {
+    "x1": 217.98098754882812,
+    "x2": 394.0200500488281,
+    "y1": 720.571533203125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "dCVAE", "(b)", "VAE", "(c)", "CVAE", "(d)", "FactorVAE", "(e)", "β-VAE", "(f)", "RFVAE"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 629.76,
+    "y2": 707.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D__ipVB0Z7-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Latent Representation of EMNIST and KMNIST",
+  "captionBoundary": {
+    "x1": 188.51699829101562,
+    "x2": 423.48492431640625,
+    "y1": 484.56951904296875,
+    "y2": 490.5719909667969
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "KMNIST", "(a)", "EMNIST"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 151.68,
+    "y2": 471.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D__ipVB0Z7-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Reconstruction for digit zero (0) and the capital letter O. Here, E refers to Negative ELBO score and A is the reconstruction error or anomaly score. Only dCVAE and FactorVAE show steady improvement for both types of reconstruction. All the other methods misclassify the samples. Moreover, we can observe higher reconstruction error and ELBO scores compared to MNIST (Figure A1) and FMNIST (Figure A2).",
+  "captionBoundary": {
+    "x1": 107.99996185302734,
+    "x2": 504.0040283203125,
+    "y1": 267.2765197753906,
+    "y2": 317.11492919921875
+  },
+  "figType": "Figure",
+  "imageText": ["(g)", "E", "=", "-171", "A", "=", "0.33", "(h)", "E", "=", "-199", "A", "=", "0.48", "(i)", "E", "=", "-180", "A", "=", "0.53", "(j)", "E", "=", "-185", "A", "=", "0.52", "(k)", "E", "=", "-195", "A", "=", "0.57", "(l)", "E", "=", "-190", "A", "=", "0.55", "(a)", "E", "=", "-235", "A", "=", "0.97", "(b)", "E", "=", "-248", "A", "=", "0.90", "(c)", "E", "=", "-245", "A", "=", "0.91", "(d)", "E", "=", "-246", "A", "=", "0.91", "(e)", "E", "=", "-244", "A", "=", "0.92", "(f)", "E", "=", "-246", "A", "=", "0.92"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 461.28,
+    "y1": 90.72,
+    "y2": 252.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D__ipVB0Z7-Figure1-1.png"
+}, {
+  "caption": "Figure 2: In KMNIST dataset, without dCVAE, all other methods fail to classify both anomalous and normal samples. Reconstruction scores suggest FactorVAE, VAE almost fail to distinguish normal and anomalous observations. Since the stroke of the samples are similar in this dataset, methods that only emphasize disentanglement or empirical approximation lose more information in latent variable resulting in false anomaly detection.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 537.591552734375,
+    "y2": 587.4290161132812
+  },
+  "figType": "Figure",
+  "imageText": ["(g)", "E", "=", "-188", "A", "=", "0.28", "(h)", "E", "=", "-211", "A", "=", "0.47", "(i)", "E", "=", "-185", "A", "=", "0.41", "(j)", "E", "=", "-201", "A", "=", "0.57", "(k)", "E", "=", "-183", "A", "=", "0.41", "(l)", "E", "=", "-170", "A", "=", "0.38", "(a)", "E", "=", "-251", "A", "=", "0.98", "(b)", "E", "=", "-281", "A", "=", "0.90", "(c)", "E", "=", "-279", "A", "=", "0.98", "(d)", "E", "=-266", "A", "=", "0.97", "(e)", "E", "=", "-277", "A", "=", "0.97", "(f)", "E", "=", "-270", "A", "=", "0.96"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 461.28,
+    "y1": 355.68,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D__ipVB0Z7-Figure2-1.png"
+}, {
+  "caption": "Table 1: Evaluation metrics score",
+  "captionBoundary": {
+    "x1": 239.26600646972656,
+    "x2": 372.7349548339844,
+    "y1": 174.35440063476562,
+    "y2": 180.35687255859375
+  },
+  "figType": "Table",
+  "imageText": ["VAE", "88.21", "37", "84.12", "39", "67.23", "92", "51.13", "78", "CVAE", "87.57", "43", "83.31", "48", "66.01", "117", "42.35", "104", "FactorVAE", "87.11", "53", "82.78", "50", "62.91", "138", "49.23", "117", "β-VAE", "85.31", "51", "82.31", "53", "65.12", "123", "50.01", "119", "RFVAE", "85.31", "55", "81.11", "57", "55.03", "130", "49.51", "132", "Time", "(min)", "dCVAE", "88.31", "37", "88.63", "44", "78.98", "102", "61.02", "95", "Training", "Time", "(min)", "AUC", "Training", "Time", "(min)", "AUC", "Training", "Time", "(min)", "AUC", "AUC", "Training", "Model", "MNIST", "FMNIST", "EMNIST", "KMNIST"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 192.95999999999998,
+    "y2": 297.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D__ipVB0Z7-Table1-1.png"
+}]

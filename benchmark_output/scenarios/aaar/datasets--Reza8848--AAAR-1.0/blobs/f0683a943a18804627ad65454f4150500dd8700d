@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 3: Descriptive statistics of benchmark datasets",
+  "captionBoundary": {
+    "x1": 201.4340057373047,
+    "x2": 410.5688781738281,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Size", "1904", "2232", "6524", "8873", "35953", "2646746", "Censoring", "rate", "0.423", "0.432", "0.699", "0.320", "0.901", "0.280", "Features", "9", "7", "8", "14", "26", "15", "METABRIC", "RotGBSG", "FLCHAIN", "SUPPORT", "MIMIC-III", "KKBOX"],
+  "name": "3",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 102.24,
+    "y2": 157.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Table3-1.png"
+}, {
+  "caption": "Figure 1: Visualizations of synthetic data results under the NFM framework. The plots in the first row compare the empirical estimates of the nonparametric component ν(t, Z) against its true value evaluated on 100 hold-out points, under the PF scheme. The plots in the second row are obtained using the FN scheme, with analogous semantics to the first row.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032958984375,
+    "y1": 361.3915710449219,
+    "y2": 400.2710266113281
+  },
+  "figType": "Figure",
+  "imageText": ["estimated", "ground", "truth", "N", "=", "10000", "(FN)", "ν", "(t", ",", "Z", ")", "index", "4", "2", "0", "50", "100", "0", "estimated", "ground", "truth", "N", "=", "5000", "(FN)", "ν", "(t", ",", "Z", ")", "index", "4", "2", "0", "50", "100", "0", "estimated", "ground", "truth", "N", "=", "1000", "(FN)", "ν", "(t", ",", "Z", ")", "index", "4", "2", "0", "50", "100", "0", "estimated", "ground", "truth", "N", "=", "10000", "(PF)", "ν", "(t", ",", "Z", ")", "index", "4", "2", "0", "50", "100", "0", "estimated", "ground", "truth", "N", "=", "5000", "(PF)", "ν", "(t", ",", "Z", ")", "index", "4", "2", "0", "50", "100", "0", "estimated", "ground", "truth", "N", "=", "1000", "(PF)", "ν", "(t", ",", "Z", ")", "index", "4", "2", "0", "50", "100", "0"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 507.84,
+    "y1": 84.96,
+    "y2": 335.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Figure1-1.png"
+}, {
+  "caption": "Table 5: Relative improvement of NFM models in comparison to their non-frailty counterparts, measured in IBS, INBLL, and C-index.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 192.26455688476562,
+    "y2": 209.22601318359375
+  },
+  "figType": "Table",
+  "imageText": ["METABRIC", "+1.33%", "+1.56%", "+1.61%", "+2.30%", "+3.08%", "+2.79%", "RotGBSG", "+1.11%", "+0.95%", "+0.84%", "+0.62%", "+0.40%", "+0.79%", "FLCHAIN", "+1.29%", "+1.32%", "+0.52%", "+0.20%", "+0.27%", "+0.01%", "SUPPORT", "+0.31%", "+0.23%", "+0.69%", "+2.22%", "+1.76%", "+0.05%", "MIMIC-III", "+12.38%", "+12.15%", "−0.64%", "+6.18%", "+5.56%", "+5.18%", "KKBOX", "+2.56%", "+0.51%", "+0.75%", "+8.20%", "+10.38%", "+2.17%", "Dataset", "NFM-PF", "vs", "DeepSurv", "NFM-FN", "vs", "SuMo-net", "IBS", "INBLL", "C-index", "IBS", "INBLL", "C-index"],
+  "name": "5",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Table5-1.png"
+}, {
+  "caption": "Table 1: Survival prediction results measured in IBS and INBLL metric (%) on four small-scale survival datasets. In each column, the boldfaced score denotes the best result and the underlined score represents the second-best result.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["NFM-PF", "16.33±0.75", "49.07±1.96", "17.60±0.55", "52.12±1.34", "9.96±0.39", "32.84±1.15", "19.14±0.39", "56.35±1.00", "NFM-FN", "16.11±0.81", "48.21±2.04", "17.66±0.52", "52.41±1.22", "10.05±0.39", "33.11±1.10", "18.97±0.60", "55.87±1.50", "CoxPH", "16.46±0.90", "49.57±2.66", "18.25±0.44", "53.76±1.11", "10.05±0.38", "33.18±1.16", "20.54±0.38", "59.58±0.86", "GBM", "16.61±0.82", "49.87±2.44", "17.83±0.44", "52.78±1.11", "9.98±0.37", "32.88±1.05", "19.18±0.39", "56.46±0.10", "RSF", "16.62±0.64", "49.61±1.54", "17.89±0.42", "52.77±1.01", "9.96±0.37", "32.92±1.05", "19.11±0.40", "56.28±1.00", "DeepSurv", "16.55±0.93", "49.85±3.02", "17.80±0.49", "52.62±1.25", "10.09±0.38", "33.28±1.15", "19.20±0.41", "56.48±1.08", "CoxTime", "16.54±0.83", "49.67±2.67", "17.80±0.58", "52.56±1.47", "10.28±0.45", "34.18±1.53", "19.17±0.40", "56.45±1.10", "DeepHit", "17.50±0.83", "52.10±2.16", "19.61±0.38", "56.67±1.10", "11.83±0.39", "37.72±1.02", "20.66±0.32", "60.06±0.72", "DeepEH", "16.56±0.65", "49.42±1.53", "17.62±0.52", "52.08±1.27", "10.11±0.37", "33.30±1.10", "19.30±0.39", "56.67±0.94", "SuMo-net", "16.49±0.83", "49.74±2.21", "17.77±0.47", "52.62±1.11", "10.07±0.40", "33.20±1.10", "19.40±0.38", "56.87±0.96", "SODEN", "16.52±0.63", "49.39±1.97", "17.05±0.63", "50.45±1.97", "10.13±0.24", "33.37±0.57", "19.07±0.50", "56.15±1.35", "IBS", "INBLL", "IBS", "INBLL", "IBS", "INBLL", "IBS", "INBLL", "Model", "METABRIC", "RotGBSG", "FLCHAIN", "SUPPORT"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 501.12,
+    "y1": 124.32,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Table1-1.png"
+}, {
+  "caption": "Table 4: Survival prediction results measured in C-index (%) on all the 6 benchmark datasets. In each column, the boldfaced score denotes the best result and the underlined score represents the second-best result. The average rank of each model is reported in the rightmost column. We did not manage to obtain reasonable results for DeepEH and SODEN on two larger datasets MIMIC-III and KKBOX, and we set corresponding ranks to be the worst on those datasets.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033264160156,
+    "y1": 394.926513671875,
+    "y2": 444.76397705078125
+  },
+  "figType": "Table",
+  "imageText": ["NFM-PF", "64.98±1.87", "67.77±1.35", "79.45±1.03", "61.33±0.83", "79.56±0.15", "86.23±0.01", "3.83", "NFM-FN", "66.63±1.82", "67.73±1.29", "79.29±0.93", "62.21±0.41", "80.18±0.20", "86.61±0.01", "2.00", "CoxPH", "63.42±1.81", "66.14±1.46", "79.09±1.11", "56.89±0.91", "74.91±0.00", "83.01±0.00", "9.17", "GBM", "64.02±1.79", "67.35±1.16", "79.47±1.08", "61.46±0.80", "75.20±0.00", "85.84±0.00", "5.67", "RSF", "64.47±1.82", "67.33±1.34", "78.75±1.07", "61.63±0.84", "75.47±0.17", "85.79±0.00", "6.50", "DeepSurv", "63.95±2.12", "67.20±1.22", "79.04±1.14", "60.91±0.85", "80.08±0.44", "85.59±0.08", "7.00", "CoxTime", "66.22±1.69", "67.41±1.35", "78.95±1.01", "61.54±0.87", "78.78±0.62", "87.31±0.24", "4.33", "DeepHit", "66.33±1.61", "66.38±1.07", "78.48±1.09", "63.20±0.85", "79.16±0.59", "86.12±0.26", "6.33", "DeepEH", "66.59±2.00", "67.93±1.28", "78.71±1.44", "61.51±1.04", "−", "−", "6.33", "SuMo-net", "64.82±1.80", "67.20±1.31", "79.28±1.02", "62.18±0.78", "76.23±1.06", "84.77±0.02", "5.50", "SODEN", "64.82±1.05", "66.97±0.75", "79.00±0.96", "61.10±0.59", "−", "−", "8.33", "Model", "METABRIC", "RotGBSG", "FLCHAIN", "SUPPORT", "MIMIC-III", "KKBOX", "Ave.", "Rank"],
+  "name": "4",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 500.15999999999997,
+    "y1": 257.76,
+    "y2": 383.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Table4-1.png"
+}, {
+  "caption": "Figure 2: Visualizations of synthetic data results under the PF scheme of NFM framework, regarding empirical recovery of the m function in (2)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 225.88150024414062,
+    "y2": 242.84295654296875
+  },
+  "figType": "Figure",
+  "imageText": ["estimated", "ground", "truth", "N", "=", "10000", ")", "m", "(Z", "index", "2", "1", "0", "0", "50", "100", "estimated", "ground", "truth", "N", "=", "5000", ")", "m", "(Z", "index", "2", "1", "0", "0", "50", "100", "estimated", "ground", "truth", "N", "=", "1000", ")", "m", "(Z", "index", "2", "1", "0", "0", "50", "100"],
+  "name": "2",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 507.84,
+    "y1": 84.96,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Figure2-1.png"
+}, {
+  "caption": "Table 2: Survival prediction results measured in IBS and INBLL metric (%) on two larger datasets. In each column, the boldfaced score denotes the best result and the underlined score represents the second-best result. Two models are not reported, namely SODEN and DeepEH, as we found empirically that their computational/memory cost is significantly worse than the rest, and we fail to obtain reasonable performances over the two datasets for these two models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00482177734375,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["NFM-PF", "16.28±0.36", "49.18±0.92", "11.02±0.11", "35.10±0.22", "NFM-FN", "17.47±0.45", "51.48±1.23", "10.63±0.08", "32.81±0.14", "CoxPH", "20.40±0.00", "60.02±0.00", "12.60±0.00", "39.40±0.00", "GBM", "17.70±0.00", "52.30±0.00", "11.81±0.00", "38.15±0.00", "RSF", "17.79±0.19", "53.34±0.41", "14.46±0.00", "44.39±0.00", "DeepSurv", "18.58±0.92", "55.98±2.43", "11.31±0.05", "35.28±0.15", "CoxTime", "17.68±1.36", "52.08±3.06", "10.70±0.06", "33.10±0.21", "DeepHit", "19.80±1.31", "59.03±4.20", "16.00±0.34", "48.64±1.04", "SuMo-net", "18.62±1.23", "54.51±2.97", "11.58±0.11", "36.61±0.28", "IBS", "INBLL", "IBS", "INBLL", "Model", "MIMIC-III", "KKBOX"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 439.2,
+    "y1": 146.4,
+    "y2": 278.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mU6ADbjk-c-Table2-1.png"
+}]

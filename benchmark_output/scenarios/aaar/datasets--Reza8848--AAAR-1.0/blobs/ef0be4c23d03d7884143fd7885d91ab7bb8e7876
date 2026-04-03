@@ -1,0 +1,421 @@
+[{
+  "caption": "Figure 1: Left: Two critical challenges in fixed camera approaches. Right: Three active cameras collaborate to best reconstruct the 3D pose of the target (marked in ).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9985656738281,
+    "y1": 709.612548828125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Dynamic", "occlusions", "lead", "to", "failed", "reconstruction", "(b)", "Constrained", "MoCap", "area", "Active", "MoCap", "in", "the", "wild"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 500.15999999999997,
+    "y1": 602.88,
+    "y2": 698.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure1-1.png"
+}, {
+  "caption": "Figure 4: UNREALPOSE: Our virtual environments for active 3D HPE in human crowd",
+  "captionBoundary": {
+    "x1": 132.12399291992188,
+    "x2": 479.877685546875,
+    "y1": 172.75753784179688,
+    "y2": 178.760009765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Blank", "(b)", "School", "Gym", "(c)", "Urban", "Street", "(d)", "Wilderness"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 75.84,
+    "y2": 159.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure4-1.png"
+}, {
+  "caption": "Figure 9: Visualization Tool. RGB videos at the two sides show the local camera view for each individual camera. The center part shows the live 3D reconstructions and corresponding MPJPE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9973449707031,
+    "y1": 437.154541015625,
+    "y2": 454.1159973144531
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 205.92,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure9-1.png"
+}, {
+  "caption": "Figure 13: Histograms of minimum Camera-to-Human distances to demonstrate the safety integrity level for three different 5-Cameras methods. Vanilla: original deep MARL policy without any safety feature. Obstacle Collision Avoidance: deep MARL policy added with OCA module Action Masking: deep MARL policy trained with AM module.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3475341796875,
+    "y1": 405.1245422363281,
+    "y2": 444.0039978027344
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 200.64,
+    "y2": 394.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure13-1.png"
+}, {
+  "caption": "Figure 5: Train results show the performance difference, relative to the number of cameras, between the baselines and our methods. Each data point aggregates the results in environments with a different number of humans (1 to 6, respectively). The threshold for success rate is set to τ = 200mm.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00140380859375,
+    "y1": 221.51052856445312,
+    "y2": 249.4310302734375
+  },
+  "figType": "Figure",
+  "imageText": ["Fixed", "Cameras", "Fixed", "Cameras", "(RANSAC)", "Fixed", "Cameras", "(PlaneSweepPose)", "MAPPO", "MAPPO", "+", "CTCR", "MAPPO", "+", "CTCR", "+", "WDL", "(Ours)", "Success", "Rate", "vs.", "Number", "of", "Cameras", "(%", ")", "at", "e", "es", "s", "R", "Su", "cc", "100", "95", "90", "85", "80", "75", "70", "65", "2", "3", "4", "5", "Number", "of", "Cameras", "MPJPE", "vs.", "Number", "of", "Cameras", "100", "120", "140", "160", "180", "200", "220", "240", "260", "M", "PJ", "PE", "(m", "m", ")", "40", "60", "80", "2", "3", "4", "5", "Number", "of", "Cameras"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 497.28,
+    "y1": 78.72,
+    "y2": 195.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure5-1.png"
+}, {
+  "caption": "Table 1: A comparison with other active control methods on the control of three cameras. We also report fixed camera results as a reference. MPJPE is averaged over six environment instances, each with a different number of humans (1 to 6, respectively).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 503.9978332519531,
+    "y1": 262.6595153808594,
+    "y2": 290.5799865722656
+  },
+  "figType": "Table",
+  "imageText": ["MPJPE", "(mm)", "↓", "122.4", "71.6", "70.2", "70.0", "56.7", "Rule-based", "Formation", "Ours", "AirCapRL", "(Reproduced)", "Fixed", "Cameras", "MAPPO"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 301.44,
+    "y2": 346.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table1-1.png"
+}, {
+  "caption": "Table 9: Adding delay (EMA) and action noise to our proposed method. In this experiment, we set η = 0.50 and sample noise factor between [0.80, 1.20). Results are reported on 5 episodes of 500 steps.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.001708984375,
+    "y1": 119.5605239868164,
+    "y2": 147.48101806640625
+  },
+  "figType": "Table",
+  "imageText": ["∆", "MPJPE", "(mm)", "Ours(Vanilla)", "–", "Add", "delay(EMA)", "+0.8", "Add", "action", "noise", "+2.1", "Add", "action", "noise", "and", "delay(EMA)", "+3.9"],
+  "name": "9",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 189.6,
+    "x2": 422.4,
+    "y1": 160.32,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table9-1.png"
+}, {
+  "caption": "Figure 11: Comparing the training curves (MPJPE (cm) vs. Environment Steps) for 3, 4, 5 cameras policies trained to 500k timesteps for the baseline and our method. Intervals for one standard deviation are shown, and each interval is computed based on samples from 3 different runs on different seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0008239746094,
+    "y1": 695.694580078125,
+    "y2": 723.614990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 196.79999999999998,
+    "x2": 415.2,
+    "y1": 341.76,
+    "y2": 685.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure11-1.png"
+}, {
+  "caption": "Figure 6: Detailed ablation study on WDL modules in the 2-cameras environment. RLPred: learn agent’s forward dynamics, TgtPred: predict future target position, PdPred: predict future pedestrian position. The full model additionally concatenates predicted future target position to observation embedding et.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0018310546875,
+    "y1": 211.54855346679688,
+    "y2": 250.427001953125
+  },
+  "figType": "Figure",
+  "imageText": ["Success", "Rate", "vs.", "Number", "of", "Humans", "(%", ")", "at", "e", "es", "s", "R", "Su", "cc", "95", "90", "85", "80", "75", "70", "65", "60", "55", "1", "2", "3", "4", "5", "6", "Number", "of", "Humans", "MPJPE", "vs.", "Number", "of", "Humans", "Fixed", "Cameras", "MAPPO", "MAPPO", "+", "RLPred", "MAPPO", "+", "RLPred", "+", "TgtPred", "MAPPO", "+", "RLPred", "+", "TgtPred", "+", "PdPred", "Ours", "(full)", "m", ")", "PE", "(m", "M", "PJ", "350", "300", "250", "200", "150", "100", "50", "1", "2", "3", "4", "5", "6", "Number", "of", "Humans"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 497.28,
+    "y1": 73.92,
+    "y2": 190.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Evaluation results for testing our multi-camera collaboration policy (three to five cameras) in four different environments that have six walking humans (including the target human).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6641845703125,
+    "y1": 392.6695251464844,
+    "y2": 409.6300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["3", "Cameras", "4", "Cameras", "5", "Cameras", "MAPPO", "MAPPO", "+", "CTCR", "MAPPO", "+", "CTCR", "+", "WDL", "(Ours)", "100", "125", "150", "175", "200", "225", "250", "275", "M", "PJ", "PE", "(m", "m", ")", "25", "50", "75", "BlankEnv", "SchoolGym", "UrbanStreet", "Wilderness", "BlankEnv", "SchoolGym", "UrbanStreet", "Wilderness", "BlankEnv", "SchoolGym", "UrbanStreet", "Wilderness", "0"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 500.15999999999997,
+    "y1": 264.96,
+    "y2": 376.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Simplified Pipeline Architecture.",
+  "captionBoundary": {
+    "x1": 220.6060028076172,
+    "x2": 391.3948059082031,
+    "y1": 228.70449829101562,
+    "y2": 234.70697021484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 60.96,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure2-1.png"
+}, {
+  "caption": "Table 4: Four fixed-camera baselines compared to our method in the 6-human Blank environment. Results for all baselines are evaluated over 20 episodes of 500 steps. RANSAC: RANSAC-based Triangulation TS: Temporal Smoothing with temporal fusion PlaneSweep: PlaneSweepPose (Lin & Lee, 2021a).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7412414550781,
+    "y1": 306.6455383300781,
+    "y2": 345.5249938964844
+  },
+  "figType": "Table",
+  "imageText": ["3", "Cameras", "142.0", "129.0", "123.5", "123.3", "73.3", "4", "Cameras", "122.3", "116.6", "106.0", "116.4", "54.7", "5", "Cameras", "87.0", "72.3", "77.7", "86.5", "51.6", "Fixed", "Cameras", "(PlaneSweep)", "Ours", "Fixed", "Cameras", "(RANSAC+TS)", "Fixed", "Cameras", "(RANSAC)", "BlankEnv", "Fixed", "Cameras", "(Triangulation)"],
+  "name": "4",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 358.56,
+    "y2": 418.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table4-1.png"
+}, {
+  "caption": "Table 5: Four fixed-camera baselines compared to our method in the 6-human SchoolGym environment. Results for all baselines are evaluated over 20 episodes of 500 steps. RANSAC: RANSACbased Triangulation TS: Temporal Smoothing with temporal fusion PlaneSweep: PlaneSweepPose (Lin & Lee, 2021a).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.65606689453125,
+    "y1": 464.0595397949219,
+    "y2": 502.93798828125
+  },
+  "figType": "Table",
+  "imageText": ["3", "Cameras", "149.1", "149.8", "144.1", "132.6", "99.4", "4", "Cameras", "133.3", "124.5", "124.7", "120.3", "67.7", "5", "Cameras", "100.2", "76.8", "83.0", "92.8", "64.6", "Fixed", "Cameras", "(PlaneSweep)", "Ours", "Fixed", "Cameras", "(RANSAC+TS)", "Fixed", "Cameras", "(RANSAC)", "SchoolGym", "Fixed", "Cameras", "(Triangulation)"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 516.0,
+    "y2": 574.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table5-1.png"
+}, {
+  "caption": "Table 6: Four fixed-camera baselines compared to our method in the 6-human UrbanStreet environment. Results for all baselines are evaluated over 5 episodes of 500 steps. RANSAC: RANSAC-based Triangulation TS: Temporal Smoothing with temporal fusion PlaneSweep: PlaneSweepPose (Lin & Lee, 2021a).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.65191650390625,
+    "y1": 620.58154296875,
+    "y2": 659.4609985351562
+  },
+  "figType": "Table",
+  "imageText": ["3", "Cameras", "513.4", "210.1", "194.2", "160.3", "103.6", "4", "Cameras", "279.4", "190.8", "174.5", "154.5", "66.4", "5", "Cameras", "136.7", "94.1", "94.4", "106.5", "61.9", "Fixed", "Cameras", "(PlaneSweep)", "Ours", "Fixed", "Cameras", "(RANSAC+TS)", "Fixed", "Cameras", "(RANSAC)", "UrbanStreet", "Fixed", "Cameras", "(Triangulation)"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 672.48,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table6-1.png"
+}, {
+  "caption": "Table 2: Common hyperparameters for models in baselines and our methods",
+  "captionBoundary": {
+    "x1": 153.50799560546875,
+    "x2": 458.1841735839844,
+    "y1": 315.26953125,
+    "y2": 321.2720031738281
+  },
+  "figType": "Table",
+  "imageText": ["Common", "Hyperparameter", "Baseline,", "Our", "Methods", "Max", "Episode", "Length", "500", "Rollout", "Fragment", "Length", "25", "Number", "of", "Rollouts", "60", "Train", "Batch", "Size", "1500", "SGD", "Mini-batch", "Size", "375", "Number", "of", "SGD", "Iterations", "(Sample", "Reuse)", "16", "gamma", "(γ)", "0.99", "GAE", "lambda", "(λ)", "1.0", "Initial", "KL", "Coefficient", "0.2", "KLTarget", "0.01", "Entropy", "Regulation", "Coefficient", "0.0", "Value", "Function", "Loss", "Coefficient", "0.1", "Value", "Function", "Clipping", "1000", "Gradient", "Clipping", "50", "Initial", "Learning", "Rate", "0.0005", "Learning", "Rate", "Schedule", "(lr,", "end", "step)", "[(0,", "5E-4),", "(200E3,", "5E-4),", "(200E3,", "1E-4),", "(400E3,", "1E-", "4),", "(600E3,", "5E-5),", "(600E3,", "5E-5)]", "LSTM", "Cell", "Size", "128", "Encoder", "Hidden", "Layers", "[128,", "128,", "128]", "Value", "Network", "Hidden", "Layers", "[128]", "Actor", "Network", "Hidden", "Layers", "[128]"],
+  "name": "2",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 529.4399999999999,
+    "y1": 333.59999999999997,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table2-1.png"
+}, {
+  "caption": "Figure 8: Visualizations for the emergent formations in controlling three to five cameras. The target person is colored in blue and others are colored in pink. The camera agents learn to spread out and avoid occlusions while maintaining good reconstruction accuracy without a centralized controller.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99884033203125,
+    "y1": 291.3905334472656,
+    "y2": 319.3110046386719
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "3", "Cameras", "(b)", "4", "Cameras", "(c)", "5", "Cameras"],
+  "name": "8",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 79.67999999999999,
+    "y2": 272.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure8-1.png"
+}, {
+  "caption": "Table 7: Four fixed-camera baselines compared to our method in the 6-human Wilderness environment. Results for all baselines are evaluated over 20 episodes of 500 steps. RANSAC: RANSAC-based Triangulation TS: Temporal Smoothing with temporal fusion PlaneSweep: PlaneSweepPose (Lin & Lee, 2021a).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7428894042969,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["3", "Cameras", "234.0", "159.6", "160.5", "139.2", "72.6", "4", "Cameras", "165.6", "143.9", "146.6", "129.5", "71.3", "5", "Cameras", "108.1", "74.9", "86.5", "95.1", "54.3", "Fixed", "Cameras", "(PlaneSweep)", "Ours", "Fixed", "Cameras", "(RANSAC+TS)", "Fixed", "Cameras", "(RANSAC)", "Wilderness", "Fixed", "Cameras", "(Triangulation)"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 135.35999999999999,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table7-1.png"
+}, {
+  "caption": "Table 8: Evaluate the effect of adding RANSAC-based Triangulation to our method. Both models are trained from scratch on a mix of Blank environment instances with 1 to 6 humans. MPJPE(mm) is averaged over the training results in six different configurations of Blank environment instances (1-6 humans).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0025939941406,
+    "y1": 491.91253662109375,
+    "y2": 530.7919921875
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "(5", "Cams)", "Ours", "(5", "Cams", "+", "RANSAC)", "MPJPE", "(mm)↓", "46.7", "35.0"],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 443.03999999999996,
+    "y1": 543.84,
+    "y2": 578.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Table8-1.png"
+}, {
+  "caption": "Figure 12: Illustration of fixed camera placements",
+  "captionBoundary": {
+    "x1": 206.16600036621094,
+    "x2": 405.83642578125,
+    "y1": 387.853515625,
+    "y2": 393.8559875488281
+  },
+  "figType": "Figure",
+  "imageText": ["2-cam", "3-cam", "4-cam", "5-cam"],
+  "name": "12",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 276.96,
+    "y2": 375.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure12-1.png"
+}, {
+  "caption": "Figure 3: An instance of computing Collaborative Triangulation Contribution Reward (CTCR) for every camera. Left: Three cameras tasked to perform HPE on the target person avoiding occlusions from two pedestrians. Middle: Three cameras can constitute four valid coalitions, each is generating a different 3D HPE. Right: Compute CTCR (without re-scaling by n) for each camera.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1696472167969,
+    "y1": 200.95352172851562,
+    "y2": 239.8330078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 69.6,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure3-1.png"
+}, {
+  "caption": "Figure 10: Decentralized Observation Processing",
+  "captionBoundary": {
+    "x1": 207.87899780273438,
+    "x2": 404.12225341796875,
+    "y1": 624.1475830078125,
+    "y2": 630.1500244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 173.76,
+    "y2": 613.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CPIy9TWFYBG-Figure10-1.png"
+}]

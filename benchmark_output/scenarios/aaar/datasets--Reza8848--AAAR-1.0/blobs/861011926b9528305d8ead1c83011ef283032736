@@ -1,0 +1,441 @@
+[{
+  "caption": "Figure 9: Normalized Laplacian eigenvectors and learned positional encodings for the graph of fluorescein. (Top row) From left to right: smallest and second smallest nontrivial eigenvectors, then second largest and largest eigenvectors. (Bottom row) From left to right: first four principal components of the output ρ([ϕ(vi) + ϕ(−vi)]i=1,...,n) of SignNet.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 505.2472839355469,
+    "y1": 271.9625549316406,
+    "y2": 312.3370056152344
+  },
+  "figType": "Figure",
+  "imageText": ["2.0", "1.5", "1.0", "0.5", "0.0", "−0.5", "−1.0", "SignNet", "PC", "4", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "3", "2", "1", "0", "−1", "SignNet", "PC", "3", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "4", "3", "2", "1", "0", "−1", "−2", "SignNet", "PC", "2", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "6", "4", "2", "0", "−2", "−4", "SignNet", "PC", "1", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "Eigenvector", "24", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "23", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "2", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "1", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C"],
+  "name": "9",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 496.79999999999995,
+    "y1": 82.56,
+    "y2": 259.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure9-1.png"
+}, {
+  "caption": "Figure 1: Symmetries of eigenvectors of a symmetric matrix with permutation invariances (e.g. a graph Laplacian). A neural network applied to the eigenvector matrix (middle) should be invariant or equivariant to permutation of the rows (left product with a permutation matrix P ) and invariant to the choice of eigenvectors in each eigenbasis (right product with a block diagonal orthogonal matrix Diag(Q1, Q2, Q3)).",
+  "captionBoundary": {
+    "x1": 305.6409912109375,
+    "x2": 505.650146484375,
+    "y1": 295.34051513671875,
+    "y2": 390.50799560546875
+  },
+  "figType": "Figure",
+  "imageText": ["𝑃", "𝑉!", "𝑉\"", "𝑉#", "𝑄\"", "𝑄!", "𝑄!", "⋅", "⋅", "𝑘", "eigenvectors", "partitioned", "by", "eigenvalue", "𝑛×𝑛", "permutation", "matrix", "𝑘×𝑘", "block", "diagonal", "orthogonal", "matrix", "𝑛"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 310.56,
+    "x2": 502.56,
+    "y1": 179.04,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure1-1.png"
+}, {
+  "caption": "Table 1: Results on the ZINC dataset with a 500k parameter budget. All models use edge features. Numbers are the mean and standard deviation over 4 runs, each with different seeds.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7449035644531,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["SignNet", "8", "476k", "0.105±0.007", "SignNet", "All", "487k", "0.084±0.006", "LapPE", "(flip)", "8", "474k", "0.132±0.010", "No", "PE", "N/A", "474k", "0.133±0.011", "PNA", "SignNet", "16", "470k", "0.147±0.005", "SignNet", "All", "417k", "0.102±0.002", "LapPE", "(flip)", "16", "470k", "0.178±0.004", "No", "PE", "N/A", "470k", "0.170±0.002", "GINE", "SignNet", "16", "479k", "0.115±0.008", "SignNet", "All", "486k", "0.102±0.005", "LapPE", "(flip)", "16", "487k", "0.223±0.007", "No", "PE", "N/A", "473k", "0.283±0.030", "Sparse", "Transformer", "SignNet", "8", "495k", "0.121±0.005", "SignNet", "All", "491k", "0.100±0.007", "SignNet", "(ϕ(v)", "only)", "8", "495k", "0.148±0.007", "LapPE", "(abs.)", "8", "492k", "0.204±0.009", "LapPE", "(can.)", "8", "505k", "0.298±0.019", "LapPE", "(flip)", "8", "492k", "0.198±0.011", "No", "PE", "N/A", "492k", "0.252±0.007", "GatedGCN", "Base", "model", "Positional", "encoding", "k", "#param", "Test", "MAE", "(↓)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 452.15999999999997,
+    "y1": 113.28,
+    "y2": 340.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table1-1.png"
+}, {
+  "caption": "Table 2: Comparison with SOTA methods on graph-level regression tasks. Numbers are test MAE, so lower is better. Best models within a standard deviation are bolded.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952392578125,
+    "y1": 351.46551513671875,
+    "y2": 368.427001953125
+  },
+  "figType": "Table",
+  "imageText": ["SignNet", "(ours)", ".084±.006", ".024±.003", ".113±.002", "ZINC", "(10K)", "↓", "ZINC-full", "↓", "Alchemy", "(10k)", "↓", "GIN", "(Xu", "et", "al.,", "2019)", ".170±.002", ".088±.002", ".180±.006", "δ-2-GNN", "(Morris", "et", "al.,", "2020b)", ".374±.022", ".042±.003", ".118±.001", "δ-2-LGNN", "(Morris", "et", "al.,", "2020b)", ".306±.044", ".045±.006", ".122±.003", "SpeqNet", "(Morris", "et", "al.,", "2022)", "—", "—", ".115±.001", "GNN-IR", "(Dupty", "&", "Lee,", "2022)", ".137±.010", "—", ".119±.002", "PF-GNN", "(Dupty", "et", "al.,", "2021)", ".122±.01", "—", ".111±.01", "Recon-GNN", "(Cotta", "et", "al.,", "2021)", ".170±.006", "—", ".125±.001"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 467.03999999999996,
+    "y1": 381.12,
+    "y2": 488.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table2-1.png"
+}, {
+  "caption": "Table 7: Results on the ZINC dataset with 500k parameter budget and no edge features. Numbers are the mean and standard deviation over 4 runs each with different seeds.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9989929199219,
+    "y1": 336.8095397949219,
+    "y2": 353.77099609375
+  },
+  "figType": "Table",
+  "imageText": ["SignNet", "16", "499k", "0.243±0.008", "GAT", "No", "PE", "16", "501k", "0.464±0.011", "LapPE", "(flip)", "16", "502k", "0.462±0.013", "SignNet", "16", "500k", "0.238±0.012", "GIN", "No", "PE", "16", "497k", "0.348±0.014", "LapPE", "(flip)", "16", "498k", "0.341±0.011", "Base", "model", "Positional", "encoding", "k", "#params", "Test", "MAE", "(↓)"],
+  "name": "7",
+  "page": 38,
+  "regionBoundary": {
+    "x1": 173.76,
+    "x2": 438.24,
+    "y1": 371.52,
+    "y2": 459.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table7-1.png"
+}, {
+  "caption": "Table 8: Comparison with domain specific methods on graph-level regression tasks. Numbers are test MAE, so lower is better. Best models within a standard deviation are bolded.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9950866699219,
+    "y1": 568.185546875,
+    "y2": 585.14697265625
+  },
+  "figType": "Table",
+  "imageText": ["SignNet", "(ours)", ".084±.006", ".024±.003", "ZINC", "(10K)", "↓", "ZINC-full", "↓", "HIMP", "†", "(Fey", "et", "al.,", "2020)", ".151±.006", ".036±.002", "CIN-small", "†", "(Bodnar", "et", "al.,", "2021)", ".094±.004", ".044±.003", "CIN", "†", "(Bodnar", "et", "al.,", "2021)", ".079±.006", ".022±.002"],
+  "name": "8",
+  "page": 38,
+  "regionBoundary": {
+    "x1": 178.56,
+    "x2": 431.03999999999996,
+    "y1": 597.6,
+    "y2": 665.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table8-1.png"
+}, {
+  "caption": "Figure 6: (Left) Cotangent Laplacian eigenvectors of the cat model. (Right) First principal component of ϕ(v) + ϕ(−v) from our trained SignNet.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 628.5375366210938,
+    "y2": 645.4990234375
+  },
+  "figType": "Figure",
+  "imageText": ["Eigenvector", "1023", "ϕ(v1023)", "+", "ϕ(−v1023)", "Eigenvector", "14", "ϕ(v14)", "+", "ϕ(−v14)", "Eigenvector", "11", "ϕ(v11)", "+", "ϕ(−v11)", "Eigenvector", "9", "ϕ(v9)", "+", "ϕ(−v9)", "Eigenvector", "1", "ϕ(v1)", "+", "ϕ(−v1)"],
+  "name": "6",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 188.64,
+    "x2": 428.15999999999997,
+    "y1": 137.76,
+    "y2": 615.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure6-1.png"
+}, {
+  "caption": "Figure 12: Illustration of our constructed G(1) and G(2) for n = 6, as used in the proof of Proposition 3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6532287597656,
+    "y1": 388.0355224609375,
+    "y2": 404.99700927734375
+  },
+  "figType": "Figure",
+  "imageText": ["G(2)", "v5v6", "v4", "v3", "v2", "v1", "G(1)", "w4", "w5", "w6", "w2", "w3", "w1"],
+  "name": "12",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 177.6,
+    "x2": 434.4,
+    "y1": 264.0,
+    "y2": 372.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Illustration of our constructed G(1) and G(2) for n = 5, as used in the proof of Proposition 3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6532287597656,
+    "y1": 205.75051879882812,
+    "y2": 222.71197509765625
+  },
+  "figType": "Figure",
+  "imageText": ["G(2)", "v5", "v4", "v3", "v2", "v1", "G(1)", "w4", "w5", "w2", "w3", "w1"],
+  "name": "11",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 81.6,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure11-1.png"
+}, {
+  "caption": "Table 10: Parameter settings for the texture reconstruction experiments.",
+  "captionBoundary": {
+    "x1": 163.2620086669922,
+    "x2": 448.4313659667969,
+    "y1": 573.91552734375,
+    "y2": 579.91796875
+  },
+  "figType": "Table",
+  "imageText": ["Intrinsic", "NF", "328,579", "128", "6", "—", "—", "—", "SignNet", "323,563", "108", "6", "4", "64", "8", "Params", "Base", "MLP", "width", "Base", "MLP", "layers", "ϕ", "out", "dim", "ρ", "out", "dim", "ρ,", "ϕ", "width"],
+  "name": "10",
+  "page": 41,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 497.28,
+    "y1": 592.8,
+    "y2": 635.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table10-1.png"
+}, {
+  "caption": "Figure 2: Pipeline for using node positional encodings. After processing by our SignNet, the learned positional encodings from the Laplacian eigenvectors are added as additional node features of an input graph ([X,SignNet(V )] denotes concatenation). These positional encodings along with the graph adjacency and original node features are passed to a prediction model (e.g. a GNN). Not shown here, SignNet can also take in eigenvalues, node features and adjacency information if desired.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 310.2995300292969,
+    "y2": 360.1369934082031
+  },
+  "figType": "Figure",
+  "imageText": ["Input", "Graph", "Model", "Compute", "Eigvecs", "(e.g.", "GNN,", "Transformer)", "Prediction", "Model", "Laplacian", "Eigenvectors", "SignNet", "Node", "Features", "Adjacency", "Matrix"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 499.2,
+    "y1": 143.04,
+    "y2": 298.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure2-1.png"
+}, {
+  "caption": "Figure 7: First three principal components of the full SignNet output on the cat model.",
+  "captionBoundary": {
+    "x1": 133.71800231933594,
+    "x2": 478.284423828125,
+    "y1": 181.34854125976562,
+    "y2": 187.35101318359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 196.79999999999998,
+    "x2": 415.2,
+    "y1": 80.64,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure7-1.png"
+}, {
+  "caption": "Table 3: Test results for texture reconstruction experiment on cat and human models, following the experimental setting of (Koestler et al., 2022). We use 1023 eigenvectors of the cotangent Laplacian.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0000305175781,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Params", "PSNR", "↑", "DSSIM", "↓", "LPIPS", "↓", "PSNR", "↑", "DSSIM", "↓", "LPIPS", "↓", "Intrinsic", "NF", "329k", "34.25", ".099", ".189", "32.29", ".119", ".330", "Absolute", "value", "329k", "34.67", ".106", ".252", "32.42", ".132", ".363", "Sign", "flip", "329k", "23.15", "1.28", "2.35", "21.52", "1.05", "2.71", "SignNet", "324k", "34.91", ".090", ".147", "32.43", ".125", ".316", "Cat", "Human"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 493.44,
+    "y1": 113.28,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table3-1.png"
+}, {
+  "caption": "Figure 3: Counting substructures and regressing graph properties (lower is better). With Laplacian PEs, SignNet improves performance, while sign flip data augmentation (LapPE) is less consistent. Mean and standard deviations are reported on 3 runs. All runs use the same 4-layer GIN base model.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 505.74517822265625,
+    "y1": 381.33154296875,
+    "y2": 409.2510070800781
+  },
+  "figType": "Figure",
+  "imageText": [")", "−2", "0", "lo", "g", "1", "0(", "Te", "st", "M", "SE", "−4", "IsConnected", "Diameter", "Radius", "Graph", "properties", "NoPE", "LapPE", "SignNet", "M", "AE", "Te", "st", "0.3", "0.2", "0.1", "0.0", "Triangle", "Tailed", "Tri.", "4-Cycle", "Star", "Counting", "Substructures"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 491.03999999999996,
+    "y1": 301.44,
+    "y2": 367.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure3-1.png"
+}, {
+  "caption": "Table 9: Sum of squared errors for spectral graph convolution regression (with no test set). Lower is better. Numbers are mean and standard deviation over 50 images from He et al. (2021).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99908447265625,
+    "y1": 109.88651275634766,
+    "y2": 126.8480224609375
+  },
+  "figType": "Table",
+  "imageText": ["DeepSets", "SignNet", ".004±.013", ".086±.405", ".021±.115", ".008±.037", ".003±.016", "Transformer", "SignNet", ".003±.016", ".004±.025", ".001±.004", ".006±.023", ".093±.641", "DeepSets", "BasisNet", ".009±.018", ".003±.015", ".008±.030", ".004±.011", ".015±.060", "Transformer", "BasisNet", ".079±.471", ".014±.038", ".005±.018", ".006±.016", ".014±.051", "Transformer", "3.662±1.97", "3.715±1.98", "1.531±1.30", "1.506±1.29", "3.178±1.93", "Transformer", "Eig", "Flip", "4.454±2.32", "4.425±2.38", "1.651±1.53", "2.567±1.73", "3.720±1.94", "Transformer", "Eig", "Abs", "2.727±1.40", "3.172±1.61", "1.264±.788", "1.445±.943", "2.607±1.32", "GCN", ".111±.068", "3.092±5.11", "1.720±3.15", "1.418±1.03", "1.753±1.17", "GAT", ".113±.065", ".954±.696", "1.105±.964", ".543±.340", ".638±.446", "GPR-GNN", ".033±.032", ".012±.007", ".137±.081", ".256±.197", ".369±.460", "ARMA", ".053±.029", ".042±.024", ".107±.039", ".148±.089", ".202±.116", "ChebNet", ".003±.002", ".001±.001", ".005±.003", ".009±.006", ".022±.016", "BernNet", ".001±.002", ".001±.001", ".000±.000", ".048±.042", ".027±.019", "Low-pass", "High-pass", "Band-pass", "Band-rejection", "Comb"],
+  "name": "9",
+  "page": 39,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 487.2,
+    "y1": 139.68,
+    "y2": 302.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table9-1.png"
+}, {
+  "caption": "Table 4: Properties of our architectures: Unconstrained-SignNet, SignNet, Unconstrained-BasisNet, and Expressive-BasisNet. The properties are: permutation equivariance, universality (for the proper class of continuous invariant functions), and computational tractability.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.249267578125,
+    "y1": 224.78152465820312,
+    "y2": 252.7020263671875
+  },
+  "figType": "Table",
+  "imageText": ["PyTorch-like", "pseudo-code", "for", "SignNet", "class", "SignNetGNN(nn.Module):", "Perm.", "equivariant", "×", "✓", "×", "✓", "✓", "Universal", "✓", "×", "✓", "×", "✓", "Tractable", "✓", "✓", "✓", "✓", "×", "Unconstr.-SignNet", "SignNet", "Unconstr.-BasisNet", "BasisNet", "Expr.-BasisNet"],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 265.44,
+    "y2": 367.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table4-1.png"
+}, {
+  "caption": "Figure 5: PyTorch-like pseudo-code for using SignNet with a GNN prediction model, where ϕ = GIN and ρ = MLP as in the ZINC molecular graph regression experiments. Reshaping eigenvectors from n× k to n× k × 1 allows ϕ to process each eigenvector (and its negation) independently in PyTorch-like deep learning libraries.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0038146972656,
+    "y1": 541.8015747070312,
+    "y2": 580.6799926757812
+  },
+  "figType": "Figure",
+  "imageText": ["return", "self.base_model(g,", "x,", "pe)", "n,", "k", "=", "eigvecs.shape", "eigvecs", "=", "eigvecs.reshape(n,", "k,", "1)", "pe", "=", "self.phi(g,", "eigvecs)", "+", "self.phi(g,", "−eigvecs)", "pe", "=", "pe.reshape(n,", "−1)", "#", "n", "x", "k", "x", "D1", "−>", "n", "x", "k∗D1", "pe", "=", "self.rho(pe)", "def", "forward(self,", "g,", "x,", "eigvecs):", "#", "g", "contains", "graph", "information", "#", "x", "shape:", "n", "x", "d", "#", "eigvecs", "shape:", "n", "x", "k", "def", "__init__(self,", "d,", "k,", "D1,", "D2,", "out_dim):", "self.phi", "=", "GIN(1,", "D1)", "#", "in", "dim=1,", "out", "dim=D1", "self.rho", "=", "MLP(k∗D1,", "D2)", "self.base_model", "=", "GNN(d+D2,", "out_dim)"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 377.28,
+    "y2": 524.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure5-1.png"
+}, {
+  "caption": "Figure 10: Commutative diagram for our proof of Theorem 4. Black arrows denote functions from topological constructions, and red dashed lines denote functions that we parameterize by neural networks (ϕ = ϕ1 × . . .× ϕk and ρ).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9987487792969,
+    "y1": 570.9925537109375,
+    "y2": 600.406982421875
+  },
+  "figType": "Figure",
+  "imageText": ["ρ", "=", "f̃", "◦", "ψ−1", "f̃ψ−1", "ψ", "=", "ψ1", "×", ".", ".", ".×", "ψk", "π", "=", "π1", "×", ".", ".", ".", "πk", "f", "=", "f̃", "◦", "πϕ", "=", "ψ", "◦", "π", "Z", "=", "im(ψ)", "⊆", "Ra", "(X1/G1)×", ".", ".", ".×", "(Xk/Gk)", "Rdout", "X1", "×", ".", ".", ".×Xk"],
+  "name": "10",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 158.88,
+    "x2": 452.15999999999997,
+    "y1": 413.76,
+    "y2": 560.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure10-1.png"
+}, {
+  "caption": "Figure 8: All normalized Laplacian eigenvectors of the fluorescein graph. The first principal components of SignNet’s learned positional encodings do not exactly match any eigenvectors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9975280761719,
+    "y1": 511.8415222167969,
+    "y2": 528.802978515625
+  },
+  "figType": "Figure",
+  "imageText": ["0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "Eigenvector", "24", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "23", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "22", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.2", "0.0", "−0.2", "−0.4", "Eigenvector", "21", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "20", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "19", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "18", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "17", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "16", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "15", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "14", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.2", "0.0", "0.2", "Eigenvector", "13", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "0.1", "0.2", "0.3", "0.4", "Eigenvector", "12", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.2", "0.0", "0.2", "0.4", "Eigenvector", "11", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "0.1", "0.2", "0.3", "0.4", "Eigenvector", "10", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "9", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "8", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "7", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "6", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "5", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "4", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "3", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.4", "0.3", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "−0.4", "Eigenvector", "2", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C", "0.2", "0.1", "0.0", "−0.1", "−0.2", "−0.3", "Eigenvector", "1", "O", "O", "C", "C", "C", "C", "C", "O", "C", "C", "C", "C", "C", "C", "C", "C", "O", "O", "C", "C", "C", "C", "C", "C", "C"],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 500.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure8-1.png"
+}, {
+  "caption": "Figure 4: Cotangent Laplacian eigenvectors of the cat model and first principal component of ϕ(v) + ϕ(−v) from our trained SignNet. Our SignNet encodes bilateral symmetry, which is useful for reconstruction of the bilaterally symmetric texture.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 199.98953247070312,
+    "y2": 227.90997314453125
+  },
+  "figType": "Figure",
+  "imageText": ["Eigvec", "11", "ϕ(v11)", "+", "ϕ(−v11)", "Eigvec", "14", "ϕ(v14)", "+", "ϕ(−v14)"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 488.15999999999997,
+    "y1": 106.56,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Figure4-1.png"
+}, {
+  "caption": "Table 5: Eigenspace statistics for datasets of multiple graphs. From left to right, the columns are: dataset name, number of graphs, range of number of nodes per graph, largest multiplicity, and percent of graphs with an eigenspace of dimension > 1.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.38543701171875,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["ZINC", "12,000", "9-37", "9", "64.1", "ZINC-full", "249,456", "6-38", "10", "63.8", "ogbg-molhiv", "41,127", "2", "-", "222", "42", "68.0", "IMDB-M", "1,500", "7", "-", "89", "37", "99.9", "COLLAB", "5,000", "32", "-", "492", "238", "99.1", "PROTEINS", "1,113", "4", "-", "620", "20", "77.3", "COIL-DEL", "3,900", "3", "-", "77", "4", "4.00", "Dataset", "Graphs", "#", "Nodes", "Max.", "Mult", "%", "Graphs", "mult.", ">", "1"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 457.44,
+    "y1": 124.32,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table5-1.png"
+}, {
+  "caption": "Table 6: Eigenspace statistics for single graphs. From left to right, the columns are: dataset name, number of nodes, distinct eigenvalues (i.e. distinct eigenspaces), number of unique multiplicities, largest multiplicity, and percent of eigenvectors belonging to an eigenspace of dimension > 1.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.247314453125,
+    "y1": 238.69754028320312,
+    "y2": 266.61798095703125
+  },
+  "figType": "Table",
+  "imageText": ["•", "Computer", "vision", "graphs:", "COIL-DEL", "(Riesen", "&", "Bunke,", "2008;", "Morris", "et", "al.,", "2020a).", "•", "Bioinformatics", "graphs:", "PROTEINS", "(Morris", "et", "al.,", "2020a)", "•", "Social", "networks:", "IMDB-M,", "COLLAB", "(Yanardag", "&", "Vishwanathan,", "2015;", "Morris", "et", "al.,", "2020a),", "•", "Molecule", "graphs:", "ZINC", "(Irwin", "et", "al.,", "2012;", "Dwivedi", "et", "al.,", "2020),", "ogbg-molhiv", "(Wu", "et", "al.,", "2018;", "Hu", "et", "al.,", "2020a)", "32×", "32", "image", "1,024", "513", "3", "32", "96.9", "Cora", "2,708", "2,187", "11", "300", "19.7", "Citeseer", "3,327", "1,861", "12", "491", "44.8", "Amazon", "Photo", "7,650", "7,416", "8", "136", "3.71", "Dataset", "Nodes", "Distinct", "λ", "#", "Mult.", "Max", "Mult.", "%", "Vecs", "mult.", ">", "1"],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 135.35999999999999,
+    "x2": 505.44,
+    "y1": 279.36,
+    "y2": 449.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q-UHqMorzil-Table6-1.png"
+}]

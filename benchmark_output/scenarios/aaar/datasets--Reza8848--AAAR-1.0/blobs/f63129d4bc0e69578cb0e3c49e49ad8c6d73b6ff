@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 8: Qualitative results with TSM evaluating on 32 × 32 and 16 × 16, and their 64 × 64 super-resolution results. From the super-resolution results of the T = 0, we can see that the superresolution models actually work quite well.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9996032714844,
+    "y1": 502.1955261230469,
+    "y2": 530.115966796875
+  },
+  "figType": "Figure",
+  "imageText": ["HiPPO-TSM-16x16", "+", "super-resolution", "HiPPO-TSM-16x16", "HiPPO-TSM-32x32", "+", "super-resolution", "HiPPO-TSM-32x32", "HiPPO-TSM-64x64", "DNS-512x512", "DNS-2048x2048", "(Ground-truth)"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 491.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure8-1.png"
+}, {
+  "caption": "Figure 1: Illustration of classic finite volume solvers (in red color), learnable solvers with vanilla stencil modeling (in blue color) and our temporal stencil modeling (in green color). While the convective flux approximation methods are different in each method, the divergence operator, the explicit time-step operator, and the pressure projection (in yellow color) are shared between classic solvers and learnable methods. Notice that the stencil interpolation coefficients in classic solvers such as WENO can also be data-adaptive (see Sec. 3.1 for more details).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 312.0605163574219,
+    "y2": 372.85693359375
+  },
+  "figType": "Figure",
+  "imageText": ["Raw", "External", "forcing", "F(t)", "New", "velocity", "Pressure", "projection", "HiPPO", "Convective", "flux", "approximation", "Convective", "flux", "approximation", "Convective", "flux", "approximation", "Calculating", "stencil", "interpolation", "coefficients", "Explicit", "timestep", "Divergence", "(Kochkov", "et", "al.,", "2021)", "Temporal", "Stencil", "Modeling", "(ours)", "Classic", "Stencil", "Interpolation", "Schemes", "(e.g.,", "WENO)", "Vanilla", "Stencil", "Modeling", "Velocity", "trajectory", "Latest", "velocity"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure1-1.png"
+}, {
+  "caption": "Figure 4: Qualitative results of predicted vorticity fields for reference (DNS 2048× 2048), previous learnable sota model (LI 64× 64) (Kochkov et al., 2021), and our method (TSM 64× 64), starting from the same initial condition. The yellow box denotes a vortex that is not captured by LI.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9963684082031,
+    "y1": 266.9395446777344,
+    "y2": 294.8590087890625
+  },
+  "figType": "Figure",
+  "imageText": ["TSM-HiPPO", "64x64", "+", "4-bundle", "(ours)", "LI", "64", "x", "64", "(Kochkov", "et", "al.", "2021)", "DNS", "2048", "x", "2048", "(ground-truth)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure4-1.png"
+}, {
+  "caption": "Figure 5: (left) Comparison of the vorticity correlation between prediction and the ground-truth solution (i.e., DNS 2048×2048). (middle) Energy spectrum scaled by k5 averaged between simulation time 6.0 to 20.0. (right) Comparison of high vorticity correlation duration v.s. inference latency.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 414.84051513671875,
+    "y2": 442.760009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 298.56,
+    "y2": 404.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure5-1.png"
+}, {
+  "caption": "Figure 6: Temporal stencil modeling performance (high-correlation duration) with different feature types and different initial trajectory steps.",
+  "captionBoundary": {
+    "x1": 327.5049743652344,
+    "x2": 505.7058410644531,
+    "y1": 236.55154418945312,
+    "y2": 275.42999267578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 336.0,
+    "x2": 497.28,
+    "y1": 114.72,
+    "y2": 225.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure6-1.png"
+}, {
+  "caption": "Table 2: Quantitative comparisons with the metric of high-correlation (ρ > 0.8) duration (w.r.t the reference DNS-2048 × 2048 trajectories). All learnable solvers use the 64× 64 grids.",
+  "captionBoundary": {
+    "x1": 107.9999771118164,
+    "x2": 325.80230712890625,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["+", "4-step", "temporal-bundle", "TSM", "9.481", "+", "4-step", "temporal-bundle", "TSM", "8.303", "32-step-HiPPO-CNN", "TSM", "9.256", "32-step-FNO", "TSM", "7.798", "4-step-raw-CNN", "TSM", "8.359", "1-step-raw-CNN", "ML", "4.824", "4-step-raw-CNN", "ML", "7.517", "32-step-FNO", "ML", "6.283", "1-step-raw-CNN", "LC", "6.171", "32-step-FNO", "LC", "7.630", "1-step-raw-CNN", "LI", "7.910", "DNS-64×", "64", "Physics", "2.805", "DNS-128×", "128", "Physics", "3.983", "DNS-256×", "256", "Physics", "5.386", "DNS-512×", "512", "Physics", "6.788", "DNS-1024×", "1024", "Physics", "8.752", "Method", "Type", "High-corr.", "duration"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 324.0,
+    "y1": 135.35999999999999,
+    "y2": 313.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Table2-1.png"
+}, {
+  "caption": "Figure 2: Illustration of super-resolution process from a trajectory of frames (i.e., temporal superresolution) or a single-frame (vanilla super-resolution).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 190.86654663085938,
+    "y2": 207.8280029296875
+  },
+  "figType": "Figure",
+  "imageText": ["64", "x", "64", "x", "T", "2048", "x", "2048", "64", "x", "64", "Temporal", "super-resolution", "Vanilla", "super-resolution"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure2-1.png"
+}, {
+  "caption": "Figure 7: Generalization test results of neural methods trained on Kolmogorov flows (Re = 1000) and evaluated on (A) decaying flows (starting from Re = 1000), (B) more turbulent Kolmogorov flows (Re = 4000), and (C) 2× larger domain Kolmogorov flows (Re = 1000).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9995422363281,
+    "y1": 500.1535339355469,
+    "y2": 528.073974609375
+  },
+  "figType": "Figure",
+  "imageText": ["Temporal", "Stencil", "Modeling", "(ours)", "Highest-resolution", "DNS", "Learned", "Interpolation", "(Kochkov", "et", "al.", "2021)", "C", "B", "≈", "≈", "A", "≈"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 489.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure7-1.png"
+}, {
+  "caption": "Table 1: 64 × 64 → 2048 × 2048 super-resolution MSE with different approaches.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 504.0002136230469,
+    "y1": 91.5975112915039,
+    "y2": 119.5169677734375
+  },
+  "figType": "Table",
+  "imageText": ["Bicubic", "Interpolation", "2.246", "CNN", "w/", "1-step", "raw", "features", "0.029", "CNN", "w/", "32-step", "raw", "features", "0.015", "CNN", "w/", "32-step", "HiPPO", "features", "0.007", "Method", "MSE"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 366.71999999999997,
+    "x2": 503.03999999999996,
+    "y1": 132.48,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Table1-1.png"
+}, {
+  "caption": "Figure 3: 64× 64 → 2048× 2048 super-resolution errors with 32∆t-step HiPPO features and 32∆t-step raw features.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 361.4412536621094,
+    "y1": 171.56350708007812,
+    "y2": 188.52496337890625
+  },
+  "figType": "Figure",
+  "imageText": ["Errors", "w/", "HiPPO", "features", "Errors", "w/", "raw", "features", "Ground", "truth"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 362.4,
+    "y1": 80.64,
+    "y2": 160.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure3-1.png"
+}, {
+  "caption": "Table 3: Quantitative comparisons with the metric of high-correlation (ρ > 0.8) duration (w.r.t the reference DNS-2048 × 2048 trajectories). The results of TSM-32 × 32 and TSM-16 × 16 are evaluated on their corresponding 64 × 64 super-resolution results with additionally trained superresolution models.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.00201416015625,
+    "y1": 126.4655532836914,
+    "y2": 165.343994140625
+  },
+  "figType": "Table",
+  "imageText": ["LI-16×", "16", "2.805", "TSM-16×", "16", "3.576", "(+27.50%)", "LI-32×", "32", "5.400", "TSM-32×", "32", "6.802", "(+25.96%)", "LI-64×", "64", "7.910", "TSM-64×", "64", "9.481", "(+19.86%)", "DNS-64×", "64", "2.805", "DNS-128×", "128", "3.983", "DNS-256×", "256", "5.386", "DNS-512×", "512", "6.788", "DNS-1024×", "1024", "8.752", "Method", "High-corr.", "duration"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 221.76,
+    "x2": 388.32,
+    "y1": 177.6,
+    "y2": 324.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Table3-1.png"
+}, {
+  "caption": "Figure 9: Illustration of using HiPPO features as the CNN inputs for neural stencil modeling. After encoding the HiPPO features for the initial velocity trajectory v[0,T ], given model-generated new velocity, we only need an additional recurrent update step to get the HiPPO features for v[0,T+∆t] (with Eq. 6). Notice that in TSM, we use the fixed optimal HiPPO recurrence for temporal encoding and only the CNN part is learnable.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00445556640625,
+    "y1": 633.8015747070312,
+    "y2": 683.6390380859375
+  },
+  "figType": "Figure",
+  "imageText": ["H", "x", "W", "x", "(C", "x", "2)", "…", "HiPPO", "feature", "recurrent", "update", "Physics", "Model", "H", "x", "W", "x", "C’", "CNN", "Physics", "Model", "H", "x", "W", "x", "C’", "CNN", "H", "x", "W", "x", "(C", "x", "2)", "HiPPO", "feature", "initial", "encoding", "H", "x", "W", "x", "T", "x", "2"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 417.59999999999997,
+    "y2": 628.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nvlqsofsc6--Figure9-1.png"
+}]

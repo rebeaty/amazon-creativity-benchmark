@@ -30,10 +30,10 @@ SUITE="${2:-creativity-benchmark}"
 MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
-RUN_ENTRY="grapheval_ai_researcher,model=${MODEL}"
+RUN_ENTRY="grapheval_ai_researcher:model=${MODEL}"
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "$RUN_ENTRY" --suite "$SUITE")
+CMD=(helm-run --plugins run_specs.grapheval_ai_researcher_run_specs --run-entries "$RUN_ENTRY" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi

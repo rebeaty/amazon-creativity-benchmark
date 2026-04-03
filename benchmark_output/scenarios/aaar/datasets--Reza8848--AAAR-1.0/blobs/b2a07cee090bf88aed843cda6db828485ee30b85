@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 4: Sanity check showing performance of MAP-D on the probe suite test set using ResNet-50 on ImageNet, where we know the ground-truth metadata. (a) and (c) Solid line shows the mean learning curve while translucent lines are randomly sampled 250 individual trajectories for each probe category. Again, the separation of different probes is evident both in the dynamics over the course of training. (b) and (d) show confusion matrices between the true vs. predicted metadata features, demonstrating strong performance of the probes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0023193359375,
+    "y1": 351.3096923828125,
+    "y2": 411.0849914550781
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Loss", "trajectories", "w/", "all", "probe", "categories", "(d)", "Confusion", "matrix", "(a)", "Loss", "trajectories", "w/", "four", "main", "probe", "categories", "(b)", "Confusion", "matrix"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 508.32,
+    "y1": 80.64,
+    "y2": 337.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure4-1.png"
+}, {
+  "caption": "Figure 8: Ablation for label correction on CIFAR-10, where we use a binary prediction instead of probability estimates returned by MAP-D. This highlights the utility and effectiveness of the uncertainty estimates computed by MAP-D.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0037841796875,
+    "y1": 621.647705078125,
+    "y2": 648.5469970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 209.76,
+    "x2": 402.24,
+    "y1": 493.91999999999996,
+    "y2": 609.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Examples surfaced through the use of MAP-D on ImageNet train set using the Typical probe (first image in each set, highlighted with black border) and Random Output probe (next two images). Sub-caption indicates the ground truth class. This showcases the utility of MAP-D for exploring a dataset, showing what the model considers typical for a class as well as uncovering potentially problematic examples.",
+  "captionBoundary": {
+    "x1": 107.73899841308594,
+    "x2": 504.0021667480469,
+    "y1": 429.1587219238281,
+    "y2": 477.97601318359375
+  },
+  "figType": "Figure",
+  "imageText": ["Milk", "Can", "Typical", "iPod", "Toaster", "Typical", "Typical", "Microwave", "Banana", "Typical", "Typical", "Ambulance", "Mountain", "Bike", "Typical", "Typical", "Balloon", "Typical"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 82.56,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Examples surfaced through the use of MAP-D on ImageNet train set. Column title is the ground truth class, row title is the metadata category assigned by MAP-D. MAP-D performs metadata archaeology by curating a probe set and then probing for similar examples based on training dynamics. This approach can bring to light biases, mislabelled examples, and other dataset issues.",
+  "captionBoundary": {
+    "x1": 107.39900207519531,
+    "x2": 505.9329528808594,
+    "y1": 312.6407165527344,
+    "y2": 361.4580078125
+  },
+  "figType": "Figure",
+  "imageText": ["Digital", "Watch", "Plastic", "Bag", "Toilet", "Tissue", "Random", "Output", "Atypical", "Corrupted", "Typical"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 300.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Comparison of different noise correction methods under the presence of label noise. Mean and standard deviation reported over 3 random runs. MAP-D is competitive with most other methods, many of which are particularly targeted towards this problem.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.9367370605469,
+    "y1": 224.49868774414062,
+    "y2": 251.39801025390625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "CIFAR-10", "(b)", "CIFAR-100"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure5-1.png"
+}, {
+  "caption": "Figure 2: An illustration of samples from our curated probes. Creating our probe suites requires no human annotation. We curate different subsets of data that might exist in a dataset including (a) typical, (b) atypical, (c) corrupted, (d) mislabeled, (e) out-ofdistribution, and (f) random input examples, using simple transformations or existing scoring mechanisms.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.66290283203125,
+    "y1": 181.80673217773438,
+    "y2": 230.6240234375
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "Rand", "Input", "Loafer", "(e)", "OOD", "Jeep", "(d)", "Rand", "Label", "Mud", "turtle", "(c)", "Corrupted", "School", "bus", "(b)", "Atypical", "Dishwasher", "(a)", "Typical", "Black", "bear"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure2-1.png"
+}, {
+  "caption": "Figure 11: An example of the different kind of probes that can be defined on the CIFAR-100 dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.2449035644531,
+    "y1": 545.732666015625,
+    "y2": 561.6729736328125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Out-of-Distribution", "(e)", "Random", "Outputs", "(f)", "Random", "Inputs", "&", "Outputs", "(a)", "Typical", "(b)", "Atypical", "(c)", "Corrupted"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 514.0799999999999,
+    "y1": 245.76,
+    "y2": 531.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Demonstration of the effectiveness of MAP-D in detecting minority-group samples on two famous minority-group datasets with spurious correlations, compared to the detection performance of JTT (Liu et al., 2021) which relies on early-stopping. MAP-D achieves better or similar performance, without needing costly hyperparameter tuning or retraining.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1953125,
+    "y1": 242.08169555664062,
+    "y2": 279.93902587890625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Waterbirds", "(b)", "CelebA"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 483.35999999999996,
+    "y1": 80.64,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure10-1.png"
+}, {
+  "caption": "Figure 6: Comparison between pretraining schedules of 105 epochs (default value as set by Arazo et al. (2019)) and 10 epochs. Mean and standard deviation reported over 3 random runs. MAP-D is robust against changes in the number of pretraining epochs, while the method from Arazo et al. (2019) achieves slightly poorer performance in the low-noise setting and significantly poorer performance in the high-noise setting.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.26580810546875,
+    "y1": 224.49868774414062,
+    "y2": 273.31597900390625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "CIFAR-10", "(b)", "CIFAR-100"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Probe categories are distinguishable via learning dynamics of a ResNet-50 trained on ImageNet, validating the approach of MAP-D. For each of the probe categories and at each epoch, we plot (a) each probe’s average accuracy; (b) the cumulative fraction of examples once predicted correctly by the nth epoch; and (c) the fraction that remain predicted correctly on all subsequent epochs. Bottom plots (d)-(h) show the spread of losses at various epochs of training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00250244140625,
+    "y1": 298.3857116699219,
+    "y2": 358.1619873046875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "1st", "Epoch", "(e)", "25th", "Epoch", "(f)", "50th", "Epoch", "(g)", "75th", "Epoch", "(h)", "90th", "Epoch", "(a)", "Probe", "Accuracy", "(b)", "Percent", "First-Learned", "(c)", "Percent", "Consistently-Learned"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 507.84,
+    "y1": 80.64,
+    "y2": 284.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure3-1.png"
+}, {
+  "caption": "Figure 9: Results for score-based prioritization with MAP-D (pink, lavender) compared against simple baselines. Mean and standard deviation computed over 3 random runs. The correct class score baselines (purple, orange) both select examples with the highest loss, which lead to poor performance due to label noise. Uniform selection baselines (blue, green) perform quite well, but take longer to train; out method achieves almost a 10x training speedup. RHO Loss* baseline (grey)) plots original results reported in Mindermann et al. (2022) while all other results use our implementation. While * use a different reporting interval, results remain comparable. The two methods are similar in training speed, but MAP-D achieves higher accuracy.",
+  "captionBoundary": {
+    "x1": 106.83399963378906,
+    "x2": 505.9290771484375,
+    "y1": 227.29672241210938,
+    "y2": 319.9490051269531
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PvLnIaJbt9-Figure9-1.png"
+}]

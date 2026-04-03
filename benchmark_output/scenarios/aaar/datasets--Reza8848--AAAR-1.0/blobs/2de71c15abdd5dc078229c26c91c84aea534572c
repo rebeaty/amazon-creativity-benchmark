@@ -1,0 +1,641 @@
+[{
+  "caption": "Figure 2: Left. Language modeling (LM) ability for various NLP models, represented by crossentropy loss (lower is better) on the text corresponding to the Harry Potter dataset. We used 4- fold cross-validation. The booksum model has worse LM ability than the base model for BigBird and LED, but better for LongT5. It has no significant difference for BART. Hence, while all 4 booksum models have better brain alignment, most do not have better LM ability. This shows that the improved brain alignment in booksum models (shown in Figure 1) is due to deeper understanding, and not language modeling. Right. 20v20 accuracy is significantly higher for the model with deeper understanding (booksum) than LM model (base), across all brain language regions. This suggests that the function of deep understanding is not localized to any one particular region in the brain, and is instead distributed across language regions. Similar results were obtained for all other models (BART, LED, LongT5), shown in Appendix G. Overall, these results suggest the need to supplement training of NLP models beyond LM for improved language understanding.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032958984375,
+    "y1": 573.5755615234375,
+    "y2": 700.1259765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 411.84,
+    "y2": 562.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure2-1.png"
+}, {
+  "caption": "Figure 22: Pearson correlation scores of BART-booksum across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 343.76953125,
+    "y2": 371.69000244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "22",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 108.0,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure22-1.png"
+}, {
+  "caption": "Figure 23: Pearson correlation scores of LED-booksum across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 671.7545776367188,
+    "y2": 699.6749877929688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "23",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 435.84,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure23-1.png"
+}, {
+  "caption": "Figure 24: Pearson correlation scores of BigBird-booksum across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 343.76953125,
+    "y2": 371.69000244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "24",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 108.0,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure24-1.png"
+}, {
+  "caption": "Figure 25: Pearson correlation scores of LongT5-booksum across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 671.7545776367188,
+    "y2": 699.6749877929688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "25",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 435.84,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure25-1.png"
+}, {
+  "caption": "Figure 15: Pearson correlation for various discourse features, for each of the 4 models.",
+  "captionBoundary": {
+    "x1": 133.31900024414062,
+    "x2": 478.6824951171875,
+    "y1": 419.8785400390625,
+    "y2": 425.8810119628906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 109.92,
+    "y2": 409.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure15-1.png"
+}, {
+  "caption": "Figure 16: For each of the 4 models, paired t-test was performed to identify the discourse features where the booksum model has greater brain alignment than the base model, with statistical significance. We also perform the t-test for all the models combined together, labeled “all”. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the discourse features labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 654.8185424804688,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 451.68,
+    "y2": 644.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure16-1.png"
+}, {
+  "caption": "Figure 33: Difference in Pearson correlation scores between LongT5-booksum and LongT5-base across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 666.2755737304688,
+    "y2": 705.155029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "33",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 430.56,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure33-1.png"
+}, {
+  "caption": "Figure 32: Difference in Pearson correlation scores between BigBird-booksum and BigBird-base across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 338.29052734375,
+    "y2": 377.16998291015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "32",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 102.72,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure32-1.png"
+}, {
+  "caption": "Figure 31: Difference in Pearson correlation scores between LED-booksum and LED-base across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.00335693359375,
+    "y1": 666.2755737304688,
+    "y2": 705.155029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "31",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 430.56,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure31-1.png"
+}, {
+  "caption": "Figure 30: Difference in Pearson correlation scores between BART-booksum and BART-base across brain voxels on the internal brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0033874511719,
+    "y1": 338.29052734375,
+    "y2": 377.16998291015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "30",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 102.72,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure30-1.png"
+}, {
+  "caption": "Figure 17: For each of the 4 models, paired t-test was performed to identify whether there were greater improvements for Characters than other discourse features, with statistical significance. We also perform the t-test for all the models combined together, labeled “all”. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the brain ROIs labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00335693359375,
+    "y1": 242.67355346679688,
+    "y2": 303.470947265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure17-1.png"
+}, {
+  "caption": "Figure 9: For BART, paired t-test was performed to identify the layers and sequence lengths where the booksum model has greater brain alignment than the base model, with statistical significance. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the layers and sequence lengths labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00360107421875,
+    "y1": 331.62652587890625,
+    "y2": 392.4229736328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 87.84,
+    "y2": 320.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure9-1.png"
+}, {
+  "caption": "Figure 10: For LED, paired t-test was performed to identify the layers and sequence lengths where the booksum model has greater brain alignment than the base model, with statistical significance. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the layers and sequence lengths labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00360107421875,
+    "y1": 659.611572265625,
+    "y2": 720.4080200195312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 415.68,
+    "y2": 648.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure10-1.png"
+}, {
+  "caption": "Figure 19: Pearson correlation scores of LED-booksum across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 629.8135375976562,
+    "y2": 657.7340087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "19",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 393.59999999999997,
+    "y2": 619.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure19-1.png"
+}, {
+  "caption": "Figure 18: Pearson correlation scores of BART-booksum across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 345.66351318359375,
+    "y2": 373.5830078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 109.92,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure18-1.png"
+}, {
+  "caption": "Figure 29: Difference in Pearson correlation scores between LongT5-booksum and LongT5-base across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 666.2755737304688,
+    "y2": 705.155029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "29",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 430.56,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure29-1.png"
+}, {
+  "caption": "Figure 28: Difference in Pearson correlation scores between BigBird-booksum and BigBird-base across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 338.29052734375,
+    "y2": 377.16998291015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "28",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 102.72,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure28-1.png"
+}, {
+  "caption": "Figure 12: For LongT5, paired t-test was performed to identify the layers and sequence lengths where the booksum model has greater brain alignment than the base model, with statistical significance. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the layers and sequence lengths labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041809082031,
+    "y1": 659.611572265625,
+    "y2": 720.4080200195312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 415.68,
+    "y2": 648.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure12-1.png"
+}, {
+  "caption": "Figure 11: For BigBird, paired t-test was performed to identify the layers and sequence lengths where the booksum model has greater brain alignment than the base model, with statistical significance. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the layers and sequence lengths labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041809082031,
+    "y1": 331.62652587890625,
+    "y2": 392.4229736328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 87.84,
+    "y2": 320.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure11-1.png"
+}, {
+  "caption": "Figure 8: Comparing 20v20 classification accuracy between LongT5-base and LongT5-booksum",
+  "captionBoundary": {
+    "x1": 112.78099822998047,
+    "x2": 499.22021484375,
+    "y1": 655.1765747070312,
+    "y2": 661.1790161132812
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 475.68,
+    "y2": 642.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Comparing 20v20 classification accuracy between BigBird-base and BigBird-booksum",
+  "captionBoundary": {
+    "x1": 112.77100372314453,
+    "x2": 499.2300720214844,
+    "y1": 327.1825256347656,
+    "y2": 333.18499755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 148.79999999999998,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure7-1.png"
+}, {
+  "caption": "Figure 27: Difference in Pearson correlation scores between LED-booksum and LED-base across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0044860839844,
+    "y1": 666.2755737304688,
+    "y2": 705.155029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "27",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 430.56,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure27-1.png"
+}, {
+  "caption": "Figure 26: Difference in Pearson correlation scores between BART-booksum and BART-base across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0044860839844,
+    "y1": 338.29052734375,
+    "y2": 377.16998291015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "26",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 102.72,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure26-1.png"
+}, {
+  "caption": "Figure 20: Pearson correlation scores of BigBird-booksum across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 343.76953125,
+    "y2": 371.69000244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "20",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 108.0,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure20-1.png"
+}, {
+  "caption": "Figure 21: Pearson correlation scores of LongT5-booksum across brain voxels on the external brain surfaces of 8 human subjects. Left. Pearson correlation scores computed for only TRs which contain Characters. Right. Same as Left, but for an equal number of TRs sampled randomly from all TRs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 671.7545776367188,
+    "y2": 699.6749877929688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "21",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 435.84,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure21-1.png"
+}, {
+  "caption": "Figure 4: Pearson correlation between fMRI predictions from BigBird and true fMRI activity for one representative participant. (A) Visualization of regions of interest (ROIs) thought to underlie language comprehension. (B) Pearson correlations for booksum models for Character TRs. (C) Same as B, but for an equal number of TRs sampled randomly from all TRs. (D) Difference in Pearson correlations between booksum and base models, for Character TRs. (E) Same as D, but for the random sample. Comparing figure B and C, there is greater brain alignment for Character TRs than for the random sample, both within and outside the language ROIs. Comparing figure D and E, Character TRs improve in more voxels than the random sample TRs. Only voxels with statistically significant results are plotted. Similar results are reported for other participants in Appendix I.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 363.8495178222656,
+    "y2": 457.52386474609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 353.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure4-1.png"
+}, {
+  "caption": "Figure 14: For each of the 4 models, paired t-test was performed to identify the brain ROIs where the booksum model has greater brain alignment than the base model, with statistical significance. We also perform the t-test for all the models combined together, labeled “all”. Left. p-values obtained from paired t-test, after false discovery rate (FDR) correction using the Benjamini–Hochberg (BH) procedure. Right. At significance level 0.05, the brain ROIs labeled in black are those where the booksum model has significantly greater brain alignment than the base model.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00341796875,
+    "y1": 655.1005859375,
+    "y2": 715.89697265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 432.96,
+    "y2": 644.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure14-1.png"
+}, {
+  "caption": "Figure 13: 20v20 accuracy for various brain Regions of Interest (ROIs), for each of the 4 models.",
+  "captionBoundary": {
+    "x1": 112.2229995727539,
+    "x2": 499.7780456542969,
+    "y1": 401.5035400390625,
+    "y2": 407.5060119628906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 110.88,
+    "y2": 390.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure13-1.png"
+}, {
+  "caption": "Figure 1: Brain alignment comparisons between BigBird-base and BigBird-booksum, across multiple representative layers and sequence lengths. Each data point represents the average across 8 participants. Training for deeper narrative understanding improves brain alignment significantly in early to middle layers (layers 6-14 out of 32) (paired t-test, FDR corrected for multiple comparisons at significance level 0.05). Results for the remaining models (BART, LED, LongT5) also improve significantly and are presented in Appendix F. These results suggest that long-range and deep understanding is an important contributor to brain representation alignment.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 261.8065490722656,
+    "y2": 333.56195068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 82.56,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Comparing 20v20 classification accuracy between BART-base and BART-booksum",
+  "captionBoundary": {
+    "x1": 120.1729965209961,
+    "x2": 491.8277587890625,
+    "y1": 304.03253173828125,
+    "y2": 310.0350036621094
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 125.75999999999999,
+    "y2": 291.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Comparing 20v20 classification accuracy between LED-base and LED-booksum",
+  "captionBoundary": {
+    "x1": 125.51300048828125,
+    "x2": 486.48785400390625,
+    "y1": 511.1935729980469,
+    "y2": 517.196044921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 332.64,
+    "y2": 498.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KzkLAE49H9b-Figure6-1.png"
+}]

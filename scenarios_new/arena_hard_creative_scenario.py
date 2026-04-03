@@ -84,7 +84,10 @@ class ArenaHardCreativeScenario(Scenario):
             line = line.strip()
             if not line:
                 continue
-            record = json.loads(line)
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError:
+                continue
             if record.get("category") != _CREATIVE_WRITING_CATEGORY:
                 continue
 

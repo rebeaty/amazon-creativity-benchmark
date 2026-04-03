@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 3: Left: evolution of GDA and double-FTR in the 2-D toy example from multiple initial points. Middle: zoom-in near a local Nash equilibrium point. Right: zoom-in near a non-Nash LASE for the GDA algorithm.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2480163574219,
+    "y1": 231.2904052734375,
+    "y2": 247.36297607421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 461.28,
+    "y1": 84.96,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Evolution of the loss landscape of a general-sum linear quadratic game when optimized by doubleFTR. We visualize two 2D slices (Ku,1,Ku,2) and (Kv,1,Kv,2) and the loss functions fu and fv respectively. This visualization confirms that double-FTR solution satisfies the second-order conditions for DNE.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 505.5732727050781,
+    "y1": 208.1864013671875,
+    "y2": 234.22198486328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 190.56,
+    "x2": 436.32,
+    "y1": 92.64,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure4-1.png"
+}, {
+  "caption": "Figure 1: Venn diagrams showing the relationship between the set of locally asymptotically stable equilibria (LASE) of the GDA flow and the set of differential Nash equilibria (DNE) in two-player differentiable games. Note that for general-sum games, there exist DNE that are unstable for GDA flow.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 505.56854248046875,
+    "y1": 188.32940673828125,
+    "y2": 214.364990234375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "General-sum", "(b)", "Zero-sum"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 449.28,
+    "y1": 80.64,
+    "y2": 175.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure1-1.png"
+}, {
+  "caption": "Figure 5: For the general-sum linear quadratic game, we visualize the evolution of the vector field Jacobian through different 2D slices. At each step, the contour plot visualizes the quadratic function defined by the current JGDA, centered at the current weight values. In both (a) and (b), the weights are initialized near a DNE that is an unstable fixed point for GDA dynamics. (a): using double-FTR, the weights converge to the DNE, where JGDA has negative eigenvalues (shown as saddle-points on the contour maps). (b): the gradient method avoids this unstable DNE, and converges to a stable fixed point instead.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00250244140625,
+    "y1": 284.07440185546875,
+    "y2": 339.99798583984375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Double-FTR", "(b)", "Gradient-play"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 487.2,
+    "y1": 89.75999999999999,
+    "y2": 272.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Weight evolution of the parameterized bilinear game under GDA and double-FTR. Solid line represent the weights for ✓, and dashed lines represent the weights for .",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9987487792969,
+    "y1": 469.62939453125,
+    "y2": 485.7019958496094
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 444.47999999999996,
+    "y1": 358.56,
+    "y2": 454.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Two examples of GDA failure modes in finding Nash equilibrium in zero-sum games. (a) GDA converges to the spurious strictly stable fixed point (0, 0), which is not a Nash equilibrium. (b) Instead of the unique Nash equilibrium (0, 0), GDA converges to a limit cycle both when initialized “inside” (green) and “outside” (blue). We use ✏ = 0.0001, = 0.01.",
+  "captionBoundary": {
+    "x1": 106.80699920654297,
+    "x2": 504.3200378417969,
+    "y1": 269.69342041015625,
+    "y2": 305.6919860839844
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "f(x,", "y)", "=", "g(x,", "y)", "=", "2x2", "+", "5xy", "+", "y2", "(b)", "f(x,", "y)", "=", "g(x,", "y)", "=", "xy", "+", "✏(x2", "y4)"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 85.92,
+    "y2": 257.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Mixure of Gaussians in 2D. Top: GDA suffers from mode collapse. Bottom: the generator distribution learned by double-FTR recovers all the modes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030517578125,
+    "y1": 327.86639404296875,
+    "y2": 343.94000244140625
+  },
+  "figType": "Figure",
+  "imageText": [",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", "7DUJHW", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", ",WHUDWLRQ", "ಜ", "ಜ", "ಜ", "ಜ", "7DUJHW", "ಜ", "ಜ", "ಜ", "ಜ"],
+  "name": "8",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 499.2,
+    "y1": 205.92,
+    "y2": 313.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Mixture of Gaussians in 1D. Left: ground-truth. Middle: generator distribution learned by GDA. Right: generator distribution learned by double-FTR.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.57049560546875,
+    "y1": 171.8853759765625,
+    "y2": 187.958984375
+  },
+  "figType": "Figure",
+  "imageText": ["GenerDtRr", "Density", "(GRuble-)T5)", "0.20", "0.15", "0.10", "0.05", "−6", "−4", "−2", "0", "2", "4", "6", "0.00", "GenerDtor", "Density", "(GDA)", "0.25", "0.20", "0.15", "0.10", "0.05", "−6", "−4", "−2", "0", "2", "4", "6", "0.00", "TDrget", "Density", "0.20", "0.15", "0.10", "0.05", "−6", "−4", "−2", "0", "2", "4", "6", "0.00"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 86.39999999999999,
+    "y2": 156.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8abnSMeFaqA-Figure7-1.png"
+}]

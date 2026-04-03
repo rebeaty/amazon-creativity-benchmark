@@ -1,0 +1,741 @@
+[{
+  "caption": "Table 1: Summary of experimental results. We report the average sampling quality and diversity scores, and time.",
+  "captionBoundary": {
+    "x1": 291.0929870605469,
+    "x2": 504.0030517578125,
+    "y1": 411.4305419921875,
+    "y2": 439.35101318359375
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.717", "0.637", "8.855", "STaSy", "0.733", "0.658", "10.663", "VEEGAN", "0.006", "0.038", "0.109", "CTGAN", "0.569", "0.352", "0.704", "TableGAN", "0.501", "0.434", "0.046", "OCT-GAN", "0.567", "0.381", "26.926", "RNODE", "0.490", "0.328", "13.392", "Methods", "Quality", "↑", "Diversity", "↑", "Runtime", "↓", "(F1", "&", "R2)", "(coverage)", "(second)"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 292.8,
+    "x2": 500.15999999999997,
+    "y1": 450.24,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table1-1.png"
+}, {
+  "caption": "Table 2: Classification/regression with real data. We report average F1 (resp. macro F1), AUROC, and Weighted-F1 for binary (resp. multi-class) classification, and R2 and RMSE for regression. The best (resp. the second best) results are highlighted in bold face (resp. with underline).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2488708496094,
+    "y1": 86.5195083618164,
+    "y2": 114.44000244140625
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.777", "0.922", "0.786", "0.324", "4076.596", "STaSy", "0.792", "0.925", "0.801", "0.350", "4071.643", "MedGAN", "0.252", "0.628", "0.243", "-inf", "inf", "VEEGAN", "0.371", "0.704", "0.356", "-2.369", "8540.780", "CTGAN", "0.639", "0.849", "0.649", "0.113", "4096.279", "TVAE", "0.603", "0.839", "0.608", "0.107", "4218.457", "TableGAN", "0.582", "0.836", "0.586", "-0.026", "4535.514", "OCT-GAN", "0.630", "0.865", "0.637", "0.160", "4105.729", "RNODE", "0.545", "0.839", "0.550", "0.130", "4112.928", "Identity", "0.806", "0.934", "0.818", "0.366", "4109.424", "F1", "AUROC", "Weighted-F1", "R2", "RMSE", "Methods", "Classification", "Regression"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 478.08,
+    "y1": 125.28,
+    "y2": 278.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table2-1.png"
+}, {
+  "caption": "Figure 5: Histograms of values in the excess kurtosis column of HTRU",
+  "captionBoundary": {
+    "x1": 165.99197387695312,
+    "x2": 446.0082702636719,
+    "y1": 392.113525390625,
+    "y2": 398.1159973144531
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy", "Real", "RNODE", "Real", "OCT−GAN", "Real", "TableGAN", "Real", "TVAE", "Real", "CTGAN", "Real", "VEEGAN", "Real", "MedGAN"],
+  "name": "5",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 494.4,
+    "y1": 236.64,
+    "y2": 381.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure5-1.png"
+}, {
+  "caption": "Figure 6: t-SNE visualizations of fake and original records in HTRU",
+  "captionBoundary": {
+    "x1": 170.7139434814453,
+    "x2": 441.2862243652344,
+    "y1": 584.5125732421875,
+    "y2": 590.5150146484375
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy", "Real", "TVAE", "Real", "VEEGAN", "Real", "MedGAN"],
+  "name": "6",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 494.4,
+    "y1": 426.71999999999997,
+    "y2": 575.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure6-1.png"
+}, {
+  "caption": "Figure 8: t-SNE visualizations of fake and original records in Robot",
+  "captionBoundary": {
+    "x1": 167.72494506835938,
+    "x2": 444.2748107910156,
+    "y1": 513.99755859375,
+    "y2": 520.0
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy", "Real", "VEEGAN", "Real", "MedGAN"],
+  "name": "8",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 496.32,
+    "y1": 355.68,
+    "y2": 505.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Histograms of values in the ultrasound sensor column of Robot",
+  "captionBoundary": {
+    "x1": 156.76597595214844,
+    "x2": 455.23382568359375,
+    "y1": 321.5285339355469,
+    "y2": 327.531005859375
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy", "Real", "RNODE", "Real", "OCT−GAN", "Real", "TableGAN", "Real", "TVAE", "Real", "CTGAN", "Real", "VEEGAN", "Real", "MedGAN"],
+  "name": "7",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 494.4,
+    "y1": 165.6,
+    "y2": 310.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure7-1.png"
+}, {
+  "caption": "Table 10: We report the F1 score and the median of the log-probabilities of testing records according to fine-tuning objective.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9953308105469,
+    "y1": 346.6595153808594,
+    "y2": 363.6199951171875
+  },
+  "figType": "Table",
+  "imageText": ["Default", "0.517±0.009", "131.011", "0.523±0.007", "131.122", "0.510±0.012", "106.184", "Shoppers", "0.642±0.009", "189.422", "0.642±0.015", "220.589", "0.643±0.005", "206.924", "Contraceptive", "0.437±0.012", "225.334", "0.451±0.017", "225.638", "0.438±0.012", "225.392", "Crowdsource", "0.738±0.099", "47.567", "0.743±0.104", "48.905", "0.744±0.086", "48.683", "F1", "Log-probability", "F1", "Log-probability", "F1", "Log-probability", "Datasets", "STaSy", "Fine-tine", "with", "Fine-tune", "with", "w/o", "fine-tuning", "the", "denoising", "score", "matching", "loss", "the", "Hutchinson’s", "estimation"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 374.4,
+    "y2": 449.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table10-1.png"
+}, {
+  "caption": "Figure 1: Distributions of denoising score matching loss in Shoppers",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 246.6004638671875,
+    "y1": 239.02651977539062,
+    "y2": 255.98797607421875
+  },
+  "figType": "Figure",
+  "imageText": ["In", "Table", "1,", "we", "summarize", "our", "experimental", "results,", "where", "we", "compare", "our", "STaSy", "with", "other", "existing", "tabular", "data", "synthe-", "sis", "methods", "in", "terms", "of", "the", "sampling", "quality,", "diversity,", "and", "time.", "As", "shown,", "our", "basic", "model", "even", "without", "our", "proposed", "self-paced", "learning", "and", "fine-tuning,", "denoted", "Naïve-STaSy,", "significantly", "outperforms", "all", "baselines", "except", "for", "runtime.", "In", "order", "to", "alleviate", "the", "training", "difficulty", "of", "Naïve-STaSy,", "we", "design", "i)", "a", "self-paced", "learning", "method,", "and", "ii)", "a", "fine-tuning", "approach.", "Our", "proposed", "self-paced", "learning", "technique", "trains", "a", "model", "from", "easy", "to", "hard", "records", "based", "on", "their", "loss", "values.", "In", "addition,", "our", "proposed", "fine-tuning", "method,", "which", "modestly", "adjusts", "the", "model", "parameters,", "can", "further", "improve", "the", "sampling", "quality", "and", "diversity."],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 255.84,
+    "x2": 505.91999999999996,
+    "y1": 123.83999999999999,
+    "y2": 270.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure1-1.png"
+}, {
+  "caption": "Table 4: Sampling diversity in terms of coverage averaged over all datasets",
+  "captionBoundary": {
+    "x1": 365.0889892578125,
+    "x2": 504.00152587890625,
+    "y1": 552.9005737304688,
+    "y2": 580.8209838867188
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.637", "STaSy", "w/o", "fine-tuning", "0.655", "STaSy", "0.658", "MedGAN", "0.037", "VEEGAN", "0.038", "CTGAN", "0.352", "TVAE", "0.494", "TableGAN", "0.434", "OCT-GAN", "0.381", "RNODE", "0.328", "Methods", "Coverage"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 366.71999999999997,
+    "x2": 490.08,
+    "y1": 591.84,
+    "y2": 709.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table4-1.png"
+}, {
+  "caption": "Table 3: The median of the log-probabilities of testing records, averaged over all datasets",
+  "captionBoundary": {
+    "x1": 333.41400146484375,
+    "x2": 503.9991760253906,
+    "y1": 241.63754272460938,
+    "y2": 258.5989990234375
+  },
+  "figType": "Table",
+  "imageText": ["RNODE", "59.327", "STaSy", "w/o", "fine-tuning", "129.293", "STaSy", "131.734", "Methods", "Log-probability"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 334.56,
+    "x2": 493.44,
+    "y1": 269.76,
+    "y2": 320.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table3-1.png"
+}, {
+  "caption": "Figure 2: t-SNE visualizations of fake and the original records in Robot.",
+  "captionBoundary": {
+    "x1": 159.14700317382812,
+    "x2": 452.8526611328125,
+    "y1": 528.2605590820312,
+    "y2": 534.2630004882812
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 440.64,
+    "y2": 513.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure2-1.png"
+}, {
+  "caption": "Table 25: Datasets used for our experiments",
+  "captionBoundary": {
+    "x1": 218.03599548339844,
+    "x2": 393.65667724609375,
+    "y1": 86.5195083618164,
+    "y2": 92.52197265625
+  },
+  "figType": "Table",
+  "imageText": ["•", "News", "(Fernandes,", "2015)", "is", "a", "regression", "dataset", "about", "online", "news", "articles", "to", "predict", "the", "number", "of", "shares", "in", "social", "networks.", "•", "Beijing", "(Liang", "et", "al.,", "2015)", "is", "a", "regression", "dataset", "about", "PM2.5", "air", "quality", "in", "the", "city", "of", "Beijing.", "•", "Shuttle", "(shu)", "is", "a", "multi-class", "classification", "dataset", "for", "extracting", "conditions", "in", "which", "automatic", "landing", "is", "preferred", "over", "manual", "control", "of", "the", "spacecraft.", "Credit", "264.8K", "20K", "29", "1", "Binary", "classification", "Default", "24K", "6K", "13", "11", "Binary", "classification", "HTRU", "14.3K", "3.6K", "8", "1", "Binary", "classification", "Magic", "15.2K", "3.8K", "10", "1", "Binary", "classification", "Phishing", "8.8K", "2.2K", "0", "31", "Binary", "classification", "Shoppers", "9.8K", "2.4K", "10", "8", "Binary", "classification", "Spambase", "3.7K", "0.9K", "57", "1", "Binary", "classification", "Bean", "10.8K", "2.7K", "16", "1", "Multi-class", "classification", "(7)", "Contraceptive", "1.2K", "0.3K", "0", "10", "Multi-class", "classification", "(3)", "Crowdsource", "8.6K", "2.1K", "28", "1", "Multi-class", "classification", "(6)", "Obesity", "1.6K", "0.4K", "7", "10", "Multi-class", "classification", "(7)", "Robot", "4.4K", "1.1K", "24", "1", "Multi-class", "classification", "(4)", "Shuttle", "46.4K", "11.6K", "9", "1", "Multi-class", "classification", "(7)", "Beijing", "15.2K", "3.8K", "8", "6", "Regression", "News", "31.6K", "8K", "45", "14", "Regression", "Datasets", "#train", "#test", "#continuous", "#categorical", "task", "(#class)"],
+  "name": "25",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 504.47999999999996,
+    "y1": 103.67999999999999,
+    "y2": 375.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table25-1.png"
+}, {
+  "caption": "Table 18: The median of the log-probabilities of testing records are reported.",
+  "captionBoundary": {
+    "x1": 152.9409942626953,
+    "x2": 458.7528076171875,
+    "y1": 457.676513671875,
+    "y2": 463.6789855957031
+  },
+  "figType": "Table",
+  "imageText": ["R", "eg", ".", "Beijing", "42.614", "17.720", "18.192", "News", "128.472", "76.770", "76.600", "ti.", "Bean", "46.764", "92.555", "92.635", "Contraceptive", "26.797", "225.334", "225.638", "Crowdsource", "23.323", "47.567", "48.905", "Obesity", "130.018", "330.003", "333.017", "Robot", "14.238", "79.233", "79.355", "Shuttle", "48.875", "114.247", "114.294", "M", "ul", "ar", "y", "Credit", "71.248", "117.001", "117.404", "Default", "55.284", "131.011", "131.122", "HTRU", "27.852", "5.435", "5.326", "Magic", "17.413", "30.247", "30.216", "Phishing", "53.478", "228.912", "228.914", "Shoppers", "62.843", "189.422", "220.589", "Spambase", "140.686", "253.935", "253.798", "B", "in", "Datasets", "RNODE", "STaSy", "w/o", "fine-tuning", "STaSy"],
+  "name": "18",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 471.35999999999996,
+    "y1": 474.71999999999997,
+    "y2": 664.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table18-1.png"
+}, {
+  "caption": "Table 17: Regression with real data. We report R2 and RMSE for regression.",
+  "captionBoundary": {
+    "x1": 152.38900756835938,
+    "x2": 459.3019714355469,
+    "y1": 153.39053344726562,
+    "y2": 159.39300537109375
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.625±0.141", "0.023±0.011", "49.524±8.963", "8103.668±45.072", "STaSy", "0.672±0.166", "0.029±0.008", "46.123±10.830", "8097.163±33.137", "MedGAN", "-48.753±26.307", "-inf", "552.597±192.765", "inf", "VEEGAN", "-1.039±0.002", "-3.699±2.771", "116.869±0.056", "16964.690±6020.151", "CTGAN", "0.207±0.017", "0.019±0.011", "72.854±0.768", "8119.705±45.940", "TVAE", "0.256±0.033", "-0.042±0.010", "70.598±1.553", "8366.315±41.758", "TableGAN", "0.155±0.027", "-0.206±0.103", "75.208±1.194", "8995.820±380.286", "OCT-GAN", "0.307±0.021", "0.013±0.016", "68.133±1.011", "8143.325±64.937", "RNODE", "0.250±0.029", "0.010±0.008", "70.869±1.369", "8154.987±33.918", "Identity", "0.728±0.196", "0.004±0.038", "40.935±13.809", "8177.913±156.310", "Beijing", "News", "Beijing", "News", "Methods", "R2", "RMSE"],
+  "name": "17",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 170.4,
+    "y2": 312.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table17-1.png"
+}, {
+  "caption": "Table 9: Comparison between SOS and STaSy in terms of Weighted-F1",
+  "captionBoundary": {
+    "x1": 161.2389678955078,
+    "x2": 450.45318603515625,
+    "y1": 349.728515625,
+    "y2": 355.7309875488281
+  },
+  "figType": "Table",
+  "imageText": ["SOS", "0.8767±0.0017", "0.7949±0.0011", "0.9197±0.0040", "STaSy", "0.8803±0.0027", "0.7960±0.0015", "0.9270±0.0029", "Identity", "0.8657±0.0163", "0.7807±0.0348", "0.9031±0.0848", "Methods", "HTRU", "Magic", "Robot"],
+  "name": "9",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 366.71999999999997,
+    "y2": 425.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table9-1.png"
+}, {
+  "caption": "Table 5: Runtime evaluation results, averaged over all datasets",
+  "captionBoundary": {
+    "x1": 181.593017578125,
+    "x2": 430.1000671386719,
+    "y1": 359.3534851074219,
+    "y2": 365.35595703125
+  },
+  "figType": "Table",
+  "imageText": ["Runtime", "0.246", "0.109", "0.704", "0.100", "0.046", "26.926", "13.392", "8.855", "10.663", "Methods", "MedGAN", "VEEGAN", "CTGAN", "TVAE", "TableGAN", "OCT-GAN", "RNODE", "Naïve-STaSy", "STaSy"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 376.32,
+    "y2": 407.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table5-1.png"
+}, {
+  "caption": "Table 6: Ablation study. We report F1 (resp. R2) for classification (resp. regression).",
+  "captionBoundary": {
+    "x1": 136.82301330566406,
+    "x2": 474.8688659667969,
+    "y1": 540.9175415039062,
+    "y2": 546.9199829101562
+  },
+  "figType": "Table",
+  "imageText": ["Beijing", "0.625±0.141", "0.670±0.166", "0.635±0.145", "0.672±0.166", "Contraceptive", "0.418±0.018", "0.437±0.012", "0.434±0.015", "0.451±0.017", "Crowdsource", "0.710±0.104", "0.738±0.099", "0.730±0.108", "0.743±0.104", "Shuttle", "0.791±0.056", "0.807±0.088", "0.816±0.045", "0.865±0.072", "Credit", "0.782±0.042", "0.782±0.044", "0.790±0.028", "0.794±0.035", "Default", "0.509±0.014", "0.517±0.009", "0.511±0.016", "0.523±0.007", "Shoppers", "0.635±0.017", "0.642±0.009", "0.635±0.018", "0.642±0.015", "Datasets", "Naïve-STaSy", "w/o", "fine-tuning", "w/o", "SPL", "STaSy"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 557.76,
+    "y2": 663.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table6-1.png"
+}, {
+  "caption": "Figure 3: (Left and Middle) Histograms of values in two columns of Bean. (Right) t-SNE (van der Maaten & Hinton, 2008) visualizations of the fake and original records in Obesity. More visualizations are in Appendix J.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65789794921875,
+    "y1": 191.51950073242188,
+    "y2": 219.44000244140625
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "OCT−GAN", "STaSy", "Real", "OCT−GAN", "STaSy"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 85.92,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure3-1.png"
+}, {
+  "caption": "Table 21: Sampling diversity in terms of coverage for regression datasets",
+  "captionBoundary": {
+    "x1": 160.552001953125,
+    "x2": 451.1410217285156,
+    "y1": 559.506591796875,
+    "y2": 565.509033203125
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.876±0.003", "0.755±0.003", "STaSy", "w/o", "fine-tuning", "0.943±0.003", "0.762±0.004", "STaSy", "0.941±0.003", "0.762±0.002", "MedGAN", "0.000±0.000", "0.000±0.000", "VEEGAN", "0.000±0.000", "0.002±0.000", "CTGAN", "0.532±0.002", "0.366±0.001", "TVAE", "0.720±0.002", "0.665±0.001", "TableGAN", "0.803±0.003", "0.154±0.003", "OCT-GAN", "0.693±0.000", "0.582±0.000", "RNODE", "0.501±0.003", "0.255±0.002", "Beijing", "News", "Methods", "Regression"],
+  "name": "21",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 185.76,
+    "x2": 426.24,
+    "y1": 576.48,
+    "y2": 724.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table21-1.png"
+}, {
+  "caption": "Table 19: Sampling diversity in terms of coverage for binary classification datasets",
+  "captionBoundary": {
+    "x1": 140.96600341796875,
+    "x2": 470.72802734375,
+    "y1": 225.44351196289062,
+    "y2": 231.44598388671875
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.014±0.000", "0.149±0.001", "0.921±0.002", "0.919±0.002", "0.655±0.006", "0.832±0.005", "0.684±0.011", "STaSy", "w/o", "fine-tuning", "0.013±0.000", "0.083±0.001", "0.907±0.002", "0.943±0.003", "0.780±0.005", "0.796±0.006", "0.727±0.006", "STaSy", "0.014±0.000", "0.101±0.001", "0.911±0.003", "0.944±0.001", "0.779±0.005", "0.798±0.004", "0.727±0.013", "MedGAN", "0.000±0.000", "0.000±0.000", "0.000±0.000", "0.001±0.000", "0.002±0.001", "0.000±0.000", "0.002±0.000", "VEEGAN", "0.000±0.000", "0.000±0.000", "0.000±0.000", "0.003±0.000", "0.035±0.000", "0.141±0.002", "0.201±0.004", "CTGAN", "0.174±0.001", "0.190±0.001", "0.461±0.004", "0.655±0.003", "0.416±0.001", "0.723±0.006", "0.471±0.007", "TVAE", "0.373±0.001", "0.272±0.002", "0.741±0.001", "0.650±0.003", "0.623±0.002", "0.737±0.001", "0.698±0.002", "TableGAN", "0.458±0.002", "0.216±0.001", "0.299±0.002", "0.748±0.002", "0.512±0.007", "0.698±0.005", "0.711±0.005", "OCT-GAN", "0.000±0.000", "0.171±0.000", "0.375±0.004", "0.634±0.001", "0.450±0.003", "0.714±0.003", "0.470±0.016", "RNODE", "0.025±0.000", "0.293±0.003", "0.751±0.006", "0.612±0.003", "0.272±0.008", "0.447±0.004", "0.326±0.009", "Credit", "Default", "HTRU", "Magic", "Phishing", "Shoppers", "Spambase", "Methods", "Binary", "classification"],
+  "name": "19",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 242.39999999999998,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table19-1.png"
+}, {
+  "caption": "Table 20: Sampling diversity in terms of coverage for multi-class classification datasets",
+  "captionBoundary": {
+    "x1": 131.8300018310547,
+    "x2": 479.8634338378906,
+    "y1": 391.071533203125,
+    "y2": 397.0740051269531
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.092±0.003", "0.839±0.012", "0.920±0.004", "0.825±0.006", "0.935±0.007", "0.133±0.003", "STaSy", "w/o", "fine-tuning", "0.095±0.005", "0.879±0.007", "0.970±0.002", "0.777±0.013", "0.937±0.004", "0.207±0.001", "STaSy", "0.100±0.005", "0.894±0.010", "0.971±0.005", "0.778±0.008", "0.937±0.004", "0.209±0.001", "MedGAN", "0.000±0.000", "0.538±0.007", "0.000±0.000", "0.007±0.001", "0.000±0.000", "0.000±0.000", "VEEGAN", "0.004±0.001", "0.082±0.002", "0.000±0.000", "0.100±0.003", "0.005±0.001", "0.001±0.000", "CTGAN", "0.053±0.001", "0.753±0.011", "0.064±0.000", "0.252±0.015", "0.140±0.004", "0.031±0.000", "TVAE", "0.118±0.001", "0.680±0.011", "0.254±0.003", "0.297±0.003", "0.472±0.014", "0.111±0.002", "TableGAN", "0.116±0.003", "0.751±0.001", "0.339±0.001", "0.440±0.006", "0.259±0.003", "0.005±0.000", "OCT-GAN", "0.106±0.001", "0.764±0.011", "0.133±0.000", "0.345±0.010", "0.250±0.004", "0.023±0.000", "RNODE", "0.292±0.006", "0.547±0.011", "0.104±0.003", "0.375±0.008", "0.113±0.004", "0.005±0.000", "Bean", "Contraceptive", "Crowdsource", "Obesity", "Robot", "Shuttle", "Methods", "Multi-class", "classification"],
+  "name": "20",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 408.0,
+    "y2": 536.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table20-1.png"
+}, {
+  "caption": "Table 16: Classification with real data. We report Weighted-F1, which is inversely weighted to its class size, for multi-class classification.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 538.8355712890625,
+    "y2": 555.7969970703125
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.935±0.010", "0.398±0.019", "0.677±0.114", "0.903±0.024", "0.941±0.029", "0.757±0.066", "STaSy", "0.936±0.009", "0.433±0.018", "0.715±0.113", "0.910±0.025", "0.943±0.033", "0.843±0.084", "MedGAN", "0.050±0.000", "0.402±0.011", "0.096±0.024", "0.209±0.079", "0.257±0.056", "0.032±0.000", "VEEGAN", "0.335±0.066", "0.318±0.056", "0.119±0.020", "0.182±0.041", "0.268±0.016", "0.147±0.027", "CTGAN", "0.885±0.015", "0.347±0.008", "0.509±0.082", "0.145±0.017", "0.651±0.048", "0.623±0.173", "TVAE", "0.896±0.011", "0.387±0.010", "0.528±0.080", "0.461±0.020", "0.767±0.044", "0.380±0.059", "TableGAN", "0.620±0.025", "0.366±0.018", "0.361±0.058", "0.316±0.043", "0.397±0.032", "0.314±0.010", "OCT-GAN", "0.918±0.014", "0.385±0.013", "0.548±0.122", "0.273±0.031", "0.780±0.035", "0.581±0.092", "RNODE", "0.795±0.116", "0.370±0.022", "0.294±0.050", "0.461±0.050", "0.474±0.137", "0.316±0.006", "Identity", "0.936±0.011", "0.481±0.016", "0.746±0.103", "0.969±0.008", "0.974±0.040", "0.922±0.078", "Bean", "Contraceptive", "Crowdsource", "Obesity", "Robot", "Shuttle", "Methods", "Multi-class", "classification"],
+  "name": "16",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 566.88,
+    "y2": 708.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table16-1.png"
+}, {
+  "caption": "Table 15: Classification with real data. We report AUROC for multi-class classification.",
+  "captionBoundary": {
+    "x1": 130.94900512695312,
+    "x2": 480.745849609375,
+    "y1": 323.83251953125,
+    "y2": 329.8349914550781
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.991±0.008", "0.642±0.022", "0.948±0.048", "0.987±0.013", "0.989±0.011", "0.984±0.027", "STaSy", "0.992±0.007", "0.680±0.014", "0.949±0.050", "0.987±0.012", "0.989±0.011", "0.991±0.014", "MedGAN", "0.500±0.000", "0.640±0.020", "0.643±0.074", "0.711±0.095", "0.646±0.082", "0.490±0.021", "VEEGAN", "0.765±0.107", "0.621±0.043", "0.650±0.075", "0.588±0.040", "0.604±0.051", "0.648±0.051", "CTGAN", "0.985±0.010", "0.565±0.008", "0.889±0.043", "0.526±0.007", "0.828±0.034", "0.984±0.018", "TVAE", "0.985±0.008", "0.621±0.025", "0.854±0.031", "0.835±0.010", "0.952±0.029", "0.872±0.048", "TableGAN", "0.913±0.012", "0.576±0.006", "0.882±0.051", "0.755±0.026", "0.723±0.018", "0.802±0.083", "OCT-GAN", "0.989±0.009", "0.588±0.015", "0.915±0.054", "0.686±0.036", "0.927±0.027", "0.968±0.037", "RNODE", "0.971±0.030", "0.579±0.028", "0.752±0.043", "0.841±0.032", "0.851±0.060", "0.712±0.001", "Identity", "0.992±0.006", "0.697±0.011", "0.953±0.052", "0.998±0.002", "0.995±0.007", "0.999±0.002", "Bean", "Contraceptive", "Crowdsource", "Obesity", "Robot", "Shuttle", "Methods", "Multi-class", "classification"],
+  "name": "15",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 340.8,
+    "y2": 482.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table15-1.png"
+}, {
+  "caption": "Table 14: Classification with real data. We report macro F1 for multi-class classification.",
+  "captionBoundary": {
+    "x1": 128.95599365234375,
+    "x2": 482.7379150390625,
+    "y1": 108.82852935791016,
+    "y2": 114.83099365234375
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.933±0.010", "0.418±0.018", "0.710±0.104", "0.904±0.024", "0.943±0.028", "0.791±0.056", "STaSy", "0.935±0.009", "0.451±0.017", "0.743±0.104", "0.910±0.025", "0.944±0.032", "0.865±0.072", "MedGAN", "0.058±0.000", "0.423±0.010", "0.174±0.020", "0.208±0.078", "0.301±0.049", "0.126±0.000", "VEEGAN", "0.332±0.063", "0.343±0.050", "0.196±0.017", "0.183±0.041", "0.307±0.016", "0.232±0.025", "CTGAN", "0.883±0.015", "0.364±0.006", "0.557±0.075", "0.144±0.016", "0.651±0.040", "0.675±0.149", "TVAE", "0.895±0.010", "0.406±0.011", "0.578±0.076", "0.462±0.020", "0.776±0.042", "0.468±0.051", "TableGAN", "0.620±0.024", "0.376±0.016", "0.427±0.056", "0.313±0.043", "0.422±0.028", "0.404±0.008", "OCT-GAN", "0.916±0.014", "0.394±0.013", "0.594±0.113", "0.274±0.031", "0.782±0.036", "0.637±0.079", "RNODE", "0.797±0.110", "0.385±0.022", "0.370±0.050", "0.461±0.051", "0.503±0.118", "0.408±0.007", "Identity", "0.934±0.011", "0.498±0.017", "0.772±0.094", "0.969±0.008", "0.975±0.038", "0.932±0.067", "Bean", "Contraceptive", "Crowdsource", "Obesity", "Robot", "Shuttle", "Methods", "Multi-class", "classification"],
+  "name": "14",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 125.75999999999999,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table14-1.png"
+}, {
+  "caption": "Figure 9: Histograms of values in the min of best keyword column of News",
+  "captionBoundary": {
+    "x1": 155.8989715576172,
+    "x2": 456.1002502441406,
+    "y1": 299.61053466796875,
+    "y2": 305.6130065917969
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy", "Real", "RNODE", "Real", "OCT−GAN", "Real", "TableGAN", "Real", "TVAE", "Real", "CTGAN", "Real", "VEEGAN", "Real", "MedGAN"],
+  "name": "9",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 494.4,
+    "y1": 144.0,
+    "y2": 288.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure9-1.png"
+}, {
+  "caption": "Figure 10: t-SNE visualizations of fake and original records in News",
+  "captionBoundary": {
+    "x1": 168.2229461669922,
+    "x2": 443.7772216796875,
+    "y1": 492.0445251464844,
+    "y2": 498.0469970703125
+  },
+  "figType": "Figure",
+  "imageText": ["Real", "STaSy", "Real", "OCT−GAN", "Real", "TVAE", "Real", "CTGAN", "Real", "VEEGAN", "Real", "MedGAN"],
+  "name": "10",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 494.4,
+    "y1": 336.0,
+    "y2": 483.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure10-1.png"
+}, {
+  "caption": "Table 27: The best hyperparameters used in Table 2",
+  "captionBoundary": {
+    "x1": 202.89300537109375,
+    "x2": 408.800048828125,
+    "y1": 504.3175354003906,
+    "y2": 510.32000732421875
+  },
+  "figType": "Table",
+  "imageText": ["Beijing", "VE", "concatsquash", "LeakyReLU", "2e-03", "0.25", "0.90", "Rademacher", "2e-07", "News", "VE", "concatsquash", "LeakyReLU", "2e-03", "0.25", "0.90", "Gaussian", "2e-07", "Bean", "VP", "squash", "ReLU", "2e-03", "0.25", "0.80", "Rademacher", "2e-05", "Contraceptive", "VP", "concatsquash", "LeakyReLU", "2e-03", "0.2", "0.95", "Rademacher", "2e-07", "Crowdsource", "VE", "squash", "LeakyReLU", "2e-03", "0.25", "0.90", "Gaussian", "2e-07", "Obesity", "VP", "squash", "ELU", "2e-03", "0.25", "0.90", "Gaussian", "2e-05", "Robot", "sub-VP", "concat", "ELU", "2e-03", "0.3", "0.95", "Rademacher", "2e-07", "Shuttle", "sub-VP", "squash", "ReLU", "2e-03", "0.3", "0.95", "Rademacher", "2e-07", "Credit", "VP", "concatsquash", "LeakyReLU", "2e-03", "0.25", "0.90", "Rademacher", "2e-05", "Default", "VP", "concatsquash", "ReLU", "2e-03", "0.30", "0.90", "Rademacher", "2e-04", "HTRU", "VE", "concatsquash", "LeakyReLU", "2e-04", "0.25", "0.95", "Rademacher", "2e-05", "Magic", "sub-VP", "squash", "ReLU", "2e-03", "0.3", "0.95", "Rademacher", "2e-07", "Phishing", "VP", "squash", "LeakyReLU", "2e-03", "0.2", "0.95", "Rademacher", "2e-07", "Shoppers", "VE", "concatsquash", "ELU", "2e-03", "0.30", "0.95", "Rademacher", "2e-07", "Spambase", "sub-VP", "concat", "LeakyReLU", "2e-04", "0.2", "0.95", "Rademacher", "2e-07", "SDE", "Type", "Layer", "Type", "Activation", "Learn.", "Rate", "α0", "β0", "Hutchinson", "Type", "Learn.", "Rate", "Datasets", "Hyperparameters", "for", "SPL", "of", "STaSy", "Hyperparameters", "for", "fine-tuning"],
+  "name": "27",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 520.8,
+    "y2": 695.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table27-1.png"
+}, {
+  "caption": "Table 26: Hyperparameters of the base classifiers/regressors",
+  "captionBoundary": {
+    "x1": 186.2259979248047,
+    "x2": 425.4678955078125,
+    "y1": 121.75955963134766,
+    "y2": 127.76202392578125
+  },
+  "figType": "Table",
+  "imageText": ["Linear", "Regression", "-", "-", "n_estimators", "10,", "50,", "100", "min_child_weight", "1,", "10", "max_depth", "5,", "10", "gamma", "0.0,", "1.0", "nthread", "-1", "XGBoost", "max_depth", "8,", "16,", "Inf", "min_samples_split", "2,", "4", "min_samples_leaf", "1,", "3", "n_jobs", "-1", "RandomForest", "MLP", "hidden_layer_sizes", "(100,", "),", "(200,", "),", "(100,", "100)", "max_iter", "50,", "100", "alpha", "0.0001,", "0.001", "Logistic", "Regression", "solver", "lbfgs", "n_jobs", "-1", "max_iter", "10,", "50,", "100", "C", "0.01,", "0.1,", "1.0", "tol", "0.0001,", "0.01,", "0.1", "AdaBoost", "n_esimators", "-10,", "50,", "100", "DecisionTree", "max_depth", "4,", "8,", "16,", "32", "min_samples_split", "2,", "4,", "8", "min_samples_leaf", "1,", "3,", "5", "Models", "Hyperparameters", "Values"],
+  "name": "26",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 461.28,
+    "y1": 138.72,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table26-1.png"
+}, {
+  "caption": "Figure 4: t-SNE visualizations of the fake and original records in Beijing",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 321.8386535644531,
+    "y1": 481.0565185546875,
+    "y2": 498.01800537109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 285.12,
+    "y1": 366.71999999999997,
+    "y2": 472.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Figure4-1.png"
+}, {
+  "caption": "Table 7: Sensitivity analyses. We report F1 (resp. R2) for classification (resp. regression).",
+  "captionBoundary": {
+    "x1": 126.66100311279297,
+    "x2": 485.0308837890625,
+    "y1": 86.95755767822266,
+    "y2": 92.96002197265625
+  },
+  "figType": "Table",
+  "imageText": ["Beijing", "VE", "0.672±0.166", "0.05", "0.663±0.162", "0.70", "0.669±0.165", "VP", "0.594±0.144", "0.10", "0.667±0.164", "0.75", "0.668±0.165", "sub-VP", "0.525±0.082", "0.30", "0.666±0.164", "0.95", "0.668±0.165", "Crowdsource", "VE", "0.743±0.104", "0.05", "0.715±0.103", "0.75", "0.712±0.097", "VP", "0.717±0.102", "0.10", "0.713±0.099", "0.80", "0.692±0.127", "sub-VP", "0.667±0.116", "0.30", "0.709±0.105", "0.95", "0.700±0.111", "Spambase", "VE", "0.866±0.036", "0.05", "0.890±0.026", "0.70", "0.890±0.023", "VP", "0.875±0.029", "0.10", "0.888±0.024", "0.80", "0.893±0.025", "sub-VP", "0.893±0.025", "0.30", "0.888±0.027", "0.90", "0.890±0.028", "Datasets", "SDE", "Type", "Metric", "α0", "Metric", "β0", "Metric"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 103.67999999999999,
+    "y2": 230.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table7-1.png"
+}, {
+  "caption": "Table 8: Results of Naïve-STaSy by various reverse SDE solvers in Magic, where ‘Pred.’ means the predictor-only method. We report F1.",
+  "captionBoundary": {
+    "x1": 334.83099365234375,
+    "x2": 502.75445556640625,
+    "y1": 383.58154296875,
+    "y2": 422.4599914550781
+  },
+  "figType": "Table",
+  "imageText": ["AS", "0.752±0.025", "0.777±0.048", "RD", "0.779±0.052", "0.775±0.054", "EM", "0.779±0.052", "0.771±0.048", "PF", "0.781±0.054", "No", "Corr.", "Predictor", "Pred.", "Pred.", "Corr."],
+  "name": "8",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 349.91999999999996,
+    "x2": 487.2,
+    "y1": 433.44,
+    "y2": 493.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table8-1.png"
+}, {
+  "caption": "Table 23: Wall-clock runtime for multi-class classification datasets",
+  "captionBoundary": {
+    "x1": 172.83599853515625,
+    "x2": 438.8573303222656,
+    "y1": 327.6305236816406,
+    "y2": 333.63299560546875
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "2.797±0.263", "1.346±0.220", "3.090±0.237", "1.387±0.232", "1.692±0.215", "12.935±0.853", "STaSy", "2.750±0.241", "1.045±0.247", "3.126±0.229", "1.023±0.237", "1.371±0.227", "13.352±0.382", "MedGAN", "0.218±0.347", "0.174±0.335", "0.191±0.336", "0.196±0.334", "0.181±0.338", "0.271±0.330", "VEEGAN", "0.029±0.006", "0.006±0.000", "0.033±0.006", "0.009±0.001", "0.024±0.010", "0.102±0.004", "CTGAN", "0.227±0.009", "0.025±0.002", "0.252±0.027", "0.036±0.002", "0.113±0.014", "0.712±0.009", "TVAE", "0.023±0.002", "0.004±0.001", "0.038±0.005", "0.039±0.040", "0.009±0.000", "0.138±0.008", "TableGAN", "0.026±0.008", "0.002±0.000", "0.021±0.007", "0.004±0.001", "0.006±0.000", "0.041±0.007", "OCT-GAN", "6.595±3.725", "2.849±3.678", "6.917±3.743", "2.885±3.613", "5.013±3.670", "29.469±3.677", "RNODE", "5.210±0.234", "12.452±0.270", "7.985±0.072", "23.675±0.432", "10.861±0.801", "6.819±0.257", "Bean", "Contraceptive", "Crowdsource", "Obesity", "Robot", "Shuttle", "Methods", "Multi-class", "classification"],
+  "name": "23",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 344.64,
+    "y2": 470.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table23-1.png"
+}, {
+  "caption": "Table 22: Wall-clock runtime for binary classification datasets",
+  "captionBoundary": {
+    "x1": 181.97198486328125,
+    "x2": 429.7218933105469,
+    "y1": 173.54452514648438,
+    "y2": 179.5469970703125
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "79.202±0.350", "7.192±0.320", "3.275±0.245", "3.466±0.254", "0.733±0.239", "3.774±0.327", "2.234±0.229", "STaSy", "79.085±0.449", "9.073±0.319", "11.903±0.201", "3.788±0.284", "3.287±0.267", "4.015±0.285", "2.173±0.225", "MedGAN", "0.756±0.328", "0.223±0.334", "0.201±0.332", "0.205±0.333", "0.189±0.334", "0.203±0.332", "0.187±0.328", "VEEGAN", "0.800±0.031", "0.112±0.008", "0.051±0.005", "0.061±0.007", "0.041±0.009", "0.041±0.006", "0.019±0.002", "CTGAN", "6.342±0.300", "0.546±0.054", "0.299±0.085", "0.284±0.002", "0.163±0.005", "0.204±0.005", "0.107±0.008", "TVAE", "0.937±0.185", "0.052±0.005", "0.028±0.001", "0.049±0.004", "0.022±0.004", "0.039±0.003", "0.014±0.005", "TableGAN", "0.381±0.025", "0.043±0.007", "0.013±0.001", "0.027±0.007", "0.019±0.007", "0.020±0.007", "0.011±0.005", "OCT-GAN", "241.104±4.724", "28.206±3.598", "10.312±3.688", "11.083±3.701", "8.622±3.704", "7.741±3.714", "4.224", "±3.680", "RNODE", "10.613±0.139", "12.901±0.731", "4.346±0.073", "2.576±0.622", "11.385±0.067", "16.461±1.326", "21.270±0.121", "Credit", "Default", "HTRU", "Magic", "Phishing", "Shoppers", "Spambase", "Methods", "Binary", "classification"],
+  "name": "22",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 190.56,
+    "y2": 308.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table22-1.png"
+}, {
+  "caption": "Table 24: Wall-clock runtime for regression datasets",
+  "captionBoundary": {
+    "x1": 201.55799865722656,
+    "x2": 410.1349182128906,
+    "y1": 489.78753662109375,
+    "y2": 495.7900085449219
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "7.338±0.146", "2.362±0.241", "STaSy", "7.818±1.074", "16.132±1.241", "MedGAN", "0.212±0.334", "0.284±0.341", "VEEGAN", "0.067±0.005", "0.234±0.037", "CTGAN", "0.346±0.023", "0.902±0.013", "TVAE", "0.036±0.006", "0.075±0.003", "TableGAN", "0.023±0.008", "0.052±0.005", "OCT-GAN", "18.008±3.566", "20.866±3.648", "RNODE", "19.380±0.500", "34.955±0.276", "Beijing", "News", "Methods", "Regression"],
+  "name": "24",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 189.6,
+    "x2": 422.4,
+    "y1": 506.88,
+    "y2": 643.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table24-1.png"
+}, {
+  "caption": "Table 11: Classification with real data. We report F1 for binary classification.",
+  "captionBoundary": {
+    "x1": 151.78500366210938,
+    "x2": 459.9082946777344,
+    "y1": 106.9355239868164,
+    "y2": 112.93798828125
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.782±0.042", "0.509±0.014", "0.885±0.009", "0.780±0.054", "0.925±0.010", "0.635±0.017", "0.884±0.026", "STaSy", "0.794±0.035", "0.523±0.007", "0.885±0.007", "0.781±0.054", "0.932±0.013", "0.642±0.015", "0.893±0.025", "MedGAN", "0.000±0.000", "0.000±0.000", "0.033±0.066", "0.566±0.069", "0.615±0.001", "0.285±0.161", "0.489±0.218", "VEEGAN", "0.002±0.005", "0.368±0.000", "0.487±0.265", "0.571±0.049", "0.815±0.061", "0.398±0.064", "0.586±0.045", "CTGAN", "0.757±0.064", "0.497±0.012", "0.853±0.007", "0.737±0.035", "0.898±0.009", "0.510±0.053", "0.785±0.019", "TVAE", "0.000±0.000", "0.444±0.029", "0.854±0.005", "0.701±0.010", "0.913±0.007", "0.585±0.039", "0.758±0.033", "TableGAN", "0.739±0.038", "0.431±0.006", "0.843±0.005", "0.740±0.045", "0.903±0.009", "0.603±0.061", "0.741±0.104", "OCT-GAN", "0.127±0.187", "0.486±0.018", "0.865±0.010", "0.728±0.018", "0.905±0.007", "0.622±0.038", "0.859±0.022", "RNODE", "0.117±0.110", "0.407±0.014", "0.632±0.047", "0.745±0.035", "0.899±0.003", "0.541±0.024", "0.825±0.049", "Identity", "0.775±0.071", "0.452±0.044", "0.884±0.010", "0.782±0.059", "0.950±0.023", "0.611±0.063", "0.940±0.023", "Credit", "Default", "HTRU", "Magic", "Phishing", "Shoppers", "Spambase", "Methods", "Binary", "classification"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 123.83999999999999,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table11-1.png"
+}, {
+  "caption": "Table 13: Classification with real data. We report Weighted-F1, which is inversely weighted to its class size, for binary classification.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 540.7285766601562,
+    "y2": 557.6900024414062
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.782±0.042", "0.592±0.011", "0.895±0.008", "0.819±0.043", "0.932±0.009", "0.678±0.015", "0.902±0.021", "STaSy", "0.794±0.035", "0.600±0.005", "0.895±0.006", "0.820±0.044", "0.938±0.012", "0.681±0.013", "0.910±0.020", "MedGAN", "0.004±0.005", "0.286±0.003", "0.514±0.257", "0.549±0.091", "0.833±0.041", "0.461±0.065", "0.616±0.053", "VEEGAN", "0.002±0.000", "0.197±0.000", "0.115±0.061", "0.498±0.180", "0.345±0.008", "0.369±0.139", "0.584±0.131", "CTGAN", "0.758±0.064", "0.579±0.009", "0.866±0.007", "0.784±0.027", "0.908±0.008", "0.562±0.048", "0.814±0.016", "TVAE", "0.002±0.000", "0.540±0.021", "0.866±0.005", "0.740±0.008", "0.921±0.006", "0.635±0.034", "0.777±0.033", "TableGAN", "0.739±0.038", "0.510±0.009", "0.856±0.004", "0.789±0.035", "0.913±0.008", "0.649±0.054", "0.792±0.076", "OCT-GAN", "0.128±0.187", "0.562±0.018", "0.876±0.009", "0.772±0.015", "0.913±0.006", "0.666±0.033", "0.879±0.019", "RNODE", "0.119±0.110", "0.512±0.010", "0.663±0.043", "0.789±0.029", "0.908±0.003", "0.597±0.021", "0.855±0.039", "Identity", "0.775±0.071", "0.549±0.034", "0.894±0.009", "0.822±0.047", "0.954±0.021", "0.659±0.055", "0.949±0.019", "Credit", "Default", "HTRU", "Magic", "Phishing", "Shoppers", "Spambase", "Methods", "Binary", "classification"],
+  "name": "13",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 568.8,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table13-1.png"
+}, {
+  "caption": "Table 12: Classification with real data. We report AUROC for binary classification.",
+  "captionBoundary": {
+    "x1": 140.08399963378906,
+    "x2": 471.60943603515625,
+    "y1": 329.5105285644531,
+    "y2": 335.51300048828125
+  },
+  "figType": "Table",
+  "imageText": ["Naïve-STaSy", "0.972±0.020", "0.749±0.019", "0.969±0.009", "0.905±0.036", "0.984±0.005", "0.910±0.009", "0.958±0.025", "STaSy", "0.967±0.036", "0.747±0.018", "0.966±0.010", "0.905±0.037", "0.986±0.006", "0.910±0.009", "0.961±0.027", "MedGAN", "0.500±0.000", "0.500±0.000", "0.577±0.179", "0.704±0.061", "0.677±0.149", "0.752±0.089", "0.825±0.059", "VEEGAN", "0.661±0.115", "0.516±0.055", "0.876±0.114", "0.789±0.042", "0.899±0.065", "0.798±0.074", "0.733±0.064", "CTGAN", "0.957±0.034", "0.749±0.007", "0.954±0.015", "0.871±0.027", "0.969±0.007", "0.849±0.029", "0.908±0.026", "TVAE", "0.500±0.000", "0.743±0.012", "0.955±0.012", "0.840±0.028", "0.980±0.005", "0.861±0.022", "0.906±0.036", "TableGAN", "0.941±0.031", "0.662±0.026", "0.959±0.011", "0.888±0.028", "0.972±0.007", "0.859±0.037", "0.930±0.046", "OCT-GAN", "0.813±0.106", "0.726±0.011", "0.959±0.012", "0.868±0.017", "0.973±0.006", "0.890±0.016", "0.950±0.020", "RNODE", "0.877±0.129", "0.723±0.009", "0.940±0.029", "0.874±0.033", "0.966±0.008", "0.889±0.020", "0.933±0.043", "Identity", "0.955±0.052", "0.769±0.015", "0.971±0.004", "0.909±0.039", "0.991±0.007", "0.922±0.015", "0.986±0.014", "Credit", "Default", "HTRU", "Magic", "Phishing", "Shoppers", "Spambase", "Methods", "Binary", "classification"],
+  "name": "12",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 346.56,
+    "y2": 487.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1mNssCWt_v-Table12-1.png"
+}]

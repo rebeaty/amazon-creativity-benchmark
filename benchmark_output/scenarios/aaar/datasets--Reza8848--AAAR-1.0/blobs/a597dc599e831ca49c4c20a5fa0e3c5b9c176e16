@@ -1,0 +1,601 @@
+[{
+  "caption": "Figure 10: Performance of human-machine on different sequence lengths. The yellow curve represents the SOTA machine (MixFormer (Cui et al. (2022))), the blue curve represents the subject, and the red triangle represents the shot-cut. Subfigures (I-IV) represent four videos with different combinations of lengths and shots. Compared with the SOTA machine, humans can still maintain adequate DVA in the face of lengthy sequences and frequent shot switching.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2477111816406,
+    "y1": 291.5675354003906,
+    "y2": 341.406005859375
+  },
+  "figType": "Figure",
+  "imageText": ["IVIII", "I", "II"],
+  "name": "10",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 132.48,
+    "y2": 277.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure10-1.png"
+}, {
+  "caption": "Figure 23: Results for Group A to F based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9952087402344,
+    "y1": 537.57958984375,
+    "y2": 554.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "23",
+  "page": 37,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure23-1.png"
+}, {
+  "caption": "Figure 11: Schematic diagram of human-machine tracking results on partial sequences. The blue sequences (B2, D2, G4) represent that humans are better than machines, the yellow sequences (O2, P4, P5) indicate that machines are better than humans, and the red sequences (E5, G1, M4) indicate that both perform poorly. For each frame, the green rectangle and green point represent the ground-truth, the blue point represents the localization result of humans, and the yellow point represents the tracking result of machines.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.664306640625,
+    "y1": 455.8745422363281,
+    "y2": 516.6710205078125
+  },
+  "figType": "Figure",
+  "imageText": ["Human", "Machine", "Human", "Machine", "Human", "Machine", "B2", "M4", "E5", "G1", "P5", "P4", "O2", "G4", "D2"],
+  "name": "11",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 490.08,
+    "y1": 108.96,
+    "y2": 441.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure11-1.png"
+}, {
+  "caption": "Figure 6: The execution flow of classical computer vision tasks (a) and comparison of task characteristics (b). Obviously, SOT is closer to human dynamic vision ability.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.649169921875,
+    "y1": 418.6775207519531,
+    "y2": 435.6390075683594
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "The", "comparison", "of", "task", "characteristics.", "Instance", "Arbitrary", "Object", "Ability", "Task", "Visual", "Scenario", "Scenario", "Random", "DVA", "the", "first", "frame", "N", "Y", "Y", "Y", "User-specified", "in", "Tracking", "Arbitrary", "Single", "Object", "first", "frame", "N", "N", "N", "N", "Detected", "in", "the", "pedestrians", "or", "vehicles", "Limited,", "usually", "Tracking", "Multi-object", "Detection", "Limited", "by", "training", "set", "Detected", "N", "Y", "N", "Y", "Video", "Object", "Classification", "SVA", "Limited", "by", "training", "set", "N", "Image", "changing", "Scene-", "Assumption", "Consistency", "Motion", "Object", "Category", "Obejct", "Selection"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 507.35999999999996,
+    "y1": 274.56,
+    "y2": 401.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure6-1.png"
+}, {
+  "caption": "Figure 9: Process of DVA experiment. (I) 15 subjects participated in the DVA experiment. For each video number, the first letter represents the video group, and the second letter represents the index. Each group contains 5 videos (e.g., A1-A5), and each video is observed by 3 subjects (e.g., A1 is observed by subjects 05, 10, 15, respectively). Subjects whose serial numbers differ by 5 should watch the same content but in a different order. (II) The experiment includes two steps: observing and remembering the target features in the first frame, then moving the mouse to track the target in subsequent frames. Note that subject has a rest time to relieve visual fatigue between two videos.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.73809814453125,
+    "y1": 285.2195129394531,
+    "y2": 356.97601318359375
+  },
+  "figType": "Figure",
+  "imageText": ["b", "er", "N", "um", "Ex", "p", "Questionnaire", "Step", "4.", "Fill", "in", "A", "II", "REST", "REST", "REST", "REST", "REST", "REST", "REST", "REST", "REST", "REST", "REST", "REST", "RESTREST", "REST", "REST", "A5", "B5", "C5", "D5", "E5", "F4", "G1", "H4", "I5", "J5", "K5", "L5", "M5", "N4", "O4", "P4", "Q1", "b", "er", "N", "um", "Ex", "p", "Video", "Frame", "15", "14", "13", "12", "11", "10", "09", "08", "07", "06", "05", "04", "03", "02", "01", "0", "10000", "20000", "30000", "40000", "50000", "Step", "3.", "DVA", "Experiment", "Step", "2.", "Play", "TEST", "Video", "Adjustment", "Subject", "01", "Step", "1.", "Position", "Following", "Frame", "Mouse", "Position", "1796/2000", "First", "Frame", "1/2000", "Target", "I"],
+  "name": "9",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 110.88,
+    "y2": 266.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure9-1.png"
+}, {
+  "caption": "Figure 15: Results for Group G to L based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 537.57958984375,
+    "y2": 554.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure15-1.png"
+}, {
+  "caption": "Figure 1: Illustrations of the evaluation system. We follow 3E paradigm (Hu et al. (2022a)) to design an overall evaluation system of human-machine DVA.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9992980957031,
+    "y1": 408.7225341796875,
+    "y2": 425.6839904785156
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Information", "on", "environment", "settings.", "Representative", "sequences", "are", "illuistrated", "in", "Appendix", "C.1.", "frames", "consecutive", "between", "factors", "Challenging", "frame", "factors", "in", "single", "Challenging", "end)", "from", "beginning", "to", "(Target", "presents", "challenging", "factors", "tracking", "with", "Short-term", "multiple", "shots)", "Global", "instance", "tracking", "(Target", "may", "disappear", "and", "reappear", "in", "shot)", "Long-term", "tracking", "(Target", "may", "disappear", "and", "reappear", "in", "a", "single", "Y", "Y", "Characteristics", "and", "cognition", "Perception", "Perception", "Ability", "Y", "N", "N", "N", "Group", "Frames", "N", "N", "robustness", "and", "Perception", "500-1,000", "Short-term", "tracking", "(Target", "presents", "from", "beginning", "to", "end)", "Task", "Settings", "Fast", "motion", "P", "Low", "correlation", "cofficient", "Q", "Abnormal", "ratio", "H", "Abnormal", "scale", "I", "Abnormal", "illumination", "J", "Blur", "bounding-box", "K", "Drastic", "ratio", "variation", "L", "Drastic", "scale", "variation", "M", "Drastic", "illumination", "variation", "N", "Drastic", "clarity", "variation", "O", "Target", "Absent", "Shot-cut", "A", "500-1,000", "B", "1,000-2,000", "C", "1,000-2,000", "D", "5,000-10,000", "E", "1,000-2,000", "F", "5,000-10,000", "G", "15,000-30,000", "(a)", "Schematic", "diagram", "of", "the", "evaluation", "system.", "244K", "frames", "ENVIRONMENT", "17", "Groups", "87", "Videos", "2", "Classical", "Metrics", "2", "New", "Metrics", "1", "Mechanism", "center", "distancebounding", "boxMachine", "EVALUATION", "Human", "center", "distancefocus", "point", "Human-machine", "Cooperation", "Human-machine", "Comparison", "2", "Modes", "EXECUTOR", "15", "Subjects", "20", "Machines", "vision", "ability?", "How", "far", "the", "gap", "is", "between", "humans", "and", "machines", "in", "dynamic", "MachineHuman", "Task:", "Single", "Object", "Tracking", "(SOT)", "#7200", "#8300", "Scene", "3", "Tracking", "Tracking", "#4500", "Scene", "2", "Tracking", "#100", "Scene", "1", "Tracking", "Initialize", "User-", "selected", "Object", "#1"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 491.03999999999996,
+    "y1": 81.6,
+    "y2": 392.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure1-1.png"
+}, {
+  "caption": "Figure 2: A comprehensive comparison and cooperation of human-machine dynamic vision ability. Boxplots enumerate the distribution of N-PRE scores for all tasks (I&V), short-term tracking task (II&VI), long-term tracking task (III&VII), and global instance tracking task (IV&VIII). The blue area represents the maximum, mean, and minimum scores of human subjects. The yellow area on top (I-IV) represents machines, while the bottom (V-VIII) represents human-machine collaborators.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7421569824219,
+    "y1": 508.0205383300781,
+    "y2": 557.8590087890625
+  },
+  "figType": "Figure",
+  "imageText": ["What", "if", "we", "allow", "human-", "machine", "cooperation?", "How", "far", "the", "gap", "is", "between", "humans", "and", "machines", "in", "dynamic", "vision", "ability?", "V", "VI", "VII", "VIII", "IVIIIIII", "Hard", "(Perception", "and", "Cognition,", "Human", "DVA)", "Easy", "(Only", "Perception,", "Toy", "Example)", "2022", "R", "e", "le", "as", "e", "d", "Y", "ea", "r", "R", "e", "le", "as", "e", "d", "Y", "ea", "r", "R", "e", "le", "as", "e", "d", "Y", "ea", "r", "2015", "r", "Y", "ea", "e", "d", "le", "as", "R", "e", "Machine", "Human", "Human-machine", "Cooperation", "Human"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 490.08,
+    "y1": 80.64,
+    "y2": 494.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure2-1.png"
+}, {
+  "caption": "Figure 14: Results for Group A to F based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9952087402344,
+    "y1": 537.57958984375,
+    "y2": 554.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure14-1.png"
+}, {
+  "caption": "Figure 24: Results for Group G to L based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 537.57958984375,
+    "y2": 554.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "24",
+  "page": 38,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure24-1.png"
+}, {
+  "caption": "Figure 19: Performance of machines (DiMP (Bhat et al. (2019)), SiamDW (Zhang & Peng (2019)), KYS (Bhat et al. (2020)),DaSiamRPN (Zhu et al. (2018)),SiamFC++ (Xu et al. (2020)),ATOM (Danelljan et al. (2018)),SiamRPN (Li et al. (2018b)),SiamCAR (Guo et al. (2020)), ECO (Danelljan et al. (2017)),SiamFC (Bertinetto et al. (2016)),KCF (Henriques et al. (2015))) on multiple challenging factors.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.24713134765625,
+    "y1": 569.9935302734375,
+    "y2": 619.83203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "19",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 84.0,
+    "y2": 553.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure19-1.png"
+}, {
+  "caption": "Figure 27: Performance of human-machine cooperations (DaSiamRPN (Zhu et al. (2018)),SiamFC++ (Xu et al. (2020)),ATOM (Danelljan et al. (2018)),SiamRPN (Li et al. (2018b)),SiamCAR (Guo et al. (2020)), , ECO (Danelljan et al. (2017)), SiamFC (Bertinetto et al. (2016)),KCF (Henriques et al. (2015))) on multiple challenging factors.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7420654296875,
+    "y1": 492.7655334472656,
+    "y2": 531.64501953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "27",
+  "page": 41,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.96,
+    "y2": 475.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure27-1.png"
+}, {
+  "caption": "Figure 18: Performance of machines (MixFormer (Cui et al. (2022)), SiamRCNN (Voigtlaender et al. (2020)),KeepTrack (Mayer et al. (2021)), SuperDiMP (Danelljan et al. (2020)), PrDiMP (Danelljan et al. (2020)),SiamRPN++ (Li et al. (2018a)),GlobalTrack (Huang et al. (2019)), Ocean (Zhang & Peng (2020)),SPLT (Yan et al. (2019))) on multiple challenging factors.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.745361328125,
+    "y1": 453.17352294921875,
+    "y2": 492.0530090332031
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 84.0,
+    "y2": 436.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure18-1.png"
+}, {
+  "caption": "Figure 20: Scores of subject groups and self-perceptions. Subjects with a serial number interval of 5 watches the same videos in different orders. (I-V) demonstrate the performance of subjects. Gray area 1 represents two TEST videos, and colorful areas 2 to 4 represent FORMAL videos. The viewing order of the subjects with blue serial number is 2-3-4, orange is 4-2-3, and green is 3-2-4. (VI) shows their self-perceptions of challenging factors in the questionnaire (a higher score means greater challenge).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7453308105469,
+    "y1": 323.9525146484375,
+    "y2": 384.7489929199219
+  },
+  "figType": "Figure",
+  "imageText": ["VI", "IV", "1", "2", "3", "4", "II", "1", "2", "3", "4", "V", "1", "2", "3", "4", "III", "1", "2", "3", "4", "I", "1", "2", "3", "4"],
+  "name": "20",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 106.56,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure20-1.png"
+}, {
+  "caption": "Figure 8: Representative sequences used in experiments, the sequence length in this part is concentrated in 500-1000 frames. (H) Example of tracking the target with abnormal ratio. (I) Example of tracking the target with abnormal scale. (J) Example of tracking the target with abnormal illumination. (K) Example of tracking the target with blur bounding-box. (L) Example of tracking the target with drastic ratio variation. (M) Example of tracking the target with drastic scale variation. (N) Example of tracking the target with drastic illumination variation. (O) Example of tracking the target with drastic clarity variation. (P) Example of tracking the target with fast motion. (Q) Example of tracking the target with low correlation coefficient.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.73931884765625,
+    "y1": 477.55853271484375,
+    "y2": 560.2739868164062
+  },
+  "figType": "Figure",
+  "imageText": ["#1", "#80", "#160", "#240", "#320", "#400", "#480", "#531", "Q", "#1", "#100", "#200", "#300", "#400", "#500", "#600", "#650", "P", "#1", "#80", "#160", "#240", "#320", "#400", "#480", "#531", "O", "#1", "#80", "#160", "#240", "#320", "#400", "#480", "#600", "N", "#1", "#80", "#160", "#240", "#320", "#400", "#480", "#600", "M", "#1", "#80", "#160", "#240", "#320", "#400", "#480", "#520", "L", "#100", "#200", "#300", "#400", "#500", "#600", "#631", "#1", "K", "#1", "#100", "#200", "#300", "#400", "#500", "#600", "#700", "J", "#1", "#90", "#180", "#270", "#360", "#450", "#550", "#650", "I", "#1", "#70", "#140", "#210", "#280", "#350", "#420", "#530", "H"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 499.2,
+    "y1": 86.39999999999999,
+    "y2": 458.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure8-1.png"
+}, {
+  "caption": "Figure 13: Results for all tasks, short-term tracking task, long-term tracking task, and global instance tracking task based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.24371337890625,
+    "y1": 417.40252685546875,
+    "y2": 445.3219909667969
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 108.96,
+    "y2": 401.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure13-1.png"
+}, {
+  "caption": "Figure 3: Performance of human and machine (MixFormer (Cui et al. (2022))) on challenging factors. Each cell represents a mixture of challenging factors, and the blank cells represent no such combination. Cell color represents the executor’s mean score across all videos that satisfy the combination. The purple rectangle represents short-term tracking with challenging factors (target presents from beginning to end, related to perception), of which the red and blue rectangles represent the combination of static and dynamic challenging factors separately. The green rectangle represents task constraints (long-term tracking and global instance tracking, related to both perception and cognition). For detailed results, please refer to Appendix E.5.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9987487792969,
+    "y1": 225.44851684570312,
+    "y2": 308.1629943847656
+  },
+  "figType": "Figure",
+  "imageText": ["Perception", "and", "cognition", "Machine", "Perception", "Human", "frames", "Challenging", "factors", "between", "consecutive", "Challenging", "factors", "in", "single", "frame"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 125.28,
+    "x2": 489.12,
+    "y1": 81.6,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure3-1.png"
+}, {
+  "caption": "Figure 25: Results for Group M to Q and TEST videos based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.38775634765625,
+    "y1": 537.57958984375,
+    "y2": 554.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "25",
+  "page": 39,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure25-1.png"
+}, {
+  "caption": "Figure 21: Boxplots enumerate the distribution of N-PRE scores for TEST videos and Group A to Q. The blue area represents the maximum, mean, and minimum scores of human subjects, and the yellow area represents human-machine cooperation.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.0031433105469,
+    "y1": 675.091552734375,
+    "y2": 703.010986328125
+  },
+  "figType": "Figure",
+  "imageText": ["GF", "C", "ED", "T", "A", "B", "H", "P", "Q", "K", "NL", "M", "O", "I", "J"],
+  "name": "21",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 132.96,
+    "y2": 658.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure21-1.png"
+}, {
+  "caption": "Figure 7: Representative sequences used in experiments. (T) Example of TEST videos, which help the experimenter familiar with the operation. (A) Example of short-term tracking videos, the sequence length of this group is concentrated in 500-1000 frames. (B) Example of short-term tracking videos, the sequence length of this group is concentrated in 1000-2000 frames. (C) Example of long-term tracking videos, the sequence length of this group is concentrated in 1000-2000 frames. (D) Example of long-term tracking videos, the sequence length of this group is concentrated in 5000-10000 frames. (E) Example of global instance tracking videos, the sequence length of this group is concentrated in 1000-2000 frames. (F) Example of global instance tracking videos, the sequence length of this group is concentrated in 5000-10000 frames. (G) Example of global instance tracking videos, the sequence length of this group is concentrated in 15000-30000 frames.",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 505.7394104003906,
+    "y1": 451.7055358886719,
+    "y2": 556.3380126953125
+  },
+  "figType": "Figure",
+  "imageText": ["#28000", "#15000", "#20000", "SHOT-CUT", "#8212", "#8213", "#7000", "#3500", "#1", "G", "#5000", "#6250", "SHOT-CUT", "#4000", "#900", "#1800", "#3302", "#3303", "#1", "F", "#1101", "SHOT-CUT", "#1250", "#600", "#800", "#1100", "#1", "#200", "#400", "E", "#1", "#1200", "#2400", "#3600", "#4800", "#6000", "#7200", "#8242", "D", "#1", "#450#220", "#700", "#1050", "#1300", "#1500", "#1735", "C", "#300", "#600#1", "#900#750", "#1200", "#1387#110", "B", "#500#400#300#200#100#1", "#600", "#700", "A", "#1722", "ABSENT", "#600", "#900", "#1200", "#1627", "#1654", "#1", "#300", "T"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 500.15999999999997,
+    "y1": 134.88,
+    "y2": 432.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure7-1.png"
+}, {
+  "caption": "Figure 17: Performance of subjects (the maximum, mean, and minimum scores of human subjects) on multiple challenging factors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66552734375,
+    "y1": 245.12850952148438,
+    "y2": 262.09002685546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 31,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 109.92,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure17-1.png"
+}, {
+  "caption": "Figure 26: Performance of human-machine cooperations (MixFormer (Cui et al. (2022)), SiamRCNN (Voigtlaender et al. (2020)),KeepTrack (Mayer et al. (2021)), SuperDiMP (Danelljan et al. (2020)), PrDiMP (Danelljan et al. (2020)),SiamRPN++ (Li et al. (2018a)),GlobalTrack (Huang et al. (2019)), Ocean (Zhang & Peng (2020)),SPLT (Yan et al. (2019)), DiMP (Bhat et al. (2019)), SiamDW (Zhang & Peng (2019)), KYS (Bhat et al. (2020))) on multiple challenging factors.",
+  "captionBoundary": {
+    "x1": 107.61100006103516,
+    "x2": 505.2478332519531,
+    "y1": 648.1565551757812,
+    "y2": 697.9949951171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "26",
+  "page": 40,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 109.92,
+    "y2": 630.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure26-1.png"
+}, {
+  "caption": "Figure 12: Boxplots enumerate the distribution of N-PRE scores for TEST videos and Group A to Q. The blue area represents the maximum, mean, and minimum scores of human subjects, and the yellow area represents machines.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.0031433105469,
+    "y1": 691.3055419921875,
+    "y2": 719.2260131835938
+  },
+  "figType": "Figure",
+  "imageText": ["T", "EA", "B", "C", "D", "JF", "G", "H", "I", "OL", "M", "NK", "P", "Q"],
+  "name": "12",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 108.96,
+    "y2": 674.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure12-1.png"
+}, {
+  "caption": "Figure 4: Example of the cooperation mechanism. The top area illustrates machine tracking results on sequence G4, and the bottom is the cooperation results. When machines fail to track (e.g., #1125 and #6353, always due to target absent or shot-cut), subjects can provide the current target position and re-initialize machines to keep tracking from the failure frame.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00201416015625,
+    "y1": 160.37252807617188,
+    "y2": 199.2509765625
+  },
+  "figType": "Figure",
+  "imageText": ["Human-machine", "Cooperation", "Fail", "Restart", "Fail", "Restart", "ABSENT", "#5149#4461#2753#2376#1124#0001", "INITIALIZE", "#3761", "ABSENT", "#6353", "INITIALIZE", "#1125", "INITIALIZE", "#6558#6352", "Machine", "#6353", "#6558#1125", "SHOT-CUT", "ABSENT", "#4461", "#5149", "#6352", "ABSENT", "#0001", "INITIALIZE", "#1124", "#2376", "#2753", "#3761"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 490.08,
+    "y1": 81.6,
+    "y2": 146.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure4-1.png"
+}, {
+  "caption": "Figure 5: The comparison and cooperation of humans and machines, based on the normalized precision (N-PRE) score. (I-II) Performance of humans (blue bar) and machines (MixFormer (Cui et al. (2022)), yellow bar) on different sequences, and the green bar represents the overlapping part. (III-IV) Performance of humans (blue bar) and human-machine cooperations (MixFormer_Human, yellow bar) on different sequences, and the green bar represents the overlapping part.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.74798583984375,
+    "y1": 347.6715393066406,
+    "y2": 397.5090026855469
+  },
+  "figType": "Figure",
+  "imageText": ["IV", "III", "II", "I", "Short-term", "tracking", "with", "challenging", "factors", "500-1000", "frames", "500-1000", "frames", "1000-2000", "frames", "5000-10000", "frames", "1000-2000", "frames", "5000-10000", "frames", "15000-30000", "frames", "Short-term", "tracking", "Long-term", "tracking", "Global", "instance", "tracking", "Short-term", "tracking", "with", "challenging", "factors", "500-1000", "frames", "500-1000", "frames", "1000-2000", "frames", "5000-10000", "frames", "1000-2000", "frames", "5000-10000", "frames", "15000-30000", "frames", "Short-term", "tracking", "Long-term", "tracking", "Global", "instance", "tracking", "Human-machine", "Cooperation", "Human-machine", "Comparison"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 491.03999999999996,
+    "y1": 212.64,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure5-1.png"
+}, {
+  "caption": "Figure 22: Results for all tasks, short-term tracking task, long-term tracking task, and global instance tracking task based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.24371337890625,
+    "y1": 417.40252685546875,
+    "y2": 445.3219909667969
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "22",
+  "page": 36,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 108.96,
+    "y2": 401.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure22-1.png"
+}, {
+  "caption": "Figure 16: Results for Group M to Q and TEST videos based on various indicators (from left to right: Weighted-N-PRE plots, N-PRE plots, The Weighted-PRE plots and PRE plots).",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.38775634765625,
+    "y1": 537.57958984375,
+    "y2": 554.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Figure16-1.png"
+}, {
+  "caption": "Table 1: The information about 20 representative models (SNN-Siamese Neural Network, CFCorrelation Filter, CNN-Convolutional Neural Network). Please refer to Appendix B for details.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6496887207031,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["3.2", "EXECUTOR", "Machine", "Representation", "Update", "Aritciture", "MixFormer", "(Cui", "et", "al.", "(2022))", "Mixed", "Attention", "Module", "X", "Transformer", "KeepTrack", "(Mayer", "et", "al.", "(2021))", "Res-50", "X", "Custom", "Networks", "SiamRCNN", "(Voigtlaender", "et", "al.", "(2020))", "VGG-16", "X", "SNN+Re-detection", "SuperDiMP", "(Danelljan", "et", "al.", "(2020))", "Res-50", "X", "Custom", "Networks", "PrDiMP", "(Danelljan", "et", "al.", "(2020))", "Res-50", "X", "Custom", "Networks", "SiamCAR", "(Guo", "et", "al.", "(2020))", "Res-50", "SNN", "KYS", "(Bhat", "et", "al.", "(2020))", "Res-50", "X", "Custom", "Networks", "Ocean", "(Zhang", "&", "Peng", "(2020))", "Res-50", "X", "SNN", "SiamFC++", "(Xu", "et", "al.", "(2020))", "AlexNet/GoogleNet", "X", "SNN", "SiamDW", "(Zhang", "&", "Peng", "(2019))", "Res-22", "SNN", "GlobalTrack", "(Huang", "et", "al.", "(2019))", "Res-50", "Custom", "Networks", "DiMP", "(Bhat", "et", "al.", "(2019))", "Res-50", "X", "Custom", "Networks", "SPLT", "(Yan", "et", "al.", "(2019))", "Res-50", "X", "SNN", "SiamRPN++", "(Li", "et", "al.", "(2018a))", "Res-50", "SNN", "ATOM", "(Danelljan", "et", "al.", "(2018))", "Res-18", "X", "Custom", "Networks", "DaSiamRPN", "(Zhu", "et", "al.", "(2018))", "Res-50", "X", "SNN", "ECO", "(Danelljan", "et", "al.", "(2017))", "VGG-M", "X", "CNN+CF", "SiamRPN", "(Li", "et", "al.", "(2018b))", "AlexNet", "SNN", "SiamFC", "(Bertinetto", "et", "al.", "(2016))", "AlexNet", "SNN", "KCF", "(Henriques", "et", "al.", "(2015))", "Histogram", "of", "Oriented", "Gradients", "X", "CF"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 116.64,
+    "y2": 357.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Table1-1.png"
+}, {
+  "caption": "Table 3: The URL of open-sourced algorithms used in this work.",
+  "captionBoundary": {
+    "x1": 176.79100036621094,
+    "x2": 435.21075439453125,
+    "y1": 274.82452392578125,
+    "y2": 280.8269958496094
+  },
+  "figType": "Table",
+  "imageText": ["Machines", "URL", "KCF", "(Henriques", "et", "al.", "(2015))", "https://github.com/uoip/KCFpy", "SiamFC", "(Bertinetto", "et", "al.", "(2016))", "https://github.com/huanglianghua/siamfc-pytorch", "SiamRPN", "(Li", "et", "al.", "(2018b))", "https://github.com/huanglianghua/siamrpn-pytorch", "ECO", "(Danelljan", "et", "al.", "(2017))", "https://github.com/visionml/pytracking", "e", "DaSiamRPN", "(Zhu", "et", "al.", "(2018))", "https://github.com/foolwood/DaSiamRPN", "ATOM", "(Danelljan", "et", "al.", "(2018))", "https://github.com/visionml/pytracking", "SiamRPN++", "(Li", "et", "al.", "(2018a))", "https://github.com/PengBoXiangShang/SiamRPN_plus_plus_PyTorch", "SPLT", "(Yan", "et", "al.", "(2019))", "https://github.com/iiau-tracker/SPLT", "DiMP", "(Bhat", "et", "al.", "(2019))", "https://github.com/visionml/pytracking", "GlobalTrack", "(Huang", "et", "al.", "(2019))", "https://github.com/huanglianghua/GlobalTrack", "SiamDW", "(Zhang", "&", "Peng", "(2019))", "https://github.com/researchmm/TracKit", "SiamFC++", "(Xu", "et", "al.", "(2020))", "https://github.com/MegviiDetection/video_analyst", "SiamCAR", "(Guo", "et", "al.", "(2020))", "https://github.com/ohhhyeahhh/SiamCAR", "PrDiMP", "(Danelljan", "et", "al.", "(2020))", "https://github.com/visionml/pytracking", "SuperDiMP", "(Danelljan", "et", "al.", "(2020))", "https://github.com/visionml/pytracking", "SiamRCNN", "(Voigtlaender", "et", "al.", "(2020))", "https://github.com/VisualComputingInstitute/SiamR-CNN", "Ocean", "(Zhang", "&", "Peng", "(2020))", "https://github.com/researchmm/TracKit", "KYS", "(Bhat", "et", "al.", "(2020))", "https://github.com/visionml/pytracking", "KeepTrack", "(Mayer", "et", "al.", "(2021))", "https://github.com/visionml/pytracking", "MixFormer", "(Cui", "et", "al.", "(2022))", "https://github.com/MCG-NJU/MixFormer"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 290.88,
+    "y2": 529.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Table3-1.png"
+}, {
+  "caption": "Table 2: The URL of open-sourced benchmarks used in this work.",
+  "captionBoundary": {
+    "x1": 174.031005859375,
+    "x2": 437.9700927734375,
+    "y1": 121.3265151977539,
+    "y2": 127.3289794921875
+  },
+  "figType": "Table",
+  "imageText": ["Benchmarks", "URL", "OTB", "(Wu", "et", "al.", "(2013;", "2015))", "http://cvlab.hanyang.ac.kr/tracker_benchmark/index.html", "VOT", "(Kristan", "et", "al.", "(2013;", "2014;", "2015;", "2016;", "2017;", "2018;", "2019))", "https://votchallenge.net/", "GOT-10k", "(Huang", "et", "al.", "(2021))", "http://got-10k.aitestunion.com", "LaSOT", "(Fan", "et", "al.", "(2020))", "https://cis.temple.edu/lasot/", "VideoCube", "(Hu", "et", "al.", "(2022b))", "http://videocube.aitestunion.com"],
+  "name": "2",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 137.76,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LGbzYw_pnsc-Table2-1.png"
+}]

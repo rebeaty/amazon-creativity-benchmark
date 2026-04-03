@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 1: Overview of FIGARO. Dashed lines indicate components that are only used during training of the learned description.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 237.49154663085938,
+    "y2": 254.4530029296875
+  },
+  "figType": "Figure",
+  "imageText": ["per", "bar", "User", "Input", "Latent", "Description", "Space", "Human-Interpretable", "Description", "Space", "VQ-VAE", "Encoder", "Learned", "Description", "Symbolic", "Feature", "Extraction", "seq2seq", "Expert", "Description", "desc-to-seq", "loss", "VQ-VAE", "loss", "Auto-Regressive", "Decoder", "Auto-Regressive", "Decoder", "Bidirectional", "Encoder", "At", "inference", "time:", "Global,", "fine-grained", "control", "in", "description", "space", "Sequence-level", "rec.", "us", "ic", "Bar-level", "rec.", "o", "f", "m", "Ba", "rs"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 224.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Figure1-1.png"
+}, {
+  "caption": "Table 3: We compare our models to the unconditional baseline based on Huang et al. (2018), (Choi et al., 2020) and MuseMorphose (Wu & Yang, 2021) on perplexity (PPL) and similarity metrics. Similarity metrics include instrument F1-score (I), chord F1-score (C) and time signature accuracy (TS) as well as note density NRMSE (ND), pitch MOA (P), velocity MOA (V), duration MOA (D), chroma similarity sc and grooving similarity sg .",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.74517822265625,
+    "y1": 368.93353271484375,
+    "y2": 420.2659912109375
+  },
+  "figType": "Table",
+  "imageText": ["(c)", "Ablation", "study", "perplexity", "and", "similarity", "metrics.", "Best/worst", "values", "are", "highlighted/emphasized.", "Model", "Fluency", "Accuracy", "Fidelity", "PPL", "↓", "I", "↑", "C", "↑", "TS", "↑", "ND", "↓", "P", "↑", "V", "↑", "D", "↑", "sc", "↑", "sg", "↑", "FIGARO", "(expert)", "1.894", ".955", ".553", ".996", "0.360", ".700", ".646", ".434", ".710", ".639", "-", "w/o", "instruments", "1.980", ".373", ".568", "1.00", "0.424", ".674", ".586", ".436", ".687", ".625", "-", "w/o", "chords", "2.023", ".895", ".100", ".995", "0.564", ".672", ".603", ".413", ".294", ".615", "-", "w/o", "meta", "info.", "1.966", ".908", ".536", ".795", "0.878", ".574", ".205", ".334", ".636", ".584", "(b)", "Description", "splicing", "perplexity", "and", "similarity", "metrics.", "Best", "values", "are", "highlighted.", "Model", "Fluency", "Accuracy", "Fidelity", "PPL", "↓", "I", "↑", "C", "↑", "TS", "↑", "ND", "↓", "P", "↑", "V", "↑", "D", "↑", "sc", "↑", "sg", "↑", "Choi", "et", "al.", "(2020)", "2.213", ".441", ".129", ".808", "1.407", ".603", ".396", ".448", ".437", ".643", "FIGARO", "(expert)", "1.824", ".944", ".524", ".992", "0.384", ".741", ".559", ".497", ".705", ".575", "FIGARO", "(learned)", "2.186", ".381", ".128", ".829", "0.831", ".649", ".424", ".478", ".446", ".614", "FIGARO", "1.782", ".917", ".514", ".988", "0.335", ".807", ".702", ".694", ".748", ".744", "(a)", "Perplexity", "and", "similarity", "metrics", "for", "style", "transfer", "on", "LakhMIDI.", "Best", "values", "are", "highlighted.", "Model", "Fluency", "Accuracy", "Fidelity", "PPL", "↓", "I", "↑", "C", "↑", "TS", "↑", "ND", "↓", "P", "↑", "V", "↑", "D", "↑", "sc", "↑", "sg", "↑", "Unconditional", "1.988", ".191", ".048", ".751", "2.192", ".563", ".153", ".312", ".306", ".510", "Choi", "et", "al.", "(2020)", "2.049", ".658", ".184", ".908", "1.679", ".646", ".574", ".484", ".514", ".688", "Wu", "&", "Yang", "(2021)", "2.094", ".179", ".050", "1.00", "0.873", ".492", ".050", ".207", ".312", ".529", "FIGARO", "(expert)", "1.913", ".957", ".561", ".996", "0.319", ".759", ".658", ".514", ".712", ".637", "FIGARO", "(learned)", "1.973", ".594", ".195", ".969", "0.738", ".701", ".653", ".546", ".544", ".697", "FIGARO", "1.705", ".960", ".593", ".997", "0.238", ".827", ".735", ".748", ".790", ".853"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 360.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Table3-1.png"
+}, {
+  "caption": "Table 2: Difference in instrument entropy Hinst and chord entropy Hchord between ground truth and modelled distributions. Model entropies are empirical estimates over samples from the style transfer task. Ground truth values are absolute, deltas are relative to ground truth.",
+  "captionBoundary": {
+    "x1": 305.6910095214844,
+    "x2": 505.2436218261719,
+    "y1": 534.1075439453125,
+    "y2": 594.9039916992188
+  },
+  "figType": "Table",
+  "imageText": ["Model", "∆Hinst", "∆Hchord", "Ground", "truth", "(3.763)", "(4.077)", "Unconditional", "−0.521", "−0.328", "Choi", "et", "al.", "(2020)", "−0.116", "−0.128", "Wu", "&", "Yang", "(2021)", "−1.954", "−1.657", "FIGARO", "(expert)", "−0.031", "−0.028", "FIGARO", "(learned)", "0.062", "0.008", "FIGARO", "−0.102", "−0.006"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 313.92,
+    "x2": 496.32,
+    "y1": 432.96,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Table2-1.png"
+}, {
+  "caption": "Figure 5: Example sequence represented in the REMI+ representation. At the beginning of each bar time signature, tempo and the current chord are noted, after which each note is represented through five subsequent tokens.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1724548339844,
+    "y1": 567.8165283203125,
+    "y2": 595.7369995117188
+  },
+  "figType": "Figure",
+  "imageText": [".", ".", ".", "<eos>", "Bar", "2", "T", "i", "m", "e", "S", "i", "g", "n", "a", "t", "u", "r", "e", "3", "/", "4", "Pos", "0", "Tempo", "120", "Pos", "0", "Tempo", "120", "Pos", "0", "Chord", "C", ":", "min", "Pos", "0", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "D", "r", "u", "m", "s", "P", "i", "t", "c", "h", "3", "6", "Vel", "90", "Dur", "0", "Pos", "0", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "P", "i", "a", "n", "o", "P", "i", "t", "c", "h", "6", "4", "Vel", "85", "Dur", "4", "Pos", "4", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "P", "i", "a", "n", "o", "P", "i", "t", "c", "h", "6", "6", "Vel", "85", "Dur", "4", "<bos>", "Bar", "1", "T", "i", "m", "e", "S", "i", "g", "n", "a", "t", "u", "r", "e", "3", "/", "4"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 208.32,
+    "x2": 401.76,
+    "y1": 468.96,
+    "y2": 553.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Figure5-1.png"
+}, {
+  "caption": "Table 1: Generative capability and controllability comparison between different methods proposed in the literature. We compare our method to other state-of-the-art symbolic music generation methods on modelling capability (can the model generate multi-track/multi-time-signature music?) and controllability (can the generation be controlled on a global/fine-grained level?).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.003662109375,
+    "y1": 162.89755249023438,
+    "y2": 201.7769775390625
+  },
+  "figType": "Table",
+  "imageText": ["FIGARO", "(ours)", "REMI+", "✓", "✓", "✓", "✓", "Method", "Input", "Rep.", "Multi-Track", "Multi-Sig.", "Global", "Ctrl.", "Fine-Grained", "Ctrl.", "MIDI-VAE", "Brunner", "et", "al.", "(2018)", "Pianoroll", "✓", "✓", "✓", "-", "MuseNet", "(Payne,", "2019)", "MIDI-like", "✓", "✓", "(✓)3", "-", "MMM", "(Ens", "&", "Pasquier,", "2020)", "MIDI-like", "✓", "✓", "✓", "(✓)4", "Choi", "et", "al.", "(2020)", "MIDI-like", "-", "✓", "✓", "(✓)5", "MuseMorphose", "(Wu", "&", "Yang,", "2021)", "REMI", "-", "-", "✓", "✓"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 152.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Table1-1.png"
+}, {
+  "caption": "Figure 6: Screenshots of the listening study. Participants were first presented with the instructions (a) before answering 15 questions of the type presented in (b).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6653747558594,
+    "y1": 679.5575561523438,
+    "y2": 696.5189819335938
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Screenshot", "of", "the", "survey", "questions", "that", "were", "provided", "to", "the", "study", "participants", "after", "reading", "the", "instructions.", "(a)", "Instructions", "that", "were", "provided", "to", "the", "participants", "of", "the", "listening", "study."],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 110.88,
+    "y2": 647.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Example of an expert description. The description contains information about time signature, note density, pitch, velocity and duration as well as which instruments and chords are played throughout each bar.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974060058594,
+    "y1": 164.78054809570312,
+    "y2": 192.70098876953125
+  },
+  "figType": "Figure",
+  "imageText": ["Bar", "3", ".", ".", ".", "<eos>", "Bar", "2", "T", "i", "m", "e", "S", "i", "g", "n", "a", "t", "u", "r", "e", "4", "/", "4", "N", "o", "t", "e", "D", "e", "n", "s", "i", "t", "y", "3", "MeanPi", "tch", "15", "MeanVeloc", "i", "ty", "18", "MeanDura", "t", "ion", "27", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "D", "r", "u", "m", "s", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "P", "i", "a", "n", "o", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "S", "l", "a", "p", "B", "a", "s", "s", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "G", "u", "i", "t", "a", "r", "Chord", "C", "#", ":", "min", "Chord", "E", ":", "maj", "Chord", "A", ":", "maj7", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "D", "r", "u", "m", "s", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "P", "i", "a", "n", "o", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "E", "−", "Piano", "I", "n", "s", "t", "r", "u", "m", "e", "n", "t", "S", "l", "a", "p", "B", "a", "s", "s", "Chord", "E", ":", "maj", "Chord", "F", "#", ":", "min7", "<bos>", "Bar", "1", "T", "i", "m", "e", "S", "i", "g", "n", "a", "t", "u", "r", "e", "4", "/", "4", "N", "o", "t", "e", "D", "e", "n", "s", "i", "t", "y", "3", "MeanPi", "tch", "14", "MeanVeloc", "i", "ty", "19", "MeanDura", "t", "ion", "32"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 154.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Schematic overview of description-tosequence learning in the context of music.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.6500549316406,
+    "y1": 468.61053466796875,
+    "y2": 485.5719909667969
+  },
+  "figType": "Figure",
+  "imageText": ["Sequence-to-Sequence", "Model", "Reconstructed", "sequence", "High-level", "desc.", "Description", "func.", "Source", "sequence", "F(x)", "F(x)", "F(x)", "F(x)", "d1", "d2", "d3", "d4"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 502.08,
+    "y1": 361.91999999999996,
+    "y2": 457.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Figure3-1.png"
+}, {
+  "caption": "Table 5: Ranking of the different methods by winrate according to the user study. The Wilcoxon signed-rank test is used to calculate pairwise ranking p-values. “Ground truth” denotes sampling the test set.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0045166015625,
+    "y1": 323.89752197265625,
+    "y2": 351.8179931640625
+  },
+  "figType": "Table",
+  "imageText": ["5.", "Wu", "&", "Yang", "(2021)", "0.345", "2484", "Wu", "&", "Yang", "(2021)", "0.589", "<", "10−5", "660", "4.", "Choi", "et", "al.", "(2020)", "0.447", "2490", "Choi", "et", "al.", "(2020)", "0.543", "0.0162", "613", "Wu", "&", "Yang", "(2021)", "0.581", "<", "10−4", "614", "3.", "Huang", "et", "al.", "(2018)", "0.463", "2467", "Huang", "et", "al.", "(2018)", "0.609", "<", "10−7", "635", "Choi", "et", "al.", "(2020)", "0.624", "<", "10−9", "631", "Wu", "&", "Yang", "(2021)", "0.696", "<", "10−20", "578", "2.", "FIGARO", "0.581", "2439", "FIGARO", "0.605", "<", "10−6", "595", "Huang", "et", "al.", "(2018)", "0.663", "<", "10−15", "605", "Choi", "et", "al.", "(2020)", "0.647", "<", "10−12", "586", "Wu", "&", "Yang", "(2021)", "0.756", "<", "10−37", "632", "1.", "Ground", "truth", "0.669", "2418", "Model", "Opponent", "Winrate", "p-value", "N"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 312.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Table5-1.png"
+}, {
+  "caption": "Figure 4: Win rates of generated samples against real samples. We compare FIGARO, Huang et al. (2018), Choi et al. (2020) and Wu & Yang (2021). Real samples are from the test set.",
+  "captionBoundary": {
+    "x1": 305.6709899902344,
+    "x2": 505.7430725097656,
+    "y1": 303.3365173339844,
+    "y2": 342.2149963378906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 504.0,
+    "y1": 204.0,
+    "y2": 292.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Figure4-1.png"
+}, {
+  "caption": "Table 4: Description mixing performance on similarity metrics. “FIGARO” refers to the performance on unaltered descriptions. Expert/learned similarity refers to similarity of generated samples to the sequence from which the expert/learned description was extracted from. Highlights indicate which of the two descriptions was more closely adhered to in terms of the respective metric.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00140380859375,
+    "y1": 180.70150756835938,
+    "y2": 219.58099365234375
+  },
+  "figType": "Table",
+  "imageText": ["FIGARO", ".960", ".593", ".997", ".238", ".827", ".735", ".748", ".790", ".853", "Expert", "Similarity", ".819", ".351", ".993", ".453", ".625", ".354", ".473", ".595", ".621", "Learned", "Similarity", ".288", ".057", ".753", ".696", ".699", ".670", ".623", ".398", ".741", "Mean", ".554", ".204", ".873", ".575", ".662", ".512", ".548", ".497", ".681", "Best", "case", ".819", ".351", ".993", ".453", ".699", ".670", ".623", ".595", ".741", "Accuracy", "Fidelity", "I", "↑", "C", "↑", "TS", "↑", "ND", "↓", "P", "↑", "V", "↑", "D", "↑", "sc", "↑", "sg", "↑"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 485.28,
+    "y1": 81.6,
+    "y2": 161.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NyR8OZFHw6i-Table4-1.png"
+}]

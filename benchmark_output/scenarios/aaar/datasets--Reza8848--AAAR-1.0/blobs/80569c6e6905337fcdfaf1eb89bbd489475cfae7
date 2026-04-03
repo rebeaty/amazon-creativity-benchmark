@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 1: (a) Our proposed Gated State Space (GSS) layer, (b) Pseudocode for GSS (full implementation in §A.2).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65142822265625,
+    "y1": 225.80654907226562,
+    "y2": 242.76800537109375
+  },
+  "figType": "Figure",
+  "imageText": ["def", "gss(x,", "F=4096,", "L=4096,", "E=1024,", "H=256):", "shortcut,", "x", "=", "x,", "norm(x)", "v", "=", "dense(x,", "F,", "activation='gelu')", "u", "=", "dense(x,", "H,", "activation='gelu')", "y", "=", "dss(u,", "H,", "L)", "#", "yh1,..,yhL", "are", "linear", "in", "uh1,..,uhL", "uc", "=", "dense(y,", "F)", "o", "=", "dense(uc", "*", "v,", "E)", "return", "o", "+", "shortcut", "Gated", "State", "Space", "*", "Dense", "State", "Space", "Dense", "Dense", "Input", "Dense"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 514.56,
+    "y1": 80.64,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5MkYIYCbva-Figure1-1.png"
+}, {
+  "caption": "Table 1: Comparison of DSS and GSS models in fixed-param setting. We consistently find that GSS outperforms DSS (with hyperparameters taken from Gupta et al. (2022)) while being 2-3× faster on all tasks. Training sequence length is 4k, except for LM1B for which it is 512.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952087402344,
+    "y1": 257.9804992675781,
+    "y2": 285.9010009765625
+  },
+  "figType": "Table",
+  "imageText": ["Github", "DSS", "209M", "1.8", "3.65", "3.21", "242.7", "OOM", "GSS", "192M", "5.3", "2.68", "2.35", "2.31", "2.12", "Arxiv", "DSS", "209M", "1.8", "3.65", "3.13", "284.6", "OOM", "GSS", "192M", "5.3", "3.57", "3.08", "3.08", "2.75", "PG-19", "DSS", "209M", "1.8", "14.51", "13.53", "692.1", "OOM", "GSS", "192M", "5.3", "14.01", "12.84", "12.94", "12.47", "LM1B", "Transformer", "182M", "6.6", "13.51", "DSS", "188M", "1.8", "13.59", "GSS", "190M", "5.6", "13.26", "512", "4k", "16k", "65k", "Dataset", "Model", "Params", "Throughput", "(steps/sec)", "Perplexity", "Eval", "Sequence", "Length"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 81.6,
+    "y2": 246.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5MkYIYCbva-Table1-1.png"
+}, {
+  "caption": "Table 2: Comparing GSS variants with best-performing models from Hutchins et al. (2022) in both fixed-param and fixed-compute settings. While, in the fixed-param setting, GSS currently lags behind performance of best Block Recurrent Transformer baseline, it is fairly competitive in the fixed-compute setting (as measured by total TPUv4 hours taken to complete training). For the larger model GSS-L used for fixed compute comparison, we simply double the layers from 16 to 32 keeping everything else fixed. In addition, due to the inherent recurrent view of state space model family, decoding at inference time is much faster than Transformer based baselines. For block-recurrent baselines, adding feedback increases both parameter count and training time, we stick with conservative estimates derived from Hutchins et al. (2022) for both, which we denote by ‘+’. Hutchins et al. (2022) report log2 of perplexity which we convert to raw perplexity in this table. Param count for all the models include embedding layers as well.",
+  "captionBoundary": {
+    "x1": 106.34600067138672,
+    "x2": 505.74603271484375,
+    "y1": 353.3775329589844,
+    "y2": 468.968994140625
+  },
+  "figType": "Table",
+  "imageText": ["Github", "Rec:ﬁxed:skip", "196M", "3k", "2.04", "Feedback:lstm:single", "196M+", "3k+", "2.07", "Feedback:ﬁxed:skip", "196M+", "3k+", "2.16", "GSS", "192M", "0.5k", "2.68", "2.35", "2.31", "2.12", "GSS-L", "352M", "1.8k", "2.31", "1.99", "2.20", "2.28", "GSS-Hybrid-L", "373M", "1.8k", "2.34", "1.88", "1.74", "2.09", "Arxiv", "Rec:ﬁxed:skip", "196M", "0.8k", "2.36", "Feedback:lstm:single", "196M+", "0.8k+", "2.33", "Feedback:ﬁxed:skip", "196M+", "0.8k+", "2.36", "GSS", "192M", "0.5k", "3.57", "3.08", "3.08", "2.75", "GSS-L", "352M", "0.8k", "3.29", "2.71", "2.72", "2.51", "GSS-Hybrid-L", "373M", "0.8k", "2.94", "2.51", "18.27", "125.2", "PG-19", "Rec:ﬁxed:skip", "196M", "0.8k", "11.55", "Feedback:lstm:single", "196M+", "0.8k+", "11.31", "Feedback:ﬁxed:skip", "196M+", "0.8k+", "11.24", "GSS", "(this", "work)", "192M", "0.5k", "14.01", "12.84", "12.94", "12.47", "GSS-L", "352M", "0.8k", "12.48", "11.33", "11.16", "11.12", "GSS-Hybrid-L", "373M", "0.8k", "11.45", "10.52", "10.44", "10.1", "512", "4k", "16k", "65k", "Dataset", "Model", "Params", "TPUv4", "hours", "Perplexity", "Eval", "Sequence", "Length"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 81.6,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5MkYIYCbva-Table2-1.png"
+}, {
+  "caption": "Table 3: Comparison of GSS with other competitive models on PG-19 across multiple scales as measured by word-level perplexity (WLP) on test set of PG-19. We evaluated WLP on 16k sequence length for GSS-Hybrid set of models. Model size numbers for Perceiver AR (Hawthorne et al., 2022) and Routing Transformer (Roy et al., 2021) are taken from Hutchins et al. (2022).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.66943359375,
+    "y1": 221.36251831054688,
+    "y2": 260.24102783203125
+  },
+  "figType": "Table",
+  "imageText": ["1B", "96", "28.0", "32k", "1.4B", "128", "27.3", "32k", "341M", "32", "32.9", "32k", "681M", "64", "30.2", "32k", "GSS-Hybrid", "(ours)", "Transformer-XL", "(Rae", "et", "al.,", "2020)", "36", "36.3", "32k", "Compressive", "Transformer", "(Rae", "et", "al.,", "2020)", "36", "33.6", "32k", "Routing", "Transformer", "(Roy", "et", "al.,", "2021)", "490M", "22", "33.2", "98k", "Perceiver", "AR", "(Hawthorne", "et", "al.,", "2022)", "974.6M", "60", "28.9", "32k", "Block", "Recurrent", "Trans", "(Hutchins", "et", "al.,", "2022)", "1.3B", "24", "26.5", "32k", "Model", "Params", "Layers", "WLP", "Vocabulary"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5MkYIYCbva-Table3-1.png"
+}, {
+  "caption": "Figure 2: Pseudocode of GSS (§3.2).",
+  "captionBoundary": {
+    "x1": 232.2320098876953,
+    "x2": 379.7681579589844,
+    "y1": 598.3243408203125,
+    "y2": 604.3267822265625
+  },
+  "figType": "Figure",
+  "imageText": ["def", "gss(x,", "F=4096,", "L=4096,", "E=1024,", "H=256):", "shortcut,", "x", "=", "x,", "norm(x)", "v", "=", "dense(x,", "F,", "activation='gelu')", "u", "=", "dense(x,", "H,", "activation='gelu')", "y", "=", "dss(u,", "H,", "L)", "uc", "=", "dense(y,", "F)", "o", "=", "dense(uc", "*", "v,", "E)", "return", "o", "+", "shortcut", "def", "dss(u,", "H,", "L):", "u", "=", "norm(u)", "#", "compute", "H", "state", "space", "kernels", "K", "=", "simplified_dss_kernel(H,", "L)", "K_f", "=", "rfft(K,", "pad_to=2*L)", "u_f", "=", "rfft(u,", "pad_to=2*L)", "y", "=", "irfft(K_f", "*", "u_f)[...,:L]", "#", "param", "D:", "[H,1]", "return", "y", "+", "D", "*", "u", "def", "simplified_dss_kernel(H,", "L,", "N=512):", "#", "Lambda_re,", "Lambda_im:", "[N]", "#", "C_re,", "C_im:", "[H", "N]", "Lambda", "=", "-Lambda_re.exp()", "+", "1j*Lambda_im.exp()", "#", "[N]", "C", "=", "C_re", "+", "1j*C_im", "#", "[H", "N]", "S", "=", "(Lambda", "*", "arange(L).view(1,L)).exp()", "#", "[N", "L]", "C", "=", "C", "*", "(Lambda.exp()", "-", "1)", "/", "Lambda", "#", "[H", "N]", "return", "einsum('hn,nl->hl',", "C,", "S).real", "#", "[H", "L]", "A.2", "IMPLEMENTATION", "OF", "GSS", "[y0", ".", ".", ".", "yL−1", "∣", "0", ".", ".", ".", "0]1×2L", "=", "[K", "∣", "0", ".", ".", ".", "0]1×2L", "⋅", "circulant([u0", ".", ".", ".", "uL−1", "∣", "0", ".", ".", ".", "0])2L×2L", "."],
+  "name": "2",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 498.24,
+    "y1": 245.76,
+    "y2": 586.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5MkYIYCbva-Figure2-1.png"
+}]

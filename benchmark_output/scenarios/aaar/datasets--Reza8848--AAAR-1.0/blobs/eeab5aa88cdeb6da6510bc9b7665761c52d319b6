@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: Training loss per hyperparameter: PIS (left) vs DDS (right).",
+  "captionBoundary": {
+    "x1": 166.83799743652344,
+    "x2": 445.1630859375,
+    "y1": 204.49349975585938,
+    "y2": 210.4959716796875
+  },
+  "figType": "Figure",
+  "imageText": ["DDS", "training", "loss", "(Ionosphere,", "steps", "=", "256)", "over", "all", ",", "max", "values.", "Los", "s", "1400", "1200", "1000", "800", "600", "400", "200", "0", "2000", "4000", "6000", "8000", "10000", "Training", "Iteration", "PIS", "training", "loss", "(Ionosphere", "steps", "=", "256)", "over", "all", "values.", "=", "0.17", "Los", "s", "8000", "7000", "6000", "5000", "4000", "3000", "2000", "1000", "0", "0", "2000", "4000", "6000", "8000", "10000", "Training", "Iteration"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 129.12,
+    "x2": 480.47999999999996,
+    "y1": 83.52,
+    "y2": 187.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8pvnfTAbu1f-Figure1-1.png"
+}, {
+  "caption": "Figure 2: lnZ estimate as a function of number of steps K - a) Funnel , b) LGCP, c) Logistic Ionosphere dataset. Yellow Dotted line is MF-VI and dashed magenta is the gold standard.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99591064453125,
+    "y1": 179.15744018554688,
+    "y2": 196.118896484375
+  },
+  "figType": "Figure",
+  "imageText": ["DDS", "PIS", "SMC", "at", "e", "Es", "tim", "ln", "Z", "111", "112", "113", "114", "115", "64", "128", "256", "512", "Number", "of", "Steps", "DDS", "PIS", "SMC", "at", "e", "Es", "tim", "ln", "Z", "500", "475", "450", "425", "400", "375", "350", "325", "64", "128", "256", "512", "Number", "of", "Steps", "DDS", "PIS", "SMC", "at", "e", "Es", "tim", "ln", "Z", "0.50", "0.25", "0.00", "0.25", "0.50", "0.75", "1.00", "1.25", "64", "128", "256", "512", "Number", "of", "Steps"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 84.0,
+    "y2": 165.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8pvnfTAbu1f-Figure2-1.png"
+}, {
+  "caption": "Table 1: Results on NICE target, we performed 30 runs with different seeds for each approach. For MCD we used the results from (Doucet et al., 2022).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 421.780517578125,
+    "y2": 438.74200439453125
+  },
+  "figType": "Table",
+  "imageText": ["γ=0.01(πtrue,", "π̂)", "658.079", "658.778", "750.245", "NA", "lnZ", "Estimate", "−3.204±", "0.645", "−3.933±", "0.754", "−4.255±", "2.043", "−6.25", "W2", "Method", "DDS", "PIS", "SMC", "MCD"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 477.12,
+    "y1": 364.8,
+    "y2": 410.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8pvnfTAbu1f-Table1-1.png"
+}, {
+  "caption": "Figure 3: lnZ estimate as a function of number of steps K - a) Logistic Sonar dataset, b) Brownian motion, c) NICE. Yellow dotted line is MF-VI and dashed magenta is the gold standard.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00201416015625,
+    "y1": 178.71749877929688,
+    "y2": 195.678955078125
+  },
+  "figType": "Figure",
+  "imageText": ["DDS", "PIS", "SMC", "at", "e", "Es", "tim", "ln", "Z", "5.0", "2.5", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "64", "128", "256", "512", "Number", "of", "Steps", "DDS", "PIS", "SMC", "at", "e", "Es", "tim", "ln", "Z", "4", "2", "0", "2", "4", "6", "8", "10", "64", "128", "256", "512", "Number", "of", "Steps", "DDS", "PIS", "SMC", "at", "e", "Es", "tim", "ln", "Z", "102.5", "105.0", "107.5", "110.0", "112.5", "115.0", "117.5", "120.0", "122.5", "64", "128", "256", "512", "Number", "of", "Steps"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 84.0,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8pvnfTAbu1f-Figure3-1.png"
+}]

@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 5: A screenshot of the annotation page.",
+  "captionBoundary": {
+    "x1": 213.56199645996094,
+    "x2": 398.43792724609375,
+    "y1": 284.8825378417969,
+    "y2": 290.885009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 270.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Figure5-1.png"
+}, {
+  "caption": "Table 6: Examples illustrating the proposed metrics, where we consider the Entailment category. “|” refers to a phrase segmentation.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7729187011719,
+    "y1": 710.7435302734375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Table",
+  "imageText": ["#", "Example", "Output", "P", "(P", ")", "E", "P", "(H)", "E", "PE", "R", "(P", ")", "E", "R", "(H)", "E", "RE", "FE", "Explanation", "1", "P", "in", "a", "garden", "0", "0", "0", "0", "0", "0", "0", "Although", "in", "occurs", "in", "the", "annotation,", "the", "word", "H", "in", "the", "bedroom", "indexes", "are", "different.", "The", "reasoning", "is", "wrong.", "2", "P", "a", "kid", "in", "red", "1", "0", "0", "1", "0", "0", "0", "Mis-matched", "phrases", "in", "hypothesis.", "H", "watching", "TV", "The", "reasoning", "is", "wrong.", "3", "P", "a", "kid", "|", "in", "red", "1", "1", "1", "1", "1", "1", "1", "All", "word", "indexes", "match", "the", "annotation.", "H", "a", "child", "|", "in", "red", "The", "reasoning", "is", "correct.", "Example", "annotation", "of", "entailment", "(in", "highlight):", "Premise:", "A", "kid", "in", "red", "is", "playing", "in", "a", "garden.", "Hypothesis:", "A", "child", "in", "red", "is", "watching", "TV", "in", "the", "bedroom."],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 600.9599999999999,
+    "y2": 695.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table6-1.png"
+}, {
+  "caption": "Figure 1: The natural language inference (NLI) task and desired phrasal reasoning.",
+  "captionBoundary": {
+    "x1": 305.57501220703125,
+    "x2": 504.6661682128906,
+    "y1": 240.68753051757812,
+    "y2": 257.64898681640625
+  },
+  "figType": "Figure",
+  "imageText": ["Entailment", "Contradiction", "Neutral", "Unaligned", "Phrase-Level", "Reasoning:", "Sentence-Level", "Prediction:", "Entailment", "Contradiction", "Neutral", "Hypothesis:", "There", "is", "one", "man", "holding", "the", "net.", "Premise:", "Several", "men", "helping", "each", "other", "pull", "in", "a", "fishing", "net.", "Input:"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 503.03999999999996,
+    "y1": 148.79999999999998,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Figure1-1.png"
+}, {
+  "caption": "Table 2: Main results. †Quoted from respective papers. ‡Obtained from the checkpoint sent by the authors. Other results are obtained by our experiments. GM and AM are the geometric and arithmetic means of the F scores.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00335693359375,
+    "y1": 217.30050659179688,
+    "y2": 245.22100830078125
+  },
+  "figType": "Table",
+  "imageText": ["Model", "Sent", "Acc", "Reasoning", "Performance", "FE", "FC", "FN", "FUP", "FUH", "GM", "AM", "Human", "–", "84.71", "71.01", "55.12", "82.46", "61.80", "70.07", "71.02", "Non-reasoning", "Mahabadi", "et", "al.", "(2020)†", "85.1", "–", "–", "–", "–", "–", "–", "–", "LSTM", "(Wang", "&", "Jiang,", "2016)†", "86.1", "–", "–", "–", "–", "–", "–", "–", "Transformer", "(Radford", "et", "al.,", "2018)", "89.9", "–", "–", "–", "–", "–", "–", "–", "Baselines", "NNL", "(Feng", "et", "al.,", "2020)‡", "79.91", "62.72", "17.49", "1.50", "66.22", "0.00", "0.00", "29.59", "STP", "81.44", "71.34", "36.84", "31.09", "76.61", "51.80", "50.37", "53.54", "Ours", "EPR", "(Local,", "LM", "unfinetuned)", "76.33±0.48", "83.11±0.29", "38.73±0.85", "44.63±0.88", "76.61", "51.80", "56.39±0.43", "58.98±0.34", "EPR", "(Local,", "LM", "finetuned)", "79.36±0.13", "82.44±0.26", "44.10±1.32", "44.69±3.22", "76.61", "51.80", "57.77±0.85", "59.93±0.67", "EPR", "(Concat,", "LM", "unfinetuned)", "84.53±0.19", "73.29±0.68", "37.95±1.16", "40.56±1.10", "76.61", "51.80", "53.73±0.39", "56.04±0.33", "EPR", "(Concat,", "LM", "finetuned)", "87.56±0.15", "69.91±1.21", "39.97±2.12", "43.31±2.78", "76.61", "51.80", "54.46±1.35", "56.32±1.13"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table2-1.png"
+}, {
+  "caption": "Figure 4: Results of tuning the coefficient of global features.",
+  "captionBoundary": {
+    "x1": 185.45799255371094,
+    "x2": 426.54290771484375,
+    "y1": 254.52951049804688,
+    "y2": 260.531982421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 80.64,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Figure4-1.png"
+}, {
+  "caption": "Figure 7: Case study of the textual explanation generation. The heat map shows the step-by-step and average attention weights to the factual tuples (vertical axis).",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 503.9978942871094,
+    "y1": 346.8225402832031,
+    "y2": 363.78399658203125
+  },
+  "figType": "Figure",
+  "imageText": ["1.0", "0.5", "0.16", "0.0", "0.61", "0.23", "score", "Average", "attention", "0.33", "0.15", "0.22", "0.16", "0.11", "0.22", "0.04", "0.02", "0.10", "0.57", "0.62", "0.50", "0.59", "0.70", "0.54", "0.66", "0.68", "0.58", "0.10", "0.23", "0.28", "0.25", "0.19", "0.24", "0.30", "0.30", "0.32", "running", "[EMPTY]", "Some", "dogs", "only", "one", "dog", "at", "the", "beach", "some", "dogs", "is", "more", "than", "one", "dog", ".", "[EOS]", "on", "a", "deserted", "beach", "Label", "Contradiction", "(not", "used", "during", "our", "explanation", "generation)", "Premise", "phrase", "Hypothesis", "phrase", "EPR", "label", "Attention", "score", "Output", "explanation", "Some", "dogs", "is", "more", "than", "one", "dog.", "Reference", "explanations:", "(1)", "Some", "is", "more", "than", "one,", "therefore", "there", "can’t", "be", "only", "one", "dog.", "(2)", "Some", "indicates", "more", "than", "one", "dog.", "One", "dog", "is", "not", "some", "dogs.", "(3)", "Some", "dogs", "are", "not", "one", "dog.", "Input", "Premise", ":", "Some", "dogs", "are", "running", "on", "a", "deserted", "beach.", "Hypothesis", ":", "There", "is", "only", "one", "dog", "at", "the", "beach.", "on", "a", "deserted", "beach", "Some", "dogs", "running", "EPR’s", "Reasoning", "Output", "23.16", "61.22", "15.62", "E", "C", "E", "at", "the", "beach", "only", "one", "dog", "[EMPTY]"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 444.47999999999996,
+    "y1": 84.96,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Figure7-1.png"
+}, {
+  "caption": "Table 5: Our rule for phrase detection. “[]” means the item is optional.",
+  "captionBoundary": {
+    "x1": 165.5229949951172,
+    "x2": 446.478271484375,
+    "y1": 721.7025756835938,
+    "y2": 727.7050170898438
+  },
+  "figType": "Table",
+  "imageText": ["1", "Prepositional", "phrase", "IN", "+", "NP", "at", "the", "playground", "2", "Noun", "phrase", "NP", "The", "woman|", "her", "blue", "dog", "3", "Verb", "phrase", "[AUX]", "+", "[NOT]", "+", "VERB", "+", "[RP]", "is", "showing", "off", "4", "Others", "Other", "open", "class", "words", "-", "Example:", "The", "woman", "is", "showing", "off", "her", "blue", "dog", "at", "the", "playground.", "Number", "Phrase", "type", "Rule", "Extracted", "phrase(s)"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 483.35999999999996,
+    "y1": 643.68,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table5-1.png"
+}, {
+  "caption": "Table 3: Results of ablation studies.",
+  "captionBoundary": {
+    "x1": 234.7030029296875,
+    "x2": 377.2976379394531,
+    "y1": 211.03854370117188,
+    "y2": 217.041015625
+  },
+  "figType": "Table",
+  "imageText": ["Mean", "induction", "Local", "79.61", "77.38", "37.14", "36.13", "76.61", "51.80", "52.84", "55.81", "Global", "83.82", "55.08", "29.92", "24.70", "76.61", "51.80", "43.82", "47.62", "Concat", "84.96", "57.12", "31.93", "31.41", "76.61", "51.80", "46.92", "49.77", "Random", "alignment", "Local", "68.52", "59.32", "21.79", "26.20", "51.43", "16.50", "31.02", "35.05", "Global", "81.99", "53.85", "35.10", "31.39", "51.43", "16.50", "34.71", "37.66", "Concat", "82.49", "57.22", "34.83", "30.91", "51.43", "16.50", "34.97", "38.18", "Random", "chunker", "Local", "72.44", "63.21", "22.65", "32.04", "65.94", "36.13", "40.53", "43.99", "Global", "82.81", "58.09", "30.64", "27.49", "65.94", "36.13", "41.05", "43.66", "Concat", "83.09", "58.75", "32.41", "31.14", "65.94", "36.13", "42.66", "44.87", "Full", "model", "Local", "76.33±0.48", "83.11±0.29", "38.73±0.85", "44.63±0.88", "76.61", "51.80", "56.39±0.43", "58.98±0.34", "Global", "84.03±0.12", "70.84±0.60", "35.12±0.90", "36.37±1.52", "76.61", "51.80", "51.41±0.62", "54.15±0.41", "Concat", "84.53±0.19", "73.29±0.68", "37.95±1.16", "40.56±1.10", "76.61", "51.80", "53.73±0.39", "56.04±0.33", "Model", "Features", "Sent", "Acc", "Reasoning", "Performance", "FE", "FC", "FN", "FUP", "FUH", "GM", "AM"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table3-1.png"
+}, {
+  "caption": "Table 1: An example showing the importance of handling unaligned phrases (in highlight).",
+  "captionBoundary": {
+    "x1": 125.19499969482422,
+    "x2": 486.8072814941406,
+    "y1": 289.2245178222656,
+    "y2": 295.22698974609375
+  },
+  "figType": "Table",
+  "imageText": ["Premise", "People", "are", "shopping", "for", "fruit.", "People", "are", "shopping", "for", "fruit", "in", "the", "market", ".", "Hypothesis", "People", "are", "shopping", "for", "fruit", "in", "the", "market", ".", "People", "are", "shopping", "for", "fruit.", "Sentence", "NLI", "[", "]", "Entailment", "[", "]", "Contradiction", "[✓]", "Neutral", "[✓]", "Entailment", "[", "]", "Contradiction", "[", "]", "Neutral"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 493.44,
+    "y1": 245.76,
+    "y2": 278.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table1-1.png"
+}, {
+  "caption": "Figure 2: An overview of our Explainable Phrasal Reasoning (EPR) model.",
+  "captionBoundary": {
+    "x1": 155.5850067138672,
+    "x2": 456.4156188964844,
+    "y1": 226.44851684570312,
+    "y2": 232.45098876953125
+  },
+  "figType": "Figure",
+  "imageText": ["Sentence", "Label", "<EMPTY>", "E", "C", "N", "P", "h", "rase", "Scores", "N", "o", "rm", "alize", "A", "lign", "m", "en", "t", "Selectio", "n", "each", "other", "Global", "Transformer", "Encoder", "Feed-forward", "Network", "Global", "similarity", "matrix", "c)", "Sentence", "Label", "Induction", "b)", "Phrasal", "NLI", "Prediction", "a)", "Phrase", "Detection", "and", "Alignment", "N", "Sentence-BERT", "E", "C", "H", "helpingP", "holding", "the", "net", "pull", "in", "a", "fishing", "net", "One", "man", "Several", "men", "Local", "similarity", "matrix", "Premise", "Several", "men", "helping", "each", "other", "pull", "in", "a", "fishing", "net", ".", "Sen", "ten", "ce-B", "ER", "T", "H", "yp", "o", "th", "esis", "th", "e", "n", "et", ".", "Th", "ere", "is", "o", "n", "e", "m", "an", "h", "o", "ld", "in", "g", "Local", "Transformer", "Encoder"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.47999999999999,
+    "x2": 503.03999999999996,
+    "y1": 80.64,
+    "y2": 212.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Figure2-1.png"
+}, {
+  "caption": "Table 8: Sentence-level prediction count and arithmetic average reasoning performance (F -score) when the sentence label is correctly and incorrectly predicted on the SNLI dataset.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.6673889160156,
+    "y1": 152.53353881835938,
+    "y2": 169.4949951171875
+  },
+  "figType": "Table",
+  "imageText": ["Correct", "75.4±1.36", "87.8±0.75", "65.71±0.83", "58.68±0.67", "Wrong", "24.6±1.36", "12.2±0.75", "40.74±2.01", "37.58±3.28", "Overall", "100.0±0.00", "100.0±0.00", "59.93±0.67", "56.32±1.13", "Sentence-level", "prediction", "Count", "Reasoning", "performance", "(AMF)", "Local", "finetuned", "Concat", "finetuned", "Local", "finetuned", "Concat", "finetuned"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 137.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table8-1.png"
+}, {
+  "caption": "Table 4: Textual explanation results. Previous work uses auxiliary information (L: the groundtruth NLI label; H: humanannotated highlights), but we use neither. †Quoted from respective papers. ‡Evaluated by checkpoints. ∥Our replication with provided code.",
+  "captionBoundary": {
+    "x1": 251.71600341796875,
+    "x2": 505.65478515625,
+    "y1": 264.2135314941406,
+    "y2": 315.09100341796875
+  },
+  "figType": "Table",
+  "imageText": ["+", "Annotated", "Highlights64M", "✓", "✓", "27.91", "36.90", "32.20", "41.21", "+", "EPR", "Outputs64M", "(ours)", "–", "–", "29.91", "38.30", "33.96", "42.63", "Model", "Info", "BLEU", "SacreBLEU", "L", "H", "2", "refs", "3", "refs", "2", "refs", "3", "refs", "Camburu", "et", "al.", "(2018)†", "–", "–", "27.58", "–", "–", "–", "NILE", "(Kumar", "&", "Talukdar,", "2020)∥", "✓", "–", "28.57", "37.73", "32.51", "41.78", "NILE", "(Kumar", "&", "Talukdar,", "2020)‡", "✓", "–", "28.67", "37.84", "32.74", "42.06", "FinetunedWT5220M", "(Narang", "et", "al.,", "2020)†", "✓", "–", "–", "–", "32.40", "–", "FinetunedWT511B", "(Narang", "et", "al.,", "2020)†", "✓", "–", "–", "–", "33.70", "–", "LIREx", "(Zhao", "&", "Vydiswaran,", "2021)∥", "✓", "✓", "17.22", "22.40", "21.24", "26.68", "Finetune", "T560M", "–", "–", "27.75", "36.78", "31.74", "40.89"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 255.84,
+    "x2": 505.44,
+    "y1": 158.88,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table4-1.png"
+}, {
+  "caption": "Table 7: Results on MNLI. †Quoted from respective papers. ‡Our replication.",
+  "captionBoundary": {
+    "x1": 151.468994140625,
+    "x2": 460.5311279296875,
+    "y1": 200.80453491210938,
+    "y2": 206.8070068359375
+  },
+  "figType": "Table",
+  "imageText": ["Model", "Sent", "Acc", "Reasoning", "Performance", "FE", "FC", "FUP", "FUH", "GM", "AM", "Human", "–", "85.15", "73.44", "73.18", "46.31", "67.85", "69.52", "Non-reasoning", "methods", "Mahabadi", "et", "al.", "(2020)†", "73.8", "–", "–", "–", "–", "–", "–", "LSTM", "(Wang", "et", "al.,", "2019)†", "72.2", "–", "–", "–", "–", "–", "–", "Transformer", "(Radford", "et", "al.,", "2018)", "82.1", "–", "–", "–", "–", "–", "–", "Reasoning", "methods", "NNL", "(Feng", "et", "al.,", "2020)‡", "61.28", "50.33", "32.00", "49.78", "0.00", "0.00", "33.03", "STP", "64.46", "58.01", "34.79", "64.32", "37.57", "46.99", "48.67", "EPR", "(Concat,", "LM", "finetuned)", "79.65±0.19", "61.76±0.32", "52.09±0.41", "64.32", "37.57", "52.80±0.07", "53.93±0.07"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Hu4r-dedqR0-Table7-1.png"
+}]

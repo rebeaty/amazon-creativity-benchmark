@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 1: Partitioning for vessel power dataset. Wind intervals represent 0-3, 3-4, 4-5 and >5 on the Beaufort scale. Train, dev and eval sets contains 530706, 18368 and 47227 records.",
+  "captionBoundary": {
+    "x1": 91.8010025024414,
+    "x2": 520.1923217773438,
+    "y1": 417.544677734375,
+    "y2": 434.81500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Generalization", "set.", "(c)", "(a)", "Regular", "split", "of", "data."],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 93.6,
+    "x2": 523.1999999999999,
+    "y1": 238.56,
+    "y2": 396.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5RSq86IM6mE-Figure1-1.png"
+}, {
+  "caption": "Table 3: Results on the real and synthetic canonical eval partitions and on the generalization set.",
+  "captionBoundary": {
+    "x1": 114.5999984741211,
+    "x2": 497.39312744140625,
+    "y1": 428.02569580078125,
+    "y2": 434.3370056152344
+  },
+  "figType": "Table",
+  "imageText": ["DNN", "1076", "1099", "1427", "1264", "1928", "4.32", "4.20", "9.52", "MC", "dropout", "1069", "1111", "1498", "1248", "1925", "4.47", "4.97", "9.28", "VI", "1069", "1104", "1446", "1243", "1895", "4.29", "4.32", "9.13", "Symbolic", "1117", "1133", "1204", "1393", "2341", "5.09", "4.41", "13.56", "Ens.", "DNN", "1084", "1116", "1487", "1296", "1985", "4.49", "5.27", "10.97", "MC", "dropout", "1078", "1122", "1526", "1271", "1954", "4.54", "5.39", "10.00", "VI", "1072", "1109", "1458", "1255", "1916", "4.33", "4.53", "9.57", "Symbolic", "1120", "1137", "1213", "1403", "2366", "5.13", "4.55", "17.51", "Single", "Synthetic", "Real", "Synthetic", "Real", "In", "Out", "Gen", "In", "Out", "Full", "Gen", "Full", "Method", "Model", "RMSE", "(kW)", "\"", "R-AUC", "(105kW", "2)", "\""],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 475.2,
+    "y1": 284.15999999999997,
+    "y2": 417.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5RSq86IM6mE-Table3-1.png"
+}, {
+  "caption": "Table 1: Meta information and canonical splits for the WML dataset. Scanner models are: Siemens Verio, GE Discovery, Siemens Aera, Philips Ingenia, Philips Medical, Siemens Magnetom Trio.",
+  "captionBoundary": {
+    "x1": 91.49200439453125,
+    "x2": 521.4529418945312,
+    "y1": 353.8157043457031,
+    "y2": 371.08599853515625
+  },
+  "figType": "Table",
+  "imageText": ["Ljubljana", "S", "Mag", "3.0", "T", "0.47!", "0.47!", "0.80", "3", "0", "0", "0", "25", "0", "Lausanne", "S", "Mag", "3.0", "T", "1.00!", "1.00!", "1.20", "2", "0", "0", "0", "0", "74", "Rennes", "S", "Verio", "3.0", "T", "0.50!", "0.50!", "1.10", "7", "8", "2", "5", "0", "0", "Bordeaux", "GE", "Disc", "3.0", "T", "0.47!", "0.47!", "0.90", "7", "5", "1", "2", "0", "0", "Lyon", "S", "Aera", "1.5", "T", "1.03!", "1.03!", "1.25", "7", "10", "2", "17", "0", "0P", "Ingenia", "3.0", "T", "0.74!", "0.74!", "0.70", "Best", "P", "Medical", "3.0", "T", "0.82!", "0.82!", "2.20", "2", "10", "2", "9", "0", "0", "Location", "Scanner", "Mag.", "Field", "Resolution", "(mm3)", "Raters", "Trn", "Devin", "Evlin", "Devout", "Evlout"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 92.64,
+    "x2": 514.0799999999999,
+    "y1": 244.79999999999998,
+    "y2": 343.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5RSq86IM6mE-Table1-1.png"
+}, {
+  "caption": "Figure 2: Power estimation key performance trends.",
+  "captionBoundary": {
+    "x1": 202.3300018310547,
+    "x2": 409.6712951660156,
+    "y1": 240.22970581054688,
+    "y2": 246.541015625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 100.8,
+    "x2": 509.28,
+    "y1": 98.88,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5RSq86IM6mE-Figure2-1.png"
+}, {
+  "caption": "Table 2: Segmentation performance (nDSC) and joint eval of robustness and uncertainty (R-AUC).",
+  "captionBoundary": {
+    "x1": 109.0999984741211,
+    "x2": 502.91168212890625,
+    "y1": 367.3296813964844,
+    "y2": 373.6409912109375
+  },
+  "figType": "Table",
+  "imageText": ["Ensemble", "UNET", "69.70", "50.85", "68.89", "57.53", "1.17", "4.66", "1.76", "7.40", "UNET-DP", "60.65", "44.70", "61.78", "50.06", "1.92", "6.77", "2.52", "7.89", "UNETR", "72.51", "53.46", "71.41", "59.49", "0.34", "1.52", "0.63", "2.88", "Single", "UNET", "68.54", "49.33", "67.59", "55.79", "2.51", "7.84", "2.77", "9.87", "UNET-DP", "59.73", "48.35", "63.93", "54.43", "2.62", "8.76", "2.66", "9.71", "UNETR", "71.21", "51.60", "69.27", "56.76", "1.89", "6.17", "1.95", "6.47", "Type", "Model", "nDSC", "(%)", "(\")", "R-AUC", "(%)", "(#)", "Devin", "Devout", "Evlin", "Evlout", "Devin", "Devout", "Evlin", "Evlout"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 499.2,
+    "y1": 250.56,
+    "y2": 356.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5RSq86IM6mE-Table2-1.png"
+}]

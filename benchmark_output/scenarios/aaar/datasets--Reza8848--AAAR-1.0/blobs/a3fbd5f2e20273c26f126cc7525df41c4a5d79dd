@@ -1,0 +1,321 @@
+[{
+  "caption": "Figure 5: Biological receptive fields form with noise. Networks trained on CIFAR10 pixels with σ = 0.8 Gaussian noise. The most active 125 neuron receptive fields are reshaped into 32x32x3 and re-scaled so their values span the range of pixel values [0, 255]. Neurons are sorted by their activity levels (top left is the most active, going across rows then down columns) for a random noisy input of a car. Starting at σ ≥ 0.1 and particularly for σ = 0.8 (shown here) we observe the formation of many Gabor filters and on/off center surround receptive fields that are unique to noisy training.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00433349609375,
+    "y1": 440.7325134277344,
+    "y2": 501.5289306640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 348.96,
+    "y2": 430.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure5-1.png"
+}, {
+  "caption": "Table 1: Reconstruction Validation Accuracy - The baseline ReLU model varying the number of neurons, compared to the shared bias, explaining away, and inhibitory interneuron networks. We only show noise up to σ = 0.8 because the higher noise levels present trivial solutions that all networks perform equally well on. Due to very high convergence between random seeds, we just present a single run for each model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 532.9015502929688,
+    "y2": 582.739990234375
+  },
+  "figType": "Table",
+  "imageText": ["ReLU", "m", "=100", "0.0047", "0.0067", "0.0130", "0.0209", "ReLU", "m", "=1,000", "0.0019", "0.0042", "0.0112", "0.0203", "ReLU", "m", "=10,000", "0.0018", "0.0041", "0.0109", "0.0203", "ReLU", "m", "=100,000", "0.0032", "0.0053", "0.0111", "0.0203", "Shared", "Bias", "0.0017", "0.0040", "0.0110", "0.0204", "Explain", "Away", "0.0018", "0.0041", "0.0110", "0.0206", "Inhib.", "Interneuron", "0.0017", "0.0041", "0.0109", "0.0204", "Method", "—", "Val.", "Acc.", "σ", "=", "0.05", "σ", "=", "0.1", "σ", "=", "0.3", "σ", "=", "0.8"],
+  "name": "1",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 164.64,
+    "x2": 447.35999999999996,
+    "y1": 421.91999999999996,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Table1-1.png"
+}, {
+  "caption": "Figure 1: An inhibitory interneuron circuit implementing a negative feedback loop to silence all but the k most active neurons.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.0018615722656,
+    "y1": 433.47552490234375,
+    "y2": 461.39599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 333.59999999999997,
+    "x2": 496.32,
+    "y1": 283.68,
+    "y2": 422.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure1-1.png"
+}, {
+  "caption": "Figure 6: Noisy pretraining retains network sparsity. The vertical purple lines denote the start of noise annealing where each noise level is linearly decayed down to σ = 0. For both reconstruction (left) and classification (right) tasks the networks remain highly sparse even after all noise is removed. Moreover, there is no noticeable performance difference between any of the networks while some of those trained with moderate noise perform slightly better than the noise free baseline. We truncate the x-axis to start at epoch 600 for the sake of clarity. The classification networks continue to sparsify even when noise annealing has started because unlike in the reconstruction task, the sparsity level did not converge within the first 800 epochs.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 388.8045349121094,
+    "y2": 471.5189208984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 218.88,
+    "y2": 378.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure6-1.png"
+}, {
+  "caption": "Figure 9: Queries used to activate the receptive fields. These queries were randomly selected. We use the cat (left) and truck images (middle) with the relevant noise levels to activate the neurons shown in Fig. 8. We use the car image (right) for the main text Fig. 5 and receptive field changes across epochs in Fig. 10.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 212.92251586914062,
+    "y2": 251.80194091796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 90.72,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Receptive fields become more biological across epochs. We show how the most active receptive fields for the σ = 0.3 network evolve over the course of training to become more biologically similar. The specific number of epochs used (3,000, 9,000 and 19,000) were chosen simply because of when the models were checkpointed and re-loaded for additional training. We use the car image as our noisy query here (rightmost in Fig. 9).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 662.321533203125,
+    "y2": 712.1599731445312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 285.59999999999997,
+    "y2": 651.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure10-1.png"
+}, {
+  "caption": "Figure 14: The GELU network sparsifies with noise when trained on CIFAR10. The GELU network closely resembles the ReLU network by sparsifying (but not to the same degree). It also forms biological receptive fields. We use the arbitrary 0.0001 absolute activation threshold to label if a neuron is on or off.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 435.2195129394531,
+    "y2": 474.09893798828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 222.72,
+    "y2": 424.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure14-1.png"
+}, {
+  "caption": "Figure 8: Receptive fields across noise levels. We show for all noise levels the 625 most active neurons for the truck query (middle of Fig. 9). For 0.8 ≥ σ which activate fewer neurons, we also show the cat query below it. Biological like receptive fields start to appear for σ = 0.1 and can be seen most clearly for σ ∈ {0.3, 0.8, 1.5}.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00469970703125,
+    "y1": 645.8395385742188,
+    "y2": 684.718994140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 117.6,
+    "y2": 635.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Training ablations. The positive correlation between noise and sparsity is robust to (a) neuron counts, (b) datasets, (c) noise distributions, and (d) training tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0003967285156,
+    "y1": 435.76153564453125,
+    "y2": 452.7230224609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 207.84,
+    "y2": 425.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure7-1.png"
+}, {
+  "caption": "Figure 2: There is a positive relationship between activation sparsity and noise. The average fraction of neurons active during each CIFAR10 latent input over the course of training for 800 epochs. Each line corresponds to training randomly initialized networks with different noise levels σ denoted by different colors. We show the average of three different random seeds and their standard error of the mean (not visible as the variance is so low). Interestingly, the higher noise levels take longer to sparsify but upon convergence become the sparsest.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 596.653564453125,
+    "y2": 657.4500122070312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 396.96,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure2-1.png"
+}, {
+  "caption": "Figure 15: The sigmoid network also sparsifies with noise for CIFAR10. While sigmoid sparsifies in proportion to noise, it does not form biological receptive fields and is less sparse than GELU or ReLU.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 493.7535400390625,
+    "y2": 521.6740112304688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 280.8,
+    "y2": 483.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure15-1.png"
+}, {
+  "caption": "Figure 12: Dead Neurons during the reconstruction task. During noise annealing, the higher noise levels σ ≥ 0.8 see a number of dead neurons. However, this does not full explain their sparsity levels and on this trivial task it does not hurt their reconstruction performance.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0008239746094,
+    "y1": 351.9195251464844,
+    "y2": 379.8389892578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 139.68,
+    "y2": 341.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Dead Neurons during the classification Task. Here there are fewer dead neurons, they only appear for σ ≥ 3.0 and they only appear close to when the noise is entirely turned off. Again these results do not fully explain the sparsity amounts found.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9999694824219,
+    "y1": 606.2495727539062,
+    "y2": 634.1699829101562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 405.59999999999997,
+    "y2": 595.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure13-1.png"
+}, {
+  "caption": "Figure 4: Example CIFAR10 reconstructions. Shown are example reconstructions obtained at different noise levels for five randomly selected images from the test data. The network at σ ≥ 0.8 qualitatively transitions from fuzzy reconstructions to more general image details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00030517578125,
+    "y1": 618.2685546875,
+    "y2": 646.18896484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 406.56,
+    "y2": 607.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Noise induces the formation of Top-K networks. Shown column-wise are the fraction of neurons that are active for each training input (Left), the values of each of the 10,000 neurons bias terms (Middle) and the L2 norms of their key vectors (Right), as a function of number of training epochs. Each is shown for three different representative noise levels (rows). These plots show each input to the network and use the density of blue to represent how many times a particular value occurs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 324.8955383300781,
+    "y2": 385.69293212890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure3-1.png"
+}, {
+  "caption": "Figure 11: Explaining Away network is sparser and sooner. For every level of noise, the explaining away network removes neurons redundantly active and makes them much more sparse.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9997863769531,
+    "y1": 492.550537109375,
+    "y2": 509.51202392578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 292.8,
+    "y2": 481.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P9yXPbfqbvC-Figure11-1.png"
+}]

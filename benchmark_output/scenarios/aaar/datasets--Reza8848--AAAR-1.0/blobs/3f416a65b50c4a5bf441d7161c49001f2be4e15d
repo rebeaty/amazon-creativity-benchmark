@@ -1,0 +1,61 @@
+[{
+  "caption": "Figure 1: Overview of the preventive learning framework to solve OPLC. The calibration rate is first obtained. The sufficient DNN size in ensuring universal feasibility is then determined, and a DNN model can be constructed directly with universal feasibility guarantee in this step. With the determined calibration rate and sufficient DNN size, a DNN model with enhanced optimality without sacrificing feasibility is obtained using the Adversary Sample-Aware algorithm.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 176.65951538085938,
+    "y2": 226.4979248046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 470.4,
+    "y1": 80.64,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QVcDQJdFTG-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Left: solution of DNN trained with default OPLC ground-truth can be infeasible due to inevitable prediction errors.Right: solution of DNN trained with calibrated OPLC ground-truth ensures universal feasibility even with prediction errors.",
+  "captionBoundary": {
+    "x1": 299.906005859375,
+    "x2": 503.9997253417969,
+    "y1": 202.64151000976562,
+    "y2": 252.47991943359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 298.56,
+    "x2": 490.08,
+    "y1": 84.96,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QVcDQJdFTG-Figure2-1.png"
+}, {
+  "caption": "Table 1: Performance comparison with SOTA DNN schemes in light-load and heavy-load regimes.",
+  "captionBoundary": {
+    "x1": 108.96600341796875,
+    "x2": 503.0366516113281,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["for", "Case118/300", "heavy-load", "and", "the", "results", "at", "400", "epochs", "for", "the", "other", "cases.", "The", "training", "epoch", "for", "the", "other", "DNN", "schemes", "are", "200.", "*", "Feasibility", "rate", "and", "Worst-case", "violation", "are", "the", "results", "before", "post-processing.", "Feasibility", "rates", "(resp", "Worst-case", "violation)", "after", "post-", "processing", "are", "100%", "(resp", "0)", "for", "all", "DNN", "schemes.", "We", "hence", "report", "the", "results", "before", "post-processing", "to", "better", "show", "the", "advantage", "of", "our", "design.", "Speedup", "and", "Optimality", "loss", "are", "the", "results", "after", "post-processing", "of", "the", "ﬁnal", "obtained", "feasible", "solutions.", "*", "The", "correction", "step", "in", "DNN-D", "(with", "10−3", "rate)", "takes", "longer", "time", "compared", "with", "l1-projection", "in", "DNN-P,", "resulting", "in", "lower", "speedups.", "*", "We", "empirically", "observe", "that", "DNN-G", "requires", "more", "training", "epochs", "for", "satisfactory", "performance.", "We", "report", "its", "best", "results", "at", "500", "epochs", "DeepOPF+-3", "×129", "×136", "100", "100", "0.03", "0.03", "0", "0", "DeepOPF+-7", "×130", "×138", "100", "100", "0.10", "0.06", "0", "0", "DNN-P", "×115", "×98", "91.29", "78.42", "0.06", "0.08", "261.1", "443.0", "DNN-D", "×115", "×102", "91.99", "82.92", "0.07", "0.07", "231.6", "348.1", "DNN-W", "×1.04", "×1.08", "100", "100", "0", "0", "0", "0", "DNN-G", "×2.44", "×2.65", "100", "100", "0.32", "0.06", "0", "0", "Case300", "DeepOPF+-3", "×201", "×226", "100", "100", "0.18", "0.19", "0", "0", "DeepOPF+-7", "×202", "×228", "100", "100", "0.37", "0.41", "0", "0", "DNN-P", "×137", "×125", "68.84", "54.92", "0.17", "0.21", "19.5", "44.8", "DNN-D", "×138", "×124", "73.42", "55.37", "0.20", "0.24", "16.69", "43.1", "DNN-W", "×2.08", "×2.26", "100", "100", "0", "0", "0", "0", "DNN-G", "×26", "×16", "100", "100", "1.29", "0.39", "0", "0", "Case118", "DeepOPF+-3", "×86", "×92", "100", "100", "0.03", "0.04", "0", "0", "DeepOPF+-7", "×86", "×93", "100", "100", "0.03", "0.09", "0", "0", "DNN-P", "×85", "×86", "100", "88.12", "0.02", "0.03", "0", "5.43", "DNN-D", "×85", "×84", "100", "93.36", "0.02", "0.03", "0", "11.19", "DNN-W", "×0.90", "×0.86", "100", "100", "0", "0", "0", "0", "DNN-G", "×24", "×26", "100", "100", "0.13", "0.04", "0", "0", "Case30", "light-load", "heavy-load", "light-load", "heavy-load", "light-load", "heavy-load", "light-load", "heavy-load", "Case", "Scheme", "Average", "speedups", "Feasibility", "rate", "(%)", "Optimality", "loss", "(%)", "Worst-case", "violation", "(%)"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 100.8,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QVcDQJdFTG-Table1-1.png"
+}]

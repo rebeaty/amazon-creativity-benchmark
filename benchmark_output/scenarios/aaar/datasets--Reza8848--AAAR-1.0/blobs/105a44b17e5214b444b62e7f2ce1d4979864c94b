@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: Cumulative regret with varying number of agents for the (a) cosine function and (b) square function. (c) Illustration of the importance of different components of our FN-UCB algorithm (cosine function). (d) Performances with different values of D (cosine function). The average number of rounds of communications are 348.0, 380.0, 456.7 for D = 5, 4, 2.5, respectively.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.0015563964844,
+    "y1": 170.94650268554688,
+    "y2": 209.82501220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "cosine", "(b)", "square", "(c)", "cosine", "(d)", "cosine", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "5,", "D", "=", "5)", "FN-UCB", "(N", "=", "5,", "D", "=", "4)", "FN-UCB", "(N", "=", "5,", "D", "=", "2.5)", "FN-UCB", "(N", "=", "5,", "comm.", "every", "round)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "100", "80", "60", "40", "20", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "2,", "only", "UCBa", "t,", "i)", "FN-UCB", "(N", "=", "2,", "only", "UCBb", "t,", "i)", "FN-UCB", "(N", "=", "2,", "no", "NN", "aggregation)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "100", "80", "60", "40", "20", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "10)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "200", "150", "100", "50", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "10)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "120", "100", "80", "60", "40", "20", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 163.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_38m4h8HcNRL-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Results (m = 20) for (a) shuttle and (b) magic. (c) Results for shuttle with diagonal approximation (m = 50). (d) Results for shuttle with different values of D. The average number of communication rounds are 3850.7, 4442.7, 4906.3 for D = 0.05, 0.03, 0.01, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.999755859375,
+    "y1": 176.65951538085938,
+    "y2": 204.58001708984375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "shuttle", "(b)", "magic", "telescope", "(c)", "shuttle", "(diag.)", "(d)", "shuttle", "(diag.)", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "5,", "D", "=", "0.05)", "FN-UCB", "(N", "=", "5,", "D", "=", "0.03)", "FN-UCB", "(N", "=", "5,", "D", "=", "0.01)", "FN-UCB", "(N", "=", "5,", "comm.", "every", "round)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "300", "250", "200", "150", "100", "50", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "300", "250", "200", "150", "100", "50", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "800", "600", "400", "200", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "800", "600", "400", "200", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 106.08,
+    "x2": 506.88,
+    "y1": 82.56,
+    "y2": 169.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_38m4h8HcNRL-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Cumulative regrets for the (a) cosine, (b) square, (c) shuttle (with diagonalization), and (d) magic telescope experiments, with additional comparisons with Linear UCB, Linear TS, Kernel UCB and Kernel TS.",
+  "captionBoundary": {
+    "x1": 107.69103240966797,
+    "x2": 505.2414855957031,
+    "y1": 646.0465698242188,
+    "y2": 673.9669799804688
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "shuttle", "(d)", "magic", "telescope", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "5,", "D", "=", "0.01)", "Kernel", "UCB", "Kernel", "TS", "Linear", "UCB", "Linear", "TS", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "1000", "800", "600", "400", "200", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "5,", "D", "=", "0.03)", "Kernel", "UCB", "Kernel", "TS", "Linear", "UCB", "Linear", "TS", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "400", "300", "200", "100", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "(a)", "cosine", "(b)", "square", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "10)", "Kernel", "UCB", "Kernel", "TS", "Linear", "UCB", "Linear", "TS", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "250", "200", "150", "100", "50", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "Neural", "UCB", "Neural", "TS", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "10)", "Kernel", "UCB", "Kernel", "TS", "Linear", "UCB", "Linear", "TS", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "200", "150", "100", "50", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations"],
+  "name": "4",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 451.2,
+    "y1": 392.15999999999997,
+    "y2": 632.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_38m4h8HcNRL-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Cumulative regret of FN-UCB and FN-UCB (Less Comm.) for the cosine and square functions. Their performances are very similar for both functions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9997253417969,
+    "y1": 257.3635559082031,
+    "y2": 274.32501220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "cosine", "(b)", "square", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "10)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "1)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "2)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "5)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "10)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "150", "100", "50", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "FN-UCB", "(N", "=", "1)", "FN-UCB", "(N", "=", "2)", "FN-UCB", "(N", "=", "5)", "FN-UCB", "(N", "=", "10)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "1)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "2)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "5)", "FN-UCB", "(Less", "Comm.)", "(N", "=", "10)", "et", "Re", "gr", "iv", "e", "ul", "at", "Cu", "m", "120", "100", "80", "60", "40", "20", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations"],
+  "name": "3",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 172.32,
+    "x2": 441.59999999999997,
+    "y1": 135.84,
+    "y2": 242.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_38m4h8HcNRL-Figure3-1.png"
+}]

@@ -1,0 +1,81 @@
+[{
+  "caption": "Table 1: Running time comparison between theory-based hyperparameter selector and cross-validation based with 10 folds, with n`j = nuj = d for j ∈ {1, 2}.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9951171875,
+    "y1": 92.5765151977539,
+    "y2": 111.03204345703125
+  },
+  "figType": "Table",
+  "imageText": ["QLDS(th)", ".01", "s", ".01", "s", ".01", "s", ".01", "s", ".017", "s", ".02", "s", ".04", "s", ".17", "s", ".95", "s", "8.58", "s", "QLDS(cv)", ".32", "s", ".38", "s", ".43", "s", ".64", "s", "1.02", "s", "2.71", "s", "14", "s", "95", "s", "587", "s", "4970", "s", "dimension", "5", "8", "16", "32", "64", "128", "256", "512", "1024", "2048"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 496.32,
+    "y1": 112.8,
+    "y2": 157.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4CQ9os3s4h3-Table1-1.png"
+}, {
+  "caption": "Figure 1: Empirical versus theoretical density of decision score f(x) for (Left) Synthetic data set with d = 100, n`1 = n`2 = 100, nu1 = nu2 = 1 000 (Center) Review-kitchen classification d = 400, n`1 = n`2 = 100 (Right) Review-books classification d = 400, n`1 = n`2 = 100. For both review data sets, the empirical histogram is computed using 400 unlabeled samples.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.17181396484375,
+    "y1": 193.80154418945312,
+    "y2": 232.67999267578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 179.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4CQ9os3s4h3-Figure1-1.png"
+}, {
+  "caption": "Table 2: The classification error of different methods under consideration on the real benchmark data sets. ↓ indicates statistically significantly worse performance than the best result (shown in bold), according to the Mann-Whitney U test (p < 0.01) (Mann and Whitney, 1947).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2474060058594,
+    "y1": 337.6075134277344,
+    "y2": 365.5270080566406
+  },
+  "figType": "Table",
+  "imageText": ["books", "37.47↓", "±", "2.25", "26.47", "±", "0.72", "49.13↓", "±", "0.65", "35.83↓", "±", "2.48", "27.91", "±", "3.32", "26.03", "±", "0.79", "25.7", "±", "0.93", "dvd", "38.33↓", "±", "1.72", "29.12", "±", "1.35", "49.25↓", "±", "0.68", "36.46↓", "±", "1.94", "29.53", "±", "3.48", "28.53", "±", "1.33", "26.94", "±", "1.47", "electronics", "34.15↓", "±", "3.25", "19.4", "±", "0.29", "48.67↓", "±", "1.05", "31.69↓", "±", "3.56", "20.1↓", "±", "1.03", "19.41", "±", "0.46", "19.11", "±", "0.58", "kitchen", "32.39↓", "±", "3.02", "19.31", "±", "0.16", "49.07↓", "±", "0.64", "29.62↓", "±", "3.03", "19.98↓", "±", "2.28", "19.11", "±", "0.32", "18.67", "±", "0.43", "splice", "39.81↓", "±", "2.93", "35.48", "±", "0.86", "44.36↓", "±", "2.3", "39.36↓", "±", "3.12", "37.02", "±", "3.04", "35.35", "±", "1.26", "33.63", "±", "1.75", "adult", "33.35", "±", "0.68", "36.28↓", "±", "0.06", "32.55", "±", "1.47", "35.45↓", "±", "0.75", "32.25", "±", "1.92", "32.88", "±", "2.46", "31.9", "±", "1.74", "mushrooms", "6.55↓", "±", "2.07", "11.33↓", "±", "0.04", "33.94↓", "±", "10.67", "6.62↓", "±", "2.39", "2.57", "±", "1.86", "8.49↓", "±", "3.63", "1.75", "±", "1.31", "QLDS(1,0)", "QLDS(0,1)", "QLDS(1,1)", "ST(LS-SVM)", "QLDS(cv)", "QLDS(th)", "QLDS(or)", "(LS-SVM)", "(GB-SSL)", "Data", "set", "Baselines", "Model", "Selection", "Oracle"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 509.28,
+    "y1": 368.64,
+    "y2": 473.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4CQ9os3s4h3-Table2-1.png"
+}, {
+  "caption": "Figure 2: Classification error depending on the number of labeled examples on different data sets. Positive vs. negative review for different products (Left) kitchen (Center) dvd and (Right) electronics with nu1 = nu2 = 200, d = 400.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7472229003906,
+    "y1": 211.44454956054688,
+    "y2": 240.8599853515625
+  },
+  "figType": "Figure",
+  "imageText": ["QLDS(0,1)", "ST(LS-SVM)", "QLDS", "(cv)", "QLDS", "(th)", "QLDS", "(or)", "0.325", "electronics", "0.300", "0.275", "0.250", "0.225", "0.200", "2024", "32", "42", "54", "70", "92", "118", "154200", "Number", "of", "labeled", "examples,", "n", "0.375", "dvd", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "2024", "32", "42", "54", "70", "92", "118", "154200", "Number", "of", "labeled", "examples,", "n", "kitchen", "r", "Er", "ro", "0.30", "0.28", "0.26", "0.24", "0.22", "0.20", "0.18", "2024", "32", "42", "54", "70", "92", "118", "154200", "Number", "of", "labeled", "examples,", "n"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 465.12,
+    "y1": 82.08,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4CQ9os3s4h3-Figure2-1.png"
+}]

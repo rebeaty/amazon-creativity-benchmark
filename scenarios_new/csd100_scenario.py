@@ -92,13 +92,22 @@ class CSD100Scenario(Scenario):
     )
 
     def get_instances(self, output_path: str) -> List[Instance]:
+        import os
         dataset = load_dataset("qualcomm/csd100", split="train")
         label_names = dataset.features["label"].names  # e.g. ["balloon+mosaic", ...]
 
+        images_dir = os.path.join(output_path, "images")
+        os.makedirs(images_dir, exist_ok=True)
+
         instances = []
-        for item in dataset:
-            image = item["image"]  # PIL Image
+        for idx, item in enumerate(dataset):
+            pil_image = item["image"]  # PIL Image
             label_name = label_names[item["label"]]  # e.g. "balloon+mosaic"
+
+            # Save PIL image to disk
+            image_path = os.path.join(images_dir, f"{idx}.jpg")
+            if not os.path.exists(image_path):
+                pil_image.save(image_path)
 
             # Parse content and style from label name
             content, style_raw = label_name.split("+", 1)
@@ -110,7 +119,7 @@ class CSD100Scenario(Scenario):
                     input=Input(
                         multimedia_content=MultimediaObject([
                             MediaObject(content_type="text/plain", text=self.CONTENT_PROMPT),
-                            MediaObject(content_type="image/jpeg", location=image),
+                            MediaObject(content_type="image/jpeg", location=image_path),
                         ])
                     ),
                     references=[Reference(Output(text=content), tags=[CORRECT_TAG])],
@@ -124,7 +133,7 @@ class CSD100Scenario(Scenario):
                     input=Input(
                         multimedia_content=MultimediaObject([
                             MediaObject(content_type="text/plain", text=self.STYLE_PROMPT),
-                            MediaObject(content_type="image/jpeg", location=image),
+                            MediaObject(content_type="image/jpeg", location=image_path),
                         ])
                     ),
                     references=[Reference(Output(text=style), tags=[CORRECT_TAG])],

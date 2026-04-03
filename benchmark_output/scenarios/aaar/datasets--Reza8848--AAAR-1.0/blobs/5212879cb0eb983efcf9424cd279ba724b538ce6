@@ -1,0 +1,401 @@
+[{
+  "caption": "Figure 3: The CATER Snitch localization challenge: The task is to locate the yellow spherical object called Snitch within the last frame. The challenge is that the Snitch might be contained and moved by a cone. So its location has to be inferred by recognizing and remembering a containment event and then tracking the position of the container. Image adapted from [30].",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3531494140625,
+    "y1": 688.8255615234375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 601.92,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure3-1.png"
+}, {
+  "caption": "Figure 15: To study the disentanglement of the different parts of our learned codes, we perform a lesion study. The principle of the study is as follows: For each component code (position, priority, size, and gestalt) we add gaussian noise to the code before applying the decoder while keeping all other codes as predicted by the model.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 505.24908447265625,
+    "y1": 370.4925842285156,
+    "y2": 409.3720703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 295.68,
+    "y2": 356.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure15-1.png"
+}, {
+  "caption": "Figure 14: Top: Exhaustive evaluation of effects on the metrics resulting from different noise intensities added to the gestalt and position codes. Bottom: Explicit visualization of the bottom-most row (manipulating position only, blue), left-most column (manipulating gestalt only, orange), and diagonal from bottom left to top right in the plots at the top (manipulating both position and gestalt, purple).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2466125488281,
+    "y1": 223.13259887695312,
+    "y2": 272.9710693359375
+  },
+  "figType": "Figure",
+  "imageText": ["cy", "cu", "ra", "5", "ac", "to", "p", "ag", "e", "Av", "er", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "level", "cy", "cu", "ra", "1", "ac", "to", "p", "ag", "e", "Av", "er", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "level", "ss", "ct", "lo", "ob", "je", "ag", "e", "Av", "er", "0.0008", "0.0006", "0.0004", "0.0002", "0.0000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "level", "ce", "ist", "an", "L2", "d", "ag", "e", "Av", "er", "4", "3", "2", "1", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "level", "Noise", "on", "gestalt", "code", "Noise", "on", "position", "code", "Noise", "on", "position", "and", "gestalt", "codes", "ce", "ist", "an", "L1", "d", "ag", "e", "Av", "er", "4", "3", "2", "1", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "level", "0.8", "0.6", "0.4", "0.2", "Average", "top", "5", "accuracy", "oi", "se", "al", "t", "n", "Ge", "st", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.5", "1.0", "Position", "noise", "0.8", "0.6", "0.4", "0.2", "Average", "top", "1", "accuracy", "oi", "se", "al", "t", "n", "Ge", "st", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.5", "1.0", "Position", "noise", "0.0008", "0.0006", "0.0004", "0.0002", "Average", "object", "loss", "oi", "se", "al", "t", "n", "Ge", "st", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.5", "1.0", "Position", "noise", "4", "3", "2", "1", "Average", "L2", "distance", "oi", "se", "al", "t", "n", "Ge", "st", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.5", "1.0", "Position", "noise", "4", "3", "2", "1", "Average", "L1", "distance", "oi", "se", "al", "t", "n", "Ge", "st", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.5", "1.0", "Position", "noise"],
+  "name": "14",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 513.6,
+    "y1": 38.879999999999995,
+    "y2": 205.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure14-1.png"
+}, {
+  "caption": "Table 1: Quantitative results of the CATER Snitch localization challenge. Referenced results are from [88] and from the other system-respective papers.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["Loci", "unsupervised", "(ours)", "4.14", "78.4", "92.0", "0.45", "0.44", "Random", "-", "2.8", "13.8", "3.9", "Transformer", "[75]", "15.01", "13.7", "39.9", "3.53", "SINet", "[56]", "138.69", "21.1", "47.1", "3.14", "TSN", "(RGB)", "+", "LSTM", "[80]", "25.6", "67.2", "2.6", "DaSiamRPN", "[89]", "33.9", "40.8", "2.4", "I3D-50", "+", "LSTM", "[16]", "60.2", "81.8", "1.2", "Hopper-transformer", "[88]", "15.01", "61.1", "86.6", "1.42", "TSM-50", "[47]", "64.0", "85.7", "0.93", "TPN-101", "[84]", "65.3", "83.0", "1.09", "Hopper-sinet", "[88]", "139.22", "69.1", "91.8", "1.02", "Inferno", "[17]", "-", "71.7", "88.9", "-", "Hopper-multihop", "[88]", "6.39", "73.2", "93.8", "0.85", "Aloe", "[22]", "74.0", "94.0", "0.44", "OPNet", "[68]", "-", "74.8", "-", "0.54", "TFC", "V3D", "Depthwise", "[87]", "24.64", "79.7", "95.5", "0.47", "Loci", "supervised", "(ours)", "2.96", "90.7", "98.5", "0.14", "0.14", "Method", "Parameters", "(M)", "Top", "1", "Top", "5", "L1", "(grid)", "L2"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 112.32,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Table1-1.png"
+}, {
+  "caption": "Figure 4: Object permanence shown on a CATER tracking example. While the network (after completely unsupervised training) struggles to keep the shape of the Snitch when contained for a longer time span, color and, importantly, the position of the Snitch are preserved during containment. Top row: input frames. Middle row: tracked objects visualized trough colored masks. Bottom row: RGB representation of the Snitch.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7473449707031,
+    "y1": 569.778564453125,
+    "y2": 619.6170043945312
+  },
+  "figType": "Figure",
+  "imageText": ["frame", "191", "frame", "194", "frame", "287", "frame", "291"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 323.03999999999996,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure4-1.png"
+}, {
+  "caption": "Table 5: Evaluations of Loci’s foreground segmentation masks. Trained networks from the Cater challenge are evaluated on CLEVR with mask by running the single CLEVR images 30 iterations through the network and then comparing the masks using the Intersecion over Union (IoU) metric. We compare a mean per mask accuracy (mask avg) and size weighted average that represents how many pixels where segmented correctly (pixel avg).",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7472839355469,
+    "y1": 380.70953369140625,
+    "y2": 430.5480041503906
+  },
+  "figType": "Table",
+  "imageText": ["1", "83.3", "96.8", "2", "84.6", "97.0", "3", "84.3", "97.1", "4", "84.1", "96.7", "5", "85.6", "97.2", "Network", "mask", "avg", "(%)", "pixel", "avg", "(%)"],
+  "name": "5",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 433.44,
+    "y2": 505.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Table5-1.png"
+}, {
+  "caption": "Figure 1: Loci’s main processing loop has three components: The tree-structured slots of the slot-wise encoder process individual entities k to generate the disentangled latent Gestalt code Gk and position code Pk. The transition module models slot-to-slot interactions and slot-dynamics. It is implemented by multiple alternating layers of multi-head attention and GateL0RD—a recurrent neural network that fosters the stable maintenance of hidden latent states [35]. The resulting Gestalt and position codes are finally used in the slot-wise decoder to predict slot-specific RGB entity-respective reconstructions Rk and masks Mk.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039367675781,
+    "y1": 656.611572265625,
+    "y2": 729.8619995117188
+  },
+  "figType": "Figure",
+  "imageText": ["Position", "1D", "Gestalt", "Position", "1D", "Gestalt", "Position", "Position", "rd", "-L", "0", "a", "te", "d", "G", "sh", "a", "re", "o", "n", "e", "n", "ti", "-A", "tt", "e", "a", "d", "i-", "H", "M", "u", "lt", "Transition", "module", "rd", "-L", "0", "a", "te", "d", "G", "sh", "a", "re", "o", "n", "e", "n", "ti", "-A", "tt", "e", "a", "d", "i-", "H", "M", "u", "lt", "1D", "Gestalt", "1D", "Gestalt", "Position", "Position", "1D", "Gestalt", "1D", "Gestalt", "ResNets", "ResNets", "ResNet", "Slot-wise", "encoder", "ResNetResNet", "Slot-wise", "decoder", "ResNet", "ResNet", "1D", "Gestalt", "X", "1D", "Gestalt", "X"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 525.6,
+    "y2": 631.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure1-1.png"
+}, {
+  "caption": "Table 4: Evaluations on the CATER Snitch challenge for supervised training, statistics of the 25 evaluations presented in Table 3",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 417.25152587890625,
+    "y2": 434.2130126953125
+  },
+  "figType": "Table",
+  "imageText": ["Top1", "88.9", "90.7", "0.8", "91.8", "Top5", "97.5", "98.5", "0.4", "99.1", "L1", "(grid)", "0.112", "0.140", "0.019", "0.174", "L2", "0.118", "0.139", "0.015", "0.170", "Metric", "min", "mean", "std", "max"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 435.35999999999996,
+    "y2": 499.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Table4-1.png"
+}, {
+  "caption": "Table 3: Evaluations on the CATER Snitch challenge for supervised training. Table shows five networks trained with different initial seeds, each evaluated five times with different initial seeds.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["1", "91.7", "99.0", "0.118", "0.122", "90.8", "98.8", "0.129", "0.126", "91.1", "98.8", "0.119", "0.121", "91.4", "98.9", "0.122", "0.123", "91.3", "98.8", "0.123", "0.126", "2", "91.1", "98.6", "0.129", "0.133", "90.4", "98.3", "0.144", "0.141", "89.8", "98.3", "0.151", "0.144", "90.0", "98.5", "0.149", "0.140", "89.5", "98.2", "0.164", "0.151", "3", "89.6", "97.8", "0.173", "0.170", "90.1", "98.0", "0.159", "0.157", "89.5", "97.9", "0.174", "0.164", "88.9", "97.5", "0.174", "0.167", "89.8", "98.1", "0.162", "0.157", "4", "91.5", "99.1", "0.112", "0.118", "90.4", "98.9", "0.133", "0.128", "91.0", "98.7", "0.125", "0.129", "90.5", "99.1", "0.125", "0.124", "90.8", "98.8", "0.127", "0.126", "5", "91.7", "98.2", "0.130", "0.139", "91.4", "98.4", "0.135", "0.139", "91.2", "98.0", "0.146", "0.150", "91.8", "98.3", "0.130", "0.140", "91.3", "98.1", "0.150", "0.151", "Network", "Top", "1", "Top", "5", "L1", "(grid)", "L2"],
+  "name": "3",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 111.83999999999999,
+    "y2": 384.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Table3-1.png"
+}, {
+  "caption": "Figure 5: Two challenging CATER tracking examples with several co-occurring containments / occlusions: Video frames overlaid with the predicted Snitch location (network trained with supervision).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6514587402344,
+    "y1": 193.95352172851562,
+    "y2": 210.91497802734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Comparison between unsupervised (left) and supervised (right) tracking, while the Snitch is contained progressively longer. On the x-axis are the number of frames the Snitch has been contained, while the left y-axis shows the L2 distance to the target position. The right y-axis shows the number of times a Snitch was contained that long within the test-set (visualized in green). The thick line represents the median L2 distance, while the thin line represents the mean L2 distance. The weaker colored area shows the 90-10-quantile, while the stronger one corresponds to the 75-25-quantile.",
+  "captionBoundary": {
+    "x1": 107.64102935791016,
+    "x2": 505.24139404296875,
+    "y1": 324.15252685546875,
+    "y2": 384.95001220703125
+  },
+  "figType": "Figure",
+  "imageText": ["o", "c", "c", "u", "rr", "e", "n", "c", "e", "2,000", "1,500", "1,000", "500", "0", "2", "frames", "contained", "L", "1", "0.8", "0.6", "0.4", "0.2", "20", "40", "60", "80", "100", "120", "140", "160", "180", "200", "220", "240", "0", "o", "c", "c", "u", "rr", "e", "n", "c", "e", "2,000", "1,500", "1,000", "500", "0", "L", "2", "frames", "contained", "1", "0.8", "0.6", "0.4", "0.2", "20", "40", "60", "80", "100", "120", "140", "160", "180", "200", "220", "240", "0"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 496.79999999999995,
+    "y1": 228.0,
+    "y2": 307.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Eight sources of information are fed into each slot-wise encoder (left side): top row: the current RGB image It, the reconstructed RGB slot image Rt k, the Gaussian slot position map Qt k, as well as the summations over other Gaussian position maps Qt,s k ; bottom row: the MSE Et, slot mask M t k, as well as the summations over other masks M t,s k , and the background mask Mbg. The background module (right side) is either implemented as a Gaussian mixture model or a simple autoencoder.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2454528808594,
+    "y1": 185.10653686523438,
+    "y2": 249.958984375
+  },
+  "figType": "Figure",
+  "imageText": ["Slot-speciﬁc", "encoder", "inputs", "Background", "Encoder", "/", "Decoder", "Background", "module", "ResNet", "ResNet"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 81.6,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure2-1.png"
+}, {
+  "caption": "Figure 11: Comparison between different sequence lengths for truncated back-propagation trough time vs back-propagation and e-prop.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99755859375,
+    "y1": 518.3225708007812,
+    "y2": 535.2839965820312
+  },
+  "figType": "Figure",
+  "imageText": ["e-prop", "backprop", "1", "time", "step", "backprop", "30", "time", "steps", "backprop", "10", "time", "steps", "backprop", "3", "time", "step", "backprop", "1", "time", "step", "L", "2", "o", "b", "j", "e", "c", "t", "Seconds", "10−4", "103", "104", "105", "106"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 499.68,
+    "y1": 319.68,
+    "y2": 488.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Comparison between GateL0RD and LSTM modules within the predictor part of the network.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9972839355469,
+    "y1": 287.83251953125,
+    "y2": 304.79400634765625
+  },
+  "figType": "Figure",
+  "imageText": ["LSTM", "GateL0rd", "L", "2", "o", "b", "j", "e", "c", "t", "Updates", "10−4", "104", "105", "106", "10−5"],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 257.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure10-1.png"
+}, {
+  "caption": "Figure 9: Predicting CLEVRER[85] 70 time-steps in closed loop after 50 times-steps of teacher forcing. Top row is ground truth wile bottom row shows Loci’s closed loop predictions.",
+  "captionBoundary": {
+    "x1": 108.00018310546875,
+    "x2": 504.1695861816406,
+    "y1": 381.6204833984375,
+    "y2": 398.58197021484375
+  },
+  "figType": "Figure",
+  "imageText": ["t", "=", "10", "t", "=", "20", "t", "=", "30", "t", "=", "40", "t", "=", "50", "t", "=", "60", "t", "=", "70"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 367.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure9-1.png"
+}, {
+  "caption": "Table 2: Moving MNIST prediction accuracy PhyDNet vs Loci. Both networks where trained using the same dataloader to predict the next 90 frames given an input sequence of 10 frames.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9964904785156,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["PhyDnet", "[34]", "35.6", "0.913", "58.6", "0.830", "80.7", "0.739", "113.9", "0.594", "155.1", "0.484", "Loci", "30.7", "0.923", "52.5", "0.881", "98.3", "0.814", "165.1", "0.720", "221.2", "0.639", "Method", "MSE", "SSIM", "MSE", "SSIM", "MSE", "SSIM", "MSE", "SSIM", "MSE", "SSIM", "T", "=", "10", "T", "=", "20", "T", "=", "30", "T", "=", "50", "T", "=", "100"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 112.32,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Table2-1.png"
+}, {
+  "caption": "Figure 7: Comparison between ground truth top row, PhyDNet center row and Loci bottom row for a prediction of up to 90 frames. Both PhyDNet and Loci were trained on 10 frame prediction. While in PhyDNet, the appearance of the digits dissolves after a few frames beyond the initial training distribution, Loci manages to keep the Gestalt code and the location accurate until the fourth collision at around frame 42. The Gestalt codes remain stable until the end of the considered 100 time steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1700744628906,
+    "y1": 263.1485900878906,
+    "y2": 312.987060546875
+  },
+  "figType": "Figure",
+  "imageText": ["t=10", "t=11", "t=12", "t=14", "t=16", "t=18", "t=20", "t=23", "t=26", "t=29", "t=33", "t=37", "t=42", "t=48", "t=58", "t=68", "t=78", "t=88", "t=100"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 181.44,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure7-1.png"
+}, {
+  "caption": "Figure 12: Ablation the importance of different input channels.",
+  "captionBoundary": {
+    "x1": 180.34300231933594,
+    "x2": 431.65948486328125,
+    "y1": 340.7755432128906,
+    "y2": 346.77801513671875
+  },
+  "figType": "Figure",
+  "imageText": ["paper-baseline", "No", "Qk", "No", "Ms", "k", "and", "Qs", "k", "No", "Rk", "No", "Mk", "L", "2", "o", "b", "j", "e", "c", "t", "Updates", "10−4", "104", "105", "106", "10−5"],
+  "name": "12",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 504.0,
+    "y1": 134.88,
+    "y2": 310.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Ablation the importance of different regularization losses.",
+  "captionBoundary": {
+    "x1": 168.52200317382812,
+    "x2": 443.4797058105469,
+    "y1": 668.7605590820312,
+    "y2": 674.7630004882812
+  },
+  "figType": "Figure",
+  "imageText": ["paper-baseline", "No", "Lt", "No", "Lp", "No", "Lo", "L", "2", "o", "b", "j", "e", "c", "t", "Updates", "10−4", "104", "105", "106", "10−5"],
+  "name": "13",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 504.0,
+    "y1": 462.71999999999997,
+    "y2": 638.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure13-1.png"
+}, {
+  "caption": "Figure 8: Fully unsupervised real world tracking example trained on 10 hour aquarium footage.",
+  "captionBoundary": {
+    "x1": 115.73500061035156,
+    "x2": 496.2663269042969,
+    "y1": 721.7025756835938,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 475.68,
+    "y2": 707.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NeDc-Ak-H_-Figure8-1.png"
+}]

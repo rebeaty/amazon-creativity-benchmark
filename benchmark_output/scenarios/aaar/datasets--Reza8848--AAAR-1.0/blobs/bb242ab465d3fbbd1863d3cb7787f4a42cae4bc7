@@ -1,0 +1,481 @@
+[{
+  "caption": "Table 1: Evaluations on the MNIST-CIFAR dataset. We report accuracy on MNIST and CIFAR trained using OOD linear head (acco(f, co)), linear head bias (b) and shift sensitivity (s).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00341796875,
+    "y1": 83.53055572509766,
+    "y2": 101.98602294921875
+  },
+  "figType": "Table",
+  "imageText": ["SL", "Supervised", "97.7", "(±9e-1)", "1.4", "(±1e+0)", "-0.3", "(±1e+0)", "51.5", "(±1e+0)", "47.6", "(±1e+0)", "0.8", "(±9e-1)", "SimCLR", "99.7", "(±1e-2)", "0.2", "(±1e-3)", "-0.2", "(±3e-3)", "85.8", "(±1e+0)", "14.1", "(±2e+0)", "35.5", "(±1e+0)", "SimSiam", "99.8", "(±2e-1)", "0.1", "(±2e-1)", "0.0", "(±9e-2)", "87.8", "(±2e+0)", "12.1", "(±2e+0)", "35.6", "(±4e+0)SSL", "BYOL", "99.8", "(±4e-2)", "0.0", "(±1e-2)", "0.9", "(±8e-3)", "84.8", "(±9e-1)", "15.0", "(±1e+0)", "33.2", "(±1e+0)", "SSL", "average", "99.8", "(±8e-2)", "0.1", "(±5e-2)", "0.2", "(±3e-2)", "86.1", "(±2e+0)", "13.7", "(±2e+0)", "34.8", "(±4e+0)", "AE", "99.9", "(±1e-2)", "0.0", "(±1e-2)", "0.0", "(±2e-3)", "81.1", "(±1e+0)", "18.8", "(±1e+0)", "30.2", "(±1e+0)", "VAE", "99.8", "(±8e-3)", "-0.1", "(±9e-3)", "0.5", "(±1e-4)", "79.7", "(±4e+0)", "20.2", "(±3e+0)", "29.2", "(±6e+0)", "IWAE", "99.8", "(±9e-3)", "0.0", "(±4e-3)", "0.1", "(±5e-3)", "80.8", "(±2e+0)", "19.0", "(±3e+0)", "30.0", "(±4e+0)AE", "β-VAE", "99.8", "(±2e-2)", "0.0", "(±4e-2)", "-0.1", "(±3e-2)", "78.0", "(±3e+0)", "21.8", "(±4e+0)", "28.0", "(±4e+0)", "AE", "average", "99.8", "(±1e-2)", "0.0", "(±1e-2)", "0.1", "(±9e-3)", "79.9", "(±3e+0)", "20.0", "(±4e+0)", "29.3", "(±4e+0)", "acco(f,", "co)", "↑", "s", "↓", "b", "acco(f,", "co)", "↑", "s", "↓", "b", "Regime", "Method", "MNIST", "(%)", "CIFAR", "(%)"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 489.12,
+    "y1": 104.64,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table1-1.png"
+}, {
+  "caption": "Table 7: Evaluations on test set of Camelyon17C with rid = 1, all metrics computed using average accuracy.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 299.7325439453125,
+    "y1": 271.3895568847656,
+    "y2": 299.3089904785156
+  },
+  "figType": "Table",
+  "imageText": ["SL", "Supervised", "73.4", "(±6e+0)", "10.7", "(±3e+0)", "5.9", "(±8e+0)", "SimCLR", "85.8", "(±8e+1)", "2.8", "(±4e-1)", "6.2", "(±2e+0)", "SimSiam", "82.1", "(±1e+0)", "6.0", "(±7e-1)", "8.3", "(±4e+0)SSL", "BYOL", "74.8", "(±5e+0)", "10.3", "(±2e+0)", "-2.2", "(±4e+0)", "SSL", "average", "80.9", "(±2e+0)", "6.3", "(±1e+0)", "4.1", "(±3e+0)", "AE", "75.7", "(±5e+0)", "7.3", "(±2e+0)", "35.1", "(±4e+0)", "VAE", "86.0", "(±3e+0)", "2.7", "(±1e+0)", "12.4", "(±4e+0)", "IWAE", "86.1", "(±1e+0)", "2.6", "(±7e-1)", "9.1", "(±3e+0)AE", "β-VAE", "84.7", "(±2e+0)", "3.8", "(±1e+0)", "15.5", "(±4e+0)", "AE", "average", "83.1", "(±3e+0)", "4.1", "(±1e+0)", "18.0", "(±4e+0)", "acco(f,", "co)", "↑", "s", "↓", "b", "Regime", "Method", "Metrics", "(%)"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 307.2,
+    "y1": 303.36,
+    "y2": 415.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table7-1.png"
+}, {
+  "caption": "Table 5: Evaluations on test set of Camelyon17C with rid = 0.5, all metrics computed using average accuracy.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 299.7325439453125,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["SL", "Supervised", "81.5", "(±5e+0)", "13.2", "(±3e+0)", "3.4", "(±4e+0)", "SimCLR", "84.5", "(±2e+0)", "8.0", "(±1e+0)", "6.6", "(±2e+0)", "SimSiam", "86.1", "(±2e+0)", "5.7", "(±1e+0)", "8.3", "(±4e+0)SSL", "BYOL", "86.4", "(±2e+0)", "4.5", "(±2e+0)", "8.8", "(±4e+0)", "SSL", "average", "85.7", "(±2e+0)", "6.1", "(±2e+0)", "7.9", "(±3e+0)", "AE", "80.4", "(±3e+0)", "6.0", "(±2e+0)", "19.0", "(±4e+0)", "VAE", "88.6", "(±2e+0)", "-0.5", "(±1e+0)", "17.8", "(±6e+0)", "IWAE", "87.8", "(±1e+0)", "-0.2", "(±1e+0)", "26.4", "(±6e+0)AE", "β-VAE", "88.5", "(±2e+0)", "0.1", "(±9e-1)", "19.7", "(±6e+0)", "AE", "average", "86.3", "(±2e+0)", "1.4", "(±1e+0)", "20.7", "(±5e+0)", "acco(f,", "co)", "↑", "s", "↓", "b", "Regime", "Method", "Metrics", "(%)"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 307.2,
+    "y1": 115.67999999999999,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table5-1.png"
+}, {
+  "caption": "Figure 1: Performance of auto-encoder (AE), self-supervised learning (SSL), supervised learning (SL) models. Top row: the OOD test set accuracy (%) using linear heads trained on OOD data; Bottom row: Shift Sensitivity (see section 2 for definition), measures models’ sensitivity to distribution shift. Note here rid = 1 for Camelyon17-CS, FMoW-CS, and CdSprites (see sections 3.1.2 and 3.2.2).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 505.73876953125,
+    "y1": 253.90451049804688,
+    "y2": 294.2779846191406
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "FMoW", "37.7", "4.99", "9.15", "AE", "SSL", "SL", "(e)", "Camelyon17", "3.5", "1.63", "-0.2", "AE", "SSL", "SL", "(d)", "FMoW-CS", "12.26", "8.77", "9.29", "AE", "SSL", "SL", "(c)", "Camelyon17-CS", "10.72", "4.09", "6.35", "AE", "SSL", "SL", "(b)", "CdSprites", "56", "17.3", "47.5", "AE", "SSL", "SL", "(a)", "MNIST-CIFAR", "47.6", "20", "13.7", "AE", "SSL", "SL", "Shift", "Sensitivity", "(lower", "is", "better)", "35.6", "29.64", "22.79", "AE", "SSL", "SL", "86.84", "89.8", "86.91", "AE", "SSL", "SL", "26.92", "25.73", "18.26", "AE", "SSL", "SL", "73.37", "83.11", "80.91", "AE", "SSL", "SL", "44", "82.7", "52.5", "AE", "SSL", "SL", "51.5", "79.9", "86.1", "AE", "SSL", "SL", "OOD", "Accuracy", "(higher", "is", "better)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 246.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Figure1-1.png"
+}, {
+  "caption": "Table 2: Evaluations on the CdSprites dataset with rid = 1.0. We report accuracy for color and shape classifiers trained using OOD linear head (acco(f, co)), linear head bias (b) and shift sensitivity (s).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0003967285156,
+    "y1": 53.64255142211914,
+    "y2": 72.0980224609375
+  },
+  "figType": "Table",
+  "imageText": ["SL", "Supervised", "100.0", "(±0e+0)", "0.0", "(±0e+0)", "0.0", "(±3e-2)", "44.0", "(±7e-1)", "56.0", "(±7e-1)", "10.7", "(±7e-1)", "SimCLR", "100.0", "(±0e+0)", "0.0", "(±0e+0)", "0.0", "(±1e-1)", "87.8", "(±5e-1)", "12.2", "(±5e-1)", "54.5", "(±5e-1)", "SimSiam", "100.0", "(±0e+0)", "0.0", "(±0e+0)", "0.1", "(±1e-1)", "69.2", "(±2e+0)", "30.8", "(±2e+0)", "35.6", "(±2e+0)SSL", "BYOL", "100.0", "(±0e+0)", "0.0", "(±0e+0)", "0.0", "(±0e+0)", "91.1", "(±4e+0)", "8.9", "(±4e+0)", "57.9", "(±4e+0)", "SSL", "average", "100.0", "(±0e+0)", "0.0", "(±0e+0)", "0.1", "(±3e-2)", "82.7", "(±2e+0)", "17.3", "(±2e+0)", "49.3", "(±4e+0)", "AE", "100.0", "(±0e+0)", "0.0", "(±2e-3)", "0.3", "(±5e-1)", "46.1", "(±6e-1)", "53.9", "(±6e-1)", "12.7", "(±5e-1)", "VAE", "99.7", "(±3e-1)", "0.3", "(±3e-1)", "-0.3", "(±3e-1)", "52.4", "(±2e+0)", "47.6", "(±2e+0)", "18.9", "(±3e+0)AE", "IWAE", "100.0", "(±0e+0)", "0.0", "(±2e-3)", "0.4", "(±5e-1)", "58.9", "(±2e+0)", "41.1", "(±2e+0)", "25.6", "(±2e+0)", "AE", "average", "99.9", "(±9e-1)", "0.1", "(±9e-2)", "0.1", "(±4e-1)", "52.5", "(±2e+0)", "47.5", "(±2e+0)", "19.1", "(±2e+0)", "acco(f,", "co)", "↑", "s", "↓", "b", "acco(f,", "co)", "↑", "s", "↓", "b", "Regime", "Method", "Color", "classification", "(%)", "Shape", "classification", "(%)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 491.03999999999996,
+    "y1": 83.52,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table2-1.png"
+}, {
+  "caption": "Figure 4: Evaluations on the CdSprites dataset with rid ∈ {0.25, 0.5, 0.75, 1.0}. We report shape classification accuracy using OOD-trained linear head (acco(f, co)), shift sensitivity s, and linear head bias b. Results are shown for individual models from the class of AE (blue), SSL (green), and SL (grey) algorithms. The black horizontal line denotes the random baseline (33.3% for three classes).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.4916076660156,
+    "y1": 208.11355590820312,
+    "y2": 246.99200439453125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Linear", "head", "bias", "b", "(%).", "Linear", "head", "bias", "b", "AE", "VAE", "IWAE", "SimCLR", "BYOL", "SimSiam", "SL", "100", "80", "60", "40", "20", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "rid", "(b)", "Shift", "sensitivity", "s", "(%).", "Shift", "Sensitivity", "s", "(", ")", "AE", "VAE", "IWAE", "SimCLR", "BYOL", "SimSiam", "SL", "100", "80", "60", "40", "20", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "rid", "(a)", "acco(f,", "co)", "(%).", "SL", "random", "SimCLR", "BYOL", "SimSiam", "AE", "VAE", "IWAE", "Test", "accuracy", "(", ")", "100", "80", "60", "40", "20", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "rid"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 496.32,
+    "y1": 83.03999999999999,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Correlation coefficient ablation for CdSprites. Shape classification accuracy for the CdSprites experiment with varying correlation of the ID training data (rid, x-axis) and OOD training and test data (rood, y-axis). Backbones were trained on data with correlation rid and linear classifiers trained and evaluated on top of the frozen backbones with correlation rood.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.004150390625,
+    "y1": 625.341552734375,
+    "y2": 665.7150268554688
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "SL", "100", "90", "80", "70", "60", "50", "100", "100", "100", "100", "44.4", "40", "100", "100", "100", "100", "51.7", "100", "100", "100", "100", "65.5", "100", "100", "100", "100", "79.4", "100", "100", "100", "100", "100", "oo", "d", "0.", "0", "0.", "25", "0.", "5", "0.", "75", "1.", "0", "0.0", "0.25", "0.5", "0.75", "1.0", "id", "(b)", "SSL", "100", "90", "80", "70", "60", "50", "100", "100", "100", "99.9", "86.4", "40", "100", "100", "100", "99.9", "89.1", "100", "100", "100", "99.9", "91.6", "100", "100", "100", "100", "95", "100", "100", "100", "100", "100", "oo", "d", "0.", "0", "0.", "25", "0.", "5", "0.", "75", "1.", "0", "0.0", "0.25", "0.5", "0.75", "1.0", "id", "(a)", "AE", "100", "90", "80", "70", "60", "50", "53.2", "52.3", "51.5", "52.9", "51.1", "40", "57.3", "56.8", "55.9", "57.3", "56.4", "68.1", "68.2", "67.7", "68.7", "68.4", "83", "83.6", "83.3", "83.7", "83.8", "100", "100", "100", "100", "100", "oo", "d", "0.", "0", "0.", "25", "0.", "5", "0.", "75", "1.", "0", "0.0", "0.25", "0.5", "0.75", "1.0", "id"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 484.32,
+    "y1": 503.03999999999996,
+    "y2": 612.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Synthetic vs. realistic distribution shift: The distribution shift in synthetic datasets (left, MNIST-CIFAR and CdSprites) are usually extreme and controllable (adjusted via changing the correlation); for realistic datasets (right, WILDS-Camelyon17 and FMoW) distribution shift can be subtle, hard to identify and impossible to control.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 503.9999084472656,
+    "y1": 193.88351440429688,
+    "y2": 232.76202392578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Figure2-1.png"
+}, {
+  "caption": "Table 16: Chosen hyperparameters for FMoW including latent dimension (L), learning rate (lr.), weight decay (wd.), optimiser (optim.), learning rate scheduler (lr. scheduler).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2453918457031,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "-", "1e-4", "0", "Adam", "step", "SimCLR", "-", "5e-4", "1e-3", "SGD", "step", "BYOL", "-", "1e-2", "1e-4", "SGD", "step", "SimSiam", "-", "5e-4", "0", "SGD", "step", "AE", "CNN", "1e-1", "1e-4", "SGD", "none", "VAE", "MLP", "1e-6", "1e-4", "Adam", "step", "IWAE", "MLP", "1e-6", "1e-4", "Adam", "step", "β-VAE", "MLP", "1e-6", "1e-4", "Adam", "step", "Decoder", "lr.", "wd.", "Optim.", "lr.", "scheduler"],
+  "name": "16",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 201.6,
+    "x2": 408.47999999999996,
+    "y1": 108.47999999999999,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table16-1.png"
+}, {
+  "caption": "Table 18: MLP architecture, Camelyon17 dataset.",
+  "captionBoundary": {
+    "x1": 206.4739990234375,
+    "x2": 405.2178955078125,
+    "y1": 442.2245178222656,
+    "y2": 448.22698974609375
+  },
+  "figType": "Table",
+  "imageText": ["Input", "∈", "RL", "fc.", "2L", "&", "ReLU", "fc.", "4L", "&", "ReLU", "fc.", "3*96*96", "&", "ReLU", "MLP,", "Decoder"],
+  "name": "18",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 270.71999999999997,
+    "x2": 341.28,
+    "y1": 382.56,
+    "y2": 431.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table18-1.png"
+}, {
+  "caption": "Table 19: ResNet decoder architecture, Camelyon17 dataset.",
+  "captionBoundary": {
+    "x1": 185.0399932861328,
+    "x2": 426.6529541015625,
+    "y1": 588.4605712890625,
+    "y2": 594.4630126953125
+  },
+  "figType": "Table",
+  "imageText": ["Input", "∈", "RL", "fc.", "2048", "&", "ReLU", "3x3", "conv.", "16C", "stride", "1x1", "pad", "1x1", "3x3", "conv.", "16C", "stride", "1x1", "pad", "1x1", "x2", "upsample", "3x3", "conv.", "8C", "stride", "1x1", "pad", "1x1", "3x3", "conv.", "8C", "stride", "1x1", "pad", "1x1", "x2", "upsample", "3x3", "conv.", "8C", "stride", "1x1", "pad", "1x1", "3x3", "conv.", "8C", "stride", "1x1", "pad", "1x1", "3x3", "conv.", "3", "stride", "1x1", "pad", "1x1", "ResNet,", "Decoder"],
+  "name": "19",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 253.92,
+    "x2": 358.08,
+    "y1": 475.68,
+    "y2": 577.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table19-1.png"
+}, {
+  "caption": "Table 17: CNN architecture, Camelyon17 dataset.",
+  "captionBoundary": {
+    "x1": 206.1999969482422,
+    "x2": 405.4918212890625,
+    "y1": 349.6865234375,
+    "y2": 355.6889953613281
+  },
+  "figType": "Table",
+  "imageText": ["Input", "∈", "RL", "4x4", "upconv.", "8C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "8C", "stride", "2x2", "pad", "0x0", "&", "ReLU", "4x4", "upconv.", "4C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "2C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "3", "stride", "2x2", "pad", "1x1", "&", "Sigmoid", "CNN,", "Decoder"],
+  "name": "17",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 238.56,
+    "x2": 373.44,
+    "y1": 267.84,
+    "y2": 338.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table17-1.png"
+}, {
+  "caption": "Table 3: Evaluations on test set of Camelyon17, all metrics computed using average accuracy.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 299.32696533203125,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["SL", "Supervised", "86.8", "(±2e+0)", "3.5", "(±1e+0)", "7.4", "(±3e+0)", "SimCLR", "92.7", "(±2e+0)", "0.4", "(±1e+0)", "8.3", "(±1e+0)", "SimSiam", "86.7", "(±1e+0)", "3.1", "(±1e+0)", "7.9", "(±3e+0)SSL", "BYOL", "89.9", "(±1e+0)", "1.4", "(±1e+0)", "10.3", "(±2e+0)", "SSL", "average", "89.8", "(±1e+0)", "1.6", "(±1e+0)", "8.8", "(±2e+0)", "AE", "84.4", "(±2e+0)", "-0.6", "(±1e+0)", "12.7", "(±2e+0)", "VAE", "88.1", "(±2e+0)", "0.5", "(±2e+0)", "39.0", "(±2e+0)", "IWAE", "88.1", "(±1e+0)", "-0.9", "(±3e+0)", "39.1", "(±4e+0)AE", "β-VAE", "87.1", "(±4e+0)", "0.2", "(±4e+0)", "36.0", "(±5e+0)", "AE", "average", "86.9", "(±2e+0)", "-0.2", "(±3e+0)", "31.7", "(±3e+0)", "acco(f,", "co)", "↑", "s", "↓", "b", "Regime", "Method", "Metrics", "(%)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 306.24,
+    "y1": 104.64,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table3-1.png"
+}, {
+  "caption": "Figure 6: Linear head bias on controllable shift datasets",
+  "captionBoundary": {
+    "x1": 195.02200317382812,
+    "x2": 416.97869873046875,
+    "y1": 186.90255737304688,
+    "y2": 192.905029296875
+  },
+  "figType": "Figure",
+  "imageText": ["SL", "SSL", "AE", "100", "Linear", "head", "bias", "b", "50", "0", "0.0", "0.5", "1.0", "rid", "SL", "SSL", "AE", "b", "bi", "as", "ea", "d", "ar", "h", "Li", "ne", "10.0", "7.5", "5.0", "2.5", "0.0", "0.0", "0.5", "1.0", "rid", "bi", "as", "b", "SL", "SSL", "AE", "ea", "d", "ar", "h", "Li", "ne", "40", "20", "0", "0.0", "0.5", "1.0", "rid"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 496.79999999999995,
+    "y1": 83.52,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Figure6-1.png"
+}, {
+  "caption": "Table 21: Domain-label pairing for FMoW-CS.",
+  "captionBoundary": {
+    "x1": 211.63499450683594,
+    "x2": 400.05755615234375,
+    "y1": 373.1455383300781,
+    "y2": 379.14801025390625
+  },
+  "figType": "Table",
+  "imageText": ["lighthouse,", "gas", "station,", "aquaculture,", "burial", "site,", "debris", "or", "rubble", "Oceania", "Single-unit", "residential,", "parking", "lot", "or", "garage,", "race", "track,", "park,", "ground", "transportation", "station,", "shopping", "mall,", "airport", "terminal,", "airport", "hangar,", "stadium,", "golf", "course,", "office", "building,", "interchange,", "car", "dealership,", "railway", "bridge,", "storage", "tank,", "surface", "mine,", "zoo", "Americas", "Recreational", "facility,", "swimming", "pool,", "educational", "institution,", "substation,", "flooded", "road,", "border", "checkpoint,", "prison,", "archaeological", "site,", "factory", "or", "powerplant,", "impoverished", "settlement,", "lake", "or", "pond", "Africa", "Place", "of", "worship,", "crop", "field,", "dam,", "tower,", "runway,", "airport,", "electric", "treatment", "facility,", "amusement", "park,", "fire", "station,", "fountain,", "construction", "site,", "shipyard,", "solar", "farm,", "space", "facility", "Europe", "Smokestack,", "barn,", "waste", "disposal,", "hospital,", "water", "helipad,", "nuclear", "powerplant,", "police", "station,", "port", "Asia", "Military", "facility,", "multi-unit", "residential,", "tunnel", "opening,", "wind", "farm,", "toll", "booth,", "road", "bridge,", "oil", "or", "gas", "facility,", "Domain", "(region)", "Label"],
+  "name": "21",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 157.92,
+    "x2": 451.2,
+    "y1": 386.88,
+    "y2": 576.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table21-1.png"
+}, {
+  "caption": "Table 20: Domain-label pairing for Camelyon17-CS.",
+  "captionBoundary": {
+    "x1": 200.2429962158203,
+    "x2": 411.45001220703125,
+    "y1": 307.3635559082031,
+    "y2": 313.36602783203125
+  },
+  "figType": "Table",
+  "imageText": ["Hospital", "1,", "2", "Benign", "Hospital", "3", "Malignant", "Domain", "(hospital)", "Label"],
+  "name": "20",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 250.56,
+    "x2": 359.03999999999996,
+    "y1": 320.64,
+    "y2": 356.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table20-1.png"
+}, {
+  "caption": "Table 15: Chosen hyperparameters for Camelyon17 including latent dimension (L), learning rate (lr.), weight decay (wd.), optimiser (optim.), learning rate scheduler (lr. scheduler).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2450256347656,
+    "y1": 621.5635986328125,
+    "y2": 638.5250244140625
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "-", "1e-3", "1e-3", "SGD", "none", "SimCLR", "-", "1e-1", "0", "SGD", "none", "BYOL", "-", "1e-1", "1e-5", "SGD", "warmup", "cosine", "SimSiam", "-", "1e-1", "1e-5", "SGD", "warmup", "cosine", "AE", "ResNet", "5e-4", "1e-5", "SGD", "warmup", "cosine", "VAE", "MLP", "1e-4", "0", "Adam", "none", "IWAE", "MLP", "1e-4", "0", "Adam", "none", "β-VAE", "MLP", "1e-4", "0", "Adam", "none", "Decoder", "lr.", "wd.", "Optim.", "lr.", "scheduler"],
+  "name": "15",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 412.32,
+    "y1": 646.56,
+    "y2": 741.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table15-1.png"
+}, {
+  "caption": "Table 14: Hyperparameter search range for Camelyon17, including decoder type, latent dimension (L), learning rate (lr.), weight decay (wd.), optimiser (optim.), learning rate scheduler (lr. scheduler).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00140380859375,
+    "y1": 94.48954010009766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["AE", "[CNN,", "MLP,", "ResNet]", "{256,", "512,", "1024}", "{1e-4,", "5e-4,", "1e-3,", "5e-3,", "1e-2}", "{0,", "1e-4}", "{Adam,", "SGD}", "{warmup", "cosine,", "step,", "none}", "SSL", "-", "{256,", "512,", "1024}", "{1e-4,", "5e-4,", "1e-3,", "5e-3,", "1e-2,", "1e-1,", "5e-1,", "1}", "{0,", "1e-3,", "1e-4,", "1e-5}", "{Adam,", "SGD}", "{warmup", "cosine,", "step,", "none}", "SL", "-", "{256,", "512,", "1024}", "{1e-4,", "5e-4,", "1e-3,", "5e-3,", "1e-2,", "1e-1,", "5e-1}", "{0,", "1e-4}", "{Adam,", "SGD}", "{warmup", "cosine,", "step,", "none}", "Decoder", "type", "L", "lr.", "wd.", "Optim.", "lr.", "scheduler"],
+  "name": "14",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 522.24,
+    "y1": 118.56,
+    "y2": 153.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table14-1.png"
+}, {
+  "caption": "Table 12: Chosen hyperparameters for CdSprites including latent dimension (L), base feature size of CNN (C), batch size (B), learning rate (lr.), weight decay (wd.), optimiser (optim.), learning rate scheduler (lr.scheduler).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9992370605469,
+    "y1": 184.47555541992188,
+    "y2": 212.39599609375
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "512", "64", "128", "5e-5", "1e-4", "Adam", "none", "SimCLR", "64", "32", "64", "5e-3", "1e-5", "SGD", "warmup", "cosine", "BYOL", "64", "32", "64", "5e-1", "1e-5", "SGD", "warmup", "cosine", "SimSiam", "64", "32", "64", "8e-2", "1e-5", "SGD", "warmup", "cosine", "AE", "512", "64", "128", "5e-5", "1e-4", "Adam", "none", "VAE", "512", "64", "128", "5e-5", "1e-4", "Adam", "none", "IWAE", "512", "64", "128", "5e-5", "1e-4", "Adam", "none", "L", "C", "B", "lr.", "wd.", "Optim.", "none"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 222.72,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table12-1.png"
+}, {
+  "caption": "Table 13: CNN architecture, CdSprites dataset.",
+  "captionBoundary": {
+    "x1": 212.00900268554688,
+    "x2": 399.6844482421875,
+    "y1": 470.37255859375,
+    "y2": 476.3750305175781
+  },
+  "figType": "Table",
+  "imageText": ["Input", "∈", "RL", "4x4", "upconv.", "8C", "stride", "1x1", "pad", "0x0", "&", "ReLU", "4x4", "upconv.", "4C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "2C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "3", "stride", "2x2", "pad", "1x1", "Decoder", "Input", "∈", "R3×64×64", "4x4", "conv.", "C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "conv.", "2C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "conv.", "4C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "conv.", "8C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "conv.", "L", "stride", "1", "pad", "0", "Encoder"],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 238.56,
+    "x2": 373.44,
+    "y1": 332.64,
+    "y2": 459.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table13-1.png"
+}, {
+  "caption": "Figure 3: Evaluations on Camelyon17-CS, FMoW-CS, and CdSprites with rid ∈ {0, 0.5, 1.0}. We report OOD test accuracy using OOD-trained linear head (acco(f, co)) and shift sensitivity (s). Blue lines are results averaged over AE models, green lines are SSL models and grey is SL.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042419433594,
+    "y1": 261.9685363769531,
+    "y2": 289.88800048828125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CdSprites", "SL", "SSL", "AE", "s", "tiv", "ity", "en", "si", "ft", "S", "S", "hi", "100", "50", "0", "0.0", "0.5", "1.0", "rid", "(b)", "FMoW-CS", "SL", "SSL", "AE", "s", "tiv", "ity", "en", "si", "ft", "S", "S", "hi", "40", "20", "0", "0.0", "0.5", "1.0", "rid", "(a)", "Camelyon17-CS", "SL", "SSL", "AE", "s", "tiv", "ity", "en", "si", "ft", "S", "S", "hi", "20", "10", "0", "0.0", "0.5", "1.0", "rid", "SL", "SSL", "AE", "y", "ur", "ac", "a", "cc", "Te", "st", "100", "50", "0", "0.0", "0.5", "1.0", "rid", "SL", "SSL", "AE", "y", "ur", "ac", "a", "cc", "Te", "st", "40", "30", "20", "0.0", "0.5", "1.0", "rid", "SL", "SSL", "AE", "y", "ur", "ac", "a", "cc", "Te", "st", "90", "80", "70", "0.0", "0.5", "1.0", "rid"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 478.08,
+    "y1": 84.0,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Figure3-1.png"
+}, {
+  "caption": "Table 9: Hyperparameter search range for MNIST-CIFAR, including base channel size of CNN (C), learning rate (lr.), weight decay (wd.), optimiser (optim.), learning rate scheduler (lr. scheduler).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2449645996094,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["AE", "{16,", "32,", "64,", "128}", "{1e-4,", "5e-4,", "1e-3,", "5e-3,", "1e-2}", "{0,", "1e-4}", "{Adam,", "SGD}", "{warmup", "cosine,", "step,", "none}", "SSL", "{16,", "32,", "64,", "128}", "uniformly", "sampled", "from", "[0.1,", "1]", "{0,", "1e-4}", "{Adam,", "SGD}", "{warmup", "cosine,", "step,", "none}", "SL", "{16,", "32,", "64,", "128}", "{1e-4,", "5e-4,", "1e-3,", "5e-3,", "1e-2,", "1e-1,", "5e-1}", "{0,", "1e-4}", "{Adam,", "SGD}", "{warmup", "cosine,", "step,", "none}", "C", "lr.", "wd.", "Optim.", "lr.", "scheduler"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 526.0799999999999,
+    "y1": 108.47999999999999,
+    "y2": 152.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table9-1.png"
+}, {
+  "caption": "Table 10: Chosen hyperparameters for MNIST-CIFAR including latent dimension (L), base feature size of CNN (C), batch size (B), learning rate (lr.), weight decay (wd.), optimiser (optim.), learning rate scheduler (lr.scheduler).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9968566894531,
+    "y1": 211.65853881835938,
+    "y2": 239.5789794921875
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "128", "16", "128", "1e-4", "0", "SGD", "warmup", "cosine", "SimCLR", "128", "32", "128", "6e-1", "1e-4", "SGD", "warmup", "cosine", "BYOL", "128", "64", "128", "7e-1", "0", "SGD", "warmup", "cosine", "SimSiam", "128", "128", "128", "6e-1", "1e-5", "SGD", "warmup", "cosine", "AE", "128", "16", "128", "1e-3", "0", "Adam", "warmup", "cosine", "VAE", "128", "32", "128", "1e-4", "0", "Adam", "warmup", "cosine", "IWAE", "128", "32", "128", "1e-4", "0", "Adam", "step", "β-VAE", "128", "16", "128", "1e-4", "0", "Adam", "step", "L", "C", "B", "lr.", "wd.", "Optim.", "lr.", "scheduler"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 427.2,
+    "y1": 247.2,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table10-1.png"
+}, {
+  "caption": "Table 11: CNN architecture, MNIST-CIFAR dataset.",
+  "captionBoundary": {
+    "x1": 200.66099548339844,
+    "x2": 411.0312194824219,
+    "y1": 556.4815063476562,
+    "y2": 562.4839477539062
+  },
+  "figType": "Table",
+  "imageText": ["Input", "∈", "RL", "4x4", "upconv.", "4C", "stride", "1x1", "pad", "0x0", "&", "ReLU", "4x1", "upconv.", "4C", "stride", "2x1", "pad", "1x0", "&", "ReLU", "4x4", "upconv.", "2C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "upconv.", "3", "stride", "2x2", "pad", "1x1", "&", "Sigmoid", "Decoder", "Input", "∈", "R3×64×32", "4x4", "conv.", "C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "conv.", "2C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x4", "conv.", "4C", "stride", "2x2", "pad", "1x1", "&", "ReLU", "4x1", "conv.", "4C", "stride", "2x1", "pad", "1x0", "&", "ReLU", "4x4", "conv.", "L", "stride", "1", "pad", "0,", "4x4", "conv.", "L", "stride", "1x1", "pad", "0x0", "Encoder"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 218.88,
+    "x2": 393.12,
+    "y1": 418.56,
+    "y2": 545.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LiXDW7CF94J-Table11-1.png"
+}]

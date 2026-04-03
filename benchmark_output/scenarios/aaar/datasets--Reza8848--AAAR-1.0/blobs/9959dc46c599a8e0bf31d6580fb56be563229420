@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 6: Measuring privacy during Shakespeare training",
+  "captionBoundary": {
+    "x1": 192.0780029296875,
+    "x2": 419.9225769042969,
+    "y1": 406.53851318359375,
+    "y2": 412.5409851074219
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Shakespeare", "per-round", "privacy", "(ε", "=", "∞)", "20", "r", "15", "10", "5", "0", "0", "100", "200", "300", "400", "500", "Global", "Round", "(r)", "(a)", "Shakespeare", "per-round", "privacy", "(ε", "=", "50)", "r", ")", "r", "ge", "t", "(", "B", "ud", "ac", "y", "Pr", "iv", "10", "8", "6", "4", "2", "0", "0", "100", "200", "300", "400", "500", "Global", "Round", "(r)"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 142.07999999999998,
+    "x2": 470.4,
+    "y1": 259.68,
+    "y2": 393.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Empirical privacy measurements over the course of FL training for popular LEAF benchmarks Sent140, CelebA and Shakespeare with ε ∈ {10, 30, 50}. We observe a notable gap between the theoretical ε obtained with DP-FEDAVG and the empirical ε̂ obtained with CANIFE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 205.03250122070312,
+    "y2": 232.95196533203125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Shakespeare", "(2-layer", "LSTM)", "ge", "t", "(", ")", "10", "30", "50", "B", "ud", "ac", "y", "Pr", "iv", "50", "40", "30", "20", "10", "0", "0", "100", "200", "300", "400", "500", "Global", "Round", "(r)", "(b)", "CelebA", "(ResNet18)", "ge", "t", "(", ")", "10", "30", "50", "B", "ud", "ac", "y", "Pr", "iv", "50", "40", "30", "20", "10", "0", "0", "500", "1000", "1500", "2000", "2500", "Global", "Round", "(r)", "(a)", "Sent140", "(2-layer", "LSTM)", "ge", "t", "(", ")", "10", "30", "50", "B", "ud", "ac", "y", "Pr", "iv", "50", "40", "30", "20", "10", "0", "0", "2000", "4000", "6000", "8000", "Global", "Round", "(r)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 93.6,
+    "y2": 199.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Experiments on CIFAR-10 on a toy setup where each client holds a single data sample. (a) Attack histograms without DP noise, showing that our attack completely succeeds. (b) Attack histograms with DP noise: as the DP noise σ increases, it becomes harder to separate both histograms. (c) Varying the design pool size and the number of participating clients. The y-axis shows the mean standard deviation of the histograms formed from the attack.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 212.71054077148438,
+    "y2": 262.5489501953125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "32", "128", "16", "64", "tio", "n", "Number", "of", "clients", "ev", "ia", "rd", "D", "an", "da", "n", "St", "M", "ea", "0.025", "0.020", "0.015", "0.010", "0.005", "0.000", "0", "500", "1000", "1500", "2000", "Design", "Pool", "Size", "(m)", "(b)", "σ", "=", "0.423", "Without", "z,", "=-0.1033,", "=0.512", "With", "z,", "=1.0955,", "=0.445", "y", "ue", "nc", "Fr", "eq", "8", "6", "4", "2", "0", "1", "0", "1", "2", "Attack", "score", "(sr)", "(a)", "σ", "=", "0", "Without", "z,", "=-0.0032,", "=0.006", "With", "z,", "=0.9981,", "=0.007", "y", "ue", "nc", "Fr", "eq", "20", "15", "10", "5", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Attack", "score", "(sr)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 92.64,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure3-1.png"
+}, {
+  "caption": "Figure 4: (a) and (b) Monitoring per-round empirical privacy on LEAF benchmarks. Models are trained to ε = 50 with 100 clients per round. CIs for ε̂r are compared with the theoretical per-round epsilon εr, rounds with an upper CI of∞ do not have CIs displayed. (c) CANIFE empirical privacy incurred during the whole training, averaged over 5 independent runs (see Figure 1 for details).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 209.75851440429688,
+    "y2": 248.637939453125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CANIFE", "empirical", "epsilon", "ε̂", "10", "30", "50", "6", "4", "2", "0", "CelebA", "Sent140", "Shakespeare", "Dataset", "(b)", "CelebA", "(ResNet18)", "r", ")", "r", "ge", "t", "(", "B", "ud", "ac", "y", "Pr", "iv", "12.5", "10.0", "7.5", "5.0", "2.5", "0.0", "0", "500", "1000", "1500", "2000", "2500", "Global", "Round", "(r)", "(a)", "Sent140", "(2-layer", "LSTM)", "t", "(", ")", "r", "r", "10", "15", "Pr", "iv", "ac", "y", "B", "ud", "ge", "5", "0", "0", "2000", "4000", "6000", "8000", "Global", "Round", "(r)"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 92.64,
+    "y2": 195.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Illustration of the proposed CANIFE method for one training round. The adversary is a rogue client that crafts a training sample resulting in an extremely out-of-distribution model update uc and performs a membership inference attack on the (public) aggregated noisy model update ũ provided to the server by SecAgg. Attack results are converted to empirical privacy guarantees ε̂ for this round. We then compound these guarantees over the course over the training as in Section 3.4.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 211.85952758789062,
+    "y2": 261.69696044921875
+  },
+  "figType": "Figure",
+  "imageText": ["Model", "Dataset", "SecAgg", "Dataset", "Adversary", "tries", "to", "detect", "canary", "Back", "to", "server", "Craft", "canary", "Dataset", "Adversary", "Client", "Client", "Server"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure2-1.png"
+}, {
+  "caption": "Table 1: Canary Samples on Shakespeare.",
+  "captionBoundary": {
+    "x1": 222.31500244140625,
+    "x2": 389.68670654296875,
+    "y1": 148.42855834960938,
+    "y2": 154.4310302734375
+  },
+  "figType": "Table",
+  "imageText": ["th,", "nothing", "bu;", "aZ", "empty", "box,", "sir,", "wQich", "in", "my", "lord’s", "beealf", "I", "cote", "to", "e?", "rtat", "3", "mRnt,,,,,,,,,,,’d,,,,,,R,,,,,A,,,,,,,,,,,,,A,,,,,,,,,,,,,,,,,AA,,,,V2,E", ">H", "&3", "4i", "Yet", "I", "confess", "that", "often", "ere", "thisMday,x?h\\nnPImh!v7DhNAd}I!H’;kXXI’PmP1Iert", "6Fa", "Canary", "Sample", "after", "optimization"],
+  "name": "1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 137.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Table1-1.png"
+}, {
+  "caption": "Figure 5: Ablations studies for CANIFE without addition of DP noise. (a) Canary initialization when varying the design pool size (CelebA, 4-layer CNN). (b) Number of design iterations required to produce robust and well-designed canaries (CelebA, 4-layer CNN). (c) Attack accuracy generally increases as model test accuracy increases (Sent140, 2-layer LSTM).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 211.27554321289062,
+    "y2": 250.15496826171875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Model", "test", "vs", "attack", "accuracy", "ac", "y", "cc", "ur", "ck", "A", "At", "ta", "1.0", "0.9", "0.8", "0.7", "0.6", "50", "55", "60", "65", "Model", "Test", "Accuracy", "(b)", "Design", "Iterations:", "Varying", "T", "ac", "y", "cc", "ur", "ck", "A", "At", "ta", "1.0", "0.9", "0.8", "0.7", "0", "1000", "2000", "3000", "4000", "5000", "Design", "Iterations", "(t)", "(a)", "Canary", "Initialisation", "random", "image", "tio", "n", "Canary", "Initialisation", "ev", "ia", "rd", "D", "an", "da", "n", "St", "M", "ea", "1.0", "0.8", "0.6", "0.4", "0.2", "0", "5000", "10000", "15000", "20000", "25000", "Design", "Sample", "Size"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 93.11999999999999,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure5-1.png"
+}, {
+  "caption": "Figure 8: Varying the canary gradient norm constant on CelebA (CNN)",
+  "captionBoundary": {
+    "x1": 163.75997924804688,
+    "x2": 448.2419128417969,
+    "y1": 396.7765197753906,
+    "y2": 402.77899169921875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Canary", "health", "lth", "H", "ea", "ar", "y", "C", "an", "1.0", "0.8", "0.6", "0", "200", "400", "600", "800", "1000", "Canary", "Gradient", "Norm", "Constant", "(a)", "Attack", "accuracy", "ac", "y", "cc", "ur", "ck", "A", "At", "ta", "0.9", "0.8", "0.7", "0.6", "0", "200", "400", "600", "800", "1000", "Canary", "Gradient", "Norm", "Constant"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 258.71999999999997,
+    "y2": 384.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Further Ablations on CelebA; (a) CNN (b), (c); ResNet18",
+  "captionBoundary": {
+    "x1": 171.0870361328125,
+    "x2": 440.91400146484375,
+    "y1": 221.22756958007812,
+    "y2": 227.23004150390625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Varying", "number", "of", "clients", "per", "round:", "Empirical", "ε̂", "(b)", "Varying", "number", "of", "clients", "per", "round:", "Attack", "accuracy", "(a)", "Loss", "modifications"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 504.0,
+    "y1": 189.12,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kf7Yyf4O0u-Figure7-1.png"
+}]

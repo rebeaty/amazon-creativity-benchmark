@@ -1,0 +1,201 @@
+[{
+  "caption": "Table 3: Comparison of our one-time-step SNN models with non-spiking DNN, BNN, and multi-step SNN counterparts on VOC2007 test dataset.",
+  "captionBoundary": {
+    "x1": 254.55096435546875,
+    "x2": 504.00433349609375,
+    "y1": 411.3695068359375,
+    "y2": 438.5879821777344
+  },
+  "figType": "Table",
+  "imageText": ["Framework", "Backbone", "mAP(%)", "Faster", "R-CNN", "Original", "ResNet50", "79.5", "Faster", "R-CNN", "Bi-Real", "Liu", "et", "al.", "(2018)", "65.7", "Faster", "R-CNN", "ReActNet", "Liu", "et", "al.", "(2020)", "73.1", "Faster", "R-CNN", "Our", "spiking", "ResNet50", "73.7", "Retinanet", "Original", "ResNet50", "77.3", "Retinanet", "SNN", "ResNet50", "(ours)", "70.5", "YOLO", "SNN", "DarkNet", "Kim", "et", "al.", "(2019)", "53.01", "SSD", "BNN", "VGG16", "Wang", "et", "al.", "(2020b)", "66.0"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 253.92,
+    "x2": 499.2,
+    "y1": 450.71999999999997,
+    "y2": 551.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Table3-1.png"
+}, {
+  "caption": "Table 2: Comparison of the test accuracy of our one-time-step SNN models with the non-spiking DNN models for object recognition. Model∗ indicates that we remove the first max pooling layer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 83.28556060791016,
+    "y2": 99.89599609375
+  },
+  "figType": "Table",
+  "imageText": ["Network", "dataset", "DNN", "Top", "1(%)", "SNN", "Top", "1", "(%)", "SNN", "Top", "5", "(%)", "SNN", "Sparsity", "(%)", "VGG16", "CIFAR10", "94.10", "93.44", "97.88", "21.87", "ResNet18", "CIFAR10", "93.34", "91.48", "97.34", "25.83", "ResNet18∗", "CIFAR10", "94.28", "93.67", "97.98", "16.12", "ResNet20", "CIFAR10", "93.18", "92.38", "97.63", "23.69", "ResNet34∗", "CIFAR10", "94.68", "93.47", "97.86", "16.04", "ResNet50∗", "CIFAR10", "94.90", "93.00", "97.86", "17.79", "VGG16", "ImageNet", "70.08", "68.00", "78.75", "24.48", "ResNet50", "ImageNet", "73.12", "66.32", "77.06", "23.89"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 117.6,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Table2-1.png"
+}, {
+  "caption": "Table 4: Comparison of our one-time-step SNN models to existing low-latency counterparts. SGD and hybrid denote surrogate gradient descent and pre-trained DNN followed by SNN fine-tuning respectively. (qC, dL) denotes an architecture with q convolutional and d linear layers.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 83.28556060791016,
+    "y2": 110.50396728515625
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", ":", "ImageNet", "Li", "et", "al.", "(2021b)", "DNN-SNN", "conversion", "VGG16", "63.64", "32", "Bu", "et", "al.", "(2022b)", "DNN-SNN", "conversion", "ResNet34", "59.35", "16", "Wu", "et", "al.", "(2021)", "Tandem", "Learning", "AlexNet", "50.22", "12", "Rathi", "et", "al.", "(2020a)", "Hybrid", "VGG16", "69.00", "5", "Zheng", "et", "al.", "(2021)", "STBP-tdBN", "ResNet34", "67.05", "6", "Chowdhury", "et", "al.", "(2021)", "Hybrid", "VGG16", "67.71", "1", "This", "work", "Adam+Hoyer", "Reg.", "VGG16", "68.00", "1", "Deng", "et", "al.", "(2021)", "DNN-SNN", "conversion", "VGG16", "92.29", "16", "Wu", "et", "al.", "(2019)", "SGD", "5C,", "2L", "90.53", "12", "Kundu", "et", "al.", "(2021)", "Hybrid", "VGG16", "92.74", "10", "Wu", "et", "al.", "(2021)", "Tandem", "Learning", "5C,", "2L", "90.98", "8", "Bu", "et", "al.", "(2022a)", "DNN-SNN", "coonversion", "VGG16", "90.96", "8", "Zhang", "&", "Li", "(2020)", "SGD", "5C,", "2L", "91.41", "5", "Rathi", "et", "al.", "(2020a)", "Hybrid", "VGG16", "92.70", "5", "Zheng", "et", "al.", "(2021)", "STBP-tdBN", "ResNet19", "93.16", "6", "Datta", "&", "Beerel", "(2022)", "Hybrid", "VGG16", "91.79", "2", "Bu", "et", "al.", "(2022b)", "DNN-SNN", "conversion", "VGG16", "91.18", "2", "Chowdhury", "et", "al.", "(2021)", "Hybrid", "VGG16", "93.05", "1", "Chowdhury", "et", "al.", "(2021)", "Hybrid", "ResNet20", "91.10", "1", "This", "work", "Adam+Hoyer", "Reg.", "VGG16", "93.44", "1", "Reference", "Training", "Architecture", "Acc.", "(%)", "Time", "steps", "Dataset", ":", "CIFAR10"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 497.28,
+    "y1": 122.88,
+    "y2": 387.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Table4-1.png"
+}, {
+  "caption": "Figure 3: Layerwise spiking activities for a VGG16 across time steps ranging from 5 to 1 (average spiking activity denoted as S in parenthesis) representing existing low-latency SNNs including our work on (a) CIFAR10, (b) ImageNet, (c) Comparison of compute energy of between SNNs with different time steps and non-spiking DNNs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 487.75152587890625,
+    "y2": 525.5780029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 505.44,
+    "y1": 393.59999999999997,
+    "y2": 485.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Figure3-1.png"
+}, {
+  "caption": "Figure 1: (a) Comparison of our Hoyer spike activation function with existing activation functions where the blue distribution denotes the shifting of the membrane potential away from the threshold using Hoyer regularized training, (b) Proposed derivative of our Hoyer activation function.",
+  "captionBoundary": {
+    "x1": 266.39801025390625,
+    "x2": 503.99591064453125,
+    "y1": 378.425537109375,
+    "y2": 426.86102294921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 267.84,
+    "x2": 503.03999999999996,
+    "y1": 294.71999999999997,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Normalized training and inference time per epoch with iso-batch (256) and hardware (RTX 3090 with 24 GB memory) conditions for (a) CIFAR10 and (b) ImageNet with VGG16.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.99658203125,
+    "y1": 336.99053955078125,
+    "y2": 374.8180236816406
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 306.71999999999997,
+    "x2": 503.03999999999996,
+    "y1": 261.59999999999997,
+    "y2": 326.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Figure4-1.png"
+}, {
+  "caption": "Table 5: Ablation study of the different methods in our proposed training framework.",
+  "captionBoundary": {
+    "x1": 243.2130126953125,
+    "x2": 504.0037536621094,
+    "y1": 460.95355224609375,
+    "y2": 477.5650329589844
+  },
+  "figType": "Table",
+  "imageText": ["Arch.", "Network", "Structure", "Hoyer", "Reg.", "Hoyer", "Spike", "Acc.", "(%)", "Sparsity", "(%)", "VGG16", "×", "×", "×", "88.42", "15.62", "VGG16", "✓", "×", "×", "90.33", "20.43", "VGG16", "✓", "✓", "×", "90.45", "20.48", "VGG16", "✓", "✓", "✓", "93.13", "22.57", "ResNet18", "×", "×", "×", "87.41", "22.78", "ResNet18", "✓", "×", "×", "91.08", "27.62", "ResNet18", "✓", "✓", "×", "90.95", "20.50", "ResNet18", "✓", "✓", "✓", "91.48", "25.83"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 250.56,
+    "x2": 491.03999999999996,
+    "y1": 486.71999999999997,
+    "y2": 598.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Table5-1.png"
+}, {
+  "caption": "Table 7: Comparison of our one-time-step SNN models to AddNNs and BNNs that also incur AC-only operations for improved energyefficiency, where CE denotes compute energy",
+  "captionBoundary": {
+    "x1": 234.70895385742188,
+    "x2": 503.99786376953125,
+    "y1": 242.81124877929688,
+    "y2": 270.0296630859375
+  },
+  "figType": "Table",
+  "imageText": ["AddNNs", "(CE", "=", "163.582", "J", "for", "CIFAR10", "on", "VGG16)", "Chen", "et", "al.", "(2020)", "CIFAR10", "93.72", "Chen", "et", "al.", "(2020)", "ImageNet", "67.0", "Li", "et", "al.", "(2021a)", "CIFAR10", "91.56", "Our", "SNNs", "(CE=21.6", "mJ", "with", "2-bits", "for", "CIFAR10", "on", "VGG16)", "This", "work", "CIFAR10", "93.44", "This", "work", "ImageNet", "68.00", "Sakr", "et", "al.", "(2018)", "CIFAR10", "89.6", "Wang", "et", "al.", "(2020a)", "CIFAR10", "90.2", "Wang", "et", "al.", "(2020a)", "ImageNet", "59.7", "Diffenderfer", "&", "Kailkhura", "(2021)", "CIFAR10", "91.9", "Reference", "Dataset", "Acc.", "(%)", "BNNs", "(CE", "=", "73.44", "mJ", "for", "CIFAR10", "on", "VGG16"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 238.56,
+    "x2": 500.15999999999997,
+    "y1": 282.71999999999997,
+    "y2": 439.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Table7-1.png"
+}, {
+  "caption": "Table 6: Accuracies of weight quantized one-time-step SNN models based on VGG16 where FP is 32-bit floating point.",
+  "captionBoundary": {
+    "x1": 333.9209899902344,
+    "x2": 504.00244140625,
+    "y1": 86.9715347290039,
+    "y2": 114.18994140625
+  },
+  "figType": "Table",
+  "imageText": ["Bits", "Acc.", "(%)", "Sparsity", "(%)", "CE", "(mJ)", "FP", "93.13", "22.57", "29742.3", "6", "93.11", "22.46", "61.9", "4", "92.84", "21.39", "39.4", "2", "92.34", "22.68", "21.6"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 338.88,
+    "x2": 494.4,
+    "y1": 123.83999999999999,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Table6-1.png"
+}, {
+  "caption": "Figure 2: Spiking network architectures corresponding to (a) VGG and (b) ResNet based models.",
+  "captionBoundary": {
+    "x1": 112.14399719238281,
+    "x2": 499.8584899902344,
+    "y1": 184.44851684570312,
+    "y2": 190.45098876953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 80.64,
+    "y2": 174.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0L8tuglXJaW-Figure2-1.png"
+}]

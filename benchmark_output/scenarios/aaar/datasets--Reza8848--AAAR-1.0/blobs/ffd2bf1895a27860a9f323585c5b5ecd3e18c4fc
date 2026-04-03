@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 1: Quality of generated binary samples from the learned EBMs, in terms of MMD with exponential Hamming kernel using bandwidth=0.1 (in units of 1 × 10−4, the lower the better).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 190.60757446289062,
+    "y2": 207.56903076171875
+  },
+  "figType": "Table",
+  "imageText": ["SDDM", "(this", "paper)", "0.120", "0.020", "0.132", "0.088", "0.191", "0.129", "0.335", "ALOE+", "(Dai", "et", "al.,", "2020)", "0.149", "0.078", "0.636", "0.516", "1.746", "0.718", "12.138", "EB-GFN", "(Zhang", "et", "al.,", "2022)", "0.583", "0.531", "0.305", "0.121", "0.492", "0.274", "1.206", "2spirals", "8gaussians", "circles", "moons", "pinwheel", "swissroll", "checkerboard", "PCD", "(Tieleman,", "2008)", "2.160", "0.954", "0.188", "0.962", "0.505", "1.382", "2.831"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 210.72,
+    "y2": 263.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Table1-1.png"
+}, {
+  "caption": "Figure 2: Visualization of sampled discrete binary data in 2D space via decoding of Gray codes.",
+  "captionBoundary": {
+    "x1": 112.99099731445312,
+    "x2": 495.9234619140625,
+    "y1": 167.32455444335938,
+    "y2": 173.3270263671875
+  },
+  "figType": "Figure",
+  "imageText": ["2spirals", "8gaussians", "circles", "moons", "pinwheel", "swissroll", "chekcerboard"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 82.56,
+    "y2": 154.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Visualization of reverse sampling with different samplers.",
+  "captionBoundary": {
+    "x1": 229.01400756835938,
+    "x2": 498.7015075683594,
+    "y1": 512.926513671875,
+    "y2": 518.928955078125
+  },
+  "figType": "Figure",
+  "imageText": ["ly", "tic", "al", "Fw", "d", "E", "ul", "er", "A", "na"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 226.56,
+    "x2": 506.4,
+    "y1": 399.84,
+    "y2": 506.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Figure3-1.png"
+}, {
+  "caption": "Table 3: Conditional music generation compared against ground truth completions.",
+  "captionBoundary": {
+    "x1": 138.82899475097656,
+    "x2": 470.0853271484375,
+    "y1": 273.3745422363281,
+    "y2": 279.37701416015625
+  },
+  "figType": "Table",
+  "imageText": ["D3PM", "Uniform", "(Austin", "et", "al.,", "2021)", "0.3839", "±", "0.0002", "0.1137", "±", "0.0010", "SDDM", "(this", "paper)", "0.3735", "±", "0.0025", "0.1071", "±", "0.0017", "τLDR-0", "Birth/Death", "(Campbell", "et", "al.,", "2022)", "0.3928", "±", "0.0010", "0.1316", "±", "0.0012", "τLDR-0", "Uniform", "(Campbell", "et", "al.,", "2022)", "0.3765", "±", "0.0013", "0.1106", "±", "0.0010", "τLDR-2", "Uniform", "(Campbell", "et", "al.,", "2022)", "0.3762", "±", "0.0015", "0.1091", "±", "0.0014", "Methods", "Hellinger", "Distance", "Proportion", "of", "Outliers"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 281.76,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Table3-1.png"
+}, {
+  "caption": "Table 2: Metrics on sample quality for different diffusion models on CIFAR10 dataset. Here Inception Score (IS) and Fréchet Inception Distance (FID) are compared. We follow the common practice to compare the 50,000 unconditionally sampled images from the model and the images from training dataset. Approaches with representations in different state spaces are listed in separate sections.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00335693359375,
+    "y1": 92.6165542602539,
+    "y2": 131.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["SDDM-VQ", "(this", "paper)", "8.91", "11.98", "VQGAN", "(Esser", "et", "al.,", "2021)", "reconstruction", "9.67", "9.05", "D3PM", "Uniform", "(Austin", "et", "al.,", "2021)", "5.99", "51.27", "D3PM", "Absorbing", "(Austin", "et", "al.,", "2021)", "6.78", "30.97", "Categorical", "discrete", "state", "Ordinal", "discrete", "state", "D3PM", "Gauss", "(Austin", "et", "al.,", "2021)", "8.56", "7.34", "τLDR-0", "(Campbell", "et", "al.,", "2022)", "8.74", "8.10", "τLDR-10", "(Campbell", "et", "al.,", "2022)", "9.49", "3.74", "NCSN", "(Song", "et", "al.,", "2020)", "9.89", "2.20", "State", "space", "Methods", "IS", "↑", "FID", "↓", "Continuous", "state", "DDPM", "(Ho", "et", "al.,", "2020)", "9.46", "3.17"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 486.24,
+    "y1": 134.88,
+    "y2": 256.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Table2-1.png"
+}, {
+  "caption": "Figure 1: Diagram illustration of the Hollow Transformer.",
+  "captionBoundary": {
+    "x1": 274.3190002441406,
+    "x2": 503.99658203125,
+    "y1": 429.44354248046875,
+    "y2": 435.4460144042969
+  },
+  "figType": "Figure",
+  "imageText": ["𝜕𝑥)", "Jacobian", "matrix", "𝜕𝑃)(𝑋", "∣", "𝑥))", "𝑥!", "𝑥\"", "𝑥#", "𝑥$", "𝑥!", "𝑥\"", "𝑥#", "𝑥$", "𝑥!", "𝑥\"", "𝑥#", "𝑥$", "𝑡", "𝑥!", "𝑥\"", "𝑥#", "𝑥$", "𝑡", "𝑥!", "𝑥\"", "𝑥#", "𝑥$", "𝑉&K'", "𝑉(", "𝐾(", "𝑃(𝑥!|𝑥\\!)", "𝑃(𝑥#|𝑥\\#)", "𝑃(𝑥$|𝑥\\$)", "𝑃(𝑥%|𝑥\\%)", "𝑄%", "𝐾&", "∘", ",", "𝐾'", "∘", "→", "[𝑉&", ",", "𝑉']", "Transformer", "Layer", "Transformer", "Layer", "Transformer", "Layer", "𝐿×", "Transformer", "Layer", "𝑥!", "𝑥\"", "𝑥#", "𝑥$𝑡", "𝑡", "𝑄"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 273.59999999999997,
+    "x2": 504.0,
+    "y1": 210.72,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Visualization of the true data in 2D space via decoding of Gray codes.",
+  "captionBoundary": {
+    "x1": 145.2239990234375,
+    "x2": 463.6885070800781,
+    "y1": 577.362548828125,
+    "y2": 583.364990234375
+  },
+  "figType": "Figure",
+  "imageText": ["2spirals", "8gaussians", "circles", "moons", "pinwheel", "swissroll", "chekcerboard"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 497.76,
+    "y2": 564.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BYWWwSY2G5s-Figure4-1.png"
+}]

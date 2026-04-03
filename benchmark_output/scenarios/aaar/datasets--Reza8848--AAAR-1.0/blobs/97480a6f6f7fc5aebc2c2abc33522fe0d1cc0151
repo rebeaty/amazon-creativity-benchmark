@@ -1,0 +1,421 @@
+[{
+  "caption": "Table 1: Results on ImageNette Dataset show consistently improved robustness from explicitly leveraging depth estimation. Additionally, the depth channel approach consistently outperforms the 3D view augmentation approach.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3487548828125,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["SwAV", "(Caron", "et", "al.,", "2020)", "89.63", "91.08", "75.31", "82.05", "+", "Depth", "(p", "=", "0.5)", "89.20", "90.85", "83.80", "85.02", "+", "Depth", "(p", "=", "0.5)", "86.52", "87.41", "85.13", "85.08", "+", "3D", "Views", "85.94", "87.62", "83.87", "84.37", "+", "3D", "Views", "87.01", "87.42", "85.75", "85.86", "SimSiam", "(Chen", "&", "He,", "2021)", "85.10", "85.76", "84.08", "84.16", "BYOL", "(Grill", "et", "al.,", "2020)", "85.71", "85.27", "84.13", "83.68", "+", "Depth", "(p", "=", "0.5)", "88.56", "88.03", "87.00", "86.68", "Method", "kNN", "Top-1", "Acc.", "ImageNet-C", "ImageNet-3DCC"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 488.15999999999997,
+    "y1": 124.32,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table1-1.png"
+}, {
+  "caption": "Figure 5: Visualization of Depth Maps of Images from the ImageNette dataset",
+  "captionBoundary": {
+    "x1": 148.84097290039062,
+    "x2": 463.1610412597656,
+    "y1": 247.61355590820312,
+    "y2": 253.61602783203125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Original", "Image", "(b)", "Estimated", "Depth", "Map", "(c)", "Original", "Image", "(d)", "Estimated", "Depth", "Map"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 123.83999999999999,
+    "y2": 234.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Visualization of Images corrupted by Gaussian Noise (from ImageNet-C dataset)",
+  "captionBoundary": {
+    "x1": 123.66598510742188,
+    "x2": 488.3369445800781,
+    "y1": 463.0035095214844,
+    "y2": 469.0059814453125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Severity", "=", "1", "(b)", "Severity", "=", "2", "(c)", "Severity", "=", "3", "(d)", "Severity", "=", "4", "(e)", "Severity", "=", "5"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 348.96,
+    "y2": 450.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Visualization of Depth Maps of Images corrupted by Gaussian Noise",
+  "captionBoundary": {
+    "x1": 147.73001098632812,
+    "x2": 464.2716979980469,
+    "y1": 678.392578125,
+    "y2": 684.39501953125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Severity", "=", "1", "(b)", "Severity", "=", "2", "(c)", "Severity", "=", "3", "(d)", "Severity", "=", "4", "(e)", "Severity", "=", "5"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 564.0,
+    "y2": 665.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Improving Self-Supervised Learning by concatenating an input channel with estimated depth to the RGB input. Depth is estimated from both an original image and an augmentation, and the resulting 4-channel inputs are used to produce the representation. Incorporating the depth channel improves downstream accuracy in a variety of SSL techniques, with the largest improvements on challenging corrupted benchmarks. (Teaser results are shown. Complete results in Tables 1, 2)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0016174316406,
+    "y1": 226.59152221679688,
+    "y2": 276.42999267578125
+  },
+  "figType": "Figure",
+  "imageText": ["R", "G", "B", "+", "D", "R", "G", "B", "+", "D", "Depth", "Estimation", "Depth", "Estimation", "Contrastive", "Self-Supervised", "Learning", "Method", "Augmentation"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 80.64,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure1-1.png"
+}, {
+  "caption": "Table 2: Results on ImageNet-100 Dataset indicates that both addition of the depth channel and 3D Views leads to a gain in corruption robustness performance.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0033264160156,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "70.90", "76.54", "48.30", "52.93", "+", "3D", "Views", "68.08", "76.40", "45.78", "52.17", "+", "3D", "Views", "73.42", "80.16", "48.15", "54.88", "SimSiam", "(Chen", "&", "He,", "2021)", "67.56", "76.00", "44.39", "50.44", "BYOL", "(Grill", "et", "al.,", "2020)", "74.24", "80.74", "47.15", "53.69", "+", "Depth", "(p", "=", "0.3)", "74.66", "80.24", "50.17", "55.55", "Method", "kNN", "Top-1", "Acc.", "ImageNet-C", "ImageNet-3DCC"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 488.15999999999997,
+    "y1": 113.28,
+    "y2": 209.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table2-1.png"
+}, {
+  "caption": "Figure 2: Novel views can be synthesized from a single image by using the estimated depth channel, which can be used as additional augmentations across a variety of contrastive self-supervised learning techniques. These improve results, especially on benchmarks with image corruptions. (Result highlights are shown. Complete results in Tables 1, 2",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2474670410156,
+    "y1": 231.48251342773438,
+    "y2": 270.36199951171875
+  },
+  "figType": "Figure",
+  "imageText": ["Sample", "one", "of", "K", "Views", "Augmentation", "Augmentation", "Contrastive", "Self-Supervised", "Learning", "Method", "Single-View", "View", "Synthesis"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure2-1.png"
+}, {
+  "caption": "Figure 4: As the number of 3D views increases, the performance of the SSL method increases with very limited increase in performance.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 246.95199584960938,
+    "y1": 203.47952270507812,
+    "y2": 242.3590087890625
+  },
+  "figType": "Figure",
+  "imageText": ["Number", "of", "generated", "3D", "views", "SimSiam", "(Baseline)", "%", ")", "(", "in", "ra", "cy", "Ac", "cu", "87.50", "87.25", "87.00", "86.75", "86.50", "86.25", "86.00", "85.75", "Number", "of", "Views", "10", "15", "20", "25", "30", "35", "40", "45", "50"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 245.28,
+    "y1": 83.52,
+    "y2": 188.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure4-1.png"
+}, {
+  "caption": "Table 3: Ablation of Depth Dropout hyperparameter (p). A large dropout (p = 0.8) leads to the model ignoring the depth signal and a low (or zero) depth dropout leads to model relying only on depth signal.",
+  "captionBoundary": {
+    "x1": 266.0889892578125,
+    "x2": 504.3575439453125,
+    "y1": 184.60855102539062,
+    "y2": 223.48797607421875
+  },
+  "figType": "Table",
+  "imageText": ["BYOL", "(Grill", "et", "al.,", "2020)", "85.27", "84.13", "83.68", "+", "Depth", "(p", "=", "0.0)", "84.38", "72.64", "73.68", "+", "Depth", "(p", "=", "0.2)", "89.05", "85.93", "85.33", "+", "Depth", "(p", "=", "0.5)", "88.03", "87.00", "86.68", "+", "Depth", "(p", "=", "0.8)", "86.57", "85.38", "85.60", "Method", "Top-1", "Acc.", "IN-C", "IN-3DCC"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 265.92,
+    "x2": 505.44,
+    "y1": 100.32,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table3-1.png"
+}, {
+  "caption": "Figure 3: Despite two images of a church (Imagenette) being quite similar visually, the presence of a tree occluding the church is a strong hint that the church is in the background, resulting in a very different depth map.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3445739746094,
+    "y1": 387.0975341796875,
+    "y2": 415.0169982910156
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Original", "Image", "(b)", "Estimated", "Depth", "Map", "(c)", "Cropped", "Image", "(d)", "Estimated", "Depth", "Map"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 262.56,
+    "y2": 379.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Figure3-1.png"
+}, {
+  "caption": "Table 11: Results on ImageNet-100 Weather Corruptions (IN-C). The proposed method with the incorporation of depth channel results in a large increase on the performance of weather-corrupted images.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00341796875,
+    "y1": 98.92752838134766,
+    "y2": 126.8480224609375
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "48.30", "38.84", "44.11", "45.81", "70.78", "+", "3D", "Views", "45.78", "35.20", "38.86", "41.45", "69.3", "+", "3D", "Views", "48.15", "38.43", "42.48", "45.99", "73.72", "SimSiam", "(Chen", "&", "He,", "2021)", "44.39", "32.78", "38.62", "40.10", "69.48", "BYOL", "(Grill", "et", "al.,", "2020)", "47.15", "35.93", "41.79", "46.84", "73.71", "+", "Depth", "(p", "=", "0.3)", "50.17", "40.15", "46.46", "46.48", "74.42", "Method", "IN-C", "Snow", "Frost", "Fog", "Brightness"],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 144.0,
+    "x2": 465.12,
+    "y1": 139.68,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table11-1.png"
+}, {
+  "caption": "Table 13: Results on ImageNet-100 3D Corruptions (Subset of ImageNet-3DCC). Both the proposed methods improve upon the base SSL method in terms of the 3D Corruptions with the 3D Views being the best of the three.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00152587890625,
+    "y1": 447.09552001953125,
+    "y2": 475.0159912109375
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "52.93", "58.78", "47.16", "52.76", "62.61", "32.62", "39.93", "+", "3D", "Views", "52.17", "57.24", "45.94", "48.88", "63.27", "34.10", "42.29", "+", "3D", "Views", "54.88", "61.39", "49.36", "53.98", "66.75", "34.73", "41.82", "SimSiam", "(Chen", "&", "He,", "2021)", "50.44", "55.31", "44.82", "48.51", "61.67", "28.93", "34.34", "BYOL", "(Grill", "et", "al.,", "2020)", "53.69", "59.09", "47.85", "53.98", "64.84", "31.12", "36.22", "+", "Depth", "(p", "=", "0.3)", "55.55", "60.42", "50.24", "57.37", "65.18", "34.28", "42.04", "Method", "IN-3DCC", "Far", "Focus", "Flash", "Low", "Light", "Near", "Focus", "XY-Motion", "Blur", "Z", "Motion", "Blur"],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 487.68,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table13-1.png"
+}, {
+  "caption": "Table 14: Results on ImageNet-100 3D Corruptions (Subset of IN-3DCC). Depth Channel improves upon the performance of non-3D corruptions like Iso-Noise and Color Quant.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9951477050781,
+    "y1": 596.16357421875,
+    "y2": 613.125
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "52.93", "48.24", "39.53", "64.46", "49.30", "+", "3D", "Views", "52.17", "48.83", "30.87", "63.13", "48.72", "+", "3D", "Views", "54.88", "51.55", "29.82", "65.64", "52.30", "SimSiam", "(Chen", "&", "He,", "2021)", "50.44", "48.26", "32.56", "62.42", "48.69", "BYOL", "(Grill", "et", "al.,", "2020)", "53.69", "51.68", "33.36", "66.15", "51.78", "+", "Depth", "(p", "=", "0.3)", "55.55", "50.64", "39.15", "67.44", "52.09", "Method", "IN-3DCC", "Fog3D", "Iso-Noise", "Color", "Quant", "Bit", "Error"],
+  "name": "14",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 625.92,
+    "y2": 715.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table14-1.png"
+}, {
+  "caption": "Table 12: Results on ImageNet-100 Digital Corruptions (IN-C). Combining the depth channel with the input improves the performance of all kinds of digital corruptions whereas we observe that 3D Views improves the accuracy on some corruptions and the performance degrades with some corruptions.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9978332519531,
+    "y1": 268.6215515136719,
+    "y2": 307.5010070800781
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "48.30", "55.37", "49.95", "66.08", "69.54", "53.33", "64.14", "+", "3D", "Views", "45.78", "54.65", "47.69", "62.50", "68.17", "47.38", "62.48", "+", "3D", "Views", "48.15", "58.74", "50.32", "66.73", "69.79", "51.26", "63.97", "SimSiam", "(Chen", "&", "He,", "2021)", "44.39", "50.32", "49.28", "60.91", "69.44", "47.25", "57.94", "BYOL", "(Grill", "et", "al.,", "2020)", "47.15", "53.32", "50.57", "65.94", "71.92", "51.02", "63.22", "+", "Depth", "(p", "=", "0.3)", "50.17", "58.50", "51.62", "69.10", "72.55", "54.98", "66.26", "Method", "IN-C", "Elastic", "Contrast", "Pixelate", "Saturate", "Spatter", "JPEG"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 320.64,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table12-1.png"
+}, {
+  "caption": "Table 4: Results on ImageNet-100 Corruptions show that while use of 3D view augmentations provides a larger improvement on 3D corruptions, the improvements from using depth channel are more consistent on a wide range of corruptions. Detailed results in App. E.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "48.30", "41.90", "38.40", "49.76", "59.84", "52.93", "53.16", "52.25", "+", "3D", "Views", "45.78", "35.00", "40.42", "46.20", "57.14", "52.17", "53.69", "47.63", "+", "3D", "Views", "48.15", "34.50", "43.06", "50.16", "60.14", "54.88", "56.56", "49.81", "SimSiam", "(Chen", "&", "He,", "2021)", "44.39", "36.20", "36.11", "45.24", "55.86", "50.44", "51.32", "47.83", "BYOL", "(Grill", "et", "al.,", "2020)", "47.15", "36.69", "38.95", "49.57", "59.33", "53.69", "54.53", "51.16", "+", "Depth", "(p", "=", "0.3)", "50.17", "42.36", "40.66", "51.88", "62.17", "55.55", "55.85", "54.65", "Method", "IN-C", "Noise", "Blur", "Weather", "Digital", "IN-3DCC", "3D", "Misc"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 124.32,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table4-1.png"
+}, {
+  "caption": "Table 7: Comparison of two Single-View View Synthesis Methods for generating 3D Views on ImageNette dataset. Higher quality views leads to higher performance.",
+  "captionBoundary": {
+    "x1": 313.5889892578125,
+    "x2": 508.30023193359375,
+    "y1": 213.22152709960938,
+    "y2": 252.0999755859375
+  },
+  "figType": "Table",
+  "imageText": ["+", "3D", "Views", "(AdaMPI)", "88.08", "85.07", "85.33", "BYOL", "(Grill", "et", "al.,", "2020)", "85.27", "84.13", "83.68", "+", "3D", "Views", "(MINE)", "87.49", "84.47", "83.93", "Method", "Top-1", "Acc.", "IN-C", "IN-3DCC"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 508.32,
+    "y1": 264.96,
+    "y2": 307.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table7-1.png"
+}, {
+  "caption": "Table 5: Ablation on Range of synthesized views generated by AdaMPI. Results are shown on ImageNette dataset.",
+  "captionBoundary": {
+    "x1": 266.0889892578125,
+    "x2": 503.99725341796875,
+    "y1": 320.35552978515625,
+    "y2": 337.3169860839844
+  },
+  "figType": "Table",
+  "imageText": ["BYOL", "(Grill", "et", "al.,", "2020)", "85.27", "84.13", "83.68", "+", "3D", "Views", "(x", "=", "0.1;", "y", "=", "0.1)", "86.09", "83.33", "83.63", "+", "3D", "Views", "(x", "=", "0.4;", "y", "=", "0.4)", "87.87", "84.78", "85.22", "+", "3D", "Views", "(x", "=", "0.5;", "y", "=", "0.5)", "88.08", "85.07", "85.33", "+", "3D", "Views", "(x", "=", "0.8;", "y", "=", "0.8)", "87.49", "82.47", "84.35", "+", "3D", "Views", "(x", "=", "1.0;", "y", "=", "1.0)", "86.34", "80.81", "83.30", "Method", "Top-1", "Acc.", "IN-C", "IN-3DCC"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 265.92,
+    "x2": 505.44,
+    "y1": 349.91999999999996,
+    "y2": 425.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table5-1.png"
+}, {
+  "caption": "Table 6: These results on ImageNette show that the model is robust to the absence of depth signal and that estimated depth improves the corruption robustness and linear evaluation performance.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 302.04656982421875,
+    "y1": 213.22152709960938,
+    "y2": 252.0999755859375
+  },
+  "figType": "Table",
+  "imageText": ["Depth", "=", "0", "at", "inference", "86.80", "84.95", "85.21", "BYOL", "(Grill", "et", "al.,", "2020)", "85.27", "84.13", "83.68", "+", "Depth", "(p", "=", "0.5)", "88.03", "87.00", "86.68", "Method", "Top-1", "Acc.", "IN-C", "IN-3DCC"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 303.36,
+    "y1": 264.96,
+    "y2": 307.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table6-1.png"
+}, {
+  "caption": "Table 8: Different Augmentations on top of 3D Views.",
+  "captionBoundary": {
+    "x1": 197.05999755859375,
+    "x2": 414.6332092285156,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["BYOL", "(Grill", "et", "al.,", "2020)", "85.27", "84.13", "83.68", "+", "3D", "Views", "(Base", "SSL", "Aug)", "88.08", "85.07", "85.33", "+", "3D", "Views", "(Minimal", "Aug)", "83.54", "68.69", "72.26", "Method", "Top-1", "Acc.", "IN-C", "IN-3DCC"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 440.15999999999997,
+    "y1": 102.24,
+    "y2": 156.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table8-1.png"
+}, {
+  "caption": "Table 9: Results on ImageNet-100 Noise Corruptions (IN-C). It can be clearly seen that the concatenation of the depth channel significantly improves the performance on noise based corruptions (by 8% in the case of Impulse noise). On the other hand, the introduction 3D Views hurts the performance on noise based corruptions.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6498718261719,
+    "y1": 169.22854614257812,
+    "y2": 208.10797119140625
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "48.30", "41.36", "39.98", "36.99", "49.29", "+", "3D", "Views", "45.78", "34.85", "33.66", "28.86", "42.61", "+", "3D", "Views", "48.15", "34.25", "33.25", "27.04", "43.46", "SimSiam", "(Chen", "&", "He,", "2021)", "44.39", "36.51", "34.48", "30.80", "43.00", "BYOL", "(Grill", "et", "al.,", "2020)", "47.15", "37.08", "36.00", "28.31", "45.36", "+", "Depth", "(p", "=", "0.3)", "50.17", "41.79", "40.37", "36.98", "50.30", "Method", "IN-C", "Gaussian", "Noise", "Shot", "Noise", "Impulse", "Noise", "Speckle", "Noise"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 220.79999999999998,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table9-1.png"
+}, {
+  "caption": "Table 10: Results on ImageNet-100 Blur Corruptions (IN-C). Both the depth channel and 3D Views method improve the accuracy on blur based corruptions. The introduction of the 3D Views helps the model capture the 3D structure more easily and thus is highly robust to blur based corruptions.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 613.2325439453125,
+    "y2": 641.1530151367188
+  },
+  "figType": "Table",
+  "imageText": ["+", "Depth", "(p", "=", "0.2)", "48.30", "37.34", "34.94", "37.64", "39.17", "42.92", "+", "3D", "Views", "45.78", "40.58", "35.21", "39.19", "41.40", "45.72", "+", "3D", "Views", "48.15", "45.21", "37.32", "39.98", "42.13", "50.70", "SimSiam", "(Chen", "&", "He,", "2021)", "44.39", "36.84", "30.92", "34.72", "35.32", "42.76", "BYOL", "(Grill", "et", "al.,", "2020)", "47.15", "40.77", "33.37", "37.03", "37.76", "46.30", "+", "Depth", "(p", "=", "0.3)", "50.17", "40.21", "36.89", "38.50", "41.55", "46.16", "Method", "IN-C", "Defocus", "Blur", "Glass", "Blur", "Motion", "Blur", "Zoom", "Blur", "Gaussian", "Blur"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 653.76,
+    "y2": 729.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Pqi9ZxxdjM-Table10-1.png"
+}]

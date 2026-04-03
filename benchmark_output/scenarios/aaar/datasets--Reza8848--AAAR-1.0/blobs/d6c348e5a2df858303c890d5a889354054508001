@@ -1,0 +1,121 @@
+[{
+  "caption": "Table 1: Results of experiments on CIFAR-100 and MiniImageNet, where we report mean average accuracy with their standard errors across three independent runs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["SGD", "35.63±", "1.271", "42.50±", "1.403", "33.23±", "0.674", "31.61±", "0.696", "Multi-Task", "(UB)", "90.42±", "1.866", "59.76±", "0.487", "89.81±", "0.250", "48.46±", "1.211", "ER-reservoir", "54.05±", "0.626", "58.31±", "1.084", "41.04±", "1.539", "40.29±", "1.077", "A-GEM", "29.01±", "1.449", "39.00±", "0.745", "26.97±", "1.264", "30.08±", "1.855", "EntropySS", "51.80±", "0.700", "56.75±", "0.806", "40.03±", "0.609", "41.12±", "0.513", "GSS", "48.20±", "0.332", "49.92±", "0.496", "37.91±", "0.493", "38.77±", "0.980", "DeepCCG", "(ours)", "56.62±", "0.288", "60.46±", "0.243", "42.18±", "0.449", "43.04±", "0.638", "CIFAR-100", "MiniImageNet", "Method", "Shifting", "Window", "Disjoint", "Tasks", "Shifting", "Window", "Disjoint", "Tasks", "EWC", "36.65±", "1.073", "42.39±", "0.787", "32.42±", "1.129", "29.57±", "0.689", "PackNet", "40.21±", "0.961", "50.28±", "0.578", "34.15±", "1.280", "37.86±", "1.710"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 112.32,
+    "y2": 259.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2L-nspTvNVC-Table1-1.png"
+}, {
+  "caption": "Table 2: Results of experiments on CIFAR-10, where we report mean average accuracy with their standard errors across three independent runs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 284.0055236816406,
+    "y2": 300.96697998046875
+  },
+  "figType": "Table",
+  "imageText": ["SGD", "63.21±", "2.088", "63.58±", "0.306", "Multi-Task", "(UB)", "96.20±", "0.690", "73.37±", "1.820", "ER-reservoir", "70.44±", "0.806", "66.71±", "0.896", "A-GEM", "57.63±", "2.163", "57.28±", "2.606", "EntropySS", "67.93±", "0.625", "64.96±", "0.911", "GSS", "71.55±", "1.45", "67.30±", "1.268", "DeepCCG", "(ours)", "74.65±", "2.00", "69.29±", "0.889", "Method", "Shifting", "Window", "Disjoint", "Tasks", "EWC", "58.68±", "1.883", "63.33±", "0.871", "PackNet", "69.29±", "2.272", "66.97±", "1.471"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 185.76,
+    "x2": 426.24,
+    "y1": 303.84,
+    "y2": 435.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2L-nspTvNVC-Table2-1.png"
+}, {
+  "caption": "Table 3: Results of performing an ablation on DeepCCG, where we report results on DeepCCG using reservoir sampling instead of its own sample selection method (DeepCCG-reservoir), when we replace the class-conditional Gaussian model with a standard classifier head (DeepCCGstandardHead) and when we do both modifications, in which case our method reduces to the ERreservoir method. We report the mean average accuracy with their standard errors across three independent runs on the CIFAR-100 shifting window setting.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 92.6165542602539,
+    "y2": 153.4129638671875
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Average", "accuracy", "ER-reservoir", "54.05±", "0.626", "DeepCCG-reservoir", "49.95±", "0.743", "DeepCCG-standardHead", "44.05±", "0.264", "DeepCCG", "56.62±", "0.288"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 205.92,
+    "x2": 406.08,
+    "y1": 156.0,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2L-nspTvNVC-Table3-1.png"
+}, {
+  "caption": "Table 4: Values selected for the hyperparameters of EWC and PackNet, which are the regularisation coefficient and the percentage of available filters to be used per task, respectively. SW stands for shifting window and DT stands for disjoint tasks.",
+  "captionBoundary": {
+    "x1": 108.00006103515625,
+    "x2": 504.00335693359375,
+    "y1": 343.42449951171875,
+    "y2": 371.344970703125
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR-100", "MiniImageNet", "CIFAR-10", "Method", "SW", "DT", "SW", "DT", "SW", "DT", "EWC", "6", "6", "2", "9", "1", "6", "PackNet", "0.1", "0.1", "0.05", "0.2", "0.3", "0.3"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 373.91999999999996,
+    "y2": 434.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2L-nspTvNVC-Table4-1.png"
+}, {
+  "caption": "Table 5: Results of experiments looking at the effect of memory buffer size m for the replay methods tested, using the shifting window setting on CIFAR-100. We report mean average accuracy with their standard errors across three independent runs.",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 504.00323486328125,
+    "y1": 495.0755310058594,
+    "y2": 522.9949951171875
+  },
+  "figType": "Table",
+  "imageText": ["Method", "m=750", "m=1000", "m=1250", "ER-reservoir", "53.17±", "0.656", "54.05±", "0.626", "55.22±", "0.592", "A-GEM", "27.18±", "1.091", "29.01±", "1.449", "27.87±", "0.172", "EntropySS", "50.52±", "0.725", "51.80±", "0.700", "53.34±", "0.372", "GSS", "47.15±", "0.766", "48.20±", "0.332", "46.18±", "0.341", "DeepCCG", "(ours)", "53.42±", "0.460", "56.62±", "0.288", "57.98±", "0.514"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 460.32,
+    "y1": 524.16,
+    "y2": 603.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2L-nspTvNVC-Table5-1.png"
+}, {
+  "caption": "Figure 1: Diagram of DeepCCG’s training routine. At time j the learner is given a sample of data Dj and has a memory set of stored datapoints Mj . The memory is split into the replay data Rj and the rest Mj/Rj . Learning happens by taking a gradient step on the parameters of the embedding function ϕ using a conditional marginal likelihood function over Dj and Rj , where Mj/Rj is used to induce a posterior over the means of the per-class Gaussians and so define the conditional marginal likelihood function used. Therefore, training aims to move the data points into per-class clusters, by drawing the embedded examples of Dj and Rj towards their own class means and away from the other class means, as shown in the embedding space diagram in the figure.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 367.03253173828125,
+    "y2": 449.7469482421875
+  },
+  "figType": "Figure",
+  "imageText": ["𝒩(", "|𝑦,𝑀", "/𝑅", ")", "𝑓", "𝑅", "Data", "Stream", "𝑓", "𝑀", "𝑀", "/𝑅", "𝐷", "KL(p(θ|Dj", ",", "tDj", ",Mj)∥p(θ|M", "′))", "M′⊆(Dj×{tDj", "})∪Mj", ",|M′|=m", "1:", "input", "Dj", "(current", "batch),", "tDj", "(current", "task", "identifier),", "Mj", "(current", "memory),", "ϕj", "(current", "embedding", "func-", "tion)", "2:", "3:", "Update", "embedding", "function", "4:", "Rj", "=", "UniformSample(Mj)", "5:", "ϕj+1", "=", "ϕj", "+", "η∇ϕ", "log", "p(DY", "j", ",", "RY", "j", "|DZ", "j", ",", "tDj", ",", "R", "Z", "j", ",", "Stasks,Mj/Rj)", "6:", "7:", "Update", "memory", "8:", "Mj+1", "=", "argmin"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.47999999999996,
+    "y1": 94.56,
+    "y2": 346.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2L-nspTvNVC-Figure1-1.png"
+}]

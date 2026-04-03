@@ -1,0 +1,17 @@
+crfm-helm>=0.5.12
+Pillow>=10.0
+openpyxl>=3.1
+h5py>=3.9
+PyYAML>=6.0
+requests>=2.31
+huggingface_hub>=0.20
+
+[dev]
+pytest>=8.0
+pytest-cov>=4.0
+
+[eval]
+diffusers>=0.25
+pytorch-fid>=0.3
+clip-score>=0.1
+vendi-score>=0.1

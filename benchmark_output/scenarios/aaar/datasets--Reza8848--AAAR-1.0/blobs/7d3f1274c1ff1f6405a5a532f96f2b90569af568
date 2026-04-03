@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 4: Input prompt for each of six baseline methods (1) GPT-3 Zero-Shot, (2) GPT-3 Few-Shot, (3) GPT-3 Zero-Shot with CoT, (4) GPT-3 Few-Shot with CoT, (5) Codex Zero-Shot, and (6) Codex Few-Shot. Similar questions (as measured by cosine similarity) are drawn from previous finals only.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.67364501953125,
+    "y1": 349.28851318359375,
+    "y2": 377.2090148925781
+  },
+  "figType": "Table",
+  "imageText": ["Codex", "Few-Shot", "\"\"\"", "Write", "a", "program", "that", "answers", "the", "following", "question:", "<similar", "question>", "\"\"\"", "<similar", "question’s", "correct", "code>", "\"\"\"", "Write", "a", "program", "that", "answers", "the", "following", "question:", "<question>", "\"\"\"", "Codex", "Zero-Shot", "\"\"\"", "Write", "a", "program", "that", "answers", "the", "following", "question:", "<question>", "\"\"\"", "GPT-3", "Few-Shot", "with", "CoT", "Q:", "<similar", "question>", "A:", "<similar", "question’s", "answer>", "Q:", "<question>", "A:", "Let’s", "think", "step", "by", "step.", "GPT-3", "Zero-Shot", "with", "CoT", "Q:", "<question>", "A:", "Let’s", "think", "step", "by", "step.", "GPT-3", "Few-Shot", "Q:", "<similar", "question>", "A:", "<similar", "question’s", "answer>", "Q:", "<question>", "A:", "GPT-3", "Zero-Shot", "<question>", "Method", "Prompt"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table4-1.png"
+}, {
+  "caption": "Figure 1: 500 MIT students taking the final exam in Introduction to Machine Learning in Fall 2021 (no student faces or identifying information appears in the image to maintain anonymity). The exam is three hours long and is taken in an indoor track-and-field stadium accommodating many students.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.5683288574219,
+    "y1": 241.07052612304688,
+    "y2": 268.989990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 406.08,
+    "y1": 80.64,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Figure1-1.png"
+}, {
+  "caption": "Table 1: Spring 2021, Question 10.a: question part, solution, Codex Zero-Shot answer, program output, GPT-3 Zero-Shot answer, and GPT-3 Zero-Shot with CoT prompt answer.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 530.8207397460938,
+    "y1": 498.1355285644531,
+    "y2": 515.0969848632812
+  },
+  "figType": "Table",
+  "imageText": ["Solution", "3", "j=1(xj", "−", "x′", "j)", "2.", "Assume", "our", "training", "data", "Dtrain", "=", "((1,", "1),", "(2,", "2),", "(3,", "6)).", "What", "is", "h(10;", "0)?", "That", "is,", "letting", "θ", "=", "0,", "what", "is", "our", "prediction", "for", "x", "=", "10?", "where", "θ", "is", "a", "scalar", "and", "∥x", "−", "x′∥2", "=", "∑d", "f(x,", "x′;", "θ)", "=", "e−θ∥x−x′∥2", "A", "typical", "choice", "for", "f", "is", "f(x,", "x(i);", "θ)y(i)∑", "(x(i),y(i))∈Dtrain", "f(x,", "x(i);", "θ)", ".", "∑", "(x(i),y(i))∈Dtrain", "h(x;", "θ)", "=", "Question", "Part", "Given", "a", "set", "of", "data", "Dtrain", "=", "{(x(i),", "y(i))},", "a", "weighted", "nearest", "neighbor", "regressor", "has", "the", "form", "Topic", "Classifiers"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 530.4,
+    "y1": 528.0,
+    "y2": 709.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table1-1.png"
+}, {
+  "caption": "Table 5: We benchmark different baselines for each semester, excluding question parts that rely on images. We compare the average grade of GPT-3 with zero-shot (ZS), GPT-3 with few-shot (FS) learning, GPT-3 with ZS, and chain-of-thought (CoT) prompting, GPT-3 with FS and CoT prompting, Codex with ZS, Codex with FS, and OPT with ZS. Fall 2017 is the first semester, so few-shot learning results based on previous semesters are unavailable (NA). Spring 2020 and Fall 2020 did not have final exams due to COVID-19. Spring 2021, Fall 2021, and Spring 2022 final exams were unavailable online when GPT-3 and Codex were trained, ensuring that the model is not overfitting. The result of the best-performing method for each semester is marked in bold.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2414245605469,
+    "y1": 183.78451538085938,
+    "y2": 266.4990234375
+  },
+  "figType": "Table",
+  "imageText": ["Fall", "2017", "38.21", "NA", "22.86", "NA", "21.43", "NA", "NA", "Spring", "2018", "44.35", "60.48", "38.71", "70.97", "32.26", "67.74", "33.33", "Fall", "2018", "51.99", "52.18", "61.63", "64.17", "49.78", "54.00", "47.54", "Spring", "2019", "43.45", "54.23", "41.07", "58.81", "15.54", "41.55", "15.32", "Spring", "2021", "44.33", "55.81", "53.45", "60.21", "33.62", "62.09", "11.11", "Fall", "2021", "58.94", "58.94", "50.35", "54.90", "18.11", "42.00", "15.32", "Spring", "2022", "42.78", "68.86", "32.03", "53.48", "51.01", "65.46", "60.71", "Semester", "GPT-3", "ZS", "GPT-3", "FS", "GPT-3", "ZS", "CoT", "GPT-3", "FS", "CoT", "Codex", "ZS", "Codex", "FS", "OPT", "ZS"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 530.4,
+    "y1": 38.879999999999995,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table5-1.png"
+}, {
+  "caption": "Table 7: The number of question parts that do not rely on images, the number of points that do not rely on images, and the number of non-open question points, in Introduction to Machine Learning finals for each semester. Spring 2020 and Fall 2020 did not have final exams due to COVID-19.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00311279296875,
+    "y1": 464.7785339355469,
+    "y2": 492.6990051269531
+  },
+  "figType": "Table",
+  "imageText": ["Total", "345", "/", "496", "505", "/", "800", "423", "/", "505", "OPT", "Total", "163", "/", "496", "246", "/", "800", "133", "/", "505", "Fall", "2017", "49", "/", "61", "70", "66", "Spring", "2018", "27", "/", "42", "62", "52", "Fall", "2018", "29", "/", "59", "62", "45", "Spring", "2019", "41", "/", "58", "70", "44", "Spring", "2021", "50", "/", "70", "61", "66", "Fall", "2021", "56", "/", "86", "48", "36", "Spring", "2022", "46", "/", "59", "69", "48", "Semester", "Non-Image", "Parts", "/", "All", "Non-Image", "Points", "/", "100", "Non-Open", "Points"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 466.08,
+    "y1": 331.68,
+    "y2": 454.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table7-1.png"
+}, {
+  "caption": "Table 8: The number of questions parts that do not rely on images, number of points that do not rely on images, and number of non-open question points in Introduction to Machine Learning finals for each topic of the course.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3487243652344,
+    "y1": 689.7665405273438,
+    "y2": 717.6859741210938
+  },
+  "figType": "Table",
+  "imageText": ["Total", "345", "/", "496", "505", "/", "800", "423", "/", "505", "Regression", "33", "/", "58", "41", "/", "67", "36", "Classifiers", "52", "/", "60", "101", "/", "123", "71", "Logistic", "Regression", "8", "/", "8", "10", "/", "10", "3", "Features", "18", "/", "21", "26", "/", "38", "15", "Loss", "Functions", "0", "/", "14", "0", "/", "18", "10", "Neural", "Networks", "56", "/", "76", "87", "/", "128", "66", "CNNs", "52", "/", "63", "57", "/", "76", "44", "MDPs", "38", "/", "72", "39", "/", "112", "72", "RNNs", "27", "/", "33", "48", "/", "67", "35", "Reinforcement", "Learning", "42", "/", "50", "55", "/", "79", "37", "Clustering", "1", "/", "8", "2", "/", "12", "5", "Decision", "Trees", "18", "/", "32", "39", "/", "72", "29", "Topic", "Non-Image", "Parts", "/", "All", "Non-Image", "Points", "/", "All", "Non-Open", "Points"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 487.2,
+    "y1": 522.72,
+    "y2": 679.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table8-1.png"
+}, {
+  "caption": "Table 6: We benchmark different baselines for each course topic, excluding question parts that rely on images. We compare the grade of GPT-3 with zero-shot (ZS), GPT-3 with few-shot (FS) learning, GPT-3 with zero-shot and chain-of-thought (CoT) prompting, GPT-3 with FS and CoT, Codex with zero-shot, Codex with few-shot learning, and OPT with ZS. The question parts on loss functions rely on image information and are therefore unavailable (marked NA). The result of the best-performing method for each semester is marked in bold.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.245849609375,
+    "y1": 243.61550903320312,
+    "y2": 304.4129943847656
+  },
+  "figType": "Table",
+  "imageText": ["Regression", "31.71", "50.00", "25.61", "40.85", "40.24", "50.00", "50.00", "Classifiers", "38.18", "46.21", "26.28", "42.35", "18.88", "53.74", "50.00", "Logistic", "Reg.", "50.00", "60.00", "77.50", "77.50", "55.00", "70.00", "16.67", "Features", "58.65", "75.96", "53.85", "77.31", "68.85", "81.54", "10.00", "Loss", "Functions", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "Neural", "Networks", "48.34", "60.23", "44.54", "68.42", "37.82", "63.45", "27.27", "CNNs", "37.50", "53.58", "28.36", "47.81", "13.38", "36.77", "23.83", "MDPs", "49.19", "52.01", "46.03", "54.23", "24.38", "38.03", "4.27", "RNNs", "61.46", "71.88", "57.29", "66.14", "12.50", "40.63", "39.28", "RL", "36.09", "42.99", "36.67", "50.11", "28.79", "45.11", "24.28", "Clustering", "100.00", "100.00", "100.00", "100.00", "50.00", "50.00", "7.14", "Decision", "Trees", "54.70", "71.80", "32.48", "51.28", "46.15", "54.70", "55.00", "Topic", "GPT-3", "ZS", "GPT-3", "FS", "GPT-3", "ZS", "CoT", "GPT-3", "FS", "CoT", "Codex", "ZS", "Codex", "FS", "OPT", "ZS"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 547.1999999999999,
+    "y1": 38.879999999999995,
+    "y2": 233.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table6-1.png"
+}, {
+  "caption": "Table 3-4: The number of questions and parts in the final for each semester and topic of Introduction to Machine Learning. Spring 2020 and Fall 2020 did not have final exams due to COVID-19. Topics can have half-questions attributed to them if a question has some parts under one topic and the other parts under another topic.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1695556640625,
+    "y1": 421.217529296875,
+    "y2": 460.09698486328125
+  },
+  "figType": "Table",
+  "imageText": ["Mean", "6.73", "45.09", "Total", "74", "496", "Regression", "6", "58", "Classifiers", "10", "60", "Logistic", "Regression", "1", "8", "Features", "3.5", "21", "Neural", "Networks", "12.5", "76", "Loss", "Functions", "2", "14", "CNNs", "8", "63", "MDPs", "9", "75", "RNNs", "7", "33", "Reinforcement", "Learning", "8", "50", "Clustering", "1", "8", "Decision", "Trees", "6", "32", "Topic", "Questions", "Parts", "Mean", "9.25", "62", "Total", "74", "496", "Fall", "2017", "10", "61", "Spring", "2018", "9", "42", "Fall", "2018", "9", "59", "Spring", "2019", "9", "58", "Fall", "2019", "8", "61", "Spring", "2021", "12", "70", "Fall", "2021", "8", "86", "Spring", "2022", "9", "59", "Semester", "Questions", "Parts"],
+  "name": "3-4",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 499.2,
+    "y1": 243.84,
+    "y2": 411.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table3-4-1.png"
+}, {
+  "caption": "Table 2: Human and machine grading of human and machine solved final exams. Mean human and machine grades on Introduction to Machine Learning final exams by semester. Spring 2021, Fall 2021, and Spring 2022 final exams were unavailable online when GPT-3 and Codex were trained, ensuring that our results are not due to overfitting. Non-image grades consider question parts that do not contain images that are required for solving the question.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2474060058594,
+    "y1": 179.02755737304688,
+    "y2": 228.864990234375
+  },
+  "figType": "Table",
+  "imageText": ["Mean", "73.10", "70.82", "63.29", "62.95", "Spring", "2021", "75.84", "80.77", "62.09", "64", "Fall", "2021", "74.38", "60.88", "58.94", "51.33", "Spring", "2022", "69.07", "70.82", "68.86", "73.53", "Grading:", "Human", "Human", "Human", "Machine", "Answers:", "Human", "Human", "Machine", "Machine", "Questions:", "All", "Non-Image", "Non-Image", "Non-Image", "Non-Open"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MT1Pcdo8sGG-Table2-1.png"
+}]

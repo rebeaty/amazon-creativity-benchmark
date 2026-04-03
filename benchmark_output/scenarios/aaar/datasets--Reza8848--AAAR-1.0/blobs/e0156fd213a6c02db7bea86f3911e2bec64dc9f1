@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 5: An example trajectory graph G(Z) construction for a controlled adaptive ODE solver with h0 = 1 2 , α = 2 and Tend = 1. Note how trajectory splitting occurs in all vertices except the final state.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9996032714844,
+    "y1": 173.19973754882812,
+    "y2": 189.62701416015625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "1", "4", ",", "1", "4", "1", "2", ",", "1", "2", "1", "4", ",", "1", "2", "0,", "1", "4", "0,", "1", "2", ")", "(b)", "1", "2", ",", "1", "2", "0,", "1", "4", "0,", "1", "2", "(a)", "0,", "1", "2", "(d)", "1,", "0", "3", "4", ",", "1", "4", "1", "2", ",", "1", "2", "1", "2", ",", "1", "4", "1", "4", ",", "1", "2", "1", "4", ",", "1", "4", "0,", "1", "2", "0,", "1", "4"],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 82.56,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Example upper bounds for y = z(Tend) via GAINS. (Lower bounds analogous.) Blue arrows show the backward substitution resulting in LCAP at t0.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 504.0007629394531,
+    "y1": 419.2657470703125,
+    "y2": 465.5140380859375
+  },
+  "figType": "Figure",
+  "imageText": ["y", "≤", "u1,2", "y", "≤", "u2", ":=", "A2z0", "+", "c2", "y", "≤", "u1", ":=", "A1z0", "+", "c1", "y", "≤", "A2z2", "+", "c2", "y", "≤", "A1z1", "+", "c1", "Tend", "y", "t2", "t1", "t0"],
+  "name": "6",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 365.76,
+    "x2": 498.24,
+    "y1": 325.92,
+    "y2": 408.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Visualization of the LCAP withm = 3, shown in (a). In (b) the constraints u1,u2 (dashed) are over-approximated by u1,2 via CURLS, which also bounds u3 (dotted).",
+  "captionBoundary": {
+    "x1": 337.6809997558594,
+    "x2": 503.9999084472656,
+    "y1": 615.7957153320312,
+    "y2": 651.0859985351562
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "u1", "u2", "u3", "u1,2", "y", "(a)", "z0", "y", "z0"],
+  "name": "7",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 352.8,
+    "x2": 492.96,
+    "y1": 547.68,
+    "y2": 615.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Overview of NODE inference in both the standard and certified (our) setting. In both settings ODE solvers are used to evaluate learned dynamics. We introduce controlled adaptive solvers (CAS) as a modification of adaptive solvers, which reduce the reachable time/step-size pairs from a continuous area to discrete points. This enables our novel NODE analysis framework GAINS to compute worst-case bounds on NODE outputs given small input ranges, allowing both inference with guarantees and provable training. For example, in the time-series forecasting setting shown on the right, standard NODE inference predicts the blue points given the concrete red inputs. In contrast GAINS computes all possible outputs (blue error bars), for inputs in the red input ranges.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00115966796875,
+    "y1": 269.3187561035156,
+    "y2": 344.4600830078125
+  },
+  "figType": "Figure",
+  "imageText": ["Inference", "w.", "Guarantees", "NODE", "Veriﬁer:", "GAINS", "(§5)", "Tend", "t2", "t1", "t0", "Controlled", "Adaptive", "ODE", "Solver", "(CAS;", "§4)", "Step", "Size", "Time", "Learning", "Provable", "Dynamics", "(§5)", "This", "Work∫", "T", "0", "gθ(z(t),", "t)dt", "Adaptive", "ODE", "Solver", "Standard", "Inference", "Step", "Size", "Learned", "Dynamics", "Time", "Standard", "NODE", "(§3)∫", "T", "0", "gθ(z(t),", "t)dt"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.35999999999996,
+    "y1": 84.96,
+    "y2": 252.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure1-1.png"
+}, {
+  "caption": "Figure 8: ε-annealing (top) and ρ-annealing (bottom) for time-series input. Dots indicate concrete inputs and error bars abstract regions.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 503.9991455078125,
+    "y1": 484.74774169921875,
+    "y2": 510.07501220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Annealing", "abstract", "ratio", "ρ.", "Data", "Time", "Data", "Time", "Data", "Time", "(a)", "Annealing", "perturbation", "ε.", "Data", "Time", "Data", "Time", "Data", "Time"],
+  "name": "8",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 336.47999999999996,
+    "x2": 496.32,
+    "y1": 368.64,
+    "y2": 477.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure8-1.png"
+}, {
+  "caption": "Table 1: Mean and standard deviations of the standard (Std.), adversarial (Adv.), and certified (Cert.) accuracy obtained with GAINS depending on the training method and evaluated on the first 1000 test set samples.",
+  "captionBoundary": {
+    "x1": 107.99199676513672,
+    "x2": 504.009033203125,
+    "y1": 83.14021301269531,
+    "y2": 96.134033203125
+  },
+  "figType": "Table",
+  "imageText": ["GAINS", "0.11", "75.1±1.2", "65.7±1.0", "56.3±1.4", "21.1±5.9", "8.4±2.3", "0.16", "71.5±1.7", "64.0±2.7", "54.7±2.5", "60.1±3.5", "42.7±1.4", "Adv.", "0.11", "80.9±0.7", "70.2±0.5", "0.0±0.0", "47.1±3.7", "0.0±0.0", "Standard", "88.6±1.2", "0.1±0.1", "0.0±0.0", "0.0±0.0", "0.0±0.0", "FMNIST", "GAINS", "0.11", "95.5±0.1", "91.5±0.6", "83.9±1.3", "84.0±2.7", "17.7±9.0", "21.4±1.8", "0.0±0.0", "0.22", "91.8±1.3", "88.5±1.8", "82.7±3.4", "86.8±2.1", "69.4±6.5", "84.5±3.2", "50.9±9.1", "Adv.", "0.11", "99.2±0.1", "95.4±0.4", "0.0±0.0", "88.3±0.6", "0.0±0.0", "59.4±3.2", "0.0±0.0", "Standard", "98.8±0.4", "23.2±3.5", "0.0±0.0", "2.5±1.6", "0.0±0.0", "0.3±0.2", "0.0±0.0", "MNIST", "Adv.", "[%]", "Cert.", "[%]", "Adv.", "[%]", "Cert.", "[%]", "Adv.", "[%]", "Cert.", "[%]", "Dataset", "Training", "Method", "εt", "Std.", "[%]", "ε", "=", "0.10", "ε", "=", "0.15", "ε", "=", "0.20"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 505.44,
+    "y1": 101.75999999999999,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Table1-1.png"
+}, {
+  "caption": "Figure 2: Linear bounds for ReLU(x).",
+  "captionBoundary": {
+    "x1": 345.6809997558594,
+    "x2": 484.1206359863281,
+    "y1": 434.73675537109375,
+    "y2": 440.1390075683594
+  },
+  "figType": "Figure",
+  "imageText": ["y", "=", "max(0,", "x)", "y", "≥", "λx", "y", "≤", "ux", "ux−lx", "(x−", "lx)", "lx", "ux", "y", "x"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 333.59999999999997,
+    "x2": 493.44,
+    "y1": 357.59999999999997,
+    "y2": 425.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure2-1.png"
+}, {
+  "caption": "Table 3: Mean and standard deviation of the attack success [%] on the first 1000 samples of the MNIST test set.",
+  "captionBoundary": {
+    "x1": 325.80096435546875,
+    "x2": 504.00146484375,
+    "y1": 520.8343505859375,
+    "y2": 546.7617797851562
+  },
+  "figType": "Table",
+  "imageText": ["GAINS", "0.11", "73.4±3.5", "86.3±3.5", "95.5±1.8", "0.22", "65.2±7.5", "75.3±6.2", "82.2±5.0", "Adversarial", "0.11", "99.3±0.1", "100.0±0.0", "100.0±0.0", "Standard", "98.9±0.3", "100.0±0.1", "100.0±0.0", "ε", "=", "0.1", "ε", "=", "0.15", "ε", "=", "0.2", "Training", "εt", "Attack", "Success", "[%]"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 326.88,
+    "x2": 501.12,
+    "y1": 550.56,
+    "y2": 620.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Table3-1.png"
+}, {
+  "caption": "Table 2: Comparison of the mean absolute errors for the unperturbed samples (Std. MAE), and the adversarial (Adv.), and certifiable (Cert.) ν-δ-robustness with ν = 0.1 and δ = 0.01 obtained using different provable training methods on the full PHYSIO-NET test set.",
+  "captionBoundary": {
+    "x1": 107.99500274658203,
+    "x2": 504.0071105957031,
+    "y1": 83.08785247802734,
+    "y2": 95.549072265625
+  },
+  "figType": "Table",
+  "imageText": ["0.2", "56.3±0.5", "99.4±0.2", "99.0±0.4", "89.3±1.4", "84.9±1.1", "57.6±5.5", "47.2±2.9", "GAINS", "0.1", "54.9±0.4", "97.8±0.0", "95.3±0.7", "78.6±1.9", "68.3±3.5", "34.2±3.4", "24.2±2.0", "24h", "Standard", "54.8±0.3", "83.3±0.6", "0.0±0.0", "38.7±0.8", "0.0±0.0", "10.1±1.4", "0.0±0.0", "0.2", "54.6±2.1", "98.8±0.3", "97.6±0.5", "88.6±0.3", "80.5±2.9", "48.9±1.9", "36.8±1.9", "GAINS", "0.1", "53.6±2.2", "98.2±0.6", "94.1±0.2", "78.5±2.1", "57.6±4.2", "33.2±4.1", "20.5±2.9", "12h", "Standard", "48.8±0.2", "72.9±1.3", "0.0±0.0", "23.4±3.6", "0.0±0.0", "5.6±1.0", "0.0±0.0", "0.2", "63.2±1.6", "99.9±0.1", "99.9±0.1", "99.8±0.2", "99.6±0.4", "97.2±0.2", "97.0±0.2", "GAINS", "0.1", "51.6±1.9", "96.1±1.0", "90.8±1.7", "70.4±4.2", "50.2±3.1", "28.4±1.3", "16.9±1.1", "6h", "Standard", "51.9±0.7", "61.0±5.0", "0.0±0.0", "17.7±2.6", "0.0±0.0", "4.1±1.2", "0.0±0.0", "Adv.", "[%]", "Cert.", "[%]", "Adv.", "[%]", "Cert.", "[%]", "Adv.", "[%]", "Cert.", "[%]", "Setting", "Training", "Method", "εt", "Std.", "MAE", "[×", "100]", "ε", "=", "0.05", "ε", "=", "0.10", "ε", "=", "0.20"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 505.44,
+    "y1": 100.8,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Table2-1.png"
+}, {
+  "caption": "Figure 3: We compare CAS and adaptive solvers (AS) with respect to the reachable time/step-size tuples af-",
+  "captionBoundary": {
+    "x1": 416.8789978027344,
+    "x2": 503.9965515136719,
+    "y1": 664.0027465820312,
+    "y2": 709.2559814453125
+  },
+  "figType": "Figure",
+  "imageText": ["Step", "Size", "Time"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 417.59999999999997,
+    "x2": 503.03999999999996,
+    "y1": 571.68,
+    "y2": 657.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure3-1.png"
+}, {
+  "caption": "Figure 4: AS and CAS error over solver steps. (Details in App. C.2)",
+  "captionBoundary": {
+    "x1": 416.8789978027344,
+    "x2": 503.9964294433594,
+    "y1": 348.5777587890625,
+    "y2": 373.905029296875
+  },
+  "figType": "Figure",
+  "imageText": ["CAS", "AS", "102", "Absolute", "Error", "10−2", "10−6", "0", "15", "30", "#", "Solver", "Steps"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 419.03999999999996,
+    "x2": 502.08,
+    "y1": 254.88,
+    "y2": 340.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KyoVpYvWWnK-Figure4-1.png"
+}]

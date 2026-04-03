@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 1: The network architecture of DyAD. The input data are split into system input u and system response x. The model parameters are updated by minimizing an autoencoder style loss in Eqn. 5.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99896240234375,
+    "y1": 215.44754028320312,
+    "y2": 232.40899658203125
+  },
+  "figType": "Figure",
+  "imageText": ["System", "input", "𝒖", "Input", "Regularization", "loss𝒙", "𝒖", "Variational", "Variable", "Latent", "Decoder", "Encoder", "Reconstruction", "loss", "Observation", "𝒙′", "Reconstructed", "System", "response", "𝒙"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 484.32,
+    "y1": 82.08,
+    "y2": 204.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Figure1-1.png"
+}, {
+  "caption": "Table 1: Dataset statistics.",
+  "captionBoundary": {
+    "x1": 252.40199279785156,
+    "x2": 359.29071044921875,
+    "y1": 148.68154907226562,
+    "y2": 154.68402099609375
+  },
+  "figType": "Table",
+  "imageText": ["MSL", "SMAP", "EV", "(ours)", "Number", "of", "dimensions", "55", "25", "8", "Number", "of", "time", "frames", "132,", "046", "562,", "800", "88,", "135,", "040", "Anomaly", "ratio", "10.27%", "13.13%", "N/A"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 134.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Table1-1.png"
+}, {
+  "caption": "Figure 3: Charging snippet examples from snippets of normal and abnormal vehicles.",
+  "captionBoundary": {
+    "x1": 135.76499938964844,
+    "x2": 476.23681640625,
+    "y1": 394.8265380859375,
+    "y2": 400.8290100097656
+  },
+  "figType": "Figure",
+  "imageText": ["Normal", "vehicle", "Abnormal", "vehicle", "C)", "p", "(", "te", "m", "M", "in", "40", "30", "20", "10", "0", "50", "100", "Timestamp", "(s)", "Normal", "vehicle", "Abnormal", "vehicle", "C)", "p", "(", "te", "m", "M", "ax", "40", "30", "20", "10", "0", "50", "100", "Timestamp", "(s)", "Normal", "vehicle", "Abnormal", "vehicle", "V)", "ol", "t", "(", "le", "v", "si", "ng", "M", "in", "4.1", "4.0", "3.9", "3.8", "3.7", "3.6", "0", "50", "100", "Timestamp", "(s)", "Normal", "vehicle", "Abnormal", "vehicle", "V)", "ol", "t", "(", "le", "v", "si", "ng", "M", "ax", "4.1", "4.0", "3.9", "3.8", "3.7", "3.6", "0", "50", "100", "Timestamp", "(s)", "Normal", "vehicle", "Abnormal", "vehicle", ")", "nt", "(A", "Cu", "rre", "0", "100", "100", "101", "102", "0", "50", "100", "Timestamp", "(s)", "Normal", "vehicle", "Abnormal", "vehicle", ")", "ge", "(V", "Vo", "lta", "2", "1", "0", "1", "2", "3", "4", "0", "50", "100", "Timestamp", "(s)"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 131.04,
+    "x2": 481.44,
+    "y1": 173.76,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Figure3-1.png"
+}, {
+  "caption": "Table 3: Mean and standard variance of test AUROC (%) values on each make. Bold denotes the best results.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0031433105469,
+    "y1": 525.196533203125,
+    "y2": 542.1580200195312
+  },
+  "figType": "Table",
+  "imageText": ["DyAD+Robust", "Score", "(Ours)", "78.0±", "5.2", "84.4±", "3.8", "Deep", "SVDD", "51.6±", "5.7", "58.5±", "13.7", "LSTMAD", "56.0±", "7.3", "58.6±", "9.5", "MTAD-GAT", "57.1±", "9.9", "50.9±", "12.5", "GDN", "64.8±", "11.5", "65.3±", "4.3", "Algorithm", "Make", "1", "Make", "2", "AE", "65.3±", "7.0", "59.4±", "8.4"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 180.95999999999998,
+    "x2": 431.03999999999996,
+    "y1": 554.88,
+    "y2": 641.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Table3-1.png"
+}, {
+  "caption": "Table 2: Mean and standard variance of test AUROC (%) values on all vehicles from three makes. Among all the considered algorithms, DyAD achieves the best detection results by a 3.1% ∼ 20.0% AUROC boost and a relatively small variance compared to the second best algorithm on both averaging (Left) and robust scoring (Right) criteria. Further, our robust scoring function consistently improves baseline algorithms. Bold denotes the best results.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.74420166015625,
+    "y1": 343.7275390625,
+    "y2": 393.5660095214844
+  },
+  "figType": "Table",
+  "imageText": ["AE", "66.1±", "3.1", "69.4±", "2.6", "Deep", "SVDD", "51.3±", "4.2", "55.2±", "2.5", "LSTMAD", "60.0±", "1.5", "63.1±", "1.7", "MTAD-GAT", "61.3±", "0.9", "65.2±", "2.3", "GDN", "68.9±", "3.1", "72.1±", "3.2", "DyAD", "(Ours)", "73.2±", "2.5", "75.2±", "2.7", "Algorithm", "AUROC", "(%)", "by", "Averaging", "Score", "AUROC", "(%)", "by", "Robust", "Score"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 187.68,
+    "x2": 424.32,
+    "y1": 406.56,
+    "y2": 503.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Table2-1.png"
+}, {
+  "caption": "Figure 2: Interpolated averaged ROC curves of several algorithms on our EV battery dataset. Shaded area represents the five-fold variance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00048828125,
+    "y1": 267.2185363769531,
+    "y2": 284.17999267578125
+  },
+  "figType": "Figure",
+  "imageText": ["MTAD-GAT", "GDN", "SVDD", "LSTMAD", "DyAD", "(Ours)", "AE", "Without", "robust", "score", "0.8", "1.0", "Tr", "ue", "p", "os", "iti", "ve", "ra", "te", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "False", "positive", "rate", "With", "robust", "score", "ra", "te", "iti", "ve", "p", "os", "Tr", "ue", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "False", "positive", "rate"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 131.51999999999998,
+    "x2": 484.32,
+    "y1": 81.11999999999999,
+    "y2": 255.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Figure2-1.png"
+}, {
+  "caption": "Table 4: F1, Precision and Recall on the two spacecraft datasets. Bold denotes the best results.",
+  "captionBoundary": {
+    "x1": 117.81800079345703,
+    "x2": 493.8762512207031,
+    "y1": 396.6285400390625,
+    "y2": 402.6310119628906
+  },
+  "figType": "Table",
+  "imageText": ["F1", "Precison", "Recall", "F1", "Precision", "Recall", "AE", "0.5774", "0.5507", "0.6070", "0.6215", "0.8606", "0.4864", "Deep", "SVDD", "0.6804", "0.8270", "0.5779", "0.2965", "0.1752", "0.9630", "LSTMAD", "0.4502", "0.3831", "0.5458", "0.6944", "0.8914", "0.5687", "MTAD-GAT", "0.9084", "0.8754", "0.9440", "0.9013", "0.8906", "0.9123", "GDN", "0.7660", "0.7598", "0.7723", "0.7069", "0.7556", "0.6641", "DyAD", "(Ours)", "0.9438", "0.9215", "0.9673", "0.9313", "0.9501", "0.9132", "Method", "MSL", "SMAP"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 471.35999999999996,
+    "y1": 415.68,
+    "y2": 517.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G-dM79m_EXd-Table4-1.png"
+}]

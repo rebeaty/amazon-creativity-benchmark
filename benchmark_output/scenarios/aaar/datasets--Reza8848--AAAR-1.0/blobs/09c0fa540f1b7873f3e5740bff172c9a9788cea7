@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 7: Visualization of more molecules",
+  "captionBoundary": {
+    "x1": 221.7419891357422,
+    "x2": 390.25933837890625,
+    "y1": 679.7005615234375,
+    "y2": 685.7030029296875
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "COc1cc(Br)c(Br)cc1O", "(e)", "COC(=O)[C@]1(c2ccc(Br)cc2)CO1", "(d)", "CO/C=C(\\F)C(=O)Nc1cccc(F)c1", "(c)", "CN[C@H](CO)c1cc(F)ccc1F", "(b)", "Clc1ccc(C2OCC=CCO2)c(Cl)c1", "(a)", "Cc1cc(F)ccc1/C=C/C(=O)O"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 102.72,
+    "y2": 662.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Rationale-aware graph augmentation preserves instance-discriminative features in original graph (e.g., 1(a)). Existing frameworks tailor-make an auxiliary model for one single transformation (e.g., 1(b) or 1(c)). SR-GCL constructs both node- and edge-wise rationale-aware views (e.g., 1(d)).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 167.34555053710938,
+    "y2": 195.2659912109375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Original", "graph", "(b)", "Node-wise", "views", "(c)", "Edge-wise", "views", "(d)", "Dual", "views"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 161.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Separate finder-encoder in 2(a) may lead to instability and biased representation, while SR-GCL integrates them together in 2(b) to pursue high-quality rationales and representations.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.0032958984375,
+    "y1": 275.00152587890625,
+    "y2": 291.9630126953125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Integrated", "scheme", "Integrated", "Model", "Rationale", "(a)", "Separate", "finder-encoder", "scheme", "Finder", "Rationale", "Encoder"],
+  "name": "2",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 446.4,
+    "y1": 206.88,
+    "y2": 268.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure2-1.png"
+}, {
+  "caption": "Table 4: Backbone model architectures",
+  "captionBoundary": {
+    "x1": 228.07798767089844,
+    "x2": 383.92291259765625,
+    "y1": 300.6162109375,
+    "y2": 306.6186828613281
+  },
+  "figType": "Table",
+  "imageText": ["OPTIMIZER", "ADAM", "ADAMW", "LEARNING", "RATE", "0.001", "0.0001", "POOLING", "MEAN", "⟨CLS⟩", "PROJECTOR", "NEURON#", "[300,300]", "[128,128]", "TRANS", "LAYER#", "-", "4", "TRANS", "HEADS#", "-", "4", "TRANS", "IN/OUT", "DIMENSION", "-", "128", "TRANS", "PROJECTION", "DIMENSION", "-", "512", "GNN", "TYPE", "GIN", "GIN", "NEURON#", "[300,300,300,300,300]", "[300,300,300,300,300]", "MODELS", "GNN", "IN", "BASELINES", "HYBRID", "MODEL"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 477.12,
+    "y1": 324.47999999999996,
+    "y2": 461.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Table4-1.png"
+}, {
+  "caption": "Table 5: Computational efficiency",
+  "captionBoundary": {
+    "x1": 238.08999633789062,
+    "x2": 373.9100646972656,
+    "y1": 643.2145385742188,
+    "y2": 649.2169799804688
+  },
+  "figType": "Table",
+  "imageText": ["GIN", "15.55±9.72", "22.49±2.27", "38.04±10.07", "1.88M", "Hybrid", "Model", "23.97±11.39", "36.51±3.32", "60.47±11.95", "2.71M", "Backbone", "Forward", "time", "(ms)", "Backward", "time", "(ms)", "Cumulative", "time", "(ms)", "Parameter", "#"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 515.04,
+    "y1": 571.1999999999999,
+    "y2": 632.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Table5-1.png"
+}, {
+  "caption": "Table 3: Statistics for ZINC-2M and MoleculeNet datasets.",
+  "captionBoundary": {
+    "x1": 187.94900512695312,
+    "x2": 424.05267333984375,
+    "y1": 488.77154541015625,
+    "y2": 494.7740173339844
+  },
+  "figType": "Table",
+  "imageText": ["C", "BASELINES", "BACE", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "1,513", "34.08", "73.71", "ZINC-2M", "BIOCHEMICAL", "MOLECULES", "PRE-TRAINING", "2,000,000", "26.62", "57.72", "BBBP", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "2,039", "24.06", "51.90", "TOX21", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "7,831", "18.57", "38.58", "TOXCAST", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "8,576", "18.78", "38.52", "SIDER", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "1,427", "33.64", "70.71", "CLINTOX", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "1,477", "26.15", "55.76", "MUV", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "93,087", "24.23", "52.55", "HIV", "BIOCHEMICAL", "MOLECULES", "FINETUNING", "41,127", "25.51", "54.93", "DATASETS", "CATEGORY", "UTILIZATION", "GRAPHS#", "AVG.", "N#", "AVG.", "DEGREE"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 515.04,
+    "y1": 513.6,
+    "y2": 649.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Table3-1.png"
+}, {
+  "caption": "Figure 5: 5(a): a molecule graph. 5(b): corresponding attention map. 5(c): node- (top) and edgewise (bottom) attention, where darker color indicates higher attention weights. 5(d): the contribution of each atom to Gasteiger partial charge (top) and partition coefficient (bottom).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 207.08248901367188,
+    "y2": 235.0029296875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 85.92,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure5-1.png"
+}, {
+  "caption": "Table 2: Ablation Study",
+  "captionBoundary": {
+    "x1": 258.08502197265625,
+    "x2": 353.91522216796875,
+    "y1": 257.9094543457031,
+    "y2": 263.91192626953125
+  },
+  "figType": "Table",
+  "imageText": ["GraphCL", "70.41±1.06", "73.82±1.04", "63.06±0.41", "60.38±1.28", "77.79±3.02", "73.81±2.02", "75.62±0.89", "78.28±1.08", "71.64", "SR-GCL", "node-wise", "73.01±0.94", "75.12±1.68", "65.69±1.02", "61.21±0.93", "80.47±3.55", "77.92±3.12", "77.89±0.68", "81.33±0.92", "74.08", "SR-GCL", "edge-wise", "71.62±1.87", "74.98±0.96", "64.87±0.65", "61.32±1.59", "80.29±2.68", "75.11±1.63", "77.64±1.68", "79.69±0.87", "73.19", "SR-GCL", "dual-views", "72.60±0.89", "77.30±0.84", "65.86±0.61", "61.46±1.36", "81.84±1.60", "77.76±1.18", "78.52±0.74", "81.58±0.97", "74.62", "Dataset", "BBBP", "Tox21", "ToxCast", "SIDER", "ClinTox", "MUV", "HIV", "BACE", "AVG."],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 272.64,
+    "y2": 346.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Table2-1.png"
+}, {
+  "caption": "Figure 3: SR-GCL framework, which constructs node- and edge-wise rationales (i.e., Rv(g)/Re(g)) by sampling from corresponding probability distributions (i.e., PV(·|G)/PE(·|G)). Then contrastive optimization is performed to encourage the agreement between views of the same anchor.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0030517578125,
+    "y1": 270.9325256347656,
+    "y2": 298.85296630859375
+  },
+  "figType": "Figure",
+  "imageText": ["Contrastive", "Optimization", "Scores", "Attention", "Transformer", "f2(·)", "Cl", "O", "N", "C", "CLS", "Cl", "O", "N", "C", "CLS", "GNN", "Edge-wise", "Rationale", "f1(·)", "Re(g)", "Node-wise", "Rationale", "Rv(g)", "p(e|g)", "Edge-wise", "Probability", "p(v|g)", "Node-wise", "Probability", "g", "=", "(V,", "E)", "Anchor", "Graph", "from", "PE", "Sample", "from", "PV", "Sample"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 501.12,
+    "y1": 84.96,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure3-1.png"
+}, {
+  "caption": "Figure 6: Sensitivity w.r.t. hyperparameters τ and ρ.",
+  "captionBoundary": {
+    "x1": 202.22801208496094,
+    "x2": 409.77166748046875,
+    "y1": 229.46353149414062,
+    "y2": 235.46600341796875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "τ", "(b)", "ρ", "(%)"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 85.92,
+    "y2": 212.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure6-1.png"
+}, {
+  "caption": "Figure 4: Self-attention map.",
+  "captionBoundary": {
+    "x1": 380.802001953125,
+    "x2": 496.5175476074219,
+    "y1": 345.7085266113281,
+    "y2": 351.71099853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 378.71999999999997,
+    "x2": 499.2,
+    "y1": 181.92,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CdU7ApBxICO-Figure4-1.png"
+}]

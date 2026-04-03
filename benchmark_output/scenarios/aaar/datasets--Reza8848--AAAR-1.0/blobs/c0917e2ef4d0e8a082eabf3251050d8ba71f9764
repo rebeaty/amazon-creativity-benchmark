@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 6: Classification accuracy performance evaluated in MNIST, EMNIST-L, CIFAR-10, and CIFAR-100 datasets (10% participation rate).",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 503.997314453125,
+    "y1": 668.5325317382812,
+    "y2": 685.4940185546875
+  },
+  "figType": "Figure",
+  "imageText": ["CIFAR-100", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0", "100", "200", "300", "400", "500", "Communication", "Rounds", "CIFAR-100", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0", "100", "200", "300", "400", "500", "Communication", "Rounds", "CIFAR-10", "IID", "accuracy", "0.66", "0.68", "0.70", "0.72", "0.74", "0.76", "0.78", "0.80", "0.82", "Te", "st", "A", "cc", "ur", "ac", "y", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "CIFAR-10", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.80", "0.78", "0.76", "0.74", "0.72", "0.70", "0.68", "0.66", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "EMNIST-L", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.96", "0.94", "0.92", "0.90", "0.88", "0.86", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "EMNIST-L", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.94", "0.92", "0.90", "0.88", "0.86", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "MNIST", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "1.00", "0.98", "0.96", "0.94", "0.92", "0.90", "0", "20", "40", "60", "80", "100", "Communication", "Rounds", "MNIST", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "1.00", "0.98", "0.96", "0.94", "0.92", "0.90", "0", "20", "40", "60", "80", "100", "Communication", "Rounds"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 109.44,
+    "y2": 646.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure6-1.png"
+}, {
+  "caption": "Table 1: Comparison of prior methods and the proposed FedElasticNet.",
+  "captionBoundary": {
+    "x1": 163.4409942626953,
+    "x2": 448.2517395019531,
+    "y1": 156.85549926757812,
+    "y2": 162.85797119140625
+  },
+  "figType": "Table",
+  "imageText": ["efficiency", "△", "△", "×", "△", "#", "Robustness", "to", "heterogeneous", "data", "×", "△", "#", "#", "#", "FedAvg", "FedProx", "SCAFFOLD", "FedDyn", "FedElasticNet", "Communication"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 81.6,
+    "y2": 141.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Table1-1.png"
+}, {
+  "caption": "Table 3: Cumulative entropy values of transmitted bits with 10% client participation for IID and nonIID settings in FL scenarios. The non-IID settings of MNIST, EMNIST-L, CIFAR-10, and CIFAR-100 datasets are created with the Dirichlet distribution of labels owned by the client. Algorithm 1 is FedElasticNet for FedProx, Algorithm 2 is FedElasticNet for SCAFFOLD, and Algorithm 3 is FedElasticNet for FedDyn. The left-side numbers of FedDyn are the entropy values when the local models θtk are transmitted and the right-side numbers in parentheses are the entropy values when the local updates ∆t k = θtk − θt−1 are transmitted.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6500549316406,
+    "y1": 424.4935302734375,
+    "y2": 499.071044921875
+  },
+  "figType": "Table",
+  "imageText": ["Non-IID", "Shakespeare", "100", "593.21", "440.97", "628.32", "470.22", "609.11", "(348.11)", "419.99", "MNIST", "100", "244.49", "45.24", "291.88", "73.12", "300.76", "(26.71)", "19.03", "EMNIST-L", "200", "636.21", "162.57", "747.72", "328.21", "700.38", "(128.34)", "91.55", "CIFAR-10", "200", "550.15", "187.01", "636.90", "115.26", "602.80", "(180.29)", "108.69", "CIFAR-100", "500", "1696.47", "428.77", "2170.14", "1078.97", "1937.09", "(463.67)", "382.44", "Dirichlet", "(.3)", "MNIST", "100", "249.63", "45.51", "293.22", "75.57", "304.00", "(26.75)", "21.24", "EMNIST-L", "200", "646.14", "163.24", "755.75", "347.31", "704.63", "(134.31)", "89.92", "CIFAR-10", "200", "564.57", "203.61", "663.23", "198.53", "616.69", "(197.62)", "121.97", "CIFAR-100", "500", "1709.33", "449.59", "2202.61", "1119.91", "1951.06", "(478.60)", "398.87", "Dirichlet", "(.6)", "MNIST", "100", "266.26", "47.29", "286.88", "83.51", "308.27", "(27.76)", "24.76", "EMNIST-L", "200", "657.64", "166.07", "764.39", "344.94", "704.57", "(132.50)", "96.37", "Shakespeare", "100", "646.33", "403.63", "520.60", "226.68", "576.17", "(348.11)", "225.44", "CIFAR-10", "200", "586.42", "232.77", "685.17", "236.76", "639.59", "(221.64)", "140.71", "CIFAR-100", "500", "1712.84", "470.78", "2225.98", "1173.01", "1964.63", "(511.14)", "423.53", "IID", "Dataset", "Rounds", "FedProx", "Algorithm", "1", "SCAFFOLD", "Algorithm", "2", "FedDyn", "Algorithm", "3"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 292.32,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Table3-1.png"
+}, {
+  "caption": "Table 2: Number of non-zero elements cumulated over the all round simulated with 10% client participation for IID and non-IID settings in FL scenarios. The non-IID settings of MNIST, EMNISTL, CIFAR-10, and CIFAR-100 datasets are created with the Dirichlet distribution of labels owned by the client. Algorithm 1 is FedElasticNet for FedProx, Algorithm 2 is FedElasticNet for SCAFFOLD, and Algorithm 3 is FedElasticNet for FedDyn. The unit of the cumulative number of elements is 107.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6513366699219,
+    "y1": 221.35055541992188,
+    "y2": 271.18902587890625
+  },
+  "figType": "Table",
+  "imageText": ["Non-IID", "Shakespeare", "100", "13.61", "11.28", "27.21", "27.21", "13.61", "9.41", "MNIST", "100", "20.3", "6.49", "40.58", "34.95", "20.3", "2.53", "EMNIST-L", "200", "18.4", "11.29", "36.78", "34.22", "18.4", "2.07", "CIFAR-10", "200", "163.82", "112.1", "327.64", "308.15", "163.82", "26.99", "CIFAR-100", "500", "413.37", "255.97", "826.74", "804.47", "413.37", "124.02", "Dirichlet", "(.3)", "MNIST", "100", "20.3", "6.66", "40.58", "35.20", "20.3", "2.55", "EMNIST-L", "200", "18.4", "11.18", "36.78", "34.45", "18.4", "2.05", "CIFAR-10", "200", "163.82", "116.96", "327.64", "310.51", "163.82", "29.96", "CIFAR-100", "500", "413.37", "247.87", "826.74", "798.21", "413.37", "127.23", "Dirichlet", "(.6)", "MNIST", "100", "20.3", "7.51", "40.58", "36.98", "20.3", "2.55", "EMNIST-L", "200", "18.4", "11.23", "36.78", "34.90", "18.4", "2.12", "Shakespeare", "100", "1.99", "1.93", "3.32", "3.31", "1.99", "1.28", "CIFAR-10", "200", "163.82", "124.56", "327.64", "313.04", "163.82", "34.23", "CIFAR-100", "500", "413.37", "249.26", "826.74", "803.33", "413.37", "132.95", "IID", "Dataset", "Rounds", "FedProx", "Algorithm", "1", "SCAFFOLD", "Algorithm", "2", "FedDyn", "Algorithm", "3"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 81.11999999999999,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Table2-1.png"
+}, {
+  "caption": "Figure 5: Classification accuracy and sparsity of local updates depending on λ1 (Algorithm 3).",
+  "captionBoundary": {
+    "x1": 117.45901489257812,
+    "x2": 494.54083251953125,
+    "y1": 552.79052734375,
+    "y2": 560.2869873046875
+  },
+  "figType": "Figure",
+  "imageText": ["Number", "of", "non-zero", "elements", "algorithm", "3", "according", "to", "1", "value", "ts", "em", "en", "o", "el", "-z", "er", "f", "n", "on", "be", "r", "o", "Nu", "m", "30", "28", "26", "24", "22", "20", "18", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value", "Algorithm", "3", "entropy", "according", "to", "1", "value", "py", "En", "tro", "120", "100", "80", "60", "40", "20", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value", "Algorithm", "3", "accuracy", "according", "to", "1", "value", "y", "ur", "ac", "A", "cc", "Te", "st", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 129.12,
+    "x2": 482.4,
+    "y1": 251.51999999999998,
+    "y2": 537.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure5-1.png"
+}, {
+  "caption": "Figure 9: Classification accuracy performance evaluated in CIFAR-10 and CIFAR-100 datasets (100% participation rate).",
+  "captionBoundary": {
+    "x1": 107.67101287841797,
+    "x2": 503.99749755859375,
+    "y1": 609.319580078125,
+    "y2": 626.281005859375
+  },
+  "figType": "Figure",
+  "imageText": ["CIFAR-100", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0", "100", "200", "300", "400", "500", "Communication", "Rounds", "CIFAR-100", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.55", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0", "100", "200", "300", "400", "500", "Communication", "Rounds", "CIFAR-100", "Dirichlet", "(.3)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.55", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0", "100", "200", "300", "400", "500", "Communication", "Rounds", "CIFAR-10", "IID", "accuracy", "0.650", "0.675", "0.700", "0.725", "0.750", "0.775", "0.800", "0.825", "0.850", "Te", "st", "A", "cc", "ur", "ac", "y", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "CIFAR-10", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.850", "0.825", "0.800", "0.775", "0.750", "0.725", "0.700", "0.675", "0.650", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "CIFAR-10", "Dirichlet", "(.3)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.850", "0.825", "0.800", "0.775", "0.750", "0.725", "0.700", "0.675", "0.650", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 183.84,
+    "y2": 587.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure9-1.png"
+}, {
+  "caption": "Figure 4: Classification accuracy and sparsity of local updates depending on λ1 (Algorithm 2).",
+  "captionBoundary": {
+    "x1": 117.45901489257812,
+    "x2": 494.54083251953125,
+    "y1": 716.7825927734375,
+    "y2": 724.280029296875
+  },
+  "figType": "Figure",
+  "imageText": ["Number", "of", "non-zero", "elements", "algorithm", "2", "according", "to", "1", "value", "ts", "em", "en", "o", "el", "-z", "er", "f", "n", "on", "be", "r", "o", "Nu", "m", "320", "310", "300", "290", "280", "270", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value", "Algorithm", "2", "entropy", "according", "to", "1", "value", "py", "En", "tro", "250", "200", "150", "100", "50", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value", "Algorithm", "2", "accuracy", "according", "to", "1", "value", "y", "ur", "ac", "A", "cc", "Te", "st", "0.80", "0.75", "0.70", "0.65", "0.60", "0.55", "0.50", "0.45", "0.40", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 129.12,
+    "x2": 482.4,
+    "y1": 415.68,
+    "y2": 701.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Classification accuracy and sparsity of local updates depending on λ1 (Algorithm 1).",
+  "captionBoundary": {
+    "x1": 117.45901489257812,
+    "x2": 494.54083251953125,
+    "y1": 388.79754638671875,
+    "y2": 396.2950134277344
+  },
+  "figType": "Figure",
+  "imageText": ["Number", "of", "non-zero", "elements", "algorithm", "1", "according", "to", "1", "value", "ts", "em", "en", "o", "el", "-z", "er", "f", "n", "on", "be", "r", "o", "Nu", "m", "100", "80", "60", "40", "20", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value", "Algorithm", "1", "entropy", "according", "to", "1", "value", "py", "En", "tro", "175", "150", "125", "100", "75", "50", "25", "0", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value", "Algorithm", "1", "accuracy", "according", "to", "1", "value", "y", "ur", "ac", "A", "cc", "Te", "st", "0.75", "0.70", "0.65", "0.60", "0.55", "0.50", "0.45", "0.40", "1e-2", "1e-4", "1e-6", "1e-8", "1", "Value"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 482.4,
+    "y1": 87.84,
+    "y2": 373.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Classification accuracy performance evaluated in MNIST, EMNIST-L, CIFAR-10, CIFAR100 dataset settings (10% participation rate and Dirichlet (.3)).",
+  "captionBoundary": {
+    "x1": 107.25301361083984,
+    "x2": 505.65771484375,
+    "y1": 677.70654296875,
+    "y2": 694.66796875
+  },
+  "figType": "Figure",
+  "imageText": ["CIFAR-100", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0", "100", "200", "300", "400", "500", "Communication", "Rounds", "CIFAR-10", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.80", "0.78", "0.76", "0.74", "0.72", "0.70", "0.68", "0.66", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "EMNIST", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.94", "0.92", "0.90", "0.88", "0.86", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "MNIST", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "1.00", "0.98", "0.96", "0.94", "0.92", "0.90", "0", "20", "40", "60", "80", "100", "Communication", "Rounds"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 378.24,
+    "y2": 656.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure1-1.png"
+}, {
+  "caption": "Table 4: Cumulative entropy values of transmitted bits with 100% client participation for IID and nonIID settings in FL scenarios. The non-IID settings of MNIST, EMNIST-L, CIFAR-10, and CIFAR-100 datasets are created with the Dirichlet distribution of labels owned by the client. Algorithm 1 is FedElasticNet for FedProx, Algorithm 2 is FedElasticNet for SCAFFOLD, and Algorithm 3 is FedElasticNet for FedDyn. The left-side numbers of FedDyn are the entropy values when the local models θtk are transmitted and the right-side numbers in parentheses are the entropy values when the local updates ∆t k = θtk − θt−1 are transmitted.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6548767089844,
+    "y1": 213.24154663085938,
+    "y2": 287.8190002441406
+  },
+  "figType": "Table",
+  "imageText": ["Non-IID", "Shakespeare", "100", "595.69", "409.60", "684.79", "897.67", "560.87", "(316.64)", "318.92", "MNIST", "100", "295.80", "42.94", "466.65", "85.06", "314.96", "(19.98)", "12.35", "EMNIST-L", "200", "716.12", "116.88", "1014.08", "249.68", "771.90", "(283.40)", "40.70", "CIFAR-10", "200", "563.15", "105.89", "806.73", "214.31", "635.78", "(215.83)", "39.58", "CIFAR-100", "500", "1685.30", "444.32", "2743.43", "1060.83", "1934.49", "(627.56)", "422.46", "Dirichlet", "(.3)", "MNIST", "100", "298.99", "30.94", "530.72", "106.08", "314.64", "(20.29)", "11.67", "EMNIST-L", "200", "721.49", "121.76", "1020.32", "251.65", "779.44", "(286.11)", "40.71", "CIFAR-10", "200", "577.74", "127.14", "839.41", "236.48", "656.48", "(223.46)", "47.52", "CIFAR-100", "500", "1697.18", "453.87", "2682.15", "1038.21", "1974.65", "(651.78)", "431.54", "Dirichlet", "(.6)", "MNIST", "100", "325.86", "39.55", "389.52", "71.57", "324.88", "(20.47)", "12.33", "EMNIST-L", "200", "728.34", "123.74", "1018.11", "263.95", "797.39", "(55.46)", "40.71", "Shakespeare", "100", "640.69", "279.51", "529.05", "476.81", "343.32", "(298.58)", "277.21", "CIFAR-10", "200", "595.16", "151.28", "873.24", "252.33", "680.70", "(259.31)", "57.70", "CIFAR-100", "500", "1721.53", "466.21", "2774.60", "1068.47", "2038.07", "(689.24)", "447.18", "IID", "Dataset", "Rounds", "FedProx", "Algorithm", "1", "SCAFFOLD", "Algorithm", "2", "FedDyn", "Algorithm", "3"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 81.11999999999999,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Table4-1.png"
+}, {
+  "caption": "Figure 8: Classification accuracy performance evaluated in MNIST, EMNIST-L datasets (100% participation rate).",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.8306884765625,
+    "y1": 611.634521484375,
+    "y2": 628.595947265625
+  },
+  "figType": "Figure",
+  "imageText": ["EMNIST-L", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.96", "0.94", "0.92", "0.90", "0.88", "0.86", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "EMNIST-L", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.96", "0.94", "0.92", "0.90", "0.88", "0.86", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "EMNIST-L", "Dirichlet", "(.3)", "accuracy", "0.94", "0.96", "Te", "st", "A", "cc", "ur", "ac", "y", "0.92", "0.90", "0.88", "0.86", "0", "25", "50", "75", "100", "125", "150", "175", "200", "Communication", "Rounds", "MNIST", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "1.00", "0.98", "0.96", "0.94", "0.92", "0.90", "0", "20", "40", "60", "80", "100", "Communication", "Rounds", "MNIST", "Dirichlet", "(.6)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "1.00", "0.98", "0.96", "0.94", "0.92", "0.90", "0", "20", "40", "60", "80", "100", "Communication", "Rounds", "MNIST", "Dirichlet", "(.3)", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "1.00", "0.98", "0.96", "0.94", "0.92", "0.90", "0", "20", "40", "60", "80", "100", "Communication", "Rounds"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 181.92,
+    "y2": 590.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure8-1.png"
+}, {
+  "caption": "Table 5: Hyperparameters.",
+  "captionBoundary": {
+    "x1": 252.69000244140625,
+    "x2": 359.00091552734375,
+    "y1": 535.1505737304688,
+    "y2": 541.1530151367188
+  },
+  "figType": "Table",
+  "imageText": ["FedDyn", "-", "10−2", "-", "Algorithm", "3", "10−6", "10−2", "10−2", "FedProx", "-", "10−4", "-", "Algorithm", "1", "10−6", "10−6", "9×", "10−3", "Algorithm", "2", "10−6", "0", "9×", "10−4", "Shakespeare", "FedDyn", "-", "4×", "10−2", "-", "Algorithm", "3", "10−4", "4×", "10−2", "2×", "10−3", "FedProx", "-", "10−4", "-", "Algorithm", "1", "10−6", "10−6", "10−3", "Algorithm", "2", "10−4", "0", "10−4", "EMNIST-L", "FedDyn", "-", "5×", "10−2", "-", "Algorithm", "3", "10−4", "5×", "10−2", "5×", "10−3", "FedProx", "-", "10−4", "-", "Algorithm", "1", "10−6", "10−6", "10−3", "Algorithm", "2", "10−4", "0", "10−4", "MNIST", "FedDyn", "-", "10−2", "-", "Algorithm", "3", "10−4", "10−2", "10−3", "FedProx", "-", "10−4", "-", "Algorithm", "1", "10−6", "10−4", "10−3", "Algorithm", "2", "10−4", "0", "10−4", "CIFAR-100", "FedDyn", "-", "10−2", "-", "Algorithm", "3", "10−4", "10−2", "5×", "10−3", "FedProx", "-", "10−4", "-", "Algorithm", "1", "10−6", "10−4", "10−3", "Algorithm", "2", "10−4", "0", "10−4", "CIFAR-10", "Dataset", "Algorithm", "λ1", "λ2", "ϵ"],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 260.64,
+    "y2": 524.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Table5-1.png"
+}, {
+  "caption": "Figure 2: Comparison of distributions of transmitted local updates ∆t k = θtk−θt−1 (10% participation rate and Dirichlet (.3)) for CIFAR-10.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9984436035156,
+    "y1": 242.43154907226562,
+    "y2": 259.39300537109375
+  },
+  "figType": "Figure",
+  "imageText": ["FedDyn", "Algorithm", "2", "Algorithm", "3", "500", "Distribution", "of", "local", "updates", "400", "300", "200", "100", "0.015", "0.010", "0.005", "0.000", "0.005", "0.010", "0.015", "0"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 216.95999999999998,
+    "x2": 394.08,
+    "y1": 90.24,
+    "y2": 221.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure2-1.png"
+}, {
+  "caption": "Figure 7: Classification accuracy performance evaluated in IID Shakespeare and Non-IID Shakespeare datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0016784667969,
+    "y1": 562.5315551757812,
+    "y2": 579.4929809570312
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "100%", "participation", "rate", "Shakespeare", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0.20", "0", "20", "40", "60", "80", "100", "Communication", "Rounds", "(c)", "100%", "participation", "rate", "Shakespeare", "Non-IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.55", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0.20", "0", "20", "40", "60", "80", "100", "Communication", "Rounds", "(b)", "10%", "participation", "rate", "Shakespeare", "IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0.20", "0", "20", "40", "60", "80", "100", "Communication", "Rounds", "(a)", "10%", "participation", "rate", "Shakespeare", "Non-IID", "accuracy", "y", "ur", "ac", "A", "cc", "Te", "st", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "0.20", "0", "20", "40", "60", "80", "100", "Communication", "Rounds"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 230.88,
+    "y2": 540.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-59_mb1lOf4-Figure7-1.png"
+}]

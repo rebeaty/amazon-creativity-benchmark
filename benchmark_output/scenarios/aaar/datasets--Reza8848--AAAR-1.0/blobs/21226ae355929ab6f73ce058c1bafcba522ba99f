@@ -1,0 +1,321 @@
+[{
+  "caption": "Table C.4: Results for active learning to predict human fairness judgments, using the separate test data S. Active learning classifiers are retrained 10 times on the last batch D6. Results are averaged and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0026550292969,
+    "y1": 320.04351806640625,
+    "y2": 358.9230041503906
+  },
+  "figType": "Table",
+  "imageText": ["Method", "ACC", "TNR", "TPR", "Baseline:", "Constant", "0", "96.1", "100.0", "0.0", "AL", "t=0.5", "93.8±", "0.5", "97.0±", "0.6", "14.6±", "2.2", "AL", "+", "Relabel", "t=0.5", "92.1±", "0.6", "95.1±", "0.7", "18.9±", "2.7", "AL", "+", "Relabel", "+", "Retrain", "t=0.5", "90.7±", "1.7", "93.8±", "1.9", "12.8±", "4.0", "AL", "+", "Relabel", "+", "Retrain", "+", "Reweigh", "t=0.5", "89.0±", "1.3", "92.0±", "1.4", "16.4±", "3.4", "From", "Scratch", "t=0.5", "89.2±", "2.6", "91.8±", "2.5", "25.7±", "5.5", "From", "Scratch", "+", "Reweigh", "t=0.5", "89.2±", "2.5", "91.8±", "2.7", "25.7±", "4.4", "AL", "t=0.1", "90.4±", "1.3", "93.3±", "1.3", "21.0±", "2.3", "AL", "+", "Relabel", "t=0.1", "89.6±", "0.8", "92.2±", "0.8", "24.6±", "1.4", "AL", "+", "Relabel", "+", "Retrain", "t=0.1", "60.0±", "8.1", "59.5±", "8.8", "72.8±", "11.9", "AL", "+", "Relabel", "+", "Retrain", "+", "Reweigh", "t=0.1", "46.7±", "7.4", "45.2±", "8.0", "83.9±", "7.6", "From", "Scratch", "t=0.1", "50.6±", "10.4", "49.8±", "11.2", "69.6±", "9.3", "From", "Scratch", "+", "Reweigh", "t=0.1", "55.0±", "9.4", "54.5±", "10.0", "66.7±", "6.6", "AL", "t=0.01", "80.6±", "2.3", "82.3±", "2.7", "38.2±", "6.8", "AL", "+", "Relabel", "t=0.01", "80.2±", "1.3", "85.5±", "1.4", "30.0±", "2.7", "AL", "+", "Relabel", "+", "Retrain", "t=0.01", "3.9±", "0.0", "0.0±", "0.0", "100.0±", "0.0", "AL", "+", "Relabel", "+", "Retrain", "+", "Reweigh", "t=0.01", "3.9±", "0.0", "0.0±", "0.0", "100.0±", "0.0", "From", "Scratch", "t=0.01", "4.6±", "0.9", "0.0±", "0.1", "99.6±", "0.4", "From", "Scratch", "+", "Reweigh", "t=0.01", "5.4±", "3.9", "1.6±", "3.2", "50.8±", "1.6"],
+  "name": "C.4",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 81.6,
+    "y2": 304.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableC.4-1.png"
+}, {
+  "caption": "Table D.1: Balanced accuracy and fraction of fairness constraints adhered to for a Roberta-based classifier f trained with CLP using different constraint sets for training. Results reported with ± are averaged over 5 runs and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.41839599609375,
+    "y1": 665.62255859375,
+    "y2": 704.5020141601562
+  },
+  "figType": "Table",
+  "imageText": ["Training/Evaluation", "BA", "WR50", "(C1)", "WR", "(C2)", "ST", "(C3)", "Full", "C", "Baseline", "88.4±", "0.1", "78.4±", "1.4", "81.3±", "1.5", "76.7±", "1.8", "78.5±", "1.5", "Censoring", "WR50", "87.0±", "0.3", "99.8±", "0.0", "88.4±", "1.2", "84.7±", "1.1", "85.9±", "1.2", "Censoring", "WR", "86.1±", "0.4", "91.4±", "1.2", "99.3±", "0.2", "89.0±", "1.5", "92.8±", "1.0", "Censoring", "Both", "WR", "86.2±", "0.3", "99.7±", "0.2", "99.1±", "0.1", "89.3±", "0.4", "92.8±", "0.3", "CLP(5)", "WR50(C1)", "87.0±", "0.3", "98.3±", "0.1", "89.1±", "1.9", "86.3±", "1.9", "87.3±", "1.8", "CLP(5)", "WR", "(C2)", "87.2±", "0.1", "93.1±", "1.2", "98.2±", "0.4", "90.5±", "1.7", "92.9±", "1.2", "CLP(5)", "ST", "(C3)", "85.9±", "0.1", "95.3±", "0.4", "97.1±", "0.3", "95.4±", "0.4", "95.5±", "0.3", "CLP(5)", "Full", "C", "85.0±", "3.4", "95.5±", "0.9", "97.8±", "0.6", "94.9±", "0.9", "95.7±", "0.8", "CLP(125)", "WR50(C1)", "82.5±", "1.3", "98.3±", "0.6", "94.3±", "0.8", "90.9±", "1.1", "92.1±", "0.9", "CLP(125)", "WR", "(C2)", "81.8±", "1.5", "95.9±", "2.2", "98.6±", "0.5", "92.5±", "2.2", "94.7±", "1.5", "CLP(125)", "ST", "(C3)", "80.3±", "2.8", "97.6±", "0.8", "98.4±", "0.6", "97.2±", "0.9", "97.2±", "0.9", "CLP(125)", "Full", "C", "79.3±", "6.1", "97.8±", "1.3", "98.6±", "0.9", "97.1±", "1.6", "97.4±", "1.4"],
+  "name": "D.1",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 504.0,
+    "y2": 649.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableD.1-1.png"
+}, {
+  "caption": "Figure 1: Workflow overview. We begin by generating sentence pairs using word replacement, and then add pairs of sentences leveraging style transfer and GPT-3. Then, we use active learning and crowdworker judgments to identify pairs that deserve similar treatment according to human intuition.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9977722167969,
+    "y1": 251.96151733398438,
+    "y2": 279.88201904296875
+  },
+  "figType": "Figure",
+  "imageText": [":", "Filtered", "pairs", ":", "Word", "Replacement", "pairs", ":", "Expanded", "set", "of", "pairs", "Crowdworkers", "\"The", "left-wing", "platform", "is", "quite", "questionable\"", "\"He", "is", "an", "ugly,", "old,", "white,", "racist", "man\"", "\"She", "was", "a", "great", "muslim\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "old\"", "Style", "Transfer", "+", "GPT-3", "Active", "Learning", "Word", "Replacement", "\"She", "was", "a", "great", "muslim\"", "\"She", "was", "a", "great", "christian\"", "\"The", "left-wing", "platform", "is", "quite", "questionable\"", "\"The", "right-wing", "platform", "is", "quite", "questionable\"", "\"He", "is", "an", "ugly,", "old,", "white,", "racist", "man\"", "\"He", "is", "a", "black", "man\"", "\"She", "was", "a", "great", "muslim\"", "\"She", "was", "a", "great", "christian\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "old\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "gay\"", "\"The", "left-wing", "platform", "is", "quite", "questionable\"", "\"The", "right-wing", "platform", "is", "quite", "questionable\"", "\"He", "is", "an", "ugly,", "old,", "white,", "racist", "man\"", "\"He", "is", "a", "black", "man\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "old\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "gay\"", "\"She", "was", "a", "great", "muslim\"", "\"She", "was", "a", "great", "christian\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "old\"", "\"I", "don't", "like", "this", "movie.", "It", "is", "so", "gay\""],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 84.96,
+    "y2": 236.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-Figure1-1.png"
+}, {
+  "caption": "Table 1: Balanced accuracy and fairness for a Roberta-based classifier f trained with CLP using different constraint sets for training. Results are averaged over 5 runs and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0038146972656,
+    "y1": 416.1515197753906,
+    "y2": 444.0719909667969
+  },
+  "figType": "Table",
+  "imageText": ["Training/Evaluation", "BA", "WR50", "(C1)", "WR", "(C2)", "ST", "(C3)", "Full", "C", "Baseline", "88.4±", "0.1", "78.4±", "1.4", "81.3±", "1.5", "76.7±", "1.8", "78.5±", "1.5", "CLP(5)", "WR50(C1)", "87.0±", "0.3", "98", ".3", "±", "0", ".1", "89.1±", "1.9", "86.3±", "1.9", "87.3±", "1.8", "CLP(5)", "WR", "(C2)", "87.2±", "0.1", "93.1±", "1.2", "98", ".2", "±", "0", ".4", "90.5±", "1.7", "92.9±", "1.2", "CLP(5)", "ST", "(C3)", "85.9±", "0.1", "95.3±", "0.4", "97.1±", "0.3", "95", ".4", "±", "0", ".4", "95.5±", "0.3", "CLP(5)", "Full", "C", "85.0±", "3.4", "95.5±", "0.9", "97.8±", "0.6", "94.9±", "0.9", "95", ".7", "±", "0", ".8"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 331.68,
+    "y2": 400.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-Table1-1.png"
+}, {
+  "caption": "Table D.3: Balanced accuracy and fracttion of fairness constraints according to φ2 adhered to for CLP training after filtering C using approximations of φ2 with varying error profiles. All results are averaged over 5 runs and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.41839599609375,
+    "y1": 535.0025634765625,
+    "y2": 573.8820190429688
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Balanced", "Accuracy", "Fairness", "Baseline", "87.9", "±", "1.2", "76.5", "±", "1.5", "Full", "C", "λ", "=", "5.0", "85.6±", "0.4", "96.6±", "0.4", "Full", "C", "λ", "=", "125.0", "78.9±", "2.7", "97.5", "±", "1.2", "Perfect", "filtering", "λ", "=", "5.0", "86.6", "±", "0.3", "95.7±", "0.6", "Perfect", "filtering", "λ", "=", "125.0", "80.7±", "2.2", "97.3±", "0.6"],
+  "name": "D.3",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 440.15999999999997,
+    "y1": 450.71999999999997,
+    "y2": 519.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableD.3-1.png"
+}, {
+  "caption": "Table D.2: Balanced accuracy and fraction of fairness constraints according to φ1 adhered to for CLP training after filtering C using approximations of φ1 with varying error profiles. All results are averaged over 5 runs and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.41839599609375,
+    "y1": 330.56854248046875,
+    "y2": 369.447998046875
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Balanced", "Accuracy", "Fairness", "Baseline", "88.2", "±", "0.4", "82.0", "±", "2.2", "Full", "C", "λ", "=", "5.0", "85.6±", "0.4", "98.2±", "0.2", "Full", "C", "λ", "=", "125.0", "73.9±", "16.8", "98.6±", "1.0", "Filtering", "with", "75%", "TNR/TPR,", "λ", "=", "5.0", "86.3±", "0.6", "97.9±", "0.3", "Filtering", "with", "75%", "TNR/TPR,", "λ", "=", "125.0", "77.2±", "6.1", "99.1±", "0.3", "Perfect", "filtering", "λ", "=", "5.0", "87.5", "±", "0.1", "98.2±", "0.2", "Perfect", "filtering", "λ", "=", "125.0", "86.1±", "0.4", "99.3", "±", "0.1"],
+  "name": "D.2",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 224.64,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableD.2-1.png"
+}, {
+  "caption": "Table D.4: Balanced accuracy, percent of unfiltered pairs, and fairness on two different test sets for differently trained classifiers f . Fairness is measured as the fraction of pairs (s, s′) with φ(s, s′) = 0 according to the majority of annotators, for which f(s) = f(s′). Active learning classifiers are retrained 5 times on the last batch D6 and results are averaged over 5 training runs. ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3459167480469,
+    "y1": 460.33251953125,
+    "y2": 521.1290283203125
+  },
+  "figType": "Table",
+  "imageText": ["Method", "BA", "NR", "Fairness", "(T", ")", "Fairness", "(S)", "Baseline", "88.2±", "0.4", "0.0", "82.1±", "2.1", "84.7±", "1.3", "WR", "(Garg)", "λ", "=", "5", "87.1±", "2.0", "100", "92.8±", "0.9", "95.2±", "0.8", "WR", "λ", "=", "5", "87.2±", "0.2", "100", "95.8±", "0.9", "95.8±", "1.2", "Full", "constraint", "set", "C", "λ", "=", "5", "85.9±", "0.3", "100", "96.5±", "1.4", "97.0±", "1.5", "Filtering", "with", "threshold", "0.5", "λ", "=", "5", "85.9±", "0.5", "88.5±", "1.0", "97.4±", "1.1", "97.1±", "1.1", "Filtering", "with", "threshold", "0.1", "λ", "=", "5", "86.1±", "0.1", "84.6±", "1.4", "97.2±", "0.6", "96.6±", "0.6", "Filtering", "with", "threshold", "0.01", "λ", "=", "5", "85.9±", "0.2", "76.9±", "2.0", "97.1±", "1.0", "96.9±", "1.1", "WR", "(Garg)", "λ", "=", "125", "81.6±", "0.6", "100", "95.6±", "1.7", "96.8±", "0.2", "WR", "λ", "=", "125", "81.2±", "2.7", "100", "97.4±", "2.5", "97.5±", "0.1", "Full", "constraint", "set", "C", "λ", "=", "125", "81.8±", "2.1", "100", "98.0±", "0.6", "97.6±", "1.1", "Filtering", "with", "threshold", "0.5", "λ", "=", "125", "81.3±", "1.5", "88.5±", "1.0", "98.1±", "0.9", "98.0±", "0.7", "Filtering", "with", "threshold", "0.1", "λ", "=", "125", "80.7±", "1.9", "84.6±", "1.4", "97.8±", "1.3", "98.2±", "0.6", "Filtering", "with", "threshold", "0.01", "λ", "=", "125", "80.7±", "2.2", "76.9±", "2.0", "98.6±", "0.5", "97.8±", "0.9"],
+  "name": "D.4",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 288.0,
+    "y2": 444.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableD.4-1.png"
+}, {
+  "caption": "Table 2: Human evaluation: Answers to questions about comment pairs (s, s′) grouped by different methods for demographic group transfer. The first number represents the fraction of the answer across all queries, while the second number (in brackets) represents the fraction of comment pairs for which the answer was the majority vote across 9 queries.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.171142578125,
+    "y1": 235.98953247070312,
+    "y2": 274.8690185546875
+  },
+  "figType": "Table",
+  "imageText": ["Metric/Method", "Word", "replacement", "Style", "Transfer", "GPT-3", "Unfair:", "Average", "American", "84.9", "(97.5)", "84.6", "(95.8)", "83.4", "(95.0)", "Unfair:", "Own", "Opinion", "85.9", "(97.5)", "85.2", "(96.2)", "83.2", "(93.7)", "Group", "Transfer", "89.3", "(95.0)", "79.2", "(85.4)", "81.9", "(89.5)", "Content", "preservation", "88.1", "(100)", "79.2", "(91.2)", "78.4", "(87.9)", "Same", "Factuality", "73.0", "(84.1)", "76.2", "(87.5)", "78.5", "(89.1)", "Same", "Grammaticality", "91.2", "(99.1)", "92.9", "(97.9)", "92.9", "(98.3)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 140.64,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-Table2-1.png"
+}, {
+  "caption": "Table C.1: Different architectures trained for one epoch on 5000 samples from a set of pairs (s, s′) generated using word replacement to distinguish demograpghic group transfer within the same category of gender and sexuality, race and religion vs across categories (φ2). \"Featurediff\" uses a linear model applied to the difference of model features produced for the respective first tokens in s and s′. \"Bilinear\" uses a bilinear model on top of these feature differences instead. \"Merge\" appends s′ to s before tokenization and learns a linear model on top of the model features for this combined input. \"Concat\" operates similarly, but first tokenizes s and s′ and pads both to 64 tokens before feeding the concatenated tokens into the model. No dropout was used in the post-BERT layers for these experiments. All results averaged over 10 runs and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.16546630859375,
+    "y1": 253.09451293945312,
+    "y2": 357.72698974609375
+  },
+  "figType": "Table",
+  "imageText": ["Model", "BA", "BERT-Concat", "86.7", "BERT-Merge", "79.9", "BERT-Featurediff", "67.8", "DeBERTa-Concat", "54.7", "DeBERTa-Merge", "53.2", "DeBERTa-Featurediff", "50.8", "RoBERTa-Concat", "52.1", "RoBERTa-Merge", "50.3", "RoBERTa-Featurediff", "51.1", "BERT-Large-Concat", "84.4", "BERT-Large-Merge", "84.1", "BERT-Large-Featurediff", "59.2", "BERT-Bilinear", "50.7"],
+  "name": "C.1",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 233.76,
+    "x2": 378.24,
+    "y1": 81.6,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableC.1-1.png"
+}, {
+  "caption": "Table B.1: Balanced accuracies of the group-presence classifier c for different labels",
+  "captionBoundary": {
+    "x1": 137.92300415039062,
+    "x2": 473.7685546875,
+    "y1": 198.30050659179688,
+    "y2": 204.302978515625
+  },
+  "figType": "Table",
+  "imageText": ["Category", "BA", "Category", "BA", "Category", "BA", "Male", "96.5", "Christian", "96.6", "Physical", "disability", "54.9", "Female", "97.8", "Jewish", "98.9", "Intellectual", "disability", "54.3", "Transgender", "99.3", "Muslim", "98.9", "Mental", "illness", "98.3", "Other", "gender", "50.0", "Hindu", "98.2", "Black", "99.2", "Heterosexual", "98.1", "Buddhist", "99.2", "White", "99.5", "Homosexual", "99.3", "Atheist", "99.6", "Asian", "98.3", "Bisexual", "65.4", "Other", "religion", "50.0", "Latino", "96.6", "Other", "sexuality", "50.0", "Other", "disability", "50.0", "Other", "race", "55.5"],
+  "name": "B.1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 81.6,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableB.1-1.png"
+}, {
+  "caption": "Table B.2: Amount of generated pairs (s, s′) per generation method.",
+  "captionBoundary": {
+    "x1": 169.6959991455078,
+    "x2": 441.99609375,
+    "y1": 646.7085571289062,
+    "y2": 652.7109985351562
+  },
+  "figType": "Table",
+  "imageText": ["Generation", "Method", "Total", "(Train)", "Total", "(Test)", "In", "C", "(Train)", "In", "C", "(Test)", "Word", "Replacement", "980667", "331490", "42500", "10625", "Style", "Transfer", "681111", "229883", "42500", "10625", "GPT-3", "Zero-Shot", "6322", "2139", "6200", "1550", "GPT-3", "Edit", "Mode", "3704", "1199", "3500", "875", "GPT-3", "Postprocessing", "5330", "1831", "5300", "1325"],
+  "name": "B.2",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 562.56,
+    "y2": 630.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableB.2-1.png"
+}, {
+  "caption": "Table 4: Balanced accuracy and fairness for differently trained classifiers f . Fairness is measured on the subset of our test set T with ϕ(s, s′) = 0. Active learning classifiers are retrained 5 times on the last batch D6 and results are averaged over 5 training runs. ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 585.9705810546875,
+    "y2": 624.8489990234375
+  },
+  "figType": "Table",
+  "imageText": ["Cadverse", "λ", "=", "5", "71.1±", "17.4", "97.8±", "2.2", "Filtered", "Ĉ⋆", "adverse", "λ", "=", "5", "79.3±", "2.2", "98.7±", "0.6", "Filtered", "constraint", "set", "Ĉ⋆", "λ", "=", "5", "85.9±", "0.5", "97.4±", "1.1", "Method", "BA", "Fairness", "(T", ")", "Baseline", "88.2±", "0.4", "82.1±", "2.1", "WR50", "(C1)", "λ", "=", "5", "87.1±", "2.0", "92.8±", "0.9", "WR", "(C2)", "λ", "=", "5", "87.2±", "0.2", "95.8±", "0.9", "Full", "constraint", "set", "C", "λ", "=", "5", "85.9±", "0.3", "96.5±", "1.4"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 439.2,
+    "y1": 472.79999999999995,
+    "y2": 570.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-Table4-1.png"
+}, {
+  "caption": "Table 3: Performance of differently trained classifiers φ̂ on the test set T . Active learning classifiers are retrained 10 times on the last batch D6. Results are averaged and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00335693359375,
+    "y1": 188.53652954101562,
+    "y2": 216.45697021484375
+  },
+  "figType": "Table",
+  "imageText": ["Method", "ACC", "TNR", "TPR", "BA", "Constant", "Baseline", "78.8", "100.0", "0.0", "50.0", "Active", "Learning", "t=0.5", "79.8±", "0.3", "97.2±", "0.3", "15.1±", "1.2", "56.1", "Active", "Learning", "+", "Relabel", "t=0.5", "81.1±", "0.3", "95.5±", "0.7", "28.6±", "2.2", "62.0", "Active", "Learning", "t=0.1", "80.0±", "0.5", "95.2±", "0.7", "23.7±", "3.5", "59.4", "Active", "Learning", "+", "Relabel", "t=0.1", "80.7±", "0.6", "93.0±", "0.9", "35.0±", "1.3", "64.0", "Active", "Learning", "t=0.01", "78.7±", "1.1", "87.5±", "2.1", "45.7±", "1.8", "66.6", "Active", "Learning", "+", "Relabel", "t=0.01", "78.3±", "0.7", "86.8±", "1.5", "46.6±", "2.5", "66.7"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 81.6,
+    "y2": 172.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-Table3-1.png"
+}, {
+  "caption": "Table C.3: Results for active learning to predict human fairness judgments, on test data T . Active learning classifiers are retrained 10 times on the last batch D6. Results are averaged and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3459167480469,
+    "y1": 603.1255493164062,
+    "y2": 642.0050048828125
+  },
+  "figType": "Table",
+  "imageText": ["Method", "ACC", "TNR", "TPR", "Baseline:", "Constant", "0", "78.8", "100.0", "0.0", "AL", "t=0.5", "79.8±", "0.3", "97.2±", "0.3", "15.1±", "1.2", "AL", "+", "Relabel", "t=0.5", "81.1±", "0.3", "95.5±", "0.7", "28.6±", "2.2", "AL", "+", "Relabel", "+", "Retrain", "t=0.5", "79.6±", "0.4", "95.3±", "1.4", "21.5±", "3.9", "AL", "+", "Relabel", "+", "Retrain", "+", "Reweigh", "t=0.5", "79.6±", "0.8", "93.9±", "1.6", "26.6±", "3.4", "From", "Scratch", "t=0.5", "77.5±", "1.3", "90.8±", "3.3", "28.1±", "7.1", "From", "Scratch", "+", "Reweigh", "t=0.5", "77.7±", "1.4", "91.0±", "2.7", "28.3±", "5.0", "AL", "t=0.1", "80.0±", "0.5", "95.2±", "0.7", "23.7±", "3.5", "AL", "+", "Relabel", "t=0.1", "80.7±", "0.6", "93.0±", "0.9", "35.0±", "1.3", "AL", "+", "Relabel", "+", "Retrain", "t=0.1", "62.1±", "5.6", "61.5±", "8.9", "64.0±", "7.0", "AL", "+", "Relabeling", "+", "Retrain", "+", "Reweigh", "t=0.1", "52.8±", "6.2", "46.8±", "7.7", "75.0±", "4.6", "From", "Scratch", "t=0.1", "53.4±", "7.9", "48.6±", "14.3", "71.1±", "9.2", "From", "Scratch", "+", "Reweighed", "t=0.1", "54.8±", "6.7", "51.2±", "10.5", "67.9±", "9.1", "AL", "t=0.01", "78.7±", "1.1", "87.5±", "2.1", "45,", "7±", "1.8", "AL", "+", "Relabel", "t=0.01", "78.3±", "0.7", "86.8±", "1.5", "46.6±", "2.5", "AL", "+", "Relabel", "+", "Retrain", "t=0.01", "21.2±", "0.1", "0.0±", "0.0", "100±", "0.0", "AL", "+", "Relabel", "+", "Retrain", "+", "Reweigh", "t=0.01", "21.1±", "0.0", "0.0±", "0.0", "100±", "0.0", "From", "Scratch", "t=0.01", "21.7±", "0.5", "0.0±", "0.0", "99.5±", "0.6", "From", "Scratch", "+", "Reweigh", "t=0.01", "21.8±", "1.5", "1.5±", "3.6", "98.3±", "1.7"],
+  "name": "C.3",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 364.8,
+    "y2": 587.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableC.3-1.png"
+}, {
+  "caption": "Table C.2: Balanced accuracy for BERT classifier trained using a constant amount of 50k gradient steps and a constant amount of 10k queries. All results are averaged over 10 runs and ± indicates the difference from the upper/lower bound of a naive 95% confidence interval assuming normally distributed errors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3459167480469,
+    "y1": 309.88153076171875,
+    "y2": 348.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["Method/Dataset", "φ2", "(Same", "category)", "φ1", "(Word", "replacement)", "Random", "sampling,", "1", "query", "75.1±", "3.6", "74.8±", "1.8", "Random", "sampling,", "3", "queries", "71.6±", "3.9", "72.5±", "1.5", "Random", "sampling,", "5", "queries", "70.7±", "2.7", "73.4±", "1.8", "BALD", "1", "query", "75.9±", "4.0", "77.9±", "2.1", "BALD", "3", "queries", "73.8±", "6.5", "78.1±", "1.7", "BALD", "automatic", "relabeling", "76.1±", "4.5", "77.6±", "2.6", "LC", "1", "query", "79.1±", "4.4", "78.5±", "1.8", "LC", "3", "queries", "74.6±", "2.4", "79.5±", "1.8", "LC", "automatic", "relabeling", "73.4±", "5.9", "78.2±", "1.3", "LC-UNC", "1", "query", "79.0±", "4.9", "79.7±", "1.5", "LC-UNC", "3", "queries", "75.8±", "5.4", "78.7±", "2.6", "LC-UNC", "automatic", "relabeling", "76.6±", "3.9", "76.7±", "1.5", "VARRA", "1", "query", "77.3±", "7.4", "78.9±", "2.1", "VARRA", "3", "queries", "73.1±", "5.7", "79.8±", "1.6", "VARRA", "automatic", "relabeling", "77.7±", "2.9", "78.0±", "1.3", "Majority", "1", "query", "74.9±", "3.5", "76.8±", "2.4", "Majority", "3", "queries", "78.7±", "5.2", "79.6±", "0.9", "Majority", "automatic", "relabeling", "74.4±", "6.2", "77.9±", "1.8"],
+  "name": "C.2",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 81.6,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableC.2-1.png"
+}, {
+  "caption": "Table A.1: Human evaluation: Answers to questions about comment pairs (s, s′) grouped along demographic group transfers along different axes. The first number represents the fraction of the answer across all queries, while the second number (in the brackets) represents the fraction of comment pairs for which the answer was the majority vote across 9 queries.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0043029785156,
+    "y1": 176.38253784179688,
+    "y2": 215.260986328125
+  },
+  "figType": "Table",
+  "imageText": ["Metric/Method", "male↔female", "black↔white", "christian↔muslim", "Unfair:", "Average", "American", "83.5", "(96.6)", "82.2", "(94.5)", "87.2", "(97.0)", "Unfair:", "Own", "Opinion", "83.5", "(96.6)", "82.4", "(92.9)", "88.4", "(97.9)", "Group", "Transfer", "82.6", "(91.6)", "81.6", "(86.6)", "86.2", "(91.6)", "Content", "preservation", "84.9", "(95.4)", "79.5", "(92.0)", "81.3", "(91.6)", "Same", "Factuality", "75.3", "(82.9)", "73.6", "(85.0)", "78.8", "(92.9)", "Same", "Grammaticality", "90.5", "(97.5)", "92.2", "(98.3)", "94.3", "(99.5)"],
+  "name": "A.1",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 81.6,
+    "y2": 160.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N_g8TT9Cy7f-TableA.1-1.png"
+}]

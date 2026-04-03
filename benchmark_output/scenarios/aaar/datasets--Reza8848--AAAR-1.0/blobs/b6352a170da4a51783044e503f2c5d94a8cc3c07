@@ -1,0 +1,561 @@
+[{
+  "caption": "Table 2: ImageNet vs ImageNet21k pre-training. The accuracy reported are the average of 74 domain shifts.",
+  "captionBoundary": {
+    "x1": 111.01000213623047,
+    "x2": 500.99444580078125,
+    "y1": 83.00335693359375,
+    "y2": 88.83599853515625
+  },
+  "figType": "Table",
+  "imageText": ["FT+SHOT", "IN", "56.0", "55.9", "62.1", "61.6", "65.1", "IN21k", "55.7", "62.0", "64.0", "65.3", "72.7", "SCA", "IN", "49.4", "49.8", "53.3", "52.7", "58.4", "IN21k", "53.1", "58.2", "58.2", "58.2", "68.5", "DGen", "IN", "45.2", "47.2", "50.5", "48.0", "54.4", "IN21k", "47.6", "51.3", "52.5", "52.2", "65.2", "Backbone", "VGG19", "ResNet50", "W-ResNet50", "DenseNet161", "ConvNext", "B", "#", "params", "(MM)", "143.7", "25.6", "68.9", "28.7", "88.6"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 489.12,
+    "y1": 101.28,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table2-1.png"
+}, {
+  "caption": "Figure 15: Each bar represent a different domain-shift experiment, i.e., a source and a target. Bars height are the average gain/degradation of domain generalization (always w.r.t. the baseline LP domain generalization) for the given domain pair.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.004638671875,
+    "y1": 491.8613586425781,
+    "y2": 517.6190185546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 192.95999999999998,
+    "y2": 476.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure15-1.png"
+}, {
+  "caption": "Table 11: Average degradation (%) in case of failure (averaged across 74 domain pairs). Every row select a certain type of model to make a full comparison. Between parethesis in reported the number of model in that group.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0009460449219,
+    "y1": 484.2703552246094,
+    "y2": 510.02801513671875
+  },
+  "figType": "Table",
+  "imageText": ["IN21k+LN", "(19)", "-1.83", "±", "0.43", "-1.03", "±", "0.40", "-3.63", "±", "4.35", "-1.42±", "0.87", "-1.08", "±", "1.22", "IN21k+BN", "(8)", "-12.60", "±", "1.40", "-1.82", "±", "0.40", "-3.65", "±", "1.94", "-17.10", "±", "3.75", "-3.31", "±", "4.47", "IN+LN", "(8)", "-2.75", "±", "0.63", "-1.32", "±", "0.34", "-2.96", "±", "2.26", "-1.39", "±", "0.57", "-1.60", "±", "1.33", "IN+BN", "(24)", "-9.82", "±", "2.01", "-1.95", "±", "0.70", "-2.56", "±", "0.98", "-11.26", "±", "4.37", "-1.27", "±", "0.72", "LN", "(27)", "-2.10", "±", "0.65", "-1.12", "±", "0.40", "-3.43", "±", "3.82", "-1.41", "±", "0.77", "-1.27", "±", "1.26", "BN", "(32)", "-10.51", "±", "2.22", "-1.92", "±", "0.63", "-2.83", "±", "1.34", "-12.72", "±", "4.89", "-1.82", "±", "2.46", "IN21K", "(27)", "-5.02", "±", "5.07", "-1.27", "±", "0.54", "-3.64", "±", "3.76", "-6.65", "±", "7.86", "-1.89", "±", "2.97", "IN", "(32)", "-8.05", "±", "3.57", "-1.79", "±", "0.68", "-2.66", "±", "1.38", "-8.79", "±", "5.75", "-1.36", "±", "0.91", "Models", "FT", "DGen", "SCA", "SHOT", "FT+SCA", "FT+SHOT", "All", "(59)", "-6.67", "±", "4.55", "-1.55", "±", "0.67", "-3.11", "±", "2.76", "-7.88", "±", "6.75", "-1.58", "±", "2.04"],
+  "name": "11",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 527.52,
+    "y2": 652.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table11-1.png"
+}, {
+  "caption": "Table 10: Domain pairs with the highest fine-tuning domain generalization degradation caused by Bacth Normalization layers.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00482177734375,
+    "y1": 156.28533935546875,
+    "y2": 172.08099365234375
+  },
+  "figType": "Table",
+  "imageText": ["dataset", "source", "target", "bn_in1k", "bn_in21k", "ln_in1k", "ln_in21k", "modernoffice31", "synthetic", "webcam", "-48.6", "-66.1", "-0.3", "1.2", "modernoffice31", "synthetic", "dslr", "-46.8", "-65.4", "-1.3", "1.0", "modernoffice31", "synthetic", "amazon", "-39.5", "-55.4", "-1.3", "0.6", "adaptiope", "synthetic", "real_life", "-33.1", "-50.0", "-2.6", "3.2", "adaptiope", "synthetic", "product_images", "-31.2", "-45.7", "-0.3", "3.9", "visda", "train", "validation", "-17.6", "-8.7", "-2.4", "0.8", "modernoffice31", "dslr", "synthetic", "-10.3", "-18.5", "-5.3", "-0.9", "officehome", "Clipart", "Art", "-10.0", "-10.2", "2.3", "2.7", "modernoffice31", "webcam", "synthetic", "-10.0", "-10.0", "-3.9", "-2.2", "modernoffice31", "webcam", "amazon", "-9.6", "-11.0", "-2.7", "-0.5"],
+  "name": "10",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 189.6,
+    "y2": 324.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table10-1.png"
+}, {
+  "caption": "Figure 8: Average Cluster Probing domain generalization accuracy (over 74 domain shifts).",
+  "captionBoundary": {
+    "x1": 140.8179931640625,
+    "x2": 471.1853332519531,
+    "y1": 715.0403442382812,
+    "y2": 720.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 524.64,
+    "y2": 699.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Average Cluster Probing generalization accuracy (over 23 domains).",
+  "captionBoundary": {
+    "x1": 164.47999572753906,
+    "x2": 447.522705078125,
+    "y1": 278.8333435058594,
+    "y2": 284.6659851074219
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 86.88,
+    "y2": 263.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Average Linear Probing domain generalization accuracy (over 74 domain shifts).",
+  "captionBoundary": {
+    "x1": 142.06900024414062,
+    "x2": 469.9336853027344,
+    "y1": 496.9363708496094,
+    "y2": 502.7690124511719
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 306.71999999999997,
+    "y2": 481.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure7-1.png"
+}, {
+  "caption": "Figure 2: The architectures are sorted on the x-axis according to their ImageNet top1 accuracy (best models on the right). We distinguish models based on the pre-training and normalization layers used. For each plot, the arrows represent the accuracy difference after fine-tuning and adaptation (when applies). Top-left: the Generalization improves with fine-tuning (average over 23 domains). Top-right: the Domain generalization slightly increases for layer-norm models but it is degraded for batch-norm models. Bottom: SCA and SHOT improve after fine-tuning w.r.t. the domain generalization. In both cases we average results over 74 domain pairs (we report a subset of the models for visualization purposes).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0045166015625,
+    "y1": 344.6163635253906,
+    "y2": 410.2250671386719
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 80.64,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure2-1.png"
+}, {
+  "caption": "Figure 11: Average generalization accuracy (over 23 domains) of models after applying the FT.",
+  "captionBoundary": {
+    "x1": 133.93699645996094,
+    "x2": 478.066650390625,
+    "y1": 715.224365234375,
+    "y2": 721.0570068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 523.68,
+    "y2": 700.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure11-1.png"
+}, {
+  "caption": "Figure 9: Average accuracy (over 74 domain shifts) of models after applying SCA (without fine-tuning).",
+  "captionBoundary": {
+    "x1": 117.77899932861328,
+    "x2": 494.22467041015625,
+    "y1": 277.5423583984375,
+    "y2": 283.375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 86.88,
+    "y2": 262.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Average accuracy (over 74 domain shifts) of models after applying SHOT (without fine-tuning).",
+  "captionBoundary": {
+    "x1": 112.73100280761719,
+    "x2": 499.27264404296875,
+    "y1": 495.8303527832031,
+    "y2": 501.6629943847656
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 304.8,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure10-1.png"
+}, {
+  "caption": "Figure 12: Average domain generalization accuracy (over 74 domain shifts) of models after applying the FT.",
+  "captionBoundary": {
+    "x1": 110.2750015258789,
+    "x2": 501.729248046875,
+    "y1": 273.94635009765625,
+    "y2": 279.77899169921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 85.92,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure12-1.png"
+}, {
+  "caption": "Figure 14: Average accuracy (over 74 domain shifts) of models after applying the FT and SHOT. In this case the two lines of the statistical multi-linear model are parallel (∆m was not statistically",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00543212890625,
+    "y1": 706.3143310546875,
+    "y2": 722.1090087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 516.0,
+    "y2": 691.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure14-1.png"
+}, {
+  "caption": "Figure 13: Average accuracy (over 74 domain shifts) of models after applying the FT and SCA.",
+  "captionBoundary": {
+    "x1": 133.5959930419922,
+    "x2": 478.4070739746094,
+    "y1": 490.13037109375,
+    "y2": 495.9630126953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 300.0,
+    "y2": 475.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure13-1.png"
+}, {
+  "caption": "Table 3: Average accuracy change (%) with respect to DGen with LP. For each architecture, the accuracy change is the average over 74 different domain-shifts. Each row, shows the performance obtained by models grouped by different combinations of their pre-training and the normalization layers. The number of considered models is reported in parenthesis. In each column, we report results for different downstream tasks.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00213623046875,
+    "y1": 329.349365234375,
+    "y2": 365.0700378417969
+  },
+  "figType": "Table",
+  "imageText": ["IN21k+BN", "(8)", "-4.02", "±", "2.30", "5.07", "±", "1.27", "5.97", "±", "3.29", "0.44", "±", "2.45", "9.72", "±", "2.28", "IN21k+LN", "(19)", "3.77", "±", "1.59", "4.25", "±", "1.35", "8.07", "±", "1.86", "7.95", "±", "1.86", "9.60", "±", "1.84", "IN+BN", "(24)", "-1.61", "±", "2.66", "3.75", "±", "1.52", "6.29", "±", "2.10", "2.74", "±", "2.91", "9.67", "±", "1.90", "IN+LN", "(8)", "3.28", "±", "1.55", "4.64", "±", "0.66", "7.42", "±", "1.12", "8.59", "±", "0.98", "9.71", "±", "1.40", "BN", "(32)", "-2.21", "±", "2.75", "4.08", "±", "1.55", "6.21±", "2.39", "2.16", "±", "2.94", "9.68", "±", "1.96", "LN", "(27)", "3.62", "±", "1.57", "4.36", "±", "1.19", "7.88", "±", "1.68", "8.14", "±", "1.66", "9.63", "±", "1.69", "IN", "(32)", "-0.39", "±", "3.23", "3.97", "±", "1.40", "6.57", "±", "1.95", "4.20", "±", "3.62", "9.68", "±", "1.76", "IN21k", "(27)", "1.46", "±", "4.04", "4.49", "±", "1.35", "7.45", "±", "2.51", "5.72", "±", "4.03", "9.63", "±", "1.93", "Models", "FT", "DGen", "SCA", "SHOT", "FT+SCA", "FT+SHOT", "All", "(59)", "0.46", "±", "3.71", "4.21", "±", "1.39", "6.97", "±", "2.24", "4.90", "±", "3.86", "9.66", "±", "1.83"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 161.76,
+    "x2": 450.24,
+    "y1": 382.56,
+    "y2": 487.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table3-1.png"
+}, {
+  "caption": "Figure 3: Rows represent different domain pairs (Sythetic → DSLR and DSLR → Synthetic from Modern Office31). In column 1, arrows indicate the effect of FT on DGen performance (DGen → FT DGen). In the other columns, arrows represent the performance for DGen of the same models for ADABN, SCA, and SHOT.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00396728515625,
+    "y1": 282.46435546875,
+    "y2": 308.2230224609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 80.64,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Families of architectures: on the x-axis we have the ImageNet top1 accuracy, on the y-axis the accuracy after applying SCA (without fine-tuning) averaged across 74 domain shifts.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00018310546875,
+    "y1": 493.42034912109375,
+    "y2": 509.21600341796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 80.64,
+    "y2": 478.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure4-1.png"
+}, {
+  "caption": "Table 13: Domain generalization accuracy for large backbones with different fine-tuning decisions. Both the fine-tuning and non fine-tuning cases are considered. For each architecture, the accuracy change is the average over the domains of the considered dataset.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00146484375,
+    "y1": 335.7203369140625,
+    "y2": 361.4779968261719
+  },
+  "figType": "Table",
+  "imageText": ["SHOT", "✗", "94.0", "89.2", "90.3", "93.9", "94.0", "89.0", "48.5", "✓", "95.1", "88.1", "88.8", "93.3", "92.2", "89.4", "51.0", "ConvNext", "XL", "384", "SCA", "✗", "95.5", "84.9", "86.9", "90.0", "96.5", "88.8", "41.2", "✓", "94.8", "84.1", "87.4", "90.8", "93.8", "83.2", "49.8", "SHOT", "✗", "94.9", "89.0", "91.5", "93.9", "95.4", "89.2", "51.5", "✓", "93.9", "83.9", "91.3", "92.4", "95.8", "89.5", "54.1", "VIT", "L", "384", "SCA", "✗", "95.3", "82.6", "88.0", "89.3", "96.4", "88.2", "42.4", "✓", "94.0", "83.5", "88.6", "89.5", "94.6", "86.7", "52.6", "SHOT", "✗", "94.8", "88.5", "90.6", "91.5", "96.4", "88.5", "47.1", "✓", "95.0", "88.9", "89.3", "91.9", "96.0", "88.0", "51.2", "SWIN", "L", "224", "SCA", "✗", "95.0", "83.4", "84.9", "88.8", "96.3", "88.3", "37.9", "✓", "94.4", "83.0", "86.4", "88.2", "93.3", "86.0", "49.1", "SHOT", "✗", "95.5", "89.2", "92.2", "95.8", "96.5", "88.3", "45.8", "✓", "94.6", "90.7", "90.1", "95.1", "96.6", "89.6", "45.1", "BEIT", "L", "384", "SCA", "✗", "94.8", "85.1", "89.0", "93.1", "97.4", "88.6", "45.3", "✓", "94.2", "79.6", "88.9", "92.7", "95.5", "86.4", "45.0", "Model", "Method", "FT", "Office31", "Visda", "OfficeHome", "Adapt.", "Mod.Office31", "Image-CLEF", "DomainNet"],
+  "name": "13",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 482.4,
+    "y1": 373.91999999999996,
+    "y2": 532.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table13-1.png"
+}, {
+  "caption": "Table 12: Time required (in seconds) for finetuning and adaptation. The times are averaged on the domains of the used dataset. For fine-tuning and SHOT the time reported refers to one epoch. Models are in mixed precision training with batch size 64 split into 2 × NVIDIA RTX 2070 SUPER on a single machine with AMD Ryzen 3900x.",
+  "captionBoundary": {
+    "x1": 311.47900390625,
+    "x2": 477.7817687988281,
+    "y1": 174.5743408203125,
+    "y2": 250.14599609375
+  },
+  "figType": "Table",
+  "imageText": ["Visda", "ResNet50", "211.1", "92.1", "425.3", "ViT", "Base", "381.6", "327.1", "1068.5", "Office31", "ResNet50", "3.4", "1.7", "6.7", "ViT", "Base", "5.7", "4.5", "14.8", "Dataset", "Model", "FT", "SCA", "SHOT"],
+  "name": "12",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 299.03999999999996,
+    "y1": 172.79999999999998,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table12-1.png"
+}, {
+  "caption": "Table 8: Comparison of results (accuracies %) of semantic pre-training (miil) of Ridnik et al. (2021) and naive pre-training of ResNet50, for linear probing domain generalization and SCA. The results are avaraged across the domains of the datasets.",
+  "captionBoundary": {
+    "x1": 143.83200073242188,
+    "x2": 468.1656494140625,
+    "y1": 164.66632080078125,
+    "y2": 190.42498779296875
+  },
+  "figType": "Table",
+  "imageText": ["†", "Experiment", "Pre-train", "O31", "Visda", "O.Home", "Adapt.", "I-CLEF", "D.Net", "LP", "DGen", "naive†", "86.6", "63.1", "68.5", "59.1", "79.8", "19.9", "miil", "88.8", "67.3", "71.4", "68.2", "81.9", "25.3", "SCA", "naive†", "90.3", "80.7", "74.4", "73.8", "85.1", "23.6", "miil", "90.4", "79.8", "72.2", "73.3", "84.8", "21.3"],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 202.56,
+    "y2": 272.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table8-1.png"
+}, {
+  "caption": "Table 9: Comparison of results (accuracies %) on Office31 benchmark using different pre-trained weights of Resnet50. We included the following pre-training: timm (Wightman, 2019), the semantic training of Ridnik et al. (2021) (miil) and our naive pretrain. Office31 domains are Amazon, Webcam and DSLR and the experiments are indicated with source → target. For these experiments the official code (not distributed and without Automatic Mixed Precision) of SHOT (Liang et al., 2020) and NRC (Yang et al., 2021a) have been used, so the results may be slightly different from the ones reproduced with our implementation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 305.73736572265625,
+    "y2": 361.3840637207031
+  },
+  "figType": "Table",
+  "imageText": ["naive", "✓", "92.6", "96.0", "80.4", "99.8", "78.5", "98.4", "90.9", "FT+NRC", "timm", "94.1", "93.0", "72.2", "99.8", "69.8", "98.2", "87.7", "miil", "✓", "96.0", "89.6", "76.7", "99.6", "75.0", "98.1", "89.2", "naive", "✓", "91.1", "94.0", "75.3", "99.6", "73.5", "98.8", "88.7", "FT+SHOT", "timm", "89.3", "87.1", "68.9", "99.8", "67.1", "98.1", "85.5", "miil", "✓", "93.2", "92.4", "75.3", "99.8", "76.8", "98.8", "89.4", "naive", "✓", "93.3", "94.6", "80.1", "98.2", "80.0", "95.7", "90.3", "SCA", "timm", "89.2", "92.5", "73.4", "97.2", "73.9", "90.1", "86.0", "miil", "✓", "93.8", "97.4", "79.0", "98.2", "78.8", "95.2", "90.4", "naive", "✓", "86.2", "83.3", "77.3", "99.4", "76.4", "97.1", "86.6", "LP", "DGen", "timm", "77.5", "78.9", "68.3", "97.8", "64.6", "96.6", "80.6", "miil", "✓", "89.4", "89.1", "78.3", "99.4", "78.7", "98.1", "88.8", "Office31", "(ResNet50)", "Method", "Init", "IN21k", "A", "→", "W", "A", "→", "D", "W", "→", "A", "W", "→", "D", "D", "→", "A", "D", "→", "W", "Avg"],
+  "name": "9",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 506.4,
+    "y1": 383.03999999999996,
+    "y2": 552.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table9-1.png"
+}, {
+  "caption": "Table 4: Average Failure Rate (%) on 74 domain shifts. Each row, shows the performance obtained by models grouped by different combinations of their pre-training and the normalization layers. The number of considered models is reported in parenthesis. In each column, we report results for different downstream tasks.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0008544921875,
+    "y1": 83.00335693359375,
+    "y2": 108.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["IN21k+BN", "(8)", "54.56", "±", "12.11", "22.30", "±", "5.11", "16.89", "±", "10.27", "32.09", "±", "11.00", "6.76", "±", "3.96", "IN21k+LN", "(19)", "26.53", "±", "11.77", "12.45", "±", "7.86", "5.48", "±", "3.39", "6.40", "±", "5.19", "2.35", "±", "2.33", "IN+BN", "(24)", "50.51", "±", "11.26", "28.89", "±", "12.78", "14.13", "±", "9.11", "29.00", "±", "11.19", "5.52", "±", "3.74", "IN+LN", "(8)", "31.93", "±", "7.61", "16.72", "±", "4.62", "10.14", "±", "8.36", "6.42", "±", "2.58", "4.05", "±", "3.23", "BN", "(32)", "51.52", "±", "11.42", "27.24", "±", "11.64", "14.82", "±", "9.32", "29.77", "±", "11.05", "5.83", "±", "3.77", "LN", "(27)", "28.13", "±", "10.85", "13.71", "±", "7.25", "6.86", "±", "5.61", "6.41", "±", "4.52", "2.85", "±", "2.69", "IN", "(32)", "45.86", "±", "13.19", "25.84", "±", "12.43", "13.13", "±", "8.97", "23.35", "±", "13.89", "5.15", "±", "3.62", "IN21K", "(27)", "34.83", "±", "17.48", "15.37", "±", "8.42", "8.86", "±", "8.03", "14.01", "±", "13.93", "3.65", "±", "3.49", "Models", "FT", "DGen", "SCA", "SHOT", "FT+SCA", "FT+SHOT", "All", "(59)", "40.82", "±", "16.14", "21.05", "±", "11.92", "11.18", "±", "8.75", "19.08", "±", "14.57", "4.47", "±", "3.61"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 126.24,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table4-1.png"
+}, {
+  "caption": "Table 5: Comparison, using modern architectures (SWIN and ConvNext) of SF-UDA (SCA, SHOT and NRC) with not Source-Free methods: DANN (Ganin et al., 2016), CDAN (Long et al., 2016), AFN (Xu et al., 2019), MDD (Zhang et al., 2019) and MCC (Jin et al., 2020).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 238.2723388671875,
+    "y2": 264.02996826171875
+  },
+  "figType": "Table",
+  "imageText": ["does", "not", "support", "distributed", "execution.", "†", "Requires", "source,", "reproduced", "by", "Kim", "et", "al.", "(2022).", "*", "Source-Free,", "reproduced", "by", "us.", "⋄", "Evaluated", "on", "a", "15%", "subset", "of", "DomainNet", "to", "reduce", "training", "time,", "since", "the", "official", "implementation", "ConvNext", "XL", "Office-Home", "86.7", "89.5", "85.5", "86.4", "88.9", "87.4", "88.8", "89.2", "DomainNet", "48.8", "51.2", "46.7", "42.8", "45.6", "49.8", "51.0", "47.1⋄", "SWIN", "L", "Office-Home", "86.6", "88.4", "85.7", "86.5", "88.3", "86.4", "89.3", "89.5", "DomainNet", "49.4", "50.4", "46.4", "41.5", "47.1", "49.0", "51.2", "48.4⋄", "Backbone", "Dataset", "DANN†", "CDAN†", "AFN†", "MDD†", "MCC†", "FT+SCA*", "FT+SHOT*", "FT+NRC*"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 276.48,
+    "y2": 371.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table5-1.png"
+}, {
+  "caption": "Table 7: Coefficients and R̄2 obtained with single and multi linear models. Parameters of the multi-linear model with p-value higher than 0.01 are removed from the model, since their contribution is not statistically significant.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00079345703125,
+    "y1": 110.932373046875,
+    "y2": 136.69000244140625
+  },
+  "figType": "Table",
+  "imageText": ["multiple", "reg.", "1.15", "—", "0.06", "−0.32", "0.93", "FT+SHOT", "single", "reg.", "1.51", "—", "—", "−0.59", "0.84", "multiple", "reg.", "1.10", "—", "0.08", "−0.33", "0.80", "FT+SCA", "single", "reg.", "1.62", "—", "—", "−0.72", "0.67", "multiple", "reg.", "1.16", "—", "0.09", "−0.43", "0.82", "FT", "DGen", "single", "reg.", "1.68", "—", "—", "−0.82", "0.70", "multiple", "reg.", "0.48", "—", "0.02", "0.46", "0.88", "FT", "Gen", "single", "reg.", "0.62", "—", "—", "0.35", "0.80", "multiple", "reg.", "1.21", "—", "0.07", "−0.40", "0.89", "SHOT", "single", "reg.", "1.62", "—", "—", "−0.71", "0.79", "multiple", "reg.", "0.87", "0.42", "−0.27", "−0.16", "0.90", "SCA", "single", "reg.", "1.08", "—", "—", "−0.32", "0.73", "multiple", "reg.", "0.92", "0.54", "−0.38", "−0.25", "0.92", "CP", "DGen", "single", "reg.", "1.14", "—", "—", "−0.41", "0.75", "multiple", "reg.", "0.95", "0.62", "−0.45", "−0.26", "0.93", "LP", "DGen", "single", "reg.", "1.14", "—", "—", "−0.41", "0.81", "multiple", "reg.", "0.59", "0.23", "−0.14", "0.26", "0.91", "CP", "Gen", "single", "reg.", "0.72", "—", "—", "0.16", "0.76", "multiple", "reg.", "0.51", "0.31", "−0.23", "0.36", "0.85", "LP", "Gen", "single", "reg.", "0.61", "—", "—", "0.29", "0.74", "Experiment", "model", "m", "∆m", "∆q", "q", "R̄2"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 159.84,
+    "x2": 452.15999999999997,
+    "y1": 154.07999999999998,
+    "y2": 434.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table7-1.png"
+}, {
+  "caption": "Figure 5: Average Linear Probing generalization accuracy (over 23 domains).",
+  "captionBoundary": {
+    "x1": 164.34100341796875,
+    "x2": 444.882080078125,
+    "y1": 693.79833984375,
+    "y2": 699.6309814453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 499.68,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure5-1.png"
+}, {
+  "caption": "Figure 1: We compare performance of different feature extractors (which have been pre-trained either on ImageNet or Imagenet21k) for, respectively: (i) Generalization LP, (ii) Domain generalization LP, (iii) SCA and (iv) FT + SHOT.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.002685546875,
+    "y1": 240.95733642578125,
+    "y2": 266.7149658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 80.64,
+    "y2": 225.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Figure1-1.png"
+}, {
+  "caption": "Table 1: Adjusted R̄2 values for linear (only top1 accuracy considered) and multi-linear (top1 and pre-training) explanatory models for linear probing (LP), cluster probing (CP), SHOT, SCA and fine tuning (FT).",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 503.9996032714844,
+    "y1": 274.21331787109375,
+    "y2": 290.0079345703125
+  },
+  "figType": "Table",
+  "imageText": ["Linear", "0.736", "0.756", "0.810", "0.755", "0.731", "0.792", "0.803", "0.698", "0.668", "0.838", "Multi-Linear", "0.851", "0.908", "0.935", "0.918", "0.902", "0.890", "0.878", "0.822", "0.792", "0.932", "CP", "Gen", "LP", "DGen", "CP", "DGen", "SCA", "SHOT", "FT", "Gen", "FT", "DGen", "FT+", "SCA", "FT+", "SHOT", "LP", "Gen"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 307.68,
+    "y2": 348.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table1-1.png"
+}, {
+  "caption": "Table 6: Comparison of the four different SCA initializations. The results are the average of 548 architectures and 74 different domain pairs. The ∆ accuracy is the difference between the target accuracy after SCA and the naive domain generalization of MR classifier trained on source. The failure rate is the percentage of experiments where SCA degrades the naive domain generalization. In the last two rows are reported the accuracy gain and degradation considering the successful and failure adaptation, respectively. These result differ from the ones in the main text, since here we consider the full set of 548 architectures.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0049743652344,
+    "y1": 453.9423522949219,
+    "y2": 509.5880432128906
+  },
+  "figType": "Table",
+  "imageText": ["C", "ARCHITECTURES", "∆", "Accuracy", "|", "Failure", "-1.8", "±", "0.6", "-1.8", "±", "1.0", "-15.4", "±", "4.3", "-2.4", "±", "1.6", "∆", "Accuracy", "|", "Success", "5.8", "±", "1.0", "6.2", "±", "0.9", "7.2", "±", "0.1", "6.4", "±", "1.0", "Failure", "Rate", "25.1", "±", "10.2", "20.1", "±", "7.2", "46.2", "±", "8.1", "29.3", "±", "10.2", "∆", "Accuracy", "3.8", "±", "1.2", "4.5", "±", "1.1", "-0.3", "±", "2.1", "3.7", "±", "1.5", "MR", "Weights", "Hard", "Pred.", "Soft.", "Pred.", "Source", "Labels"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 481.44,
+    "y1": 526.56,
+    "y2": 643.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-PL1Gk4jt7-Table6-1.png"
+}]

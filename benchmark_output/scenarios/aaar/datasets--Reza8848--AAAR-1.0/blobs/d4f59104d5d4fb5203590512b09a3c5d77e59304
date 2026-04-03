@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 7: COMPAS dataset case study.",
+  "captionBoundary": {
+    "x1": 228.44699096679688,
+    "x2": 383.5547180175781,
+    "y1": 322.48052978515625,
+    "y2": 328.4830017089844
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "(Northpointe)", "“Sample", "B”", "analysis", "done", "by", "Northpointe", "using", "False", "Discovery", "Rate", "that", "op-", "posed", "the", "ProPublica", "reports.", "(a)", "(ProPublica)", "COMPAS,", "“Sample", "A”", "False", "Positive", "Rate", "Bias", "specification", "required", "to", "above", "the", "10%", "=⇒", "0.9", "threshold", "converges", "to", "a", "value", "that", "can", "be", "guaranteed", "to", "be", "under", "the", "required", "threshold."],
+  "name": "7",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 308.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Shaded nodes describe our contributions to create the AVOIR framework.",
+  "captionBoundary": {
+    "x1": 139.72999572753906,
+    "x2": 472.2715148925781,
+    "y1": 149.29751586914062,
+    "y2": 155.29998779296875
+  },
+  "figType": "Figure",
+  "imageText": ["Constrained", "Optimization", "Solver", "Optimization", "Objective", "Tree", "Visualization", "Monitoring", "System", "Concentration", "Bound", "Inference", "Engine", "Data", "Assumptions"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 138.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure1-1.png"
+}, {
+  "caption": "Table 1: Comparison of AVOIR with prior work.",
+  "captionBoundary": {
+    "x1": 208.7899932861328,
+    "x2": 403.21002197265625,
+    "y1": 246.47555541992188,
+    "y2": 252.47802734375
+  },
+  "figType": "Table",
+  "imageText": ["Albarghouthi", "&", "Vinitsky", "(2019)", "✓", "✗", "✓", "✗", "✓", "Bellamy", "et", "al.", "(2019)", "✓", "✗", "✗", "✗", "✓", "Bastani", "et", "al.", "(2019)", "✓", "✓", "✓", "✗", "✓", "Ghosh", "et", "al.", "(2021b)", "✗", "✗", "✓", "✗", "✓", "Ginart", "et", "al.", "(2022)", "✗", "✓", "✓", "✗", "✓", "Ghosh", "et", "al.", "(2021a)", "✓", "✓", "✗", "✗", "✗", "AVOIR", "(Our", "work)", "✓", "✓", "✓", "✓", "✓", "Tool", "Flexible", "Fairness", "Metrics", "Adaptive", "Optimization", "Online", "Monitoring", "Visual", "Refinement", "Black-Box", "Model"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 170.88,
+    "y2": 235.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Table1-1.png"
+}, {
+  "caption": "Figure 3: (Left) AVOIR finds a solution for a theoretical scenario with δX+δY ≤ ∆ under constraint ϵX+ϵY ≤ ϵT (Right) For RateMyProfs, a real-world dataset, the vertical lines show the step at which the methods can provide a guarantee of failure for the upper bounds with ∆ <= 0.05.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0019836425781,
+    "y1": 292.3195495605469,
+    "y2": 320.239990234375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Bounds", "for", "first", "half", "of", "a", "gender-fairness", "speci-", "fication", "generated", "by", "AVOIR-OB", "and", "AVOIR-VF.", "(a)", "No", "solution", "exists", "with", "additional", "constraint", "Aδ", ":", "δX", "=", "δY", "=", "∆/2", "-", "common", "assumption", "in", "prior", "work.", "δX", "=", "δY", "δX", "+", "δY", "≤", "0.1", "ϵX", "+", "ϵY", "≤", "0.2", "δY", "δX", "7", "·10−2", "6", "5", "4", "·10−2", "3", "3.5", "4", "4.5", "5", "5.5", "6"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure3-1.png"
+}, {
+  "caption": "Figure 2: (Left) Failure probability of Bernoulli r.v. being concentrated around its mean for different n. H = (online) Hoeffding, AH = Adaptive Hoeffding. (Right) Modified Grammar for Specification.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99713134765625,
+    "y1": 709.612548828125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "⟨E⟩", "refers", "to", "pure", "expressions", "and", "⟨comp−op⟩", "is", "any", "arbitrary", "comparison", "operator", "∈", "{>,<,=,", "̸=}.", "⟨ETerm⟩", "::=", "E[⟨E⟩]", "|", "E[⟨E⟩|⟨E⟩]", "|", "c", "∈", "R", "|", "⟨ETerm⟩", "{+,−,×,÷}", "⟨ETerm⟩", "⟨spec⟩", "::=", "⟨ETerm⟩", "⟨comp-op⟩", "c", "|", "⟨spec⟩", "∧", "⟨spec⟩", "|", "⟨spec⟩", "∨", "⟨spec⟩", "(a)", "At", "the", "same", "concentration", "ϵ,", "lower", "failure", "prob-", "ability", "δ", "for", "the", "majority", "class.", "H:", "t", "=", "600", "AH:", "t", "=", "600", "H:", "t", "=", "1000", "AH:", "t", "=", "1000", "δ", "ϵ", "10−2", "10−5", "10−8", "10−11", "0.1", "0.11", "0.12", "0.13", "0.14", "0.15", "10−14"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.47999999999996,
+    "y1": 535.68,
+    "y2": 696.9599999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Inference rules used to guarantees for expressions.The inference rules for each compound expression build on the union bound, triangle inequality, and structural induction approach described by Bastani et al. (2019).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 532.0325317382812,
+    "y2": 559.9520263671875
+  },
+  "figType": "Figure",
+  "imageText": ["ψ1", "∨", "ψ2", ":", "(B1", "∨", "B2,", "δ1", "+", "δ2),", "{C11,...,1k}", "∨", "{C21,...,2m}", "(or", "constr.)", "ψ1", ":", "(B1,", "δ1),", "{C11,...,1k},", "ψ2", ":", "(B2,", "δ2)", "ψ1", ":", "(B1,", "δ1),", "{C11,...,1k},", "ψ2", ":", "(B2,", "δ2),", "{C21,...,2m}", "ψ1", "∧", "ψ2", ":", "(B1", "∧", "B2,", "δ1", "+", "δ2),", "{C11,...,1k,", "C21,...,2m}", "(and", "constr.)", "ψ1", "∨", "ψ2", ":", "(B1", "∨", "B2,", "δ1", "+", "δ2)", "(or)", "ψ1", ":", "(B1,", "δ1),", "ψ2", ":", "(B2,", "δ2)", "ψ1", "∧", "ψ2", ":", "(B1", "∧", "B2,", "δ1", "+", "δ2)", "(and)", "ψ1", ":", "(B1,", "δ1),", "ψ2", ":", "(B2,", "δ2)", "X", ":", "(", "E,", "ϵ,", "δ", ")", "ψ", "≡", "X", "<", "c", ":", "(T,", "δ),", "{E+", "ϵ", "<", "c}", "(False", "Constr.)", "ψ", "≡", "X", "<", "c", ":", "(F,", "δ)", "(False)", "X", ":", "(", "E,", "ϵ,", "δ", ")", "ψ", "≡", "X", ">", "c", ":", "(T,", "δ),", "{E−", "ϵ", ">", "c}", "(True", "Constr.)", "X", ":", "(", "E,", "ϵ,", "δ", ")", ",E+", "ϵ", "<", "c", "ψ", "≡", "X", ">", "c", ":", "(T,", "δ)", "(True)", "X", ":", "(", "E,", "ϵ,", "δ", ")", ",E−", "ϵ", ">", "c", ")", ",", "{E−", "ϵ", ">", "0}", "(Inverse", "Constr.)", ",", "ϵ", "E(E−ϵ)", ",", "δ", "(", "E,", "ϵ,", "δ", ")", "X−1", ":", "(", "E−1", ")", "(Inverse)", "X", ":", ",", "ϵ", "E(E−ϵ)", ",", "δ", "X−1", ":", "(", "E−1", "X", ":", "(", "E,", "ϵ,", "δ", ")", ",E−", "ϵ", ">", "0", ")", "X", "×", "Y", ":", "(E[X]E[Y", "],", "ϵXϵY", "+", "E[X]ϵY", "+", "E[Y", "]ϵX", ",", "δX", "+", "δY", ")", ")", "X", ":", "(", "E[X],", "ϵX", ",", "δX", ")", ",", "Y", ":", "(", "E[Y", "],", "ϵY", ",", "δY", "X", ":", "(", "E[X],", "ϵX", ",", "δX", ")", ",", "Y", ":", "(", "E[Y", "],", "ϵY", ",", "δY", ")", "X", "±", "Y", ":", "(", "E[X]±", "E[Y", "],", "ϵX", "+", "ϵY", ",", "δX", "+", "δY"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 496.32,
+    "y1": 218.88,
+    "y2": 516.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure5-1.png"
+}, {
+  "caption": "Figure 4: (Left) Red dotted lines the upper bound of the value cannot be guaranteed to be under the threshold at the specified failure probability. (Right) Guarantee possible with given data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99969482421875,
+    "y1": 301.363525390625,
+    "y2": 318.32501220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Group", "fairness", "for", "race", "(difference", "in", "ratio", "of", "high", "income", "earners)", "in", "right", "subtree", "for", "initial", "specifica-", "tion.", "(a)", "Group", "fairness", "for", "sex.", "Difference", "in", "ratio", "of", "high", "income", "earners", "in", "left", "subtree", "for", "initial", "specification."],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.47999999999996,
+    "y1": 80.64,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure4-1.png"
+}, {
+  "caption": "Figure 6: Tree of initial specification before refinement in the adult income dataset.",
+  "captionBoundary": {
+    "x1": 140.2729949951172,
+    "x2": 471.7287292480469,
+    "y1": 318.8695373535156,
+    "y2": 324.87200927734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 308.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Gp91Et4LeRf-Figure6-1.png"
+}]

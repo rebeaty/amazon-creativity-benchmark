@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 6: The usee context shows the signature of the elements that are used by the main code or by elements from the user context. By seeing their predicted type signatures, the model can understand the type-level behavior of these definitions without having to dive into their implementation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 599.2095947265625,
+    "y2": 627.1290283203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 181.92,
+    "y2": 585.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Simplified code snippets taken from our own codebase. The eval on dataset function first calls the chunk srcs function to convert the given texture data into equally sized chunks, and it then feed them into the ModelWrapper.predict method.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0002746582031,
+    "y1": 700.5335693359375,
+    "y2": 728.4539794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 519.84,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure1-1.png"
+}, {
+  "caption": "Table 3: Accuracy comparison on all types (common + rare).",
+  "captionBoundary": {
+    "x1": 179.18702697753906,
+    "x2": 429.7252197265625,
+    "y1": 649.83056640625,
+    "y2": 655.8330078125
+  },
+  "figType": "Table",
+  "imageText": ["Type4Py", "n/a", "34.52", "35.87", "19.68", "35.61", "n/a", "21.11", "22.35", "9.61", "22.64", "CodeT5", "67.07", "67.47", "72.12", "44.05", "73.44", "68.80", "68.95", "75.14", "54.04", "77.78", "TypeT5", "71.89", "73.02", "77.07", "49.72", "78.87", "71.98", "73.15", "77.16", "62.66", "80.20", "full", "adjusted", "base", "full", "adjusted", "base", "all", "all", "simple", "complex", "all", "all", "all", "simple", "complex", "all", "BetterTypes4Py", "InferTypes4Py"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 658.56,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Table3-1.png"
+}, {
+  "caption": "Table 1: Basic statistics of our two datasets.",
+  "captionBoundary": {
+    "x1": 215.6199951171875,
+    "x2": 393.2929992675781,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["Projects", "573", "40", "50", "3", "Nonempty", "ﬁles", "16.5K", "1098", "949", "99", "Lines", "of", "code", "2.4M", "174K", "139K", "21K", "API", "type", "slots", "541K", "38.2K", "28.4K", "4.6K", "API", "user-added", "types", "275K", "19.3K", "15.8K", "2.7k", "Rare", "type", "ratio", "25.7%", "23.3%", "35.0%", "33.8%", "Complex", "type", "ratio", "20.4%", "16.6%", "20.8%", "33.4%", "Average", "type", "size", "1.42", "1.33", "1.43", "1.72", "train", "valid", "test", "test", "BetterTypes4Py", "InferTypes4Py"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 173.76,
+    "x2": 438.24,
+    "y1": 99.84,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Table1-1.png"
+}, {
+  "caption": "Table 2: Accuracy comparison on common types.",
+  "captionBoundary": {
+    "x1": 203.06700134277344,
+    "x2": 405.8446960449219,
+    "y1": 232.95352172851562,
+    "y2": 238.95599365234375
+  },
+  "figType": "Table",
+  "imageText": ["Typilus", "n/a", "54.05", "55.12", "33.23", "60.37", "n/a", "52.33", "52.19", "53.91", "64.67", "Type4Py", "n/a", "50.34", "51.91", "32.14", "47.51", "n/a", "32.08", "33.47", "16.54", "29.83", "CodeT5", "76.74", "78.04", "82.43", "53.03", "82.44", "77.83", "78.06", "85.31", "63.41", "81.87", "TypeT5", "79.24", "81.43", "85.69", "56.75", "84.82", "81.75", "82.95", "87.62", "72.78", "84.17", "full", "adjusted", "base", "full", "adjusted", "base", "all", "all", "simple", "complex", "all", "all", "all", "simple", "complex", "all", "BetterTypes4Py", "InferTypes4Py"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 241.92,
+    "y2": 323.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Table2-1.png"
+}, {
+  "caption": "Figure 5: The preamble gathers all the important statements and class headers from the current file. This helps the model see which types are available and where each symbol comes from.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 404.7605285644531,
+    "y2": 421.72198486328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 80.64,
+    "y2": 390.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure5-1.png"
+}, {
+  "caption": "Figure 2: How CodeT5 encodes and decodes source code using BPE. Marker tokens (highlighted in blue) indicate gaps (input) and their corresponding fillers (output).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 345.5980224609375,
+    "y1": 255.52151489257812,
+    "y2": 283.44097900390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 329.28,
+    "y1": 80.64,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure2-1.png"
+}, {
+  "caption": "Figure 3: The two-pass sequential decoding process.",
+  "captionBoundary": {
+    "x1": 353.51800537109375,
+    "x2": 504.00299072265625,
+    "y1": 261.0005187988281,
+    "y2": 277.96197509765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 354.71999999999997,
+    "x2": 502.08,
+    "y1": 86.88,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure3-1.png"
+}, {
+  "caption": "Table 4: Performance of different model modifications. All models are retrained with the corresponding inputs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 294.1213073730469,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["No", "Preamble", "64.20", "6067", "No", "Users", "71.20", "7053", "No", "Usees", "67.25", "7332", "Nonincremental", "72.52", "5720", "Original", "(TypeT5)", "73.02", "5087", "Modiﬁcation", "Accuracy", "Type", "Error"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 294.24,
+    "y1": 123.36,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Table4-1.png"
+}, {
+  "caption": "Table 5: Performance of different decoding strategies. The same TypeT5 model weights are used for decoding strategies.",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 503.99847412109375,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["Independent", "71.68", "6876", "Random", "71.66", "6215", "UserToUsee", "70.67", "7415", "UseeToUser", "72.65", "6402", "TwoPass", "(TypeT5)", "73.02", "5087", "Strategy", "Accuracy", "Type", "Error"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 503.03999999999996,
+    "y1": 123.36,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Table5-1.png"
+}, {
+  "caption": "Figure 4: The usage graph corresponding to the code snippets in Figure 1. WindowArgs and ChunkedDataset are assumed to be defined elsewhere in the same project.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 199.36849975585938,
+    "y2": 216.3299560546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 80.64,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure4-1.png"
+}, {
+  "caption": "Figure 8: The user context shows two callers of the predict method from the main code. We see that the model successfully predicts all user-defined types, despite the fact that these are all new classes defined in the current project.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 663.5885620117188,
+    "y2": 691.509033203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 117.6,
+    "y2": 649.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure8-1.png"
+}, {
+  "caption": "Figure 7: The main code is the element that is being annotated by the model at the current decoding step. The model has made two errors in this example, both of which can actually be directly attributed to the previous two errors made in the usee context (line 102 and line 97). This shows that the model is making coherent predictions according to the context, and such errors can be avoided if the user has corrected the previous errors (as described in subsection 4.4).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 571.5825805664062,
+    "y2": 621.4210205078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 187.68,
+    "y2": 557.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4TyNEhI2GdN-Figure7-1.png"
+}]

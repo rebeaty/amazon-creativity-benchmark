@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 1: Illustration of hidden Markov Transformer. HMT explicitly produces K = 3 states for each target token to represent starting translating the target token when receiving different numbers of source tokens respectively (where h≤n means starting translating when receiving the first n source tokens). Then, HMT judges whether to select each state from low latency to high latency (i.e., from left to right). Once a state is selected, HMT will translate the target token based on the selected state.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 165.15451049804688,
+    "y2": 214.991943359375
+  },
+  "figType": "Figure",
+  "imageText": ["READ", "READ", "WRITE", "READ", "WRITE", "READ", "READ", "WRITE", "WRITE", "WRITE", "Selected", "State", "Unselected", "State", "today", "today", "today", "happy", "specialhappyhappy", "开⼼(_happy)", "very", "a", "special", "very", "feel", "today", "feel", "feel", "I", "today", "I", "I", "今天(_today)", "我(_I)", "感觉(_feel)", "特别(_very)", "<s>", "Encoder", "Hidden", "Markov", "Decoder"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 153.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Translation quality (BLEU) against latency (AL) of HMT and previous SiMT methods.",
+  "captionBoundary": {
+    "x1": 112.40301513671875,
+    "x2": 499.5994873046875,
+    "y1": 213.57052612304688,
+    "y2": 219.572998046875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "De→En,", "Transformer-Big", "Full-sentence", "MT", "HMT", "GMA", "MMA", "MoE", "Wait-k", "Adaptive", "Wait-k", "Multipath", "Wait-k", "Wait-k", "co", "re", "U", "S", "B", "LE", "32", "30", "28", "26", "24", "22", "20", "0", "2", "4", "6", "8", "10", "12", "Average", "Lagging", "(AL,", "token)", "(b)", "De→En,", "Transformer-Base", "Full-sentence", "MT", "HMT", "GSiMT", "GMA", "MMA", "MoE", "Wait-k", "Adaptive", "Wait-k", "Multipath", "Wait-k", "Wait-k", "co", "re", "U", "S", "B", "LE", "32", "30", "28", "26", "24", "22", "20", "18", "0", "2", "4", "6", "8", "10", "12", "Average", "Lagging", "(AL,", "token)", "(a)", "En→Vi,", "Transformer-Small", "Full-sentence", "MT", "HMT", "GMA", "MMA", "MoE", "Wait-k", "Adaptive", "Wait-k", "Multipath", "Wait-k", "Wait-k", "co", "re", "U", "S", "B", "LE", "29", "28", "27", "26", "25", "4", "6", "8", "10", "Average", "Lagging", "(AL,", "token)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 501.12,
+    "y1": 87.84,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure4-1.png"
+}, {
+  "caption": "Figure 8: Specific improvements brought by HMT architecture and inference policy.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 503.99761962890625,
+    "y1": 420.0045166015625,
+    "y2": 447.92498779296875
+  },
+  "figType": "Figure",
+  "imageText": ["Full-sentence", "MT", "HMT", "(HMT", "architecture", "+", "HMT", "inference)", "HMT", "architecture", "+", "Wait-k", "inference", "Wait-k", "(Wait-k", "architecture", "+", "Wait-k", "inference)", "co", "re", "U", "S", "B", "LE", "32", "30", "28", "26", "24", "22", "20", "18", "0", "2", "4", "6", "8", "10", "12", "Average", "Lagging", "(AL,", "token)"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 370.56,
+    "x2": 499.2,
+    "y1": 305.28,
+    "y2": 414.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure8-1.png"
+}, {
+  "caption": "Figure 9: HMT performance under various thresholds δ of confidence.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 503.99761962890625,
+    "y1": 664.300537109375,
+    "y2": 681.2620239257812
+  },
+  "figType": "Figure",
+  "imageText": ["HMT", "(", "=", "0.5)", "=", "0.2", "=", "0.4", "=", "0.6", "=", "0.8", "co", "re", "U", "S", "B", "LE", "32", "30", "28", "26", "24", "22", "20", "0", "2", "4", "6", "8", "10", "12", "Average", "Lagging", "(AL,", "token)"],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 370.56,
+    "x2": 499.2,
+    "y1": 553.4399999999999,
+    "y2": 659.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure9-1.png"
+}, {
+  "caption": "Figure 2: The architecture of hidden Markov decoder.",
+  "captionBoundary": {
+    "x1": 198.7530059814453,
+    "x2": 413.2476806640625,
+    "y1": 213.43954467773438,
+    "y2": 219.4420166015625
+  },
+  "figType": "Figure",
+  "imageText": ["0.6", "0.4", "0.7…", "0.2", "0.9", "0.3…", "0.3", "0.4", "0.7…", "0.2", "0.1", "0.9…", "ŏ", "ŏ", "Outputs", "Confidence", "…", "…", "Encoder", "outputs", "State", "…", "StateState", "…", "…", "ŏ", "Target", "Inputs", "N×", "FNN", "Encoder", "Outputs", "ŏ", "ŏ", "…", "…", "…", "…", "cross-attention", "self-attention", "between", "states", "…", "…", "…", "…", "ŏ", "…", "…", "…", "…", "ŏ", "…", "…", "…", "…", "ŏ"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 169.44,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 206.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Setting of translating moment t (L=1, K =4). Each purple square is a state si,k, representing that translates yi when receiving first ti,k source tokens.",
+  "captionBoundary": {
+    "x1": 373.3190002441406,
+    "x2": 504.0000305175781,
+    "y1": 488.1085205078125,
+    "y2": 539.4409790039062
+  },
+  "figType": "Figure",
+  "imageText": ["state", "READ", "WRITE", "Lower", "boundary", "wait-L", "path", "Upper", "boundary", "wait-(L+K-1)", "path"],
+  "name": "3",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 376.8,
+    "x2": 500.15999999999997,
+    "y1": 408.47999999999996,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure3-1.png"
+}, {
+  "caption": "Table 7: Hyperparameters of HMT.",
+  "captionBoundary": {
+    "x1": 235.5050048828125,
+    "x2": 376.4956970214844,
+    "y1": 136.03256225585938,
+    "y2": 142.0350341796875
+  },
+  "figType": "Table",
+  "imageText": ["Hyperparameters", "En→Vi", "Transformer-Small", "De→En", "Transformer-Base", "De→En", "Transformer-Big", "encoder-layers", "6", "6", "6", "encoder-attention-heads", "4", "8", "16", "encoder-embed-dim", "512", "512", "1024", "encoder-ffn-embed-dim", "1024", "2048", "4096", "decoder-layers", "6", "6", "6", "decoder-attention-heads", "4", "8", "16", "decoder-embed-dim", "512", "512", "1024", "decoder-ffn-embed-dim", "1024", "2048", "4096", "dropout", "0.3", "0.3", "0.3", "optimizer", "adam", "adam", "adam", "adam-β", "(0.9,", "0.98)", "(0.9,", "0.98)", "(0.9,", "0.98)", "clip-norm", "0", "0", "0", "lr", "2e-4", "5e-4", "5e-4", "lr-scheduler", "inverse", "sqrt", "inverse", "sqrt", "inverse", "sqrt", "warmup-updates", "4000", "4000", "4000", "warmup-init-lr", "1e-7", "1e-7", "1e-7", "weight-decay", "0.0001", "0.0001", "0.0001", "label-smoothing", "0.1", "0.1", "0.1", "max-tokens", "16000", "8192×4", "8192×4"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 150.72,
+    "y2": 362.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table7-1.png"
+}, {
+  "caption": "Figure 7: An example to depict the calculation of transition probability p(zi | zi−1).",
+  "captionBoundary": {
+    "x1": 138.5800018310547,
+    "x2": 473.4196472167969,
+    "y1": 227.05050659179688,
+    "y2": 234.5479736328125
+  },
+  "figType": "Figure",
+  "imageText": ["selection", "result"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 110.88,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure7-1.png"
+}, {
+  "caption": "Table 4: Ablation study of the weight λstate of state loss Lstate.",
+  "captionBoundary": {
+    "x1": 402.08099365234375,
+    "x2": 503.0628356933594,
+    "y1": 83.53055572509766,
+    "y2": 112.94500732421875
+  },
+  "figType": "Table",
+  "imageText": ["λstate", "AL", "BLEU", "0.0", "3.24", "27.74", "0.5", "3.47", "29.10", "1.0", "3.46", "29.29", "1.5", "3.46", "29.16", "2.0", "3.58", "29.21"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 402.71999999999997,
+    "x2": 503.03999999999996,
+    "y1": 120.96,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table4-1.png"
+}, {
+  "caption": "Table 3: Ablation study of the weight λlatency of latency loss Llatency.",
+  "captionBoundary": {
+    "x1": 274.8389892578125,
+    "x2": 381.75927734375,
+    "y1": 83.53055572509766,
+    "y2": 112.94500732421875
+  },
+  "figType": "Table",
+  "imageText": ["λlatency", "AL", "BLEU", "0.0", "6.66", "30.07", "0.5", "4.12", "29.80", "1.0", "3.46", "29.29", "1.5", "2.10", "26.65", "2.0", "2.00", "25.94"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 273.59999999999997,
+    "x2": 382.08,
+    "y1": 120.96,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table3-1.png"
+}, {
+  "caption": "Table 2: Ablation study of HMM loss, including marginalizing all possible selections or only optimizing the most probable selection result.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 254.5199737548828,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["AL", "BLEU", "Marginalizing", "all", "possible", "selections", "3.46", "29.29", "Optimizing", "most", "probable", "selection", "1.77", "24.02"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 253.44,
+    "y1": 129.6,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table2-1.png"
+}, {
+  "caption": "Table 8: Numerical results of HMT on En→Vi with Transformer-Small.",
+  "captionBoundary": {
+    "x1": 162.23577880859375,
+    "x2": 449.76544189453125,
+    "y1": 269.0644836425781,
+    "y2": 275.06695556640625
+  },
+  "figType": "Table",
+  "imageText": ["IWSLT15", "En→Vi", "Transformer-Small", "L", "K", "CW", "AP", "AL", "DAL", "BLEU", "1", "2", "1.15", "0.64", "3.10", "3.72", "27.99", "2", "2", "1.22", "0.67", "3.72", "4.38", "28.53", "4", "2", "1.24", "0.72", "4.92", "5.63", "28.59", "5", "4", "1.53", "0.76", "6.34", "6.86", "28.78", "6", "4", "1.96", "0.83", "8.15", "8.71", "28.86", "7", "6", "2.24", "0.89", "9.60", "10.12", "28.88"],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 210.72,
+    "x2": 401.28,
+    "y1": 283.68,
+    "y2": 366.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table8-1.png"
+}, {
+  "caption": "Table 9: Numerical results of HMT on De→En with Transformer-Base.",
+  "captionBoundary": {
+    "x1": 163.052001953125,
+    "x2": 448.9478759765625,
+    "y1": 385.613525390625,
+    "y2": 391.6159973144531
+  },
+  "figType": "Table",
+  "imageText": ["WMT15", "De→En", "Transformer-Base", "L", "K", "CW", "AP", "AL", "DAL", "BLEU", "-1", "4", "1.58", "0.52", "0.27", "2.41", "22.52", "2", "4", "1.78", "0.59", "2.20", "4.53", "27.60", "3", "6", "2.06", "0.64", "3.46", "6.38", "29.29", "5", "6", "1.85", "0.69", "4.74", "6.95", "30.29", "7", "6", "2.03", "0.74", "6.43", "8.35", "30.90", "9", "8", "2.48", "0.79", "8.37", "10.09", "31.45", "11", "8", "3.02", "0.83", "10.06", "11.57", "31.61", "13", "8", "3.73", "0.86", "11.80", "13.08", "31.71"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 209.76,
+    "x2": 402.24,
+    "y1": 400.8,
+    "y2": 503.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table9-1.png"
+}, {
+  "caption": "Table 10: Numerical results of HMT on De→En with Transformer-Big.",
+  "captionBoundary": {
+    "x1": 163.0469970703125,
+    "x2": 448.9535217285156,
+    "y1": 522.0885620117188,
+    "y2": 528.0910034179688
+  },
+  "figType": "Table",
+  "imageText": ["WMT15", "De→En", "Transformer-Big", "L", "K", "CW", "AP", "AL", "DAL", "BLEU", "-1", "4", "1.65", "0.52", "0.06", "2.43", "22.70", "2", "4", "1.79", "0.60", "2.19", "4.50", "27.97", "3", "6", "2.04", "0.64", "3.46", "6.30", "29.91", "5", "6", "1.88", "0.69", "4.85", "7.07", "30.85", "7", "6", "2.06", "0.74", "6.56", "8.47", "31.99", "9", "8", "2.47", "0.79", "8.34", "10.10", "32.28", "11", "8", "2.98", "0.83", "10.12", "11.58", "32.46", "13", "8", "3.75", "0.86", "11.78", "13.09", "32.58"],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 209.76,
+    "x2": 402.24,
+    "y1": 536.64,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table10-1.png"
+}, {
+  "caption": "Figure 12: Effect of the proposed state loss Lstate. We apply HMT with L = 3 and K = 6 and visualize the state outputs of case #912 in De→En test set (Source: ‘meine erste Wahl war eine Ausbildung in der Armee.’; Reference: ‘my first choice was to go in the army.’). The outputs marked in red represent unselected states, the outputs marked in blue represent the selected states, and the outputs marked in gray represent the states that are not considered in inference. The numerical values in the squares report the cross-attention weight, and blank squares indicate that those source tokens have not been received when translating the target token.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0045471191406,
+    "y1": 458.4895324707031,
+    "y2": 530.2459106445312
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "HMT", "with", "the", "state", "loss", "Lstate.", "Translation", "result:", "‘my", "first", "choice", "was", "to", "train", "in", "the", "army.’.", "So", "ur", "ce", "Target", "(a)", "HMT", "without", "the", "state", "loss", "Lstate.", "Translation", "result:", "‘my", "first", "choice", "was", "to", "train", "the", "army.’.", "The", "green", "box", "marks", "the", "incorrect", "translation,", "where", "the", "correct", "translation", "should", "be", "‘in’", "but", "the", "model", "generated", "‘the’.", "So", "ur", "ce", "Target"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 502.56,
+    "y1": 223.67999999999998,
+    "y2": 441.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure12-1.png"
+}, {
+  "caption": "Figure 5: Token accuracy with predicted confidence.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 504.0029296875,
+    "y1": 514.8125610351562,
+    "y2": 531.7739868164062
+  },
+  "figType": "Figure",
+  "imageText": ["76.38Low", "latency", "(L", "=", "2,", "K", "=", "4)", "Middle", "latency", "(L", "=", "5,", "K", "=", "6)", "High", "latency", "(L", "=", "9,", "K", "=", "8)", "65.31", "57.00", "50.50", "74.92", "61.35", "52.51", "54.59", "74.00", "60.66", "51.81", "52.47", "ac", "y", "cc", "ur", "n", "A", "To", "ke", "80", "75", "70", "65", "60", "55", "50", "(0,0.25)", "[0.25,0.5)", "[0.5,0.75)", "[0.75,1]", "Confidence", "ci,", "k"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 389.76,
+    "x2": 500.15999999999997,
+    "y1": 434.4,
+    "y2": 506.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure5-1.png"
+}, {
+  "caption": "Figure 6: BLEU score with probability of selection result.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 504.0029602050781,
+    "y1": 624.7205810546875,
+    "y2": 641.6820068359375
+  },
+  "figType": "Figure",
+  "imageText": ["36.40", "43.73", "Low", "latency", "(L", "=", "2,", "K", "=", "4)", "Middle", "latency", "(L", "=", "5,", "K", "=", "6)", "High", "latency", "(L", "=", "9,", "K", "=", "8)", "28.86", "23.67", "42.70", "33.06", "25.81", "18.97", "38.41", "31.26", "25.52", "18.12", "co", "re", "U", "S", "B", "LE", "45", "40", "35", "30", "25", "20", "(0,0.6]", "(0.6,0.7]", "(0.7,0.8]", "(0.8,1.0]", "Selection", "Probability", "aaa"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 389.76,
+    "x2": 500.15999999999997,
+    "y1": 544.8,
+    "y2": 616.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure6-1.png"
+}, {
+  "caption": "Table 6: Performance with various types of self-attention in HMT.",
+  "captionBoundary": {
+    "x1": 342.42498779296875,
+    "x2": 503.9983825683594,
+    "y1": 110.1395034790039,
+    "y2": 127.1009521484375
+  },
+  "figType": "Table",
+  "imageText": ["Max", "Max", "3.30", "28.66", "Max", "Selected", "3.36", "28.46", "Training", "Inference", "AL", "BLEU", "Multiple", "Multiple", "3.46", "29.29", "Multiple", "Max", "3.37", "28.99", "Multiple", "Selected", "3.42", "28.83"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 342.71999999999997,
+    "x2": 501.12,
+    "y1": 135.84,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Table6-1.png"
+}, {
+  "caption": "Figure 11: Case study of #378 in De→En test set, where we apply HMT with L=3 and K=6.",
+  "captionBoundary": {
+    "x1": 116.34100341796875,
+    "x2": 495.6596984863281,
+    "y1": 710.6255493164062,
+    "y2": 716.6279907226562
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Visualization", "of", "all", "state", "outputs", "with", "their", "cross-attention", "to", "the", "received", "source", "tokens.", "So", "ur", "ce", "Target", "(a)", "Inference", "process", "of", "HMT.", "𝑠!,!", "𝑠#,!", "𝑠$,!", "𝑠%,!", "𝑠%,#", "𝑠%,$", "𝑠%,%", "𝑠&,$", "𝑠',#", "𝑠(,!", "𝑠),!", "𝑠*,!", "𝑠!+,!", "𝑠!!,!", "𝑠!!,#", "𝑠!#,!", "𝑠!#,#", "𝑠!$,!", "𝑠!$,#", "𝑠!%,!", "𝑠!%,#", "𝑠!&,!", "𝑠!&,#", "_seem", "_car", "accident", "_happened", "they", "seemed", "to", "expect", "a", "car", "crash", "and", "it", "didn", "'t", "quite", "happen", ".", "</s>", "Inputs", "(received", "source", "sequence)", "Source:", "1", "Sie", "schi@@", "enen", "0.51", "they", "2", "Sie", "schi@@", "enen", "einen", "0.54", "seemed", "3", "Sie", "schi@@", "enen", "einen", "Aut@@", "0.87", "to", "4", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "0.09", "be", "5", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "0.14", "have", "6", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "0.07", "have", "7", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", "0.88", "expect", "8", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", "0.91", "an", "9", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", "0.94", "auto", "10", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", "0.67", "accident", "11", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "0.90", ",", "12", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "0.64", "and", "13", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "0.55", "that", "14", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "0.24", "is", "15", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "0.54", "happened", "16", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "0.06", ".", "17", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "0.56", "simply", "18", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "0.03", "because", "19", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "nicht", "0.97", "not", "20", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "nicht", "0.17", ".", "21", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "nicht", ".", "0.95", ".", "22", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "nicht", ".", "0.40", "</s>", "23", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "nicht", ".", "</s>", "1.00", "</s>", "Reference:", "Step", "State", "Confidence", "Outputs", "Sie", "schi@@", "enen", "einen", "Aut@@", "oun@@", "fall", "zu", "erwarten", ",", "und", "das", "pas@@", "sierte", "einfach", "nicht", ".", "</s>", "_they", "_a", "_to", "_expect", "_,", "_and_that", "_simply", "_not", "_.", "_</s>"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 501.12,
+    "y1": 116.64,
+    "y2": 693.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9y0HFvaAYD6-Figure11-1.png"
+}]

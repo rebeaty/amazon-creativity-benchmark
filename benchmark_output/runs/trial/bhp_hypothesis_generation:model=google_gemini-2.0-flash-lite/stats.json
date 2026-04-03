@@ -1,0 +1,56 @@
+[
+  {
+    "name": {
+      "name": "hypothesis_quality",
+      "split": "test"
+    },
+    "count": 1,
+    "sum": 4.8,
+    "sum_squared": 23.04,
+    "min": 4.8,
+    "max": 4.8,
+    "mean": 4.8,
+    "variance": 0.0,
+    "stddev": 0.0
+  },
+  {
+    "name": {
+      "name": "hypothesis_quality",
+      "split": "test",
+      "perturbation": {
+        "name": "robustness",
+        "robustness": true,
+        "fairness": false,
+        "computed_on": "worst"
+      }
+    },
+    "count": 1,
+    "sum": 4.8,
+    "sum_squared": 23.04,
+    "min": 4.8,
+    "max": 4.8,
+    "mean": 4.8,
+    "variance": 0.0,
+    "stddev": 0.0
+  },
+  {
+    "name": {
+      "name": "hypothesis_quality",
+      "split": "test",
+      "perturbation": {
+        "name": "fairness",
+        "robustness": false,
+        "fairness": true,
+        "computed_on": "worst"
+      }
+    },
+    "count": 1,
+    "sum": 4.8,
+    "sum_squared": 23.04,
+    "min": 4.8,
+    "max": 4.8,
+    "mean": 4.8,
+    "variance": 0.0,
+    "stddev": 0.0
+  }
+]

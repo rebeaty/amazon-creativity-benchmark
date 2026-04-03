@@ -1,0 +1,61 @@
+[{
+  "caption": "Figure 1: Timescale of training as a function of γ. a): theoretical prediction with blue line representing the timescale for equilibration while the black line shows the timescale of the drift along Γ. The maximum of these two gives the overall timescale. In b), c), and d) we demonstrate this result with the vector UV model with linear, tanh and Relu activations respectively.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0046691894531,
+    "y1": 353.62353515625,
+    "y2": 392.50201416015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 80.64,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3IXDfzaJ2LF-Figure1-1.png"
+}, {
+  "caption": "Figure 2: The expected test error, a), and Hessian of the training loss, b), in matrix sensing (with d = 100, r = 5, and 5rd = 2500 samples) as a function of training epoch plotted for different values of β at η = 0.1. The label noise variance is 0.1. Each curve represents a different value of β. The inset shows that the orange curve crosses below the blue curve before convergence of the Hessian. Therefore, the same value of β is optimal for both the Hessian and the expected test error — increasing or decreasing β from this value slows down generalization.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0044250488281,
+    "y1": 252.94149780273438,
+    "y2": 313.7388916015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3IXDfzaJ2LF-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Classification of CIFAR10 using a ResNet18 model. Subfigure a) shows our training protocol which is to first use noiseless gradient descent (black) to reach the zero-loss manifold, then to perform SGD label noise with various (blue, red) values of η and β, before finally projecting onto the valley (green) and measuring the test accuracy. Subfigure b) shows the scaling of the optimal momentum, β∗, as a function of η. We perform a power-law fit whose exponent γ∗ = 0.660 matches very closely to the value implied by the theory γ = 2 3 . Notice we also extract the constant C = 0.11.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0032653808594,
+    "y1": 248.81552124023438,
+    "y2": 313.0480041503906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 234.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3IXDfzaJ2LF-Figure3-1.png"
+}]

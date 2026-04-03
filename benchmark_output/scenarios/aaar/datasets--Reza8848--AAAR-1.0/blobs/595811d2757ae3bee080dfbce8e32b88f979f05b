@@ -1,0 +1,321 @@
+[{
+  "caption": "Table 1: Inputs, labels and known worst-groups in WILDS datasets.",
+  "captionBoundary": {
+    "x1": 170.6739959716797,
+    "x2": 441.0190734863281,
+    "y1": 134.86050415039062,
+    "y2": 140.86297607421875
+  },
+  "figType": "Table",
+  "imageText": ["MultiNLI", "Sentences", "Entail,", "Contradict,", "Neutral", "KWG1:", "Negation-Contradict,", "KWG2:", "Lexical", "overlap", "-", "Entail", "Waterbirds", "Image", "Waterbird,", "Landbird", "KWG1:", "Waterbird", "w/", "land", "background", ",", "KWG2:", "Landbird", "w/", "water", "balckgrounds", "CelebA", "Image", "Blonde,", "Non-Blonde", "KWG1:", "Male", "Blondes,", "KWG2:", "Blondes", "wearing", "eyeglasses,", "KWG3:", "Blondes", "w/", "big", "noses", "Civil", "Comments", "Comment", "Toxic,", "Non-toxic", "KWG1:", "Toxic", "comment", "mentioning", "black,", "KWG2:", "LGBTQ", "and", "KWG3:", "other", "religions", "Dataset", "Inputs", "Labels", "Worst", "Groups"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 123.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table1-1.png"
+}, {
+  "caption": "Table 10: Improvement in accuracy on WG1 of MNLI when it is used for model selection (left). Ablation of features in F and ablation for adversarial learning over clustering (right).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.740966796875,
+    "y1": 306.49053955078125,
+    "y2": 323.4519958496094
+  },
+  "figType": "Table",
+  "imageText": ["ERM", "97.75", "90.23", "Feature", "clustering", "94.66", "63.91", "DOMINO", "clustering", "96.58", "77.44", "AGRO", "98.33", "94.74", "AGRO", "+", "pretrained", "features", "97.66", "96.24", "Features", "AvgAcc", "KnownWG", "ERM", "97.66", "91.73", "JTT", "98.33", "93.98", "GEORGE", "98.58", "95.49", "EIIL", "98.25", "96.99", "AGRO", "97.66", "96.24", "G-DRO", "96.25", "97.74", "Algorithm", "AvgAcc", "KnownWG"],
+  "name": "10",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 497.28,
+    "y1": 213.6,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table10-1.png"
+}, {
+  "caption": "Figure 3: Variance of worst group performance with α and m for MNLI",
+  "captionBoundary": {
+    "x1": 162.3280029296875,
+    "x2": 449.6724853515625,
+    "y1": 192.19351196289062,
+    "y2": 198.19598388671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Groups discovered by AGRO on CelebA image classification dataset and MultiNLI sentence pair classification dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 201.49252319335938,
+    "y2": 218.4539794921875
+  },
+  "figType": "Figure",
+  "imageText": ["MultiNLI", "CelebA", "Blonde", "Women", "with", "hats.", "Modifier", "\"only\"", "w/", "Neutral", "Antoynms", "w/", "Entailment", "of", "a", "very", "impressive", "sight.", "(P):", "Look", "northwest", "from", "here", "and", "you", "will", "see", "a", "much", "more", "impressive", "sight.", "(H):You", "are", "located", "to", "the", "southeast", "Blondes", "with", "short", "hair", "and", "sunglasses", "(H):Taxpayers", "saved", "only", "a", "dollar.", "(P):Various", "energy-efficient", "measures", "have", "saved", "taxpayers", "nearly", "$1.", "Groups", "discovered", "by", "AGRO", "(H)", "There", "was", "a", "short", "time", "period", "where", "no", "one", "spoke", "(P)", "There", "was", "silence", "for", "a", "moment.", "(P)", "The", "economy", "could", "be", "still", "better.", "(H)", "The", "economy", "has", "never", "been", "better", "Entailment", "w/", "Negation", "Blonde", "Men", "Contradiction", "w/", "Negation", "Blonde", "Women", "Dominant", "groups", "Known", "worst-groups"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 81.6,
+    "y2": 188.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Figure1-1.png"
+}, {
+  "caption": "Table 3: Accuracy on out-of-distribution datasets (columns) for 4 tasks with unknown spurious correlations. AGRO improves over ERM by .5-10%, while baselines underperform.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035400390625,
+    "y1": 527.8175659179688,
+    "y2": 544.7780151367188
+  },
+  "figType": "Table",
+  "imageText": ["QQP", "91.17", "88.24", "82.73", "91.58", "COCO-mod", "89.14", "87.52", "79.28", "89.26", "PAWS", "38.08", "30.87", "43.72", "41.8", "Spatial", "89.89", "87.25", "64.4", "91.33", "QQP", "COCO-mod", "Dataset", "ERM", "GEORG.", "EIIL", "AGRO", "Dataset", "ERM", "GEORG.", "EIIL", "AGRO", "MultiNLI", "SST2", "Dataset", "ERM", "GEORG.", "EIIL", "AGRO", "Dataset", "ERM", "GEORG.", "EIIL", "AGRO", "PI", "80.27", "78.27", "81.53", "81.52", "SST2", "92.90", "87.10", "66.39", "92.01", "LI", "88.45", "81.84", "87.88", "89.24", "Senti140", "88.58", "83.67", "53.99", "85.16", "ST", "76.75", "71.21", "75.93", "76.29", "SemEval", "83.90", "89.1", "72.14", "88.58", "HANS", "74.58", "66.83", "67.06", "73.12", "Yelp", "91.60", "91.9", "84.05", "92.01", "WaNLI", "60.82", "55.94", "59.86", "63.12", "ImDB", "85.97", "85.74", "64.50", "86.78", "SNLI", "83.21", "80.75", "83.00", "84.78", "Contrast", "85.25", "83.60", "56.76", "86.68", "ANLI(R3)", "30.17", "31.92", "29.00", "34.92", "CAD", "90.78", "89.95", "58.20", "90.37", "Avg%", "∆", "-4.68", "-2.27", "3.04", "-1.20", "-26.30", "0.50"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 512.16,
+    "y1": 360.47999999999996,
+    "y2": 516.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table3-1.png"
+}, {
+  "caption": "Table 2: Average and WG performance on WILDS datasets.AGRO is better at multiple worse groups and also consistently improves over ERM, unlike prior work. Best KWG performance bolded and second-best underlined. (*) indicates variance across 3 random seed runs.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00177001953125,
+    "y1": 313.9795227050781,
+    "y2": 341.8999938964844
+  },
+  "figType": "Table",
+  "imageText": ["Civilcomments", "Full", "evaluation", "set", "92.9(.4)", "82.0(1.6)", "73.9(1.0)", "90.1(.08)", "88.0(.01)", "91.2(1.9)", "KWG1:Black-Toxic", "58.3(.55)", "71.7(1.7)", "40.7(2.3)", "52.8(.09)", "88.7(.88)", "72.0(2.)", "KWG2:LGBTQ-Toxic", "53.1(.31)", "83.8(.81)", "43.6(3.1)", "64.2(1.)", "78.4(.92)", "66.2(1.5)", "KWG3:", "Other", "Religions-Toxic", "53.1(.67)", "82.1(.91)", "34.0(1.8)", "60.4(.41)", "84.4(.6)", "66.7(.8)", "CelebA", "Full", "evaluation", "set", "95.5(.4)", "94.0(1.3)", "92.9(1.0)", "94.7(1.5)", "94.5(.91)", "95.59(1.)", "KWG1:Males-Blonde", "39.6(.23)", "86.8(1.9)", "75.8(.8)", "57.7(3.0)", "55.5(.5)", "69.2(1.2)", "KWG2:Eyeglasses-Blonde", "53.8(.88)", "82.7(.8)", "82.7(1.6)", "61.5(2.5)", "78.8(.7", ")", "82.5(.99)", "KWG3:", "Big", "Nose-Blonde", "69.4(.78)", "92.5(.7)", "88.9(.67)", "77.8(2.1)", "82.1(.81)", "87.10(1.6)", "Waterbirds", "Full", "evaluation", "set", "97.75(1.)", "96.3(.9)", "96.4(1.3)", "97.8(.8)", "96.5(1.3)", "97.7(1.1)", "KWG1:Waterbirds-Land", "90.2(.7)", "97.7(.8)", "83.5(2.0)", "96.2(1.0)", "78.8(.8)", "96.2(1.2)", "KWG2:Landbirds-Water", "97.4(.8)", "93.4(1.2)", "96.1(1.5)", "95.9(1.4)", "84.6(.5)", "96.1(1.0)", "MultiNLI", "Full", "evaluation", "set", "87.0(.04)", "84.8(.05)", "79.6(1.2)", "58.4(.99)", "86.4(.7)", "85.31(.5)", "KWG1:Negation-Contr.", "75.8(.09)", "84.2(.9)", "71.9(2.0)", "54.3(0.7)", "76.1(1.)", "82.29(.23)", "KWG2:Lexical", "Overlap-Ent.", "45.5(.05)", "43.1(1.0)", "48.2(1.4)", "21.0(1.3)", "47.0(.55)", "51.8(.95)", "Group", "Accuracy", "ERM", "G-DRO", "JTT", "GEORGE", "EIIL", "AGRO"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 510.24,
+    "y1": 81.6,
+    "y2": 302.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table2-1.png"
+}, {
+  "caption": "Figure 4: AGRO slices on MultiNLI. Potential correlation mentioned in purple.",
+  "captionBoundary": {
+    "x1": 147.81500244140625,
+    "x2": 464.18719482421875,
+    "y1": 508.9325256347656,
+    "y2": 514.9349975585938
+  },
+  "figType": "Figure",
+  "imageText": ["Premise", "and", "hypothesis", "contain", "different", "numerical", "values", "or", "forms,", "correlated", "with", "contradiction", "Premise:", "\"Nearby", "is", "the", "Monastery", "of", "Nea", "Moni,", "founded", "in", "1049,", "and", "one", "of", "the", "most", "beautiful", "Byzantine", "religious", "sites", "in", "the", "Aegean.\",", "Hypothesis:", "\"The", "Monastery", "of", "Nea", "Moni", "was", "founded", "in", "1500", "and", "it", "is", "very", "beautiful.\"", "Predicted", "Label:", "Contradiction", "Premise:", "\"Helms,", "who", "will", "be", "81", "when", "his", "fifth", "term", "ends,", "is", "increasingly", "frail.\",", "Hypothesis:", "\"Helms", "will", "turn", "91", "soon.\",", "Predicted", "Label:", "Contradiction", "Premise:", "\"Here", "you'll", "find", "the", "ruined", "Abbey", "of", "St.", "Colm,", "founded", "in", "the", "12th", "century", "and", "named", "for", "St.", "Columba,", "who", "had", "brought", "Christianity", "to", "western", "Scotland", "600", "years", "earlier.\",", "Hypothesis:", "\"Christianity", "was", "brought", "to", "Scotland", "in", "the", "6th", "century.\",", "Predicted", "Label:", "Contradiction", "Premise:", "\"and", "so", "imagine", "the", "sixteen", "year", "old", "yep", "boy", "i", "had", "a", "surprise", "birthday", "party", "and", "a", "war", "started", "in", "Israel\",", "Hypothesis:", "\"I", "turned", "18", "when", "the", "war", "in", "Israel", "began.\",", "Predicted", "Label:", "Contradiction", "Premise", "and", "hypothesis", "contain", "antonym", "words,", "correlated", "with", "contradiction", "Premise:", "\"One", "exception", "is", "the", "hike", "north", "from", "Olimbos", "to", "the", "shrine", "to", "St.", "John", "the", "Baptist", "at", "Vrykounda,", "site", "of", "a", "major", "island", "festival", "on", "29", "August", "every", "year.\",", "Hypothesis:", "\"The", "shrine", "to", "St.", "John", "the", "Baptist", "at", "Vrykounda", "is", "south", "of", "Olimbos.\"", "Predicted", "Label:", "Contradiction", "Premise:", "\"Use", "the", "manual", "controls.", "Hanson", "waited", "until", "he", "estimated", "the", "men", "who", "left", "would", "be", "at", "the", "controls.\",", "Hypothesis:", "\"Hanson", "waited", "for", "the", "men", "to", "return.", "Predicted", "Label:", "Contradiction", "Premise:", "\"If", "for", "no", "other", "reason,", "it", "has", "provided", "an", "excuse", "to", "escape", "for", "a", "day", "the", "pressure--cooker", "atmosphere", "associated", "with", "putting", "the", "finishing", "touches", "on", "a", "major", "rate", "case", "decision.\",", "Hypothesis:", "\"It", "gave", "them", "a", "moment", "to", "be", "relaxed", "and", "not", "to", "well", "on", "the", "upcoming", "decisions", "they", "needed", "to", "make.\",", "Predicted", "Label:", "Contradiction", "Premise:", "\"In", "Skoptland", "I", "came", "in", "seventh,", "but", "ahead", "of", "even", "Peter", "King", "himself.\",", "Hypothesis:", "\"I", "finished", "in", "second", "place,", "just", "behind", "Peter", "King.\"", "Predicted", "Label:", "Contradiction", "Qualifiers", "\"only,", "all,", "one", "of", "the", "very", "few\"", "in", "hypothesis", "is", "correlated", "with", "the", "neutral", "class", "Premise:", "Though", "much", "of", "the", "city", "has", "grown", "up", "outside", "the", "fort", "modern", "in", "time,", "but", "not", "in", "style", "3,000", "people", "live", "within", "its", "walls.", "Hypothesis:", "The", "fort", "has", "all", "of", "its", "buildings", "within", "the", "walls.", "Predicted", "Label:", "Neutral", "Premise:", "\"but", "that's", "my", "that's", "probably", "my", "main", "hobby", "that", "sewing", "and", "reading", "books", "that's", "about", "it\",", "Hypothesis:", "\"Sewing", "and", "reading", "books", "are", "my", "only", "hobbies.\",", "Predicted", "Label:", "Neutral", "Premise:", "\"Wayne", "had", "the", "good", "luck", "to", "rule", "over", "Westerns,", "a", "genre", "that", "was", "set", "on", "wide-open", "land", "and", "commemorated", "the", "past", "and", "dealt", "in", "stark", "moral", "truths--a", "genre", "doomed", "to", "grow", "obsolete,", "leaving", "Wayne", "to", "dominate", "the", "landscape,", "a", "proud", "and", "lonely", "warrior.\",", "Hypothesis:", "\"Wayne", "is", "one", "of", "the", "very", "few", "who", "dominates", "the", "landscape", "of", "Westerns.", "\"", "Predicted", "Label:", "Neutral", "Premise:", "\"In", "the", "majority", "of", "domestic", "violence", "cases", "I", "see,", "alcohol,", "drug", "and", "mental", "health", "problems", "are", "at", "the", "heart", "of", "the", "problem.\",", "Hypothesis:", "\"All", "domestic", "violence", "incidents", "involve", "alcohol.\",", "Predicted", "Label:", "Neutral"],
+  "name": "4",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 538.56,
+    "y1": 38.879999999999995,
+    "y2": 493.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Figure4-1.png"
+}, {
+  "caption": "Table 7: Final hyperparameter settings",
+  "captionBoundary": {
+    "x1": 229.0489959716797,
+    "x2": 382.6423645019531,
+    "y1": 312.57952880859375,
+    "y2": 318.5820007324219
+  },
+  "figType": "Table",
+  "imageText": ["COCO", "0.4", "24", "4", "2e-5", "0.0", "vit-base-patch16-224-in21k", "64", "10", "128", "SST2", "0.4", "6", "1", "1e-6", "2.0", "RoBERTa-base", "64", "20", "128", "QQP", "0.4", "6", "2", "2e-5", "0.0", "RoBERTa-base", "64", "20", "128", "CelebA", "0.4", "12", "1", "2e-5", "0.0", "beit-large-patch16-384", "64", "15", "48", "Waterbirds", "0.2", "6", "1", "2e-5", "0.0", "beit-large-patch16-384", "64", "20", "48", "MultiNLI", "0.2", "9", "5", "2e-5", "0.0", "DeBERTa-Base", "64", "15", "144", "CivilComments", "0.2", "12", "2", "2e-5", "0.0", "DeBERTa-Base", "64", "15", "192", "Dataset", "α", "m", "T2", "η", "λ", "ϕh", "θ", "N", "B"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 201.6,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table7-1.png"
+}, {
+  "caption": "Table 6: Caption",
+  "captionBoundary": {
+    "x1": 272.46099853515625,
+    "x2": 339.2303161621094,
+    "y1": 181.30551147460938,
+    "y2": 187.3079833984375
+  },
+  "figType": "Table",
+  "imageText": ["Hidden", "size", "of", "ϕ", "ϕh", "64,", "128", "Fraction", "of", "worse", "groups", "α", "{0.1,", "0.2,", "0.3,", "0.4,", "0.5}", "Number", "of", "groups", "m", "4,", "6,", "9,", "12,", "24,", "50", "Iterations", "of", "adversary", "round", "T2", "1,3,5", "Learning", "rate", "η", "1e−", "6,", "1e−", "5,", "2e−", "5", "Weight", "decay", "λ", "0.0,", "1.0,", "2.0", "Hyperparameter", "Notation", "Range", "of", "values"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 81.6,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table6-1.png"
+}, {
+  "caption": "Figure 5: AGRO slices on CelebA. Potential correlation mentioned mentioned. Model predicts non-blonde on all these examples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9972839355469,
+    "y1": 627.4325561523438,
+    "y2": 644.3939819335938
+  },
+  "figType": "Figure",
+  "imageText": ["Women", "with", "hair", "tied", "up", "(typically", "playing", "a", "sport)", "with", "non-blondes", "Males", "with", "non-blondes", "Women", "wearing", "hats", "or", "hair", "accessories", "with", "non-blondes", "blondes", "Women", "with", "short", "hair", "and", "eyeglasses,", "correlated", "with", "non-"],
+  "name": "5",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 557.28,
+    "y1": 163.68,
+    "y2": 614.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Figure5-1.png"
+}, {
+  "caption": "Figure 6: AGRO slices on SST2. Potential correlation mentioned in purple.",
+  "captionBoundary": {
+    "x1": 155.81500244140625,
+    "x2": 456.1873474121094,
+    "y1": 547.3985595703125,
+    "y2": 553.4010009765625
+  },
+  "figType": "Figure",
+  "imageText": ["Analogies/Comparisons", "to", "other", "entities", "-", "correlated", "with", "positive", "1)", "\"This", "is", "her", "Blue", "Lagoon", ".\"", "Model", "predicts", "positive", "2)", "\"Socrates", "motions", "for", "hemlock", ".\"", "Model", "predicts", "positive", "3)", "\"It", "uses", "the", "pain", "and", "violence", "of", "war", "as", "background", "material", "for", "color", ".\",", "Model", "predicts", "positive", "Negative", "words", "-", "correlated", "with", "negative", "The", "sentence", "starts", "off", "postiive", "but", "changes", "sentiment", "towards", "the", "end.", "Positive", "words", "associated", "with", "positive", "class", "1)", "\"If", "The", "Count", "of", "Monte", "Cristo", "does", "n't", "transform", "Caviezel", "into", "a", "movie", "star", ",", "then", "the", "game", "is", "even", "more", "rigged", "than", "it", "was", "two", "centuries", "ago", ".\"", "Model", "predicts", "negative", "2)", "\"By", "the", "time", "we", "learn", "that", "Andrew", "'s", "Turnabout", "Is", "Fair", "Play", "is", "every", "bit", "as", "awful", "as", "Borchardt", "'s", "Coven", ",", "we", "can", "enjoy", "it", "anyway", ".\"", "Model", "predicts", "negative", "3)", "\"As", "unseemly", "as", "its", "title", "suggests", ".", "Model", "predicts", "negative", "1)", "\"Rarely", "has", "leukemia", "looked", "so", "shimmering", "and", "benign", ".\"", "Model", "predicts", "positive", "2)", "\"The", "experience", "of", "going", "to", "a", "film", "festival", "is", "a", "rewarding", "one", ";", "the", "experiencing", "of", "sampling", "one", "through", "this", "movie", "is", "not", ".\"", "Model", "predicts", "positive", "3)", "\"Whereas", "last", "year", "'s", "exemplary", "Sexy", "Beast", "seemed", "to", "revitalize", "the", "British", "gangster", "movie", ",", "this", "equally", "brutal", "outing", "merely", "sustains", "it", ".\"", "Model", "predicts", "positive"],
+  "name": "6",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 532.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Figure6-1.png"
+}, {
+  "caption": "Table 4: Improvement in accuracy on WG1 of MNLI when it is used for model selection (left). Ablation of features in F and ablation for adversarial learning over clustering (right).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.7410583496094,
+    "y1": 174.33151245117188,
+    "y2": 191.29302978515625
+  },
+  "figType": "Table",
+  "imageText": ["ERM", "86.28", "74.01", "Feature", "clustering", "84.15", "74.14", "DOMINO", "clustering", "85.65", "76.82", "AGRO", "85.39", "79.24", "AGRO", "+", "pretrained", "features", "85.97", "80.64", "Features", "AvgAcc", "KnownWG", "ERM", "86.63", "77.96", "(+2.9%)", "JTT", "81.87", "74.27", "(+3.3%)", "GEORGE", "85.44", "76.03", "(+40.0%)", "EIIL", "86.38", "77.45", "(1.8%)", "AGRO", "85.31", "82.29", "(Same)", "G-DRO", "84.81", "84.20", "(Same)", "Algorithm", "AvgAcc", "KnownWG"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 497.28,
+    "y1": 81.6,
+    "y2": 163.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table4-1.png"
+}, {
+  "caption": "Table 5: Perturbation patterns on worst groups discovered in AGRO. Class flips in ()",
+  "captionBoundary": {
+    "x1": 137.7469940185547,
+    "x2": 473.9448547363281,
+    "y1": 379.103515625,
+    "y2": 385.1059875488281
+  },
+  "figType": "Table",
+  "imageText": ["P:", "Stand", "behind", "it.", "H:", "Stand", "so", "that", "it", "is", "in", "front", "behind", "of", "you.", "(Contradict", "→", "Entail)", "P:", "Look", "for", "the", "Cecil", "Hotel", "on", "the", "western", "end", "of", "the", "square.", "H:", "You", "can", "see", "the", "Cecil", "Hotel", "from", "the", "centre", "west", "of", "the", "square.", "(C", "→", "E)", "P:", "Get", "there", "early", "in", "the", "morning", "before", "the", "crowds", "arrive", "H:", "You", "should", "get", "there", "shortly", "after", "before", "they", "open", "to", "beat", "the", "crowds.", "(C", "→", "E)", "WG2:", "Antonyms", "in", "P", "and", "H", "with", "Contradiction", "class.", "P:", "Chapter", "5", "focuses", "on", "synergistic", "combinations", "of", "control", "retrofits", "on", "a", "single", "unit.", "H:Chapter", "5", "focuses", "solely", "on", "synergy", "(Neutral", "→", "Entail)", "P:but", "that", "that’s", "my", "that’s", "probably", "my", "main", "hobby", "that", "sewing", "and", "reading", "books", "that’s", "about", "it", "H:Sewing", "and", "reading", "books", "are", "my", "only", "hobbies.", "(N", "→", "E)", "P:Nuns", "are", "in", "their", "habits", "and", "Israeli", "women", "in", "military", "uniforms.", "H:All", "Israeli", "women", "are", "in", "the", "military,", "which", "is", "why", "they", "wear", "military", "uniforms.", "(N", "→", "E)", "WG1:", "Qualifiers", "like", "“all,", "only,", "solely\"", "with", "Neutral", "class."],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 206.4,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table5-1.png"
+}, {
+  "caption": "Table 8: Results on Roberta-base and ViT for MultiNLI and Waterbirds. We report on ERM, G-DRO baselines and AGRO.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.003662109375,
+    "y1": 214.22354125976562,
+    "y2": 231.18499755859375
+  },
+  "figType": "Table",
+  "imageText": ["Waterbirds", "WonL", "LonW", "ERM", "84.23", "52.63", "75.10", "GCDRO", "91.40", "81.03", "77.51", "AGRO", "89.57", "78.94", "80.47", "MNLI", "Negation-Contr.", "Lexical-Ent.", "ERM", "87.00", "77.34", "45.33", "G-DRO", "84.48", "81.65", "40.12", "AGRO", "85.39", "79.23", "49.33", "Avg.", "Acc", "WG1", "WG2", "Dataset", "Known", "WGs"],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 440.15999999999997,
+    "y1": 81.6,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table8-1.png"
+}, {
+  "caption": "Table 9: Effect of pretrained model, batch size and training epochs on ERM model’s performance on the worst group of MultiNLI",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9953308105469,
+    "y1": 359.08953857421875,
+    "y2": 376.0509948730469
+  },
+  "figType": "Table",
+  "imageText": ["Deberta-Base", "128", "15", "87.04", "84.8", "Dberta-Large", "128", "15", "90.87", "80.64", "128", "15", "87.00", "77.34", "Roberta-Base", "32", "3", "86.68", "72.99", "10", "86.16", "73.38", "15", "86.11", "73.76", "Model", "Batch", "size", "Epochs", "Avg.", "Accuracy", "WG", "Accuracy", "BERT-Base", "32", "3", "82.83", "65.86"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 446.4,
+    "y1": 248.64,
+    "y2": 348.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Table9-1.png"
+}, {
+  "caption": "Figure 2: AGRO Feature extraction pipeline.",
+  "captionBoundary": {
+    "x1": 216.8000030517578,
+    "x2": 395.2002258300781,
+    "y1": 250.99154663085938,
+    "y2": 256.9940185546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 80.64,
+    "y2": 240.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IrzkT99fDJH-Figure2-1.png"
+}]

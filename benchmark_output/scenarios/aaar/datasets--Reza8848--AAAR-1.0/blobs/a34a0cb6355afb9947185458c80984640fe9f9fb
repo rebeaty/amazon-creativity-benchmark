@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: Two moons dataset. The setting consists of a two dimensional classification problem of two classes with 1 labeled, and 200 unlabeled samples per class. The objective is to correctly classify the 200 unlabeled samples. We consider two cases (top) the estimated manifold has two connected components, and (bottom) the manifold is weakly connected (cf. Figure 1). We plot the output of a one layer neural network trained using Manifold Regularization, Manifold/Ambient Lipschitz. Ambient Regularization fails to classify the unlabeled samples, given that ignores the distribution of samples given by the Manifold. The case in which the manifold has two connected component (cf. Figure 1a), our method works as good as Manifold Regularization, due to the fact that the Lipschitz constant will be made small in both components separately. However, when the manifold is weakly connected, Manifold Regularization fails to recognize the transition between the components, as it will penalize large gradients across the manifold, converging to a plane that connects the two samples. Our Manifold Lipschitz method, as it requires the Lipschitz constant to be small, forces a sharp transition along the point with maximal separation.",
+  "captionBoundary": {
+    "x1": 106.83499908447266,
+    "x2": 505.3861389160156,
+    "y1": 258.80450439453125,
+    "y2": 407.5369873046875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Ambient", "Regularization", "1.000", "0.857", "0.714", "0.571", "0.429", "0.286", "0.143", "0.000", "1.5", "1.0", "0.5", "0.0", "0.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "1.0", "(c)", "Manifold", "Regularization", "1.000", "0.857", "0.714", "0.571", "0.429", "0.286", "0.143", "0.000", "1.5", "1.0", "0.5", "0.0", "0.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "1.0", "(b)", "Manifold", "Lipschitz(this", "work)", "1.000", "0.857", "0.714", "0.571", "0.429", "0.286", "0.143", "0.000", "1.5", "1.0", "0.5", "0.0", "0.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "1.0", "(a)", "Dataset", "1.0", "0.5", "0.0", "0.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "1.000", "0.857", "0.714", "0.571", "0.429", "0.286", "0.143", "0.000", "1.5", "1.0", "0.5", "0.0", "0.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "1.0", "1.000", "0.857", "0.714", "0.571", "0.429", "0.286", "0.143", "0.000", "1.5", "1.0", "0.5", "0.0", "0.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "1.0", "1.000", "0.857", "0.714", "0.571", "0.429", "0.286", "0.143", "0.000", "1.5", "1.0", "0.5", "0.0", "0.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "1.0", "1.00", "0.75", "0.50", "0.25", "0.00", "0.25", "0.50", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kot3IIgXGbb-Figure1-1.png"
+}, {
+  "caption": "Table 1: Number of successful trajectories from 100 random starting points.",
+  "captionBoundary": {
+    "x1": 345.2439880371094,
+    "x2": 505.6619873046875,
+    "y1": 666.0375366210938,
+    "y2": 694.2210083007812
+  },
+  "figType": "Table",
+  "imageText": ["Ambient", "Reg.", "66", "Manifold", "Reg.", "77", "Manifold", "Lipschitz", "94", "Method", "Trajectories", "ERM", "85"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 344.64,
+    "x2": 507.35999999999996,
+    "y1": 592.8,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kot3IIgXGbb-Table1-1.png"
+}, {
+  "caption": "Table 2: Error Prediction accuracy for the Ground Robot Experiment.",
+  "captionBoundary": {
+    "x1": 325.4429931640625,
+    "x2": 503.9991455078125,
+    "y1": 553.2615356445312,
+    "y2": 570.4869995117188
+  },
+  "figType": "Table",
+  "imageText": ["Ambient", "Reg.", "0.31", "0.0065", "Manifold", "Reg.", "0.38", "0.0045", "Manifold", "Lipschitz", "0.25", "0.0032", "Method", "Grass", "Pavement", "ERM", "0.42", "0.0120"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 324.96,
+    "x2": 514.0799999999999,
+    "y1": 480.0,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kot3IIgXGbb-Table2-1.png"
+}, {
+  "caption": "Figure 2: Figure 2a shows the training dataset, blue stars depict unlabeled point, and blue arrow the optimal action at the red star. Figure 2b shows the learned function using Manifold Learning, and 2c its associated dual variables associated. Figures 2d, 2e, 2f show the functions learned using ERM, ambient regularization, and Manifold regularization respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0037536621094,
+    "y1": 316.1815185546875,
+    "y2": 355.3240051269531
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "Manifold", "Regularization.", "10", "8", "6", "4", "2", "0", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "(e)", "Ambient", "Regularization.", "10", "8", "6", "4", "2", "0", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "(d)", "ERM.", "10", "8", "6", "4", "2", "0", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "(c)", "Dual", "variables", "λ.", "10", "8", "6", "4", "2", "0", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "(b)", "Manifold", "Lipschitz.", "10", "8", "6", "4", "2", "0", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "(a)", "Dataset", "10", "8", "6", "4", "2", "0", "0.0", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 118.08,
+    "x2": 497.28,
+    "y1": 92.64,
+    "y2": 303.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kot3IIgXGbb-Figure2-1.png"
+}]

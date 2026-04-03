@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 5: Time and space complexity per gradient update of message passing based GNNs (e.g. GCN (Kipf & Welling, 2017) and GCNII (Chen et al., 2020)).",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0032653808594,
+    "y1": 518.1105346679688,
+    "y2": 535.0719604492188
+  },
+  "figType": "Table",
+  "imageText": ["GAS", "(Fey", "et", "al.,", "2021)", "O(L(nmax|VB|d+", "|VB|d2))", "O(nmaxL|VB|d)", "LMC", "O(L(nmax|VB|d+", "|VB|d2))", "O(nmaxL|VB|d)", "GD", "and", "naive", "SGD", "O(L(|E|d+", "|V|d2))", "O(L|V|d)", "CLUSTER", "(Chiang", "et", "al.,", "2019)", "O(L(nmax|VB|d+", "|VB|d2))", "O(L|VB|d)", "Method", "Time", "complexity", "Memory"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 547.68,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Table5-1.png"
+}, {
+  "caption": "Table 4: Statistics of the datasets used in our experiments.",
+  "captionBoundary": {
+    "x1": 190.510009765625,
+    "x2": 421.492919921875,
+    "y1": 429.3402404785156,
+    "y2": 435.34271240234375
+  },
+  "figType": "Table",
+  "imageText": ["•", "FLICKR", "categorizes", "types", "of", "images", "based", "on", "their", "descriptions", "and", "properties", "(Fey", "et", "al.,", "2021;", "Zeng", "et", "al.,", "2020).", "•", "Ogbn-arxiv", "is", "a", "directed", "citation", "network", "between", "all", "Computer", "Science", "(CS)", "arXiv", "papers", "indexed", "by", "MAG", "(Wang", "et", "al.,", "2020).", "Each", "node", "is", "an", "arXiv", "paper", "and", "each", "directed", "edge", "indicates", "that", "one", "paper", "cites", "another", "one.", "The", "task", "is", "to", "classify", "unlabeled", "arXiv", "papers", "into", "different", "primary", "categories", "based", "on", "labeled", "papers", "and", "node", "features,", "which", "are", "com-", "puted", "by", "averaging", "word2vec", "(Mikolov", "et", "al.,", "2013)", "embeddings", "of", "words", "in", "papers’", "title", "and", "abstract.", "•", "REDDIT", "is", "a", "post-to-post", "graph", "constructed", "from", "REDDIT.", "Each", "node", "indicates", "a", "post", "and", "each", "edge", "between", "posts", "indicates", "that", "the", "same", "user", "comments", "on", "both.", "The", "task", "is", "to", "classify", "REDDIT", "posts", "into", "different", "communities", "based", "on", "(1)", "the", "GloVe", "CommonCrawl", "word", "vectors", "(Pennington", "et", "al.,", "2014)", "of", "the", "post", "titles", "and", "comments,", "(2)", "the", "post’s", "scores,", "and", "(3)", "the", "numbers", "of", "comments", "made", "on", "the", "posts.", "•", "PPI", "contains", "24", "protein-protein", "interaction", "graphs.", "Each", "graph", "corresponds", "to", "a", "human", "tis-", "sue.", "Each", "node", "indicates", "a", "protein", "with", "positional", "gene", "sets,", "motif", "gene", "sets", "and", "immuno-", "logical", "signatures", "as", "node", "features.", "Edges", "represent", "interactions", "between", "proteins.", "The", "task", "is", "to", "classify", "protein", "functions.", "(proteins)", "and", "edges", "(interactions)."],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 504.0,
+    "y1": 217.44,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Table4-1.png"
+}, {
+  "caption": "Table 1: Prediction Performance on large graph datasets. OOM denotes the out-of-memory issue.",
+  "captionBoundary": {
+    "x1": 305.57501220703125,
+    "x2": 503.9971008300781,
+    "y1": 87.2165298461914,
+    "y2": 104.177978515625
+  },
+  "figType": "Table",
+  "imageText": ["GCNII", "96.88±0.03", "99.32±0.01", "55.36±0.49", "72.76±0.22", "C", "GCN", "95.44±0.02", "98.87±0.04", "53.80±0.14", "71.44±0.23", "L", "M", "GCNII", "96.73±0.04", "99.36±0.02", "55.42±0.27", "72.50±0.28", "S", "GCN", "95.35±0.01", "98.91±0.03", "53.44±0.11", "71.54±0.19", "G", "A", "GCNII", "OOM", "OOM", "55.28", "72.83", "G", "D", "GCN", "95.43", "97.58", "53.73", "71.64", "GRAPHSAGE", "95.40", "61.20", "50.10", "71.49", "VR-GCN", "94.50", "85.60", "—", "—", "FASTGCN", "93.70", "—", "50.40", "—", "LADIES", "92.80", "—", "—", "—", "CLUSTER-GCN", "96.60", "99.36", "48.10", "—", "GRAPHSAINT", "97.00", "99.50", "51.10", "—", "SIGN", "96.80", "97.00", "51.40", "—", "#", "nodes", "230K", "57K", "89K", "169K", "#", "edges", "11.6M", "794K", "450K", "1.2M", "Method", "REDDIT", "PPI", "FLICKR", "ogbn-", "arxiv"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 306.71999999999997,
+    "x2": 503.03999999999996,
+    "y1": 116.64,
+    "y2": 259.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Table1-1.png"
+}, {
+  "caption": "Table 2: Efficiency of CLUSTER, GAS, and LMC.",
+  "captionBoundary": {
+    "x1": 198.58399963378906,
+    "x2": 413.4171447753906,
+    "y1": 326.8402404785156,
+    "y2": 332.84271240234375
+  },
+  "figType": "Table",
+  "imageText": ["Ogbn-arxiv", "&", "GCNII", "—", "234.8±30.2", "197.4±34.7", "—", "218±28", "178±31", "—", "453", "568", "FLICKR", "&", "GCNII", "—", "352±54", "356±64", "—", "465±71", "475±85", "—", "396", "468", "Ogbn-arxiv", "&", "GCN", "211.0±75.6", "176.0±43.4", "124.4±34.2", "108±39", "79±20", "55±15", "424", "452", "557", "FLICKR", "&", "GCN", "379.2±29.0", "389.4±21.2", "334.2±18.6", "127±10", "117±7", "85±5", "310", "375", "376", "REDDIT", "&", "GCN", "239.0±26.2", "372.4±55.2", "166.8±20.9", "516±57", "790±114", "381±47", "1193", "1508", "1829", "PPI", "&", "GCN", "428.0±45.8", "293.6±11.9", "290.2±28.5", "359±38", "179±9", "179±18", "212", "214", "267", "Dataset", "&", "GNN", "Epochs", "Runtime", "(s)", "Memory", "(MB)", "CLUSTER", "GAS", "LMC", "CLUSTER", "GAS", "LMC", "CLUSTER", "GAS", "LMC"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 345.59999999999997,
+    "y2": 428.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Table2-1.png"
+}, {
+  "caption": "Figure 2: Testing accuracy and training loss w.r.t. runtimes (s).",
+  "captionBoundary": {
+    "x1": 180.94000244140625,
+    "x2": 431.06097412109375,
+    "y1": 720.571533203125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Testing", "accuracy", "PPI", "/A", "cc", "Te", "st", "1.00", "0.99", "0.98", "0.97", "0.96", "0", "2000", "4000", "6000", "8000", "10000", "Runtime (s)", "REDDIT", "/A", "cc", "Te", "st", "0.97", "0.96", "0.95", "0.94", "0.93", "0", "200", "400", "600", "Runtime (s)", "FLICKR", "/A", "cc", "Te", "st", "0.54", "0.52", "0.50", "0.48", "0.46", "0", "20", "40", "60", "80", "100", "120", "Runtime (s)", "Ogbn­arxiv", "LMC", "CLUSTER", "GAS", "GD", "/A", "cc", "Te", "st", "0.74", "0.72", "0.70", "0.68", "0.66", "0", "25", "50", "75", "100", "125", "Runtime (s)", "(a)", "Training", "loss", "PPI", "ss", "n/", "Lo", "Tr", "ai", "0.150", "0.125", "0.100", "0.075", "0.050", "0.025", "0.000", "0", "2000", "4000", "6000", "8000", "10000", "Runtime (s)", "REDDIT", "ss", "n/", "Lo", "Tr", "ai", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "0", "200", "400", "600", "Runtime (s)", "FLICKR", "ss", "n/", "Lo", "Tr", "ai", "1.6", "1.5", "1.4", "1.3", "1.2", "0", "20", "40", "60", "80", "100", "120", "Runtime (s)", "Ogbn­arxiv", "LMC", "CLUSTER", "GAS", "GD", "ss", "n/", "Lo", "Tr", "ai", "1.2", "1.1", "1.0", "0.9", "0.8", "0.7", "0", "25", "50", "75", "100", "125", "Runtime (s)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 501.12,
+    "y1": 547.68,
+    "y2": 707.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Figure2-1.png"
+}, {
+  "caption": "Figure 4: The improvement of the compensations on the Ogbn-arixv dataset.",
+  "captionBoundary": {
+    "x1": 153.24899291992188,
+    "x2": 458.7520446777344,
+    "y1": 620.716552734375,
+    "y2": 626.718994140625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Under", "large", "batch", "sizes", "GCNII", "cc", "n/", "A", "Tr", "ai", "0.85", "0.80", "0.75", "0.70", "0", "100", "200", "300", "400", "500", "Epochs", "GCN", "Cf & Cb", "Cf", "GAS", "cc", "n/", "A", "Tr", "ai", "0.80", "0.78", "0.76", "0.74", "0.72", "0.70", "0", "50", "100", "150", "200", "250", "300", "Epochs", "(a)", "Under", "small", "batch", "sizes", "GCNII", "cc", "n/", "A", "Tr", "ai", "0.85", "0.80", "0.75", "0.70", "0", "50", "100", "150", "200", "250", "300", "Epochs", "GCN", "Cf & Cb", "Cf", "GAS", "cc", "n/", "A", "Tr", "ai", "0.80", "0.78", "0.76", "0.74", "0.72", "0.70", "0", "100", "200", "300", "400", "500", "600", "Epochs"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 500.64,
+    "y1": 530.88,
+    "y2": 607.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Figure4-1.png"
+}, {
+  "caption": "Table 3: Performance under different batch sizes on the Ogbn-arxiv dataset.",
+  "captionBoundary": {
+    "x1": 333.9210205078125,
+    "x2": 504.0013122558594,
+    "y1": 255.14450073242188,
+    "y2": 272.10595703125
+  },
+  "figType": "Table",
+  "imageText": ["10", "71.60", "72.14", "72.82", "72.80", "1", "70.56", "71.65", "71.34", "72.11", "2", "71.11", "71.89", "72.25", "72.55", "5", "71.99", "71.84", "72.23", "72.87", "Batch", "size", "GCN", "GCNII", "GAS", "LMC", "GAS", "LMC"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 495.35999999999996,
+    "y1": 284.64,
+    "y2": 362.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Table3-1.png"
+}, {
+  "caption": "Figure 3: The average relative estimated errors of mini-batch gradients computed by CLUSTER, GAS, and LMC for GCN models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 207.44552612304688,
+    "y2": 224.406982421875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "REDDIT", "CLUSTER", "GAS", "LMC", "ts", "di", "en", "f", "g", "ra", "rs", "o", "er", "ro", "tiv", "e", "Re", "la", "1.0", "0.8", "0.6", "0.4", "0.2", "Layer", "0", "Layer", "1", "0.0", "(b)", "FLICKR", "CLUSTER", "GAS", "LMC", "ts", "di", "en", "f", "g", "ra", "rs", "o", "er", "ro", "tiv", "e", "Re", "la", "1.0", "0.8", "0.6", "0.4", "0.2", "Layer", "0", "Layer", "1", "0.0", "(a)", "Ogbn-arxiv", "CLUSTER", "GAS", "LMC", "ts", "di", "en", "f", "g", "ra", "rs", "o", "er", "ro", "tiv", "e", "Re", "la", "1.0", "0.8", "0.6", "0.4", "0.2", "Layer", "0", "Layer", "1", "Layer", "2", "0.0"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 84.47999999999999,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Comparison of LMC with GNNAutoScale (GAS) (Fey et al., 2021). (a) shows the original graph with in-batch nodes, 1-hop out-of-batch nodes, and other out-of-batch nodes in orange, blue, and grey, respectively. (b) and (d) show the computation graphs of forward passes and backward passes of GAS, respectively. (c) and (e) show the computation graphs of froward passes and backward passes of LMC, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 286.3585510253906,
+    "y2": 336.19696044921875
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Backward", "passes", "of", "LMC", "Layer", "1", "Layer", "0", "v1", "v2", "Layer", "2", "v1", "v2", "v3", "v4", "v1", "v2", "v3", "v4", "v3", "v4", "(d)", "Backward", "passes", "of", "GAS", "Layer", "0", "Layer", "1", "v1", "v2", "Layer", "2", "v1", "v2", "v3", "v4", "v1", "v2", "v3", "v4", "v3", "v4", "Historical", "message", "passing", "Message", "passing", "Other", "out-of-batch", "nodes", "1-hop", "out-of-batch", "nodes", "In-batch", "nodes", "(c)", "Forward", "passes", "of", "LMC", "Layer", "1", "Layer", "0", "v1", "v2", "Layer", "2", "v1", "v2", "v3", "v4", "v1", "v2", "v3", "v4", "v3", "v4", "(b)", "Forward", "passes", "of", "GAS", "Layer", "0", "Layer", "1", "v1", "v2", "Layer", "2", "v1", "v2", "v3", "v4", "v1", "v2", "v3", "v4", "v3", "v4", "(a)", "Original", "graph", "v3", "v2", "v5", "v4", "v1"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 490.08,
+    "y1": 84.0,
+    "y2": 273.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5VBBA91N6n-Figure1-1.png"
+}]

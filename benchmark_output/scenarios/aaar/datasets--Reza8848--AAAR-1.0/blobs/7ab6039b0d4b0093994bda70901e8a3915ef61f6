@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 4: Comparison between our PPL method and baseline with noisy pseudo labels. “mIoU Gap” denotes the mIoU gap between situations with ground-truth and with noisy pseudo labels.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.0032043457031,
+    "y1": 529.786376953125,
+    "y2": 546.7478637695312
+  },
+  "figType": "Table",
+  "imageText": ["0%", "78.37", "-", "74.69", "-", "10%", "77.74", "-0.63", "73.90", "-0.79", "20%", "77.67", "-0.70", "72.94", "-1.75", "40%", "76.35", "-2.02", "71.17", "-3.75", "Noise", "ratio", "PPL", "(%)", "baseline", "(%)", "mIoU", "mIoU", "Gap", "mIoU", "mIoU", "Gap"],
+  "name": "4",
+  "page": 10,
+  "regionBoundary": {
+    "x1": 199.68,
+    "x2": 409.44,
+    "y1": 559.68,
+    "y2": 631.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table4-1.png"
+}, {
+  "caption": "Figure 1: Comparison between the standard feature-prototype interaction and our push-and-pull learning. (a) In the standard classification head, the interaction with the negative prototypes is always “pushing-away”. (b) This paper reveals that in addition to the pushing-away interaction, a competing pulling-close interaction between features and negative prototypes is also beneficial. Therefore, the proposed push-and-pull learning (PPL) combines the pushing-away and pulling-close interactions for negative prototypes. Moreover, we use multiple prototypes to represent each individual class to better reflect the intra-class diversity, which is also beneficial. Circles and squares represent prototypes and features, respectively. Different classes are in different colors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 160.89755249023438,
+    "y2": 243.6129150390625
+  },
+  "figType": "Figure",
+  "imageText": ["proxy", "feature", "push", "away", "pull", "close", "(a)", "Standard", "pushing", "interaction", "(b)", "Proposed", "push-and-pull", "learning", "feature", "space", "feature", "spacefeature", "space"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 493.44,
+    "y1": 81.6,
+    "y2": 153.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Figure1-1.png"
+}, {
+  "caption": "Table 1: Comparison with state-of-the-art methods on PASCAl VOC 2012. Two backbones, i.e., ResNet-50 and ResNet-101 and four data partition protocols, i.e., 1/16 , 1/8 , 1/4 and 1/2 are considered. The results of U2PL(Wang et al., 2022) are from the authors’ GitHub issues.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9996643066406,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["MT", "(Tarvainen", "&", "Valpola,", "2017)", "66.77", "70.78", "73.22", "75.41", "70.59", "73.20", "76.62", "77.61", "CCT", "(Ouali", "et", "al.,", "2020)", "65.22", "70.87", "73.43", "74.75", "67.94", "73.00", "76.17", "77.56", "CutMix-Seg", "(French", "et", "al.,", "2019)", "68.90", "70.70", "72.46", "74.49", "72.56", "72.69", "74.25", "75.89", "GCT", "(Ke", "et", "al.,", "2020)", "64.05", "70.47", "73.45", "75.20", "69.77", "73.30", "75.25", "77.14", "CPS", "(Chen", "et", "al.,", "2021)", "71.98", "73.67", "74.90", "76.15", "74.48", "76.44", "77.68", "78.64", "U2PL(Wang", "et", "al.,", "2022)", "-", "-", "-", "-", "74.43", "77.60", "78.70", "79.94", "PS-MT", "(Liu", "et", "al.,", "2022)", "72.83", "75.70", "76.43", "77.88", "75.50", "78.20", "78.72", "79.76", "PPL", "(Ours)", "74.22", "77.03", "77.33", "78.03", "77.10", "78.57", "79.50", "80.20", "Methods", "ResNet-50", "(%)", "ResNet-101", "(%)", "1/16", "1/8", "1/4", "1/2", "1/16", "1/8", "1/4", "1/2"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 491.03999999999996,
+    "y1": 124.32,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table1-1.png"
+}, {
+  "caption": "Table 7: Computational cost of PPL during inference.",
+  "captionBoundary": {
+    "x1": 199.01199340820312,
+    "x2": 412.9886474609375,
+    "y1": 548.6825561523438,
+    "y2": 554.6849975585938
+  },
+  "figType": "Table",
+  "imageText": ["wo/", "PPL", "40.42", "76.24", "One", "PPL", "stage", "40.58", "77.60", "Two", "PPL", "stage", "40.75", "78.96", "Method", "#params", "(M)", "FLOPs", "(G)"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 218.88,
+    "x2": 391.2,
+    "y1": 567.84,
+    "y2": 619.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table7-1.png"
+}, {
+  "caption": "Table 6: Analysis of the impact of the scale factor γ and the margin m",
+  "captionBoundary": {
+    "x1": 165.9250030517578,
+    "x2": 446.07415771484375,
+    "y1": 203.47250366210938,
+    "y2": 209.4749755859375
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "m", "mIoU", "(%)", "0.15", "75.80", "0.25", "77.03", "0.35", "76.63", "(a)", "γ", "mIoU", "(%)", "16", "76.14", "32", "77.03", "64", "75.19"],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 193.92,
+    "x2": 416.15999999999997,
+    "y1": 222.72,
+    "y2": 291.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table6-1.png"
+}, {
+  "caption": "Table 3: Effectiveness of the attention-based pulling interaction and the contrast-based pushing interaction. “Pulling” and “Pushing” denote the developed pulling and pushing interactions, respectively. “Semi” and “Fully” denotes networks are trained in semi-supervised and fully-supervised manners, respectively, while “Gap” denotes the accuracy gap between “Semi” and “Fully”. Results with semi-supervised learning are evaluated on PASCAL VOC 2012 under 1/8 partition protocol.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 211.41952514648438,
+    "y2": 261.2579345703125
+  },
+  "figType": "Table",
+  "imageText": ["✓", "74.15", "76.84", "2.69", "76.33", "79.21", "2.88", "✓", "✓", "77.03", "78.05", "1.02", "78.57", "80.64", "2.07", "PPL", "✓", "74.40", "77.00", "2.60", "77.35", "79.63", "2.28", "Baseline", "72.15", "75.71", "3.56", "75.35", "78.68", "3.33", "Method", "Pulling", "Pushing", "ResNet-50", "(%)", "ResNet-101", "(%)", "Semi", "Fully", "Gap", "Semi", "Fully", "Gap"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 159.84,
+    "x2": 450.24,
+    "y1": 273.59999999999997,
+    "y2": 350.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table3-1.png"
+}, {
+  "caption": "Table 2: Comparison with state-of-the-art methods on Cityscapes. Two backbones, i.e., ResNet-50 and ResNet-101 and four data partition protocols, i.e., 1/16, 1/8, 1/4 and 1/2 are considered.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99713134765625,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["MT", "(Tarvainen", "&", "Valpola,", "2017)", "66.14", "72.03", "74.47", "77.43", "68.08", "73.71", "76.53", "78.59", "CCT", "(Ouali", "et", "al.,", "2020)", "66.35", "72.46", "75.68", "76.78", "69.64", "74.48", "76.35", "78.29", "GCT", "(Ke", "et", "al.,", "2020)", "65.81", "71.33", "75.30", "77.09", "66.90", "72.96", "76.45", "78.58", "CPS", "(Chen", "et", "al.,", "2021)", "74.47", "76.61", "77.83", "78.77", "74.72", "77.62", "79.21", "80.21", "PS-MT", "(Liu", "et", "al.,", "2022)", "-", "77.12", "78.38", "79.22", "-", "-", "-", "-", "PPL", "(Ours)", "77.02", "78.54", "79.72", "80.29", "77.54", "78.84", "80.21", "80.79", "Methods", "ResNet-50", "(%)", "ResNet-101", "(%)", "1/16", "1/8", "1/4", "1/2", "1/16", "1/8", "1/4", "1/2"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 490.08,
+    "y1": 113.28,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table2-1.png"
+}, {
+  "caption": "Figure 2: Overview of the push-and-pull learning. We perform the pushing interaction by multiprototype contrastive learning, as shown in (b), and the pulling interaction via a feature-to-prototype attention, as shown in (c). The classifier memory bank CM is designed as a queue to store class prototypes and is updated by the corresponding classifier weights. Multiple pulling and pushing interactions are leveraged sequentially to enlarge their benefit. “⊗” and “⊕” in (c) denote matrix multiplication and element-wise sum, respectively. ρ, ψ, δ and g are four convolutional modules.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.003173828125,
+    "y1": 296.70751953125,
+    "y2": 357.50396728515625
+  },
+  "figType": "Figure",
+  "imageText": ["Contrast-base", "pushingEncoder", "Classifier", "CE", "Loss", "PPL", "stage", "2", "𝑦$", "(b)", "Contrast-based", "pushing", "Negative", "prototype", "Push", "awayPositive", "prototype", "Pull", "close", "label", "𝑓", "Assign", "feature", "space", "CM", "(c)", "Attention-based", "pulling", "𝑓̅", "128×𝐻𝑊𝐾𝑇×𝐻𝑊", "128×𝐾×𝑇", "128×𝐾𝑇", "128×𝐾×𝑇", "𝐾𝑇×128", "𝑠𝑜𝑓𝑡𝑚𝑎𝑥", "𝑓", "128×𝐻×𝑊", "128×𝐻𝑊", "CM", "256×𝐾×𝑇", "𝑔", "δ", "ψ", "ρ", "256×𝐻×𝑊", "(a)", "Our", "Push-and-pull", "learning", "Feature", "flow", "Prototype", "flow", "Label", "flow", "CE", "Loss", "Classifier", "•••", "PPL", "stage", "n", "PPL", "stage", "1", "𝑝", "𝑓!", "𝑓\"", "update", "𝑓!", "Attention-", "base", "pulling", "CM", "𝑥!/𝑥\"", "𝑦!/𝑦\"\""],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Figure2-1.png"
+}, {
+  "caption": "Table 5: Analysis of the impact of classifier memory bank length T and PPL stage number n.",
+  "captionBoundary": {
+    "x1": 305.9999084472656,
+    "x2": 503.99658203125,
+    "y1": 425.57537841796875,
+    "y2": 442.536865234375
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "n", "mIoU", "(%)", "0", "72.15", "1", "76.16", "2", "77.03", "3", "76.85", "4", "76.18", "(a)", "T", "mIoU", "(%)", "1", "75.86", "5", "76.95", "10", "77.03", "20", "76.20"],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 319.68,
+    "x2": 488.15999999999997,
+    "y1": 455.52,
+    "y2": 537.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Table5-1.png"
+}, {
+  "caption": "Figure 4: Quantitative comparison of generated pseudo labels from 1) the popular teacher-student “baseline”, 2) “PPL one stage” (using one PPL stage) and 3) “PPL two stage” (Ours).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 199.47354125976562,
+    "y2": 216.43499755859375
+  },
+  "figType": "Figure",
+  "imageText": ["%", ")", "al", "l", "(", "R", "ec", "Epoch", "Epoch", "baseline", "PPL", "one", "stage", "PPL", "two", "stage", "11", "21", "31", "41", "51", "61", "71", "80", "75", "70", "65", "60", "55", "50", "baseline", "PPL", "one", "stage", "PPL", "two", "stage", "11", "21", "31", "41", "51", "61", "71", "80", "75", "70", "65", "60", "55", "50", ")", "U", "(%", "m", "Io"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 471.35999999999996,
+    "y1": 83.52,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Qualitative comparison of the pseudo label quality. Some pixels are in white color because the predicted pseudo labels are filtered out due to low prediction confidence.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 396.9515380859375,
+    "y2": 413.91302490234375
+  },
+  "figType": "Figure",
+  "imageText": ["Input", "Ground-truth", "Baseline", "PPL", "one", "stage", "PPL", "two", "stage"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 474.24,
+    "y1": 240.0,
+    "y2": 385.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Integrating the proposed PPL into a popular teacher-student framework for semisupervised segmentation. The student and teacher networks share the same architecture and both contain multiple (n) PPL stages. The detailed structure of each PPL stage is illustrated in Fig. 2(a). Please note that while each PPL has its own classifier, there is one more classifier (“Final classifier”) after the last PPL stage. This final classifier uses the refined features of the last PPL as its input features. The student network uses the ground truth on the labeled data and the pseudo labels on the unlabeled data for supervision. The teacher network applies weak augmentation (Aug) to the unlabeled data, while the student network mixes both weak and strong augmentation (Aug′).",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0033874511719,
+    "y1": 210.07150268554688,
+    "y2": 292.785888671875
+  },
+  "figType": "Figure",
+  "imageText": ["𝑓%,(", "𝑓!,'$", "𝑓!,($", "𝑓%,#", "𝑓%,'", "argmax", "𝑦\"", "CE", "Loss", "Teacher", "network", "Student", "network", "PPL", "Stage", "n•••", "Final", "classifier", "Encoder", "PPL", "Stage", "1", "PPL", "Stage", "n•••", "Final", "classifier", "Encoder", "PPL", "Stage", "1", "Aug'", "Aug", "Aug", "𝑥!#", "𝑥!", "𝑓!,#$", "EMA", "update", "𝑥\"!", "𝑥\"", "𝑦\"!"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 192.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_39cMBLyo_ia-Figure3-1.png"
+}]

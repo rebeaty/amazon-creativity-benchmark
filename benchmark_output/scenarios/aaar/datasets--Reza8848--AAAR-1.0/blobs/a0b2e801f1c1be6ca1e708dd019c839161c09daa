@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 2: DSI representations for the physical space. (A) The square room tiled with 30x30 discrete states. (B) Grid-like DSI representations in the space (upper) and their spatial autocorrelation (lower). (C) The distribution of grid scales of DSI representations. Red and blue broken lines indicate positions of peaks and 30",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 273.3605041503906,
+    "y2": 312.23895263671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Spatial navigation using DSI representation vectors. (A) Geometric interpretation of the state transition rule in the DSI representation space. (B) An example spatial path obtained by DSIbased navigation. (C) Example spatial paths by DSI-based navigation in the four-room environment.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 478.0125427246094,
+    "y2": 505.9320068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 346.56,
+    "y2": 459.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure3-1.png"
+}, {
+  "caption": "Table 4: Examples of analogical relationships in Mikolov’s dataset.",
+  "captionBoundary": {
+    "x1": 171.87899780273438,
+    "x2": 440.12188720703125,
+    "y1": 529.5374755859375,
+    "y2": 535.5399169921875
+  },
+  "figType": "Table",
+  "imageText": ["boy", "girl", "king", "queen", "husband", "wife", "he", "she", "Paris", "France", "Tokyo", "Japan", "China", "Chinese", "Italy", "Italian", "big", "bigger", "small", "smaller", "free", "freely", "quick", "quickly", "convenient", "inconvenient", "possible", "impossible", "WORD1", "WORD2", "WORD3", "WORD4"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 193.92,
+    "x2": 418.08,
+    "y1": 544.3199999999999,
+    "y2": 641.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Table4-1.png"
+}, {
+  "caption": "Table 3: Contribution of each model component to the performance. Rates of grid-like units, nearoptimal navigation, significantly concept-specific units, correct analogical inference.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 282.768310546875,
+    "y2": 299.7287902832031
+  },
+  "figType": "Table",
+  "imageText": ["Full", "DSI", "51%", "97.2%", "35%", "63%", "Decorrelation", "OFF", "5%", "99.9%", "38%", "64%", "Non-negativity", "OFF", "29%", "99.8%", "2%", "63%", "SR-SVD", "21%", "57.2%", "13%", "28%", "METHOD", "GRID", "CELL", "NAVIGATION", "CONCEPT", "CELL", "ANALOGY"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 308.64,
+    "y2": 371.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Table3-1.png"
+}, {
+  "caption": "Figure 4: Vector-based inference of a novel spatial context. (A) We constructed representation vectors for a novel context A+B (a square room with two barriers) by the sum of DSI representation vectors for two familiar contexts A and B (with either of two barriers). (B) Rates of near-optimal navigation in various settings of representation vectors and contexts.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 177.42153930664062,
+    "y2": 216.29998779296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 80.64,
+    "y2": 158.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure4-1.png"
+}, {
+  "caption": "Figure 6: Structures of state transition graphs used in the section 4.4.",
+  "captionBoundary": {
+    "x1": 168.86599731445312,
+    "x2": 443.1363525390625,
+    "y1": 379.8875427246094,
+    "y2": 385.8900146484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 256.8,
+    "y2": 360.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Interpretation of our model. (A) Biological interpretation of our model. PSI as a model of the hippocampus and DSI as a model of EC. (B) The setting of a state transition map in which DSI approximates value functions for spatial navigation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 699.7845458984375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 570.72,
+    "y2": 680.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Concept-specific representations formed by DSI. Ten words that gave the highest activation (TOP-10 words) are shown. We also marked each unit with a descriptive label.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 252.61251831054688,
+    "y2": 269.573974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 233.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure5-1.png"
+}, {
+  "caption": "Table 1: Evaluation of conceptual specificity. Numbers of evaluated and significantly conceptspecific units, the ratio of concept-specific units, and average conceptual specificity are summarized.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 295.8735046386719,
+    "y2": 312.8349609375
+  },
+  "figType": "Table",
+  "imageText": ["DSI", "285", "100", "35%", "0.32", "Skip-gram", "297", "14", "5%", "-0.11", "CBOW", "298", "83", "28%", "0.26", "GloVe", "297", "6", "2%", "-0.07", "PPMI-SVD", "297", "36", "12%", "0.06", "METHOD", "EVALUATED", "SIGNIFICANT", "RATIO", "SPECIFICITY"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 471.35999999999996,
+    "y1": 321.59999999999997,
+    "y2": 395.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Table1-1.png"
+}, {
+  "caption": "Table 2: Performances of vector-based computations in the conceptual space. The correlation of word similarity evaluated by vectors and humans, and the rate of correct analogical inference.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["DSI", "0.70", "0.63", "Skip-gram", "0.69", "0.71", "CBOW", "0.69", "0.74", "GloVe", "0.69", "0.71", "PPMI-SVD", "0.52", "0.58", "METHOD", "SIMILARITY", "ANALOGY"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 404.15999999999997,
+    "y1": 118.08,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Table2-1.png"
+}, {
+  "caption": "Figure 7: A part of word representations formed by DSI. Ten words that gave the highest activation (TOP-10 words) are shown for units 1 - 15. Those classified as concept-specific units in our analysis are boxed with bold lines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 588.8095703125,
+    "y2": 616.72998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 180.95999999999998,
+    "y2": 569.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3_NvTLGjDKy-Figure7-1.png"
+}]

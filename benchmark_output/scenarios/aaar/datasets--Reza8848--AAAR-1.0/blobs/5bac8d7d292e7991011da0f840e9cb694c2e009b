@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 4: Behavior entropy and scores curve across training for different games where we achieved unprecedented performance. The names of the axes are the same as that of the leftmost figure.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0025329589844,
+    "y1": 344.3025207519531,
+    "y2": 361.2640075683594
+  },
+  "figType": "Figure",
+  "imageText": ["Scores", "Entropy", "1.0", "1e6Phoenix", "0.8", "0.6", "0.4", "0.2", "0.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e9", "6", "1e5Jamesbond", "4", "2", "0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e9", "1e5DemonAttack", "6", "8", "Sc", "or", "es", "4", "2", "0", "py", "En", "tro", "2.5", "2.0", "1.5", "1.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Training", "Scale", "(Frames)", "1e9"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.68,
+    "y1": 218.88,
+    "y2": 332.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FeWvD0L_a4-Figure4-1.png"
+}, {
+  "caption": "Figure 3: The learning curves in Atari. Curves are smoothed with a moving average over 5 points.",
+  "captionBoundary": {
+    "x1": 109.05999755859375,
+    "x2": 499.8529052734375,
+    "y1": 205.58151245117188,
+    "y2": 211.583984375
+  },
+  "figType": "Figure",
+  "imageText": ["Agent57@100B(2019)", "Go-Explore@10B(2021)", "Muzero@20B(2020)", "EfficientZero@100K(2021)", "Ours@1B", "MEME@1B(2022)", "2000.0%", "1500.0%", "1000.0%", "500.0%", "0.0%", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e9", "10000.0%", "8000.0%", "6000.0%", "4000.0%", "2000.0%", "0.0%", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e9", "25", "20", "15", "10", "5", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e9"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 489.12,
+    "y1": 75.84,
+    "y2": 191.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FeWvD0L_a4-Figure3-1.png"
+}, {
+  "caption": "Figure 2: A General Architecture of Our Algorithm.",
+  "captionBoundary": {
+    "x1": 200.40199279785156,
+    "x2": 408.5106506347656,
+    "y1": 233.03054809570312,
+    "y2": 239.03302001953125
+  },
+  "figType": "Figure",
+  "imageText": ["𝑠𝑡,", "𝑟𝑡", ",", "𝑠𝑡+1", "EnvActor", "1", "𝑎𝑡", "Policy", "Training", "Data", "Collection", "Shared", "Replay", "Buffer", "𝜇𝝍1", "(𝑠,", "𝑎)", "𝐺𝝍1", "L", "2", "1", "⋅⋅", "⋅", "⋅⋅", "⋅", "Hybrid", "Behavior", "𝝍1", "∼", "𝒫Ψ", "∗", "Meta-controller", "𝒫Ψ", "∗", "=", "argmax𝒫Ψℒ𝒫", "Mapping", "ℱ𝝍1", "Hybrid", "Behavior", "𝝍1", "𝒫∗", "𝝍1", "∼", "𝒫Ψ", "∗", "𝜋𝑖(𝑠,", "𝑎)⋅⋅", "⋅", "Policy", "Population", "𝜋1(𝑠,", "𝑎)", "⋅⋅", "⋅", "Φ𝜽1,𝐡1", "Policy", "1", "𝜋2(𝑠,", "𝑎)", "𝒉2,", "𝜽2", "Policy", "2", "𝜋𝑁(𝑠,", "𝑎)", "𝒉𝑁,", "𝜽𝑁", "Policy", "N", "𝜇1(𝑠,", "𝑎)", "Hybrid", "Behavior", "𝝍1", "∼", "𝒫Ψ", "∗", "Mapping", "ℱ𝝍1", "𝑠𝑡,", "𝑟𝑡", ",", "𝑠𝑡+1Φ(𝑠,", "𝑎)⋅⋅", "⋅", "Hybrid", "Behavior", "EnvActor", "2", "𝑠𝑡,", "𝑟𝑡", ",", "𝑠𝑡+1", "𝑎𝑡", "EnvActor", "L", "𝑎𝑡"],
+  "name": "2",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 499.2,
+    "y1": 67.2,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FeWvD0L_a4-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Performance on the 57 Atari games. Our method achieves the highest mean human",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9973449707031,
+    "y1": 516.779541015625,
+    "y2": 522.781982421875
+  },
+  "figType": "Figure",
+  "imageText": ["100B", "LBC", "(Ours)", "MEME", "(2022)", "Agent57", "(2020)", "1B", "1B", "1011", "1010", "Number", "Samples", "109", "20", "15", "10", "5", "Median", "HNS", "0", "100", "75", "50", "25", "Mean", "HNS", "0", "25", "20", "15", "10", "5", "HWRB", "0"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 503.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FeWvD0L_a4-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Ablation Results. All the results are scaled by the main algorithm to improve readability.",
+  "captionBoundary": {
+    "x1": 109.54399871826172,
+    "x2": 502.45892333984375,
+    "y1": 184.96749877929688,
+    "y2": 190.969970703125
+  },
+  "figType": "Figure",
+  "imageText": ["Scaled", "Mean", "HNS", "Scaled", "Median", "HNS", "81.5%", "Ablate", "MAB", "59%", "SAblate", "H", "28%", "Ablate", "H,", "n", "HN", "ed", "ia", "ed", "M", "Sc", "al", "120.0%", "100.0%", "80.0%", "60.0%", "40.0%", "20.0%", "0.0%", "80.3%", "HN", "S", "Ablate", "H", "19%", "Ablate", "H,31%", "Ablate", "MAB", "ea", "n", "ed", "M", "Sc", "al", "120.0%", "100.0%", "80.0%", "60.0%", "40.0%", "20.0%", "Main", "Algorithm", "Reducing", "H", "Reducing", "H", "and", "Random", "Selection", "0.0%"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 492.0,
+    "y1": 60.0,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FeWvD0L_a4-Figure5-1.png"
+}]

@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 1: (a): point-estimate entropy of DNN and expected entropy of Dirichlet-based model, where the color denotes the class identity. Both models are trained with source data. (b): examples of the prediction distribution of three “monitor” images on the simplex, where the model is trained with the images of “keyboard”, “computer” and “monitor” from the Clipart domain of Office-Home dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.998046875,
+    "y1": 200.21450805664062,
+    "y2": 239.093994140625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Examples", "of", "different", "prediction", "distributions", "Domain:", "Real-World", "Domain:", "Real-World", "Domain:", "Clipart", "𝜶:", "parameters", "of", "Dirichlet", "distribution", "!𝝆:", "expected", "prediction", "𝑈!\"#", "/", "𝑈!$%$", ":", "distribution", "/", "data", "uncertainty", "shared", "shared", "Dirichlet-", "based", "model", "Dirichlet-", "based", "model", "high", "distribution", "uncertainty", "high", "data", "uncertainty", "confident", "!𝝆", "=", "[0.15,", "0.47,", "0.38],", "𝑒𝑛𝑡𝑟𝑜𝑝𝑦", "=", "1.01,", "𝑈!\"#", "=", "0.10,", "𝑈!$%$", "=", "0.91", "!𝝆", "=", "[0.23,", "0.54,", "0.23],", "𝑒𝑛𝑡𝑟𝑜𝑝𝑦", "=", "1.01,", "𝑈!\"#", "=", "0.18,", "𝑈!$%$", "=", "0.83", "!𝝆", "=", "[0.04,", "0.10,", "0.86],", "𝑒𝑛𝑡𝑟𝑜𝑝𝑦", "=", "0.50,", "𝑈!\"#", "=", "0.05,", "𝑈!$%$", "=", "0.45", "keyboard", "computer", "monitor", "1.4", "4.3", "3.5", "keyboard", "computer", "monitor", "1.1", "2.5", "1.1", "keyboard", "computer", "monitor", "0.8", "1.7", "15.0", "𝜶", "uncertainty", "keyboard", "computer", "monitor", "keyboard", "computer", "monitor", "keyboard", "computer", "monitor", "Dirichlet-", "based", "model", "(a)", "Standard", "DNN", "v.s.", "Dirichlet-based", "Model", "Point-estimate", "Entropy", "of", "Standard", "DNN", "Expected", "Entropy", "of", "Dirichlet-based", "Model", "Source", "Domain", "Target", "Domain", "Entropy", "(Standard", "DNN)", "Entropy", "(Evidential", "Model)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 86.39999999999999,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure1-1.png"
+}, {
+  "caption": "Table 1: Accuracy (%) on miniDomainNet with 5% target samples as the labeling budget (ResNet-50).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7426452636719,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["EADA", "(Xie", "et", "al.,", "2021)", "66.0", "80.8", "63.5", "69.4", "83.0", "65.1", "71.1", "68.6", "65.7", "71.0", "64.3", "81.0", "70.8", "DUC", "67.1", "81.1", "67.1", "74.0", "83.5", "67.6", "72.4", "70.3", "66.5", "73.5", "70.0", "81.1", "72.9", "TQS", "(Fu", "et", "al.,", "2021)", "67.8", "82.0", "65.4", "67.5", "84.8", "66.1", "63.8", "67.2", "62.5", "71.1", "64.4", "81.6", "70.4", "CLUE", "(Prabhu", "et", "al.,", "2021)", "57.6", "77.5", "58.6", "58.9", "76.8", "65.9", "66.3", "60.2", "60.5", "66.2", "58.7", "76.0", "65.3", "AADA", "(Su", "et", "al.,", "2019)", "62.4", "77.5", "61.7", "61.9", "79.7", "61.1", "65.6", "66.0", "60.8", "65.1", "62.1", "80.0", "67.0", "DBAL", "(Deheeger", "et", "al.,", "2021)", "62.9", "79.2", "60.8", "64.6", "78.1", "62.5", "65.6", "65.2", "59.2", "66.3", "61.3", "80.3", "67.2", "Source-only", "52.1", "63.0", "49.4", "55.9", "73.0", "51.1", "56.8", "61.0", "50.0", "54.0", "48.9", "60.3", "56.3", "Random", "61.6", "78.7", "61.6", "64.0", "78.7", "63.7", "60.5", "64.3", "61.1", "64.8", "58.7", "75.2", "66.1", "BvSB", "(Joshi", "et", "al.,", "2009)", "63.2", "77.9", "62.7", "66.7", "80.5", "64.9", "64.3", "67.0", "62.2", "67.6", "62.5", "77.8", "68.1", "Entropy", "(Wang", "&", "Shang,", "2014)", "63.3", "78.3", "61.0", "65.7", "81.4", "63.2", "63.3", "66.2", "63.0", "67.9", "60.5", "78.3", "67.7", "CoreSet", "(Sener", "&", "Savarese,", "2018)", "62.6", "78.3", "60.2", "62.1", "79.9", "63.6", "63.6", "65.2", "59.1", "63.1", "62.3", "78.1", "66.5", "WAAL", "(Shui", "et", "al.,", "2020)", "63.2", "80.2", "62.1", "60.6", "80.3", "64.6", "62.9", "64.1", "59.5", "65.4", "61.8", "78.6", "66.9", "BADGE", "(Ash", "et", "al.,", "2020)", "64.3", "80.8", "63.5", "65.2", "80.2", "63.8", "65.9", "65.4", "63.4", "66.7", "63.3", "79.2", "68.5", "Method", "clp→pnt", "clp→rel", "clp→skt", "pnt→clp", "pnt→rel", "pnt→skt", "rel→clp", "rel→pnt", "rel→skt", "skt→clp", "skt→pnt", "skt→rel", "Avg"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 100.8,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table1-1.png"
+}, {
+  "caption": "Table 2: Accuracy (%) on Office-Home with 5% target samples as the labeling budget (ResNet-50).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.85003662109375,
+    "y1": 219.89151000976562,
+    "y2": 225.89398193359375
+  },
+  "figType": "Table",
+  "imageText": ["4", "EXPERIMENTS", "EADA", "(Xie", "et", "al.,", "2021)", "63.6", "84.4", "83.5", "70.7", "83.7", "80.5", "73.0", "63.5", "85.2", "78.4", "65.4", "88.6", "76.7", "DUC", "65.5", "84.9", "84.3", "73.0", "83.4", "81.1", "73.9", "66.6", "85.4", "80.1", "69.2", "88.8", "78.0", "TQS", "(Fu", "et", "al.,", "2021)", "58.6", "81.1", "81.5", "61.1", "76.1", "73.3", "61.2", "54.7", "79.7", "73.4", "58.9", "86.1", "70.5", "CLUE", "(Prabhu", "et", "al.,", "2021)", "58.0", "79.3", "80.9", "68.8", "77.5", "76.7", "66.3", "57.9", "81.4", "75.6", "60.8", "86.3", "72.5", "AADA", "(Su", "et", "al.,", "2019)", "56.6", "78.1", "79.0", "58.5", "73.7", "71.0", "60.1", "53.1", "77.0", "70.6", "57.0", "84.5", "68.3", "DBAL", "(Deheeger", "et", "al.,", "2021)", "58.7", "77.3", "79.2", "61.7", "73.8", "73.3", "62.6", "54.5", "78.1", "72.4", "59.9", "84.3", "69.6", "Source-only", "42.1", "66.3", "73.3", "50.7", "59.0", "62.6", "51.9", "37.9", "71.2", "65.2", "42.6", "76.6", "58.3", "Random", "52.5", "74.3", "77.4", "56.3", "69.7", "68.9", "57.7", "50.9", "75.8", "70.0", "54.6", "81.3", "65.8", "BvSB", "(Joshi", "et", "al.,", "2009)", "56.3", "78.6", "79.3", "58.1", "74.0", "70.9", "59.5", "52.6", "77.2", "71.2", "56.4", "84.5", "68.2", "Entropy", "(Wang", "&", "Shang,", "2014)", "58.0", "78.4", "79.1", "60.5", "73.0", "72.6", "60.4", "54.2", "77.9", "71.3", "58.0", "83.6", "68.9", "CoreSet", "(Sener", "&", "Savarese,", "2018)", "51.8", "72.6", "75.9", "58.3", "68.5", "70.1", "58.8", "48.8", "75.2", "69.0", "52.7", "80.0", "65.1", "WAAL", "(Shui", "et", "al.,", "2020)", "55.7", "77.1", "79.3", "61.1", "74.7", "72.6", "60.1", "52.1", "78.1", "70.1", "56.6", "82.5", "68.3", "BADGE", "(Ash", "et", "al.,", "2020)", "58.2", "79.7", "79.9", "61.5", "74.6", "72.9", "61.5", "56.0", "78.3", "71.4", "60.9", "84.2", "69.9", "Method", "Ar→Cl", "Ar→Pr", "Ar→Rw", "Cl→Ar", "Cl→Pr", "Cl→Rw", "Pr→Ar", "Pr→Cl", "Pr→Rw", "Rw→Ar", "Rw→Cl", "Rw→Pr", "Avg"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 228.95999999999998,
+    "y2": 363.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table2-1.png"
+}, {
+  "caption": "Figure 5: The t-SNE visualization of features learned by the model trained with Ledl and Ledl + βLUdis respectively. Red and blue dots represent source and target features, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.9328918457031,
+    "y1": 394.64154052734375,
+    "y2": 414.1540222167969
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 162.23999999999998,
+    "x2": 442.56,
+    "y1": 413.76,
+    "y2": 433.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure5-1.png"
+}, {
+  "caption": "Figure 1: The t-SNE visualization of features learned by the model trained with Ledl and Ledl + βLUdis respectively. Red and blue dots represent source and target features, respectively.",
+  "captionBoundary": {
+    "x1": 162.4134063720703,
+    "x2": 442.16522216796875,
+    "y1": 409.68096923828125,
+    "y2": 434.2430419921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 433.91999999999996,
+    "y2": 463.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure1-1.png"
+}, {
+  "caption": "Table 7: Results with different total labeling budget B on Office-Home (ResNet-50).",
+  "captionBoundary": {
+    "x1": 137.2310028076172,
+    "x2": 474.769287109375,
+    "y1": 95.46451568603516,
+    "y2": 101.46697998046875
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "Ar", "→", "Cl", "(", "w/", "ℒ!!\"#)", "(a)", "Ar", "→", "Cl", "(", "w/o", "ℒ!!\"#)", "(c)", "Cl", "→", "Ar", "(", "w/o", "ℒ!!\"#)", "(d)", "Cl", "→", "Ar", "(", "w/", "ℒ!!\"#)", "Avg", "accuracy", "68.6", "72.9", "78.0", "80.2", "82.4", "84.8", "86.4", "88.0", "88.9", "Gain", "over", "previous", "one", "-", "4.3", "↑", "5.1", "↑", "2.2", "↑", "2.2", "↑", "2.4", "↑", "1.6", "↑", "1.6", "↑", "0.9", "↑", "B", "0%", "2.5%", "5%", "7.5%", "10%", "12.5%", "15%", "17.5%", "20%", "Total", "labeling", "budget"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 502.08,
+    "y1": 103.67999999999999,
+    "y2": 386.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table7-1.png"
+}, {
+  "caption": "Table 4: mIoU (%) comparisons on the task SYNTHIA→ Cityscapes. mIoU∗ is reported according to the average of 13 classes, excluding the “wall”, “fence” and “pole”.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0001525878906,
+    "y1": 184.54251098632812,
+    "y2": 201.5040283203125
+  },
+  "figType": "Table",
+  "imageText": ["DUC", "5%", "96.1", "73.1", "88.7", "43.3", "39.0", "42.2", "49.9", "55.5", "90.7", "92.8", "73.7", "49.2", "91.9", "67.9", "45.9", "71.1", "66.9", "72.8", "AADA#", "(Su", "et", "al.,", "2019)", "5%", "91.3", "57.6", "86.9", "37.6", "48.3", "45.0", "50.4", "58.5", "88.2", "90.3", "69.4", "37.9", "89.9", "44.5", "32.8", "62.5", "61.9", "66.2", "MADA#", "(Ning", "et", "al.,", "2021)", "5%", "96.5", "74.6", "88.8", "45.9", "43.8", "46.7", "52.4", "60.5", "89.7", "92.2", "74.1", "51.2", "90.9", "60.3", "52.4", "69.4", "68.1", "73.3", "DUC#", "5%", "96.3", "74.6", "89.4", "46.8", "47.6", "46.8", "49.7", "63.1", "90.3", "91.3", "74.7", "53.8", "93.1", "78.9", "57.0", "71.0", "70.3", "75.6", "Methods", "with", "#", "are", "based", "on", "DeepLab-v3+", "(Chen", "et", "al.,", "2018)", "and", "others", "are", "based", "on", "DeepLab-v2", "(Chen", "et", "al.,", "2015).", "Method", "with", "budget", "“-”", "are", "the", "source-only", "or", "UDA", "methods.", "MRKLD", "(Zou", "et", "al.,", "2019)", "-", "67.7", "32.2", "73.9", "10.7", "1.6", "37.4", "22.2", "31.2", "80.8", "80.5", "60.8", "29.1", "82.8", "25.0", "19.4", "45.3", "43.8", "50.1", "TPLD", "(Shin", "et", "al.,", "2020)", "-", "80.9", "44.3", "82.2", "19.9", "0.3", "40.6", "20.5", "30.1", "77.2", "80.9", "60.6", "25.5", "84.8", "41.1", "24.7", "43.7", "47.3", "53.5", "Seg-Uncertainty", "(Zheng", "&", "Yang,", "2021)", "-", "87.6", "41.9", "83.1", "14.7", "1.7", "36.2", "31.3", "19.9", "81.6", "80.6", "63.0", "21.8", "86.2", "40.7", "23.6", "53.1", "47.9", "54.9", "ProDA", "(Zhang", "et", "al.,", "2021)", "-", "87.8", "45.7", "84.6", "37.1", "0.6", "44.0", "54.6", "37.0", "88.1", "84.4", "74.2", "24.3", "88.2", "51.1", "40.5", "45.6", "55.5", "62.0", "Method", "budget", "road", "side.", "buil.", "wall∗", "fence∗", "pole∗", "light", "sign", "veg.", "sky", "pers.", "rider", "car", "bus", "motor", "bike", "mIoU", "mIoU∗", "Source-only", "-", "64.3", "21.3", "73.1", "2.4", "1.1", "31.4", "7.0", "27.7", "63.1", "67.6", "42.2", "19.9", "73.1", "15.3", "10.5", "38.9", "34.9", "40.3"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 503.03999999999996,
+    "y1": 204.0,
+    "y2": 279.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table4-1.png"
+}, {
+  "caption": "Table 5: Ablation study of DUC on Office-Home.",
+  "captionBoundary": {
+    "x1": 310.4410095214844,
+    "x2": 505.740478515625,
+    "y1": 558.196533203125,
+    "y2": 564.198974609375
+  },
+  "figType": "Table",
+  "imageText": ["DUC", "X", "X", "-", "-", "X", "X", "78.0", "EDL", "-", "-", "-", "-", "-", "-", "61.5", "EDL", "-", "-", "X", "-", "-", "-", "71.1", "EDL", "-", "-", "-", "X", "-", "-", "73.3", "Variant", "A", "-", "-", "-", "-", "X", "X", "74.1", "Variant", "B", "X", "-", "-", "-", "X", "X", "76.6", "Variant", "C", "-", "X", "-", "-", "X", "X", "74.2", "Variant", "D", "X", "X", "-", "-", "-", "-", "68.6", "Variant", "E", "X", "X", "X", "-", "-", "-", "75.0", "Variant", "F", "X", "X", "-", "X", "-", "-", "76.7", "Variant", "G", "X", "X", "-", "-", "X", "-", "77.1", "Variant", "H", "X", "X", "-", "-", "-", "X", "76.9", "Method", "Loss", "Active", "Selection", "Criterion", "AvgLUdis", "LUdata", "random", "entropyUdis", "Udata"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 313.92,
+    "x2": 505.44,
+    "y1": 566.88,
+    "y2": 699.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table5-1.png"
+}, {
+  "caption": "Table 3: mIoU (%) comparisons on the task GTAV→ Cityscapes.",
+  "captionBoundary": {
+    "x1": 174.5590057373047,
+    "x2": 437.4416198730469,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["DUC#", "5%", "95.9", "70.6", "89.8", "50.7", "48.3", "47.8", "53.7", "59.7", "90.3", "56.8", "93.1", "74.7", "55.1", "92.8", "74.8", "77.9", "63.4", "59.5", "71.6", "69.8", "Methods", "with", "#", "are", "based", "on", "DeepLab-v3+", "(Chen", "et", "al.,", "2018)", "and", "others", "are", "based", "on", "DeepLab-v2", "(Chen", "et", "al.,", "2015).", "Method", "with", "budget", "“-”", "are", "the", "source-only", "or", "UDA", "methods.", "ProDA", "(Zhang", "et", "al.,", "2021)", "-", "87.8", "56.0", "79.7", "46.3", "44.8", "45.6", "53.5", "53.5", "88.6", "45.2", "82.1", "70.7", "39.2", "88.8", "45.5", "59.4", "1.0", "48.9", "56.4", "57.5", "DUC", "5%", "96.8", "76.2", "89.2", "53.2", "46.0", "42.5", "48.5", "57.6", "89.6", "58.5", "92.1", "72.9", "51.3", "92.0", "62.8", "72.2", "48.5", "52.8", "70.3", "67.0", "AADA#", "(Su", "et", "al.,", "2019)", "5%", "92.2", "59.9", "87.3", "36.4", "45.7", "46.1", "50.6", "59.5", "88.3", "44.0", "90.2", "69.7", "38.2", "90.0", "55.3", "45.1", "32.0", "32.6", "62.9", "59.3", "MADA#", "(Ning", "et", "al.,", "2021)", "5%", "95.1", "69.8", "88.5", "43.3", "48.7", "45.7", "53.3", "59.2", "89.1", "46.7", "91.5", "73.9", "50.1", "91.2", "60.6", "56.9", "48.4", "51.6", "68.7", "64.9", "Method", "budget", "road", "side.", "buil.", "wall", "fence", "pole", "light", "sign", "veg.", "terr.", "sky", "pers.", "rider", "car", "truck", "bus", "train", "motor", "bike", "mIoU", "Source-only", "-", "75.8", "16.8", "77.2", "12.5", "21.0", "25.5", "30.1", "20.1", "81.3", "24.6", "70.3", "53.8", "26.4", "49.9", "17.2", "25.9", "6.5", "25.3", "36.0", "36.6", "MRKLD", "(Zou", "et", "al.,", "2019)", "-", "91.0", "55.4", "80.0", "33.7", "21.4", "37.3", "32.9", "24.5", "85.0", "34.1", "80.8", "57.7", "24.6", "84.1", "27.8", "30.1", "26.9", "26.0", "42.3", "47.1", "Seg-Uncertainty", "(Zheng", "&", "Yang,", "2021)", "-", "90.4", "31.2", "85.1", "36.9", "25.6", "37.5", "48.8", "48.5", "85.3", "34.8", "81.1", "64.4", "36.8", "86.3", "34.9", "52.2", "1.7", "29.0", "44.6", "50.3", "TPLD", "(Shin", "et", "al.,", "2020)", "-", "94.2", "60.5", "82.8", "36.6", "16.6", "39.3", "29.0", "25.5", "85.6", "44.9", "84.4", "60.6", "27.4", "84.1", "37.0", "47.0", "31.2", "36.1", "50.3", "51.2"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 503.03999999999996,
+    "y1": 100.8,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table3-1.png"
+}, {
+  "caption": "Figure 6: (a) and (b) are the label histogram and examples of selected instances by DUC on Ar→Cl and Cl→Ar tasks, respectively. The total labeling budget is 5% of target images. For the visualization of selected samples, we present the top 10 selected instances in each active selection step.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00042724609375,
+    "y1": 686.6005859375,
+    "y2": 714.52099609375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Cl→Ar", "High", "Low", "Priority", "S", "te", "p", "5", "S", "te", "p", "4", "S", "te", "p", "3", "S", "te", "p", "2", "S", "te", "p", "1", "Selected", "target", "images", "(top", "10", "in", "each", "selection", "step)", "n", "t", "C", "o", "u", "Label", "Histogram", "(a)", "Ar→Cl", "S", "te", "p", "5", "S", "te", "p", "4", "S", "te", "p", "3", "S", "te", "p", "2", "S", "te", "p", "1", "Selected", "target", "images", "(top", "10", "in", "each", "selection", "step)", "High", "Low", "Priority", "n", "t", "C", "o", "u", "Label", "Histogram"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 445.44,
+    "y1": 96.96,
+    "y2": 685.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure6-1.png"
+}, {
+  "caption": "Table 6: Analysis on the ordering of Udis, Udata.",
+  "captionBoundary": {
+    "x1": 297.7120056152344,
+    "x2": 492.4866943359375,
+    "y1": 551.2855224609375,
+    "y2": 558.781982421875
+  },
+  "figType": "Table",
+  "imageText": ["(mIoU", "/", "mIoU∗)", "Udis,", "Udata", "67.0", "66.9", "/", "72.8", "Udata,", "Udis", "66.2", "65.3", "/", "71.6", "Ordering", "Dataset", "GTAV→Cityscapes", "(mIoU)", "SYNTHIA→Cityscapes", "(Avg)", "Udis,", "Udata", "72.9", "78.0", "Udata,", "Udis", "72.2", "77.5", "Ordering", "Dataset", "miniDomainNet", "(Avg)", "Ofﬁce-Home"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 289.92,
+    "x2": 505.44,
+    "y1": 559.68,
+    "y2": 636.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Table6-1.png"
+}, {
+  "caption": "Figure 4: (a): The effect of different first-round selection ration κ% on Office-Home dataset. (b): Hyperparameter sensitivity of β and λ on Office-Home.",
+  "captionBoundary": {
+    "x1": 294.1199951171875,
+    "x2": 505.65460205078125,
+    "y1": 578.91552734375,
+    "y2": 606.8359985351562
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "78", "77", "76", "75", "(%", ")", "0", "20", "40", "60", "80", "100", "ra", "cy", "Ac", "cu", "0.1", "0.01", "0.05", "0.001", "0.005", "0.05", "0.01", "0.5", "0.1", "(a)", "1.0", "Office-Home", "𝜅", "%", ")", "c", "y", "(", "A", "c", "c", "u", "ra", "30", "40", "50", "60", "70", "80", "100", "78.0", "1", "10", "20", "90", "76.0", "72.0", "74.0", "70.0"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 494.88,
+    "y1": 493.91999999999996,
+    "y2": 575.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure4-1.png"
+}, {
+  "caption": "Figure 3: (a): The distribution of logUdis for source and target data on task Ar → Cl and Cl→ Ar. For elegancy, we apply logarithm to Udis. (b): Expected calibration error (ECE) of target data, where the standard DNN with cross entropy (CE) loss and our model are both trained with source data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7432556152344,
+    "y1": 193.66854858398438,
+    "y2": 221.5889892578125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Distribution", "of", "logUdis", "(b)", "Expected", "calibration", "error", "(ECE)", "of", "target", "data", "log", "𝑈!\"#", "log", "𝑈!\"#"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 496.79999999999995,
+    "y1": 85.92,
+    "y2": 186.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Visualization of selected pixels in the task GTAV→Cityscapes, with the total labeling budget of 5% pixels. Here, we randomly choose ten images from Cityscapes for display.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9978942871094,
+    "y1": 265.6505432128906,
+    "y2": 282.61199951171875
+  },
+  "figType": "Figure",
+  "imageText": ["ix", "e", "ls", "d", "P", "c", "te", "S", "e", "le", "ru", "th", "u", "n", "d", "T", "G", "ro", "ix", "e", "ls", "d", "P", "c", "te", "S", "e", "le", "ru", "th", "u", "n", "d", "T", "G", "ro"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Illustration of DUC. When the training reaches the active selection steps, the distribution uncertainty Udis and data uncertainty Udata of unlabeled target samples are calculated according to the Dirichlet distribution with parameter α. Then κb samples with the highest Udis are chosen in the first round. In the second round, according to Udata, we select the top b samples from the instances chosen in the first round to query their labels. These labeled target samples are added into the supervised learning. When reaching the total labeling budget B, the active selection stops.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 223.82052612304688,
+    "y2": 284.61700439453125
+  },
+  "figType": "Figure",
+  "imageText": ["𝑈\"&'", "high", "low", "selected", "data", "in", "the", "second", "rounddecision", "boundary", "selected", "data", "in", "the", "first", "round", "Training", "Stage", "𝒯*", "first", "round", "second", "round", "𝒯)", "𝒮", "𝐷𝑖𝑟(𝝆|𝜶)", "labeled", "source", "set", "labeled", "target", "set", "unlabeled", "target", "set", "selected", "target", "data", "labeled", "source", "data", "flow", "labeled", "target", "data", "flow", "unlabeled", "target", "data", "flow", "Active", "Selection", "Stage", "...", "𝜶", "top", "κ𝑏", "top", "𝑏", "sorted", "by", "𝑈\"()(", "low", "high", "sorted", "by", "𝑈\"&'", "low", "high", "add", "to", "𝒯#", "query", "labels", "Oracle", "ℒ!\"#", "ℒ$%", "candidate", "feature", "extractor", "ℱ", "evidence", "head", "𝒢"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 83.03999999999999,
+    "y2": 206.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4WM4cy42B81-Figure2-1.png"
+}]

@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 21: Additional text-to-image generation results with different text prompt, produced by TLDM with Ttrunc = 4.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00146484375,
+    "y1": 650.4625244140625,
+    "y2": 668.91796875
+  },
+  "figType": "Figure",
+  "imageText": ["A", "clock", "tower", "near", "the", "river."],
+  "name": "21",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 520.8,
+    "y2": 633.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure21-1.png"
+}, {
+  "caption": "Figure 12: Signal-to-noise ratio evolution across different diffuse step T . The right sub-panel shows a zoomed-in SNR evolution in the range of [30, 140] steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010681152344,
+    "y1": 232.46151733398438,
+    "y2": 249.4229736328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 466.08,
+    "y1": 84.0,
+    "y2": 219.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure12-1.png"
+}, {
+  "caption": "Figure 1: (Best viewed in color) An illustrative depiction of diffusion models and our truncated diffusion models. Top: The conventional denoising diffusion models add Gaussian noise gradually with a large number of time steps, where the true posterior can be kept close to Gaussian and hence easy to fit with denoising (score-matching) loss (marked in a solid blue box). Bottom: Truncated diffusion models truncate the diffusion chain to keep its first few steps and small diffusion segment (marked in the dashed blue box). This truncated diffusion chain can still be learned with previous denoising methods. Meanwhile, as the left part is truncated, the Gaussian prior p(xT ) will have a large gap to the truncated point q(xT |x0), which is bridged with an implicit generative distribution pψ(xT ) = ∫ pψ(xT |z)p(z)dz (marked in dashed red box).",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.1498107910156,
+    "y1": 245.83651733398438,
+    "y2": 329.6139831542969
+  },
+  "figType": "Figure",
+  "imageText": ["Matching", "prior", "to", "aggregated", "posterior", "Denoise", "step:", "data", "reconstruction", "loss", "Truncated", "di", "usion", "chain", "Implicit", "generator", "Di", "use", "step:", "Denoise", "step:", "data", "reconstruction", "loss", "Di", "use", "step:"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 498.24,
+    "y1": 84.47999999999999,
+    "y2": 233.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Random generation results of TDPM on CIFAR-10 using DDPM or Improved DDPM backbone.",
+  "captionBoundary": {
+    "x1": 112.58899688720703,
+    "x2": 499.4150695800781,
+    "y1": 498.5345153808594,
+    "y2": 504.5369873046875
+  },
+  "figType": "Figure",
+  "imageText": ["DDPM", "backbone", "Improved", "DDPM", "backbone", "Church", "Bedroom", "Method", "NFE", "FID", "FID", "DDPM", "backbone", "DDPM", "1000", "7.89", "4.90", "TDPM", "(TTrunc=99)", "100", "4.33", "3.95", "TDPM+", "(TTrunc=99)", "100", "3.98", "3.67", "DDIM", "50", "10.58", "6.62", "TDPM", "(TTrunc=49)", "50", "5.35", "4.10", "TDPM+", "(TTrunc=49)", "50", "4.34", "3.98", "TDPM", "(TTrunc=4)", "5", "4.98", "4.16", "TDPM+", "(TTrunc=4)", "5", "4.89", "4.09", "ADM", "backbone", "ADM", "1000", "3.49", "1.90", "ADM+DDIM", "250", "6.45", "2.31", "TDPM", "(TTrunc=99)", "100", "4.41", "2.24", "TDPM+", "(TTrunc=99)", "100", "3.61", "1.88", "TDPM", "(TTrunc=49)", "50", "4.57", "2.92", "TDPM+", "(TTrunc=49)", "50", "3.67", "1.89", "TDPM", "(TTrunc=4)", "5", "5.61", "7.92", "TDPM+", "(TTrunc=4)", "5", "4.66", "4.01", "GAN-based", "StyleGAN2", "1", "3.93", "3.98", "StyleGAN2-ADA", "1", "4.12", "7.89", "TDPM", "(TTrunc=0)", "1", "4.77", "5.24", "Method", "NFE", "FID↓", "Recall↑", "DDPM", "backbone", "DDPM", "1000", "3.21", "0.57", "TDPM", "(TTrunc=99)", "100", "3.10", "0.57", "TDPM+", "(TTrunc=99)", "100", "2.88", "0.58", "DDIM", "50", "4.67", "0.53", "TDPM", "(TTrunc=49)", "50", "3.30", "0.57", "TDPM+", "(TTrunc=49)", "50", "2.94", "0.58", "TDPM", "(TTrunc=4)", "5", "3.34", "0.57", "TDPM+", "(TTrunc=4)", "5", "3.21", "0.57", "Improved", "DDPM", "backbone", "Improved", "DDPM", "4000", "2.90", "0.58", "TDPM", "(TTrunc=99)", "100", "2.97", "0.57", "TDPM+", "(TTrunc=99)", "100", "2.83", "0.58", "Improved", "DDPM+DDIM", "50", "3.92", "0.55", "TDPM", "(TTrunc=49)", "50", "3.11", "0.57", "TDPM+", "(TTrunc=49)", "50", "2.96", "0.58", "TDPM", "(TTrunc=4)", "5", "3.51", "0.55", "TDPM+", "(TTrunc=4)", "5", "3.17", "0.57", "GAN-based", "StyleGAN2", "1", "8.32", "0.41", "StyleGAN2-ADA", "1", "2.92", "0.49", "TDPM", "(TTrunc=0)", "1", "7.34", "0.46"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 494.4,
+    "y1": 129.12,
+    "y2": 495.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure2-1.png"
+}, {
+  "caption": "Figure 13: Qualitative results on CIFAR-10 and CelebA (64× 64).",
+  "captionBoundary": {
+    "x1": 183.21099853515625,
+    "x2": 428.7893981933594,
+    "y1": 710.5515747070312,
+    "y2": 716.5540161132812
+  },
+  "figType": "Figure",
+  "imageText": ["TDPM-GAN", "TDPM-CT", "TDPM-CTTDPM-GAN"],
+  "name": "13",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 615.84,
+    "y2": 704.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure13-1.png"
+}, {
+  "caption": "Figure 9: Analogous results to Figure 8 using 8-modal Gaussian data.",
+  "captionBoundary": {
+    "x1": 167.20199584960938,
+    "x2": 444.7998352050781,
+    "y1": 373.0995178222656,
+    "y2": 379.10198974609375
+  },
+  "figType": "Figure",
+  "imageText": ["TDPM-CT", "TDPM-GAN", "True", "data", "DDPM"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 499.2,
+    "y1": 101.75999999999999,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Analogous results to Figure 8 using 25-modal Gaussian data.",
+  "captionBoundary": {
+    "x1": 162.2209930419922,
+    "x2": 449.7814025878906,
+    "y1": 701.0845336914062,
+    "y2": 707.0869750976562
+  },
+  "figType": "Figure",
+  "imageText": ["TDPM-CT", "TDPM-GAN", "True", "data", "DDPM"],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 500.15999999999997,
+    "y1": 429.59999999999997,
+    "y2": 683.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure10-1.png"
+}, {
+  "caption": "Figure 15: Analogous qualitative results to Figure 14 on LSUN-Bedroom. Produced by TDPM.",
+  "captionBoundary": {
+    "x1": 132.3260040283203,
+    "x2": 479.67755126953125,
+    "y1": 482.8155212402344,
+    "y2": 488.8179931640625
+  },
+  "figType": "Figure",
+  "imageText": ["TTrunc", "=", "99", "TTrunc", "=", "49", "TTrunc", "=", "4"],
+  "name": "15",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 328.8,
+    "y2": 468.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure15-1.png"
+}, {
+  "caption": "Figure 14: Qualitative results of TDPM on LSUN-Church (256 × 256), with Ttrunc = 99, 49, and 4. Note NFE = Ttrunc + 1 in TDPM. Each group presents generated samples from pθ(x0) (left) and pθ(xTtrunc) (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 257.6165466308594,
+    "y2": 275.57391357421875
+  },
+  "figType": "Figure",
+  "imageText": ["TTrunc", "=", "99", "TTrunc", "=", "49", "TTrunc", "=", "4"],
+  "name": "14",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 103.67999999999999,
+    "y2": 243.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure14-1.png"
+}, {
+  "caption": "Figure 16: Analogous qualitative results to Figure 14 on CelebA-HQ. Produced by TDPM.",
+  "captionBoundary": {
+    "x1": 124.9260025024414,
+    "x2": 487.0764465332031,
+    "y1": 698.0515747070312,
+    "y2": 704.0540161132812
+  },
+  "figType": "Figure",
+  "imageText": ["TTrunc", "=", "99", "TTrunc", "=", "49", "TTrunc", "=", "4"],
+  "name": "16",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 543.84,
+    "y2": 684.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure16-1.png"
+}, {
+  "caption": "Figure 5: Randomly generated images of TDPM using ADM (Dhariwal & Nichol, 2021) backbone on LSUNChurch and LSUN-Bedroom (256× 256), with Ttrunc = 4, 49, and 99. Note NFE = Ttrunc + 1 in TDPM. Each group presents generated samples from the full model pθ(x0) (left) and its implicit prior ∼ pθ(xTtrunc) (right); the full model sample is obtained by refining the implicit prior sample via the truncated reverse diffusion chain.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.4861145019531,
+    "y1": 335.83251953125,
+    "y2": 371.7229919433594
+  },
+  "figType": "Figure",
+  "imageText": ["9", "TT", "ru", "nc", "=", "9", "9", "nc", "=", "4", "TT", "ru", "nc", "=", "4", "TT", "ru"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 495.35999999999996,
+    "y1": 65.75999999999999,
+    "y2": 328.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure5-1.png"
+}, {
+  "caption": "Figure 11: Analogous results to Figure 8 using Double Moons data.",
+  "captionBoundary": {
+    "x1": 171.07200622558594,
+    "x2": 440.9288635253906,
+    "y1": 537.091552734375,
+    "y2": 543.093994140625
+  },
+  "figType": "Figure",
+  "imageText": ["TDPM-CT", "TDPM-GAN", "True", "data", "DDPM"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 503.03999999999996,
+    "y1": 265.92,
+    "y2": 519.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure11-1.png"
+}, {
+  "caption": "Figure 8: A comparison of DDPM (Ho et al., 2020), TDPM-GAN, and TDPM-CT on Swiss Roll toy data. We show the effects of a truncated diffusion chain with length T =2 and T =5 (TTrunc=1 and TTrunc=4). The first row displays the true distribution from q(x0) to q(xT−1). Each row below the first one represents the corresponding denoising distribution pθ(xt−1 |xt). DDPM assumes p(xT ) =N (0, I) and we can observe a gap between the true data distribution q(xT−1) and its generative distribution pθ(xT−1). TDPM learns pθ(xTtrunc), which can be observed to well approximate the true q(xT−1), which helps the model successfully recover the clean data distribution q(x0). Below each model, we report empirical KL divergence between data and generative distributions as the quantitative metric. More results on different toy data can be found in Appendix D.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3224792480469,
+    "y1": 244.04550170898438,
+    "y2": 326.760009765625
+  },
+  "figType": "Figure",
+  "imageText": ["TDPM-CT", "TDPM-GAN", "True", "data", "DDPM"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 481.44,
+    "y1": 80.64,
+    "y2": 237.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure8-1.png"
+}, {
+  "caption": "Figure 19: Analogous qualitative results to Figure 14 on CelebA-HQ. Produced by TDPM-CT.",
+  "captionBoundary": {
+    "x1": 117.26899719238281,
+    "x2": 494.73193359375,
+    "y1": 705.9395751953125,
+    "y2": 711.9420166015625
+  },
+  "figType": "Figure",
+  "imageText": ["TTrunc", "=", "99", "TTrunc", "=", "49", "TTrunc", "=", "4"],
+  "name": "19",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 552.0,
+    "y2": 691.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure19-1.png"
+}, {
+  "caption": "Figure 18: Analogous qualitative results to Figure 14 on LSUN-Bedroom. Produced by TDPM-CT.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.96575927734375,
+    "y1": 477.83453369140625,
+    "y2": 483.8370056152344
+  },
+  "figType": "Figure",
+  "imageText": ["TTrunc", "=", "99", "TTrunc", "=", "49", "TTrunc", "=", "4"],
+  "name": "18",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 324.0,
+    "y2": 463.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure18-1.png"
+}, {
+  "caption": "Figure 17: Analogous qualitative results to Figure 14 on LSUN-Church. Produced by TDPM-CT.",
+  "captionBoundary": {
+    "x1": 111.70999908447266,
+    "x2": 500.29119873046875,
+    "y1": 263.9015197753906,
+    "y2": 269.90399169921875
+  },
+  "figType": "Figure",
+  "imageText": ["TTrunc", "=", "99", "TTrunc", "=", "49", "TTrunc", "=", "4"],
+  "name": "17",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 109.92,
+    "y2": 249.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure17-1.png"
+}, {
+  "caption": "Figure 6: Quantitative text-to-image results (FID and GPU time) across different NFE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 282.2450256347656,
+    "y1": 182.59951782226562,
+    "y2": 198.56500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["LDM", "LDM", "LDM", "TLDM", "TLDM", "TLDM", "NFE=100", "(TTrunc", "=", "99)", "NFE=50", "(TTrunc", "=", "49)", "NFE=5", "(TTrunc", "=", "4)"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 204.95999999999998,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Figure6-1.png"
+}, {
+  "caption": "Table 4: Ablation study with different noise schedules on CIFAR-10. The number before and after “/\" denotes the FID using linear and cosine schedules, respectively.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0011901855469,
+    "y1": 171.12551879882812,
+    "y2": 187.09100341796875
+  },
+  "figType": "Table",
+  "imageText": ["TDPM-GAN", "Ttrunc=99", "3.10", "/", "3.47", "TDPM-GAN", "Ttrunc=49", "3.30", "/", "3.16", "TDPM-CT", "Ttrunc=99", "3.69", "/", "3.62", "TDPM-CT", "Ttrunc=49", "3.97", "/", "3.24", "Model", "Steps", "FID↓", "(linear", "/", "cosine)"],
+  "name": "4",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 196.79999999999998,
+    "x2": 415.2,
+    "y1": 199.68,
+    "y2": 268.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Table4-1.png"
+}, {
+  "caption": "Table 5: Comparison of model size (the added parameters corresponds to the discriminator model in the training but not involved in the generation), and GPU time in generation.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.995849609375,
+    "y1": 568.610595703125,
+    "y2": 585.572021484375
+  },
+  "figType": "Table",
+  "imageText": ["Resolution", "32x32", "64x64", "256x256", "Model", "Parameter", "Time", "(s/image)", "Parameter", "Time", "(s/image)", "Parameter", "Time", "(s/image)", "DDPM", "36M", "31.03", "79M", "33.01", "114M", "62.93", "TDPM,", "Ttrunc=99", "36M+20M", "3.13", "79M+21M", "3.52", "114M+24M", "6.65", "TDPM,", "Ttrunc=49", "36M+20M", "1.52", "79M+21M", "1.55", "114M+24M", "1.88", "TDPM,", "Ttrunc=4", "36M+20M", "0.16", "79M+21M", "0.26", "114M+24M", "0.65", "TDPM,", "Ttrunc=0", "36M+20M", "0.03", "79M+21M", "0.05", "114M+24M", "0.14"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 597.6,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HDxgaKk956l-Table5-1.png"
+}]

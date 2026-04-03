@@ -1,0 +1,401 @@
+[{
+  "caption": "Table 1: Mean and standard deviation of errors over all time steps of all testsets. The Hybrid NNPDE approach outperforms all other baselines considered.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 245.38851928710938,
+    "y2": 262.3499755859375
+  },
+  "figType": "Table",
+  "imageText": ["nonUniform-Bunsen32", "184860", "±", "185694", "130219", "±", "142094", "9647", "±", "13903", "17569", "±", "24392", "nonUniform-Bunsen100", "-", "-", "23293", "±", "37451", "26862", "±", "47639", "Planar-v0", "88316", "±", "124394", "34491", "±", "43966", "1122", "±", "1300", "292", "±", "296", "uniform-Bunsen", "220817", "±", "167024", "72563", "±", "56919", "721", "±", "1007", "1267", "±", "1622", "M", "SE", "Planar-v0", "8.27", "±", "5.51%", "6.33", "±", "3.05%", "1.40", "±", "0.65%", "1.21", "±", "0.39%", "uniform-Bunsen", "15.57", "±", "8.72%", "7.58", "±", "3.73%", "0.72", "±", "0.37%", "1.11", "±", "0.47%", "nonUniform-Bunsen32", "12.30", "±", "7.98%", "12.48", "±", "11.31%", "2.04", "±", "1.39%", "2.46", "±", "1.61%", "nonUniform-Bunsen100", "-", "-", "3.23", "±", "3.76%", "4.14", "±", "4.99%", "PE", "M", "A", "Baseline", "Baseline", "Hybrid", "Hybrid", "FNO", "NN", "NN-PDE", "NN-PDE-dt"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 505.44,
+    "y1": 269.76,
+    "y2": 370.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Table1-1.png"
+}, {
+  "caption": "Figure 3: 1D cut of the planar flame simulation over 300 steps. The initial state is plotted in red, target state in green. Hybrid NN-PDE approach predicts physically accurate results over longer rollouts with correct flame temperature and relative displacement of flame front across different equivalence ratios.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 181.15054321289062,
+    "y2": 220.02996826171875
+  },
+  "figType": "Figure",
+  "imageText": ["]", "GT", "Hybrid", "PDD", "FNO", "e", "te", "m", "pe", "ra", "tu", "re", "[k", "Fl", "am", "2200", "2100", "2000", "1900", "1800", "1700", "(E)", "t", "o", "f", "f", "la", "m", "e", "m", "en", "la", "ce", "e", "di", "sp", "Re", "la", "tiv", "1.0", "0.8", "0.6", "0.4", "0.2", "0.950.850.750.65", "Equivalence", "ratio", "(D):", "Ground", "Truth", "0.00", "0.02", "0.04", "L", "[m]", "(C):", "Hybrid", "NN-PDE", "0.00", "0.02", "0.04", "L", "[m]", "(B):", "PDD", "0.00", "0.02", "0.04", "L", "[m]", "(A):", "FNO", "]", "ra", "tu", "re", "[k", "Te", "m", "pe", "1000", "1250", "1500", "1750", "2000", "2250", "500", "750", "0.00", "0.02", "0.04", "Domain", "length", "L", "[m]"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 131.04,
+    "x2": 481.44,
+    "y1": 84.0,
+    "y2": 162.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure3-1.png"
+}, {
+  "caption": "Table 5: Mean and standard deviation of squared errors of fuel (Yf ) and oxidizer (Yo) mass fraction fields over all time steps of all testsets. The Hybrid NN-PDE approach outperforms all other baselines considered.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 92.62955474853516,
+    "y2": 120.54998779296875
+  },
+  "figType": "Table",
+  "imageText": ["Planar-v0", "1.0e-2", "±", "6.8e-3", "1.3e-3", "±", "1.2e-3", "3.7e-5", "±", "2.9e-5", "4.1e-5", "±", "4.4e-5", "uniform-Bunsen", "4.7e-1", "±", "9.6e-2", "2.1e-2", "±", "2.7e-2", "3.6e-5", "±", "3.0e-5", "1.4e-4", "±", "1.2e-4", "nonUniform-Bunsen32", "1.4e0", "±", "1.8e0", "6.1e-3", "±", "7.9e-3", "1.6e-4", "±", "1.6e-4", "2.8e-4", "±", "3.0e-4", "nonUniform-Bunsen100", "-", "-", "3.3e-4", "±", "4.2e-4", "5.0e-4", "±", "5.8e-4", "Yo", "Planar-v0", "1.3e-4", "±", "7.4e-5", "2.9e-5", "±", "3.8e-5", "8.9e-7", "±", "1.0e-6", "1.6e-7", "±", "1.5e-7", "uniform-Bunsen", "6.4e-4", "±", "2.4e-4", "5.1e-5", "±", "4.1e-5", "5.6e-7", "±", "7.4e-7", "9.8e-7", "±", "1.3e-6", "nonUniform-Bunsen32", "2.2e-4", "±", "1.9e-4", "9.6e-5", "±", "1.0e-4", "8.0e-6", "±", "1.1e-5", "1.4e-5", "±", "1.9e-5", "nonUniform-Bunsen100", "-", "-", "1.8e-5", "±", "2.8e-5", "1.8e-5", "±", "2.9e-5", "Yf", "Baseline", "Baseline", "Hybrid", "Hybrid", "FNO", "NN", "NN-PDE", "NN-PDE-dt"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 504.0,
+    "y1": 125.75999999999999,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Table5-1.png"
+}, {
+  "caption": "Figure 9: Temperature field predictions for (A): Planar-v0 flame case with E = 0.95; (B) uniformBunsen case with constant inlet velocity U = 0.375 and E = 0.95 for different approaches. Hybrid NN-PDE model predicts physically accurate evolution of the flame cases under study.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0043640136719,
+    "y1": 435.85150146484375,
+    "y2": 463.7719421386719
+  },
+  "figType": "Figure",
+  "imageText": ["2200", "T", "[k]", "1800", "1500", "1200", "800", "t", "=", "20", "t", "=", "50", "t", "=", "172", "t", "=", "225(B)", "2000", "T", "[k]", "1600", "1200", "800", "400", "t", "=", "100", "t", "=", "200", "t", "=", "300(A)", "Ground", "Truth", "t", "=", "50", "Hybrid", "NN-PDE", "PDD", "FNO"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 499.68,
+    "y1": 250.56,
+    "y2": 417.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure9-1.png"
+}, {
+  "caption": "Figure 1: The incomplete/non-reactive (top) and complete/reactive (bottom) PDE solvers we consider can yield fundamentally different evolutions, as shown here for a sample temperature field over time.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.99664306640625,
+    "y1": 517.1495361328125,
+    "y2": 566.9869384765625
+  },
+  "figType": "Figure",
+  "imageText": ["t", "=", "0", "t", "=", "50", "t", "=", "300", "Complete", "PDE", "Incomplete", "PDE", "800", "1000", "1200", "1400", "1600", "1800", "2000", "2200", "Tem", "perature", "[k]"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 309.59999999999997,
+    "x2": 501.12,
+    "y1": 386.88,
+    "y2": 504.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Left : Inlet velocity profile used. (a-d) Temperature field prediction by hybrid NN-PDE approach over different steps given the inlet velocity profile. (e) Ground truth data. Right : Difference between ground truth data and hybrid NN-PDE output at last snapshot. Top to bottom: 32 × 32 resolution cases of (A) uniform-Bunsen, (B) nonUniform-Bunsen32, and (C) 100 × 100 testcase nonUniform-Bunsen100. ϵ represents the instantaneous MAPE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 244.08755493164062,
+    "y2": 293.92498779296875
+  },
+  "figType": "Figure",
+  "imageText": ["300", "200", "100", "0", "−100", "−200", "−300", "(a)", "t", "=", "200", "(b)", "t", "=", "300", "(c)", "t", "=", "400", "(d)", "t", "=", "500", "(e)", "t", "=", "500", "ε=3.57", "(C)", "ni", "fo", "rm", "-", "Bu", "ns", "en", "10", "0", "no", "nU", "0.4", "0.3", "0", "50", "100", "(a)", "t", "=", "200", "(b)", "t", "=", "300", "(c)", "t", "=", "400", "(d)", "t", "=", "500", "(e)", "t", "=", "500", "ε=2.38", "(B)", "ni", "fo", "rm", "-", "Bu", "ns", "en", "32", "no", "nU", "0.5", "0.4", "0.3", "0", "15", "30", "Difference", "ε=0.73", "Ground", "Truth", "(e)", "t", "=", "300", "Hybrid", "NN-PDE", "(a)", "t", "=", "50", "(b)", "t", "=", "100", "(c)", "t", "=", "200", "(d)", "t", "=", "300", "(A)", "Inlet", "Condition", "u", "ni", "fo", "rm", "-", "B", "un", "se", "n", "0.46", "0.44", "0.42", "0", "15", "30"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 482.4,
+    "y1": 83.52,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure4-1.png"
+}, {
+  "caption": "Table 4: Details of the boundary conditions used for the planar flame case and various cases of Bunsen-type flames. The uniform-Bunsen case is obtained with κ = constant and nonUniformBunsen case is obtained with κ ∈ Rn as discussed in section 4",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033874511719,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": [")", "slip", "1+", "φ", "E", "(1+3.76", "WN2", "WO2", "field", "inlet", "left", "and", "right", "wall", "T", "800", "K", "Neumann", "BC", "uy", "κ", "no-slip", "ux", "0", "slip", "P", "101325", "Neumann", "BC", "Yf", "1", ")", "slip", "1+", "φ", "E", "(1+3.76", "WN2", "WO2", "T", "400", "K", "Neumann", "BC", "uy", "0", "-", "ux", "0", "-", "P", "101325", "Neumann", "BC", "Yf", "1", "Planar", "flame", "Bunsen-type", "flame", "field", "inlet", "left", "and", "right", "wall"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 514.0799999999999,
+    "y1": 122.39999999999999,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Table4-1.png"
+}, {
+  "caption": "Figure 8: Instances of (A): incomplete PDE solver; (B): complete PDE solver for different operating conditions. (C): Snapshot of complete PDE solver at t = 300 for all training and testing datasets of uniform-Bunsen case. (D): Snapshot of complete PDE solver at t = 500 for all training and testing datasets of nonUniform-Bunsen32 case.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003662109375,
+    "y1": 435.1115417480469,
+    "y2": 473.989990234375
+  },
+  "figType": "Figure",
+  "imageText": ["2400", "2200", "2000", "1800", "1600", "1400", "1200", "1000", "800", "(D)", "(C)", "Tr", "ai", "ni", "ng", "Te", "st", "in", "g", "Te", "st", "in", "g", "Tr", "ai", "ni", "ng", "(B)", "E", "=", "0.9", "U", "=", "0.4", "E", "=", "0.8", "U", "=", "0.3", "30", "0", "P", "c", "(T", "t)", "t", "=", "E", "=", "1.0", "U", "=", "0.45", "15", "0", "P", "c", "(T", "t)", "t", "=", "50", "P", "c", "(T", "t)", "t", "=", "10", "0", "25", "P", "c", "(T", "t)", "t", "=", "P", "c", "(T", "t)", "t", "=", "1", "P", "c", "(T", "t)", "t", "=", "(A)", "E", "=", "0.9", "U", "=", "0.4", "E", "=", "0.8", "U", "=", "0.3", "30", "0", "P", "i", "(T", "t)", "t", "=", "E", "=", "1.0", "U", "=", "0.45", "15", "0", "P", "i", "(T", "t)", "t", "=", "50", "P", "i", "(T", "t)", "t", "=", "10", "0", "25", "P", "i", "(T", "t)", "t", "=", "P", "i", "(T", "t)", "t", "=", "1", "P", "i", "(T", "t)", "t", "="],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 231.84,
+    "y2": 417.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure8-1.png"
+}, {
+  "caption": "Figure 12: Comparison between different approaches - from top to bottom - FNO, PDD, hybrid NN-PDE for nonUniform-Bunsen32 test case. Hybrid approach predictions accurately match with the ground truth data over long-rollouts of 500 time steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 247.64755249023438,
+    "y2": 275.5670166015625
+  },
+  "figType": "Figure",
+  "imageText": ["Tem", "perature", "[k]", "2200", "2000", "1800", "1600", "1400", "1200", "1000", "800", "t", "=", "50", "t", "=", "100", "t", "=", "150", "t", "=", "200", "t", "=", "250", "t", "=", "300", "t", "=", "350", "t", "=", "400", "t", "=", "500", "Gr", "ou", "nd", "Tr", "ut", "h", "t", "=", "25", "Hy", "br", "id", "NN", "-P", "DE", "PD", "D", "FN", "O"],
+  "name": "12",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 481.44,
+    "y1": 84.96,
+    "y2": 228.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Additional visualization of reactive flow trajectories predicted by the hybrid approach for different test cases of nonUniform-Bunsen32 scenario.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 525.4105224609375,
+    "y2": 542.3720092773438
+  },
+  "figType": "Figure",
+  "imageText": ["0", "250", "500", "2000", "1600", "1200", "800", "ε=0.95", "ε=1.02", "ε=1.34", "ε=2.08", "ε=1.93", "ε=1.82", "ε=2.27", "ε=2.29", "ε=3.73", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "-P", "DE", "̃", "T", "t", "NN", "P", "c", "̃T", "t)", "Ta", "rg", "et", "0", "250", "500", "2000", "1600", "1200", "800", "ε=0.59", "ε=1.04", "ε=1.89", "ε=2.74", "ε=2.61", "ε=1.68", "ε=1.78", "ε=1.83", "ε=1.53", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "̃P", "DE", "̃", "T", "t", "NN", "P", "c", "(T", "t)", "Ta", "rg", "et"],
+  "name": "13",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.91999999999996,
+    "y1": 292.8,
+    "y2": 506.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure13-1.png"
+}, {
+  "caption": "Table 3: Mean and standard deviation of errors over different architectures for purely data-driven and hybrid NN-PDE approach.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030822753906,
+    "y1": 631.1355590820312,
+    "y2": 648.0969848632812
+  },
+  "figType": "Table",
+  "imageText": ["Planar-v0", "6.33", "±", "3.05%", "7.09", "±", "4.40%", "1.62", "±", "0.44%", "1.40", "±", "0.65%", "uniform-Bunsen", "7.58", "±", "3.73%", "2.87", "±", "1.53%", "2.01", "±", "0.99%", "0.72", "±", "0.37%", "nonUniform-Bunsen32", "12.48", "±", "11.31%", "19.19", "±", "14.92%", "3.25", "±", "2.35%", "2.04", "±", "1.39%", "nonUniform-Bunsen100", "-", "-", "15.68", "±", "10.44%", "3.23", "±", "3.76%", "PE", "M", "A", "PDD", "PDD", "Hybrid", "NN-PDE", "Hybrid", "NN-PDE", "ResNet", "UNet", "ResNet", "UNet"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 505.44,
+    "y1": 664.8,
+    "y2": 726.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Table3-1.png"
+}, {
+  "caption": "Table 2: Details of various neural network architectures used in this paper.",
+  "captionBoundary": {
+    "x1": 157.97189331054688,
+    "x2": 454.0304260253906,
+    "y1": 452.1321716308594,
+    "y2": 458.1346435546875
+  },
+  "figType": "Table",
+  "imageText": ["#", "trainable", "parameters", "261,953", "136,227", "362,371", "Spacial", "down-sample", "by", "layer", "2", "2", "latent", "sizes", "(32)", "(32,64)", "#", "UNet", "layers", "2", "3", "CNN", "stack", "depth", "2", "3", "2", "Base", "latent", "size", "16", "16", "Loss", "MSE", "MSE", "MSE", "#", "ResBlocks", "5", "Hyper-parameters", "ResNet", "UNet32", "UNet100", "Kernel", "size", "5", "5", "5", "Latent", "size", "32", "Activation", "LeakyReLu", "LeakyReLu", "ReLu"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 456.47999999999996,
+    "y1": 465.59999999999997,
+    "y2": 600.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Table2-1.png"
+}, {
+  "caption": "Figure 5: Effect of longer look-ahead steps. MAPE of temperature field over all testsets. Models trained with higher look-ahead steps m accurately predict the temporal evolution of dynamics for longer duration across all cases considered.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 174.12155151367188,
+    "y2": 202.0419921875
+  },
+  "figType": "Figure",
+  "imageText": ["20", "(D)", "nonUniform-Bunsen100", "15", "10", "5", "0", "0", "200", "400", "Simulation", "steps", "20", "(C)", "nonUniform-Bunsen32", "15", "10", "5", "0", "0", "200", "400", "Simulation", "steps", "20", "(B)", "uniform-Bunsen", "15", "10", "5", "0", "0", "100", "200", "300", "Simulation", "steps", "(A)", "Planar-v0", "m=2", "m=4", "m=8", "m=16", "m=32", "E", "M", "AP", "20", "15", "10", "5", "0", "0", "100", "200", "300", "Simulation", "steps"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 131.04,
+    "x2": 481.44,
+    "y1": 84.0,
+    "y2": 155.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Left : Constant inlet velocity profile used. (a-d) uniform-Bunsen case trained and inferred at double time-step using hybrid NN-PDE approach. It achieves same flame shape at t = 150 for which the complete PDE solver requires 300 time-steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 291.7395324707031,
+    "y2": 319.65997314453125
+  },
+  "figType": "Figure",
+  "imageText": ["−100", "0", "100", "200", "300", "400", "500", "Ground", "Truth", "Difference", "(e)", "t", "=", "300", "Hybrid", "NN-PDE", "(a)", "t", "=", "25", "(b)", "t", "=", "50", "(c)", "t", "=", "100", "(d)", "t", "=", "150", "Inlet", "Condition", "u", "ni", "fo", "rm", "-", "B", "un", "se", "n", "0.39", "0.38", "0.37", "0.36", "0", "15", "30"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 217.92,
+    "y2": 275.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure6-1.png"
+}, {
+  "caption": "Figure 2: (A) Multi-step training framework helps to learn the dynamics of complete PDE solver over longer rollouts. (B1) Details of the input flow state and predictor block used in a purely datadriven approach and (B2) the hybrid NN-PDE approach.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 232.72250366210938,
+    "y2": 260.6429443359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure2-1.png"
+}, {
+  "caption": "Figure 14: Comparison between ground truth data (Pc(Tt)) and hybrid NN-PDE approach predictions (T̃t) for various test cases of complex, high resolution scenario of nonUniform-Bunsen100",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 503.9979553222656,
+    "y1": 560.8245849609375,
+    "y2": 580.98095703125
+  },
+  "figType": "Figure",
+  "imageText": ["0", "250", "500", "800", "1200", "1600", "2000", "ε=1.05", "ε=1.59", "ε=2.40", "ε=3.48", "ε=3.99", "ε=4.62", "ε=5.81", "ε=6.40", "ε=6.65", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "-P", "DE", "̃", "T", "t", "NN", "P", "c", "̃T", "t)", "Ta", "rg", "et", "0", "250", "500", "800", "1200", "1600", "2000", "ε=0.82", "ε=1.47", "ε=1.96", "ε=2.90", "ε=3.43", "ε=3.97", "ε=4.63", "ε=5.21", "ε=4.96", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "-P", "DE", "̃", "T", "t", "NN", "P", "c", "̃T", "t)", "Ta", "rg", "et", "0", "250", "500", "800", "1200", "1600", "2000", "ε=0.54", "ε=1.42", "ε=1.75", "ε=2.06", "ε=2.29", "ε=2.38", "ε=2.87", "ε=3.30", "ε=3.46", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "̃P", "DE", "̃", "T", "t", "NN", "P", "c", "(T", "t)", "Ta", "rg", "et"],
+  "name": "14",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 481.91999999999996,
+    "y1": 233.76,
+    "y2": 541.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure14-1.png"
+}, {
+  "caption": "Figure 11: Comparison between ground truth (or Target) data and the hybrid NN-PDE approach for the Uniform-Bunsen case for fuel (top) and oxidizer (bottom) mass fraction fields for different operating conditions. Error field shows the absolute difference between target state and hybrid prediction over {0, 50, 100, 150, 200, 225, 250, 300} steps. ϵ indicates the instantaneous MSE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 529.3555908203125,
+    "y2": 568.2340087890625
+  },
+  "figType": "Figure",
+  "imageText": ["0.0000.0050.0100.0150.0200.0250.030", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "ε=1.3e-05", "ε=6.9e-05", "ε=1.8e-05", "ε=9.8e-06", "ε=1.1e-05", "ε=1.2e-05", "ε=2.7e-05", "Er", "ro", "r", "̃", "Y", "o", ",t", "|", "o,", "t)", "−", "|P", "c(Y", "ε=0.0ẽ00", "̃", "Y", "o", ",t", "NN", "-P", "DE", "o,", "t)", "Ta", "rg", "et", "P", "c", "(Y", "0.000", "0.002", "0.004", "0.006", "0.008", "0.010", "0.00", "0.01", "0.02", "0.03", "0.04", "0.05", "ε=6.8e-08", "ε=4.4e-07", "ε=1.4e-06", "ε=1.2e-06", "ε=1.2e-06", "ε=1.5e-06", "ε=4.7e-06", "Er", "ro", "r", "̃", "Y", "f", ",t", "|", "f,", "t)", "−", "|P", "c(Y", "ε=0.0ẽ00", "̃", "Y", "f", ",t", "NN", "-P", "DE", "f,", "t)", "Ta", "rg", "et", "P", "c", "(Y"],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 131.51999999999998,
+    "x2": 481.91999999999996,
+    "y1": 243.84,
+    "y2": 510.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure11-1.png"
+}, {
+  "caption": "Figure 7: Temperature field predictions achieved by the neural network model T̃NN ∗ from given initial flame shape T0 to achieve target flame shape T̃∗ by controlling flow velocity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9993591308594,
+    "y1": 169.48855590820312,
+    "y2": 189.61700439453125
+  },
+  "figType": "Figure",
+  "imageText": ["2400", "T", "[k]", "2000", "1600", "1200", "800", "(g)", "t", "=", "64", "T̃", "(f)", "t", "=", "64", "Target", "Sha", "e", "T̃", "T̃NÑ", "(e)", "t", "=", "64", "NN", "Prediction", "T̃NÑ", "(b)", "t", "=", "40", "(c)", "t", "=", "50", "(d)", "t", "=", "64", "Initial", "Sha", "e", "T0", "(a)", "t", "=", "0"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.88,
+    "y1": 84.47999999999999,
+    "y2": 155.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure7-1.png"
+}, {
+  "caption": "Figure 15: Predictions made by hybrid NN-PDE model (T̃t) with an incomplete PDE solver at twice the time-step of 2∆tc, are compared with the grouth truth solutions coming from the complete PDE solver at time-step of ∆tc. We showcase the effectiveness of hybrid approach in relaxing temporal stiffness of the complete PDE solver on reactive flow cases of - from top to bottom - Planar-v0, uniform-Bunsen, nonUniform-Bunsen32 and nonUniform-Bunsen100 for different test cases.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0040283203125,
+    "y1": 666.8235473632812,
+    "y2": 716.6610107421875
+  },
+  "figType": "Figure",
+  "imageText": ["500", "250", "0", "2000", "1600", "1200", "800", "ε=0.93", "ε=1.34", "ε=3.06", "ε=3.90", "ε=4.91", "ε=5.82", "ε=6.37", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "t", "=", "50", "t", "=", "100", "t", "=", "150", "t", "=", "175", "t", "=", "200", "t", "=", "225", "t", "=", "250", "-P", "DE", "̃", "T", "t", "NN", "t̃=̃0", "t̃=̃100", "t̃=̃200", "t̃=̃300", "t̃=̃350", "t̃=̃400", "t̃=̃450", "t̃=̃500", "P", "c", "(T", "t)", "Ta", "rg", "et", "t̃=̃0", "500", "250", "0", "2000", "1600", "1200", "800", "ε=0.84", "ε=1.64", "ε=2.16", "ε=2.21", "ε=2.60", "ε=3.19", "ε=3.83", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "t", "=", "50", "t", "=", "100", "t", "=", "150", "t", "=", "175", "t", "=", "200", "t", "=", "225", "t", "=", "250", "-P", "DE", "̃", "T", "t", "NN", "t̃=̃0", "t̃=̃100", "t̃=̃200", "t̃=̃300", "t̃=̃350", "t̃=̃400", "t̃=̃450", "t̃=̃500", "P", "c", "(T", "t)", "Ta", "rg", "et", "t̃=̃0", "500", "250", "0", "2000", "1600", "1200", "800", "ε=0.58", "ε=0.90", "ε=0.83", "ε=0.98", "ε=1.17", "ε=1.23", "ε=1.21", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "t", "=", "25", "t", "=", "50", "t", "=", "75", "t", "=", "100", "t", "=", "113", "t", "=", "125", "t", "=", "150", "-P", "DE", "̃", "T", "t", "NN", "t̃=̃0", "t̃=̃50", "t̃=̃100", "t̃=̃150", "t̃=̃200", "t̃=̃226", "t̃=̃250", "t̃=̃300", "P", "c", "(T", "t)", "Ta", "rg", "et", "t̃=̃0", "500", "250", "0", "2000", "1600", "1200", "800", "ε=1.04", "ε=1.01", "ε=1.02", "ε=1.19", "ε=1.42", "ε=1.99", "ε=2.32", "Er", "ro", "r", "̃", "T", "t", "|", "t)", "−", "|P", "c(T", "ε=0.00", "t", "=", "25", "t", "=", "50", "t", "=", "75", "t", "=", "100", "t", "=", "113", "t", "=", "125", "t", "=", "150", "̃P", "DE", "̃", "T", "t", "NN", "t", "=", "0", "t", "=", "50", "t", "=", "100", "t", "=", "150", "t", "=", "200", "t", "=", "226", "t", "=", "250", "t", "=", "300", "t)", "Ta", "rg", "et", "t", "=", "0", "P", "c", "(T"],
+  "name": "15",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 140.16,
+    "x2": 472.32,
+    "y1": 96.96,
+    "y2": 648.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure15-1.png"
+}, {
+  "caption": "Figure 10: Absolute error between target field (Pc(Tt)) and the output predicted - from top to bottom top - by: FNO (T̃ fno",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.000244140625,
+    "y1": 246.00155639648438,
+    "y2": 265.12200927734375
+  },
+  "figType": "Figure",
+  "imageText": ["1100", "̃00", "300", "0", "ε=0.50", "ε=0.56", "ε=0.95", "ε=1.26", "(B)", "ε=4.06", "ε=11.25", "ε=6.5̃", "ε=6.51", "ε=0.14", "ε=4.82", "ε=22.̃5", "ε=26.̃6", "1100", "̃00", "300", "0", "ε=1.65", "ε=2.15", "ε=2.̃6", "(A)", "r", "Hy", "br", "id", "E", "rro", "Th", "yb", "t", "|", "t)", "−", "|P", "c(T", "ε=0.9̃", "ε=4.69", "ε=9.08", "ε=13.43", "PD", "D", "Er", "ro", "r", "Tp", "dd", "t", "|", "t)", "−", "|P", "c(T", "ε=3.05", "ε=6.19", "ε=14.31", "ε=22.48", "FN", "O", "Er", "ro", "r", "̃", "Tf", "no", "t", "|", "c(T", "t)", "−", "ε=4.84", "|P"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 131.51999999999998,
+    "x2": 481.44,
+    "y1": 85.92,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QP02DQ-FG-8-Figure10-1.png"
+}]

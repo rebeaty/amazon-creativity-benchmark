@@ -1,0 +1,201 @@
+[{
+  "caption": "Table 2: Methods on Deformable Object Manipulation with respect to different setups.",
+  "captionBoundary": {
+    "x1": 123.22200012207031,
+    "x2": 488.77996826171875,
+    "y1": 157.96255493164062,
+    "y2": 163.96502685546875
+  },
+  "figType": "Table",
+  "imageText": ["Differentiability", "✗", "✓", "✓", "✗", "✓", "✗", "✓", "✓", "Reward", "function", "✓", "✓", "✓", "—", "—", "✓", "✓", "✓", "#", "expert", "demos", "—", "—", "—", "10", "1", "—", "—", "—", "Methods", "PPO", "SHAC", "APG", "Transporter", "ILD", "CEM-MPC", "diff-MPC", "diff-CEM-MPC", "Paradigms", "Reinforcement", "Learning", "Imitation", "Learning", "Planning"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 146.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Table2-1.png"
+}, {
+  "caption": "Figure 3: Learning curves of three benchmarked RL algorithms: PPO, APG, and SHAC. The y-axis shows the episode reward, scaled from 0 to 1, with larger values being closer to the goal state. The x-axis is the number of training iterations. All methods are trained in the same number of batched environments. We refer the readers to Table 4 for the numerical results in the appendix.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 338.09649658203125,
+    "y2": 376.9759216308594
+  },
+  "figType": "Figure",
+  "imageText": ["PPO", "APG", "SHAC", "Whip-Rope", "0.0", "0.2", "0.4", "0.6", "0.8", "Re", "wa", "rd", "0", "2000", "Iteration", "Pour-Water", "0.05", "0.10", "0.15", "0.20", "0.25", "0.30", "Re", "wa", "rd", "0", "2000", "Iteration", "Pour-Soup", "0.10", "0.15", "0.20", "0.25", "0.30", "0.35", "0.40", "0.45", "Re", "wa", "rd", "0", "2000", "Iteration", "Shape-Rope", "0.55", "0.60", "0.65", "0.70", "0.75", "Re", "wa", "rd", "0", "2000", "Iteration", "Unfold-Cloth-3", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "Re", "wa", "rd", "0", "2000", "Iteration", "Unfold-Cloth-1", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Re", "wa", "rd", "0", "2000", "Iteration", "Fold-Cloth-3", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Re", "wa", "rd", "0", "2000", "Iteration", "Fold-T-Shirt", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Re", "wa", "rd", "0", "2000", "Iteration"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 103.2,
+    "x2": 501.59999999999997,
+    "y1": 181.44,
+    "y2": 321.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Computation graphs for the differentiable algorithms. We use SHAC, ILD, and Diff CEM-MPC to represent the differentiable algorithms for planning, RL, and IL respectively. The black/green arrows correspond to the forward/backward propagation respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 314.01953125,
+    "y2": 341.94000244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "SHAC.", "(b)", "ILD.", "(c)", "Diff", "CEM-MPC."],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 226.56,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Figure4-1.png"
+}, {
+  "caption": "Table 3: Task performance for the planning and imitation learning methods. We report the mean and standard error for the policy/control sequences evaluated under 20 seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.995849609375,
+    "y1": 196.19052124023438,
+    "y2": 212.156005859375
+  },
+  "figType": "Table",
+  "imageText": ["Low-level", "Whip-Rope", "—", "0.70±0.06", "1.00±", "0.00", "0.34±0.01", "0.37±0.00", "0.33±0.01", "Pour-Water", "—", "0.32±0.03", "0.91±", "0.06", "0.58±0.01", "0.30±0.00", "0.58±0.01", "Pour-Soup", "—", "0.42±0.12", "0.85±", "0.00", "0.56±0.01", "0.44±0.00", "0.55±0.02", "Push-Rope", "0.70±0.00", "0.76±0.02", "0.93±0.00", "0.71±0.01", "0.70±0.01", "0.71±0.01", "Fold-Cloth-1", "0.19±0.04", "0.76±0.04", "0.91±0.00", "0.74±0.07", "0.29±0.07", "0.80±0.04", "Fold-Cloth-3", "0.40±0.05", "0.82±0.05", "0.89±0.00", "0.62±0.08", "0.14±0.02", "0.66±0.07", "Fold-T-shirt", "0.46±0.02", "0.59±0.11", "0.85±0.00", "0.58±0.04", "0.29±0.06", "0.66±0.01", "Unfold-Cloth-1", "0.48±0.01", "0.64±0.03", "0.87±0.00", "0.57±0.04", "0.30±0.05", "0.67±0.02", "Unfold-Cloth-3", "0.30±0.00", "0.52±0.02", "0.87±0.00", "0.57±0.01", "0.26±0.04", "0.58±0.01", "High-level", "Task", "Type", "Task", "Transporter", "ILD", "Expert", "CEM-MPC", "Diff-MPC", "Diff-CEM-MPC", "Imitation", "Learning", "Planning"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Table3-1.png"
+}, {
+  "caption": "Table 4: Reinforcement Learning Methods Task Results. We report the mean and standard error over 20 random seeds for each entry.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9964599609375,
+    "y1": 184.31454467773438,
+    "y2": 200.280029296875
+  },
+  "figType": "Table",
+  "imageText": ["Low-level", "Wipe", "Rope", "0.25±0.10", "0.83±0.01", "0.66±0.03", "Pour", "Water", "0.27±0.02", "0.27±0.02", "0.28±0.00", "Pour", "Soup", "0.27±0.08", "0.27±0.00", "0.32±0.13", "Rope", "Push", "0.75±0.02", "0.72±0.02", "0.75±0.01", "Fold", "Cloth", "1", "0.40±0.13", "0.36±0.06", "0.34±0.07", "Fold", "Cloth", "3", "0.21±0.11", "0.19±0.09", "0.22±0.22", "Fold", "T-shirt", "0.61±0.08", "0.40±0.05", "0.44±0.09", "Unfold", "Cloth", "1", "0.72±0.01", "0.42±0.02", "0.50±0.03", "Unfold", "Cloth", "3", "0.56±0.00", "0.39±0.02", "0.48±0.03", "High-level", "Task", "Type", "Task", "PPO", "APG", "SHAC"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Table4-1.png"
+}, {
+  "caption": "Figure 1: An example of a bowl of soup with tofu and vegetables. All materials including the soup are simulated by DaX using particles. Moreover, the entire simulation is fully differentiable and highly parallelizable.",
+  "captionBoundary": {
+    "x1": 385.198974609375,
+    "x2": 504.0037841796875,
+    "y1": 616.2705688476562,
+    "y2": 682.0490112304688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 402.71999999999997,
+    "x2": 487.2,
+    "y1": 544.8,
+    "y2": 615.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Figure1-1.png"
+}, {
+  "caption": "Table 1: Comparison among the simulators for Deformable Object Manipulation",
+  "captionBoundary": {
+    "x1": 145.19500732421875,
+    "x2": 466.8075256347656,
+    "y1": 193.94149780273438,
+    "y2": 199.9439697265625
+  },
+  "figType": "Table",
+  "imageText": ["DaXBench", "✓", "✓", "✓", "✓", "✓", "Multiple", "✓", "SoftGym", "✓", "✓", "✗", "✗", "✗", "Single", "✗", "DiffSim", "✗", "✓", "✗", "✗", "✓", "Single", "✗", "DiSECt", "✗", "✗", "✓", "✗", "✓", "Single", "✗", "Training", "PlasticineLab", "✗", "✗", "✓", "✗", "✓", "Single", "✗", "Liquid", "Fabric", "Elasto-", "plastic", "Mixture", "#", "of", "simulations", "per", "process", "Multi-Device", "Parallelization", "Differen-", "tiability", "Engine", "Application"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Table1-1.png"
+}, {
+  "caption": "Figure 6: We demonstrate how to use the active region to reduce the computation complexity for the simulation. Taking rope for example, the original environment, denoted as the black background, is of size 128× 128× 128, while the active region, where the region that will be active changed due to the current deformation highlight in red, is of size 32× 6× 32, as illustrated in (a). To avoid update the all particles in the environment, in ( b), we shift the active region to the top corner, the origin of the environment and update the dynamic and observation. Finally, in ( c), we shift the updated active region back to align its original coordinates.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 197.37655639648438,
+    "y2": 269.1319580078125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Shift", "back", "the", "up-", "date", "active", "region.", "(b)", "Update", "the", "defor-", "mation.", "(a)", "Detect", "the", "active", "region."],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 480.47999999999996,
+    "y1": 80.64,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Figure6-1.png"
+}, {
+  "caption": "Figure 2: We illustrate different deformable object manipulation tasks in this work. A template is provided to readily expand this set to many other similar tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 165.85855102539062,
+    "y2": 182.82000732421875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Pour", "Soup.", "(b)", "Push", "Rope.", "(c)", "Whip", "Rope.", "(d)", "Fold", "T-shirt.", "(e)", "Unfold", "Cloth."],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 80.64,
+    "y2": 153.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Figure2-1.png"
+}, {
+  "caption": "Figure 5: We deploy CEM-MPC in a Push-Rope task to straighten the rope in 6 steps on a real robot. (a) The system structure. CEM-MPC uses our DaX simulator as the predictive model. Given current state estimated from a point cloud image, CEM-MPC plans the best action to be executed by the robot. (b) The states after each of the 6 pushes. We compare the dynamics in reality and in simulation. Top: state trajectory in a real robot experiment. Bottom: the next state predicted by DaX given the estimated current state and the corresponding planned action.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 212.09756469726562,
+    "y2": 272.89398193359375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1NAzMofMnWl-Figure5-1.png"
+}]

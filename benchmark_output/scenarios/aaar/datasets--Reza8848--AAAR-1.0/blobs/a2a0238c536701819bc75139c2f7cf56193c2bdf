@@ -1,0 +1,401 @@
+[{
+  "caption": "Figure 2: Visualization of the solutions for the conic section problem. Red, green, and blue indicate the solutions by PD, GOL, and POL respectively. See Figure D.3 for more examples.",
+  "captionBoundary": {
+    "x1": 286.1990051269531,
+    "x2": 504.0015563964844,
+    "y1": 430.56854248046875,
+    "y2": 469.447021484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 295.68,
+    "x2": 495.35999999999996,
+    "y1": 341.76,
+    "y2": 416.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-Figure2-1.png"
+}, {
+  "caption": "Figure D.12: Visualization of PPA with learned proximal operator on selected models from the test dataset of Kim et al. (2020). Iterations 0, 1, 2, 5, 10, 15, 20 are shown, where the 0th iteration contains the initial samples from unif(X ). Pink indicates lower objective value in (9), while light blue indicates higher.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0045471191406,
+    "y1": 634.6395263671875,
+    "y2": 673.5180053710938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "D.12",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 135.84,
+    "y2": 620.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.12-1.png"
+}, {
+  "caption": "Figure D.13: Randomly selected object detection results by POL on COCO17 validation split. Each test image is 400 × 400 patch cropped from the original image with a random scaling by a number between 0.5 and 1. In each image we display all 1024 bounding boxes without clustering, most of which are perfectly overlapping. For some images there is a bounding box for the whole image (check if the image has an orange border). There is no class label associated with each box.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 624.5475463867188,
+    "y2": 674.385986328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "D.13",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 134.88,
+    "y2": 610.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.13-1.png"
+}, {
+  "caption": "Figure D.8: Convergence (left figure) and histograms (right figure) of the objective for the p = 1/2 non-convex sparse recovery problem with α = 0.627. For the convergence figure on the left, the horizontal axis shows the number of iterations, and the vertical axis shows the value of fα(x), averaged over all current solutions (fill-in region’s width indicates standard deviation). PGD denotes the proximal gradient descent method (Tibshirani et al., 2010) with the closed-form thresholding formula by Cao et al. (2013).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0031433105469,
+    "y1": 187.87551879882812,
+    "y2": 248.67291259765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "D.8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 466.08,
+    "y1": 80.64,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.8-1.png"
+}, {
+  "caption": "Figure D.10: The plot of δ vs. WPδ t for symmetry detection on the test dataset of Kim et al. (2020) (t = 10−4, 10−3, 10−2, 10−1). See the caption of Figure D.4 for the meaning of the various notations. We do not show WDt as the vertical bars here because GOL’s WDt is much higher than POL’s and is out of the range for the horizontal axis. We sample 1024 witnesses to compute WPδ t , averaged over 10 trials of witness sampling (the fill-in region’s width indicates the standard deviation).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0010070800781,
+    "y1": 156.92453002929688,
+    "y2": 218.950927734375
+  },
+  "figType": "Figure",
+  "imageText": ["GOL(ρ", "=", "0.95)", "POL(ρ", "=", "1.00)", "1)", "=", "0.", "W", "P", "δ", "t(", "t", "0.75", "0.50", "0.25", "0.00", "0.000", "0.025", "0.050", "0.075", "0.100", "δ(ρgt", "=", "1.00)", "GOL(ρ", "=", "0.64)", "POL(ρ", "=", "0.90)", "01", ")", "=", "0.", "W", "P", "δ", "t(", "t", "0.75", "0.50", "0.25", "0.00", "0.000", "0.025", "0.050", "0.075", "0.100", "δ(ρgt", "=", "0.91)", "GOL(ρ", "=", "0.40)", "POL(ρ", "=", "0.75)", "00", "1)", "=", "0.", "W", "P", "δ", "t(", "t", "0.5", "0.0", "0.000", "0.025", "0.050", "0.075", "0.100", "δ(ρgt", "=", "0.76)", "POL(ρ", "=", "0.61)", "00", "01", ")", "GOL(ρ", "=", "0.21)", "=", "0.", "W", "P", "δ", "t(", "t", "0.75", "0.50", "0.25", "0.00", "0.000", "0.025", "0.050", "0.075", "0.100", "δ(ρgt", "=", "0.64)"],
+  "name": "D.10",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 140.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.10-1.png"
+}, {
+  "caption": "Figure D.1: Convergence to the true proximal operator of f(x) = ∥x∥1.",
+  "captionBoundary": {
+    "x1": 162.76300048828125,
+    "x2": 449.2366638183594,
+    "y1": 219.24252319335938,
+    "y2": 228.2340087890625
+  },
+  "figType": "Figure",
+  "imageText": ["d", "=", "32", "d", "=", "16", "d", "=", "8", "d", "=", "4", "d", "=", "2", ")‖", "2", "2/", "d", "Φ", "∗", "(", "x", ")", "−", "‖Φ", "(x", "0.020", "0.015", "0.010", "0.005", "0.000", "0", "2000", "4000", "6000", "8000", "10000", "training", "iteration"],
+  "name": "D.1",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 188.64,
+    "x2": 424.32,
+    "y1": 83.52,
+    "y2": 202.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.1-1.png"
+}, {
+  "caption": "Figure D.2: Left: the result of POL after 10 iterations with λ = 0, 1, 10, 400 for the 2D cosine function which has weakly convex constant ξ = 40π2 < 400. Right: particle swarms recovered by Cao et al. (2019) for after 10 iterations from 256 independent runs. The population size of the swarm is 4 (default value in their source code).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 416.134521484375,
+    "y2": 455.01397705078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "D.2",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 466.08,
+    "y1": 244.79999999999998,
+    "y2": 402.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.2-1.png"
+}, {
+  "caption": "Figure 4: Symmetry detection results using our method. Each reflection is represented as a colored line segment representing the normal of the reflection plane with one endpoint on the plane. Pink indicates better objective values, while blue indicates worse. Our method is capable of detecting complicated discrete symmetries as well as continuous families of reflectional symmetries for cylindrical objects.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 535.4075317382812,
+    "y2": 585.2459716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 444.96,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-Figure4-1.png"
+}, {
+  "caption": "Figure 3: 18 different max cuts (max cut value 10) of a graph generated by our method. Red and blue vertices indicate the two vertex set separated by the cut. Vertex 0 is set to blue to remove the duplicates obtained by swapping the colors. See Figure D.11 for more results.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 167.57052612304688,
+    "y2": 195.490966796875
+  },
+  "figType": "Figure",
+  "imageText": ["7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0", "7", "6", "5", "4", "3", "2", "1", "0"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 463.2,
+    "y1": 82.56,
+    "y2": 152.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-Figure3-1.png"
+}, {
+  "caption": "Figure D.5: Convergence speed comparison at test time for the conic section problem. For POL and GOL, the x-axis is the number of iterations used. For PD, the x-axis is the number of gradient descent steps, multiplied by 100. The horizontal axis shows the number of iterations, and the vertical axis shows the value of fτ (x), averaged over all current solutions (fill-in region’s width indicates standard deviation). The three plots shown correspond to the problem instances in the first three columns in Figure D.3. Once the operator has been trained, POL converges in less than 5 steps, while GOL converges slower (GOL is already trained with the largest step size without causing training to explode).",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0033874511719,
+    "y1": 572.7285766601562,
+    "y2": 655.4429931640625
+  },
+  "figType": "Figure",
+  "imageText": ["GOL", "POL", "150", "PD", "100", "50", "0", "0", "10", "20", "30", "40", "50", "−50", "GOL", "POL", "300", "PD", "200", "100", "0", "0", "10", "20", "30", "40", "50", "−100", "GOL", "POL", "150", "PD", "100", "50", "0", "0", "10", "20", "30", "40", "50"],
+  "name": "D.5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 129.12,
+    "x2": 483.35999999999996,
+    "y1": 493.91999999999996,
+    "y2": 555.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.5-1.png"
+}, {
+  "caption": "Figure D.3: Visualization of the solutions for the conic section problem. Red indicates the solutions by PD which we treat as ground truth. Green and blue indicate the solutions by GOL (Section 4) and POL (proposed method) respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 263.6545104980469,
+    "y2": 291.573974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "D.3",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 178.56,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.3-1.png"
+}, {
+  "caption": "Figure D.4: The plot of δ vs. WPδ t for the conic section problem (t = 0.05, 0.1, 0.2). The vertical dashed line indicates WDt. 50 equally spaced δ values are used to draw the plot. Here ρgt indicates the percentage of PD solutions that have objectives ≤ t, and ρ similarly indicates the percentage of solutions for each method with objectives below t. We sample 1024 witnesses to compute WPδ t , averaged over 256 test problem instances. The plot is averaged over 10 trials of witness sampling (the fill-in region’s width indicates the standard deviation). Here the standard deviations are all less than 10−3 so the fill-in regions are too small to be visible.",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0032043457031,
+    "y1": 398.6455383300781,
+    "y2": 471.63092041015625
+  },
+  "figType": "Figure",
+  "imageText": ["GOL(ρ", "=", "0.86)", "POL(ρ", "=", "0.95)", "2)", "=", "0.", "W", "P", "δ", "t", "(t", "0.9", "0.8", "0.7", "0.6", "0.1", "0.2", "0.3", "0.4", "δ(ρgt", "=", "0.92)", "GOL(ρ", "=", "0.82)", "POL(ρ", "=", "0.93)", "1)", "=", "0.", "W", "P", "δ", "t", "(t", "0.9", "0.8", "0.7", "0.6", "0.1", "0.2", "0.3", "0.4", "δ(ρgt", "=", "0.91)", "GOL(ρ", "=", "0.76)", "POL(ρ", "=", "0.91)", "05", ")", "=", "0.", "W", "P", "δ", "t", "(t", "1.0", "0.9", "0.8", "0.7", "0.6", "0.1", "0.2", "0.3", "0.4", "δ(ρgt", "=", "0.90)"],
+  "name": "D.4",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 129.12,
+    "x2": 483.35999999999996,
+    "y1": 313.92,
+    "y2": 382.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.4-1.png"
+}, {
+  "caption": "Table D.1: Choices of λ for all applications considered. X is the search space of solutions, and d is the dimension of the Euclidean space where we embed X (so it might be greater than the intrinsic dimension of X ).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0008239746094,
+    "y1": 92.74051666259766,
+    "y2": 120.66094970703125
+  },
+  "figType": "Table",
+  "imageText": ["symmetry", "detection", "(5.4)", "S2", "×R≥0", "4", "1.0", "object", "detection", "(5.5)", "[0,", "1]4", "4", "1.0", "sparse", "recovery", "(5.2)", "[−2,", "2]8", "8", "10.0", "max-cut", "(5.3)", "(S1)8", "16", "10.0", "Application", "X", "d", "λ", "conic", "section", "(5.1)", "[−5,", "5]2", "2", "0.1"],
+  "name": "D.1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 194.88,
+    "x2": 415.2,
+    "y1": 129.6,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-TableD.1-1.png"
+}, {
+  "caption": "Figure D.11: Visualization of the cuts obtained by applying Goemans-Williamson-type procedure to randomly selected solutions of POL. The graphs are chosen among the ones that have at least 8 solutions uniformly at random without human intervention. Each row contains the multiple solutions for the same graph with binary weights. Two colors indicate the two vertex sets separated by the cut. Dashed lines indicate edges in the cut. For each graph we annotate the number of cuts on top. The 0th vertex is always in blue to remove the obvious duplicates obtained by swapping the two colors on each vertex.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 611.37353515625,
+    "y2": 683.1300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "10", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "10", "7", "6", "5", "4", "1", "2", "3", "0", "#cuts", "=", "7", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "7", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "7", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "7", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "7", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "11", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "12", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "12", "7", "6", "5", "4", "3", "2", "01", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "11", "7", "6", "5", "4", "3", "1", "2", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "5", "4", "3", "2", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "9", "6", "7", "5", "4", "2", "3", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "8", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "4", "5", "3", "2", "1", "0", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "9", "7", "6", "5", "4", "3", "2", "0", "1", "#cuts", "=", "10", "7", "6", "5", "4", "3", "2", "0", "1"],
+  "name": "D.11",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.11-1.png"
+}, {
+  "caption": "Figure 5: First 4 iterations of PPA using the learned proximal operator on 20 randomly initialized boxes (leftmost column). Only a few iterations are needed for the boxes to form distinctive clusters.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 511.2425231933594,
+    "y2": 528.2039794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 424.32,
+    "y1": 406.56,
+    "y2": 504.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-Figure5-1.png"
+}, {
+  "caption": "Table 1: Object detection results. WD∞ (resp. WP0.1 ∞ ) is the witnessed divergence (resp. precision) in (5) with t = ∞ (i.e. keeping all solutions), averaged over 10 trials (standard deviation < 10−3). Precision and recall are computed with Hungarian matching as no confidence score is available for the usual greedy matching (see Appendix D.8). FRCNN(.S) (Ren et al., 2015) means keeping predictions with confidence ≥ S% for Faster R-CNN.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00347900390625,
+    "y1": 125.1144790649414,
+    "y2": 174.95196533203125
+  },
+  "figType": "Table",
+  "imageText": ["FN", "0.161", "0.481", "0.139", "0.577", "GOL", "0.251", "0.243", "0.508", "0.282", "POL", "(OURS)", "0.149", "0.590", "0.817", "0.442", "FRCNN(.80)", "0.140", "0.624", "0.778", "0.650", "FRCNN(.95)", "0.162", "0.589", "0.887", "0.515", "METHOD", "WD∞", "WP0.1", "∞", "PRECISION", "RECALL"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 417.12,
+    "y1": 182.88,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-Table1-1.png"
+}, {
+  "caption": "Figure D.6: Visualization of the solutions’ objective values for the conic section problem. Red indicates the solutions by PD which we treat as ground truth. Green and blue indicate the solutions by GOL and POL (proposed method) respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 391.5035400390625,
+    "y2": 419.42401123046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "D.6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 244.79999999999998,
+    "y2": 377.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.6-1.png"
+}, {
+  "caption": "Figure D.7: Histograms of the objectives for non-convex sparse recovery on 4 problem instances. We denote τ = (α, p) at the top, corresponding to a sparsity-inducing function of the form α∥x∥pp.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 523.2835693359375,
+    "y2": 543.2340087890625
+  },
+  "figType": "Figure",
+  "imageText": ["PD", "GOL", "POL", "ω", "=", "(0.249,", "0.465)", "of", "x", "b", "er", "nu", "m", "1000", "500", "0", "10", "20", "fω(x)", "PD", "GOL", "POL", "ω", "=", "(0.789,", "0.275)", "of", "x", "b", "er", "nu", "m", "4000", "2000", "0", "4", "5", "6", "fω(x)", "PD", "GOL", "POL", "ω", "=", "(0.262,", "0.205)", "of", "x", "b", "er", "nu", "m", "4000", "2000", "0", "6", "7", "8", "fω(x)", "PD", "GOL", "POL", "ω", "=", "(0.839,", "0.468)", "of", "x", "b", "er", "nu", "m", "2000", "1000", "0", "10", "20", "fω(x)"],
+  "name": "D.7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 444.47999999999996,
+    "y2": 506.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureD.7-1.png"
+}, {
+  "caption": "Figure 1: Interpretation of Dt. In this example, the witness W is drawn uniformly from the union of four squares. If At (resp. Bt) is the set of red (resp. blue) points, then P(Dt ≈ 0) = 3/4 and P(Dt ≈ 0.5) = 1/4, since Dt is only non-zero when W is in the rightmost square. This aligns well with the intuition that 3/4 of the red points match with the blue ones. In comparison, the Hausdorff distance between At and Bt is approximately 1, which is the same as the Hausdorff distance between the orange point and Bt, despite the fact most of red points are close to the blue ones.",
+  "captionBoundary": {
+    "x1": 290.162841796875,
+    "x2": 504.004150390625,
+    "y1": 375.18853759765625,
+    "y2": 490.7799072265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 476.15999999999997,
+    "y1": 312.0,
+    "y2": 366.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-Figure1-1.png"
+}, {
+  "caption": "Figure B.1: Network architecture for the operators used in POL and GOL. We use ReLU as the activation after all intermediate linear layers, except for predicting the scaling in the residual block, where we use HardTanh to ensure s ∈ [−2, 2]. For the shared 2-layer fully-connected network, the hidden layer sizes are 256, 128. For the 3-layer fully-connected network in each residual block, the hidden layer sizes are 128, 128, 128.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042419433594,
+    "y1": 374.1605224609375,
+    "y2": 423.99896240234375
+  },
+  "figType": "Figure",
+  "imageText": ["Operator", "Network", "Residual", "Block", "Fully-connected", "(not", "shared)", "Fully-connected", "(shared", "by", "residual", "blocks)", "Network", "Intermediate", "Output", "Input", "Residual", "Block", "Residual", "Block", "Residual", "Block", "Application", "Encoder", "HardTanh"],
+  "name": "B.1",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 338.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PzBGIu-llo7-FigureB.1-1.png"
+}]

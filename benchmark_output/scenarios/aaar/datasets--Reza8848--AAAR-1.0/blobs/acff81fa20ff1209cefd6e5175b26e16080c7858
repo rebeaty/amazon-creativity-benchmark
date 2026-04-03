@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: Agent’s Advantage And Specializations: From MI maximization optimization, both Generalists Agent I. and Agent K. show low deviations of advantage relative to the general population. This shows MI maximization optimizes the marginalized advantage of the population. In contrast, the Specialists Agent I. and Agent K. have demonstrated strong deviation from the population norm. With MI minimization being the optimization objective, Specialists learn to gain an additional competitive edge by specializing agents’ unique agent-attributes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 338.64154052734375,
+    "y2": 399.43896484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 123.83999999999999,
+    "y2": 324.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Social Graphs of Generalists and Specialists: In MI Maximization Social Graph, the uniformity of edge-connection strengths shows each agent approximately interacts with other agents s similar number of times. This result shows each agent receives approximately the same distribution of experiences. In contrast, the social graphs of the Specialists gradual shift away from the symmetry. This allows each agent to interact with more relevant agents, and acquire more individualized information distribution. The differences in social graphs directly influence the stability of population learning and agents’ experiences distribution. The more disjoint the experience distributions are, the more polarized the population becomes. Hence the necessity of conditional MI minimization and PPO’s KL constraint.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 206.23153686523438,
+    "y2": 299.9049072265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Timing and Strategy: Comparing the behavioral difference between the Generalists and the Specialists, there is a clear difference in how Generalists and Specialists respond. For the Generalists, the mean-deviation shows similar change despite playing four uniquely different agents. Except for the cooldown constraint, the actions of the four Generalists are largely the same response. This shows the drawback of MI maximization optimization. On the contrary, the Specialists are incentivized to formulate creative plays based on their individual agent-attributes. M&M creates a wide variety of strategy timings and competitive behaviors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00372314453125,
+    "y1": 655.9495849609375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 540.96,
+    "y2": 642.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure3-1.png"
+}, {
+  "caption": "Figure 8: The performance metric of Agent H. and T. Specialization: Agent H. shows an initial performance of 72.7 % performance relative to the other 15 Generalists population. With M&M’s specialization, Agent H. shows a substantial increase in competitive performance of 87.2 %. On the other hand, Agent T. shows an initial performance of 87 % performance relative to the other 15 Generalists population. With M&M’s specialization, Agent T.’s performance does not deviate from the initialization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 562.4735717773438,
+    "y2": 623.27001953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 197.76,
+    "y2": 548.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure8-1.png"
+}, {
+  "caption": "Figure 7: The heatmap shows the evaluation matches across the different Generalist iterations ΠNθt . The ablation evaluation shows joint policy optimization roughly diminished as the training approaches the 11th 13th iteration. In particular, the 13th iteration only has a 57.6 % winrate against the 12th iteration of Generalist, which is close to the Nash equilibrium of 50 %.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00323486328125,
+    "y1": 688.8255615234375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 506.88,
+    "y2": 674.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Performance Gain from Specialization: With joint policy optimization, the top performing NeuPL agents converge to win rates of 58.2 9̃2.5% in deep blue. After M&M specialization, with the exception of Agent T., agents show substantial performance gain. Notably, among the improvements the highest performance gain from weaker agents, Agent A. and Agent K.. As a result, M&M produces a more balanced agent population with win rates of (77.6 9̃7.3%).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 466.41253662109375,
+    "y2": 516.2509765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 288.96,
+    "y2": 452.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure4-1.png"
+}, {
+  "caption": "Figure 6: DRL architecture for mobile devices: We build our neural network deployable to mobile devices. We first pass inputs to an embedding layer to reduce the dimension and also use Conv1D as opposed to the Dense layer to reduce compute load. Our input to output is separated into four modules.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 344.5185241699219,
+    "y2": 383.39794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 132.0,
+    "y2": 330.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure6-1.png"
+}, {
+  "caption": "Figure 5: Training Efficiency and Competitiveness: With 170k additional learning steps, the 11th round of Generalist can efficiently increase the average performance of the 16 agents by 16.1% (50% 6̃6.1%). With M&M specialization, Agent K. and Agent M. require an additional 130k learning steps to reach with the same relative win rate against the general population (as the 9th round)",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 253.96353149414062,
+    "y2": 292.842041015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 240.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Cx1xYn6vVm2-Figure5-1.png"
+}]

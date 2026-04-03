@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 1: Latent variable (LV) distillation significantly boosts PC performance on challenging image (ImageNet32) and language (WikiText-2) modeling datasets. Lower is better.",
+  "captionBoundary": {
+    "x1": 266.39801025390625,
+    "x2": 504.0027160644531,
+    "y1": 561.5845947265625,
+    "y2": 589.5050048828125
+  },
+  "figType": "Figure",
+  "imageText": ["WikiText-2", "w/", "LVD", "w/o", "LVD", "ty", "le", "xi", "Pe", "rp", "280", "260", "240", "220", "200", "180", "#", "parameters", "108", "109", "ImageNet32", "w/", "LVD", "w/o", "LVD", "pd", ")", "on", "(b", "en", "si", "-d", "im", "-p", "er", "B", "its", "5.4", "5.2", "5", "4.8", "4.6", "4.4", "4.2", "#", "parameters", "106", "107", "108", "109"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 270.24,
+    "x2": 501.12,
+    "y1": 445.91999999999996,
+    "y2": 558.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_067CGykiZTS-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Distribution decomposition of an example PC with materialized LVs Z1, Z2.",
+  "captionBoundary": {
+    "x1": 321.8370056152344,
+    "x2": 503.9984436035156,
+    "y1": 592.3955688476562,
+    "y2": 610.8510131835938
+  },
+  "figType": "Figure",
+  "imageText": ["···", "···", "Z2", "=1", "Z2", "=M2", ".", ".", ".", "Z1", "=1", "Z1", "=M1", ".", ".", "."],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 322.56,
+    "x2": 502.08,
+    "y1": 458.88,
+    "y2": 588.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_067CGykiZTS-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Extracting LVs for image data. The MAE model (a) is used to extract categorical LVs {Zi}ki=1 that correspond to image patches {Xi}ki=1, respectively. (b) provides example patches from the training set that belong to four randomly chosen clusters of the LV Z1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9972839355469,
+    "y1": 148.19650268554688,
+    "y2": 177.61102294921875
+  },
+  "figType": "Figure",
+  "imageText": ["Cluster", "#2", "Cluster", "#3", "Cluster", "#4", "(b)", "Example", "of", "image", "patches", "belonging", "to", "the", "same", "cluster.", "Cluster", "#1", "(a)", "Illustration", "of", "the", "Masked", "Autoencoder", "model.", "Decoder", "Latent", "features", "Encoder", "…"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 504.0,
+    "y1": 85.92,
+    "y2": 140.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_067CGykiZTS-Figure6-1.png"
+}, {
+  "caption": "Table 1: Density estimation performance of Tractable Probabilistic Models (TPMs) and Deep Generative Models (DGMs) on three natural image datasets. Reported numbers are test set bit-perdimension (bpd). Bold indicates best bpd (smaller is better) among all four TPMs.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.64990234375,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["ImageNet32", "4.38", "4.82", "5.63", "6.90", "4.09", "4.28", "3.96", "ImageNet64", "4.12", "4.67", "5.69", "6.82", "3.81", "3.98", "-", "CIFAR", "4.37", "4.61", "5.81", "6.95", "3.35", "3.49", "3.08", "LVD", "(ours)", "HCLT", "EiNet", "RAT-SPN", "Glow", "RealNVP", "BIVA", "Dataset", "TPMs", "DGMs"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 486.24,
+    "y1": 124.32,
+    "y2": 189.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_067CGykiZTS-Table1-1.png"
+}, {
+  "caption": "Figure 7: Generative modeling performance of four TPMs on three natural image datasets. For each method, we report the test set bits-per-dimension (y-axis) in terms of the number of parameters (x-axis) for different numbers of latent states.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00408935546875,
+    "y1": 308.63153076171875,
+    "y2": 336.552001953125
+  },
+  "figType": "Figure",
+  "imageText": ["LVD", "(ours)", "HCLT", "RAT-SPN", "EiNet", "pd", ")", "ImageNet32", "on", "(b", "en", "si", "-d", "im", "-p", "er", "B", "its", "7", "6.5", "6", "5.5", "5", "4.5", "4", "#", "parameters", "106", "107", "108", "109", "LVD", "(ours)", "HCLT", "RAT-SPN", "EiNet", "pd", ")", "ImageNet64", "on", "(b", "en", "si", "-d", "im", "-p", "er", "B", "its", "7.5", "7", "6.5", "6", "5.5", "5", "4.5", "4", "#", "parameters", "106", "107", "108", "109", "1010", "LVD", "(ours)", "HCLT", "RAT-SPN", "EiNet", "pd", ")", "CIFAR", "on", "(b", "en", "si", "-d", "im", "-p", "er", "B", "its", "7", "6.5", "6", "5.5", "5", "4.5", "4", "#", "parameters", "106", "107", "108", "109"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 503.03999999999996,
+    "y1": 204.0,
+    "y2": 301.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_067CGykiZTS-Figure7-1.png"
+}, {
+  "caption": "Figure 3: A mixture-of-Gaussian distribution (a) and two PCs (b-c) that encode the distribution.",
+  "captionBoundary": {
+    "x1": 115.2969970703125,
+    "x2": 496.70501708984375,
+    "y1": 161.60452270507812,
+    "y2": 167.60699462890625
+  },
+  "figType": "Figure",
+  "imageText": ["0.50.35", "0.15", "X", "Z", "=", "1", "X", "Z", "=", "2", "X", "Z", "=", "3", "p1", "p2", "p3", "0.35", "0.5", "0.15", "p1", "p2", "p3", "(a)", "Amixture", "of", "three", "Gaussians.", "(b)", "A", "PC", "that", "encodes", "the", "distribution.", "(c)", "An", "equivalent", "deterministic", "PC.", "X", "X", "X"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 493.44,
+    "y1": 81.6,
+    "y2": 151.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_067CGykiZTS-Figure3-1.png"
+}]

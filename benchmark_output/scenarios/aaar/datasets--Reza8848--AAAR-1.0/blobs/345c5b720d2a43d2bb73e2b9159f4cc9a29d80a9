@@ -1,0 +1,361 @@
+[{
+  "caption": "Figure 2: Predicting the change to the OT distance for increasing/reducing the probability mass of a point. The OT distance is calculated between two subsets of CIFAR-10. We examine the change to the OT distance predicted by the calibrated gradients against the actual change. The results of two datapoints are visualized for demonstration (I.(a)/(b) and II.(a)/(b) are analyzed on datapoint #1 and #2, respectively). The probability mass of the datapoint is perturbed from −100% (removing the datapoint) to 100% (duplicating the datapoint). I.(a) and II.(a): Predicted change on the OT distance against the actual change. The predicted change demonstrated high consistency to the actual change despite minor deviation for large perturbation. I.(b) and II.(b): Relative error for the prediction, defined as (predicted_change - actual_change)/actual_change×100%. The color bar represents the theoretical range of perturbation where the change in the OT distance can be accurately predicted. The prediction holds approximately well beyond the range.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.745361328125,
+    "y1": 180.36154174804688,
+    "y2": 295.9530029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 487.2,
+    "y1": 80.64,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure2-1.png"
+}, {
+  "caption": "Table 1: Comparison of runtime between various methods needed to valuate ImageNet-100.",
+  "captionBoundary": {
+    "x1": 365.0889892578125,
+    "x2": 505.65191650390625,
+    "y1": 602.51953125,
+    "y2": 630.4400024414062
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Time", "LAVA", "1", "hr", "54", "min", "KNN-SV", "4", "hr", "21", "min", "TracIn-Clean", "7", "hr", "50", "min", "TracIn-Self", "7", "hr", "51", "min"],
+  "name": "1",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 364.8,
+    "x2": 489.12,
+    "y1": 528.0,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Table1-1.png"
+}, {
+  "caption": "Table 2: Summary of datasets and models and their licenses used for experimental evaluation.",
+  "captionBoundary": {
+    "x1": 117.55899810791016,
+    "x2": 491.355712890625,
+    "y1": 92.5765151977539,
+    "y2": 98.5789794921875
+  },
+  "figType": "Table",
+  "imageText": ["Data", "Duplication", "Not", "Applicable", "Not", "Applicable", "Not", "Applicable", "Not", "Applicable", "5K/5K", "Duplication", "of", "Training", "Set", "Detection", "Rate", "of", "LAVA", "Backdoor:", "Blend,", "Trojan", "SQ-WM", "CIFAR10", "MIT", "Not", "Applicable", "Not", "Applicable", "50K/10K", "Visualization", "of", "Attacks", "50K/10K", "50K/5K", "50K/2K", "50K/0.5K", "50K/0.2K", "Different", "Validation", "Sizes", "Weights", "1,5,10,100", "Different", "Label", "Weights", "1,10,50,100", "Noisy", "Label", "CIFAR10", "MIT", "PreAct-", "ResNet18", "MIT", "50K/10K", "Different", "Feature", "VGG16", "CC", "BY", "4.0", "ResNet18", "MIT", "Noisy", "Label", "CIFAR10", "MIT", "PreAct-", "ResNet18", "MIT", "50K/10K", "25%", "Noisy", "Label", "Irrelevant", "Data", "CIFAR100", "MIT", "PreAct-", "ResNet34", "MIT", "50K/10K", "1", "Target", "Class", "Spread", "Into", "99", "Other", "Classes", "Noisy", "Label", "ImageNet", "-100", "Not", "Applicable", "ResNet50", "MIT", "100K/10K", "25%", "Mislabeled", "10", "Classes", "PreAct-", "ResNet18", "MIT", "60K/10K", "25%", "Noisy", "Data", "Noisy", "Feature", "MNIST", "CCA-", "SA", "3.0", "Backdoor:", "Blend", "GTSRB", "CC0", "1.0", "PreAct-", "ResNet18", "MIT", "35888/", "12360", "5%", "Poisoned", "Runtime", "VS", "Perf", "CIFAR10", "MIT", "ResNet18", "MIT", "2K1K", "10%", "Backdoors", "Irrelevant", "Data", "CIFAR10", "MIT", "PreAct-", "ResNet18", "MIT", "50K/10K", "1", "Target", "Class", "Spread", "Into", "9", "Other", "Classes", "Noisy", "Labels", "CIFAR10", "MIT", "ResNet18", "MIT", "50K/10K", "25%", "Noisy", "Data", "Noisy", "Feature", "CIFAR10", "MIT", "ResNet18", "MIT", "50K/10K", "25%", "Noisy", "Data", "Poisoning:", "Collision", "CIFAR10", "MIT", "ResNet18", "MIT", "50K/10K", "0.1%", "Poisoned", "Backdoor:", "Trojan", "Sq", "CIFAR10", "MIT", "ResNet18", "MIT", "50K/10K", "5%", "Poisoned", "CIFAR100", "MIT", "ResNet50", "MIT", "50K/10K", "0%,", "2%5%,", "10%,", "15%", "Mislabeled", "Wasserstein", "vs", "STL10", "Not", "Applicable", "GoogLeNet", "MIT", "5K/8K", "0%,", "2%5%,", "10%,", "15%", "Mislabeled", "Model", "Performance", "CIFAR10", "MIT", "ResNet18", "MIT", "50K/10K", "0%,", "2%5%,", "10%,", "15%", "Mislabeled", "Experiment", "Type", "Dataset", "License", "Model", "License", "Train/", "Valid", "Size", "Detail"],
+  "name": "2",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 110.88,
+    "y2": 493.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Table2-1.png"
+}, {
+  "caption": "Figure 3: Performance comparison between LAVA and baselines on various use cases. For I.(b), we depict the Attack Accuracy, where lower value indicates more effective detection. For II.(b), we depict the Attack Confidence, as lower confidence indicates better poison removal. For III.(b) and IV.(b), we show the model test accuracy, where higher accuracy means effective data removal.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9996032714844,
+    "y1": 281.0335388183594,
+    "y2": 319.9119873046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 487.2,
+    "y1": 80.64,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure3-1.png"
+}, {
+  "caption": "Figure 11: Detection rate by various methods on mislabeled CIFAR-10 using validation size of 500.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 505.6582946777344,
+    "y1": 670.1075439453125,
+    "y2": 708.9869995117188
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 384.96,
+    "x2": 504.0,
+    "y1": 526.56,
+    "y2": 657.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure11-1.png"
+}, {
+  "caption": "Figure 9: (a) Comparison between different feature weights on the performance of mislabeled data in CIFAR-10. (b) Comparison between different label weights on the performance of mislabeled data in CIFAR-10. (c) Comparison between different validation sizes on inspecting 50k samples from CIFAR-10 with 25% mislabeled data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 201.73654174804688,
+    "y2": 240.614990234375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 474.24,
+    "y1": 90.72,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Comparison between different feature embedder architectures on inspecting 50k samples from CIFAR-10 with 25% mislabeled data.",
+  "captionBoundary": {
+    "x1": 384.8399963378906,
+    "x2": 505.65771484375,
+    "y1": 466.1395263671875,
+    "y2": 515.9769897460938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 384.96,
+    "x2": 504.0,
+    "y1": 331.68,
+    "y2": 451.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Left: Heatmap of inter-class distance of CIFAR-10. Right: Examples of irrelevant data. The detection rates of first 500 inspected images are 94% and 46% for Deer-Truck, Cat-Dog, respectively.",
+  "captionBoundary": {
+    "x1": 266.0690002441406,
+    "x2": 505.7465515136719,
+    "y1": 470.2315368652344,
+    "y2": 509.1109924316406
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 278.88,
+    "x2": 489.12,
+    "y1": 378.71999999999997,
+    "y2": 466.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure4-1.png"
+}, {
+  "caption": "Figure 1: Normalized Wasserstein distance vs. model performance on different datasets and models.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 504.0041198730469,
+    "y1": 225.11251831054688,
+    "y2": 253.03302001953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 364.8,
+    "x2": 505.44,
+    "y1": 136.79999999999998,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure1-1.png"
+}, {
+  "caption": "Figure 15: Detection performance comparison between LAVA and the model trained on validation data of size 10, 000 on various use cases in CIFAR-10.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9966125488281,
+    "y1": 349.9735412597656,
+    "y2": 366.93499755859375
+  },
+  "figType": "Figure",
+  "imageText": ["Backdoor", "Detection", "(5%)", "Poison", "Detection", "(0.1%)", "Noisy", "Features", "(25%)", "Noisy", "Labels", "(25%)", "(a)", "(b)", "(c)", "(d)"],
+  "name": "15",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 234.72,
+    "y2": 336.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure15-1.png"
+}, {
+  "caption": "Figure 12: Comparison of various methods on rebalancing an unbalanced dataset on CIFAR-10 with the class Frog being unbalanced.",
+  "captionBoundary": {
+    "x1": 384.95001220703125,
+    "x2": 505.652587890625,
+    "y1": 504.5335388183594,
+    "y2": 554.3720092773438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 384.96,
+    "x2": 504.0,
+    "y1": 385.91999999999996,
+    "y2": 494.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure12-1.png"
+}, {
+  "caption": "Figure 14: Detection performance comparison between LAVA and the model trained on validation data of size 500 on various use cases in CIFAR-10.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9966125488281,
+    "y1": 207.79751586914062,
+    "y2": 224.75897216796875
+  },
+  "figType": "Figure",
+  "imageText": ["Backdoor", "Detection", "(5%)", "Poison", "Detection", "(0.1%)", "Noisy", "Features", "(25%)", "Noisy", "Labels", "(25%)", "(a)", "(b)", "(c)", "(d)"],
+  "name": "14",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 90.72,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure14-1.png"
+}, {
+  "caption": "Figure 13: Comparison of various methods on reducing a dataset size based on valuation of datapoints on CIFAR-10.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 505.6541748046875,
+    "y1": 690.8435668945312,
+    "y2": 729.7230224609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 384.96,
+    "x2": 504.0,
+    "y1": 566.88,
+    "y2": 680.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure13-1.png"
+}, {
+  "caption": "Figure 6: (a) Blend backdoor attack detection on GTSRB dataset. Comparison with baselines. (b) Noisy feature detection on the digit MNIST dataset. Comparison with baselines.",
+  "captionBoundary": {
+    "x1": 345.2439880371094,
+    "x2": 505.6512451171875,
+    "y1": 250.27755737304688,
+    "y2": 300.114990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 351.84,
+    "x2": 491.03999999999996,
+    "y1": 316.8,
+    "y2": 444.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure6-1.png"
+}, {
+  "caption": "Figure 5: Runtime v.s. Detection Error comparison between LAVA and baselines on inspecting 2000 samples from CIFAR-10 with 10% backdoor data.",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 505.6535339355469,
+    "y1": 326.1925354003906,
+    "y2": 365.0719909667969
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 317.76,
+    "x2": 497.28,
+    "y1": 238.56,
+    "y2": 324.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure5-1.png"
+}, {
+  "caption": "Figure 18: Detection rate of various backdoor attacks by LAVA.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 503.99859619140625,
+    "y1": 713.696533203125,
+    "y2": 730.6580200195312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 373.91999999999996,
+    "x2": 493.44,
+    "y1": 568.8,
+    "y2": 699.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure18-1.png"
+}, {
+  "caption": "Figure 16: Comparison of various methods on reducing a dataset size based on valuation of datapoints on CIFAR-10.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 505.6541748046875,
+    "y1": 344.87152099609375,
+    "y2": 383.75
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 384.96,
+    "x2": 504.0,
+    "y1": 225.6,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure16-1.png"
+}, {
+  "caption": "Figure 17: Near-linear time complexity of LAVA shown on CIFAR10.",
+  "captionBoundary": {
+    "x1": 364.6499938964844,
+    "x2": 505.65399169921875,
+    "y1": 535.8475341796875,
+    "y2": 563.7680053710938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 373.91999999999996,
+    "x2": 493.44,
+    "y1": 441.59999999999997,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JJuP86nBl4q-Figure17-1.png"
+}]

@@ -30,10 +30,10 @@ SUITE="${2:-creativity-benchmark}"
 MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
-RUN_ENTRY="dat_creative_writing,model=${MODEL}"
+RUN_ENTRY="dat_creative_writing:model=${MODEL}"
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "$RUN_ENTRY" --suite "$SUITE")
+CMD=(helm-run --plugins run_specs.dat_creative_writing_run_specs --run-entries "$RUN_ENTRY" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi

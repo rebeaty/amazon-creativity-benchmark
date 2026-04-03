@@ -1,0 +1,281 @@
+[{
+  "caption": "Table 2: Average return across 100 episodes (mean ± standard deviation for 4 random seeds). Experiments that do not ((Hier-)RecSAC) / do leverage prior experience, were ran for 106 vs 1.5 ∗ 105 environment steps. APES employs hierarchy, priors and learns m for πH 0 . APES-{H20 - S} do not learn m. The remainder do not employ priors.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7481994628906,
+    "y1": 566.1275634765625,
+    "y2": 605.0070190429688
+  },
+  "figType": "Table",
+  "imageText": ["Expert", "1", "8", "4", "APES-no", "prior", "Tirumala", "et", "al.", "(2019)", "-", "-", "0.00", "±", "0.00", "2.34", "±", "0.19", "0.00", "±", "0.00", "Hier-RecSAC", "Wulfmeier", "et", "al.", "(2019)", "-", "-", "0.00", "±", "0.00", "0.07", "±", "0.03", "0.01", "±", "0.01", "RecSAC", "Haarnoja", "et", "al.", "(2018b)", "-", "-", "0.00", "±", "0.00", "0.08", "±", "0.02", "0.01", "±", "0.01", "APES-H20", "Tirumala", "et", "al.", "(2020)", "xt−20:t", "✗", "0.16", "±", "0.09", "3.84", "±", "0.19", "1.03", "±", "0.45", "APES-H10", "-", "xt−10:t", "✗", "0.22", "±", "0.09", "4.03", "±", "0.55", "1.22", "±", "0.26", "APES-H1", "Bagatella", "et", "al.", "(2022)", "xt−1:t", "✗", "0.80", "±", "0.03", "6.37", "±", "0.17", "3.11", "±", "0.12", "APES-S", "Galashov", "et", "al.", "(2019)", "Pertsch", "et", "al.", "(2020)", "st", "✗", "0.00", "±", "0.00", "3.03", "±", "0.38", "1.98", "±", "0.16", "APES", "-", "xt−20:t", "✓", "0.93", "±", "0.05", "7.03", "±", "0.09", "3.33", "±", "0.18", "Approach", "Paper", "πH", "0", "input", "learn", "m", "sparse", "2", "corr", "(int)", "s-sparse", "4", "corr", "(ext)", "4", "blocks", "(ext)"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 492.0,
+    "y1": 610.56,
+    "y2": 727.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table2-1.png"
+}, {
+  "caption": "Figure 3: Sparse 2 corr. 4 rollouts shown for each method, with each episode rolled out horizontally. Corridors are colour coded and depth within them is denoted by shade; the darker the deeper. Hallway is white. See text for detailed analysis.",
+  "captionBoundary": {
+    "x1": 327.3710021972656,
+    "x2": 504.17034912109375,
+    "y1": 85.57852935791016,
+    "y2": 146.375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 85.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure3-1.png"
+}, {
+  "caption": "Table 8: Covariate Shift Analysis. In general, reduced IA benefits more from reduced covariate shift. Sparse domains suffer more from shift, seen by clearer IA covariate trends.",
+  "captionBoundary": {
+    "x1": 282.5889892578125,
+    "x2": 505.6563415527344,
+    "y1": 367.95452880859375,
+    "y2": 406.8340148925781
+  },
+  "figType": "Table",
+  "imageText": ["Expert", "0", "0", "0", "APES-no", "prior", "0.00", "±", "0.00", "0.09", "±", "0.08", "0.49", "±", "0.26", "Hier-RecSAC", "0.00", "±", "0.00", "0.02", "±", "0.03", "0.00", "±", "0.01", "RecSAC", "0.00", "±", "0.00", "0.27", "±", "0.13", "0.19", "±", "0.05", "APES-H20", "0.28", "±", "0.03", "0.12", "±", "0.22", "0.84", "±", "0.06", "APES-H10", "0.24", "±", "0.07", "0.62", "±", "0.30", "1.20", "±", "0.31", "APES-H1", "0.13", "±", "0.02", "0.34", "±", "0.32", "0.22", "±", "0.24", "APES-S", "0.00", "±", "0.00", "0.48", "±", "0.21", "0.00", "±", "0.17", "Approach", "2", "corridor", "4", "corridor", "4", "blocks", "sparse", "semi-sparse", "sparse", "interpolate", "extrapolate", "extrapolate", "CorridorMaze", "Stack"],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 281.76,
+    "x2": 499.2,
+    "y1": 412.8,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table8-1.png"
+}, {
+  "caption": "Figure 8: CorridorMaze 4 corridor. 10 final policy rollouts (episodes vertically, rollouts horizontally) for most performant method. Task: (Blue, Orange, Green, Red) corridors. Policy distribution over categorical latent space for πH and πH 0 plotted (between policy rollouts, denoted by xt) as vertical histograms, with colour and width denoting category and probability.",
+  "captionBoundary": {
+    "x1": 341.34100341796875,
+    "x2": 505.24639892578125,
+    "y1": 85.40750885009766,
+    "y2": 190.03997802734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 97.92,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 85.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure8-1.png"
+}, {
+  "caption": "Figure 4: Expressivity-Transferability Trade-Off. Distillation loss vs transfer performance increase when pre-training πH . The level of information conditioning is shown by marker size. Absolute transfer performance is shown by marker colour (red - high; blue - low). We fit a second order curve (in red) to show the general expressivity-transferability trend, per Theorems 3.1 and 3.2, that distilling more, by reducing IA, can hurt transfer, due to increased covariate shift. See Table 8 for detailed tabular results.",
+  "captionBoundary": {
+    "x1": 244.94900512695312,
+    "x2": 504.0033874511719,
+    "y1": 487.4925231933594,
+    "y2": 570.20703125
+  },
+  "figType": "Figure",
+  "imageText": ["Expressivity-Transferability", "Trade-Off", "4", "Blocks", "APES-H20", "APES-H10", "APES-H1", "APES-S1", "Transfer", "Perform", "ance", "0.75", "0.70", "0.65", "0.60", "0.55", "0.50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "S-Sparse", "4", "Corr", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "Increase", "in", "Transfer", "Performance", "(Due", "to", "Reduced", "Trajectory/Covariate", "Shift)", "Sparse", "2", "Corr", "ss", "n", "Lo", "illa", "tio", "Di", "st", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.00", "0.05", "0.10", "0.15", "0.20", "0.25", "0.1"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 247.67999999999998,
+    "x2": 502.08,
+    "y1": 412.32,
+    "y2": 483.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure4-1.png"
+}, {
+  "caption": "Table 3: H(m) vs DKL(π H ||πH 0 )",
+  "captionBoundary": {
+    "x1": 359.7340393066406,
+    "x2": 492.0515441894531,
+    "y1": 215.59054565429688,
+    "y2": 224.0660400390625
+  },
+  "figType": "Table",
+  "imageText": ["Max", "2.08/2.26", "0.84/1.71", "Min", "0.00/0.00", "0.00/0.00", "APES-S", "0.70/0.70", "0.81/0.75", "APES-H1", "0.78/0.95", "0.22/0.65", "APES-H10", "1.78/1.96", "0.12/0.49", "APES-H20", "2.08/2.26", "0.11/0.47", "APES", "0.26/1.20", "0.16/0.49", "0", ")", "Domain", "(Corr/Stack)", "(Corr/Stack)", "Metric", "H(m)", "DKL(π", "H", "||πH"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 350.88,
+    "x2": 500.15999999999997,
+    "y1": 225.6,
+    "y2": 312.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table3-1.png"
+}, {
+  "caption": "Figure 9: Final transfer performance for most performant method. Tasks are solved. Displaying latent distribution for both policy and prior. For both domains, policy deviates most from prior at the bottleneck state (hallway/stacking zone, for CorridorMaze/Stack), where prior multimodality exists (e.g. which corridor/block to stack next), but where determinism is required for the task at hand.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00018310546875,
+    "y1": 427.3625183105469,
+    "y2": 466.2409973144531
+  },
+  "figType": "Figure",
+  "imageText": ["0", "plot-", "ted", "(between", "policy", "rollouts,", "denoted", "by", "xt)", "as", "vertical", "histograms,", "with", "colour", "and", "width", "denoting", "category", "and", "probability.", "Colour", "here", "does", "not", "correlate", "to", "corridor.", "rollout", "((b))", "Stack", "4", "blocks.", "Top)", "Policy", "rollouts", "for", "most", "performant", "method.", "Task:", "stack", "blocks", "in", "order", "(0,", "1,", "2,", "3).", "Bottom)", "policy", "distributions", "akin", "to", "Fig.", "9(a).", "Horizontal", "dashed", "lines", "in", "bottom", "plots", "refer", "to", "current", "sub-task", "(block", "stack),", "vertically", "transitioning", "upon", "each", "completion.", "((a))", "CorridorMaze", "2", "corridor.", "10", "final", "policy", "rollouts", "(episodes", "vertically,", "rollouts", "horizontally)", "for", "most", "perfor-", "mant", "method.", "Task:", "(Blue,", "Orange)", "corridors.", "Policy", "dis-", "tribution", "over", "categorical", "latent", "space", "for", "πH", "and", "πH", "rollout", "CorridorMaze", "4", "Corridor"],
+  "name": "9",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 80.64,
+    "y2": 414.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure9-1.png"
+}, {
+  "caption": "Table 1: Previously Explored IAs",
+  "captionBoundary": {
+    "x1": 342.14599609375,
+    "x2": 475.6248779296875,
+    "y1": 168.42648315429688,
+    "y2": 174.428955078125
+  },
+  "figType": "Table",
+  "imageText": ["(Tirumala", "et", "al.,", "2020;", "Liu", "et", "al.,", "2022)", "xt", "(Bagatella", "et", "al.,", "2022)", "at−n:t", "(Bagatella", "et", "al.,", "2022)", "xt−1:t", "(Pertsch", "et", "al.,", "2020;", "2021;", "Ajay", "et", "al.,", "2020)", "st", "(Rao", "et", "al.,", "2021;", "Tirumala", "et", "al.,", "2019;", "2020)", "zt−1", "(Tirumala", "et", "al.,", "2019;", "Goyal", "et", "al.,", "2019)", "−", "Paper", "π", "(H)", "0", "input"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 501.12,
+    "y1": 178.56,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table1-1.png"
+}, {
+  "caption": "Figure 5: APES attention for πH 0 , plotted as log(m), for each domain (key on right; red and blue as high and low values). We aggregate attention to the state/action levels. For sub-state/action attention visualisation see Figure 7. APES learns sparse, domain dependent, attention, primarily focusing on recent actions.",
+  "captionBoundary": {
+    "x1": 246.6020050048828,
+    "x2": 504.0031433105469,
+    "y1": 184.72152709960938,
+    "y2": 234.55999755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 245.76,
+    "x2": 504.0,
+    "y1": 128.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Environments. a) CorridorMaze: A hard-exploration toy domain. The agent starts in the hallway and must traverse a given number of corridors in a given sequence. The agent completes a given corridor by traversing to its depth and back. b) Stack: A hard exploration, robotic, domain. The agent must stack the cubes in a given ordering over the light blue target pad.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0018615722656,
+    "y1": 191.44253540039062,
+    "y2": 230.322021484375
+  },
+  "figType": "Figure",
+  "imageText": ["C", "orridor", "N", "um", "ber", "(5)", "Corridor", "Depth", "w", "ay", "H", "all", "a)", "CorridorMaze", "b)", "Stack"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 80.64,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure2-1.png"
+}, {
+  "caption": "Table 7: Full Training Setup",
+  "captionBoundary": {
+    "x1": 249.38800048828125,
+    "x2": 362.3040466308594,
+    "y1": 558.1275634765625,
+    "y2": 564.1300048828125
+  },
+  "figType": "Table",
+  "imageText": ["Q", "learning", "rate", "3e−6", "3e−5", "3e−5", "π", "learning", "rate", "3e−4", "3e−4", "3e−4", "β", "z/a", "0", "1e−2", "1e−1", "5e−2", "β", "z/a", "u", "1e−2", "0", "5e−4", "Q", "update", "rate", "6e−4", "6e−4", "6e−4", "Retrace", "λ", "0.99", "0.99", "0.99", "batch", "size", "128", "128", "128", "episodic", "length", "30", "60", "65", "Transfer", "task", "2", "corridor", "4", "corridor", "4", "blocks", "Reward", "Type", "sparse", "semi-sparse", "sparse", "Environment", "CorridorMaze", "Stack", "(b)", "Reinforcement", "Learning", "Setup", "0", "1", "1", "αm", "1e−1", "1e−1", "DAGGER", "rate", "0.1", "0.1", "batch", "size", "128", "128", "episodic", "length", "24", "35", "π(i)", "learning", "rate", "3e−4", "3e−4", "z", "categorical", "size", "10", "10", "πH", "history-depth", "24", "5", "βz", "u", "1e−3", "1e−3", "βa", "u", "1e−2", "1e−2", "βa", "e", "1", "1", "βz", "0", "=", "βa", "Environment", "CorridorMaze", "Stack", "(a)", "Behavioural", "Cloning", "Setup"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 493.44,
+    "y1": 577.92,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table7-1.png"
+}, {
+  "caption": "Table 5: Feedforward Module, π{H,L} (0)",
+  "captionBoundary": {
+    "x1": 229.02499389648438,
+    "x2": 382.1677551269531,
+    "y1": 86.26456451416016,
+    "y2": 95.6600341796875
+  },
+  "figType": "Table",
+  "imageText": ["hidden", "layers", "(512,", "512)", "hidden", "layer", "activation", "relu", "output", "activation", "linear"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 226.56,
+    "x2": 385.44,
+    "y1": 106.56,
+    "y2": 146.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table5-1.png"
+}, {
+  "caption": "Table 6: Full experimental setup. Describes inputs to each module, level over which KL-regularization occurs, which modules are shared, and which are reused across training and transfer tasks.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99505615234375,
+    "y1": 163.52255249023438,
+    "y2": 180.4840087890625
+  },
+  "figType": "Table",
+  "imageText": ["APES", "✓", "xt−20:t", "st", "st", "xk", "z", "✓", "πH", "0", ",", "πL", "0", ",", "π", "L", "APES-H20", "✗", "xt−20:t", "st", "st", "xk", "z", "✓", "πH", "0", ",", "πL", "0", ",", "π", "L", "APES-H10", "✗", "xt−10:t", "st", "st", "xk", "z", "✓", "πH", "0", ",", "πL", "0", ",", "π", "L", "APES-H1", "✗", "xt−1:t", "st", "st", "xk", "z", "✓", "πH", "0", ",", "πL", "0", ",", "π", "L", "APES-S", "✗", "st", "st", "st", "xk", "z", "✓", "πH", "0", ",", "πL", "0", ",", "π", "L", "APES-no", "prior", "-", "st", "xk", "πL", "Hier-RecSAC", "-", "st", "xk", "RecSAC", "-", "xk", "APES-H1-KL-a", "✗", "xt−1:t", "st", "st", "xk", "a", "✗", "πH", "0", ",", "πL", "0", "APES-H1-flat", "✗", "xt−1:t", "st", "xk", "a", "✗", "πL", "0", "Name", "learn", "m", "πH", "0", "πL", "0", "πL", "πH", "KL", "level", "πL", "=", "πL", "0", "reused", "modules"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 193.44,
+    "y2": 323.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Table6-1.png"
+}, {
+  "caption": "Figure 7: APES attention for πH 0 , plotted as log(m), for each domain (key on right; red and blue as high and low values). APES learns sparse, domain dependent, attention.",
+  "captionBoundary": {
+    "x1": 246.6020050048828,
+    "x2": 504.0031433105469,
+    "y1": 686.1825561523438,
+    "y2": 714.1019897460938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 245.76,
+    "x2": 504.0,
+    "y1": 601.92,
+    "y2": 684.9599999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0v4VkCSkHNm-Figure7-1.png"
+}]

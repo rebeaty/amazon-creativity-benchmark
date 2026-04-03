@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 2: Computational graph for the loss function. Each edge is associated with a weight (parameter), either θij or πij .",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 242.55654907226562,
+    "y2": 261.01202392578125
+  },
+  "figType": "Figure",
+  "imageText": ["Frames", "X1", "X2", "X3", "X1", "Output", "of", "NN", "Neural", "Network", "X2", "X3", "X3E3", "E2", "X1E1", "X2"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 440.15999999999997,
+    "y1": 81.6,
+    "y2": 230.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4zGai1tFQE-Figure2-1.png"
+}, {
+  "caption": "Table 1: Comparison of all methods for Charades dataset",
+  "captionBoundary": {
+    "x1": 192.3769989013672,
+    "x2": 419.62384033203125,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["mAP", "LRAP", "JI", "CNN", "(Feichtenhofer", "et", "al.,", "2019)", "0.3884", "0.5347", "0.2937", "DRF", "-", "GS", "0.2654", "0.4386", "0.2244", "DRF", "-", "ILP", "0.1926", "0.2782", "0.3063", "DRF", "-", "IJGP", "0.3115", "0.4370", "0.3194", "DDN", "-", "LR", "-", "Pipeline", "0.3450", "0.4837", "0.2897", "DDN", "-", "LR", "-", "Joint", "0.3902", "0.5479", "0.3025", "DDN", "-", "MLP", "-", "Pipeline", "0.3755", "0.5493", "0.2950", "DDN", "-", "MLP", "-", "Joint", "0.4052", "0.5696", "0.3356"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 185.76,
+    "x2": 426.24,
+    "y1": 101.75999999999999,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4zGai1tFQE-Table1-1.png"
+}, {
+  "caption": "Table 2: Comparison of all methods for TACoS and Wetlab datasets",
+  "captionBoundary": {
+    "x1": 170.74400329589844,
+    "x2": 441.25848388671875,
+    "y1": 220.78353881835938,
+    "y2": 226.7860107421875
+  },
+  "figType": "Table",
+  "imageText": ["CNN", "(Szegedy", "et", "al.,", "2016)", "0.7012", "0.8076", "0.4017", "0.6079", "0.7911", "0.8208", "0.3526", "0.6383", "DRF", "-", "GS", "0.5584", "0.7940", "0.4693", "0.6499", "0.5392", "0.7567", "0.3532", "0.5154", "DRF", "-", "ILP", "0.4026", "0.6720", "0.5094", "0.6471", "0.6304", "0.7339", "0.5967", "0.7271", "DRF", "-", "IJGP", "0.5609", "0.8141", "0.4387", "0.7010", "0.7875", "0.8525", "0.5801", "0.7366", "DDN", "-", "LR", "-", "Pipeline", "0.7164", "0.8264", "0.5042", "0.6717", "0.775", "0.8549", "0.5734", "0.7018", "DDN", "-", "LR", "-", "Joint", "0.7463", "0.8390", "0.5371", "0.6861", "0.8432", "0.869", "0.6343", "0.779", "DDN", "-", "MLP", "-", "Pipeline", "0.7294", "0.8602", "0.5785", "0.6948", "0.8116", "0.8819", "0.6184", "0.7267", "DDN", "-", "MLP", "-", "Joint", "0.7797", "0.8752", "0.5963", "0.7040", "0.8809", "0.8969", "0.697", "0.7925", "TACoS", "Wetlab", "mAP", "LRAP", "SA", "JI", "mAP", "LRAP", "SA", "JI"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 240.0,
+    "y2": 351.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4zGai1tFQE-Table2-1.png"
+}, {
+  "caption": "Table 3: Time Comparisons for the Proposed methods. Learning Time is in Hours and Inference times is in seconds. Inference was performed on a CPU while training was performed on a GPU.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.0032653808594,
+    "y1": 446.931396484375,
+    "y2": 463.89288330078125
+  },
+  "figType": "Table",
+  "imageText": ["DDN", "-", "MLP", "-", "Joint", "∼", "7", "hrs", "∼", "0.19", "sec", "∼", "8", "hrs", "∼", "0.31", "sec", "∼", "14.5", "hrs", "∼", "0.58", "sec", "DDN", "-", "LR", "-", "Joint", "∼", "6", "hrs", "∼", "0.1", "sec", "∼", "7.25", "hrs", "∼", "0.15", "sec", "∼", "12", "hrs", "∼", "0.39", "sec", "DDN", "-", "MLP", "-", "Pipeline", "∼", "2.25", "hrs", "∼", "0.19", "sec", "∼", "3", "hrs", "∼", "0.31", "sec", "∼", "4.25", "hrs", "∼", "0.58", "sec", "DRF", "-", "GS", "∼", "5", "hrs", "∼", "0.58", "sec", "∼", "6.5", "hrs", "∼", "0.61", "sec", "∼", "8", "hrs", "∼", "1.93", "sec", "DRF", "-", "ILP", "∼", "5", "hrs", "∼", "1.54", "sec", "∼", "6.5", "hrs", "∼", "1.46", "sec", "∼", "9", "hrs", "∼", "2.42", "sec", "DRF", "-", "IJGP", "∼", "5", "hrs", "∼", "2.31", "sec", "∼", "6.5", "hrs", "∼", "2.15", "sec", "∼", "9", "hrs", "∼", "5.8", "sec", "DDN", "-", "LR", "-", "Pipeline", "∼", "1.5", "hrs", "∼", "0.1", "sec", "∼", "2", "hrs", "∼", "0.15", "sec", "∼", "3", "hrs", "∼", "0.39", "sec", "Tacos", "Wetlab", "Charades", "Train", "Inference", "Train", "Inference", "Train", "Inference"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 476.64,
+    "y2": 580.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4zGai1tFQE-Table3-1.png"
+}, {
+  "caption": "Figure 1: Dependency Network structure for three actions. Video frames are given as input to the NN and it produces the features for the DN (E1, E2, E3). These features are then used to model the conditional distributions at each variable Xi. At each node Xi, the form of the conditional distribution is the variable given its parents (incoming arrows) in the graph.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.003173828125,
+    "y1": 209.69552612304688,
+    "y2": 248.574951171875
+  },
+  "figType": "Figure",
+  "imageText": ["Video", "frames", "Output", "of", "NN", "Neural", "Network...", "X3E3", "E2", "X1E1", "X2"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 155.51999999999998,
+    "x2": 463.2,
+    "y1": 81.6,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4zGai1tFQE-Figure1-1.png"
+}]

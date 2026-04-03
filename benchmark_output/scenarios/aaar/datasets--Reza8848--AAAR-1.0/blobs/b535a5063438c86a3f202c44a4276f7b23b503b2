@@ -1,0 +1,221 @@
+[{
+  "caption": "Table 3: Machine translation benchmark data.",
+  "captionBoundary": {
+    "x1": 320.39300537109375,
+    "x2": 503.35614013671875,
+    "y1": 691.591552734375,
+    "y2": 697.593994140625
+  },
+  "figType": "Table",
+  "imageText": ["WMT", "2014", "English", "(en)", "German", "(de)", "4.5M", "3000", "3000", "WMT", "2019", "English", "(en)", "German", "(de)", "43M", "2900", "2900", "WMT", "2014", "English", "(en)", "French", "(fr)", "35M", "26000", "26000", "Dataset", "Year", "Source", "Lang", "Target", "Lang", "#Train", "#Valid", "#Test"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 318.71999999999997,
+    "x2": 505.44,
+    "y1": 613.92,
+    "y2": 690.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table3-1.png"
+}, {
+  "caption": "Table 7: Search space of AutoMoE vs. HAT vs. manually designed Transformer-Base / Big (Vaswani et al., 2017b). ‘PL’ refers to per layer while ‘PE’ refers to per expert. M denotes maximum number of experts per layer.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032043457031,
+    "y1": 282.7975158691406,
+    "y2": 310.71795654296875
+  },
+  "figType": "Table",
+  "imageText": ["#Encoder-Experts", "(PL)", "-", "{1,", "2,", "·", "·", "·", "M}", "{1,", "2,", "·", "·", "·", "M}", "-", "#Decoder-Experts", "(PL)", "-", "{1,", "2,", "·", "·", "·", "M}", "{1,", "2,", "·", "·", "·", "M}", "-", "Enc-Expert-FFN-Inter-Size", "(PL,", "PE)", "-", "-", "{1024,", "2048,", "3072}", "-", "Dec-Expert-FFN-Inter-Size", "(PL,", "PE)", "-", "-", "{1024,", "2048,", "3072}", "-", "Encoder-Embedding-Size", "{512,", "640}", "{512,", "640}", "{512,", "640}", "512", "/", "1024", "Decoder-Embedding-Size", "{512,", "640}", "{512,", "640}", "{512,", "640}", "512", "/", "1024", "#Encoder-Layers", "{6}", "{6}", "{6}", "6", "#Decoder-Layers", "{1,", "2,", "3,", "4,", "5,", "6}", "{1,", "2,", "3,", "4,", "5,", "6}", "{1,", "2,", "3,", "4,", "5,", "6}", "6", "Encoder-QKV-Dim", "{512}", "{512}", "{512}", "512", "/", "1024", "Decoder-QKV-Dim", "{512}", "{512}", "{512}", "512", "/", "1024", "#Encoder-Self-Att-Heads", "(PL)", "{4,", "8}", "{4,", "8}", "{4,", "8}", "8", "/", "16", "#Decoder-Self-Att-Heads", "(PL)", "{4,", "8}", "{4,", "8}", "{4,", "8}", "8", "/", "16", "#Decoder-Cross-Att-Heads", "(PL)", "{4,", "8}", "{4,", "8}", "{4,", "8}", "8", "/", "16", "#Decoder-Arbitrary-Att", "(PL)", "{-1,", "1,", "2}", "{-1,", "1,", "2}", "{-1,", "1,", "2}", "-1", "Encoder-FFN-Intermediate-Size", "(PL)", "{1024,", "2048,", "3072}", "{1024,", "2048,", "3072}", "{1024,", "2048,", "3072}", "2048", "/", "4096", "Decoder-FFN-Intermediate-Size", "(PL)", "{1024,", "2048,", "3072}", "{1024,", "2048,", "3072}", "{1024,", "2048,", "3072}", "2048", "/", "4096", "Hyperparameter", "HAT", "AutoMoE", "(std-experts)", "AutoMoE", "(fract-", "experts)", "Trans-Base", "/", "Big"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 111.36,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table7-1.png"
+}, {
+  "caption": "Table 8: AutoMoE-generated Pareto-optimal architectures for different datasets. FFN intermediate sizes for fractional experts (i.e. varying expert sizes within each layer) are enclosed within square brackets.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00323486328125,
+    "y1": 632.7105712890625,
+    "y2": 660.6309814453125
+  },
+  "figType": "Table",
+  "imageText": ["2-4-1-1", "[3072-3072]-[3072-", "1024-2048-3072]-", "3072-3072", "WMT’19", "En-De", "2-3-1-2-6-1", "[3072-3072]-[3072-3072-3072]-", "3072-[3072-2048]-[3072-1024-", "2048-3072-1024-2048]-3072", "2-1-4-2", "[3072-3072]-3072-", "[3072-3072-3072-", "2048]-[3072-2048]", "WMT’14", "En-Fr", "6-2-3-4-4-5", "[2048-1024-2048-1024-1024-", "3072]-[2048-2048]-[3072-3072-", "2048]-[3072-3072-2048-3072]-", "[3072-1024-1024-2048]-[2048-", "3072-3072-2048-2048]", "3-1-1-1", "[3072-1024-2048]-", "3072-3072-3072", "[3072-3072-1024]-[3072-1024-", "3072-2048]-3072-[3072-1024-", "3072]", "Fract-expert", "WMT’14", "En-De", "3-2-3-4-1-3", "[2048-3072-2048]-[3072-1024]-", "3072", "Std-expert", "WMT’14", "En-De", "3-2-4-1-5-2", "2048-3072-3072-3072-3072-3072", "2-1-1-1", "2048-3072-3072-", "3072", "WMT’14", "En-Fr", "1-1-3-1-3-3", "3072-2048-3072-3072-3072-3072", "2-1-1-1", "3072-3072-3072-", "3072", "WMT’19", "En-De", "1-2-5-1-2-4", "3072-3072-3072-3072-3072-3072", "4-4-1-1", "3072-3072-3072-", "Size", "Model", "Encoder", "Decoder", "Dataset", "#Experts", "per", "layer", "Expert", "FFN", "Inter", "Size", "#Experts", "per", "layer", "Expert", "FFN", "Inter"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 421.44,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table8-1.png"
+}, {
+  "caption": "Table 1: Manually designed vs. AutoMoE searched architecture for 6-layer encoder-decoder Transformer. We report various computational footprint metrics (measured on 1 V100 GPU) and BLEU score of sparse expert models on WMT’14 En-De machine translation task. We show the number of experts per layer separated by hyphen (-) for encoder and decoder.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 418.6715393066406,
+    "y2": 457.55096435546875
+  },
+  "figType": "Table",
+  "imageText": ["Manually", "designed", "(every", "layer)", "4-4-4-4-4-4", "4-4-4-4-4-4", "27.87", "586ms", "56M", "3.4", "Manually", "designed", "(every", "other", "layer)", "1-4-1-4-1-4", "1-4-1-4-1-4", "28.48", "506ms", "56M", "3.4", "AutoMoE", "2-4-1-1-3-1", "1-1-1-1-1", "28.22", "239ms", "49M", "3.1", "AutoMoE", "1-1-4-4-4-1", "4-1-1-1", "28.15", "194ms", "22M", "2.9", "Design", "Approach", "Encoder", "Decoder", "BLEU", "Latency", "#", "Active", "Params", "FLOPs", "(G)", "Machine", "Translation", "#Experts", "in", "each", "layer", "Accuracy", "Computational", "Footprint"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 348.96,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table1-1.png"
+}, {
+  "caption": "Table 4: Performance comparison of AutoMoE vs. baselines with Pareto-optimal architectures highlighted in blue color. We report both active model parameters; and sparsity measured as nonactive parameters as a percentage of total parameters. We report training time for one Nvidia V100 GPU and training cost following HAT (Wang et al., 2020) corresponding to 40K training steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 248.99349975585938,
+    "y2": 287.8719482421875
+  },
+  "figType": "Table",
+  "imageText": ["WMT’19", "En-De", "Transformer", "Dense", "176", "0", "10.6", "46.1", "184", "HAT", "NAS", "over", "Dense", "63", "0", "4.1", "45.8", "264", "AutoMoE", "(2", "Experts)", "NAS", "over", "Sparse", "45", "41", "2.8", "45.5", "248AutoMoE", "(16", "Experts)", "NAS", "over", "Sparse", "69", "81", "3.2", "45.9", "WMT’14", "En-Fr", "Transformer", "Dense", "176", "0", "10.6", "41.2", "240", "Evolved", "Transformer", "NAS", "over", "Dense", "175", "0", "10.8", "41.3", "2,192,000", "HAT", "NAS", "over", "Dense", "57", "0", "3.6", "41.5", "248", "AutoMoE", "(6", "Experts)", "NAS", "over", "Sparse", "46", "72", "2.9", "41.6", "236AutoMoE", "(16", "Experts)", "NAS", "over", "Sparse", "135", "65", "3.0", "41.9", "WMT’14", "En-De", "Transformer", "Dense", "176", "0", "10.6", "28.4", "184", "Evolved", "Transformer", "NAS", "over", "Dense", "47", "0", "2.9", "28.2", "2,192,000", "HAT", "NAS", "over", "Dense", "56", "0", "3.5", "28.2", "264", "AutoMoE", "(6", "Experts)", "NAS", "over", "Sparse", "45", "62", "2.9", "28.2", "224", "FLOPs", "(G)", "BLEU", "GPU", "hours", "Dataset", "Network", "#Active", "Params", "(M)", "Sparsity", "(%)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table4-1.png"
+}, {
+  "caption": "Figure 3: Architecture analysis for AutoMoE-generated sparsely activated models. We sample several architectures from the Pareto for AutoMoE-variants and baselines, and report the aggregate statistics in terms of the impact on different computational metrics.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00439453125,
+    "y1": 294.1815185546875,
+    "y2": 322.10198974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Overall", "vs.", "Decoder", "latency.", "(m", "s)", "en", "cy", "L", "at", "od", "er", "D", "ec", "450", "400", "350", "300", "250", "250", "300", "350", "400", "450", "Overall", "Latency", "(ms)", "(d)", "Decoder", "layer", "vs.", "#Expert", "(%).", "0.165", "0.180", "0.195", "0.210", "0.225", "0.240", "0.255", "0.270", "#", "D", "ec", "od", "er", "E", "xp", "er", "ts", "%", "1", "2", "3", "4", "5", "6", "Decoder", "Layer", "(c)", "Encoder", "layer", "vs.", "#Expert", "(%).", "0.152", "0.156", "0.160", "0.164", "0.168", "0.172", "0.176", "0.180", "#", "En", "co", "de", "r", "Ex", "pe", "rt", "s", "%", "1", "2", "3", "4", "5", "6", "Encoder", "Layer", "(b)", "Encoder", "experts", "as", "ratio", "of", "total", "experts.", "c.", "0.52", "0.56", "0.60", "0.64", "0.68", "0.72", "0.76", "0.80", "#", "En", "co", "de", "r", "E", "xp", "er", "ts", "F", "ra", "12", "16", "20", "24", "28", "32", "36", "40", "Total", "Experts", ")", "(a)", "#Decoder", "layers", "vs.", "FLOPs.", "2.25", "2.50", "2.75", "3.00", "3.25", "3.50", "3.75", "4.00", "FL", "O", "Ps", "(G", "3", "4", "5", "6", "#Decoder", "Layers"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 499.68,
+    "y1": 82.56,
+    "y2": 286.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Figure3-1.png"
+}, {
+  "caption": "Figure 1: AutoMoE Framework. (1) Heterogeneous search space with variable dimensions for dense Transformer blocks and sparsely activated expert modules. (2) Supernet training by sampling subnetworks from search space and training them by sharing common weights with Supernet. (3) Evolutionary search to find efficient architectures by (a) sampling subnetworks from the search space; (b) using latency measured in the target device; and (c) performance estimation from Supernet as feedback for iterative optimization via crossover and mutation. (4) Efficient subnetwork(s) from evolutionary search is trained on downstream task.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00323486328125,
+    "y1": 287.12353515625,
+    "y2": 358.87994384765625
+  },
+  "figType": "Figure",
+  "imageText": ["Efficient", "Subnet", "(for", "deployment)", "GPU", "Efficient", "Architecture", "Standalone", "training", "(4)", "Efficient", "Subnet", "Training", "Partially", "Gold", "Latency", "Candidate", "Architecture", "GPU", "Validation", "Loss", "Candidate", "Architecture", "Sample_Architecture()", "Sample_Architecture()", "(3)", "Search", "Evolutionary", "Search", "(2)", "Supernet", "Training", "Cross-Attention-Heads", "…", "Decoder", "Layer", "n", "er", "1", "L", "ay", "od", "er", "D", "ec", "FFN-", "M", "Inter-", "Size", "…", "FFN-1", "Inter-", "Size", "FFN-2", "Inter-", "Size", "Router", "Self-Attention-Heads", "Embedding-Size", "…", "Encoder", "Layer", "m", "Encoder", "Layer", "2", "er", "1", "L", "ay", "od", "er", "E", "nc", "…", "Inter-", "Size", "FFN-1", "Inter-", "Size", "FFN-2", "Inter-", "Size", "FFN-", "M", "Router", "Self-Attention-Heads", "Embedding-Size", "(1)", "Design", "space", "construction", "#enc-exp=[1-2-2-4-4-4],", "…", "#enc-exp=[1-4-3-2-1-2],", "…", "#dec-exp=[1-3-2-1-1-1],", "…", "#dec-exp=[1-1-1-4-4-4],", "…", "#dec-exp=[1-1-1-1-1],", "…", "#dec-exp=[1-4-1-4],", "…"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 485.28,
+    "y1": 85.44,
+    "y2": 283.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Figure1-1.png"
+}, {
+  "caption": "Table 2: Search space of AutoMoE. ‘PL’ and ‘PE’ refer to per layer and per expert search dimensions. Decoder arbitrary attn. searches last k encoder layers to attend. FFN size varies across layers and experts. M denotes maximum experts per layer.",
+  "captionBoundary": {
+    "x1": 333.9209899902344,
+    "x2": 504.0041198730469,
+    "y1": 638.9585571289062,
+    "y2": 699.7559814453125
+  },
+  "figType": "Table",
+  "imageText": ["#Encoder-Experts", "(PL)", "{1,", "2,", "·", "·", "·", "M}", "#Decoder-Experts", "(PL)", "{1,", "2,", "·", "·", "·", "M}", "{1024,", "2048,", "3072}", "Decoder-FFN-Intermediate-Size", "(PL,", "PE)", "{1024,", "2048,", "3072}", "Encoder-FFN-Intermediate-Size", "(PL,", "PE)", "Encoder-Embedding-Size", "{512,", "640}", "Decoder-Embedding-Size", "{512,", "640}", "#Encoder-Layers", "{6}", "#Decoder-Layers", "{1,", "2,", "3,", "4,", "5,", "6}", "Encoder-QKV-Dim", "{512}", "Decoder-QKV-Dim", "{512}", "#Encoder-Self-Att-Heads", "(PL)", "{4,", "8}", "#Decoder-Self-Att-Heads", "(PL)", "{4,", "8}", "#Decoder-Cross-Att-Heads", "(PL)", "{4,", "8}", "#Decoder-Arbitrary-Att", "(PL)", "{-1,", "1,", "2}", "Attributes", "Dimensions"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 510.24,
+    "y1": 483.35999999999996,
+    "y2": 635.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table2-1.png"
+}, {
+  "caption": "Table 5: Impact of different search constraints on WMT’14 En-Fr dataset.",
+  "captionBoundary": {
+    "x1": 333.9209899902344,
+    "x2": 504.0024108886719,
+    "y1": 253.69454956054688,
+    "y2": 270.656005859375
+  },
+  "figType": "Table",
+  "imageText": ["FLOPs", "≤", "4", "GFLOPs", "AutoMoE", "(2", "Experts)", "41.71", "4.0", "270", "AutoMoE", "(4", "Experts)", "41.76", "4.0", "285", "FLOPs", "≤", "3", "GFLOPs", "AutoMoE", "(2", "Experts)", "41.09", "3.0", "216", "AutoMoE", "(4", "Experts)", "41.10", "3.0", "229", "Latency", "≤", "200ms", "AutoMoE", "(2", "Experts)", "41.23", "2.9", "176", "AutoMoE", "(4", "Experts)", "41.22", "3.0", "198", "Search", "Constraint", "BLEU", "FLOPs", "(G)", "Latency", "(ms)"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 336.0,
+    "x2": 503.52,
+    "y1": 141.12,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table5-1.png"
+}, {
+  "caption": "Table 6: Variations in AutoMoE’s search space on WMT’14 En-De dataset.",
+  "captionBoundary": {
+    "x1": 333.92095947265625,
+    "x2": 504.0018310546875,
+    "y1": 461.3155212402344,
+    "y2": 478.2769775390625
+  },
+  "figType": "Table",
+  "imageText": ["AutoMoE", "(Fract-expert,", "2", "experts)", "AutoMoE", "(Fract-expert)", "28.4", "3.5", "w/", "Identity", "Expert", "-", "FFN", "Intermediate", "size", "∈", "{0,", "3072}", "28.1", "2.7", "AutoMoE", "(Std-expert,", "2", "Experts)", "w/", "manually", "designed", "homogeneous", "experts", "1-2-1-2-1-2", "28.3", "3.5", "1-1-1-2-2-2", "28.3", "3.8", "2-2-2-1-1-1", "28.3", "3.1", "Varying", "number", "of", "encoder", "layers", "HAT", "28.2", "3.5", "HAT", "w/", "#Encoder-Layers", "∈", "{1", "−", "6}", "28.1", "3.4", "AutoMoE", "(Std-expert,", "2", "Experts)", "w/", "fixed", "encoder", "layers", "28.2", "2.9", "AutoMoE", "(Std-expert,", "2", "Experts)", "w/", "#Encoder-Layers", "∈", "{1", "−", "6}", "28.3", "3.7", "Search", "Space", "Variation", "BLEU", "FLOPs", "(G)"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 507.84,
+    "y1": 290.88,
+    "y2": 456.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Table6-1.png"
+}, {
+  "caption": "Figure 2: Weight sharing in the Supernet for sparsely activated expert modules. Illustrations of weight sharing for the standard dense Transformer modules can be found at Wang et al. (2020).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00311279296875,
+    "y1": 280.4625549316406,
+    "y2": 297.42401123046875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Experts", "(e.g.,", "2", "FFN", "experts)", "ut", "Ou", "tp", "Input", "Output", "FFN-2", "SubTransformer", "Weight", "for", "51", "2)", ".g", ".,", "(e", "Si", "ze", "in", "g", "be", "dd", "Em", "pl", "ed", "Sa", "m", "(e.g.,", "1024)", "Expert", "FFN", "Intermediate", "Size", "64", "0)", ".g", ".,", "(e", "Si", "ze", "in", "g", "be", "dd", ".", "E", "m", "M", "ax", "Max.", "Expert", "FFN", "Intermediate", "Size", "(e.g.,", "3072)", "ut", "Ou", "tp", "Input", "FFN-2", "SubTransformer", "Weight", "for", "Input", ")", "10", "24", ".g", ".,", "ze", "(e", "Si", "ia", "te", "rm", "ed", "In", "te", "FF", "N", "er", "t", "E", "xp", "pl", "ed", "Sa", "m", "Sampled", "Embedding", "Size", "(e.g.,", "512)", "(e", ".g", ".,", "30", "72", ")", "S", "ize", "ia", "te", "rm", "ed", "In", "te", "FN", "er", "t", "F", ".", "E", "xp", "M", "ax", "Max.", "Embedding", "Size", "(e.g.,", "640)", "ut", "Ou", "tp", "Input", "Output", "FFN-1", "SubTransformer", "Weight", "for", "51", "2)", ".g", ".,", "(e", "Si", "ze", "in", "g", "be", "dd", "Em", "pl", "ed", "Sa", "m", "Expert", "FFN", "Intermediate", "Size", "(e.g.,", "2048)", "64", "0)", ".g", ".,", "(e", "Si", "ze", "in", "g", "be", "dd", ".", "E", "m", "M", "ax", "Max.", "Expert", "FFN", "Intermediate", "Size", "(e.g.,", "3072)", "ut", "Ou", "tp", "Input", "Input", "FFN-1", "SubTransformer", "Weight", "for", ")", "20", "48", ".g", ".,", "(e", "S", "ize", "ia", "te", "rm", "ed", "In", "te", "FN", "er", "t", "F", "E", "xp", "pl", "ed", "Sa", "m", "Sampled", "Embedding", "Size", "(e.g.,", "512)", "(e", ".g", ".,", "30", "72", ")", "S", "ize", "ia", "te", "rm", "ed", "In", "te", "FN", "er", "t", "F", ".", "E", "xp", "M", "ax", "Max.", "Embedding", "Size", "(e.g.,", "640)", "(a)", "Router", "Router", "SubTransformer", "Weight", "for", "pu", "t", "O", "ut", "Input", ".,", "3)", "(e", ".g", "er", "ts", "E", "xp", "pl", "ed", "Sa", "m", ".,", "4)", "(e", ".g", "er", "ts", ".", "E", "xp", "M", "ax", "Sampled", "Embedding", "Size", "(e.g.,", "512)", "Max.", "Embedding", "Size", "(e.g.,", "640)"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 494.88,
+    "y1": 84.47999999999999,
+    "y2": 276.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3yEIFSMwKBC-Figure2-1.png"
+}]

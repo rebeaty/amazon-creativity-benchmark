@@ -1,0 +1,321 @@
+[{
+  "caption": "Figure 1: An overview of CBLab.",
+  "captionBoundary": {
+    "x1": 238.6580047607422,
+    "x2": 373.3423767089844,
+    "y1": 512.0365600585938,
+    "y2": 518.0390014648438
+  },
+  "figType": "Figure",
+  "imageText": ["SimulatorData", "Tool", "Environment", "CBLab", "Deploy", "3", "4", "1", "2", "Store", "Train", "Action", "CBData", "CBEngine", "CBScenario", "Input", "Data", "Observation", "Raw", "Traffic", "Data", "Traffic", "Policies"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 439.2,
+    "y2": 503.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure1-1.png"
+}, {
+  "caption": "Figure 6: The simulation input data supporting pipeline of CBData.",
+  "captionBoundary": {
+    "x1": 171.48599243164062,
+    "x2": 440.5158996582031,
+    "y1": 202.43051147460938,
+    "y2": 208.4329833984375
+  },
+  "figType": "Figure",
+  "imageText": ["CBEngine", "OpenStreetMap", "Map", "Traffic", "Flow", "Preprocessor", "Flow", "Generator", "Road", "Network", "Dataset", "Reduced", "GraphRaw", "Graph", "User", "Query", "City", "A"],
+  "name": "6",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 501.12,
+    "y1": 84.96,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Loss curves during learning the driving module on two roads.",
+  "captionBoundary": {
+    "x1": 163.72000122070312,
+    "x2": 448.2816162109375,
+    "y1": 532.1365966796875,
+    "y2": 538.1390380859375
+  },
+  "figType": "Figure",
+  "imageText": ["Learning", "Process,", "Zhuangcun", "Road", "Loss", "Min", "New", "Data", "Injection", "ue", "s", "v", "al", "Lo", "ss", "8", "6", "4", "2", "0", "10", "20", "30", "40", "50", "60", "Time", "step", "Learning", "Process,", "Xinyu", "Road", "Loss", "Min", "New", "Data", "Injection", "ue", "s", "v", "al", "Lo", "ss", "6", "5", "4", "3", "2", "1", "0", "0", "10", "20", "30", "40", "50", "60", "Time", "step"],
+  "name": "7",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 449.76,
+    "y2": 526.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure7-1.png"
+}, {
+  "caption": "Table 5: Hyperparameters of DQN in traffic signal control.",
+  "captionBoundary": {
+    "x1": 188.62100219726562,
+    "x2": 423.0708312988281,
+    "y1": 522.6095581054688,
+    "y2": 528.6119995117188
+  },
+  "figType": "Table",
+  "imageText": ["Value", "0.005", "20", "0.2", "0.995", "Hyperparameter", "Learning", "rate", "Target", "network", "updating", "interval", "ϵmin", "Decay", "of", "ϵmin", "Value", "5000", "1", "0.9", "0.95", "Hyperparameter", "Memory", "size", "Value", "network", "updating", "interval", "ϵ", "γ"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 482.4,
+    "y1": 442.56,
+    "y2": 511.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Table5-1.png"
+}, {
+  "caption": "Table 6: Hyperparameters of EBGtoll in congestion pricing.",
+  "captionBoundary": {
+    "x1": 186.13600158691406,
+    "x2": 425.55712890625,
+    "y1": 710.3785400390625,
+    "y2": 716.3809814453125
+  },
+  "figType": "Table",
+  "imageText": ["Value", "0.125", "10", "0.0005", "Hyperparameter", "τ", "Target", "network", "updating", "interval", "Critic", "learning", "rate", "Value", "2000", "1", "0.001", "Hyperparameter", "Memory", "size", "Value", "network", "updating", "interval", "Policy", "learning", "rate"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 479.03999999999996,
+    "y1": 629.76,
+    "y2": 699.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Table6-1.png"
+}, {
+  "caption": "Figure 2: The Traffic Model of CBEngine",
+  "captionBoundary": {
+    "x1": 222.4340057373047,
+    "x2": 389.56658935546875,
+    "y1": 245.70053100585938,
+    "y2": 251.7030029296875
+  },
+  "figType": "Figure",
+  "imageText": ["step", "step", "t", "tt+", "𝜹t", "t+", "𝜹t", "action", ":", "change", "the", "route", "action", ":", "change", "the", "acceleration", "t", "t+𝜹t", "step", "action", ":", "change", "the", "signal", "phase", "from", "1", "to", "4", "5", "6", "7", "8", "1", "2", "3", "4", "𝒙", "𝒗", "𝒂", "𝒙′", "𝒗", "′", "𝒂′", "5", "6", "7", "8", "1", "2", "3", "4", "Traffic", "Signal", "CBEngine", "Model", "Vehicle", "Routing", "Driving"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 483.35999999999996,
+    "y1": 84.0,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure2-1.png"
+}, {
+  "caption": "Table 4: Comparison results of efficiency experiments between two setups of SUMO.",
+  "captionBoundary": {
+    "x1": 135.54600524902344,
+    "x2": 476.1473693847656,
+    "y1": 183.65451049804688,
+    "y2": 189.656982421875
+  },
+  "figType": "Table",
+  "imageText": ["SUMO", "1218.53", "1987.12", "2046.63", "2973.50", "3020.16", "6083.37(no", "internal", "links)", "SUMO", "1239.93", "2091.60", "2151.01", "3103.58", "3199.14", "6173.51", "(with", "internal", "links)", "(±3.58)", "(±7.84)", "(±70.64)", "(±110.08)", "(±70.87)", "(±75.27)", "Time", "Cost", "Dataset", "Nanchang", "Changchun", "JiNan", "Shenzhen", "Hangzhou", "Shanghai"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 514.0799999999999,
+    "y1": 81.6,
+    "y2": 172.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Table4-1.png"
+}, {
+  "caption": "Figure 8: Curves of loss, BLEU, and METEOR during learning the routing module.",
+  "captionBoundary": {
+    "x1": 138.7729949951172,
+    "x2": 473.22735595703125,
+    "y1": 174.54354858398438,
+    "y2": 180.5460205078125
+  },
+  "figType": "Figure",
+  "imageText": ["eo", "r", "M", "et", "1.0", "0.8", "0.6", "0.4", "0", "20", "40", "Iteration", "Bl", "eu", "1.0", "0.8", "0.6", "0.4", "0.2", "0", "20", "40", "Iteration", "Lo", "ss", "6", "4", "2", "0", "0", "20", "40", "Iteration"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 141.12,
+    "x2": 466.08,
+    "y1": 82.56,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Visualization of the routing result. The deeper red is, the more frequent the route is picked.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9613342285156,
+    "y1": 303.1595153808594,
+    "y2": 309.1619873046875
+  },
+  "figType": "Figure",
+  "imageText": ["Original", "Data", "Generated", "Data", "(Untrained", "Model)", "Generated", "Data", "(Trained", "Model)"],
+  "name": "9",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 193.92,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Illustration of two scenarios: traffic signal control and congestion pricing.",
+  "captionBoundary": {
+    "x1": 137.05999755859375,
+    "x2": 474.94146728515625,
+    "y1": 529.6605224609375,
+    "y2": 535.6629638671875
+  },
+  "figType": "Figure",
+  "imageText": ["Price", "1:", "$4.00", "Price", "2:", "$2.00", "t", "1", "g", "en", "Route", "1Interface", "Route", "2", "A", "Input", "Output", "Volume", "of", "Vehicles", "Road", "Average", "Travel", "Time", "State", "Action", "Time", "Throughput", "Minus", "Travel", "2", "en", "t", "A", "g", "Reward", "New", "Phase", "Input", "Output", "Vehicles", "Phase", "Waiting", "Throughput", "Phase", "State", "Action", "Time", "Minus", "Waiting", "Price", "Traffic", "Signal", "…", "Vehicles", "Minus", "Waiting", "1", "2", "3", "4", "route", "cheapest", "the", "Choose", "Set", "the", "price", "1", "en", "t", "A", "g", "CBEngine", "Interface", "Set", "the", "phase", "Change", "the", "phase", "Reward", "Train", "Traffic", "Signal", "1", "Traffic", "Signal", "Control", "Congestion", "Pricing", "Train", "CBEngine"],
+  "name": "10",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 504.0,
+    "y1": 425.28,
+    "y2": 524.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure10-1.png"
+}, {
+  "caption": "Figure 3: Comparison between CBEngine and other simulators on parallelization design of computing actions for vehicles. The gray data member indicates it is not updated, while the black one is updated.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 298.8615417480469,
+    "y2": 315.822998046875
+  },
+  "figType": "Figure",
+  "imageText": ["Other", "Simulator(s):", "CBEngine:", "Action", "Vehicle", "Action", "Vehicle", "Action", "Vehicle", "GetStatus", "GetActionStatus", "Action", "Thread", "GetStatus", "GetActionStatus", "Action", "Thread", "Compute()", "Action", "Vehicle", "Action", "Vehicle", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Status", "Action", "Vehicle", "Action()", "GetVehicle", "Thread", "Thread", "Status()", "GetVehicle", "Thread", "Thread"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 84.47999999999999,
+    "y2": 289.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure3-1.png"
+}, {
+  "caption": "Table 3: Performance of baseline algorithms on congestion pricing.",
+  "captionBoundary": {
+    "x1": 171.61000061035156,
+    "x2": 440.0820617675781,
+    "y1": 623.2725830078125,
+    "y2": 629.2750244140625
+  },
+  "figType": "Table",
+  "imageText": ["No-Change", "2176", "1455", "2911", "1328", "Random", "3008", "644.00", "3459", "1120.69", "Deltatoll", "3186", "604.00", "3670", "960.17", "EBGtoll", "2803", "310.18", "3494", "1019.85", "Metrics", "Throughput", "Travel", "Time(s)", "Throughput", "Travel", "Time(s)", "Dataset", "Hangzhou", "Manhattan"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 508.32,
+    "y1": 525.6,
+    "y2": 611.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Table3-1.png"
+}, {
+  "caption": "Table 2: Performance of baseline algorithms on traffic signal control.",
+  "captionBoundary": {
+    "x1": 168.2779998779297,
+    "x2": 443.4150695800781,
+    "y1": 267.3545227050781,
+    "y2": 273.35699462890625
+  },
+  "figType": "Table",
+  "imageText": ["SOTL", "1122", "305.79", "137", "488.62", "DQN", "3573", "309.10", "3926", "375.51", "FixedTime", "2184", "1478.01", "2894", "1309.88", "MaxPressure", "3336", "700.66", "3364", "805.14", "Metrics", "Throughput", "Travel", "Time(s)", "Throughput", "Travel", "Time(s)", "Dataset", "Hangzhou", "Manhattan"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 514.0799999999999,
+    "y1": 170.4,
+    "y2": 256.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Table2-1.png"
+}, {
+  "caption": "Figure 5: Comparison results of two experiments of scalability.",
+  "captionBoundary": {
+    "x1": 180.10400390625,
+    "x2": 431.8986511230469,
+    "y1": 535.382568359375,
+    "y2": 541.385009765625
+  },
+  "figType": "Figure",
+  "imageText": ["st", ")+", "1", "Traffic", "Flow", "Scalability", "SUMO", "Cityflow", "CBEngine", "e", "Co", "T", "im", "St", "ep", "lo", "g(", "2", "1", "0", "2", "3", "4", "5", "6", "lg(#", "of", "vehicles)", "st", ")+", "1", "Road", "Network", "Scalability", "SUMO", "Cityflow", "CBEngine", "e", "Co", "T", "im", "St", "ep", "lo", "g(", "2", "1", "0", "1", "2", "3", "4", "lg(#", "of", "intersections)"],
+  "name": "5",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 485.28,
+    "y1": 420.47999999999996,
+    "y2": 525.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure5-1.png"
+}, {
+  "caption": "Table 1: Comparison results of efficiency experiments in six real-world cities.",
+  "captionBoundary": {
+    "x1": 150.9029998779297,
+    "x2": 460.78961181640625,
+    "y1": 292.3935241699219,
+    "y2": 298.39599609375
+  },
+  "figType": "Table",
+  "imageText": ["CBEngine", "104.39", "169.36", "174.29", "243.26", "245.01", "472.07", "(±0.54)", "(±1.60)", "(±1.93)", "(±1.75)", "(±2.16)", "(±2.90)", "Cityflow", "164.08", "243.22", "242.47", "289.31", "310.98", "664.18", "(±6.30)", "(±11.85)", "(±21.34)", "(±1.74)", "(±18.22)", "(±21.01)", "SUMO", "1239.93", "2091.60", "2151.01", "3103.58", "3199.14", "6173.51", "(±3.58)", "(±7.84)", "(±70.64)", "(±110.08)", "(±70.87)", "(±75.27)", "Time", "Cost", "Vehicle", "Num", "~25000", "~50000", "~50000", "~70000", "~70000", "~120000", "Intersection", "Num", "1506", "2228", "2314", "3427", "3434", "8474", "Dataset", "Nanchang", "Changchun", "JiNan", "Shenzhen", "Hangzhou", "Shanghai"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 128.16,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Table1-1.png"
+}, {
+  "caption": "Figure 11: Visualization of road networks of six cities used in our experiment: Nanchang (top left), Changchun (top right), JiNan (middle left), Shenzhen (middle right), Hangzhou (bottom left), Shanghai (bottom right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2429504394531,
+    "y1": 592.8545532226562,
+    "y2": 620.7750244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 189.6,
+    "y2": 584.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5iqzNK-Qeb-Figure11-1.png"
+}]

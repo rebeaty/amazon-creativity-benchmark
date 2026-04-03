@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 5: Randomly generated images from GAN trained with LGaussian only",
+  "captionBoundary": {
+    "x1": 153.6479949951172,
+    "x2": 458.3514709472656,
+    "y1": 605.0355224609375,
+    "y2": 612.532958984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 196.79999999999998,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure5-1.png"
+}, {
+  "caption": "Figure 1: Within the GAN framework, we illustrate our proposed structural adversarial objectives, which push the discriminator to learn good feature representations. We combine objectives from two levels of granularity. Top right: At a coarse scale, we model features under the Gaussian assumption, and adversarially orient generated embedding (orange) towards the real embedding (blue), using the sample mean µ and covariance Σ. Bottom right: At a finer scale, we implement clustering objectives, which group adjacent real embeddings to form a cluster and adversarially attract the generated embedding towards the nearby cluster center. Bottom left: Learned representations on CIFAR-10 show a distribution consistent with categorization.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 270.3725280761719,
+    "y2": 353.0869140625
+  },
+  "figType": "Figure",
+  "imageText": ["LGaussian", "Lcluster", "Structural", "objectives", "Visualize", "embedding", "with", "t-SNE", "Generative", "Adversarial", "Network", "X", "G", "attraction", "D", "repulsing", "Legend", "D", "attraction", "D", "G", "D", "(𝝁𝟐,", "𝜮𝟐)", "Z", "(𝝁𝟏,", "𝜮𝟏)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 472.32,
+    "y1": 75.36,
+    "y2": 262.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure1-1.png"
+}, {
+  "caption": "Figure 2: We train GAN with our objectives on a synthetic double spiral data to qualitatively demonstrate the generated samples and learned representation. (a) Data sample colored by two ground truth categories (b) Generated samples that capture all modes and accurately avoid invalid regions, the space between two double spirals. (c) We use t-SNE to project the learned representation into twodimensional space and color each point using ground truth assignment. We show that the learned representation correctly separates two categories and preserves continuity within each group. (4) We further showcase the point-wise features by projecting the representation into a 2d palette map, displayed at the bottom right corner, using t-SNE, illustrating that the embedding precisely preserves the point-wise spatial order across and within each group. Best viewed in color.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0046691894531,
+    "y1": 185.49453735351562,
+    "y2": 279.16888427734375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Visualize", "representa-", "tion", "with", "2d", "palette", "map", "(c)", "Visualize", "representa-", "tion", "with", "t-SNE", "(b)", "Samples", "from", "Gen-", "erator", "(a)", "Data", "samples", "and", "categorical", "assignment"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 172.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Randomly generated images from our full objectives.",
+  "captionBoundary": {
+    "x1": 180.13800048828125,
+    "x2": 431.8629455566406,
+    "y1": 605.0355224609375,
+    "y2": 611.0379638671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 196.79999999999998,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure4-1.png"
+}, {
+  "caption": "Table 1: We evaluate our methods by benchmarking the learned representation using linear SVM and K-means clustering. We report averaged accuracy and standard deviation (shown in parentheses), over 20 runs. Our method achieves competitive performance with state-of-the-art selfsupervised methods across multiple datasets. However, we do not leverage any augmented views. With NNCLR (Same View), we additionally show removing augmented view information from the NNCLR pipeline yielding degenerated model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 226.33651733398438,
+    "y2": 287.1339111328125
+  },
+  "figType": "Table",
+  "imageText": ["DINO", "89.73", "63.90", "(0.64)", "65.64", "36.73", "(0.47)", "87.80", "67.98(2.25)", "NNCLR", "91.69", "69.32", "(3.20)", "69.77", "40.42", "(0.62)", "91.40", "66.83", "(3.20)", "SimCLR", "90.64", "75.25", "(3.32)", "65.61", "41.36", "(0.59)", "89.00", "65.73", "(2.87)", "BYOL", "93.08", "75.03", "(2.74)", "70.69", "42.80", "(0.71)", "90.40", "67.30", "(3.34)", "SWAV", "89.14", "64.50", "(0.91)", "65.07", "35.26", "(0.48)", "90.01", "61.94", "(3.11)", "Ours", "89.76", "80.11", "(2.84)", "63.34", "38.16", "(0.45)", "91.20", "75.41", "(2.14)", "Method", "CIFAR10", "CIFAR100", "ImageNet10", "SVM", "K-means", "SVM", "K-means", "SVM", "K-means", "Supervised", "baseline", "95.13", "95.15", "(0.00)", "75.96", "73.60", "(0.78)", "96.40", "96.37", "(0.15)", "Random", "42.96", "22.08", "(0.09)", "18.39", "8.99", "(0.16)", "48.20", "28.34", "(0.66)", "NNCLR", "(Same", "View)", "29.53", "20.21(0.22)", "7.70", "7.25(0.07)", "-", "-"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Table1-1.png"
+}, {
+  "caption": "Figure 7: Randomly generated images from unconditional BigGAN",
+  "captionBoundary": {
+    "x1": 170.80299377441406,
+    "x2": 441.19781494140625,
+    "y1": 605.0355224609375,
+    "y2": 611.0379638671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 196.79999999999998,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure7-1.png"
+}, {
+  "caption": "Table 2: We run ablated experiments and compare different objectives function. Our proposed structural objectives significantly outperform widely adopted hinge loss baseline by a large margin. Including finer scale clustering objectives (last row) improve both representation and image quality over the methods only using coarse scale objectives (3rd and 4th row).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 329.78753662109375,
+    "y2": 368.6669921875
+  },
+  "figType": "Table",
+  "imageText": ["Full", "objectives", "8.73", "13.63", "80.11", "89.76", "Hinge", "Loss", "8.13", "18.54", "36.41", "77.19", "LGaussian", "only,", "with", "DB", "8.39", "17.83", "70.76", "87.9", "LGaussian", "only,", "with", "JSD", "8.55", "16.97", "80.55", "88.32", "Method", "Inception", "Scores", "↑", "FID", "↓", "KMeans", "SVM", "BigGAN(Brock", "et", "al.,", "2019)", "8.22", "17.50", "29.69", "69.31"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 243.84,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Table2-1.png"
+}, {
+  "caption": "Figure 3: On the CIFAR-10 validation set, we visualize the learned representation using t-SNE and compare with multiple baseline objectives. Training GAN with LGaussian only produces diversified yet over smoothed representation. With cluster loss, the representations from full objectives experiment enhance categorical-wise discrepancy which are visually competitive with state-of-the-art BYOL.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 175.23550415039062,
+    "y2": 225.07293701171875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "BYOL", "(b)", "Full", "Objectives", "(c)", "LGaussian", "only", "(d)", "Hinge", "Loss"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 162.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure3-1.png"
+}, {
+  "caption": "Figure 6: Randomly generated images from GAN trained with hinge loss",
+  "captionBoundary": {
+    "x1": 160.1529998779297,
+    "x2": 451.847900390625,
+    "y1": 605.0355224609375,
+    "y2": 611.0379638671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 196.79999999999998,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_99XwOpGYAH-Figure6-1.png"
+}]

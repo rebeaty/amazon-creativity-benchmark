@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 1: Edge classification performance on Amazon-Movie, Amazon-App, Goodreads-Crime, and Goodreads-Children.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00042724609375,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["Edgeformer-E", "64.18", "73.59", "60.67", "71.28", "61.03", "65.86", "57.45", "61.71", "BERT", "61.38", "71.36", "59.11", "69.27", "56.41", "61.29", "51.57", "57.72", "BERT+nodes", "63.00", "72.45", "59.72", "70.82", "58.64", "65.02", "54.42", "60.46", "TF-IDF", "50.01", "64.22", "48.30", "62.88", "43.07", "51.72", "39.42", "49.90", "TF-IDF+nodes", "53.59", "66.34", "50.56", "65.08", "49.35", "57.50", "47.32", "56.78", "Model", "Macro-F1", "Micro-F1", "Macro-F1", "Micro-F1", "Macro-F1", "Micro-F1", "Macro-F1", "Micro-F1", "Amazon-Movie", "Amazon-Apps", "Goodreads-Crime", "Goodreads-Children"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 498.24,
+    "y1": 109.92,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table1-1.png"
+}, {
+  "caption": "Figure 4: Effect of the sampled neighbor size (i.e., |Nepvq|).",
+  "captionBoundary": {
+    "x1": 186.0780029296875,
+    "x2": 425.9221496582031,
+    "y1": 181.52957153320312,
+    "y2": 189.02606201171875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "StackOverflow", "|", "(", ")|", "(b)", "Goodreads-Children", "|", "(", ")|", "(a)", "Amazon-Apps", "|", "(", ")|"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 86.88,
+    "y2": 172.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Figure4-1.png"
+}, {
+  "caption": "Table 8: Hyper-parameter configuration.",
+  "captionBoundary": {
+    "x1": 225.41294860839844,
+    "x2": 386.58782958984375,
+    "y1": 204.18759155273438,
+    "y2": 210.1900634765625
+  },
+  "figType": "Table",
+  "imageText": ["A.7", "LIMITATIONS", "sampled", "neighbor", "size", "user:8", "user:3", "reader:8", "reader:6", "expert:2", "item:10", "item:5", "book:10", "book:4", "question:5", "node", "embedding", "dim", "64", "chunk", "k", "12", "max", "sequence", "length", "64", "backbone", "PLM", "BERT-base-uncased", "training", "batch", "size", "30", "testing", "batch", "size", "100", "Adam", "ϵ", "1e-8", "early-stopping", "patience", "3", "optimizer", "Adam", "learning", "rate", "1e-5", "weight", "decay", "1e-3", "Parameter", "Amazon-Movie", "Amazon-Apps", "Goodreads-Crime", "Goodreads-Children", "StackOverflow"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 501.12,
+    "y1": 212.64,
+    "y2": 384.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table8-1.png"
+}, {
+  "caption": "Table 2: Link prediction performance (on the testing set) on Amazon-Movie, Amazon-Apps, Goodreads-Crime, Goodreads-Children, and StackOverflow. ∆ denotes the relative improvement of our model comparing with the best baseline.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.24310302734375,
+    "y1": 92.5765151977539,
+    "y2": 120.49700927734375
+  },
+  "figType": "Table",
+  "imageText": ["Edgeformer-N", "0.2919", "0.4344", "0.2239", "0.3771", "0.2395", "0.3875", "0.1446", "0.3000", "0.1754", "0.3339", "+", "∆", "%", "3.5%", "2.1%", "5.3%", "2.9%", "5.9%", "3.2%", "5.9%", "2.6%", "2.7%", "1.8%", "BERT", "0.2391", "0.3864", "0.1790", "0.3350", "0.1986", "0.3498", "0.1274", "0.2836", "0.1666", "0.3252", "BERT+MaxSAGE", "0.2780", "0.4224", "0.2055", "0.3602", "0.2193", "0.3694", "0.1312", "0.2872", "0.1681", "0.3264", "BERT+MeanSAGE", "0.2491", "0.3972", "0.1983", "0.3540", "0.1952", "0.3477", "0.1223", "0.2791", "0.1678", "0.3264", "BERT+GIN", "0.2573", "0.4037", "0.2000", "0.3552", "0.2007", "0.3522", "0.1238", "0.2801", "0.1708", "0.3279", "GraphFormers", "0.2756", "0.4198", "0.2066", "0.3607", "0.2176", "0.3684", "0.1323", "0.2887", "0.1693", "0.3278", "BERT+CensNet", "0.1919", "0.3462", "0.1544", "0.3132", "0.1437", "0.3000", "0.0847", "0.2436", "0.1173", "0.2789", "BERT+NENN", "0.2821", "0.4256", "0.2127", "0.3666", "0.2262", "0.3756", "0.1365", "0.2925", "0.1619", "0.3215", "MF", "0.2032", "0.3546", "0.1482", "0.3052", "0.1923", "0.3443", "0.1137", "0.2716", "0.1040", "0.2642", "MeanSAGE", "0.2138", "0.3657", "0.1766", "0.3343", "0.1832", "0.3368", "0.1066", "0.2647", "0.1174", "0.2768", "MaxSAGE", "0.2178", "0.3694", "0.1674", "0.3258", "0.1846", "0.3387", "0.1066", "0.2647", "0.1173", "0.2769", "GIN", "0.2140", "0.3648", "0.1797", "0.3362", "0.1846", "0.3374", "0.1128", "0.2700", "0.1189", "0.2778", "CensNet", "0.2048", "0.3568", "0.1894", "0.3457", "0.1880", "0.3398", "0.1157", "0.2726", "0.1235", "0.2806", "NENN", "0.2565", "0.4032", "0.1996", "0.3552", "0.2173", "0.3670", "0.1297", "0.2854", "0.1257", "0.2854", "Model", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "Amazon-Movie", "Amazon-Apps", "Goodreads-Crime", "Goodreads-Children", "StackOverflow"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 496.32,
+    "y1": 122.88,
+    "y2": 284.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table2-1.png"
+}, {
+  "caption": "Table 7: Link prediction performance (on the validation set) on Amazon-Movie, Amazon-Apps, Goodreads-Crime, Goodreads-Children, and StackOverflow. ∆ denotes the relative improvement of our model comparing with the best baseline.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2431945800781,
+    "y1": 92.5765151977539,
+    "y2": 120.49700927734375
+  },
+  "figType": "Table",
+  "imageText": ["Edgeformer-N", "0.3206", "0.4574", "0.2320", "0.3838", "0.3106", "0.4514", "0.1849", "0.3385", "0.1944", "0.3508", "+", "∆", "%", "3.9%", "2.3%", "5.8%", "3.2%", "5.1%", "3.0%", "6.4%", "3.2%", "4.6%", "2.6%", "BERT", "0.2582", "0.4017", "0.1863", "0.3407", "0.2540", "0.4001", "0.1608", "0.3156", "0.1798", "0.3371", "BERT+MaxSAGE", "0.3028", "0.4424", "0.2128", "0.3661", "0.2859", "0.4299", "0.1687", "0.3236", "0.1828", "0.3399", "BERT+MeanSAGE", "0.2705", "0.4145", "0.2024", "0.3572", "0.2527", "0.4004", "0.1572", "0.3129", "0.1849", "0.3418", "BERT+GIN", "0.2790", "0.4212", "0.2040", "0.3583", "0.2613", "0.4073", "0.1611", "0.3158", "0.1858", "0.3413", "GraphFormers", "0.2998", "0.4393", "0.2111", "0.3642", "0.2852", "0.4294", "0.1671", "0.3220", "0.1833", "0.3405", "BERT+CensNet", "0.2025", "0.3552", "0.1577", "0.3163", "0.1822", "0.3361", "0.1007", "0.2603", "0.1232", "0.2845", "BERT+NENN", "0.3087", "0.4470", "0.2193", "0.3719", "0.2956", "0.4382", "0.1737", "0.3280", "0.1759", "0.3341", "MF", "0.2178", "0.3666", "0.1523", "0.3086", "0.2492", "0.3966", "0.1470", "0.3042", "0.1104", "0.2702", "MeanSAGE", "0.2280", "0.3775", "0.1804", "0.3375", "0.2286", "0.3792", "0.1348", "0.2927", "0.1258", "0.2846", "MaxSAGE", "0.2321", "0.3812", "0.1708", "0.3288", "0.2299", "0.3812", "0.1339", "0.2919", "0.1257", "0.2848", "GIN", "0.2287", "0.3769", "0.1846", "0.3402", "0.2306", "0.3802", "0.1420", "0.2989", "0.1275", "0.2860", "CensNet", "0.2186", "0.3682", "0.1953", "0.3504", "0.2399", "0.3875", "0.1501", "0.3059", "0.1338", "0.2900", "NENN", "0.2776", "0.4204", "0.2068", "0.3610", "0.2777", "0.4224", "0.1658", "0.3207", "0.1361", "0.2948", "Model", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "Amazon-Movie", "Amazon-Apps", "Goodreads-Crime", "Goodreads-Children", "StackOverflow"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 497.28,
+    "y1": 122.88,
+    "y2": 284.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table7-1.png"
+}, {
+  "caption": "Figure 3: Effect of the dimension of initial node embeddings.",
+  "captionBoundary": {
+    "x1": 183.7949981689453,
+    "x2": 428.2073974609375,
+    "y1": 397.0795593261719,
+    "y2": 403.08203125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "StackOverflow", "|", "(", ")|", "(b)", "Goodreads-Children", "|", "(", ")|", "(a)", "Amazon-Apps", "|", "(", ")|"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 302.88,
+    "y2": 388.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Model Framework Overview. (a) An illustration of Edgeformer-E for edge representation learning, where virtual node token hidden states are concatenated to the edge text original token hidden states to inject network signal into edge text encoding. (b) An illustration of Edgeformer-N for node representation learning, where Edgeformer-E is enhanced by local network structure virtual token hidden state and edge representations are aggregated to obtain node representation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0002136230469,
+    "y1": 291.7535400390625,
+    "y2": 341.5920104980469
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Edgeformer-E", "(b)", "Edgeformer-N", "Edge", "Representation", "Local", "Network", "Aggregation", "Virtual", "Local", "Network", "Hidden", "State", "Node", "Representation", "Virtual", "Node", "Token", "Hidden", "States", "AGG(", ")", "Ego-Graph"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 498.24,
+    "y1": 84.96,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Figure1-1.png"
+}, {
+  "caption": "Table 4: Node classification performance on Amazon-Movie and Amazon-App.",
+  "captionBoundary": {
+    "x1": 146.947998046875,
+    "x2": 465.0538330078125,
+    "y1": 195.27853393554688,
+    "y2": 201.281005859375
+  },
+  "figType": "Table",
+  "imageText": ["Edgeformer-N", "0.9276±0.0007", "0.9411±0.0006", "0.9417±0.0005", "0.7758±0.0100", "0.9339±0.0007", "0.9431±0.0005", "BERT", "0.9209±0.0005", "0.9361±0.0003", "0.9367±0.0003", "0.7608±0.0175", "0.9283±0.0015", "0.9337±0.0015", "BERT+CensNet", "0.9032±0.0006", "0.9221±0.0004", "0.9227±0.0004", "0.5750±0.0277", "0.8692±0.0034", "0.8731±0.0028", "BERT+NENN", "0.9247±0.0005", "0.9387±0.0004", "0.9393±0.0005", "0.7556±0.0092", "0.9306±0.0008", "0.9382±0.0006", "MF", "0.7566±0.0017", "0.8234±0.0013", "0.8241±0.0013", "0.4647±0.0151", "0.8393±0.0012", "0.8462±0.0006", "CensNet", "0.8528±0.0010", "0.8839±0.0008", "0.8845±0.0007", "0.2782±0.0168", "0.8279±0.0006", "0.8331±0.0005", "NENN", "0.9186±0.0008", "0.9341±0.0008", "0.9347±0.0007", "0.3408±0.0082", "0.8789±0.0019", "0.8819±0.0017", "Model", "Macro-F1", "Micro-F1", "PREC", "Macro-F1", "Micro-F1", "PREC", "Amazon-Movie", "Amazon-Apps"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 498.24,
+    "y1": 204.0,
+    "y2": 299.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table4-1.png"
+}, {
+  "caption": "Table 3: Ablation study of link prediction performance (on the testing set) on Amazon-Movie, Amazon-Apps, Goodreads-Crime, Goodreads-Children, and StackOverflow. (-) means removing the corresponding virtual tokens.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2431335449219,
+    "y1": 92.5765151977539,
+    "y2": 120.49700927734375
+  },
+  "figType": "Table",
+  "imageText": ["Edgeformer-N", "0.2919", "0.4344", "0.2239", "0.3771", "0.2395", "0.3875", "0.1446", "0.3000", "0.1754", "0.3339", "-", "center", "node", "token", "0.2899", "0.4325", "0.2178", "0.3717", "0.2361", "0.3847", "0.1407", "0.2964", "0.1702", "0.3291", "-", "neighbor", "node", "token", "0.2880", "0.4306", "0.2115", "0.3656", "0.2322", "0.3807", "0.1411", "0.2963", "0.1730", "0.3310", "-", "neighbor", "text", "token", "0.2895", "0.4321", "0.2260", "0.3789", "0.2386", "0.3867", "0.1442", "0.2998", "0.1734", "0.3314", "Model", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "MRR", "NDCG", "Amazon-Movie", "Amazon-Apps", "Goodreads-Crime", "Goodreads-Children", "StackOverflow"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 500.15999999999997,
+    "y1": 122.88,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table3-1.png"
+}, {
+  "caption": "Table 6: Dataset Statistics",
+  "captionBoundary": {
+    "x1": 254.21499633789062,
+    "x2": 357.78619384765625,
+    "y1": 160.42849731445312,
+    "y2": 166.43096923828125
+  },
+  "figType": "Table",
+  "imageText": ["Amazon-Movie", "173,986", "1,697,533", "Amazon-Apps", "100,468", "752,937", "Goodreads-Crime", "385,203", "1,849,236", "Goodreads-Children", "192,036", "734,640", "StackOverflow", "129,322", "281,657", "Dataset", "#", "Node", "#", "Edge"],
+  "name": "6",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 210.72,
+    "x2": 401.28,
+    "y1": 169.92,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table6-1.png"
+}, {
+  "caption": "Table 5: Time cost (ms) per mini-batch for BERT+GIN, BERT+NENN, GraphFormers, and Edgeformer-N, with neighbor size |Nepvq| increasing from 2 to 5 on Amazon-Apps, GoodreadsChildren, and StackOverflow. Edgeformer-N achieves similar efficiency with the baselines.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6490783691406,
+    "y1": 237.37850952148438,
+    "y2": 265.29901123046875
+  },
+  "figType": "Table",
+  "imageText": ["BERT+GIN", "15.53", "21.44", "25.69", "31.19", "15.44", "21.38", "25.88", "31.02", "15.29", "21.41", "25.58", "31.05", "BERT+NENN", "15.70", "21.71", "26.03", "31.50", "15.78", "21.86", "26.15", "31.46", "15.74", "21.97", "26.09", "31.46", "GraphFormers", "17.21", "23.56", "28.29", "34.43", "17.08", "23.76", "28.43", "34.38", "17.13", "23.65", "28.60", "34.45", "Edgeformer-N", "18.68", "25.39", "30.45", "36.57", "18.74", "25.17", "30.42", "36.42", "18.57", "25.32", "30.46", "36.32", "Model", "2", "3", "4", "5", "2", "3", "4", "5", "2", "3", "4", "5", "Amazon-Apps", "Goodreads-Children", "StackOverflow"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 487.2,
+    "y1": 266.4,
+    "y2": 330.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Table5-1.png"
+}, {
+  "caption": "Figure 2: Embedding visualization. Node embeddings are denoted as stars, and the embeddings of edges are denoted as points with the same color if they are linked to the same node.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99810791015625,
+    "y1": 209.97653198242188,
+    "y2": 226.93798828125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Children", "60", "40", "20", "0", "−20", "−40", "−40", "−20", "0", "20", "40", "60", "80", "(a)", "Apps", "60", "40", "20", "0", "−20", "−40", "−40", "−20", "0", "20", "40", "60", "80", "−60"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 157.92,
+    "x2": 448.32,
+    "y1": 98.88,
+    "y2": 201.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2YQrqe4RNv-Figure2-1.png"
+}]

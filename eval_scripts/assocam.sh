@@ -31,12 +31,12 @@ MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
 RUN_ENTRIES=()
-RUN_ENTRIES+=("assocam_10T1,model=${MODEL}")
-RUN_ENTRIES+=("assocam_4T1,model=${MODEL}")
-RUN_ENTRIES+=("assocam_7T1,model=${MODEL}")
+RUN_ENTRIES+=("assocam_10T1:model=${MODEL}")
+RUN_ENTRIES+=("assocam_4T1:model=${MODEL}")
+RUN_ENTRIES+=("assocam_7T1:model=${MODEL}")
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "${RUN_ENTRIES[@]}" --suite "$SUITE")
+CMD=(helm-run --plugins run_specs.assocam_run_specs --run-entries "${RUN_ENTRIES[@]}" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi

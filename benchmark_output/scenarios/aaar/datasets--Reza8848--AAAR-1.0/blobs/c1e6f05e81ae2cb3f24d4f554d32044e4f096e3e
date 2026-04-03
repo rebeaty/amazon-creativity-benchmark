@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 1: (a) Two substructures that appear frequently in ChEMBL. (b) Different connection modes of sulfur atoms. The “*-S(-*)(-*)=*” is commonly seen while“*#S#*” does not appear in ChEMBL.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 169.24349975585938,
+    "y2": 186.2049560546875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "*-S(-*)(=*)=*", "*#S#*", "(a)", "Triﬂuoromethylbenzene", "“FC(F)(F)c1ccccc1”", "Benzaldehyde", "“O=Cc1ccccc1”"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 152.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure1-1.png"
+}, {
+  "caption": "Table 1: Distributional results on QM9, ZINC, and GuacaMol. The higher the better for all metrics. The results of JT-VAE, GCPN and GP-VAE are from Kong et al. (2021). For MoLeR, we use the released code from Maziarz et al. (2021) with no changes. Their vocabulary size is 4096, which is large enough to achieve their best overall performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 92.6165542602539,
+    "y2": 131.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["GuacaMol", "MoLeR", "1.0", "1.000", "0.991", "0.964", "0.625", "MiCaM", "(Ours)", "1.0", "0.994", "0.986", "0.989", "0.731", "JT-VAE", "1.0", "0.988", "0.988", "0.882", "0.263", "GCPN", "1.0", "0.982", "0.982", "0.456", "0.003", "GP-VAE", "1.0", "0.997", "0.997", "0.850", "0.318", "MoLeR", "1.0", "0.996", "0.993", "0.984", "0.721", "MiCaM", "(Ours)", "1.0", "0.998", "0.997", "0.988", "0.791", "ZINK", "JT-VAE", "1.0", "0.549", "0.386", "0.891", "0.588", "GCPN", "1.0", "0.533", "0.320", "0.552", "0.174", "GP-VAE", "1.0", "0.673", "0.523", "0.921", "0.659", "MoLeR", "1.0", "0.940", "0.355", "0.969", "0.931", "MiCaM", "(Ours)", "1.0", "0.932", "0.493", "0.980", "0.945", "QM9", "Dadaset", "Model", "Validity", "Uniqueness", "Novelty", "KL", "Div", "FCD"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 134.4,
+    "y2": 298.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Table1-1.png"
+}, {
+  "caption": "Figure 4: KL Divergence and FCD scores (higher is better) for different numbers of merging operations and different choices of generation modes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 443.0995178222656,
+    "y2": 460.06097412109375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Novelty", "greedy", "distributional", "GP-VAE", "MoLeR", "el", "ty", "N", "ov", "0.65", "0.60", "0.55", "0.50", "0.45", "0.40", "0.35", "Number", "of", "Merging", "Operations", "100", "200", "300", "400", "500", "600", "1000", "2000", "3000", "(b)", "FCD", "greedy", "distributional", "MoLeR", "s", "co", "re", "D", "S", "F", "C", "0.94", "0.93", "0.92", "0.91", "0.90", "Number", "of", "Merging", "Operations", "100", "200", "300", "400", "500", "600", "1000", "2000", "3000", "(a)", "KL", "Divergence", "distributional", "GP-VAE", "greedy", "re", "s", "MoLeR", "S", "co", "n", "ce", "er", "ge", "D", "iv", "K", "L", "0.98", "0.96", "0.94", "0.92", "0.90", "Number", "of", "Merging", "Operations", "100", "200", "300", "400", "500", "600", "1000", "2000", "3000"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 321.59999999999997,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure4-1.png"
+}, {
+  "caption": "Figure 6: Time costs of learning merging operations on QM9. (a) and (b) show the accumulative time costs and time costs of each iteration, respectively. (c) shows the frequencies of the learnt mergingoperations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 207.57357788085938,
+    "y2": 235.4940185546875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Frequencies", "en", "cy", "q", "u", "F", "re", "106", "105", "104", "103", "102", "Iteration", "0", "100", "200", "300", "400", "500", "(b)", "Time", "costs", "of", "each", "iteration", "s", "u", "te", "M", "in", "100", "10−1", "10−2", "10−3", "Iteration", "0", "100", "200", "300", "400", "500", "(a)", "Accumulative", "time", "costs", "s", "u", "te", "M", "in", "10", "8", "6", "4", "2", "Iteration", "0", "1000", "2000", "3000"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 127.19999999999999,
+    "x2": 485.28,
+    "y1": 87.84,
+    "y2": 190.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure6-1.png"
+}, {
+  "caption": "Figure 2: An example of connection-aware molecular motif mining. Given a training set D = {“Brc1ccccc1”, “Cc1cccc(O)c1”}, it consists of two phases. (a) Merging-operation Learning Phase. The merging graphs are initialized the same as the molecular graphs. In the first iteration, “c:c” (marked in blue) is the most frequent pattern. We merge the patterns “c:c” in all the molecules to update the merging graphs. In the second iteration, “c:c:c:c” (marked in yellow) is the most frequent pattern, so we merge such patterns and update merging graphs. We repeat this process for 3 iterations and record the merging operations in order. (b) Motif-vocabulary Construction Phase. We apply the recorded merging operations sequentially on all molecules. Then the two molecules are fragmentized as motifs. We break the bonds between different motifs while preserving the broken bonds. In this way we construct a connection-aware motif vocabulary as shown in (c).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 287.2845153808594,
+    "y2": 391.9168701171875
+  },
+  "figType": "Figure",
+  "imageText": ["**", "*OC", "*", "*", "*Br", "Br", "O", "Br", "O", "Br", "O", "Br", "O", "O", "Br", "7", "(b)", "Motif-vocabulary", "Construction", "Phase", "c1ccccc1", "c:c:c:c", "c:c", "Operations:", "Merging", "(a)", "Merging-operation", "Learning", "Phase", "(c)", "Motif", "Vocabulary:", "(1)", "(2)", "(3)", "2", "1", "1", "1", "c:c:c:c", "Br-c:c", "C-c:c", "O-c:c", "6", "1", "1", "1", "O-c:c", "c1ccccc1", "Br-c:c:c:c", "C-c:c:c:c", "c:c", "Br-c", "C-c", "O-c", "12", "1", "1", "1", "Statistics:", "Graphs:", "Merging", "Graphs:", "Molecule"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 84.0,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure2-1.png"
+}, {
+  "caption": "Figure 10: Merging operations. Note that instead of kekulizing all molecules, we maintain the aromaticity of atoms and bonds. Thus some of the patters seem half-baked.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032043457031,
+    "y1": 710.7435302734375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Learnt", "merging", "operations", "for", "GuacaMol.", "(a)", "Learnt", "merging", "operations", "for", "QM9."],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 204.95999999999998,
+    "y2": 693.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure10-1.png"
+}, {
+  "caption": "Table 2: Goal directed generation results on five GuacaMol benchmarks. The higher the better for all metrics. The results of baselines are from Brown et al. (2019) and Ahn et al. (2020). The benchmarks are: a. Celecoxib Rediscovery; b. Aripiprazole Similarity; c. C11H24 Isomers; d. Ranolazine MPO; and e. Sitagliptin MPO.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 92.6165542602539,
+    "y2": 131.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["a.", "0.505", "0.732", "0.355", "1.000", "1.000", "1.000", "1.000", "b.", "0.595", "0.834", "0.380", "1.000", "1.000", "1.000", "1.000", "c.", "0.684", "0.829", "0.410", "0.971", "0.993", "0.997", "0.999", "d.", "0.792", "0.881", "0.616", "0.920", "0.855", "0.931", "0.932", "e.", "0.509", "0.689", "0.458", "0.891", "0.545", "0.868", "0.914", "Benchmark", "Dataset", "SMILES", "GA", "Graph", "MCTS", "Graph", "GA", "SMILES", "LSTM", "MSO", "MiCaM", "(Ours)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 134.4,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Table2-1.png"
+}, {
+  "caption": "Figure 3: The Generation Steps. (a) The generation procedure is based on the connection-aware motif vocabulary. We obtain the graph representations hF∗ (yellow) and the node representations hv (dark blue) via GNNmotif. (b) In the tth generation step, we obtain the graph representation hGt (dark green) and node representations hv (light blue) via GNNpmol. We focus on a connection site vt and use [z,hGt ,hvt ] to query another connection site either from the motif vocabulary (which implies adding a motif) or from the partial molecule (which implies cyclizing). The right answers of every steps are marked by red boxes.",
+  "captionBoundary": {
+    "x1": 107.99996185302734,
+    "x2": 504.0032958984375,
+    "y1": 222.64151000976562,
+    "y2": 294.39794921875
+  },
+  "figType": "Figure",
+  "imageText": ["(6)", "(5)", "{3}", "···ℎ", "[1]", "[2]", "[3]", "[4]", "···", "(1)", "(2)", "(3)", "(4)", "(5)", "(6)", "···ℎℱ∗", "{1}", "{2}{3}", "NNkey", "(3)", "{2}", "(2)", "(4)", "{1}", "···", "(1)", "(a)", "Motif", "Vocabulary", "GNNpmolGNNmotif", "NNquery", "[𝑧,", "ℎ𝒢", ",", "ℎ", "]", "···", "[3]", "[4]", "(1)", "(5)", "(6)", "𝑣", "[4]", "[3]", "Step", "1", "𝑣", "Step", "2", "𝑣", "Step", "0", "[2]", "[1]", "Step", "3", "NNstart", "𝑧", "[1]", "[2]", "(1)", "(5)", "(6)", "···", "{1}", "{2}{3}", "(b)", "Generation", "Steps", "···", "(1)", "(5)", "(6)"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 84.0,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure3-1.png"
+}, {
+  "caption": "Figure 12: Motifs sampled for the Ranolazine MPO benchmark.",
+  "captionBoundary": {
+    "x1": 178.00100708007812,
+    "x2": 433.9999694824219,
+    "y1": 514.530517578125,
+    "y2": 520.532958984375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Mind", "motifs", "in", "the", "last", "iteration", "for", "Ranolazine", "MPO", "benchmark.", "(b)", "Mined", "motifs", "for", "GuacaMol.", "(a)", "Mined", "motifs", "for", "QM9."],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 80.64,
+    "y2": 497.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure12-1.png"
+}, {
+  "caption": "Figure 11: The t-SNE visualization of Motif representations.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.99725341796875,
+    "y1": 724.5435791015625,
+    "y2": 741.5050048828125
+  },
+  "figType": "Figure",
+  "imageText": ["Oc1ccccc1", "Cc1ccccc1", "CCNC", "Cc1ccnn1", "c1ccc2ncccc2c1", "20", "10", "0", "−10", "−20", "−15", "−10", "−5", "0", "5", "10", "15"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 347.03999999999996,
+    "x2": 503.03999999999996,
+    "y1": 559.68,
+    "y2": 708.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure11-1.png"
+}, {
+  "caption": "Figure 8: Generation trajectories for Celecoxib Rediscovery. We show the trajectories of the best molecules in three different iterations. In each generation step, the query connection is marked in red, and the newly added motif is marked in yellow.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 264.0825500488281,
+    "y2": 292.00299072265625
+  },
+  "figType": "Figure",
+  "imageText": ["score=0.628score=0.364score=0.220score=0.156", "score=0.753", "score=0.750score=0.364score=0.299", "score=1.000score=0.750score=0.663", "Iter", "5:", "score=0.868", "Iter", "3:", "Iter", "1:"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 241.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Samples from molecules randomly generated by a MiCaM model, trained on GuacaMol.",
+  "captionBoundary": {
+    "x1": 109.65799713134766,
+    "x2": 502.3438415527344,
+    "y1": 701.1705322265625,
+    "y2": 707.1729736328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 478.08,
+    "y1": 478.56,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure9-1.png"
+}, {
+  "caption": "Figure 5: Generation trajectories for Ranolazine MPO benchmark. In each generation step, the query connection is marked in red, and the newly added motif is marked in yellow.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0034484863281,
+    "y1": 217.81558227539062,
+    "y2": 234.77703857421875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Scores", "of", "each", "properties", "Sim", "logP", "TPSA", "Num", "Fs", "Mean", "re", "S", "co", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Generation", "Step", "1", "2", "3", "4", "5", "6", "(a)", "Generation", "trajectory"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 492.47999999999996,
+    "y1": 87.84,
+    "y2": 200.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure5-1.png"
+}, {
+  "caption": "Table 3: Ablation studies on different versions of MiCaM. The results are from a set of 100, 000 molecules randomly sampled from GuacaMol.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9998779296875,
+    "y1": 549.7054443359375,
+    "y2": 566.6668701171875
+  },
+  "figType": "Table",
+  "imageText": ["MiCaM", "1.0", "0.998", "0.995", "0.957", "0.754", "Model", "Validity", "Uniqueness", "Novelty", "KL", "Div", "FCD", "MiCaM(v1)", "1.0", "1.000", "0.993", "0.926", "0.685", "MiCaM(v2)", "1.0", "0.989", "0.989", "0.965", "0.617"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 567.84,
+    "y2": 625.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Table3-1.png"
+}, {
+  "caption": "Figure 7: Visualization of the probability distributions of training sets (QM9, ZINK and GuacaMol) and the generated molecules. The postfix “ ref” means reference, i.e., the training sets (shown in green, blue and red, respectively), and the postfix “ gen” means the sets of molecules generated by our model (shown in grey). We obtain the representations of molecules by calculating their molecular fingerprints, and we then apply t-SNE dimensionality reduction for visualization. The curves represent the contour lines of the probability distributions of the datasets. (a) shows the distributional shift over the three training sets. (b), (c) and (d) demonstrate that our generative model can properly fit the different distributions respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 322.6385192871094,
+    "y2": 405.35394287109375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Results", "on", "GuacaMol", "GuacaMol", "ref", "GuacaMol", "gen", "100", "75", "50", "25", "0", "−25", "−50", "−75", "−100", "(c)", "Results", "on", "ZINK", "−100", "−75", "−50", "−25", "0", "25", "50", "75", "100", "ZINK", "ref", "ZINK", "gen", "100", "75", "50", "25", "0", "−25", "−50", "−75", "−100", "(b)", "Results", "on", "QM9", "−100", "−75", "−50", "−25", "0", "25", "50", "75", "100", "QM9", "ref", "QM9", "gen", "100", "75", "50", "25", "0", "−25", "−50", "−75", "−100", "(a)", "Training", "sets", "−100", "−75", "−50", "−25", "0", "25", "50", "75", "100", "QM9", "ref", "ZINK", "ref", "GuacaMol", "ref", "100", "75", "50", "25", "0", "−25", "−50", "−75", "−100", "−75", "−50", "−25", "0", "25", "50", "75", "100", "−100"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 498.71999999999997,
+    "y1": 207.35999999999999,
+    "y2": 305.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q_Jexl8-qDi-Figure7-1.png"
+}]

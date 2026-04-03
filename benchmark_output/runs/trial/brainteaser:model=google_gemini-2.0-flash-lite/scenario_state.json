@@ -1,0 +1,824 @@
+{
+  "adapter_spec": {
+    "method": "multiple_choice_joint",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "Answer: ",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 1,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [
+      "\n"
+    ],
+    "multi_label": false
+  },
+  "request_states": [
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What is the most shocking city?\n\nA. Urban city.\nB. Inner city.\nC. Electricity.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id300"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What is the most shocking city?\n\nA. Urban city.\nB. Inner city.\nC. Electricity.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **D. D**\n\nThe question is a play on words. \"Shocking\" can refer to an electrical shock. The only option related to electricity is \"C. Electricity\". However, the question asks for the \"most shocking city\", and none of the options are cities. Therefore, the best answer is \"None of the above\".\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.9617931842803955,
+        "request_datetime": 1775238261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: Which beans cannot be grown in a garden?\n\nA. Jelly beans.\nB. Soy beans.\nC. Green beans.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id319"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: Which beans cannot be grown in a garden?\n\nA. Jelly beans.\nB. Soy beans.\nC. Green beans.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **A. A**\n\nJelly beans are a processed confection, not a type of bean that grows in a garden. The other options, soybeans and green beans, are types of beans that can be grown in a garden.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.958848237991333,
+        "request_datetime": 1775238261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What kind of beans won't grow in a garden?\n\nA. Soy beans.\nB. Green beans.\nC. Jelly beans.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id318"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What kind of beans won't grow in a garden?\n\nA. Soy beans.\nB. Green beans.\nC. Jelly beans.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **C. Jelly beans.**\n\nJelly beans are a candy and won't grow in a garden. The other options are types of beans that can be grown.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.8276200294494629,
+        "request_datetime": 1775238261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What type of ship is found beneath the ice in the freezer?\n\nA. An lightship.\nB. A cargo ship.\nC. An icebreaker ship.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id65"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What type of ship is found beneath the ice in the freezer?\n\nA. An lightship.\nB. A cargo ship.\nC. An icebreaker ship.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **D. None of above.**\n\nThe question is a riddle or a play on words. A freezer is a device that keeps things cold, and ships are found on water. There's no ship \"beneath the ice in the freezer\" in a literal sense.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.1156554222106934,
+        "request_datetime": 1775238261
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: Which city is based on studying?\n\nA. Alphabet city.\nB. Music city.\nC. Windy city.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id59"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: Which city is based on studying?\n\nA. Alphabet city.\nB. Music city.\nC. Windy city.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **D. D**\n\nHere's why:\n\n*   **Alphabet City:** A neighborhood in New York City, not related to studying.\n*   **Music City:** Nashville, TN - known for its music industry.\n*   **Windy City:** Chicago, IL - a nickname.\n*   **None of the above:** Since none of the listed cities are based on the concept of studying, this is the correct answer.",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.4595232009887695,
+        "request_datetime": 1775238262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What kind of bank doesn't have money on hand?\n\nA. Riverbank.\nB. Investment bank.\nC. Central bank.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id356"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What kind of bank doesn't have money on hand?\n\nA. Riverbank.\nB. Investment bank.\nC. Central bank.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. Investment bank.**\n\nHere's why:\n\n*   **Investment banks** primarily facilitate financial transactions for companies and wealthy individuals. They don't typically hold large amounts of customer deposits like a retail bank. Instead, they focus on activities like underwriting securities, mergers and acquisitions, and trading.\n*   **Central banks** (like the Federal Reserve in the US) manage a country's monetary policy and do hold significant reserves.\n*   **Riverbank** is a play on words to trick you. It's not a type of bank.\n\nTherefore, the bank that doesn't have money on hand is an investment bank.\n\n**Correct Answer: B**",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.4232549667358398,
+        "request_datetime": 1775238262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What has only one letter inside, a 'E' at the beginning and a 'E' at the end?\n\nA. Evolve.\nB. Envelope.\nC. Eagle.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id289"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What has only one letter inside, a 'E' at the beginning and a 'E' at the end?\n\nA. Evolve.\nB. Envelope.\nC. Eagle.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **B. Envelope.**\n\nHere's why:\n\n*   **Envelope** fits the description: It starts with \"E\", ends with \"E\", and has \"nvelop\" (containing only one letter \"l\") inside.\n*   **Evolve** and **Eagle** start with \"E\" but don't end with \"E.\"",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.0628173351287842,
+        "request_datetime": 1775238262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What does a stone become when in the water?\n\nA. A whetstone.\nB. A limestone\nC. A sandstone.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id60"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What does a stone become when in the water?\n\nA. A whetstone.\nB. A limestone\nC. A sandstone.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The best answer is **D. None of the above.** Here's why:\n\n*   **Whetstone:** A whetstone is used for sharpening tools, but the water doesn't *make* a stone a whetstone.\n*   **Limestone:** Limestone is a type of sedimentary rock, but water doesn't *turn* a stone *into* limestone.\n*   **Sandstone:** Sandstone is another type of sedimentary rock. Like limestone, water doesn't transform a stone into sandstone.\n*   **None of the above:** This is the correct answer because none of the options describe what a stone *becomes* when in water. Stones can be *found* in water, but the water doesn't fundamentally change their composition.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.7244856357574463,
+        "request_datetime": 1775238262
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What kind of ice doesn't contain water?\n\nA. Flaked ice.\nB. Dry ice.\nC. Glacier ice.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id395"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What kind of ice doesn't contain water?\n\nA. Flaked ice.\nB. Dry ice.\nC. Glacier ice.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The correct answer is **B. Dry ice.**\n\nDry ice is frozen carbon dioxide (CO2), not water. It's called \"dry\" because it doesn't melt into a liquid; it sublimates directly into a gas.\n\nThe other options are incorrect:\n\n*   **A. Flaked ice:** This is made of water.\n*   **C. Glacier ice:** This is made of water.\n*   **D. None of the above:** Since B is correct, this is incorrect.\n\nSo the answer is $\\boxed{B}$\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 1.1733283996582031,
+        "request_datetime": 1775238263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "Question: What kind of butter is really able to fly?\n\nA. Almond butter.\nB. Peanut butter.\nC. Butterfly.\nD. None of above."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "A"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "B"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "C"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "D"
+            },
+            "tags": []
+          }
+        ],
+        "split": "test",
+        "id": "id325"
+      },
+      "train_trial_index": 0,
+      "output_mapping": {
+        "A": "A",
+        "B": "B",
+        "C": "C",
+        "D": "D"
+      },
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "Question: What kind of butter is really able to fly?\n\nA. Almond butter.\nB. Peanut butter.\nC. Butterfly.\nD. None of above.\nA. A\nB. B\nC. C\nD. D\nAnswer:",
+        "temperature": 0.7,
+        "num_completions": 1,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "The answer is **C. Butterfly**.\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": true,
+        "request_time": 0.504302978515625,
+        "request_datetime": 1775238263
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    }
+  ]
+}

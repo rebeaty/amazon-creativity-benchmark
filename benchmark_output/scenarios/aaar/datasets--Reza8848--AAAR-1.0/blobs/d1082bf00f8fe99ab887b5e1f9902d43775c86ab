@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: Different matrices and corresponding models",
+  "captionBoundary": {
+    "x1": 207.17300415039062,
+    "x2": 404.5204162597656,
+    "y1": 427.9605407714844,
+    "y2": 433.9630126953125
+  },
+  "figType": "Table",
+  "imageText": ["Learning", "task:", "We", "consider", "the", "problem", "of", "learning", "a", "linear", "teacher", "function", "fd(x)", "=", "β∗Tx", "with", "x", "and", "x̂", "sampled", "as", "deﬁned", "above,", "and", "with", "β∗", "∈", "Rp", "a", "column", "vectors.", "This", "hidden", "vector", "β∗", "(to", "be", "learned)", "can", "potentially", "be", "a", "deterministic", "vector.", "We", "suppose", "that", "we", "have", "n", "data-points", "(zi,", "yi)1≤i≤n", "with", "xi", "=", "Bzi,", "x̂i", "=", "Azi.", "This", "data", "can", "be", "represented", "as", "the", "n×", "d", "matrix", "Z", "∈", "Rn×d", "", "Further", "Kernel", "methods", "0", "0", "·", "·", "·", "√ωd", ".", ".", ".", "...", "...", "...", "", "", "√", "ω1", "0", "·", "·", "·", "0", "0", "√", "ω2", "·", "·", "·", "0", "0", "0", "·", "·", "·", "√ωd", ".", ".", ".", "...", "...", "...", "Oq×N", "", "Random", "features", "regression", "of", "a", "noisy", "linear", "function", "with", "W", "the", "random", "weights", "and", "(µ,", "ν)", "describ-", "ing", "a", "non-linear", "activation", "function", "√", "ω1", "0", "·", "·", "·", "0", "0", "√", "ω2", "·", "·", "·", "0", "d", "pIN", "", "µ", "√", "d", "pW", "ν", "√", "Oq×p", "σ", "√", "d", "q", "Iq", "r", "√", "d", "pIp", "Op×q", "ON×p", "ON×q", "", "non-isotropic", "ridgless", "regression", "noiseless", "with", "a", "α", "polynomial", "dis-", "torsion", "of", "the", "inputs", "scalings", "Iγd", "α", "p−1", "2", "...", "0", ".", ".", ".", "1", "", "", "1", "α0", "Iγd", "0", "0", "0", ".", ".", ".", "0", "0", ".", ".", ".", "...", "0", "0", ".", ".", ".", "Iγd", "", "Iγd", "0", "0", "0", "0", "Iγd", "0", "0", "", "", "√", "d", "γpIγp", "O(1−γ)p×γd", "Oq×γd", "", "Mismatched", "ridgeless", "regression", "withz", "signal", "r", "and", "noise", "σ", "and", "mis-", "match", "parameter", "γ", "with", "γ+", "γ′", "=", "1", "σ2d", "q", "Iq", "0", "0", "√", "", "√", "r2d", "p", "Iγp", "0", "0", "0", "√", "r2d", "p", "Iγ′p", "0", ")", "Ridgeless", "regression", "with", "signal", "r", "and", "noise", "σ", "Oq×p", "", "(√", "d", "pIp", "d", "q", "Iq", "0", "σ", "√", "Target", "Matrix", "B", "Estimator", "Matrix", "A", "Corresponding", "Modelr√d", "pIp", "0"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 504.47999999999996,
+    "y1": 444.96,
+    "y2": 732.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Table1-1.png"
+}, {
+  "caption": "Figure 1: Example of theoretical multiple descents in the least-squares solution for the non-isotropic ridgeless regression model with p = 3, λ = 10−7 (left) and p = 4, λ = 10−13 (right), and α = 104 in both of them.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039367675781,
+    "y1": 432.43951416015625,
+    "y2": 448.4049987792969
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 163.68,
+    "x2": 448.32,
+    "y1": 327.84,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Example of theoretical multiple descents evolution in the non-isotropic ridgeless regression model with p = 3, λ = 10−5, α = 100 with φ = 1 on the left and a range φ ∈ (0, 1) on the right heatmap.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 503.99713134765625,
+    "y1": 632.2615966796875,
+    "y2": 648.2260131835938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 163.68,
+    "x2": 448.32,
+    "y1": 528.0,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Theoretical (log-)eigenvalue distribution in the non-isotropic ridgeless regression model with p = 3, λ = 10−5, α = 104 with φ = 1 on the left and a range φ ∈ (0, 1) on the right heatmap.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 503.99755859375,
+    "y1": 200.41152954101562,
+    "y2": 217.37298583984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure6-1.png"
+}, {
+  "caption": "Figure 4: Comparison between the analytical and experimental learning profiles for the minimum least-squares estimator at λ = 10−3 on the left (20 runs) and the time evolution at λ = 10−2, n = 700 on the right (10 runs).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00067138671875,
+    "y1": 595.8445434570312,
+    "y2": 611.8099975585938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 163.68,
+    "x2": 448.32,
+    "y1": 490.56,
+    "y2": 585.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Analytical training error and test error heat-maps for the theoretical gradient flow for λ = 10−3.",
+  "captionBoundary": {
+    "x1": 113.66699981689453,
+    "x2": 498.3326110839844,
+    "y1": 717.3245849609375,
+    "y2": 723.3270263671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 615.84,
+    "y2": 706.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Theoretical (log-)eigenvalue distribution in the non-isotropic ridgeless regression model with p = 3, λ = 10−5, α = 100 with φ = 1 on the left and a range φ ∈ (0, 1) on the right heatmap.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.996826171875,
+    "y1": 176.65151977539062,
+    "y2": 192.61700439453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure3-1.png"
+}, {
+  "caption": "Figure 8: Comparison between the analytical and experimental learning evolution at λ = 10−2, n = 700 (10 runs).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 705.3435668945312,
+    "y2": 721.3090209960938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 225.6,
+    "x2": 386.4,
+    "y1": 588.0,
+    "y2": 694.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Comparison between the analytical and experimental learning profiles for the minimum least-squares estimator at λ = 10−3 on the left (average and ± 2-standard-deviations over 20 runs) and λ = 10−2, n = 700 on the right.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.22662353515625,
+    "y1": 563.9395751953125,
+    "y2": 589.8679809570312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 467.03999999999996,
+    "y1": 445.91999999999996,
+    "y2": 553.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O2cW5Q3bH_M-Figure7-1.png"
+}]

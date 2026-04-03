@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 2: The main results on the test set across the different tasks and different evaluation metrics. Numbers are in percentage. The “Random Guess” results are included to facilitate visualization since different tasks have different answer types.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7442321777344,
+    "y1": 250.27053833007812,
+    "y2": 278.19097900390625
+  },
+  "figType": "Table",
+  "imageText": ["Graph", "Similarity", "T5", "[large]", "(fine-tuned)", "44.1", "67.0", "05.4", "00.9", "00.3", "GPT-3", "[davinci]", "(few-shot)", "15.1", "1.9", "16.0", "05.2", "01.1", "Reasoning", "Graph", "Accuracy", "T5", "[large]", "(fine-tuned)", "17.1", "60.0", "00.7", "00.0", "00.0", "GPT-3", "[davinci]", "(few-shot)", "01.7", "1.2", "00.7", "00.0", "00.0", "Random", "Guess", "25.0", "—", "—", "20.0", "20.0", "T5", "[large]", "(fine-tuned)", "93.5", "69.6", "10.4", "28.7", "28.0", "GPT-3", "[davinci]", "(few-shot)", "72.9", "02.3", "34.8", "40.2", "19.0", "Model", "ARC", "SCONE", "GSM8K", "AQUA-RAT", "AR-LSAT", "Answer", "Accuracy"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Table2-1.png"
+}, {
+  "caption": "Figure 1: Example derived from the Grade School Math (GSM8K) and Analytical Reasoning - Law School Admission Test (AR-LSAT) tasks where the QA components (e.g. question, context, and answers options) are broken into textual logical units, or TLUs. These TLUs are then connected, forming a reasoning graph. We build upon existing QA datasets by adding the structured reasoning explanations that shows how one can derive the answer to a given question.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2471923828125,
+    "y1": 305.74053955078125,
+    "y2": 355.5780029296875
+  },
+  "figType": "Figure",
+  "imageText": ["GSM8K", "AR-LSAT", "contradicts", "option", "D)", "(18)", "If", "neither", "type", "of", "jazz", "is", "on", "sale,", "both", "types", "of", "soul", "must", "be", "on", "sale,", "which", "(14)", "D)", "Neither", "type", "of", "jazz", "and", "neither", "type", "of", "soul", "is", "on", "sale.", "CONTEXT:", "(1)", "Natalia", "sold", "clips", "to", "48", "of", "her", "friends", "in", "April,", "and", "then", "(2)", "she", "sold", "half", "as", "many", "clips", "in", "May.", "QUESTION:", "(3)", "How", "many", "clips", "did", "Natalia", "sell", "altogether", "in", "April", "and", "May?", "CONTEXT:", "(1)", "A", "music", "store", "carries", "exactly", "ten", "types", "of", "CDs", "(2)", "both", "new", "and", "used", "of", "each", "of", "jazz,", "opera,", "pop,", "rap,", "and", "soul.", "(3)", "The", "store", "is", "having", "a", "sale", "on", "some", "of", "these", "types", "of", "CDs.", "(4)", "The", "following", "conditions", "must", "apply:", "(5)", "used", "pop", "is", "on", "sale", "and", "new", "opera", "is", "not.", "(6)", "If", "both", "types", "of", "pop", "are", "on", "sale,", "then", "all", "soul", "is.", "(7)", "If", "both", "types", "of", "jazz", "are", "on", "sale,", "then", "no", "rap", "is.", "(8)", "If", "neither", "type", "of", "jazz", "is", "on", "sale,", "then", "new", "pop", "is.", "(9)", "If", "either", "type", "of", "rap", "is", "on", "sale,", "then", "no", "soul", "is.", "QUESTION:", "(10)", "Which", "one", "of", "the", "following", "CANNOT", "be", "true?", "(11)", "A)", "Neither", "type", "of", "opera", "and", "neither", "type", "of", "rap", "is", "on", "sale.", "(12)", "B)", "Neither", "type", "of", "jazz", "and", "neither", "type", "of", "opera", "is", "on", "sale.", "(13)", "C)", "Neither", "type", "of", "opera", "and", "neither", "type", "of", "soul", "is", "on", "sale.", "(14)", "D)", "Neither", "type", "of", "jazz", "and", "neither", "type", "of", "soul", "is", "on", "sale.", "(15)", "E)", "Neither", "type", "of", "jazz", "and", "neither", "type", "of", "rap", "is", "on", "sale.", "Answer:", "D)", "soul", "are", "on", "sale.", "(17)", "Since", "new", "pop", "and", "used", "pop", "are", "on", "sale,", "then", "new", "soul", "and", "used", "(16)", "If", "new", "jazz", "or", "used", "jazz", "are", "not", "on", "sale,", "then", "new", "pop", "is", "on", "sale.", "(8)", "If", "neither", "type", "of", "jazz", "is", "on", "sale,", "then", "new", "pop", "is", "(6)", "If", "both", "types", "of", "pop", "are", "on", "sale,", "then", "all", "soul", "is.", "(5)", "used", "pop", "is", "on", "sale", "and", "new", "opera", "is", "not.", "Question", "+", "Context", "Reasoning", "Steps", "Answer", "Answer:", "72", "(5)", "Natalia", "sold", "48", "+", "24", "=", "72", "clips", "in", "April", "and", "May", "(4)", "Natalia", "sold", "48", "/", "2", "=", "24", "clips", "in", "May", "(3)", "How", "many", "clips", "did", "Natalia", "sell", "altogether", "in", "April", "and", "May?", "(2)", "and", "then", "she", "sold", "half", "as", "many", "clips", "in", "May", "(1)", "Natalia", "sold", "clips", "to", "48", "of", "her", "friends", "in", "April"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 500.15999999999997,
+    "y1": 82.56,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Figure1-1.png"
+}, {
+  "caption": "Figure 3: A histogram containing the reasoning graph similarity of baseline models as well as human performance on a randomly selected subset of the test data.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.6567077636719,
+    "y1": 593.3755493164062,
+    "y2": 632.2550048828125
+  },
+  "figType": "Figure",
+  "imageText": ["Human", "Performance", "T5", "[large]", "GPT-3", "[davinci]", "Reasoning", "Graph", "Similarity", "for", "Correct", "Answers", "AR-LSAT", "AQUA-RAT", "GSM8K", "SCONE", "ARC", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Similarity", "Value"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 312.47999999999996,
+    "x2": 494.88,
+    "y1": 336.96,
+    "y2": 574.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Figure3-1.png"
+}, {
+  "caption": "Table 1: The different tasks used to create the proposed benchmark. In the answer types, “K-Way MC” stands for multiple choice answer with K options.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.35028076171875,
+    "y1": 197.39950561523438,
+    "y2": 214.36102294921875
+  },
+  "figType": "Table",
+  "imageText": ["TOTAL", "—", "134,648", "19,096", "151,093", "—", "ARC", "Science", "7,787", "1,840", "5,881", "4-Way", "MC", "SCONE", "Processes", "14,574", "14,574", "130,482", "State", "Pred.", "GSM8K", "Math", "8,792", "1,030", "4,666", "Number", "AQUA-RAT", "Math", "101,449", "1,152", "7,179", "5-Way", "MC", "AR-LSAT", "Logic", "2,046", "500", "2,885", "5-Way", "MC", "Answer", "Type", "#", "Reasoning", "Steps", "#", "Used", "Questions", "#", "Original", "Questions", "Task", "Domain", "Task", "Name"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Table1-1.png"
+}, {
+  "caption": "Figure 2: A histogram containing the distribution of data points and the number of reasoning steps for each annotated dataset (training, development, and testing split combined), truncated to a maximum of 15 steps. The distribution varies among datasets, with an average of 7.8 steps across all data points.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7394714355469,
+    "y1": 186.51351928710938,
+    "y2": 214.43402099609375
+  },
+  "figType": "Figure",
+  "imageText": ["0.00", "0.05", "0.10", "0.15", "0.20", "0.25", "0.30", "0.35", "Da", "ta", "se", "t", "P", "ro", "po", "tio", "n", "ARC", "GSM8K", "AQUA-RAT", "SCONE", "AR-LSAT", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15+", "Number", "of", "Reasoning", "Steps"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 118.08,
+    "x2": 492.0,
+    "y1": 84.0,
+    "y2": 168.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Figure2-1.png"
+}, {
+  "caption": "Table 3: Definition of the text similarity function for each of the STREET tasks.",
+  "captionBoundary": {
+    "x1": 144.96600341796875,
+    "x2": 467.0368957519531,
+    "y1": 476.6855163574219,
+    "y2": 482.68798828125
+  },
+  "figType": "Table",
+  "imageText": ["ARC", "and", "AR-LSAT", "Since", "the", "conclusion", "nodes", "in", "these", "are", "in", "free", "text", "format,", "we", "follow", "Dalvi", "et", "al.", "(2021)", "and", "use", "the", "BLEURT", "(Sellam", "et", "al.,", "2020)", "text", "similarity", "function.", "BLEURT", "is", "a", "trained", "metric", "that", "uses", "the", "BERT", "language", "model", "and", "was", "shown", "to", "have", "better", "correlation", "to", "human", "judgment", "than", "standard", "metrics", "like", "BLEU", "and", "ROUGE.", "We", "define", "that", "BLEURT", ">", "0.25", "is", "the", "threshold", "that", "defines", "if", "nodes", "a", "and", "b", "are", "similar.", "GSM8K", "and", "AQUA-RAT", "We", "parse", "the", "node", "text", "and", "extract", "all", "the", "mathematical", "values", "inside", "the", "node.", "For", "instance", "“Natalia", "sold", "48", "/", "2", "=", "24", "clips", "in", "May”", "would", "be", "converted", "to", "the", "set", "{48,", "2,", "24}.", "Then", "the", "similarity", "function", "return", "TRUE", "if", "the", "sets", "extracted", "from", "a", "and", "b", "are", "equal.", "SCONE", "The", "nodes", "in", "scone", "follow", "a", "well", "defined", "textual", "structure,", "therefore", "the", "node", "similarity", "returns", "TRUE", "if", "and", "only", "if", "a", "=", "b.", "STREET", "Tasks", "Text", "Similarity", "σ(a,", "b)", "Description"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 274.56,
+    "y2": 465.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Table3-1.png"
+}, {
+  "caption": "Figure 4: A histogram containing the distribution of incoming edges (a.k.a node’s degree) per reasoning step for each annotated dataset (training, development, and testing split combined), truncated to a maximum value of 8 incoming edges.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65667724609375,
+    "y1": 186.51351928710938,
+    "y2": 214.43402099609375
+  },
+  "figType": "Figure",
+  "imageText": ["GSM8K", "AQUA-RAT", "SCONE", "AR-LSAT", "tio", "n", "ARC", "ro", "po", "se", "t", "P", "Da", "ta", "0.8", "0.6", "0.4", "0.2", "0.0", "1", "2", "3", "4", "5", "6", "7", "8+", "Number", "of", "Incoming", "Edges"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 119.52,
+    "x2": 490.08,
+    "y1": 84.0,
+    "y2": 168.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1C_kSW1-k0-Figure4-1.png"
+}]

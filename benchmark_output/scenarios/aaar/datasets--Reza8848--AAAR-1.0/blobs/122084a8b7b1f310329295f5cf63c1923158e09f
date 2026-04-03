@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 5: Cross-class analysis on category-oriented channel awareness. (a) Ratio of overlapped channels between 9 different classes. e select the top 100 channels with the highest category-oriented channel awareness for each class. A high ratio indicates more shared channels between the two classes. (b) Single-channel manipulation results on different classes. The semantics discovered from the source class (1st and 2nd columns) are applied to other target classes (3rd - 7th columns). (Zoom in for better view.)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0047607421875,
+    "y1": 273.4365539550781,
+    "y2": 334.23297119140625
+  },
+  "figType": "Figure",
+  "imageText": ["Source", "2", "3", "4", "5", "6", "7", "Ta", "rg", "et", "1", "Po", "in", "te", "d", "Ea", "r", "Lo", "ng", "Fu", "r", "Bo", "dy", "C", "ar", "Ar", "ea", "W", "at", "er", "Fu", "r", "W", "hi", "te", "(a)", "(b)", "408", "627", "407", "24", "13", "12", "151", "154", "152", "152", "154", "151", "12", "13", "24", "407", "627", "408"],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 82.56,
+    "y2": 267.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure5-1.png"
+}, {
+  "caption": "Table 1: Cross-class analysis on latent-oriented channel awareness. Results of the number of shared channels among 1,000 classes in different layers (layer 0 - layer 11) in three types of channel selection criterion. For each class, we select only 10 channels (k=10) and perform intersection among all classes. The category-oriented channel awareness is served as baseline. Channel overlapping results of more ks, as well as an extreme case of k=1 can be found in Appendix C.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00323486328125,
+    "y1": 348.9804992675781,
+    "y2": 398.81890869140625
+  },
+  "figType": "Table",
+  "imageText": ["Selection", "Criterion", "L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8", "L9", "L10", "L11", "highest", "awareness", "w.r.t.", "category", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "lowest", "awareness", "w.r.t.", "category", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "highest", "awareness", "w.r.t.", "latent", "3", "3", "3", "1", "3", "3", "0", "4", "2", "1", "5", "4"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 406.56,
+    "y2": 461.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Table1-1.png"
+}, {
+  "caption": "Figure 1: Novel applications enabled by interpreting class conditional GANs. Given a conditional generator in (a), we propose channel awareness to quantify the contribution of each feature channel to the output image, as shown in (b), which reveals how the categorical information is handled by different channels. Red, green, and blue channels are primarily responsible for the synthesis of a particular category, while yellow ones are shared by all classes. (c) Such an interpretation facilitates a range of applications, including single-channel image editing, category hybridization, fine-grained semantic segmentation, and category-wise synthesis performance evaluation. (Zoom in for better view.)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 277.9865417480469,
+    "y2": 360.700927734375
+  },
+  "figType": "Figure",
+  "imageText": ["C", "G", "W", "H", "😀", "😐", "☹", "(c)", "(b)", "(a)", "e1", "e2", "e3", "…", "Manhole", "cover", "Leathery", "turtle", "Barrow", "＞", "＞", "(4)", "Synthesis", "Performance", "Evaluation", "(3)", "Object", "Part", "Segmentation", "(2)", "Category", "Hybridization", "+-", "(1)", "Single-channel", "Image", "Editing", "+", "z", "Conditional", "GeneratorInputs", "Various", "Categories", "…", "…", "C", "H", "W", "Channel", "Awareness"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 272.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure1-1.png"
+}, {
+  "caption": "Figure 6: Versatile attributes discovered by the channel awareness. (a) Attributes discovered via the category-oriented channel awareness, which are highly relevant to a particular class. (b) Attributes discovered via the latent-oriented channel awareness, which are shared among various classes. Each editing result is achieved by manipulating a single channel. (Zoom in for better view.) More results can be found in Appendix E and Appendix F.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 235.37454223632812,
+    "y2": 285.21295166015625
+  },
+  "figType": "Figure",
+  "imageText": ["n", "B", "ub", "bl", "e", "m", "on", "t", "B", "ea", "co", "D", "in", "di", "e", "D", "an", "bo", "at", "Li", "fe", "(a)", "Category-oriented", "Attributes", "(b)", "Latent-oriented", "Attributes", "ie", "r", "Te", "rr", "to", "n", "B", "os", "Dormant", "Volcano", "C", "at", "ia", "n", "Pe", "rs", "rc", "h", "C", "hu", "Long", "Small", "Dome", "Style", "Scene", "an", "o", "Vo", "lc", "Volcanic", "Ash", "Explosion", "Fire", "Surface", "Small", "Mouth", "Fur", "Color", "Close", "Mouth", "Open", "MouthBig", "Head", "StylePlants", "Night", "ColorOriginal", "Zoom", "outOriginal", "Black", "NoseShorten", "Fur", "Increase", "Fur", "Dark", "Fur", "Fur", "Style"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 504.0,
+    "y1": 84.0,
+    "y2": 227.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure6-1.png"
+}, {
+  "caption": "Figure 8: Object part segmentation with and without awareness weighting. We showcase that simple clustering on the feature space of the class-conditional GAN can obtain object part segmentations. Our channel awareness can be used for weighting channels and push them to be more class-related. Results of three different categories, two kinds of feature selecting layers, and two different amounts of clusters reveal that, in all settings, the channel awareness helps the clustering to focus more on the class-relevant representations, hence it recovers more detailed segmentations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 418.1355285644531,
+    "y2": 478.93292236328125
+  },
+  "figType": "Figure",
+  "imageText": ["without", "with", "without", "with", "without", "with", "Features", "from", "all", "layers", "Features", "from", "latter", "half", "layers", "3", "Clusters", "5", "Clusters", "Input", "without", "with", "Features", "from", "all", "layers", "Features", "from", "latter", "half", "layers"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 500.15999999999997,
+    "y1": 262.56,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Category hybridization by mixing the channels that are relevant to two categories. Compare with the conventional style mixing (Karras et al., 2019) (the 3rd column), our approach (the 4th column) better fuses the characteristics (including both shape and appearance) of both classes. More results can be found in Appendix G.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00274658203125,
+    "y1": 208.19149780273438,
+    "y2": 247.0709228515625
+  },
+  "figType": "Figure",
+  "imageText": ["Input", "Reference", "Output", "w/o", "Channel", "Mixing", "Output", "w/", "Channel", "Mixing", "Input", "Reference", "Output", "w/o", "channel", "mixing", "Output", "w/", "channel", "mixing"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 498.24,
+    "y1": 88.32,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Concept diagram of channel probe, from whose statistics we develop the channel awareness. For a particular feature channel, it is first transformed by class-conditional batch normalization (CCBN) with category-specific scale γc e , and bias βc e , then activated by ReLU to filter out negative neurons. Such a process is reformulated as a combined operation (as shown at the bottom), where we define the channel probe as t = −βc e γc e . This value reflects the integrated action of CCBN and ReLU.",
+  "captionBoundary": {
+    "x1": 107.99996185302734,
+    "x2": 504.00323486328125,
+    "y1": 212.92251586914062,
+    "y2": 278.406005859375
+  },
+  "figType": "Figure",
+  "imageText": ["𝐲!", "=", "𝛾\"!𝐱!", "+", "𝛽\"!", "𝛾!\"", "Channel", "Probe", "𝑡", "=", "−", "𝛽!\"", "0", "C", "CCBN", "ReLU", "H", "W"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure2-1.png"
+}, {
+  "caption": "Figure 9: Qualitative results of evaluating category-wise synthesis performance, which is enabled by the total channel awareness. For each class, we show 6 generated samples, as well as total channel awareness, precision, and recall on below. We observe that classes with high total awareness tend to have high synthesis quality yet low diversity.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0038146972656,
+    "y1": 261.1925354003906,
+    "y2": 300.07196044921875
+  },
+  "figType": "Figure",
+  "imageText": ["Total", "Channel", "Awareness:", "194;", "Precision:", "0.73;", "Recall:", "0.15;", "Barrow", "Total", "Channel", "Awareness:", "197;", "Precision:", "0.71;", "Recall:", "0.20;", "Plastic", "Bag", "Total", "Channel", "Awareness:", "198;", "Precision:", "0.73;", "Recall:", "0.13;", "Reel", "Total", "Channel", "Awareness:", "199;", "Precision:", "0.70;", "Recall:", "0.20;", "Stretcher", "Total", "Channel", "Awareness:", "205;", "Precision:", "0.65;", "Recall:", "0.20;", "Chainsaw", "5", "classes", "with", "lowest", "total", "channel", "awareness"],
+  "name": "9",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 171.84,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Quantitative results of evaluating category-wise synthesis performance, including the correlation between our total channel awareness and the category-wise precision, recall, MSSSIM, and FID. X-axis: Class indices sorted by the total awareness. Y-axis: Normalized total channel awareness and other four metrics. The correlations between total channel awareness and each other metric are shown at the bottom. ↑: higher is better; ↓: lower is better. Note that precision evaluates quality, recall and MS-SSIM evaluates diversity and FID measures both quality and diversity.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 400.6115417480469,
+    "y2": 472.366943359375
+  },
+  "figType": "Figure",
+  "imageText": ["MS-SSIMTotal", "Channel", "Awareness", "Precision", "Recall", "FID", "(b)", "Recall(↑),", "correlation=", "-0.792(a)", "Precision(↑),", "correlation=0.714", "(d)", "FID(↓),", "correlation=", "-0.798(c)", "MS-SSIM(↓),", "correlation=0.899"],
+  "name": "10",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 308.64,
+    "y2": 393.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Quantitative results of the correlation between category-oriented channel awareness (blue line) and categorical score change (red line) of four classes. Top: The correlation between the two curves; Bottom: the corresponding class name. (The channel indices are sorted by the awareness scores for better display).",
+  "captionBoundary": {
+    "x1": 353.51800537109375,
+    "x2": 504.0030517578125,
+    "y1": 467.08453369140625,
+    "y2": 560.7579956054688
+  },
+  "figType": "Figure",
+  "imageText": ["Correlation:", "0.922", "Correlation:", "0.912", "Correlation:", "0.904", "Correlation:", "0.922", "Aircraft", "Carrier", "Police", "Van", "English", "Foxhound", "Bull", "Mastiff"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 352.8,
+    "x2": 504.0,
+    "y1": 348.0,
+    "y2": 461.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Qualitative results of masking channels with the lowest (the 1st column) and the highest (the 3rd column) category-oriented channel awareness (CCA) as well as masking randomly selected channels (the 2ndcolumn, as baseline). Masking channels with the highest CCA results in the most noticeable class-relevant features lost, while masking channels with the lowest CCA causes only mild changes in the outputs. Results of more classes are shown in Appendix D.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 208.82553100585938,
+    "y2": 258.6639404296875
+  },
+  "figType": "Figure",
+  "imageText": ["1", "2", "3", "1", "2", "3", "Highest", "CCARandom", "G", "en", "er", "at", "ed", "im", "ag", "e", "Original", "D", "iff", "er", "en", "ce", "m", "ap", "Lowest", "CCA", "Masking", "5%", "channels", "Masking", "10%", "channels", "Highest", "CCARandomLowest", "CCA"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 495.35999999999996,
+    "y1": 84.47999999999999,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CCF5eG4UPNS-Figure3-1.png"
+}]

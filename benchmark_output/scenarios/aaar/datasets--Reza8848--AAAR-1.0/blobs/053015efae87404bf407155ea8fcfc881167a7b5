@@ -1,0 +1,341 @@
+[{
+  "caption": "Figure 1: Graph visualization of sequences from two easily confused classes (“point to something” and “take a selfie”). The graphs are learned by CTR-GCN (Chen et al., 2021b). We take the tip of the hand that does the action as the anchor. The size of the red circles and the width of the blue lines both denote the strengths of connections between joints. For simplicity, only representative frames are visualized. (a) Three sequences from class “point to something” are correctly classified, where the graphs contain connections to the body joints. (b) Three sequences from class “take a selfie” are correctly classified, where the graphs highly emphasize the connections to the hands, while the connections to the body are suppressed. (c) A sequence from class “point to something” is misclassified as “take a selfie”, whose graph resembles the graphs in (b), but is dissimilar from graphs in (a). Hence, we realize that the class-ambiguous graph representations would make negative impacts on recognition performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 198.36251831054688,
+    "y2": 313.953857421875
+  },
+  "figType": "Figure",
+  "imageText": ["（a）", "（b）", "（c）", "Label:", "Point", "to", "something", "Predict:", "Take", "a", "selfie", "×", "Label:", "Take", "a", "selfie", "Predict:", "Take", "a", "selfie", "√", "Label:", "Point", "to", "something", "Predict:", "Point", "to", "something", "√"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 474.24,
+    "y1": 80.64,
+    "y2": 185.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Figure1-1.png"
+}, {
+  "caption": "Table 1: Top-1 accuracy comparison (%) with the state-of-the-art methods on NTU 60 and NTU120 datasets. The numbers in gray indicate the results reported in their papers. * indicates that we retrain the models using their officially released code. Particularly, 2S-AGCN is retrained using a stronger train recipe from CTR-GCN.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["CTR-GCN*", "w/SkeletonGCL", "90.8", "91.1", "92.6", "93.1", "95.3", "95.4", "96.6", "97.0", "85.6", "86.9", "89.2", "89.5", "87.3", "88.2", "90.5", "91.0", "InfoGCN", "(Chi", "et", "al.,", "2022)", "89.8", "90.6", "91.6", "92.7", "95.2", "95.5", "96.5", "96.9", "85.1", "87.3", "88.5", "89.4", "86.3", "88.5", "89.7", "90.7", "InfoGCN*", "(Chi", "et", "al.,", "2022)", "89.4", "90.6", "91.3", "92.3", "95.2", "95.4", "96.2", "96.7", "84.2", "86.9", "88.2", "89.2", "86.3", "88.5", "89.4", "90.7", "InfoGCN*", "w/SkeletonGCL", "90.1", "91.0", "91.9", "92.8", "95.5", "95.7", "96.6", "97.1", "85.2", "87.4", "88.8", "89.8", "87.2", "88.7", "90.0", "91.2", "CTR-GCN", "(Chen", "et", "al.,", "2021b)", "-", "-", "-", "92.4", "-", "-", "-", "96.8", "-", "85.7", "88.7", "88.9", "-", "87.5", "90.1", "90.6", "CTR-GCN*", "(Chen", "et", "al.,", "2021b)", "89.8", "90.2", "92.0", "92.4", "94.8", "94.8", "96.3", "96.8", "84.9", "85.7", "88.7", "88.9", "86.7", "87.5", "90.1", "90.5", "2S-AGCN", "(Shi", "et", "al.,", "2019)", "-", "-", "88.5", "-", "93.7", "93.2", "95.1", "-", "-", "-", "-", "-", "-", "-", "-", "-", "2S-AGCN*", "(Shi", "et", "al.,", "2019)", "88.9", "89.2", "91.0", "91.5", "94.5", "94.1", "95.7", "95.9", "84.0", "85.1", "87.8", "88.2", "85.3", "86.3", "89.0", "89.6", "2S-AGCN*", "w/SkeletonGCL", "89.9", "90.0", "91.6", "92.2", "95.0", "94.4", "96.1", "96.4", "84.7", "86.0", "88.4", "88.7", "86.1", "86.8", "89.7", "90.2", "MS-G3D", "(Liu", "et", "al.,", "2020)", "89.4", "90.1", "91.5", "-", "95.0", "95.3", "96.2", "-", "-", "-", "86.9", "-", "-", "-", "88.4", "-", "MST-GCN", "(Chen", "et", "al.,", "2021c)", "89.0", "89.5", "91.1", "91.5", "95.1", "95.2", "96.4", "96.6", "82.8", "84.8", "87.0", "87.5", "84.5", "86.3", "88.3", "88.8", "SGCN", "(Zhang", "et", "al.,", "2020a)", "-", "-", "89.0", "-", "-", "-", "94.5", "-", "-", "-", "79.2", "-", "-", "-", "81.5", "-", "ST-TR-GCN", "(Plizzari", "et", "al.,", "2021)", "89.2", "-", "90.3", "-", "95.8", "-", "96.3", "-", "82.7", "-", "85.1", "-", "85.0", "-", "87.1", "-", "Shift-GCN", "(Cheng", "et", "al.,", "2020b)", "87.8", "-", "89.7", "90.7", "95.1", "-", "96.0", "96.5", "80.9", "-", "85.3", "85.9", "83.2", "-", "86.6", "87.6", "DC-GCN+ADG", "(Cheng", "et", "al.,", "2020a)", "-", "-", "90.8", "-", "-", "-", "96.6", "-", "-", "-", "86.5", "-", "-", "-", "88.1", "-", "Dynamic", "GCN", "(Ye", "et", "al.,", "2020)", "-", "-", "-", "91.5", "-", "-", "-", "96.0", "-", "-", "-", "87.3", "-", "-", "-", "88.6", "Method/Modality", "J", "B", "J+B", "4S", "J", "B", "J+B", "4S", "J", "B", "J+B", "4S", "J", "B", "J+B", "4S", "Dataset", "NTU", "60", "NTU", "120", "Setting", "X-Sub", "X-View", "X-Sub", "X-Set"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 506.4,
+    "y1": 134.88,
+    "y2": 300.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table1-1.png"
+}, {
+  "caption": "Table 2: Top-1 accuracy Comparison (%) with the state-of-the-art methods on the NW-UCLA dataset. Numbers in gray denote the results reported in their papers. * indicates that we retrain the models using their officially released codes. Particularly, 2S-AGCN is retrained using a stronger train recipe from CTR-GCN.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 539.62841796875,
+    "y2": 578.5078735351562
+  },
+  "figType": "Table",
+  "imageText": ["CTR-GCN*", "w/SkeletonGCL", "95.1", "95.0", "95.9", "96.8", "InfoGCN", "(Chi", "et", "al.,", "2022)", "94.0", "95.3", "96.3", "96.6", "InfoGCN*", "(Chi", "et", "al.,", "2022)", "93.8", "94.2", "95.5", "96.1", "InfoGCN*", "w/SkeletonGCL", "94.8", "94.6", "96.1", "96.8", "CTR-GCN", "(Chen", "et", "al.,", "2021b)", "-", "-", "-", "96.5", "CTR-GCN*", "(Chen", "et", "al.,", "2021b)", "94.6", "91.8", "94.2", "96.5", "2S-AGCN", "(Shi", "et", "al.,", "2019)", "-", "-", "-", "-", "2S-AGCN*", "(Shi", "et", "al.,", "2019)", "92.0", "92.2", "95.0", "95.5", "2S-AGCN*", "w/SkeletonGCL", "92.6", "93.0", "95.7", "96.3", "Shift-GCN", "(Cheng", "et", "al.,", "2020b)", "92.5", "-", "94.2", "94.6", "AGC-LSTM", "(Si", "et", "al.,", "2019)", "93.3", "-", "-", "-", "DC-GCN+ADG", "(Cheng", "et", "al.,", "2020a)", "-", "-", "95.3", "-", "Dataset", "NW-UCLA", "Method/Modality", "J", "B", "J+B", "4S"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 194.88,
+    "x2": 415.2,
+    "y1": 590.88,
+    "y2": 716.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table2-1.png"
+}, {
+  "caption": "Table 11: Comparison with using triplet loss.",
+  "captionBoundary": {
+    "x1": 279.3009948730469,
+    "x2": 378.29901123046875,
+    "y1": 335.0297546386719,
+    "y2": 350.39501953125
+  },
+  "figType": "Table",
+  "imageText": ["Baseline", "89.8", "Triplet", "loss", "90.7", "InfoNCE", "loss", "90.8", "Model", "(CTR-GCN)", "Acc", "(%)"],
+  "name": "11",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 281.76,
+    "x2": 374.4,
+    "y1": 362.88,
+    "y2": 399.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table11-1.png"
+}, {
+  "caption": "Table 7: Impact of the FC layer in graph projection head.",
+  "captionBoundary": {
+    "x1": 240.28599548339844,
+    "x2": 359.0907287597656,
+    "y1": 228.42971801757812,
+    "y2": 243.79498291015625
+  },
+  "figType": "Table",
+  "imageText": ["Baseline", "89.8", "Graph", "Projection", "wo/FC", "90.1", "Graph", "Projection", "w/FC", "90.8", "Graph", "Projection", "w/MLP", "90.6", "Model", "(CTR-GCN)", "Acc", "(%)"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 244.79999999999998,
+    "x2": 353.28,
+    "y1": 255.84,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table7-1.png"
+}, {
+  "caption": "Table 5: Impact of memory banks.",
+  "captionBoundary": {
+    "x1": 372.572998046875,
+    "x2": 491.3778076171875,
+    "y1": 153.70974731445312,
+    "y2": 169.07501220703125
+  },
+  "figType": "Table",
+  "imageText": ["Instance", "+", "Semantic", "90.8", "Baseline", "89.8", "Instance", "Memory", "90.3", "Semantic", "Memory", "90.2", "Model", "(CTR-GCN)", "Acc", "(%)"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 384.0,
+    "x2": 478.08,
+    "y1": 181.92,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table5-1.png"
+}, {
+  "caption": "Table 8: Apply graph contrast on different layers.",
+  "captionBoundary": {
+    "x1": 372.572998046875,
+    "x2": 491.37774658203125,
+    "y1": 228.42971801757812,
+    "y2": 243.79498291015625
+  },
+  "figType": "Table",
+  "imageText": ["Baseline", "89.8", "7th", "layer", "89.8", "8th", "layer", "90.0", "9th", "layer", "90.4", "10th", "layer", "90.8", "Model", "(CTR-GCN)", "Acc", "(%)"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 384.96,
+    "x2": 477.12,
+    "y1": 255.84,
+    "y2": 308.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table8-1.png"
+}, {
+  "caption": "Table 9: Impact of τ .",
+  "captionBoundary": {
+    "x1": 109.66300201416016,
+    "x2": 185.53558349609375,
+    "y1": 335.0297546386719,
+    "y2": 340.4320068359375
+  },
+  "figType": "Table",
+  "imageText": ["0.5", "90.4", "0.8", "90.6", "1.0", "90.8", "1.5", "90.5", "τ", "Acc", "(%)"],
+  "name": "9",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 170.4,
+    "y1": 352.8,
+    "y2": 397.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table9-1.png"
+}, {
+  "caption": "Table 10: Impact of α.",
+  "captionBoundary": {
+    "x1": 192.65699768066406,
+    "x2": 273.84259033203125,
+    "y1": 335.0297546386719,
+    "y2": 340.4320068359375
+  },
+  "figType": "Table",
+  "imageText": ["0.75", "90.6", "0.80", "90.7", "0.85", "90.8", "0.9", "90.6", "α", "Acc", "(%)"],
+  "name": "10",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 257.28,
+    "y1": 352.8,
+    "y2": 397.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table10-1.png"
+}, {
+  "caption": "Table 6: Impact of sampling strategies. R: Random; H: Hard.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 226.80479431152344,
+    "y1": 228.42971801757812,
+    "y2": 243.79498291015625
+  },
+  "figType": "Table",
+  "imageText": ["R+H", "90.8", "R", "+", "H", "R", "+", "H", "90.3", "H", "R", "90.4", "H", "90.6", "R+H", "90.5", "R", "R", "90.1", "H", "90.2", "Sampling", "Positive", "Negative", "Acc(%)"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 213.12,
+    "y1": 255.84,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table6-1.png"
+}, {
+  "caption": "Table 3: Comparison of intrabatch and inter-batch contrast.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 226.80479431152344,
+    "y1": 153.70968627929688,
+    "y2": 169.074951171875
+  },
+  "figType": "Table",
+  "imageText": ["Inter-batch", "Contrast", "90.8", "Baseline", "(w/o", "contrast)", "89.8", "Intra-batch", "Contrast", "(No", "Bank)", "90.2", "Model", "(CTR-GCN)", "Acc", "(%)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 232.32,
+    "y1": 181.92,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table3-1.png"
+}, {
+  "caption": "Table 12: Training consumption on NTU60.",
+  "captionBoundary": {
+    "x1": 391.7860107421875,
+    "x2": 502.6645202636719,
+    "y1": 335.0297546386719,
+    "y2": 350.39501953125
+  },
+  "figType": "Table",
+  "imageText": ["InfoGCN", "4.3", "InfoGCN", "w/ours", "4.6", "↑", "7.0%", "CTR-GCN", "11.4", "CTR-GCN", "w/ours", "11.7", "↑", "2.6%", "2S-AGCN", "3.4", "2S-AGCN", "w/ours", "3.5", "↑", "2.9%", "Model", "Time", "(hours)"],
+  "name": "12",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 396.0,
+    "x2": 497.28,
+    "y1": 362.88,
+    "y2": 423.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table12-1.png"
+}, {
+  "caption": "Figure 4: Illustration of graph projection heads for GCNs.",
+  "captionBoundary": {
+    "x1": 190.45399475097656,
+    "x2": 421.54638671875,
+    "y1": 562.3875732421875,
+    "y2": 568.3900146484375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "2S-AGCN", "(c)", "InfoGCN", "v", "𝑪𝑪𝒈𝒈", "g’", "FC", "𝑲𝑲𝑺𝑺𝑵𝑵𝟐𝟐", "Flatten", "g", "𝑲𝑲𝑺𝑺", "×", "𝑵𝑵", "×", "𝑵𝑵", "(a)", "CTR-GCN", "v�g", "𝑪𝑪𝒈𝒈", "g’", "FC", "𝑲𝑲𝑺𝑺𝑵𝑵𝟐𝟐", "Flatten", "𝑲𝑲𝑺𝑺", "×", "𝑵𝑵", "×", "𝑵𝑵", "Average", "Pool", "v�g", "𝑪𝑪𝒈𝒈", "g", "𝑲𝑲𝑺𝑺", "×", "𝑪𝑪", "×", "𝑵𝑵", "×", "𝑵𝑵", "g’", "FC", "𝑲𝑲𝑺𝑺𝑵𝑵𝟐𝟐", "Flatten", "𝑲𝑲𝑺𝑺", "×", "𝑵𝑵", "×", "𝑵𝑵", "Average", "Pool", "g", "𝑻𝑻", "×", "𝑲𝑲𝑺𝑺", "×", "𝑵𝑵", "×", "𝑵𝑵"],
+  "name": "4",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 512.64,
+    "y2": 550.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Figure4-1.png"
+}, {
+  "caption": "Table 13: Comparison of using cross-entropy loss to supervise graph learning.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 305.99658203125,
+    "y1": 664.58154296875,
+    "y2": 681.54296875
+  },
+  "figType": "Table",
+  "imageText": ["w/Cross-entropy", "loss", "89.7", "w/SkeletonGCL", "90.8", "Model", "(CTR-GCN)", "Acc", "(%)", "Baseline", "89.8"],
+  "name": "13",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 261.12,
+    "y1": 693.6,
+    "y2": 728.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table13-1.png"
+}, {
+  "caption": "Table 14: Impact of the size ofMIns.",
+  "captionBoundary": {
+    "x1": 343.2619934082031,
+    "x2": 491.317626953125,
+    "y1": 664.58154296875,
+    "y2": 672.0780029296875
+  },
+  "figType": "Table",
+  "imageText": ["128", "90.3", "342", "90.5", "684", "90.8", "1368", "90.4", "2736", "90.0", "P", "Acc", "(%)"],
+  "name": "14",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 384.0,
+    "x2": 449.28,
+    "y1": 682.56,
+    "y2": 735.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Table14-1.png"
+}, {
+  "caption": "Figure 3: t-SNE visualization. t-SNE (Van der Maaten & Hinton, 2008) visualization of graph and feature representations from sequences in the test set of NTU 60. Each color denotes a certain class. Best viewed with zoom in.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00323486328125,
+    "y1": 492.26153564453125,
+    "y2": 520.1810302734375
+  },
+  "figType": "Figure",
+  "imageText": ["CTR-GCN", "CTR-GCN", "w/SkeletonGCL", "(a)", "t-SNE", "visualization", "of", "graph", "representation.", "CTR-GCN", "CTR-GCN", "w/SkeletonGCL", "(b)", "t-SNE", "visualization", "of", "feature", "representation."],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 493.44,
+    "y1": 382.56,
+    "y2": 475.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Figure3-1.png"
+}, {
+  "caption": "Figure 2: Overview of SkeletonGCL. An input skeleton sequence I is fed into a GCN encoder, producing a feature vector f for classification and a learned graph g for graph contrastive learning. The graph g is embedded into a vector by a projection head. And two memory banks are built to store the embedded graphs. From the memory banks, we sample the positives and negatives according to the labels, then perform contrastive loss. The memory banks are only used in the training stage but will be removed during the testing stage.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00323486328125,
+    "y1": 221.80050659179688,
+    "y2": 282.597900390625
+  },
+  "figType": "Figure",
+  "imageText": ["Head", "Graph", "Projection", "Head", "Classification", "g", "v", "𝑪𝒈", "തg", "g’", "FC", "𝑲𝑺𝑵", "𝟐", "Flatten", "𝑲𝑺", "×", "𝑵", "×𝑵", "Average", "Pool", "g", "𝑲𝑺", "×", "𝑪", "×", "𝑵", "×𝑵", "𝑲𝑺", "×", "𝑪", "×", "𝑵", "×", "𝑵", "𝑫", "Contrastive", "Loss", "ℒNCE", "Sem", "…", "Negative", "Positive", "Sample", "Update", "Momentum", "Memory", "Bank", "ℳSem", "…", "Semantic-level", "c1", "c2", "c3", "𝑻", "×", "𝑵×", "𝑪", "Input", "𝑰", "Ins", "Negative", "Contrastive", "Loss", "ℒNCE", "PositiveSample", "Anchor", "Enqueue", "Memory", "Bank", "ℳIns", "Instance-level", "…", "…c1", "…c2", "…c3", "f", "ℒCECross-Entropy", "Loss", "Encoder", "GCN"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 81.6,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PLUXnnxUdr4-Figure2-1.png"
+}]

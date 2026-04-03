@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 2: Comparison of different combinations of numerical methods under LTSP splitting for guided diffusion sampling. We plot LPIPS against the sampling time. [A, B] denotes the use of method A in the diffusion subproblem and method B in the condition subproblem. The red dotted lines indicate a reference DDIM score obtained from 250 sampling steps, which produce images visually close to those from 1,000 steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 221.68447875976562,
+    "y2": 271.52191162109375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Varying", "the", "method", "for", "the", "condition", "subproblem", "PLMS1", "(DDIM)", "[PLMS1,", "PLMS1]", "[PLMS1,", "PLMS2]", "[PLMS1,", "PLMS4]", "[PLMS1,", "RK2]", "[PLMS1,", "RK4]", "3", "×", "10", "1", "DDIM", "250", "steps", "3", "×", "10", "2", "S", "LP", "IP", "10", "1", "10", "2", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "22.5", "Sampling", "time", "(sec.)", "(a)", "Varying", "the", "method", "for", "the", "diffusion", "subproblem", "3", "×", "10", "1", "PLMS1", "(DDIM)", "PLMS4", "[PLMS1,PLMS1]", "[PLMS2,PLMS1]", "[PLMS4,PLMS1]", "[RK2,", "PLMS1]", "[RK4,", "PLMS1]", "DDIM", "250", "steps", "3", "×", "10", "2", "S", "LP", "IP", "10", "1", "10", "2", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "22.5", "Sampling", "time", "(sec.)"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 499.68,
+    "y1": 85.92,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F0KTk2plQzO-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Generated samples of a classifier-guided diffusion model trained on ImageNet256 using 8-256 sampling steps from different sampling methods. Our technique, STSP4, produces highquality results in a fewer number of steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 280.2235412597656,
+    "y2": 308.14300537109375
+  },
+  "figType": "Figure",
+  "imageText": ["STSP4", "(Ours)", "PLMS4", "DDIM", "Number", "of", "steps", "8", "16", "32", "64", "128", "256"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 482.4,
+    "y1": 81.6,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F0KTk2plQzO-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Comparison of different numerical methods for guided diffusion sampling.",
+  "captionBoundary": {
+    "x1": 111.197998046875,
+    "x2": 289.39898681640625,
+    "y1": 207.99850463867188,
+    "y2": 224.9599609375
+  },
+  "figType": "Figure",
+  "imageText": ["3", "×", "10", "1", "PLMS1", "(DDIM)", "PLMS4", "RK2", "RK4", "LTSP4", "[PLMS4,PLMS1]", "STSP4", "[PLMS4,PLMS1]", "DDIM", "250", "steps", "3", "×", "10", "2", "10", "1", "LP", "IP", "S", "10", "2", "2.5", "5.0", "7.5", "10.0", "12.5", "15.0", "17.5", "20.0", "22.5", "Sampling", "time", "(sec.)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 283.2,
+    "y1": 84.96,
+    "y2": 194.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F0KTk2plQzO-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Text-to-image generation using different sampling methods.",
+  "captionBoundary": {
+    "x1": 165.24400329589844,
+    "x2": 446.75714111328125,
+    "y1": 445.10552978515625,
+    "y2": 451.1080017089844
+  },
+  "figType": "Figure",
+  "imageText": ["(approximately", "using", "the", "same", "sampling", "time)", "Full", "DDIM", "DDIM", "PLMS4", "LTSP4", "STSP4", "(1,000", "steps)", "(45", "steps)", "(45", "steps)", "(45", "steps)", "(30", "steps)", "trending", "on", "artstation.”", "“A", "beautiful", "painting", "of", "a", "starry", "night,", "over", "a", "sunflower", "sea,", "a", "tumultuous", "sea", "of", "blood,", "trending", "on", "artstation.”", "“A", "beautiful", "painting", "of", "a", "singular", "lighthouse,", "shining", "its", "light", "across"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 283.68,
+    "y2": 435.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F0KTk2plQzO-Figure4-1.png"
+}, {
+  "caption": "Table 2: Comparison of different numerical methods using a few steps on guided diffusion sampling. Our methods and the best scores are highlighted in bold. We provide the reported scores from Dhariwal & Nichol (2021) using 250 sampling steps, referred to as ADM-G in their paper. *ADMG’s sampling times are measured using our machine.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 230.14151000976562,
+    "y2": 269.01995849609375
+  },
+  "figType": "Table",
+  "imageText": ["ImageNet512", "DDIM", "25", "5.56", "9.07", "0.81", "0.42", "PLMS4", "25", "5.78", "16.00", "0.75", "0.51", "STSP4", "20", "5.13", "8.24", "0.83", "0.45", "ADM-G", "250", "56.2*", "7.72", "0.87", "0.42", "ImageNet256", "DDIM", "25", "1.99", "5.47", "0.80", "0.47", "PLMS4", "25", "2.05", "4.71", "0.82", "0.49", "STSP4", "20", "1.95", "4.49", "0.83", "0.50", "ADM-G", "250", "20.9*", "4.59", "0.82", "0.50", "Method", "Steps", "Time", "FID", "Prec", "Rec", "ImageNet128", "DDIM", "25", "0.55", "6.69", "0.78", "0.49", "PLMS2", "25", "0.57", "5.71", "0.80", "0.51", "PLMS4", "25", "0.57", "4.97", "0.80", "0.53", "LTSP2", "25", "0.55", "5.14", "0.81", "0.51", "LTSP4", "25", "0.55", "3.85", "0.81", "0.54", "STSP2", "20", "0.54", "5.33", "0.80", "0.52", "STSP4", "20", "0.54", "3.78", "0.81", "0.54", "ADM-G", "250", "5.59*", "2.97", "0.78", "0.59", "Method", "Steps", "Time", "FID", "Prec", "Rec"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F0KTk2plQzO-Table2-1.png"
+}, {
+  "caption": "Figure 5: Guided-diffusion results of our STSP4 and DDIM on inpainting, colorization, and superresolution. Both methods were limited to use approximately the same sampling time.",
+  "captionBoundary": {
+    "x1": 107.99981689453125,
+    "x2": 504.0030517578125,
+    "y1": 361.70745849609375,
+    "y2": 378.6689453125
+  },
+  "figType": "Figure",
+  "imageText": ["io", "n", "ol", "ut", "R", "es", "pe", "r-", "8x", "Su", "in", "tin", "g", "C", "ol", "or", "iz", "at", "io", "n", "In", "pa", "Original", "Input", "STSP4", "(Ours)", "DDIM"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 80.64,
+    "y2": 351.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F0KTk2plQzO-Figure5-1.png"
+}]

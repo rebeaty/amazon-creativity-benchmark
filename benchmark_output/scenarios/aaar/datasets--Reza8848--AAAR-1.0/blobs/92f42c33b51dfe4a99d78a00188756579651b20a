@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 1: Illustration of evaluating (few-shot) open-domain question answering with (closed-book) direct generation (Chowdhery et al., 2022), (open-book) retrieval-augmented generation (Izacard et al., 2022), and (closed-book) recitation-augmented generation (ours).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 699.7845458984375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": ["LM", "Output", "LM", "Input", "Recitation:", "The", "School", "for", "Good", "and", "Evil", "was", "first", "published", "on", "May", "14,", "2013", "by", "Soman", "Chainani…", "Answer:", "Soman", "Chainani", "Recitation-augmented", "Generation", "(ours)", "Question:", "who", "wrote", "the", "song", "i", "hate", "you", "i", "love", "you", "Recitation:", "\"I", "Hate", "U,", "I", "Love", "U\"", "(stylized", "in", "all", "lowercase)", "is", "a", "song", "by", "American", "singer", "and", "rapper", "Gnash", "featuring", "American", "singer", "Olivia", "O'Brien.", "Answer:", "Gnash", "…", "Question:", "who", "wrote", "the", "school", "for", "good", "and", "evil", "Retriever", "Results", "The", "School", "for", "Good", "and", "Evil", "is", "a", "fantasy", "fairytale", "hexalogy", "of", "books", "by", "Soman", "Chainani…", "LM", "Output", "LM", "Input", "Answer:", "Soman", "Chainani", "Retrieval-augmented", "Generation", "(e.g.,", "Atlas)", "Question:", "who", "wrote", "the", "school", "for", "good", "and", "evil", "LM", "Output", "LM", "Input", "Answer:", "Soman", "Chainani", "Direct", "Generation", "(e.g.,", "PaLM)", "Question:", "who", "wrote", "the", "school", "for", "good", "and", "evil", "…", "Answer:", "Gnash", "Question:", "who", "wrote", "the", "song", "i", "hate", "you", "i", "love", "you"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 538.56,
+    "y2": 685.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure1-1.png"
+}, {
+  "caption": "Table 6: The model hyper-parameters of the large language models used in our experiments.",
+  "captionBoundary": {
+    "x1": 122.12092590332031,
+    "x2": 489.88031005859375,
+    "y1": 624.8154296875,
+    "y2": 630.81787109375
+  },
+  "figType": "Table",
+  "imageText": ["7https://cloud.google.com/tpu/docs/v4-users-guide", "In-house", "LM-62B", "decoder-only", "64", "32", "8192", "62.50", "UL2-20B", "encoder-dencoder", "32", "/", "32", "16", "4096", "19.46", "OPT-30B", "decoder-only", "48", "56", "7168", "29.97", "Model", "Type", "#", "of", "Layers", "#", "of", "Heads", "dmodel", "#", "of", "Parameters", "(B)"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 493.44,
+    "y1": 633.6,
+    "y2": 731.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Table6-1.png"
+}, {
+  "caption": "Table 1: Performance comparison on Natural Questions (NQ), TriviaQA, and HotpotQA. The number of shots for each task are mentioned in parenthesis.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["HotpotQA", "Standard-prompting", "(direct)", "20.51", "/", "28.90(4)", "16.99", "/", "24.99(4)", "16.70", "/", "25.21(4)", "Chain-of-thought", "(20-path)", "23.73", "/", "32.80(4)", "17.68", "/", "24.87(4)", "16.89", "/", "24.03(4)", "Recite-and-answer", "(20-path)", "26.46", "/", "35.67(4)", "19.04", "/", "27.32(4)", "17.77", "/", "26.58(4)", "TriviaQA", "Standard-prompting", "(direct)", "65.38", "/", "71.85(5)", "48.73", "/", "54.32(5)", "45.90", "/", "50.68(5)", "Recite-and-answer", "(20-path)", "65.84", "/", "72.10(5)", "53.42", "/", "58.69(5)", "49.02", "/", "54.22(5)", "Recite-and-answer", "(20-path)", "28.70", "/", "39.76(5)", "16.34", "/", "25.55(5)", "17.84", "/", "26.74", "(5)31.34", "/", "42.48(64)", "18.53", "/", "27.73(16)", "NQ", "Standard-prompting", "(direct)", "25.76", "/", "36.47(5)", "14.63", "/", "21.36(5)", "14.97", "/", "22.93(5)28.98", "/", "40.13(64)", "15.73", "/", "23.85(16)", "In-house", "LM-62B", "UL2-20B", "OPT-30B", "EM", "/", "F1", "EM", "/", "F1", "EM", "/", "F1"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 482.4,
+    "y1": 112.32,
+    "y2": 244.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Table1-1.png"
+}, {
+  "caption": "Figure 9: The 5-shot prompt we used for performing question-answering on TriviaQA dataset.",
+  "captionBoundary": {
+    "x1": 117.98699951171875,
+    "x2": 494.01519775390625,
+    "y1": 308.759521484375,
+    "y2": 314.7619934082031
+  },
+  "figType": "Figure",
+  "imageText": ["A:", "Chicago", "Q:", "\"The", "song", "\"\"My", "Kind", "Of", "Town\"\",", "written", "by", "Sammy", "Cahn", "and", "Jimmy", "Van", "Heusen", "in", "1964,", "was", "about", "which", "city?\"", "A:", "London", "Bridge", "Q:", "Which", "bridge", "crossing", "The", "River", "Thames", "did", "Queen", "Elizabeth", "II", "open", "on", "17th", "March", "1973?", "A:", "Deliverance", "Q:", "In", "which", "1972", "John", "Boorman", "film", "is", "a", "leading", "character,", "played", "by", "Ned", "Beatty,", "raped", "by", "a", "'Hillbilly'?", "A:", "9th", "Q:", "What", "was", "Beethoven's", "last", "symphony?", "A:", "Montgomery,", "Al", "Q:", "Triggered", "by", "Rosa", "Parks'", "refusal", "to", "give", "up", "her", "seat,", "the", "public", "transportation", "system", "in", "what", "US", "city", "was", "devastated", "by", "a", "year", "long", "boycott", "of", "their", "busses?"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 96.0,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure9-1.png"
+}, {
+  "caption": "Figure 10: The 4-shot prompt we used for performing multiple-evidence-recitation on HotpotQA dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030822753906,
+    "y1": 698.1295776367188,
+    "y2": 715.0910034179688
+  },
+  "figType": "Figure",
+  "imageText": ["Answer", "2:", "Het", "Huis", "Anubis", "(English:", "The", "House", "of", "Anubis)", "is", "a", "Dutch-Belgian", "children's", "television", "mystery", "drama.", "It", "first", "aired", "in", "September", "2006.", "Answer", "1:", "House", "of", "Anubis", "is", "a", "mystery", "television", "series", "developed", "for", "Nickelodeon", "based", "on", "the", "Dutch–Belgian", "television", "series", "Het", "Huis", "Anubis.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "two", "Wikipedia", "page,", "section,", "and", "paragraphs:", "Question:", "The", "Dutch-Belgian", "television", "series", "that", "\"House", "of", "Anubis\"", "was", "based", "on", "first", "aired", "in", "what", "year?", "Answer", "2:", "Hoki", "Tokuda", "is", "an", "Japanese", "actress,", "known", "for", "Blind", "Woman's", "Curse", "(1970),", "The", "Abalone", "Girls", "(1965)", "and", "Nippon", "Paradise", "(1964).", "Answer", "1:", "In", "1967,", "Miller", "married", "his", "fifth", "wife,", "Japanese", "born", "singer", "Hoki", "Tokuda.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "two", "Wikipedia", "page,", "section,", "and", "paragraphs:", "Question:", "What", "nationality", "was", "James", "Henry", "Miller’s", "wife?", "Answer", "2:", "The", "Oberoi", "Group", "is", "an", "award-winning", "luxury", "hotel", "group", "with", "its", "head", "office", "in", "New", "Delhi,", "India.", "Answer", "1:", "P.R.S.", "Oberoi", "is", "the", "current", "chairman", "of", "The", "Oberoi", "Group.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "two", "Wikipedia", "page,", "section,", "and", "paragraphs:", "Question:", "The", "Oberoi", "family", "is", "part", "of", "a", "hotel", "company", "that", "has", "a", "head", "office", "in", "what", "city?", "Answer", "2:", "First", "for", "Women", "is", "a", "woman's", "magazine", "published", "by", "Bauer", "Media", "Group", "in", "the", "USA.", "The", "magazine", "was", "started", "in", "1989.", "Answer", "1:", "Arthur", "magazine", "was", "a", "bi-monthly", "periodical", "that", "was", "founded", "in", "October", "2002,", "by", "publisher", "Laris", "Kreslins", "and", "editor", "Jay", "Babcock.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "two", "Wikipedia", "page,", "section,", "and", "paragraphs:", "Question:", "Which", "magazine", "was", "started", "first", "Arthur’s", "Magazine", "or", "First", "for", "Women?"],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 353.76,
+    "y2": 673.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure10-1.png"
+}, {
+  "caption": "Figure 4: TriviaQA EM/F1 on OPT-30B and UL2-20B with different # of self-consistency paths.",
+  "captionBoundary": {
+    "x1": 112.96099853515625,
+    "x2": 499.0414733886719,
+    "y1": 496.8065185546875,
+    "y2": 502.8089904785156
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 390.71999999999997,
+    "y2": 489.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure4-1.png"
+}, {
+  "caption": "Table 3: Robustness evaluation of UL2 on TriviaQA with different few-shot exemplars over 5 random seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 199.61050415039062,
+    "y2": 216.57098388671875
+  },
+  "figType": "Table",
+  "imageText": ["Standard-prompting", "(direct)", "48.42", "(±", "0.71)", "53.85", "(±", "0.57)", "Recite-and-answer", "(5-path)", "49.75", "(±", "0.50)", "54.78", "(±", "0.46)", "Recite-and-answer", "(20-path)", "52.68", "(±", "0.62)", "58.05", "(±", "0.58)", "EM(5)", "F1(5)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 181.92,
+    "x2": 428.15999999999997,
+    "y1": 217.92,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Table3-1.png"
+}, {
+  "caption": "Table 2: Performance comparison of In-house LM-62B on Natural Questions (NQ) dataset with standard-prompting, recite-and-answer with self-consistency sampling, and recite-and-answer with diversified recitation. The number of shots for each task are mentioned in parenthesis.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["Standard-prompting", "(direct)", "25.76", "/", "36.47", "28.98", "/", "40.13", "Recite-and-answer", "(20-path)", "28.70", "/", "39.76", "31.34", "/", "42.48", "Recite-and-answer", "w/", "diversiﬁed", "recitation", "(20-path)", "32.20", "/", "44.02", "33.23", "/", "45.29", "EM", "/", "F1(5)", "EM", "/", "F1(64)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 467.03999999999996,
+    "y1": 123.83999999999999,
+    "y2": 175.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Table2-1.png"
+}, {
+  "caption": "Figure 2: Illustration of prompt-based in-context learning for recitation generation, recitationaugmented question answering, self-consistency ensembling, and multiple-recite-and-answer for multi-hop questions (Sec. 3.1). In multiple-recite-and-answer scheme, the latter recitaiton can utilize the information from the previous ones, such as “Oberoi Group” in this case. The prompts for self-consistency and multi-hop recite-and-answer are dropped for brevity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 320.91851806640625,
+    "y2": 370.7559814453125
+  },
+  "figType": "Figure",
+  "imageText": ["4)", "multiple-recite-and-answer", "The", "answer", "is", "Delhi.", "<End", "of", "Recitation>", "Recitation", "2:", "The", "Oberoi", "Group", "is", "an", "award-winning", "luxury", "hotel", "group", "with", "its", "head", "office", "in", "New", "Delhi,", "India.", "Recitation", "1:", "The", "two", "major", "holding", "companies", "of", "The", "Oberoi", "Group", "are", "EIH", "Ltd", "and", "EIH", "Associated", "Hotels", "(formerly", "East", "India", "Hotels).", "The", "Oberoi", "family", "is", "the", "majority", "shareholder", "in", "EIH", "Ltd", "with", "a", "32.11%", "stake.", "The", "Oberoi", "family", "is", "part", "of", "a", "hotel", "company", "that", "has", "a", "head", "office", "in", "what", "city?", "<Answer", "N-0>", "<Answer", "N-1>", "<Answer", "N-0>", "<Recitation", "N-2>", "<Recitation", "N-1>", "<Recitation", "N-0>", "Majority", "vote", "3)", "self-consistency", "<Answer", "N-0>", "LM", "Output", "<Answer", "N>", "LM", "input", "…", "<Question", "N>", "<Question", "0>", "<Answer", "0>", "<Recitation", "N>", "2)", "few-shot", "in-context", "learning", "for", "recitation-augmented", "QA", "LM", "Output", "<Recitation", "N>", "LM", "input", "…", "<Question", "N>", "<Question", "0>", "<Recitation", "0>", "1)", "few-shot", "in-context", "learning", "for", "recitation", "<Question", "N>"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 306.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure2-1.png"
+}, {
+  "caption": "Figure 12: Four recitation sampled from UL2 for the same example question from HotpotQA dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 667.9435424804688,
+    "y2": 684.905029296875
+  },
+  "figType": "Figure",
+  "imageText": ["Answer", "1:", "Local", "H", "is", "an", "American", "band", "from", "San", "Diego,", "California.", "Answer", "2:", "For", "Against", "is", "an", "American", "punk", "band", "from", "Los", "Angeles,", "California.", "Answer", "1:", "Local", "H", "is", "a", "rock", "band", "from", "Los", "Angeles,", "California.", "Answer", "2:", "For", "Against", "is", "an", "American", "rock", "band", "from", "Phoenix,", "Arizona.", "Answer", "1:", "Local", "H", "is", "an", "American", "rock", "band", "from", "Austin,", "Texas.", "Answer", "2:", "For", "Against", "is", "a", "rock", "band", "from", "Nashville,", "Tennessee.", "Answer", "1:", "Local", "H", "is", "an", "American", "rock", "band", "from", "Chicago,", "Illinois.", "Answer", "2:", "For", "Against", "is", "an", "indie", "rock", "band", "from", "New", "York", "City,", "New", "York.", "Question:", "Are", "Local", "H", "and", "For", "Against", "both", "from", "the", "United", "States?"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 447.84,
+    "y2": 654.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure12-1.png"
+}, {
+  "caption": "Figure 11: The 4-shot prompt we used for performing question-answering on HotpotQA dataset.",
+  "captionBoundary": {
+    "x1": 113.53299713134766,
+    "x2": 498.4677429199219,
+    "y1": 342.8545227050781,
+    "y2": 348.85699462890625
+  },
+  "figType": "Figure",
+  "imageText": ["A:", "The", "answer", "is", "2006.", "Q:", "The", "Dutch-Belgian", "television", "series", "that", "\"House", "of", "Anubis\"", "was", "based", "on", "first", "aired", "in", "what", "year?", "A:", "The", "answer", "is", "American.", "Q:", "What", "nationality", "was", "James", "Henry", "Miller’s", "wife?", "A:", "The", "answer", "is", "Delhi.", "Q:", "The", "Oberoi", "family", "is", "part", "of", "a", "hotel", "company", "that", "has", "a", "head", "office", "in", "what", "city?", "A:", "The", "answer", "is", "Arthur’s", "Magazine.", "Q:", "Which", "magazine", "was", "started", "first", "Arthur’s", "Magazine", "or", "First", "for", "Women?"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 125.75999999999999,
+    "y2": 328.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure11-1.png"
+}, {
+  "caption": "Figure 8: Four recitation passages sampled from UL2 for the same example question from TriviaQA dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 301.13653564453125,
+    "y2": 318.0980224609375
+  },
+  "figType": "Figure",
+  "imageText": ["Recitation:", "It", "states", "that", "the", "following", "two", "statements", "cannot", "both", "be", "true:", "the", "position", "of", "a", "particle", "cannot", "be", "both", "precisely", "determined", "and", "known", "exactly,", "and", "the", "momentum", "of", "a", "particle", "cannot", "be", "both", "precisely", "measured", "and", "known", "exactly.", "Recitation:", "The", "uncertainty", "principle", "states", "that", "it", "is", "impossible", "to", "know", "both", "the", "exact", "momentum", "and", "the", "exact", "position", "of", "an", "object", "(particle)", "at", "the", "same", "time,", "that", "is,", "the", "momentum", "and", "position", "are", "incompatible", "and,", "therefore,", "complementary.", "The", "uncertainty", "principle", "is", "one", "of", "the", "fundamental", "results", "of", "quantum", "mechanics,", "and", "is", "often", "regarded", "as", "one", "of", "its", "most", "surprising", "consequences.", "Recitation:", "One", "of", "the", "consequences", "of", "the", "principle", "of", "special", "relativity", "is", "that", "the", "position", "and", "momentum", "of", "a", "moving", "object", "cannot", "both", "be", "measured", "simultaneously", "with", "high", "precision.", "Recitation:", "In", "1935,", "Heisenberg", "(along", "with", "his", "assistants", "Walther", "Gerlach", "and", "Walther", "von", "Braun)", "published", "a", "paper", "in", "which", "they", "described", "a", "\"principle", "of", "uncertainty\"", "that", "would", "later", "be", "dubbed", "the", "Heisenberg", "uncertainty", "principle.", "The", "principle", "asserts", "that", "the", "momentum", "and", "position", "of", "a", "particle", "cannot", "both", "be", "precisely", "determined.", "Question:", "Which", "physicist's", "principle", "asserts", "that", "the", "momentum", "&", "position", "of", "a", "particle", "cannot", "both", "be", "precisely", "determined", "at", "the", "same", "time?"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure8-1.png"
+}, {
+  "caption": "Figure 7: The 5-shot prompt we used for performing evidence-recitation on TriviaQA dataset.",
+  "captionBoundary": {
+    "x1": 118.947998046875,
+    "x2": 493.0534362792969,
+    "y1": 685.7815551757812,
+    "y2": 691.7839965820312
+  },
+  "figType": "Figure",
+  "imageText": ["Answer:", "\"My", "Kind", "of", "Town\"", "made", "a", "minor", "appearance", "on", "the", "U.S.", "pop", "charts,", "reaching", "#110", "in", "1964.", "It", "was", "the", "second", "of", "two", "charting", "songs", "about", "Chicago", "recorded", "by", "Sinatra.", "The", "other", "was", "\"Chicago", "(That", "Toddlin'", "Town)\"", "from", "1957,", "which", "reached", "U.S.", "#84.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph:", "Question:", "\"The", "song", "\"\"My", "Kind", "Of", "Town\"\",", "written", "by", "Sammy", "Cahn", "and", "Jimmy", "Van", "Heusen", "in", "1964,", "was", "about", "which", "city?\"", "Answer:", "Queen", "Elizabeth", "II", "of", "the", "United", "Kingdom", "opens", "the", "new", "London", "Bridge.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph:", "Question:", "Which", "bridge", "crossing", "The", "River", "Thames", "did", "Queen", "Elizabeth", "II", "open", "on", "17th", "March", "1973?", "Answer:", "In", "1972,", "Beatty", "made", "his", "film", "debut", "as", "Bobby", "Trippe", "in", "Deliverance,", "starring", "Jon", "Voight", "and", "Burt", "Reynolds,", "and", "set", "in", "northern", "Georgia.", "Beatty's", "character", "is", "forced", "to", "strip", "at", "gunpoint", "by", "two", "mountain", "men", "who", "humiliate", "and", "rape", "him,", "a", "scene", "so", "shocking", "that", "it", "is", "still", "referred", "to", "as", "a", "screen", "milestone.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph:", "Question:", "In", "which", "1972", "John", "Boorman", "film", "is", "a", "leading", "character,", "played", "by", "Ned", "Beatty,", "raped", "by", "a", "'Hillbilly'?", "Answer:", "The", "year", "1823", "saw", "the", "completion", "of", "three", "notable", "works,", "all", "of", "which", "had", "occupied", "Beethoven", "for", "some", "years,", "namely", "the", "Missa", "solemnis,", "the", "Ninth", "Symphony", "and", "the", "Diabelli", "Variations.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph:", "Question:", "What", "was", "Beethoven's", "last", "symphony?", "Answer:", "On", "December", "1,", "1955,", "in", "Montgomery,", "Alabama,", "Parks", "rejected", "bus", "driver", "James", "F.", "Blake's", "order", "to", "vacate", "a", "row", "of", "four", "seats", "in", "the", "\"colored\"", "section", "in", "favor", "of", "a", "White", "passenger,", "once", "the", "\"White\"", "section", "was", "filled.", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph:", "Question:", "Triggered", "by", "Rosa", "Parks'", "refusal", "to", "give", "up", "her", "seat,", "the", "public", "transportation", "system", "in", "what", "US", "city", "was", "devastated", "by", "a", "year", "long", "boycott", "of", "their", "busses?"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 337.91999999999996,
+    "y2": 671.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure7-1.png"
+}, {
+  "caption": "Table 4: 5-shot NQ question-answering results with different context passages.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 305.99664306640625,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["Ground-truth", "passage", "41.02", "55.73", "BM25-Retrieval", "(Top-1)", "16.31", "27.66", "LM-Recitation(5)", "(20-path)", "14.16", "23.13", "No", "passage", "10.15", "20.17", "EM(5)", "F1(5)"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 320.15999999999997,
+    "y1": 112.8,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Table4-1.png"
+}, {
+  "caption": "Table 5: Error analysis on 5-shot TriviaQA.",
+  "captionBoundary": {
+    "x1": 319.9949951171875,
+    "x2": 493.7925109863281,
+    "y1": 98.0955581665039,
+    "y2": 104.0980224609375
+  },
+  "figType": "Table",
+  "imageText": ["Not", "Recit.", "21.09%", "22.27%", "Hits@20-Recit.", "5.66%", "8.01%", "Hits@20-Path", "19.82%", "20.07%", "Hits@1", "(EM)", "53.42%", "49.02%", "UL2-20B", "OPT-30B"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 317.76,
+    "x2": 493.44,
+    "y1": 106.56,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Table5-1.png"
+}, {
+  "caption": "Figure 13: The 4-shot prompt we used for the Chain-of-Thought (Wei et al., 2022) baseline on HotpotQA dataset. The prompt is taken from (Wang et al., 2022a).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 515.8355712890625,
+    "y2": 532.7969970703125
+  },
+  "figType": "Figure",
+  "imageText": ["A:", "\"House", "of", "Anubis\"", "is", "based", "on", "the", "Dutch–Belgian", "television", "series", "Het", "Huis", "Anubis.", "Het", "Huis", "Anubis", "is", "firstaired", "in", "September", "2006.", "The", "answer", "is", "2006.", "Q:", "The", "Dutch-Belgian", "television", "series", "that", "\"House", "of", "Anubis\"", "was", "based", "on", "first", "aired", "in", "what", "year?", "A:", "James", "Henry", "Miller’s", "wife", "is", "June", "Miller.", "June", "Miller", "is", "an", "American.", "The", "answer", "is", "American.", "Q:", "What", "nationality", "was", "James", "Henry", "Miller’s", "wife?", "A:", "The", "Oberoi", "family", "is", "part", "of", "the", "hotel", "company", "called", "The", "Oberoi", "Group.", "The", "Oberoi", "Group", "has", "its", "head", "office", "in", "Delhi.", "The", "answer", "is", "Delhi.", "Q:", "The", "Oberoi", "family", "is", "part", "of", "a", "hotel", "company", "that", "has", "a", "head", "office", "in", "what", "city?", "A:", "Arthur’s", "Magazine", "started", "in", "1844.", "First", "for", "Women", "started", "in", "1989.", "So", "Arthur’s", "Magazine", "was", "started", "first.", "The", "answer", "is", "Arthur’s", "Magazine.", "Q:", "Which", "magazine", "was", "started", "first", "Arthur’s", "Magazine", "or", "First", "for", "Women?"],
+  "name": "13",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 276.0,
+    "y2": 501.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure13-1.png"
+}, {
+  "caption": "Figure 3: Illustration of question answering with diverse recitation and the corresponding few-shot question generation and fine-tuning processes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 303.05352783203125,
+    "y2": 320.0150146484375
+  },
+  "figType": "Figure",
+  "imageText": ["Recitation:", "Child", "benefit", "is", "a", "payment", "made", "to", "parents", "in", "the", "United", "Kingdom,", "Ireland,", "Australia…", "QA", "with", "diverse", "recitation", "augmentation", "Recitation:", "The", "first", "child", "benefit", "was", "introduced", "in", "the", "United", "Kingdom", "in", "1911,", "and", "was", "paid", "to…", "Recitation:", "The", "first", "child", "support", "law", "was", "passed", "in", "1911", "in", "the", "United", "Kingdom…", "LM", "input", "LM", "Output", "prediction", "<Passage", "hint", "N>", "<Recitation", "N><Question", "N>", "LM", "input", "LM", "Output", "fine-tuning", "generation", "LM", "Output", "few-shot", "question", "<Generated", "Question", "K>", "LM", "input", "…", "<Passage", "K>", "<Passage", "0>", "<Question", "0>", "Passage", "hint", "fine-tuning", "for", "diverse", "recitation", "<Passage", "hint", "K>", "<Passage", "K>", "<Generated", "Question", "K>", "Model", "Frozen", "Language", "aggregated", "recitations", "Question", "answering", "with", "1911", "Greedy", "decoding", "recitations", "Sampling", "diverse", "passage", "hints", "Passage", "hint:", "Child", "benefit", "---", "History", "---", "Paragraph", "#2", "Passage", "hint:", "Child", "benefit", "---", "Short", "description", "---", "Paragraph", "#1", "Passage", "hint:", "Child", "support", "---", "Short", "description", "---", "Paragraph", "#1", "Finetuned", "Reciter-LM", "when", "was", "child", "benefit", "paid", "for", "the", "first", "child?"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 289.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure3-1.png"
+}, {
+  "caption": "Figure 5: Two sampled evidence-recitation exemplars in Natural Questions (NQ) dataset. Notice that in NQ, we can directly use the “long answer” annotation as the recitation demonstrations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 356.45953369140625,
+    "y2": 373.4210205078125
+  },
+  "figType": "Figure",
+  "imageText": ["Question:", "who", "sells", "the", "most", "oil", "in", "the", "world", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph", "or", "table:", "Answer:", "The", "top", "three", "producers", "have", "in", "recent", "history", "been", "(alphabetically)", "Russia,", "Saudi", "Arabia,", "and", "the", "United", "States.", "Each", "of", "these", "countries", "experienced", "major", "production", "declines", "at", "different", "times", "in", "the", "past,", "but", "since", "2014", "all", "three", "have", "been", "producing", "near", "their", "peak", "rates", "of", "9", "to", "11", "million", "barrels", "per", "day.", "Saudi", "Arabia", "and", "Russia", "also", "top", "the", "list", "of", "oil", "exporting", "countries,", "while", "Russia", "is", "not", "a", "member", "of", "OPEC.", "The", "monthly", "U.S.", "oil", "production", "reached", "10.07", "million", "b/d", "in", "November", "2017,", "the", "highest", "monthly", "level", "of", "crude", "oil", "production", "in", "U.S.", "history.", "In", "early", "2018,", "the", "U.S.", "government", "forecast", "the", "country", "will", "become", "a", "net", "oil", "and", "gas", "exporter", "by", "2022,", "the", "first", "time", "since", "1953.", "Question:", "where", "did", "united", "states", "drop", "the", "atomic", "bomb", "The", "answer", "to", "the", "above", "question", "can", "be", "found", "in", "the", "following", "Wikipedia", "page,", "section,", "and", "paragraph", "or", "table:", "Answer:", "During", "the", "final", "stage", "of", "World", "War", "II,", "the", "United", "States", "detonated", "two", "nuclear", "weapons", "over", "the", "Japanese", "cities", "of", "Hiroshima", "and", "Nagasaki", "on", "August", "6", "and", "9,", "1945,", "respectively.", "The", "United", "States", "dropped", "the", "bombs", "after", "obtaining", "the", "consent", "of", "the", "United", "Kingdom,", "as", "required", "by", "the", "Quebec", "Agreement.", "The", "two", "bombings", "killed", "at", "least", "129,000", "people,", "most", "of", "whom", "were", "civilians.", "They", "remain", "the", "only", "use", "of", "nuclear", "weapons", "in", "the", "history", "of", "warfare."],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Four recitation passages sampled from UL2 for the same example question from Natural Questions dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 711.132568359375,
+    "y2": 728.093017578125
+  },
+  "figType": "Figure",
+  "imageText": ["Recitation:", "In", "the", "UK,", "the", "first", "Daylight", "Saving", "Time", "was", "first", "proposed", "by", "William", "Willett,", "an", "English", "builder", "and", "Liberal", "Party", "politician,", "in", "1907,", "and", "after", "a", "public", "consultation", "his", "proposal", "was", "accepted", "in", "1908.", "The", "first", "Daylight", "Saving", "in", "the", "UK", "was", "introduced", "on", "25", "March", "1916,", "and", "the", "second", "on", "27", "March", "the", "following", "year.", "It", "was", "repealed", "in", "May", "1919,", "but", "reintroduced", "in", "May", "1919.", "Recitation:", "Daylight", "saving", "time,", "also", "known", "as", "daylight", "savings,", "and", "several", "other", "variants,", "is", "the", "practice", "of", "advancing", "clocks", "during", "summer", "months", "by", "one", "hour", "so", "that", "evening", "daylight", "lasts", "one", "more", "hour.", "Usually,", "clocks", "are", "adjusted", "forward", "one", "hour", "near", "the", "start", "of", "spring", "and", "are", "adjusted", "backward", "in", "autumn.", "Historically,", "the", "time", "change", "was", "intended", "to", "conserve", "energy", "by", "making", "better", "use", "of", "the", "available", "daylight", "at", "the", "equinox.", "Recitation:", "Daylight", "savings", "time", "in", "the", "United", "States", "is", "the", "practice", "of", "advancing", "clocks", "during", "summer", "months", "so", "that", "evening", "daylight", "lasts", "longer,", "while", "sacrificing", "normal", "sunrise", "times.", "The", "practice", "allows", "people", "to", "have", "more", "evening", "daylight", "and", "less", "morning", "daylight,", "which", "allows", "for", "more", "productivity", "and", "leisure.", "Recitation:", "The", "United", "States", "began", "Daylight", "Saving", "Time", "in", "the", "year", "1918,", "putting", "in", "effect", "a", "nationwide", "summer", "time", "arrangement,", "which", "had", "been", "put", "forward", "by", "the", "National", "Defense", "Act", "of", "1916.", "Originally,", "Daylight", "Saving", "Time", "was", "started", "in", "the", "United", "States", "to", "save", "energy", "and", "reduce", "the", "cost", "of", "living.", "Currently,", "many", "countries", "have", "discontinued", "the", "practice,", "but", "some,", "such", "as", "the", "United", "States,", "observe", "it", "on", "a", "regional", "basis..", "Question:", "when", "did", "day", "light", "savings", "start", "in", "the", "us"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 468.96,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-cqvvvb-NkI-Figure6-1.png"
+}]

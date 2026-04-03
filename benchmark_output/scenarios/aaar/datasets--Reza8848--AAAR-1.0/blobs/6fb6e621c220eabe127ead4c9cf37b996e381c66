@@ -1,0 +1,341 @@
+[{
+  "caption": "Table 8: We conduct experiments on the Cityscapes dataset with different training data sizes. Results are evaluated in 35 samples with standard-sampling representation.",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 504.0032653808594,
+    "y1": 363.9113464355469,
+    "y2": 380.872802734375
+  },
+  "figType": "Table",
+  "imageText": ["Cityscapes", "/", "4", "0.823", "±", "0.006", "0.598", "±", "0.002", "0.157", "±", "0.002", "0.686", "±", "0.004", "1.878", "±", "0.009", "Cityscapes", "/", "2", "0.814", "±", "0.004", "0.597", "±", "0.002", "0.156", "±", "0.001", "0.687", "±", "0.005", "1.858", "±", "0.013", "Cityscapes", "0.817", "±", "0.010", "0.595", "±", "0.004", "0.155", "±", "0.002", "0.690", "±", "0.002", "1.861", "±", "0.015", "Train", "dataset", "Entropy", "Sample", "Diversity", "GED", "↓", "M-IOU", "↑", "ECE", "↓", "(%)"],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 393.59999999999997,
+    "y2": 449.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table8-1.png"
+}, {
+  "caption": "Table 1: Quantitative results on the LIDC dataset. The number of sampled outputs is shown in the parentheses aside the metrics. Our method achieves SOTA on all evaluation metrics for all settings.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["†", "This", "score", "is", "taken", "from", "Baumgartner", "et", "al.", "(2019).", "∗", "This", "score", "is", "generated", "by", "running", "the", "pre-trained", "model", "provided", "by", "Kassapis", "et", "al.", "(2021).", "One", "-", "-", "0.445", "±", "N/A", "-", "-", "Baumgartner", "et", "al.", "(2019)", "-", "-", "0.323", "±", "N/A", "-", "-", "Monteiro", "et", "al.", "(2020)", "-", "-", "0.365", "±", "0.005", "-", "-", "Ours", "0.252", "±", "0.004", "0.229", "±", "0.005", "0.223", "±", "0.005", "0.596", "±", "0.003", "0.105", "±", "0.009", "Ours", "-", "compact", "0.228", "±", "0.004", "0.221", "±", "0.004", "0.220", "±", "0.005", "0.605", "±", "0.003", "0.090", "±", "0.011", "Kohl", "et", "al.", "(2018)", "All", "0.320", "±", "0.030", "-", "0.252", "±", "N/A", "†", "0.500", "±", "0.030", "-", "Kohl", "et", "al.", "(2019)", "0.270", "±", "0.010", "-", "-", "0.530", "±", "0.010", "-", "Hu", "et", "al.", "(2019)", "-", "0.267", "±", "0.012", "-", "-", "-", "Baumgartner", "et", "al.", "(2019)", "-", "-", "0.224", "±", "N/A", "-", "-", "Monteiro", "et", "al.", "(2020)", "-", "-", "0.225", "±", "0.002", "-", "-", "Kassapis", "et", "al.", "(2021)", "0.264", "±", "0.002", "0.248", "±", "0.004", "0.243", "±", "0.004", "0.592", "±", "0.005", "0.214", "∗", "Ours", "0.218", "±", "0.003", "0.195", "±", "0.002", "0.189", "±", "0.002", "0.624", "±", "0.004", "0.064", "±", "0.015", "Ours", "-", "compact", "0.195", "±", "0.005", "0.187", "±", "0.003", "0.186", "±", "0.002", "0.635", "±", "0.003", "0.054", "±", "0.015", "Kohl", "et", "al.", "(2018)", "Method", "#", "labels", "GED", "↓", "(16)", "GED", "↓", "(50)", "GED", "↓", "(100)", "M-IoU", "↑", "(16)", "ECE", "↓", "(%)", "(16)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 113.28,
+    "y2": 281.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table1-1.png"
+}, {
+  "caption": "Figure 8: The GED score changes with the number of experts, evaluated with 35 samples in standard-sampling representation. Experiments are conducted on the Cityscapes dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 365.7425231933594,
+    "y2": 382.7039794921875
+  },
+  "figType": "Figure",
+  "imageText": ["0.185", "0.190", "G", "E", "D", " (", "35", ")", "0.180", "0.175", "0.170", "0.165", "26", "28", "30", "32", "34", "36", "38", "40", "Number of experts"],
+  "name": "8",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 465.12,
+    "y1": 113.75999999999999,
+    "y2": 341.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure8-1.png"
+}, {
+  "caption": "Figure 1: Given an ambiguous image as input, our model consists of several expert networks and a gating network and produces segmentation samples with corresponding weights. It represents the aleatoric uncertainty at two granularity levels, (e.g. the input image can be annotated as either “2” or “3” and also has variations near boundaries.) and is trained by an Optimal-Transport-based loss function which minimizes the distance between the MoSE outputs and ground truth annotations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 225.46951293945312,
+    "y2": 275.30792236328125
+  },
+  "figType": "Figure",
+  "imageText": ["𝑣2", "𝑣1", "...", "…", "0.3", "0.02", "0.06", "0.25", "OT-based", "loss", "S", "h", "a", "re", "d", "Latent", "Priors", "𝑣𝑀", "...", "(𝑚1,", "𝜎1)", "(𝑚𝐾,", "𝜎𝐾", ")", "Decoder", "Decoder", "Encoder", "π𝐾", "Samples", "Annotations", "Gating", "Network", "π1", "Image", "…"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 470.88,
+    "y1": 86.39999999999999,
+    "y2": 212.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure1-1.png"
+}, {
+  "caption": "Figure 5: The GED score changes with the number of experts, evaluated with 16 samples in standard-sampling representation. Experiments are conducted on the LIDC dataset with the full label set.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 434.4355163574219,
+    "y2": 462.35595703125
+  },
+  "figType": "Figure",
+  "imageText": ["16", ")", "D", " (", "G", "E", "0.25", "0.24", "0.23", "0.22", "0.21", "2", "4", "6", "8", "10", "Number of experts"],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 465.12,
+    "y1": 182.88,
+    "y2": 410.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure5-1.png"
+}, {
+  "caption": "Figure 9: The extra visualization results on the Cityscapes. On the first line of each case, we show the input image masked with a ground truth label. Rest lines show samples from 35 experts and 32 ground truth modes. For clarity, we show matched pairs for ground truth masks on the top and predicted masks on the bottom and divide them into 5 subgroups labeled as (1) - (5). The predictions are generated by sampling once from each expert, we denote the corresponding predicted probabilities on the left head of each prediction.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 665.6415405273438,
+    "y2": 726.43896484375
+  },
+  "figType": "Figure",
+  "imageText": ["(5)", "(4)", "(3)", "(2)", "(1)", "(5)", "(4)", "(3)", "(2)", "(1)"],
+  "name": "9",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 141.12,
+    "x2": 490.08,
+    "y1": 84.0,
+    "y2": 644.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure9-1.png"
+}, {
+  "caption": "Table 2: Ablation study on our model components, evaluated with sample number 16.",
+  "captionBoundary": {
+    "x1": 135.06300354003906,
+    "x2": 476.9395751953125,
+    "y1": 287.6084899902344,
+    "y2": 293.6109619140625
+  },
+  "figType": "Table",
+  "imageText": ["stochastic", "learnable", "OT-based", "0.218", "±", "0.003", "0.624", "±", "0.004", "0.064", "±", "0.015", "stochastic", "learnable", "IoU", "loss", "0.533", "±", "0.001", "0.533", "±", "0.001", "0.277", "±", "0.017", "stochastic", "uniform", "OT-based", "0.282", "±", "0.002", "0.545", "±", "0.007", "0.215", "±", "0.006", "deterministic", "learnable", "OT-based", "0.246", "±", "0.006", "0.591", "±", "0.001", "0.142", "±", "0.003", "Expert", "type", "Expert", "weights", "loss", "GED", "↓", "M-IoU", "↑", "ECE", "↓", "(%)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 499.2,
+    "y1": 306.71999999999997,
+    "y2": 376.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table2-1.png"
+}, {
+  "caption": "Figure 2: Qualitative results on the LIDC dataset. Each row of predictions represents a sampling sequence from an expert, with the last line showing the entropy map. We denote the mode probabilities on the left head of each row.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 243.07351684570312,
+    "y2": 270.99395751953125
+  },
+  "figType": "Figure",
+  "imageText": ["0.64", "0.28", "0.02", "0.05", "0.40", "0.24", "0.04", "0.32", "3", "2", "1", "0", "Samples", "Entropy", "Image", "Annotations", "3", "2", "1", "0", "Samples", "Entropy", "Image", "Annotations"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 230.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure2-1.png"
+}, {
+  "caption": "Table 7: We analyze different model variations by replacing the backbone and changing the noise injection layer and the gating input layer. Experiments are done on the full-label LIDC dataset and evaluated with 16 samples in the standard-sampling representation. Below we denote L as the full layer of encoder and Q as the full layer of decoder. In our default Unet architecture, L = Q = 6.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 164.95840454101562,
+    "y2": 203.83782958984375
+  },
+  "figType": "Table",
+  "imageText": ["Unet", "L", "Q", "0.218", "±", "0.003", "0.624", "±", "0.004", "0.064", "±", "0.015", "Unet", "L", "1/3", "Q", "0.224", "±", "0.003", "0.625", "±", "0.001", "0.086", "±", "0.006", "Unet", "L", "2/3", "Q", "0.220", "±", "0.001", "0.627", "±", "0.002", "0.082", "±", "0.011", "Unet", "1/3", "L", "Q", "0.222", "±", "0.005", "0.620", "±", "0.004", "0.080", "±", "0.037", "Unet", "2/3", "L", "Q", "0.218", "±", "0.001", "0.626", "±", "0.002", "0.082", "±", "0.009", "Deeplab", "v3+", "-", "-", "0.237", "±", "0.005", "0.609", "±", "0.005", "0.104", "±", "0.018", "Backbone", "Noise", "Injection", "Layer", "Gating", "Input", "Layer", "GED", "↓", "M-IOU", "↑", "ECE", "↓", "(%)"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 216.95999999999998,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table7-1.png"
+}, {
+  "caption": "Figure 6: We show the reliability plots of our model (left) and Kassapis et al. (2021) (right) on the Cityscapes dataset evaluated with 35 samples. Our result is taken from one of the three random runs in Table 3 last column, last row.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 658.1845703125,
+    "y2": 686.10498046875
+  },
+  "figType": "Figure",
+  "imageText": ["Kassapis", "et", "al.", "(2021)", "Accuracy", "Gap", "ECE:", "2.196%", "ra", "cy", "Ac", "cu", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Confidence", "Ours", "Accuracy", "Gap", "ECE:", "0.321%", "ra", "cy", "Ac", "cu", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Confidence"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 484.79999999999995,
+    "y1": 467.03999999999996,
+    "y2": 636.9599999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure6-1.png"
+}, {
+  "caption": "Figure 4: We show the reliability plot of our model (left) and compare with the plot of Kassapis et al. (2021) (right) on the LIDC dataset. For both methods, 16 samples are drawn for evaluation and we use the standard-sampling representation. We achieves 0.041% ECE (one of the three random runs in Table 1).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 287.5285339355469,
+    "y2": 326.407958984375
+  },
+  "figType": "Figure",
+  "imageText": ["Kassapis", "et", "al.", "(2021)", "Accuracy", "Gap", "ECE:", "0.214%", "ra", "cy", "Ac", "cu", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Confidence", "Ours", "Accuracy", "Gap", "ECE:", "0.041%", "ra", "cy", "Ac", "cu", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Confidence"],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 484.79999999999995,
+    "y1": 96.47999999999999,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure4-1.png"
+}, {
+  "caption": "Table 6: We conduct experiments on the LIDC dataset with different training data sizes. Here, entropy and sample diversity are used to measure the uncertainty level of output in both pixelwise and sample-wise. Experiments are done using all the labels and evaluated in 16 samples with standard-sampling representation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 547.9673461914062,
+    "y2": 586.8468017578125
+  },
+  "figType": "Table",
+  "imageText": ["LIDC", "/", "4", "0.561", "±", "0.006", "0.509", "±", "0.010", "0.226", "±", "0.002", "0.615", "±", "0.006", "0.097", "±", "0.016", "LIDC", "/", "2", "0.559", "±", "0.007", "0.505", "±", "0.011", "0.225", "±", "0.002", "0.619", "±", "0.004", "0.076", "±", "0.010", "LIDC", "0.554", "±", "0.007", "0.501", "±", "0.007", "0.218", "±", "0.003", "0.624", "±", "0.004", "0.064", "±", "0.015", "Train", "dataset", "Entropy", "(%)", "Sample", "Diversity", "GED", "↓", "M-IOU", "↑", "ECE", "↓", "(%)"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 599.52,
+    "y2": 656.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table6-1.png"
+}, {
+  "caption": "Table 3: Quantitative results on the multimodal Cityscapes dataset.",
+  "captionBoundary": {
+    "x1": 172.781005859375,
+    "x2": 439.22076416015625,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Kassapis", "et", "al.", "(2021)", "35", "0.139", "0.672", "2.196", "Ours", "0.155", "±", "0.002", "0.690", "±", "0.002", "1.861", "±", "0.015", "Ours", "-", "compact", "0.142", "±", "0.001", "0.761", "±", "0.002", "0.352", "±", "0.025", "Kohl", "et", "al.", "(2018)", "16", "0.206", "±", "N/A", "-", "-", "Kassapis", "et", "al.", "(2021)", "0.164", "±", "0.01", "0.633", "3.274", "Ours", "0.176", "±", "0.002", "0.638", "±", "0.002", "3.030", "±", "0.021", "Method", "Sample", "number", "GED", "↓", "M-IoU", "↑", "ECE", "↓", "(%)"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 504.0,
+    "y1": 102.72,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table3-1.png"
+}, {
+  "caption": "Figure 3: Qualitative results on the multimodal Cityscapes dataset. Within each case, (a) shows the image and a part of ground truth labels with corresponding probabilities, and (b) shows the entropy map, predictive samples and predicted probabilities.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 346.64752197265625,
+    "y2": 374.5679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["road", "sidework", "building", "wall", "fence", "pole", "traffic", "light", "traffic", "sign", "vegetation", "terrain", "sky", "person", "rider", "car", "truck", "bus", "train", "motorcycle", "bicycle", "sidewalk2", "person2", "car2", "vegetation2", "road2", "(a)", "(b)", "(a)", "(b)", "unlabeled"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 211.67999999999998,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure3-1.png"
+}, {
+  "caption": "Figure 7: We compare the calibration of our method and Kassapis et al. (2021) in terms of modewise probabilities and pixel-wise class flip ratios. In the table below, we use ‘0’ to demonstrate the class is not flipped, and use ‘1’ to demonstrate the class is flipped.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 716.5635375976562,
+    "y2": 744.4840087890625
+  },
+  "figType": "Figure",
+  "imageText": ["Pixel­wise Frequency Estimation", "P", "Discrete Modes", "0.1", "0.2", "0.3", "0.4", "0.5", "sidewalk", "0", "1", "0", "1", "0", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "1", "0", "1", "0", "1", "person", "0", "0", "1", "1", "0", "0", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "1", "1", "0", "0", "1", "1", "car", "0", "0", "0", "0", "1", "1", "0", "1", "0", "1", "0", "0", "0", "0", "1", "0", "1", "0", "1", "1", "1", "1", "0", "1", "0", "1", "0", "0", "1", "1", "1", "1", "vegetation", "0", "0", "0", "0", "0", "0", "1", "0", "1", "0", "0", "1", "0", "1", "1", "0", "1", "0", "0", "1", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "1", "road", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "1", "0", "0", "1", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "Estimated Frequencies", "Ground truth", "Kassapis et al. (2021)", "P", "0.14", "0.12", "0.10", "0.08", "0.06", "0.04", "0.02", "Pixel­wise Frequency Estimation", "P", "Discrete Modes", "0.1", "0.2", "0.3", "0.4", "0.5", "sidewalk", "0", "1", "0", "1", "0", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "0", "1", "1", "0", "1", "0", "1", "0", "1", "person", "0", "0", "1", "1", "0", "0", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "0", "1", "1", "1", "0", "0", "1", "1", "car", "0", "0", "0", "0", "1", "1", "0", "1", "0", "1", "0", "0", "0", "0", "1", "0", "1", "0", "1", "1", "1", "1", "0", "1", "0", "1", "0", "0", "1", "1", "1", "1", "vegetation", "0", "0", "0", "0", "0", "0", "1", "0", "1", "0", "0", "1", "0", "1", "1", "0", "1", "0", "0", "1", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "1", "road", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "0", "1", "0", "0", "1", "0", "1", "1", "0", "1", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "Estimated Frequencies", "Ground truth", "Ours", "0.08", "0.10", "P", "0.06", "0.04", "0.02"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 451.2,
+    "y1": 104.16,
+    "y2": 681.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Figure7-1.png"
+}, {
+  "caption": "Table 4: Other Quantitative results on LIDC-IDRI dataset. The ECE is in %.",
+  "captionBoundary": {
+    "x1": 153.5380096435547,
+    "x2": 458.46337890625,
+    "y1": 286.0273742675781,
+    "y2": 292.02984619140625
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "One", "0.604", "±", "0.003", "0.606", "±", "0.003", "0.089", "±", "0.010", "0.085", "±", "0.012", "Ours", "-", "compact", "0.607", "±", "0.003", "0.607", "±", "0.003", "0.084", "±", "0.011", "0.083", "±", "0.012", "Ours", "All", "0.631", "±", "0.002", "0.636", "±", "0.002", "0.053", "±", "0.018", "0.052", "±", "0.017", "Ours", "-", "compact", "0.637", "±", "0.003", "0.638", "±", "0.002", "0.049", "±", "0.014", "0.049", "±", "0.014", "Method", "#", "labels", "M-IoU", "↑(50)", "M-IoU", "↑(100)", "ECE↓(50)", "ECE↓(100)"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 505.44,
+    "y1": 304.8,
+    "y2": 386.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table4-1.png"
+}, {
+  "caption": "Table 5: Complementary results of the ablation study with sample number 50, 100. The ECE is in %.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 406.0675354003906,
+    "y2": 423.02899169921875
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "0.195", "±", "0.002", "0.189", "±", "0.002", "0.631", "±", "0.002", "0.636", "±", "0.002", "0.053", "±", "0.018", "0.052", "±", "0.017", "IoU", "loss", "0.533", "±", "0.001", "0.533", "±", "0.001", "0.533", "±", "0.001", "0.533", "±", "0.001", "0.277", "±", "0.016", "0.277", "±", "0.016", "Uniform", "expert", "weights", "0.256", "±", "0.003", "0.249", "±", "0.003", "0.554", "±", "0.006", "0.556", "±", "0.007", "0.209", "±", "0.008", "0.209", "±", "0.009", "Deterministic", "Expert", "0.221", "±", "0.004", "0.216", "±", "0.004", "0.601", "±", "0.008", "0.603", "±", "0.009", "0.127", "±", "0.005", "0.121", "±", "0.003", "Method", "GED", "↓", "(50)", "GED", "↓", "(100)", "M-IoU", "↑", "(50)", "M-IoU", "↑", "(100)", "ECE", "↓", "(50)", "ECE", "↓", "(100)"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 503.03999999999996,
+    "y1": 435.84,
+    "y2": 497.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KE_wJD2RK4-Table5-1.png"
+}]

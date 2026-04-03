@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 1: Proposed data generating process for a range of NLP datasets for well-specified and underspecified prediction tasks. X and Y represent text: the dataset features and labels, while W , G, and S represent symbolic entities that may cause the text.",
+  "captionBoundary": {
+    "x1": 325.80096435546875,
+    "x2": 504.0042419433594,
+    "y1": 653.70654296875,
+    "y2": 714.5040283203125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Underspecified:", "Dataset", "features", "do", "not", "observe", "any", "causes", "of", "the", "labels.", "(a)", "Well-specified:", "G", "fully", "observed,", "in", "both", "dataset", "features", "and", "labels."],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 324.96,
+    "x2": 504.47999999999996,
+    "y1": 529.92,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Averaged softmax percentages from RoBERTa large for predicted female gender pronouns (normalized over all gendered predictions) vs a range of dates (injected into the text), for the ‘Doctor’ Winogender texts listed in Table 2.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.99664306640625,
+    "y1": 505.1595153808594,
+    "y2": 554.9969482421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 495.35999999999996,
+    "y1": 314.88,
+    "y2": 494.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure4-1.png"
+}, {
+  "caption": "Table 2: Extended Winogender evaluation sentences and uncertainty results for occupation as ‘Doctor’. Only sentence IDs 5 & 6 are not underspecified for gender pronoun prediction, and appropriately all models show the lowest relative uncertainty for these sentences, in particular the larger and longer trained models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["1", "In", "DATE:", "The", "doctor", "told", "the", "man", "that", "[MASK]", "would", "be", "on", "vacation", "next", "week.", "1.7", "1.8", "15.0", "14.0", "2", "In", "DATE:", "The", "doctor", "told", "the", "woman", "that", "[MASK]", "would", "be", "on", "vacation", "next", "week.", "4.3", "27.3", "4.0", "18.8", "3", "In", "DATE:", "The", "doctor", "told", "someone", "that", "[MASK]", "would", "be", "on", "vacation", "next", "week.", "10.6", "8.0", "13.3", "20.2", "4", "In", "DATE:", "The", "doctor", "told", "the", "patient", "that", "[MASK]", "would", "be", "on", "vacation", "next", "week.", "1.9", "6.6", "14.7", "16.6", "5", "In", "DATE:", "The", "doctor", "told", "the", "man", "that", "[MASK]", "would", "be", "at", "risk", "without", "the", "vaccination.", "0.0", "0.0", "0.3", "0.1", "6", "In", "DATE:", "The", "doctor", "told", "the", "woman", "that", "[MASK]", "would", "be", "at", "risk", "without", "the", "vaccination.", "0.3", "0.1", "0.7", "0.5", "7", "In", "DATE:", "The", "doctor", "told", "someone", "that", "[MASK]", "would", "be", "at", "risk", "without", "the", "vaccination.", "11.3", "10.5", "41.3", "16.4", "8", "In", "DATE:", "The", "doctor", "told", "the", "patient", "that", "[MASK]", "would", "be", "at", "risk", "without", "the", "vaccination.", "6.1", "12.3", "19.2", "9.3", "BERT", "RoBERTa", "base", "large", "base", "large", "ID", "Sentence", "with", "Participant", "and", "Coreferent", "Highlighted", "Uncertainty"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 139.68,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Table2-1.png"
+}, {
+  "caption": "Table 3: List of explicitly gendered words that are masked out for prediction as part of the masked gender task. These words were largely selected for convenience, as each is a single token in both the BERT and RoBERTa tokenizer vocabs, for ease of downstream token to word alignment. During finetuning, it is expected that this list will not fully mask gender in every sample, reducing the underspecification of the learning task. At inference time, it is critical that all gendered words are masked, and because the inference input texts are constructed by a heuristic, this is trivial to achieve.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 83.53055572509766,
+    "y2": 144.32794189453125
+  },
+  "figType": "Table",
+  "imageText": ["ACTOR", "ACTRESS", "BOYFRIEND", "GIRLFRIEND", "BROTHER", "SISTER", "HIMSELF", "HERSELF", "MALE", "FEMALE", "MAN", "WOMAN", "MEN", "WOMEN", "HUSBAND", "WIFE", "FATHER", "MOTHER", "HE", "SHE", "HIM", "HER", "HIS", "HER", "MALE-VARIANT", "FEMALE-VARIANT"],
+  "name": "3",
+  "page": 10,
+  "regionBoundary": {
+    "x1": 248.64,
+    "x2": 360.0,
+    "y1": 161.76,
+    "y2": 264.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Table3-1.png"
+}, {
+  "caption": "Figure 11: Demo where users can choose their own input text and select almost any BERT-like model hosted on Hugging Face to test for model uncertainty using selection collider bias induced spurious correlations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 625.2015380859375,
+    "y2": 653.1209716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 141.6,
+    "y2": 614.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Demo where users can choose their own input text and select almost any BERT-like model hosted on Hugging Face to test for selection collider bias induced spurious correlations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 533.653564453125,
+    "y2": 550.614990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 150.72,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure10-1.png"
+}, {
+  "caption": "Table 1: Heuristic for creating gender-neutral input texts for the MGT evaluation set for 2 W categories, and the example rendered text. For verb we used past, present and future tenses of the verb to be: [‘was’, ‘became’, ‘is’, ‘will be’, ‘becomes’], and for life stage we used proper and colloquial terms for a range of life stages: [‘a child’, ‘a kid’, ‘an adolescent’, ‘a teenager’, ‘an adult’, ‘all grown up’], excluding life stages past adulthood due to age gender-inequities. For the text versions of w, we used a spectrum of values defined in Appendix B.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 144.32696533203125
+  },
+  "figType": "Table",
+  "imageText": ["Date", "&", "Place", "‘f\"[MASK]", "{verb}", "{life", "stage}", "in", "{w}.\"’", "‘[MASK]", "was", "a", "teenager,", "in", "1953.’", "‘f\"In", "{w},", "[MASK]", "{verb}", "{life", "stage}.\"’", "‘In", "Mali,", "[MASK]", "will", "be", "an", "adult", ".’", "W", "Category", "Python", "f-string", "Example", "text"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 506.4,
+    "y1": 156.0,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Table1-1.png"
+}, {
+  "caption": "Figure 9: Uncertainty results for all Winogender occupations where the masked pronoun is coreferent with the participant, thus the sentences containing ‘man’ and ‘woman’ become well-specified, while the rest remain underspecified. Accordingly, the plots show that the uncertainty metric for the models is closer to 0 for the well-specified sentences containing ‘man’ and ‘woman’, and higher than 0 otherwise, particularly in the case of the more highly over-parameterized models like BERT large and RoBERTA base & large in Figure 5(b).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0050048828125,
+    "y1": 573.903564453125,
+    "y2": 634.7000122070312
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "RoBERTa", "base", "(b)", "BERT", "large", "(a)", "BERT", "base"],
+  "name": "9",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 485.28,
+    "y1": 172.79999999999998,
+    "y2": 560.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure9-1.png"
+}, {
+  "caption": "Figure 6: Statistical relationships induced by the structural causal model defined by equations Equation (5) to Equation (9), with Equation (7) individually defined above, for the well-specified (top row in blue) and underspecified (bottom row in green) models in Figure 1.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 206.87350463867188,
+    "y2": 234.7939453125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(W", "−G+N", "(0,", "1))", ">", "2α", "sampled.", "(b)", "(W", "+G+N", "(0,", "1))", ">", "2α", "sampled."],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure6-1.png"
+}, {
+  "caption": "Figure 8: Uncertainty results for all Winogender occupations where the masked pronoun is coreferent with the gender-unidentified professional, thus all sentences remain underspecified. The plots show that generally, the models do not become erroneously certain about gender when the words ‘man’ and ‘woman’ are injected into the text.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00457763671875,
+    "y1": 593.1475830078125,
+    "y2": 632.0269775390625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "RoBERTa", "base", "(b)", "BERT", "large", "(a)", "BERT", "base"],
+  "name": "8",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 175.68,
+    "y2": 579.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Decreasing the path coefficient, β, for X → Y , as a toy representation of what we termed the W-Injection.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.00372314453125,
+    "y1": 336.6725158691406,
+    "y2": 364.59295654296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 306.71999999999997,
+    "x2": 503.03999999999996,
+    "y1": 185.76,
+    "y2": 326.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure7-1.png"
+}, {
+  "caption": "Figure 3: Difference between the female and male pronoun linear fit slope and Pearson’s r coefficients from the plots in Figure 2.",
+  "captionBoundary": {
+    "x1": 294.1199951171875,
+    "x2": 504.0020751953125,
+    "y1": 274.73052978515625,
+    "y2": 302.6500244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 295.68,
+    "x2": 502.08,
+    "y1": 140.64,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_25VgHaPz0l4-Figure3-1.png"
+}]

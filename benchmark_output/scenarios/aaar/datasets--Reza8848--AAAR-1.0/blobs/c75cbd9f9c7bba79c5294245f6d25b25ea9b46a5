@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 2: An illustration of our key modifications. We maliciously modify the query, key and value layer in the MHA block to tag the mixed embedding of relevant sequences. We also modify the feed-forward layers to encode statistically distinguishable signatures to each token based on the tag. The signature is then used to filter out irrelevant mixed embedding. Note that the ⊕ represents add-and-norm operation in transformer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 298.08056640625,
+    "y1": 190.30252075195312,
+    "y2": 294.93487548828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 280.32,
+    "y1": 90.72,
+    "y2": 179.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure2-1.png"
+}, {
+  "caption": "Figure 3: The measurement distributions of mixed embedding by w +w′ from Section 3.3 on GPT-2. The measurement distribution of irrelevant mixed embedding (blue) exhibits clear separation from the measurement distribution of relevant mixed embedding (orange). We set β = 2.5 here.",
+  "captionBoundary": {
+    "x1": 313.9219665527344,
+    "x2": 504.0039978027344,
+    "y1": 221.22055053710938,
+    "y2": 292.9769287109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 205.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure3-1.png"
+}, {
+  "caption": "Figure 6: Experiment on our attack across different architectures for large batch size. The sequence length is fixed to 32. We evaluate our method only on the target sequences. Our attack steadily obtains high fidelity recovery even against extreme-scale aggregation. Attack success remains basically constant as batch sizes increases.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00335693359375,
+    "y1": 185.27755737304688,
+    "y2": 224.156982421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 179.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Experiment on our attack across different architectures for target phrases with different length. We fix the sequence length to 32 and batch size to 64 respectively. Our method is able to accurately capture relevant sequences given target phrases of various lengths. Attack success remains constant as batch sizes increase.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 339.4345397949219,
+    "y2": 378.31298828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 235.67999999999998,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure7-1.png"
+}, {
+  "caption": "Figure 1: An overview of our proposed panning attack. In particular, an attacker reprograms the encoder block with a tagging module and a filter module, which encodes keyword-specific information into model gradient. The information enables the attacker to pan for individual relevant tokens from aggregated user update. The attacker can then post-process the retrieved tokens to recover original sequences.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 176.42153930664062,
+    "y2": 226.25994873046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Comparison of our method with Decepticons, a recent Transformer-based attack, for different architectures across various batch sizes. The results of Decepticon are depicted in dased lines. The sequence length is fixed to 32. Our attack outperforms Decepticons for every batch size, and the performance remains stable as batch size increases.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 190.19351196289062,
+    "y2": 229.07293701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Comparison of our method with Decepticons for different architectures across various sequence lengths. The batch size is fixed to 32. We evaluate both methods only on the target sequences. Our attack remains agnostic to sequence length, and outperforms Decepticons in all metrics on target sequences.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 354.66253662109375,
+    "y2": 393.5419921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 242.88,
+    "y2": 338.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A9WQaxYsfx-Figure5-1.png"
+}]

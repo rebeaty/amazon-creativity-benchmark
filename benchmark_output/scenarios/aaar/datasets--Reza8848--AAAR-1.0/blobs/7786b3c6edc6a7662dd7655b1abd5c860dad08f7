@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 2: The SSIM scores for different methods on the architectures of AdaIN and WCT.",
+  "captionBoundary": {
+    "x1": 128.552001953125,
+    "x2": 483.44964599609375,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["AdaIN", "0.307", "0.315", "WCT", "0.274", "0.234", "WCT", "w/", "PR", "0.280", "0.251", "Method", "\\Architecture", "AdaIN", "WCT"],
+  "name": "2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 221.76,
+    "x2": 390.24,
+    "y1": 99.84,
+    "y2": 155.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Table2-1.png"
+}, {
+  "caption": "Figure 1: Qualitative comparison on the state-of-the-art UST algorithms. AdaIN w/ Fcs and WCT w/ Fcs are implemented following Eq. (6) in the frequency domain, which perform equivalent stylization with the original methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0017395019531,
+    "y1": 494.8105163574219,
+    "y2": 522.73095703125
+  },
+  "figType": "Figure",
+  "imageText": ["WCT", "w/", "ℱ!\"", "AdaIN", "w/", "ℱ!\"", "Ours", "Linear", "WCT", "Optimal", "WCT", "WCT", "AdaIN", "Style", "Content"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure1-1.png"
+}, {
+  "caption": "Table 1: The SSIM scores, the Gram loss and the time cost (seconds) for different UST methods.",
+  "captionBoundary": {
+    "x1": 113.08999633789062,
+    "x2": 498.9116516113281,
+    "y1": 547.4775390625,
+    "y2": 553.47998046875
+  },
+  "figType": "Table",
+  "imageText": ["SSIM", "0.307", "0.234", "0.378", "0.250", "0.329", "0.310", "0.276", "0.403", "SSIM", "(w/", "PR)", "0.307", "0.251", "0.427", "0.263", "-", "-", "-", "0.438", "Time", "0.0218", "0.3167", "0.0038", "0.6247", "3.027", "0.0052", "0.0513", "0.098", "Time", "(w/", "PR)", "0.0226", "0.3293", "0.0045", "0.6321", "-", "-", "-", "0.112", "Method", "AdaIN", "WCT", "LinearWCT", "OptimalWCT", "AvatarNet", "SANet", "Self-Contained", "Ours"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 555.84,
+    "y2": 611.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Table1-1.png"
+}, {
+  "caption": "Figure 8: Additional synthesized results with the same Fourier amplitude and replaced Fourier phase. We replace the Fourier phase of stylized feature maps in each layer and use the proposed method (without phase replacement) to synthesize stylized images. Note that feature maps with the same amplitude produce images with highly similar contrast and intensities, (e.g., the same differences between the brightest pixels and the darkest pixels of (c), (d) and (e)). Therefore, we validate the connection between Fourier amplitude and the intensities of synthesized images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 540.9525756835938,
+    "y2": 601.7490234375
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Phase", "of", "(a)", "and", "amplitude", "of", "(c)", "(a)", "Content", "image", "(b)", "Style", "image", "(c)", "Stylized", "image", "(d)", "Phase", "of", "(b)", "and", "amplitude", "of", "(c)"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 352.32,
+    "y2": 526.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Additional synthesized results with the same Fourier phase and replaced Fourier amplitude. We replace the Fourier amplitude of stylized feature maps in each layer and use the proposed method to synthesize stylized images. Note that feature maps with the same phase produce images with highly similar spatial arrangements (e.g., the triangular structure of the architecture and the human face), even in some details (e.g., the light on the human cheek). Therefore, Fourier phase is validated to play an important role on the spatial arrangements of images.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 274.2845153808594,
+    "y2": 335.0809326171875
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Amplitude", "of", "(a)", "and", "phase", "of", "(c)", "(a)", "Content", "image", "(b)", "Style", "image", "(c)", "Stylized", "image", "(d)", "Amplitude", "of", "(b)", "and", "phase", "of", "(c)"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 85.92,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Synthesized results with replaced Fourier amplitude or phase.",
+  "captionBoundary": {
+    "x1": 163.55099487304688,
+    "x2": 448.451416015625,
+    "y1": 270.6635437011719,
+    "y2": 276.666015625
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Phase", "of", "(a)", "and", "amplitude", "of", "(c)", "(d)", "Phase", "of", "(b)", "and", "amplitude", "of", "(c)", "(e)", "Amplitude", "of", "(a)", "and", "phase", "of", "(c)", "(II)", "(I)", "(c)", "Stylized", "image(a)", "Content", "image", "(b)", "Style", "image", "(a)", "Content", "image", "(b)", "Style", "image", "(c)", "Stylized", "image", "(d)", "Amplitude", "of", "(b)", "and", "phase", "of", "(c)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.03999999999999,
+    "x2": 504.47999999999996,
+    "y1": 36.48,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure2-1.png"
+}, {
+  "caption": "Figure 9: Results on the efficacy of phase replacement (abbr. PR). We implement PR on different methods and show the visual difference. It can be observed that PR improves the visual effect of all methods in the spatial arrangement of not only the details (e.g., it improves the unpleasant human eyes and vague contours of architectures ), but also the overview (e.g., it improves the uneven light and shade) of images.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0031433105469,
+    "y1": 264.6395568847656,
+    "y2": 314.47698974609375
+  },
+  "figType": "Figure",
+  "imageText": ["OptimalWCT", "w/", "PR", "Ours", "w/", "PROptimalWCT", "Ours", "Content", "Style", "WCT", "WCT", "w/", "PR"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 85.92,
+    "y2": 250.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure9-1.png"
+}, {
+  "caption": "Figure 6: Qualitative comparison on the state-of-the-art UST algorithms. On one hand, compared with AdaIN and LinearWCT, the proposed method produces more intensive colors (e.g., 3rd, 4th, 6th and 9th rows). On the other hand, the proposed method does better in the structure preservation of images than the rest of methods (e.g., 1st, 2nd, 5th, 7th and 8th rows).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 608.4765625,
+    "y2": 647.3560180664062
+  },
+  "figType": "Figure",
+  "imageText": ["Avatar", "Net", "Ours", "Content", "Style", "AdaIN", "WCT", "Optimal", "WCT", "Linear", "WCT"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 86.39999999999999,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure6-1.png"
+}, {
+  "caption": "Figure 4: Comparison between (c) linear combination and (d) frequency combination. It is worth noting that the proposed method helps the background remain stylized (e.g., the sky more sketchstylized than (c)) while renders the details more realistic (e.g., the buildings and the sailboat more realistic than (c)). Note that the proposed method achieves this performance without any spatial masks to identify where to stylize. The hyper-parameter σ for results in (d) is set to 0.99.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 411.1145324707031,
+    "y2": 460.95294189453125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Linear", "(d)", "Ours(a)", "Content", "(b)", "Style"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 211.67999999999998,
+    "y2": 390.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Results on the efficacy of phase replacement (abbr. PR).",
+  "captionBoundary": {
+    "x1": 174.17100524902344,
+    "x2": 437.8294677734375,
+    "y1": 202.11154174804688,
+    "y2": 208.114013671875
+  },
+  "figType": "Figure",
+  "imageText": ["Ours", "w/o", "PR", "Ours", "w/", "PR", "Content", "Ours", "w/o", "PR", "Ours", "w/", "PR", "Style", "Content", "Style"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 180.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure3-1.png"
+}, {
+  "caption": "Figure 10: Comparison between (a) linear combination and (b) frequency combination. Images in the first column are stylized images and images in the last column are content images. The proposed frequency method can maintain the low frequencies of stylized images and focus on the high frequencies of content images. On one hand, the proposed method can fix distorted details by introducing the high frequencies of content images, since these distortion are caused by the high frequencies of stylized images (e.g., the difference between the first column and the second column of (b)). On the other hand, the proposed method can enhance the details while keeping the overview stylized (e.g., the difference between the fourth column of (a) and (b)). Note that the proposed method achieves this performance without any spatial masks to identify where to stylize.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 547.1065673828125,
+    "y2": 640.780029296875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "(a)", "(b)", "(a)", "(b)", "(a)"],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 120.47999999999999,
+    "x2": 498.24,
+    "y1": 81.6,
+    "y2": 532.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure10-1.png"
+}, {
+  "caption": "Figure 5: Qualitative comparison on the state-of-the-art UST algorithms. Compared with the proposed method, AvatarNet and SANet sometimes generates less intensive colors (e.g., in 2nd and 4th columns) and produce unexpected style pattern (e.g., eyes in the 5th column), while Self-Contained sometimes introduces unexpected color (e.g., in the 4th column)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 498.2275390625,
+    "y2": 537.1070556640625
+  },
+  "figType": "Figure",
+  "imageText": ["Ours", "Self-Contained", "SANet", "Avatar", "Net", "Linear", "WCT", "Optimal", "WCT", "WCT", "AdaIN", "Style", "Content"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 484.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KAB29urre4C-Figure5-1.png"
+}]

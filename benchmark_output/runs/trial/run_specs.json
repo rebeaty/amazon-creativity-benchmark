@@ -1,0 +1,511 @@
+[
+  {
+    "name": "amuse_chord_generation:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.amuse_chord_generation_scenario.AmuseChordGenerationScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 8,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "metrics.jsd_metric.JSDMetric",
+        "args": {
+          "n": 1
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "amuse_chord_generation"
+    ]
+  },
+  {
+    "name": "arastories:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.arastories_scenario.AraStoriesScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "fluency"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "coherence"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "following_instructions"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "consistency"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "variety"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "arastories"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "fluency",
+          "rubric": "Evaluate the FLUENCY of the generated Arabic story. Fluency measures how natural, grammatically correct, and readable the Arabic text is.\n\nScore 1: Incomprehensible or severely broken Arabic language\nScore 2: Frequent grammatical errors that impede understanding\nScore 3: Generally understandable but with noticeable awkwardness\nScore 4: Reads naturally with only minor linguistic issues\nScore 5: Perfectly fluent, native-quality Arabic writing\n"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "coherence",
+          "rubric": "Evaluate the COHERENCE of the generated Arabic story. Coherence measures whether the story has logical flow, consistent characters, and a sensible narrative arc.\n\nScore 1: No logical connection between sentences or ideas\nScore 2: Major gaps in logic or contradictions in the narrative\nScore 3: Mostly follows a thread but with some disconnects\nScore 4: Well-structured narrative with minor inconsistencies\nScore 5: Perfectly coherent story with clear, consistent narrative arc\n"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "following_instructions",
+          "rubric": "Evaluate how well the generated Arabic story FOLLOWS THE INSTRUCTIONS given in the prompt. Instructions specify age group, setting, ending type, character count, country, and other story constraints.\n\nScore 1: Ignores nearly all specified constraints\nScore 2: Addresses only 1-2 of the specified constraints\nScore 3: Addresses most constraints with some notable omissions\nScore 4: Addresses all constraints with only minor deviations\nScore 5: Perfectly fulfills every specified constraint in the prompt\n"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "consistency",
+          "rubric": "Evaluate the CONSISTENCY of the generated Arabic story. Consistency measures whether characters, settings, and plot details remain stable throughout the story.\n\nScore 1: Characters or settings change contradictorily without explanation\nScore 2: Multiple inconsistencies that disrupt the reading experience\nScore 3: Generally consistent with some minor continuity errors\nScore 4: Consistent throughout with at most one minor inconsistency\nScore 5: Perfectly consistent \u2014 every detail is stable and logical\n"
+        }
+      },
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "variety",
+          "rubric": "Evaluate the VARIETY of the generated Arabic story. Variety measures the richness of vocabulary, sentence structures, and narrative techniques used.\n\nScore 1: Monotonous, repetitive vocabulary and sentence structure throughout\nScore 2: Limited variety; relies heavily on simple repeated patterns\nScore 3: Some variety in expression but falls back on repetitive structures\nScore 4: Good variety with diverse vocabulary and sentence constructions\nScore 5: Rich, varied language with sophisticated narrative techniques\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "arena_hard_creative:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.arena_hard_creative_scenario.ArenaHardCreativeScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "win_rate"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "arena_hard_creative"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 1024,
+          "metric_name": "win_rate",
+          "rubric": "Evaluate the quality of the creative response in a head-to-head comparison with a reference.\nConsider creativity, originality, quality of writing, and relevance to the prompt.\n\nScore 1: Generated response is significantly worse in creativity and quality\nScore 2: Generated response is somewhat weaker in creative elements\nScore 3: Both responses are roughly equal in creative quality\nScore 4: Generated response shows better creativity and writing quality\nScore 5: Generated response is significantly more creative and higher quality\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "bhp_hypothesis_generation:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.bhp_hypothesis_generation_scenario.BHPHypothesisGenerationScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "hypothesis_quality"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "bhp_hypothesis_generation"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "hypothesis_quality",
+          "rubric": "Evaluate the quality of the generated biomedical hypothesis given the research background.\nConsider scientific grounding, novelty, specificity, and logical coherence.\n\nScore 1: Hypothesis is nonsensical, irrelevant, or scientifically invalid\nScore 2: Hypothesis is vaguely related but lacks specificity or scientific rigor\nScore 3: Hypothesis is reasonable but not particularly novel or insightful\nScore 4: Hypothesis is well-grounded, specific, and shows good scientific reasoning\nScore 5: Hypothesis is excellent \u2014 novel, specific, scientifically rigorous, and testable\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "brainteaser:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.brainteaser_scenario.BrainteaserScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "multiple_choice_joint",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "Answer: ",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [
+        "\n"
+      ],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "brainteaser"
+    ]
+  },
+  {
+    "name": "crowdcounter:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.crowdcounter_scenario.CrowdCounterScenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 5,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+        "args": {
+          "metric_name": "counterspeech_quality"
+        }
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "crowdcounter"
+    ],
+    "annotators": [
+      {
+        "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+        "args": {
+          "judge_model_name": "google/gemini-2.0-flash-lite",
+          "judge_temperature": 0.0,
+          "judge_max_new_tokens": 256,
+          "metric_name": "counterspeech_quality",
+          "rubric": "Evaluate the quality of the generated counterspeech response to the given hate speech.\nConsider whether the response effectively addresses the hateful content, promotes understanding, and discourages harmful behavior.\n\nScore 1: Response is irrelevant, inflammatory, or itself contains hateful content\nScore 2: Response acknowledges the hate speech but is ineffective or generic\nScore 3: Response is reasonable but lacks depth or persuasiveness\nScore 4: Response is thoughtful, addresses the core issue, and promotes understanding\nScore 5: Response is excellent \u2014 empathetic, persuasive, specific, and effectively counters the hate\n"
+        }
+      }
+    ]
+  },
+  {
+    "name": "csd100:model=google_gemini-2.0-flash-lite",
+    "scenario_spec": {
+      "class_name": "scenarios_new.csd100_scenario.CSD100Scenario",
+      "args": {}
+    },
+    "adapter_spec": {
+      "method": "generation",
+      "global_prefix": "",
+      "global_suffix": "",
+      "instructions": "",
+      "input_prefix": "",
+      "input_suffix": "\n",
+      "reference_prefix": "A. ",
+      "reference_suffix": "\n",
+      "chain_of_thought_prefix": "",
+      "chain_of_thought_suffix": "\n",
+      "output_prefix": "",
+      "output_suffix": "\n",
+      "instance_prefix": "\n",
+      "substitutions": [],
+      "max_train_instances": 0,
+      "max_eval_instances": 10,
+      "num_outputs": 1,
+      "num_train_trials": 1,
+      "num_trials": 1,
+      "sample_train": true,
+      "model_deployment": "google/gemini-2.0-flash-lite",
+      "model": "google/gemini-2.0-flash-lite",
+      "temperature": 0.7,
+      "max_tokens": 512,
+      "stop_sequences": [],
+      "multi_label": false
+    },
+    "metric_specs": [
+      {
+        "class_name": "helm.benchmark.metrics.basic_metrics.BasicReferenceMetric",
+        "args": {}
+      }
+    ],
+    "data_augmenter_spec": {
+      "perturbation_specs": [],
+      "should_augment_train_instances": false,
+      "should_include_original_train": false,
+      "should_skip_unchanged_train": false,
+      "should_augment_eval_instances": false,
+      "should_include_original_eval": false,
+      "should_skip_unchanged_eval": false,
+      "seeds_per_instance": 1
+    },
+    "groups": [
+      "creativity",
+      "csd100"
+    ]
+  }
+]

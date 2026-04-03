@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 4: -EigenGame compared to (Meng et al., 2021) on proportion of correlations captured— Pk i ̂i/ Pk i i. Shading indicates ±1 stdev. Markers indicate runtime in seconds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99786376953125,
+    "y1": 317.9226989746094,
+    "y2": 340.2279968261719
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 216.0,
+    "y2": 307.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PEgBEB74JjB-Figure4-1.png"
+}, {
+  "caption": "Figure 3: -EigenGame converges to the true SGEP solution regardless of minibatch size in support of the unbiased nature of the derived update scheme (Algorithm 2).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9984130859375,
+    "y1": 183.55270385742188,
+    "y2": 200.822998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PEgBEB74JjB-Figure3-1.png"
+}, {
+  "caption": "Figure 2: Blind Source Separation. Algorithm 2 ( -EigenGame) run for 1000 epochs with minibatches of size n 4 subsampled i.i.d. from the dataset recovers the three original signals from the linearly mixed signals. Scikit-learn’s FastICA2also recovers the signals by maximizing an alternative measure of non-Gaussianity. Directly solving the SGEP using scipy.linalg.eigh(A, B) fails to cleanly recover the gray sinusoid (black circle highlights a discontinuity) due to overfitting to the sample dataset. We confirm this by training -EigenGame for many more iterations and show it exhibits similar artifacts in Appx. G.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0019836425781,
+    "y1": 261.5057067871094,
+    "y2": 335.4150085449219
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 152.64,
+    "x2": 459.35999999999996,
+    "y1": 80.64,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PEgBEB74JjB-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Each player’s utility is a sinusoid on the sphere warped tangentially along the axis of angular deviation according to B; values for A and B used in this example are given in Appx. B. Three mathematical representations of the utility are plotted; their equivalence is supported by the overlapping curves. If player 2 aligns with the top eigenvector (dashed vertical), they receive zero utility. If they align with the second eigenvector (solid vertical), they receive 2 (optimal) as reward. If B = I as in SVD/PCA, the vertical lines indicating the minima and maxima would be separated by exactly 90 . In this case, the matrix B redefines what it means for two vectors to be orthogonal (hv̂i, Bv̂ji = 0), so that the vectors are 71 (equivalently, 180 71 = 109 ) from each other.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 194.11666870117188,
+    "y2": 278.635009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PEgBEB74JjB-Figure1-1.png"
+}, {
+  "caption": "Figure 5: -EigenGame compares the representation (activations) of a deep network trained on CIFAR-10 for t steps to that of its final learned representation (25k or 100k steps). Curves with higher correlation coefficients indicate more similar representations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9997863769531,
+    "y1": 177.75765991210938,
+    "y2": 205.98699951171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 80.64,
+    "y2": 167.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PEgBEB74JjB-Figure5-1.png"
+}]

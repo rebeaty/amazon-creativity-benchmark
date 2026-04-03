@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 2: Top-1 accuracy (%) on ImageNet for tail training with different averaging epochs",
+  "captionBoundary": {
+    "x1": 126.19400024414062,
+    "x2": 485.4982604980469,
+    "y1": 351.0045166015625,
+    "y2": 357.0069885253906
+  },
+  "figType": "Table",
+  "imageText": ["RESNET-18", "69.76", "70.02", "70.28", "70.12", "70.32", "RESNET-50", "76.13", "76.62", "76.78", "76.74", "76.93", "MODEL", "PRETRAINED", "SWA", "TWA", "SWA", "TWA", "5", "EPOCHS", "10", "EPOCHS"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 177.6,
+    "x2": 432.47999999999996,
+    "y1": 369.59999999999997,
+    "y2": 427.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Table2-1.png"
+}, {
+  "caption": "Figure 4: Left: Scaled learning rate schedules with different scaling factors; Middle and Right: Test accuracy curves of TWA w.r.t. to different schedules on CIFAR-10/100. Training in subspace shows high robustness to scaled learning rate, which scales up the learning rate and reduces the corresponding training epochs. In this way, TWA achieves very fast convergence.",
+  "captionBoundary": {
+    "x1": 107.69100952148438,
+    "x2": 505.3855895996094,
+    "y1": 555.0135498046875,
+    "y2": 593.8929443359375
+  },
+  "figType": "Figure",
+  "imageText": ["lr=1", "(20", "epochs)", "lr=2", "(10", "epochs)", "lr=4", "(5", "epochs)", "PreResNet-164", "on", "CIFAR-100", "(%", ")", "ra", "cy", "Ac", "cu", "78", "77", "76", "1", "5", "10", "20", "Epochs", "lr=1", "(20", "epochs)", "lr=2", "(10", "epochs)", "lr=4", "(5", "epochs)", "VGG16", "on", "CIFAR-10", "(%", ")", "ra", "cy", "Ac", "cu", "94.0", "93.8", "93.6", "93.4", "93.2", "93.0", "1", "5", "10", "20", "Epochs", "Condensed", "learning", "rate", "lr=1", "(20", "epochs)", "lr=2", "(10", "epochs)", "lr=4", "(5", "epochs)", "ra", "te", "ni", "ng", "Le", "ar", "4", "2", "1", "1", "5", "10", "20", "Epochs"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 499.2,
+    "y1": 446.4,
+    "y2": 537.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Performance comparisons on before and after TWA w.r.t. different epochs of weights used. “SGD final” indicates the accuracy reached by regular SGD training and “TWA” is the corresponding accuracy reached by Algorithm 1 with these epochs of weights. The final accuracy of SGD training is plotted for reference. TWA dramatically lifts the SGD accuracy and outperforms the final accuracy of SGD within 100 epochs. The experiments are repeated over 3 trials.",
+  "captionBoundary": {
+    "x1": 106.67500305175781,
+    "x2": 505.73681640625,
+    "y1": 174.99954223632812,
+    "y2": 224.8380126953125
+  },
+  "figType": "Figure",
+  "imageText": ["SGD", "final", "TWA", "SGD", "80", "PreResNet-164", "on", "CIFAR-100", "70", "60", "50", "10", "50", "100", "Epochs", "SGD", "final", "TWA", "SGD", "80", "VGG16", "on", "CIFAR-100", "60", "40", "10", "50", "100", "Epochs", "SGD", "final", "TWA", "SGD", "95", "PreResNet-164", "on", "CIFAR-10", "90", "85", "80", "10", "50", "100", "Epochs", "SGD", "final", "TWA", "SGD", "VGG16", "on", "CIFAR-10", "(%", ")", "ra", "cy", "Ac", "cu", "95", "90", "85", "80", "10", "50", "100", "Epochs"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 504.0,
+    "y1": 84.0,
+    "y2": 157.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Figure3-1.png"
+}, {
+  "caption": "Table 4: Top-1 accuracy (%) and generalization gap (%) on ImageNet for head training",
+  "captionBoundary": {
+    "x1": 132.28900146484375,
+    "x2": 479.4023132324219,
+    "y1": 407.78851318359375,
+    "y2": 413.7909851074219
+  },
+  "figType": "Table",
+  "imageText": ["RESNET-18", "69.82", "−1.59", "62.19", "69.82", "−2.36", "(↓", "0.77)", "RESNET-50", "75.82", "0.25", "67.66", "75.90", "−0.68", "(↓", "0.93)", "MODEL", "ACCURACY", "GAP", "ACCURACY", "ACCURACY", "GAP", "SGD", "(90", "EPOCHS)", "SWA", "(60", "EPOCHS)", "TWA", "(60", "+", "2", "EPOCHS)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 482.4,
+    "y1": 426.71999999999997,
+    "y2": 484.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Table4-1.png"
+}, {
+  "caption": "Table 5: Top-1 accuracy (%) on ImageNet for tail training and very short TWA",
+  "captionBoundary": {
+    "x1": 325.49200439453125,
+    "x2": 504.1632385253906,
+    "y1": 603.3345336914062,
+    "y2": 620.2959594726562
+  },
+  "figType": "Table",
+  "imageText": ["RESNET-18", "69.82", "70.37", "RESNET-50", "75.82", "76.34", "MODEL", "SGD", "TWA", "(+1", "EPOCH)"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 336.0,
+    "x2": 489.12,
+    "y1": 632.64,
+    "y2": 675.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Table5-1.png"
+}, {
+  "caption": "Table 3: Test accuracy (%) and generalization gap (%) on CIFAR-10/100 for the head training",
+  "captionBoundary": {
+    "x1": 118.34700012207031,
+    "x2": 493.34490966796875,
+    "y1": 183.49050903320312,
+    "y2": 189.49298095703125
+  },
+  "figType": "Table",
+  "imageText": ["VGG16", "72.72±", "0.17", "26.70", "69.18±", "0.24", "74.24±", "0.24", "17.14", "(↓", "9.56)", "CIFAR-100", "PRERESNET-164", "75.85±", "0.18", "24.10", "73.36±", "0.34", "78.11±", "0.19", "20.02", "(↓", "4.08)", "VGG16", "93.54±", "0.11", "6.42", "92.40±", "0.08", "93.79±", "0.18", "5.59", "(↓", "0.83)", "CIFAR-10", "PRERESNET-164", "95.11±", "0.17", "4.86", "92.52±", "0.04", "95.19±", "0.04", "4.11", "(↓", "0.75)", "DATASET", "MODEL", "ACCURACY", "GAP", "ACCURACY", "ACCURACY", "GAP", "SGD", "(200", "EPOCHS)", "SWA", "(100", "EPOCHS)", "TWA", "(100", "+", "10", "EPOCHS)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 202.56,
+    "y2": 284.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Table3-1.png"
+}, {
+  "caption": "Figure 6: Averaging coefficients of TWA.",
+  "captionBoundary": {
+    "x1": 331.9320068359375,
+    "x2": 497.87896728515625,
+    "y1": 487.9415283203125,
+    "y2": 493.9440002441406
+  },
+  "figType": "Figure",
+  "imageText": ["PreResNet-164", "on", "CIFAR-100", "nt", "s", "fic", "ie", "Co", "ef", "0.06", "0.04", "0.02", "0.00", "0.02", "0.04", "0.06", "0", "20", "40", "60", "80", "100", "Epochs"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 482.4,
+    "y1": 395.03999999999996,
+    "y2": 486.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Figure6-1.png"
+}, {
+  "caption": "Table 6: Wall-clock time per epoch",
+  "captionBoundary": {
+    "x1": 346.53399658203125,
+    "x2": 486.91693115234375,
+    "y1": 143.37753295898438,
+    "y2": 149.3800048828125
+  },
+  "figType": "Table",
+  "imageText": ["SGD", "59.04S", "TWA", "60.20S", "OPTIMIZER", "TIME", "PER", "EPOCH"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 481.44,
+    "y1": 162.23999999999998,
+    "y2": 204.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Table6-1.png"
+}, {
+  "caption": "Figure 5: Comparisons with EMA.",
+  "captionBoundary": {
+    "x1": 345.2770080566406,
+    "x2": 484.52423095703125,
+    "y1": 317.63653564453125,
+    "y2": 323.6390075683594
+  },
+  "figType": "Figure",
+  "imageText": ["TWA", "EMA:", "0.99", "EMA:", "0.999", "SWA", "SGD", "PreResNet-164", "on", "CIFAR-100", "(%", ")", "ra", "cy", "Ac", "cu", "80", "75", "70", "65", "60", "55", "50", "20", "40", "60", "80", "100", "Epochs"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 482.4,
+    "y1": 218.4,
+    "y2": 316.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Figure5-1.png"
+}, {
+  "caption": "Figure 2: An efficient parallel scheme for distributed training.",
+  "captionBoundary": {
+    "x1": 182.93299865722656,
+    "x2": 429.0689392089844,
+    "y1": 667.6075439453125,
+    "y2": 673.6099853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 573.6,
+    "y2": 651.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Figure2-1.png"
+}, {
+  "caption": "Figure 7: Train loss and test error surface of TWA and SWA with different SWA_LR.",
+  "captionBoundary": {
+    "x1": 135.6699981689453,
+    "x2": 476.32965087890625,
+    "y1": 341.89154052734375,
+    "y2": 347.8940124511719
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "SWA_LR", "=", "0.10", ">", "40.0", "40.0", "30.3", "25.5", "23.2", "22.0", "21.5", "21.2", "20.9", "Test", "error", "(%)", "Epoch", "125", "SWA", "TWA", "14", "12", "10", "8", "6", "4", "2", "0", "10", "0", "10", "20", "30", "40", "50", "60", "2", ">", "1.35", "1.35", "0.83", "0.57", "0.44", "0.38", "0.35", "0.34", "0.32", "Training", "loss", "Epoch", "125", "SWA", "TWA", "14", "12", "10", "8", "6", "4", "2", "0", "10", "0", "10", "20", "30", "40", "50", "60", "2", "(a)", "SWA_LR", "=", "0.05", ">", "39.0", "39.0", "29.1", "24.2", "21.8", "20.6", "20.0", "19.7", "19.5", "Test", "error", "(%)", "Epoch", "125", "SWA", "TWA", "12", "10", "8", "6", "4", "2", "0", "0", "10", "20", "30", "40", "50", "2", ">", "0.94", "0.94", "0.52", "0.30", "0.20", "0.14", "0.12", "0.10", "0.09", "Training", "loss", "Epoch", "125", "SWA", "TWA", "12", "10", "8", "6", "4", "2", "0", "0", "10", "20", "30", "40", "50", "2"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 484.32,
+    "y1": 83.03999999999999,
+    "y2": 329.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Figure7-1.png"
+}, {
+  "caption": "Table 1: Test accuracy (%) on CIFAR-10/100 for tail training with different learning rates",
+  "captionBoundary": {
+    "x1": 127.15599822998047,
+    "x2": 484.5367736816406,
+    "y1": 576.7235717773438,
+    "y2": 582.7260131835938
+  },
+  "figType": "Table",
+  "imageText": ["VGG16", "74.71±", "0.03", "75.73±", "0.18", "65.52±", "0.25", "69.70±", "0.45", "CIFAR-100", "PRERESNET-164", "80.20±", "0.41", "80.35±", "0.27", "78.14±", "0.48", "78.87±", "0.27", "VGG16", "94.01±", "0.04", "94.16±", "0.14", "91.03±", "0.14", "92.41±", "0.15", "CIFAR-10", "PRERESNET-164", "95.58±", "0.09", "95.65±", "0.13", "91.58±", "0.45", "92.61±", "0.09", "DATASET", "MODEL", "SWA", "TWA", "SWA", "TWA", "SWA_LR", "=", "0.05", "SWA_LR", "=", "0.10"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 492.0,
+    "y1": 595.68,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8wbnpOJY-f-Table1-1.png"
+}]

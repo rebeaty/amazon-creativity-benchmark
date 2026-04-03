@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 6: Training loss (left) and validation perplexity (right) with respect to Tokens for 1-bit Adam and 0/1 Adam.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99609375,
+    "y1": 145.28750610351562,
+    "y2": 162.2490234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 80.64,
+    "y2": 131.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Sample-wise and time-wise convergence for BERT-Base/Large pre-training sequence length 128 and Resnet18 pretraining on ImageNet using 128 GPUs on the Ethernet cluster.",
+  "captionBoundary": {
+    "x1": 107.2530288696289,
+    "x2": 504.0014953613281,
+    "y1": 301.91351318359375,
+    "y2": 318.875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Resnet18", "on", "ImageNet", "(b)", "BERT-Large", "pretraining", "seq128", "(a)", "BERT-Base", "pretraining", "seq128"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 509.28,
+    "y1": 80.64,
+    "y2": 290.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Figure2-1.png"
+}, {
+  "caption": "Figure 3: End-to-end average throughput for BERT-Base/Large pre-training sequence length 128 and Resnet18 pretraining on ImageNet using 128 V100 GPUs on the Ethernet/InfiniBand cluster. Note that since for ImageNet, both batch size (256) and model (Resnet18) are small compared to BERT, and its parallelism speed up will be limited if applied to the same large system on BERT (128 GPUs). And so we test it for 4 to 32 GPUs in Figure (d).",
+  "captionBoundary": {
+    "x1": 107.64102935791016,
+    "x2": 505.7445373535156,
+    "y1": 427.9065246582031,
+    "y2": 477.7439880371094
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "BERT-Base", "(Ethernet)", "batch", "size=4096", "(b)", "BERT-Large", "(Ethernet)", "batch", "size=4096", "(c)", "BERT-Large", "(Infini-", "Band)", "batch", "size=4096", "(d)", "ImageNet", "(Ethernet)", "batch", "size=256"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.84,
+    "y1": 329.76,
+    "y2": 410.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Figure3-1.png"
+}, {
+  "caption": "Table 3: Profiling on Ethernet cluster the time taken in computation and others (including initialization of a communication round and compression) during one 1-bit AllReduce round at different scales.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9951477050781,
+    "y1": 408.27252197265625,
+    "y2": 425.2340087890625
+  },
+  "figType": "Table",
+  "imageText": ["ImageNet", "4", "node", "(16", "GPUs)", "8", "node", "(32", "GPUs)", "16", "node", "(64", "GPUs)", "32", "node", "(128", "GPUs)", "Computation", "73ms", "68ms", "44ms", "51ms", "Others", "8ms", "6ms", "21ms", "19ms", "BERT-Base", "4", "node", "(16", "GPUs)", "8", "node", "(32", "GPUs)", "16", "node", "(64", "GPUs)", "32", "node", "(128", "GPUs)", "Computation", "941ms", "490ms", "263ms", "162ms", "Others", "153ms", "250ms", "397ms", "658ms", "BERT-Large", "4", "node", "(16", "GPUs)", "8", "node", "(32", "GPUs)", "16", "node", "(64", "GPUs)", "32", "node", "(128", "GPUs)", "Computation", "1840ms", "970ms", "640ms", "332ms", "Others", "340ms", "510ms", "590ms", "931ms"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 527.04,
+    "y1": 427.68,
+    "y2": 529.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Table3-1.png"
+}, {
+  "caption": "Figure 1: Momentum and variance Profiling for BERT-Large sequence 128 pretraining with original Adam using 64 GPUs. For variance, we profile two types of metrics: the first is the difference between local and global variance: ∥v(0) t − vt∥, where v (0) t and vt denotes the variance term computed via local gradient on worker-0 and the gradient from full-precision AllReduce, respectively. We also profile the variance difference in adjacent step ∥vt − vt−1∥. Similarly, we profile the same two metrics for the momentum.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0039367675781,
+    "y1": 177.45053100585938,
+    "y2": 240.84698486328125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "∥vt", "−", "vt−1∥", "(b)", "∥v(0)", "t", "−", "vt∥", "(c)", "∥mt", "−mt−1∥", "(d)", "∥m(0)", "t", "−mt∥"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 85.92,
+    "y2": 160.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Figure1-1.png"
+}, {
+  "caption": "Table 1: GLUE development set results. BERT-Base/Large(original) results are from (Devlin et al., 2018). BERT-Base/Large(Adam and 1-bit Adam) results are from (Tang et al., 2021). The scores are the median scores over 10 runs with different seeds, and are obtained on the checkpoints trained by both sequence 128 and sequence 512 datasets.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2424621582031,
+    "y1": 92.5765151977539,
+    "y2": 131.45599365234375
+  },
+  "figType": "Table",
+  "imageText": ["RTE", "MRPC", "STS-B", "CoLA", "SST-2", "QNLI", "QQP", "MNLI-(m/mm)", "Avg", "BERT-Base(Original)", "66.4", "84.8", "85.8", "52.1", "93.5", "90.5", "89.2", "84.6/83.4", "81.1", "BERT-Base(Adam)", "68.2", "84.8", "85.1", "56.8", "91.8", "90.9", "90.9", "83.6/83.5", "81.8", "BERT-Base(1-bit", "Adam)", "69.0", "84.8", "83.6", "55.6", "91.6", "90.8", "90.9", "83.6/83.9", "81.5", "BERT-Base(0/1", "Adam)", "69.7", "85.1", "84.9", "54.4", "91.9", "90.3", "90.7", "83.7/83.7", "81.6", "BERT-Large(Original)", "70.1", "85.4", "86.5", "60.5", "94.9", "92.7", "89.3", "86.7/85.9", "83.6", "BERT-Large(Adam)", "70.3", "86.0", "86.9", "60.3", "93.1", "92.2", "91.4", "86.1/86.2", "83.6", "BERT-Large(1-bit", "Adam)", "70.4", "86.1", "86.1", "62.0", "93.8", "91.9", "91.5", "85.7/85.4", "83.7", "BERT-Large(0/1", "Adam)", "71.7", "86.2", "86.9", "59.9", "93.2", "91.6", "91.4", "85.6/85.6", "83.6"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 133.92,
+    "y2": 235.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Table1-1.png"
+}, {
+  "caption": "Table 2: The first column shows Top1 accuracy on ImageNet of Resnet at the end of epoch 90 from different algorithms. The original accuracy is provided by Pytorch pretrained model library (Pytorch, 2014). For the other two algorithms, the accuracy is the highest score over 3 runs. The other two columns shows zero-shot evaluation of the trained GPT-2 on WikiText-103 and LAMBADA datasets, the evaluation methodology follows (Shoeybi et al., 2019). The number for Adam is obtained from (Li et al., 2021b).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.2468566894531,
+    "y1": 271.9955139160156,
+    "y2": 332.7929992675781
+  },
+  "figType": "Table",
+  "imageText": ["ImageNet", "Top1", "Acc.", "↑", "WikiText", "Perplexity", "↓", "LAMBADA", "Acc.", "↑", "Original", "Adam", "69.76", "27.78", "33.19", "1-bit", "Adam", "69.93", "28.37", "33.21", "0/1", "Adam", "69.88", "28.07", "33.51"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 489.12,
+    "y1": 334.08,
+    "y2": 381.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Table2-1.png"
+}, {
+  "caption": "Figure 4: Reduction on number of bits per parameter used and number of communication rounds in different tasks. Note that the communication round numbers are normalized due to scale difference in different tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9971923828125,
+    "y1": 173.14651489257812,
+    "y2": 201.0670166015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 159.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Evaluation BERT-Base/Large pretraining throughput using 0/1 Adam without communication rounds skipping. Comparing with Figure 4 and 2, local steps breaks the barrier on the performance gain.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.655029296875,
+    "y1": 267.2304992675781,
+    "y2": 295.1510009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 202.56,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-CefY2EOupj-Figure5-1.png"
+}]

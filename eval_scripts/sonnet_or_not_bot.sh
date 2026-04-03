@@ -30,10 +30,10 @@ SUITE="${2:-creativity-benchmark}"
 MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
-RUN_ENTRY="sonnet_or_not_bot,model=${MODEL}"
+RUN_ENTRY="sonnet_or_not_bot:model=${MODEL}"
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "$RUN_ENTRY" --suite "$SUITE")
+CMD=(helm-run --plugins run_specs.sonnet_or_not_bot_run_specs --run-entries "$RUN_ENTRY" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi

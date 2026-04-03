@@ -1,0 +1,161 @@
+[{
+  "caption": "Table 1: Evaluation on ImageNet linear probing. We adopt a ResNet-50 (He et al., 2016) as our backbone, and pre-train it on middle-scale and large-scale datasets, i.e., ImageNet-100 and ImageNet-1K (Deng et al., 2009) for 400 and 200 epochs, respectively. We build our method on two widely-used frameworks, MoCo-v2 (Chen et al., 2020b) and BYOL (Grill et al., 2020) to evaluate the universality. To thoroughly verify the effectiveness, we set the standard two-crop version as a weak baseline and a multi-crop version as a strong baseline. We report the top 1 accuracy of linear probing and k-NN on ImageNet-100 and ImageNet-1K, respectively. Each model is pre-trained for 200 epochs. ∗ denotes the strong baseline.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.17193603515625,
+    "y1": 83.53055572509766,
+    "y2": 166.2449951171875
+  },
+  "figType": "Table",
+  "imageText": ["MoCo-v2", "80.9", "75.0", "90.9", "67.7", "55.7", "78.6", "MoCo-v2∗", "83.8", "75.7", "91.9", "69.8", "56.0", "80.0", "MosRep", "(Ours)", "85.7", "78.2", "92.6", "72.3", "61.7", "81.9", "BYOL", "82.3", "79.5", "92.1", "72.4", "66.1", "85.0", "BYOL∗", "83.2", "78.9", "91.8", "74.7", "69.6", "86.6", "MosRep", "(Ours)", "84.7", "80.9", "92.4", "76.2", "70.4", "87.4", "SimCLR", "-", "-", "-", "68.3", "-", "-", "SwAV", "-", "-", "-", "69.1", "-", "-", "SimSiam", "-", "-", "-", "70.0", "-", "-", "MSF", "-", "-", "-", "71.4", "-", "-", "Supervised", "85.8", "85.3", "94.5", "76.5", "74.9", "90.2", "Linear", "1-NN", "5-NN", "Linear", "1-NN", "5-NN", "Method", "ImageNet-100", "ImageNet-1K"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 488.15999999999997,
+    "y1": 178.56,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Table1-1.png"
+}, {
+  "caption": "Figure 1: (a) The standard view is generated from the input image by applying the strategy used in (He et al., 2020). (b) The multi-crop view is generated from the input image by the multicrop strategy (Caron et al., 2020). (c) The mosaic view is generated from the input image by our designed augmentation strategy. Although the multi-crop view encourages the “local-to-global” correspondences, it obviously overlooks the diverse background information. In contrast, the mosaic view effectively enriches the background of each crops in the mosaic view, which more facilitates the extraction of discriminative features than the multi-crop strategy. (i), (ii) and (iii) denote the activation maps of MoCo-v2, MoCo-v2 with the multi-crop strategy and MoCo-v2 with our MosRep. Qualitatively, MosRep performs better localization than the other two methods, demonstrating that our method effectively extracts discriminative features and learns high-quality representations.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 505.7757873535156,
+    "y1": 183.60549926757812,
+    "y2": 288.2380065917969
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Class-agnostic", "Activation", "Map(a)", "Standard", "view", "(ⅲ)", "(ⅱ)", "(i)", "(c)", "Mosaic", "view(b)", "Multi-crop", "view"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 81.6,
+    "y2": 167.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Figure1-1.png"
+}, {
+  "caption": "Table 3: Evaluation on Linear probing transfer learning evaluation. We pre-train a ResNet-50 (He et al., 2016) on ImageNet-1K for 200 epochs, and conduct linear probing on 8 classification datasets. We build our method on two widely-used frameworks, MoCo-v2 (Chen et al., 2020b) and BYOL (Grill et al., 2020) to evaluate the universality. For a thorough comparison, we set the standard two-crop version as a weak baseline and the multi-crop version as a strong baseline. ∗ denotes the strong baseline.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.0037536621094,
+    "y1": 326.1645202636719,
+    "y2": 386.96099853515625
+  },
+  "figType": "Table",
+  "imageText": ["BYOL", "92.4", "77.1", "96.8", "72.9", "87.8", "70.3", "88.3", "56.5", "BYOL∗", "93.5", "78.8", "97.5", "77.0", "92.0", "71.6", "91.0", "65.0", "MosRep", "(Ours)", "93.7", "78.2", "97.8", "77.3", "90.9", "72.5", "91.2", "63.0", "MoCo-v2", "90.7", "72.7", "95.6", "71.4", "82.6", "68.1", "81.7", "42.4", "MoCo-v2∗", "90.6", "72.4", "96.8", "72.0", "78.3", "69.8", "80.5", "35.9", "MosRep", "(Ours)", "91.5", "74.5", "97.1", "74.3", "84.5", "71.3", "84.5", "44.8", "Supervised", "90.7", "73.5", "97.0", "73.0", "85.9", "67.2", "91.9", "47.9", "Method", "CIFAR", "10", "CIFAR", "100", "STL", "10", "Food", "101", "Flower", "102", "DTD", "Pets", "Cars"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 501.12,
+    "y1": 399.84,
+    "y2": 503.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Table3-1.png"
+}, {
+  "caption": "Table 2: Evaluation on ImageNet-1K semi-supervised training. We pre-train a ResNet-50 (He et al., 2016) on ImageNet-1K for 200 epochs, and conduct semi-supervised training on 1% and 10% labelled sets. We build our method on two widely-used frameworks, MoCo-v2 (Chen et al., 2020b) and BYOL (Grill et al., 2020) to evaluate the universality. To fully evaluate the effectiveness, we set the standard two-crop version as a weak baseline and the multi-crop version as a strong baseline. Top-1 and Top-5 accuracy are used as benchmark metrics. ∗ denotes the strong baseline.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74517822265625,
+    "y1": 83.53055572509766,
+    "y2": 144.3270263671875
+  },
+  "figType": "Table",
+  "imageText": ["MoCo-v2", "43.5", "70.9", "58.9", "82.8", "MoCo-v2∗", "45.4", "73.9", "60.8", "84.9", "MosRep", "(Ours)", "52.8", "78.7", "65.7", "87.5", "BYOL", "54.1", "78.9", "66.9", "87.5", "BYOL∗", "58.4", "81.3", "68.8", "88.9", "MosRep", "(Ours)", "60.0", "82.7", "70.2", "89.5", "SimCLR", "44.8", "-", "59.5", "-", "SwAV", "52.5", "-", "67.2", "-", "SimSiam", "46.8", "-", "62.4", "-", "MSF", "53.5", "-", "65.2", "-", "Top-1", "Top-5", "Top-1", "Top-5", "Method", "ImageNet-1K", "(1%)", "ImageNet-1K", "(10%)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 156.96,
+    "y2": 317.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Table2-1.png"
+}, {
+  "caption": "Figure 2: The framework of MosRep. The upper figure illustrates the pipeline of the mosaic augmentation strategy. The lower figure illustrates the architecture of the MosRep that is built on the MoCo-v2 (Chen et al., 2020b). Following their training setting, the blue encoder and projector are updated by the SGD optimizer, and the green encoder is updated by the exponential moving average strategy. Best viewed in color.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010986328125,
+    "y1": 249.07254028320312,
+    "y2": 298.9100036621094
+  },
+  "figType": "Figure",
+  "imageText": ["Encoder", "Projector𝑥!", "$", "𝑧!", "$", "Exponential", "Moving", "Average", "Contrastive", "Loss", "···", "𝑧!\"", "Encoder", "RoI", "Align", "Projector𝑥!#", "Encoder", "Projector𝑥!\"", "Mosaic", "View", "View", "Jitter", "Group", "Compose", "Aug.", "&", "Shuffle", "&", "Image", "Small", "Crops", "Mosaic", "View"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 468.47999999999996,
+    "y1": 82.56,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Figure2-1.png"
+}, {
+  "caption": "Table 4: Evaluation on COCO object detection and instance segmentation. We adopt a ResNet-50 (He et al., 2016) as our backbone, and pre-train it on ImageNet-100 and ImageNet-1K (Deng et al., 2009) for 400 and 200 epochs, respectively. To evaluate the effectiveness, we set the standard twocrop version as a weak baseline and the multi-crop version as a strong baseline. Each pretrained model is transferred to the Mask R-CNN R50-FPN model, subsequently finetuned on COCO 2017 (Lin et al., 2014) train set and evaluated on COCO 2017 val set. Averaging precisions on bounding-boxes (APbb) and masks (APmk) are used as benchmark metrics. ∗ denotes the strong baseline.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.657958984375,
+    "y1": 83.53055572509766,
+    "y2": 155.2860107421875
+  },
+  "figType": "Table",
+  "imageText": ["MoCo-v2", "37.6", "34.1", "39.8", "36.0", "MoCo-v2∗", "38.2", "34.6", "40.4", "36.6", "MosRep", "(Ours)", "39.0", "35.3", "40.6", "36.6", "BYOL", "38.3", "34.7", "40.4", "36.7", "BYOL∗", "38.5", "35.0", "40.9", "37.1", "MosRep", "(Ours)", "38.6", "35.2", "41.1", "37.2", "Supervised", "37.2", "33.7", "38.9", "35.4", "APbb", "APmk", "APbb", "APmk", "Method", "ImageNet-100", "ImageNet-1K"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 467.03999999999996,
+    "y1": 168.0,
+    "y2": 296.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Table4-1.png"
+}, {
+  "caption": "Table 5: Evaluation on Cityscapes instance segmentation. We adopt a ResNet-50 (He et al., 2016) as our backbone, and pre-train it on ImageNet-100 and ImageNet-1K (Deng et al., 2009) for 400 and 200 epochs, respectively. To evaluate the effectiveness, we set the standard two-crop version as a weak baseline and the multi-crop version as a strong baseline. Each pretrained model is transferred to Mask R-CNN R50-FPN model, subsequently finetuned on Cityscapes (Cordts et al., 2016) train set and evaluated on Cityscapes val set. Averaging precision on masks (APmk) is used as benchmark metric. All results are the average of three trials. ∗ denotes the strong baseline.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.6684265136719,
+    "y1": 83.53055572509766,
+    "y2": 155.2860107421875
+  },
+  "figType": "Table",
+  "imageText": ["MoCo-v2", "32.2", "58.3", "33.7", "60.5", "MoCo-v2∗", "32.8", "59.9", "34.0", "61.0", "MosRep", "(Ours)", "33.4", "61.0", "34.7", "64.0", "BYOL", "28.2", "56.5", "33.4", "62.4", "BYOL∗", "29.5", "58.0", "33.9", "63.5", "MosRep", "(Ours)", "30.0", "57.3", "34.2", "63.8", "Supervised", "29.4", "54.6", "32.9", "59.6", "APmk", "APmk", "50", "APmk", "APmk", "50", "Method", "ImageNet-100", "ImageNet-1K"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 471.35999999999996,
+    "y1": 168.0,
+    "y2": 296.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Table5-1.png"
+}, {
+  "caption": "Figure 3: Built on the MoCo-v2, we train the MosRep on the IN-100 for 400 epochs, and conduct the linear prob on the IN-100. The orange dashed line denotes the MosRep without the jitter operation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 436.7835388183594,
+    "y2": 453.7449951171875
+  },
+  "figType": "Figure",
+  "imageText": ["Diff.", "Range", "w.o.", "Jittering", "Range", "of", "Pixel", "𝜃", "To", "p-", "1", "A", "cc", "32", "48", "64", "96", "85.9", "85.7", "85.5", "85.3", "85.1", "84.9", "84.7", "84.5", "84.7", "85.1", "85.7", "85.4", "Diff.", "𝛼", "w.o.", "Jittering", "Parameter", "𝛼", "To", "p-", "1", "A", "cc", "0.3", "0.5", "1.0", "2.0", "85.9", "85.7", "85.5", "85.3", "85.1", "84.9", "84.7", "84.5", "85.0", "84.9", "85.7", "85.3"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 469.44,
+    "y1": 307.2,
+    "y2": 418.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JAezPMehaUu-Figure3-1.png"
+}]

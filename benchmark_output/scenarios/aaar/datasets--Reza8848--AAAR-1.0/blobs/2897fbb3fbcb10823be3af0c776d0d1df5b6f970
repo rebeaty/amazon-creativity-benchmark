@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: Average loss and accuracy graphs for the tractable language. Shaded areas show the minimum and maximum values across trials. Almost every configuration achieves 100% test accuracy in ≤ 133 epochs, demonstrating that BERT-Tiny can learn an equivalence-preserving program embedding function for the tractable language on the input space sizes we evaluated on.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6666259765625,
+    "y1": 344.0165100097656,
+    "y2": 394.1180114746094
+  },
+  "figType": "Figure",
+  "imageText": ["2", "3", "4", "5", "7", "11", "Input", "Space", "Size", "ra", "cy", "cc", "u", "t", "A", "T", "es", "100%", "50%", "0%", "0", "100", "200", "300", "Epoch", "os", "s", "t", "L", "T", "es", "10−2", "10−5", "0", "100", "200", "300", "Epoch", "ra", "cy", "cc", "u", "in", "A", "T", "ra", "100%", "50%", "0%", "0", "100", "200", "300", "Epoch", "s", "10−2", "T", "ra", "in", "L", "os", "10−5", "0", "100", "200", "300", "Epoch"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 496.32,
+    "y1": 89.75999999999999,
+    "y2": 323.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Average loss and accuracy graphs for the intractable language. Shaded areas show the minimum and maximum values across trials. After 600 epochs, no configuration achieves 100% train and test accuracy, demonstrating that BERT-Tiny is unable to learn an equivalence-preserving program embedding function for the intractable language on the input space sizes we evaluated on.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036926269531,
+    "y1": 467.7655334472656,
+    "y2": 517.8680419921875
+  },
+  "figType": "Figure",
+  "imageText": ["2", "3", "4", "5", "7", "11", "Input", "Space", "Size", "cy", "u", "ra", "A", "cc", "io", "n", "id", "at", "V", "al", "40%", "20%", "0%", "0", "200", "400", "600", "Epoch", "s", "L", "os", "io", "n", "id", "at", "V", "al", "6×", "100", "4×", "100", "3×", "100", "2×", "100", "100", "0", "200", "400", "600", "Epoch", "ra", "cy", "cc", "u", "t", "A", "T", "es", "60%", "40%", "20%", "0%", "0", "200", "400", "600", "Epoch", "os", "s", "t", "L", "T", "es", "101", "100", "0", "200", "400", "600", "Epoch", "ra", "cy", "cc", "u", "in", "A", "T", "ra", "100%", "75%", "50%", "25%", "0%", "0", "200", "400", "600", "Epoch", "os", "s", "in", "L", "T", "ra", "101", "100", "10−1", "10−2", "0", "200", "400", "600", "Epoch"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 116.16,
+    "x2": 496.32,
+    "y1": 89.28,
+    "y2": 446.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure2-1.png"
+}, {
+  "caption": "Figure 6: The data generation algorithm to enumerate ASTs of a fixed size without caching.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.9209899902344,
+    "y1": 261.83953857421875,
+    "y2": 268.10601806640625
+  },
+  "figType": "Figure",
+  "imageText": ["return", "trees", "for", "right", "in", "enum_ast(size", "-", "i", "-", "1):", "trees.append(binop(left,", "right))", "for", "binop", "in", "BINOPS:", "for", "left", "in", "enum_ast(i):", "#", "Binary", "trees", "for", "i", "in", "range(1,", "size", "-", "1):", "#", "Unary", "trees", "trees", "=", "[Not(e)", "for", "e", "in", "enum_ast(size", "-", "1)]", "return", "[i", "for", "i", "in", "CONSTS]", "+", "[Var(\"x\")]", "def", "enum_ast(size:", "int)", "->", "list[Expr]:", "if", "size", "==", "1:"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Average train and test accuracy vs. input space size for the tractable and intractable languages. We collect the accuracy for each trial at the epoch with the highest validation accuracy. These results show BERT-Tiny is able to learn an equivalence-preserving program embedding function for the tractable language at every input space size we evaluated on, while it was unable to learn an equivalence-preserving program embedding function for the intractable language at any input space size we evaluated on.",
+  "captionBoundary": {
+    "x1": 107.74099731445312,
+    "x2": 504.269287109375,
+    "y1": 266.23553466796875,
+    "y2": 327.2959899902344
+  },
+  "figType": "Figure",
+  "imageText": ["Tractable", "Intractable", "Language", "ra", "cy", "cc", "u", "t", "A", "T", "es", "100%", "75%", "50%", "25%", "2", "4", "6", "8", "10", "Input", "Space", "Size", "ra", "cy", "cc", "u", "in", "A", "T", "ra", "100%", "80%", "60%", "2", "4", "6", "8", "10", "Input", "Space", "Size"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 495.35999999999996,
+    "y1": 90.72,
+    "y2": 244.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Number of semantic equivalence classes encountered in 100,000 AST samples vs. input space size. We plot this relationship for the tractable language in Section 4.1 (Top) and the intractable language in Section 4.2 (Bottom) and for AST sizes from 1 through 11. (Top) For the tractable language, we only see new semantic equivalence classes at odd AST sizes, since every operator is binary. At each AST size, as we increase the input space size, the number of semantic equivalence classes increases monotonically until plateauing. (Bottom) For the intractable language, we do not see a monotonic relationship between the input space size and the number of semantic equivalence classes, for any AST size. However, we do see that the relative relationship across input space sizes is preserved as we vary the AST size.",
+  "captionBoundary": {
+    "x1": 106.66000366210938,
+    "x2": 505.9339904785156,
+    "y1": 598.8395385742188,
+    "y2": 703.7360229492188
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 106.56,
+    "y2": 585.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Comparison of the number of semantic equivalence classes encountered during sampling vs. the number of semantic equivalence classes included in the final dataset. We make this comparison for sample sizes of 500,000, 1 million, and 10 million ASTs, and we find that using 500,000 samples gives the number of encountered classes that matches most closely with the number of classes in the final dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.273193359375,
+    "y1": 631.029541015625,
+    "y2": 681.1320190429688
+  },
+  "figType": "Figure",
+  "imageText": ["10,000,000", "samples", "1,000,000", "samples", "500,000", "samples"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 127.67999999999999,
+    "y2": 617.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure5-1.png"
+}, {
+  "caption": "Figure 4: Semantic equivalence classes sorted by the number of expressions in the equivalence class.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.999755859375,
+    "y1": 343.41552734375,
+    "y2": 360.6409912109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Figure4-1.png"
+}, {
+  "caption": "Table 1: Number of semantic equivalence classes in dataset generated at each input space size",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 503.99639892578125,
+    "y1": 384.6075134277344,
+    "y2": 401.8330078125
+  },
+  "figType": "Table",
+  "imageText": ["Input", "Space", "Size", "2", "3", "4", "5", "7", "11", "#", "Tractable", "Classes", "4", "9", "16", "22", "26", "26", "#", "Intractable", "Classes", "4", "27", "53", "834", "2143", "3000"],
+  "name": "1",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 439.2,
+    "y1": 408.0,
+    "y2": 443.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_69MODRAL5u8-Table1-1.png"
+}]

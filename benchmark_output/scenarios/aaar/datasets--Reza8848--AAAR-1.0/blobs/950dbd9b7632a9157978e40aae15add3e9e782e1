@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 5: Learned phase portraits and inferred distribution of the latent states for the continuous Bernoulli example. The open source code for running OVS was not immediately compatible with non-Gaussian approximations. Top: Phase portraits and filtered latent states when approximations are constrained to be Gaussian. Bottom: Same as top, but for approximations constrained to be CB.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9984130859375,
+    "y1": 326.24853515625,
+    "y2": 365.12799072265625
+  },
+  "figType": "Figure",
+  "imageText": ["ss", "ia", "n", "C", "B", "G", "au", "eVKF", "OVS", "VJF", "SVMC"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 486.24,
+    "y1": 84.0,
+    "y2": 312.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_M_MvkWgQSt-Figure5-1.png"
+}, {
+  "caption": "Figure 6: On the left: phase portrait and filtered latent states of a system with gamma distributed transitions using the prediction step variance correction. On the right: same as the left, but without using the prediction step correction.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00384521484375,
+    "y1": 465.41754150390625,
+    "y2": 493.3380126953125
+  },
+  "figType": "Figure",
+  "imageText": ["variance", "corrected", "variance", "uncorrected", "true", "filtering", "mean", "3", "0", "3", "3", "0", "3"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 381.59999999999997,
+    "y2": 452.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_M_MvkWgQSt-Figure6-1.png"
+}, {
+  "caption": "Table 1: RMSEs of state estimation for Chaotic RNN dynamics. We show the mean ± one standard deviation (over 10 trials) of latent state RMSEs. The latent dimensionality L varies from 2 up to 64. Those in the parentheses are the size of ensemble and the number of particles.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.2492980957031,
+    "y1": 169.75753784179688,
+    "y2": 197.677001953125
+  },
+  "figType": "Table",
+  "imageText": ["EVKF", "(OURS)", "0.047", "±", "6.4e−4", "0.150", "±", "5.8e−4", "0.250", "±", "1.5e−3", "0.450", "±", "5.8e−3", "OVS", "0.103", "±", "6.4e−4", "0.178", "±", "5.8e−4", "0.302", "±", "1.5e−3", "0.323", "±", "1.5e−3", "VJF", "0.105", "±", "2.8e−2", "0.288", "±", "4.0e−2", "0.400", "±", "1.1e−2", "0.711", "±", "4.4e−2", "ENKF", "(1,000)", "0.115", "±", "3.3e−3", "0.437", "±", "6.0e−2", "0.619", "±", "8.2e−2", "0.620", "±", "2.8e−2", "PF", "(10,000)", "0.047", "±", "6.7e−4", "0.422", "±", "9.3e−3", "0.877", "±", "2.5e−2", "1.660", "±", "4.2e−2", "METHOD", "L", "=", "2", "L", "=", "16", "L", "=", "32", "L", "=", "64"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 153.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_M_MvkWgQSt-Table1-1.png"
+}, {
+  "caption": "Figure 4: Learned phase portraits and inferred distribution of the latent states for the Van der Pol system with Poisson observations. For comparison, we plot the ground truth latent state in black. We see that eVKF infers much smoother latent states than the other methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00048828125,
+    "y1": 232.72952270507812,
+    "y2": 260.6500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["eVKF", "OVS", "VJF", "SVMC"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 491.03999999999996,
+    "y1": 84.0,
+    "y2": 222.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_M_MvkWgQSt-Figure4-1.png"
+}, {
+  "caption": "Table 3: Metrics of inference for continuous Bernoulli dynamics. We use both CB and Gaussian approximations for the methods that are applicable. eVKF achieves the highest log-likelihood of latent trajectories, lowest KL-divergence of the learned dynamics, and lowest Chamfer distance. The downside of using Gaussian approximations is most apparent when we look at the Chamfer distance, which is always worse within each method. Note, we do not calculate the KL measure when Gaussian approximations are used.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2454833984375,
+    "y1": 301.3155212402344,
+    "y2": 362.11199951171875
+  },
+  "figType": "Table",
+  "imageText": ["METHOD", "log", "q(zt)", "↑", "KL", "↓", "log(CHAMFER)", "↓", "log", "q(zt)", "↑", "log(CHAMFER)", "↓", "CVKF", "2.01", "0.057", "-0.19", "±", "0.25", "6.15", "2.55", "±", "0.36", "OVS", "–", "–", "–", "3.61", "45.74", "±", "16.9", "VJF", "1.94", "2.78", "3.22", "±", "0.50", "-20.3", "3.43", "±", "0.13", "SVMC", "(5000)", "–", "2.37", "3.24", "±", "0.45", "–", "3.66", "±", "0.22", "CONTINUOUS", "BERNOULLI", "GAUSSIAN"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 480.47999999999996,
+    "y1": 212.64,
+    "y2": 285.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_M_MvkWgQSt-Table3-1.png"
+}, {
+  "caption": "Table 2: Metrics of inference for Van der Pol dynamics. We report the log-likelihood of the ground truth under the inferred filtering distributions, the KL of one-step transitions, the log symmetric Chamfer distance of trajectories drawn from the learned prior to trajectories realized from the true system, and computation time per time step. SVMC uses 5000 particles.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0030822753906,
+    "y1": 158.79855346679688,
+    "y2": 197.677001953125
+  },
+  "figType": "Table",
+  "imageText": ["CVKF", "1.15", "6.817", "5.66", "±", "0.93", "104", "0.57", "7.131", "2.30", "±", "0.32", "13", "OVS", "-0.92", "13.48", "7.76", "±", "0.16", "6270", "-0.21", "9.132", "3.76", "±", "0.32", "4150", "VJF", "-3.58", "134.3", "6.61", "±", "0.26", "30", "-1.24", "325.5", "3.99", "±", "0.23", "100", "SVMC", "–", "84.83", "5.85", "±", "0.39", "314", "–", "410.2", "4.06", "±", "0.22", "730", "METHOD", "log", "q(zt)", "↑", "KL", "↓", "log(CHAMFER)", "↓", "TIME", "(MS)", "log", "q(zt)", "↑", "KL", "↓", "log(CHAMFER)", "↓", "TIME", "(MS)", "GAUSSIAN", "LIKELIHOOD", "POISSON", "LIKELIHOOD"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 141.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_M_MvkWgQSt-Table2-1.png"
+}]

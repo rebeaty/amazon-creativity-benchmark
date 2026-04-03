@@ -1,0 +1,69 @@
+{
+  "name": "crowdcounter:model=google_gemini-2.0-flash-lite",
+  "scenario_spec": {
+    "class_name": "scenarios_new.crowdcounter_scenario.CrowdCounterScenario",
+    "args": {}
+  },
+  "adapter_spec": {
+    "method": "generation",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 5,
+    "max_eval_instances": 10,
+    "num_outputs": 1,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [],
+    "multi_label": false
+  },
+  "metric_specs": [
+    {
+      "class_name": "llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric",
+      "args": {
+        "metric_name": "counterspeech_quality"
+      }
+    }
+  ],
+  "data_augmenter_spec": {
+    "perturbation_specs": [],
+    "should_augment_train_instances": false,
+    "should_include_original_train": false,
+    "should_skip_unchanged_train": false,
+    "should_augment_eval_instances": false,
+    "should_include_original_eval": false,
+    "should_skip_unchanged_eval": false,
+    "seeds_per_instance": 1
+  },
+  "groups": [
+    "creativity",
+    "crowdcounter"
+  ],
+  "annotators": [
+    {
+      "class_name": "llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
+      "args": {
+        "judge_model_name": "google/gemini-2.0-flash-lite",
+        "judge_temperature": 0.0,
+        "judge_max_new_tokens": 256,
+        "metric_name": "counterspeech_quality",
+        "rubric": "Evaluate the quality of the generated counterspeech response to the given hate speech.\nConsider whether the response effectively addresses the hateful content, promotes understanding, and discourages harmful behavior.\n\nScore 1: Response is irrelevant, inflammatory, or itself contains hateful content\nScore 2: Response acknowledges the hate speech but is ineffective or generic\nScore 3: Response is reasonable but lacks depth or persuasiveness\nScore 4: Response is thoughtful, addresses the core issue, and promotes understanding\nScore 5: Response is excellent \u2014 empathetic, persuasive, specific, and effectively counters the hate\n"
+      }
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+[{
+  "caption": "Figure 2: Obtaining cluster IDs by PCNN upon query.",
+  "captionBoundary": {
+    "x1": 197.96600341796875,
+    "x2": 414.0347900390625,
+    "y1": 525.069580078125,
+    "y2": 531.072021484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 504.0,
+    "y1": 384.96,
+    "y2": 513.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Comparison of PCNN and LSH for varying Approximation Factor α ∈ {1.2, 1.4, 1.6, 2.0} on YandexDeep dataset (with sizenn = 1, using nbit = 28 and hyperplane LSH).",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.000244140625,
+    "y1": 271.6975402832031,
+    "y2": 288.65899658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure6-1.png"
+}, {
+  "caption": "Table 1: Evaluation datasets: main characteristics.",
+  "captionBoundary": {
+    "x1": 206.04100036621094,
+    "x2": 405.96044921875,
+    "y1": 163.02951049804688,
+    "y2": 169.031982421875
+  },
+  "figType": "Table",
+  "imageText": ["BIGANN", "10M/5K", "128", "Euclidean", "No", "YandexDeep", "10M/5K", "96", "Euclidean", "Yes", "YandexTTI", "10M/5K", "200", "Cosine", "Yes", "Dataset", "Name", "#Dataset/#Query", "Dim.", "Distance", "Normalized"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 84.96,
+    "y2": 147.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Table1-1.png"
+}, {
+  "caption": "Figure 11: Comparison of PCNN with hyperplane embedding vs. Hadamard-based embedding (with hyperplane LSH for comparison). The dataset is YandexDeep, with sizenn = 1 and α = 1.4.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 271.6975402832031,
+    "y2": 288.65899658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure11-1.png"
+}, {
+  "caption": "Figure 5: Illustration of the decoding tree for polar code.",
+  "captionBoundary": {
+    "x1": 193.08999633789062,
+    "x2": 418.9122009277344,
+    "y1": 278.1905212402344,
+    "y2": 284.1929931640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 187.68,
+    "x2": 424.32,
+    "y1": 82.56,
+    "y2": 265.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure5-1.png"
+}, {
+  "caption": "Figure 3: recall/ndis performance comparison for sizenn = 1 (using nbit = 28 and hyperplane LSH) for three datasets: (a) YandexDeep, α = 1.4; (b) BIGANN, α = 1.4; (c) YandexTTI, α = 2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0018310546875,
+    "y1": 204.47055053710938,
+    "y2": 221.4320068359375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 507.35999999999996,
+    "y1": 80.64,
+    "y2": 191.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure3-1.png"
+}, {
+  "caption": "Figure 1: A visual illustration of the PCNN algorithm (Algorithms 1 to 3) using the cdimdimensional binary cube sketched by a grid of 2cdim points. Sub-figures (a)-(c) deal with initialization and preprocessing and sub-figures (d)-(e) deal with querying. (a) Embedding of the dataset vectors in D by h : Rd → {0, 1}cdim (green solid). (b) 2nbit polar [cdim,nbit]-code codewords C ⊆ {0, 1}cdim (purple solid) whose nbit-bits identifiers comprise the index entries. (c) Partition M of the dataset D, comprised of 2nbit partitions. The partitions correspond to Voronoi cells (rectangles) induced by the codewords in C and computed by LISTDEC with ℓ = 1. (d) Extracted nprb = 3 cluster IDs of focus for a query q. Retrieved by LISTDEC of h(q) (red solid) with ℓ = nprb, using time proportional to nprb that does not depend on |C|. (e) Find the nearest vectors to q with respect to the subset of D contained in the extracted nprb clusters of focus.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00347900390625,
+    "y1": 166.71151733398438,
+    "y2": 277.3438720703125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)", "(e)"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 153.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure1-1.png"
+}, {
+  "caption": "Figure 12: recall/ndis performance comparison for sizenn = 1, α = 1.4 for YandexDeep (using nbit = 28 and autoencoder LSH).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00042724609375,
+    "y1": 258.7845153808594,
+    "y2": 275.7449951171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure12-1.png"
+}, {
+  "caption": "Figure 13: recall/ndis performance comparison for sizenn = 1, α = 1.4 for YandexDeep (using nbit = 28 and autoencoder LSH).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00042724609375,
+    "y1": 469.0135192871094,
+    "y2": 485.9749755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 291.84,
+    "y2": 458.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure13-1.png"
+}, {
+  "caption": "Table 2: Examples of changes to cosine similarity through approximation factor α for cosine distance.",
+  "captionBoundary": {
+    "x1": 107.9998779296875,
+    "x2": 503.9952697753906,
+    "y1": 603.8884887695312,
+    "y2": 620.8499755859375
+  },
+  "figType": "Table",
+  "imageText": ["0.7", "0.64", "0.55", "0.4", "0.25", "0.1", "0.8", "0.76", "0.7", "0.6", "0.5", "0.4", "0.9", "0.88", "0.85", "0.8", "0.75", "0.7", "0.95", "0.94", "0.925", "0.9", "0.875", "0.85", "0.97", "0.964", "0.955", "0.94", "0.925", "0.91", "cs1", "α", "1.2", "1.5", "2.0", "2.5", "3.0"],
+  "name": "2",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 407.03999999999996,
+    "y1": 638.88,
+    "y2": 725.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Table2-1.png"
+}, {
+  "caption": "Figure 9: Illustration of a convex frontier of CHC (solid blue curve) that corresponds to 30 curves (dashed yellow curves) obtained by using different seeds as used in the case of Figure 8a.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 271.6975402832031,
+    "y2": 288.65899658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Reproducing the results of Figures 3a and 4a using convex-frontier instead of seed averaging.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 537.01953125,
+    "y2": 553.98095703125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 362.88,
+    "y2": 523.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Comparison of multiple table usage for sizenn = 1 and α = 1.4, using nbit = 28. (a) On YandexDeep, using hyperplane LSH. (b) on a binary dataset obtained by embedding YandexDeep to binary space of dimension 512.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9998474121094,
+    "y1": 239.09756469726562,
+    "y2": 267.01800537109375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 80.64,
+    "y2": 229.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure4-1.png"
+}, {
+  "caption": "Table 3: Comparison of the time complexity of PCNN and CHC. Time complexity is compared for preprocessing and for extraction of nprb cluster IDs (CIDs) to probe upon a query. (Note that this table does not refer to the main cost of querying, which is searching within clusters; this is evaluated empirically in Section 4.)",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 290.66827392578125,
+    "y2": 329.5477294921875
+  },
+  "figType": "Table",
+  "imageText": ["CHC", "preprocess", "O(n", "·", "nbit)", "O(n", "·", "d", "·", "nbit)", "O(n", "·", "d", "·", "log", "d)", "extract", "CIDs", "O(nprb", "·", "nbit)", "O(d", "·", "nbit+", "nprb", "·", "nbit)", "O(d", "·", "log", "d+nprb", "·nbit)", "PCNN", "preprocess", "O(n", "·", "d", "·", "log", "d)", "O(n", "·", "d2)", "O(n", "·", "d", "·", "log", "d)", "extract", "CIDs", "O(nprb", "·", "d", "·", "log", "d)", "O(d2", "+", "nprb", "·", "d", "·", "log", "d)", "O(nprb", "·", "d", "·", "log", "d)", "without", "embedding", "w.", "hyperplane", "embed-", "ding", "w.", "approx.", "embedding"],
+  "name": "3",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 347.52,
+    "y2": 425.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Table3-1.png"
+}, {
+  "caption": "Figure 8: Variance comparison for 30 different random seeds on YandexDeep (with sizenn = 1, α = 1.4 and using nbit = 28 and hyperplane LSH) for (a) CHC, (b) PCNN with cdim = 1024. SubFigure (c) shows the standard deviations from (a) and (b) per choice of nprb.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0003356933594,
+    "y1": 427.9625244140625,
+    "y2": 455.88299560546875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 507.35999999999996,
+    "y1": 304.8,
+    "y2": 414.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Comparison of PCNN and LSH for varying Number of Neighbors sizenn ∈ {1, 10, 50} on YandexDeep (with α = 1.4, using nbit = 28 and hyperplane LSH).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0003356933594,
+    "y1": 271.6975402832031,
+    "y2": 288.65899658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-jP_rDkyfpI-Figure7-1.png"
+}]

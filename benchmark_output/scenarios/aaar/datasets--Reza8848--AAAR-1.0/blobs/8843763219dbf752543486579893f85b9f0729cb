@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 2: Dataset size scaling for neural kernels on CIFAR-5m. Using CIFAR-5m as training data, we explore dataset scaling spanning 6 orders of magnitude. Each column corresponds to different neural architectures: 3-layer fully-connected neural network (FC3), 8-layer convolutional neural network with output vectorization (CV8), and 10-layer Myrtle convolutional neural network with average pooling (Myrtle). Evaluations on three different held-out test sets, CIFAR-5m validation, CIFAR-10 test set, and CIFAR-10.1 test set, are shown. Scaling exponents on mean squared error are larger (thus faster improvement with more data) for more complex and computationally intensive kernels and for more in-distribution held out data (CIFAR-5m > CIFAR-10 > CIFAR-10.1).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 287.8574523925781,
+    "y2": 370.57183837890625
+  },
+  "figType": "Figure",
+  "imageText": ["CIFAR-10.1,", "D", "=", "0.09", "CIFAR-10,", "D", "=", "0.12", "CIFAR-5m,", "D", "=", "0.13", "Myrtle", "Dataset", "Size", "102", "104", "106", "CIFAR-10.1,", "D", "=", "0.06", "CIFAR-10,", "D", "=", "0.09", "CIFAR-5m,", "D", "=", "0.11", "CV8", "Dataset", "Size", "102", "104", "106", "CIFAR-10.1,", "D", "=", "0.04", "CIFAR-10,", "D", "=", "0.06", "CIFAR-5m,", "D", "=", "0.09", "FC3", "ro", "r", "d", "Er", "ua", "re", "n", "Sq", "M", "ea", "0.08", "0.1", "0.04", "0.05", "0.06", "0.03", "Dataset", "Size", "102", "104", "106", "Myrtle", "Dataset", "Size", "101", "102", "103", "104", "105", "106", "CV8", "Dataset", "Size", "101", "102", "103", "104", "105", "106", "CIFAR-10.1", "Test", "(OOD)", "CIFAR-10", "Test", "(OOD)", "CIFAR-5m", "Valid", "(IID)", "FC3", "r", "Er", "ro", "tio", "n", "sif", "ica", "Cl", "as", "0.3", "0.4", "0.5", "0.6", "0.70.8", "0.2", "0.1", "Dataset", "Size", "101", "102", "103", "104", "105", "106"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 150.23999999999998,
+    "x2": 460.32,
+    "y1": 85.92,
+    "y2": 266.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Dataset scaling for Myrtle on Tiny ImageNet. At full resolution (64×64), we achieve a best accuracy of 44.7%. Higher resolution inputs result in better classification accuracy and higher scaling exponent(αD).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 518.4555053710938,
+    "y2": 547.8699340820312
+  },
+  "figType": "Figure",
+  "imageText": ["Tuned", "Myrtle", "on", "Tiny", "ImageNet", "64x64,", "D", "=", "0.06", "32x32,", "D", "=", "0.04", "SE", "n", "M", "at", "io", "Va", "lid", "0.009", "0.008", "0.007", "0.006", "0.005", "Dataset", "Size", "101", "102", "103", "104", "105", "Tuned", "Myrtle", "on", "Tiny", "ImageNet", "64x64", "32x32", "r", "Er", "ro", "io", "n", "lid", "at", "1", "Va", "To", "p-", "0.9", "0.8", "0.7", "0.6", "0.5", "Dataset", "Size", "101", "102", "103", "104", "105"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 150.23999999999998,
+    "x2": 459.35999999999996,
+    "y1": 389.76,
+    "y2": 496.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Neural kernel performance on CIFAR-10 with data augmentation. Using horizontal flip and RandAug, we measure scaling of neural kernels’ classification error for 3 different architectures and 2 test sets (CIFAR-10 as well as CIFAR-10.1). Data augmentation factors smaller than 1.0 (light blue shaded region) denotes a subset of original training set, so additional i.i.d. data can be compared with augmented data. The augmentation factor 2× includes horizontal flips, whereas factors larger than 2× use RandAug combined with random crop and flips. While data augmentation consistently improves scaling, there is a noticeable change in slope around 1.0 for FC3 and Tuned Myrtle kernels (see Appendix C). For augmentation factors of 10× and 20×, the Tuned Myrtle kernel achieves less than 10% classification error (8.8% with 20×). (See Table 1 for detailed comparison.)",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.00335693359375,
+    "y1": 191.82150268554688,
+    "y2": 296.453857421875
+  },
+  "figType": "Figure",
+  "imageText": ["Tuned", "Myrtle", "0.02", "0.050.1", "0.2", "0.5", "1", "2", "5", "10", "20", "Data", "Augmentation", "Factor", "CV8", "0.02", "0.050.1", "0.2", "0.5", "1", "2", "5", "10", "20", "Data", "Augmentation", "Factor", "CIFAR-10.1", "CIFAR-10", "FC3", "r", "Er", "ro", "tio", "n", "sif", "ica", "Cl", "as", "0.3", "0.4", "0.5", "0.6", "0.7", "0.2", "0.1", "0.02", "0.050.1", "0.2", "0.5", "1", "2", "5", "10", "20", "Data", "Augmentation", "Factor"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 150.23999999999998,
+    "x2": 459.35999999999996,
+    "y1": 85.92,
+    "y2": 172.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Figure4-1.png"
+}, {
+  "caption": "Figure 1: (Top) An upper diagonal of large kernel matrix is split into smaller, dimension 5,000×5,000 blocks for multi-threading of IO. When computing the kernel, the blocks can be computed independently by machines that need not be co-located. Each block is then batched further (to meet device memory limitations) and computed by the Neural Tangents library on several GPUs. (Bottom left) It is natural to split the kernel by rows across the workers, then each worker can receive the vector from the host, compute the matrix product between the rows in its memory with the vector, and return this chunk of the result to the host. The host can then aggregate the results from the workers by concatenating. However, for larger systems with many workers, simply communicating a large vector to all workers becomes a bottleneck. Instead the kernel can also be partitioned over columns. This means that each worker only needs a subset of the vector entries, and we found this dramatically increased communication speed. The cost of this approach is that slightly more complex aggregation is required on the host. (Bottom right) Classification error rate as a function of rank or partition size for four different kernel approximations. The kernel used is a 10-layer Myrtle NTK for 1.6 million examples of the CIFAR-5m dataset. The performance of CG is shown as a dashed line for comparison and exceeds all other results.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033264160156,
+    "y1": 312.4905090332031,
+    "y2": 471.9178161621094
+  },
+  "figType": "Figure",
+  "imageText": ["Myrtle-NTK", "CIFAR-5m", "Subset", "of", "regressors", "Nystrom", "Block", "diagonal", "Bayesian", "committee", "machine", "Congugate", "gradients", "r", "Er", "ro", "ito", "n", "sif", "ica", "Cl", "as", "0.4", "0.3", "0.2", "103", "104", "Rank", "/", "Partition", "Size", "0.1"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 497.28,
+    "y1": 80.64,
+    "y2": 298.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Figure1-1.png"
+}, {
+  "caption": "Table 1: CIFAR-10 test accuracy for kernels and finite neural networks of the corresponding architecture type.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 316.88653564453125,
+    "y2": 333.8480224609375
+  },
+  "figType": "Table",
+  "imageText": ["Finite", "NN", "ResNet18", "CIFAR-5m", "(Nakkiran", "et", "al.,", "2021)", "89.0", "-", "89.4", "CNN-GAP", "DA,", "Small", "LR,", "no", "L2", "(Lee", "et", "al.,", "2020)", "84.4", "-", "-", "CNN-GAP", "DA", "Large", "LR,", "L2", "(Lee", "et", "al.,", "2020)", "86.7", "Myrtle10", "DA", "(Shankar", "et", "al.,", "2020)", "96.0", "89.8", "-"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 258.71999999999997,
+    "y2": 299.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Table1-1.png"
+}, {
+  "caption": "Figure 5: A scatter plot of test MSE. Each point is a different assignment of the hyperparameters whose coordinates are the test MSE using 100 and 2k examples to train respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 285.9065246582031,
+    "y2": 302.86798095703125
+  },
+  "figType": "Figure",
+  "imageText": ["Test", "MSE", "se", "t", "ai", "n", "2k", "tr", "0.17", "0.16", "0.15", "0.14", "0.13", "0.255", "0.260", "0.265", "0.270", "0.275", "0.280", "0.285", "0.290", "0.295", "0.300", "100", "train", "set"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 170.88,
+    "x2": 438.71999999999997,
+    "y1": 85.92,
+    "y2": 264.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Figure5-1.png"
+}, {
+  "caption": "Table 3: AUROC for kernel regression compared to other methods reported in (Han et al., 2021).",
+  "captionBoundary": {
+    "x1": 111.47600555419922,
+    "x2": 497.43707275390625,
+    "y1": 230.32351684570312,
+    "y2": 236.32598876953125
+  },
+  "figType": "Table",
+  "imageText": ["TEST-IID", "0.919", "0.937", "0.932", "0.942", "0.943", "TEST-OOD1", "0.786", "0.823", "0.836", "0.850", "0.800", "TEST-OOD2", "0.831", "0.873", "0.885", "0.896", "0.750", "Model", "baseline", "GP", "SNGP", "SNGP", "Ensemble", "Ours"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 453.12,
+    "y1": 165.6,
+    "y2": 215.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Table3-1.png"
+}, {
+  "caption": "Table 2: Spearman correlation for kernel regression compared to the best result reported for several methods in (Dallago et al., 2021)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 135.07650756835938,
+    "y2": 152.0379638671875
+  },
+  "figType": "Table",
+  "imageText": ["Best", "reported", "0.79", "0.75", "0.48", "0.74", "0.74", "0.39", "Ours", "0.81", "0.84", "0.64", "0.71", "0.71", "0.34", "Method", "Mut-Des", "Des-Mut", "1-vs-rest", "2-vs-rest", "7-vs-rest", "low-vs-high"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 120.47999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ED3WvUgu09-Table2-1.png"
+}]

@@ -1,0 +1,121 @@
+[{
+  "caption": "Table 1: Statistics of datasets",
+  "captionBoundary": {
+    "x1": 247.98800659179688,
+    "x2": 364.0124206542969,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["Test", "BCR", "Set", "470", "97", "236", "183", "47", "1.14", "7.51", "2.81", "0.78", "RCSB", "PDB", "Set", "501533", "2", "4433", "259", "199", "0.48", "9.00", "2.59", "1.00", "min", "max", "mean", "std", "min", "max", "mean", "std", "Training", "BCR", "Set", "18470", "71", "879", "191", "46", "0.92", "9.00", "2.82", "0.95", "Dataset", "Protein", "Count", "Residue", "Count", "Resolution", "Statistic"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 104.64,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F5Cj26wfiu-Table1-1.png"
+}, {
+  "caption": "Figure 1: The architecture of xTrimoABFold, which takes single sequence and coarse-grained structural prediction as input, and uses pretrained antibody language model and cross-modal templates to model homologous sequences and structures respectively. Then, the combination of Evoformer (encoder) and Structure Module (decoder) of AlphaFold2 is employed to predict the fine-grained prediction 3D structure of antibody.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 265.0785217285156,
+    "y2": 314.91693115234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 80.64,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F5Cj26wfiu-Figure1-1.png"
+}, {
+  "caption": "Table 2: Experimental results of antibody structure prediction on test dataset with 95% confidence interval. xTrimoABFold-ESM refers the similar approach like xTrimoABFold expect for replacing the pretrained ALM to the pretrained PLM: ESM2 (Lin et al., 2022) with 15b parameters (the largest PLM to date). The results show ALM is more suitable for antibody structure prediction.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 277.3955383300781,
+    "y2": 316.27496337890625
+  },
+  "figType": "Table",
+  "imageText": ["xTrimoABFold", "2.1059", "±", "0.0812", "0.8936", "±", "0.0053", "0.8655", "±", "0.0058", "0.7439", "±", "0.0068", "xTrimoABFold-ESM", "4.8790", "±", "0.1299", "0.7057", "±", "0.0061", "0.6727", "±", "0.0063", "0.4992", "±", "0.0062", "HelixFold-Single", "2.9648", "±", "0.0997", "0.8328", "±", "0.0055", "0.7805", "±", "0.0057", "0.6225", "±", "0.0060", "IgFold", "14.2407", "±", "0.4115", "0.5035", "±", "0.0143", "0.4495", "±", "0.0157", "0.3474", "±", "0.0148", "Method", "RMSD", "↓", "TM-Score", "↑", "GDT", "TS", "↑", "GDT", "HA", "↑", "AlphaFold2", "3.1254", "±", "0.1410", "0.8385", "±", "0.0055", "0.7948", "±", "0.0057", "0.6548", "±", "0.0063", "OmegaFold", "3.2610", "±", "0.1463", "0.8384", "±", "0.0057", "0.7925", "±", "0.0059", "0.6586", "±", "0.0063"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 524.16,
+    "y1": 332.64,
+    "y2": 432.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F5Cj26wfiu-Table2-1.png"
+}, {
+  "caption": "Figure 3: Median time of MSA search, AlphaFold2 and xTrimoABFold. xTrimoABFold is 151 faster than AlphaFold2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 251.41555786132812,
+    "y2": 268.37701416015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F5Cj26wfiu-Figure3-1.png"
+}, {
+  "caption": "Figure 2: An illustration of the residue2pair communication.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9964904785156,
+    "y1": 371.1175231933594,
+    "y2": 388.0780029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 324.0,
+    "x2": 483.35999999999996,
+    "y1": 289.92,
+    "y2": 365.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F5Cj26wfiu-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Model performance on RMSD w/o CDR focal loss",
+  "captionBoundary": {
+    "x1": 184.9149932861328,
+    "x2": 427.0858459472656,
+    "y1": 405.5755310058594,
+    "y2": 411.5780029296875
+  },
+  "figType": "Figure",
+  "imageText": ["xTrimoABFold", "0.6064", "±", "0.0294", "0.6585", "±", "0.0072", "0.5899", "±", "0.0278", "0.6823", "±", "0.0067", "1.2539", "±", "0.0584", "0.5517", "±", "0.0095"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 517.4399999999999,
+    "y1": 191.51999999999998,
+    "y2": 400.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F5Cj26wfiu-Figure4-1.png"
+}]

@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 3: Ablation studies among different model architectures. The robust accuracy is evaluated under L∞PGD100. Our method is effective on various models with different architectures.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 503.999755859375,
+    "y1": 394.228515625,
+    "y2": 411.19000244140625
+  },
+  "figType": "Table",
+  "imageText": ["None", "100", "1", "100", "2", "100", "1", "100", "5", "94", "12", "AudioPure", "96", "72", "94", "67", "94", "71", "93", "69", "89", "64", "Defense", "ResNeXt-29-8-64", "VGG-19-BN", "WideResNet-28-10", "DenseNet-BC-100-12", "M5", "Clean", "Robust", "Clean", "Robust", "Clean", "Robust", "Clean", "Robust", "Clean", "Robust"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 485.28,
+    "y1": 422.88,
+    "y2": 474.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Table3-1.png"
+}, {
+  "caption": "Table 2: The robust accuracy under different attack budget ϵ when using different reverse steps n⋆. Larger ϵ requires larger n⋆ to ensure better robustness.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99957275390625,
+    "y1": 281.0705261230469,
+    "y2": 297.0360107421875
+  },
+  "figType": "Table",
+  "imageText": ["ϵ", "=", "0.002", "3", "94", "90", "89", "84", "77", "67", "ϵ", "=", "0.004", "0", "76", "89", "86", "83", "74", "66", "ϵ", "=", "0.008", "0", "27", "70", "85", "84", "74", "68", "ϵ", "=", "0.016", "0", "0", "21", "53", "69", "57", "63", "Attack", "Budget", "Diffusion", "Steps", "n⋆", "=", "0", "n⋆", "=", "1", "n⋆", "=", "2", "n⋆", "=", "3", "n⋆", "=", "5", "n⋆", "=", "7", "n⋆", "=", "10"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 309.59999999999997,
+    "y2": 378.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Table2-1.png"
+}, {
+  "caption": "Figure 2: The performance of baseline (no defense, denoted as None), adversarial training (denoted as AdvTr), and AudioPure under attacks with different iteration steps and EOT size. (a) indicates the step of convergence, and the attack is almost optimal when iterating over 70 steps. (b) shows that increasing EOT size can barely affect the robustness of our method.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0021057128906,
+    "y1": 225.54153442382812,
+    "y2": 261.4320068359375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "robust", "accuracy", "with", "different", "EOT", "size", "None", "AdvTr", "AudioPure", "ac", "y", "cc", "ur", "st", "A", "Ro", "bu", "100", "80", "60", "40", "20", "0", "0", "5", "10", "15", "20", "25", "EOT", "size", "(a)", "robust", "accuracy", "with", "different", "PGD", "steps", "None", "AdvTr", "AudioPure", "ac", "y", "cc", "ur", "st", "A", "Ro", "bu", "100", "80", "60", "40", "20", "0", "0", "25", "50", "75", "100", "125", "150", "PGD", "steps"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 491.52,
+    "y1": 85.92,
+    "y2": 216.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Figure2-1.png"
+}, {
+  "caption": "Table 1: We use a pre-trained ResNeXt-29-8-64 as the classifier (Xie et al., 2017), and compare AudioPure with other different defense methods under adaptive L∞-PGD attacks, L2-PGD attacks, and FAKRBOB (Chen et al., 2021a) which is a L∞-norm black-box attack designed for acoustic systems. We use the attack budget ϵ = 0.002 for all the L∞ attacks. For L2 attacks we set ϵ = 1. AudioPure shows much stronger robustness under different attacks. Even under the strongest L2-PGD100, AudioPure can keep 60% robust accuracy, while adversarial training virtually fails to get any robustness.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 83.53055572509766,
+    "y2": 139.34600830078125
+  },
+  "figType": "Table",
+  "imageText": ["AdvTr", "(Madry", "et", "al.,", "2018)", "100", "45", "28", "24", "23", "23", "22", "8", "5", "3", "3", "1", "76", "AudioPure", "96", "84", "77", "76", "77", "72", "72", "77", "69", "69", "65", "60", "74", "None", "100", "3", "1", "1", "1", "1", "1", "1", "0", "0", "0", "0", "21", "AS", "(Yang", "et", "al.,", "2019)", "100", "4", "2", "1", "1", "1", "1", "4", "0", "0", "0", "0", "24", "MS", "(Yang", "et", "al.,", "2019)", "100", "6", "3", "2", "1", "1", "1", "1", "0", "0", "0", "0", "21", "DS", "(Yang", "et", "al.,", "2019)", "99", "2", "1", "1", "1", "1", "1", "0", "0", "0", "0", "0", "16", "LPF", "(Rajaratnam", "&", "Alshemali,", "2018)", "100", "5", "2", "1", "1", "1", "1", "1", "0", "0", "0", "0", "20", "BPF", "(Rajaratnam", "&", "Alshemali,", "2018)", "99", "5", "1", "1", "1", "1", "1", "3", "0", "0", "0", "0", "18", "Defense", "Clean", "L∞", "white-box", "L2", "white-box", "L∞", "black-box", "PGD10", "PGD20", "PGD30", "PGD50", "PGD70", "PGD100", "PGD10", "PGD20", "PGD30", "PGD50", "PGD100", "FAKEBOB"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 151.68,
+    "y2": 234.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Table1-1.png"
+}, {
+  "caption": "Table 4: Ablation studies among different audio representations. We implement AudioPure using two different diffusion models as purifiers, DiffWave and DiffSpec, that respectively process the representations in the time domain and time-frequency domain.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00079345703125,
+    "y1": 83.53055572509766,
+    "y2": 109.4580078125
+  },
+  "figType": "Table",
+  "imageText": ["DiffWave", "96", "84", "77", "76", "77", "72", "72", "77", "69", "69", "65", "60", "DiffSpec", "100", "80", "76", "67", "64", "60", "57", "50", "45", "42", "37", "34", "Defense", "Clean", "L∞", "white-box", "L2", "white-box", "PGD10", "PGD20", "PGD30", "PGD50", "PGD70", "PGD100", "PGD10", "PGD20", "PGD30", "PGD50", "PGD100"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 485.28,
+    "y1": 118.56,
+    "y2": 159.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Table4-1.png"
+}, {
+  "caption": "Table 5: Certified accuracy for different methods. For each noise level σ, we add the same level of noise to train the classifier and apply it to RS-Gaussian.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00250244140625,
+    "y1": 172.35952758789062,
+    "y2": 188.32501220703125
+  },
+  "figType": "Table",
+  "imageText": ["AudioPure", "σ", "=", "0.5", "45", "40", "35", "27", "21", "17", "13", "σ", "=", "1.0", "27", "22", "16", "15", "12", "11", "8", "RS-Gaussian", "σ", "=", "0.5", "49", "39", "33", "23", "14", "6", "3", "σ", "=", "1.0", "18", "15", "11", "10", "5", "5", "4", "RS-Vanilla", "σ", "=", "0.5", "30", "21", "12", "6", "4", "3", "3", "σ", "=", "1.0", "8", "8", "8", "7", "4", "3", "3", "Method", "Noise", "level", "Certified", "radius", "(L2)", "0", "0.25", "0.50", "0.75", "1.0", "1.25", "1.50"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 192.48,
+    "y2": 289.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Table5-1.png"
+}, {
+  "caption": "Figure 1: The architecture of the whole acoustic system protected by AudioPure (black line in the figure) and the adaptive attack (orange line in the figure). AudioPure first adds noise to the adversarial audio and then runs the reverse process to recover purified audio. Next, the purified audio is transformed into the spectrogram, and the spectrogram is fed into the classifier to get predictions. The attacker updates the adversarial audio based on the gradients backpropagated through SDE. Without AudioPure , the adversarial audio transfers to the spectrogram and feeds into the classifier directly.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00201416015625,
+    "y1": 234.56051635742188,
+    "y2": 290.37701416015625
+  },
+  "figType": "Figure",
+  "imageText": ["Classifier", "STFT", "&", "Rescale", "AudioPure", "Update", "adversarial", "audio", "using", "the", "gradients", "backpropagated", "through", "SDE", "", "", "…", "…", "Adversarial", "Audio", "Purified", "Audio", "𝑛𝑛", "=", "0", "𝑛𝑛", "=", "𝑛𝑛⋆", "𝑛𝑛", "=", "0", "Diffusion", "Model", "Diffusion", "Reverse", "Purified", "Audio", "Adversarial", "Audio"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 125.28,
+    "x2": 488.15999999999997,
+    "y1": 85.44,
+    "y2": 220.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5-Df3tljit7-Figure1-1.png"
+}]

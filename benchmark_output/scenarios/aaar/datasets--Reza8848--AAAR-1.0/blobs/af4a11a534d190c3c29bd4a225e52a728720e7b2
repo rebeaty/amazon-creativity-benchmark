@@ -1,0 +1,421 @@
+[{
+  "caption": "Figure 4: Mean SDR and standard errors of the models trained and tested on different modalities.",
+  "captionBoundary": {
+    "x1": 349.55999755859375,
+    "x2": 505.65631103515625,
+    "y1": 554.1475830078125,
+    "y2": 582.0679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["Text", "query", "Image", "query", "SD", "R", "10", "8", "6", "4", "2", "CLIPSep", "CLIPSep-Text", "CLIPSep-Hybrid", "0"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 352.32,
+    "x2": 502.08,
+    "y1": 470.4,
+    "y2": 542.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure4-1.png"
+}, {
+  "caption": "Figure 9: Training and validation losses along the training progress on the VGGSound dataset. We also include the losses computed using text queries instead of image queries. The y-axes are intentionally set to the same range for easy comparison. Note that we do not use the validation results obtained with text queries for choosing the best model.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7452392578125,
+    "y1": 300.83154296875,
+    "y2": 339.71099853515625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "CLIPSep-NIT", "(γ", "=", "0.5)", "(e)", "CLIPSep-NIT", "(γ", "=", "0.25)", "(f)", "CLIPSep-NIT", "(γ", "=", "0.1)", "Train", "Valid", "Valid", "(text)", "Lo", "ss", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "0.200", "0", "50000", "100000", "150000", "200000", "Steps", "Train", "Valid", "Valid", "(text)", "Lo", "ss", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "0.200", "0", "50000", "100000", "150000", "200000", "Steps", "Train", "Valid", "Valid", "(text)", "Lo", "ss", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "0.200", "0", "50000", "100000", "150000", "200000", "Steps", "(a)", "CLIPSep", "(b)", "PIT", "(c)", "CLIPSep-NIT", "(unregularized)", "Train", "Valid", "Valid", "(text)", "Lo", "ss", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "0.200", "0", "50000", "100000", "150000", "200000", "Steps", "Train", "Valid", "Lo", "ss", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "0.200", "0", "50000", "100000", "150000", "200000", "Steps", "Train", "Valid", "Valid", "(text)", "Lo", "ss", "0.350", "0.325", "0.300", "0.275", "0.250", "0.225", "0.200", "0", "50000", "100000", "150000", "200000", "Steps"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 91.67999999999999,
+    "y2": 287.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Test SDR along the training progress on the VGGSound-Clean dataset. The y-axes are intentionally set to the same range for easy comparison.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99749755859375,
+    "y1": 572.7925415039062,
+    "y2": 589.7540283203125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "CLIPSep-NIT", "(γ", "=", "0.5)", "(e)", "CLIPSep-NIT", "(γ", "=", "0.25)", "(f)", "CLIPSep-NIT", "(γ", "=", "0.1)", "Image", "Text", "Image", "(w/", "noise", "heads)", "Text", "(w/", "noise", "heads)", "SD", "R", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50000", "100000", "150000", "200000", "Steps", "Image", "Text", "Image", "(w/", "noise", "heads)", "Text", "(w/", "noise", "heads)", "SD", "R", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50000", "100000", "150000", "200000", "Steps", "Image", "Text", "Image", "(w/", "noise", "heads)", "Text", "(w/", "noise", "heads)", "SD", "R", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50000", "100000", "150000", "200000", "Steps", "(a)", "CLIPSep", "(b)", "PIT", "(c)", "CLIPSep-NIT", "(unregularized)", "Image", "(w/", "noise", "heads)", "Text", "(w/", "noise", "heads)", "Image", "Text", "SD", "R", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50000", "100000", "150000", "200000", "Steps", "Image", "SD", "R", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50000", "100000", "150000", "200000", "Steps", "Image", "Text", "SD", "R", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50000", "100000", "150000", "200000", "Steps"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 504.0,
+    "y1": 363.84,
+    "y2": 559.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure10-1.png"
+}, {
+  "caption": "Figure 16: Query robustness experiment on the MUSIC+ dataset. Target source—“acoustic guitar”; interference—“cheetah chirrup”. The spectrograms are shown in the log frequency scale.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.8240661621094,
+    "y1": 611.4065551757812,
+    "y2": 628.3679809570312
+  },
+  "figType": "Figure",
+  "imageText": ["Prediction", "(Query:", "”car", "engine”)", "Prediction", "(Query:", "”a", "man", "is", "playing", "acoustic", "guitar", "in", "a", "room”)", "acoustic", "guitar”)", "Prediction", "(Query:", "”a", "man", "is", "playing", "Prediction", "(Query:", "”guitar”)", "Prediction", "(Query:", "”acoustic", "guitar”)", "Mixture", "Ground", "truth", "Ground", "truth", "(Interference)"],
+  "name": "16",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 467.03999999999996,
+    "y1": 180.95999999999998,
+    "y2": 596.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure16-1.png"
+}, {
+  "caption": "Figure 1: An illustration of modality transfer.",
+  "captionBoundary": {
+    "x1": 215.625,
+    "x2": 396.3763427734375,
+    "y1": 184.92453002929688,
+    "y2": 190.927001953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 164.64,
+    "x2": 447.35999999999996,
+    "y1": 80.64,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure1-1.png"
+}, {
+  "caption": "Table 2: Results on the MUSIC dataset. Standard errors are reported in the mean SDR column. Bold values indicate the largest SDR achieved per group.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00347900390625,
+    "y1": 283.5665283203125,
+    "y2": 300.52801513671875
+  },
+  "figType": "Table",
+  "imageText": ["Nonqueried", "models", "LabelSep", "✓", "Label", "Label", "8.18", "±", "0.80", "7.82", "PIT", "(Yu", "et", "al.,", "2017)", "✓", "×", "×", "8.68", "±", "0.76", "7.67", "CLIPSep-Text", "✓", "Text", "Image", "6.25", "±", "0.72", "6.19", "CLIPSep-Hybrid", "✓", "Text", "+", "Image", "Image", "8.06", "±", "0.79", "8.01", "Image-queried", "models", "SOP", "(Zhao", "et", "al.,", "2018)", "✓", "✓", "Image", "Image", "6.59", "±", "0.85", "6.22", "CLIPSep", "✓", "✓", "Image", "Image", "7.03", "±", "0.70", "5.85", "CLIPSep-Text", "✓", "Text", "Text", "7.91", "±", "0.81", "7.46", "CLIPSep-Hybrid", "✓", "Text", "+", "Image", "Text", "8.36", "±", "0.83", "8.72", "Text-queried", "models", "CLIPSep", "✓", "✓", "Image", "Text", "5.49", "±", "0.72", "4.97", "Mixture", "-", "-", "-", "-", "0.00", "±", "0.89", "0.00", "Training", "Test", "Mean", "Median", "Query", "type", "SDR", "[dB]", "Model", "Unlabeled", "data", "Post-proc.", "free"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 272.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Table2-1.png"
+}, {
+  "caption": "Table 5: Results on the ESC-50 dataset. Standard errors are reported in the mean SDR column.",
+  "captionBoundary": {
+    "x1": 116.677001953125,
+    "x2": 495.3255310058594,
+    "y1": 378.3785400390625,
+    "y2": 384.3810119628906
+  },
+  "figType": "Table",
+  "imageText": ["CLIPSep", "✓", "VGGSound", "-", "1.07", "±", "0.28", "2.34", "✓", "ESC-50", "-", "5.18", "±", "0.26", "5.09", "✓", "VGGSound", "ESC-50", "6.73", "±", "0.26", "5.89", "PIT", "×", "VGGSound", "-", "4.90", "±", "0.26", "2.44", "Mixture", "-", "-", "-", "0.00", "±", "0.44", "0.00", "Training", "Finetuning", "Mean", "Median", "Dataset", "SDR", "Model", "Post-processing", "free"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 463.2,
+    "y1": 270.71999999999997,
+    "y2": 367.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Table5-1.png"
+}, {
+  "caption": "Figure 8: An illustration of the PIT model for n = 2. The two predicted masks are interchangeable during the loss computation. Since the two predicted masks are interchangeable, the PIT model requires an additional post-selection step to obtain the target sound.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99969482421875,
+    "y1": 228.77554321289062,
+    "y2": 256.69500732421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 80.64,
+    "y2": 214.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure8-1.png"
+}, {
+  "caption": "Table 1: Comparisons of related work in sound separation. (✓) indicates that the problem of noisy training data is partially addressed. CLIPSep-NIT denotes the proposed CLIPSep model trained with the noise invariant training. To the best of our knowledge, no previous work has attempted the problem of label-free text-queried sound separation.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.3456726074219,
+    "y1": 249.33554077148438,
+    "y2": 288.2139892578125
+  },
+  "figType": "Table",
+  "imageText": ["CLIPSep", "(ours)", "Text", "/", "Image", "✓", "CLIPSep-NIT", "(ours)", "Text", "/", "Image", "✓", "✓", "PixelPlayer", "(Zhao", "et", "al.,", "2018)", "Image", "✓", "(✓)", "AudioScope", "(Tzinis", "et", "al.,", "2021)", "Image", "✓", "✓", "SoundFilter", "(Gfeller", "et", "al.,", "2021)", "Audio", "✓", "Zero-shot", "audio", "separation", "(Chen", "et", "al.,", "2022)", "Audio", "(✓)", "Text-Queried", "(Liu", "et", "al.,", "2022)", "Text", "Text/Audio-Queried", "(Kilgour", "et", "al.,", "2022)", "Text", "/", "Audio", "Universal", "Sound", "Selector", "(Ochiai", "et", "al.,", "2020)", "Label", "USS-Label", "(Kong", "et", "al.,", "2020)", "Label", "(✓)", "USS", "(Kavalerov", "et", "al.,", "2019)", "×", "✓", "MixIT", "(Wisdom", "et", "al.,", "2020)", "×", "✓", "✓", "Method", "Query", "type", "Unlabeled", "data", "Noisy", "data"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Table1-1.png"
+}, {
+  "caption": "Figure 13: Example results on the MUSIC+ dataset. Target source—“acoustic guitar”; interference— “cheetah chirrup”, query—“acoustic guitar”. The spectrograms and masks are shown in the log and linear frequency scales, respectively.",
+  "captionBoundary": {
+    "x1": 106.67500305175781,
+    "x2": 505.99542236328125,
+    "y1": 681.2845458984375,
+    "y2": 709.2049560546875
+  },
+  "figType": "Figure",
+  "imageText": ["Noise", "head", "2", "(CLIPSep-NIT)", "Noise", "head", "1", "(CLIPSep-NIT)", "CLIPSep", "CLIPSep-NIT", "(γ", "=", "0.25)", "PIT", "(Yu", "et", "al.,", "2017)", "Mixture", "Ground", "truth", "Ground", "truth", "(Interference)"],
+  "name": "13",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 174.72,
+    "x2": 437.28,
+    "y1": 100.32,
+    "y2": 666.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure13-1.png"
+}, {
+  "caption": "Table 4: Query templates used in our experiments.",
+  "captionBoundary": {
+    "x1": 205.45799255371094,
+    "x2": 406.5430908203125,
+    "y1": 339.74853515625,
+    "y2": 345.7510070800781
+  },
+  "figType": "Table",
+  "imageText": ["a", "photo", "of", "[user", "input", "query]", "a", "photo", "of", "dog", "barking", "a", "photo", "of", "the", "small", "[user", "input", "query]", "a", "photo", "of", "the", "small", "dog", "barking", "a", "low", "resolution", "photo", "of", "a", "[user", "input", "query]", "a", "low", "resolution", "photo", "of", "a", "dog", "barking", "a", "photo", "of", "many", "[user", "input", "query]", "a", "photo", "of", "many", "dog", "barking", "Query", "template", "Example", "query", "for", "the", "label", "“dog", "barking”"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 266.88,
+    "y2": 328.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Table4-1.png"
+}, {
+  "caption": "Figure 7: Inference pipeline of the proposed CLIPSep and CLIPSep-NIT models. Note that the mixture spectrogram and the masks are shown in log frequency scale, while the masked spectrogram is shown in linear frequency scale.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9997253417969,
+    "y1": 225.10549926757812,
+    "y2": 253.0250244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 80.64,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Example results of the CLIPSep-NIT model with γ = 0.25 on the MUSIC+ dataset. We mix the an audio sample (“violin” in this example) in the MUSIC dataset with an interference audio sample (“people sobbing” in this example) in the VGGSound dataset to create an artificial mixture. (b) and (c) show the reconstructed signals using the ground truth ideal binary masks. The spectrograms are shown in the log frequency scale. We observe that the proposed model successfully separates the desired sounds (i.e., (d)) from query-irrelevant noise (i.e., (e) and (f)).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.66534423828125,
+    "y1": 435.7555236816406,
+    "y2": 496.552001953125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Input", "mixture", "(b)", "Ground", "truth", "(c)", "Interference", "(d)", "Prediction", "(e)", "Noise", "head", "1", "(f)", "Noise", "head", "2"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 345.59999999999997,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure5-1.png"
+}, {
+  "caption": "Table 3: Results of the MUSIC+ and VGGSound-Clean+ evaluations (see Section 4.2). Standard errors are reported in the mean SDR [dB] columns. Bold values indicate the largest SDR achieved per group. We use γ = 0.25 for CLIPSep-NIT. Note that the LabelSep model does not work on the MUSIC dataset due to the different label taxonomies of the MUSIC and VGGSound datasets.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0015563964844,
+    "y1": 295.321533203125,
+    "y2": 334.20098876953125
+  },
+  "figType": "Table",
+  "imageText": ["Nonqueried", "models", "PIT", "(Yu", "et", "al.,", "2017)", "✓", "12.24", "±", "1.20", "12.53", "5.73", "±", "0.79", "4.97", "LabelSep", "✓", "-", "-", "5.55", "±", "0.81", "5.29", "CLIPSep-Text", "✓", "9.89", "±", "1.04", "8.09", "2.45", "±", "0.70", "1.74", "Image-queried", "models", "SOP", "(Zhao", "et", "al.,", "2018)", "✓", "✓", "11.44", "±", "1.18", "11.18", "2.99", "±", "0.84", "3.89", "CLIPSep", "✓", "✓", "12.20", "±", "1.17", "12.42", "5.46", "±", "0.79", "5.35", "CLIPSep-NIT", "✓", "✓", "11.28", "±", "1.08", "10.83", "4.84", "±", "0.66", "3.57", "CLIPSep-Text", "✓", "10.73", "±", "0.99", "9.93", "5.49", "±", "0.82", "5.06", "Text-queried", "models", "CLIPSep", "✓", "✓", "9.71", "±", "1.21", "8.73", "2.76", "±", "1.00", "3.95", "CLIPSep-NIT", "✓", "✓", "10.27", "±", "1.04", "10.02", "3.05", "±", "0.73", "3.26", "Mixture", "-", "-", "4.49", "±", "1.41", "2.04", "-0.77", "±", "1.31", "-0.84", "Model", "Unlabeled", "data", "Post-proc.", "free", "Mean", "SDR", "Median", "Mean", "SDR", "Median", "SDR", "SDR", "MUSIC+", "VGGSound-Clean+"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 283.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Table3-1.png"
+}, {
+  "caption": "Figure 2: An illustration of the proposed CLIPSep model for n = 2. During training, we mix audio from two videos and train the model to separate each audio source given the corresponding video frame as the query. At test time, we instead use a text query in the form of “a photo of [user input query]” to query the sound separation model. Thanks to the properties of the pretrained CLIP model, the query vectors we obtain for the image and text queries are expected to be close.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2469787597656,
+    "y1": 269.5475158691406,
+    "y2": 319.385986328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 80.64,
+    "y2": 255.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure2-1.png"
+}, {
+  "caption": "Figure 14: Example results on the VGGSound-Clean+ dataset. Target source—“cat growling”; interference—“railroad car train wagon”; query—“cat growling”. The spectrograms and masks are shown in the log and linear frequency scales, respectively.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.82684326171875,
+    "y1": 681.2845458984375,
+    "y2": 709.2049560546875
+  },
+  "figType": "Figure",
+  "imageText": ["Noise", "head", "2", "(CLIPSep-NIT)", "Noise", "head", "1", "(CLIPSep-NIT)", "CLIPSep", "CLIPSep-NIT", "(γ", "=", "0.25)", "PIT", "(Yu", "et", "al.,", "2017)", "LabelSep", "Mixture", "Ground", "truth", "Ground", "truth", "(Interference)"],
+  "name": "14",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 100.32,
+    "y2": 666.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure14-1.png"
+}, {
+  "caption": "Figure 12: Example results on the MUSIC+ dataset. Target source—“violin”; interference—“people sobbing”; query—“violin”. The spectrograms and masks are shown in the log and linear frequency scales, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3485107421875,
+    "y1": 681.2845458984375,
+    "y2": 709.2049560546875
+  },
+  "figType": "Figure",
+  "imageText": ["Noise", "head", "2", "(CLIPSep-NIT)", "Noise", "head", "1", "(CLIPSep-NIT)", "CLIPSep", "CLIPSep-NIT", "(γ", "=", "0.25)", "PIT", "(Yu", "et", "al.,", "2017)", "Mixture", "Ground", "truth", "Ground", "truth", "(Interference)"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 174.72,
+    "x2": 437.28,
+    "y1": 100.32,
+    "y2": 666.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure12-1.png"
+}, {
+  "caption": "Figure 6: Effects of the noise regularization level γ for the CLIPSep-NIT model—mean SDR for the (a) MUSIC+ and (b) VGGSound-Clean+ evaluations, and (c) the total mean noise head activation,∑n i=1 mean(M̂N i ), on the validation set. The shaded areas show standard errors.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.2438659667969,
+    "y1": 180.25650024414062,
+    "y2": 212.40802001953125
+  },
+  "figType": "Figure",
+  "imageText": ["io", "n", "iv", "at", "a", "ct", "he", "ad", "is", "e", "n", "no", "l", "m", "ea", "To", "ta", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "(c)", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "regularization", "level,", "CLIPSep-NIT", "CLIPSep-NIT", "(w/", "noise", "heads)", "SD", "R", "6.0", "5.5", "5.0", "4.5", "4.0", "3.5", "3.0", "2.5", "2.0", "(b)", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "regularization", "level,", "CLIPSep-NIT", "CLIPSep-NIT", "(w/", "noise", "heads)", "SD", "R", "11.5", "11.0", "10.5", "10.0", "9.5", "9.0", "8.5", "8.0", "7.5", "(a)", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noise", "regularization", "level,"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 82.08,
+    "y2": 167.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure6-1.png"
+}, {
+  "caption": "Figure 15: Example results on the VGGSound-Clean+ dataset. Target source—“electric grinder grinding”; interference—“vehicle horn car horn honking”; query—“electric grinder grinding”. The spectrograms and masks are shown in the log and linear frequency scales, respectively. Note that the PIT model requires a post-selection step to get the correct source. Without the post-selection step, the PIT model return the right source in only a 50% chance.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.16424560546875,
+    "y1": 670.3255615234375,
+    "y2": 720.1640625
+  },
+  "figType": "Figure",
+  "imageText": ["Noise", "head", "2", "(CLIPSep-NIT)", "Noise", "head", "1", "(CLIPSep-NIT)", "CLIPSep", "CLIPSep-NIT", "(γ", "=", "0.25)", "PIT", "(Yu", "et", "al.,", "2017)", "LabelSep", "Mixture", "Ground", "truth", "Ground", "truth", "(Interference)"],
+  "name": "15",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 89.28,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure15-1.png"
+}, {
+  "caption": "Figure 3: An illustration of the proposed CLIPSep-NIT model for n = 2. Similar to the CLIPSep model, we train the model to separate each audio source given the corresponding query image during training and switch to using a text query at test time. The two predicted noise masks are interchangeable for loss computation during training, and they are discarded at test time.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0028076171875,
+    "y1": 285.63653564453125,
+    "y2": 324.5150146484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure3-1.png"
+}, {
+  "caption": "Figure 11: Total mean noise head activation, ∑n i=1 mean(M̂N i ), on the validation set for the CLIPSepNIT models along the training progress.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6585693359375,
+    "y1": 467.41552734375,
+    "y2": 484.37701416015625
+  },
+  "figType": "Figure",
+  "imageText": ["io", "n", "=", "0.1", "=", "0.25", "=", "0.5", "Unregularized", "iv", "at", "a", "ct", "he", "ad", "is", "e", "n", "no", "l", "m", "ea", "To", "ta", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0", "50000", "100000", "150000", "200000", "Steps"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 210.23999999999998,
+    "x2": 401.76,
+    "y1": 327.84,
+    "y2": 448.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_H-T3F0dMbyj-Figure11-1.png"
+}]

@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 1: The model pipeline consists of three steps: MLP (feature transformation), propagation with skip connection and debiasing via low-rank perturbation in probability space.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 286.3305358886719,
+    "y2": 303.2919921875
+  },
+  "figType": "Figure",
+  "imageText": ["𝑋!\"#", "𝑋$\"%&'", "𝑋%((", "Input", "Prediction", "Propagation", "Debiasing", "MLP", "Jacobian", "Transformation", "Male", "Perturbation", "Female", "Perturbation", "Softmax"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 464.15999999999997,
+    "y1": 86.39999999999999,
+    "y2": 275.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Figure1-1.png"
+}, {
+  "caption": "Table 3: Statistical Information on Datasets",
+  "captionBoundary": {
+    "x1": 219.19699096679688,
+    "x2": 392.496337890625,
+    "y1": 421.12652587890625,
+    "y2": 427.1289978027344
+  },
+  "figType": "Table",
+  "imageText": ["NBA", "403", "95", "21242", "156", "246", "Pokec-n", "66569", "265", "1034094", "4398", "500", "Pokec-z", "67796", "276", "1235916", "5131", "500", "Dataset", "#", "Nodes", "#", "Node", "Features", "#", "Edges", "#", "Training", "Labels", "#", "Training", "Sens"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 157.92,
+    "x2": 454.08,
+    "y1": 439.68,
+    "y2": 497.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Table3-1.png"
+}, {
+  "caption": "Table 1: Comparative Results with Baselines on Node Classification.",
+  "captionBoundary": {
+    "x1": 168.4720001220703,
+    "x2": 443.2205505371094,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["FMP", "70.50", "±", "0.50", "0.81", "±", "0.40", "1.73", "±", "1.03", "72.16", "±", "0.33", "0.66", "±", "0.40", "1.47", "±", "0.87", "73.33", "±", "1.85", "18.92", "±", "2.28", "13.33", "±", "5.89", "APPNP", "66.91", "±", "1.46", "3.90", "±", "0.69", "5.71", "±", "1.29", "69.80", "±", "0.89", "1.98", "±", "1.30", "4.01", "±", "2.36", "63.80", "±", "1.19", "26.51", "±", "3.33", "20.00", "±", "4.56", "SGC", "71.24", "±", "0.46", "4.81", "±", "0.30", "4.79", "±", "2.27", "71.46", "±", "0.41", "2.22", "±", "0.29", "3.85", "±", "1.63", "63.17", "±", "0.63", "22.56", "±", "3.94", "14.33±", "2.16", "GCN", "71.78", "±", "0.37", "3.25", "±", "2.35", "2.36", "±", "2.09", "73.09", "±", "0.28", "3.48", "±", "0.47", "5.16", "±", "1.38", "61.90", "±", "1.00", "23.70", "±", "2.74", "17.50", "±", "2.63", "GAT", "69.76", "±", "1.30", "2.39", "±", "0.62", "2.91", "±", "0.97", "71.00", "±", "0.48", "3.71", "±", "2.15", "7.50", "±", "2.88", "57.78", "±", "10.65", "20.12", "±", "16.18", "13.00", "±", "13.37", "Acc", "(%)", "↑", "∆DP", "(%)", "↓", "∆EO", "(%)", "↓", "Acc", "(%)", "↑", "∆DP", "(%)", "↓", "∆EO", "(%)", "↓", "Acc", "(%)", "↑", "∆DP", "(%)", "↓", "∆EO", "(%)", "↓", "MLP", "70.48", "±", "0.77", "1.61", "±", "1.29", "2.22", "±", "1.01", "72.48", "±", "0.26", "1.53", "±", "0.89", "3.39", "±", "2.37", "65.56", "±", "1.62", "22.37", "±", "1.87", "18.00", "±", "3.52", "Models", "Pokec-z", "Pokec-n", "NBA"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 506.4,
+    "y1": 103.67999999999999,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Table1-1.png"
+}, {
+  "caption": "Figure 6: Hyperparameter study on fairness and smoothness hyperparameter for demographic parity and Accuracy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3434753417969,
+    "y1": 286.6615295410156,
+    "y2": 303.62200927734375
+  },
+  "figType": "Figure",
+  "imageText": ["Pokec_n", "Pokec_z", "NBA"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 485.28,
+    "y1": 87.36,
+    "y2": 268.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Figure6-1.png"
+}, {
+  "caption": "Table 2: Table of Notations",
+  "captionBoundary": {
+    "x1": 251.281005859375,
+    "x2": 360.41131591796875,
+    "y1": 110.2955093383789,
+    "y2": 116.2979736328125
+  },
+  "figType": "Table",
+  "imageText": ["λf", ",", "λs", "Hyperparameter", "for", "fairness", "and", "graph", "smoothness", "objectives", "h∗(·)", "Fenchel", "conjugate", "function", "of", "h(·)", "||X||F", ",", "||X||1", "The", "Frobenius", "norm", "and", "l1", "norm", "of", "matrix", "X", "Xtrans", "∈", "Rn×dout", "The", "output", "node", "features", "for", "feature", "transformation", "Fagg", "∈", "Rn×dout", "The", "aggregated", "node", "features", "after", "propagation", "F", "∈", "Rn×dout", "The", "learned", "node", "features", "considering", "graph", "smoothness", "and", "fairness", "u", "∈", "R1×dout", "The", "permutation", "direction", "in", "feature", "representation", "space", "Xori", "∈", "Rn×d", "The", "input", "node", "attributes", "matrix", "A", "∈", "Rn×n", "The", "adjacency", "matrix", "Â", "∈", "Rn×n", "The", "adjacency", "matrix", "with", "self-loop", "Ã", "∈", "Rn×n", "The", "normalized", "adjacency", "matrix", "with", "self-loop", "L", "∈", "Rn×n", "The", "Laplacian", "matrix", "ϵlabel", "Label", "homophily", "coefficient", "ϵsens", "Sensitive", "homophily", "coefficient", "dout", "The", "number", "of", "node", "classes", "∆s", "∈", "R1×n", "The", "sensitive", "attribute", "incident", "vector", "Notations", "Description", "|E|", "The", "number", "of", "edges", "n", "The", "number", "of", "nodes", "d", "The", "number", "of", "node", "feature", "dimensions"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 484.32,
+    "y1": 128.64,
+    "y2": 364.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Table2-1.png"
+}, {
+  "caption": "Figure 2: DP and Acc trade-off performance on three real-world datasets compared with adding regularization (Top) and adversarial debiasing (Bottom). The trade-off curve more close to right bottom corner means better trade-off performance 6",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99737548828125,
+    "y1": 246.56454467773438,
+    "y2": 274.4849853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 96.96,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Figure2-1.png"
+}, {
+  "caption": "Figure 4: The visualization of node representation for training with/without (left/right) sensitive attribute for FMP and several baselines across three real-world dataset. The data point with different colors represents different sensitive attributes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00360107421875,
+    "y1": 308.92852783203125,
+    "y2": 336.8489990234375
+  },
+  "figType": "Figure",
+  "imageText": ["Fair", "Mixup", "Adv", "Reg", "FMP", "Pokec_n", "Pokec_z", "NBA", "ss"],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 297.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Figure4-1.png"
+}, {
+  "caption": "Figure 5: The running time comparison.",
+  "captionBoundary": {
+    "x1": 226.00599670410156,
+    "x2": 385.995361328125,
+    "y1": 463.8905334472656,
+    "y2": 469.89300537109375
+  },
+  "figType": "Figure",
+  "imageText": ["Vanilla", "Regularization", "Adversarial", "Debiasing"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 360.47999999999996,
+    "y2": 448.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Figure5-1.png"
+}, {
+  "caption": "Figure 3: DP and Acc trade-off performance on three real-world datasets compared with (manifold) Fair Mixup.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6632995605469,
+    "y1": 198.46853637695312,
+    "y2": 215.42901611328125
+  },
+  "figType": "Figure",
+  "imageText": ["Pokec-n", "Pokec-z", "NBA"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 87.84,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NGv_ui-1wz-Figure3-1.png"
+}]

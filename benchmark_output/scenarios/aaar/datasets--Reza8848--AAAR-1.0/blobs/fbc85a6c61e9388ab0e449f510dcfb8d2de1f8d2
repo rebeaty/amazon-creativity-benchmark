@@ -1,0 +1,441 @@
+[{
+  "caption": "Figure 5: A suite of multiple steps [1,10,20] PGD-based adversarial attacks on clones of CrossViT-18† models that were optimized differently. Here we see that our winning entry (Adversarial training + Rotation Invariance) shows greater robustness (adversarial accuracy) than all other models as the number of steps of PGD-based attacks increases only for big step sizes of 10 & 20.",
+  "captionBoundary": {
+    "x1": 106.59500122070312,
+    "x2": 504.003173828125,
+    "y1": 191.27255249023438,
+    "y2": 230.1519775390625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "PGD", "attack", "-", "20", "step", "Architecture", "CrossViT-18", "(Adv", "+", "Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Rot)", "CrossViT-18", "(Pretrained)", "(%", ")", "ra", "cy", "Ac", "cu", "100", "80", "60", "40", "20", "0", "0", "1/255", "2/255", "4/255", "6/255", "8/255", "10/255", "eps", "(b)", "PGD", "attack", "-", "10", "step", "Architecture", "CrossViT-18", "(Adv", "+", "Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Rot)", "CrossViT-18", "(Pretrained)", "(%", ")", "ra", "cy", "Ac", "cu", "100", "80", "60", "40", "20", "0", "0", "1/255", "2/255", "4/255", "6/255", "8/255", "10/255", "eps", "(a)", "PGD", "attack", "-", "1", "step", "Architecture", "CrossViT-18", "(Adv", "+", "Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Rot)", "CrossViT-18", "(Pretrained)", "(%", ")", "ra", "cy", "Ac", "cu", "100", "80", "60", "40", "20", "0", "0", "1/255", "2/255", "4/255", "6/255", "8/255", "10/255", "eps"],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 491.03999999999996,
+    "y1": 89.75999999999999,
+    "y2": 178.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure5-1.png"
+}, {
+  "caption": "Figure 11: Training robust acc. of each Vision Transformer model (Adv + Rot). We clearly observed that ViT-S/16 has over-fitted during training.",
+  "captionBoundary": {
+    "x1": 305.6910095214844,
+    "x2": 505.6561279296875,
+    "y1": 604.8865966796875,
+    "y2": 643.7659912109375
+  },
+  "figType": "Figure",
+  "imageText": ["Model", "CrossViT-18", "(Adv", "+", "Rot)", "ViT-S/32", "(Adv", "+", "Rot)", "ViT-S/16", "(Adv", "+", "Rot)", "ViT-B/32", "(Adv", "+", "Rot)", "ViT-B/16", "(Adv", "+", "Rot)", ".", "A", "cc", "bu", "st", "n", "Ro", "Tr", "ai", "80", "60", "40", "20", "0", "0", "200", "400", "600", "800", "1000", "#", "Iterations"],
+  "name": "11",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 317.28,
+    "x2": 485.28,
+    "y1": 486.71999999999997,
+    "y2": 589.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Custom scheduler used for training the Vision Transformer.",
+  "captionBoundary": {
+    "x1": 305.6409912109375,
+    "x2": 503.9971618652344,
+    "y1": 374.23553466796875,
+    "y2": 391.1969909667969
+  },
+  "figType": "Figure",
+  "imageText": ["1e", "4", "e", "R", "at", "ni", "ng", "Le", "ar", "2.00", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "1", "2", "3", "4", "5", "6", "Epoch", "number"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 316.8,
+    "x2": 477.12,
+    "y1": 252.48,
+    "y2": 362.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure10-1.png"
+}, {
+  "caption": "Figure 1: Diagram of CrossViT-18† (Chen et al., 2021) architecture & specification of selected layers for the V1, V2, V4, IT brain areas and the behavioral benchmark. Our Brain-Score 2022 competition entry was a variation of this model where the architecture is cloned, and the network is adversarially trained with hard data-augmentation rotations starting from a pre-trained ImageNet model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3433837890625,
+    "y1": 304.3725280761719,
+    "y2": 343.25201416015625
+  },
+  "figType": "Figure",
+  "imageText": ["Small", "Branch", "Large", "Branch", "Norm", "Gelu", "Linear", "Revert", "Proj.", "Norm", "Gelu", "Linear", "Attention", "Attention", "Norm", "Norm", "Norm", "Attention", "Attention", "Norm", "Attention", "Norm", "Attention", "Norm", "Attention", "Norm", "Attention", "Norm", "X4", "Transformer", "Encoder", "Transformer", "Encoder", "Revert", "Proj.", "Cross", "-", "Attention", "CAT", "Behavior", "MLP", "HeaderMLP", "Header", "Multi-Scale", "Transformer", "Encoder", "Multi-Scale", "Transformer", "Encoder", "Multi-Scale", "Transformer", "Encoder", "Linear", "ProjectionLinear", "Projection", "Norm", "Gelu", "Linear", "Revert", "Proj.", "Norm", "Gelu", "Linear", "Attention", "Attention", "Norm", "Norm", "Norm", "Attention", "Attention", "Norm", "Attention", "Norm", "Attention", "Norm", "Attention", "Norm", "Attention", "Norm", "X4", "Transformer", "Encoder", "Transformer", "Encoder", "Revert", "Proj.", "Cross", "-", "Attention", "IT", "V4", "V2", "V1", "+"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 440.15999999999997,
+    "y1": 85.92,
+    "y2": 286.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure1-1.png"
+}, {
+  "caption": "Figure 6: A comparison of how two CrossViT-18† models manage to classify original and texform stimuli. In (0.) we see a magnification of a texform, and in (A.,B.) we see how our winning Model Adv. + Rot. manages to create tighter vicinities across the visual stimuli, and ultimately – at the behavioral level – can separate both original and texform stimuli, while pretrained transformers seem to struggle with texform linear separability at the behavioral stage.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00396728515625,
+    "y1": 275.5915222167969,
+    "y2": 325.4289855957031
+  },
+  "figType": "Figure",
+  "imageText": ["Ampliﬁed", "Visualization", "of", "Mid-Ventral", "Stimuli", "Texform", "Original", "Texform", "Original", "0.", "PreTrained", "CrossViT-18", "Adv.", "Training", "+", "Rot.", "Invariance", "CrossViT-18", "A.", "B.", "Testing", "Stimuli", "2", "d", "im", "dim", "1", "Original", "TexformOriginal", "2", "d", "im", "dim", "1", "Testing", "Stimuli", "Texform", "-V", "4", "-V", "2", "V", "1", "r", "IT", "B", "e", "h", "a", "v", "io"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 264.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure6-1.png"
+}, {
+  "caption": "Table 1: Ranking of all entries in the Brain-Score 2022 competition as of February 28th, 2022. Scores in blue indicate world record (highest of all models at the time of the competition), while scores in bold display the highest scores of competing entries. Column ρ-Hierarchy indicates the Spearman rank correlation between per-Area Brain-Score and Depth of Visual Area (V1 → IT).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0038757324219,
+    "y1": 148.90151977539062,
+    "y2": 187.781005859375
+  },
+  "figType": "Table",
+  "imageText": ["1", "1033", "Bag", "of", "Tricks", "(Riedel,", "2022)", "[New", "SOTA]", "0.515", "0.568", "0.360", "0.481", "0.514", "0.652", "-0.2", "2", "991", "CrossViT-18†", "(Adv", "+", "Rot)", "[Ours]", "0.488", "0.493", "0.342", "0.514", "0.531", "0.562", "+0.8", "3", "1044", "Gated", "Recurrence", "(Azeglio", "et", "al.,", "2022)", "0.463", "0.509", "0.303", "0.482", "0.467", "0.554", "-0.4", "4", "896", "N/A", "0.456", "0.538", "0.336", "0.485", "0.459", "0.461", "-0.4", "5", "1031", "N/A", "0.453", "0.539", "0.332", "0.475", "0.510", "0.410", "-0.2", "Brain-Score", "ρ-Hierarchy", "Rank", "Model", "ID", "#", "Description", "Avg", "V1", "V2", "V4", "IT", "Behavior"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 138.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table1-1.png"
+}, {
+  "caption": "Table 7: PGD adversarial attacks on different flavors of CrossViT-18†. Results represent adversarial accuracy at 1/10/20 PGD-iterations",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99835205078125,
+    "y1": 223.96554565429688,
+    "y2": 240.927001953125
+  },
+  "figType": "Table",
+  "imageText": ["CrossViT-18†", "48.31/14.87/6.64", "44.01/5.56/1.1", "41.58/1.47/0.09", "40.96/0.59/0.02", "40.79/0.35/0.01", "40.9/0.13/0", "CrossViT-18†", "(Adv", "+", "Rot)", "65.1/64.84/64.83", "55.99/54.27/54.23", "39.52/32/31.69", "27.81/15.76/15.28", "19.33/6.67/6.32", "14.77/2.72/2.43", "CrossViT-18†", "(Adv)", "62.27/5.3/4.15", "59.9/4.2/2.14", "55.36/7.18/0.996", "51.02/14.97/0.66", "47.16/12.84/0.6", "43.76/6.37/0.6", "CrossViT-18†", "(Rot)", "48/1.75/1.5", "4.87/0/0", "2.17/0/0", "1.89/0/0", "1.87/0/0", "2.13/0/0", "ϵ−", "test(↑)", "Model", "1/255", "2/255", "4/255", "6/255", "8/255", "10/255"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 161.76,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table7-1.png"
+}, {
+  "caption": "Table 6: Parameters used for the targeted attacks",
+  "captionBoundary": {
+    "x1": 209.13900756835938,
+    "x2": 402.55291748046875,
+    "y1": 141.86154174804688,
+    "y2": 147.864013671875
+  },
+  "figType": "Table",
+  "imageText": ["ImageNet", "300", "500", "1", "Dataset", "ϵ", "Steps", "Step", "size"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 126.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table6-1.png"
+}, {
+  "caption": "Figure 8: Similarity Brain-Score analysis on the different cortical areas of the ventral stream for vanilla transformers (ViT) and CrossViT. For nearly all Transformer variations, Adversarial Training with Joint Rotational Invariance increases per Area and Average Brain-Scores.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.17010498046875,
+    "y1": 672.1105346679688,
+    "y2": 700.031005859375
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "Average", "Brain-Scores", "Method", "Adv", "+", "Rot", "Pretrained", "Av", "g", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "CrossViT-18", "ViT-B/32", "ViT-B/16", "ViT-S/32", "Architecture", "(e)", "Behavior", "Scores", "Method", "Adv", "+", "Rot", "Pretrained", "re", "S", "co", "vi", "or", "Be", "ha", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "CrossViT-18", "ViT-B/32", "ViT-B/16", "ViT-S/32", "Architecture", "(d)", "IT", "Scores", "Method", "Adv", "+", "Rot", "Pretrained", "co", "re", "IT", "S", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "CrossViT-18", "ViT-B/32", "ViT-B/16", "ViT-S/32", "Architecture", "(c)", "V4", "scores", "Method", "Adv", "+", "Rot", "Pretrained", "co", "re", "V4", "S", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "CrossViT-18", "ViT-B/32", "ViT-B/16", "ViT-S/32", "Architecture", "(b)", "V2", "Scores", "Method", "Adv", "+", "Rot", "Pretrained", "co", "re", "V2", "S", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "CrossViT-18", "ViT-B/32", "ViT-B/16", "ViT-S/32", "Architecture", "(a)", "V1", "Scores", "Method", "Adv", "+", "Rot", "Pretrained", "co", "re", "V1", "S", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "CrossViT-18", "ViT-B/32", "ViT-B/16", "ViT-S/32", "Architecture"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 490.08,
+    "y1": 455.52,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure8-1.png"
+}, {
+  "caption": "Figure 7: A summary of Feature Inversion models when applied on two different randomly samples noise images from a subset of the stimuli used in Harrington & Deza (2022). Standard and Pretrained models poorly invert the original stimuli leaving high spatial frequency artifacts. Adversarial training improves image inversion models, and this is even more evident for Transformer models. Notice that Transformer models independent of their optimization seem to preserve a higher shape bias as they recover the global structure of the original images. An extended figure can be viewed in the supplementary material.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 311.2815246582031,
+    "y2": 383.0379943847656
+  },
+  "figType": "Figure",
+  "imageText": ["ResNet-50CrossViT-18†", "Sample", "1", "Sample", "2", "Sample", "1", "Sample", "2", "Standard", "Robust", "Tu", "rt", "le", "B", "ir", "d", "Fr", "og", "C", "at", "Initial", "Image", "(Noise)", "Pretrained", "Adv.+", "Rot.", "Sample", "1", "Sample", "2", "Sample", "1", "Sample", "2", "Sample", "1", "Sample", "2", "Original", "D", "og"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 504.0,
+    "y1": 108.47999999999999,
+    "y2": 300.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure7-1.png"
+}, {
+  "caption": "Table 3: Selected Layers of CrossViT-18†",
+  "captionBoundary": {
+    "x1": 328.3260192871094,
+    "x2": 495.11236572265625,
+    "y1": 240.93954467773438,
+    "y2": 246.9420166015625
+  },
+  "figType": "Table",
+  "imageText": ["Behavior", "blocks.2.revert_projs.1.2", "IT", "blocks.1.blocks.1.4.norm2", "V1,V2,V4", "blocks.1.blocks.1.0.norm1", "Benchmark", "Layer"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 318.71999999999997,
+    "x2": 496.32,
+    "y1": 270.71999999999997,
+    "y2": 337.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table3-1.png"
+}, {
+  "caption": "Table 2: A list of different models submitted to the Brain-Score 2022 competition. Scores in bold indicate the highest performing model per column. Scores in blue indicate world record (highest of all models at the time of the competition). All CrossViT-18† entries in the table are ours.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00299072265625,
+    "y1": 168.47451782226562,
+    "y2": 196.39501953125
+  },
+  "figType": "Table",
+  "imageText": ["N/A", "Pixels", "(Baseline)", "N/A", "0.053", "0.158", "0.003", "0.048", "0.035", "0.020", "N/A", "AlexNet", "(Baseline)", "63.3", "0.424", "0.508", "0.353", "0.443", "0.447", "0.370", "N/A", "VOneResNet50-robust", "(SOTA)", "71.7", "0.492", "0.531", "0.391", "0.471", "0.522", "0.545", "991", "CrossViT-18†", "(Adv", "+", "Rot)", "73.53", "0.488", "0.493", "0.342", "0.514", "0.531", "0.562", "1084", "CrossViT-18†", "(Adv)", "64.60", "0.462", "0.497", "0.343", "0.508", "0.519", "0.441", "1095", "CrossViT-18†", "(Rot)", "79.22", "0.458", "0.458", "0.288", "0.495", "0.503", "0.547", "1057", "CrossViT-18†", "83.05", "0.442", "0.473", "0.274", "0.478", "0.484", "0.500", "ImageNet", "(↑)", "Brain-Score", "(↑)", "Model", "ID", "#", "Description", "Validation", "Accuracy", "(%)", "Avg", "V1", "V2", "V4", "IT", "Behavior"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 157.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table2-1.png"
+}, {
+  "caption": "Figure 2: A schematic of how brain-score is calculated as similarity metrics obtained from neural responses and model activations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 307.6499938964844,
+    "y1": 536.6725463867188,
+    "y2": 564.5919799804688
+  },
+  "figType": "Figure",
+  "imageText": ["We", "also", "investigated", "the", "differential", "effects", "of", "rotation", "invariance", "and", "adversarial", "training", "used", "Additionally,", "in", "comparison", "with", "the", "biologically-inspired", "model", "(VOneRes-", "Net50+", "Adv.", "training),", "our", "model", "achieves", "greater", "scores", "in", "the", "IT,", "V4", "and", "Behavioral", "benchmarks.", "Critically", "we", "notice", "that", "our", "best-performing", "model", "(#991)", "has", "a", "positive", "ρ-Hierarchy", "coefficient3", "compared", "to", "the", "new", "state", "of", "the", "art", "model", "(#1033)", "and", "other", "remaining", "entries,", "where", "this", "coefficient", "is", "negative.", "This", "was", "an", "unexpected", "result", "that", "we", "found", "as", "most", "biologically-driven", "models", "obtain", "higher", "Brain-Scores", "at", "the", "initial", "stages", "of", "the", "visual", "hierarchy", "(V1)", "(Dapello", "et", "al.,", "2020),", "and", "these", "scores", "decrease", "as", "a", "function", "of", "hierarchy", "with", "generally", "worse", "Brain-Scores", "in", "the", "final", "stages", "(e.g.", "IT)."],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 505.91999999999996,
+    "y1": 386.88,
+    "y2": 588.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure2-1.png"
+}, {
+  "caption": "Table 8: Layers selected for each brain region on each vision transformer.",
+  "captionBoundary": {
+    "x1": 159.11199951171875,
+    "x2": 452.5802917480469,
+    "y1": 167.09951782226562,
+    "y2": 173.10198974609375
+  },
+  "figType": "Table",
+  "imageText": ["CrossViT-18†", "blocks.1.blocks.1.0.norm1", "blocks.1.blocks.1.0.norm1", "blocks.1.blocks.1.0.norm1", "blocks.1.blocks.1.4.norm2", "blocks.2.revert_projs.1.2", "ViT-S/16", "blocks.1.mlp.act", "blocks.3.attn.proj", "blocks.3.norm2", "blocks.9.norm1", "pre_logits", "ViT-S/16", "blocks.1.mlp.act", "blocks.3.attn.proj", "blocks.3.norm2", "blocks.9.norm1", "pre_logits", "ViT-S/32", "blocks.1.mlp.act", "blocks.10.norm1", "blocks.2.mlp.act", "blocks.10.norm1", "pre_logits", "ViT-B/16", "blocks.1.mlp.act", "blocks.6.norm2", "blocks.2.mlp.act", "blocks.8.norm1", "pre_logits", "ViT-B/32", "blocks.1.mlp.act", "blocks.6.norm2", "blocks.2.mlp.act", "blocks.11.norm1", "pre_logits", "Model", "V1", "V2", "V4", "IT", "Behavior"],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 151.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table8-1.png"
+}, {
+  "caption": "Table 9: ImageNet accuracy, Brain-Scores of each brain area & Behavior benchmark evaluated on vanilla vision transformers. The spearman rank correlation between the validation accuracy and the average Brain-Score is −0.28 suggesting an inverse correlation between clean ImageNet accuracy and Brain-Score (Schrimpf et al., 2020a).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.349365234375,
+    "y1": 305.1815185546875,
+    "y2": 344.0610046386719
+  },
+  "figType": "Table",
+  "imageText": ["ViT-S/16", "(Adv", "+", "Rot)", "50.44", "0.443", "0.506", "0.332", "0.470", "0.496", "0.409", "ViT-S/32", "(Adv", "+", "Rot)", "55.20", "0.457", "0.512", "0.347", "0.433", "0.485", "0.508", "ViT-B/16", "(Adv", "+", "Rot)", "67.25", "0.486", "0.536", "0.332", "0.470", "0.496", "0.598", "ViT-B/32", "(Adv", "+", "Rot)", "53.01", "0.457", "0.524", "0.357", "0.417", "0.472", "0.515", "ViT-S/16", "81.40", "0.445", "0.527", "0.295", "0.454", "0.449", "0.498", "ViT-S/32", "75.99", "0.415", "0.531", "0.271", "0.422", "0.423", "0.426", "ViT-B/16", "84.53", "0.451", "0.522", "0.317", "0.398", "0.487", "0.529", "ViT-B/32", "80.72", "0.440", "0.553", "0.311", "0.413", "0.418", "0.505", "ImageNet(↑)", "Brain-Score(↑)", "Description", "Validation", "Acc.", "(%)", "Avg", "V1", "V2", "V4", "IT", "Behavior"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 496.32,
+    "y1": 187.68,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table9-1.png"
+}, {
+  "caption": "Table 10: Parameters used for standard & robust stimuli by feature inversion",
+  "captionBoundary": {
+    "x1": 153.51800537109375,
+    "x2": 458.17425537109375,
+    "y1": 550.3265380859375,
+    "y2": 556.3289794921875
+  },
+  "figType": "Table",
+  "imageText": ["l2", "1000", "1", "10000", "Constraint", "ϵ", "Step-size", "Iterations"],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 212.64,
+    "x2": 397.44,
+    "y1": 500.64,
+    "y2": 535.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table10-1.png"
+}, {
+  "caption": "Figure 12: Similarity of representations at V1, V2, V4, Behavior and Inversion layers across the four versions of CrossViT-18† (pretrained, Adv., Adv. + Rot., Rot.). A score of 1.0 indicates highest representational similarity, while a score of 0.0 indicated lowest.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9995422363281,
+    "y1": 500.84552001953125,
+    "y2": 528.7659912109375
+  },
+  "figType": "Figure",
+  "imageText": ["1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "Layer", "Inversion", "0.48", "0.46", "0.53", "1", "0.89", "0.86", "1", "0.53", "0.89", "1", "0.86", "0.46", "1", "0.89", "0.89", "0.48", "EL", "1", "M", "OD", "CrossViT-18", "CrossViT-18", "(Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Adv", "+", "Rot)", "MODEL", "2", "18", "sV", "iT-", "Cr", "os", "ot", ")", "18", "(R", "sV", "iT-", "Cr", "os", "dv", ")", "18", "(A", "sV", "iT-", "Cr", "os", ")", "R", "ot", "dv", "+", "18", "(A", "sV", "iT-", "Cr", "os", "1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "Layer", "Behavior", "0.83", "0.81", "0.85", "1", "0.92", "0.91", "1", "0.85", "0.93", "1", "0.91", "0.81", "1", "0.93", "0.92", "0.83", "EL", "1", "M", "OD", "CrossViT-18", "CrossViT-18", "(Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Adv", "+", "Rot)", "MODEL", "2", "0.9", "1.0", "Cr", "os", "sV", "iT-", "18", "(A", "dv", "+", "R", "ot", ")", "Cr", "os", "sV", "iT-", "18", "(A", "dv", ")", "Cr", "os", "sV", "iT-", "18", "(R", "ot", ")", "Cr", "os", "sV", "iT-", "18", "0.8", "0.7", "0.6", "0.5", "Layer", "IT", "0.89", "0.89", "0.94", "1", "0.92", "0.91", "1", "0.94", "0.95", "1", "0.91", "0.89", "1", "0.95", "0.92", "0.89", "EL", "1", "M", "OD", "CrossViT-18", "CrossViT-18", "(Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Adv", "+", "Rot)", "MODEL", "2", "18", "sV", "iT-", "Cr", "os", "ot", ")", "18", "(R", "sV", "iT-", "Cr", "os", "dv", ")", "18", "(A", "sV", "iT-", "Cr", "os", ")", "R", "ot", "dv", "+", "18", "(A", "sV", "iT-", "Cr", "os", "1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "Layer", "V1-V2-V4", "0.84", "0.81", "0.94", "1", "0.91", "0.84", "1", "0.94", "0.89", "1", "0.84", "0.81", "1", "0.89", "0.91", "0.84", "EL", "1", "M", "OD", "CrossViT-18", "CrossViT-18", "(Rot)", "CrossViT-18", "(Adv)", "CrossViT-18", "(Adv", "+", "Rot)", "MODEL", "2", "18", "sV", "iT-", "Cr", "os", "ot", ")", "18", "(R", "sV", "iT-", "Cr", "os", "dv", ")", "18", "(A", "sV", "iT-", "Cr", "os", ")", "R", "ot", "dv", "+", "18", "(A", "sV", "iT-", "Cr", "os"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 128.16,
+    "x2": 483.84,
+    "y1": 192.0,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure12-1.png"
+}, {
+  "caption": "Figure 9: A cartoon inspired by Feather et al. (2019; 2021) depicting how our model changes its perceptual similarity depending on its optimization procedure. The arrows outside the spheres represent projections of such perceptual spaces that are observable by the images we show each system. While it may look like our winning model is “nearly human\" it has still a long way to go, as the adversarial conditions have never been physiologically tested.",
+  "captionBoundary": {
+    "x1": 305.6709899902344,
+    "x2": 505.7414855957031,
+    "y1": 599.5355224609375,
+    "y2": 704.16796875
+  },
+  "figType": "Figure",
+  "imageText": ["Out", "of", "Distribution", "Image", "Set", "Adversarial", "Image", "Set", "In", "Distribution", "Image", "Set", "Human", "Perception", "Machine", "Perception"],
+  "name": "9",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 322.56,
+    "x2": 486.71999999999997,
+    "y1": 447.84,
+    "y2": 588.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure9-1.png"
+}, {
+  "caption": "Figure 4: An extended demonstration of our winning model (CrossViT-18† [Adv. Training + Rot. invariance]) where a targeted attack is done for 3 images and the resulting stimuli is perceptually aligned with a human judgment of the fooled class. To our knowledge, this is the first time perceptually-aligned adversarially attacks have been shown to emerge in Transformer-based models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7466735839844,
+    "y1": 291.009521484375,
+    "y2": 329.8890075683594
+  },
+  "figType": "Figure",
+  "imageText": ["Targeted", "Attack", "Cat", "Dog", "Insect", "Fish", "Frog", "Original"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 475.2,
+    "y1": 82.08,
+    "y2": 279.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure4-1.png"
+}, {
+  "caption": "Figure 3: A qualitative demonstration of the human-machine perceptual alignment of the CrossViT-18† via the effects of adversarial perturbations. As the average Brain-Score increases in our system, the distortions seem to fool a human as well.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.652587890625,
+    "y1": 649.9055786132812,
+    "y2": 710.7020263671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 499.2,
+    "y1": 485.76,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Figure3-1.png"
+}, {
+  "caption": "Table 4: A table showing the comparison of mean corruption errors (mce)’s across CrossViT models contingent on their training regime. A ResNet50-Augmix is shown as a reference of a particularly strong model to common corruptions. Here lower scores are indicative of better robustness to the different distortion types of Hendrycks & Dietterich (2019).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3465881347656,
+    "y1": 309.8165283203125,
+    "y2": 348.69500732421875
+  },
+  "figType": "Table",
+  "imageText": ["CrossViT-18†", "83.05", "51", "46.1", "48.8", "46.4", "61.2", "72.6", "54.4", "65", "44.9", "42.1", "37.2", "41.5", "37", "67.2", "46.8", "54.2", "CrossViT-18†", "(Adv)", "64.60", "88.8", "85", "85.7", "86.7", "96.7", "88", "92.1", "91.3", "85.8", "83.6", "109.3", "82.2", "104.9", "90", "70.3", "80.9", "CrossViT-18†", "(Rot)", "79.22", "73.1", "75.4", "76.7", "75", "75.7", "85.3", "72.3", "79.2", "68.8", "70.9", "64.3", "54.7", "67.6", "78.4", "75.4", "76.4", "Network", "Clean", "Accuracy", "(↑)", "mce", "(↓)", "Gauss", "Shot", "Impulse", "Defocus", "Glass", "Motion", "Zoom", "Snow", "Frost", "Fog", "Bright", "Contrast", "Elastic", "Pixel", "JPEG", "ResNet50-Augmix", "77.53", "67.1", "65.5", "65.1", "66.4", "67.7", "81", "63.9", "65.5", "71.6", "70.9", "66.5", "57.8", "60.2", "76.9", "59.5", "68.5", "CrossViT-18†", "(Adv", "+", "Rot)", "73.53", "79.5", "80.7", "81.6", "83.2", "90.2", "78.7", "82.4", "80", "77.6", "74", "107.9", "65", "100.4", "74.2", "57.4", "58.7"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 244.79999999999998,
+    "y2": 292.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table4-1.png"
+}, {
+  "caption": "Table 5: A table showing the comparison of the accuracy on Imagenet-R dataset across CrossViT models contingent in their training regime.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.30841064453125,
+    "y1": 582.5975341796875,
+    "y2": 599.5590209960938
+  },
+  "figType": "Table",
+  "imageText": ["CrossViT-18†", "95.64", "45.7", "49.94", "CrossViT-18†", "(Rot)", "93.89", "37.35", "56.54", "CrossViT-18†", "(Adv", "+", "Rot)", "90.75", "41.14", "49.61", "CrossViT-18†", "(Adv)", "85.52", "35.73", "49.79", "Network", "ImageNet-200", "(↑)", "ImageNet-R", "(↑)", "Gap", "(↓)"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 144.0,
+    "x2": 465.12,
+    "y1": 490.56,
+    "y2": 567.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_02Bt_4tx6r-Table5-1.png"
+}]

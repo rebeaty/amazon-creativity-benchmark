@@ -1,0 +1,301 @@
+[{
+  "caption": "Table 1: mRecall results on the Visual Genome (VG) dataset (the higher, the better). Context models have additional privilege to mitigate errors propagated from classification (SGCLS) and detection (SGDET) unlike the knowledge graph (KG) and depth-privileged models. Hence, our major baselines for SGCLS and SGDET tasks are based on KG and depth. The best results overall on the SGCLS and SGDET tasks are denoted by the superscript *.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["20", "50", "100", "20", "50", "100", "20", "50", "100", "MOTIFS", "(Zellers", "et", "al.,", "2018)", "context", "10.8", "14.0", "15.3", "6.3", "7.7", "8.2", "4.2", "5.7", "6.6", "FREQ", "(Tang", "et", "al.,", "2019)", "context", "8.3", "13.0", "16.0", "5.1", "7.2", "8.5", "4.5", "6.1", "7.1", "RTN", "(Koner", "et", "al.,", "2020)", "context", "−", "−", "20.3", "−", "−", "12.6*", "−", "−", "−", "RU-Net", "(Lin", "et", "al.,", "2022)", "context", "−", "−", "24.7", "−", "−", "13.9", "−", "−", "10.1*", "VCTree", "(Tang", "et", "al.,", "2019)", "context", "14.0", "17.9", "19.4", "8.2*", "10.1*", "10.8", "5.2*", "6.9*", "8.0", "KERN", "(Chen", "et", "al.,", "2019a)", "KG", "−", "17.7", "19.2", "−", "9.4", "10.0", "−", "6.4", "7.3", "GB-NET", "(Zareian", "et", "al.,", "2020)", "KG", "−", "19.3", "20.9", "−", "9.6", "10.2", "−", "6.1", "8.3", "Depth-VRD", "(Sharifzadeh", "et", "al.,", "2021)", "depth", "16.4", "20.7", "22.7", "−", "−", "−", "−", "−", "−", "CREAM", "(ours)", "depth", "20.3", "25.8", "28.1", "8.0", "9.7", "10.5", "4.0", "5.2", "6.5", "Model", "Privilege", "PRDCLS", "SGCLS", "SGDET", "mRecall@", "mRecall@", "mRecall@"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 504.0,
+    "y1": 148.79999999999998,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Table1-1.png"
+}, {
+  "caption": "Figure 8: Qualitative results for PRDCLS. The triplets correctly predicted by CREAM while missed by Depth-VRD Sharifzadeh et al. (2021) are highlighted in green. The CREAM model successfully detects the under-represented classes ‘over’, ‘sitting on’ (left) as well as ‘laying on’, ‘behind’ (right) missed by the DepthVRD model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001953125,
+    "y1": 291.5665283203125,
+    "y2": 327.45703125
+  },
+  "figType": "Figure",
+  "imageText": ["CREAM", "CREAM", "Person", "laying", "on", "surfboard", "Wave", "behind", "person", "Depth-VRD", "Pole", "of", "umbrella", "Person", "holding", "dog", "Umbrella", "over", "man", "Man", "sitting", "on", "seat", "Depth-VRD", "Pole", "of", "umbrella"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 142.56,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Qualitative results for PRDCLS. The triplets correctly predicted by CREAM while missed by Depth-VRD Sharifzadeh et al. (2021) are highlighted in green. Our proposed CREAM model successfully detects the under-represented class ‘covering’ (left) missed by the Depth-VRD model. The figures on the right show that our model can capture the descriptive under-represented classes ‘walking in’, ‘standing on’ (highlighted in green), while Depth-VRD could only relate the same pair using the highly-represented, less descriptive relation ‘in’ (highlighted in red).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001953125,
+    "y1": 609.5885620117188,
+    "y2": 665.405029296875
+  },
+  "figType": "Figure",
+  "imageText": ["CREAM", "CREAM", "Person", "wearing", "jacket", "Person", "wearing", "coat", "Person", "in", "snow", "Person", "wearing", "jacket", "Person", "wearing", "coat", "Person", "walking", "in", "snow", "Person", "standing", "on", "snow", "Depth-VRD", "Man", "wearing", "pant", "Person", "holding", "pole", "Snow", "on", "roof", "Skier", "holding", "pole", "Snow", "covering", "mountain", "Person", "on", "ski", "Roof", "of", "building", "Snow", "covering", "tree", "Depth-VRD", "Man", "wearing", "pant", "Person", "holding", "pole", "Snow", "on", "roof", "Skier", "holding", "pole", "Person", "on", "ski", "Roof", "of", "building"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 460.79999999999995,
+    "y2": 598.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure9-1.png"
+}, {
+  "caption": "Figure 1: Primal vs Early Fusion. In the case of primal fusion the modalities and the subject-object features are fused explicitly to form the transformer input tokens. Contrastingly, for early fusion there is no interaction between the modalities and subject-object features prior to entering the transformer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00103759765625,
+    "y1": 175.97653198242188,
+    "y2": 201.90399169921875
+  },
+  "figType": "Figure",
+  "imageText": ["er", "L", "ay", "cls", "Token", "Types:", "Subj-RGB", "Obj-RGB", "Subj-Depth", "Obj-Depth", "Class", "CREAM", "Primal", "fusion", "Early", "fusion", "Input", "tokens", "clscls"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 164.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure1-1.png"
+}, {
+  "caption": "Table 3: mRecall results for PRDCLS task on Open Images v4 and v6 (the higher, the better). Baseline results from official code are denoted by the superscript †.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00421142578125,
+    "y1": 245.19851684570312,
+    "y2": 262.15997314453125
+  },
+  "figType": "Table",
+  "imageText": ["MOTIFS†", "(Zellers", "et", "al.,", "2018)", "context", "83.6", "84.2", "84.4", "70.3", "70.5", "70.5", "Depth-VRD†", "(Sharifzadeh", "et", "al.,", "2021)", "depth", "80.2", "80.4", "80.4", "69.8", "70.0", "70.0", "CREAM(ours)", "depth", "92.2", "92.4", "92.4", "76.0", "76.2", "76.3", "mRecall@", "mRecall@", "20", "50", "100", "20", "50", "100", "Model", "Privilege", "PRDCLS", "(v4)", "PRDCLS", "(v6)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 277.92,
+    "y2": 330.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Table3-1.png"
+}, {
+  "caption": "Table 2: mRecall results for debiased models on Visual Genome (VG) (the higher, the better). Context models have additional privilege to mitigate errors propagated from classification (SGCLS) and detection (SGDET) unlike knowledge graph (KG) and depth-privileged models. Hence, our major baseline for SGCLS and SGDET tasks is based on KG. The best results overall on the SGCLS and SGDET tasks are denoted by the superscript *.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["20", "50", "100", "20", "50", "100", "20", "50", "100", "MOTIFS+TDE:GATE", "(Tang", "et", "al.,", "2020)", "context", "18.5", "24.9", "28.3", "11.1", "13.9", "15.2", "6.6", "8.5", "9.9", "VTransE+TDE:GATE", "(Tang", "et", "al.,", "2020)", "context", "18.9", "25.3", "28.4", "9.8", "13.1", "14.7", "6.3", "8.5", "10.2", "VCTree+TDE:SUM", "(Tang", "et", "al.,", "2020)", "context", "18.4", "25.4", "28.7", "8.9", "12.2", "14.0", "6.9", "9.3", "11.1", "Seq2Seq:", "RL-loss", "(Lu", "et", "al.,", "2021)", "context", "21.3", "26.1", "30.5", "11.9*", "14.7*", "16.2", "7.5*", "9.6", "12.1", "BGNN:", "multitask", "loss", "(Li", "et", "al.,", "2021)", "context,", "resampling", "−", "30.4", "32.9", "−", "14.3", "16.5*", "−", "10.7*", "12.6*", "GB-NET:β-loss", "(Zareian", "et", "al.,", "2020)", "KG", "−", "22.1", "24.0", "−", "12.7", "13.4", "−", "7.1", "8.5", "CREAM:β-loss", "(ours)", "depth", "25.1", "31.6", "34.8", "10.4", "12.8", "14.0", "5.8", "7.9", "9.1", "Model", "Privilege", "PRDCLS", "SGCLS", "SGDET", "mRecall@", "mRecall@", "mRecall@"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 505.44,
+    "y1": 148.79999999999998,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Table2-1.png"
+}, {
+  "caption": "Figure 5: Sensitivity analysis by varying the modality proportion within the CREAM tokens. From left to right vdim is incremented by 64 while ddim is decremented by 64. We plot the sum of mRecall@20, 50, and 100.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99957275390625,
+    "y1": 235.20651245117188,
+    "y2": 261.13397216796875
+  },
+  "figType": "Figure",
+  "imageText": ["Projection", "dimension", "0", "0", "0", ",", "1", ",", "5", "2", "0", "al", "l@", "R", "ec", "f", "m", "m", "o", "S", "u", "𝑣64,", "𝑑512", "𝑣128,", "𝑑448", "𝑣192,", "𝑑384", "𝑣256,", "𝑑320", "𝑣320,", "𝑑256", "𝑣384,", "𝑑192", "𝑣448,", "𝑑128", "𝑣512,", "𝑑64", "Sensitivity", "Analysis", "v64,", "d512", "v128,", "d448", "v192,", "d384", "v256,", "d320", "v320,", "d256", "v384,", "d192", "v448,", "d128", "v512,", "d64", "91", "90", "89", "88", "87", "86", "85", "88.4", "87.2", "89.4", "88.1", "89.7", "89.8", "88.4", "90.1"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 84.96,
+    "y2": 222.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure5-1.png"
+}, {
+  "caption": "Figure 6: CREAM(β-loss): Variation across training runs. mRecall@20, 50, and 100 on the test set is plotted for all the model variants obtained by varying the seed from 0 to 4.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.001953125,
+    "y1": 426.8725280761719,
+    "y2": 442.8370056152344
+  },
+  "figType": "Figure",
+  "imageText": ["l", "ec", "al", "m", "R", "32", "mRecall", "across", "runs", "mRecall@20", "mRecall@50", "mRecall@100", "seed0", "seed1", "seed2", "seed3", "seed4", "40", "35", "30", "25", "20", "15", "10", "5", "0", "31.2", "32.2", "31.2", "31.4", "34.2", "34.9", "34.5", "35.3", "35.2", "24.7", "25.8", "24.3", "25.4", "25.2"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 276.0,
+    "y2": 414.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure6-1.png"
+}, {
+  "caption": "Table 6: Visual Genome (VG) recall results (the higher, the better).",
+  "captionBoundary": {
+    "x1": 169.0199737548828,
+    "x2": 442.98065185546875,
+    "y1": 458.33251953125,
+    "y2": 464.3349914550781
+  },
+  "figType": "Table",
+  "imageText": ["MOTIFS", "Zellers", "et", "al.", "(2018)", "58.5", "65.2", "67.1", "32.9", "35.8", "36.5", "21.4", "27.2", "30.3", "Frequency+Overlap", "Zellers", "et", "al.", "(2018)", "53.6", "60.6", "62.2", "29.3", "32.3", "32.9", "20.1", "26.2", "30.1", "Message", "Passing+", "Zellers", "et", "al.", "(2018)", "52.7", "59.3", "61.3", "31.7", "34.6", "35.4", "14.6", "20.7", "24.5", "VCTree", "Tang", "et", "al.", "(2019)", "60.1", "66.4", "68.1", "35.2", "38.1", "38.8", "22.0", "27.9", "31.3", "GB-NET", "Zareian", "et", "al.", "(2020)", "−", "66.6", "68.2", "−", "38.0", "38.8", "−", "26.4", "30.0", "Depth-vrd", "Sharifzadeh", "et", "al.", "(2021)", "59.4", "66.2", "68.0", "−", "−", "−", "−", "−", "−", "CREAM", "59.3", "66.3", "68.1", "31.3", "34.5", "35.3", "17.0", "21.9", "25.0", "PRDCLS", "SGCLS", "SGDET", "Recall@", "20", "50", "100", "20", "50", "100", "20", "50", "100"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 504.0,
+    "y1": 480.0,
+    "y2": 572.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Table6-1.png"
+}, {
+  "caption": "Figure 7: Failure cases reported by Sharifzadeh et al. (2021). The second row shows the noisy depth maps VG-Depth.v1 from Sharifzadeh et al. (2021). The bottom row represents the improved depth map VG-Depth.v2.",
+  "captionBoundary": {
+    "x1": 108.00009155273438,
+    "x2": 504.00341796875,
+    "y1": 697.2196044921875,
+    "y2": 725.1400146484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 583.68,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Qualitative results for PRDCLS. The triplets correctly predicted by CREAM while missed by Depth-VRD (Sharifzadeh et al., 2021) are highlighted in green. The CREAM model is successful at predicting both spatially-aware scenarios such as ‘sitting on’, ‘covered in’ (left) and relation-aware scenarios ‘and’ (right) missed by Depth-VRD.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 442.5025329589844,
+    "y2": 481.3819580078125
+  },
+  "figType": "Figure",
+  "imageText": ["CREAM", "Depth-VRD", "Paw", "on", "book", "Bear", "has", "nose", "Bear", "on", "bed", "Book", "on", "bed", "Bottle", "on", "bed", "Bear", "holding", "bottle", "Paw", "on", "book", "Table", "and", "chair", "Curtain", "behind", "table", "Bear", "has", "nose", "Bear", "on", "bed", "Book", "on", "bed", "Bottle", "on", "bed", "Depth-VRD", "CREAM", "Man", "at", "table", "Man", "at", "table", "Man", "holding", "umbrella", "Man", "wearing", "shirt", "Man", "wearing", "pant", "Building", "behind", "people", "Man", "at", "table", "Man", "at", "table", "Man", "wearing", "shirt", "Man", "wearing", "pant", "Man", "holding", "umbrella", "Mountain", "covered", "in", "tree", "Man", "sitting", "on", "bench"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 260.64,
+    "y2": 431.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure4-1.png"
+}, {
+  "caption": "Table 4: Impact of depth-map quality and computational cost of CREAM vs. the state of the art.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 503.999755859375,
+    "y1": 638.2354736328125,
+    "y2": 644.2379150390625
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "Computational", "cost", "in", "comparison", "to", "the", "state", "of", "the", "art.", "GB-NET", "180", "500", "444", "Depth-VRD", "28", "25", "298", "CREAM", "(ours)", "26", "25", "288", "Model", "Training", "Time", "Inference", "Time", "#Parameters", "(min/epoch)", "(ms/image)", "(million)", "(a)", "mRecall", "performance", "improvement", "on", "Visual", "Genome", "(VG)", "for", "PREDCLS", "(higher,", "the", "better).", "Depth-VRD", "20", "16.4", "16.0", "-2%", "50", "20.7", "20.9", "1%", "100", "22.7", "23.7", "4%", "CREAM", "(ours)", "20", "16.7", "20.3", "22%", "50", "20.9", "25.8", "23%", "100", "22.7", "28.1", "24%", "Model", "mRecall@", "VG-Depth.v1", "VG-Depth.v2", "Improvement"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 505.44,
+    "y1": 660.0,
+    "y2": 722.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Table4-1.png"
+}, {
+  "caption": "Figure 3: Class-level recall@100 for PRDCLS. The yellow line depicts the data distribution per predicate class. Our CREAM model, denoted using blue bars, has a higher recall than Depth-VRD (Sharifzadeh et al., 2021) for under-represented classes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 210.84152221679688,
+    "y2": 238.761962890625
+  },
+  "figType": "Figure",
+  "imageText": ["CREAM", "Depth-VRD", "Predicate", "distribution", "Predicate", "Classes", "l@", "1", "0", "0", "ec", "al", "m", "R", "%", "o", "n", "u", "ti", "tr", "ib", "d", "is", "at", "e", "d", "ic", "P", "re", "n", "g", "i", "k", "in", "w", "al", "n", "g", "o", "w", "in", "g", "ro", "n", "g", "o", "ly", "in", "f", "ac", "k", "o", "o", "n", "b", "n", "g", "u", "si", "n", "g", "i", "fl", "y", "in", "ss", "ac", "ro", "t", "o", "f", "p", "ar", "s", "sa", "y", "n", "d", "o", "m", "o", "u", "n", "te", "n", "ed", "i", "co", "v", "er", "e", "o", "f", "m", "ad", "o", "n", "to", "k", "ed", "p", "ar", "fr", "o", "m", "t", "g", "a", "k", "in", "lo", "o", "n", "st", "ag", "ai", "n", "d", "o", "n", "te", "p", "ai", "o", "g", "t", "o", "n", "g", "in", "b", "el", "n", "w", "ee", "b", "et", "g", "an", "d", "ch", "in", "w", "at", "n", "g", "al", "o", "n", "g", "o", "la", "y", "in", "in", "g", "co", "v", "er", "g", "y", "in", "p", "la", "n", "g", "o", "k", "in", "w", "al", "n", "g", "ea", "ti", "g", "y", "in", "ca", "rr", "in", "g", "ri", "d", "ro", "m", "o", "v", "er", "fo", "r", "g", "f", "g", "in", "h", "an", "t", "o", "at", "ch", "ed", "at", "ta", "o", "f", "ro", "n", "t", "in", "f", "n", "g", "o", "d", "in", "st", "an", "rs", "w", "ea", "n", "in", "g", "o", "si", "tt", "in", "d", "u", "n", "d", "er", "b", "eh", "in", "g", "h", "o", "ld", "h", "ab", "o", "v", "e", "w", "it", "r", "ri", "n", "g", "n", "ea", "w", "ea", "o", "n", "h", "as", "in", "o", "f", "1", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0", "40%", "35%", "30%", "25%", "20%", "15%", "10%", "5%", "0%"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure3-1.png"
+}, {
+  "caption": "Figure 2: The CREAM architecture. An object detector, operating on each RGB image, first yields entity proposals and entity features v. Moreover, a depth map is estimated from the RGB input, which is also passed through the feature extractor to obtain depth features d. Then, for each subject-object pair, a sequence of Cross-Relation-Modality tokens are generated through Cross-Relation and Cross-Modality fusion of the subject-object features. The resultant tokens are passed through the transformer to yield a relation prediction.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00213623046875,
+    "y1": 292.280517578125,
+    "y2": 338.1330261230469
+  },
+  "figType": "Figure",
+  "imageText": ["Dimension", "𝑑𝑠", "Transformer", "Class,", "Location", "channel,", "width,", "height", "Token", "Types", "LearnableCREAM", "….", "(", "𝑝", "𝑘", ")2", "𝑧0", "1", "𝑧0", "𝑑𝑠𝑜𝑣𝑠𝑜", "2", "∗", "𝑐𝑑", ",", "𝑝,", "𝑝2", "∗", "𝑐𝑣,", "𝑝,", "𝑝", "𝑐𝑑", ",", "𝑤,", "ℎ", "𝑣𝑠", "𝑣𝑜", "𝑑𝑜", "𝑐𝑑", ",", "𝑝,", "𝑝𝑐𝑣,", "𝑝,", "𝑝", "𝑐𝑣,", "𝑝,", "𝑝", "𝑐𝑣,", "𝑤,", "ℎ", "𝑑𝑣", "𝑐𝑑", ",", "𝑤,", "ℎ", "….", "….", "….", "𝑝𝑟𝑜𝑗_𝑣𝑠𝑜", "(", "𝑝", "𝑘", ")2….", "(", "𝑝", "𝑘", ")2", "𝑝𝑟𝑜𝑗_𝑑𝑠𝑜", "1", "𝑝𝑟𝑜𝑗_𝑑𝑠𝑜", "avg", "pool", "avg", "pool", "avg", "pool", "avg", "pool", "SGGClassifier", "Primal", "fusion", "Learnable", "1D", "position", "embeddings", "….", "Cross-Modality", "Fusion", "Cross-Relation", "Fusion", "Cross-Relation", "Fusion", "RPN", "RGB", "depth-map", "Extractor", "Depth", "Feature", "Extractor", "RGB", "Feature", "Depth", "Network", "𝑝𝑟𝑜𝑗_𝑣𝑠𝑜", "1"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 501.12,
+    "y1": 82.56,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Figure2-1.png"
+}, {
+  "caption": "Table 5: Ablation study. mRecall results on Visual Genome (VG) for β-loss model variants (the higher, the better). The token design of the model variants is considerd v: visual, d: depth, s: subject, and o: object information; ‘-’ denotes separate tokens.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0024719238281,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["20", "50", "100", "vso", "Cross-Relation", "(no", "depth)", "15.7", "19.43", "21.0", "vso-dso", "Cross-Relation", "21.2", "25.5", "27.5", "vds-vdo", "Cross-Modality", "17.1", "21.4", "22.0", "vs-vo-ds-do", "no", "cross", "tokens", "16.7", "20.0", "21.4", "CREAM", "(vdso)", "Cross-Relation-Modality", "25.1", "31.6", "34.8", "Model", "Variants", "Model", "Description", "PRDCLS", "mRecall@"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 163.68,
+    "x2": 448.32,
+    "y1": 126.72,
+    "y2": 217.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7AwPeT4XbAh-Table5-1.png"
+}]

@@ -1,0 +1,441 @@
+[{
+  "caption": "Figure 1: MAML trained models and union supervised trained (USL) models have statistically equivalent meta-test accuracy for MiniImagenet and Cifar-fs with Resnet12 and five layer CNNs. This holds for both the Resnet12 architecture used in (Tian et al., 2020) and the 5 layer CNN (indicated as “5CNN\") in (Ravi and Larochelle, 2017). Results used a (meta) batch-size of 100 tasks and 95% confidence intervals. All MAML models were trained with 5 inner steps during meta-training. “MAML5\" and “MAML10\" in the bar plot indicates the adaptation method used at test time i.e. we used 5 inner steps and 10 inner steps at test time. MiniImagenet is abbreviated as “MI\" in the figure.",
+  "captionBoundary": {
+    "x1": 106.67500305175781,
+    "x2": 504.3446350097656,
+    "y1": 537.8065795898438,
+    "y2": 620.52099609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 214.56,
+    "x2": 394.08,
+    "y1": 388.8,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure1-1.png"
+}, {
+  "caption": "Table 2: MAML trained representations and supervised trained representation have statistically equivalent meta-test accuracy on MiniImagenet – which has low diversity. The transfer model’s adaptation is labeled as “Adapted Head only (with LR)\" – which stands for “Logistic Regression (LR)\" used in (Tian et al., 2020). For experimental details see section D.3.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.65673828125,
+    "y1": 329.5055236816406,
+    "y2": 368.385009765625
+  },
+  "figType": "Table",
+  "imageText": ["Random", "Adapt", "Head", "only", "(with", "LR)", "40.2", "±", "1.30", "MAML5", "Adapt", "Head", "only", "(with", "LR)", "59.7", "±", "1.37", "USL", "Adapt", "Head", "only", "(with", "LR)", "60.1", "±", "1.37", "Random", "MAML10", "adaptation", "34.1", "±", "1.23", "MAML5", "MAML10", "adaptation", "62.3", "±", "1.50", "USL", "MAML10", "adaptation", "25.1", "±", "0.97", "Random", "MAML5", "adaptation", "34.2", "±", "1.16", "MAML5", "MAML5", "adaptation", "62.4", "±", "1.64", "USL", "MAML5", "adaptation", "25.1", "±", "0.98", "Random", "no", "adaptation", "19.3", "±", "0.80", "MAML0", "no", "adaptation", "20.0", "±", "0.00", "USL", "no", "adaptation", "15.0", "±", "0.26", "Meta-train", "Initialization", "Adaptation", "at", "Inference", "Meta-test", "Accuracy"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 468.47999999999996,
+    "y1": 147.84,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Table2-1.png"
+}, {
+  "caption": "Figure 15: Histogram of distances of 5-way, 20-shot tasks from Cifar-fs using the Task2Vec distance. This plot justifies the use of a subsample of the population to estimate the diversity coefficient because of its approximate Gaussian distribution. For the full argument, see the main text, section K.2. The top left histogram uses a Resnet18 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The top right histogram uses a Resnet18 with random weights to compute the Task2Vec distance between tasks. The bottom left histogram uses a Resnet34 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The bottom right histogram uses a Resnet34 with random weights on Imagenet to compute the Task2Vec distance between tasks.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3465270996094,
+    "y1": 612.9485473632812,
+    "y2": 695.6630249023438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 434.88,
+    "y2": 599.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure15-1.png"
+}, {
+  "caption": "Figure 14: Shows homogeneity and low diversity of 5-way, 20-shot tasks from Cifar-fs using the Task2Vec distance. The top left heat map uses a Resnet18 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The top right heat map uses a Resnet18 with random weights to compute the Task2Vec distance between tasks. The bottom left heat map uses a Resnet34 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The bottom right heat map uses a Resnet34 with random weights on Imagenet to compute the Task2Vec distance between tasks. Homogeneity is shown because of the uniform color shown in the heat map. Low diversity is shown because the distance is between 0.07-0.12 given that max is 1.0 and minimum is 0.0. The axis indices indicate the arbitrary name for the tasks. Indices between heat maps do not indicate the same task. We used the cosine distance between task Task2Vec embeddings.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7461853027344,
+    "y1": 304.738525390625,
+    "y2": 409.37200927734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 80.64,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure14-1.png"
+}, {
+  "caption": "Figure 16: Histogram of distances of 5-way, 20-shot tasks from MiniImagenet using the Task2Vec distance. This plot justifies the use of a subsample of the population to estimate the diversity coefficient because of its approximate Gaussian distribution. For the full argument, see the main text, section K.2. The top left histogram uses a Resnet18 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The top right histogram uses a Resnet18 with random weights to compute the Task2Vec distance between tasks. The bottom left histogram uses a Resnet34 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The bottom right histogram uses a Resnet34 with random weights on Imagenet to compute the Task2Vec distance between tasks.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.7369079589844,
+    "y1": 252.66354370117188,
+    "y2": 335.3789978027344
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 80.64,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure16-1.png"
+}, {
+  "caption": "Table 3: Benchmarks of increasing diversity are created by increasing σm, or the standard deviation of the class mean. This table also shows that as the ground truth diversity increase so does the Task2Vec diversity – implying the Task2Vec diversity is a good proxy to the groun truth distribution based diversity. A larger σm increases the variance of the class means, making their respective class distributions farther apart on average and causing both the Hellinger-based distribution diversity and Task2Vec-based task diversity coefficients to increase. We varied σm from 0.01 to 1000 and fixed all remaining benchmark parameters to obtain 7 different Gaussian benchmarks. The corresponding Hellinger-based distribution diversity coefficients were obtained by numerically approximating the expected Hellinger distance between two classes sampled from the benchmark and computing the 95% confidence interval of the approximation. We also computed Task2Vec-based task diversity coefficients as an alternative measure to diversity using a random 3-layer fully connected probe network described in Section D. Figure 12 visualizes the Task2Vec task diversities among the synthetic benchmarks via a heatmap showing the relative pairwise distance between sampled tasks.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 326.8445129394531,
+    "y2": 475.31298828125
+  },
+  "figType": "Table",
+  "imageText": ["(0,", "0.01,", "1,", "0.01)", "7.475e-05", "±", "4.891e-07", "0.247", "±", "1.04e-3", "(0,", "1,", "1,", "0.01)", "0.183", "±", "1.24e-3", "0.271", "±", "1.15e-3", "(0,", "3,", "1,", "0.01)", "0.574", "±", "2.28e-3", "0.393", "±", "1.79e-3", "(0,", "10,", "1,", "0.01)", "0.860", "±", "1.75e-3", "0.470", "±", "2.35e-3", "(0,", "20,", "1,", "0.01)", "0.929", "±", "1.31e-3", "0.533", "±", "2.47e-3", "(0,", "30,", "1,", "0.01)", "0.952", "±", "1.10e-3", "0.537", "±", "2.57e-3", "(0,", "1000,", "1,", "0.01)", "0.998", "±", "2.07e-4", "0.546", "±", "2.74e-3", "Benchmark", "Parameters", "(µm,", "σm,", "µs,", "σs)", "Hellinger-based", "Distribution", "Diversity", "Task2Vec-based", "Task", "Diversity"],
+  "name": "3",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 515.04,
+    "y1": 200.64,
+    "y2": 311.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Table3-1.png"
+}, {
+  "caption": "Figure 2: The meta-test accuracy of MAML and transfer learning using USL is similar in a statistically significant way – regardless of the model size. In this experiment, we used the MiniImagenet benchmark, the five layer CNN used in (Finn et al., 2017; Ravi and Larochelle, 2017), and only increased the filter size using sizes 4, 8, 16, and 32. We made sure the comparison was fair by using the same architecture, optimizer, and trained all models to convergence. During meta-training, the MAML model was trained using 5 inner steps. The legends indicating MAMl5 and MAML10 refer to the number of inner steps used at test time. We used a (meta) batch size of 100 tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2454528808594,
+    "y1": 338.1985168457031,
+    "y2": 409.9549865722656
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 197.76,
+    "y2": 324.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure2-1.png"
+}, {
+  "caption": "Figure 12: Heatmaps show how benchmarks with larger Task2Vec-based task diversity coefficient show more heterogeneity between sampled tasks Each heatmap below shows the pairwise distance between fifteen 5-way, 10-shot few-shot learning tasks sampled from the various synthetic Gaussian benchmarks described in Table 3. Note that as σm (the standard deviation of the class mean) increases, the distance between two tasks becomes larger on average and more varied, which can be seen as the heatmaps become more heterogeneous. This increase in expected distance among different tasks in turn increases the Task2Vec-based task diversity coefficient, which summarizes the average distance between any two tasks. From left to right, top to bottom, the benchmarks tested have parameters σm = 0.01, 1, 3, 20, 30, 1000 and Task2Vec-based task diversity coefficient parameters div = 0.247, 0.271, 0.393, 0.533, 0.537, 0.546.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.35308837890625,
+    "y1": 596.4735717773438,
+    "y2": 701.1069946289062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 324.96,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Shows the strong relation between Hellinger distribution diversity and the Task2Vec task diversity coefficients, as both coefficients may be used interchangeably as a measure for the diversity of a given synthetic Gaussian benchmark The first two plots show the relation between the Hellinger-based distribution diversity of a synthetic Gaussian benchmark and the benchmark’s performance on the MAML5, MAML10, and USL methods. These first two plots are noticeably similar to Figure 3 (where Task2Vec-based task diversity was used as a measure of diversity instead of Hellinger-based distribution diversity), which indicates that our Hellinger-based distribution diversity metric also serves as a good proxy for task diversity. The rightmost plot shows a strong positive correlation between Hellinger-based distribution diversity and Task2Vec task diversity (Pearson r = 0.990).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3529357910156,
+    "y1": 209.19650268554688,
+    "y2": 313.8290100097656
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure11-1.png"
+}, {
+  "caption": "Figure 3: Left and center plots show the meta-test accuracy of MAML and transfer learning using USL is similar in a statistically equivalent way in the low diversity regime in the 5-way, 10-shot Gaussian Benchmarks. The right most figure shows the strong correlation between Task2Vec diversity and the ground truth Hellinger Diversity. Results used a (meta) batch-size of 500 tasks, 95% confidence intervals and the Pearson value was r = 0.990. MAML5 and MAML10 indicate adaptation at test time of the MAML5 trained model.",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 505.2455139160156,
+    "y1": 209.85855102539062,
+    "y2": 270.656005859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure3-1.png"
+}, {
+  "caption": "Figure 9: Shows the significant difference between the feature extractor layers of a MAML trained model vs. a union supervised learned model – especially in contrast to the small change in the adapted MAML model (green line). This figure suggests that although benchmark diversity is small, a meta-learned representation still learns through a different mechanism than a supervised learned representation. Note that the green line is our reproduction of previous work (Raghu et al., 2020) that showed that a MAML trained model does not change after using the MAML adaptation. They term this observation as “feature re-use\".",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7451171875,
+    "y1": 553.142578125,
+    "y2": 624.8989868164062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 300.0,
+    "y2": 539.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure9-1.png"
+}, {
+  "caption": "Figure 8: Plot showing convergence of a custom 3-layer fully connected network, for all synthetic Gaussian benchmarks tested. Each curve represents a different synthetic Gaussian benchmark tested on either MAML (left plot) or USL (right plot). The curves are then color-coded by the value of the Task2Vec-based task diversity coefficient of the Gaussian benchmark tested in that particular run.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9976806640625,
+    "y1": 289.7735290527344,
+    "y2": 328.65301513671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 195.84,
+    "y2": 275.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Plot showing convergence of Resnet12 on Cifar-fs.",
+  "captionBoundary": {
+    "x1": 181.91600036621094,
+    "x2": 426.9958801269531,
+    "y1": 173.93850708007812,
+    "y2": 179.94097900390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 80.64,
+    "y2": 160.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure7-1.png"
+}, {
+  "caption": "Figure 17: Histogram of distances of 5-way, 20-shot tasks from the Synthetic Gaussian benchmark using the Task2Vec distance. This plot justifies the use of a subsample of the population to estimate the diversity coefficient because of its approximate Gaussian distribution. For the full argument, see the main text, section K.2. The meta parameters generating tasks for each benchmark are denoted by B = (0, x, 1, 0.01) where x is in the list [0.01, 1, 3, 10, 20, 30, 1000] indicating the mean to generate the mean of the Gaussian tasks. For full details of the synthetic Gaussian benchmark, see section J.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6513366699219,
+    "y1": 457.8175354003906,
+    "y2": 529.573974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 80.64,
+    "y2": 443.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure17-1.png"
+}, {
+  "caption": "Figure 13: Shows homogeneity and low diversity of 5-way, 20-shot tasks from MiniImagenet using the Task2Vec distance (Achille UCLA et al., 2019). The top left heat map uses a Resnet18 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The top right heat map uses a Resnet18 with random weights to compute the Task2Vec distance between tasks. The bottom left heat map uses a Resnet34 pre-trained on Imagenet to compute the Task2Vec distance between tasks. The bottom right heat map uses a Resnet34 with random weights on Imagenet to compute the Task2Vec distance between tasks. Homogeneity is shown because of the uniform color shown in the heat map. Low diversity is shown because the distance is between 0.07-0.12 given that max is 1.0 and minimum is 0.0. Note the diagonal is exactly zero because it is comparing the same tasks. The axis indices indicate the arbitrary name for the tasks. Indices between heat maps do not indicate the same task. We used the cosine distance between task Task2Vec embeddings.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.004638671875,
+    "y1": 305.4145202636719,
+    "y2": 421.0060119628906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 80.64,
+    "y2": 291.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure13-1.png"
+}, {
+  "caption": "Figure 19: Show how to avoid the pathological case when using feature based similarities by increasing the number of data points (or batch size). In particular, as the number of data points in two random data matrix increases – the true similarity approaches the true low similarity value. The green line indicates when the number of examples and dimensionality are equal (and equal to 300). D denotes the dimensionality of the simulated data and B the size of the batch size/number of points.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.74639892578125,
+    "y1": 669.8085327148438,
+    "y2": 719.64599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "19",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 505.91999999999996,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure19-1.png"
+}, {
+  "caption": "Figure 18: Shows that as the dimensionality of a random data matrix increases – the SVCCA similarity approaches the pathological case by falsely reports the similarity is perfect. The green line indicates when the number of examples and dimensionality are equal (and equal to 300). D denotes the dimensionality of the simulated data and B the size of the batch size/number of points.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.36334228515625,
+    "y1": 443.2585144042969,
+    "y2": 482.13800048828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 278.88,
+    "y2": 429.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure18-1.png"
+}, {
+  "caption": "Figure 10: The classification layer of transfer learning and a MAML5 model decrease in distance – implying similar predictions. More precisely, an initialization trained with 5 inner steps (MAML5) has an increasingly similar head (classifier) after adaptation with MAML5 compared to the classifier layer of the Union Supervise-Learned (USL) model that has been adapted only at the final layer. In particular, the USL model has been adapted with Logistic Regression (LR) with LBFGS with the default value for the l2 regularization parameter given by Python’s Sklearn (as in (Tian et al., 2020)). We showed this trend with four different distance metrics - SVCCA, PWCCA, LICKA, and OPD - as referenced in section 2. Observe that according to PWCCA, the distance between the predictions is zero. This is true because the distance of classification layer (indicated as “head\" in the figure) is zero. The architecture used here is a five layer CNN as in (Finn et al., 2017; Ravi and Larochelle, 2017) with their same setup. The benchmark used for this analysis is MiniImagenet.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.24981689453125,
+    "y1": 334.4415283203125,
+    "y2": 460.99200439453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 80.64,
+    "y2": 320.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure10-1.png"
+}, {
+  "caption": "Table 1: The diversity coefficient of MiniImagenet (MI) and Cifar-fs is low. The diversity coefficient was computed using the cosine distance between different standard 5-way, 20-shot classification tasks from the few-shot learning benchmark using the Task2Vec method described in section 3. We used 20 shots (number of examples per class) since we can use the whole task data to compute the diversity coefficient (no splitting of support and query set required for the diversity coefficient). We used Resnet18 and Resnet34 networks as probe networks – both pre-trained on ImageNet (indicated as “pt\" on table) and randomly initialized (indicated as “rand\" on table). We observe that both type of networks and weights give similar diversity results. All confidence intervals were at 95%. To compute results, we used 500 few-shot learning tasks and only compare pairs of different tasks. This results in (5002 − 500)/2 = 124, 750 pair-wise distances used to compute the diversity coefficient.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.35205078125,
+    "y1": 281.1985168457031,
+    "y2": 396.7900085449219
+  },
+  "figType": "Table",
+  "imageText": ["Resnet18", "(pt)", "0.117", "±", "2.098e-5", "0.100", "±", "2.18e-5", "Resnet18", "(rand)", "0.0955", "±", "1.29e-5", "0.103", "±", "1.05e-5", "Resnet34", "(pt)", "0.0999", "±", "1.95e-5", "0.0847", "±", "3.06e-5", "Resnet34", "(rand)", "0.0620", "±", "8.12e-6", "0.0643", "±", "9.64e-6", "Probe", "Network", "Diversity", "on", "MI", "Diversity", "on", "Cifar-fs"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 177.6,
+    "x2": 431.03999999999996,
+    "y1": 202.56,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Table1-1.png"
+}, {
+  "caption": "Figure 4: Plot showing convergence of 5CNN on MiniImagenet.",
+  "captionBoundary": {
+    "x1": 174.56900024414062,
+    "x2": 434.3437194824219,
+    "y1": 476.0135192871094,
+    "y2": 482.0159912109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 385.91999999999996,
+    "y2": 462.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Plot showing convergence of 5CNN on Cifar-fs.",
+  "captionBoundary": {
+    "x1": 187.4499969482422,
+    "x2": 421.46142578125,
+    "y1": 594.8545532226562,
+    "y2": 600.8569946289062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 504.96,
+    "y2": 580.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Plot showing convergence of Resnet12 on MiniImagenet.",
+  "captionBoundary": {
+    "x1": 169.03500366210938,
+    "x2": 439.8782043457031,
+    "y1": 714.0645751953125,
+    "y2": 720.0670166015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 624.0,
+    "y2": 700.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8re-nA0wDxW-Figure6-1.png"
+}]

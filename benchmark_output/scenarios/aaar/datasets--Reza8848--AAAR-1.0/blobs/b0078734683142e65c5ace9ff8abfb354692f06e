@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 1: (left) Most model-based RL methods learn the representations, latent-space model, and policy using three different objectives. (Right) Our method jointly optimizes all three components using a single objective, which is a lower bound on expected returns.",
+  "captionBoundary": {
+    "x1": 305.677001953125,
+    "x2": 505.1209411621094,
+    "y1": 592.08154296875,
+    "y2": 637.9340209960938
+  },
+  "figType": "Figure",
+  "imageText": ["lower", "bound", "on", "RL", "loss", "representations", "policy", "model", "Aligned", "Latent", "Models", "(ALM)", "representation", "loss", "policy", "loss", "model", "loss", "representations", "policy", "model", "Standard", "model-based", "RL", "algorithms"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 504.0,
+    "y1": 535.68,
+    "y2": 579.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure1-1.png"
+}, {
+  "caption": "Table 1: On the model-based benchmark from Wang et al. (2019), ALM outperforms model-based and modelfree methods on 4/5 tasks, often by a wide margin. We report mean and std. dev. across 5 random seeds. T-Humanoid-v2 and T-Ant-v2 refer to the respective truncated environments.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.5726623535156,
+    "y1": 63.60550308227539,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["TD3", "(Fujimoto", "et", "al.,", "2018)", "147", "±", "0.7", "870", "±", "283", "3016", "±", "969", "-516", "±", "812", "1817", "±", "994", "SAC", "(Haarnoja", "et", "al.,", "2018)", "1470", "±", "794", "548", "±", "146", "3460", "±", "1326", "166", "±", "1318", "788", "±", "977", "SLBO", "(Luo", "et", "al.,", "2018)", "1377", "±", "150", "200", "±40", "1097", "±", "166", "207", "±", "108", "805", "±", "142", "SVG(1)", "(Heess", "et", "al.,", "2015)", "811.8", "±", "241", "185", "±", "141", "336", "±", "387", "252", "±", "48", "435", "±", "163", "SAC-SVG(2)", "(Amos", "et", "al.,", "2020)", "501", "±", "37", "4473", "±", "893", "8752", "±", "1785", "448", "±", "1139", "2852", "±", "361", "SAC-SVG(3)", "472", "±", "85", "3833", "±", "1418", "9220", "±", "1431", "878", "±", "1533", "2024", "±", "1981", "ALM(3)", "5306", "±", "437", "4887", "±", "1027", "10789", "±", "366", "3006", "±", "1183", "2546", "±", "1074", "T-Humanoid-v2", "T-Ant-v2", "HalfCheetah-v2", "Walker2d-v2", "Hopper-v2"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 496.32,
+    "y1": 96.96,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Table1-1.png"
+}, {
+  "caption": "Figure 3: Good performance without ensembles. Our method (ALM) can (Top) match the sample complexity of ensembling-based methods (MBPO, REDQ) while (Bottom) requiring less compute. ALM performs updates ∼ 10× faster than MBPO. See Appendix Fig. 8 for results on other environments.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3139953613281,
+    "y1": 305.0295104980469,
+    "y2": 330.95697021484375
+  },
+  "figType": "Figure",
+  "imageText": ["10", "×", "6", "×", "st", "ep", "en", "v", "er", "nd", "s", "p", "se", "co", "0.5", "MBPO", "REDQ", "ALM(3)", "0.0", "1e3", "Ant-v2", "6", "4", "2", "0", "2", "0", "1", "2", "3", "4", "time", "(hours)", "1e1", "ALM(3)", "MBPO", "REDQ", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "1e4", "HalfCheetah-v2", "0", "1", "2", "3", "4", "time", "(hours)", "1e1", "1e3", "Humanoid-v2", "rn", "s", "re", "tu", "ag", "e", "av", "er", "6", "4", "2", "0", "0", "1", "2", "3", "4", "time", "(hours)", "1e1", "1.4", "1e4", "HalfCheetah-v2", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "1", "2", "3", "env", "steps", "1e5", "ALM(3)", "MBPO", "SAC", "REDQ", "1e3", "Ant-v2", "6", "4", "2", "0", "2", "0.0", "2.5", "5.0", "env", "steps", "1e5", "1e3", "Humanoid-v2", "rn", "s", "re", "tu", "ag", "e", "av", "er", "6", "4", "2", "0", "0.0", "2.5", "5.0", "env", "steps", "1e5"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 501.12,
+    "y1": 84.96,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure3-1.png"
+}, {
+  "caption": "Figure 2: Aligned Latent Models (ALM) performs model-based RL by jointly optimizing the policy, the latent-space model, and the representations produced by the encoder using the same objective: maximize predicted rewards while minimizing the errors in the predicted representations. This objective corresponds to RL with an augmented reward function r̃. ALM estimates this objective without predicting high-dimensional observations st+1.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.4859313964844,
+    "y1": 510.3235168457031,
+    "y2": 597.0230102539062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 498.24,
+    "y1": 392.64,
+    "y2": 502.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure2-1.png"
+}, {
+  "caption": "Table 3: Neural networks used by ALM",
+  "captionBoundary": {
+    "x1": 232.5019989013672,
+    "x2": 379.19024658203125,
+    "y1": 273.8775329589844,
+    "y2": 279.8800048828125
+  },
+  "figType": "Table",
+  "imageText": ["Reward", "Function:", "rθ(z,", "a)", "∈", "R", "MSE", "(Eq.", "10)", "zt,", "at,", "rt", "zt+1", "∼", "eφ(st+1)", "ˆzt+1", "∼", "mφ(zt,", "at)", "Classiﬁer:", "Cθ(z,", "a,", "z′)", "∈", "(0,", "1)", "cross", "entropy", "loss", "(Eq.", "11)", "zt,", "at", "Q-Function:", "Qθ(z,", "a)", "∈", "R", "TD-loss", "(Eq.", "9)", "zt,", "at,", "rt,", "zt+1", "Policy:", "πφ(z)→", "a", "joint", "lower", "bound", "(Eq.", "5)", "zt", "joint", "lower", "bound", "(Eq.", "5)", "{si,", "ai,", "si+1}t+K−1", "i=t", "Encoder:", "eφ(s)→", "z", "Model:", "mφ(z,", "a)→", "z′", "Neural", "Network", "Loss", "Function", "Inputs", "to", "Loss"],
+  "name": "3",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 457.44,
+    "y1": 292.32,
+    "y2": 415.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Table3-1.png"
+}, {
+  "caption": "Figure 7: In accordance to what our theory suggests, the joint objective is a biased estimate of the true returns. The std values are uniform throughout training and consistently lower than REDQ, which could be the reason behind the sample efficiency of ALM(3)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 546.5245361328125,
+    "y2": 574.4450073242188
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 435.84,
+    "y2": 533.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure7-1.png"
+}, {
+  "caption": "Table 2: A default set of hyper-parameters used in our experiments.",
+  "captionBoundary": {
+    "x1": 171.3159942626953,
+    "x2": 440.37591552734375,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Hyperparameters", "Value", "Discount", "(γ)", "0.99", "Warmup", "steps", "5000", "Soft", "update", "rate", "(τ)", "0.005", "Weighted", "target", "parameter", "(λ)", "0.95", "Replay", "Buffer", "106", "for", "humanoid", "105", "otherwise", "Batch", "size", "512", "Learning", "rate", "1e-4", "Max", "grad", "norm", "100.0", "Latent", "dimension", "50", "Coefﬁcient", "of", "classiﬁer", "rewards", "0.1", "Exploration", "stddev.", "clip", "0.3", "Exploration", "stddev.", "schedule", "linear(1.0", ",", "0.1,", "100000)"],
+  "name": "2",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 185.76,
+    "x2": 426.24,
+    "y1": 101.75999999999999,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Table2-1.png"
+}, {
+  "caption": "Figure 4: Analyzing Q-values. See text for details.",
+  "captionBoundary": {
+    "x1": 310.8280029296875,
+    "x2": 499.17303466796875,
+    "y1": 283.92352294921875,
+    "y2": 289.9259948730469
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 308.64,
+    "x2": 501.12,
+    "y1": 192.95999999999998,
+    "y2": 277.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Ablation experiments (left) Comparison of ALM (3) with no value term for the encoder, no KL term for the encoder and no classifier based rewards for the policy. Results reflect the importance of temporal consistency terms, especially for training the encoder. (Center) Comparison of ALM(K) for different values of K and baselines SAC. Using architectures that support larger values of K could promise further improvements in performance. (Right) Representation learning objective of ALM(3) leads to higher sample efficiency for model-free RL. To ensure the validity of these results, we implemented TD3 (TD3 (ours)), which uses the same architecture, exploration and learning parameters as our method. Ablation results for other environments can be found in Fig. 9a, 9b, 9c.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.43743896484375,
+    "y1": 650.7185668945312,
+    "y2": 726.4600219726562
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Terms", "in", "the", "objective.", "(b)", "Sequence", "length.", "(c)", "Model", "free", "RL."],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 449.76,
+    "y2": 641.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure5-1.png"
+}, {
+  "caption": "Figure 8: ALM generally matches the sample efficiency of MBPO and REDQ at a fraction of the computation complexity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99896240234375,
+    "y1": 316.9525146484375,
+    "y2": 332.9179992675781
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 355.68,
+    "y2": 515.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Analyzing the learned representations: (Left-top) The ground truth representations are obtained from the respective trained encoders on the same optimal trajectory. (Left-bottom) Without the KL term, the representations learnt are degenerate, i.e. they correspond to the same value for different states. (Right) The KL term in the ALM objective, trains the model to reduce the future K step prediction errors. The latent-space model is accurately able to approximate the true representations upto ∼ 20 rollout steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00360107421875,
+    "y1": 196.93655395507812,
+    "y2": 242.78997802734375
+  },
+  "figType": "Figure",
+  "imageText": ["TextALM", "without", "KL", "ALM"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 482.4,
+    "y1": 61.919999999999995,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MQcmfgRxf7a-Figure6-1.png"
+}]

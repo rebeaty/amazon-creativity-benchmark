@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 4: Qualitative comparison of text-guided image translation on Landscape dataset. Our model generates outputs with better perceptual quality than the baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00048828125,
+    "y1": 633.3895263671875,
+    "y2": 650.3510131835938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 474.24,
+    "y1": 380.64,
+    "y2": 631.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Qualitative comparison of text-guided translation on Animals dataset. Our model generates realistic samples that reflects the text condition, with better perceptual quality than the baselines.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99908447265625,
+    "y1": 355.5005187988281,
+    "y2": 372.46099853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 465.12,
+    "y1": 80.64,
+    "y2": 353.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure3-1.png"
+}, {
+  "caption": "Table 1: Quantitative comparison in the text-guided image translation. Our model outperforms baselines in overall scores for both of Animals and Landscapes datasets as well as user study.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 151.19650268554688,
+    "y2": 168.157958984375
+  },
+  "figType": "Table",
+  "imageText": ["VQGAN-CLIP", "30.01", "65.51", "0.462", "33.31", "82.92", "0.571", "2.78", "2.05", "2.16", "CLIP-GD", "12.50", "53.05", "0.468", "18.13", "62.19", "0.458", "2.61", "2.24", "2.28", "DiffusionCLIP", "25.09", "66.50", "0.379", "29.85", "76.29", "0.568", "2.50", "2.54", "3.06", "FlexIT", "32.71", "57.87", "0.215", "18.04", "60.04", "0.243", "2.22", "3.15", "3.89", "Ours", "9.98", "41.07", "0.372", "16.86", "54.48", "0.417", "3.68", "4.28", "4.11", "Method", "Animals", "Landscapes", "User", "Study", "SFID↓", "CSFID↓", "LPIPS↓", "SFID↓", "CSFID↓", "LPIPS↓", "Text", "↑", "Realism", "↑", "Content", "↑"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 143.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Table1-1.png"
+}, {
+  "caption": "Table 2: User study comparison of image-guided translation tasks. Our model outperforms baseline methods in overall perceptual quality.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.997314453125,
+    "y1": 586.5535888671875,
+    "y2": 625.4320068359375
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "4.23", "4.25", "4.51", "STROTSS", "3.92", "2.91", "3.17", "SplicingViT", "3.50", "2.08", "2.15", "Method", "Style", "↑", "Realism", "↑", "Content", "↑", "SANet", "2.75", "4.08", "4.37", "WCT2", "2.59", "4.64", "4.90"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 346.56,
+    "x2": 503.03999999999996,
+    "y1": 531.84,
+    "y2": 583.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Table2-1.png"
+}, {
+  "caption": "Figure 2: Given the input image xsrc, we guide the reverse diffusion process {xt}0t=T using various losses. (a) ℓcon: the structural similarity loss between input and outputs in terms of contrastive loss between extracted keys from ViT. (b) ℓCLIP : relative distance to the target text dtrg in CLIP space in terms of xsrc and dsrc. (c) ℓsty: the [CLS] token distances between the outputs and target xtrg. (d) ℓsem: dissimilarity between the [CLS] token from the present and past denoised samples.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 287.8935241699219,
+    "y2": 339.2259216308594
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 285.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure2-1.png"
+}, {
+  "caption": "Figure 9: Qualitative results of text-guided image translation.",
+  "captionBoundary": {
+    "x1": 183.94400024414062,
+    "x2": 428.0575256347656,
+    "y1": 608.2635498046875,
+    "y2": 614.2659912109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 193.92,
+    "y2": 597.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure9-1.png"
+}, {
+  "caption": "Figure 8: Outputs from face image translation models. The outputs from our model successfully translated the human face images with proper target domain semantic information.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 537.2085571289062,
+    "y2": 554.1699829101562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 296.64,
+    "y2": 526.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Various outputs of artistic style transfer. We can translation natural images into artistic style paintigns with both of text or image conditions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 264.8625183105469,
+    "y2": 281.823974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Qualitative comparison of image-guided image translation. Our results have better perceptual quality than the baseline outputs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 303.5215148925781,
+    "y2": 320.48297119140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 80.64,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Qualitative comparison on ablation study. Our full setting shows the best results.",
+  "captionBoundary": {
+    "x1": 125.76300048828125,
+    "x2": 486.23968505859375,
+    "y1": 433.7855224609375,
+    "y2": 439.7879943847656
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 474.24,
+    "y1": 332.64,
+    "y2": 431.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure6-1.png"
+}, {
+  "caption": "Figure 10: Qualitative results of image-guided image translation.",
+  "captionBoundary": {
+    "x1": 176.677001953125,
+    "x2": 435.32598876953125,
+    "y1": 603.4685668945312,
+    "y2": 609.4710083007812
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 197.76,
+    "y2": 592.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Figure10-1.png"
+}, {
+  "caption": "Table 3: Quantitative comparison of ablation studies.",
+  "captionBoundary": {
+    "x1": 200.45700073242188,
+    "x2": 411.54449462890625,
+    "y1": 484.8885192871094,
+    "y2": 490.8909912109375
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "(a)", "9.98", "41.07", "0.372", "No", "ℓcont", "(c)", "9.90", "33.07", "0.477", "No", "ℓsem", "(b)", "15.00", "53.43", "0.347", "No", "resampling", "(f)", "11.88", "59.09", "0.316", "L2", "Max", "instead", "of", "ℓsem", "(e)", "13.18", "49.47", "0.324", "LPIPs", "instead", "of", "ℓcont", "(d)", "11.15", "58.67", "0.400", "Settings", "Animals", "SFID↓", "CSFID↓", "LPIPS↓"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 365.76,
+    "y2": 469.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Nayau9fwXU-Table3-1.png"
+}]

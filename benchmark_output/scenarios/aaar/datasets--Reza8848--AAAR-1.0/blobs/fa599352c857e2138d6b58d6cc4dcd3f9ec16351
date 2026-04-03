@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 4: Ablation study on the ScanNet dataset.",
+  "captionBoundary": {
+    "x1": 218.5649871826172,
+    "x2": 393.4366760253906,
+    "y1": 158.14480590820312,
+    "y2": 163.54705810546875
+  },
+  "figType": "Figure",
+  "imageText": ["Baseline", "+", "SDF", "Transformer", "+", "Post", "Dilate", "Attention", "Ground", "Truth"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 151.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure4-1.png"
+}, {
+  "caption": "Figure 7: More qualitative results.",
+  "captionBoundary": {
+    "x1": 244.7689971923828,
+    "x2": 367.2320251464844,
+    "y1": 616.1237182617188,
+    "y2": 621.5260009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 186.72,
+    "y2": 605.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure7-1.png"
+}, {
+  "caption": "Figure 1: The overview of the 3D reconstruction framework. The input images are extracted to features by a 2D backbone network, then the 2D features are back-projected and fused to 3D feature volumes, which are aggregated by our 3D SDF transformer and generate the reconstruction in a coarse-to-fine manner.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0009765625,
+    "y1": 200.16177368164062,
+    "y2": 225.489013671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure1-1.png"
+}, {
+  "caption": "Table 1: Evaluation of the 3D meshes on ScanNet. The upper part follows the evaluation in NeuralRecon while the lower part follows TransformerFusion. The metric definitions are explained in the supplemental materials.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00115966796875,
+    "y1": 263.2307434082031,
+    "y2": 278.59600830078125
+  },
+  "figType": "Table",
+  "imageText": ["TransformerFusion", "(Bozic", "et", "al.,", "2021)", "0.055", "0.083", "0.069", "0.728", "0.600", "0.655", "Ours", "0.032", "0.062", "0.047", "0.829", "0.694", "0.754", "Atlas", "(Murez", "et", "al.,", "2020)", "0.072", "0.076", "0.074", "0.675", "0.605", "0.636", "NeuralRecon", "(Sun", "et", "al.,", "2021)", "0.051", "0.091", "0.071", "0.630", "0.612", "0.619", "GP-MVS", "(Hou", "et", "al.,", "2019a)", "0.129", "0.080", "0.105", "0.453", "0.510", "0.477", "DPSNet", "(Im", "et", "al.,", "2019)", "0.119", "0.076", "0.098", "0.474", "0.519", "0.492", "ESTDepth", "(Long", "et", "al.,", "2021)", "0.127", "0.075", "0.101", "0.456", "0.542", "0.491", "DeepVideoMVS", "(Duzceker", "et", "al.,", "2021)", "0.107", "0.069", "0.088", "0.541", "0.592", "0.563", "Colmap", "(Schönberger", "et", "al.,", "2016)", "0.102", "0.119", "0.111", "0.509", "0.474", "0.489", "MVDepthNet", "(Wang", "&", "Shen,", "2018)", "0.129", "0.083", "0.106", "0.443", "0.487", "0.460", "VoRTX", "(Stier", "et", "al.,", "2021)", "0.054", "0.090", "0.072", "0.708", "0.588", "0.641", "Ours", "0.049", "0.068", "0.058", "0.754", "0.664", "0.705", "Atlas", "(Murez", "et", "al.,", "2020)", "0.068", "0.098", "0.083", "0.640", "0.539", "0.583", "NeuralRecon", "(Sun", "et", "al.,", "2021)", "0.054", "0.128", "0.091", "0.684", "0.479", "0.562", "Method", "Acc", "↓", "Comp", "↓", "Chamfer", "↓", "Prec", "↑", "Recall", "↑", "F-score", "↑", "DeepVideoMVS", "(Duzceker", "et", "al.,", "2021)", "0.079", "0.133", "0.106", "0.521", "0.454", "0.474"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 257.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Table1-1.png"
+}, {
+  "caption": "Table 2: Evaluation of the 2D depth maps on the ScanNet dataset. The upper part shows the results of depthbased methods, while the lower part shows volumetric methods, whose depths are rendered from the meshes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010070800781,
+    "y1": 395.2137451171875,
+    "y2": 410.5790100097656
+  },
+  "figType": "Table",
+  "imageText": ["Vortx", "(Stier", "et", "al.,", "2021)", "0.061", "0.096", "0.038", "0.205", "0.943", "0.973", "0.987", "Ours", "0.051", "0.086", "0.033", "0.199", "0.958", "0.980", "0.990", "Atlas", "(Murez", "et", "al.,", "2020)", "0.065", "0.124", "0.043", "0.251", "0.936", "0.971", "0.986", "NeuralRecon", "(Sun", "et", "al.,", "2021)", "0.065", "0.106", "0.031", "0.195", "0.948", "0.961", "0.975", "DPSNet", "(Im", "et", "al.,", "2019)", "0.087", "0.158", "0.035", "0.232", "0.925", "0.984", "0.995", "MVDepthNet", "(Wang", "&", "Shen,", "2018)", "0.098", "0.191", "0.061", "0.293", "0.896", "0.977", "0.994", "GP-MVS", "(Hou", "et", "al.,", "2019a)", "0.130", "0.239", "0.339", "0.472", "0.906", "0.967", "0.980", "Method", "Abs", "Rel", "↓", "Abs", "Diff", "↓", "Sq", "Rel", "↓", "RMSE", "↓", "δ-1.25", "↑", "δ-1.252", "↑", "δ-1.253", "↑", "Colmap", "(Schönberger", "et", "al.,", "2016)", "0.137", "0.264", "0.138", "0.502", "0.834", "−", "−"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 281.76,
+    "y2": 388.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Table2-1.png"
+}, {
+  "caption": "Figure 6: More qualitative results.",
+  "captionBoundary": {
+    "x1": 244.7689971923828,
+    "x2": 367.2320251464844,
+    "y1": 510.2377624511719,
+    "y2": 515.6400146484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 499.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure6-1.png"
+}, {
+  "caption": "Table 5: Efficiency experiments.",
+  "captionBoundary": {
+    "x1": 247.8179931640625,
+    "x2": 364.18389892578125,
+    "y1": 315.28375244140625,
+    "y2": 320.6860046386719
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "13.3", "ms", "286.4", "ms", "75", "TransformerFusion", "(Bozic", "et", "al.,", "2021)", "130.5", "ms", "243.3", "ms", "7", "VoRTX", "(Stier", "et", "al.,", "2021)", "71.4", "ms", "231.7", "ms", "14", "Atlas", "(Murez", "et", "al.,", "2020)", "71", "ms", "840", "ms", "14", "NeuralRecon", "(Sun", "et", "al.,", "2021)", "30", "ms", "0", "ms", "33", "Method", "Per", "Frame", "Time", "Per", "Scene", "Time", "FPS"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 461.28,
+    "y1": 232.32,
+    "y2": 304.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Table5-1.png"
+}, {
+  "caption": "Table 6: Metric definitions. n denotes the number of pixels with both valid ground truth and prediction, d and d∗ denote the predicted and the ground-truth depths, p and p∗ denote the predicted and the ground-truth point clouds.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00048828125,
+    "y1": 653.0287475585938,
+    "y2": 678.3560180664062
+  },
+  "figType": "Table",
+  "imageText": ["F-score", "2×Prec×Recall", "Prec", "+", "Recall", "Recall", "meanp∗∈P∗(minp∈", "||p−", "p∗||", "<", "0.05)", "Prec", "meanp∈P", "(minp∗∈P∗", "||p−", "p∗||", "<", "0.05)", "Chamfer", "distance", "Acc", "+", "Comp", "2", "Acc", "meanp∈P", "(minp∗∈P∗", "||p−", "p∗||)", "Comp", "meanp∗∈P∗(minp∈", "||p−", "p∗||)", "d∗", ",", "d∗", "d", ")", "<", "1.25i)", "∑", "(max(", "d", "δ", "−", "1.25i", "1", "n", "∑", "|d−", "d∗|2", "1", "n", "RMSE", "√", "∑", "|d−", "d∗|2/d∗", "Sq", "Rel", "1", "n", "∑", "|d−", "d∗|", "Abs", "Diff", "1", "n", "∑", "|d−", "d∗|/d∗", "Abs", "Rel", "1", "n", "Metrics", "Definition"],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 469.44,
+    "y2": 642.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Table6-1.png"
+}, {
+  "caption": "Figure 5: The qualitative results on the ScanNet dataset.",
+  "captionBoundary": {
+    "x1": 205.4250030517578,
+    "x2": 406.5771179199219,
+    "y1": 552.1926879882812,
+    "y2": 557.594970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 550.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure5-1.png"
+}, {
+  "caption": "Figure 2: (a) Illustration of the sparse window attention. For calculating the attention of the current voxel (in orange), we first sparsify the volume using the occupancy prediction from the coarser level, and then search the occupied voxels (in dark blue) within a small window. The attention is hence computed based on only these neighbor occupied voxels. (b) Illustration of the dilate-attention in a 2D slice. We dilate the occupied voxels and calculate the attention of these dilated voxels (in yellow) to maintain the geometry structure.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010986328125,
+    "y1": 191.43173217773438,
+    "y2": 236.68499755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure2-1.png"
+}, {
+  "caption": "Table 3: Generalization experiments on the ICL-NUIM and TUM-RGBD datasets.",
+  "captionBoundary": {
+    "x1": 286.1990051269531,
+    "x2": 504.00177001953125,
+    "y1": 254.27377319335938,
+    "y2": 269.6390380859375
+  },
+  "figType": "Table",
+  "imageText": ["Vortx", "0.175", "0.314", "0.280", "0.194", "0.229", "Ours", "0.129", "0.455", "0.406", "0.173", "0.254", "M", "Atlas", "0.208", "2.344", "0.360", "0.089", "0.132", "NeuralRecon", "0.130", "2.528", "0.382", "0.075", "0.115", "T", "U", "VoRTX", "0.102", "0.146", "0.449", "0.375", "0.408", "Ours", "0.083", "0.142", "0.522", "0.390", "0.447", "Atlas", "0.175", "0.314", "0.280", "0.194", "0.229", "NeuralRecon", "0.215", "1.031", "0.214", "0.036", "0.058", "IC", "L", "Method", "Acc", "↓", "Comp", "↓", "Prec", "↑", "Recall", "↑", "F-score", "↑"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 285.59999999999997,
+    "x2": 508.32,
+    "y1": 141.12,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Table3-1.png"
+}, {
+  "caption": "Figure 3: The structure of the SDF transformer.",
+  "captionBoundary": {
+    "x1": 319.8110046386719,
+    "x2": 490.1904296875,
+    "y1": 305.57574462890625,
+    "y2": 310.9779968261719
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 505.44,
+    "y1": 84.96,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-iADdfa4GKH-Figure3-1.png"
+}]

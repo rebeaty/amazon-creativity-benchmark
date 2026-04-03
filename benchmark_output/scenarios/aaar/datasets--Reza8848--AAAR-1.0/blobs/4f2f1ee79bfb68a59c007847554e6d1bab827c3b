@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 2: 100 step trajectories of various optimizers on the Rosenbrock function minimization task of Section 5.2. The red star marks the initialization and the green star marks the location of the global minimum.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.997314453125,
+    "y1": 677.9475708007812,
+    "y2": 738.7440185546875
+  },
+  "figType": "Figure",
+  "imageText": ["Initialization", "Momentum", "RMSprop", "Adam", "Yogi", "LODO", "Minimum", "y", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "x"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 348.47999999999996,
+    "x2": 502.08,
+    "y1": 579.84,
+    "y2": 666.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure2-1.png"
+}, {
+  "caption": "Table 5: Hyperparameters used for the experiments in Section 5, after tuning hyperparameters with a genetic algorithm as in Appendix D. β and β1 generally represent momentum decay rates while β2 represent variance EMA decay rates. Dashes indicate that the optimizer was not used for that experiment.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 92.6165542602539,
+    "y2": 131.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["β", "0.519", "–", "0.9301", "Initial", "Learning", "Rate", "0.8186", "–", "0.2134", "LODO-Residuals", "Meta-Learning", "Rate", "0.001971", "–", "3.829×", "10−5", "β", "0.431", "–", "0.9525", "Initial", "Learning", "Rate", "0.5999", "–", "0.05583", "LODO-Diagonal", "Meta-Learning", "Rate", "0.002886", "–", "0.0005196", "β", "0.436", "–", "0.9860", "Initial", "Learning", "Rate", "1.080", "–", "0.1325", "LODO-Global", "Meta-Learning", "Rate", "0.004138", "–", "7.951×", "10−5", "β", "0.195", "0.897", "0.9343", "Initial", "Learning", "Rate", "0.270", "0.2946", "0.08459", "Yogi", "Learning", "Rate", "2.169", "0.2991", "0.0009340", "β1", "0.4362", "0.9273", "0.9319", "β2", "0.9999723", "0.998787", "0.999708", "LARS", "Learning", "Rate", "–", "–", "0.001710", "β", "–", "–", "0.9343", "Weight", "Decay", "–", "–", "4.839×", "10−5", "L-BFGS", "Learning", "Rate", "1.204", "–", "–", "τ", "23002", "–", "–", "O-LBFGS", "Learning", "Rate", "1.050", "–", "–", "τ", "36721", "–", "–", "LODO", "Meta-Learning", "Rate", "0.009600", "0.0001394", "7.946×", "10−6", "ρ", "0.04943", "0.02836", "0.002258", "β", "0.595", "0.880", "0.936", "Adam", "Learning", "Rate", "1.164", "0.9704", "0.0009554", "β1", "0.465", "0.864", "0.9323", "β2", "0.9884", "0.99804", "0.99505", "Momentum", "Learning", "Rate", "1.394", "0.09870", "0.003411", "β", "0.529", "0.9359", "0.9640", "RMSprop", "Learning", "Rate", "0.449", "0.004318", "4.167×", "10−5", "Noisy", "Rosenbrock", "Image", "quadratic", "bowl", "function", "generation", "Optimizer", "Hyperparameter", "Value"],
+  "name": "5",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 493.44,
+    "y1": 142.56,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Table5-1.png"
+}, {
+  "caption": "Table 1: Average tracking error of the quadratic bowl minimum on the noisy quadratic bowl task of Section 5.1. Values are are averaged over the last 10% of training before the stated training milestone, with means and standard deviations produced across 8 optimization runs with different randomization seeds. The theoretical best possible loss using Newton’s method is also listed. The version of L-BFGS is one with stochastic modifications from (Schraudolph et al., 2007), instead of the original from (Nocedal & Wright, 1999). Our timing setup is described in Appendix G.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 92.6165542602539,
+    "y2": 153.4129638671875
+  },
+  "figType": "Table",
+  "imageText": ["LODO", "(ours)", "8.99±", "0.05", "10.05±", "0.22", "Newton", "Method", "(Best", "Possible)", "7.41", "Adam", "(Kingma", "&", "Ba,", "2014)", "15.28±", "0.07", "15.26±", "0.08", "Momentum", "16.59±", "0.08", "16.56±", "0.05", "RMSprop", "(Hinton", "et", "al.,", "2012)", "22.37±", "0.06", "22.47±", "0.13", "Yogi", "(Zaheer", "et", "al.,", "2018)", "15.35±", "0.10", "15.16±", "0.05", "L-BFGS", "(Schraudolph", "et", "al.,", "2007)", "49.30±", "1.04", "40.60±", "1.40", "O-LBFGS", "(Schraudolph", "et", "al.,", "2007)", "13.96±", "0.08", "10.80±", "0.17", "Optimizer", "100k", "steps", "300", "sec.", "Training", "loss"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 441.12,
+    "y1": 164.64,
+    "y2": 286.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Table1-1.png"
+}, {
+  "caption": "Figure 3: Left: LODO’s average inverse Hessian approximation error σ = √",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 421.008544921875,
+    "y1": 408.33251953125,
+    "y2": 414.3349914550781
+  },
+  "figType": "Figure",
+  "imageText": ["Momentum", "RMSprop", "Adam", "Yogi", "LODO", "L-BFGS", "O-LBFGS", "Newton", "method", "(theoretical)", "lo", "ss", "in", "g", "tra", "in", "40", "30", "20", "10", "0", "25000", "50000", "75000", "100000", "step", "ro", "r", "n", "er", "at", "io", "ox", "im", "ap", "pr", "ia", "n", "he", "ss", "0.82", "0.80", "0.78", "0.76", "0.74", "0", "25000", "50000", "75000", "100000", "step"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 125.28,
+    "x2": 504.0,
+    "y1": 299.03999999999996,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Batch of 5 tensors of preprocessed MNIST images from the image generation task of Section 5.3, each as one of the 5 rows of the image. Shown in each of 5 columns are the masked input, the left-of-selected-pixel indicator, visible mask, and two gradient images. The images in each row are concatenated together into a 28 × 28 × 5 data tensor and then used as input into the CNN.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00341796875,
+    "y1": 334.3825378417969,
+    "y2": 384.220947265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 418.08,
+    "y1": 86.88,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Visualization of LODO’s matrix structure of G(θ) from Equation (1) for approximation of the inverse Hessian. Reduced to a depth of 3, block size 2, and size ñ = 8 matrices for illustration.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9988098144531,
+    "y1": 385.0035400390625,
+    "y2": 401.96502685546875
+  },
+  "figType": "Figure",
+  "imageText": ["rand", "perm", "rand", "perm", "rand", "perm", "rand", "perm", "rand", "perm", "rand", "perm", "end", "while", "return", "θt"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 240.48,
+    "y2": 374.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure1-1.png"
+}, {
+  "caption": "Figure 8: Grids of 16 imitated MNIST images generated the image generation CNN of Section 5.3, trained for 300k steps using RMSprop, Adam, Yogi, and LODO respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 191.81954956054688,
+    "y2": 208.781005859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 84.0,
+    "y2": 175.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure8-1.png"
+}, {
+  "caption": "Table 6: Mean losses between steps 180-200 while training on the Rosenbrock function minimization task of Section 5.2, with various optimizers. The standard deviation is calculated over 8 test runs of LODO because its G neural network architecture is randomly generated.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 233.64755249023438,
+    "y2": 261.5679931640625
+  },
+  "figType": "Table",
+  "imageText": ["LODO", "(ours)", "0.001040", "±", "0.00002140", "Adam", "0.00005342", "RMSprop", "0.0008967", "Momentum", "0.01397", "Yogi", "0.0007916", "Optimizer", "Mean", "loss", "between", "steps", "180-200"],
+  "name": "6",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 411.35999999999996,
+    "y1": 272.64,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Table6-1.png"
+}, {
+  "caption": "Figure 9: Log loss as a function of step, when using various optimizers on the Rosenbrock function minimization task of Section 5.2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 503.9325256347656,
+    "y2": 520.8939819335938
+  },
+  "figType": "Figure",
+  "imageText": ["RMSprop", "Adam", "Yogi", "LODO", "lo", "ss", "Momentum", "in", "g", "tra", "in", "10", "1", "10", "2", "10", "3", "10", "4", "0", "50", "100", "150", "200", "step"],
+  "name": "9",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 188.16,
+    "x2": 421.44,
+    "y1": 377.76,
+    "y2": 494.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure9-1.png"
+}, {
+  "caption": "Table 3: Negative log likelihoods in nats per pixel after training for 300k steps on the MNIST image generation task of Section 5.3 with ablated versions of LODO from Section 6. Values are averaged over the last 10% of training, with means and standard deviations produced across 8 runs with different randomization seeds. Our timing setup is described in Appendix G. *Setup is similar to (Amid et al., 2022) **(Baydin et al., 2017).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00323486328125,
+    "y1": 514.6284790039062,
+    "y2": 564.4669189453125
+  },
+  "figType": "Table",
+  "imageText": ["LODO-Diagonal*", "Diverged", "Diverged", "Diverged", "Diverged", "9.92±", "0.09", "LODO-Global**", "0.770±", "0.035", "0.919±", "0.139", "0.747", "0.801", "9.92±", "0.03", "LODO-Residuals", "0.701±", "0.004", "0.750±", "0.008", "0.693", "0.741", "3.31±", "0.03", "LODO", "0.696±", "0.004", "0.698±", "0.005", "0.689", "0.689", "5.64±", "0.02", "Optimizer", "300k", "steps", "50k", "sec.", "(∼", "14", "h.)", "300k", "steps", "50k", "sec.", "Steps", "/", "sec.", "Training", "loss", "Test", "loss"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 491.03999999999996,
+    "y1": 576.0,
+    "y2": 657.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Table3-1.png"
+}, {
+  "caption": "Table 2: Negative log likelihoods in nats per pixel after training for 300k steps on the MNIST image generation task of Section 5.3 with every optimizer. Values are averaged over the last 10% of training before the stated training milestone, with means and standard deviations produced across 8 optimization runs with different randomization seeds. The top 3 optimizers are underlined for each metric. Our timing setup is described in Appendix G.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 92.6165542602539,
+    "y2": 142.4539794921875
+  },
+  "figType": "Table",
+  "imageText": ["LODO", "(ours)", "0.696±", "0.004", "0.698±", "0.005", "0.689", "0.689", "5.64±", "0.02", "Adam", "0.830±", "0.005", "0.859±", "0.009", "0.809", "0.854", "7.08±", "0.03", "Momentum", "0.708±", "0.005", "0.698±", "0.005", "0.689", "0.685", "7.10±", "0.03", "RMSprop", "0.917±", "0.010", "0.920±", "0.014", "0.931", "0.899", "7.10±", "0.02", "Yogi", "0.683±", "0.002", "0.677±", "0.003", "0.686", "0.674", "7.42±", "0.02", "LARS", "(You", "et", "al.,", "2017)", "0.701±", "0.006", "0.702±", "0.006", "0.688", "0.688", "5.89±", "0.02", "Optimizer", "300k", "steps", "50k", "sec.", "(∼", "14", "h.)", "300k", "steps", "50k", "sec.", "Steps", "/", "sec.", "Training", "loss", "Test", "loss"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 500.15999999999997,
+    "y1": 153.6,
+    "y2": 255.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Table2-1.png"
+}, {
+  "caption": "Figure 4: Average training loss learning curves over 8 training runs on the MNIST image generation task of Section 5.3. Learning curves are smoothed by averaging over blocks of 600 steps each. Error margins indicate ±1 standard deviation between the performances of the 8 optimizers at every step. Left: By step. Middle: By time. Our timing setup is described in Appendix G. Right: Validataion loss by step, using a subset of 64 images excluded from the training data. Each image provides 784 pixel colors to predict, so the validation dataset effectively consists of 50176 samples.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 362.884521484375,
+    "y2": 423.68194580078125
+  },
+  "figType": "Figure",
+  "imageText": ["n", "lo", "ss", "Momentum", "RMSprop", "Adam", "LARS", "Yogi", "LODO", "at", "io", "va", "lid", "0.95", "0.90", "0.85", "0.80", "0.75", "0", "100000", "200000", "300000", "step", "lo", "ss", "in", "g", "tra", "in", "0.9", "0.8", "0.7", "0", "5", "10", "time", "(h)", "lo", "ss", "in", "g", "tra", "in", "0.9", "0.8", "0.7", "0", "100000", "200000", "300000", "step"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 486.24,
+    "y1": 268.8,
+    "y2": 346.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure4-1.png"
+}, {
+  "caption": "Figure 6: In this diagram, ñ = 8 and p = 2, for illustrative purposes. Left: Visual depiction of how a fanout forest followed by a fanin forest can represent arbitrary sparse connections. Right: Visual depiction of how p+1 chained copies of G̃(θ) networks left-multiplied by block matrices diagonal can manifest a forest of fanout trees. G̃i are permutations implemented by G̃(θ) networks allowing for arbitrary connections, and Bi are block diagonal matrices which create the necessary fanouts. Data flows from left to right in the illustration, though successive operations are written out right to left when using mathematical notation. The largest fanout in this pattern of connections is 3, which is less than 2p = 4; all the fanins are 1.",
+  "captionBoundary": {
+    "x1": 107.9998779296875,
+    "x2": 504.0030212402344,
+    "y1": 210.16653442382812,
+    "y2": 296.0029296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 480.47999999999996,
+    "y1": 80.64,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure6-1.png"
+}, {
+  "caption": "Figure 5: LODO’s training loss as a function of the momentum decay coefficient β, averaged over the last 10% of 300k steps, for the image generation task of Section 5.3. Momentum improves LODO. Error bars depict LODO’s uncertainty from Table 2.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.9973449707031,
+    "y1": 271.0515441894531,
+    "y2": 342.80694580078125
+  },
+  "figType": "Figure",
+  "imageText": ["lo", "ss", "0.74", "0.72", "0.70", "0.4", "0.6", "0.8", "beta"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 349.44,
+    "x2": 505.44,
+    "y1": 156.96,
+    "y2": 258.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Figure5-1.png"
+}, {
+  "caption": "Table 4: Noise and Step number schedules for tuning the optimizers’ hyperparameters using the genetic algorithm presented in Appendix D",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 247.18533325195312,
+    "y2": 264.14678955078125
+  },
+  "figType": "Table",
+  "imageText": ["0", "3", "1k", "3", "200", "3", "1k", "1", "3", "1k", "3", "200", "3", "1k", "2", "3", "1k", "3", "200", "3", "1k", "3", "3", "1k", "2.5", "200", "3", "1k", "4", "2", "1.5k", "2", "200", "2", "1.5k", "5", "1.7", "1.5k", "1.5", "200", "1.7", "1.5k", "6", "1.4", "2k", "1", "200", "1.4", "2k", "7", "1.2", "3k", "0.75", "200", "1.2", "3k", "8", "0.9", "5k", "0.5", "200", "0.9", "5k", "9", "0.6", "8k", "0.3", "200", "0.6", "8k", "Noise", "stddev", "#", "steps", "Noise", "stddev", "#", "steps", "Noise", "stddev", "#", "steps", "Generation", "Noisy", "Quadratic", "Bowl", "Rosenbrock", "Function", "Image", "Generation"],
+  "name": "4",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 488.15999999999997,
+    "y1": 276.0,
+    "y2": 424.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EqDnVOyiVX-Table4-1.png"
+}]

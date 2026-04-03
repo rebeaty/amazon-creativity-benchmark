@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 5: Illustration of Lemma 8 and Corollary 9. Given a cover ofN balls, we can pick a subcover of balls covering at least half of the measure, with each ball having measure at least 1 2N .",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0042724609375,
+    "y1": 235.58956909179688,
+    "y2": 255.98699951171875
+  },
+  "figType": "Figure",
+  "imageText": ["a)", "The", "original", "cover", "of", "C.", "b)", "The", "dense", "greedy", "subcover."],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 452.15999999999997,
+    "y1": 80.64,
+    "y2": 222.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0_TxFpAsEI-Figure5-1.png"
+}, {
+  "caption": "Figure 1: Depending on the covering number of C, a small number of ‖·‖- balls of sufficient density cover a lot of the measure of C. Label noise makes every point drawn from the covered set adversarially vulnerable.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.99951171875,
+    "y1": 579.5355224609375,
+    "y2": 640.33203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 353.76,
+    "x2": 468.47999999999996,
+    "y1": 451.68,
+    "y2": 561.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0_TxFpAsEI-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Figures 3a and 3b plots adversarial risk against perturbation budget on CIFAR10 and CIFAR100 datasets respectively, with three label noise models. Clean denotes the original CIFAR-10/100 labels. Human denotes the human-generated labels from (Wei et al., 2022). Uniform refers to uniformly random label noise with the same rate as Human. Figure 3c plots the average memorisation score per class for: Human mislabeled examples i.e. examples with Human noisy labels and All samples. The horizontal line is the average across all classes. The higher score of human mislabeled examples indicates that those examples belong to the long tail of the distribution.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 201.06149291992188,
+    "y2": 272.81787109375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CIFAR10", "All", "samples", "co", "re", "Human", "mislabeled", "n", "S", "at", "io", "or", "is", "M", "em", "Av", "g.", "0.4", "0.3", "0.2", "0.1", "0.0", "(b)", "CIFAR100", "air", "pla", "ne", "au", "tom", "ob", "ile", "bir", "d", "ca", "t", "de", "er", "do", "g", "fro", "g", "ho", "rse", "sh", "ip", "tru", "ck", "Human", "Clean", "Uniform", "rr", "or", "ria", "l", "E", "er", "sa", "A", "dv", "100", "80", "60", "40", "0.001", "0.003", "0.006", "0.01", "Perturbation", "Budget", "(a)", "CIFAR10", "Human", "Clean", "Uniform", "rr", "or", "ria", "l", "E", "er", "sa", "A", "dv", "100", "80", "60", "40", "20", "0.001", "0.003", "0.006", "0.01", "Perturbation", "Budget"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 499.2,
+    "y1": 84.96,
+    "y2": 188.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0_TxFpAsEI-Figure3-1.png"
+}, {
+  "caption": "Figure 2: From Sanyal et al. (2021). Adversarial error increases with increasing label noise η (xaxis) at a rate much faster than predicted by Theorem 2. Here, ε is the perturbation magnitude (ρ in the current paper). The label noise is synthetically injected in the training set with probability η.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0003662109375,
+    "y1": 182.12454223632812,
+    "y2": 210.04400634765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "MNIST", "(b)", "ResNet18", "(CIFAR10)", "(c)", "DenseNet121", "(CIFAR10)"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 491.03999999999996,
+    "y1": 82.56,
+    "y2": 158.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0_TxFpAsEI-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Visualization of a portion of the distribution µ and the hypothesis class H used in Theorem 7. The crosses are the mislabeled examples and the circles are correctly labelled examples. All the circles are adversarially vulnerable to upwards perturbations of magnitude less than ρ.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 135.44052124023438,
+    "y2": 163.3609619140625
+  },
+  "figType": "Figure",
+  "imageText": ["≤", "ρ", "W"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 183.84,
+    "x2": 422.88,
+    "y1": 81.6,
+    "y2": 123.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0_TxFpAsEI-Figure4-1.png"
+}]

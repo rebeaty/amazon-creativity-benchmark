@@ -1,0 +1,281 @@
+[{
+  "caption": "Table 8: Pre-training settings for vanilla ViT-S/16, ViT-B/16 and ResNet-50 models on ImageNet-1K. Note that we adopt the same pre-training configurations across different architectures without further parameter tuning.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0039978027344,
+    "y1": 263.7693786621094,
+    "y2": 291.6898193359375
+  },
+  "figType": "Table",
+  "imageText": ["D", "VISUALIZATION", "Optimizer", "AdamW", "(Loshchilov", "&", "Hutter,", "2017)", "Pre-training", "epochs", "300", "Peak", "learning", "rate", "1.2e-3", "Batch", "size", "2048", "Weight", "decay", "0.05", "Optimizer", "momentum", "β1,", "β2", "=", "0.9,", "0.95", "(Chen", "et", "al.,", "2020a)", "Learning", "rate", "schedule", "Cosine", "decay", "Warmup", "epochs", "20", "Gradient", "clipping", "3.0", "Dropout", "(Srivastava", "et", "al.,", "2014)", "✗", "Stochastic", "depth", "(Huang", "et", "al.,", "2016)", "✗", "LayerScale", "(Touvron", "et", "al.,", "2021b)", "✗", "Data", "augmentation", "RandomResizedCrop", "Pos.", "emb.", "in", "Transformer", "layers", "1-D", "absolute", "pos.", "emb.", "(Dosovitskiy", "et", "al.,", "2020)", "Patch", "size", "16", "Pre-training", "resolution", "224", "Configuration", "Value"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 484.32,
+    "y1": 304.8,
+    "y2": 518.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table8-1.png"
+}, {
+  "caption": "Figure 1: Comparison of masking recipes in Masked Language Modeling (MLM), Masked Image Modeling (MIM), low-level image processing and Masked Frequency Modeling (MFM). Note the differences of masked information among MIM, low-level image processing and MFM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 273.2555236816406,
+    "y2": 301.17498779296875
+  },
+  "figType": "Figure",
+  "imageText": ["iFFT", "frequency", "domain", "image", "domain", "maskmask", "FFT", "mask", "frequency", "domain", "image", "domain", "(d)", "MFM", "original", "low-pass", "high-pass", "(c)", "Low-level", "image", "processing", "downsample", "blur", "noise", "(a)", "MLM", "(b)", "MIM", "small", "flowers.", "A", "white", "cat", "runs", "on", "a", "green", "grass", "covered", "with", "small", "flowers.", "A", "white", "cat", "runs", "on", "a", "green", "grass", "covered", "with"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 264.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Figure1-1.png"
+}, {
+  "caption": "Table 2: Comparison of SR, deblurring, denoising and MFM tasks with ViT-B/16 on ImageNet1K. All models are pre-trained for 300 epochs, and evaluated with top-1 fine-tuning accuracy. Corrupted image samples from ImageNet-1K training set with different degradation levels are visualized in both image and frequency domain. The studied hyper-parameter that controls the difficulty of degradation for each task is (a) downsampling scale factor, (b) Gaussian blur sigma, (c) Gaussian noise sigma, and (d) mask radius, respectively. More examples are provided in Appendix D. Zoom in for best view.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 83.53055572509766,
+    "y2": 155.28594970703125
+  },
+  "figType": "Table",
+  "imageText": ["original", "(d)", "(c)", "(b)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "(a)", "8", "82.8", "16", "83.1", "24", "82.7", "32", "82.6", "(d)", "MFM", "25", "82.4", "50", "82.6", "75", "82.7", "100", "82.6", "(c)", "Denoise", "1", "79.7", "3", "81.2", "5", "81.7", "7", "81.5", "(b)", "Deblur", "×2", "82.1", "×4", "82.2", "×8", "82.4", "×16", "82.1", "(a)", "SR", "Task", "Parameter", "Top-1", "acc", "(%)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 502.08,
+    "y1": 155.04,
+    "y2": 316.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table2-1.png"
+}, {
+  "caption": "Table 7: Combination of SR, deblurring, denoising tasks using ViT-B/16 on ImageNet-1K. All models are pre-trained for 300 epochs, and evaluated with top-1 fine-tuning accuracy.",
+  "captionBoundary": {
+    "x1": 108.0000228881836,
+    "x2": 504.00238037109375,
+    "y1": 194.92337036132812,
+    "y2": 211.88482666015625
+  },
+  "figType": "Table",
+  "imageText": ["Individual", "task:", "SR", "82.4", "Deblur", "81.7", "Denoise", "82.7", "Integrated", "task:", "SR+Denoise", "82.2", "Deblur+Denoise", "82.5", "Task", "Top-1", "acc", "(%)"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 231.84,
+    "x2": 380.15999999999997,
+    "y1": 224.64,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table7-1.png"
+}, {
+  "caption": "Figure 4: Example results of recovered images on ImageNet-1K validation set for SR, deblurring, denoising and MFM tasks. We visualize both images and their frequency spectrums. We use the best pre-trained model of each task in Table 2 of the main text for visualization, i.e., the downsampling scale factor is ×8 for SR, the Gaussian blur sigma is 5 for Deblur, the Gaussian noise sigma is 75 for Denoise, and the mask radius is 16 for MFM†. Compared with SR, Deblur and Denoise, MFM can utilize both high-frequency and low-frequency information for prediction. Zoom in for best view. †As MFM only predicts the masked area of the frequency spectrum, we overlay the output with the visible frequency spectrum for better visual quality.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032653808594,
+    "y1": 655.5055541992188,
+    "y2": 738.5089721679688
+  },
+  "figType": "Figure",
+  "imageText": ["original", "input", "output", "input", "output", "input", "output", "input", "output", "input", "output", "SR", "Deblur", "Denoise", "MFM"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 85.92,
+    "y2": 644.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Figure4-1.png"
+}, {
+  "caption": "Table 4: ImageNet-1K top-1 fine-tuning accuracy of self-supervised models using ResNet-50 as the encoder. Table is split to three sub-tables for better placement. Results for other methods are taken from Fang et al. (2022) as we adopt the same fine-tuning recipe. †: modified ResNet-50 architecture. (a) Training-from-scratch baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 428.3235168457031,
+    "y2": 468.4979553222656
+  },
+  "figType": "Table",
+  "imageText": ["MFM", "300", "80.1", "SimSiam", "400", "79.1", "MoCo", "v2", "400", "79.6", "SimCLR", "800", "79.9", "BYOL", "400", "80.0", "SwAV", "600", "80.1", "RSB", "A2", "-", "79.8", "Method", "Epochs", "Top-1", "acc", "(%)", "SR", "300", "77.9", "Deblur", "300", "78.0", "Denoise", "300", "77.5", "MFM", "300", "78.5", "RSB", "A3", "-", "78.1", "Method", "Epochs", "Top-1", "acc", "(%)", "350", "-", "78.8", "FAMS400", "-", "79.5", "Original90", "-", "75.3", "PyTorch90", "-", "76.1", "FixRes120", "-", "77.0", "DeiT300", "-", "78.4", "ResNet-RS†", "Method", "Epochs", "Top-1", "acc", "(%)"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 500.15999999999997,
+    "y1": 471.35999999999996,
+    "y2": 558.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table4-1.png"
+}, {
+  "caption": "Table 3: ImageNet-1K top-1 fine-tuning accuracy of self-supervised models using ViT-S/16 and ViT-B/16 as the encoder. DINO and MoCo v3 use extra momentum encoder. BEiT requires extra 250M DALL-E data (Ramesh et al., 2021) to pre-train dVAE. BEiT and MAE also use mask tokens (inserted either in the encoder or the decoder). All entries are on an image size of 224×224. We use the actual processed images/views to measure the effective pre-training epochs (Zhou et al., 2022). Scratch indicates the supervised baseline in Touvron et al. (2021a). †: doubled attention heads. ‡: our reproduced results with official code.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 219.94943237304688,
+    "y2": 291.704833984375
+  },
+  "figType": "Table",
+  "imageText": ["SR", "IN-1K", "-", "-", "300", "80.8", "82.4", "Deblur", "IN-1K", "-", "-", "300", "79.4", "81.7", "Denoise", "IN-1K", "-", "-", "300", "81.1", "82.7", "MFM", "IN-1K", "-", "-", "300", "81.6", "83.1", "BEiT", "(Bao", "et", "al.,", "2022)", "IN-1K+DALL-E", "dVAE", "✓", "300", "81.3", "82.9", "MAE", "(He", "et", "al.,", "2022)", "IN-1K", "-", "✓", "300", "80.6‡", "82.9‡", "MoCo", "v3", "(Chen", "et", "al.,", "2021)", "IN-1K", "momentum", "ViT", "-", "600", "81.4†", "83.2", "DINO", "(Caron", "et", "al.,", "2021)", "IN-1K", "momentum", "ViT", "-", "1600", "81.5", "82.8", "Scratch", "(Touvron", "et", "al.,", "2021a)", "-", "-", "-", "-", "79.9", "81.8", "Method", "Pre-train", "data", "Extra", "model", "Mask", "token", "Epochs", "ViT-S", "ViT-B"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 296.64,
+    "y2": 422.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table3-1.png"
+}, {
+  "caption": "Figure 2: Overview of our MFM pre-training pipeline. We convert each input image into frequency domain via FFT and mask a portion of frequencies on the frequency spectrum via a low/high-pass filter. After iFFT, the low-/high-pass filtered images are then randomly fed to the encoder (e.g., ViT, CNN), with a lightweight one-layer head to predict the masked frequency values on the frequency spectrum via a frequency loss. The dice icon refers to the random sampling process of low-/high-pass filters, following a Bernoulli distribution.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0035705566406,
+    "y1": 181.66452026367188,
+    "y2": 242.4619140625
+  },
+  "figType": "Figure",
+  "imageText": ["FFT", "linear", "head", "encoder", "(ViT,", "CNN,", "etc.)", "mask", "frequencies", "predict", "FFT", "iFFT"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 172.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Example results of recovered images on COCO validation set for SR, deblurring, denoising and MFM tasks, using the models pre-trained on ImageNet-1K (the same model weights as in Figure 4). We visualize both images and their frequency spectrums. Zoom in for best view.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039978027344,
+    "y1": 677.4605712890625,
+    "y2": 705.3800048828125
+  },
+  "figType": "Figure",
+  "imageText": ["original", "input", "output", "input", "output", "input", "output", "input", "output", "input", "output", "SR", "Deblur", "Denoise", "MFM"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 107.03999999999999,
+    "y2": 666.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Figure5-1.png"
+}, {
+  "caption": "Figure 3: More visualizations of corrupted image samples from ImageNet-1K training set following Table 2 in the main text. We visualize both images and their frequency spectrums with different degradation levels. (a) SR, (b) Deblur (kernel size 21), (c) Denoise, (d) MFM. Each task achieves its best performance with a moderate degradation intensity. See Section 4.3 in the main text for more discussion. Zoom in for best view.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 650.3875732421875,
+    "y2": 700.2249755859375
+  },
+  "figType": "Figure",
+  "imageText": ["×2", "×4", "×8", "×16", "×2", "×4", "×8", "×16", "×2", "×4", "×8", "×16", "×2", "×4", "×8", "×16", "×2", "×4", "×8", "×16", "×2", "×4", "×8", "×16", "×2", "×4", "×8", "×16", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "original", "(d)", "(c)", "(b)", "(a)", "32", "24", "16", "8", "25", "50", "75", "100", "1", "3", "5", "7", "×2", "×4", "×8", "×16"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 110.88,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Figure3-1.png"
+}, {
+  "caption": "Table 5: ADE20K semantic segmentation (mIoU) of ViT-B/16 models.",
+  "captionBoundary": {
+    "x1": 356.5980224609375,
+    "x2": 504.0046691894531,
+    "y1": 164.92544555664062,
+    "y2": 181.88690185546875
+  },
+  "figType": "Table",
+  "imageText": ["SR", "48.5", "Deblur", "47.0", "Denoise", "47.6", "MFM", "48.6", "BEiT", "(Bao", "et", "al.,", "2022)", "47.7", "MAE", "(He", "et", "al.,", "2022)", "48.1", "MoCo", "v3", "(Chen", "et", "al.,", "2021)", "47.2", "DINO", "(Caron", "et", "al.,", "2021)", "46.8", "Supervised", "(Touvron", "et", "al.,", "2021a)", "45.3", "Method", "mIoU"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 360.96,
+    "x2": 497.28,
+    "y1": 184.79999999999998,
+    "y2": 291.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table5-1.png"
+}, {
+  "caption": "Table 6: Robustness evaluation on six robustness benchmarks. We report top-1 accuracy of ViTB/16 (left) and ResNet-50 (right) models except for IN-C that uses the mean corruption error (mCE). The original ImageNet top-1 fine-tuning results are also appended for reference. The best results are in bold, and the second best results are underlined.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 296.0503845214844,
+    "y2": 334.92999267578125
+  },
+  "figType": "Table",
+  "imageText": ["SR", "17.2", "1.9", "73.6", "6.5", "35.8", "25.4", "77.9", "Deblur", "17.2", "2.0", "74.8", "8.2", "37.2", "26.5", "78.0", "Denoise", "15.8", "1.8", "78.0", "7.2", "35.6", "24.7", "77.5", "MFM", "18.5", "2.3", "74.2", "9.0", "36.9", "26.7", "78.5", "Scratch", "20.2", "3.4", "77.0", "6.6", "36.0", "25.0", "78.1", "Method", "Robustness", "benchmarks", "Orig.", "FGSM", "PGD", "IN-C", "(↓)", "IN-A", "IN-R", "IN-SK", "MAE", "38.9", "11.2", "52.3", "31.5", "48.3", "33.8", "82.9", "SR", "46.1", "21.5", "46.3", "29.1", "49.2", "35.5", "82.4", "Deblur", "42.5", "17.2", "49.2", "25.3", "46.9", "33.2", "81.7", "Denoise", "47.6", "24.3", "47.8", "30.7", "48.4", "34.8", "82.7", "MFM", "47.7", "24.4", "47.5", "32.7", "48.6", "34.8", "83.1", "Scratch", "46.3", "21.2", "48.5", "28.1", "44.7", "32.0", "81.8", "Method", "Robustness", "benchmarks", "Orig.", "FGSM", "PGD", "IN-C", "(↓)", "IN-A", "IN-R", "IN-SK"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 336.0,
+    "y2": 420.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table6-1.png"
+}, {
+  "caption": "Table 9: Fine-tuning settings for vanilla ViT-S/16 and ViT-B/16 on ImageNet-1K. We fine-tune ViT-S/16 for 200 epochs, and ViT-B/16 for 100 epochs. All other hyper-parameters are the same.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00396728515625,
+    "y1": 117.1905288696289,
+    "y2": 134.1519775390625
+  },
+  "figType": "Table",
+  "imageText": ["Optimizer", "AdamW", "(Loshchilov", "&", "Hutter,", "2017)", "Fine-tuning", "epochs", "200", "(S),", "100", "(B)", "Peak", "learning", "rate", "8e-3", "Layer-wise", "learning", "rate", "decay", "(Bao", "et", "al.,", "2022)", "0.8", "(Clark", "et", "al.,", "2020)", "Batch", "size", "2048", "Weight", "decay", "0.05", "Optimizer", "momentum", "β1,", "β2", "=", "0.9,", "0.999", "Learning", "rate", "schedule", "Cosine", "decay", "Warmup", "epochs", "5", "Loss", "function", "Cross-entropy", "loss", "Gradient", "clipping", "✗", "Dropout", "(Srivastava", "et", "al.,", "2014)", "✗", "Stochastic", "depth", "(Huang", "et", "al.,", "2016)", "0.1", "Mixup", "(Zhang", "et", "al.,", "2017a)", "0.8", "Cutmix", "(Yun", "et", "al.,", "2019)", "1.0", "Label", "smoothing", "(Szegedy", "et", "al.,", "2016)", "0.1", "Random", "augmentation", "(Cubuk", "et", "al.,", "2020)", "9", "/", "0.5", "Patch", "size", "16", "Fine-tuning", "resolution", "224", "Test", "resolution", "224", "Configuration", "Value"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 146.88,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table9-1.png"
+}, {
+  "caption": "Table 10: Fine-tuning settings for vanilla ResNet-50 on ImageNet-1K. The hyper-parameters generally follow Wightman et al. (2021), except that we adopt the AdamW optimizer following Fang et al. (2022).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 444.6775207519531,
+    "y2": 472.59796142578125
+  },
+  "figType": "Table",
+  "imageText": ["Optimizer", "AdamW", "(Loshchilov", "&", "Hutter,", "2017)", "Peak", "learning", "rate", "12e-3", "Layer-wise", "learning", "rate", "decay", "(Bao", "et", "al.,", "2022)", "✗", "Batch", "size", "2048", "Weight", "decay", "0.02", "Learning", "rate", "schedule", "Cosine", "decay", "Warmup", "epochs", "5", "Loss", "function", "Binary", "cross-entropy", "loss", "Gradient", "clipping", "✗", "Dropout", "(Srivastava", "et", "al.,", "2014)", "✗", "Stochastic", "depth", "(Huang", "et", "al.,", "2016)", "✗", "Mixup", "(Zhang", "et", "al.,", "2017a)", "0.1", "Cutmix", "(Yun", "et", "al.,", "2019)", "1.0", "Label", "smoothing", "(Szegedy", "et", "al.,", "2016)", "0.1", "✗", "Repeated", "augmentation", "(Berman", "et", "al.,", "2019;", "Hoffer", "et", "al.,", "2019)", "✗", "✓", "Random", "augmentation", "(Cubuk", "et", "al.,", "2020)", "6", "/", "0.5", "7", "/", "0.5", "Fine-tuning", "resolution", "160", "224", "Test", "resolution", "224", "Test", "crop", "ratio", "0.95", "Configuration", "100", "epoch", "FT", "300", "epoch", "FT"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 485.76,
+    "y2": 696.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9-umxtNPx5E-Table10-1.png"
+}]

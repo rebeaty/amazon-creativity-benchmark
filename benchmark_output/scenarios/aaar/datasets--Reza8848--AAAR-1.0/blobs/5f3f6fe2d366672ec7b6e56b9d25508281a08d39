@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 7: Abbreviations",
+  "captionBoundary": {
+    "x1": 260.1369934082031,
+    "x2": 351.55377197265625,
+    "y1": 503.2575378417969,
+    "y2": 509.260009765625
+  },
+  "figType": "Table",
+  "imageText": ["TD:", "Temporal", "Difference", "SAC:", "Soft", "Actor", "Critic", "MPC:", "Model", "Predictive", "Control", "ADE:", "Average", "Displacement", "Error", "MFD:", "Maximum", "Final", "Distance", "RL:", "Reinforcement", "Learning", "HMM:", "Hidden", "Markov", "Model", "RLAI:", "Reinforcement", "Learning", "as", "Inference", "SMC:", "Sequential", "Monte", "Carlo", "MDP:", "Markov", "Decision", "Process"],
+  "name": "7",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 407.03999999999996,
+    "y1": 375.84,
+    "y2": 492.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table7-1.png"
+}, {
+  "caption": "Table 6: Notations",
+  "captionBoundary": {
+    "x1": 268.864990234375,
+    "x2": 342.8273010253906,
+    "y1": 363.6605224609375,
+    "y2": 369.6629943847656
+  },
+  "figType": "Table",
+  "imageText": ["t", "∈", "1", ".", ".", ".", "T", "≜", "timesteps", "n", "∈", "1", ".", ".", ".", "N", "≜", "particle", "number", "k", "∈", "1", ".", ".", ".K", "≜", "putative", "action", "particle", "number", "βpen", "≜", "penalty", "coefficient", "γ", "≜", "discount", "factor", "T", "≜", "horizon", "length", "Qϕ", "≜", "parametric", "approximation", "of", "the", "critic", "Qψ", "≜", "fixed", "target", "critic", "model", "used", "for", "computing", "the", "TD", "error", "ht", "≜", "heuristic", "factor", "at", "timestep", "t", "ŵt", "≜", "pre-resampling", "particle", "weight", "w̄t", "≜", "post-resampling", "particle", "weight", "Wt", "≜", "normalizing", "factor", "αit", "≜", "ancestral", "indices", "for", "each", "particle", "i", "p(Ot|st,", "at,", "st+1)", "≜", "optimality", "probability", "defined", "as", "the", "exponentiated", "reward", "Q(st,", "at)", "≜", "soft", "state-action", "value", "function", "referred", "to", "as", "the", "critic", "π(at|st)", "≜", "prior", "policy", "p(st+1|st,", "at)", "≜", "state", "transition", "dynamics", "density", "r(st,", "at,", "st+1)", "≜", "reward", "value", "received", "at", "timestep", "t", "s1:T", "≜", "sequence", "of", "states", "a1:T", "≜", "sequence", "of", "actions"],
+  "name": "6",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 480.47999999999996,
+    "y1": 96.96,
+    "y2": 352.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table6-1.png"
+}, {
+  "caption": "Figure 1: Illustration of the difference between CriticSMC and SMC in a toy environment in which a green ego agent is trying to reach the red goal without being hit by any of the three chasing adversaries. All plots show overlaid samples of environment trajectories conditioned on the ego agent achieving its goal. While SMC will asymptotically explore the whole space of environment trajectories, CriticSMC’s method of using the critic as a heuristic within SMC encourages computationally efficient discovery of diverse high reward trajectories. SMC with a small number of particles fails here because the reward is sparse and the ego agent’s prior behavioral policy assigns low probability to trajectories that avoid the barrier and the other agents.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.73944091796875,
+    "y1": 232.87753295898438,
+    "y2": 315.5929870605469
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "SMC", "(10", "particles)", "(b)", "SMC", "(10k", "particles)", "(c)", "CriticSMC", "(10", "particles)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 80.64,
+    "y2": 219.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Figure1-1.png"
+}, {
+  "caption": "Table 1: Infraction rates for different inference methods performing model-predictive planning tested on four locations from the INTERACTION dataset (Zhan et al., 2019).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00372314453125,
+    "y1": 302.8115234375,
+    "y2": 319.77301025390625
+  },
+  "figType": "Table",
+  "imageText": ["Prior", "0.00583", "3.5536", "0.4389", "Rejection", "Sampling", "0.00216", "3.4992", "0.4287", "SMC", "by", "Piché", "et", "al.", "(2019)", "0.00342", "3.2836", "0.5701", "CriticSMC", "0.00083", "3.4248", "0.4450", "DR", "DEU", "Roundabout", "OF", "Prior", "0.00583", "3.1004", "0.4080", "Rejection", "Sampling", "0.00133", "3.0211", "0.4046", "SMC", "by", "Piché", "et", "al.", "(2019)", "0.00166", "3.0086", "0.4814", "CriticSMC", "0.00066", "2.9736", "0.4439", "DR", "USA", "Roundabout", "FT", "Prior", "0.00874", "3.1369", "0.3969", "Rejection", "Sampling", "0.00218", "3.2100", "0.3908", "SMC", "by", "Piché", "et", "al.", "(2019)", "0.00351", "2.8490", "0.4622", "CriticSMC", "0.00085", "2.8713", "0.4479", "DR", "USA", "Intersection", "MA", "Prior", "0.02522", "2.2038", "0.3024", "Rejection", "Sampling", "0.01758", "2.3578", "0.3071", "SMC", "by", "Piché", "et", "al.", "(2019)", "0.02191", "2.3388", "0.4817", "CriticSMC", "0.01032", "2.2009", "0.3448", "DR", "DEU", "Merging", "MT", "Infraction", "Rate", "MFD", "ADE6", "Location", "Method", "Collision"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 332.64,
+    "y2": 531.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table1-1.png"
+}, {
+  "caption": "Figure 3: Collision avoidance arising from using CriticSMC for control of the red ego agent in a scenario from the INTERACTION dataset. There are three rows: the top shows the sequence of states leading to a collision arising from choosing actions from the prior policy, the middle row shows that control by CriticSMC’s implicit policy avoids the collision, and the third row is a contour plot illustrating the relative values of the critic (brighter corresponds to higher expected reward) evaluated at the current state over the entire action space of acceleration (vertical axis) and steering (horizontal axis). The black dots are 128 actions sampled from the prior policy. The white dot indicates the selected action. Best viewed zoomed onscreen. For more examples see Figure 5 in the Appendix.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00421142578125,
+    "y1": 198.59152221679688,
+    "y2": 281.3059997558594
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Figure3-1.png"
+}, {
+  "caption": "Figure 5: More examples similar to Figure 3 of the main paper.",
+  "captionBoundary": {
+    "x1": 180.1479949951172,
+    "x2": 431.85308837890625,
+    "y1": 512.6295776367188,
+    "y2": 518.6320190429688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 288.96,
+    "y2": 501.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Main loop of SMC without heuristic factors (left), with a naive heuristic factors ht (middle) and with the placement we use in CriticSMC (right). We use ŵ for pre-resampling weights and w̄",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66796875,
+    "y1": 234.31253051757812,
+    "y2": 251.27398681640625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CriticSMC", "version", "8:", "end", "sampler", "αi", "t", "t", ",a", "αi", "t", "t", ",sit+1)−h", "αi", "t", "t", "7:", "w̄it", "←", "1", "N", "er(s", "1:", "sampler", "CRITICSMC", "2:", "ait", "∼", "π(at|sit)", "3:", "4:", "ŵit", "←", "w̄it−1e", "hi", "t", "5:", "αit", "∼", "RESAMPLE(ŵ1:N", "t", ")", "6:", "sit+1", "←", "p(st+1|s", "αi", "t", "t", ",", "a", "αi", "t", "t", ")", "(b)", "With", "heuristic", "factors", "8:", "end", "sampler", "αi", "t", "t", "7:", "w̄it", "←", "1", "N", "e−h", "2:", "ait", "∼", "π(at|sit)", "3:", "ŝit+1", "∼", "p(st+1|sit,", "ait)", "4:", "ŵit", "←", "w̄it−1e", "r(sit,a", "i", "t,ŝ", "i", "t+1)+h", "i", "t", "5:", "αit", "∼", "RESAMPLE(ŵ1:N", "t", ")", "6:", "sit+1", "←", "ŝ", "αi", "t", "t+1", "1:", "sampler", "H-FACTORS", "(a)", "No", "heuristic", "factors", "2:", "ait", "∼", "π(at|sit)", "3:", "ŝit+1", "∼", "p(st+1|sit,", "ait)", "4:", "ŵit", "←", "w̄it−1e", "r(sit,a", "i", "t,ŝ", "i", "t+1)", "5:", "αit", "∼", "RESAMPLE(ŵ1:N", "t", ")", "6:", "sit+1", "←", "ŝ", "αi", "t", "t+1", "7:", "w̄it", "←", "1", "N", "8:", "end", "sampler", "1:", "sampler", "SIMPLE"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Execution time comparison between the baseline methods and CriticSMC for both modelpredictive planning and model-free online control. The collision infraction rate is averaged across all four INTERACTION locations.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 505.6570129394531,
+    "y1": 557.4775390625,
+    "y2": 629.2340087890625
+  },
+  "figType": "Figure",
+  "imageText": ["Model-free", "Online", "Control", "CriticSMC", "SAC", "Prior", "Ra", "te", "io", "n", "Co", "llis", "0.04", "0.03", "0.02", "0.01", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1.0", "Execution", "Time", "(s)", "Model-predictive", "Planning", "CriticSMC", "Rejection", "Sampling", "SMC", "by", "Piché", "et", "al.", "(2019)", "Ra", "te", "Prior", "io", "n", "Co", "llis", "0.010", "0.008", "0.006", "0.004", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "Execution", "Time", "(s)"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 368.15999999999997,
+    "x2": 502.08,
+    "y1": 416.15999999999997,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Figure4-1.png"
+}, {
+  "caption": "Table 3: Infraction rates for SMC and CriticSMC with a varying the number of particles and putative particles, tested on 500 random initial states using the proposed toy environment.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99530029296875,
+    "y1": 286.91851806640625,
+    "y2": 303.8800048828125
+  },
+  "figType": "Table",
+  "imageText": ["SMC", "1024", "0.578", "0.3664", "0.237", "0.1568", "0.0904", "CriticSMC", "1024", "0.048", "0.01", "0.002", "0.002", "0.0", "SMC", "1", "0.776", "0.6092", "0.4576", "0.3178", "0.1836", "CriticSMC", "1", "0.776", "0.368", "0.1346", "0.0334", "0.0106", "Method", "Putative", "Particles", "Particles", "1", "5", "10", "20", "50"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 164.64,
+    "x2": 447.35999999999996,
+    "y1": 316.8,
+    "y2": 391.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table3-1.png"
+}, {
+  "caption": "Table 2: Infraction rates for performing model-free online control against the prior and SAC policies tested on four locations from the INTERACTION dataset (Zhan et al., 2019).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0013427734375,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Prior", "0.00583", "3.5536", "0.4389", "SAC", "0.06400", "0.0", "3.4583", "CriticSMC", "0.00233", "3.5173", "0.4459", "DR", "DEU", "Roundabout", "OF", "CriticSMC", "0.00183", "3.0125", "0.4567", "DR", "USA", "Roundabout", "FT", "Prior", "0.00583", "3.1004", "0.4080", "SAC", "0.04501", "0.0", "1.7987", "CriticSMC", "0.00285", "2.9595", "0.4641", "DR", "USA", "Intersection", "MA", "Prior", "0.00874", "3.1369", "0.3969", "SAC", "0.02700", "0.0", "4.1141", "CriticSMC", "0.01376", "2.1985", "0.3665", "DR", "DEU", "Merging", "MT", "Prior", "0.02522", "2.2038", "0.3024", "SAC", "0.03899", "0.0", "1.1548", "Infraction", "Rate", "MFD", "ADE6", "Location", "Method", "Collision"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 443.03999999999996,
+    "y1": 113.28,
+    "y2": 274.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table2-1.png"
+}, {
+  "caption": "Table 5: Hyper-parameters for the reinforcement learning baseline used in Section 4.2. All hyperparameters which were not listed above, use the default values provided by the SAC implementation of stable-baselines3 (Brockman et al., 2016).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6496887207031,
+    "y1": 642.9925537109375,
+    "y2": 670.9130249023438
+  },
+  "figType": "Table",
+  "imageText": ["α2", "2", "Coefficient", "for", "action", "reward,", "this", "incen-", "tives", "the", "policy", "to", "be", "as", "close", "to", "the", "mode", "of", "ITRA", "as", "possible", "without", "access", "to", "a", "score", "function", "over", "those", "actions.", "α3", "0.05", "Coefficient", "for", "action", "difference", "reward,", "this", "incentivizes", "the", "agent", "to", "produce", "se-", "quences", "of", "actions", "which", "are", "smoother,", "and", "therefore", "often", "more", "human-like.", "α4,5,6", "0", "or", "1", "Boolean", "coefficients", "selecting", "whether", "in-", "fraction,", "survival,", "or", "ground", "truth", "rewards", "are", "used.", "γ", "0.99", "Discount", "factor,", "set", "to", "encourage", "lower", "vari-", "ance", "gradient", "estimates,", "but", "greedier", "policy", "behavior", "(Sutton", "&", "Barto,", "2018).", "Learning", "Rate", "0.0002,", "0.00012,", "0.00008", "Learning", "rate", "for", "optimization", "(in", "this", "case", "the", "Adam", "Optimizer).", "Batch", "Size", "256", "Number", "of", "examples", "used", "in", "each", "gradient", "decent", "update", "for", "both", "the", "critic", "and", "policy", "networks.", "Buffer", "Size", "500000", "Size", "of", "SAC", "experience", "buffer", "(equivalent", "to", "maximum", "number", "of", "steps", "which", "can", "be", "taken", "within", "the", "environment).", "Learning", "Starts", "1000", "Number", "of", "exploration", "steps", "used", "(e.g.", "a", "uniform", "distribution", "over", "actions)", "before", "learned", "stochastic", "policy", "is", "used", "to", "gather", "interactions.", "τ", "0.005", "Polyak", "parameter", "averaging", "coefficient", "which", "improves", "convergence", "of", "deep", "Q", "learning", "algorithms", "(Haarnoja", "et", "al.,", "2018b).", "Latent-Features", "256", "Number", "of", "neurons", "used", "in", "the", "output", "of", "the", "feature", "encoder,", "and", "which", "is", "fed", "to", "the", "standard", "two", "layer", "multi-layer", "per-", "ceptron", "defined", "by", "standard", "SAC", "algo-", "rithms", "(Haarnoja", "et", "al.,", "2018b).", "scales", "how", "closely", "the", "agent", "should", "track", "estimated", "log-likelihood", "of", "actions", "under", "the", "ITRA", "model.", "t", ".", "α1", "0.15", "Coefficient", "for", "score", "reward,", "this", "parameter", "normal", "distribution", "centred", "around", "hypo-", "thetical", "ITRA", "action", "aITRA", "Reinforcement", "Learning", "Baseline", "Parameters", "Parameter", "Name", "Parameter", "Value(s)", "Parameter", "Description", "Σ", "I2", "The", "covariance", "matrix", "of", "the", "multivariate"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 136.79999999999998,
+    "y2": 626.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table5-1.png"
+}, {
+  "caption": "Table 4: Infraction rates for the Hard-Q and the Soft-Q objectives tested on the location DR DEU Merging MT from the INTERACTION dataset (Zhan et al., 2019).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["CriticSMC", "Hard-Q", "0.01911", "0.9383", "1.0385", "14.98", "Soft-Q", "0.01376", "2.1985", "0.3665", "15.91", "Prior", "-", "0.02522", "2.2038", "0.3024", "16.43", "Infraction", "Rate", "MFD", "ADE6", "Progress", "Method", "Critic", "Objective", "Collision"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 113.28,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ObtGcyKmwna-Table4-1.png"
+}]

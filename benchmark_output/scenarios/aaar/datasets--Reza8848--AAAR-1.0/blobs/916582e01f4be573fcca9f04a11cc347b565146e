@@ -1,0 +1,201 @@
+[{
+  "caption": "Figure 2: Main results for GemNet when DFT data is viewed as inaccurate.",
+  "captionBoundary": {
+    "x1": 155.72499084472656,
+    "x2": 456.2768249511719,
+    "y1": 596.5225830078125,
+    "y2": 602.5250244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Toluene", "(e)", "Ethanol", "(a)", "Benzene", "(b)", "Aspirin", "(c)", "Malonaldehyde"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 373.91999999999996,
+    "y2": 583.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure2-1.png"
+}, {
+  "caption": "Figure 1: (a) Log-log plot of the number of training point versus the prediction error for deep force fields (b) Prediction error on CCSD labelled molecules for force fields trained on large amounts of DFT reference forces (100,000 configurations) and moderate amounts of CCSD reference forces (1000 configurations). In both cases the model architecture used is GemNet (Gasteiger et al., 2021).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 250.14749145507812,
+    "y2": 289.02593994140625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Prediction", "Error", "vs.", "Training", "Set", "Size", "(b)", "Prediction", "Error", "on", "CCSD(T)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 80.64,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure1-1.png"
+}, {
+  "caption": "Table 1: ASTEROID with empirical force field data. The training set for the fine-tuning stage contains 200 CCSD(T) labelled molecules.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 327.95550537109375,
+    "y2": 344.9169921875
+  },
+  "figType": "Table",
+  "imageText": ["EGNN", "Standard", "Training", "1.897", "0.297", "1.466", "0.777", "0.840", "ASTEROID", "1.314", "0.268", "1.341", "0.664", "0.637", "Aspirin", "Benzene", "Malonaldehyde", "Toluene", "Ethanol", "GemNet", "Standard", "Training", "1.554", "0.083", "0.801", "0.591", "0.348", "ASTEROID", "0.843", "0.048", "0.516", "0.337", "0.301"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 362.88,
+    "y2": 456.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Table1-1.png"
+}, {
+  "caption": "Figure 3: Main results for EGNN when DFT data is viewed as inaccurate.",
+  "captionBoundary": {
+    "x1": 158.7689971923828,
+    "x2": 453.2336730957031,
+    "y1": 302.4745178222656,
+    "y2": 308.47698974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Toluene", "(e)", "Ethanol", "(a)", "Benzene", "(b)", "Aspirin", "(c)", "Malonaldehyde"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 487.2,
+    "y1": 80.64,
+    "y2": 288.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Prediction errors of models tested on CCSD(T) data. Models are trained with different inaccurately labelled data but are not fine-tuned on the accurate CCSD(T) data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 246.70755004882812,
+    "y2": 263.66900634765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 209.76,
+    "x2": 402.24,
+    "y1": 80.64,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure4-1.png"
+}, {
+  "caption": "Table 3: Ablation study on ASTEROID. The inaccurate data is DFT labelled configurations and the accurate dataset contains 200 CCSD(T) labelled configurations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 450.6495361328125,
+    "y2": 467.61102294921875
+  },
+  "figType": "Table",
+  "imageText": ["EGNN", "Standard", "Training", "1.897", "0.297", "1.466", "0.777", "0.840", "ASTEROID", "w/o", "FT", "4.617", "3.260", "2.765", "3.304", "5.120", "ASTEROID", "w/o", "BAT", "0.577", "0.225", "0.213", "0.272", "0.009", "ASTEROID", "0.563", "0.223", "0.219", "0.268", "0.102", "Aspirin", "Benzene", "Malonaldehyde", "Toluene", "Ethanol", "GemNet", "Standard", "Training", "1.554", "0.083", "0.801", "0.591", "0.348", "ASTEROID", "w/o", "FT", "4.670", "3.252", "2.726", "3.342", "5.107", "ASTEROID", "w/o", "BAT", "0.788", "0.062", "0.311", "0.360", "0.112", "ASTEROID", "0.738", "0.057", "0.312", "0.325", "0.109"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 485.76,
+    "y2": 623.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Table3-1.png"
+}, {
+  "caption": "Table 2: ASTEROID with unlabelled molecular configurations. The training set for the fine-tuning stage contains 200 CCSD(T) labelled molecules.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 292.30853271484375,
+    "y2": 309.27001953125
+  },
+  "figType": "Table",
+  "imageText": ["EGNN", "Standard", "Training", "1.897", "0.297", "1.466", "0.777", "0.840", "ASTEROID", "(Unsupervised)", "1.756", "0.305", "1.382", "0.740", "0.823", "Aspirin", "Benzene", "Malonaldehyde", "Toluene", "Ethanol", "GemNet", "Standard", "Training", "1.554", "0.083", "0.801", "0.591", "0.348", "ASTEROID", "(Unsupervised)", "0.928", "0.093", "0.629", "0.475", "0.314"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 326.88,
+    "y2": 420.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Table2-1.png"
+}, {
+  "caption": "Figure 7: Main results for GemNet when DFT data is viewed as inaccurate.",
+  "captionBoundary": {
+    "x1": 155.72499084472656,
+    "x2": 456.2768249511719,
+    "y1": 529.5835571289062,
+    "y2": 535.5859985351562
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Toluene", "(e)", "Ethanol", "(a)", "Benzene", "(b)", "Aspirin", "(c)", "Malonaldehyde"],
+  "name": "7",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 306.71999999999997,
+    "y2": 516.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Prediction error of models trained on with varying amounts of inaccurate data. The molecule is aspirin, the inaccurate data is labelled with DFT, and the accurate data is made up of 200 CCSD(T) labelled molecules. For score matching we do not fine-tune the model.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.0032958984375,
+    "y1": 223.86251831054688,
+    "y2": 251.781982421875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "ASTEROID", "(b)", "Score", "Matching"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 80.64,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Ablation study on the toluene molecule. We set γ = 1.0 and ρ = 0.001 by default.",
+  "captionBoundary": {
+    "x1": 121.93899536132812,
+    "x2": 490.0614013671875,
+    "y1": 438.7815246582031,
+    "y2": 444.78399658203125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "γ", "(GemNet)", "(b)", "γ", "(EGNN)", "(c)", "ρ"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 328.8,
+    "y2": 425.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5C5ZcWvtI7S-Figure6-1.png"
+}]

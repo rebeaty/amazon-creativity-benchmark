@@ -1,0 +1,661 @@
+[{
+  "caption": "Figure 4: Few-shot in-context test accuracy on 24 Instruction Induction tasks. The APE improves the few-shot in-context learning performance on 21 out of 24 tasks. See best performing instruction performance in Figure 9.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974670410156,
+    "y1": 447.0975341796875,
+    "y2": 475.01800537109375
+  },
+  "figType": "Figure",
+  "imageText": ["Instruction", "Only", "In-context", "Only", "Instruction", "+", "In-context", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 490.08,
+    "y1": 276.0,
+    "y2": 438.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure4-1.png"
+}, {
+  "caption": "Figure 3: Zero-shot test accuracy on 24 Instruction Induction tasks. APE achieves human-level performance on 19 out of 24 tasks. See best performing instruction performance in Figure 8.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974060058594,
+    "y1": 245.79751586914062,
+    "y2": 262.75897216796875
+  },
+  "figType": "Figure",
+  "imageText": ["Greedy", "Human", "APE", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 124.32,
+    "x2": 491.03999999999996,
+    "y1": 66.72,
+    "y2": 229.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure3-1.png"
+}, {
+  "caption": "Figure 24: Iterative Monte Carlo search improves the quality of the instruction candidates at each round. Task: Sentiment.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 329.01654052734375,
+    "y2": 345.9779968261719
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")"],
+  "name": "24",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 141.6,
+    "y2": 311.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure24-1.png"
+}, {
+  "caption": "Figure 25: Iterative Monte Carlo search improves the quality of the instruction candidates at each round. Task: Translation en-fr.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 657.0015869140625,
+    "y2": 673.9630126953125
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")"],
+  "name": "25",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 469.44,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure25-1.png"
+}, {
+  "caption": "Table 3: Best APE instructions for underperforming tasks in zero-shot setting",
+  "captionBoundary": {
+    "x1": 151.54100036621094,
+    "x2": 460.1523132324219,
+    "y1": 545.7015380859375,
+    "y2": 551.7039794921875
+  },
+  "figType": "Table",
+  "imageText": ["Second", "Letter", "most", "likely", "\"Find", "the", "second", "letter", "in", "each", "word.\"", "0.84", "Membership", "to", "choose", "the", "animals", "from", "the", "list", "0.5", "Task", "Best", "instruction", "Zero-shot", "test", "accuracy", "Passivization", "to", "use", "the", "passive", "voice.", "1"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 569.76,
+    "y2": 634.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table3-1.png"
+}, {
+  "caption": "Table 2: LLM raw prompt templates",
+  "captionBoundary": {
+    "x1": 233.10899353027344,
+    "x2": 378.5828857421875,
+    "y1": 129.12454223632812,
+    "y2": 135.12701416015625
+  },
+  "figType": "Table",
+  "imageText": ["Iterative", "Generate", "a", "variation", "of", "the", "following", "instruction", "while", "keeping", "the", "semantic", "meaning.\\n\\n", "Input:", "[INSTRUCTION]\\n", "Output:<COMPLETE>", "Insert", "TruthfulQA", "Professor", "Smith", "was", "given", "the", "following", "instructions:<INSERT>Here", "are", "the", "Professor’s", "responses:[QA_CONTEXT]", "Insert", "instruction", "I", "instructed", "my", "friend", "to<INSERT>The", "friend", "read", "the", "instruction", "and", "wrote", "an", "output", "for", "every", "one", "of", "the", "inputs.\\n", "Here", "are", "the", "input-output", "pairs:[CONTEXT]", "and", "wrote", "an", "output", "for", "every", "one", "of", "the", "inputs.\\n", "Here", "are", "the", "input-output", "pairs:[CONTEXT]", "\\n\\n", "The", "instruction", "was<COMPLETE>", "Context", "(5×)", "\\n\\n", "Input:", "[INPUT]", "\\n", "Output:", "[OUTPUT]", "QA_Context", "(6×)", "\\n\\n", "Q:", "[QUESTION]", "\\n", "A:", "[ANSWER]", "Zero", "shot", "Instruction:", "[INSTRUCTION]\\n\\n", "Input:", "[INPUT]", "\\n", "Output:<COMPLETE>", "Few", "shot", "Instruction:", "[INSTRUCTION][CONTEXT]\\n\\n", "Input:", "[INPUT]", "\\n", "Out-", "put:<COMPLETE>", "Forward", "instruction", "I", "gave", "a", "friend", "an", "instruction", "and", "five", "inputs.", "The", "friend", "read", "the", "instruction", "Usage", "Template"],
+  "name": "2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 528.0,
+    "y1": 153.6,
+    "y2": 365.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table2-1.png"
+}, {
+  "caption": "Figure 15: Zero-shot test accuracy of best performing instruction on 24 Instruction Induction tasks using two different metrics and two different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9987487792969,
+    "y1": 486.7055358886719,
+    "y2": 503.6659851074219
+  },
+  "figType": "Figure",
+  "imageText": ["logp_forward", "logp_insert", "exec_forward", "exec_insert", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "15",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 491.03999999999996,
+    "y1": 307.68,
+    "y2": 470.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure15-1.png"
+}, {
+  "caption": "Figure 14: Zero-shot test accuracy on 24 Instruction Induction tasks using two different metrics and two different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99676513671875,
+    "y1": 268.0485534667969,
+    "y2": 285.010009765625
+  },
+  "figType": "Figure",
+  "imageText": ["logp_forward", "logp_insert", "exec_forward", "exec_insert", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "14",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 124.32,
+    "x2": 491.03999999999996,
+    "y1": 88.8,
+    "y2": 252.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure14-1.png"
+}, {
+  "caption": "Figure 16: In-Context learning without instruction on 24 Instruction Induction tasks using two different metrics and two different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.997314453125,
+    "y1": 705.361572265625,
+    "y2": 722.322998046875
+  },
+  "figType": "Figure",
+  "imageText": ["logp_forward", "logp_insert", "exec_forward", "exec_insert", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "16",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 491.03999999999996,
+    "y1": 526.56,
+    "y2": 689.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure16-1.png"
+}, {
+  "caption": "Figure 1: (a) Natural language program synthesis finds an appropriate instruction (the program) that generates the observed demonstrations when executed by the model. We frame this as a black-box optimization problem guided by an inference procedure. (b) We use LLMs as inference models to fill in the blank; our algorithm involves a search over candidates proposed by the inference models. (c) As measured by the interquartile mean across the 24 NLP tasks introduced by Honovich et al. (2022), APE is able to surpass human performance when using the InstructGPT model (Ouyang et al., 2022).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2437438964844,
+    "y1": 220.57351684570312,
+    "y2": 281.3710021972656
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Interquartile", "mean", "across", "24", "tasks", "Human", "Prompt", "Engineer", "ce", "rm", "an", "er", "fo", "ho", "t", "P", "ro", "-S", "n", "Ze", "M", "ea", "rti", "le", "rq", "ua", "In", "te", "175B", "0.76", "175B", "0.71", "175B", "0.40", "175B", "0.03", "6.7B", "0.57", "6.7B", "0.65", "6.7B", "0.03", "6.7B", "0.03", "1.3B", "0.73", "1.3B", "0.63", "0.01", "1.3B", "0.01", "1.3B", "350M", "0.59", "350M", "0.61", "350M", "0.02", "350M", "0.01", "0.8", "0.75", "0.6", "0.4", "0.2", "0", "Greedy", "(GPT-3)", "Greedy", "(InstructGPT)", "APE", "(GPT-3)", "APE", "(InstructGPT)", "(b)", "LLMs", "as", "inference", "models", "Model", "Output", "Model", "Input", "<M>: read", "both", "sentences", "and", "determine", "which", "one", "is", "the", "cause", "and", "which", "one", "is", "the", "effect.", "Choose", "the", "sentence", "that", "is", "the", "cause", "and", "write", "it", "as", "the", "output.", "Input:", "Sentence", "1:", "The", "dinosaurs", "became", "extinct.", "Sentence", "2:", "A", "large", "object", "hit", "the", "Earth.", "Output:", "A", "large", "object", "hit", "the", "Earth.", "...", "Input:", "Sentence", "1:", "The", "company's", "posted", "strong", "earnings.", "Sentence", "2:", "The", "company's", "stock", "went", "up.", "Output:", "The", "company's", "posted", "strong", "earnings.", "I", "instructed", "my", "friend", "to", "<M>.", "The", "friend", "read", "the", "instruction", "and", "wrote", "an", "output", "for", "every", "one", "of", "the", "inputs.", "Here", "are", "the", "input-output", "pairs:", "(a)", "Instruction", "Demonstrations", "Approximate", "Inference", "using", "LLMs"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 65.75999999999999,
+    "y2": 207.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure1-1.png"
+}, {
+  "caption": "Figure 19: Test accuracy of in-Context learning with best performing instruction on 24 Instruction Induction tasks using two different metrics and two different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011291503906,
+    "y1": 705.361572265625,
+    "y2": 722.322998046875
+  },
+  "figType": "Figure",
+  "imageText": ["logp_forward", "logp_insert", "exec_forward", "exec_insert", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "19",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 491.03999999999996,
+    "y1": 526.56,
+    "y2": 689.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure19-1.png"
+}, {
+  "caption": "Figure 18: Test accuracy of in-Context learning with instruction on 24 Instruction Induction tasks using two different metrics and two different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99737548828125,
+    "y1": 486.7055358886719,
+    "y2": 503.6659851074219
+  },
+  "figType": "Figure",
+  "imageText": ["logp_forward", "logp_insert", "exec_forward", "exec_insert", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "18",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 124.32,
+    "x2": 491.03999999999996,
+    "y1": 307.68,
+    "y2": 470.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure18-1.png"
+}, {
+  "caption": "Figure 17: In-Context learning without instruction on 24 Instruction Induction tasks using two different metrics and two different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.997314453125,
+    "y1": 268.0485534667969,
+    "y2": 285.010009765625
+  },
+  "figType": "Figure",
+  "imageText": ["logp_forward", "logp_insert", "exec_forward", "exec_insert", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "17",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 124.32,
+    "x2": 491.03999999999996,
+    "y1": 88.8,
+    "y2": 252.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure17-1.png"
+}, {
+  "caption": "Table 1: For convenience, Table 1 from Honovich et al. (2022) is duplicated here. This describes the 24 NLP instruction induction tasks.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00054931640625,
+    "y1": 131.37454223632812,
+    "y2": 148.33599853515625
+  },
+  "figType": "Table",
+  "imageText": ["Syntax", "Negation", "Negate", "the", "input", "sentence.", "Time", "is", "finite", "→", "Time", "is", "not", "fi-", "nite.", "Passivization", "Write", "the", "input", "sentence", "in", "passive", "form.", "The", "artist", "introduced", "the", "scientist.", "→", "The", "scientist", "was", "introduced", "by", "the", "artist.", "Pluralization", "Convert", "the", "input", "word", "to", "its", "plural", "form.", "cat→", "cats", "Morpho-", "syntax", "Starting", "With", "Extract", "the", "words", "starting", "with", "a", "given", "letter", "from", "the", "input", "sentence.", "The", "man", "whose", "car", "I", "hit", "last", "week", "sued", "me.", "[m]→", "man,", "me", "List", "Letters", "Break", "the", "input", "word", "into", "letters,", "sepa-", "rated", "by", "spaces.", "cat→", "c", "a", "t", "Second", "Letter", "Extract", "the", "second", "letter", "of", "the", "input", "word.", "cat→", "a", "Spelling", "First", "Letter", "Extract", "the", "first", "letter", "of", "the", "input", "word.", "cat→", "c", "Category", "Task", "Instruction", "Demonstration"],
+  "name": "1",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.91999999999996,
+    "y1": 160.79999999999998,
+    "y2": 343.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table1-1.png"
+}, {
+  "caption": "Figure 2: Our method, Automatic Prompt Engineer (APE), automatically generates instructions for a task that is specified via output demonstrations: it generates several instruction candidates, either via direct inference or a recursive process based on semantic similarity, executes them using the target model, and selects the most appropriate instruction based on computed evaluation scores.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.1699523925781,
+    "y1": 169.40353393554688,
+    "y2": 208.28302001953125
+  },
+  "figType": "Figure",
+  "imageText": ["Execute", "&", "evaluate", "Instruction", "Scoring", "and", "ﬁltering", "using", "LLMs", " ", "Generate", "semantically", "similar", "instructions  ", "LLMs", "Large", "set", "of ", "instruction", "candidatesDemonstrations", "read", "both", "sentences", "and", "determine", "..."],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 456.47999999999996,
+    "y1": 75.36,
+    "y2": 155.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure2-1.png"
+}, {
+  "caption": "Table 8: Number of tasks that achieves human-level performance on zero-shot learning and few-shot learning.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0014953613281,
+    "y1": 112.28055572509766,
+    "y2": 129.24200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Beat", "Zero-shot", "human", "(Mean)", "14", "16", "19", "13", "Beat", "Zero-shot", "human", "(Best)", "19", "18", "21", "19", "Beat", "In-context", "w/o", "instr", "(Mean)", "21", "18", "21", "18", "Beat", "In-context", "w/o", "instr", "(Best)", "23", "21", "23", "19", "Beat", "In-context", "human", "(Mean)", "13", "11", "12", "11", "Beat", "In-context", "human", "(Best)", "15", "12", "13", "12", "Forward", "Insert", "Forward", "Insert", "Task", "LogP", "ExecACC"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 446.4,
+    "y1": 141.6,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table8-1.png"
+}, {
+  "caption": "Figure 8: Zero-shot test accuracy of best performing instruction on 24 Instruction Induction tasks. APE achieves human-level performance on 21 out of 24 tasks.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.7452697753906,
+    "y1": 438.57452392578125,
+    "y2": 455.5360107421875
+  },
+  "figType": "Figure",
+  "imageText": ["Greedy", "Human", "APE", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 491.03999999999996,
+    "y1": 259.68,
+    "y2": 422.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure8-1.png"
+}, {
+  "caption": "Figure 9: Few-shot in-context test accuracy of best performing instruction on 24 Instruction Induction tasks. The APE -generated instruction improves the few-shot in-context learning performance on 23 out of 24 tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 658.6925659179688,
+    "y2": 686.6119995117188
+  },
+  "figType": "Figure",
+  "imageText": ["Instruction", "Only", "In-context", "Only", "Instruction", "+", "In-context", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Sentiment", "Starting", "With", "Sum", "Synonyms", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "Word", "in", "Context", "0", "1", "Membership", "Negation", "Number", "to", "Word", "Passivization", "Pluralization", "Rhymes", "Second", "Letter", "Sentence", "Similarity", "0", "1", "Antonyms", "Cause", "Selection", "Common", "Concept", "Diff", "First", "Letter", "Formality", "Large", "Animal", "List", "Letters", "0"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 491.03999999999996,
+    "y1": 480.0,
+    "y2": 643.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure9-1.png"
+}, {
+  "caption": "Figure 20: Iterative Monte Carlo search improves the quality of the instruction candidates at each round. Task: Antonyms.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 329.01654052734375,
+    "y2": 345.9779968261719
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")"],
+  "name": "20",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 141.6,
+    "y2": 311.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure20-1.png"
+}, {
+  "caption": "Figure 21: Iterative Monte Carlo search improves the quality of the instruction candidates at each round. Task: Cause Selection.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 657.0015869140625,
+    "y2": 673.9630126953125
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")"],
+  "name": "21",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 469.44,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure21-1.png"
+}, {
+  "caption": "Figure 5: Comparison of APE and “help” (human) prompt on the TruthfulQA task. (a) Percentage of answers that were either true (% True), informative (% Info), or both (% True + % Info) on the 100 training examples. (b) Same data on the 717 test examples. (c) %True-%Info frontier computed on training data with top 10 instructions from each metric. (d) %True-%Info frontier on the test data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0020446777344,
+    "y1": 176.48251342773438,
+    "y2": 215.36199951171875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "%True-%Info", "trade-off", "Test", "Truth", "Info", "Truth+Info", "Human", ")", "in", "fo", "P", "T-", "e", "(G", "at", "iv", "fo", "rm", "%", "In", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.60", "0.65", "0.70", "0.75", "0.80", "0.85", "0.90", "0.95", "%", "True", "(GPT-judge)", "(c)", "%True-%Info", "trade-off", "Training", "Truth", "Info", "Truth+Info", "Human", ")", "in", "fo", "P", "T-", "e", "(G", "at", "iv", "fo", "rm", "%", "In", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.60", "0.65", "0.70", "0.75", "0.80", "0.85", "0.90", "0.95", "%", "True", "(GPT-judge)", "(b)", "Average", "performance", "Test", "Human", "APE", "(%", ")", "al", "ue", "ric", "V", "M", "et", "0.8", "0.6", "0.4", "0.2", "%", "True", "(GPT-judge)", "%", "Info", "(GPT-info)", "%", "True", "+", "%", "Info", "0.0", "(a)", "Average", "performance", "Training", "Human", "APE", "(%", ")", "al", "ue", "ric", "V", "M", "et", "0.8", "0.6", "0.4", "0.2", "%", "True", "(GPT-judge)", "%", "Info", "(GPT-info)", "%", "True", "+", "%", "Info", "0.0"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 163.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure5-1.png"
+}, {
+  "caption": "Figure 6: (Left) Quality of the proposal distribution of models with different size as assessed by test execution accuracy. (Right) Iterative Monte Carlo search improves the quality of the instruction candidates at each round.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3529968261719,
+    "y1": 332.321533203125,
+    "y2": 360.24200439453125
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "Train", "accuracy", "(", ")", "ac", "y", ">", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", "InstructGPT", "(6.7B)", "InstructGPT", "(175B)", "InstructGPT", "(350M)", "InstructGPT", "(1.3B)", "GPT-3", "(6.7B)", "GPT-3", "(175B)", "GPT-3", "(350M)", "GPT-3", "(1.3B)", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Test", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Test", "accuracy", "(", ")"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 498.24,
+    "y1": 228.95999999999998,
+    "y2": 317.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure6-1.png"
+}, {
+  "caption": "Figure 11: Survival function and the histogram of test accuracy on a challenging task (i.e. Start With)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013732910156,
+    "y1": 663.6385498046875,
+    "y2": 669.6409912109375
+  },
+  "figType": "Figure",
+  "imageText": ["nt", "GPT-3", "(350M)", "GPT-3", "(1.3B)", "GPT-3", "(6.7B)", "GPT-3", "(175B)", "InstructGPT", "(350M)", "InstructGPT", "(1.3B)", "InstructGPT", "(6.7B)", "InstructGPT", "(175B)", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "Test", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "Test", "accuracy", "(", ")"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 122.39999999999999,
+    "x2": 487.68,
+    "y1": 473.76,
+    "y2": 646.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure11-1.png"
+}, {
+  "caption": "Figure 10: Survival function and the histogram of test accuracy on a simple task (i.e. Pluralization)",
+  "captionBoundary": {
+    "x1": 108.85199737548828,
+    "x2": 503.1517028808594,
+    "y1": 335.6535339355469,
+    "y2": 341.656005859375
+  },
+  "figType": "Figure",
+  "imageText": ["InstructGPT", "(6.7B)", "InstructGPT", "(175B)", "InstructGPT", "(350M)", "InstructGPT", "(1.3B)", "GPT-3", "(6.7B)", "GPT-3", "(175B)", "GPT-3", "(350M)", "GPT-3", "(1.3B)", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Test", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Test", "accuracy", "(", ")"],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 487.68,
+    "y1": 145.92,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure10-1.png"
+}, {
+  "caption": "Table 7: The best instruction under zero-shot test accuracy generated by APE for each of the 24 tasks in the Instruction-Induction benchmark",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9989929199219,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Passivization", "to", "use", "the", "passive", "voice.", "1.00", "Pluralization", "to", "pluralize", "the", "word.", "1.00", "Morpho-", "syntax", "0.68", "Starting", "With", "to", "find", "the", "first", "word", "that", "starts", "with", "the", "letter", "given", "in", "brackets.", "0.99", "List", "Letters", "to", "write", "the", "inputted", "word", "out", "letter", "by", "letter", "with", "a", "space", "in", "between", "each", "letter.", "Second", "Letter", "most", "likely", "“Find", "the", "second", "letter", "in", "each", "word.”", "0.84", "Spelling", "First", "Letter", "most", "likely", "“Write", "the", "first", "letter", "of", "the", "word.”", "1.00", "Category", "Task", "Best", "Instruction", "Generated", "by", "APE", "Zero-Shot", "Test", "Accuracy"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 526.0799999999999,
+    "y1": 113.28,
+    "y2": 250.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table7-1.png"
+}, {
+  "caption": "Figure 22: Iterative Monte Carlo search improves the quality of the instruction candidates at each round. Task: Passivization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 329.01654052734375,
+    "y2": 345.9779968261719
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")"],
+  "name": "22",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 141.6,
+    "y2": 311.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure22-1.png"
+}, {
+  "caption": "Figure 23: Iterative Monte Carlo search improves the quality of the instruction candidates at each round. Task: Second Letter.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 657.0015869140625,
+    "y2": 673.9630126953125
+  },
+  "figType": "Figure",
+  "imageText": ["Start", "1", "2", "3", "4", "5", "nt", "C", "ou", "10", "2", "10", "1", "10", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")", ">", "ac", "y", "cc", "ur", "ith", "a", "ns", "w", "ct", "io", "st", "ru", "%", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Train", "accuracy", "(", ")"],
+  "name": "23",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 469.44,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure23-1.png"
+}, {
+  "caption": "Figure 7: (Left) Test execution of the best instruction as we increase the number of instruction candidates. We report the mean and standard deviation across 6 different tasks. (Middle) Pearson Correlation between the test accuracy and two metrics on 24 tasks. (Right) Test execution accuracy of the best instruction selected using APE and iterative APE (APE (IT)).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.35211181640625,
+    "y1": 177.12350463867188,
+    "y2": 216.00299072265625
+  },
+  "figType": "Figure",
+  "imageText": ["Human", "APE", "APE", "(IT)", "y", "ur", "ac", "A", "cc", "io", "n", "xc", "ut", "E", "xe", "1", "Sentiment", "Antonyms", "Cause", "Selection", "0", "1", "Second", "Letter", "Passivization", "Translation", "en-fr", "0", "LogP", "Exec", "Acc", "tio", "n", "re", "la", "C", "or", "rs", "on", "P", "ea", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "5", "10", "15", "20", "25", "Sorted", "Task", "Index", "APE", "(Train)", "APE", "(Test)", "Human", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "0.8", "0.7", "0.6", "0.5", "0.4", "4", "8", "16", "32", "64", "128", "Posterior", "Sample", "Size"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 66.72,
+    "y2": 162.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure7-1.png"
+}, {
+  "caption": "Figure 12: Zero-shot test accuracy on 24 Instruction Induction tasks using eight different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 316.780517578125,
+    "y2": 333.7409973144531
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "GPT-3_S", "GPT-3_M", "GPT-3_L", "GPT-3_XL", "InstructGPT_S", "InstructGPT_M", "InstructGPT_L", "InstructGPT_XL", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Common", "Concept", "Formality", "Sum", "Diff", "Number", "to", "Word", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "0", "1", "Word", "in", "Context", "Negation", "Antonyms", "Synonyms", "Membership", "Rhymes", "Large", "Animal", "Cause", "Selection", "0", "1", "First", "Letter", "Second", "Letter", "List", "Letters", "Starting", "With", "Pluralization", "Passivization", "Sentiment", "Sentence", "Similarity", "0"],
+  "name": "12",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 148.79999999999998,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure12-1.png"
+}, {
+  "caption": "Figure 13: Zero-shot test accuracy of best performing instruction on 24 Instruction Induction tasks using eight different LLM models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9987487792969,
+    "y1": 644.7655639648438,
+    "y2": 661.7269897460938
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "GPT-3_S", "GPT-3_M", "GPT-3_L", "GPT-3_XL", "InstructGPT_S", "InstructGPT_M", "InstructGPT_L", "InstructGPT_XL", "ac", "y", "cc", "ur", "n", "A", "cu", "tio", "E", "xe", "1", "Common", "Concept", "Formality", "Sum", "Diff", "Number", "to", "Word", "Translation", "en-de", "Translation", "en-es", "Translation", "en-fr", "0", "1", "Word", "in", "Context", "Negation", "Antonyms", "Synonyms", "Membership", "Rhymes", "Large", "Animal", "Cause", "Selection", "0", "1", "First", "Letter", "Second", "Letter", "List", "Letters", "Starting", "With", "Pluralization", "Passivization", "Sentiment", "Sentence", "Similarity", "0"],
+  "name": "13",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 476.64,
+    "y2": 631.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Figure13-1.png"
+}, {
+  "caption": "Table 4: Worst APE instructions for underperforming tasks in zero-shot setting",
+  "captionBoundary": {
+    "x1": 148.6219940185547,
+    "x2": 463.0713806152344,
+    "y1": 116.98551177978516,
+    "y2": 122.98797607421875
+  },
+  "figType": "Table",
+  "imageText": ["Second", "Letter", "write", "the", "middle", "letter", "of", "the", "word.", "0.32", "Membership", "probably", "to", "sort", "the", "inputs", "alphabetically.", "0", "Task", "Worst", "instruction", "Zero-shot", "test", "accuracy", "Passivization", "to", "reverse", "the", "order", "of", "the", "subject", "and", "object.", "0.17"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 140.64,
+    "y2": 206.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table4-1.png"
+}, {
+  "caption": "Table 5: APE Rhyme instructions with zero and few-shot performance",
+  "captionBoundary": {
+    "x1": 165.3990020751953,
+    "x2": 446.2944030761719,
+    "y1": 287.0075378417969,
+    "y2": 293.010009765625
+  },
+  "figType": "Table",
+  "imageText": ["write", "a", "function", "that", "takes", "a", "word", "as", "input", "and", "1", "0.07returns", "the", "word", "with", "the", "first", "letter", "capitalized.", "“Write", "a", "function", "that", "takes", "in", "a", "string", "and", "prints", "1", "0.39out", "the", "string", "with", "the", "first", "letter", "capitalized.”", "probably", "“Write", "a", "function", "that", "takes", "a", "string", "0.99", "0.37as", "input", "and", "outputs", "the", "string", "in", "all", "caps.”", "write", "a", "function", "that", "takes", "in", "a", "string", "and", "1", "0.03outputs", "the", "string", "with", "the", "first", "letter", "capitalized.", "Instruction", "Zero-shot", "test", "accuracy", "Few-shot", "test", "accuracy", "probably", "“Write", "a", "word", "that", "rhymes", "0.55", "0.61with", "each", "of", "the", "following", "words.”"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 535.1999999999999,
+    "y1": 312.96,
+    "y2": 460.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table5-1.png"
+}, {
+  "caption": "Table 6: APE Second Letters instructions with zero and few-shot performance",
+  "captionBoundary": {
+    "x1": 150.02099609375,
+    "x2": 461.6709289550781,
+    "y1": 541.4385375976562,
+    "y2": 547.4409790039062
+  },
+  "figType": "Table",
+  "imageText": ["write", "the", "middle", "letter", "of", "the", "word.", "0.32", "0.22", "to", "\"write", "the", "vowel", "that", "comes", "before", "0.50", "0.59the", "first", "double", "letter", "in", "the", "word.\"", "to", "find", "the", "first", "vowel", "in", "each", "word.", "0.60", "0.62", "to", "write", "the", "letter", "that", "0.72", "0.64appears", "second", "in", "the", "word.", "Instruction", "Zero-shot", "test", "accuracy", "Few-shot", "test", "accuracy", "most", "likely", "\"Find", "the", "0.84", "0.69second", "letter", "in", "each", "word.\""],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 566.4,
+    "y2": 692.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_92gvk82DE--Table6-1.png"
+}]

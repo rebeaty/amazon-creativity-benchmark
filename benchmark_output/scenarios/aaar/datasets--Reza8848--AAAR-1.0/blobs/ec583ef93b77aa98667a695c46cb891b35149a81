@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 2: Ablation study on the components of MECTA on ImageNet-C. The dash horizontal lines in (b) and (c) are the performance of BN with the best trade-off in (a) (of batch size 128).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00146484375,
+    "y1": 709.612548828125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Cache", "pruning", "(C).", "b)", "ze", "(M", "he", "si", "c", "ac", "m", "ax", "400", "300", "200", "100", "ac", "c", "io", "n", "rru", "pt", "n-", "co", "m", "ea", "56", "54", "52", "50", "0.2", "0.4", "0.6", "0.8", "q", "(b)", "Adaptive", "training", "(L).", "b)", "e", "(M", "e", "siz", "ca", "ch", "av", "g", "600", "500", "400", "300", "200", "100", "ac", "c", "io", "n", "rru", "pt", "n-", "co", "m", "ea", "56", "54", "52", "50", "th", "10", "4", "10", "3", "10", "2", "(a)", "Trade-off", "comparison.", "method", "EATA", "EATA+MECTA-B", "BN", "EATA+MECTA-BL", "EATA+MECTA-BLC", "25", "30", "35", "40", "45", "50", "55", "60", "m", "ea", "n-", "co", "rru", "pt", "io", "n", "ac", "c", "0", "500", "1000", "1500", "2000", "2500", "average", "cache", "size", "(Mb)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 478.56,
+    "y1": 608.64,
+    "y2": 703.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Dynamic cache sizes and layer-wise β using MECTA on ImageNet-C.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 504.0038757324219,
+    "y1": 534.5415649414062,
+    "y2": 562.4609985351562
+  },
+  "figType": "Figure",
+  "imageText": ["Impul.", "Defoc.norm", "2", "norm", "4", "norm", "23", "norm", "40", "norm", "45", "2", ")", "(×", "10", "2.0", "1.0", "0.2", "0.3", "0.5", "2000", "2500", "3000", "3500", "4000", "4500", "5000", "5500", "index", "b)", "e", "(M", "e", "siz", "ca", "ch", "350", "300", "250", "200", "0", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "iteration"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 370.56,
+    "x2": 500.15999999999997,
+    "y1": 378.24,
+    "y2": 524.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Figure3-1.png"
+}, {
+  "caption": "Table 1: Continual evaluation on three datasets with the highest severity level 5 regarding accuracy (%) and cache sizes (Mb). For a fair comparison, batch sizes (BS) are chosen such that the corresponding cache sizes are lower than those of BN with a batch size of 128. Orig. denotes the original data. Blue cells highlight the accuracy that is the highest among all methods, and the bold texts indicate the best accuracy given the same base algorithm. Results with more batch sizes are in Table 5.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.66717529296875,
+    "y1": 144.87551879882812,
+    "y2": 194.7139892578125
+  },
+  "figType": "Table",
+  "imageText": ["EATA", "8", "34.1", "37.0", "35.0", "27.5", "28.1", "35.5", "38.6", "39.6", "39.7", "47.8", "56.6", "35.5", "44.1", "53.3", "46.7", "63.2", "41.4", "307", "307", "+MECTA", "32", "50.3", "54.1", "52.6", "44.6", "47.0", "53.6", "57.0", "55.5", "54.8", "62.9", "70.3", "54.3", "61.1", "68.4", "63.0", "74.6", "57.8", "288", "373", "TENT", "8", "33.8", "16.5", "0.8", "0.4", "0.3", "0.4", "0.4", "0.4", "0.4", "0.3", "0.4", "0.2", "0.3", "0.4", "0.3", "0.4", "3.5", "307", "307", "+MECTA", "32", "47.0", "52.3", "51.7", "38.5", "43.1", "47.5", "51.5", "47.4", "49.3", "54.2", "64.4", "46.2", "55.6", "62.4", "57.0", "68.8", "52.3", "269", "373", "ImageNet-C", "BN", "64", "38.4", "41.6", "38.8", "29.1", "32.1", "40.1", "46.4", "44.1", "46.8", "54.8", "67.7", "35.1", "53.7", "64.7", "54.6", "73.5", "47.6", "206", "206", "BN", "128", "39.2", "42.6", "39.6", "29.9", "32.9", "40.8", "47.4", "45.0", "47.7", "55.8", "68.5", "36.0", "54.8", "65.4", "55.7", "74.2", "48.5", "411", "411", "EATA", "8", "52.1", "54.2", "53.2", "65.3", "51.5", "63.8", "64.9", "59.1", "58.5", "53.9", "66.8", "63.2", "56.3", "61.1", "52.9", "70.1", "59.2", "100", "100", "+MECTA", "32", "58.7", "62.0", "60.0", "73.0", "60.5", "71.3", "73.9", "66.7", "67.3", "62.0", "75.3", "71.7", "66.3", "69.8", "61.5", "78.0", "67.4", "81", "120", "Tent", "8", "52.9", "53.9", "46.7", "50.5", "31.2", "29.7", "23.7", "14.3", "10.0", "6.7", "5.9", "3.4", "3.9", "3.6", "3.5", "3.5", "21.5", "100", "100", "+MECTA", "32", "58.6", "61.5", "60.1", "73.9", "61.0", "72.4", "74.9", "66.8", "68.1", "61.9", "75.3", "71.3", "66.7", "70.5", "61.7", "78.1", "67.7", "77", "120", "CIFAR100-C", "BN", "128", "57.6", "59.0", "56.6", "72.5", "58.2", "69.9", "71.8", "64.7", "64.8", "57.9", "73.5", "69.8", "64.3", "66.7", "58.6", "75.8", "65.1", "134", "134", "EATA", "8", "74.5", "70.9", "66.6", "69.7", "55.5", "54.6", "47.2", "38.4", "33.1", "35.1", "35.2", "18.8", "12.2", "14.5", "13.3", "8.5", "40.5", "100", "100", "+MECTA", "32", "87.1", "89.3", "86.8", "92.0", "85.6", "90.7", "92.3", "90.8", "91.1", "89.7", "93.3", "92.5", "88.0", "91.0", "86.9", "93.5", "90.0", "71", "119", "Tent", "8", "68.8", "46.3", "16.4", "12.8", "11.8", "8.9", "9.9", "10.7", "10.3", "10.2", "10.3", "10.2", "10.1", "10.0", "10.2", "10.2", "16.7", "100", "100", "+MECTA", "32", "87.0", "88.6", "85.7", "91.8", "84.5", "90.9", "92.5", "90.1", "91.3", "88.8", "93.2", "92.0", "88.0", "90.5", "86.0", "93.8", "89.7", "62", "119", "CIFAR10-C", "BN", "128", "81.5", "83.2", "79.9", "92.4", "80.7", "91.1", "92.1", "87.9", "87.7", "85.7", "92.7", "89.8", "85.6", "87.6", "83.0", "94.2", "87.2", "134", "134", "Alg.", "BS", "Gauss.", "Shot.", "Impul.", "Defoc.", "Glass.", "Motion", "Zoom.", "Snow", "Frost", "Fog", "Bright.", "Contr.", "Elast.", "Pixel.", "JPEG", "Orig.", "Avg", "Avg", "Max", "Noise", "Blur", "Weather", "Digital", "Acc.", "Cache"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 207.84,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Table1-1.png"
+}, {
+  "caption": "Table 2: Comparison to other baselines with a batch size of 64 on the standardly-trained ResNet50 on ImageNet-C and on the highest severity level 5. GN is the group norm and JT denotes the model is jointly trained via supervised cross-entropy and rotation prediction losses. The bold numbers indicate the highest accuracy (or smallest cache) and the underlined ones are the second best result.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0014343261719,
+    "y1": 523.6505737304688,
+    "y2": 562.5289916992188
+  },
+  "figType": "Table",
+  "imageText": ["EATA", "35.0", "38.1", "36.8", "33.8", "34.2", "47.3", "53.2", "51.1", "45.6", "59.7", "68.0", "44.2", "57.2", "60.4", "54.7", "48.0", "2460", "+MECTA", "33.3", "40.1", "39.2", "32.9", "35.0", "45.4", "52.9", "49.4", "45.6", "58.7", "67.4", "44.1", "56.9", "60.4", "55.5", "47.8", "746", "ResNet50;", "Lifelong", "adaptation", "Tent", "28.4", "34.1", "31.7", "19.3", "12.2", "6.9", "4.0", "1.4", "0.8", "0.7", "0.9", "0.4", "0.6", "0.7", "0.6", "9.5", "2460", "+MECTA", "25.3", "33.7", "32.8", "22.4", "24.0", "27.4", "34.8", "27.6", "24.7", "32.4", "45.1", "12.7", "25.6", "27.4", "21.8", "27.8", "746", "ResNet50;", "Reset", "model", "per", "domain", "adaptation", "Source", "2.2", "2.9", "1.8", "17.9", "9.8", "14.8", "22.5", "16.9", "23.3", "24.4", "58.9", "5.4", "16.9", "20.6", "31.6", "18.0", "206", "BN", "15.5", "16.1", "16.3", "20.0", "20.0", "28.5", "40.0", "34.8", "35.0", "48.5", "65.9", "24.1", "45.8", "50.7", "41.1", "33.5", "206", "TTA", "(Ashukha", "et", "al.,", "2021)", "4.1", "4.9", "4.5", "12.5", "8.2", "12.9", "25.8", "14.0", "19.1", "21.3", "53.0", "12.4", "14.6", "24.6", "33.6", "17.7", "2460×64", "MEMO", "(Zhang", "et", "al.,", "2021)", "7.5", "8.7", "9.0", "19.7", "13.0", "20.7", "27.6", "25.3", "28.8", "32.1", "61.0", "11.0", "23.8", "33.0", "37.5", "23.9", "2460×65", "Tent", "28.4", "30.2", "30.1", "28.2", "27.3", "41.4", "49.5", "47.1", "41.3", "57.5", "67.4", "25.1", "54.8", "58.5", "52.3", "42.6", "2460", "ResNet50", "(GN+JT);", "Reset", "model", "per", "domain", "adaptation", "Source", "5.1", "4.9", "5.8", "11.1", "8.3", "13.3", "18.4", "17.5", "18.2", "19.4", "50.8", "12.6", "23.1", "20.8", "31.5", "17.4", "206", "TTT", "(Sun", "et", "al.,", "2020)", "31.0", "33.6", "33.4", "28.1", "7.8", "33.2", "36.8", "40.9", "19.0", "51.0", "61.8", "38.9", "49.4", "51.7", "48.0", "37.6", "2460×21", "Alg.", "Gauss.", "Shot.", "Impul.", "Defoc.", "Glass.", "Motion", "Zoom.", "Snow", "Frost", "Fog", "Bright.", "Contr.", "Elast.", "Pixel.", "JPEG", "Avg", "Max", "(Mb)", "Noise", "Blur", "Weather", "Digital", "Acc.", "Cache"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 575.52,
+    "y2": 720.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Table2-1.png"
+}, {
+  "caption": "Table 4: Evaluation of k-new K-old shift accuracy by EATA. Average accuracy (AA %) and worst accuracy (WA %) are reported for each target perturbation. Values in the brackets denote the difference between the current method and the base one without EMA and MECTA-B. More combinations of (K, k) are in Table 7.",
+  "captionBoundary": {
+    "x1": 106.83399963378906,
+    "x2": 504.0040283203125,
+    "y1": 186.04550170898438,
+    "y2": 224.92401123046875
+  },
+  "figType": "Table",
+  "imageText": ["49", "1", "✗", "✗", "35.5", "34.6", "37.0", "36.8", "50.1", "49.8", "48.3", "47.8", "✓", "✗", "35.4", "(-0.1)", "30.6", "(-4.0)", "26.6", "(-11.0)", "20.1", "(-16.7)", "41.0", "(-9.1)", "25.9", "(-23.9)", "42.8", "(-5.5)", "39.3", "(-8.5)", "✓", "✓", "34.4", "(-1.1)", "32.0", "(-2.6)", "28.6", "(-8.4)", "25.7", "(-11.1)", "43.6", "(-6.5)", "39.1", "(-10.7)", "42.6", "(-5.7)", "41.2", "(-6.6)", "β", "=", "0.1", "Auto", "β", "AA", "WA", "AA", "WA", "AA", "WA", "AA", "WA", "K", "k", "EMA", "MECTA-B", "Impul.", "Motion", "Fog", "Elast."],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 233.76,
+    "y2": 286.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Table4-1.png"
+}, {
+  "caption": "Table 3: Ablation study of MECTA-B on ImageNet-C with the highest severity level 5 regarding accuracy (%) and a batch size of 16. Bold texts indicate the best accuracy among ablations of EMA and MECTA-B. See Table 6 for other backbone methods.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3602294921875,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["EATA", "✗", "✗", "44.4", "47.1", "45.4", "39.0", "39.4", "47.4", "49.7", "49.7", "48.4", "57.6", "64.3", "47.8", "54.5", "61.7", "56.3", "69.5", "51.4", "✓", "✗", "50.4", "53.1", "51.9", "45.2", "45.9", "53.9", "56.3", "55.6", "54.2", "63.1", "69.6", "53.2", "60.5", "67.2", "62.0", "74.0", "57.3", "✓", "✓", "51.7", "54.8", "53.6", "46.0", "47.5", "54.9", "57.7", "56.9", "55.3", "64.2", "70.5", "54.2", "61.6", "68.1", "63.3", "74.9", "58.4", "Alg.", "β", "=", "0.1", "auto", "β", "Gauss.", "Shot.", "Impul.", "Defoc.", "Glass.", "Motion", "Zoom.", "Snow", "Frost", "Fog", "Bright.", "Contr.", "Elast.", "Pixel.", "JPEG", "Orig.", "Avg", "EMA", "MECTA-B", "Noise", "Blur", "Weather", "Digital"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 120.96,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Table3-1.png"
+}, {
+  "caption": "Figure 1: Demonstration of incremental memory footprints brought by each operation on ImageNet and illustration of the proposed MECTA method, which reduces the cache size of gradient-based adaptation. During forwarding, the MECTA Norm (B) stabilizes the normalization-statistic estimation via shift-aware moving-average from small batches, (C) randomly drops caches by channel admitting sparse gradient descent without knowing gradient in advance, and (L) maintains caches only for layers on demand of training.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.1685791015625,
+    "y1": 244.35055541992188,
+    "y2": 305.1470031738281
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 233.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_N92hjSf5NNh-Figure1-1.png"
+}]

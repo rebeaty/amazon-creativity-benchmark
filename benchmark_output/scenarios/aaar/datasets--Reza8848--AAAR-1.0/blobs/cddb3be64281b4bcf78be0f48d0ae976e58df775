@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 3: Illustration of intra- and inter-negative sampling for music and image data.",
+  "captionBoundary": {
+    "x1": 136.96600341796875,
+    "x2": 475.0353088378906,
+    "y1": 210.32754516601562,
+    "y2": 216.33001708984375
+  },
+  "figType": "Figure",
+  "imageText": ["GT", "data", "Intra", "negative", "samples", "Inter", "negative", "samples", "2", "3", "6", "4", "5", "1", "3", "6", "4", "1", "2", "5", "1", "2", "3", "4", "5", "6"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Examples of the input (left column) and synthesized output (middle column) from our contrastive diffusion model for dance-to-music (Rows 1-2), text-to-image (Rows 3-4), and classconditioned (Row 5) generation experiments on five datasets. The right column shows some synthesized data with reasonable quality but weaker correspondence to the input from existing methods Zhu et al. (2022); Gu et al. (2022). Consider: in Row 3, the bird is yellow, not gray-white, and has no pointy beak; in Row 4, motorbikes are hardly visible; in Row 5, the object is a flower that is just shaped like a mushroom.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6576843261719,
+    "y1": 403.592529296875,
+    "y2": 475.3479919433594
+  },
+  "figType": "Figure",
+  "imageText": ["Correspondence", "Input", "Outputs", "from", "Our", "Contrastive", "Diffusion", "Outputs", "w/", "Weaker", "si", "c", "-M", "u", "-t", "o", "an", "ce", "e", "D", "m", "ag", "o", "-I", "ss", "-t", "C", "la", "ag", "e", "-I", "m", "t-", "to", "T", "ex", "Mushroom", "Class", "label:", "street.", "up", "down", "a", "busy", "motorbikes", "line", "a", "lot", "of", "pointy", "beak.", "has", "a", "long,", "with", "white", "and", "this", "bird", "is", "gray"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 119.52,
+    "x2": 491.03999999999996,
+    "y1": 84.0,
+    "y2": 386.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Figure1-1.png"
+}, {
+  "caption": "Table 5: Complete quantitative evaluation results for the dance-to-music generation task on the AIST++ dataset. We report the mean and standard deviations of our contrastive diffusion for three inference tests.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0035400390625,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "Step-Intra", "93.9±1.2", "90.7±1.5", "25.8±0.6", "3.6", "3.5", "Ours", "Step-Inter", "92.4±1.0", "88.9±1.7", "24.3±0.7", "3.4", "3.5", "Ours", "Sample-Intra", "91.5±1.7", "84.6±1.6", "26.0±0.8", "3.5", "3.6", "Ours", "Sample-Inter", "91.8±1.6", "86.9±1.4", "27.2±0.5", "3.6", "3.6", "D2M-GAN", "Zhu", "et", "al.", "(2022)", "88.2", "84.7", "24.4", "3.3", "3.4", "Ours", "Vanilla", "89.0±1.1", "83.8±1.5", "25.3±0.8", "3.3", "3.6", "Dance2Music", "Aggarwal", "&", "Parikh", "(2021)", "83.5", "82.4", "7.0", "3.0", "-", "CMT", "Di", "et", "al.", "(2021)", "85.5", "83.5", "11.6", "3.0", "-", "GT", "Music", "100", "100", "88.5", "4.7", "4.8", "Foley", "Gan", "et", "al.", "(2020a)", "74.1", "69.4", "8.1", "2.9", "-", "Musical", "features", "Rhythms", "Rhythms", "Genre", "Coherence", "Quality", "Metrics", "Coverage", "↑", "Hit", "↑", "Accuracy", "↑", "MOS", "↑", "MOS", "↑"],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 492.0,
+    "y1": 120.96,
+    "y2": 240.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Table5-1.png"
+}, {
+  "caption": "Table 6: Ablation results for different music lengths on the AIST++ dataset.",
+  "captionBoundary": {
+    "x1": 154.78399658203125,
+    "x2": 457.2186279296875,
+    "y1": 270.9605407714844,
+    "y2": 276.9630126953125
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "Step-Intra", "87.9", "83.2", "22.9", "Ours", "Sample-Inter", "86.3", "81.6", "23.0", "D2M-GAN", "Zhu", "et", "al.", "(2022)", "-", "-", "-", "Ours", "Vanilla", "84.8", "81.1", "22.7", "6s", "Ours", "Step-Intra", "93.1", "86.4", "25.3", "Ours", "Sample-Inter", "91.4", "83.9", "26.1", "D2M-GAN", "Zhu", "et", "al.", "(2022)", "87.1", "83.0", "23.3", "Ours", "Vanilla", "86.2", "81.8", "24.6", "4s", "Ours", "Step-Intra", "93.9", "90.7", "25.8", "Ours", "Sample-Inter", "91.8", "86.9", "27.2", "D2M-GAN", "Zhu", "et", "al.", "(2022)", "88.2", "84.7", "24.4", "Ours", "Vanilla", "89.0", "83.8", "25.3", "2s", "Length", "Methods", "Beats", "Coverage", "↑", "Beats", "Hit", "↑", "Genre", "Acc.", "↑"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 279.84,
+    "y2": 430.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Table6-1.png"
+}, {
+  "caption": "Table 7: Comparisons in terms of the task, datasets, model scale, and training time between our proposed CDCD and some other diffusion-based works.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1659851074219,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["Correspondence", "Input", "Outputs", "from", "Our", "Contrastive", "Diffusion", "Model", "Outputs", "w/", "Weaker", "Class-conditioned", "ImageNet", "Ours", "CDCD", "370", "M", "160", "V100", "days", "Image", "Synthesis", "ImageNet", "ADMDhariwal", "&", "Nichol", "(2021)", "-", "150-1000", "V100", "days", "Image", "Synthesis", "ImageNet", "LDM", "Rombach", "et", "al.", "(2022)", "400M", "270", "V100", "days", "Tasks", "Dataset", "Method", "Param.", "Training", "time", "Dance-to-Music", "AIST++", "Li", "et", "al.", "(2021)", "Ours", "CDCD", "350M", "8", "V100", "days", "Dance-to-Music", "TikTok", "Zhu", "et", "al.", "(2022)", "Ours", "CDCD", "350M", "6", "V100", "days", "Text-to-Image", "CUB200", "Wah", "et", "al.", "(2011)", "Ours", "CDCD", "35M", "20", "V100", "days", "Text-to-Image", "MSCOCO", "Lin", "et", "al.", "(2014)", "Ours", "CDCD", "35M", "80", "V100", "days"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 497.76,
+    "y1": 112.32,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Table7-1.png"
+}, {
+  "caption": "Figure 5: More qualitative results from our text-to-image experiments on CUB200 dataset. We show examples of the text input (left column), the synthesized images from our contrastive diffusion model with 80 diffusion steps and a FID score of 12.61 (middle column), and the output from existing method Gu et al. (2022) with 100 diffusion steps and a FID score 12.97.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 470.531494140625,
+    "y2": 509.40997314453125
+  },
+  "figType": "Figure",
+  "imageText": ["beak.", "with", "a", "black", "green", "in", "color,", "this", "bird", "is", "black", "and", "wings", "that", "are", "brown", "and", "has", "an", "orange", "bill.", "this", "bird", "has", "bill,", "black", "head", "and", "wings,", "and", "a", "yellow", "throat.", "this", "bird", "has", "a", "pointy", "yellow", "bird.", "black", "spotted", "white", "and", "this", "bird", "is", "a", "beak.", "long,", "pointy", "black", "and", "has", "a", "this", "bird", "is", "all"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 496.32,
+    "y1": 216.95999999999998,
+    "y2": 447.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Figure5-1.png"
+}, {
+  "caption": "Table 4: FID scores and top 5 classification accuracy using pre-trained ResNet101 He et al. (2016) for classconditioned image synthesis on ImageNet 256× 256. Our model follows the SampleInter contrastive setting with 80 diffusion steps in both training and inference.",
+  "captionBoundary": {
+    "x1": 382.64801025390625,
+    "x2": 503.4156799316406,
+    "y1": 92.6165542602539,
+    "y2": 197.2490234375
+  },
+  "figType": "Table",
+  "imageText": ["VQ-D", "(T=100)", "11.89", "72.72", "Ours", "(T=80)", "11.74", "77.63", "VQGAN", "15.78", "-", "IDDPM", "12.30", "-", "Methods", "FID", "↓", "Acc.↑", "ImageBART", "21.19", "-"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 384.0,
+    "x2": 501.12,
+    "y1": 199.68,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Table4-1.png"
+}, {
+  "caption": "Table 3: FID and CLIPScore for text-to-image synthesis on CUB-200 and MSCOCO datasets. The VQ-D model with ⋆ shows the results we reproduced by training using the original code, which can be considered as our baseline. We show the results obtained with default 80 diffusion steps in both training and inference.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 377.2818908691406,
+    "y1": 92.6165542602539,
+    "y2": 142.4539794921875
+  },
+  "figType": "Table",
+  "imageText": ["SEGAN", "18.17", "-", "32.28", "-", "AttnGAN", "23.98", "-", "35.49", "65.66", "DM-GAN", "16.09", "-", "32.64", "65.45", "DF-GAN", "14.81", "-", "21.42", "66.42", "DAE-GAN", "15.19", "-", "28.12", "-", "DALLE", "56.10", "74.66", "27.50", "-", "VQ-D", "(T=100)", "12.97", "-", "30.17", "-", "VQ-D⋆", "(T=80)", "14.61", "74.96", "36.45", "65.53", "Ours", "Step-Intra", "(T=80)", "12.73", "75.32", "32.25", "66.22", "Ours", "Sample-Inter", "(T=80)", "12.61", "75.50", "28.76", "66.79", "StackGAN", "51.89", "-", "74.05", "-", "StackGAN++", "15.30", "-", "81.59", "-", "Datasets", "CUB-200", "MSCOCO", "Metrics", "FID", "↓", "CLIPScore", "↑", "FID", "↓", "CLIPScore", "↑"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 367.2,
+    "y1": 144.96,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Table3-1.png"
+}, {
+  "caption": "Figure 6: More qualitative results from our text-to-image experiments on COCO dataset. We show examples of the text input (left column), the synthesized images from our contrastive diffusion model with 80 diffusion steps and a FID score of 28.76 (middle column), and the output from existing method Gu et al. (2022) with 100 diffusion steps and a FID score 30.17.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.3592529296875,
+    "y1": 358.9605407714844,
+    "y2": 397.8399963378906
+  },
+  "figType": "Figure",
+  "imageText": ["Correspondence", "Input", "Outputs", "from", "Our", "Contrastive", "Diffusion", "Model", "Outputs", "w/", "Weaker", "vegetables.", "table", "covered", "with", "delicious", "a", "small", "wooden", "square.", "busy", "city", "motorists", "and", "bicyclists", "in", "a", "flying", "through", "a", "clear", "blue", "sky.", "the", "plane", "is", "laptop.", "and", "chair", "and", "desk", "computer", "an", "office", "with", "large", "window.", "area", "with", "a", "a", "kitchen", "and", "dining", "room"],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 497.76,
+    "y1": 89.75999999999999,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Figure6-1.png"
+}, {
+  "caption": "Figure 7: More qualitative results from our class-conditioned image synthesis experiments on ImageNet. We show examples of the text input (left column), the synthesized images from our contrastive diffusion model with 80 diffusion steps and a FID score of 11.74 (middle column), and the output from existing method Gu et al. (2022) with 100 diffusion steps and a FID score 11.89.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.170166015625,
+    "y1": 686.946533203125,
+    "y2": 725.8250122070312
+  },
+  "figType": "Figure",
+  "imageText": ["Correspondence", "Input", "Outputs", "from", "Our", "Contrastive", "Diffusion", "Model", "Outputs", "w/", "Weaker", "Class", "label:", "microwave", "purse", "Class", "label:", "fountain", "Class", "label:", "bookcase", "Class", "label:", "snail", "Class", "label:"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 497.76,
+    "y1": 418.08,
+    "y2": 663.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Overview of the proposed pipeline. Our framework includes two major components: a VQ-based encoder-decoder model (top) and a conditioned discrete contrastive diffusion as generative model on the VQ space (bottom). In the contrastive diffusion stage, we illustrate our proposed step-wise parallel diffusion (bottom left) and sample-wise auxiliary diffusion (bottom right). The variables in green denote those from the principal diffusion process, while the variables in red represent the diffusion invoked by negative samples. Here we show audio generation from video input, but demonstrate that this approach extends to different modalities, e.g., text-to-image.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00238037109375,
+    "y1": 319.592529296875,
+    "y2": 391.3479919433594
+  },
+  "figType": "Figure",
+  "imageText": ["𝑧0", "𝑁", "𝑧0", "1", "𝑧𝑇", "𝑁", "𝑧𝑡", "𝑁", "𝑧𝑡−1", "𝑁", "𝑧0", "𝑁", "𝑧𝑇", "1", "𝑧𝑡", "1", "𝑧𝑡−1", "1", "𝑧0", "1", "Encoders", "Conditioning", "Conditioning", "𝑐", "···", "···", "𝑧𝑇", "2", "K", "9······", "𝑧0", "𝑗", "𝑧0", "2", "K", "9···", "···", "···", "···", "···", "···", "···", "Sample-Wise", "Auxiliary", "Diffusion", "Conditional", "Discrete", "Contrastive", "Diffusion", "VQ-Based", "Model", "reconstructed", "data", "GT", "data", "data", "embedding", "VQ", "sequence", "𝑧", "Codebook", "2", "K", "9···", "K", "1", "2", "n", "Decoder", "Data", "Encoder", "Data", "𝑝𝜃(𝑧0", "𝑁|𝑧𝑡,", "𝑐)", "𝑝𝜃(𝑧0", "𝑗", "|𝑧𝑡,", "𝑐)", "𝑝𝜃(𝑧0", "1|𝑧𝑡,", "𝑐)", "DPM", "block", "at", "step", "𝑡", "Auxiliary", "Transformer-based", "𝑧𝑡", "𝑝𝜃(𝑧0|𝑧𝑡)", "Step-Wise", "Parallel", "Diffusion", "Conditioning", "𝑐", "Encoders", "Conditioning", "Transformer-based", "DPM", "block", "at", "step", "𝑡", "𝑝𝜃(𝑧𝑡−1", "𝑁", "|𝑧𝑡", "𝑁,", "𝑐)", "𝑝𝜃(𝑧𝑡−1", "𝑗", "|𝑧𝑡", "𝑗", ",", "𝑐)", "𝑝𝜃(𝑧𝑡−1", "1", "|𝑧𝑡", "1,", "𝑐)", "···", "···", "···𝑧𝑇", "𝑗", "𝑧𝑡", "𝑗", "𝑧𝑡−1", "𝑗", "𝑧0", "𝑗", "···", "···", "···", "···𝑝𝜃(𝑧𝑡−1|𝑧𝑡)", "······", "𝑧𝑇", "𝑧0𝑧𝑡", "𝑧𝑡−1"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 84.0,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1-MBdJssZ-S-Figure2-1.png"
+}]

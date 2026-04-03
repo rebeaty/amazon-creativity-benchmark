@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 2: Details of used datasets. Cora, CiteSeer, and PubMed datasets have a single class label, but the PPI dataset can have multiple class labels.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["PPI", "56944", "818716", "50", "121", "44906", "/", "6514", "/", "5524", "Cora", "2708", "5429", "1433", "7", "140", "/", "500", "/", "1000", "CiteSeer", "3327", "4732", "3703", "6", "120", "/", "500", "/", "1000", "PubMed", "19717", "44338", "500", "3", "60", "/", "500", "/", "1000", "Dataset", "Nodes", "Edges", "Features", "Classes", "Train", "/", "Validation", "/", "Test"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 466.08,
+    "y1": 112.32,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Table2-1.png"
+}, {
+  "caption": "Table 3: The accuracy of GCN, GCNII, GAT, and SGC on Cora, CiteSeer, and PubMed datasets.",
+  "captionBoundary": {
+    "x1": 113.1989974975586,
+    "x2": 498.801513671875,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["GCN", "82.40", "71.60", "78.90", "GCNII", "83.40", "73.40", "78.40", "GAT", "81.90", "71.30", "78.80", "SGC", "79.80", "72.00", "76.90", "Network", "Cora", "CiteSeer", "PubMed"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 218.88,
+    "x2": 393.12,
+    "y1": 101.28,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Table3-1.png"
+}, {
+  "caption": "Figure 1: Schematic description of the alternating method and the additive method after nonoverlapping graph decomposition. Note that we assume the case of N = 2 for simplicity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 306.9535217285156,
+    "y2": 323.91497802734375
+  },
+  "figType": "Figure",
+  "imageText": ["Non-overlapping", "decomposition", "Minibatch", "2", "Minibatch", "1", "Alternating", "method", "Loss", "Loss", "GCN", "GCN", "Additive", "method", "Loss", "GCN", "GCN"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 503.52,
+    "y1": 82.08,
+    "y2": 273.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Figure1-1.png"
+}, {
+  "caption": "Table 4: The accuracy of GCN, GCNII, GAT, and SGC equipped with additive (AD), alternating (AL), and substructuring (SS) for the Cora, CiteSeer, and PubMed datasets, where N denotes the number of subgraphs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["SGC", "AD", "64", "77.40", "70.50", "76.00", "AL", "64", "61.40", "65.00", "71.90", "SS", "64", "80.40", "72.10", "78.80", "GAT", "AD", "64", "77.10", "69.20", "77.20", "AL", "64", "76.30", "69.90", "77.30", "SS", "64", "83.00", "70.60", "79.10", "GCNII", "AD", "64", "79.30", "71.00", "76.00", "AL", "64", "78.30", "45.30", "77.60", "SS", "64", "83.80", "75.30", "81.10", "GCN", "AD", "64", "78.40", "67.50", "78.10", "AL", "64", "76.10", "70.50", "76.80", "SS", "64", "81.20", "72.00", "78.60", "Network", "Type", "N", "Cora", "CiteSeer", "PubMed", "SGC", "AD", "32", "77.60", "71.50", "76.20", "AL", "32", "72.90", "47.60", "75.60", "SS", "32", "79.70", "72.50", "78.40", "GAT", "AD", "32", "77.70", "69.90", "77.80", "AL", "32", "79.70", "68.80", "78.90", "SS", "32", "82.20", "70.00", "79.10", "GCN", "AD", "32", "79.10", "70.10", "78.40", "AL", "32", "78.10", "71.50", "78.60", "SS", "32", "80.20", "72.80", "78.60", "GCNII", "AD", "32", "81.60", "73.00", "74.80", "AL", "32", "81.50", "58.40", "76.70", "SS", "32", "83.50", "73.00", "80.20", "Network", "Type", "N", "Cora", "CiteSeer", "PubMed", "SGC", "AD", "16", "77.80", "71.90", "75.90", "AL", "16", "74.10", "37.90", "67.60", "SS", "16", "79.50", "72.80", "78.70", "GAT", "AD", "16", "80.40", "70.70", "77.50", "AL", "16", "78.90", "70.80", "76.80", "SS", "16", "81.10", "70.90", "80.00", "GCN", "AD", "16", "80.10", "71.10", "77.40", "AL", "16", "81.40", "72.10", "77.30", "SS", "16", "80.20", "72.20", "79.00", "GCNII", "AD", "16", "80.40", "72.70", "75.20", "AL", "16", "81.60", "70.00", "77.20", "SS", "16", "84.60", "72.70", "80.90", "Network", "Type", "N", "Cora", "CiteSeer", "PubMed", "GAT", "AD", "8", "80.80", "69.00", "76.70", "AL", "8", "82.00", "68.30", "78.10", "SS", "8", "81.90", "70.60", "78.30", "SGC", "AD", "8", "79.30", "71.30", "76.50", "AL", "8", "66.80", "23.70", "75.40", "SS", "8", "79.10", "72.20", "78.70", "GCNII", "AD", "8", "82.60", "73.20", "76.30", "AL", "8", "83.20", "69.00", "78.00", "SS", "8", "82.20", "73.90", "81.00", "GCN", "AD", "8", "79.20", "71.60", "77.70", "AL", "8", "80.30", "71.90", "78.20", "SS", "8", "79.90", "72.00", "78.00", "Network", "Type", "N", "Cora", "CiteSeer", "PubMed", "SGC", "AD", "4", "78.90", "70.40", "77.20", "AL", "4", "73.60", "61.70", "75.50", "SS", "4", "79.70", "71.90", "77.60", "GAT", "AD", "4", "79.50", "69.90", "78.50", "AL", "4", "80.20", "70.60", "78.10", "SS", "4", "81.60", "70.70", "78.70", "GCNII", "AD", "4", "81.00", "72.80", "77.00", "AL", "4", "80.90", "70.60", "78.20", "SS", "4", "82.60", "74.00", "79.30", "GCN", "AD", "4", "79.90", "71.40", "78.90", "AL", "4", "78.10", "71.50", "79.10", "SS", "4", "78.90", "72.20", "78.30", "Network", "Type", "N", "Cora", "CiteSeer", "PubMed", "SGC", "AD", "2", "78.80", "71.70", "76.30", "AL", "2", "74.30", "71.30", "75.20", "SS", "2", "79.30", "72.00", "77.20", "GAT", "AD", "2", "81.30", "70.90", "78.40", "AL", "2", "80.70", "70.10", "78.10", "SS", "2", "81.50", "69.30", "78.30", "GCNII", "AD", "2", "82.30", "70.30", "78.40", "AL", "2", "82.10", "70.20", "77.10", "SS", "2", "83.60", "72.20", "79.30", "GCN", "AD", "2", "80.60", "71.00", "79.00", "AL", "2", "80.00", "71.40", "79.10", "SS", "2", "80.30", "72.50", "78.30", "Network", "Type", "N", "Cora", "CiteSeer", "PubMed"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 122.88,
+    "y2": 319.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Table4-1.png"
+}, {
+  "caption": "Table 5: F1-scores of GCN, GCNII, GAT, and SGC equipped with additive (AD), alternating (AL), and substructuring (SS) for the PPI dataset, where N is the number of subgraphs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["SGC", "AD", "64", "74.60", "AL", "64", "74.68", "SS", "64", "75.10", "GAT", "AD", "64", "81.62", "AL", "64", "73.24", "SS", "64", "98.49", "GCNII", "AD", "64", "80.84", "AL", "64", "76.43", "SS", "64", "85.33", "GCN", "AD", "64", "84.24", "AL", "64", "73.88", "SS", "64", "95.58", "Network", "Type", "N", "PPI", "SGC", "AD", "32", "74.65", "AL", "32", "74.71", "SS", "32", "75.20", "GAT", "AD", "32", "83.55", "AL", "32", "72.73", "SS", "32", "98.41", "GCNII", "AD", "32", "81.56", "AL", "32", "78.13", "SS", "32", "88.16", "GCN", "AD", "32", "85.96", "AL", "32", "78.82", "SS", "32", "96.18", "Network", "Type", "N", "PPI", "SGC", "AD", "16", "74.72", "AL", "16", "74.83", "SS", "16", "75.27", "GAT", "AD", "16", "86.72", "AL", "16", "75.88", "SS", "16", "98.38", "GCNII", "AD", "16", "82.18", "AL", "16", "79.78", "SS", "16", "88.30", "GCN", "AD", "16", "88.39", "AL", "16", "89.68", "SS", "16", "96.61", "Network", "Type", "N", "PPI", "SGC", "AD", "8", "74.83", "AL", "8", "74.90", "SS", "8", "75.26", "GAT", "AD", "8", "90.39", "AL", "8", "91.13", "SS", "8", "98.52", "GCNII", "AD", "8", "91.70", "AL", "8", "92.49", "SS", "8", "88.76", "GCN", "AD", "8", "91.70", "AL", "8", "92.49", "SS", "8", "96.87", "Network", "Type", "N", "PPI", "SGC", "AD", "4", "75.00", "AL", "4", "75.07", "SS", "4", "75.25", "GAT", "AD", "4", "93.48", "AL", "4", "94.31", "SS", "4", "98.66", "GCNII", "AD", "4", "85.00", "AL", "4", "84.89", "SS", "4", "88.55", "GCN", "AD", "4", "94.34", "AL", "4", "95.10", "SS", "4", "96.52", "Network", "Type", "N", "PPI", "SGC", "AD", "2", "75.29", "AL", "2", "75.79", "SS", "2", "75.05", "GAT", "AD", "2", "98.20", "AL", "2", "98.42", "SS", "2", "98.29", "GCNII", "AD", "2", "87.78", "AL", "2", "88.20", "SS", "2", "87.29", "GCN", "AD", "2", "97.97", "AL", "2", "98.17", "SS", "2", "95.68", "Network", "Type", "N", "PPI"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 120.96,
+    "y2": 443.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Table5-1.png"
+}, {
+  "caption": "Table 1: The number of edge-cut according to the number of subgraphs N with random, ordered, and METIS decomposition applied to Cora. The random decomposition method uses the randperm function in PyTorch, and the ordered decomposition method divides the node indices in order of Cora. Note that the total number of edges in the Cora is 5429.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 267.5505065917969,
+    "y2": 306.428955078125
+  },
+  "figType": "Table",
+  "imageText": ["2", "2613", "2603", "186", "4", "3907", "3682", "351", "8", "4580", "4340", "537", "16", "4898", "4649", "714", "32", "5082", "4817", "1018", "64", "5187", "4941", "1313", "N", "Random", "Ordered", "METIS"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 228.0,
+    "x2": 384.0,
+    "y1": 308.64,
+    "y2": 400.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Table1-1.png"
+}, {
+  "caption": "Figure 2: Graphical description of the proposed substructured graph convolution after nonoverlapping graph decomposition. Note that we assume the case of N = 2 for simplicity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 226.21652221679688,
+    "y2": 243.177978515625
+  },
+  "figType": "Figure",
+  "imageText": ["α̂", "α̃", "Output", "S̃", "Interface", "Interior", "Ŝ", "Substructured", "Graph", "Convolution", "InterfaceInterior", "Non-overlapping", "decomposition"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 83.52,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NTTc8wZktaT-Figure2-1.png"
+}]

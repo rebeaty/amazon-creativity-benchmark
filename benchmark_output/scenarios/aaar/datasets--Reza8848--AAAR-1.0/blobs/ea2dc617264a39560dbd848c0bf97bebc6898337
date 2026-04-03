@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 6: Histogram of individual ε after 50 epochs without filtering when using a clipping constant that is 5x the optimum. A majority of the individual ε are far away from ε = 2.75, which means that they will not be instantly deactivated in epoch 51, which uses filtering.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 495.0735168457031,
+    "y2": 522.9939575195312
+  },
+  "figType": "Figure",
+  "imageText": ["subgroup", "2", "3", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "individual", "subgroup", "0", "1", "nt", "s", "ap", "oi", "f", "d", "at", "be", "r", "o", "nu", "m", "250", "200", "150", "100", "50", "0", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "individual"],
+  "name": "6",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 498.71999999999997,
+    "y1": 293.76,
+    "y2": 472.79999999999995
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JmC_Tld3v-f-Figure6-1.png"
+}, {
+  "caption": "Figure 1: MNIST experiment. Left: Randomly chose data element and its accurate (ε, δ)-curve after 50 epochs vs. the µ-GDP upper bound approximation. Right: Comparison of individual ε-values obtained via RDPs and PLDs: histograms for randomly selected 1000 samples after 50 epochs (δ = 10−6). Computation using PLDs is better able to capture small individual ε-values.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00042724609375,
+    "y1": 681.863525390625,
+    "y2": 720.7429809570312
+  },
+  "figType": "Figure",
+  "imageText": ["100", "120", "140", "160", "Individual", "-values", "(via", "PLDs)", "Individual", "-values", "(via", "RDPs)", "0.2", "0.4", "0.6", "0.8", "1.00", "20", "40", "60", "80", "Tight", "DP-SGD", "(", ",", ")-DP", "Approximative", "-GDP", "Upper", "Bound", "10", "1", "10", "3", "10", "5", "10", "7", "0.0", "0.2", "0.4", "0.6", "0.8"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 495.35999999999996,
+    "y1": 530.4,
+    "y2": 663.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JmC_Tld3v-f-Figure1-1.png"
+}, {
+  "caption": "Figure 2: MIMIC III experiment and individual filtering for private GD. Comparing the test losses, training losses and average privacy losses before and after filtering has started (at 50 epochs). The filtering has a further disparate impact on model accuracies across subgroups.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 577.8075561523438,
+    "y2": 605.72802734375
+  },
+  "figType": "Figure",
+  "imageText": ["loss", "at", "epoch", "train", "(50)", "test", "(50)", "train", "(100)", "test", "(100)", "Lo", "ss", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "average", "at", "epoch", "50", "100", "Av", "g.", "3.75", "3.00", "2.25", "1.50", "0.75", "0.00", "group", "0", "group", "4", "group", "2", "group", "3", "group", "1", "subgroups"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 464.64,
+    "y1": 394.56,
+    "y2": 557.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JmC_Tld3v-f-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Filtered DP-GD with a maximum privacy loss of (ε = 2.75, δ = 1e-5) using tuned hyperparameters and different clipping constants. Left: The test AUC-ROC as a function of epochs. The red vertical line denotes the starting point of the filtering. Right: The number of active elements, which drops faster for a smaller clipping constant.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 400.7455139160156,
+    "y2": 439.62493896484375
+  },
+  "figType": "Figure",
+  "imageText": ["clipping", "constant", "0.5x", "optimum", "1.0x", "optimum", "1.5x", "optimum", "3.0x", "optimum", "5.0x", "optimum", "en", "ts", "el", "em", "iv", "e", "f", "a", "ct", "be", "r", "o", "nu", "m", "30000", "25000", "20000", "15000", "10000", "5000", "0", "0", "20", "40", "60", "80", "100", "epoch", ")", "clipping", "constant", "0.5x", "optimum", "1.0x", "optimum", "1.5x", "optimum", "3.0x", "optimum", "5.0x", "optimum", "O", "C", "C", "-R", "d", "AU", "ra", "ge", "-a", "ve", "ac", "ro", "y", "(m", "ut", "ilit", "0.74", "0.73", "0.72", "0.71", "0.70", "0.69", "0", "20", "40", "60", "80", "100", "epoch"],
+  "name": "4",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 96.47999999999999,
+    "y2": 387.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JmC_Tld3v-f-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Histogram of individual ε after 50 epochs without filtering when using the optimal clipping constant. A majority of the individual ε are near ε = 2.75, which means that they will be deactivated in epoch 51, which uses filtering.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 685.9405517578125,
+    "y2": 713.8610229492188
+  },
+  "figType": "Figure",
+  "imageText": ["subgroup", "2", "3", "0", "1", "2", "3", "individual", "subgroup", "0", "1", "nt", "s", "ap", "oi", "f", "d", "at", "be", "r", "o", "nu", "m", "800", "600", "400", "200", "0", "0", "1", "2", "3", "individual"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.47999999999996,
+    "y1": 487.68,
+    "y2": 659.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JmC_Tld3v-f-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Comparison of RDP and GDP for private GD with σ = 100 and number of iterations k = 420. This means that when we replace the RDP filter with GDP filter for the private GD, we can get roughly 10 percent smaller ε-values.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0047912597656,
+    "y1": 316.2535400390625,
+    "y2": 344.17303466796875
+  },
+  "figType": "Figure",
+  "imageText": ["(", ",", ")-DP", "via", "RDP", "Filtering", "(", ",", ")-DP", "via", "GDP", "Filtering", "10", "1", "10", "2", "10", "3", "10", "4", "10", "5", "10", "6", "0.2", "0.4", "0.6", "0.8"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 91.2,
+    "y2": 293.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JmC_Tld3v-f-Figure3-1.png"
+}]

@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 3: [Comparisons Across Architectures For Downstream Task Accuracy] All models shown here are pre-trained on ImageNet1k. We see that diffused redundancy exists across architectures, and the trend observed in Figure 1c&1a regarding adversarially trained models also holds here as models curves that are more “inside” are the ones trained with standard loss.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00079345703125,
+    "y1": 484.4617614746094,
+    "y2": 519.7520751953125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Oxford-IIIT-Pets", "vgg16_bn-nonrob", "vgg16_bn-robustl2eps3", "resnet18-nonrob", "resnet18-robustl2eps3", "resnet50-nonrob", "resnet50-robustl2eps3", "wide_resnet50_2-nonrob", "wide_resnet50_2-robustl2eps3", "vit_small_patch16_224-nonrob", "vit_small_patch32_224-nonrob", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(c)", "Flowers", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(b)", "CIFAR100", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(a)", "CIFAR10", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 378.71999999999997,
+    "y2": 470.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure3-1.png"
+}, {
+  "caption": "Table 1: Different model architectures with varying penultimate layer lengths trained on ImageNet1k. WRN502 stands for WideResNet50-2. Implementation of architectures is taken from timm (Wightman, 2019). Diffused redundancy here measures what fractions of neurons (randomly picked) can be discarded to achieve within δ = 90% performance of the full layer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011291503906,
+    "y1": 83.4337387084961,
+    "y2": 118.7239990234375
+  },
+  "figType": "Table",
+  "imageText": ["VGG16", "4096", "73.36%", "0.95", "0.80", "0.80", "0.95", "ViT", "S-16", "384", "64.82%", "0.70", "0.50", "0.50", "0.80", "ViT", "S-32", "384", "55.73%", "0.70", "0.50", "0.50", "0.70", "ResNet18", "512", "69.23%", "0.80", "0.50", "0.50", "0.90", "ResNet50", "2048", "80.07%", "0.90", "0.50", "0.20", "0.90", "WRN50-2", "2048", "77.00%", "0.95", "0.80", "0.50", "0.95", "Model", "Feature", "Length", "ImageNet1k", "Top-1", "Accuracy", "Diffused", "Redundancy", "for", "δ", "=", "0.9", "CIFAR10", "CIFAR100", "Flowers", "Oxford-IIIT-Pets"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 509.28,
+    "y1": 130.56,
+    "y2": 230.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Table1-1.png"
+}, {
+  "caption": "Figure 4: [Comparison Across Upstream Datasets] We see that degree of diffused redundancy depends a great deal on the upstream training dataset, in particular models trained on ImageNet21k exhibit a higher degree of diffused redundanacy, although the differences in the degree of diffused redundanacy are downstream task dependent",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039367675781,
+    "y1": 180.99172973632812,
+    "y2": 216.281982421875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Oxford-IIIT-Pets", "vit_small_patch16_224-imagenet", "vit_small_patch16_224-imagenet21k", "vit_small_patch32_224-imagenet", "vit_small_patch32_224-imagenet21k", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(c)", "Flowers", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(b)", "CIFAR100", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(a)", "CIFAR10", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 167.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure4-1.png"
+}, {
+  "caption": "Figure 5: [Diffused Redundancy as Function of Layer Width] As we make the length of layer smaller, the degree of redundancy becomes lesser. For ResNet50 ff8, i.e.ResNet50 with only 8 neurons in final layer, we see that across all datasets we need almost 90% of neurons to achieve similar accuracy as the full layer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00469970703125,
+    "y1": 618.0807495117188,
+    "y2": 643.4089965820312
+  },
+  "figType": "Figure",
+  "imageText": ["resnet50_ff32", "resnet50_ff16", "resnet50_ff8", "resnet50_ff256", "resnet50_ff128", "resnet50_ff64", "resnet50", "resnet50_ff1024", "resnet50_ff512", "(d)", "Oxford-IIIT-Pets", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(c)", "Flowers", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(b)", "CIFAR100", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(a)", "CIFAR10", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 497.28,
+    "y2": 603.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure5-1.png"
+}, {
+  "caption": "Figure 8: [Comparison of Diffused Redundancy in MRL vs other losses, through the lens of CKA] We see a similar trend as reported in Fig 6 in the main paper, where even the MRL model shows a significant amount of diffused redundancy despite being explicitly trained to instead have structured redundancy. The amount of diffused redundancy however is much lesser than the resnets trained using the standard loss and adv. training as denoted by a much lower red line across all datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00445556640625,
+    "y1": 604.7997436523438,
+    "y2": 650.052978515625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Oxford-IIIT-Pets", "resnet50-nonrob-random", "resnet50-robustl2eps3-random", "resnet50_mrl-nonrob-first", "resnet50_mrl-nonrob-random", "CK", "A", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Fraction", "of", "Neurons", "(Total=2048)", "(c)", "Flowers", "resnet50-nonrob-random", "resnet50-robustl2eps3-random", "resnet50_mrl-nonrob-first", "resnet50_mrl-nonrob-random", "CK", "A", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Fraction", "of", "Neurons", "(Total=2048)", "(b)", "CIFAR100", "resnet50-nonrob-random", "resnet50-robustl2eps3-random", "resnet50_mrl-nonrob-first", "resnet50_mrl-nonrob-random", "CK", "A", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Fraction", "of", "Neurons", "(Total=2048)", "(a)", "CIFAR10", "resnet50-nonrob-random", "resnet50-robustl2eps3-random", "resnet50_mrl-nonrob-first", "resnet50_mrl-nonrob-random", "CK", "A", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Fraction", "of", "Neurons", "(Total=2048)"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 368.64,
+    "y2": 591.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure8-1.png"
+}, {
+  "caption": "Figure 6: [Comparison of Diffused Redundancy in MRL vs other losses] Here we compare ResNet50 trained using multiple losses including MRL (Kusupati et al., 2022). Red line shows results for part of the representation explicitly optimized in MRL, whereas green line shows results for parts that are picked randomly from the same representation. Even the MRL model shows a significant amount of diffused redundancy despite being explicitly trained to instead have structured redundancy.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0009765625,
+    "y1": 453.9887390136719,
+    "y2": 499.2420349121094
+  },
+  "figType": "Figure",
+  "imageText": ["resnet50-nonrob-random", "resnet50-robustl2eps3-random", "resnet50_mrl-nonrob-random", "resnet50_mrl-nonrob-first", "(d)", "Oxford-IIIT-Pets", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(c)", "Flowers", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(b)", "CIFAR100", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons", "(a)", "CIFAR10", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Fraction", "of", "neurons"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 353.76,
+    "y2": 440.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure6-1.png"
+}, {
+  "caption": "Figure 1: [Testing For Diffused Redundancy in ResNet50 Pre-trained on ImageNet1k] Top: transfer accuracies + DR measure (Eq 1) on different downstream datasets, dotted horizontal line shows accuracy obtained using the full layer. We see that accuracy obtained using parts of representation varies greatly with pre-training loss (much more diffused redundancy in adversarially trained ResNet), but also depends on the downstream dataset. Bottom: comparing CKA between a randomly chosen fraction of neurons to the whole layer. Here we evaluate CKA on samples from different datasets and fnd that similarity of a subset of layer rapidly increases, reaching a similarity of greater than 90% on the adversarially trained ResNet50 with only 10% randomly chosen neurons. All values are averaged over 5 random picks and errors bars show standard deviation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010681152344,
+    "y1": 250.99575805664062,
+    "y2": 326.13604736328125
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "CKA;", "AT", "cifar10", "cifar100", "flowers", "oxford-iiit-pets", "CK", "A", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "Fraction", "of", "Neurons", "(Total=2048)", "(e)", "CKA;", "Standard", "cifar10", "cifar100", "flowers", "oxford-iiit-pets", "CK", "A", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "Fraction", "of", "Neurons", "(Total=2048)", "(d)", "Diff.", "Redundancy;", "AT", "cifar10", "cifar100", "flowers", "oxford-iiit-pets", "(D", "R)", "nc", "y", "un", "da", "R", "ed", "us", "ed", "D", "iff", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "1.00.0", "(c)", "Downstream", "Acc;", "AT", "cifar10", "cifar100", "flowers", "oxford-iiit-pets", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "Fraction", "of", "Neurons", "(Total=2048)", "(b)", "Diff.", "Redundancy;", "Standard", "cifar10", "cifar100", "flowers", "oxford-iiit-pets", "(D", "R)", "nc", "y", "un", "da", "R", "ed", "us", "ed", "D", "iff", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "1.00.0", "(a)", "Downstream", "Acc;", "Standard", "cifar10", "cifar100", "flowers", "oxford-iiit-pets", "y", "ur", "ac", "A", "cc", "sf", "er", "Tr", "an", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "Fraction", "of", "Neurons", "(Total=2048)"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure1-1.png"
+}, {
+  "caption": "Figure 7: [Gini Coefficient of Class-Wise Accuracies as we Drop Neurons] Higher value of Gini coefficient indicates higher inequality (Gini, 1921). We see that for all models gini coefficients become higher as the accuracy reduces (as a result of dropping neurons). Additionally in some regions (highlighted in the plots), the model explicitly optimized for efficient transfer (resnet50 mrl) can give rise to higher gini values, resulting in a more unequal spread of accuracy over classes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001708984375,
+    "y1": 318.8577575683594,
+    "y2": 364.11102294921875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Oxford-IIIT-Pets", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "i", "G", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "Accuracy", "(c)", "Flowers", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "i", "G", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Accuracy", "(b)", "CIFAR100", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "i", "G", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Accuracy", "(a)", "CIFAR10", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "i", "G", "in", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "Accuracy"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 82.56,
+    "y2": 305.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure7-1.png"
+}, {
+  "caption": "Figure 9: [Coefficient of Variation As We Drop Neurons] We see a similar trend as reported in Fig 7 of the main paper where inequality increases as we drop neurons for all models on all datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.000732421875,
+    "y1": 515.1826782226562,
+    "y2": 530.5479736328125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Oxford-IIIT-Pets", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "on", "ia", "ti", "V", "ar", "f.", "of", "Co", "ef", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "Accuracy", "(c)", "Flowers", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "on", "ia", "ti", "V", "ar", "f.", "of", "Co", "ef", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Accuracy", "(b)", "CIFAR100", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "on", "ia", "ti", "V", "ar", "f.", "of", "Co", "ef", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Accuracy", "(a)", "CIFAR10", "resnet50-nonrob", "resnet50-robustl2eps3", "resnet50_mrl-nonrob-first", "on", "ia", "ti", "V", "ar", "f.", "of", "Co", "ef", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "Accuracy"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 279.36,
+    "y2": 502.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_G2GpzH1l9AC-Figure9-1.png"
+}]

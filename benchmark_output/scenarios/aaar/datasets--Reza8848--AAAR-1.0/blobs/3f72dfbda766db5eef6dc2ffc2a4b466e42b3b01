@@ -1,0 +1,201 @@
+[{
+  "caption": "Table 2: Information of the six benchmark datasets.",
+  "captionBoundary": {
+    "x1": 203.171875,
+    "x2": 408.829833984375,
+    "y1": 375.09234619140625,
+    "y2": 381.0948181152344
+  },
+  "figType": "Table",
+  "imageText": ["MUTAG", "188", "[10", "-", "28]", "17.93", "[20", "-", "66]", "19.79", "2", "PTC-MR", "344", "[2", "-", "64]", "14.29", "[2", "-", "142]", "14.69", "2", "PTC-MM", "336", "[2", "-", "64]", "13.97", "[2", "-", "142]", "14.32", "2", "BZR", "405", "[13", "-", "57]", "35.75", "[26", "-", "120]", "38.36", "2", "ENZYMES", "600", "[2", "-", "126]", "32.63", "[2", "-", "298]", "62.14", "6", "COX2", "467", "[32", "-", "56]", "41.22", "[68", "-", "118]", "43.45", "2", "Dataset", "name", "Number", "of", "graphs", "Range", "of", "nodes", "Average", "nodes", "Range", "of", "edges", "Average", "edges", "Classes"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 505.44,
+    "y1": 381.59999999999997,
+    "y2": 460.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table2-1.png"
+}, {
+  "caption": "Table 6: Clustering performance (ACC, NMI, ARI) on MUTAG and BZR. The best result is highlighted in bold.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.00347900390625,
+    "y1": 474.40350341796875,
+    "y2": 491.364990234375
+  },
+  "figType": "Table",
+  "imageText": ["DGLC", "84.68±0.89", "35.75±2.51", "47.01±2.64", "80.98±0.60", "9.79±0.92", "20.53±1.84", "DGLCd1", "77.95±1.41", "35.22±3.47", "30.95±3.03", "63.62±2.41", "1.59±0.95", "2.39±1.44", "DGLCd2", "80.50±2.34", "32.52±3.65", "37.16±5.53", "66.61±3.14", "1.98±1.29", "4.32±2.54", "DGLCd3", "81.48±2.31", "30.89±3.98", "38.34±6.61", "73.87±2.58", "2.92±2.30", "5.35±3.96", "ACC", "NMI", "ARI", "ACC", "NMI", "ARI", "Method", "MUTAG", "BZR"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 511.2,
+    "y1": 493.91999999999996,
+    "y2": 581.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table6-1.png"
+}, {
+  "caption": "Figure 3: Sensitivity analysis of ACC, NMI and ARI regarding the number of GNN hidden layers on MUTAG, PTC-MR and BZR datasets",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 209.63851928710938,
+    "y2": 226.5999755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 80.64,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Figure3-1.png"
+}, {
+  "caption": "Table 3: Clustering performance (ACC, NMI, ARI) on MUTAG and PTC-MR. The best result is highlighted in bold.",
+  "captionBoundary": {
+    "x1": 108.0000228881836,
+    "x2": 504.00335693359375,
+    "y1": 370.32427978515625,
+    "y2": 387.2857666015625
+  },
+  "figType": "Table",
+  "imageText": ["DGLC(Ours)", "84.68±0.89", "35.75±2.51", "47.01±2.64", "60.93±0.57", "2.98±0.43", "4.29±0.52", "InfoGraph(Sun", "et", "al.,", "2020)+KM", "77.95±1.41", "35.22±3.47", "30.95±3.03", "54.79±0.68", "0.49±0.35", "0.28±0.21", "InfoGraph(Sun", "et", "al.,", "2020)+SC", "72.58±4.83", "28.68±4.93", "19.85±5.91", "56.10±0.33", "1.50±0.26", "0.20±0.13", "GWF(Xu", "et", "al.,", "2022)+KM", "66.94±7.68", "12.46±9.31", "13.32±10.53", "56.33±3.52", "1.09±0.88", "1.65±1.50", "GWF(Xu", "et", "al.,", "2022)+SC", "73.92±4.30", "18.35±3.85", "24.48±4.69", "55.32±4.03", "0.89±0.84", "1.49±1.44", "GraphCL(You", "et", "al.,", "2020)+KM", "77.07±1.21", "35.69±2.83", "28.99±2.65", "54.33±0.76", "1.15±0.55", "0.16±0.29", "GraphCL(You", "et", "al.,", "2020)+SC", "73.22±2.66", "32.19±2.05", "23.44±2.45", "56.13±0.42", "1.31±0.30", "1.17±0.24", "JOAO(You", "et", "al.,", "2021)+KM", "79.20±0.72", "36.32±3.03", "33.74±1.65", "56.39±0.18", "0.53±0.21", "0.41±0.01", "JOAO(You", "et", "al.,", "2021)+SC", "70.72±2.85", "27.73±0.23", "17.12±2.03", "56.16±0.22", "1.03±0.33", "0.19±0.11", "Unsupervised", "graph", "representation", "learning", "followed", "by", "k-means", "(KM)", "and", "SC", "RW(Vishwanathan", "et", "al.,", "2010)+SC", "77.65±0.00", "30.81±0.00", "30.26±0.00", "56.98±0.00", "0.63±0.00", "1.25±0.00", "WL(Shervashidze", "et", "al.,", "2011)+SC", "73.40±0.00", "14.50±0.00", "21.20±0.00", "52.91±0.00", "0.23±0.00", "0.05±0.00", "SP(Borgwardt", "&", "Kriegel,", "2005)+SC", "72.87±0.00", "10.24±0.00", "15.95±0.00", "56.69±0.00", "1.04±0.00", "0.50±0.00", "LT(Johansson", "et", "al.,", "2014)+SC", "56.60±4.88", "3.09±1.38", "-0.62±0.63", "55.17±1.32", "0.40±0.65", "0.19±0.52", "GK(Shervashidze", "et", "al.,", "2009)+SC", "67.02±0.00", "1.74±0.00", "1.04±0.00", "56.40±0.00", "1.32±0.00", "0.31±0.00", "Graph", "kernel", "followed", "by", "spectral", "clustering", "(SC)", "ACC", "NMI", "ARI", "ACC", "NMI", "ARI", "Method", "MUTAG", "PTC-MR"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 505.44,
+    "y1": 389.76,
+    "y2": 622.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table3-1.png"
+}, {
+  "caption": "Figure 2: Sensitivity analysis of accuracy, NMI and ARI regarding the dimension dh of GNN hidden layers and the embedding dimension dz of clustering layer on MUTAG and PTC-MR datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 697.1505737304688,
+    "y2": 715.6060180664062
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "PTC-MR", "ACC", "(e)", "PTC-MR", "NMI", "(e)", "PTC-MR", "ARI", "(a)", "MUTAG", "ACC", "(b)", "MUTAG", "NMI", "(c)", "MUTAG", "ARI"],
+  "name": "2",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 458.88,
+    "y2": 680.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Figure2-1.png"
+}, {
+  "caption": "Table 1: Notations for the main variables and parameters in this paper.",
+  "captionBoundary": {
+    "x1": 165.94200134277344,
+    "x2": 446.0604553222656,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["G", "Graph", "set", "G", "Graph", "set", "in", "a", "minibatch", "V", "Node", "set", "E", "Edge", "set", "X", "Node", "features", "set", "N", "(v)", "Neighborhood", "set", "of", "node", "v", "G", "A", "single", "graph", "K", "Number", "of", "GNN", "hidden", "layers", "hkv", "Learned", "feature", "for", "node", "v", "in", "k-th", "GNN", "layer", "akv", "Aggregated", "feature", "for", "node", "v", "in", "k-th", "GNN", "layer", "Hϕ(G)", "Graph-level", "representaion", "Iϕ,ψ", "Mutual", "information", "estimator", "fθ", "Cluster", "projector", "Zϕ,θ(G)", "Cluster", "embedding", "c", "Number", "of", "clusters", "ϕ", "Parameters", "of", "GNN", "ψ", "Parameters", "of", "mutual", "information", "estimator", "θ", "Parameter", "of", "clustering", "network"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 101.28,
+    "y2": 188.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table1-1.png"
+}, {
+  "caption": "Table 4: Clustering performance (ACC, NMI, ARI) on PTC-MM and BZR. The best result is highlighted in bold.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["DGLC(Ours)", "63.30±0.81", "2.70±0.45", "5.53±0.61", "80.98±0.60", "9.79±0.92", "20.53±1.84", "InfoGraph(Sun", "et", "al.,", "2020)+KM", "61.48±1.03", "2.35±0.83", "3.61±1.45", "63.62±2.41", "1.59±0.95", "2.39±1.44", "InfoGraph(Sun", "et", "al.,", "2020)+SC", "61.96±1.53", "2.12±0.99", "4.55±0.83", "73.53±2.66", "3.66±2.52", "5.04±3.12", "GWF(Xu", "et", "al.,", "2022)+KM", "53.37±3.18", "0.30±0.37", "0.38±1.09", "53.00±0.31", "3.42±0.45", "-0.76±0.05", "GWF(Xu", "et", "al.,", "2022)+SC", "53.02±1.66", "0.36±0.28", "0.21±0.09", "52.76±0.80", "3.47±1.16", "-0.71±0.32", "GraphCL(You", "et", "al.,", "2020)+KM", "58.93±0.74", "0.27±0.15", "0.60±0.14", "71.43±4.09", "1.04±0.77", "3.07±1.03", "GraphCL(You", "et", "al.,", "2020)+SC", "62.09±0.56", "2.14±0.43", "3.36±0.87", "72.88±1.66", "1.90±0.38", "3.47±0.59", "JOAO(You", "et", "al.,", "2021)+KM", "59.04±0.52", "0.21±0.14", "0.98±0.41", "72.64±4.26", "1.37±1.14", "4.01±3.39", "JOAO(You", "et", "al.,", "2021)+SC", "62.41±0.80", "2.00±0.78", "4.28±1.34", "72.98±1.59", "2.75±1.30", "5.62±3.74", "Unsupervised", "graph", "representation", "learning", "followed", "by", "k-means", "(KM)", "and", "SC", "RW(Vishwanathan", "et", "al.,", "2010)+SC", "60.71±0.00", "0.97±0.00", "2.91±0.00", "64.69±0.00", "0.00±0.00", "-0.15±0.00", "WL(Shervashidze", "et", "al.,", "2011)+SC", "62.20±0.00", "1.50±0.00", "3.87±0.00", "75.56±0.00", "0.50±0.00", "3.76±0.00", "SP(Borgwardt", "&", "Kriegel,", "2005)+SC", "62.20±0.00", "1.63±0.00", "0.73±0.00", "79.51±0.00", "4.13±0.00", "3.97±0.00", "LT(Johansson", "et", "al.,", "2014)+SC", "61.19±0.88", "0.73±0.55", "1.09±1.06", "78.35±0.35", "0.69±0.28", "1.12±1.03", "GK(Shervashidze", "et", "al.,", "2009)+SC", "62.20±0.00", "1.63±0.00", "0.73±0.00", "61.23±3.36", "1.06±1.21", "3.13±3.74", "Graph", "kernel", "followed", "by", "spectral", "clustering", "(SC)", "ACC", "NMI", "ARI", "ACC", "NMI", "ARI", "Method", "PTC-MM", "BZR"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 505.44,
+    "y1": 112.32,
+    "y2": 350.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table4-1.png"
+}, {
+  "caption": "Table 5: Clustering performance (ACC, NMI, ARI) on ENZYMES and COX2. The best result is highlighted in bold.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 373.8445129394531,
+    "y2": 390.80596923828125
+  },
+  "figType": "Table",
+  "imageText": ["DGLC(Ours)", "27.08±1.49", "6.39±1.09", "2.86±0.80", "78.28±0.17", "2.38±0.99", "6.79±3.37", "InfoGraph(Sun", "et", "al.,", "2020)+KM", "22.06±0.98", "2.40±0.45", "1.25±0.52", "56.74±3.04", "3.30±0.60", "0.17±0.10", "InfoGraph(Sun", "et", "al.,", "2020)+SC", "23.75±0.50", "4.64±0.65", "2.23±0.41", "70.37±2.01", "3.56±0.99", "1.92±1.67", "GWF(Xu", "et", "al.,", "2022)+KM", "28.55±0.20", "6.02±0.55", "3.16±0.20", "57.60±4.11", "1.50±0.13", "2.08±1.80", "GWF(Xu", "et", "al.,", "2022)+SC", "25.66±1.57", "5.24±1.28", "1.78±0.61", "58.83±4.46", "1.16±0.41", "1.45±1.21", "GraphCL(You", "et", "al.,", "2020)+KM", "21.50±0.22", "1.55±0.12", "0.90±0.09", "68.88±0.59", "1.05±0.21", "0.44±0.57", "GraphCL(You", "et", "al.,", "2020)+SC", "25.28±0.28", "4.75±0.36", "2.03±0.26", "75.01±2.12", "1.24±0.37", "2.39±2.28", "JOAO(You", "et", "al.,", "2021)+KM", "21.66±0.37", "1.60±0.01", "0.94±0.02", "70.56±2.03", "1.19±0.34", "0.44±0.43", "JOAO(You", "et", "al.,", "2021)+SC", "24.65±0.44", "4.85±0.37", "2.07±0.18", "76.46±0.61", "1.43±0.77", "2.35±2.49", "Unsupervised", "graph", "representation", "learning", "followed", "by", "k-means", "(KM)", "and", "SC", "RW(Vishwanathan", "et", "al.,", "2010)+SC", "17.00±0.00", "0.66±0.00", "0.25±0.00", "51.31±0.00", "0.70±0.00", "-0.92±0.00", "WL(Shervashidze", "et", "al.,", "2011)+SC", "21.00±0.00", "3.09±0.00", "1.48±0.00", "50.54±0.00", "0.51±0.00", "-0.40±0.00", "SP(Borgwardt", "&", "Kriegel,", "2005)+SC", "22.00±0.00", "2.57±0.00", "1.69±0.00", "52.03±0.00", "0.13±0.00", "0.01±0.00", "LT(Johansson", "et", "al.,", "2014)+SC", "17.00±0.09", "0.42±0.11", "0.00±0.00", "77.52±0.59", "0.26±0.34", "0.17±0.71", "GK(Shervashidze", "et", "al.,", "2009)+SC", "17.07±0.13", "0.80±0.25", "0.00±0.00", "66.17±0.00", "0.02±0.00", "0.08±0.17", "Graph", "kernel", "followed", "by", "spectral", "clustering", "(SC)", "ACC", "NMI", "ARI", "ACC", "NMI", "ARI", "Method", "ENZYMES", "COX2"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 505.44,
+    "y1": 393.59999999999997,
+    "y2": 632.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table5-1.png"
+}, {
+  "caption": "Figure 1: t-SNE visualization of the learned graph-level representations of our methods and other unsupervised graph representation learning methods. The first row is the visualization for MUTAG, while the second row is for ENZYMES.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 353.5035400390625,
+    "y2": 381.42401123046875
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "DGLC(d)", "JOAO(c)", "GraphCL(a)", "InfoGraph", "(b)", "GWF", "(e)", "DGLC(d)", "JOAO(c)", "GraphCL(a)", "InfoGraph", "(b)", "GWF"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 506.4,
+    "y1": 211.67999999999998,
+    "y2": 337.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Figure1-1.png"
+}, {
+  "caption": "Table 7: Running time comparison (in seconds) on the six benchmark graph datasets.",
+  "captionBoundary": {
+    "x1": 136.34300231933594,
+    "x2": 475.6591491699219,
+    "y1": 224.88540649414062,
+    "y2": 230.88787841796875
+  },
+  "figType": "Table",
+  "imageText": ["DGLC", "10.16", "12.12", "25.66", "12.84", "31.87", "30.50", "RW(Vishwanathan", "et", "al.,", "2010)+SC", "12.29", "29.29", "76.34", "25.44", "2346.51", "2457.56", "WL(Shervashidze", "et", "al.,", "2011)+SC", "2.19", "4.97", "9.57", "7.15", "13.43", "10.65", "SP(Borgwardt", "&", "Kriegel,", "2005)+SC", "3.60", "5.38", "25.49", "5.08", "53.75", "32.39", "LT(Johansson", "et", "al.,", "2014)+SC", "88.28", "160.86", "860.70", "552.66", "9117.17", "6016.26", "InfoGraph(Sun", "et", "al.,", "2020)+KM", "12.69", "17.12", "30.80", "18.03", "38.21", "34.87", "InfoGraph(Sun", "et", "al.,", "2020)+SC", "35.96", "96.60", "165.48", "101.2", "313.70", "300.84", "GWF(Xu", "et", "al.,", "2022)+KM", "477.48", "830.26", "2480.76", "803.81", "3668.92", "2945.12", "GWF(Xu", "et", "al.,", "2022)+SC", "566.41", "911.37", "2591.73", "896.44", "3954.87", "3132.67", "Method", "MUTAG", "PTC-MR", "BZR", "PTC-MM", "ENZYMES", "COX2"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 505.44,
+    "y1": 233.76,
+    "y2": 356.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6RWJe6lPbQ-Table7-1.png"
+}]

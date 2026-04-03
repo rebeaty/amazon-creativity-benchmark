@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 2: a) WebN–T5* performance compared to the previous SOTA models on MiniWoB benchmark. WebN-T5-3B improves the task success 16% while using 192 times less data, over to the best SL model, CC-Net (SL). LLMs performance is only surpassed by works utilizing RL, requiring orders of magnitude more online experience interaction with websites. b) LLMs with and without pretraining on Autonomous Web Navigation task. 2.5-4.5x performance improvement with pretraining.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0010070800781,
+    "y1": 196.40347290039062,
+    "y2": 242.2569580078125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Pre-training", "effect.", "Model", "Name", "Success", "(%)", "Model", "Size", "T5-large", "18.1", "800M", "LaMDA-1B", "15.6", "1B", "T5-3B", "11.1", "3B", "WebN-T5-large", "46.4", "800M", "WebN-LaMDA-1B", "48.8", "1B", "WebN-T5-3B", "51.8", "3B", "(a)", "Baseline", "comparison.", "2.4M", "Demos", "12K", "Demos"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 520.3199999999999,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Figure2-1.png"
+}, {
+  "caption": "Figure 1: a) HTML example page with a highlighted salient element, an element of interest (dashed box). All canonical tasks evaluate a distinct interaction with this element, either by classifying it as one of given categories, generating text description of its purpose, or applying an action as part of a sequential navigation of a multi-page website. b) LLM architectures overview. Dashed boxes denote sub-modules that are specific to either encoder-only or encoder-decoder models. For encoder-only models, we add an extra classification layer. Decoder-only models (not in the diagram) are similar to encoder-decoder models, the main difference is that HTML snippet is fed to the decoder and processed from left-to-right.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0029296875,
+    "y1": 259.6545104980469,
+    "y2": 325.43304443359375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "<div><label", "class=\"form-label\"", "for=”uName”>Email", "Address</label><label", "class=\"form-label\"", "for=”pass”>Enter", "Password:", "</label></div><div><input", "type=\"email\"", "id=\"uName”", "target><input", "type=\"password\"", "id=\"pass\"><span", "class=\"hidden\">Please", "enter", "your", "password.</span></div>", "(a)", "Please", "enter", "your", "password.", "</span>", "</div>", "<button", "type=\"submit\">Sign", "In</button>", "</form>", "</body>", "</html>", "<input", "type=\"email\"", "id=\"uName”>", "<input", "type=\"password\"", "id=\"pass\">", "<span", "class=\"hidden\">", "</div>", "<div>", "<label", "class=\"form-label\"", "for=”pass”>", "Enter", "Password:", "</label>", "<div>", "<label", "class=\"form-label\"", "for=”uName”>", "Enter", "Email", "Address", "</label>", "<html>", "<body>", "<form", "class=\"login-form\">"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 246.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Figure1-1.png"
+}, {
+  "caption": "Figure 4: a) Effect of snippet extraction parameters on WebC-T5-3B. Increases above 50% in new descendants and height of 4. Large increases in both parameters lead to large snippets and decrease in accuracy. b)Accuracy over training data size. WebC-T5-3B outperforms T5-3B (no pretraining) using only 1000 labeled examples (3.4% of all training dataset), and outperforms WebC-PaLM-8B which is an order of magnitude larger.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0050964355469,
+    "y1": 677.4385375976562,
+    "y2": 713.3280029296875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "PaLM", "T5-3B", "T5-3B", "(no", "pretraining)", "500", "1000", "1500", "2000", "85", "80", "75", "70", "65", "60", "55", "y", "ur", "ac", "A", "cc", "(a)", "Data", "Size", "25", "3", "87.7", "90.3", "25", "4", "88.6", "89.2", "50", "3", "88.4", "90.0", "50", "4", "89.3", "89.2", "300", "5", "87.8", "88.8", "500", "7", "75.8", "74.5", "New", "Height", "Test", "(%)", "Dev", "(%)", "descendants", "(%)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 503.03999999999996,
+    "y1": 544.3199999999999,
+    "y2": 664.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Figure4-1.png"
+}, {
+  "caption": "Table 2: LLMs performance on the Semantic Classification task. Pre-training helps LLMs transfer better, improving the accuracy of PaLM-8B more than 12% when compared to the same architecture trained only on HTML data (no pretraining). While WebC-PaLM-62B clearly performed better than all other models, we found WebC-T5-large to be competitive with much larger models such as WebC-LaMDA-1B or WebC-PaLM-8B.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042724609375,
+    "y1": 279.9895324707031,
+    "y2": 315.8790283203125
+  },
+  "figType": "Table",
+  "imageText": ["0%", "WebC-Albert-XL", "83.5", "83.1", "58.9", "M", "WebC-BERT-smallest", "84.4", "83.6", "38.7", "M", "WebC-BERT-small", "84.4", "85.2", "52.8", "M", "WebC-BERT-medium", "85.2", "84.5", "67", "M", "WebC-BERT-base", "83.9", "84.8", "109.5", "M", "WebC-BERT-large", "84.1", "85.8", "335.2", "M", "WebC-T5-base", "86.8", "89.9", "250", "M", "WebC-T5-large", "87.0", "89.3", "800", "M", "WebC-T5-3B", "87.7", "90.3", "3", "B", "WebC-LaMDA-1B", "87.4", "87.1", "1", "B", "12.5%", "Code", "WebC-PaLM-8B", "86.6", "89.9", "8", "B", "5%", "Code", "(0.875%", "HTML)", "WebC-PaLM-62B", "88.7", "90.5", "62", "B", "5%", "Code", "(0.875%", "HTML)", "T5-large", "76.4", "75.2", "800", "M", "0%T5-3B", "77.2", "73.8", "3", "B", "PaLM-8B", "73.3", "70.1", "8", "B", "Model", "Name", "Test", "(%)", "Dev", "(%)", "Model", "Size", "Code", "in", "training", "Corpus", "WebC-MobileBERT", "78.1", "77.7", "24.6", "M"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 476.15999999999997,
+    "y1": 94.56,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table2-1.png"
+}, {
+  "caption": "Figure 3: Accuracy per classification category of the WebC-T5-3B model on the development dataset.",
+  "captionBoundary": {
+    "x1": 121.16100311279297,
+    "x2": 490.8431091308594,
+    "y1": 495.6305236816406,
+    "y2": 501.63299560546875
+  },
+  "figType": "Figure",
+  "imageText": ["Categories"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 352.8,
+    "y2": 484.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Figure3-1.png"
+}, {
+  "caption": "Table 6: A sample web page and corresponding episode using the T5-3B model. At each time step, previous actions, instruction, and HTML are concatenated into a single HTML text. Note that at the beginning of episode, there is no past actions and we simply concatenate instruction and HTML. Action is generated as a sequence of tokens which is later parsed into a dictionary. The ref in the action points to an element that has a ref attribute with the same value. For instance, at the beginning of episode, ref: 6 corresponds to an input with ref=6. At the end of the episode, the model clicks on the submit button and the episode terminates.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0035095214844,
+    "y1": 83.53055572509766,
+    "y2": 155.28594970703125
+  },
+  "figType": "Table",
+  "imageText": ["{action:", "click,", "ref:", "14}14", "{action:", "click,", "ref:", "12}", "{action:", "click,", "ref:", "10}", "{action:", "click,", "ref:", "6}", "HTML", "Text", "Action", "Text", "Web", "page"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 168.95999999999998,
+    "y2": 766.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table6-1.png"
+}, {
+  "caption": "Table 5: Few-shot prompting performance with different pre- and post-processing steps.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.99847412109375,
+    "y1": 193.81649780273438,
+    "y2": 209.781982421875
+  },
+  "figType": "Table",
+  "imageText": ["Model", "Name", "Test", "Dev", "PaLM-540B", "64.2", "60.3", "-", "w/o", "Example", "Cleaning", "57.9", "57.2", "-", "w/o", "Category", "Rewriting", "52.1", "50.7", "-", "w/o", "Dictionary", "Mapping", "45.6", "45.1"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 315.84,
+    "x2": 494.4,
+    "y1": 124.8,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table5-1.png"
+}, {
+  "caption": "Figure 6: Performance comparison w.r.t. increasing model size. As the model size increases, we observe an increase in overall accuracy with PaLM-62B model achieving the highest accuracy while being 7x larger than PaLM-8B.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 267.0074768066406,
+    "y2": 294.92791748046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 307.68,
+    "y2": 502.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Figure6-1.png"
+}, {
+  "caption": "Table 3: Description generation accuracy of LLMs.",
+  "captionBoundary": {
+    "x1": 212.14199829101562,
+    "x2": 399.8594665527344,
+    "y1": 154.06552124023438,
+    "y2": 160.0679931640625
+  },
+  "figType": "Table",
+  "imageText": ["Test", "Dev", "Model", "Name", "Accuracy(%)", "BLEU", "ROUGE-1", "Accuracy(%)", "BLEU", "ROUGE-1", "WebD-T5-large", "90.1", "94.1", "94.7", "76.9", "87.4", "87", "WebD-LaMDA-1B", "89.7", "92.3", "94.6", "77.5", "83.2", "86.5", "WebD-T5-3B", "90.8", "94.7", "95", "78.1", "87.8", "87.5", "Closest", "Description", "61.2", "35.8", "62.7", "56.8", "17.1", "58.4"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 143.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table3-1.png"
+}, {
+  "caption": "Table 1: Task, dataset, and model summary. All models receive raw HTML. Autonomous Web Navigation receives the entire HTML, while the other tasks receive HTML snippets extracted given salient element.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042724609375,
+    "y1": 152.97250366210938,
+    "y2": 168.93695068359375
+  },
+  "figType": "Table",
+  "imageText": ["Description", "Generation", "CommonCrawl", "(new)", "85K", "Snippet", "Enc-Dec", "Text", "TextDec", "Semantic", "Classiﬁcation", "Annotated", "Shopping", "Webpages", "(Gur", "et", "al.,", "2021)", "38K", "Snippet", "All", "Text", "Category", "Autonomous", "Web", "Navigation", "MiniWoB", "Demos", "(Shi", "et", "al.,", "2017)", "12K", "Page", "Enc-Dec", "Text", "DictionaryDec", "Model", "Task", "Dataset", "Size", "Input", "Architecture", "Output", "Task", "Output"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 142.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table1-1.png"
+}, {
+  "caption": "Table 8: Resource requirements and running time of LLMs.",
+  "captionBoundary": {
+    "x1": 197.1230010986328,
+    "x2": 414.8789978027344,
+    "y1": 377.9875183105469,
+    "y2": 383.989990234375
+  },
+  "figType": "Table",
+  "imageText": ["T5", "3B", "TPU", "v4", "128", "512", "163.8", "734.5", "LaMDA", "1B", "TPU", "v2", "128", "512", "363.1", "1416", "Model", "Name", "Model", "Size", "TPU", "version", "Batch", "size", "Input", "sequence", "length", "Examples", "per", "sec", "(training)", "Examples", "per", "sec", "(inference)", "PaLM", "62B", "TPU", "v4", "8", "1920", "9.313", "30.51", "PaLM", "8B", "TPU", "v4", "32", "1920", "64.4", "184.3"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 503.03999999999996,
+    "y1": 396.0,
+    "y2": 435.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table8-1.png"
+}, {
+  "caption": "Figure 5: High-level overview of our pre-processing pipeline for generating snippets from a full HTML webpage. Given the page, we detect salient elements and for each one of them we extract snippets by recursively moving up in the HTML tree until a validation heuristic fails.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0018615722656,
+    "y1": 185.53952026367188,
+    "y2": 211.46697998046875
+  },
+  "figType": "Figure",
+  "imageText": ["<input", "type=\"password\"", "id=\"pass\">", "<span", "class=\"hidden\">", "Please", "enter", "your", "password.", "</span>", "</div>", "otherwise", "output", "<input", "type=\"email\"", "id=\"uName”", "target>", "<input", "type=\"email\"", "id=\"uName”>", "<div>", "if", "expandable:", "expand", "<input", "type=\"email\"", "id=\"uName”>", "<input", "name=\"uName\">", "<input", "name=\"pass\">", "<button", "type=\"submit\">", "HTML", "<input", "type=\"password\"", "id=\"pass\">", "<span", "class=\"hidden\">", "Please", "enter", "your", "password.", "</span>", "</div>", "<button", "type=\"submit\">Sign", "In</button>", "</form>", "</body>", "</html>", "<input", "type=\"email\"", "id=\"uName”>", "<label", "class=\"form-label\"", "for=”pass”>", "Enter", "Password:", "</label>", "</div>", "<div>", "<html>", "<body>", "<form", "class=\"login-form\">", "<div>", "<label", "class=\"form-label\"", "for=”uName”>", "Enter", "Email", "Address", "</label>", "snippet", "generation", "salient", "elements", "up", "expand", "one", "level"],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Figure5-1.png"
+}, {
+  "caption": "Table 4: Types of errors over 50 manually examined examples. 32% of errors are due to lack of information in HTML snippets, 30% of errors are related to annotations or can’t be improved due to ambiguity (email/username), and the remaining errors are incorrect predictions by the model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00091552734375,
+    "y1": 646.6035766601562,
+    "y2": 672.531005859375
+  },
+  "figType": "Table",
+  "imageText": ["Error", "Type", "Percentage", "of", "Examples", "Not", "enough", "information", "in", "the", "HTML", "snippet", "30", "Incorrect", "annotation", "(ex:", "”unknown", "role”", "instead", "of", "”organization”)", "12", "Annotation", "tool", "translates", "user", "selection", "incorrectly", "8", "Email/Username", "ambiguity", "10", "More", "general", "category", "(ex:", "”header”", "instead", "of", "”cart", "header”)", "8", "Immediate", "neighboring", "text", "misleads", "8", "Incorrect", "date", "formatting", "(ex:", "”mm”", "instead", "of", "”mmm”)", "4", "No", "information", "in", "the", "HTML", "snippet", "2", "Others", "18"],
+  "name": "4",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 522.72,
+    "y2": 635.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table4-1.png"
+}, {
+  "caption": "Table 7: Success rate comparison of various models in MiniWoB tasks. Baseline results are borrowed from (Humphreys et al., 2022). Note that these are normalized between 0 and 1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9994812011719,
+    "y1": 114.47953033447266,
+    "y2": 130.44500732421875
+  },
+  "figType": "Table",
+  "imageText": ["use-spinner", "0.98", "0.07", "0.05", "1", "0.47", "0.17", "0.04", "n/a", "n/a", "0.04", "n/a", "0.17", "0.17", "visual-addition", "0.97", "n/a", "n/a", "0.99", "0.36", "0.01", "n/a", "n/a", "n/a", "n/a", "n/a", "0.01", "0.01", "use-slider-2", "0.97", "n/a", "n/a", "0.95", "0.03", "0.15", "n/a", "n/a", "n/a", "n/a", "n/a", "0.15", "0.15", "use-slider", "0.98", "n/a", "n/a", "0.91", "0.18", "0.51", "n/a", "n/a", "n/a", "n/a", "n/a", "0.51", "0.51", "unicode-test", "0.99", "n/a", "n/a", "1", "0.86", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "use-autocomplete", "0.98", "0.22", "0.15", "1", "0.07", "0", "0.78", "n/a", "n/a", "0.98", "n/a", "0.78", "0.98", "use-colorwheel-2", "0.94", "n/a", "n/a", "0.95", "0.38", "1", "n/a", "n/a", "n/a", "n/a", "n/a", "1", "1", "use-colorwheel", "0.9", "n/a", "n/a", "0.98", "0.68", "1", "n/a", "n/a", "n/a", "n/a", "n/a", "1", "1", "terminal", "0.88", "n/a", "n/a", "-0.01", "0", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "text-editor", "0.88", "n/a", "n/a", "0.98", "0.11", "0.01", "n/a", "n/a", "n/a", "n/a", "n/a", "0.01", "0.01", "text-transform", "0.86", "n/a", "n/a", "0.6", "0.19", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "tic-tac-toe", "0.71", "0.48", "0.40", "0.83", "0.32", "0.34", "0.37", "n/a", "n/a", "0.47", "n/a", "0.37", "0.47", "simple-algebra", "0.86", "n/a", "n/a", "0.75", "0.03", "0.04", "n/a", "n/a", "n/a", "n/a", "n/a", "0.04", "0.04", "simple-arithmetic", "0.96", "n/a", "n/a", "0.86", "0.38", "0.07", "n/a", "n/a", "n/a", "n/a", "n/a", "0.07", "0.07", "social-media-all", "0.89", "0", "0", "0.75", "0", "n/a", "0.01", "n/a", "n/a", "0.01", "1", "0.01", "1", "social-media-some", "0.91", "0.02", "0", "0.85", "0.01", "n/a", "0.01", "n/a", "n/a", "0.42", "n/a", "0.01", "0.42", "social-media", "0.96", "0.21", "0.24", "0.9", "0.03", "0.23", "0.39", "n/a", "1", "1", "n/a", "1", "1", "resize-textarea", "0.94", "n/a", "n/a", "1", "0.27", "0.11", "n/a", "n/a", "n/a", "n/a", "n/a", "0.11", "0.11", "right-angle", "0.87", "n/a", "n/a", "0.98", "0.26", "0.38", "n/a", "n/a", "n/a", "n/a", "n/a", "0.38", "0.38", "scroll-text-2", "0.97", "n/a", "n/a", "1", "0.88", "0.96", "n/a", "n/a", "n/a", "n/a", "n/a", "0.96", "0.96", "scroll-text", "0.97", "n/a", "n/a", "0.96", "0.04", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "search-engine", "0.97", "0.34", "0.34", "1", "0.15", "0", "0.26", "n/a", "1", "0.99", "n/a", "1", "1", "simon-says", "0.62", "n/a", "n/a", "0", "0.02", "0.28", "n/a", "n/a", "n/a", "n/a", "n/a", "0.28", "0.28", "moving-items", "0.18", "n/a", "n/a", "0.88", "0.13", "0.78", "n/a", "n/a", "n/a", "n/a", "n/a", "0.78", "0.78", "multi-layouts", "0.95", "0.83", "0.48", "1", "0", "n/a", "0.99", "n/a", "n/a", "1", "n/a", "0.99", "1", "multi-orderings", "0.96", "0.88", "0.64", "1", "0", "n/a", "0.05", "n/a", "n/a", "1", "n/a", "0.05", "1", "navigate-tree", "0.98", "0.91", "0.99", "0.99", "0.32", "0.2", "0.99", "1", "1", "0.99", "1", "1", "1", "number-checkboxes", "0.96", "n/a", "n/a", "0.99", "0", "0.16", "n/a", "n/a", "n/a", "n/a", "n/a", "0.16", "0.16", "read-table-2", "0.95", "n/a", "n/a", "0.94", "0", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "read-table", "0.97", "n/a", "n/a", "0.97", "0.01", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "ﬁnd-midpoint", "0.94", "n/a", "n/a", "0.97", "0.35", "0.31", "n/a", "n/a", "n/a", "n/a", "n/a", "0.31", "0.31", "ﬁnd-word", "0.96", "n/a", "n/a", "0.88", "0.05", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "focus-text-2", "0.99", "1", "1", "1", "0.96", "0.83", "1", "n/a", "1", "1", "n/a", "1", "1", "focus-text", "1", "1", "1", "1", "0.99", "0.95", "1", "n/a", "1", "1", "n/a", "1", "1", "grid-coordinate", "0.87", "0.49", "0.42", "1", "0.66", "0.26", "1", "n/a", "n/a", "1", "n/a", "1", "1", "guess-number", "0.99", "0", "0", "1", "0.21", "0.2", "0", "n/a", "n/a", "0", "n/a", "0.2", "0.2", "highlight-text-2", "0.97", "n/a", "n/a", "1", "0.4", "0.13", "n/a", "n/a", "n/a", "n/a", "n/a", "0.13", "0.13", "highlight-text", "0.97", "n/a", "n/a", "1", "0.51", "0.9", "n/a", "n/a", "n/a", "n/a", "n/a", "0.9", "0.9", "identify-shape", "0.98", "0.88", "0.89", "1", "0.68", "0.36", "0.9", "n/a", "n/a", "1", "n/a", "0.9", "1", "login-user-popup", "0.94", "0.72", "0.40", "1", "0.02", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "login-user", "0.96", "0.82", "0.64", "1", "0", "0", "0.99", "1", "1", "1", "1", "1", "1", "enter-password", "0.96", "0.97", "0.92", "1", "0.02", "0", "0.99", "1", "1", "1", "1", "1", "1", "enter-text-2", "0.91", "n/a", "n/a", "0.98", "0.04", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "enter-text-dynamic", "0.97", "0.98", "0.92", "1", "0.39", "1", "1", "1", "1", "1", "1", "1", "1", "enter-text", "0.98", "0.89", "0.99", "1", "0.35", "0", "1", "n/a", "1", "1", "n/a", "1", "1", "enter-time", "0.98", "0", "0.01", "0.97", "0.04", "0.08", "0.52", "n/a", "n/a", "0.9", "n/a", "0.52", "0.9", "email-inbox", "0.96", "0.38", "0.21", "1", "0.09", "0.03", "0.43", "n/a", "0.54", "0.99", "n/a", "0.54", "0.99", "enter-date", "0.97", "0", "0", "1", "0.02", "0.61", "0", "1", "n/a", "0.96", "1", "1", "1", "email-inbox-reply", "0.91", "n/a", "n/a", "1", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "email-inbox-star-reply", "0.95", "n/a", "n/a", "1", "0.11", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "email-inbox-forward", "0.96", "n/a", "n/a", "1", "0.01", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "email-inbox-important", "0.99", "n/a", "n/a", "1", "0.3", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "email-inbox-nl-turk", "0.93", "0.23", "0.26", "1", "0.05", "n/a", "0.77", "n/a", "n/a", "0.93", "n/a", "0.77", "0.93", "email-inbox-noscroll", "0.96", "n/a", "n/a", "1", "0.13", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "drag-sort-numbers", "0.92", "n/a", "n/a", "0.97", "0.11", "0.66", "n/a", "n/a", "n/a", "n/a", "n/a", "0.66", "0.66", "email-inbox-delete", "0.99", "n/a", "n/a", "1", "0.22", "n/a", "n/a", "n/a", "1", "n/a", "n/a", "1", "1", "email-inbox-forward-nl-turk", "0.88", "0.33", "0.09", "1", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "email-inbox-forward-nl", "0.91", "0.60", "0.09", "1", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "drag-items-grid", "0.87", "n/a", "n/a", "0.98", "0.05", "0.01", "n/a", "n/a", "n/a", "n/a", "n/a", "0.01", "0.01", "drag-items", "0.93", "n/a", "n/a", "0.99", "0.13", "0.41", "n/a", "n/a", "n/a", "n/a", "n/a", "0.41", "0.41", "drag-shapes", "0.96", "n/a", "n/a", "0.99", "0.26", "0.92", "n/a", "n/a", "n/a", "n/a", "n/a", "0.92", "0.92", "click-test", "1", "1", "1", "1", "1", "1", "1", "n/a", "1", "1", "n/a", "1", "1", "click-widget", "0.83", "1", "0.97", "1", "0.56", "0.34", "0.93", "n/a", "1", "0.93", "n/a", "1", "1", "copy-paste-2", "0.94", "n/a", "n/a", "0.63", "0.01", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "copy-paste", "0.94", "n/a", "n/a", "0.79", "0.04", "0", "n/a", "n/a", "n/a", "n/a", "n/a", "0", "0", "count-shape", "0.82", "0.41", "0.43", "0.85", "0.21", "0.18", "0.59", "n/a", "n/a", "0.76", "n/a", "0.59", "0.76", "count-sides", "0.98", "n/a", "n/a", "1", "0.74", "0.3", "n/a", "n/a", "n/a", "n/a", "n/a", "0.3", "0.3", "drag-box", "0.99", "n/a", "n/a", "1", "0.61", "0.31", "n/a", "n/a", "n/a", "n/a", "n/a", "0.31", "0.31", "drag-cube", "0.99", "n/a", "n/a", "0.79", "0.23", "0.18", "n/a", "n/a", "n/a", "n/a", "n/a", "0.18", "0.18", "drag-item", "0.98", "n/a", "n/a", "1", "0.61", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "click-test-2", "0.99", "1", "1", "1", "0.95", "0.83", "1", "n/a", "1", "1", "n/a", "1", "1", "click-test-transfer", "0.99", "n/a", "n/a", "1", "0.94", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "click-shades", "0.91", "0", "0", "1", "0.04", "0.27", "0.22", "n/a", "n/a", "0.99", "n/a", "0.27", "0.99", "click-shape", "0.88", "0.53", "0.54", "0.95", "0.11", "0.11", "0.64", "n/a", "n/a", "0.64", "n/a", "0.64", "0.64", "click-tab-2-easy", "0.99", "n/a", "n/a", "0.99", "0.61", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "click-tab-2-hard", "0.96", "0.12", "0.13", "0.98", "0.19", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "click-tab-2-medium", "0.97", "n/a", "n/a", "0.99", "0.54", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "click-tab-2", "0.97", "0.18", "0.09", "0.98", "0.27", "0.08", "0.64", "n/a", "1", "0.98", "n/a", "1", "1", "click-tab", "0.99", "0.74", "1", "1", "0.95", "0.97", "0.55", "1", "1", "1", "1", "1", "1", "click-pie", "0.98", "0.51", "0.14", "0.97", "0.15", "0.15", "0.32", "1", "n/a", "0.32", "1", "1", "1", "click-scroll-list", "0.91", "0", "0", "0.6", "0.01", "0.07", "n/a", "n/a", "n/a", "n/a", "n/a", "0.07", "0.07", "click-color", "0.97", "0.27", "0.23", "1", "0.82", "0.23", "1", "n/a", "n/a", "1", "n/a", "1", "1", "click-dialog-2", "0.99", "0.24", "0.35", "1", "0.88", "0.53", "1", "n/a", "n/a", "1", "n/a", "1", "1", "click-dialog", "1", "1", "1", "1", "0.95", "1", "1", "1", "1", "1", "1", "1", "1", "click-link", "0.99", "1", "0.96", "0.99", "0.59", "0.31", "1", "1", "1", "1", "1", "1", "1", "click-menu-2", "0.98", "n/a", "n/a", "0.83", "0.52", "0.16", "n/a", "n/a", "n/a", "n/a", "n/a", "0.16", "0.16", "click-menu", "0.97", "0.37", "0.38", "0.94", "0.22", "0.13", "n/a", "n/a", "n/a", "n/a", "n/a", "0.13", "0.13", "click-option", "0.99", "0.87", "0.78", "0.99", "0.21", "0.28", "1", "n/a", "1", "1", "n/a", "1", "1", "click-collapsible-2", "0.97", "0", "0.01", "0.98", "0.17", "0.11", "0.65", "n/a", "n/a", "0.99", "n/a", "0.65", "0.99", "click-collapsible", "0.99", "0", "0.01", "1", "0.81", "0.98", "1", "1", "n/a", "1", "1", "1", "1", "click-checkboxes-transfer", "0.98", "0.63", "0.34", "0.99", "0.36", "n/a", "0.64", "n/a", "n/a", "0.64", "n/a", "0.64", "0.64", "click-checkboxes", "0.97", "0.96", "0.84", "0.98", "0.32", "0.48", "0.98", "n/a", "1", "1", "n/a", "1", "1", "click-button", "0.98", "1", "0.96", "1", "0.78", "0.62", "1", "1", "1", "1", "1", "1", "1", "click-checkboxes-large", "0.87", "0.22", "0", "0.71", "0", "n/a", "0.68", "n/a", "n/a", "0.84", "n/a", "0.68", "0.84", "click-checkboxes-soft", "0.73", "0.54", "0.43", "0.95", "0.04", "n/a", "0.51", "n/a", "n/a", "0.94", "n/a", "0.51", "0.94", "circle-center", "0.96", "n/a", "n/a", "0.97", "0.36", "0.98", "n/a", "n/a", "n/a", "n/a", "n/a", "0.98", "0.98", "click-button-sequence", "0.94", "1", "1", "1", "0.47", "0.22", "0.99", "n/a", "1", "1", "n/a", "1", "1", "choose-date", "0.97", "0", "0", "0.97", "0.12", "0", "0", "n/a", "1", "0", "n/a", "1", "1", "choose-list", "0.98", "0.26", "0.14", "0.99", "0.19", "0.25", "0.16", "0.26", "n/a", "0.16", "0.26", "0.26", "0.26", "(RL)", "(Augmented)", "bisect-angle", "0.92", "n/a", "n/a", "0.97", "0.29", "0.8", "n/a", "n/a", "n/a", "n/a", "n/a", "0.8", "0.8", "book-ﬂight", "0.87", "0", "0", "0.87", "0", "0", "0", "n/a", "n/a", "0", "1", "0", "1", "chase-circle", "0.82", "n/a", "n/a", "0.93", "0.8", "1", "n/a", "n/a", "n/a", "n/a", "n/a", "1", "1", "choose-date-easy", "0.99", "0.03", "0.05", "0.99", "0.42", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "choose-date-medium", "0.98", "0", "0", "0.99", "0.26", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "n/a", "(no", "history)", "bits", "exploration", "navigate", "exploration", "navigate", "(SL", "&", "RL)", "(Augmented)", "(SL", "&", "RL)", "(SL", "&", "RL)", "the", "web", "(Augmented)", "the", "web", "TASK", "Human", "CC-Net", "CC-Net", "World", "Workﬂow", "Learning", "DOM-Q-Net", "Workﬂow", "Learning", "Aggregated", "Aggregated", "WebC-T5-3B", "WebC-T5-3B", "(SL", "&", "RL)", "(SL)", "of", "guided", "to", "(RL)", "guided", "to", "SOTA", "SOTA"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 503.03999999999996,
+    "y1": 142.56,
+    "y2": 698.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GVMwL15UrZO-Table7-1.png"
+}]

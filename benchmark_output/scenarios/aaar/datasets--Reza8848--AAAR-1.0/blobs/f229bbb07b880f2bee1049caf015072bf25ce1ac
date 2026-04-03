@@ -1,0 +1,361 @@
+[{
+  "caption": "Figure 1: Scaling behavior of SAC and SR-SAC in the DeepMind Control Suite (DMC15-500k) benchmark, and of SPR and SR-SPR in the Atari 100k benchmark. (5 seeds for point for SAC and SR-SAC, at least 20 seeds for point for SPR and SR-SPR, 95% bootstrapped C.I.)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6679992675781,
+    "y1": 698.653564453125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Atari", "100k", "SR-SPR", "SPR", "IQ", "M", "0.6", "0.4", "0.2", "1", "2", "4", "8", "16", "Replay", "Ratio", "(a)", "DeepMind", "Control", "Suite", "(DMC15-500k)", "SR-SAC", "SAC", "IQ", "M", "800", "600", "400", "200", "1", "2", "4", "8", "16", "32", "64", "128", "Replay", "Ratio"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 490.08,
+    "y1": 540.0,
+    "y2": 685.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Scaling behavior of SAC, SR-SAC and its tandem and iterated offline variations in the DMC15 benchmark. Each individual line shows performance at a given number of environment steps, denoted by color, across different numbers of agent updates. Each point in a line is obtained by measuring performance with a different replay ratio for that number of environment steps. Each line is computed over 5 seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3529052734375,
+    "y1": 184.11849975585938,
+    "y2": 233.95697021484375
+  },
+  "figType": "Figure",
+  "imageText": ["Number", "of", "agent", "updates", "Environm", "ent", "steps", "2.5", "×", "104", "2.2", "×", "105", "4.2", "×", "105", "6.1", "×", "105", "8.0", "×", "105", "Iterated", "Offline", "SR-SAC", "105", "106", "107", "108", "Tandem", "SR-SAC", "105", "106", "107", "108", "SR-SAC", "105", "106", "107", "108", "SAC", "IQ", "M", "800", "600", "400", "200", "105", "106", "107", "108", "0"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 500.64,
+    "y1": 84.47999999999999,
+    "y2": 168.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure4-1.png"
+}, {
+  "caption": "Figure 12: Evaluation Returns on individual DMC15 environments for replay ratio 32.",
+  "captionBoundary": {
+    "x1": 133.7519989013672,
+    "x2": 478.24859619140625,
+    "y1": 337.9415283203125,
+    "y2": 343.9440002441406
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC,", "RR=32SR-SAC,", "RR=32", "SAC,", "RR=32SR-SAC,", "RR=32", "SAC,", "RR=32", "Tandem", "SR-SAC,", "RR=32SR-SAC,", "RR=32", "SAC,", "RR=32", "Tandem", "S", "-SAC,", "RR=32", "Iterated", "Offline", "SR-SAC,", "RR=32SR-SAC,", "RR=32", "SAC,", "RR=32", "Tandem", "SR-SAC,", "R=32", "Iterated", "Offline", "S", "-SAC,", "RR=32", "REDQ,", "RR=32", "walker-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "swimmer-swimmer6", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "reacher-hard", "500", "1000", "Ep", "is", "od", "e", "R", "et", "ur", "n", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "pendulum-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-hop", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "fish-swim", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "finger-turn_hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "cheetah-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "acrobot-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)"],
+  "name": "12",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 325.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Evaluation Returns on individual DMC15 environments for replay ratio 64.",
+  "captionBoundary": {
+    "x1": 133.7519989013672,
+    "x2": 478.24859619140625,
+    "y1": 665.9265747070312,
+    "y2": 671.9290161132812
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC,", "RR=64SR-SAC,", "RR=64", "SAC,", "RR=64SR-SAC,", "RR=64", "SAC,", "RR=64", "Tandem", "SR-SAC,", "RR=64SR-SAC,", "RR=64", "SAC,", "RR=64", "Tandem", "S", "-SAC,", "RR=64", "Iterated", "Offline", "SR-SAC,", "RR=64SR-SAC,", "RR=64", "SAC,", "RR=64", "Tandem", "SR-SAC,", "R=64", "Iterated", "Offline", "S", "-SAC,", "RR=64", "REDQ,", "RR=64", "walker-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "swimmer-swimmer6", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "reacher-hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "pendulum-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-hop", "ur", "n", "R", "et", "od", "e", "Ep", "is", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "fish-swim", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "finger-turn_hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "cheetah-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "acrobot-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "300", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)"],
+  "name": "13",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 466.08,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure13-1.png"
+}, {
+  "caption": "Figure 5: Learning curves (top) and evaluation performance (bottom) at replay ratio 16 for SPR and SR-SPR with and without offline updates after each reset",
+  "captionBoundary": {
+    "x1": 384.4519958496094,
+    "x2": 505.65386962890625,
+    "y1": 629.695556640625,
+    "y2": 690.4929809570312
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SPR:", "16", "SR-SPR:", "16", "+", "Offline", "SPR:", "16", "0.30", "0.45", "0.60", "IQM", "SR-SPR:", "16", "+", "Offline", "SR-SPR:", "16", "SPR:", "16", "IQ", "M", "ni", "ng", "Tr", "ai", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "40000", "80000", "Step"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 387.84,
+    "x2": 502.08,
+    "y1": 489.59999999999997,
+    "y2": 615.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Examples of behaviors of SR-SAC and its tandem and iterated offline variations on four environments from DMC15. (5 runs, ± std).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.16778564453125,
+    "y1": 180.68954467773438,
+    "y2": 197.6510009765625
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC,", "RR=128SR-SAC,", "RR=128", "SAC,", "RR=1SR-SAC,", "RR=128", "SAC,", "RR=1", "Tandem", "SR-SAC,", "RR=128SR-SAC,", "RR=128", "SAC,", "RR=1", "Tandem", "S", "-SAC,", "RR=128", "Iterated", "Offline", "SR-SAC,", "RR=128", "walker-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.05", "0.10", "0.15", "0.20", "Environment", "Steps", "(×106)", "quadruped-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.05", "0.10", "0.15", "0.20", "Environment", "Steps", "(×106)", "humanoid-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "100", "0", "0.00", "0.05", "0.10", "0.15", "0.20", "Environment", "Steps", "(×106)", "hopper-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.05", "0.10", "0.15", "0.20", "Environment", "Steps", "(×106)"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure6-1.png"
+}, {
+  "caption": "Figure 11: Evaluation Returns on individual DMC15 environments for replay ratio 16.",
+  "captionBoundary": {
+    "x1": 133.7519989013672,
+    "x2": 478.24859619140625,
+    "y1": 665.9265747070312,
+    "y2": 671.9290161132812
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC,", "RR=16SR-SAC,", "RR=16", "SAC,", "RR=16SR-SAC,", "RR=16", "SAC,", "RR=16", "Tandem", "SR-SAC,", "RR=16SR-SAC,", "RR=16", "SAC,", "RR=16", "Tandem", "S", "-SAC,", "RR=16", "Iterated", "Offline", "SR-SAC,", "RR=16SR-SAC,", "RR=16", "SAC,", "RR=16", "Tandem", "SR-SAC,", "R=16", "Iterated", "Offline", "S", "-SAC,", "RR=16", "REDQ,", "RR=16", "walker-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "swimmer-swimmer6", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "reacher-hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "pendulum-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-hop", "ur", "n", "R", "et", "od", "e", "Ep", "is", "300", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "fish-swim", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "finger-turn_hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "cheetah-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "acrobot-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "300", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)"],
+  "name": "11",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 466.08,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Evaluation Returns on individual DMC15 environments for replay ratio 8.",
+  "captionBoundary": {
+    "x1": 136.2429962158203,
+    "x2": 475.75830078125,
+    "y1": 337.9415283203125,
+    "y2": 343.9440002441406
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC,", "RR=8SR-SAC,", "RR=8", "SAC,", "RR=8SR-SAC,", "RR=8", "SAC,", "RR=8", "Tandem", "SR-SAC,", "RR=8SR-SAC,", "RR=8", "SAC,", "R=8", "Tandem", "S", "-SAC,", "RR=8", "Iterated", "Offline", "SR-SAC,", "RR=8SR-SAC,", "RR=8", "SAC,", "RR=8", "Tandem", "SR-SAC,", "R=8", "Iterated", "Offlin", "S", "-SAC,", "RR=8", "REDQ,", "RR=8", "walker-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "swimmer-swimmer6", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "reacher-hard", "500", "1000", "Ep", "is", "od", "e", "R", "et", "ur", "n", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "pendulum-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "150", "100", "50", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-hop", "ur", "n", "R", "et", "od", "e", "Ep", "is", "300", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "fish-swim", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "finger-turn_hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "cheetah-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "acrobot-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)"],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 325.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure10-1.png"
+}, {
+  "caption": "Table 4: Full results for individual games in Atari 100k for SR-SPR at various replay ratios.",
+  "captionBoundary": {
+    "x1": 123.02799987792969,
+    "x2": 488.66534423828125,
+    "y1": 562.9175415039062,
+    "y2": 568.9199829101562
+  },
+  "figType": "Table",
+  "imageText": ["Alien", "227.8", "7127.7", "420.0", "877.9", "964.4", "1015.5", "1107.8", "Amidar", "5.8", "1719.5", "143.0", "189.2", "211.8", "203.1", "203.4", "Assault", "222.4", "742.0", "1524.4", "891.9", "987.3", "1069.5", "1088.9", "Asterix", "210.0", "8503.3", "853.6", "836.7", "894.2", "916.5", "903.1", "Bank", "Heist", "14.2", "753.1", "53.1", "253.6", "460.0", "472.3", "531.7", "Battle", "Zone", "2360.0", "37187.5", "13074.0", "14493.5", "17800.6", "19398.4", "17671.0", "Boxing", "0.1", "12.1", "70.1", "36.1", "42.0", "46.7", "45.8", "Breakout", "1.7", "30.5", "83.7", "24.5", "26.1", "28.8", "25.5", "Chopper", "Command", "811.0", "7387.8", "1565.0", "1609.4", "1933.7", "2201.0", "2362.1", "Crazy", "Climber", "10780.5", "35829.4", "59324.2", "28004.7", "38341.7", "43122.3", "45544.1", "Demon", "Attack", "152.1", "1971.0", "2034.4", "2969.0", "3016.2", "2898.1", "2814.4", "Freeway", "0.0", "29.6", "31.1", "24.1", "24.5", "24.9", "25.4", "Frostbite", "65.2", "4334.7", "259.1", "1450.4", "1809.9", "1752.8", "2584.8", "Gopher", "257.6", "2412.5", "2236.1", "735.3", "717.5", "711.2", "712.4", "Hero", "1027.0", "30826.4", "7037.4", "6832.1", "7195.7", "7679.6", "8524.0", "Jamesbond", "29.0", "302.8", "462.7", "412.9", "408.8", "392.8", "389.1", "Kangaroo", "52.0", "3035.0", "838.2", "1651.2", "2024.1", "3254.9", "3631.7", "Krull", "1598.0", "2665.5", "6616.4", "5206.4", "5364.3", "5824.8", "5914.4", "Kung", "Fu", "Master", "258.5", "22736.3", "21759.8", "14165.6", "17656.5", "17095.6", "18649.4", "Ms", "Pacman", "307.3", "6951.6", "999.1", "1472.6", "1544.7", "1522.6", "1574.1", "Pong", "-20.7", "14.6", "14.6", "-10.5", "-5.5", "-3.0", "2.9", "Private", "Eye", "24.9", "69571.3", "100.0", "98.8", "95.8", "95.8", "97.9", "Qbert", "163.9", "13455.0", "745.7", "3431.7", "3699.8", "3850.6", "4044.1", "Road", "Runner", "11.5", "7845.0", "9614.6", "12199.0", "14287.3", "13623.5", "13463.4", "Seaquest", "68.4", "42054.7", "661.3", "714.7", "766.6", "800.5", "819.0", "Up", "N", "Down", "533.4", "11693.2", "3546.2", "61851.2", "91435.2", "95501.1", "112450.3", "Games", ">", "Human", "0", "0", "9", "7", "8", "9", "9", "IQM", "(↑)", "0.000", "1.000", "0.501", "0.444", "0.544", "0.589", "0.632", "Optimality", "Gap", "(↓)", "1.000", "0.000", "0.512", "0.516", "0.470", "0.452", "0.433", "Median", "(↑)", "0.000", "1.000", "0.289", "0.336", "0.523", "0.560", "0.685", "Mean", "(↑)", "0.000", "1.000", "1.046", "0.910", "1.111", "1.188", "1.272", "Game", "Random", "Human", "IRIS", "SR-SPR:2", "SR-SPR:4", "SR-SPR:8", "SR-SPR:16"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 551.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Table4-1.png"
+}, {
+  "caption": "Table 3: The tasks from the DMC15 benchmark. We chose commonly-employed DMC tasks for which the optimal policy is not immediately found by SAC according to https://github.com/ denisyarats/pytorch_sac#results.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.19482421875,
+    "y1": 224.14450073242188,
+    "y2": 252.06500244140625
+  },
+  "figType": "Table",
+  "imageText": ["walker", "run", "quadruped", "run,", "walk", "reacher", "hard", "humanoid", "run,", "walk,", "stand", "swimmer", "swimmer6", "cheetah", "run", "hopper", "hop,", "stand", "acrobot", "swingup", "pendulum", "swingup", "finger", "turn", "hard", "fish", "swim", "Environment", "Tasks"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Table3-1.png"
+}, {
+  "caption": "Figure 9: Scaling curve for SR-SAC and SAC on DMC15-1M.",
+  "captionBoundary": {
+    "x1": 180.81500244140625,
+    "x2": 431.18505859375,
+    "y1": 720.571533203125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["SAC", "SR-SAC", "IQ", "M", "800", "600", "400", "200", "1", "2", "4", "8", "16", "32", "64", "128", "Replay", "Ratio"],
+  "name": "9",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 213.6,
+    "x2": 399.36,
+    "y1": 565.4399999999999,
+    "y2": 702.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure9-1.png"
+}, {
+  "caption": "Figure 8: Performance of SR-SAC in the DMC15 benchmark as a function of the number of interactions with the environment (data budget) and number of agent updates (computational budget) as determined by the replay ratio.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 505.65484619140625,
+    "y1": 655.9635620117188,
+    "y2": 716.760009765625
+  },
+  "figType": "Figure",
+  "imageText": ["IQ", "M", "700", "600", "500", "400", "300", "es", ")", "pd", "at", "nt", "u", "f", "a", "ge", "be", "r", "o", "(N", "um", "ge", "t", "l", "b", "ud", "tio", "na", "pu", "ta", "C", "om", "107", "106", "(Environment", "steps)", "1e6", "0.2", "0.4", "0.6", "0.8", "1.0", "Data", "budget"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 348.96,
+    "x2": 499.68,
+    "y1": 530.88,
+    "y2": 640.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure8-1.png"
+}, {
+  "caption": "Figure 7: The replay ratio scaling behavior of SRSPR with various components ablated.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.650390625,
+    "y1": 390.19451904296875,
+    "y2": 407.156005859375
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SPR", "No", "SP", "No", "Target", "Exploration", "Online", "Targets", "No", "SP,", "Online", "targets", "Constant", "interval", "SP", "Only", "IQ", "M", "0.65", "0.60", "0.55", "0.50", "0.45", "0.40", "0.35", "0.30", "0.25", "1", "2", "4", "8", "16", "Replay", "Ratio"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 309.12,
+    "x2": 501.12,
+    "y1": 115.67999999999999,
+    "y2": 375.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure7-1.png"
+}, {
+  "caption": "Figure 2 & Table 1: Performance of SR-SAC and of standard baselines on the DMC15 benchmark. (5 seeds for SR-SAC, 20 for all other algorithms, 95% bootstrapped C.I.).",
+  "captionBoundary": {
+    "x1": 107.67102813720703,
+    "x2": 505.73773193359375,
+    "y1": 238.70254516601562,
+    "y2": 255.66400146484375
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC", "805", "(726,", "867)", "729", "(628,", "790)", "710", "(643,", "775)", "REDQ", "586", "(514,", "649)", "546", "(490,", "596)", "539", "(498,", "576)", "SAC", "535", "(467,", "597)", "525", "(471,", "567)", "519", "(480,", "557)", "DDPG", "514", "(450,", "572)", "492", "(440,", "540)", "489", "(450,", "526)", "Method", "IQM", "Median", "Mean", "DMC15-1M", "SR-SAC", "740", "(642,", "818)", "667", "(573,", "742)", "658", "(589,", "722)", "REDQ", "511", "(440,", "577)", "493", "(442,", "544)", "494", "(452,", "534)", "SAC", "391", "(334,", "448)", "424", "(376,", "468)", "424", "(386,", "461)", "DDPG", "392", "(334,", "445)", "410", "(364,", "454)", "408", "(371,", "442)", "Method", "IQM", "Median", "Mean", "DMC15-500k", "SAC", "REDQ", "SR-SAC", "DDPG", "IQ", "M", "800", "600", "400", "200", "0", "Environment", "Steps", "(×106)", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 505.44,
+    "y1": 85.92,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure2-1.png"
+}, {
+  "caption": "Figure 16: Learning curves for SR-SPR (solid) and SPR (dashed) at various replay ratios. Note that all SR-SPR runs converge to similar TD errors, gradient norms and parameter norms, while these metrics greatly differ for SPR at different replay ratios. IQM training performance does not match evaluation performance, as ongoing training episodes are often disrupted by the reset procedure.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030822753906,
+    "y1": 592.4185791015625,
+    "y2": 631.2979736328125
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SPR:16", "SPR:16", "SR-SPR:8", "SPR:8", "SR-SPR:4", "SPR:4", "SR-SPR:2", "SPR:2", "IQ", "M", "ni", "ng", "Tr", "ai", "0.6", "0.4", "0.2", "0.0", "0", "20000", "40000", "60000", "80000", "100000", "Step", "rr", "or", "TD", "E", "0.18", "0.16", "0.14", "0.12", "0.10", "0.08", "0.06", "0", "20000", "40000", "60000", "80000", "100000", "Step", "m", "t", "N", "or", "di", "en", "G", "ra", "2.25", "2.00", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0", "20000", "40000", "60000", "80000", "100000", "Step", "or", "m", "er", "N", "m", "et", "Pa", "ra", "120", "100", "80", "60", "40", "0", "20000", "40000", "60000", "80000", "100000", "Step"],
+  "name": "16",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 496.32,
+    "y1": 184.79999999999998,
+    "y2": 577.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure16-1.png"
+}, {
+  "caption": "Figure 3 & Table 2: Performance profiles (left, higher is better) of SR-SPR at various replay ratios, and 95% bootstrapped C.I.s of SR-SPR at replay ratio 16 and of standard baselines on Atari 100k (right, 20 seeds for SR-SPR and SPR, 5 seeds for IRIS, 100 seeds for all other algorithms as taken from (Agarwal et al., 2021)).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.2452087402344,
+    "y1": 687.694580078125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["0.30", "0.45", "0.60", "0.75", "Median", "0.75", "1.00", "1.25", "Mean", "SR-SPR", "IRIS", "SPR", "0.40", "0.48", "0.56", "0.64", "IQM", "SR-SPR", "0.632", "(0.60,", "0.66)", "0.685", "(0.60,", "0.77)", "1.272", "(1.18,", "1.37)", "IRIS", "0.501", "(0.44,", "0.56)", "0.289", "(0.25,", "0.41)", "1.046", "(0.96,", "1.13)", "SPR", "0.380", "(0.36,", "0.39)", "0.433", "(0.38,", "0.48)", "0.578", "(0.56,", "0.60)", "DrQ(ϵ)", "0.280", "(0.27,", "0.29)", "0.304", "(0.28,", "0.33)", "0.465", "(0.46,", "0.48)", "DER", "0.183", "(0.18,", "0.19)", "0.191", "(0.18,", "0.21)", "0.351", "(0.34,", "0.36)", "CURL", "0.113", "(0.11,", "0.12)", "0.102", "(0.09,", "0.12)", "0.261", "(0.25,", "0.27)", "Method", "IQM", "Median", "Mean", "Atari-100k", "SR-SPR:", "16", "SR-SPR:", "8", "SR-SPR:", "4", "SR-SPR:", "2", "SR-SPR:", "1", "SPR", "re", ">", "s", "co", "w", "ith", "un", "s", "of", "r", "tio", "n", "Fr", "ac", "1.00", "0.75", "0.50", "0.25", "0.00", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Human", "Normalized", "Score", "(", ")"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 520.8,
+    "y2": 672.9599999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure3-1.png"
+}, {
+  "caption": "Figure 15: Pareto fronts for SR-SAC and Tandem SR-SAC on DMC15 (5 seeds).",
+  "captionBoundary": {
+    "x1": 144.552001953125,
+    "x2": 467.44989013671875,
+    "y1": 661.8175659179688,
+    "y2": 667.8200073242188
+  },
+  "figType": "Figure",
+  "imageText": ["es", ")", "1e7", "IQM", ">", "600", "SR-SAC", "Tandem", "SR-SAC", "SAC", "pd", "at", "nt", "u", "f", "a", "ge", "be", "r", "o", "(N", "um", "ge", "t", "l", "b", "ud", "tio", "na", "pu", "ta", "C", "om", "3", "2", "1", "0", "(Environment", "steps)", "1e5", "4", "6", "8", "Data", "budget"],
+  "name": "15",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 211.67999999999998,
+    "x2": 400.32,
+    "y1": 481.91999999999996,
+    "y2": 644.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure15-1.png"
+}, {
+  "caption": "Figure 14: Evaluation Returns on individual DMC15 environments for replay ratio 128.",
+  "captionBoundary": {
+    "x1": 131.26199340820312,
+    "x2": 480.7398681640625,
+    "y1": 342.050537109375,
+    "y2": 348.0530090332031
+  },
+  "figType": "Figure",
+  "imageText": ["SR-SAC,", "RR=128SR-SAC,", "RR=128", "SAC,", "RR=128SR-SAC,", "RR=128", "SAC,", "RR=128", "Tandem", "SR-SAC,", "RR=128SR-SAC,", "RR=128", "SAC,", "RR=128", "Tandem", "SR-SAC,", "RR=128", "Iterated", "Offline", "SR-SAC,", "RR=128SR-SAC,", "RR=128", "SAC,", "RR=128", "Tandem", "S", "-SAC,", "R=128", "Iterated", "Offline", "S", "-SAC,", "RR=128", "REDQ,", "RR=128", "walker-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "swimmer-swimmer6", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "reacher-hard", "500", "1000", "Ep", "is", "od", "e", "R", "et", "ur", "n", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "quadruped-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "pendulum-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-walk", "ur", "n", "R", "et", "od", "e", "Ep", "is", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "humanoid-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "300", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-stand", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "hopper-hop", "ur", "n", "R", "et", "od", "e", "Ep", "is", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "fish-swim", "ur", "n", "R", "et", "od", "e", "Ep", "is", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "finger-turn_hard", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "500", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "cheetah-run", "ur", "n", "R", "et", "od", "e", "Ep", "is", "1000", "750", "500", "250", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)", "acrobot-swingup", "ur", "n", "R", "et", "od", "e", "Ep", "is", "300", "200", "100", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Environment", "Steps", "(×106)"],
+  "name": "14",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OpC-9aBBVJe-Figure14-1.png"
+}]

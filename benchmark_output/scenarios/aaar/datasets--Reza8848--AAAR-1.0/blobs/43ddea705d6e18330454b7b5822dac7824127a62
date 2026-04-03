@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 4: Gesture prediction",
+  "captionBoundary": {
+    "x1": 256.90997314453125,
+    "x2": 355.09197998046875,
+    "y1": 503.76373291015625,
+    "y2": 509.1659851074219
+  },
+  "figType": "Table",
+  "imageText": ["Word", "The", "word", "gestures", "are", "predicted", "with", "the", "help", "of", "count_defects", "and", "area", "values", "as", "presented", "in", "Algorithm", "11", "A.2.", "Alphabet", "The", "alphabet", "gestures", "are", "predicted", "with", "the", "help", "of", "count_defects", "and", "area", "values", "as", "presented", "in", "Algorithm", "10", "A.2.", "distance", "a,", "else,", "a", "variable", "B", "is", "incremented", "with", "the", "value", "of", "the", "distance", "b.", "These", "variables", "A", "and", "B", "represents", "the", "sum", "of", "distances", "between", "the", "ﬁngers", "and", "the", "sum", "of", "lengths", "of", "the", "ﬁngers.", "Finally,", "the", "predictions", "for", "the", "number", "gestures", "are", "obtained", "by", "using", "the", "values", "of", "count_defects,", "A", "and", "B", "as", "presented", "in", "Algorithm", "9", "A.2.", "Gesture", "Methodology", "Number", "When", "a", "defect", "with", "its", "vertex", "angle", "less", "than", "90◦", "is", "encountered,", "a", "variable", "A", "is", "incremented", "with", "the", "value", "of", "the"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 530.4,
+    "y1": 516.0,
+    "y2": 592.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Table4-1.png"
+}, {
+  "caption": "Table 3: Gesture Features",
+  "captionBoundary": {
+    "x1": 259.8999938964844,
+    "x2": 352.1014099121094,
+    "y1": 83.4337387084961,
+    "y2": 88.83599853515625
+  },
+  "figType": "Table",
+  "imageText": ["Length", "and", "Angle", "For", "each", "defect", "in", "defects,", "the", "coordinates", "of", "start", "point,", "end", "point", "and", "farthest", "point", "is", "stored", "in", "start,", "end", "and", "far", "respectively.", "The", "workﬂow", "for", "calculating", "lengths", "of", "the", "sides", "of", "the", "triangle", "formed", "by", "joining", "these", "points", "and", "the", "angle", "θ", "formed", "at", "the", "vertex", "of", "the", "farthest", "point", "is", "presented", "in", "Algorithm", "8", "A.2.", "A", "depiction", "of", "these", "distances", "and", "angle", "with", "respect", "to", "ﬁngers", "having", "convex", "defect", "is", "shown", "in", "Fig.", "4(c).", "If", "the", "angle", "calculated", "is", "less", "than", "90◦,", "then", "a", "variable", "count_defects", "is", "incremented", "by", "one.", "The", "ﬁnal", "image", "depicting", "the", "contours", "in", "green", "line", "and", "defects", "in", "red", "dots", "is", "shown", "in", "Fig.", "4(d).", "Convex", "Hull", "and", "Convexity", "Defects", "The", "smallest", "convex", "polygon,", "that", "encloses", "all", "the", "set", "of", "contour", "points", "in", "contour,", "is", "found", "by", "convex", "hull", "method", "which", "follows", "Akl-Toussaint", "heuristic", "followed", "by", "Graham-Sklansky", "scan", "as", "presented", "in", "Algorithm", "1.", "This", "algo-", "rithm", "returns", "the", "sequence", "of", "stack", "of", "vertices", "of", "the", "convex", "hull", "and", "is", "stored", "in", "hull.", "Fig.", "4(b)", "shows", "the", "convex", "hull", "lines", "(as", "red", "lines)", "joining", "all", "the", "points", "in", "hull.", "Considering", "H[n]", "as", "convex", "hull", "points", "and", "C[n]", "as", "contour", "points,", "for", "each", "pair", "of", "adjacent", "hull", "points", "(H[i],", "H[i+", "1]),", "deﬁning", "one", "edge", "of", "the", "convex", "hull,", "the", "distance", "from", "the", "edge", "for", "each", "point", "on", "the", "contour", "C[n]", "that", "lies", "between", "H[i]", "and", "H[i", "+", "1]", "(excluding", "C[n]", "==", "H[i", "+", "1])", "is", "calculated.", "The", "workﬂow", "for", "calculating", "the", "maximum", "distance", "is", "presented", "in", "Algorithm", "7", "A.2.", "If", "the", "distance", "is", "greater", "than", "zero,", "then", "a", "defect", "is", "considered", "to", "be", "present.", "When", "a", "defect", "is", "present,", "the", "value", "of", "i,", "i", "+", "1,", "the", "index", "(n)", "of", "the", "contour", "point", "where", "the", "maximum", "is", "located", "and", "the", "maximum", "distance", "is", "recorded", "in", "defects", "as", "a", "list", "containing:", "[", "start", "point,", "end", "point,", "farthest", "point,", "approximate", "distance", "to", "farthest", "point", "].", "uses", "CV_RETR_TREE", "mode", "to", "retrieve", "all", "the", "contours", "and", "reconstruct", "a", "full", "hierarchy", "of", "nested", "contours", "along", "with", "CV_CHAIN_APPROX_SIMPLE", "method", "to", "compress", "horizontal,", "vertical,", "and", "diagonal", "segments", "and", "leaves", "only", "their", "end", "points.", "Contour", "retrieval", "follows", "Suzuki’s", "algorithm", "which", "is", "explained", "as", "follows:", "The", "function", "f(x,", "y)", "denotes", "the", "value", "of", "the", "pixel", "at", "location", "(x,", "y).", "The", "uppermost", "row,", "the", "lowermost", "row,", "the", "rightmost", "column,", "and", "the", "leftmost", "column", "of", "the", "picture", "composes", "the", "frame.", "Then,", "a", "unique", "number", "is", "assigned", "to", "every", "new", "border", "and", "it", "is", "denoted", "by", "NBD.", "The", "criteria", "for", "checking", "the", "outer", "border", "or", "hole", "border", "is", "shown", "in", "Fig.", "4(a).", "The", "NBD", "of", "the", "frame", "is", "assumed", "to", "be", "1.", "Other", "borders", "are", "numbered", "sequentially.", "The", "information", "of", "the", "parent", "of", "any", "border", "is", "saved", "in", "LNBD", "or", "last", "NBD.", "The", "workﬂow", "to", "ﬁnd", "the", "contour", "points", "is", "presented", "in", "Algorithm", "5", "A.2.", "The", "retrieved", "tree", "of", "list", "of", "points", "are", "stored", "in", "contours.", "Using", "contours,", "the", "largest", "contour", "in", "terms", "of", "area", "is", "isolated", "and", "stored", "as", "contour.", "Fig.", "4(b)", "shows", "the", "contour", "line", "(as", "green", "line)", "joining", "all", "the", "points", "in", "contour.", "The", "area", "of", "contour", "is", "calculated", "using", "the", "formula", "presented", "in", "Algorithm", "6", "A.2.", "Feature", "Description", "Contours", "Contours", "algorithm", "processes", "the", "arbitrary", "binary", "image", "thresh", "and", "returns", "a", "vector", "of", "detected", "contour", "points.", "It"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 546.24,
+    "y1": 96.0,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Table3-1.png"
+}, {
+  "caption": "Figure 4: Convex Hull Optimization in URVoice",
+  "captionBoundary": {
+    "x1": 219.06298828125,
+    "x2": 392.9394226074219,
+    "y1": 481.8457336425781,
+    "y2": 487.24798583984375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Final", "image", "(c)", "Sides", "and", "angle", "w.r.t", "to", "a", "Convex", "defect", "(b)", "Contour", "and", "Convex", "hull", "(a)", "Outer", "and", "hole", "bor-", "der", "check"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 459.84,
+    "y1": 360.0,
+    "y2": 475.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Figure4-1.png"
+}, {
+  "caption": "Figure 1: Functional overview of the Vocalizer",
+  "captionBoundary": {
+    "x1": 222.13800048828125,
+    "x2": 389.8634338378906,
+    "y1": 721.470703125,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 443.03999999999996,
+    "y1": 564.0,
+    "y2": 718.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Figure1-1.png"
+}, {
+  "caption": "Table 1: Convex Hull Literature",
+  "captionBoundary": {
+    "x1": 248.62899780273438,
+    "x2": 363.3720397949219,
+    "y1": 393.89874267578125,
+    "y2": 399.3009948730469
+  },
+  "figType": "Table",
+  "imageText": ["Graham-Sklansky", "scan", "Preparata", "&", "Shamos", "(1985)", "O(n)", "It", "is", "similar", "to", "the", "Sklansky", "algorithm.", "Often", "used", "after", "Akl-", "Toussaint", "heuristic", "Selim", "Akl", "and", "G.", "T.", "Tou-", "ssaint", "Bhattacharya", "&", "Toussaint", "(1983),Akl", "&", "Toussaint", "(1978)", "O(n)", "It", "is", "often", "used", "as", "the", "ﬁrst", "step", "in", "implementations", "of", "convex", "hull", "algorithm", "to", "improve", "the", "performance.", "Akl-Toussaint", "heuristic", "Chan’s", "algorithm", "Chan", "Chan", "(1996)", "O(nlogh)", "A", "simpler", "optimal", "output-sensitive", "algorithm.", "It", "combines", "gift", "wrapping", "with", "the", "execution", "of", "an", "algorithm", "withO(nlogn)", "(such", "as", "Graham", "scan)", "on", "small", "subsets", "of", "the", "input.", "Ultimate", "pla-", "nar", "convex", "hull", "algorithm", "Kirkpatrick", "and", "Seidel", "Kirkpatrick", "&", "Seidel", "(1986)", "O(nlogh)", "The", "ﬁrst", "optimal", "output-sensitive", "algorithm.", "It", "is", "a", "modiﬁca-", "tion", "of", "the", "divide", "and", "conquer", "algorithm", "by", "using", "the", "technique", "of", "marriage-before-conquest", "and", "low-dimensional", "linear", "program-", "ming.", "Incremental", "con-", "vex", "hull", "algorithm", "Kallay", "Kallay", "(1984)", "O(nlogn)", "It", "is", "used", "to", "develop", "3D", "convex", "hull", "algorithms.", "Divide", "and", "con-", "quer", "Preparata", "and", "Hong", "Preparata", "&", "Hong", "(1977)", "O(nlogn)", "This", "algorithm", "is", "applicable", "to", "3D", "case.", "Barber,", "Dobkin", "and", "Huhdanpaa", "Barber", "(1996)", "Hoare", "(1961)", "O(nlogr)", "It", "uses", "a", "divide", "and", "conquer", "approach", "like", "that", "of", "quicksort.", "N-dimensional", "Quickhull", "Monotone", "chain", "algorithm", "Andrew", "Andrew", "(1979)", "O(nlogn)", "A", "variant", "of", "the", "Gram", "scan.", "It", "sorts", "points", "by", "their", "coordinates", "instead", "of", "angles.", "Graham", "scan", "Graham", "Graham", "(1972)", "O(nlogn)", "A", "modiﬁed", "version", "of", "Gift", "wrapping", "method.", "Starting", "from", "the", "lowest", "point,", "all", "the", "points", "are", "sorted", "in", "increasing", "order", "of", "the", "angle", "of", "the", "lowest", "point", "made", "with", "the", "x-axis,", "and", "then", "a", "more", "efﬁcient", "searching", "scheme", "can", "be", "performed.", "Gift", "wrapping", "method", "Chand", "and", "Kapur", "Chand", "&", "Kapur", "(1970),", "Jarvis", "Jarvis", "(1973)", "O(nh)", "It", "determines", "the", "left", "most", "point,", "which", "is", "a", "vertex", "of", "the", "convex", "hull,", "and", "then", "searches", "for", "the", "point", "that", "lies", "on", "one", "side", "of", "the", "line", "from", "the", "current", "vertex", "to", "it.", "All", "the", "vertices", "of", "the", "convex", "hull", "can", "be", "found", "by", "repeating", "this", "procedure.", "Linear", "time", "algo-", "rithm", "(1972)", "Sklansky", "Sklansky", "(1982)", "O(n)", "It", "was", "short", "and", "elegant", "to", "ﬁnd", "the", "convex", "hull", "of", "a", "simple", "polygon", "in", "linear", "time.", "Algorithm", "Proposed", "by", "Complexity", "Description", "Graham’s", "method", "(1972)", "Graham", "O(nlogn)", "To", "compute", "the", "convex", "hull", "of", "n", "points", "on", "the", "plane", "based", "on", "polar", "angles"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 550.0799999999999,
+    "y1": 405.59999999999997,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Table1-1.png"
+}, {
+  "caption": "Figure 2: Overview of the algorithm",
+  "captionBoundary": {
+    "x1": 240.78799438476562,
+    "x2": 371.2132263183594,
+    "y1": 308.9227600097656,
+    "y2": 314.32501220703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 427.2,
+    "y1": 82.56,
+    "y2": 306.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Figure2-1.png"
+}, {
+  "caption": "Table 7: Benchmarking Convex Hull Optimization with selected ML/DL Models",
+  "captionBoundary": {
+    "x1": 160.83599853515625,
+    "x2": 451.1679382324219,
+    "y1": 83.4337387084961,
+    "y2": 88.83599853515625
+  },
+  "figType": "Table",
+  "imageText": ["Convex", "Hull", "Optimization", "technique", "1,", "2,", "3,", "4,", "5,", "6,", "7,", "8,", "9,", "B,", "C,", "L,", "P,", "R,", "W,", "T,", "Doc-", "tor,", "This,", "Your,", "Mine", "[Total:20", "classes]", "Real-time", "RGB", "images", "in", "video", "stream:", "[200x200]", "pixels", "for", "num-", "ber", "gestures", "and", "[400x200]", "pixels", "for", "alphabet", "and", "word", "gestures.", "A", "rule", "based", "classiﬁer", "as", "dis-", "cussed", "in", "subsection", "3.6", "Refer", "Table", "6", "Convolutional", "Neural", "Network", "(2)", "0,", "1,", "2,", "3,", "4,", "5,", "7,", "8,", "9", "[Total:9", "classes]", "RGB", "image", "dataset", "of", "static", "single", "hand", "gestures", "of", "shape", "[400x400x3].", "300", "images", "per", "class", "[Total:", "2700", "images].", "Training", "set:", "250", "images", "per", "class", "Validation", "set:", "30", "images", "per", "class", "Testing", "set:", "20", "images", "per", "class", "A", "Sequential", "Model", "with", "2", "Convolution2D", "layers,", "2", "Max-", "Pooling2D", "layers", "and", "2", "hid-", "den", "layers", "of", "neural", "network", "with", "relu", "as", "activation", "function.", "The", "output", "layer", "uses", "softmax", "activation", "function,", "adam", "opti-", "miser", "and", "categorical", "crossen-", "tropy", "as", "loss", "function.", "Accuracy:", "98.89%", "Loss:", "2.46%", "Precision:", "98%", "Recall:", "98%", "F1-score:", "98%", "Convolutional", "Neural", "Network", "(1)", "0,", "1,", "2,", "3,", "4,", "5,", "7,", "8,", "9", "[Total:9", "classes]", "RGB", "image", "dataset", "of", "static", "single", "hand", "gestures", "of", "shape", "[400x400x3].", "60", "images", "per", "class", "[Total:", "540", "im-", "ages].", "Training", "set:", "40", "images", "per", "class", "Testing", "set:", "20", "images", "per", "class", "A", "Sequential", "Model", "with", "2", "Convolution2D", "layers,", "2", "Max-", "Pooling2D", "layers", "and", "2", "hid-", "den", "layers", "of", "neural", "network", "with", "relu", "as", "activation", "function.", "The", "output", "layer", "uses", "softmax", "activation", "function,", "adam", "opti-", "miser", "and", "categorical", "crossen-", "tropy", "as", "loss", "function.", "Accuracy:", "86.67%", "Loss:", "13.33%", "Precision:", "91%", "Recall:", "87%", "F1-score:", "87%", "Artiﬁcial", "Neu-", "ral", "Network", "(numbers,", "al-", "phabets", "and", "words)", "1,", "2,", "3,", "4,", "5,", "6,", "7,", "8,", "9,", "B,", "C,", "L,", "P,", "R,", "W,", "T,", "Doctor,", "This,", "Your,", "Mine", "[Total:", "20", "classes]", "Numerical", "dataset", "of", "extracted", "fea-", "tures", "of", "hand", "gestures", "[normalised", "data].", "1000x8", "features", "per", "class", "[Total:", "20000x8", "features].", "Training", "set:", "6300x8", "features", "per", "class", "Testing", "set:", "1800x8", "features", "per", "class", "A", "Sequential", "Model", "with", "4", "hid-", "den", "layers", "which", "uses", "relu", "ac-", "tivation", "function.", "The", "out-", "put", "layer", "uses", "softmax", "activa-", "tion", "function,", "adam", "optimiser", "and", "categorical", "crossentropy", "as", "loss", "function.", "Training", "accuracy:", "93.70%", "Training", "loss:", "17.80%", "Validation", "accu-", "racy:", "95.32%", "Validation", "loss:", "14.01%", "Artiﬁcial", "Neu-", "ral", "Network", "(only", "numbers)", "1,", "2,", "3,", "4,", "5,", "6,", "7,", "8,", "9", "[Total:", "9", "classes]", "Numerical", "dataset", "of", "8", "extracted", "features", "of", "hand", "gestures", "[nor-", "malised", "data].", "1000x8", "features", "per", "class", "[Total:", "9000x8", "features].", "Training", "set:", "6300x8", "features", "per", "class", "Testing", "set:", "1800x8", "features", "per", "class", "A", "Sequential", "Model", "with", "3", "hid-", "den", "layers", "which", "uses", "relu", "ac-", "tivation", "function.", "The", "out-", "put", "layer", "uses", "softmax", "activa-", "tion", "function,", "adam", "optimiser", "and", "categorical", "crossentropy", "as", "loss", "function.", "Training", "accuracy:", "94.59%", "Training", "loss:", "17.97%", "Validation", "accu-", "racy:", "97.33%", "Validation", "loss:", "10.94%", "Support", "Vector", "Classiﬁer", "0,", "1,", "2,", "3,", "4,", "5,", "7,", "8,", "9", "[Total:9", "classes]", "RGB", "image", "dataset", "of", "static", "single", "hand", "gestures", "of", "shape", "[400x400x3].", "300", "images", "per", "class", "[Total:", "2700", "images].", "Training", "set:", "2518", "images", "Validation", "set:", "169", "images", "per", "class", "Testing", "set:", "13", "images", "per", "class", "A", "pipeline", "with", "Randomized-", "PCA", "for", "dimensionality", "reduc-", "tion", "followed", "by", "SVC", "classi-", "ﬁer", "with", "\"rbf\"", "kernel", "and", "\"bal-", "anced\"", "class_weight.", "Trained", "data", "using", "GridSearchCV.", "Testing", "accuracy:", "95.86%", "Testing", "loss:", "4.14%", "Validation", "accu-", "racy:", "93.68%", "Validation", "loss:", "6.32%", "Dataset", "Speciﬁcations", "Model", "Architecture", "Performance", "Analysis", "Model", "Classes", "trained"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 531.36,
+    "y1": 96.0,
+    "y2": 554.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Table7-1.png"
+}, {
+  "caption": "Figure 3: Image Progression in URVoice",
+  "captionBoundary": {
+    "x1": 233.07701110839844,
+    "x2": 378.9244689941406,
+    "y1": 373.541748046875,
+    "y2": 378.9440002441406
+  },
+  "figType": "Figure",
+  "imageText": ["(i)", "Thresholded", "image", "with", "his-", "togram", "(h)", "Blurred", "image", "with", "his-", "togram", "(g)", "Eroded", "image", "with", "his-", "togram", "(f)", "Dilated", "image", "with", "his-", "togram", "(e)", "Masked", "image", "with", "his-", "togram", "(d)", "HSV", "image", "with", "his-", "togram", "(c)", "Blur", "image", "with", "his-", "togram", "(b)", "Cropped", "image", "with", "histogram", "(a)", "Captured", "image"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 90.72,
+    "y2": 368.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Figure3-1.png"
+}, {
+  "caption": "Table 2: Pre-processing stages",
+  "captionBoundary": {
+    "x1": 251.43099975585938,
+    "x2": 360.56988525390625,
+    "y1": 315.3575439453125,
+    "y2": 320.7597961425781
+  },
+  "figType": "Table",
+  "imageText": ["7", "Threshold", "Thresholding", "is", "applied", "on", "filtered", "to", "ensure", "uniformity", "of", "higher-grade", "gray", "pixel", "values", "in", "the", "image.", "The", "workﬂow", "for", "thresholding", "the", "image", "is", "presented", "in", "Algorithm", "4", "A.2.", "The", "resultant", "binary", "image", "obtained,", "as", "shown", "in", "Fig.", "3(i)", "is", "stored", "in", "thresh.", "The", "small", "peaks", "in", "the", "histogram", "of", "the", "blur", "image", "(Fig.", "3(h))", "are", "erased", "in", "the", "histogram", "of", "the", "thresholded", "image", "(Fig.", "3(i)).", "6", "Gaussian", "Blur", "Gaussian", "blur", "is", "again", "applied", "on", "erosion", "to", "smoothen", "the", "image.", "This", "helps", "to", "remove", "the", "deformities", "on", "the", "edges", "of", "the", "hand", "gesture", "formed", "due", "to", "erosion.", "The", "procedure", "followed", "is", "same", "as", "in", "Point", "1", "under", "Pre-processing", "and", "the", "resultant", "image", "obtained,", "as", "shown", "in", "Fig.", "3(h),", "is", "stored", "in", "filtered.", "The", "histogram", "in", "the", "Fig.", "3(h)", "shows", "appearance", "of", "small", "new", "peaks", "between", "the", "earlier", "obtained", "peaks.", "This", "is", "considered", "as", "noise", "and", "hence", "has", "to", "be", "removed", "by", "thresholding", "the", "image.", "5", "Erosion", "Erosion", "is", "applied", "on", "dilation", "to", "eliminate", "noise", "if", "any.", "It", "is", "observed", "that", "the", "thickness", "of", "the", "fore-", "ground", "object", "has", "decreased.", "This", "operation", "is", "similar", "to", "dilation.", "As", "the", "kernel", "[5x5", "unit", "matrix]", "is", "scanned", "over", "the", "image,", "it", "computes", "the", "minimal", "pixel", "value", "overlapped", "by", "the", "kernel", "and", "this", "minimal", "value", "replaces", "the", "image", "pixel", "under", "the", "anchor", "point.", "This", "process", "takes", "place", "once", "throughout", "the", "image.", "The", "ﬁnal", "image", "obtained,", "as", "shown", "in", "Fig.", "3(g)", "along", "with", "its", "histogram,", "is", "stored", "in", "erosion.", "Now,", "the", "resultant", "image", "contains", "rough", "edges", "which", "has", "to", "be", "ﬁxed", "by", "blurring", "it.", "4", "Dilation", "Dilation", "is", "applied", "on", "mask", "to", "overcome", "the", "disﬁgured", "regions", "and", "also", "assist", "in", "joining", "broken", "parts", "of", "the", "image.", "It", "is", "observed", "that", "the", "thickness", "of", "the", "foreground", "object", "has", "increased.", "This", "operation", "consists", "of", "convolving", "the", "image", "(mask)", "with", "a", "kernel", "(5", "×", "5", "unit", "matrix).", "The", "kernel", "has", "a", "deﬁned", "anchor", "point", "which", "is", "at", "the", "center.", "As", "the", "kernel", "is", "scanned", "over", "the", "image,", "the", "maximal", "pixel", "value", "overlapped", "by", "the", "kernel", "is", "computed", "and", "this", "replaces", "the", "image", "pixel", "at", "the", "anchor", "point", "position.", "This", "process", "takes", "place", "once", "throughout", "the", "image.", "The", "ﬁnal", "image", "obtained,", "as", "shown", "in", "Fig.", "3(f)", "along", "with", "its", "histogram,", "is", "stored", "in", "dilation.", "3", "Mask", "A", "mask", "is", "applied", "on", "hsv", "to", "crop", "out", "the", "gesture", "within", "the", "image.", "The", "workﬂow", "for", "the", "same", "is", "presented", "in", "Algorithm", "3", "A.2.", "A", "binary", "mask", "is", "returned", "and", "stored", "in", "mask.", "The", "resultant", "image", "obtained", "is", "as", "shown", "in", "Fig.", "3(e)", "along", "with", "its", "histogram", "which", "now", "has", "two", "peaks.", "2", "HSV", "HSV", "color", "space", "is", "most", "suitable", "for", "color-based", "image", "segmentation", "and", "it", "is", "and", "it", "is", "hence", "directly", "applied", "on", "blur", "with", "BGR", "image", "format.", "The", "Algorithm", "2", "A.2", "presents", "the", "workﬂow", "for", "obtaining", "the", "hsv", "values.", "The", "bgr", "values", "of", "the", "blurred", "image", "are", "then", "replaced", "by", "the", "hsv", "values", "after", "applying", "Algorithm", "2", "A.2", "and", "is", "stored", "in", "hsv.", "The", "resultant", "image", "obtained", "is", "as", "shown", "in", "Fig.", "3(d)", "along", "with", "its", "histogram.", "It", "can", "be", "observed", "from", "the", "image", "that", "the", "region", "of", "interest,", "i.e.,", "the", "hand,", "is", "now", "covered", "with", "green", "pixels.", "Thus,", "a", "mask", "has", "to", "be", "applied", "on", "hsv", "to", "focus", "on", "the", "region", "of", "interest.", "0.06292", "0.124998", "0.06292", "", "After", "convolution,", "a", "blur", "image", "is", "obtained,", "as", "shown", "in", "Fig.", "3(c),", "and", "is", "stored", "as", "blur", "with", "BGR", "pixel", "format.", "The", "histogram", "of", "Fig.", "3(c)", "shows", "minor", "changes", "in", "the", "peaks", "and", "valleys", "of", "the", "histogram.", "The", "BGR", "format", "of", "the", "image", "is", "then", "converted", "to", "HSV", "format", "to", "mainly", "focus", "on", "the", "intensity", "component", "of", "the", "image", "which", "helps", "in", "eliminating", "the", "background", "noise", "and", "shadows.", "0.124998", "0.248326", "0.124998", "1", "Gaussian", "Blur", "Gaussian", "blur", "is", "applied", "ﬁrst", "on", "crop_image", "to", "smoothen", "the", "pixel", "values", "of", "the", "hand", "so", "as", "to", "create", "some", "amount", "of", "uniformity.", "Here,", "a", "Gaussian", "ﬁlter", "convolves", "over", "this", "image", "and", "thereby", "blurs", "it.", "The", "workﬂow", "for", "obtaining", "the", "Gaussian", "ﬁlter", "is", "presented", "in", "Algorithm", "1", "in", "A.2.", "From", "this", "algorithm,", "the", "value", "of", "σ", "is", "obtained", "as", "0.8", "and", "the", "Gaussian", "ﬁlter", "obtained", "is:", "0.06292", "0.124998", "0.06292", "Description", "Stage", "Name", "of", "ﬁlter"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 511.2,
+    "y1": 326.88,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GG0sigkMnxF-Table2-1.png"
+}]

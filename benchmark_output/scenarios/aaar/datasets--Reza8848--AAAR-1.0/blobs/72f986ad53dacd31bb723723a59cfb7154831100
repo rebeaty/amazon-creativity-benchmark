@@ -1,0 +1,301 @@
+[{
+  "caption": "Table 1: 4× SR quantitative comparison on datasets with Gaussian8 kernels. The bottom three methods marked in rouse use IDR to guide blind SR. The FLOPs and runtime are computed based on an LR size of 180× 320. Best and second best performance are in red and blue colors, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036315917969,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["KDSRS-M", "(Ours)", "5.80", "191.42", "38.74", "32.02", "0.8892", "28.46", "0.7761", "27.52", "0.7281", "25.96", "0.7760", "30.58", "0.9026", "KDSRS-L", "(Ours)", "14.19", "623.61", "149.14", "32.11", "0.8933", "28.68", "0.7867", "27.64", "0.7300", "26.15", "0.7830", "30.99", "0.9069", "DASR", "5.84", "185.66", "44.14", "31.46", "0.8789", "28.11", "0.7603", "27.44", "0.7214", "25.36", "0.7506", "29.39", "0.8861", "DCLS", "13.63", "-", "175.84", "32.12", "0.8890", "28.54", "0.7728", "27.60", "0.7285", "26.15", "0.7809", "30.86", "0.9086", "AdaTarget", "16.70", "1032.59", "109.77", "31.58", "0.8814", "28.14", "0.7626", "27.43", "0.7216", "25.72", "0.7683", "29.97", "0.8955", "DANv2", "4.71", "1088.14", "201.51", "32.00", "0.8885", "28.50", "0.7715", "27.56", "0.7277", "25.94", "0.7748", "30.45", "0.9037", "DANv1", "4.33", "1098.33", "201.04", "31.89", "0.8864", "28.42", "0.7687", "27.51", "0.7248", "25.86", "0.7721", "30.50", "0.9037", "IKC", "5.32", "2528.03", "1053.79", "31.67", "0.8829", "28.31", "0.7643", "27.37", "0.7192", "25.33", "0.7504", "28.91", "0.8782", "Bicubic+ZSSR", "0.23", "-", "30946.60", "26.45", "0.7279", "24.78", "0.6268", "24.97", "0.5989", "21.11", "0.5805", "23.53", "0.724", "RCAN", "15.59", "1082.41", "556.21", "26.60", "0.7598", "24.85", "0.6513", "25.01", "0.6170", "22.19", "0.6078", "23.52", "0.7428", "Bicubic", "-", "-", "-", "24.57", "0.7108", "22.79", "0.6032", "23.29", "0.5786", "20.35", "0.5532", "21.50", "0.6933", "Methods", "Param", "(M)", "FLOPs", "(G)", "Time", "(ms)", "Set5", "Set14", "BSD100", "Urban100", "Manga109", "PSNR", "SSIM", "PSNR", "SSIM", "PSNR", "SSIM", "PSNR", "SSIM", "PSNR", "SSIM"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 122.88,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Table1-1.png"
+}, {
+  "caption": "Figure 3: Visual comparison (4×) of Blind-SR methods on isotropic Gaussian kernels.",
+  "captionBoundary": {
+    "x1": 133.37399291992188,
+    "x2": 478.6253662109375,
+    "y1": 423.3385314941406,
+    "y2": 429.34100341796875
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 262.56,
+    "y2": 418.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure3-1.png"
+}, {
+  "caption": "Figure 8: 4× visual comparison on anisotropic Gaussian kernels and noises. Noise levels are set to 10 for these images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0021667480469,
+    "y1": 703.0775756835938,
+    "y2": 720.0390014648438
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 451.2,
+    "y1": 105.6,
+    "y2": 700.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure8-1.png"
+}, {
+  "caption": "Figure 1: The illustration of different degradation estimators. (a) Non-blind SR methods directly use known degradation information to guide SR networks, such as SRMD (Zhang et al., 2018a). (b) Many Blind-SR methods estimate the explicit degradation with the supervision of ground-truth degradation. (c) Several methods use metric learning to distinguish degradation roughly. (d) Our knowledge distillation (KD) based implicit degradation estimator can estimate accurate implicit degradation representation to guide SR without ground-truth degradation supervision.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 289.1565246582031,
+    "y2": 349.95391845703125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "blind", "SR", "with", "KD", "based", "implicit", "degradation", "estimation", "(Ours)", "(c)", "blind", "SR", "with", "Metric", "Learning", "based", "implicit", "degradation", "estimation", "(b)", "blind", "SR", "with", "explicit", "degradation", "estimation", "(a)", "Non-blind", "SR", "with", "multiple", "degradation", "close", "Metric", "Learning", "Push", "features", "Metric", "Learning", "Push", "away", "features", "Weight", "Transfer", "Knowledge", "Distillation", "Degradation", "Representation", "2nd", "stage", "student", "network", "training", "1st", "stage", "teacher", "network", "training", "Teacher", "SR", "Network", "Student", "Implicit", "Degradation", "Estimator", "Teacher", "Implicit", "Degradation", "Estimator", "LR", "Student", "SR", "Network", "HR", "HRLR", "Metric", "Learning", "SR", "Network", "GT", "Blur", "Kernel", "Estimated", "Blur", "Kernel", "Implicit", "Degradation", "Estimator", "LR", "HR", "Degradation", "Estimator", "SR", "Network", "Blur", "KernelLR", "HR", "𝜎", "Noise", "Level", "SR", "Network"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 503.03999999999996,
+    "y1": 86.88,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure1-1.png"
+}, {
+  "caption": "Table 2: PSNR results achieved on Set14 (Zeyde et al., 2010) under anisotropic Gaussian blur and noises. The bottom two methods marked in rouse use IDR to guide blind SR. The best results are marked in bold. The runtime is measured on an LR size of 180× 320.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["10", "25.74", "25.91", "25.97", "26.00", "25.96", "25.88", "25.75", "25.50", "24.67", "20", "24.72", "24.89", "24.92", "24.89", "24.92", "24.82", "24.70", "24.59", "23.84", "KDSRS", "(Ours)", "5.80M", "38.74ms", "0", "27.67", "27.99", "28.14", "28.20", "28.12", "27.99", "27.80", "27.87", "26.52", "10", "25.26", "25.57", "25.64", "25.69", "25.62", "25.54", "25.42", "25.20", "24.37", "20", "23.68", "23.87", "24.20", "24.32", "24.09", "23.91", "23.76", "23.81", "22.87", "DASR", "5.84M", "44.14ms", "0", "27.20", "27.62", "27.74", "27.85", "27.82", "27.62", "27.38", "27.44", "26.27", "10", "24.05", "24.28", "24.44", "24.50", "24.40", "24.27", "24.09", "23.85", "22.90", "20", "23.58", "23.75", "23.88", "23.93", "23.88", "23.72", "23.56", "23.40", "22.58", "DnCNN", "+DCLS", "650K+19.05M", "192.83ms", "0", "25.80", "26.20", "26.45", "26.46", "26.30", "26.20", "26.39", "25.57", "23.96", "10", "24.20", "24.54", "24.86", "24.96", "24.78", "24.52", "24.23", "24.19", "23.14", "20", "23.62", "23.87", "24.07", "24.15", "24.06", "23.86", "23.65", "23.59", "22.71", "DnCNN", "+IKC", "650K+5.32M", "1053.79ms", "0", "24.76", "25.55", "26.54", "27.33", "26.55", "25.55", "24.64", "25.99", "25.49", "10", "23.88", "24.03", "24.16", "24.21", "24.13", "24.03", "23.88", "23.62", "22.76", "20", "23.45", "23.58", "23.70", "23.73", "23.69", "23.57", "23.42", "23.23", "22.46", "DnCNN", "+", "RCAN", "650K+15.59M", "556.21ms", "0", "24.28", "24.47", "24.6", "24.64", "24.58", "24.47", "24.31", "23.97", "23.01", "Blur", "Kernel", "Method", "Params", "Time", "Noise", "σ"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 121.92,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Table2-1.png"
+}, {
+  "caption": "Figure 4: 4× visual comparison. Noise levels are set to 10 and 20 for these two images separately.",
+  "captionBoundary": {
+    "x1": 110.21199798583984,
+    "x2": 501.78985595703125,
+    "y1": 393.7745056152344,
+    "y2": 399.7769775390625
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 293.76,
+    "y2": 387.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure4-1.png"
+}, {
+  "caption": "Figure 7: 4× visual comparison on isotropic Gaussian kernels.",
+  "captionBoundary": {
+    "x1": 181.09100341796875,
+    "x2": 430.91094970703125,
+    "y1": 715.2185668945312,
+    "y2": 721.2210083007812
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M", "Bicubic", "DANv2", "DASR", "KDSRS-L", "HR", "RCAN", "DCLS", "KDSRS-M"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 152.64,
+    "x2": 453.12,
+    "y1": 101.75999999999999,
+    "y2": 713.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure7-1.png"
+}, {
+  "caption": "Table 5: Comparison between different KD loss functions.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 504.00299072265625,
+    "y1": 635.9464721679688,
+    "y2": 652.9078979492188
+  },
+  "figType": "Table",
+  "imageText": ["L1", "(Eq.", "8)", "25.92", "L2", "(Eq.", "9)", "25.88", "Lkl", "(Eq.", "5)", "25.96", "Loss", "PNSR", "(dB)"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 389.76,
+    "x2": 499.2,
+    "y1": 653.76,
+    "y2": 709.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Table5-1.png"
+}, {
+  "caption": "Table 3: 4× SR quantitative comparison on real-world SR competition benchmarks. The FLOPs and runtime are computed based on an LR size of 180 × 320. The best results are marked in bold.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["ESRGAN", "16.69", "871.25", "236.04", "0.5558", "23.17", "0.6192", "0.5938", "21.14", "0.3119", "BSRGAN", "16.69", "871.25", "236.04", "0.4048", "24.20", "0.6904", "0.3691", "26.75", "0.7386", "Real-ESRGAN", "16.69", "871.25", "236.04", "0.3956", "23.89", "0.6892", "0.3471", "26.40", "0.7431", "MM-RealSR", "26.13", "930.54", "290.64", "0.3948", "23.45", "0.6889", "0.3446", "25.19", "0.7404", "KDSRs-GAN", "(Ours)", "18.85", "640.84", "154.62", "0.3739", "24.10", "0.6946", "0.3199", "26.66", "0.7487", "Methods", "Parms", "(M)", "FLOPs(G)", "Runtime", "(ms)", "AIM2019", "NTIRE2020", "LPIPS↓", "PSNR↑", "SSIM↑", "LPIPS↓", "PSNR↑", "SSIM↑"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 111.83999999999999,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Table3-1.png"
+}, {
+  "caption": "Figure 5: 4× visual comparison on real-world SR competition benchmarks.",
+  "captionBoundary": {
+    "x1": 155.21800231933594,
+    "x2": 456.7836608886719,
+    "y1": 286.3045349121094,
+    "y2": 292.3070068359375
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "Real-ESRGAN", "KDSRS-GAN", "HR", "BSRGAN", "MM-RealSR", "Bicubic", "Real-ESRGAN", "KDSRS-GAN", "HR", "BSRGAN", "MM-RealSR"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 187.68,
+    "y2": 280.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure5-1.png"
+}, {
+  "caption": "Figure 2: The overview of our proposed knowledge distillation based Blind-SR network (KDSR), which consists of a KD based implicit degradation estimator network (KD-IDE) and a SR network mainly formed by the IDR based Depthwise Dynamic convolution (IDR-DDC). There are two stage training processes for KDSR, including Teacher KDSRT and Student KDSRS training. We first train the KDSRT : we input the paired HR and LR images to the KD-IDET and obtain the implicit degradation representation (IDR) DT and D′T , where DT is used to guide the SR. After that, we move on to KDSRS training. We initialize the KDSRS with the KDSRT ’s parameters and make the KDSRS learn to directly extract D′S same as D′T from LR images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 311.83453369140625,
+    "y2": 397.2930603027344
+  },
+  "figType": "Figure",
+  "imageText": ["ca", "lin", "g", "(×", "4)", "U", "ps", "ca", "lin", "g", "(×", "4)", "U", "ps", "3×H×𝑊", "3×4H×4𝑊", "3×H×𝑊", "48×H×𝑊", "𝐶", "4𝐶", "4𝐶", "𝐶", "𝐶", "𝐶×H×𝑊", "𝐶×H×𝑊", "𝐶×H×𝑊", "Knowledge", "Distillation", "Layer", "3x3", "Convolutional", "LeakyRelu", "Linear", "Layer", "Convolution", "Summation", "𝑫𝑺(", "𝑫𝑺", "𝑻", "(", "𝑫(", "(e)", "Second", "Stage:", "Training", "Student", "KDSR", "+", "or", "Inference", "(d)", "First", "Stage:", "Training", "Teacher", "KDSR", ")", "KD", "−ID", "E", "+", "LR", "HR", "C", "onv", "3x3…", "C", "onv", "3x3", "𝑫(", "𝑫𝑻", "Concatenate", "HR(", "HR", "Pixel", "Unshuffle", "KD", "−ID", "E", ")", "HR", "LR", "(c)", "Knowledge", "Distillation", "based", "Implicit", "Degrdation", "Estimator", "(KD-IDE)", "Input", "𝑫(", "𝐶𝑫", "𝑫(", "4𝐶", "𝑫", "Avg", "pool", "4𝐶", "…", "LRelu", "Conv", "3x3", "LN", "C", "onv", "3x3…", "C", "onv", "3x3", "ha", "pe", "R", "es", "(b)", "IDR", "based", "Dynamic", "Convolution", "Residual", "Block", "(IDR-DCRB)", "…", "𝑭𝒐𝒖𝒕", "C", "onv", "3x3", "LR", "elu", "ID", "R", "D", "epthw", "ise", "D", "ynam", "ic", "C", "onv", "…", "𝑭𝒊𝒏LN", "LN", "LR", "elu", "(a)", "IDR", "based", "Depthwise", "Dynamic", "Convolution", "(IDR-DDC)", "…", "𝑭𝒐𝒖𝒕", "…", "Depthwise", "Dynamic", "Convolution", "𝑭𝒊𝒏", "𝐶×H×𝑊", "…", "𝐶×1×𝐾!×𝐾\"", "…", "𝑾", "𝑫", "𝐶"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 503.03999999999996,
+    "y1": 84.96,
+    "y2": 305.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure2-1.png"
+}, {
+  "caption": "Figure 10: 4× visual comparison on real-world SR competition benchmarks: AIM2019 (top 2 examples) and NTIRE2020 (bottom 2 examples)",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0009460449219,
+    "y1": 698.1885375976562,
+    "y2": 715.1500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "Real-ESRGAN", "KDSRS-GAN", "HR", "BSRGAN", "MM-RealSR", "Bicubic", "Real-ESRGAN", "KDSRS-GAN", "HR", "BSRGAN", "MM-RealSR", "Bicubic", "Real-ESRGAN", "KDSRS-GAN", "HR", "BSRGAN", "MM-RealSR", "Bicubic", "Real-ESRGAN", "KDSRS-GAN", "HR", "BSRGAN", "MM-RealSR"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 451.2,
+    "y1": 110.88,
+    "y2": 696.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure10-1.png"
+}, {
+  "caption": "Table 4: PSNR results evaluated on Urban100 with Gaussian8 (Gu et al., 2019) kernels for 4× SR. The FLOPs and runtime are both measured on an LR size of 180× 320.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9999084472656,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["KDSRS1", "%", "%", "%", "5.58", "293.46", "47.80", "25.37", "KDSRS2", "%", "%", "!", "5.80", "191.42", "38.74", "25.54", "KDSRS3", "!", "%", "!", "6.13", "166.26", "41.06", "26.08", "KDSRS4", "(Ours)", "%", "!", "!", "5.80", "191.42", "38.74", "25.96", "KDSRT", "(Ours)", "%", "%", "!", "5.82", "192.77", "39.05", "26.16", "Method", "Oracle", "Degradation", "KD", "IDR-DDC", "Param", "(M)", "FLOPs", "(G)", "Time", "(ms)", "PSNR", "(dB)"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 110.88,
+    "y2": 205.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Table4-1.png"
+}, {
+  "caption": "Figure 6: Visualization of IDR with different isotropic Gaussian blur kernels σ on various methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.995849609375,
+    "y1": 306.19952392578125,
+    "y2": 312.2019958496094
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "IDR", "extracted", "by", "KDSRT", ".", "(b)", "IDR", "extracted", "by", "KDSRS", ".", "(c)", "IDR", "extracted", "by", "KDSRS", "without", "KD.", "(d)", "IDR", "extracted", "by", "DASR.", "40", "30", "20", "10", "0", "10", "20", "30", "20", "10", "0", "10", "20", "30", "40", "20", "10", "0", "10", "20", "40", "20", "0", "20", "40", "20", "10", "0", "10", "20", "30", "30", "20", "10", "0", "10", "20", "30", "40", "40", "30", "20", "10", "0", "10", "20", "30", "30", "20", "10", "0", "10", "20"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 499.2,
+    "y1": 210.72,
+    "y2": 296.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure6-1.png"
+}, {
+  "caption": "Figure 9: 4× visual comparison on anisotropic Gaussian kernels and noises. Noise levels are set to 20 for these images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0021667480469,
+    "y1": 703.008544921875,
+    "y2": 719.969970703125
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR", "Bicubic", "RCAN", "KDSRS", "HR", "DCLS", "DASR"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 451.2,
+    "y1": 105.6,
+    "y2": 700.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fg3mYW8owg-Figure9-1.png"
+}]

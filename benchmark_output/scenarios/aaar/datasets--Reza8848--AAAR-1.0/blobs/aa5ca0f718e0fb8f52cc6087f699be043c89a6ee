@@ -1,0 +1,81 @@
+[{
+  "caption": "Table 2: Top-1 accuracy in semi-supervised learning on Cifar-100 using 10%, 50% and 100% training examples (%).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99993896484375,
+    "y1": 215.57052612304688,
+    "y2": 232.531982421875
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", "CIFAR-100", "Method", "10%", "50%", "100%", "BYOL", "40.87±", "0.10", "48.92±", "0.22", "51.71±", "0.39", "BBYOL", "39.58±", "0.86", "48.34±", "0.48", "51.33±", "0.38", "BYOL-ENS", "41.45±", "0.10", "49.53±", "0.26", "52.50±", "0.23", "BBYOL-ENS", "40.51±", "0.92", "49.84±", "0.48", "53.31±", "0.42"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 243.84,
+    "y2": 312.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPPmQdU3k7-Table2-1.png"
+}, {
+  "caption": "Table 1: Top-1 accuracy in semi-supervised learning on Cifar-10 using 1%, 10%, 50% and 100% training examples (%).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99969482421875,
+    "y1": 93.2935562133789,
+    "y2": 110.2550048828125
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", "CIFAR-10", "Method", "1%", "10%", "50%", "100%", "BYOL", "73.79±", "0.23", "78.17±", "0.29", "80.29±", "0.20", "81.35±", "0.09", "BBYOL", "74.04±", "0.67", "78.26±", "0.57", "81.58±", "0.37", "82.85±", "0.30", "BYOL-ENS", "74.41±", "0.31", "78.39±", "0.23", "80.35±", "0.32", "81.66±", "0.24", "BBYOL-ENS", "74.32±", "0.60", "78.29±", "0.67", "81.37±", "0.35", "83.21±", "0.29"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 480.47999999999996,
+    "y1": 121.92,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPPmQdU3k7-Table1-1.png"
+}, {
+  "caption": "Table 3: Results for OOD detection for various settings. Models are fine-tunned over 100% labeled data of CIFAR-10 and tested on SVHN. All values are in percentages. ↑ indicates larger value is better, and ↓ indicates lower value is better.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00238037109375,
+    "y1": 411.5384826660156,
+    "y2": 439.45892333984375
+  },
+  "figType": "Table",
+  "imageText": ["Method", "NLL", "↓", "AUROC", "↑", "BYOL", "5.25", "46.92", "BYOL-ENS", "4.77", "46.90", "BBYOL", "4.63", "47.73", "BBYOL-ENS", "4.22", "47.25"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 225.6,
+    "x2": 386.4,
+    "y1": 450.71999999999997,
+    "y2": 508.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPPmQdU3k7-Table3-1.png"
+}, {
+  "caption": "Figure 1: Empirical CDF for the predictive entropy. Models are fine-tunned on 100% split of Cifar10 and tested on SVHN. BYOL-ENS (25) is marginalizing over 25 embeddings.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99945068359375,
+    "y1": 272.2865295410156,
+    "y2": 289.24700927734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 405.12,
+    "y1": 116.64,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPPmQdU3k7-Figure1-1.png"
+}]

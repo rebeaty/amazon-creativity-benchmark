@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 2: The analysis of distributions of rings. (a) The KL divergence of different ring-related metrics between the generated molecules and training set. (b) The distributions of counts of rings per molecule. (c) The distributions of counts of hub atoms per molecule. (d) The distributions of counts of rings that an atom exists in.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9993896484375,
+    "y1": 293.10552978515625,
+    "y2": 331.9849853515625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "(d)", "KL", "divergence", "with", "training", "set(a)", "(b)", "ty", "en", "si", "of", "d", "Geom", "setLo", "g", "CVAE", "SBDD", "GraphBP", "Pocket2Mol", "FragDiff", "Train", "set", "Model", "/", "Set", "#Rings", "one", "atom", "exists", "in", "CVAE", "SBDD", "GraphBP", "Pocket2Mol", "FragDiff", "Train", "set", "Geom", "set", "Model", "/", "Set", "ty", "en", "si", "of", "d", "Lo", "g", "#Hub", "atoms", "per", "molecule", "SBDD", "GraphBP", "Pocket2Mol", "FragDiff", "Train", "set", "Model", "/", "Set", "CVAE", "si", "ty", "D", "en", "#Rings", "per", "molecule", "CVAE", "1.0236", "0.8072", "0.2961", "0.1606", "1.6167", "SBDD", "0.6065", "0.5138", "0.2017", "0.0423", "0.4163", "GraphBP", "3.0896", "2.5693", "1.4876", "0.1740", "2.6646", "Pocket2Mol", "0.6219", "0.4348", "1.0753", "0.1468", "0.4309", "FragDiff", "0.3545", "0.3480", "0.0155", "0.0699", "0.1894", "Training", "set", "0.0000", "0.0000", "0.0000", "0.0000", "0.0000", "Geom", "set", "0.1595", "0.1384", "0.0201", "0.0109", "0.2152", "#Rings", "per", "atom", "#Rings", "per", "bond", "#Hub", "atoms", "per", "molecule", "#Rings", "one", "atom", "exists", "in", "Ring", "types"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 80.64,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure2-1.png"
+}, {
+  "caption": "Figure 9: The distributions of bond lengths of different bond types. (a) The KL divergence of bond lengths of different bond types with the training set. (b) The distributions of bond lengths of the most frequent six bond types.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.995849609375,
+    "y1": 527.965576171875,
+    "y2": 555.885986328125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "(a)", "CC", "CN", "CO", "C=O", "OP", "C=C", "CF", "CS", "O=P", "C=N", "NO", "CVAE", "7.10", "8.24", "8.73", "7.80", "8.16", "6.05", "10.81", "8.92", "9.88", "SBDD", "1.40", "1.02", "0.97", "1.24", "0.96", "4.00", "3.78", "GraphBP", "2.87", "2.49", "2.37", "1.46", "9.22", "2.07", "3.70", "6.85", "3.22", "4.36", "Pocket2Mol", "1.51", "1.35", "1.07", "1.30", "2.50", "3.45", "3.38", "3.99", "FragDiff", "0.44", "0.41", "0.68", "0.57", "1.59", "0.48", "3.19", "2.40", "2.45", "0.85", "2.91", "Train", "set", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "Geom", "set", "0.19", "0.59", "0.79", "1.30", "0.42", "0.67", "0.44", "2.16", "1.88"],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 503.03999999999996,
+    "y1": 255.35999999999999,
+    "y2": 512.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure9-1.png"
+}, {
+  "caption": "Figure 1: The molecule generation process",
+  "captionBoundary": {
+    "x1": 220.62100219726562,
+    "x2": 391.37994384765625,
+    "y1": 219.22854614257812,
+    "y2": 225.23101806640625
+  },
+  "figType": "Figure",
+  "imageText": ["Autoregressive", "generation", "for", "molecule", "…", "……", "𝑡", "=", "𝑇", "𝑡", "=", "0𝑡", "=", "1𝑡", "=", "𝑇", "−", "1", "𝑡", "=", "𝑇", "−", "2", "Diffusion", "generation", "for", "each", "fragment"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure1-1.png"
+}, {
+  "caption": "Figure 8: The KL divergence of bond lengths, bond angles, and dihedral angles for more ring types.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 681.0465698242188,
+    "y2": 687.0490112304688
+  },
+  "figType": "Figure",
+  "imageText": ["CVAE", "7.29", "7.59", "3.83", "8.10", "9.47", "3.21", "13.69", "11.16", "3.61", "10.05", "9.03", "3.66", "10.60", "10.38", "2.86", "SBDD", "2.25", "1.97", "6.19", "1.63", "2.49", "4.43", "4.12", "2.96", "1.76", "7.12", "2.35", "0.45", "2.64", "0.72", "0.27", "GraphBP", "-", "-", "-", "3.48", "1.73", "3.86", "2.91", "7.09", "4.51", "2.95", "7.97", "4.16", "2.06", "6.56", "3.47", "Pocket2Mol", "2.47", "0.53", "1.14", "3.35", "1.13", "2.23", "7.11", "0.70", "1.11", "6.36", "1.19", "0.35", "5.52", "0.45", "0.53", "FragDiff", "0.78", "0.41", "0.86", "1.16", "0.87", "1.32", "1.28", "0.37", "0.51", "2.71", "0.43", "0.33", "3.26", "0.14", "0.02", "Train", "set", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "Geom", "set", "0.19", "0.00", "0.00", "-", "-", "-", "1.05", "0.05", "0.03", "0.52", "0.03", "0.22", "0.99", "0.02", "0.06", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang"],
+  "name": "8",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 557.76,
+    "y2": 663.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure8-1.png"
+}, {
+  "caption": "Figure 6: The generation process of a molecule generated by FragDiff.",
+  "captionBoundary": {
+    "x1": 165.13999938964844,
+    "x2": 446.8624267578125,
+    "y1": 184.06954956054688,
+    "y2": 190.072021484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 484.32,
+    "y1": 121.92,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure6-1.png"
+}, {
+  "caption": "Figure 7: The ratio of the 20 ring types of different models or sets.",
+  "captionBoundary": {
+    "x1": 173.56300354003906,
+    "x2": 438.4385986328125,
+    "y1": 458.14251708984375,
+    "y2": 464.1449890136719
+  },
+  "figType": "Figure",
+  "imageText": ["io", "R", "at", "Smiles", "of", "rings", "Train", "set", "Pocket2Mol", "FragDiff", "GraphBP", "Model", "/", "Set", "CVAE", "SBDD"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 503.03999999999996,
+    "y1": 286.56,
+    "y2": 442.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure7-1.png"
+}, {
+  "caption": "Figure 3: The analysis of 3D distributions of rings. (a) The KL divergence of bond lengths, bond angles, and dihedral angles for each ring type. (b) The distributions of bond angles, bond angles and dihedral angles of benzene rings.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0030822753906,
+    "y1": 273.5705261230469,
+    "y2": 301.490966796875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "(a)", "Bond", "Lengths", "Bond", "Angles", "Dihedral", "Angles", "Model", "/Set", "Model", "/Set", "Model", "/Set", "CVAE", "3.61", "3.28", "4.14", "6.74", "3.03", "0.41", "3.61", "3.28", "4.14", "5.78", "1.93", "2.64", "7.52", "4.60", "2.13", "SBDD", "0.90", "0.97", "9.24", "2.14", "0.84", "0.21", "0.90", "0.97", "9.24", "2.79", "0.78", "5.37", "-", "-", "-", "GraphBP", "0.34", "0.19", "0.63", "2.18", "4.26", "2.45", "0.34", "0.19", "0.63", "-", "-", "-", "-", "-", "-", "Pocket2Mol", "2.11", "0.26", "1.19", "3.43", "0.32", "0.14", "2.11", "0.26", "1.19", "2.49", "0.47", "1.32", "2.87", "1.26", "1.80", "FragDiff", "0.24", "0.04", "0.78", "0.54", "0.09", "0.11", "0.24", "0.04", "0.78", "0.35", "0.23", "0.61", "1.04", "0.21", "1.27", "Train", "set", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "0.00", "Geom", "set", "0.36", "0.01", "0.00", "0.82", "0.02", "0.09", "0.36", "0.01", "0.00", "0.47", "0.02", "0.00", "0.25", "0.08", "0.00", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang", "Length", "Angle", "Dih.Ang"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 131.51999999999998,
+    "x2": 484.32,
+    "y1": 83.03999999999999,
+    "y2": 254.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Comparison of KL divergence between different ablation models.",
+  "captionBoundary": {
+    "x1": 155.59500122070312,
+    "x2": 456.40570068359375,
+    "y1": 175.93252563476562,
+    "y2": 181.93499755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 483.35999999999996,
+    "y1": 85.92,
+    "y2": 158.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure4-1.png"
+}, {
+  "caption": "Figure 5: The distributions of QED, SA, Vina score and Vina rmsd of molecules",
+  "captionBoundary": {
+    "x1": 146.04600524902344,
+    "x2": 465.95513916015625,
+    "y1": 298.2655334472656,
+    "y2": 304.26800537109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 482.4,
+    "y1": 202.56,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HGsoe1wmRW5-Figure5-1.png"
+}]

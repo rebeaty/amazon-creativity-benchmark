@@ -1,0 +1,41 @@
+[{
+  "caption": "Table 1: Communication complexity of different methods for solving Problem 1 under µ-strong convexity, L-smoothness, and Assumption 1. Õ(·) ignore polylogarithmic factors and constants. We use the client sampling model, which counts exchanging a vector between the server and one of the clients as a single communication step.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033264160156,
+    "y1": 264.3965148925781,
+    "y2": 304.6419982910156
+  },
+  "figType": "Table",
+  "imageText": ["✓", "Theorem", "3", "(NEW)", "3/4", "+M", ")", "δ", "µM", "✓", "Theorem", "2", "(NEW)", "Catalyzed", "SVRP", "Õ", "(√", "SVRP", "Õ", "(", "δ2", "µ2", "+M", ")", ")", "-", "(Arjevani", "&", "Shamir,", "2015)", "δ", "µM", "Lower", "Bound", "(no", "sampling)", "Õ", "(√", ")", "✓", "(Kovalev", "et", "al.,", "2022)", "δ", "µM", "Accelerated", "Extragradient", "Õ", "(√", ")", "✓", "(Tian", "et", "al.,", "2022)", "δ", "µM", "Accelerated", "SONATA", "Õ", "(√", ")", "✓", "(Sun", "et", "al.,", "2022)", "δ", "µM", "SONATA", "Õ", "(", ")", "✗", "(Karimireddy", "et", "al.,", "2020b)", "δ+L", "µ", "M", "SCAFFOLD", "Õ", "(", ")", "✗", "(Zhang", "&", "Lin,", "2015)", "δ", "µM", "DiSCO", "Õ", "(√", "Method", "Communication", "Complexity", "Non-quadratic?", "Reference", "DANE", "Õ", "(", "δ2", "µ2M", ")", "✗", "(Shamir", "et", "al.,", "2014)"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElC6LYO4MfD-Table1-1.png"
+}, {
+  "caption": "Figure 1: Top row: experiments on synthetic data. Left figure has M = 1000 clients, middle has M = 2000, and right has M = 3000. Bottom row: experiments on real data. Left has M = 20 clients, middle has M = 40 clients, and right has M = 60 clients. We plot the squared distance from the optimum point for all methods on a logarithmic scale versus the number of communication steps, where one exchange of vectors between the server and a single client counts as a communication step.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.7414245605469,
+    "y1": 265.7414855957031,
+    "y2": 315.5789489746094
+  },
+  "figType": "Figure",
+  "imageText": ["SVRG", "Accelerated", "Extragradient", "SVRP", "SCAFFOLD", "*", "2", "x", "x", "10", "2", "10", "6", "10", "10", "10", "14", "10", "18", "10", "22", "10", "26", "0", "2000", "4000", "6000", "8000", "10000", "Communications", "SVRG", "Accelerated", "Extragradient", "SVRP", "SCAFFOLD", "*", "2", "x", "x", "101", "10", "3", "10", "7", "10", "11", "10", "15", "10", "19", "10", "23", "10", "27", "0", "2000", "4000", "6000", "8000", "10000", "Communications", "SVRG", "Accelerated", "Extragradient", "SVRP", "SCAFFOLD", "*", "2", "x", "x", "10", "2", "10", "6", "10", "10", "10", "14", "10", "18", "10", "22", "10", "26", "0", "2000", "4000", "6000", "8000", "10000", "Communications", "Accelerated", "Extragradient", "SVRP", "SCAFFOLD", "*", "2", "SVRG", "x", "x", "101", "100", "10", "1", "10", "2", "10", "3", "10", "4", "10", "5", "10", "6", "0", "2000", "4000", "6000", "8000", "10000", "12000", "Communications", "SVRG", "Accelerated", "Extragradient", "SVRP", "SCAFFOLD", "*", "2", "x", "x", "101", "100", "10", "1", "10", "2", "10", "3", "10", "4", "10", "5", "10", "6", "0", "2000", "4000", "6000", "8000", "10000", "12000", "Communications", "Accelerated", "Extragradient", "SVRP", "SCAFFOLD", "*", "2", "SVRG", "x", "x", "10", "2", "10", "4", "10", "6", "10", "8", "0", "2000", "4000", "6000", "8000", "10000", "Communications"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 486.71999999999997,
+    "y1": 90.24,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElC6LYO4MfD-Figure1-1.png"
+}]

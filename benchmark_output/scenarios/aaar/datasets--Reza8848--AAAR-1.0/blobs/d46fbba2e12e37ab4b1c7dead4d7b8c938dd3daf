@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 4: The evolution of SNN’s nuclear norm, train error, and test error over time with learning rates (LR) of different magnitudes. In the left plot, the nuclear norm decays over time and converges to the same minimum value regardless of the learning rates.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00225830078125,
+    "y1": 366.3045349121094,
+    "y2": 394.2250061035156
+  },
+  "figType": "Figure",
+  "imageText": ["5×10−4", "1×10−4", "5×10−5", "1×10−5", "5×10−6", ")", "sc", "ale", "(l", "og", "Lo", "ss", "Te", "st", "0", "−5", "−10", "−15", "−20", "0", "100000", "200000", "Iterations", "−5", "0", "Tr", "ain", "L", "os", "s", "(", "log", "sc", "ale", ")", "−10", "−15", "−20", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "(l", "og", "or", "m", "ar", "N", "Nu", "cle", "4.6", "4.5", "4.4", "4.3", "0", "100000", "200000", "Iterations"],
+  "name": "4",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 234.72,
+    "y2": 350.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure4-1.png"
+}, {
+  "caption": "Figure 5: The evolution of SNN’s nuclear norm, train error, and test error over time with various SNN architectures. We use a learning rate of 10−5. The left plot shows that gradient descent minimizes the nuclear norm of the solution matrix for all architectures, although they converge to slightly different final solutions. In the right plot, we observe that there is a substantial difference in the test error between different architectures. In this particular simulation, a 2-layer achieves the lowest test error. This evidence supports the advantage of going beyond a single block to multi-layer SNN architecture as we proposed in Section 3.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74493408203125,
+    "y1": 545.7615966796875,
+    "y2": 617.5180053710938
+  },
+  "figType": "Figure",
+  "imageText": ["1-block", "1-layer", "2-layer", "3-layer", ")", "sc", "ale", "(l", "og", "Lo", "ss", "Te", "st", "0", "−5", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "s", "(", "log", "L", "os", "Tr", "ain", "0", "−5", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "(l", "og", "or", "m", "ar", "N", "Nu", "cle", "0", "100000", "200000", "Iterations"],
+  "name": "5",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 416.64,
+    "y2": 530.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure5-1.png"
+}, {
+  "caption": "Figure 6: The evolution of SNN’s nuclear norm, train error, and test error over time with learning rates (LR) of different magnitudes. From the left plot, the nuclear norm generally decreases over time and converges to the same value albeit with some erratic movements in the early iterations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 263.1505432128906,
+    "y2": 291.07000732421875
+  },
+  "figType": "Figure",
+  "imageText": ["5×10−4", "1×10−4", "5×10−5", "1×10−5", "5×10−6", ")", "sc", "ale", "(l", "og", "Lo", "ss", "Te", "st", "−5", "−10", "−15", "−20", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "s", "(", "log", "L", "os", "Tr", "ain", "−5", "−10", "−15", "−20", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "(l", "og", "or", "m", "ar", "N", "Nu", "cle", "2.58", "2.57", "2.56", "2.55", "2.54", "2.53", "0", "100000", "200000", "Iterations"],
+  "name": "6",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 130.56,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure6-1.png"
+}, {
+  "caption": "Figure 7: The evolution of SNN’s nuclear norm, train error, and test error over time with various numbers of layers. We use a learning rate of 10−5. In the middle and right plots, it shows that the 1-block model is the easiest to optimize but does not result in the best generalization performance: the error decreases quickly at first, but then plateaus. Whereas for more complex SNN, the loss improves slowly but reaches better solutions.",
+  "captionBoundary": {
+    "x1": 107.50199890136719,
+    "x2": 504.00390625,
+    "y1": 443.6375427246094,
+    "y2": 493.47601318359375
+  },
+  "figType": "Figure",
+  "imageText": ["1-block", "1-layer", "2-layer", "3-layer", ")", "sc", "ale", "(l", "og", "Lo", "ss", "Te", "st", "0", "−5", "−10", "−15", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "s", "(", "log", "L", "os", "Tr", "ain", "0", "−5", "−10", "−15", "0", "100000", "200000", "Iterations", ")", "sc", "ale", "(l", "og", "or", "m", "ar", "N", "Nu", "cle", "0", "100000", "200000", "Iterations"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 314.88,
+    "y2": 428.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure7-1.png"
+}, {
+  "caption": "Figure 2: The evolution of X largest 3 singular values when running gradient descent on the matrix sensing problem with learning rates of different magnitudes. The first 100 iterations have vastly different values and are omitted for clarity of presentation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3437194824219,
+    "y1": 698.653564453125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 103.67999999999999,
+    "x2": 508.32,
+    "y1": 592.8,
+    "y2": 684.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Visualization of the anatomy of an SNN block and a depth−D SNN architecture. In layer i, there are Li elemental neurons, which aggregate matrices from the previous layers to produce Li output matrices as inputs for the next layer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.24481201171875,
+    "y1": 337.6915283203125,
+    "y2": 365.6109924316406
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure1-1.png"
+}, {
+  "caption": "Figure 3: The evolution of X’s training error (left panel) and nuclear norm (right panel) over time with learning rates (LR) of different magnitudes.",
+  "captionBoundary": {
+    "x1": 107.6409683227539,
+    "x2": 504.00262451171875,
+    "y1": 285.7345275878906,
+    "y2": 302.6960144042969
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 522.24,
+    "y1": 137.76,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EKdBD-1qHW6-Figure3-1.png"
+}]

@@ -1,0 +1,401 @@
+[{
+  "caption": "Figure 4: Latent traversals of several models trained on 3D-Shapes, in their original order. Note the ordering of the information in the structural decoder models (SAE-12 and SAE-3) where higher level, nonlinear features (like shape and orientation) are encoded in the first few dimensions, which feed into Str-Tfm layers deeper in the network.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 582.007568359375,
+    "y2": 620.885986328125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "SAE-12", "(b)", "SAE-3", "(c)", "VAE", "(d)", "AdaAE-12"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 501.12,
+    "y1": 392.64,
+    "y2": 568.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Quality of the generated samples using different models and sampling methods (lower is better). Note that our SAE models perform well without having to regularize the latent space towards a prior. In fact, even with the conventional “hourglass” architecture (in orange), the hybrid sampling method generates relatively high quality samples, often outperforming the more principled prior-based sampling.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 322.38751220703125,
+    "y2": 372.2259521484375
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "MPI3D", "Real", "Sampling", "Hybrid", "Prior", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "e", "Sc", "or", "FI", "D", "50", "40", "30", "20", "10", "0", "E-", "12", "Ad", "aA", "SA", "E-", "2", "W", "AE", "AE", "VL", "AE", "-1", "2", "VL", "AE", "-3", "SA", "E-", "3", "VL", "AE", "-6", "VL", "AE", "-1", "2", "SA", "E-", "12", "VL", "AE", "-6", "VL", "AE", "-3", "SA", "E-", "4", "W", "AE", "VL", "AE", "-4", "TC", "VA", "E", "VL", "AE", "-2", "VA", "E", "Ad", "aA", "E-", "6", "VL", "AE", "-2", "TC", "VA", "E", "VA", "E", "VL", "AE", "-4", "SA", "E-", "6", "VA", "E", "FV", "AE", "VA", "E", "FV", "AE", "(e)", "MPI3D", "Sim", "Sampling", "Hybrid", "Prior", "Structural", "Adaptive", "Ladder", "Baseline", "Sc", "or", "e", "Architecture", "FI", "D", "70", "60", "50", "40", "30", "20", "10", "E0", "-3", "W", "AE", "VL", "AE", "-3", "FV", "AE", "VL", "AE", "-2", "VL", "AE", "-2", "VA", "E", "SA", "E-", "6", "VA", "E", "FV", "AE", "TC", "VA", "E", "VA", "E", "TC", "VA", "E", "VA", "VL", "AE", "-1", "2", "VL", "AE", "-1", "2", "VL", "AE", "-4", "W", "AE", "SA", "E-", "12", "AE", "VL", "AE", "E-", "12", "Ad", "aA", "VL", "AE", "-6", "VL", "AE", "-6", "SA", "E-", "2", "VL", "AE", "-4", "SA", "E-", "3", "SA", "E-", "4", "(d)", "MPI3D", "Toy", "Sampling", "Hybrid", "Prior", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "e", "Sc", "or", "FI", "D", "50", "40", "30", "20", "10", "VA", "E0", "-6", "W", "AE", "VL", "AE", "-6", "VL", "AE", "-4", "VL", "AE", "-1", "2", "VL", "AE", "-4", "VL", "AE", "-1", "2", "VL", "AE", "-2", "Ad", "aA", "E-", "6", "VL", "AE", "-2", "VL", "AE", "-3", "VL", "AE", "-3", "SA", "E-", "4", "FV", "AE", "Ad", "aA", "E-", "12", "TC", "VA", "E", "TC", "VA", "E", "FV", "AE", "VA", "E", "VA", "E", "VA", "E", "VL", "AE", "12", "SA", "E-", "3", "W", "AE", "AE", "SA", "E-", "2", "SA", "E-", "6", "SA", "E-", "(c)", "Celeb-A", "Sampling", "Hybrid", "Prior", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "e", "Sc", "or", "FI", "D", "170", "160", "150", "140", "130", "120", "110", "100", "90", "-1", "680", "VL", "AE", "-1", "6", "VA", "E", "AE", "VL", "AE", "16", "VA", "E", "VA", "E", "VA", "E", "SA", "E-", "E-", "16", "Ad", "aA", "(b)", "RFD", "Sampling", "Hybrid", "Prior", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "e", "Sc", "or", "FI", "D", "50", "40", "30", "20", "10", "0", "E-", "16", "Ad", "aA", "-1", "6", "AE", "VA", "E", "VA", "E", "VA", "E", "VA", "E", "VL", "AE", "-1", "6", "VL", "AE", "16", "SA", "E-", "(a)", "3D-Shapes", "Sampling", "Hybrid", "Prior", "Structural", "Adaptive", "Ladder", "Baseline", "Sc", "or", "e", "Architecture", "FI", "D", "70", "60", "50", "40", "30", "20", "10", "0", "E-", "12", "FV", "AE", "Ad", "aA", "SA", "E-", "12", "VL", "AE", "-1", "2", "VL", "AE", "-3", "VL", "AE", "-2", "VL", "AE", "-6", "VL", "AE", "-4", "VL", "AE", "-1", "2", "SA", "E-", "6", "SA", "E-", "4", "VL", "AE", "-3", "VL", "AE", "-4", "VL", "AE", "-2", "VA", "E", "Ad", "aA", "E-", "6", "TC", "VA", "E", "VL", "AE", "-6", "TC", "VA", "E", "FV", "AE", "VA", "E", "VA", "E", "AE", "W", "AE", "W", "AE", "VA", "E", "SA", "E-", "3", "SA", "E-", "2"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 495.35999999999996,
+    "y1": 81.6,
+    "y2": 309.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure3-1.png"
+}, {
+  "caption": "Figure 14: Latent Traversals of several models for MPI3D-Sim. Each row shows the generated image when varying the corresponding latent dimension while fixing the rest of the latent vector. For the SAE and VLAE models, the groups of dimensions that are fed into the same Str-Tfm layer (or ladder rung) are grouped together. Note the disentangled segments achieved by the SAE models and the consistent ordering of factors of variation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 579.0885620117188,
+    "y2": 628.926025390625
+  },
+  "figType": "Figure",
+  "imageText": ["(j)", "VAE", "(k)", "β-VAE", "(l)", "AE", "(g)", "VLAE-12", "(h)", "VLAE-6", "(i)", "VLAE-4"],
+  "name": "14",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 565.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure14-1.png"
+}, {
+  "caption": "Figure 12: Same as figure 7, except for the camera angle setting. Although the results are generally very consistent, note how much better the SAE-12 model performs than the VLAE-12 in this setting.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 218.64254760742188,
+    "y2": 235.60302734375
+  },
+  "figType": "Figure",
+  "imageText": ["E1", "2", "Ad", "aA", "VA", "E", "-1", "2", "VL", "AE", "Input", "No", "Update", "Encoder", "only", "Decoder", "only", "Both", "12", "SA", "E-", "Model", "Neither", "Encoder", "Decoder", "Both", "SAE-12", "4.88", "2.65", "0.77", "0.43", "VLAE-12", "6.91", "3.83", "1.61", "0.77", "AdaAE-12", "4.8", "2.93", "0.59", "0.41", "AE", "4.98", "2.94", "0.62", "0.45", "WAE", "4.79", "3.07", "0.69", "0.44", "VAE", "5.17", "3.09", "1.01", "0.51", "βVAE", "5.7", "3.97", "1.5", "0.82"],
+  "name": "12",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 505.44,
+    "y1": 82.56,
+    "y2": 206.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure12-1.png"
+}, {
+  "caption": "Table 2: Disentanglement and Completeness scores for MPI3D-Toy. (for all these metrics higher is better)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 709.612548828125,
+    "y2": 726.573974609375
+  },
+  "figType": "Table",
+  "imageText": ["FVAE", "0.108", "0.029", "0.680", "0.876", "0.743", "βVAE", "0.046", "0.004", "0.987", "0.998", "0.621", "VAE", "0.093", "0.078", "0.621", "0.861", "0.659", "WAE", "0.203", "0.028", "0.633", "0.904", "0.859", "AE", "0.186", "0.043", "0.632", "0.911", "0.844", "AdaAE-12", "0.208", "0.080", "0.546", "0.919", "0.931", "Model", "DCI", "MIG", "IRS", "Mod", "Exp", "SAE-12", "0.642", "0.487", "0.570", "0.938", "0.946", "SAE-6", "0.454", "0.094", "0.553", "0.918", "0.911", "VLAE-12", "0.414", "0.323", "0.667", "0.909", "0.842", "βTCVAE", "0.091", "0.007", "0.605", "0.858", "0.678", "A.3.3", "MPI3D-TOY"],
+  "name": "2",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 420.47999999999996,
+    "y1": 378.24,
+    "y2": 693.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Table2-1.png"
+}, {
+  "caption": "Figure 5: Disentanglement scores for 3D-Shapes. DCI denotes the DCI disentanglement score (Eastwood & Williams, 2018), MIG is the Mutual Information Gap (Chen et al., 2018), IRS is the Interventional Robustness Score (Suter et al., 2018), and Mod/Exp refers to the Modularity/Explicitness scores respectively (Ridgeway & Mozer, 2018) (for all these metrics higher is better). The figure on the right shows how the scores vary across five models with different random seeds marked with a cross (lines indicate the resulting mean and standard deviation). Both hierarchical methods, SAE-12 and the VLAE-12, outperform all other baselines, and in particular the SAE performs well, despite the lack of regularization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 249.30850219726562,
+    "y2": 332.02386474609375
+  },
+  "figType": "Figure",
+  "imageText": ["IR", "S", "VAE", "VAE", "TCVAE", "FVAE", "AdaAE-12", "AE", "SAE-12", "VLAE-12", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Score", "M", "IG", "VAE", "VAE", "TCVAE", "FVAE", "AdaAE-12", "AE", "SAE-12", "VLAE-12", "DC", "I", "VAE", "VAE", "TCVAE", "FVAE", "AdaAE-12", "AE", "SAE-12", "VLAE-12", "Model", "DCI", "MIG", "IRS", "Mod", "Exp", "SAE-12", "0.974", "0.537", "0.830", "0.967", "1.000", "SAE-6", "0.865", "0.225", "0.735", "0.966", "0.999", "SAE-4", "0.740", "0.209", "0.654", "0.945", "0.999", "VLAE-12", "0.832", "0.553", "0.751", "0.914", "0.977", "VLAE-6", "0.785", "0.326", "0.689", "0.929", "0.963", "VLAE-4", "0.690", "0.282", "0.544", "0.900", "0.926", "βTCVAE", "0.410", "0.237", "0.603", "0.865", "0.923", "FVAE", "0.330", "0.123", "0.725", "0.907", "0.955", "βVAE", "0.235", "0.127", "0.593", "0.879", "0.799", "VAE", "0.314", "0.138", "0.607", "0.892", "0.872", "WAE", "0.211", "0.050", "0.621", "0.946", "0.906", "AE", "0.307", "0.092", "0.638", "0.926", "0.943", "AdaAE-12", "0.299", "0.062", "0.503", "0.876", "0.999"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 492.0,
+    "y1": 81.6,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure5-1.png"
+}, {
+  "caption": "Figure 15: Latent Traversals of several models for MPI3D-Real. Each row shows the generated image when varying the corresponding latent dimension while fixing the rest of the latent vector. For the SAE and VLAE models, the groups of dimensions that are fed into the same Str-Tfm layer (or ladder rung) are grouped together. Note the disentangled segments achieved by the SAE models and the consistent ordering of factors of variation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 579.0885620117188,
+    "y2": 628.926025390625
+  },
+  "figType": "Figure",
+  "imageText": ["(j)", "VAE", "(k)", "β-VAE", "(l)", "AE", "(g)", "VLAE-12", "(h)", "VLAE-6", "(i)", "VLAE-4"],
+  "name": "15",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 565.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure15-1.png"
+}, {
+  "caption": "Figure 1: The structural decoder reconstructs (or generates) a sample from a latent vector U by first splitting U into d variables each of which infuses latent information with an affine transforms of the pixel vhwl in image feature map Si produced by a Str-Tfm layer (green box where αi and βi are the affine parameters that are extracted from the latent variable Ui by network MLPi).",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0035400390625,
+    "y1": 255.49655151367188,
+    "y2": 339.7059326171875
+  },
+  "figType": "Figure",
+  "imageText": ["Static", "Features", "Convolution", "Vector", "Split", "Fully-connected", "Bilinear", "Upsampling"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 505.44,
+    "y1": 89.75999999999999,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure1-1.png"
+}, {
+  "caption": "Figure 18: Latent traversals for the RFD dataset. Each row corresponds to a 1D traversal of the corresponding latent dimension while the other latent dimensions are fixed. Note the ordering of information in the more structured models like the SAE-16 and VLAE-16.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 565.5415649414062,
+    "y2": 593.4620361328125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "AdaAE-16", "(d)", "VAE"],
+  "name": "18",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 87.84,
+    "y2": 552.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure18-1.png"
+}, {
+  "caption": "Figure 10: Several disentanglement metrics for all the models and each of the seeds. (for all these metrics higher is better)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 616.0015869140625,
+    "y2": 632.9630126953125
+  },
+  "figType": "Figure",
+  "imageText": ["SAE-12SAE-6SAE-4VLAE-12VLAE-6VLAE-4TCVAEFVAEVAEVAEWAEAEAdaAE-12", "Ex", "p", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Score", "SAE-12SAE-6SAE-4VLAE-12VLAE-6VLAE-4TCVAEFVAEVAEVAEWAEAEAdaAE-12", "M", "od", "SAE-12SAE-6SAE-4VLAE-12VLAE-6VLAE-4TCVAEFVAEVAEVAEWAEAEAdaAE-12", "SA", "P", "SAE-12SAE-6SAE-4VLAE-12VLAE-6VLAE-4TCVAEFVAEVAEVAEWAEAEAdaAE-12", "IR", "S", "SAE-12SAE-6SAE-4VLAE-12VLAE-6VLAE-4TCVAEFVAEVAEVAEWAEAEAdaAE-12", "M", "IG", "SAE-12SAE-6SAE-4VLAE-12VLAE-6VLAE-4TCVAEFVAEVAEVAEWAEAEAdaAE-12", "DC", "I"],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 493.91999999999996,
+    "y1": 86.88,
+    "y2": 595.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure10-1.png"
+}, {
+  "caption": "Figure 13: Latent Traversals of several models for MPI3D-Toy. Each row shows the generated image when varying the corresponding latent dimension while fixing the rest of the latent vector. For the SAE and VLAE models, the groups of dimensions that are fed into the same Str-Tfm layer (or ladder rung) are grouped together. Note the disentangled segments achieved by the SAE models and the consistent ordering of factors of variation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 579.0885620117188,
+    "y2": 628.926025390625
+  },
+  "figType": "Figure",
+  "imageText": ["(j)", "VAE", "(k)", "β-VAE", "(l)", "AE", "(g)", "VLAE-12", "(h)", "VLAE-6", "(i)", "VLAE-4"],
+  "name": "13",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 565.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure13-1.png"
+}, {
+  "caption": "Figure 6: CelebA controllable generation and sampling comparison",
+  "captionBoundary": {
+    "x1": 171.36099243164062,
+    "x2": 440.6400146484375,
+    "y1": 330.8115539550781,
+    "y2": 336.81402587890625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Samples", "generated", "using", "hybrid", "and", "prior-", "based", "sampling", "using", "several", "models", "trained", "on", "CelebA.", "Note", "that", "the", "hybrid", "sampling", "tends", "to", "produce", "relatively", "high", "quality", "samples", "both", "for", "our", "proposed", "SAE", "and", "AdaAE", "architectures", "as", "well", "as", "baselines.", "id", "VA", "E", "Hy", "br", "Hy", "br", "id", "VA", "E", "Pr", "io", "r", "-1", "6", "VL", "AE", "Hy", "br", "id", "VL", "AE", "-1", "6", "Pr", "io", "r", "E-", "16", "Ad", "aA", "SA", "E-", "16", "Hy", "br", "id", "(a)", "Here", "we", "use", "hybridized", "chunks", "of", "latent", "vec-", "tor", "to", "show", "the", "diffuse", "disentanglement", "achieved", "by", "the", "hierarchical", "structure", "of", "the", "SAE-16", "ar-", "chitecture", "when", "combined", "with", "the", "flexible", "hy-", "brid", "sampling.", "For", "each", "row", "the", "corresponding", "quarter", "of", "latent", "dimensions", "(8/32)", "are", "hybridized", "(see", "section", "2.2)", "while", "the", "remaining", "dimensions", "are", "fixed.", "This", "shows", "how", "the", "SAE", "architecture", "is", "able", "to", "order", "partially", "disentangled", "factors", "of", "variation", "from", "high-level", "(more", "nonlinear,", "like", "fa-", "cial", "expressions", "and", "features)", "to", "low-level", "(such", "as", "color/lighting)", "without", "any", "additional", "regular-", "ization", "or", "supervision.", "le", "Co", "lo", "rs", "/s", "ty", "le", "s", "Ha", "irs", "ty", "es", "sio", "n", "Or", "ie", "nt", "at", "io", "n", "&", "Fa", "cia", "l", "f", "ea", "tu", "re", "Ex", "pr"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 490.56,
+    "y1": 84.0,
+    "y2": 317.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure6-1.png"
+}, {
+  "caption": "Table 1: Disentanglement and Completeness scores for 3D-Shapes. The DCI-d metric corresponds to the DCI-disentanglement score and DCI-c to the completeness score (Eastwood & Williams, 2018), IRS is a similar disentanglement metric (Suter et al., 2018), the MIG is the Mutual Information Gap (Chen et al., 2018), and Mod/Exp refers to the Modularity/Explicitness scores respectively (Ridgeway & Mozer, 2018) (for all these metrics higher is better)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 676.7355346679688,
+    "y2": 726.573974609375
+  },
+  "figType": "Table",
+  "imageText": ["Model", "DCI", "MIG", "IRS", "Mod", "Exp", "SAE-12", "0.974", "0.537", "0.830", "0.967", "1.000", "SAE-6", "0.865", "0.225", "0.735", "0.966", "0.999", "SAE-4", "0.740", "0.209", "0.654", "0.945", "0.999", "VLAE-12", "0.832", "0.553", "0.751", "0.914", "0.977", "VLAE-6", "0.785", "0.326", "0.689", "0.929", "0.963", "VLAE-4", "0.690", "0.282", "0.544", "0.900", "0.926", "βTCVAE", "0.410", "0.237", "0.603", "0.865", "0.923", "FVAE", "0.330", "0.123", "0.725", "0.907", "0.955", "βVAE", "0.235", "0.127", "0.593", "0.879", "0.799", "VAE", "0.314", "0.138", "0.607", "0.892", "0.872", "WAE", "0.211", "0.050", "0.621", "0.946", "0.906", "AE", "0.307", "0.092", "0.638", "0.926", "0.943", "AdaAE-12", "0.299", "0.062", "0.503", "0.876", "0.999"],
+  "name": "1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 504.0,
+    "y2": 660.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Table1-1.png"
+}, {
+  "caption": "Figure 9: Comparison of the hybrid and prior-based sampling method for all different models. Each “x” corresponds to a unique random seed, the horizontal line corresponds to the mean performance and the vertical line signifies one standard deviation above and below the mean. (lower is best)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 357.5005187988281,
+    "y2": 385.42095947265625
+  },
+  "figType": "Figure",
+  "imageText": ["Sampling", "Hybrid", "Prior", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "e", "Sc", "or", "FI", "D", "100", "90", "80", "70", "60", "50", "40", "30", "20", "FV", "AE", "E-", "12", "Ad", "aA", "W", "AE", "VA", "E", "W", "AE", "VA", "E", "AE", "FV", "AE", "VA", "E", "E", "TC", "VA", "E", "TC", "VA", "VA", "E", "6", "SA", "E-", "-1", "2", "VL", "AE", "-1", "2", "VL", "AE", "12", "SA", "E-"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 120.47999999999999,
+    "x2": 501.12,
+    "y1": 83.03999999999999,
+    "y2": 341.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure9-1.png"
+}, {
+  "caption": "Table 4: Disentanglement and Completeness scores for MPI3D-Real. (for all these metrics higher is better)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 709.612548828125,
+    "y2": 726.573974609375
+  },
+  "figType": "Table",
+  "imageText": ["FVAE", "0.095", "0.028", "0.522", "0.904", "0.729", "βVAE", "0.090", "0.021", "0.659", "0.869", "0.680", "VAE", "0.080", "0.020", "0.602", "0.875", "0.694", "WAE", "0.159", "0.042", "0.587", "0.837", "0.831", "AE", "0.143", "0.048", "0.563", "0.858", "0.804", "AdaAE-12", "0.164", "0.034", "0.530", "0.952", "0.895", "Model", "DCI", "MIG", "IRS", "Mod", "Exp", "SAE-12", "0.374", "0.148", "0.564", "0.928", "0.869", "SAE-6", "0.295", "0.074", "0.535", "0.879", "0.840", "VLAE-12", "0.291", "0.217", "0.579", "0.914", "0.805", "βTCVAE", "0.185", "0.100", "0.595", "0.870", "0.699", "A.3.5", "MPI3D-REAL"],
+  "name": "4",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 693.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Table4-1.png"
+}, {
+  "caption": "Table 3: Disentanglement and Completeness scores for MPI3D-Sim. (for all these metrics higher is better)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 709.612548828125,
+    "y2": 726.573974609375
+  },
+  "figType": "Table",
+  "imageText": ["FVAE", "0.095", "0.044", "0.664", "0.916", "0.722", "βVAE", "0.060", "0.054", "0.850", "0.926", "0.701", "VAE", "0.070", "0.056", "0.850", "0.828", "0.713", "WAE", "0.129", "0.033", "0.548", "0.881", "0.819", "AE", "0.157", "0.033", "0.526", "0.855", "0.805", "AdaAE-12", "0.159", "0.022", "0.481", "0.893", "0.905", "Model", "DCI", "MIG", "IRS", "Mod", "Exp", "SAE-12", "0.411", "0.238", "0.508", "0.930", "0.890", "SAE-6", "0.294", "0.052", "0.479", "0.928", "0.877", "VLAE-12", "0.220", "0.093", "0.634", "0.863", "0.816", "βTCVAE", "0.148", "0.139", "0.688", "0.856", "0.694", "A.3.4", "MPI3D-SIM"],
+  "name": "3",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 693.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Table3-1.png"
+}, {
+  "caption": "Figure 7: Average reconstruction error (MSE x1000) on novel observations when training either the encoder, decoder, both, or neither on the initially left-out ball shape (see section 3.2). Example input and reconstructed images are shown above. All models perform significantly better when updating the decoder than the encoder, and reach a reconstruction quality that is almost indistinguishable from the model when updating both the encoder and decoder. Furthermore, the SAE-12 generally outperforms all variational baselines, suggesting the aggressive regularization of VAEs makes updating the representation more difficult.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 349.2015380859375,
+    "y2": 420.95794677734375
+  },
+  "figType": "Figure",
+  "imageText": ["AE", "VA", "E", "-1", "2", "VL", "AE", "Input", "No", "Update", "Encoder", "only", "Decoder", "only", "Both", "12", "SA", "E-", "Model", "Neither", "Encoder", "Decoder", "Both", "SAE-12", "13.21", "7.7", "0.42", "0.34", "SAE-6", "13.35", "7.99", "0.52", "0.36", "VLAE-12", "18.37", "7.69", "1.55", "0.62", "VAE", "12.97", "8.78", "0.44", "0.46", "βVAE", "15.49", "8.31", "1.35", "0.52", "AE", "11.81", "7.31", "0.38", "0.35", "WAE", "11.68", "7.87", "0.37", "0.35"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 505.44,
+    "y1": 213.12,
+    "y2": 337.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure7-1.png"
+}, {
+  "caption": "Figure 11: Latent Traversals of several models for 3D-Shapes. Each row shows the generated image when varying the corresponding latent dimension while fixing the rest of the latent vector. For the SAE and VLAE models, the groups of dimensions that are fed into the same Str-Tfm layer (or ladder rung) are grouped together. Note the disentangled segments achieved by the SAE models and the consistent ordering of factors of variation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 579.0885620117188,
+    "y2": 628.926025390625
+  },
+  "figType": "Figure",
+  "imageText": ["(j)", "VAE", "(k)", "β-VAE", "(l)", "AE", "(g)", "VLAE-12", "(h)", "VLAE-6", "(i)", "VLAE-4"],
+  "name": "11",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 565.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure11-1.png"
+}, {
+  "caption": "Figure 2: Reconstruction quality for all models and datasets (lower is better). “Baseline” models correspond to traditional “hourglass” CNN architectures, while the “Structural” models use our novel architectures to further structure the learned representation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 322.38751220703125,
+    "y2": 350.3079833984375
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "MPI3D", "Real", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "50", "40", "30", "20", "10", "VA", "E0", "E-", "12", "SA", "E-", "6", "SA", "E-", "12", "SA", "E-", "4", "Ad", "aA", "E-", "6", "SA", "E-", "3", "SA", "E-", "2", "W", "AE", "AE", "VL", "AE", "-1", "2", "VL", "AE", "-4", "VL", "AE", "-3", "VL", "AE", "-6", "FV", "AE", "VL", "AE", "-2", "VA", "E", "TC", "VA", "E", "Ad", "aA", "(e)", "MPI3D", "Sim", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "70", "60", "50", "40", "30", "20", "10", "VA", "E0", "VL", "AE", "-4", "VL", "AE", "-1", "2", "VL", "AE", "-3", "FV", "AE", "VL", "AE", "-2", "VA", "E", "VA", "E", "TC", "-6", "W", "AE", "SA", "E-", "6", "VL", "AE", "E-", "12", "AE", "Ad", "aA", "12", "SA", "E-", "4", "SA", "E-", "SA", "E-", "2", "SA", "E-", "3", "(d)", "MPI3D", "Toy", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "50", "40", "30", "20", "10", "VA", "E0", "SA", "E-", "3", "Ad", "aA", "E-", "12", "SA", "E-", "6", "W", "AE", "SA", "E-", "2", "AE", "VL", "AE", "-6", "FV", "AE", "VL", "AE", "-4", "VL", "AE", "-1", "2", "VL", "AE", "-2", "VL", "AE", "-3", "TC", "VA", "E", "VA", "E", "E-", "6", "Ad", "aA", "12", "SA", "E-", "4", "SA", "E-", "(c)", "Celeb-A", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "150", "140", "130", "120", "110", "100", "90", "80", "-1", "6", "VA", "E", "AE", "VL", "AE", "16", "VA", "E", "SA", "E-", "E-", "16", "Ad", "aA", "(b)", "RFD", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "50", "40", "30", "20", "10", "-1", "6", "VA", "E", "VA", "E0", "VL", "AE", "E-", "16", "AE", "Ad", "aA", "16", "SA", "E-", "(a)", "3D-Shapes", "Architecture", "Structural", "Adaptive", "Ladder", "Baseline", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "70", "60", "50", "40", "30", "20", "10", "E0", "12", "SA", "E-", "4", "SA", "E-", "6", "SA", "E-", "3", "SA", "E-", "2", "Ad", "aA", "E-", "6", "VL", "AE", "-4", "VL", "AE", "-3", "VL", "AE", "-6", "VL", "AE", "-1", "2", "W", "AE", "AE", "FV", "AE", "VA", "E", "VL", "AE", "-2", "TC", "VA", "E", "VA", "SA", "E-", "E-", "12", "Ad", "aA"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 495.35999999999996,
+    "y1": 81.6,
+    "y2": 309.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure2-1.png"
+}, {
+  "caption": "Figure 8: 3D-Shapes reconstruction quality comparison between models using the reconstruction loss (binary cross entropy) and the Fréchet Inception Distance (FID) (Heusel et al., 2017) between the original and reconstructed observations (lower is better for both). Each “x” is a model trained with a unique random seed using the architecture/regularization corresponding to the color. The performance of all the seeds are averaged and plotted as circles “o”. Firstly, this plot shows how the reconstruction FID (y-axis) can complement the pixelwise comparison (x-axis) to quantify the quality of the reconstructed samples. Next, the multiple seeds help differentiate the performance of the regularized vs unregularized methods. These regimes separate the models that use the variational regularization loss from the models that only use a reconstruction loss (or a regularization on the aggregated posterior like the WAE). Lastly, the AdaAE-12 slightly out performs the SAE-12 and both of which significantly out perform less structured baselines, which suggests the architectural biases are conducive to high fidelity decoders.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 600.0235595703125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["WAE", "AE", "AdaAE-12", "VAE", "FVAE", "VAE", "TCVAE", "Model", "SAE-12", "SAE-6", "VLAE-12", "20", "18", "16", "14", "12", "or", "e", "D", "Sc", "n", "FI", "ct", "io", "ns", "tru", "Re", "co", "50", "45", "40", "35", "30", "25", "20", "15", "10", "3460", "3480", "3500", "3520", "3540", "Reconstruction", "Loss"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 501.12,
+    "y1": 325.44,
+    "y2": 584.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O_lFCPaF48t-Figure8-1.png"
+}]

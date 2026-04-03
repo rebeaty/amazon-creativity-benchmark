@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 2: Average RMSE between complete and imputed data produced by the different algorithms. A Lower score represents better performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 291.4935302734375,
+    "y2": 308.45501708984375
+  },
+  "figType": "Figure",
+  "imageText": ["GAIN", "KNN", "Mean", "MBMF", "MF", "S", "E", "R", "M", "Data", "size", "0.175", "0.150", "0.125", "0.17", "0.15", "0.13", "0.11", "0.16", "0.14", "0.12", "0.10", "0.16", "0.14", "0.12", "0.21", "0.18", "0.15", "0.12", "0.16", "0.14", "0.12", "0.200", "0.175", "0.150", "0.125", "0.100", "0.16", "0.14", "0.12", "0.175", "0.150", "0.125", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "Missing", "rate:", "30%", "MAR", "Missing", "rate:", "10%", "MAR", "Missing", "rate:", "50%", "MCAR", "Missing", "rate:", "30%", "MCAR", "Missing", "rate:", "10%", "MCAR", "Missing", "rate:", "50%", "MNAR", "Missing", "rate:", "30%", "MNAR", "Missing", "rate:", "10%", "MNAR", "Missing", "rate:", "50%", "MAR"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 275.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GrpU6dxFmMN-Figure2-1.png"
+}, {
+  "caption": "Table 2: Summary of the real-world data sets used in Section 4.4.",
+  "captionBoundary": {
+    "x1": 175.68499755859375,
+    "x2": 436.3165283203125,
+    "y1": 211.09353637695312,
+    "y2": 217.09600830078125
+  },
+  "figType": "Table",
+  "imageText": ["Iris", "4", "150", "Continuous", "Breast", "30", "569", "Continuous", "Wine", "11", "1599", "Continuous", "Game", "10", "958", "Categorical", "Car", "7", "1728", "Categorical", "Mushroom", "22", "8124", "Categorical", "Number", "of", "variables", "Number", "of", "instances", "Data", "type"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 457.44,
+    "y1": 111.36,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GrpU6dxFmMN-Table2-1.png"
+}, {
+  "caption": "Figure 4: Average execution time of MF and MBMF under different sample sizes, mechanisms of missingness, and rates of missingness.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 499.051513671875,
+    "y2": 516.0130004882812
+  },
+  "figType": "Figure",
+  "imageText": ["ds", "ec", "on", "e", "/", "s", "n", "tim", "cu", "tio", "E", "xe", "10%", "30%", "50%", "Missing", "rate", "300", "200", "100", "0", "MCAR", "MAR", "MNAR", "Missing", "mechanism", "300", "200", "100", "0", "500", "1000", "2000", "3000", "Data", "size", "600", "400", "200", "0", "MF", "MBMF", "Feature", "selection", "phase", "Imputation", "phase"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 501.12,
+    "y1": 348.0,
+    "y2": 484.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GrpU6dxFmMN-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Average F1 scores of the graphs learned by GES from data imputed by the different algorithms. A higher F1 score represents better performance. The dashed line represents the performance of GES when applied to complete data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 291.4935302734375,
+    "y2": 319.41400146484375
+  },
+  "figType": "Figure",
+  "imageText": ["Complete", "GAIN", "KNN", "Mean", "MBMF", "MF", "F", "1", "Data", "size", "0.7", "0.6", "0.5", "0.4", "0.3", "0.7", "0.6", "0.5", "0.7", "0.6", "0.5", "0.4", "0.7", "0.6", "0.5", "0.7", "0.6", "0.5", "0.4", "0.7", "0.6", "0.5", "0.4", "0.3", "0.7", "0.6", "0.5", "0.4", "0.3", "0.7", "0.6", "0.5", "0.7", "0.6", "0.5", "0.4", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "0.3", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "1000", "2000", "3000", "Missing", "rate:", "30%", "MAR", "Missing", "rate:", "10%", "MAR", "Missing", "rate:", "50%", "MCAR", "Missing", "rate:", "30%", "MCAR", "Missing", "rate:", "10%", "MCAR", "Missing", "rate:", "50%", "MNAR", "Missing", "rate:", "30%", "MNAR", "Missing", "rate:", "10%", "MNAR", "Missing", "rate:", "50%", "MAR"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 275.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GrpU6dxFmMN-Figure3-1.png"
+}, {
+  "caption": "Figure 1: M-graphs under MCAR, MAR and MNAR conditions respectively. Shaded nodes represent partially observed variables",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 191.17251586914062,
+    "y2": 208.13397216796875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "MNAR", "R1", "R3", "V5V6", "V4", "V3", "V1", "V2", "(b)", "MAR", "R1", "R3", "V5V6", "V4", "V3", "V1", "V2", "(a)", "MCAR", "R1", "R3", "V5V6", "V4", "V3", "V1", "V2"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 471.35999999999996,
+    "y1": 84.96,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GrpU6dxFmMN-Figure1-1.png"
+}, {
+  "caption": "Table 1: Average RMSE and PFC scores, and their standard deviations, for different imputation algorithms and real-world data combinations. Lower RMSE and PFC scores represent better performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 181.30551147460938,
+    "y2": 209.2259521484375
+  },
+  "figType": "Table",
+  "imageText": ["Iris", ".284±.085", "-", ".103±.029", ".164±.060", ".092±", ".026", ".092±.025", "Breast", ".149±.012", "-", ".113±.009", ".098±.029", ".057±", ".009", ".054±.009", "Wine", ".123±.009", "-", ".109±.013", ".106±.009", ".039±.013", ".040±", ".013", "Game", "-", ".563±.020", ".501±.072", "-", ".505±", ".064", ".496±.070", "Car", "-", ".675±.074", ".613±.073", "-", ".655±", ".107", ".593±.061", "Mushroom", "-", ".443±.062", ".294±.083", "-", ".207±", ".060", ".203±.058", "Mean", "Mode", "KNN", "GAIN", "MF", "MBMF"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GrpU6dxFmMN-Table1-1.png"
+}]

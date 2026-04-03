@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: An illustration of the two-tier tradeoffs in CLARE.",
+  "captionBoundary": {
+    "x1": 183.7050018310547,
+    "x2": 425.8060302734375,
+    "y1": 341.0395202636719,
+    "y2": 347.0419921875
+  },
+  "figType": "Figure",
+  "imageText": ["Tradeoff", "Tradeoff", "“Exploitation”", "“Exploration”", "Expert", "data", "Diverse", "data", "Model-based", "synthetic", "data"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 462.24,
+    "y1": 252.0,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Figure1-1.png"
+}, {
+  "caption": "Figure 2: CLARE against other algorithms on all tasks over different dataset sizes consisting of expert and medium data equally.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 710.7435302734375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": ["CLARE", "BC", "IQ-Learn", "AVRIL", "MOMAX", "EDM", "Expert", "Medium", "Halfcheetah", "rn", "Re", "tu", "ag", "e", "Av", "er", "10000", "7500", "5000", "2500", "0", "2k", "10k", "50k", "100k", "150k", "Number", "of", "Tuples", "CLARE", "BC", "IQ-Learn", "AVRIL", "MOMAX", "Expert", "Medium", "Ant", "rn", "Re", "tu", "ag", "e", "Av", "er", "4000", "2000", "0", "2k", "10k", "50k", "100k", "150k", "Number", "of", "Tuples", "CLARE", "BC", "IQ-Learn", "AVRIL", "MOMAX", "EDM", "Expert", "Medium", "Hopper", "rn", "Re", "tu", "ag", "e", "Av", "er", "3000", "2000", "1000", "0", "2k", "10k", "50k", "100k", "150k", "Number", "of", "Tuples", "CLARE", "BC", "IQ-Learn", "AVRIL", "MOMAX", "EDM", "Expert", "Medium", "Walker2d", "rn", "Re", "tu", "ag", "e", "Av", "er", "4000", "2000", "0", "2k", "10k", "50k", "100k", "150k", "Number", "of", "Tuples"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 623.52,
+    "y2": 702.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Comparison to MOMAX. Results are averaged over 7 random seeds. Each experiment uses 10k expert and 10k medium state-actions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9999694824219,
+    "y1": 705.445556640625,
+    "y2": 722.406982421875
+  },
+  "figType": "Figure",
+  "imageText": ["0", "1", "2", "3", "4", "Iterations", "CLARE", "MOMAX", "Halfcheetah", "1e3", "rn", "Re", "tu", "ag", "e", "Av", "er", "6", "4", "2", "0", "0", "1", "2", "3", "4", "Steps", "1e4", "0", "1", "2", "3", "4", "Iterations", "CLARE", "MOMAX", "Ant", "1e3", "rn", "Re", "tu", "ag", "e", "Av", "er", "4", "2", "0", "0", "1", "2", "3", "4", "Steps", "1e4", "0", "1", "2", "3", "4", "Iterations", "CLARE", "MOMAX", "Hopper", "1e3", "rn", "Re", "tu", "ag", "e", "Av", "er", "3", "2", "1", "0", "0", "1", "2", "3", "4", "Steps", "1e4", "0", "1", "2", "3", "4", "Iterations", "CLARE", "MOMAX", "Walker2d", "1e3", "rn", "Re", "tu", "ag", "e", "Av", "er", "4", "2", "0", "0", "1", "2", "3", "4", "Steps", "1e4"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 585.6,
+    "y2": 688.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Figure4-1.png"
+}, {
+  "caption": "Table 4: Performance of CLARE on D4RL datasets. For each MuJoCo task, the experiments are carried out with three data combinations: 1) 10k expert state-action tuples, 2) 5k expert state-action tuples, 3) 5k expert and 5k medium state-action tuples, and 4) 5k expert and 5k random state-action tuples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 384.8114929199219,
+    "y2": 423.69091796875
+  },
+  "figType": "Table",
+  "imageText": ["Walker2d", "3673.88", "3813.49", "3458.29", "4990.57", "Hopper", "1891.55", "2335.07", "1885.76", "2604.59", "Ant", "1960.05", "3879.48", "3278.08", "3940.30", "Half-Cheetah", "1113.75", "4888.64", "4714.30", "5375.17", "Task", "Exp.", "(5k)", "&", "Rand.", "(5k)", "Exp.", "(5k)", "&", "Med.", "(5k)", "Exp.", "(5k)", "Exp.", "(10k)"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 426.71999999999997,
+    "y2": 493.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Table4-1.png"
+}, {
+  "caption": "Table 3: Performance under different u values. We tune u from set {0.4, 0.6, 0.8}. For each MuJoCo task, the experiments are carried out with three data combinations: 1) 10k expert state-action tuples, 2) 5k expert and 5k medium state-action tuples, and 3) 5k expert and 5k random state-action tuples. The highest score across different u is bold.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.003173828125,
+    "y1": 93.2935562133789,
+    "y2": 132.1729736328125
+  },
+  "figType": "Table",
+  "imageText": ["Ant", "2747.10", "3925.90", "3330.48", "Half-Cheetah", "5350.05", "4942.20", "4542.45", "Walker2d", "4674.52", "4958.04", "4742.20", "Hopper", "1954.04", "2605.82", "2328.22", "Exp.", "Ant", "3568.49", "3805.64", "2635.30", "Half-Cheetah", "4955.23", "4349.88", "4000.17", "Walker2d", "3334.55", "3780.78", "3275.21", "Hopper", "1722.44", "2407.90", "1963.59", "Exp.", "&", "Med.", "Ant", "2047.98", "1496.09", "1337.01", "Half-Cheetah", "453.03", "1118.58", "849.42", "Walker2d", "2896.93", "3389.79", "1083.17", "Hopper", "1187.22", "1841.15", "1508.09", "Exp.", "&", "Rand.", "Dataset", "type", "Environment", "u", "=", "0.4", "u", "=", "0.6", "u", "=", "0.8"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 439.2,
+    "y1": 134.88,
+    "y2": 299.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Table3-1.png"
+}, {
+  "caption": "Table 2: Hyperparameters for CLARE. Instead of u, the hyperparameters used in the evaluation are identical across different tasks (Half-Cheetah, Walker2d, Hopper, and Ant).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 505.9575500488281,
+    "y2": 522.9190063476562
+  },
+  "figType": "Table",
+  "imageText": ["Reward", "learning", "rate", "(η)", "5×", "10−5", "Rollout", "batchsize", "(B)", "5000", "Rollout", "horizon", "(H)", "5", "Policy", "regularization", "weight", "(λ)", "0.25", "Discount", "factor", "(γ)", "0.99", "#", "steps", "per", "reward", "updating", "(T", ")", "5", "#", "epochs", "(E)", "500", "#", "steps", "per", "epoch", "20", "Actor", "learning", "rate", "3×", "10−4", "Critic", "learning", "rate", "3×", "10−4", "Hyperparameter", "Value"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 210.72,
+    "x2": 401.28,
+    "y1": 525.6,
+    "y2": 659.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Table2-1.png"
+}, {
+  "caption": "Table 1: Results on D4RL datasets. For each task, the experiments are carried out with three different data combinations: 1) 10k expert tuples, 2) 5k expert and 5k medium tuples, and 3) 5k expert and 5k random tuples. The data scores below for 1), 2), and 3) correspond to expert, medium, and random data, respectively. We tune IQ-LEARN, EDM, and AVRIL based on their publicly available source code. Results are averaged over 7 random seeds. The highest score across all algorithms is bold.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 92.64151763916016,
+    "y2": 142.47894287109375
+  },
+  "figType": "Table",
+  "imageText": ["Ant", "5172.8", "3940.3", "1797.9", "375.4", "-3000.6", "1000.2", "48.1", "Half-Cheetah", "10748.7", "5375.1", "242.4", "3750.5", "-299.5", "-619.0", "-0.4", "Walker2d", "5010.4", "4990.5", "1665.7", "2445.4", "189.7", "194.1", "23.2", "Hopper", "3603.2", "2604.5", "1436.1", "2854.4", "192.5", "183.9", "34.5", "Exp.", "Ant", "3969.0", "3879.4", "2146.0", "222.2", "-3001.5", "1001.0", "-33.2", "Half-Cheetah", "4667.8", "4888.6", "2375.0", "2957.7", "-298.3", "-1195.6", "-0.2", "Walker2d", "3496.3", "3813.4", "1674.2", "1676.8", "175.7", "184.0", "19.6", "Hopper", "1422.7", "2335.0", "947.0", "2049.8", "194.4", "183.7", "27.6", "Exp.", "&", "Med.", "Ant", "-64.4", "1960.0", "-427.6", "-247.2", "-3000.9", "1000.1", "113.8", "Half-Cheetah", "-505.1", "1113.7", "-86.7", "123.9", "-346.7", "-1093.5", "-11.0", "Walker2d", "1.9", "3673.8", "17.8", "256.9", "165.5", "100.9", "-525.4", "Hopper", "18.4", "1891.5", "110.2", "523.6", "178.8", "178.3", "0.7", "Exp.", "&", "Rand.", "Dataset", "type", "Environment", "Data", "score", "CLARE", "BC", "IQ-LEARN", "EDM", "AVRIL", "MOMAX"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 144.96,
+    "y2": 284.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Table1-1.png"
+}, {
+  "caption": "Figure 3: Performance of CLARE. 1) Impact of u: Figure 3(a) shows the impact of user-chosen parameter u on the performance using 10k expert tuples. 2) Convergence speed: Figures 3(c) and 3(b) show the convergence of CLARE using 10k expert and 10k medium tuples. In each iteration, CLARE carries out policy improvement by total 10k gradient updates (total 500 epochs with 20 gradient steps per epoch) for the actor and critic networks using SAC. 3) Recovered reward: Figure 3(d) shows the result of training SAC via replacing the underlying reward by the one learned from CLARE.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 422.3275451660156,
+    "y2": 494.08392333984375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Recovered", "reward.", "SAC", "with", "the", "learned", "reward", "function", "SAC", "with", "underlying", "rewards", "Expert", "1e3", "Hopper", "rn", "Re", "tu", "ag", "e", "Av", "er", "4", "3", "2", "1", "0", "0.0", "0.5", "1.0", "Million", "Steps", "(c)", "Convergence", "speed.", "0", "1", "2", "3", "4", "Iterations", "CLARE", "Ant", "rn", "1e3", "Re", "tu", "ag", "e", "Av", "er", "4", "2", "0", "0", "1", "2", "3", "4", "Steps", "1e4", "(b)", "Convergence", "speed.", "0", "1", "2", "3", "4", "Iterations", "CLARE", "Walker2d", "1e3", "rn", "Re", "tu", "ag", "e", "Av", "er", "4", "2", "0", "0", "1", "2", "3", "4", "Steps", "1e4", "(a)", "Impact", "of", "u.", "0", "1", "2", "3", "4", "Iterations", "u=0.1", "u=0.6", "u=1.0", "Halfcheetah", "1e3", "rn", "Re", "tu", "ag", "e", "Av", "er", "8", "6", "4", "2", "0", "0", "1", "2", "3", "4", "Steps", "1e4"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 295.2,
+    "y2": 411.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5aT4ganOd98-Figure3-1.png"
+}]

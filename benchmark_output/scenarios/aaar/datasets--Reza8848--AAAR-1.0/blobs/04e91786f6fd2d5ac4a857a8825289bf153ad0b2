@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 4: Results on KITTI val set with varying KDE bandwidth h (left) and prototype selection approaches (right) with increasing queried bounding boxes.",
+  "captionBoundary": {
+    "x1": 393.1199951171875,
+    "x2": 504.003662109375,
+    "y1": 426.8345031738281,
+    "y2": 487.6319274902344
+  },
+  "figType": "Figure",
+  "imageText": ["GMM", "K-Means", "K-Means++", "e", "er", "at", "M", "od", "(%", ")", "-", "A", "P", "3D", "m", "70", "65", "60", "55", "500", "750", "1000", "1250", "1500", "1750", "Number", "of", "Selected", "Bounding", "Boxes", "h=9", "h=7", "h=5", "h=3", "e", "er", "at", "M", "od", "(%", ")", "-", "A", "P", "3D", "m", "70", "65", "60", "55", "400", "600", "800", "1000", "1200", "1400", "1600", "1800", "Number", "of", "Selected", "Bounding", "Boxes"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 388.32,
+    "y1": 426.71999999999997,
+    "y2": 508.79999999999995
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Figure4-1.png"
+}, {
+  "caption": "Table 2: Ablative study of different active learning criteria on the KITTI val split. 3D and BEV AP scores (%) are reported when 1,000 bounding boxes are annotated.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 70.0805435180664,
+    "y2": 87.0419921875
+  },
+  "figType": "Table",
+  "imageText": ["76.72±0.78", "64.70±1.07", "59.68±0.93", "80.71±0.26", "70.01±0.40", "65.47±0.56√", "√", "√", "79.03±1.39", "65.86±1.21", "61.06±1.43", "82.60±1.34", "70.74±0.57", "66.41±1.22", "-", "√", "69.11±13.22", "56.12±12.74", "52.85±11.49", "73.57±10.45", "62.49±10.62", "59.45±9.78√", "√", "-", "76.19±2.13", "62.81±1.31", "58.03±1.18", "80.73±0.92", "68.67±0.21", "64.42±0.22√", "-", "-", "√", "-", "74.93±3.11", "61.65±1.95", "57.70±1.52", "78.85±2.31", "67.07±1.36", "63.47±1.21", "-", "√", "-", "-", "-", "70.70±1.60", "58.27±1.04", "54.69±1.30", "75.37±1.65", "64.54±1.69", "61.36±1.61√", "-", "-", "77.76±1.70", "64.56±1.39", "59.54±1.13", "81.07±1.67", "69.76±1.45", "65.01±1.31", "CLS", "RPS", "GPDB", "EASY", "MODERATE", "HARD", "EASY", "MODERATE", "HARD", "3D", "Detection", "mAP", "BEV", "Detection", "mAP"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 92.64,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Table2-1.png"
+}, {
+  "caption": "Figure 3: A case study of active 3D detection performance of RAND (bottom left) and CRB (bottom right) under the budge of 1,000 annotated bounding boxes. False positive (corrected predictions) are highlighted in red (green) boxes. The orange box denotes the detection with low confidence.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 350.9205017089844,
+    "y2": 378.8409729003906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 192.48,
+    "y2": 346.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Figure3-1.png"
+}, {
+  "caption": "Table 1: Performance comparisons (3D AP scores) with generic AL and applied AL for detection on KITTI val set with 1% queried bounding boxes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 79.04752349853516,
+    "y2": 96.00897216796875
+  },
+  "figType": "Table",
+  "imageText": ["RAND", "ENTROPY", "MC-REG", "LLAL", "CORESET", "BADGE", "CRB", "2", "ev", "el", "(%", ")", "L", "A", "P", "52", "50", "48", "46", "44", "42", "0", "10000", "20000", "30000", "40000", "50000", "Number", "of", "Selected", "Bounding", "Boxes", "RAND", "ENTROPY", "MC-REG", "LLAL", "CORESET", "BADGE", "CRB", "d", "H", "ar", "(%", ")", "-", "A", "P", "3D", "m", "65", "60", "55", "50", "45", "0", "500", "1000", "1500", "2000", "2500", "3000", "3500", "Number", "of", "Selected", "Bounding", "Boxes", "RAND", "ENTROPY", "MC-REG", "LLAL", "CORESET", "BADGE", "CRB", "e", "er", "at", "M", "od", "(%", ")", "-", "A", "P", "3D", "m", "70", "65", "60", "55", "50", "0", "500", "1000", "1500", "2000", "2500", "3000", "3500", "Number", "of", "Selected", "Bounding", "Boxes", "CRB", "90.98", "79.02", "74.04", "64.17", "54.80", "50.82", "86.96", "67.45", "63.56", "80.70", "67.81", "62.81", "MC-MI", "86.28", "75.58", "71.56", "41.05", "37.50", "33.83", "86.26", "60.22", "56.04", "71.19", "57.77", "53.81", "CONSENSUS", "90.14", "78.01", "74.28", "56.43", "49.50", "44.80", "78.46", "55.77", "53.73", "75.01", "61.09", "57.60", "LT/C", "88.73", "78.12", "73.87", "55.17", "48.37", "43.63", "83.72", "63.21", "59.16", "75.88", "63.23", "58.89", "-D", "et", "MC-REG", "88.85", "76.21", "73.47", "35.82", "31.81", "29.79", "73.98", "55.23", "51.85", "66.21", "54.41", "51.70", "A", "L", "BADGE", "89.96", "75.78", "70.54", "51.94", "46.24", "40.98", "84.11", "62.29", "58.12", "75.34", "61.44", "56.55", "LLAL", "89.95", "78.65", "75.32", "56.34", "49.87", "45.97", "75.55", "60.35", "55.36", "73.94", "62.95", "58.88", "er", "ic", "CORESET", "87.77", "77.73", "72.95", "47.27", "41.97", "38.19", "81.73", "59.72", "55.64", "72.26", "59.81", "55.59", "G", "en", "Method", "EASY", "MOD.", "HARD", "EASY", "MOD.", "HARD", "EASY", "MOD.", "HARD", "EASY", "MOD.", "HARD", "CAR", "PEDESTRIAN", "CYCLIST", "AVERAGE"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 108.96,
+    "y2": 305.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Table1-1.png"
+}, {
+  "caption": "Figure 2: 3D and BEV mAP (%) of CRB and AL baselines on the KITTI and Waymo val split.",
+  "captionBoundary": {
+    "x1": 117.27403259277344,
+    "x2": 494.7261962890625,
+    "y1": 418.7674865722656,
+    "y2": 424.76995849609375
+  },
+  "figType": "Figure",
+  "imageText": ["RAND", "ENTROPY", "MC-REG", "LLAL", "CORESET", "BADGE", "CRB", "el", "2", ")", "L", "ev", "H", "(%", "A", "P", "36", "35", "34", "33", "32", "31", "0", "10000", "20000", "30000", "40000", "50000", "Number", "of", "Selected", "Bounding", "Boxes", "RAND", "ENTROPY", "MC-REG", "LLAL", "CORESET", "BADGE", "CRB", "d", "H", "ar", "(%", ")", "-", "A", "P", "V", "m", "B", "E", "70", "65", "60", "55", "0", "500", "1000", "1500", "2000", "2500", "3000", "3500", "Number", "of", "Selected", "Bounding", "Boxes", "RAND", "ENTROPY", "MC-REG", "LLAL", "CORESET", "BADGE", "CRB", "e", "er", "at", "M", "od", "(%", ")", "-", "A", "P", "V", "m", "B", "E", "75", "70", "65", "60", "55", "0", "500", "1000", "1500", "2000", "2500", "3000", "3500", "Number", "of", "Selected", "Bounding", "Boxes"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 318.71999999999997,
+    "y2": 405.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Figure2-1.png"
+}, {
+  "caption": "Table 3: Performance comparisons on KITTI val set w.r.t. varying thresholds K1 and K2 after two rounds of active selection (8% point clouds, 1% bounding boxes). Results are reported with 3D AP with 40 recall positions. † indicates the reported performance of the backbone trained with the full labeled set (100%).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.004150390625,
+    "y1": 56.63150405883789,
+    "y2": 95.51092529296875
+  },
+  "figType": "Table",
+  "imageText": ["PV-RCNN†", "92.56", "84.36", "82.48", "64.26", "56.67", "51.91", "88.88", "71.95", "66.78", "81.75", "70.99", "67.06", "500", "400", "90.04", "79.08", "74.66", "57.11", "51.10", "51.12", "81.97", "63.40", "59.62", "76.50", "64.53", "60.10", "500", "300", "90.98", "79.02", "74.04", "64.17", "54.80", "50.82", "86.96", "67.45", "63.56", "80.70", "67.81", "62.81", "400", "300", "91.30", "79.21", "74.00", "62.93", "55.67", "49.27", "79.02", "60.50", "56.74", "77.75", "65.13", "60.00", "300", "200", "90.45", "78.81", "73.44", "65.00", "55.91", "51.12", "84.82", "65.77", "61.53", "80.09", "67.32", "62.05", "K1", "K2", "EASY", "MOD.", "HARD", "EASY", "MOD.", "HARD", "EASY", "MOD.", "HARD", "EASY", "MOD.", "HARD", "CAR", "PEDESTRIAN", "CYCLIST", "AVERAGE"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 108.47999999999999,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Table3-1.png"
+}, {
+  "caption": "Figure 1: An illustrative flowchart of the proposed CRB framework for active selection of point clouds. Motivated by optimizing the generalization risk, the derived strategy hierarchically selects point clouds that have non-redundant bounding box labels, latent gradients and geometric characteristics to mitigate the gap with the test set and minimize annotation costs.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.003173828125,
+    "y1": 188.91055297851562,
+    "y2": 227.78997802734375
+  },
+  "figType": "Figure",
+  "imageText": ["of", "size", "Greedy", "Search", "Sparse", "Dense", "Conv-Block", "Dropout", "Conv-Block", "Classi", "ier", "Conv-Block", "Dropout", "Conv-Block", "Regression", "Heads", "of", "sizeMC", "Dropout", "of", "size", "of", "size", "n", "Prototypes", "Selection", "Ent", "=", "0", "Gradient", "ExtractionEnt", "=", "1.5", "RoI", "HeadBox", "Head", "Voxel", "Encoder", "Label", "Query", "Pre-train", "Re-train", "Active", "Learning", "Policy", "Unlabeled", "Pool", "Labeled", "Training", "Set", "Selected", "Point", "Clouds", "Infer", "Budget", "Human", "AnnotatorLabeled", "Subset", "pedestrain", "minimize", "KL-divergence", "Label", "Sampling", "Hypothetical", "Regression", "Labels", "Conciseness", "Representativeness", "Balance", "Box-level", "Point", "Density"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2RwXVje1rAh-Figure1-1.png"
+}]

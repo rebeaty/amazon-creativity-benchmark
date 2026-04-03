@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 4: Importance of StopGradient in the InfoNCE loss, using M/8 on CIFAR-10 with 256 channels 1 group.",
+  "captionBoundary": {
+    "x1": 353.51800537109375,
+    "x2": 505.6512451171875,
+    "y1": 629.3455810546875,
+    "y2": 657.2659912109375
+  },
+  "figType": "Figure",
+  "imageText": ["Original", "Different", "Perturbation", "StopGrad", "20000", "40000", "60000", "80000", "15", "10", "5", "0", "s", "L", "os", "ni", "ng", "Tr", "ai", "Step"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 360.0,
+    "x2": 499.2,
+    "y1": 522.24,
+    "y2": 628.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure4-1.png"
+}, {
+  "caption": "Figure 3: Feature aggregator designs. A) In the conventional design, average pooling is performed to aggregate features from different spatial locations. B) We propose the replicated design, features are first concatenated across groups and then averaged across spatial locations. We create copies of the same feature with different stop gradient masks so that we obtain more local losses instead of a global one. The stop gradient mask makes sure that perturbation in one spatial group corresponds to its loss function. The numerical value of the loss function is the same as the conventional design.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 209.44454956054688,
+    "y2": 270.24200439453125
+  },
+  "figType": "Figure",
+  "imageText": ["N", "x", "CN", "x", "HW", "x", "C", "Avg", "Patches", "A.", "Conventional", "B.", "Replicated", "N", "x", "HW", "x", "G", "x", "C/G", "N", "x", "HW", "x", "G", "x", "C", "N", "x", "HW", "x", "HW", "x", "G", "x", "C", "N", "x", "HW", "x", "G", "x", "C", "Avg", "Avg", "Avg", "Avg", "AvgPool", "+", "StopGradient", "he", "s", "Pa", "tc", "Stack", "+", "StopGradient", "ps", "Gr", "ou"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure3-1.png"
+}, {
+  "caption": "Figure 5: Memory and compute usage of naïve and fused implementation of replicated losses.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.0025329589844,
+    "y1": 503.24652099609375,
+    "y2": 531.1669921875
+  },
+  "figType": "Figure",
+  "imageText": ["Naïve", "Fused", "1", "2", "4", "8", "16", "32", "200", "150", "100", "50", "0", "ch", ")", "/e", "po", "(s", "ec", "pu", "te", "C", "om", "Number", "of", "Groups", "Naïve", "Fused", "1", "2", "4", "8", "16", "32", "40", "30", "20", "10", "0", ")", "y", "(G", "em", "or", "U", "M", "G", "P", "Number", "of", "Groups"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 330.71999999999997,
+    "x2": 500.15999999999997,
+    "y1": 381.12,
+    "y2": 490.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure5-1.png"
+}, {
+  "caption": "Table 2: Local Mixer Architecture Details",
+  "captionBoundary": {
+    "x1": 222.05099487304688,
+    "x2": 389.64178466796875,
+    "y1": 157.57553100585938,
+    "y2": 163.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["Local", "Mixer", "S/1/1", "1", "1×1", "256", "1", "272K", "MNIST", "Local", "Mixer", "M/1/16", "1", "1×1", "512", "16", "429K", "MNIST", "Local", "Mixer", "M/8/16", "4", "8×8", "512", "16", "919K", "CIFAR-10", "Local", "Mixer", "L/8/64", "4", "8×8", "2048", "64", "13.1M", "CIFAR-10", "Local", "Mixer", "L/32/64", "4", "32×32", "2048", "64", "17.3M", "ImageNet", "Type", "Blocks", "Patches", "Channels", "Groups", "Params", "Dataset"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 153.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Table2-1.png"
+}, {
+  "caption": "Figure 8: Effect of groups. For BP algorithms, groups has a minor effect on the final performance, but for local forward gradient, it significantly reduces the variance and achieves lower error rate on both training and test sets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.24810791015625,
+    "y1": 222.26553344726562,
+    "y2": 250.18597412109375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "CIFAR-10", "Contrastive", "M/8/*", "LG-FG-A", "Test", "LG-BP", "Test", "BP", "Test", "LG-FG-A", "Train", "LG-BP", "Train", "BP", "Train", "1", "2", "4", "8", "16", "32", "64", "45", "35", "25", "15", "(%", ")", "at", "e", "or", "R", "E", "rr", "Number", "of", "Groups", "(a)", "CIFAR-10", "Supervised", "M/8/*", "LG-FG-A", "Test", "LG-BP", "Test", "BP", "Test", "LG-FG-A", "Train", "LG-BP", "Train", "BP", "Train", "1", "2", "4", "8", "16", "32", "64", "40", "30", "20", "10", "0", "(%", ")", "at", "e", "or", "R", "E", "rr", "Number", "of", "Groups"],
+  "name": "8",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 499.2,
+    "y1": 88.32,
+    "y2": 209.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure8-1.png"
+}, {
+  "caption": "Table 5: Comparing different normalization schemes. NG=No normalization gradient. CIFAR-10 test / train error (%)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 139.75155639648438,
+    "y2": 156.7130126953125
+  },
+  "figType": "Table",
+  "imageText": ["BN", "30.38", "/", "0.00", "33.41", "/", "5.41", "32.84", "/", "23.09", "33.48", "/", "20.80", "27.56", "/", "24.39", "30.27", "/", "28.03", "35.47", "/", "32.71", "37.41", "/", "31.52", "LN", "30.55", "/", "0.00", "33.17", "/", "7.09", "29.03", "/", "17.63", "29.33", "/", "19.26", "23.52", "/", "20.71", "27.41", "/", "24.73", "34.21", "/", "31.38", "36.24", "/", "34.12", "Local", "LN", "32.89", "/", "0.00", "33.84", "/", "0.05", "30.68", "/", "19.39", "30.44", "/", "17.12", "23.24", "/", "21.03", "28.42", "/", "25.20", "32.89", "/", "31.01", "32.25", "/", "30.17", "Supervised", "M/8/16", "Contrastive", "M/8/16", "BP", "LG-BP", "LG-FG-A", "LG-FG-A", "(NG)", "BP", "LG-BP", "LG-FG-A", "LG-FG-A", "(NG)"],
+  "name": "5",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 127.19999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Table5-1.png"
+}, {
+  "caption": "Table 6: Place of LayerNorm on CIFAR-10, test / train error. (%)",
+  "captionBoundary": {
+    "x1": 175.83399963378906,
+    "x2": 435.8577880859375,
+    "y1": 270.5065002441406,
+    "y2": 276.50897216796875
+  },
+  "figType": "Table",
+  "imageText": ["Begin", "Block", "31.43", "/", "0.00", "34.73", "/", "1.45", "34.89", "/", "31.11", "23.27", "/", "20.69", "25.82", "/", "22.96", "89.93", "/", "90.71", "Before", "Linear", "32.50", "/", "0.00", "34.15", "/", "0.05", "33.88", "/", "27.94", "22.62", "/", "20.38", "NaN", "/", "NaN", "35.01", "/", "32.91", "After", "Linear", "30.38", "/", "0.00", "29.83", "/", "0.44", "29.35", "/", "23.19", "26.50", "/", "23.98", "28.97", "/", "26.67", "34.10", "/", "33.18", "Before", "+", "After", "Linear", "33.62", "/", "0.00", "33.84", "/", "0.05", "30.68", "/", "19.39", "23.24", "/", "21.03", "28.42", "/", "25.20", "32.89", "/", "31.01", "Supervised", "M/8/16", "Contrastive", "M/8/16", "LN", "BP", "LG-BP", "LG-FG-A", "BP", "LG-BP", "LG-FG-A"],
+  "name": "6",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 193.92,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Table6-1.png"
+}, {
+  "caption": "Table 4: Self-supervised contrastive learning with linear readout",
+  "captionBoundary": {
+    "x1": 177.90199279785156,
+    "x2": 433.7912902832031,
+    "y1": 471.63653564453125,
+    "y2": 477.6390075683594
+  },
+  "figType": "Table",
+  "imageText": ["FG-W", "53.37", "/", "51.56", "50.45", "/", "45.64", "91.94", "/", "89.69", "FG-A", "54.59", "/", "52.96", "56.63", "/", "56.09", "97.83", "/", "97.79", "LG-FG-W", "52.66", "/", "50.23", "52.27", "/", "48.67", "91.36", "/", "88.81", "LG-FG-A", "32.88", "/", "29.73", "26.81", "/", "23.90", "73.24", "/", "66.89", "FA", "45.87", "/", "44.06", "67.93", "/", "65.32", "82.86", "/", "80.21", "L-FA", "37.73", "/", "36.13", "31.05", "/", "26.97", "83.18", "/", "79.80", "LG-FA", "36.72", "/", "34.06", "30.49", "/", "25.56", "82.57", "/", "79.53", "DFA", "46.09", "/", "42.76", "39.26", "/", "37.17", "93.51", "/", "92.51", "BP-free", "algorithms", "BP", "24.11", "/", "21.08", "17.53", "/", "13.35", "55.66", "/", "49.79", "L-BP", "24.69", "/", "21.80", "19.13", "/", "13.60", "59.11", "/", "52.50", "LG-BP", "29.63", "/", "25.60", "23.62", "/", "16.80", "68.36", "/", "62.53", "Dataset", "CIFAR-10", "CIFAR-10", "ImageNet", "Network", "M/8/16", "L/8/64", "L/32/64", "Metric", "Test", "/", "Train", "Err.", "(%)", "Test", "/", "Train", "Err.", "(%)", "Test", "/", "Train", "Err.", "(%)"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 460.32,
+    "y1": 287.52,
+    "y2": 466.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Table4-1.png"
+}, {
+  "caption": "Table 3: Supervised learning for image classification",
+  "captionBoundary": {
+    "x1": 200.80099487304688,
+    "x2": 410.8922424316406,
+    "y1": 263.9565124511719,
+    "y2": 269.958984375
+  },
+  "figType": "Table",
+  "imageText": ["FG-W", "9.25", "/", "8.93", "8.56", "/", "8.64", "55.95", "/", "54.28", "97.71", "/", "97.58", "FG-A", "3.24", "/", "1.53", "3.76", "/", "1.75", "59.72", "/", "41.29", "98.83", "/", "98.80", "LG-FG-W", "9.25", "/", "8.93", "5.66", "/", "4.59", "52.70", "/", "51.71", "97.39", "/", "97.29", "LG-FG-A", "3.24", "/", "1.53", "2.55", "/", "0.00", "30.68", "/", "19.39", "58.37", "/", "44.86", "FA", "2.82", "/", "0.00", "2.90", "/", "0.00", "39.94", "/", "28.44", "94.55", "/", "94.13", "L-FA", "3.21", "/", "0.00", "2.90", "/", "0.00", "39.74", "/", "28.98", "87.20", "/", "85.69", "LG-FA", "3.11", "/", "0.00", "2.50", "/", "0.00", "39.73", "/", "32.32", "85.45", "/", "82.83", "DFA", "3.31", "/", "0.00", "3.17", "/", "0.00", "38.80", "/", "33.69", "91.17", "/", "90.28", "BP-free", "algorithms", "BP", "2.66", "/", "0.00", "2.41", "/", "0.00", "33.62", "/", "0.00", "36.82", "/", "14.69", "L-BP", "2.38", "/", "0.00", "2.16", "/", "0.00", "30.75", "/", "0.00", "42.38", "/", "22.80", "LG-BP", "2.43", "/", "0.00", "2.81", "/", "0.00", "33.84", "/", "0.05", "54.37", "/", "39.66", "Dataset", "MNIST", "MNIST", "CIFAR-10", "ImageNet", "Network", "S/1/1", "M/1/16", "M/8/16", "L/32/64", "Metric", "Test", "/", "Train", "Err.", "(%)", "Test", "/", "Train", "Err.", "(%)", "Test", "/", "Train", "Err.", "(%)", "Test", "/", "Train", "Err.", "(%)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 82.56,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Table3-1.png"
+}, {
+  "caption": "Table 1: Comparing weight (gw) and activity (ga) perturbation. V =dimension-wise avg. gradient variance, S=dimension-wise avg. squared gradient norm; p=fan-in; q=fan-out; N=batch size.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.004150390625,
+    "y1": 134.47653198242188,
+    "y2": 151.43798828125
+  },
+  "figType": "Table",
+  "imageText": ["N", "V", "+", "(q", "+", "1)S", "q+2", "N", "V", "+", "q+1", "N", "S", "S", "ga(·)", "Yes", "q+2", "gw(·)", "Yes", "pq+2", "N", "V", "+", "(pq", "+", "1)S", "pq+2", "N", "V", "+", "pq+1", "N", "Unbiased?", "Avg.", "Variance", "(shared)", "Avg.", "Variance", "(independent)"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 158.88,
+    "x2": 453.12,
+    "y1": 81.6,
+    "y2": 125.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Table1-1.png"
+}, {
+  "caption": "Figure 6: Effect of adding local losses at different locations on the performance of forward gradient",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9958801269531,
+    "y1": 192.79751586914062,
+    "y2": 198.79998779296875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "ImageNet", "Supervised", "L/32", "Test", "Train", "Global", "Block", "Patch", "+", "Group", "Block", "+", "Patch", "Block", "+", "Patch", "+", "Group", "60", "40", "20", "0", ")", "y", "(%", "ur", "ac", "A", "cc", "(b)", "CIFAR-10", "Contrastive", "M/8", "Test", "Train", "Global", "Block", "Block", "+", "Patch", "Patch", "+", "Group", "Block", "+", "Patch", "+", "Group", "70", "65", "60", "55", "50", "45", "40", "35", ")", "y", "(%", "ur", "ac", "A", "cc", "(a)", "CIFAR-10", "Supervised", "M/8", "Test", "Train", "Global", "Block", "Block", "+", "Patch", "Patch", "+", "Group", "Block", "+", "Patch", "+", "Group", "85", "75", "65", "55", "45", "35", ")", "y", "(%", "ur", "ac", "A", "cc"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure6-1.png"
+}, {
+  "caption": "Figure 7: Error rate of M/8/* during CIFAR-10 training using different number of groups.",
+  "captionBoundary": {
+    "x1": 126.88800048828125,
+    "x2": 485.1130065917969,
+    "y1": 318.0765380859375,
+    "y2": 324.0790100097656
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Contrastive", "Train", "Group", "1", "Group", "2", "Group", "4", "Group", "8", "Group", "16", "Group", "32", "20000", "40000", "60000", "80000", "65", "55", "45", "35", "25", "(%", ")", "at", "e", "or", "R", "E", "rr", "Steps", "(c)", "Contrastive", "Test", "Group", "1", "Group", "2", "Group", "4", "Group", "8", "Group", "16", "Group", "32", "20000", "40000", "60000", "80000", "65", "55", "45", "35", "25", "(%", ")", "at", "e", "or", "R", "E", "rr", "Steps", "(b)", "Supervised", "Train", "Group", "1", "Group", "2", "Group", "4", "Group", "8", "Group", "16", "Group", "32", "0", "25000", "50000", "75000", "65", "55", "45", "35", "25", "15", "(%", ")", "at", "e", "or", "R", "E", "rr", "Steps", "(a)", "Supervised", "Test", "Group", "1", "Group", "2", "Group", "4", "Group", "8", "Group", "16", "Group", "32", "0", "25000", "50000", "75000", "65", "55", "45", "35", "25", "(%", ")", "at", "e", "or", "R", "E", "rr", "Steps"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 127.19999999999999,
+    "x2": 505.91999999999996,
+    "y1": 214.07999999999998,
+    "y2": 308.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure7-1.png"
+}, {
+  "caption": "Figure 1: A local mixer network consists of several mixer residual blocks.",
+  "captionBoundary": {
+    "x1": 158.61900329589844,
+    "x2": 453.38238525390625,
+    "y1": 153.22854614257812,
+    "y2": 159.23101806640625
+  },
+  "figType": "Figure",
+  "imageText": ["A", "A", "Local", "Losses", "Local", "Losses", "Local", "Losses", "Channel", "Mixing", "+", "Token", "Mixing", "Channel", "Mixing", "+…", "…", "Token", "Mixing", "Channel", "Mixing"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 456.47999999999996,
+    "y1": 83.52,
+    "y2": 147.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure1-1.png"
+}, {
+  "caption": "Figure 2: A local mixer residual block with local losses. Token mixing consists of a linear layer and channels are grouped in the channel mixing layers. Layer norm is applied before and after every linear layer. LN=Layer Norm; FC=Fully Connected layer; A=Activation function (ReLU); T=Transpose.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1673889160156,
+    "y1": 273.7525329589844,
+    "y2": 301.6719970703125
+  },
+  "figType": "Figure",
+  "imageText": ["A", "…", "…", "N", "x", "HW", "x", "C", "N", "x", "C", "x", "HW", "N", "x", "HW", "x", "C", "N", "x", "HW", "x", "G", "x", "C/G", "N", "x", "HW", "x", "G", "LN+FC", "LN+FC", "LN+FC", "LN+FC", "LN+FC", "LN+FC", "Local", "LossesProject", "LN+FC+LN+A", "LN+FC+LN+A", "LN+FC+LN+A", "+", "Reshape", "LN+FC+LN+A", "LN+FC+LN+A", "…", "…", "LN+FC+LN+A", "LN+FC+LN+A", "…", "LN+FC+LN+A", "LN+FC+LN+A", "Channel", "Groups", "Channel", "Mixing", "T", "LN+FC+LN+A", "T", "ne", "ls", "Patches", "Ch", "an", "Token", "Mixing", "Patches", "Channels", "LN+FC+LN+A", "…", "…"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 172.79999999999998,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JxpBP1JM15--Figure2-1.png"
+}]

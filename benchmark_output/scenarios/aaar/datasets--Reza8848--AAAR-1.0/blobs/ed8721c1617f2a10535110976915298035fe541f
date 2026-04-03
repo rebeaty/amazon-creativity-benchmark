@@ -1,0 +1,561 @@
+[{
+  "caption": "Table 7: Details of the hyperparameters of ERL-Re2-DDPG that are varied across tasks.",
+  "captionBoundary": {
+    "x1": 130.52699279785156,
+    "x2": 481.1651306152344,
+    "y1": 83.96854400634766,
+    "y2": 89.97100830078125
+  },
+  "figType": "Table",
+  "imageText": ["10", "Rollout", "each", "agent", "in", "P", "for", "one", "episode", "and", "evaluate", "its", "fitness", "by", "MC", "estimate", "11", "Rollout", "the", "RL", "agent", "for", "one", "episode", "12", "Store", "the", "experiences", "generated", "by", "P", "and", "Wrl", "to", "D", "13", "#", "Individual", "scale:", "evolution", "and", "reinforcement", "in", "the", "policy", "space", "14", "Train", "PeVFA", "Qθ", "and", "RL", "critic", "Qψ", "with", "D", "▷", "see", "Eq.", "1", "15", "Optimize", "CEM:", "rank", "all", "policies", "with", "fitness", "and", "use", "the", "top", "T", "policies", "to", "update", "CEM.", "16", "Optimize", "the", "RL", "agent:", "update", "Wrl", "(by", "e.g.,", "DDPG", "and", "TD3)", "according", "to", "Qψ", "▷", "see", "Eq.", "5", "17", "#", "Common", "scale:", "improving", "the", "policy", "space", "through", "optimizing", "Zϕ", "18", "Update", "the", "shared", "state", "representation:", "optimize", "Zϕ", "with", "a", "unifying", "gradient", "direction", "derived", "from", "value", "function", "maximization", "regarding", "Qθ", "and", "Qψ", "▷", "see", "Eq.", "2", "19", "until", "reaching", "maximum", "training", "steps;", "function", "Zϕ,", "the", "RL", "agent", "Wrl,", "the", "RL", "critic", "Qψ", "and", "the", "PeVFA", "Qθ", "(target", "networks", "are", "omitted", "here)", "3", "repeat", "4", "#", "Draw", "the", "CEM", "population", "P", "5", "Draw", "the", "population", "P", "=", "{W1,", "·", "·", "·", ",Wn}", "from", "N", "(πµ,Σ)", "6", "#", "Rollout", "the", "EA", "and", "RL", "agents", "with", "Zϕ", "and", "estimate", "the", "(surrogate)", "fitness", "7", "if", "Random", "Number", ">", "p", "then", "8", "Rollout", "each", "agent", "in", "P", "for", "H", "steps", "and", "evaluate", "its", "fitness", "by", "the", "surrogate", "f̂(W", ")", "▷", "see", "Eq.", "3", "9", "else", "partial", "rollout", "length", "H", "2", "Initialize:", "Initialize", "the", "mean", "policy", "Wµ", "of", "CEM.", "a", "replay", "buffer", "D,", "the", "shared", "state", "representation", "Algorithm", "3:", "ERL-Re2", "with", "Cross", "Entropy", "Method", "(CEM)", "1", "Input:", "Σ", "=", "σinitI", "and", "T", "of", "CEM,", "the", "EA", "population", "size", "n,", "the", "probability", "p", "of", "using", "MC", "estimate,", "the", "Env", "name", "p", "β", "H", "K", "HalfCheetach", "0.5", "1.0", "200", "1", "Walker", "0.8", "0.2", "50", "1", "Swimmer", "0.3", "0.5", "200", "3", "Hopper", "0.8", "0.7", "50", "3", "Ant", "0.7", "0.5", "200", "1", "Humanoid", "0.7", "0.5", "200", "1"],
+  "name": "7",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 96.96,
+    "x2": 504.0,
+    "y1": 102.72,
+    "y2": 433.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table7-1.png"
+}, {
+  "caption": "Table 3: Comparisons on Deepmind Control Suite with image inputs.",
+  "captionBoundary": {
+    "x1": 167.5760040283203,
+    "x2": 444.1177673339844,
+    "y1": 550.91455078125,
+    "y2": 556.9169921875
+  },
+  "figType": "Table",
+  "imageText": ["Environments", "Cartpole", "Swingup", "Cheetah", "Run", "Finger", "Turn", "hard", "Walker", "Walk", "ERL-Re2", "(RAD)", "854.453", "±", "17.582", "508.619", "±", "22.622", "197.35", "±", "83.388", "567.417", "±", "139.278", "RAD", "728.66", "±", "149.219", "472.594", "±", "29.595", "126.725", "±", "48.954", "498.867", "±", "142.509", "Steps", "100k", "100k", "100k", "100k"],
+  "name": "3",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 531.36,
+    "y1": 569.76,
+    "y2": 616.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table3-1.png"
+}, {
+  "caption": "Figure 19: Comparisons of ERL-Re2 (TD3) and ERL-Re2 (TD3) with VIP (Dabney et al., 2021). We design two versions. The version 1 means firstly optimizing PeVFA with the current and previous generation’ policy representations, then optimizing the state representations with these policy representations. The version 2 means directly optimizing the state representations with the current and previous generation’ policy representations.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.73931884765625,
+    "y1": 227.58151245117188,
+    "y2": 276.10400390625
+  },
+  "figType": "Figure",
+  "imageText": ["Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "ERL-Re2(TD3)", "version", "1", "version", "2", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "19",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 481.44,
+    "y1": 84.96,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure19-1.png"
+}, {
+  "caption": "Figure 20: The comparative experiment of two architectures. Only PeVFA for both EA and RL is using the PeVFA to update RL without introducing the RL Critic. PeVFA for EA and Critic for RL is the architecture chosen in this paper. The results show that both architectures are feasible and can achieve competitive performances.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0012512207031,
+    "y1": 383.1705322265625,
+    "y2": 421.06298828125
+  },
+  "figType": "Figure",
+  "imageText": ["Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "PeVFA", "for", "both", "EA", "and", "RL", "PeVFA", "for", "EA", "and", "Critic", "for", "RL", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "20",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 482.88,
+    "y1": 287.03999999999996,
+    "y2": 371.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure20-1.png"
+}, {
+  "caption": "Figure 22: Comparison experiment using one episode MC return and one episode discounted MC return. The experiments do not use f̂(Wi) as a surrogate of the fitness. The results indicate the strengths of ERL-Re2 do not come from the discounted design.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99884033203125,
+    "y1": 442.56951904296875,
+    "y2": 471.90301513671875
+  },
+  "figType": "Figure",
+  "imageText": ["n", "Humanoid", "4000", "5000", "Un", "di", "sc", "ou", "nt", "ed", "R", "et", "ur", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Discounted", "MC", "MC", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "22",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 481.44,
+    "y1": 300.47999999999996,
+    "y2": 426.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure22-1.png"
+}, {
+  "caption": "Figure 21: The comparative experiment of TD3 with and without layer normalization. The results demonstrate that the strengths of ERL-Re2 do not come from the layer normalization.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.001708984375,
+    "y1": 274.2425231933594,
+    "y2": 290.875
+  },
+  "figType": "Figure",
+  "imageText": [")", "HalfCheetach", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "10000", "8000", "6000", "4000", "2000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Humanoid", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "120", "100", "80", "60", "40", "20", "0", "20", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "4000", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "TD3", "w", "layer", "normalization", "TD3", "w/o", "layer", "normalization", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "21",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 128.16,
+    "x2": 489.12,
+    "y1": 83.52,
+    "y2": 262.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure21-1.png"
+}, {
+  "caption": "Figure 9: The illustration on how to update shared state representations. In each update, we sample K policy representations from the population. Based on this, ERL-Re2 updates the shared state representation network with PeVFA and critic according to Eq. 2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9971008300781,
+    "y1": 225.93850708007812,
+    "y2": 253.20098876953125
+  },
+  "figType": "Figure",
+  "imageText": ["gradients", "ℚ(st,", "at,", "wi)", "𝑄(𝑠𝑡", ",", "𝑎𝑡)", "𝒘𝒊", "sample", "𝒘𝒊𝒘𝒏", "Shared", "EA", "RL", "𝒔𝒕", "𝒔𝒕", "𝒂𝒕", "𝒔𝒕", "Critic𝒂𝒕", "PeVFA", "𝒘𝒓𝒍", "𝒛𝒕", "Policy", "Representation", "𝒘𝟏", "Population", "Network", "Shared", "State", "Representation"],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 148.32,
+    "x2": 463.2,
+    "y1": 82.56,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure9-1.png"
+}, {
+  "caption": "Figure 15: Comparison of EA and EA with Re2. With Re2, the performance of EA can be further improved, which indicates that the idea of ERL-Re2 can be integrated with EA and further improve EA.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.16888427734375,
+    "y1": 363.61053466796875,
+    "y2": 390.8739929199219
+  },
+  "figType": "Figure",
+  "imageText": ["Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "HalfCheetah", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "8000", "6000", "4000", "2000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "EA", "EA", "w/", "Re2", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "15",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 482.88,
+    "y1": 266.88,
+    "y2": 351.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure15-1.png"
+}, {
+  "caption": "Figure 14: Comparison of ERL-Re2 (TD3) with different population sizes. 5 is more effective than 10 in ERL-Re2 (TD3). Thus we set 5 for population size in all tasks. For a fair comparison, we also evaluate other baselines with 5 and 10 and report the best performance.",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 504.0006103515625,
+    "y1": 227.58151245117188,
+    "y2": 254.843994140625
+  },
+  "figType": "Figure",
+  "imageText": ["Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "100000", "200000", "300000", "400000", "500000", "600000", "700000", "800000", "Time", "Steps", "10", "5", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0", "100000", "200000", "300000", "400000", "500000", "600000", "Time", "Steps"],
+  "name": "14",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 485.76,
+    "y1": 84.96,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure14-1.png"
+}, {
+  "caption": "Figure 24: The comparative experiment of PDERL with different actor structures. With the structure of the TD3 paper, PDERL improves performance in some tasks and degrades in other tasks. In summary, ERL-Re2 (TD3) is still significantly better than the best performance of the two structures.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 503.9978942871094,
+    "y1": 517.1905517578125,
+    "y2": 544.4539794921875
+  },
+  "figType": "Figure",
+  "imageText": [")", "Humanoid", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "HalfCheetach", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "12000", "10000", "8000", "6000", "4000", "2000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "100", "150", "200", "250", "300", "350", "400", "0", "50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Original", "structure", "Structure", "of", "TD3", "paper", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "24",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 489.12,
+    "y1": 326.88,
+    "y2": 505.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure24-1.png"
+}, {
+  "caption": "Figure 23: The comparative experiment of ERL with different actor structures. With the structure of the TD3 paper, ERL improves performance in some tasks and degrades in other tasks. The parameter-level operators in a large network can make performance easily crash. (See Swimmer). In summary, ERL-Re2 (TD3) is still significantly better than the best performance of the two structures.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00469970703125,
+    "y1": 274.2425231933594,
+    "y2": 312.135009765625
+  },
+  "figType": "Figure",
+  "imageText": [")", "Humanoid", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "HalfCheetach", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "10000", "8000", "6000", "4000", "2000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "4000", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Original", "structure", "Structure", "of", "TD3", "paper", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "23",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 489.12,
+    "y1": 83.52,
+    "y2": 262.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure23-1.png"
+}, {
+  "caption": "Figure 8: Comparison between ERL (Khadka & Tumer, 2018) and ERL-Re2. The left shows the interaction between EA and RL in ERL, and the right shows the interaction between EA and RL in ERL-Re2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00421142578125,
+    "y1": 633.1825561523438,
+    "y2": 660.4459838867188
+  },
+  "figType": "Figure",
+  "imageText": ["Evaluation", "Evaluation", "Shared", "State", "Representation", "RL", "based", "on", "Policy", "Representation", "Inject", "RL", "policy", "to", "EA", "population", "Experiences", "EA", "based", "on", "Policy", "Representation", "Env", "RL", "based", "on", "actor", "Inject", "RL", "policy", "to", "EA", "population", "Experiences", "EA", "based", "on", "actor", "Env"],
+  "name": "8",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 151.2,
+    "x2": 461.28,
+    "y1": 470.88,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure8-1.png"
+}, {
+  "caption": "Figure 4: Performance comparison between ERL-Re2 and baselines (all in the TD3 version).",
+  "captionBoundary": {
+    "x1": 120.78800201416016,
+    "x2": 491.2116394042969,
+    "y1": 247.24154663085938,
+    "y2": 253.2440185546875
+  },
+  "figType": "Figure",
+  "imageText": ["HalfCheetah", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "12000", "10000", "8000", "6000", "4000", "2000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Humanoid", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "ERL-Re2(TD3)", "CEM-TD3", "CERL(TD3)", "ERL(TD3)", "PDERL(TD3)", "PPO", "SAC", "TD3", "EA", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 473.28,
+    "y1": 77.75999999999999,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Performance comparison between ERL-Re2 and baselines (all in the DDPG version).",
+  "captionBoundary": {
+    "x1": 116.08599853515625,
+    "x2": 495.9136047363281,
+    "y1": 426.3065490722656,
+    "y2": 432.30902099609375
+  },
+  "figType": "Figure",
+  "imageText": ["HalfCheetach", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "10000", "8000", "6000", "4000", "2000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Humanoid", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "ERL-Re2(DDPG)", "CEM-DDPG", "CERL(DDPG)", "ERL(DDPG)", "PDERL(DDPG)", "DDPG", "EA", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 473.28,
+    "y1": 257.28,
+    "y2": 420.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure5-1.png"
+}, {
+  "caption": "Figure 1: The left represents ERL framework and the right represents ERL-Re2 framework. In ERL-Re2, all the policies are composed of the nonlinear shared state representation Zϕ and an individual linear policy representation W .",
+  "captionBoundary": {
+    "x1": 246.6020050048828,
+    "x2": 505.658447265625,
+    "y1": 273.0605163574219,
+    "y2": 310.9540100097656
+  },
+  "figType": "Figure",
+  "imageText": ["Evolution-based", "optimization", "𝒁𝝓", "𝝅𝟏", "𝝅𝟐", "𝝅𝒏", "𝑾𝒓𝒍𝝅𝒓𝒍", "𝑾𝟏", "𝑾𝟐", "𝑾𝒏", "ERL", "Framework", "ERL-Re𝟐", "Framework", "the", "shared", "state", "representation", "Convey", "common", "useful", "knowledge", "by", "Inject", "RL", "policy", "Experiences", "Evaluation", "Gradient-based", "optimization", "RL", "side", "EA", "side", "Inject", "RL", "policy", "Experiences", "Evaluation", "Gradient-based", "optimization", "Evolution-based", "optimization", "RL", "side", "EA", "side"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 252.95999999999998,
+    "x2": 495.35999999999996,
+    "y1": 102.72,
+    "y2": 265.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure1-1.png"
+}, {
+  "caption": "Figure 16: Comparisons of probabilities of RL agent being selected as the elite (left) and discarder (right) of the population in ERL-Re2 (TD3), ERL(TD3), and PDERL(TD3). The results show that both EA and RL in ERL-Re2 (TD3) have more competitive effects on population evolution than in ERL(TD3) and PDERL(TD3).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.1698303222656,
+    "y1": 226.91250610351562,
+    "y2": 264.8060302734375
+  },
+  "figType": "Figure",
+  "imageText": ["Swimmer", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "Di", "sc", "ar", "de", "d", "Pe", "rc", "en", "ta", "ge", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "ERL(TD3)", "PDERL(TD3)", "ERL-Re2(TD3)", "Swimmer", "ag", "e", "ce", "nt", "s", "P", "er", "El", "ite", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "16",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 135.35999999999999,
+    "x2": 481.44,
+    "y1": 84.96,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure16-1.png"
+}, {
+  "caption": "Figure 17: The added undiscounted return after optimizing the shared state representation. Max/Min/Mean means the change of the best/worst/average performance in the population before and after the optimization. The results demonstrate that the optimization of shared state representations can construct a better policy space for all policies, thus facilitating the evolution of the population.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7453308105469,
+    "y1": 467.8895263671875,
+    "y2": 505.7829895019531
+  },
+  "figType": "Figure",
+  "imageText": ["HalfCheetach", "Max", "Mean", "Min", "n", "et", "ur", "ta", "l", "R", "em", "en", "In", "cr", "7000", "6000", "5000", "4000", "3000", "2000", "1000", "0", "1000", "0", "100000", "200000", "300000", "400000", "500000", "600000", "700000", "800000", "Time", "Steps", "(1e6)"],
+  "name": "17",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 190.07999999999998,
+    "x2": 429.12,
+    "y1": 282.24,
+    "y2": 450.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure17-1.png"
+}, {
+  "caption": "Figure 12: Experiments on the repeated episodes with different H as the surrogate of the fitness. 10× 20 means that repeat 10 episodes with 20 steps (i.e., H = 20) and get the average as the fitness. In the results, 1 ×H is effective in the tasks. To reduce hyperparameters and simplify the tuning process, we use 1 episode in all tasks.",
+  "captionBoundary": {
+    "x1": 107.50199890136719,
+    "x2": 505.7476806640625,
+    "y1": 226.91250610351562,
+    "y2": 264.8060302734375
+  },
+  "figType": "Figure",
+  "imageText": ["Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "100000", "200000", "300000", "400000", "500000", "600000", "700000", "800000", "Time", "Steps", "1", "x", "20", "1", "x", "200", "1", "x", "50", "10", "x", "20", "4", "x", "50", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 485.28,
+    "y1": 84.96,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Parameter analysis of the mutation ratio β in ERL-Re2 (TD3). The results show that ERL-Re2 (TD3) is a little sensitive to β and proper adjustment is necessary.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9986877441406,
+    "y1": 423.2245178222656,
+    "y2": 439.85699462890625
+  },
+  "figType": "Figure",
+  "imageText": ["=0.2", "=0.5", "=0.7", "=1.0", "Hopper", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "3500", "3000", "2500", "2000", "1500", "1000", "500", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "=0.2", "=0.5", "=0.7", "=1.0", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 133.44,
+    "x2": 480.96,
+    "y1": 280.32,
+    "y2": 406.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure13-1.png"
+}, {
+  "caption": "Table 4: The structures of the shared state representation network and policy representations.",
+  "captionBoundary": {
+    "x1": 120.83599853515625,
+    "x2": 490.8568420410156,
+    "y1": 83.3005142211914,
+    "y2": 89.302978515625
+  },
+  "figType": "Table",
+  "imageText": ["tanh", "tanh", "tanh", "(400,300)", "Shared", "State", "Representation", "Network", "Policy", "Representation", "(state_dim,", "400)", "(300,action_dim)"],
+  "name": "4",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 173.76,
+    "x2": 436.32,
+    "y1": 101.75999999999999,
+    "y2": 157.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table4-1.png"
+}, {
+  "caption": "Table 5: The structure of PeVFA.",
+  "captionBoundary": {
+    "x1": 239.35499572753906,
+    "x2": 372.3357849121094,
+    "y1": 169.64852905273438,
+    "y2": 175.6510009765625
+  },
+  "figType": "Table",
+  "imageText": ["E.3", "HYPERPARAMETERS", "leaky_relu", "leaky_relu", "(300,", "1)", "(64,", "64)", "leaky_relu", "leaky_relu", "(400,", "300)", "(64,", "64)", "PeVFA", "(state-action_dim+", "64,", "400)", "(301,", "64)"],
+  "name": "5",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 420.47999999999996,
+    "y1": 188.64,
+    "y2": 282.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table5-1.png"
+}, {
+  "caption": "Table 6: Details of the hyperparameters of ERL-Re2-TD3 that are varied across tasks.",
+  "captionBoundary": {
+    "x1": 134.9550018310547,
+    "x2": 476.73736572265625,
+    "y1": 414.114501953125,
+    "y2": 420.1169738769531
+  },
+  "figType": "Table",
+  "imageText": ["Env", "name", "p", "β", "H", "K", "HalfCheetach", "0.3", "1.0", "200", "1", "Walker", "0.8", "0.2", "50", "1", "Swimmer", "0.3", "1.0", "200", "3", "Hopper", "0.8", "0.2", "50", "3", "Ant", "0.5", "0.7", "200", "1", "Humanoid", "0.5", "0.5", "200", "1"],
+  "name": "6",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 221.76,
+    "x2": 387.36,
+    "y1": 432.96,
+    "y2": 509.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table6-1.png"
+}, {
+  "caption": "Table 1: Time consumption of different algorithms on Walker2d every 10000 steps. The additional time consuming comes mainly from the training of PeVFA and shared state representations. Distributed training can solve this problem.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6537170410156,
+    "y1": 556.633544921875,
+    "y2": 583.89697265625
+  },
+  "figType": "Table",
+  "imageText": ["Algorithm", "ERL-Re2", "(TD3)", "TD3", "PDERL(TD3)", "seconds", "396.14", "215.5", "251.37", "algorithm", "ERL(TD3)", "CERL(TD3)", "CEM-TD3", "seconds", "223.86", "502.45", "241.82"],
+  "name": "1",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 173.76,
+    "x2": 436.32,
+    "y1": 596.64,
+    "y2": 643.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table1-1.png"
+}, {
+  "caption": "Figure 18: Comparisons of ERL-Re2 (TD3) and ERL-Re2 (TD3) with MI loss (i.e., Self-supervised loss). MI loss brings certain performance improvements in Ant, which is worth further research in the future.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00299072265625,
+    "y1": 227.58151245117188,
+    "y2": 254.843994140625
+  },
+  "figType": "Figure",
+  "imageText": ["Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "ERL-Re2(TD3)", "ERL-Re2(TD3)", "w/", "MI", "loss", "Ant", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "6000", "5000", "4000", "3000", "2000", "1000", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "18",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 481.44,
+    "y1": 84.96,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure18-1.png"
+}, {
+  "caption": "Table 2: The number of parameters (i.e., weights and biases) for different algorithms on HalfCheetach. For ERL and PDERL, we use | to separate the results for two implementations: the left one uses the same structure as in the original paper, and the right one is aligned with the settings in the TD3 paper.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74383544921875,
+    "y1": 659.7145385742188,
+    "y2": 686.9769897460938
+  },
+  "figType": "Table",
+  "imageText": ["Algorithm", "ERL-Re2", "(TD3)", "CERL(TD3)", "PDERL(TD3)", "CEM-TD3", "ERL(TD3)", "number", "765508", "1553462", "456302|1553462", "1553462", "456302|1553462"],
+  "name": "2",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 515.04,
+    "y1": 699.8399999999999,
+    "y2": 724.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Table2-1.png"
+}, {
+  "caption": "Figure 2: The optimization flow of ERL-Re2. In an iterative fashion, the shared state representation and individual linear policy representations are optimized at two scales.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.9954833984375,
+    "y1": 245.86050415039062,
+    "y2": 262.49298095703125
+  },
+  "figType": "Figure",
+  "imageText": ["Policy", "Space", "𝚷", "𝝓t+𝟏", "Derived", "by", "𝝓𝒕+𝟏", "Integrated", "optimization", "RL", "agent", "Superior", "policy", "region", "Optimized", "state", "representation", "regarding", "all", "agents", "Optimized", "state", "representation", "regarding", "𝑾𝒊", "EA", "agent", "Individual", "optimization", "𝑾𝟏", "𝑾𝒓𝒍", "𝑾𝟐", "𝑾𝟐", "𝑾rl", "𝑾𝟏", "Optimized", "Agents", "Optimized", "Agents", "Optimize", "𝝓", "Optimize", "𝝓", "Optimize", "𝝓", "Policy", "Space", "𝚷", "𝝓t", "Derived", "by", "𝝓𝒕", "𝝓𝑾𝟏", "𝝓𝑾𝒓𝒍", "𝝓𝑾𝟐𝝓𝒕+𝟐", "𝝓𝒕+𝟏", "𝝓𝒕+𝟏", "𝝓𝑾𝟐", "𝝓𝑾𝒓𝒍", "𝝓𝑾𝟏", "𝝓𝒕"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 463.2,
+    "y1": 77.75999999999999,
+    "y2": 240.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure2-1.png"
+}, {
+  "caption": "Figure 11: Parameter analysis on ERL-Re2 (TD3) with different H . The results show that ERL-Re2 (TD3) is not sensitive to H but proper adjustment can get better results.",
+  "captionBoundary": {
+    "x1": 107.67098999023438,
+    "x2": 503.7005920410156,
+    "y1": 416.7165222167969,
+    "y2": 433.3489990234375
+  },
+  "figType": "Figure",
+  "imageText": ["Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "H=200", "H=50", "H=500", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 133.44,
+    "x2": 481.44,
+    "y1": 274.08,
+    "y2": 400.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Ablation study on behavior-level crossover and mutation operators in ERL-Re2 (TD3). The results show that both the mutation and crossover can bring performance gains and the best performance can be obtained by using a combination of both.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74395751953125,
+    "y1": 227.58151245117188,
+    "y2": 254.843994140625
+  },
+  "figType": "Figure",
+  "imageText": ["Walker", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "5000", "4000", "3000", "2000", "1000", "0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6", "ERL-Re2(TD3)", "ERL-Re2(TD3)", "w/o", "crossover", "ERL-Re2(TD3)", "w/o", "mutation", "Swimmer", "ur", "n", "R", "et", "nt", "ed", "sc", "ou", "Un", "di", "350", "300", "250", "200", "150", "100", "50", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Time", "Steps", "(1e6)", "1e6"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 137.28,
+    "x2": 481.44,
+    "y1": 84.96,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FYZCHEtt6H0-Figure10-1.png"
+}]

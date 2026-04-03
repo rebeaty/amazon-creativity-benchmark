@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 8: Posterior marginal densities of the parameters of the Lotka-Volterra model obtained using SNLE, SRE (both targeting the marginal p(θ|y)) with NPE, ABC-SMC (both targeting the joint p(x,θ|y)). NPE failed to estimate θ correctly.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00439453125,
+    "y1": 635.2215576171875,
+    "y2": 663.1419677734375
+  },
+  "figType": "Figure",
+  "imageText": ["ue", "nc", "y", "Fr", "eq", "15.0", "12.5", "10.0", "7.5", "5.0", "2.5", "0.0", "0.5", "1.0", "c3", "SNLE", "SRE", "ABC", "NPE", "ue", "nc", "y", "Fr", "eq", "0.4", "0.3", "0.2", "0.1", "0.0", "20", "40", "c2×103", "ue", "nc", "y", "Fr", "eq", "30", "20", "10", "0", "0.2", "0.4", "c1"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 496.79999999999995,
+    "y1": 451.68,
+    "y2": 600.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Comparison between methods that estimate jointly the parameters and hidden states of a HMM (in this case the Lotka-Volterra model), such as ABC-SMC & NPE, with those that estimate these quantities separately, such as SMC & IDE. The plot above shows the posteriors of one component of the hidden state summarised by the mean (solid lines) and 95% credible intervals (broken lines). The proposed method IDE reduces the simulation burden by a large factor in comparison to NPE. Note that even with a much larger simulation budget NPE fails to correctly estimate the hidden states as well as the parameters (see Figure E).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3475646972656,
+    "y1": 346.51751708984375,
+    "y2": 418.27301025390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 425.28,
+    "y1": 115.67999999999999,
+    "y2": 332.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure7-1.png"
+}, {
+  "caption": "Table 1: The sum of pathwise MMD (smaller the better, given by equation 15) between estimates of the posterior predictive distribution obtained using SMC and other competing approaches: IDE (proposed), PrDyn and ABC-SMC (used for LV and PKY model only). These MMDs are summarised by the mean ± standard deviation across 10 different simulated datasests.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00347900390625,
+    "y1": 522.4505615234375,
+    "y2": 561.3300170898438
+  },
+  "figType": "Table",
+  "imageText": ["LV", "1.8998", "±", "0.2491", "17.1193±", "1.1592", "15.4705±", "0.8785795", "PKY", "5.5491", "±", "1.4890", "21.1983±", "2.0962", "53.6201±", "0.0278", "SIR", "1.1922", "±", "0.5415", "4.7694±", "0.2298", "–", "MODEL", "IDE", "PRDYN", "ABC-SMC", "(WHEN", "p(θ|y)", "FOR", "SMC,", "IDE", "AND", "PRDYN", "OBTAINED", "USING", "SRE)", "LV", "1.8965", "±", "0.2432", "17.2093±", "1.1659", "15.4923±", "0.8170", "PKY", "4.4448", "±", "1.3243", "20.9553±", "2.7296", "53.2612±", "4.9731", "SIR", "1.1372", "±", "0.5208", "5.0773±", "0.2570", "–", "MODEL", "IDE", "PRDYN", "ABC-SMC", "(WHEN", "p(θ|y)", "FOR", "SMC,", "IDE", "AND", "PRDYN", "OBTAINED", "USING", "SNLE)", "COMPARISON", "OF", "THE", "ESTIMATE", "OF", "p(y∗|y)", "WITH", "SMC", "(BASELINE)"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 158.88,
+    "x2": 451.2,
+    "y1": 568.3199999999999,
+    "y2": 713.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Table1-1.png"
+}, {
+  "caption": "Figure 6: Posterior marginal densities of the parameters of the Prokaryotic autoregulatory model, inferred from one of the 10 datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.245361328125,
+    "y1": 450.9405212402344,
+    "y2": 467.9020080566406
+  },
+  "figType": "Figure",
+  "imageText": ["ue", "nc", "y", "Fr", "eq", "2.0", "1.5", "1.0", "0.5", "0.0", "0", "2", "c8", "ue", "nc", "y", "Fr", "eq", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "2", "4", "c7", "ue", "nc", "y", "Fr", "eq", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "2", "c6", "ue", "nc", "y", "Fr", "eq", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "2", "c5", "0.00", "0.25", "0.50", "0.75", "1.00", "1.25", "Fr", "eq", "ue", "nc", "y", "0", "2", "c4", "ue", "nc", "y", "Fr", "eq", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "2.5", "5.0", "c3", "SNLE", "SRE", "ABC", "ue", "nc", "y", "Fr", "eq", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "2", "4", "c2", "1.0", "1.5", "Fr", "eq", "ue", "nc", "y", "0.5", "0.0", "0", "2", "c1"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 497.28,
+    "y1": 87.84,
+    "y2": 417.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Comparison of the accuracy of parameter estimates for the Lotka-Volterra (a) and Prokaryotic autoregulator (b) models, using the log probability of the true generative parameter vector, summarised across the 10 datasets.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.17315673828125,
+    "y1": 207.53555297851562,
+    "y2": 235.45501708984375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 180.95999999999998,
+    "x2": 431.03999999999996,
+    "y1": 85.92,
+    "y2": 190.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Posterior distributions of one component of the latent sample path x summarised by the mean (solid lines) and 95% credible intervals (broken lines), for the Lotka-Volterra (a), Prokaryotic autoregulator (b) and SIR (c) model. The baseline is SMC.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.000244140625,
+    "y1": 422.9085388183594,
+    "y2": 450.8290100097656
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 257.76,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure3-1.png"
+}, {
+  "caption": "Figure 1: (Left) Process of creation of a dataset for training the IDE: qϕ(Xti |Xti−1 ,yti ,θ). We demonstrate this using M = 4 time points. (Right) Graphical model of the IDE showing how the sample path of the hidden states x is drawn. Note that p(θ|y) can be obtained using any off-the-shelf likelihood-free method. We build the IDE using a masked autoregressive flow.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00494384765625,
+    "y1": 237.23153686523438,
+    "y2": 276.1099853515625
+  },
+  "figType": "Figure",
+  "imageText": ["Simulate", "from", "the", "HMM", "targets", "inputs", "Training", "examples", "IDE", "Once", "trained", "samples", "of", "the", "latent", "path", "drawn", "recursively", "using", "the", "IDE", "How", "examples", "are", "created", "for", "training", "the", "IDE:", "Simulate", "from", "the", "HMM"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 484.79999999999995,
+    "y1": 82.08,
+    "y2": 222.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Posterior marginal densities of the parameters of the Lotka-Volterra model, inferred from one of the 10 datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9966735839844,
+    "y1": 418.44952392578125,
+    "y2": 435.4110107421875
+  },
+  "figType": "Figure",
+  "imageText": ["ue", "nc", "y", "Fr", "eq", "15.0", "12.5", "10.0", "7.5", "5.0", "2.5", "0.0", "0.5", "0.6", "c3", "SNLE", "SRE", "ABC", "0.3", "0.4", "Fr", "eq", "ue", "nc", "y", "0.2", "0.1", "0.0", "20", "25", "30", "c2×103", "ue", "nc", "y", "Fr", "eq", "30", "20", "10", "0", "0.25", "0.30", "0.35", "c1"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 497.28,
+    "y1": 234.72,
+    "y2": 383.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Posterior marginal densities of the parameters of the SIR model, inferred from one of the 10 datasets.",
+  "captionBoundary": {
+    "x1": 107.50199890136719,
+    "x2": 503.99884033203125,
+    "y1": 698.3275756835938,
+    "y2": 715.2890014648438
+  },
+  "figType": "Figure",
+  "imageText": ["ue", "nc", "y", "Fr", "eq", "15", "10", "5", "0", "0.5", "0.6", "γ", "ue", "nc", "y", "Fr", "eq", "3", "2", "1", "0", "1.5", "2.0", "β", "SNLE", "SRE", "ue", "nc", "y", "Fr", "eq", "60", "50", "40", "30", "20", "10", "0", "0.02", "0.04", "0.06", "1−", "s0"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 476.15999999999997,
+    "y1": 519.84,
+    "y2": 674.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5eCi6tAPc7-Figure5-1.png"
+}]

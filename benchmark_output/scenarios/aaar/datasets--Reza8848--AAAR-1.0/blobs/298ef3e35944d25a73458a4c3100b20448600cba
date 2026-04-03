@@ -1,0 +1,421 @@
+[{
+  "caption": "Table 1: Synthetic-to-Real generalization results for semantic segmentation and object detection. Tables 1a, 1b and 1c summarize syn-to-real generalization results for semantic segmentation (across 3 runs) on Cityscapes (C), BDD-100K (B) and Mapillary (M) when trained on GTAV (G). Table 1d summarizes syn-to-real generalization results for object detection on Cityscapes (C) when trained on Sim10K (S). ∗ indicates numbers drawn from published manuscripts. † indicates trained with downsampled 1024× 560 images due to restricted compute. k = 2 and β = 0.25 for PASTA (α = 3). β = 0.5 for PASTA (α = 0). Rows in gray font use different base architectures and / or extra data for training and have been included primarily for completeness (drawn directly from published manuscripts). Bold indicates best and underline indicates second best.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.4928894042969,
+    "y1": 81.38455963134766,
+    "y2": 156.864990234375
+  },
+  "figType": "Table",
+  "imageText": ["9", "EPM", "N/A", "51.20", "10", "ILLUME", "N/A", "53.10", "11", "Faster-RCNN", "(Oracle)", "N/A", "70.40", "Adaptation", "1", "Baseline∗", "N/A", "41.8", "2", "Baseline", "39.4", "43.3", "3", "+", "PD", "51.5", "52.2", "4", "+", "RandAug", "52.8", "57.2", "5", "+", "PASTA", "(α", "=", "0)", "52.9", "53.9", "6", "+", "PASTA", "(α", "=", "3)", "56.3", "55.2", "7", "+", "PD", "+", "PASTA", "(α", "=", "0)", "57.0", "57.1", "8", "+", "PD", "+", "PASTA", "(α", "=", "3)", "58.0", "56.6", "Generalization", "Method", "R-50", "R-101", "(d)", "ObjDet", "S→C", "(R-50", "&", "R-101,", "Faster-RCNN).", "7", "ISW∗", "30.86", "30.05", "30.67", "30.53", "8", "ISW†", "30.11", "27.20", "27.54", "28.28±1.65", "9", "+", "PASTA", "(α", "=", "3)†", "35.15", "36.49", "38.85", "36.83±0.40", "4", "IBN-Net∗", "30.14", "27.66", "27.07", "28.29", "5", "IBN-Net†", "29.13", "26.29", "28.34", "27.92±1.76", "6", "+", "PASTA", "(α", "=", "3)†", "35.37", "36.15", "38.60", "36.71±0.65", "1", "Baseline∗", "25.92", "25.73", "26.45", "26.03", "2", "Baseline†", "24.27", "23.30", "23.07", "23.55±0.47", "3", "+", "PASTA", "(α", "=", "3)†", "37.76", "36.32", "39.07", "37.71±0.54", "Method", "C", "B", "M", "Avg.", "(c)", "SemSeg", "G→{C,", "B,", "M}", "(MNv2,", "DeepLabv3+).", "10", "DRPC", "42.53", "38.72", "38.05", "39.77", "11", "WEDGE", "43.60", "41.62", "48.82", "44.68", "12", "ASG", "32.79", "N/A", "N/A", "N/A", "13", "CSG", "38.88", "N/A", "N/A", "N/A", "14", "FSDR", "44.80", "41.20", "43.40", "43.13", "15", "WildNet", "45.79", "41.73", "47.08", "44.87", "7", "ISW∗", "37.20", "33.36", "35.57", "35.58", "8", "ISW†", "31.74", "31.90", "34.94", "32.86±0.48", "9", "+", "PASTA", "(α", "=", "3)†", "40.93", "41.68", "44.40", "42.34±0.86", "4", "IBN-Net∗", "37.37", "34.21", "36.81", "36.13", "5", "IBN-Net†", "30.85", "32.94", "34.77", "32.35±0.70", "6", "+", "PASTA", "(α", "=", "3)†", "40.74", "41.62", "44.71", "42.36±0.58", "1", "Baseline∗", "32.97", "30.77", "30.68", "31.47", "2", "Baseline†", "29.36", "23.61", "28.14", "27.04±1.86", "3", "+", "PASTA", "(α", "=", "3)†", "41.54", "39.43", "45.05", "42.01±0.26", "Method", "C", "B", "M", "Avg.", "(b)", "SemSeg", "G→{C,", "B,", "M}", "(R-101,", "DeepLabv3+).", "9", "DRPC", "37.42", "32.14", "34.12", "34.56", "10", "WEDGE", "38.15", "36.14", "43.21", "39.17", "11", "ASG", "31.89", "N/A", "N/A", "N/A", "12", "CSG", "35.27", "N/A", "N/A", "N/A", "13", "WildNet", "44.62", "38.42", "46.09", "43.04", "7", "ISW∗", "36.58", "35.20", "40.33", "37.37", "8", "+", "PASTA", "(α", "=", "3)", "42.13", "40.95", "45.67", "42.91±0.27", "5", "IBN-Net∗", "33.85", "32.30", "37.75", "34.63", "6", "+", "PASTA", "(α", "=", "3)", "41.90", "41.46", "45.88", "43.08±0.37", "1", "Baseline∗", "28.95", "25.14", "28.18", "27.42", "2", "+", "RandAug", "31.89", "38.28", "34.54", "34.54±0.57", "3", "+", "PASTA", "(α", "=", "0)", "41.65", "34.75", "43.37", "39.92±0.30", "4", "+", "PASTA", "(α", "=", "3)", "44.12", "40.19", "47.11", "43.81±0.74", "Method", "C", "B", "M", "Avg.", "(a)", "SemSeg", "G→{C,", "B,", "M}", "(R-50,", "DeepLabv3+)."],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 515.04,
+    "y1": 157.92,
+    "y2": 564.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table1-1.png"
+}, {
+  "caption": "Figure 11: GTAV→Cityscapes Baseline segmentation prediction diffs. Differences between prediction and ground truth for predictions made on randomly selected Cityscapes validation images by a Baseline DeepLabv3+ model (R-50 backbone) trained on GTAV synthetic images. The first two columns indicate the original image and the associated ground truth and rest indicate the considered approaches.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0005798339844,
+    "y1": 688.1255493164062,
+    "y2": 737.0869750976562
+  },
+  "figType": "Figure",
+  "imageText": ["sky", "person", "rider", "car", "truck", "bus", "train", "mcycle", "bicycle", "unlabel", "road", "swalk", "build", "wall", "fence", "pole", "tlight", "tsign", "veg", "terrain", "Image", "Ground", "Truth", "Baseline", "Baseline", "+", "Randaug", "Baseline", "+", "PASTA(", "=", "0)", "Baseline", "+", "PASTA(", "=", "3)"],
+  "name": "11",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 670.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure11-1.png"
+}, {
+  "caption": "Figure 12: GTAV→Cityscapes IBN-Net (Pan et al., 2018) segmentation predictions. Qualitative predictions made on randomly selected Cityscapes validation images by IBN-Net (DeepLabv3+ model with R-50 backbone) trained on GTAV synthetic images. The first two columns indicate the original image and the associated ground truth and rest indicate the considered approaches.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 505.39971923828125,
+    "y1": 679.9165649414062,
+    "y2": 718.1380004882812
+  },
+  "figType": "Figure",
+  "imageText": ["sky", "person", "rider", "car", "truck", "bus", "train", "mcycle", "bicycle", "unlabel", "road", "swalk", "build", "wall", "fence", "pole", "tlight", "tsign", "veg", "terrain", "Image", "Ground", "Truth", "IBN-Net", "IBN-Net", "+", "PASTA(", "=", "3)"],
+  "name": "12",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 500.15999999999997,
+    "y1": 92.64,
+    "y2": 662.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure12-1.png"
+}, {
+  "caption": "Figure 5: Variations in amplitude values across fine-grained frequency bands (GTAV→Real and SYNTHIA→Real). Across domain shifts GTAV→Real and SYNTHIA→Real, and four settings corresponding to fine-grained frequency bands (3, 5, 7 and 9 bands; increasing in frequency from Band-1 to Band-n), we find that synthetic images have less variance in high-frequency components of the amplitude spectrum compared to real images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041198730469,
+    "y1": 332.884521484375,
+    "y2": 381.84600830078125
+  },
+  "figType": "Figure",
+  "imageText": ["-9", "Ba", "nd", "-8", "Ba", "nd", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea", "GTAV", "SYNTHIA", "Cityscapes", "BDD-100K", "Mapillary", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea", "GTAV", "SYNTHIA", "Cityscapes", "BDD-100K", "Mapillary", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea"],
+  "name": "5",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 481.44,
+    "y1": 97.92,
+    "y2": 320.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Variations in amplitude values across fine-grained frequency bands (VisDA-C Synthetic→Real). For the VisDA-C Synthetic→Real domain shift, and four settings corresponding to fine-grained frequency bands (3, 5, 7 and 9 bands; increasing in frequency from Band-1 to Band-n), we find that synthetic images have less variance in high-frequency components of the amplitude spectrum compared to real images.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2450256347656,
+    "y1": 660.8695678710938,
+    "y2": 709.8309936523438
+  },
+  "figType": "Figure",
+  "imageText": ["-9", "Ba", "nd", "-8", "Ba", "nd", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea", "VisDA-C", "(Synthetic)", "VisDA-C", "(Real)", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea", "VisDA-C", "(Synthetic)", "VisDA-C", "(Real)", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.55", "0.492", "0.433", "0.375", "0.317", "0.258", "0.2", "n", "M", "ea"],
+  "name": "6",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 495.35999999999996,
+    "y1": 426.71999999999997,
+    "y2": 648.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure6-1.png"
+}, {
+  "caption": "Figure 1: PASTA augmentation samples. Examples of images from different synthetic datasets when augmented using PASTA and RandAugment (Cubuk et al., 2020). Row 1 includes examples from GTAV and row 2 from VisDA-C. N (1, σ2[m,n]) such that σ[m,n] increases monotonically with (m,n) (specifically √ m2 + n2), thereby, ensuring that higher frequency components in the amplitude spectrum are perturbed more compared to the lower frequency components. The dependence of σ[m,n] on (m,n) can be controlled using a set of hyper-parameters that govern the degree of monotonicity. Finally, given the perturbed amplitude and the original phase spectrums, we can apply an inverse 2D Fast Fourier Transform (iFFT) to obtain the augmented image. Fig. 1 shows a few examples of augmentation by PASTA.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.2453918457031,
+    "y1": 191.30850219726562,
+    "y2": 281.66900634765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 80.64,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure1-1.png"
+}, {
+  "caption": "Table 2: VisDA-C (ResNet-50) generalization. Vanilla ResNet50 CNN trained (3 runs) on the synthetic source data of VisDA-C is evaluated on the real (val split) target data of VisDA-C. k = 3 and β = 0.875. I.D. and O.O.D. are regular in and out-of-domain accuracies. O.O.D. (Bal.) is class balanced accuracy on out-ofdomain data. Bold indicates best and underline indicates second best.",
+  "captionBoundary": {
+    "x1": 266.0889892578125,
+    "x2": 505.4875183105469,
+    "y1": 170.03152465820312,
+    "y2": 234.614013671875
+  },
+  "figType": "Table",
+  "imageText": ["1", "Baseline", "93.87±0.13", "55.86±0.79", "49.77±1.49", "2+", "RandAug", "90.83±0.34", "60.48±0.34", "56.40±0.33", "3+", "PASTA", "(α", "=", "0)", "92.13±0.41", "56.29±1.27", "51.61±1.84", "4+", "PASTA", "(α", "=", "4)", "90.26±0.47", "60.20±0.71", "56.91±0.53", "Method", "Accuracy", "I.D.", "O.O.D", "O.O.D", "(Bal.)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 266.88,
+    "x2": 504.0,
+    "y1": 246.72,
+    "y2": 318.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table2-1.png"
+}, {
+  "caption": "Figure 15: GTAV→Cityscapes ISW (Choi et al., 2021) segmentation prediction diffs. Differences between prediction and ground truth for predictions made on randomly selected Cityscapes validation images by ISW (DeepLabv3+ model with R-50 backbone) trained on GTAV synthetic images. The first two columns indicate the original image and the associated ground truth and rest indicate the considered approaches.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00408935546875,
+    "y1": 674.5465698242188,
+    "y2": 723.5070190429688
+  },
+  "figType": "Figure",
+  "imageText": ["sky", "person", "rider", "car", "truck", "bus", "train", "mcycle", "bicycle", "unlabel", "road", "swalk", "build", "wall", "fence", "pole", "tlight", "tsign", "veg", "terrain", "Image", "Ground", "Truth", "ISW", "ISW", "+", "PASTA(", "=", "3)"],
+  "name": "15",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 500.15999999999997,
+    "y1": 87.36,
+    "y2": 656.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure15-1.png"
+}, {
+  "caption": "Figure 8: Variations in amplitude values across fine-grained frequency bands for synthetic images post-PASTA (VisDA-C). For VisDA-C (Synthetic), we find that applying PASTA increases variations in amplitude values across different frequency bands. Four plots correspond to fine-grained frequency bands (3, 5, 7 and 9 bands; increasing in frequency from Band-1 to Band-n). We find the maximum amount of increase for the highest frequency bands across different granularity levels.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.003173828125,
+    "y1": 660.8695678710938,
+    "y2": 709.8309936523438
+  },
+  "figType": "Figure",
+  "imageText": ["-9", "Ba", "nd", "-8", "Ba", "nd", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea", "VisDA-C", "(Synthetic)", "α=3", "α=4", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea", "VisDA-C", "(Synthetic)", "α=3", "α=4", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea"],
+  "name": "8",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 495.35999999999996,
+    "y1": 426.71999999999997,
+    "y2": 648.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Variations in amplitude values across fine-grained frequency bands for synthetic images post-PASTA (GTAV). For GTAV, we find that applying PASTA increases variations in amplitude values across different frequency bands. Four plots correspond to fine-grained frequency bands (3, 5, 7 and 9 bands; increasing in frequency from Band-1 to Band-n). We find the maximum amount of increase for the highest frequency bands across different granularity levels.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3520812988281,
+    "y1": 332.884521484375,
+    "y2": 381.84600830078125
+  },
+  "figType": "Figure",
+  "imageText": ["-9", "Ba", "nd", "-8", "Ba", "nd", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea", "-7", "Ba", "nd", "-6", "Ba", "nd", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "Frequency", "Bands", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea", "GTAV", "α=3", "α=4", "-5", "Ba", "nd", "-4", "Ba", "nd", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea", "GTAV", "α=3", "α=4", "-3", "Ba", "nd", "-2", "Ba", "nd", "-1", "Ba", "nd", "Al", "l", "0.65", "0.575", "0.5", "0.425", "0.35", "0.275", "0.2", "n", "M", "ea"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 481.44,
+    "y1": 97.92,
+    "y2": 320.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Amplitude spectrum characteristics. (a) Sample amplitude spectrums (lowest frequency at the center) for one channel of synthetic and real images. Note that the amplitude spectrums tend to follow a specific pattern – statistics of natural images have been found to exhibit the property that amplitude values tend to follow an inverse power law w.r.t. the frequency (Burton & Moorhead, 1987; Tolhurst et al., 1992), i.e., roughly, the amplitude at frequency f , A(f) ∝ 1 fγ , for some γ determined empirically. (b) Variations in amplitude values across images. Synthetic images have less variance in high-frequency components of the amplitude spectrum compared to real images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.32305908203125,
+    "y1": 181.34555053710938,
+    "y2": 247.44500732421875
+  },
+  "figType": "Figure",
+  "imageText": ["3", "METHOD", "Single", "Domain", "Generalization", "(SDG).", "Unlike", "DG", "which", "leverages", "diversity", "across", "domains", "for", "generalization,", "SDG", "considers", "generalizing", "from", "only", "one", "source", "domain.", "Some", "notable", "approaches", "for", "SDG", "involve", "using", "meta-learning", "(Qiao", "et", "al.,", "2020)", "by", "considering", "strongly", "augmented", "versions", "of", "source", "images", "as", "meta-target", "data", "(by", "exposing", "the", "model", "to", "increasingly", "distinct", "augmented", "views", "of", "the", "source", "data", "(Wang", "et", "al.,", "2021;", "Li", "et", "al.,", "2021))", "and", "learning", "feature", "normalization", "schemes", "with", "auxiliary", "objectives", "(Fan", "et", "al.,", "2021).", "Synthetic-to-Real", "Generalization", "(syn-to-real).", "Approaches", "specific", "to", "syn-to-real", "generalization", "in", "prior", "work", "(most", "relevant", "to", "our", "experimental", "settings)", "mostly", "consider", "either", "learning", "specific", "feature", "normalization", "schemes", "so", "that", "predictions", "are", "invariant", "to", "style", "characteristics", "(Pan", "et", "al.,", "2018;", "Choi", "et", "al.,", "2021),", "collecting", "external", "data", "to", "inject", "style", "information", "(Kim", "et", "al.,", "2021;", "Kundu", "et", "al.,", "2021),", "learning", "to", "optimize", "for", "robustness", "(Chen", "et", "al.,", "2020b),", "leveraging", "strong", "augmentations", "/", "domain", "randomization", "(Yue", "et", "al.,", "2019;", "Kundu", "et", "al.,", "2021)", "or", "using", "contrastive", "techniques", "to", "aid", "generalization", "(Chen", "et", "al.,", "2021).", "To", "adapt", "to", "real", "images", "from", "synthetic", "data", "(Chen", "et", "al.,", "2018b)", "trained", "Faster", "R-CNN", "in", "an", "adversarial", "manner,", "(Saito", "et", "al.,", "2019)", "leveraged", "adversarial", "alignment", "loss", "to", "emphasize", "globally", "similar", "images,", "(Chen", "et", "al.,", "2020a)", "proposed", "a", "method", "to", "harmonize", "transferability", "and", "discriminability", "of", "features", "in", "a", "hierarchical", "method,", "and", "(Vibashan", "et", "al.,", "2021)", "ensures", "category-aware", "feature", "alignment", "for", "learning", "domain-invariant", "features.", "We", "consider", "three", "of", "the", "most", "commonly", "studied", "settings", "for", "syn-to-real", "generalization", "in", "this", "paper", "–", "(1)", "Semantic", "Segmentation", "-", "GTAV→Real", "datasets,", "(2)", "Object", "Detection", "-", "Sim10K→Real", "and", "(3)", "Object", "Recognition", "-", "the", "VisDA-C", "(Peng", "et", "al.,", "2017)", "dataset.", "To", "appropriately", "characterize", "the", "“right\"", "synthetic", "data", "for", "generalization,", "(Mishra", "et", "al.,", "2021)", "has", "recently", "considered", "tailoring", "synthetic", "data", "for", "downstream", "generalization.", "Fourier", "Domain", "Generalization,", "Adaptation", "and", "Robustness.", "Prior", "work", "has", "considered", "aug-", "menting", "images", "in", "the", "frequency", "domain", "as", "opposed", "to", "the", "pixel", "space.", "These", "approaches", "rely", "on", "the", "empirical", "observation", "(Oppenheim", "et", "al.,", "1979;", "Oppenheim", "&", "Lim,", "1981;", "Piotrowski", "&", "Campbell,", "1982;", "Hansen", "&", "Hess,", "2007)", "that", "the", "phase", "component", "of", "the", "Fourier", "spectrum", "corresponds", "to", "the", "semantics", "of", "the", "image.", "PASTA", "is", "in", "line", "with", "this", "style", "of", "approach.", "Closest", "and", "perhaps", "most", "relevant", "to", "our", "work", "are", "that", "of", "(Xu", "et", "al.,", "2021;", "Yang", "&", "Soatto,", "2020)", "which", "consider", "perturbing", "the", "amplitude", "spectrums", "of", "the", "source", "synthetic", "images.", "Building", "on", "top", "of", "(Xu", "et", "al.,", "2021),", "(Yang", "et", "al.,", "2021)", "adds", "a", "significance", "mask", "during", "linear", "interpolation", "of", "amplitudes.", "(Huang", "et", "al.,", "2021b)", "decomposes", "images", "into", "multiple", "frequency", "components", "and", "only", "perturbs", "components", "that", "capture", "little", "semantic", "information.", "(Wang", "et", "al.,", "2022)", "uses", "an", "encoder-decoder", "architecture", "to", "obtain", "high", "and", "low", "frequency", "features,", "and", "augments", "the", "image", "by", "adding", "random", "noise", "to", "the", "phase", "of", "high", "frequency", "features", "and", "to", "the", "amplitude", "of", "low", "frequency", "features.", "More", "generally,", "(Yin", "et", "al.,", "2019)", "finds", "that", "perturbations", "in", "the", "higher", "frequency", "domain", "increase", "robustness", "of", "models", "to", "high-frequency", "image", "corruptions."],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 106.08,
+    "x2": 505.91999999999996,
+    "y1": 253.44,
+    "y2": 659.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure2-1.png"
+}, {
+  "caption": "Table 7: GTA5→Mapillary per-class generalization results. Per-class IoU comparisons for syn-to-real generalization results when semantic segmentation models trained on GTAV are evaluated on Mapillary. Base model involved is DeepLabv3+ (R-50 backbone). Results are reported across 3 runs. ∗ indicates drawn directly from published manuscripts. k = 2 and β = 0.25 for PASTA (α = 3). β = 0.5 for PASTA (α = 0). Class headers are in decreasing order of pixel frequency.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3160400390625,
+    "y1": 279.92352294921875,
+    "y2": 324.9800109863281
+  },
+  "figType": "Table",
+  "imageText": ["mIoU", "1", "Baseline", "42.2", "46.8", "64.9", "33.5", "24.9", "72.3", "14.4", "27.7", "23.8", "6.7", "8.5", "23.7", "53.7", "7.0", "35.8", "18.4", "4.9", "15.5", "10.8", "28.2", "2", "+RandAug", "51.7", "59.6", "75.5", "39.5", "33.9", "81.3", "22.6", "37.2", "24.6", "4.2", "32.4", "31.2", "56.5", "13.4", "36.2", "18.0", "11.9", "21.4", "5.0", "34.5", "3", "+PASTA", "(α", "=", "0)", "88.4", "76.5", "73.7", "65.5", "36.1", "82.3", "22.7", "38.9", "32.9", "14.5", "49.9", "35.8", "60.0", "17.0", "42.6", "27.3", "16.8", "31.8", "11.2", "43.4", "4", "+PASTA", "(α", "=", "3)", "93.3", "83.0", "76.3", "76.9", "40.2", "83.3", "27.1", "40.9", "37.1", "19.2", "50.4", "35.2", "63.3", "19.5", "41.4", "29.4", "25.2", "38.1", "15.2", "47.1", "5", "IBN-Net", "82.0", "66.4", "73.5", "57.1", "32.9", "73.1", "24.9", "31.5", "28.4", "10.5", "38.9", "30.7", "56.4", "16.0", "38.0", "18.6", "9.1", "16.6", "12.6", "37.7", "6", "+PASTA", "(α", "=", "3)", "94.4", "81.7", "76.1", "76.9", "40.4", "80.8", "27.1", "40.3", "38.7", "19.0", "43.2", "38.0", "62.0", "20.5", "39.3", "25.7", "23.6", "31.6", "12.4", "45.9", "7", "ISW", "88.2", "74.8", "74.3", "66.1", "36.2", "78.7", "26.0", "35.4", "30.2", "15.2", "36.6", "33.3", "58.6", "14.4", "37.9", "17.8", "11.1", "20.4", "11.0", "40.3", "8", "+PASTA", "(α", "=", "3)", "94.6", "82.9", "76.7", "76.0", "41.9", "81.8", "25.8", "40.4", "40.9", "18.8", "43.1", "34.1", "61.6", "19.9", "40.2", "24.5", "22.3", "30.5", "11.6", "45.7", "tra", "in", "cle", "rid", "er", "moto", "rcy", "le", "ca", "r", "fen", "ce", "po", "le", "ter", "rai", "n", "wall", "sig", "n", "tru", "ck", "pe", "rso", "n", "bu", "s", "lig", "ht", "bic", "yc", "alk", "sid", "ew", "ing", "bu", "ild", "tat", "ion", "Method", "sk", "y", "roa", "d", "ve", "ge"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 343.2,
+    "y2": 456.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table7-1.png"
+}, {
+  "caption": "Table 6: GTA5→BDD-100K per-class generalization results. Per-class IoU comparisons for syn-to-real generalization results when semantic segmentation models trained on GTAV are evaluated on BDD-100K. Base model involved is DeepLabv3+ (R-50 backbone). Results are reported across 3 runs. ∗ indicates drawn directly from published manuscripts. k = 2 and β = 0.25 for PASTA (α = 3). β = 0.5 for PASTA (α = 0). Class headers are in decreasing order of pixel frequency.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3160400390625,
+    "y1": 83.3775405883789,
+    "y2": 128.4329833984375
+  },
+  "figType": "Table",
+  "imageText": ["1", "Baseline", "48.2", "32.3", "34.3", "58.2", "67.3", "23.0", "19.8", "21.4", "11.3", "28.4", "5.6", "3.4", "18.1", "43.9", "30.2", "11.1", "16.0", "5.1", "0.0", "25.1", "2", "+RandAug", "75.4", "82.8", "67.7", "74.7", "74.1", "39.3", "32.7", "26.6", "22.7", "37.0", "16.5", "5.0", "23.9", "51.7", "35.8", "12.0", "29.3", "20.2", "0.0", "38.3", "3", "+PASTA", "(α", "=", "0)", "73.6", "65.9", "50.6", "67.7", "78.5", "37.2", "28.8", "19.1", "20.5", "34.1", "6.4", "4.2", "25.4", "52.1", "35.8", "10.4", "38.5", "11.5", "0.0", "34.8", "4", "+PASTA", "(α", "=", "3)", "86.0", "86.6", "74.8", "72.7", "82.8", "38.4", "31.2", "24.9", "23.7", "34.8", "6.4", "11.2", "26.2", "55.1", "37.0", "13.3", "38.3", "19.9", "0.0", "40.2", "5", "IBN-Net", "68.9", "66.9", "56.7", "66.6", "70.3", "28.8", "21.4", "22.1", "12.8", "31.9", "7.2", "6.0", "21.7", "50.2", "35.0", "18.1", "23.2", "5.8", "0.0", "32.3", "6", "+PASTA", "(α", "=", "3)", "86.1", "87.6", "74.9", "72.3", "82.3", "36.6", "30.6", "26.2", "25.3", "37.1", "10.8", "13.2", "25.5", "56.0", "36.8", "21.4", "38.9", "26.0", "0.0", "41.5", "7", "ISW", "74.9", "77.4", "65.2", "69.0", "72.4", "30.4", "22.6", "26.2", "16.2", "34.9", "6.1", "11.5", "22.2", "50.3", "36.9", "11.4", "31.3", "10.0", "0.0", "35.2", "8", "+PASTA", "(α", "=", "3)", "86.5", "87.9", "74.0", "73.0", "83.2", "37.7", "28.6", "28.1", "23.4", "37.2", "7.8", "11.3", "25.0", "55.1", "37.8", "23.6", "35.5", "22.4", "0.0", "41.0", "cle", "rid", "er", "tra", "in", "mIoU", "le", "moto", "rcy", "fen", "ce", "ter", "rai", "n", "tru", "ck", "po", "le", "bu", "s", "wall", "sig", "n", "pe", "rso", "n", "lig", "ht", "bic", "yc", "alk", "ca", "r", "sid", "ew", "tat", "ion", "ve", "ge", "ing", "Method", "roa", "d", "sk", "y", "bu", "ild"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 146.88,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table6-1.png"
+}, {
+  "caption": "Figure 9: PASTA augmentation samples. Examples of images from different synthetic datasets when augmented using PASTA and RandAugment (Cubuk et al., 2020). Rows 1-3 include examples from GTAV and rows 4-6 from VisDA-C.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00341796875,
+    "y1": 551.3165283203125,
+    "y2": 578.7979736328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 228.95999999999998,
+    "y2": 540.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure9-1.png"
+}, {
+  "caption": "Figure 14: GTAV→Cityscapes ISW (Choi et al., 2021) segmentation predictions. Qualitative predictions made on randomly selected Cityscapes validation images by ISW (DeepLabv3+ model with R-50 backbone) trained on GTAV synthetic images. The first two columns indicate the original image and the associated ground truth and rest indicate the considered approaches.",
+  "captionBoundary": {
+    "x1": 107.6409912109375,
+    "x2": 504.0028991699219,
+    "y1": 679.9165649414062,
+    "y2": 718.1380004882812
+  },
+  "figType": "Figure",
+  "imageText": ["sky", "person", "rider", "car", "truck", "bus", "train", "mcycle", "bicycle", "unlabel", "road", "swalk", "build", "wall", "fence", "pole", "tlight", "tsign", "veg", "terrain", "Image", "Ground", "Truth", "ISW", "ISW", "+", "PASTA(", "=", "3)"],
+  "name": "14",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 500.15999999999997,
+    "y1": 92.64,
+    "y2": 662.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure14-1.png"
+}, {
+  "caption": "Table 3: VisDA-C (ResNet-101) generalization. We apply PASTA to CSG (Chen et al., 2021). Since CSG inherently uses RandAug, we also report results with and without the use of RandAug when PASTA is applied. ∗ indicates drawn directly from published manuscripts. We report class-balanced accuracy on the real (val split) target data of VisDA-C. k = 1 and β = 0.5 for PASTA. Results are reported across 3 runs. Bold indicates best and underline indicates second best.",
+  "captionBoundary": {
+    "x1": 305.5790100097656,
+    "x2": 505.5716552734375,
+    "y1": 211.69955444335938,
+    "y2": 295.8089904785156
+  },
+  "figType": "Table",
+  "imageText": ["PASTA", "is", "complementary", "to", "existing", "gener-", "alization", "methods.", "In", "addition", "to", "ensuring", "that", "a", "baseline", "model", "is", "competitive", "with", "or", "signif-", "icantly", "improves", "over", "existing", "methods,", "PASTA", "can", "also", "complement", "to", "existing", "generalization", "methods.", "For", "semantic", "segmentation,", "from", "Tables.", "1a,", "1b", "and", "1c,", "we", "find", "that", "applying", "PASTA", "to", "IBN-Net", "and", "ISW", "significantly", "improves", "performance", "(see", "IBN-Net,", "IBN-Net", "+", "PASTA", "and", "ISW,", "ISW", "+", "PASTA", "set", "of", "rows)", "–", "with", "improvements", "ranging", "from", "∼6-9%", "mIoU", "for", "IBN-Net", "and", "∼5-7%", "mIoU", "for", "ISW", "across", "different", "backbones.", "For", "object", "recognition,", "in", "Table.", "3,", "we", "apply", "PASTA", "to", "CSG", "(Chen", "et", "al.,", "2021),", "one", "of", "the", "state-of-the-art", "generalization", "methods", "on", "VisDA-C.", "Since", "CSG", "inherently", "uses", "RandAugment,", "we", "consider", "both", "settings", "where", "PASTA", "is", "applied", "to", "CSG", "with", "and", "without", "RandAugment.", "In", "both", "cases,", "applying", "PASTA", "improves", "performance.", "PASTA", "vs", "Frequency-based", "Augmentation", "Strategies.", "Closest", "to", "our", "work", "is", "FACT", "(Xu", "et", "al.,", "2021),", "where", "authors", "employ", "Amplitude", "Mixup", "(AM)", "and", "Amplitude", "Jitter", "(AJ)", "as", "aug-", "mentations", "in", "a", "broader", "training", "pipeline.", "On", "our", "experimental", "settings", "(semantic", "segmenta-"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 298.08,
+    "y1": 208.79999999999998,
+    "y2": 489.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table3-1.png"
+}, {
+  "caption": "Table 5: GTA5→Cityscapes per-class generalization results. Per-class IoU comparisons for syn-to-real generalization results when semantic segmentation models trained on GTAV are evaluated on Cityscapes. Base model involved is DeepLabv3+ (R-50 backbone). Results are reported across 3 runs. ∗ indicates drawn directly from published manuscripts. k = 2 and β = 0.25 for PASTA (α = 3). β = 0.5 for PASTA (α = 0). Class headers are in decreasing order of pixel frequency.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3160400390625,
+    "y1": 83.3775405883789,
+    "y2": 128.4329833984375
+  },
+  "figType": "Table",
+  "imageText": ["mIoU", "1", "Baseline", "45.1", "56.8", "80.9", "61.0", "23.1", "38.9", "23.9", "58.2", "24.3", "16.3", "16.6", "13.4", "7.3", "20.0", "17.4", "1.2", "30.0", "7.2", "8.5", "29.0", "2", "+RandAug", "58.5", "56.3", "77.3", "83.7", "30.3", "45.1", "27.3", "57.8", "20.6", "20.9", "11.4", "16.9", "9.7", "20.3", "15.0", "2.4", "28.1", "14.0", "10.3", "31.9", "3", "+PASTA", "(α", "=", "0)", "77.1", "76.3", "85.5", "82.3", "35.2", "72.9", "33.1", "65.2", "31.6", "25.7", "25.4", "22.8", "19.8", "23.2", "33.8", "2.8", "33.8", "21.0", "24.0", "41.7", "4", "+PASTA", "(α", "=", "3)", "84.1", "80.5", "85.8", "85.9", "40.1", "81.8", "31.9", "66.0", "31.4", "28.1", "29.0", "21.8", "28.5", "24.5", "28.7", "7.0", "32.9", "23.4", "27.2", "44.1", "5", "IBN-Net", "51.3", "59.7", "85.0", "76.7", "24.1", "67.8", "23.0", "60.6", "40.6", "25.9", "14.1", "15.7", "10.1", "23.7", "16.3", "0.8", "30.9", "4.9", "11.9", "33.9", "6", "+PASTA", "(α", "=", "3)", "78.1", "79.5", "85.8", "84.5", "31.7", "80.1", "32.2", "63.4", "38.8", "21.7", "28.0", "18.2", "22.6", "26.4", "29.0", "2.8", "34.0", "16.5", "22.9", "41.9", "7", "ISW", "60.5", "65.4", "85.4", "82.7", "25.5", "70.3", "25.8", "61.9", "38.5", "23.7", "21.6", "15.5", "12.2", "25.4", "21.1", "0.0", "33.3", "9.3", "16.8", "36.6", "8", "+PASTA", "(α", "=", "3)", "76.6", "78.4", "85.6", "83.7", "32.5", "83.1", "33.1", "63.4", "40.4", "23.6", "27.3", "17.4", "22.3", "25.7", "30.1", "3.3", "35.9", "18.2", "19.9", "42.1", "cle", "ter", "rai", "n", "fen", "ce", "wall", "bic", "yc", "le", "sig", "n", "bu", "s", "tru", "ck", "rid", "er", "lig", "ht", "tra", "in", "moto", "rcy", "n", "sk", "y", "po", "le", "pe", "rso", "alk", "ca", "r", "sid", "ew", "tat", "ion", "ve", "ge", "ing", "Method", "roa", "d", "bu", "ild"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 146.88,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table5-1.png"
+}, {
+  "caption": "Figure 13: GTAV→Cityscapes IBN-Net (Pan et al., 2018) segmentation prediction diffs. Differences between prediction and ground truth for predictions made on randomly selected Cityscapes validation images by IBN-Net (DeepLabv3+ model with R-50 backbone) trained on GTAV synthetic images. The first two columns indicate the original image and the associated ground truth and rest indicate the considered approaches.",
+  "captionBoundary": {
+    "x1": 107.75099182128906,
+    "x2": 505.654052734375,
+    "y1": 674.5465698242188,
+    "y2": 723.5070190429688
+  },
+  "figType": "Figure",
+  "imageText": ["sky", "person", "rider", "car", "truck", "bus", "train", "mcycle", "bicycle", "unlabel", "road", "swalk", "build", "wall", "fence", "pole", "tlight", "tsign", "veg", "terrain", "Image", "Ground", "Truth", "IBN-Net", "IBN-Net", "+", "PASTA(", "=", "3)"],
+  "name": "13",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 500.15999999999997,
+    "y1": 87.36,
+    "y2": 656.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure13-1.png"
+}, {
+  "caption": "Figure 10: GTAV→Cityscapes Baseline segmentation predictions. Qualitative predictions made on randomly selected Cityscapes validation images by a Baseline DeepLabv3+ model (R-50 backbone) trained on GTAV synthetic images. The first two columns indicate the original image and the associated ground truth and rest indicate the considered approaches.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6676025390625,
+    "y1": 688.2725830078125,
+    "y2": 726.4940185546875
+  },
+  "figType": "Figure",
+  "imageText": ["sky", "person", "rider", "car", "truck", "bus", "train", "mcycle", "bicycle", "unlabel", "road", "swalk", "build", "wall", "fence", "pole", "tlight", "tsign", "veg", "terrain", "Image", "Ground", "Truth", "Baseline", "Baseline", "+", "Randaug", "Baseline", "+", "PASTA(", "=", "0)", "Baseline", "+", "PASTA(", "=", "3)"],
+  "name": "10",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 670.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Ablating α, β, k in PASTA. We train a vanilla ResNet-50 on VisDA-C source by applying PASTA and varying α, k and β within the sets {0, 3, 5, 7, 9}, {2, 4, 6, 8} and {0.25, 0.5, 0.75, 1.0} respectively. The trained models are evaluated on the target (validation) real data with class-balanced accuracy as the metric.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0546875,
+    "y1": 184.33450317382812,
+    "y2": 209.864013671875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)", "α", "=", "0", "α", "=", "3", "α", "=", "5", "α", "=", "7", "α", "=", "9", "2", "4", "6", "8", "15", "30", "45", "60", "2", "4", "6", "8", "0", "15", "30", "45", "60", "2", "4", "6", "8", "0", "15", "30", "45", "60", "2", "4", "6", "8", "0", "(%", ")", "0", "15", "30", "45", "60", "ra", "cy", "Ac", "cu", "ed", "la", "nc", "D", "Ba", "O", "O"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 177.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Figure4-1.png"
+}, {
+  "caption": "Table 4: Implementation & Optimization Details. We summarize details surrounding dataset, training, optimization and model selection criteria for our semantic segmentation, object detection and object recognition experiments.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.1214904785156,
+    "y1": 100.8195571899414,
+    "y2": 126.3480224609375
+  },
+  "figType": "Table",
+  "imageText": ["Source", "Data", "VisDA-C", "Synthetic", "VisDA-C", "Synthetic", "Target", "Data", "VisDA-C", "Real", "VisDA-C", "Real", "Backbone", "ResNet-50", "(R-50)", "(He", "et", "al.,", "2016)", "ResNet-101", "(R-101)", "(He", "et", "al.,", "2016)", "Optimizer", "SGD", "w/o", "momentum", "SGD", "w/", "momentum", "(0.9)", "Initial", "Learning", "Rate", "10−4", "10−4", "Weight", "Decay", "10−5", "5×", "10−4", "Initialization", "Imagenet", "(Krizhevsky", "et", "al.,", "2012)", "Imagenet", "(Krizhevsky", "et", "al.,", "2012)", "Epochs", "10", "30", "Batch", "Size", "64", "32", "Augmentations", "w/", "PASTA", "Color", "Jitter,", "Random", "Resized", "Crop", "RandAugment", "(Cubuk", "et", "al.,", "2020)", "Random", "Horizontal", "Flip", "Model", "Selection", "Criteria", "Best", "In-domain", "Val", "Performance", "Best", "In-domain", "Val", "Performance", "Config", "Value", "(for", "Table.", "2", "main", "paper)", "Value", "(for", "Table.", "3", "main", "paper)", "(c)", "Object", "Recognition", "Training", "Config", "Value", "Source", "Data", "Sim10K", "Target", "Data", "Cityscapes", "(Val", "Split)", "Segmentation", "Architecture", "Faster-RCNN", "(Ren", "et", "al.,", "2015)", "CNN", "Backbones", "ResNet-50", "(R-50)", "(He", "et", "al.,", "2016)", "ResNet-101", "(R-101)", "(He", "et", "al.,", "2016)", "Training", "Resolution", "Original", "Sim10K", "resolution", "for", "R-50,", "R-101", "Optimizer", "SGD", "(momentum", "=", "0.9)", "Initial", "Learning", "Rate", "10−2", "Learning", "Rate", "Schedule", "Step-LR,", "Warmup", "500", "iterations,", "Warmup", "Ratio", "0.001", "Steps", "6000", "&", "8000", "iterations", "Initialization", "Imagenet", "Pre-trained", "Weights", "(Krizhevsky", "et", "al.,", "2012)", "Iterations", "10000", "Batch", "Size", "32", "Augmentations", "w/", "PASTA", "Resize,", "Random", "Flip", "Model", "Selection", "Criteria", "Checkpoint", "at", "10k", "iterations", "(b)", "Object", "Detection", "Training", "Training", "Resolution", "Original", "GTAV", "resolution", "for", "R-50", "1024×", "560", "for", "R-101", "&", "Mn-v2", "Optimizer", "SGD", "Initial", "Learning", "Rate", "10−2", "Learning", "Rate", "Schedule", "Polynomial", "LR", "(exp", "0.9)", "Initialization", "Imagenet", "Pre-trained", "Weights", "(Krizhevsky", "et", "al.,", "2012)", "Iterations", "40000", "Batch", "Size", "16", "Augmentations", "w/", "PASTA", "Gaussian", "Blur,", "Color", "Jitter,", "Random", "Crop", "Random", "Horizontal", "Flip,", "Random", "Scaling", "Model", "Selection", "Criteria", "In-domain", "(Source)", "Validation", "performance", "ResNet-101", "(R-101)", "(He", "et", "al.,", "2016)", "MobileNetv2", "(Mn-v2)", "(Sandler", "et", "al.,", "2018)", "Segmentation", "Architecture", "DeepLabv3+", "(Chen", "et", "al.,", "2018a)", "CNN", "Backbones", "ResNet-50", "(R-50)", "(He", "et", "al.,", "2016)", "BDD-100K", "(Val", "Split)", "Mapillary", "(Val", "Split)", "Config", "Value", "Source", "Data", "GTAV", "(Train", "Split)", "Target", "Data", "Cityscapes", "(Val", "Split)", "(a)", "Semantic", "Segmentation", "Training"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 499.2,
+    "y1": 139.68,
+    "y2": 711.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5FqeE2SojJi-Table4-1.png"
+}]

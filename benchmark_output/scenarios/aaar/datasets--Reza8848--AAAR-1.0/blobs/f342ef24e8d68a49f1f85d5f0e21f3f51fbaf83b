@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 4: Correlation between aggregated proxy PA and generalization bound.",
+  "captionBoundary": {
+    "x1": 147.98699951171875,
+    "x2": 464.01251220703125,
+    "y1": 610.3045654296875,
+    "y2": 616.3070068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 224.64,
+    "x2": 384.0,
+    "y1": 477.59999999999997,
+    "y2": 611.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EQiRSnqUYOh-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Relative Frobenius norm change in µ and σ respectively during training with MSE loss which is derived from the classic PAC-Bayesian bound, where m is the width of the network.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 503.9955139160156,
+    "y1": 265.6045227050781,
+    "y2": 282.56500244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 90.72,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EQiRSnqUYOh-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Comparison between the gradient of mean µ and standard deviations σ.",
+  "captionBoundary": {
+    "x1": 142.77999877929688,
+    "x2": 469.22064208984375,
+    "y1": 453.4365234375,
+    "y2": 459.4389953613281
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 224.64,
+    "x2": 384.0,
+    "y1": 300.96,
+    "y2": 454.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EQiRSnqUYOh-Figure3-1.png"
+}, {
+  "caption": "Figure 1: The first row shows correlation results of FCN structure on the MNIST dataset. Kendall-tau correlations between generalization bound with respect to the proportion of prior data, coefficient of KL penalty, and ρ0 are 0.89, 0.89, and 0.93 at 1% level of significance. Similar results are found in the CNN structure with the CIFAR10 dataset where Kendall-tau correlations are 0.89, 0.83, and 0.57, as shown in the second row.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2430114746094,
+    "y1": 306.0525207519531,
+    "y2": 355.8900146484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 87.84,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EQiRSnqUYOh-Figure1-1.png"
+}, {
+  "caption": "Table 1: The performance i.e., risk certificates (cross-entropy ℓx-e and accuracy ℓ01) and computation time against three hyperparameters searching methods (exhaustive search, Bayesian search, and PA, the training free method). For the lowest risk certificate and computational time are highlighted in boldface, and second best are highlighted by underlining.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2452697753906,
+    "y1": 609.5415649414062,
+    "y2": 648.4199829101562
+  },
+  "figType": "Table",
+  "imageText": ["CNN", ".0142", ".1970", "0.03", "19.44", "PA", "FCN", ".178", "0.5490", "0.03", "19.44", "CNN", ".0142", ".1969", "45.00", "1,620.00", "FCN", ".174", "0.5377", "1.09", "39.24", "Bayesian", "Search", "CNN", ".0142", ".1969", "45.00", "29,160.00", "FCN", ".174", "0.5377", "1.09", "706.32", "Exhaustive", "Search", "CIFAR10", "CNN", ".0085", ".0160", "0.03", "19.44", "PA", "FCN", ".0010", ".0264", "0.03", "19.44", "CNN", ".0059", ".0110", "16.92", "609.12", "FCN", ".0010", ".0212", "0.50", "18.00", "Bayesian", "Search", "CNN", ".0059", ".0110", "16.92", "10964.16", "FCN", ".0010", ".0212", "0.50", "324.00", "Exhaustive", "Search", "MNIST", "Data", "Method", "Network", "ℓx-e", "ℓ01", "Single", "Total", "Setup", "Risk", "cert.", "Computation", "time", "(hours)"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 372.0,
+    "y2": 598.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EQiRSnqUYOh-Table1-1.png"
+}]

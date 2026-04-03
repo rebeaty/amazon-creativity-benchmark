@@ -1,0 +1,301 @@
+[{
+  "caption": "Table 2: (top) Best SimCLR ImageNet1k trial top 1 linear probing performance training for 300 epochs. σReparam + LN yields the highest performing run, with Frozen Patcher performing competitively. (bottom) Configuration of the variants used in our stability analysis. The MoCo v3 weight initialization and patch initialization scheme are described in Chen et al. (2021). For full hyperparameters, see Table 6 of Appendix C.1.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.5733642578125,
+    "y1": 83.53055572509766,
+    "y2": 119.4210205078125
+  },
+  "figType": "Table",
+  "imageText": ["Weight", "Init", "MoCo", "v3", "MoCo", "v3", "trunc", "norm(.02)", "trunc", "norm(.02)", "Patcher", "Init", "MoCo", "v3", "MoCo", "v3", "trunc", "norm(.02)", "trunc", "norm(.02)", "Frozen", "Patcher", "No", "Yes", "No", "No", "σReparam", "No", "No", "Yes", "Yes", "Layer", "Norm", "Yes", "Yes", "No", "Yes", "Top", "1", "@", "300", "(ours)", "72.4", "74.4", "73.7", "74.5", "Baseline", "Frozen", "Patcher", "σReparam", "σReparam", "+", "LN"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 493.44,
+    "y1": 132.0,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table2-1.png"
+}, {
+  "caption": "Figure 3: Ten trials of SimCLR for each method on ImageNet1k with 40 epochs of learning rate warmup. (a) Linear probe performance for the best (solid line) and worst (dashed line) trials of each method, against relevant metrics from the first attention layer (top to bottom): attention entropy, the spectral norm of the attention weights, and the ℓ∞–gradient norm of the attention weights. We see that the Frozen Patcher method functions as intended, regulating its gradient norm, and protecting it from the large gradient norms inducing instability in Baseline. We also observe a second form of instability during training: the growing spectral norm leads to a poorly behaved attention mechanism, entropy collapse, and a drop in performance as described in Section 3. This affects Baseline, as well as Frozen Patcher, as neither method gives specific protection against this second type of instability (solid and dashed red, and dashed green lines). Finally, we see that σReparam with and without layer normalization regulate both the gradient norms, as well as the spectral norms, giving defense against both types of instability. (b) Linear probe performance of every trial. We see that σReparam is the most stable method. σReparam + LN is also quite stable. In the case where it experiences instabilities, we see that it is able to recover much quicker than Baseline and Frozen Patcher. This is due to the regularization of the spectral norm which 1) prevents any arising instability pushing the model too far away from the current solution, and 2) keeps the attention mechanism useful, such that gradients are available for any required correction.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.5740661621094,
+    "y1": 486.4475402832031,
+    "y2": 631.927001953125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Stability", "over", "10", "trials", "per", "method.", ")", "1", "(%", "To", "p", "Te", "st", "Training", "Epochs", "60", "σReparam", "40", "20", "0", "20", "40", "60", "80", "100", "0", "60", "σReparam", "+", "LN", "40", "20", "0", "60", "Frozen", "Patcher", "40", "20", "0", "60", "Baseline", "40", "20", "0", "(a)", "Statistics", "of", "best", "and", "worst", "trials", "per", "method.", "Training", "Epochs", "–n", "or", "m", "Baseline", "Frozen", "Patcher", "σReparam", "+", "LN", "σReparam", "gr", "ad", "`", "∞", ")", "W", "α", "(1", "0.04", "0.03", "0.02", "0.01", "0", "20", "40", "60", "80", "100", "0.00", "or", "m", "σ", "–n", ")", "W", "α", "(1", "102", "101", "100", "at", "s)", "y", "(n", "tr", "op", ")", "–", "en", "α", "(1", "5", "4", "3", "2", "1", "0", ")", "1", "(%", "To", "p", "Te", "st", "60", "40", "20", "0"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 503.03999999999996,
+    "y1": 220.79999999999998,
+    "y2": 473.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Figure3-1.png"
+}, {
+  "caption": "Figure 6: Eight trials of SimCLR for each method on ImageNet1k with 10 epochs of learning rate warmup. (a) Linear probe performance for the best (solid line) and worst (dshed line) trials of each method, against relevant metrics from the first attention layer (top to bottom): attention entropy, the spectral norm of the attention weights, and the ℓ∞–gradient norm of the attention weights. Our observations are consistent with those of the longer warmup of 40 epochs investigated in Figure 3, except that here, Frozen Patcher is less able to tame early layer gradient norms than it was in the longer warmup (dashed green line). (b) Linear probe performance of every trial. Observations are again consistent with the longer warmup; σReparam with and without Layer Norm are the most stable methods. σReparam (0.01) refers to a σReparam with an initialization scheme of trunc normal(.01) instead of trunc normal(.02), with the former showing some signs of instability. Understanding the source of this instability will be the subject of future work. σReparam + LN uses the default trunc normal(.02).",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.5664367675781,
+    "y1": 347.5455322265625,
+    "y2": 453.17498779296875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Stability", "over", "8", "trials", "per", "method.", "(%", ")", "p", "1", "st", "To", "60", "σReparam", "(0.01)", "Training", "Epochs", "Te", "40", "20", "0", "20", "40", "60", "80", "100", "0", "60", "σReparam", "+", "LN", "40", "20", "0", "60", "Frozen", "Patcher", "40", "20", "0", "60", "Baseline", "40", "20", "0", "(a)", "Statistics", "of", "best", "and", "worst", "trials", "per", "method.", "Training", "Epochs", "m", "–n", "or", "gr", "ad", "`", "∞", ")", "W", "α", "(1", "10−1", "10−2", "10−3", "10−4", "0", "20", "40", "60", "80", "100", "or", "m", "σ", "–n", ")", "W", "α", "(1", "101", "100", "at", "s)", "y", "(n", "tr", "op", ")", "–", "en", "α", "(1", "5", "4", "3", "2", "1", "0", "1", "(%", ")", "Baseline", "Frozen", "Patcher", "σReparam", "+", "LN", "σReparam", "(0.01)", "To", "p", "Te", "st", "60", "40", "20", "0"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 334.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Linear probe performance on ImageNet1k at the end of training over 8 trials for each method. Trials are ordered by decreasing performance, with run rank 1 (8) corresponding to the best (worst) trial. Frozen Patcher produce the best individual, with all other methods marginally lower. σReparam + LN and σReparam are the methods most reliably giving good performance, with Baseline and Frozen Patcher each susceptible to at least one instability type.",
+  "captionBoundary": {
+    "x1": 316.9209899902344,
+    "x2": 505.5682678222656,
+    "y1": 471.42852783203125,
+    "y2": 557.1320190429688
+  },
+  "figType": "Figure",
+  "imageText": ["Baseline", "Frozen", "Patcher", "σReparam", "+", "LN", "σReparam", "(0.01)", ")", "1", "(%", "To", "p", "Te", "st", "70", "60", "50", "40", "30", "20", "Run", "rank", "1", "2", "3", "4", "5", "6", "7", "8"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 304.32,
+    "y1": 471.84,
+    "y2": 571.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Figure7-1.png"
+}, {
+  "caption": "Figure 1: The training loss curves of ViT-B on ImageNet, together with the attention entropy for three layers. From top left to bottom right: baseline with default hyper parameters from Touvron et al. (2021); 0.2× learning rate; 2× warmup epochs; 2× learning rate. We see a close correlation between the dip of the attention entropy and the convergence and stability of the training loss.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7393798828125,
+    "y1": 364.03350830078125,
+    "y2": 402.9129638671875
+  },
+  "figType": "Figure",
+  "imageText": ["Training", "loss", "Attn", "entropy", "layer", "1", "Attn", "entropy", "layer", "6", "Attn", "entropy", "layer", "11", "2×", "Learning", "Rate", "ro", "py", "E", "nt", "5", "4", "3", "2", "1", "0", "s", "L", "os", "7.0", "6.5", "6.0", "5.5", "5.0", "4.5", "4.0", "3.5", "Training", "Epochs", "0", "10", "20", "30", "40", "50", "Training", "loss", "Attn", "entropy", "layer", "1", "Attn", "entropy", "layer", "6", "Attn", "entropy", "layer", "11", "2×", "Learning", "Rate", "Warmup", "ro", "py", "E", "nt", "5", "4", "3", "2", "1", "0", "s", "L", "os", "7.0", "6.5", "6.0", "5.5", "5.0", "4.5", "4.0", "3.5", "Training", "Epochs", "0", "10", "20", "30", "40", "50", "60", "70", "80", "Training", "loss", "Attn", "entropy", "layer", "1", "Attn", "entropy", "layer", "6", "Attn", "entropy", "layer", "11", "0.2×", "Learning", "Rate", "ro", "py", "E", "nt", "5", "4", "3", "2", "1", "0", "s", "L", "os", "7.0", "6.5", "6.0", "5.5", "5.0", "4.5", "4.0", "3.5", "Training", "Epochs", "0", "10", "20", "30", "40", "50", "60", "70", "80", "Training", "loss", "Attn", "entropy", "layer", "1", "Attn", "entropy", "layer", "6", "Attn", "entropy", "layer", "11", "Baseline", "ro", "py", "E", "nt", "5", "4", "3", "2", "1", "0", "s", "L", "os", "7.0", "6.5", "6.0", "5.5", "5.0", "4.5", "4.0", "3.5", "Training", "Epochs", "0", "10", "20", "30", "40", "50", "60", "70", "80"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 131.51999999999998,
+    "x2": 480.0,
+    "y1": 83.03999999999999,
+    "y2": 349.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Figure1-1.png"
+}, {
+  "caption": "Table 6: Default hyperparameters of the variants of SimCLR used in our stability analysis. The MoCo v3 weight initialization and patch initialization scheme are described in Chen et al. (2021). SinCos refers to stacked 2D SinCos positional encodings Vaswani et al. (2017). The table is divided vertically into hyperparameters that differ across methods (top) and hyperparameters shared across methods (bottom).",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.00018310546875,
+    "y1": 83.53055572509766,
+    "y2": 119.4210205078125
+  },
+  "figType": "Table",
+  "imageText": ["Architecture", "ViT-B/16", "ViT-B/16", "ViT-B/16", "ViT-B/16", "Batch", "Size", "4096", "4096", "4096", "4096", "ColorJitter", "Strength", "0.5", "0.5", "0.5", "0.5", "Learning", "Rate", "2×", "10−4", "2×", "10−4", "2×", "10−4", "2×", "10−4", "Learning", "Rate", "Sched", "Cosine", "Cosine", "Cosine", "Cosine", "Learning", "Rate", "Warmup", "40", "Epochs", "40", "Epochs", "40", "Epochs", "40", "Epochs", "Optimizer", "AdamW", "AdamW", "AdamW", "AdamW", "Positional", "Encoding", "SinCos", "SinCos", "SinCos", "SinCos", "Weight", "Decay", "0.1", "0.1", "0.1", "0.1", "σReparam", "No", "No", "Yes", "Yes", "Frozen", "Patcher", "No", "Yes", "No", "No", "Layer", "Norm", "Yes", "Yes", "No", "Yes", "Patcher", "Init", "MoCo", "v3", "MoCo", "v3", "trunc", "norm(.02)", "trunc", "norm(.02)", "Weight", "Init", "MoCo", "v3", "MoCo", "v3", "trunc", "norm(.02)", "trunc", "norm(.02)", "Baseline", "Frozen", "Patcher", "σReparam", "σReparam", "+", "LN"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 132.0,
+    "y2": 299.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table6-1.png"
+}, {
+  "caption": "Figure 5: Robustness of σReparam with respect to different hyperparameters: learning rate (left), warmup (middle) and initialization std value (right).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2427673339844,
+    "y1": 526.6815185546875,
+    "y2": 543.6430053710938
+  },
+  "figType": "Figure",
+  "imageText": ["(kq,", "v)", "+", "post-LN", "(kq,", "v)", "(kqv)", "+", "post-LN", "(kqv)", "n", "iza", "tio", "iti", "al", "of", "in", "St", "d", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "18.0", "18.5", "19.0", "19.5", "20.0", "20.5", "21.0", "21.5", "22.0", "dev-other", "WER", "m", "up", "W", "ar", "60000", "50000", "40000", "30000", "20000", "10000", "18.0", "18.5", "19.0", "19.5", "20.0", "20.5", "21.0", "21.5", "22.0", "dev-other", "WER", "e", "R", "at", "ni", "ng", "Le", "ar", "1.3", "1.2", "1.1", "1.0", "0.9", "0.8", "0.7", "18.0", "18.5", "19.0", "19.5", "20.0", "20.5", "21.0", "21.5", "dev-other", "WER"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 428.64,
+    "y2": 512.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Figure5-1.png"
+}, {
+  "caption": "Table 3: Comparison between different normalizations and our re-parametrization for speech domain: training loss and word error rate are reported for the best models.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.3815002441406,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["σReparam", "37.5", "6.4", "20.5", "6.8", "21.0", "+", "post-LN", "34.9", "6.1", "17.8", "6.4", "18.0", "post-LN", "37.7", "5.9", "17.7", "6.2", "17.8", "pre-LN", "(same)", "35.3", "6.9", "21.3", "7.1", "21.6", "pre-LN", "(optimized)", "37.2", "6.2", "19.1", "6.3", "19.3", "Train", "Loss", "dev-clean", "WER", "dev-other", "WER", "test-clean", "WER", "test-other", "WER"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 118.56,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table3-1.png"
+}, {
+  "caption": "Table 1: Supervised Image Classification on ImageNet1k. The B/L refer to ViT-B/16 and ViT-L/16 variants respectively.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9957580566406,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Top-1", "81.8%", "82.2%", "82.1%", "/", "81.5%", "81.88%", "/", "82.41%", "EMA", "Top-1", "–", "–", "82.3%", "/", "82.6%", "82.37%", "/", "82.48%", "Training", "Epochs", "300", "300", "300", "250", "/", "300", "Layer", "Norm", "Yes", "No", "Yes", "No", "SGD", "No", "No", "No", "Yes", "(LARS)", "Cosine", "Schedule", "Yes", "Yes", "Yes", "No", "/", "Yes", "LR", "Warmup", "Yes", "Yes", "Yes", "No", "Weight", "Decay", "Yes", "Yes", "Yes", "No", "DeiT", "(B)", "σReparam", "(B)", "MAE", "(B/L)", "σReparam", "(B/L)"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 467.03999999999996,
+    "y1": 113.28,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table1-1.png"
+}, {
+  "caption": "Table 9: Training hyper-parameter comparison for supervised ViT-B/16.",
+  "captionBoundary": {
+    "x1": 162.02099609375,
+    "x2": 449.6710510253906,
+    "y1": 186.06057739257812,
+    "y2": 192.06304931640625
+  },
+  "figType": "Table",
+  "imageText": ["Weight", "Init", "trunc", "normal(.02)", "trunc", "normal(.02)", "trunc", "normal(.02)", "Patcher", "Init", "trunc", "normal(.02)", "trunc", "normal(.02)", "trunc", "normal(.02)", "σReparam", "No", "No", "Yes", "Layer", "Norm", "Yes", "Yes", "No", "Optimizer", "AdamW(β1=0.9,", "β2=0.95)", "AdamW(β1=0.9,", "β2=0.95)", "LARS(mom=0.9)", "Base", "LR", "5×", "10−4", "1×", "10−4", "0.1", "LR", "schedule", "cosine", "cosine", "step(210,", "0.1)", "Batch", "size", "1024", "4096", "4096", "Weight", "decay", "0.05", "0.3", "0.0", "Warmup", "epochs", "5", "20", "0", "Training", "epochs", "300", "300", "250", "Label", "smoothing", "0.1", "0.1", "0.1", "Stoch.", "Depth", "0.1", "0.1", "0.1", "Repeated", "Aug.", "2", "2", "2", "RandAug", "9/0.5", "9/0.5", "9/0.5", "Mixup", "prob.", "0.8", "0.8", "0.8", "Cutmix", "prob.", "1.0", "1.0", "1.0", "Erasing", "prob.", "0.25", "0.25", "0.25", "Top-1", "81.8%", "82.1%", "81.88%", "EMA", "Top-1", "-", "82.3%", "82.37%", "DeiT", "MAE", "σReparam"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 204.95999999999998,
+    "y2": 431.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table9-1.png"
+}, {
+  "caption": "Table 10: Training hyperparameter comparison for supervised ViT-L/16.",
+  "captionBoundary": {
+    "x1": 161.36900329589844,
+    "x2": 450.32415771484375,
+    "y1": 456.89752197265625,
+    "y2": 462.8999938964844
+  },
+  "figType": "Table",
+  "imageText": ["Weight", "Init", "trunc", "normal(.02)", "trunc", "normal(.01)", "Patcher", "Init", "trunc", "normal(.02)", "trunc", "normal(.0025)", "σReparam", "No", "Yes", "Layer", "Norm", "Yes", "No", "Optimizer", "AdamW(β1=0.9,", "β2=0.95)", "LARS(mom=0.9)", "Base", "LR", "1×", "10−4", "0.15", "LR", "schedule", "cosine", "cosine", "Batch", "size", "4096", "4096", "Weight", "decay", "0.3", "0.0", "Warmup", "epochs", "20", "0", "Training", "epochs", "300", "300", "Label", "smoothing", "0.1", "0.1", "Stoch.", "Depth", "0.2", "0.2", "Repeated", "Aug.", "2", "2", "RandAug", "9/0.5", "9/0.5", "Mixup", "prob.", "0.8", "0.8", "Cutmix", "prob.", "1.0", "1.0", "Erasing", "prob.", "0.25", "0.25", "Top-1", "81.5%", "82.41%", "EMA", "Top-1", "82.6%", "82.48%", "MAE", "σReparam"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 158.88,
+    "x2": 453.12,
+    "y1": 475.68,
+    "y2": 702.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table10-1.png"
+}, {
+  "caption": "Table 4: Comparison between different normalizations and our re-parametrization for speech domain when no warmup and LARS optimizer are used: training loss and word error rate are reported for the best models. σReparam performs re-parametrization for joint matrix for key, queries and values in self-attention.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0037536621094,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["σReparam", "51.1", "7.2", "22.8", "7.5", "23.2", "+", "post-LN", "34.2", "5.8", "18.1", "6.2", "18.7", "post-LN", "64.5", "8.1", "25.0", "8.6", "25.6", "pre-LN", "LARS", "29.4", "5.9", "18.9", "6.4", "19.2", "Train", "Loss", "dev-clean", "WER", "dev-other", "WER", "test-clean", "WER", "test-other", "WER"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 140.16,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table4-1.png"
+}, {
+  "caption": "Table 5: WikiText-103 language modeling results in perplexity.",
+  "captionBoundary": {
+    "x1": 179.67999267578125,
+    "x2": 432.0126037597656,
+    "y1": 350.5355224609375,
+    "y2": 356.5379943847656
+  },
+  "figType": "Table",
+  "imageText": ["Baseline", "Transformer", "Baevski", "&", "Auli", "(2019)", "15.4", "18.1", "18.7", "σReparam", "w/", "weight", "decay", "16.5", "17.9", "18.6", "σReparam", "w/o", "weight", "decay", "12.9", "18.5", "19.3", "Model", "PPL↓", "train", "dev.", "test"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 369.59999999999997,
+    "y2": 446.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table5-1.png"
+}, {
+  "caption": "Table 7: Training hyperparameter comparison for speech domain, Table 3.",
+  "captionBoundary": {
+    "x1": 157.83200073242188,
+    "x2": 453.8607177734375,
+    "y1": 215.47549438476562,
+    "y2": 221.47796630859375
+  },
+  "figType": "Table",
+  "imageText": ["Weight", "Init", "uniform(.036)", "uniform(.036)", "trunc", "normal(.1)", "trunc", "normal(.1)", "σReparam", "No", "No", "Yes", "Yes", "Layer", "Norm", "Yes", "Yes", "No", "Yes", "Base", "LR", "0.03", "0.5", "1", "1", "Optimizer", "Adagrad", "LR", "schedule", "step(330k,", "0.5)", "Batch", "size", "240s", "x", "8", "Weight", "decay", "none", "Warmup", "steps", "64k", "Training", "steps", "500k", "Dropout", "0.3", "Stoch.", "Depth", "0.3", "SpecAugment", "F", "=", "30,", "T", "=", "50,", "p", "=", "0.1,", "fmask", "=", "2,", "tmask", "=", "10", "Grad.", "clip", "1", "dev-clean", "5.9", "6.2", "6.4", "6.1", "dev-other", "17.7", "19.1", "20.5", "17.8", "post-LN", "pre-LN", "σReparam", "σReparam", "+", "post-LN"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 234.23999999999998,
+    "y2": 401.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table7-1.png"
+}, {
+  "caption": "Table 8: Training hyperparameter comparison for speech domain trained with LARS, Table 4.",
+  "captionBoundary": {
+    "x1": 118.67400360107422,
+    "x2": 493.0187072753906,
+    "y1": 426.446533203125,
+    "y2": 432.4490051269531
+  },
+  "figType": "Table",
+  "imageText": ["Weight", "Init", "uniform(.036)", "uniform(.036)", "trunc", "normal(.1)", "trunc", "normal(.1)", "σReparam", "No", "No", "Yes", "Yes", "Layer", "Norm", "Yes", "Yes", "No", "Yes", "Base", "LR", "0.1", "0.5", "1", "0.3", "Optimizer", "LARS", "Momentum", "0.9", "LR", "schedule", "step(300k,", "0.5)", "Batch", "size", "240s", "x", "8", "Weight", "decay", "none", "Warmup", "steps", "0k", "Training", "steps", "500k", "Dropout", "0.3", "Stoch.", "Depth", "0.3", "SpecAugment", "F", "=", "30,", "T", "=", "50,", "p", "=", "0.1,", "fmask", "=", "2,", "tmask", "=", "10", "Grad.", "clip", "1", "dev-clean", "8.1", "5.9", "7.2", "5.8", "dev-other", "25", "18.9", "22.8", "18.1", "post-LN", "pre-LN", "σReparam", "σReparam", "+", "post-LN"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 445.44,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwqxO8URJzn-Table8-1.png"
+}]

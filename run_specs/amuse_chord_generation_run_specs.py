@@ -25,15 +25,14 @@ def get_amuse_chord_generation_spec() -> RunSpec:
         output_prefix="",
         output_suffix="\n",
         max_train_instances=0,  # ASSUMPTION: zero-shot, no TRAIN_SPLIT seen
-        num_outputs=30,
+        num_outputs=8,
         max_tokens=512,
         temperature=0.7,
         stop_sequences=[],
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={}),
-        MetricSpec(class_name="metrics.jsd_metric.JSDMetric", args={}),
+        MetricSpec(class_name="metrics.jsd_metric.JSDMetric", args={"n": 1}),
     ]
 
     return RunSpec(

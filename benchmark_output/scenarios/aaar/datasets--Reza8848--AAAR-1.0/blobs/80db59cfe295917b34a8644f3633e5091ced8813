@@ -1,0 +1,221 @@
+[{
+  "caption": "Table 4: Kendall tau system-level correlation of variants of SMART using different matching functions. For each block, correlations of metrics not significantly outperformed by any other metric (using William’s Test; Graham & Baldwin, 2014) for that specific dimension are marked with an asterisk (*). Those that are not significantly outperformed by all metrics are boldfaced. We also show the average scores in the µ column, where the top three values for each block are underlined.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00421142578125,
+    "y1": 388.59051513671875,
+    "y2": 438.4289855957031
+  },
+  "figType": "Table",
+  "imageText": ["BERTScore", "S1", ".317", ".683", ".561", ".517", ".519", "S2", "-.017", ".383", ".276", ".183", ".207", "SL", ".383", ".683", ".527", ".583", ".544", "ANLI", "S1", ".117", ".550", ".444", ".350", ".365", "S2", ".133", ".533", ".360", ".333", ".340", "SL", ".117", ".483", ".343", ".350", "323", "BLEURT", "S1", ".433", ".667", ".644∗", ".667", ".603", "S2", ".417", ".750∗", ".628∗", ".528", ".594", "SL", ".567∗", ".567", ".611", ".733∗", ".619"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 280.8,
+    "y2": 377.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table4-1.png"
+}, {
+  "caption": "Figure 3: Length Analysis. Relative increase in Kendall tau system-level correlation with respect to ROUGE-X of four evaluation metrics for each length bucket (leftmost bucket has the shortest lengths).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9999084472656,
+    "y1": 571.9345703125,
+    "y2": 599.85498046875
+  },
+  "figType": "Figure",
+  "imageText": ["Informativeness", "SX-BLEURT", "SX-CHRF", "BARTScore", "SMS", "ROUGE-X", "<40", "<43", "<47", "<65", "Number", "of", "Tokens", "in", "Reference", "Fluency", "<40", "<43", "<47", "<65", "Number", "of", "Tokens", "in", "Reference", "Factuality", "<40", "<43", "<47", "<65", "Number", "of", "Tokens", "in", "Reference", "Coherence", "n", "la", "tio", "or", "re", "in", "C", "ea", "se", "In", "cr", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "<40", "<43", "<47", "<65", "Number", "of", "Tokens", "in", "Reference"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 502.56,
+    "y1": 461.28,
+    "y2": 557.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Kendall tau system-level correlations of ROUGE and SMART averaged over four dimensions of summary quality as the number of tokens increases. Summaries are from CNN/DM (Hermann et al., 2015) and human annotations are from SummEval (Fabbri et al., 2021). Each bucket in the x-axis contains equal number of data points. More details in Section A.2.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.6539001464844,
+    "y1": 217.93350219726562,
+    "y2": 256.81201171875
+  },
+  "figType": "Figure",
+  "imageText": ["SMART", "ROUGE", "BartScore", "tio", "n", "re", "la", "C", "or", "ev", "el", "em", "-L", "Sy", "st", "0.6", "0.4", "0.2", "0.0", "<40", "<43", "<47", "<65", "Number", "of", "Tokens", "in", "Reference"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 209.28,
+    "x2": 403.2,
+    "y1": 84.96,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Figure1-1.png"
+}, {
+  "caption": "Table 1: Kendall tau system-level correlation of different metrics on the SummEval dataset. Correlations of metrics not significantly outperformed by any other metric (using William’s Test; Graham & Baldwin, 2014) for that specific dimension are boldfaced. We also show the average scores in the µ column, where the best values for each block are underlined. Note that BARTScore+CNN uses BART that is fine-tuned on CNN/DM, the same data source as SummEval, thus direct comparison with the other metrics is not possible.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.6553649902344,
+    "y1": 370.3805236816406,
+    "y2": 431.177001953125
+  },
+  "figType": "Table",
+  "imageText": ["PRISM", ".233", ".600", ".360", ".367", ".390", "Q2", ".250", ".750", ".577", ".450", ".507", "ANLI", ".250", ".583", ".544", ".517", ".473", "BARTScore", ".350", ".617", ".494", ".450", ".478", "BARTScore+CNN†", ".550", ".317", ".594", ".583", ".511", "S1-BLEURT", ".433", ".667", ".644", ".667", ".603", "S2-BLEURT", ".417", ".750", ".628", ".583", ".594", "SL-BLEURT", ".567", ".567", ".611", ".733", ".619"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 460.32,
+    "y1": 270.71999999999997,
+    "y2": 359.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table1-1.png"
+}, {
+  "caption": "Table 7: ROC AUC results for the different metrics on the development set of the TRUE benchmark. The highest average score is boldfaced.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7441711425781,
+    "y1": 182.10855102539062,
+    "y2": 199.07000732421875
+  },
+  "figType": "Table",
+  "imageText": ["Average", "84.5", "83.7", "84.1", "73.1", "73.5", "73.0", "70.8", "71.3", "70.8", "dataset", "82.3", "82.5", "82.2", "69.6", "70.5", "69.6", "60.7", "62.0", "60.7", "DialFact", "90.4", "90.2", "90.4", "65.8", "69.9", "66.7", "65.8", "68.6", "65.7", "PAWS", "98.3", "98.3", "98.3", "66.4", "66.3", "66.4", "66.3", "66.2", "66.3", "FRANK", "90.5", "89.9", "90.4", "83.8", "84.8", "82.9", "83.3", "84.0", "83.2", "SummEval", "80.8", "77.4", "81.0", "75.3", "74.8", "75.8", "75.2", "75.5", "75.9", "MNBM", "73.0", "73.0", "73.0", "67.9", "68.0", "67.9", "68.0", "68.0", "68.0", "QAGS-C", "83.0", "79.7", "79.1", "80.9", "79.2", "79.4", "75.5", "75.2", "74.9", "QAGS-X", "77.2", "77.2", "77.2", "61.6", "61.6", "61.6", "59.0", "59.0", "59.0", "BEGIN", "85.0", "84.8", "85.0", "86.7", "86.8", "86.7", "83.6", "83.5", "83.6", "Q2", "Task", "S1-ANLI", "S2-ANLI", "SL-ANLI", "S1-BLEURT", "S2-BLEURT", "SL-BLEURT", "S1-CHRF", "S2-CHRF", "SL-CHRF"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table7-1.png"
+}, {
+  "caption": "Table 2: Ablation study. Kendall tau system-level correlation of SX-BLEURT when one component is set to a different configuration.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0019226074219,
+    "y1": 284.0445251464844,
+    "y2": 301.0060119628906
+  },
+  "figType": "Table",
+  "imageText": ["ref-only", "(CNN/DM)", "-.100", "-.300", "-.059", "-.033", "-.123", "ref-only", "(best", "system)", ".367", ".100", ".410", ".500", ".344", "max", "(CNN/DM)", ".500", ".767", ".711", ".667", ".661", "max", "(best", "system)", ".667", ".467", ".745", ".867", ".686", "using", "a", "different", "reference", "summary", "ref-only", "-.100", "-.300", "-.092", "-.033", "-.131", "src-only", ".267", ".700", ".460", ".433", ".465", "average", ".400", ".750", ".577", ".600", ".582", "minimum", ".267", ".700", ".427", ".467", ".465", "using", "a", "different", "source/reference", "aggregation", "precision", ".083", ".017", ".259", ".350", ".177", "recall", ".283", ".683", ".410", ".383", ".440", "using", "precision", "or", "recall", "SX-BLEURT", ".450", ".750", ".661", ".650", ".628", "Component", "Coherence", "Factuality", "Fluency", "Informativeness", "µ"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 273.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table2-1.png"
+}, {
+  "caption": "Table 6: Scores of three systems on two different datasets based on five different reference-free metrics. Human rankings are also shown for comparison. Values that are colored red are those that do not correspond to the human rankings.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035705566406,
+    "y1": 209.26254272460938,
+    "y2": 237.1829833984375
+  },
+  "figType": "Table",
+  "imageText": ["GPT3-D2", "1st", "24.357", "17.974", "20.215", "42.946", "48.911", "BRIO", "2nd", "22.128", "16.552", "17.299", "42.950", "43.436", "T0", "3rd", "15.182", "10.445", "12.492", "40.641", "41.486"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 161.76,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table6-1.png"
+}, {
+  "caption": "Table 3: ROC AUC results for the different metrics on the development set of the TRUE benchmark. Results can be from ensembles of multiple metrics, and are grouped by the number of metrics used in the ensemble. The highest average score for each group is boldfaced.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7441711425781,
+    "y1": 230.52151489257812,
+    "y2": 258.4420166015625
+  },
+  "figType": "Table",
+  "imageText": ["Average", "86.0", "85.8", "84.7", "84.2", "81.5", "81.4", "80.7", "dataset", "82.8", "81.5", "83.0", "82.4", "72.7", "77.4", "80.9", "DialFact", "90.4", "90.3", "89.4", "90.4", "77.7", "84.1", "86.1", "PAWS", "91.2", "95.7", "90.5", "98.3", "86.4", "88.2", "89.7", "FRANK", "91.2", "91.1", "89.6", "89.4", "89.4", "89.1", "87.8", "SummEval", "82.9", "82.2", "80.7", "80.6", "80.5", "81.7", "78.8", "MNBM", "76.6", "77.0", "75.6", "73.0", "77.9", "71.3", "68.7", "QAGS-C", "87.7", "85.3", "86.0", "81.7", "82.1", "80.9", "83.5", "QAGS-X", "84.8", "84.0", "81.8", "77.2", "83.8", "78.1", "70.9", "BEGIN", "86.2", "84.9", "85.7", "85.0", "82.6", "82.0", "79.7", "Q2", "3-Ensemble", "2-Ensemble", "Single", "Metrics", "Task", "ANLI", "+", "Q2", "+", "SCZS", "ANLI", "+", "SX-ANLI", "ANLI", "+", "Q2", "SX-ANLI", "ANLI", "SCZS", "Q2"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 219.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table3-1.png"
+}, {
+  "caption": "Figure 2: Python pseudocode of the soft version of Longest Common Subsequence (Soft-LCS) given two sets of summary sentences X and Y.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99761962890625,
+    "y1": 187.62051391601562,
+    "y2": 204.58197021484375
+  },
+  "figType": "Figure",
+  "imageText": ["return", "lcs[-1][-1]", "if", "i", "!=", "0", "and", "j", "!=", "0:", "m", "=", "match(X[i],", "Y[j])", "lcs[i][j]", "=", "max(lcs[i-1][j-1]+m,", "lcs[i-1][j]+m,", "lcs[i][j-1])"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 132.96,
+    "y2": 177.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Bias Analysis. Difference in ranking between human scores and metric scores for each competing metric, averaged over all quality dimensions. A negative value means that the metric ranks the system higher. M0 to M23 in the x-axis correspond to the summarization models, where M0 to M5 are extractive and the rest are abstractive. See Fabbri et al. (2021) for detailed model descriptions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00146484375,
+    "y1": 247.49349975585938,
+    "y2": 286.37298583984375
+  },
+  "figType": "Figure",
+  "imageText": ["ROUGE-X", "SMS", "BARTScore", "SX-CHRF", "SX-BLEURT", "k", "R", "an", "um", "an", "k", "-", "H", "R", "an", "od", "el", "=", "M", "D", "iff", "Ra", "nk", "9", "6", "3", "0", "3", "6", "M0", "M1", "M2", "M5", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "M15", "M17", "M20", "M22", "M23", "9"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 93.6,
+    "y2": 222.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Figure4-1.png"
+}, {
+  "caption": "Table 5: The standard deviation of the difference in ranking between human and metric scores σ(Rank Diff) and the pairwise ranking accuracy of different metrics for different summary quality. Best scores are boldfaced.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.2496337890625,
+    "y1": 551.0625610351562,
+    "y2": 578.9819946289062
+  },
+  "figType": "Table",
+  "imageText": ["SX-BLEURT", "2.739", "82.50", "ROUGE-X", "3.841", "75.00", "SMS", "4.783", "70.00", "BARTScore", "4.500", "72.50", "SX-CHRF", "4.198", "75.00", "In", "f", "SX-BLEURT", "2.646", "83.33", "ROUGE-X", "3.969", "72.50", "SMS", "4.650", "67.50", "BARTScore", "4.031", "75.00", "SX-CHRF", "3.824", "74.17", "Fl", "u", "SX-BLEURT", "2.151", "87.50", "ROUGE-X", "4.228", "70.00", "SMS", "2.915", "80.83", "BARTScore", "2.915", "80.83", "SX-CHRF", "2.062", "86.67", "Fa", "c", "SX-BLEURT", "4.228", "72.50", "Metric", "σ(Rank", "Diff)", "↓", "Pairwise", "Acc.", "↑", "ROUGE-X", "5.012", "63.33", "SMS", "5.500", "63.33", "BARTScore", "4.717", "67.50", "SX-CHRF", "5.232", "65.00", "C", "oh"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 407.03999999999996,
+    "y1": 303.84,
+    "y2": 540.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OIe3kpwl40D-Table5-1.png"
+}]

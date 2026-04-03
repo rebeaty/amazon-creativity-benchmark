@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 4: Shape-rotation task. (a) Left and right rotating shapes. Each sequence is composed of 7 frames, each frame is 8x8 pixels. (b) Example single-trial network responses to a sequence presentation for the three types of networks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00225830078125,
+    "y1": 579.277587890625,
+    "y2": 607.197998046875
+  },
+  "figType": "Figure",
+  "imageText": ["a)", "b)", "U", "-", "right", "U", "-", "left", "T", "-", "right", "T", "-", "left", "R", "N", "-S", "O", "200", "300Po", "st", "100", "10", "20", "30", "40", "50", "60", "70", "80", "Time", "(steps)", "-IP", "Po", "st", "300", "200", "100", "10", "20", "30", "40", "50", "60", "70", "80", "N", "R", "N", "300", "200", "100", "10", "20", "30", "40", "50", "60", "70", "80"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 476.64,
+    "y1": 397.91999999999996,
+    "y2": 556.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure4-1.png"
+}, {
+  "caption": "Figure 5: (a) Activity of a network composed of 300 units and corresponding perturbation analysis during the shape-rotation task over 480 trials (38400 time steps). Random RNNs become more chaotic after IP and more ordered after self-organization. Comparison of the memory performance of the three network types (yellow markings) in decoding the shape (b) and rotation direction (c) of the object. Negative times correspond to the stimulus presentation, 0 marks the stimulus offset. After learning, SORNs exhibit a much stronger memory trace for both shape and direction compared to the other network types.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1701354980469,
+    "y1": 479.1245422363281,
+    "y2": 550.8800048828125
+  },
+  "figType": "Figure",
+  "imageText": ["0", "0", "RNN", "Post-IP", "Post-SORN", "]", "Shape", "Direction", "RNN", "Post-IP", "Post-SORN", "90", "100", "P", "er", "fo", "rm", "an", "ce", "[%", "80", "70", "60", "50", "40", "-40", "-32", "-24", "-16", "-8", "8", "16", "24", "32", "40", "Time", "from", "offset", "[%", "]", "an", "ce", "fo", "rm", "P", "er", "100", "90", "80", "70", "60", "50", "40", "-40", "-32", "-24", "-16", "-8", "8", "16", "24", "32", "40", "Time", "from", "offset", "IP", "b)", "c)", "a)", "g", "RNN", "SORN", "m", "in", "H", "am", "2", "1", "0", "0", "160", "320", "480", "Time", "(trials)", "ts", "U", "ni", "300", "200", "100"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.76,
+    "y1": 160.32,
+    "y2": 456.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure5-1.png"
+}, {
+  "caption": "Figure 7: Hamming distance for RNNs, IP-networks and SORNs in the presence of inputs of varying length. SORNs outperform the other networks and exhibit ordered dynamics (Hamming distance <1) for all values of n. Most orderly dynamics if observed for smaller n. Error bars indicate s.e.m.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6671142578125,
+    "y1": 378.759521484375,
+    "y2": 406.67999267578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 9,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 204.95999999999998,
+    "y2": 359.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Impact of self-organized learning on criticality Recurrent networks of randomly connected excitatory units exhibit ordered, critical and chaotic dynamics. In the upper row, examples of the temporal evolution of the network state for a recurrent network with critical dynamics before and after the introduction of local plasticity rules. IP makes the dynamics of the network more chaotic (Hamming distance > 1), while SORN (STDP+IP) makes the dynamics more ordered (Hamming distance < 1). When plasticity is turned off, these recently acquired dynamical properties are preserved.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7393798828125,
+    "y1": 355.9975280761719,
+    "y2": 416.79400634765625
+  },
+  "figType": "Figure",
+  "imageText": ["2", "1", "no", "plasticity", "SORN", "(ordered)", "IP", "(chaotic)", "g", "RNN", "m", "in", "H", "am", "0", "Time", "0", "10000", "20000", "30000", "1", "50", "100", "SORN", "1", "50", "100", "IP", "t", "#", "20", "40U", "ni", "1", "50", "100", "Time", "RNN"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 154.07999999999998,
+    "x2": 446.4,
+    "y1": 91.67999999999999,
+    "y2": 333.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure1-1.png"
+}, {
+  "caption": "Figure 2: (a) Activity of a network composed of 125 units over 60000 time steps (Top) and corresponding perturbation analysis (Bottom). Hamming distance is averaged across 500 consecutive time steps. The moments when IP and STDP+IP are introduced are marked by dotted lines. Networks with IP become more chaotic (Hamming distance>1). SORNs become more ordered (Hamming distance <1). In the absence of plasticity the networks retain their newly acquired dynamics. Shaded intervals are compared in (b) and (d). (b) IP-networks and SORNs have lower firing rates compared to random RNNs tuned to exhibit critical dynamics, because of their homeostatic IP. (c) Example of weight distributions before and after unsupervised learning with STDP. (d) Memory and prediction performance scores are compared between random RNNs, IP-networks and SORNs, after plasticity was turned off (shaded intervals in (a), 20 runs). SORNs have an increased memory for the experienced stimuli compared to their counterparts.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.3493957519531,
+    "y1": 387.60552978515625,
+    "y2": 503.1969909667969
+  },
+  "figType": "Figure",
+  "imageText": ["Time", "d)", "c)", "b)", "a)", "1", "0.5", "0", "0", "0.5", "1", "WSORN", "1", "0.5", "0", "0", "0.5", "1", "WRNN", "te", "E", "I", "g", "ra", "Fi", "rin", "0.4", "0.2", "RNN", "Post-IP", "Post-SORN", "0", "RNN", "Post-IP", "Post-SORN", "[%", "]", "an", "ce", "fo", "rm", "P", "er", "100", "90", "80", "70", "60", "50", "40", "-12", "-8", "-4", "0", "4", "Time", "lag", "1", "2", "H", "am", "m", "in", "g", "RNN", "IP", "SORN", "0", "20000", "40000", "60000", "0", "ni", "ts", "80", "120", "U", "40"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 486.24,
+    "y1": 83.52,
+    "y2": 366.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Contrast of learning short (n = 4, left panel) vs long sequences (n = 24, right panel). RNNs with N=125 units, pEE = 0.05, TE max = 0.4, TI max = 0.3 are shaped by IP or IP+STDP (SORN). SORNs maintain a longer input memory trace compared to IP-networks and RNNs. Error bars indicate s.e.m.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7427673339844,
+    "y1": 510.9605407714844,
+    "y2": 549.8399658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 331.68,
+    "y2": 492.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Impact of learning a temporal-MNIST on network dynamics. (a) Example stimuli from the original MNIST dataset and downsampled versions received by the network. 6000 stimuli were downsampled to 10x10 pixels and sectioned from top to bottom into 10 consecutive chunks, i.e. each digit became a vector sequence of length 10. (b) Activity of RNN, IP-network and SORN for 10000 steps and 10000 steps post-plasticity. The comparison is made between non-plastic networks, marked by shaded areas. RNNs are tuned to be close to criticality, where their performance is known to be high. Networks with IP become chaotic (Hamming distance>1) and remain chaotic when IP is turned off. SORNs become ordered after learning (Hamming distance<1). (c) Impact of learning a large dataset (MNIST images) on network performance. RNNs have been tuned to be close to criticality, where their performance is known to be high, but are outperformed by SORNs. (d) The dynamics of SORNs becomes ordered after learning. (e) Performance of SORNs is significantly higher for both memory and prediction compared to IP-networks and random RNNs (average over timelags 1 to 10).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.74639892578125,
+    "y1": 471.7915344238281,
+    "y2": 598.3419799804688
+  },
+  "figType": "Figure",
+  "imageText": ["e)", "c)", "d)", "b)", "a)", "-20", "-16", "-12", "-8", "-4", "0", "4", "8", "Memory", "Prediction", "[%", "]", "an", "ce", "fo", "rm", "P", "er", "20", "18", "16", "14", "12", "RNN", "IP", "SORN", "10", "st", "g", "di", "m", "in", "H", "am", "1.5", "1", "RNN", "IP", "SORN", "0.5", "RNN", "IP", "SORN", "8", "10", "12", "14", "16", "18", "20", "22", "24", "26", "28", "30", "P", "er", "fo", "rm", "an", "ce", "[%", "]", "Time", "lag", "g", "RNN", "IP", "SORN", "m", "in", "H", "am", "2", "1.5", "1", "0.5", "0", "0", "20000", "40000", "60000", "Time", "steps", "ts", "U", "ni", "200", "150", "100", "50"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 127.19999999999999,
+    "x2": 484.32,
+    "y1": 85.92,
+    "y2": 449.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8JEpyIgQS0t-Figure3-1.png"
+}]

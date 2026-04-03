@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: (Left) We add noise from a stochastic process to the whole time series at once. The model ϵθ learns to reverse this process. (Right) We can use this approach to, e.g., forecast with uncertainty.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.004150390625,
+    "y1": 709.612548828125,
+    "y2": 728.0679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["Conditional", "model", "Forecast", "Noise", "History", "...", "..."],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 497.28,
+    "y1": 646.56,
+    "y2": 703.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Overview of the forecasting model. The inputs are time series Xn, diffusion step n, observation times t and the history vector z. The output is the predicted noise value ϵn.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99969482421875,
+    "y1": 181.21749877929688,
+    "y2": 199.6739501953125
+  },
+  "figType": "Figure",
+  "imageText": ["Residual", "layer", "Conv2d", "ReLU", "Conv2d", "Gated", "activation", "Conv2d+ReLU", "Dilated", "Conv2d", "Conv2d+ReLU", "Linear", "Linear", "Linear", "MLP", "MLP", "Pos", "emb", "Conv2d"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 459.35999999999996,
+    "y1": 86.39999999999999,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Figure2-1.png"
+}, {
+  "caption": "Table 6: Accuracy of the discriminator trained on samples from a diffusion model. Values around 0.5 indicate the discriminative model cannot distinguish the model samples and real data. Values closer to 1 indicate the generative model is not capturing the data distribution.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 528.3785400390625,
+    "y2": 556.2990112304688
+  },
+  "figType": "Table",
+  "imageText": ["C", "SP", "D", "Gauss", "0.537±0.0458", "0.959±0.0808", "0.5155±0.0165", "0.9995±0.001", "0.6335±0.0765", "0.9095±0.1306", "GP", "0.645±0.1034", "1.0±0.0", "0.507±0.0264", "0.894±0.212", "0.894±0.212", "0.88±0.088", "OU", "0.984±0.032", "1.0±0.0", "0.9905±0.019", "1.0±0.0", "1.0±0.0", "1.0±0.0", "D", "SP", "D", "Gauss", "0.624±0.0438", "0.713±0.1798", "0.5275±0.0371", "1.0±0.0", "0.7875±0.0585", "0.9695±0.0302", "GP", "0.558±0.0611", "0.894±0.212", "0.5535±0.1152", "0.7565±0.1362", "0.735±0.2146", "0.784±0.2281", "OU", "1.0±0.0", "1.0±0.0", "1.0±0.0", "1.0±0.0", "1.0±0.0", "1.0±0.0", "Feedforward", "model", "C", "SP", "D", "Gauss", "0.644±0.0373", "0.5015±0.0243", "0.6105±0.0153", "0.548±0.0751", "0.611±0.0516", "0.5495±0.0313", "GP", "0.5795±0.0541", "0.674±0.0739", "0.5025±0.0622", "0.607±0.0538", "0.5575±0.0376", "0.5345±0.0201", "OU", "0.4535±0.165", "0.715±0.0884", "0.5255±0.011", "0.5835±0.0723", "0.556±0.118", "0.5795±0.0173", "D", "SP", "D", "Gauss", "0.5245±0.0252", "0.512±0.0212", "0.568±0.051", "0.5275±0.0383", "0.5565±0.0353", "0.526±0.0085", "GP", "0.5115±0.0282", "0.5135±0.0288", "0.5055±0.0458", "0.5855±0.0219", "0.5255±0.009", "0.513±0.0103", "OU", "0.514±0.0737", "0.6095±0.0964", "0.5605±0.0581", "0.5865±0.053", "0.507±0.11", "0.6255±0.1672", "CIR", "Lorenz", "OU", "Predator-prey", "Sine", "Sink", "RNN-based", "model"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 372.47999999999996,
+    "y2": 514.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Table6-1.png"
+}, {
+  "caption": "Table 1: Negative log-likelihood on synthetic data (lower is better) shows OU/GP consistently better than independent noise.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 158.13851928710938,
+    "y2": 175.0999755859375
+  },
+  "figType": "Table",
+  "imageText": ["C", "SP", "D", "Gauss", "-0.4914±0.0079", "1.9043±0.3224", "0.5333±0.0144", "-3.5642±0.2014", "-1.1204±0.0580", "-5.6209±0.2057", "OU", "-0.4796±0.0109", "-6.6638±0.0773", "0.4959±0.011", "-8.7748±0.1419", "-3.9496±0.1669", "-10.4739±0.2482", "GP", "-0.4935±0.0052", "-7.5565±0.4107", "0.5251±0.0145", "-9.3409±0.199", "-4.3591±0.1242", "-11.6571±0.2825", "D", "SP", "D", "Gauss", "-0.4830±0.0176", "1.4161±0.0987", "0.7081±0.0192", "-3.8656±0.0347", "-1.3978±0.0108", "-5.8355±0.0360", "OU", "-0.4694±0.0154", "-7.3334±0.1446", "0.5298±0.0229", "-9.4932±0.0544", "-4.2337±0.0577", "-11.3145±0.2015", "GP", "-0.4512±0.0606", "-8.4433±0.2435", "0.5622±0.0050", "-10.1138±0.4601", "-4.5568±0.0732", "-12.0081±0.0404", "CIR", "Lorenz", "OU", "Predator–prey", "Sine", "Sink"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 144.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Table1-1.png"
+}, {
+  "caption": "Table 2: Accuracy of the discriminator trained to distinguish real data and model samples.",
+  "captionBoundary": {
+    "x1": 126.5999984741211,
+    "x2": 485.40301513671875,
+    "y1": 240.17453002929688,
+    "y2": 246.177001953125
+  },
+  "figType": "Table",
+  "imageText": ["CTFP", "0.9985±0.0012", "0.995±0.0057", "0.783±0.0756", "0.789±0.0227", "0.981±0.0104", "0.7265±0.1378", "Latent", "ODE", "1.0±0.0", "0.998±0.0019", "0.512±0.0331", "0.958±0.0213", "1.0±0.0", "0.907±0.0394", "DSPD-GP", "(Our)", "0.5115±0.0282", "0.5135±0.0288", "0.5055±0.0458", "0.5855±0.0219", "0.5255±0.009", "0.513±0.0103", "CIR", "Lorenz", "OU", "Predator-prey", "Sine", "Sink"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 503.03999999999996,
+    "y1": 192.0,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Table2-1.png"
+}, {
+  "caption": "Figure 3: Real data and samples from our model based on an Ornstein-Uhlenbeck process.",
+  "captionBoundary": {
+    "x1": 125.5780029296875,
+    "x2": 486.4233703613281,
+    "y1": 340.2435302734375,
+    "y2": 346.2460021972656
+  },
+  "figType": "Figure",
+  "imageText": ["Lorenz", "50", "0", "x", "3", "−50", "0", "x2", "0", "20", "x1", "−20", "Sink", "x", "2", "2", "1", "0", "−1", "−1.0", "−0.5", "0.0", "0.5", "1.0", "x1", "Sine", "x", "4", "2", "0", "−2", "−4", "0.0", "2.5", "5.0", "7.5", "10.0", "t", "Predator-prey", "x", "2", "8", "6", "4", "2", "0", "0", "2", "4", "6", "x1", "OU", "x", "12.5", "10.0", "7.5", "5.0", "2.5", "0.0", "−2.5", "0", "20", "40", "60", "t", "CIR", "Data", "Samples", "x", "3.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "0", "20", "40", "60", "t"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 503.03999999999996,
+    "y1": 265.92,
+    "y2": 323.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Figure3-1.png"
+}, {
+  "caption": "Table 5: Multivariate dimension, domain, frequency, total training time steps and prediction length properties of the training data sets used in the forecasting experiments.",
+  "captionBoundary": {
+    "x1": 108.00006103515625,
+    "x2": 504.0032653808594,
+    "y1": 151.10757446289062,
+    "y2": 168.06903076171875
+  },
+  "figType": "Table",
+  "imageText": ["Exchange", "8", "R+", "day", "6,", "071", "30", "Solar", "137", "R+", "hour", "7,", "009", "24", "Electricity", "370", "R+", "hour", "5,", "833", "24", "Data", "set", "Dim.", "d", "Dom.", "Freq.", "Time", "steps", "Pred.", "steps"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 138.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Table5-1.png"
+}, {
+  "caption": "Table 4: Imputation RMSE on Physionet",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 286.20098876953125,
+    "y1": 376.7315368652344,
+    "y2": 382.7340087890625
+  },
+  "figType": "Table",
+  "imageText": ["Diffusion", "model", "Context", "Target", "µ±", "σ", "µ±", "2σ", "True", "Gaussian", "process", "2", "0", "−2"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 300.96,
+    "x2": 493.44,
+    "y1": 315.36,
+    "y2": 384.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1TxMUE7cF6_-Table4-1.png"
+}]

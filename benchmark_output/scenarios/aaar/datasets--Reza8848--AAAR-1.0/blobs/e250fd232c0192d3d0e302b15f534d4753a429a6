@@ -1,0 +1,301 @@
+[{
+  "caption": "Table 4: Hyper-parameters used in our experiments. The learning rates for weights W , Lagrange multipliers λ, and biases b are denoted by ηw, ηλ, and ηb, respectively. The weight-decay (L2 regularization) is denoted by wd.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0047302246094,
+    "y1": 473.2475280761719,
+    "y2": 502.6629638671875
+  },
+  "figType": "Table",
+  "imageText": ["SNN-Calib", "CIFAR-10", "0.01", "1e-4", "0.01", "1e-3", "128", "100", "32", "SGD", "AdamCIFAR-100", "SGD", "AdamCIFAR10-DVS", "16", "64", "16", "ImageNet", "32", "100", "4", "SEW-ResNet", "DVS128", "Gesture", "0.1", "-", "-", "0.01", "16", "200", "16", "STBP", "CIFAR-10", "5e-3", "-", "-", "5e-4", "50", "100", "8", "SGD", "AdamCIFAR-100", "TSSL-BP", "CIFAR-10", "2e-4", "-", "-", "1e-4", "50", "200", "5", "AdamW", "AdamW", "Algorithm", "Dataset", "ηw", "wd", "ηb", "ηλ", "Batch", "size", "Epoch", "Steps", "Optimizer", "weight", "Optimizer", "multiplier"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 514.56,
+    "y2": 615.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Table4-1.png"
+}, {
+  "caption": "Figure 1: Accuracy and weight-memory usage of CBP-QSNNs on CIFAR-10/100 and ImageNet. The diamond, square, and star symbols denote binary, ternary, and int2 weight precision, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 205.37350463867188,
+    "y2": 233.2939453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 191.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure1-1.png"
+}, {
+  "caption": "Table 1: Classification accuracy and weight-memory usage for CBP-QSNNs that were pre-trained using direct training methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["†Reproduced", "result", "‡Reported", "result", "CBP", "Binary", "73.89±0.62", "(74.7)", "1.33Mb", "Ternary", "74.83±0.46", "(75.3)", "2.58Mb", "Wide-7B-Net", "Arctan", "gradient", "FP32", "74.7†(74.4‡)", "40.2Mb", "CIFAR10-DVS", "CBP", "Binary", "97.11±0.33", "(97.57)", "159Kb", "Ternary", "97.68±0.16", "(97.92)", "288Kb", "7B-Net", "Arctan", "gradient", "FP32", "97.92†(97.92‡)", "4.16Mb", "DVS128", "Gesture", "CBP", "Binary", "60.10", "37.9Mb", "Ternary", "62.98", "59.2Mb", "SEW-ResNet-34", "Arctan", "gradient", "FP32", "66.65†(67.04‡)", "697Mb", "CBP", "Binary", "54.34", "27.8Mb", "Ternary", "58.04", "39.0Mb", "SEW-ResNet-18", "Arctan", "gradient", "FP32", "62.81†(63.18‡)", "374Mb", "ImageNet", "CBP", "Binary", "60.81±0.01", "(60.83)", "63.8Mb", "Ternary", "60.85±0.18", "(61.09)", "126Mb", "7Conv,", "3FC", "STBP", "FP32", "62.25", "1.99Gb", "CIFAR-100", "CBP", "Binary", "89.51±0.05", "(89.59)", "62.4Mb", "Ternary", "89.58±0.08", "(89.67)", "124Mb", "7Conv,", "3FC", "STBP", "FP32", "90.26†(89.53‡)", "1.99Gb", "21.6Mb", "42.7Mb", "89.45±0.37", "(89.95)", "88.92±0.03", "(88.96)", "CBP", "Binary", "Ternary", "AlexNet", "TSSL-BP", "FP32", "89.00†(89.22‡)", "677Mb", "Network", "Algorithm", "Weight", "precision", "Avg.", "(Best)", "accuracy", "weight-memory", "usage", "CIFAR-10"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 485.28,
+    "y1": 117.6,
+    "y2": 422.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Table1-1.png"
+}, {
+  "caption": "Figure 8: CBP-QSNN-(7B-Net) on DVS128 Gesture.",
+  "captionBoundary": {
+    "x1": 199.36599731445312,
+    "x2": 412.6352844238281,
+    "y1": 699.9635620117188,
+    "y2": 705.9660034179688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 430.56,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure8-1.png"
+}, {
+  "caption": "Figure 7: CBP-QSNN-(SEW-ResNet-34) on ImageNet.",
+  "captionBoundary": {
+    "x1": 195.20599365234375,
+    "x2": 416.7940673828125,
+    "y1": 371.9775390625,
+    "y2": 377.9800109863281
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 102.72,
+    "y2": 358.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure7-1.png"
+}, {
+  "caption": "Table 2: Classification accuracy and weight-memory usage for CBP-QSNN-(SNN-Calibration).",
+  "captionBoundary": {
+    "x1": 115.11799621582031,
+    "x2": 496.884765625,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["†Reproduced", "result", "‡Reported", "result", "CBP", "Binary", "66.32±0.16", "(66.53)", "16.6Mb", "Ternary", "66.37±0.44", "(66.46)", "31.2Mb", "VGG-16", "SNN-Calibration", "FP32", "62.60†", "(64.53‡)", "473Mb", "CIFAR-100", "CBP", "Binary", "91.40±0.09", "(91.51)", "15.1Mb", "Ternary", "91.49±0.13", "(91.66)", "29.8Mb", "VGG-16", "SNN-Calibration", "FP32", "91.04†", "(91.82‡)", "471Mb", "Network", "Algorithm", "Weight", "precision", "Avg.", "(Best)", "accuracy", "weight-memory", "usage", "CIFAR-10"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 106.56,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Table2-1.png"
+}, {
+  "caption": "Figure 2: Constraint functions with unconstrained-weight windows (filled areas) for (a) binary- and (b) ternary-weight constraints.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030517578125,
+    "y1": 200.23049926757812,
+    "y2": 217.19097900390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure2-1.png"
+}, {
+  "caption": "Figure 9: CBP-QSNN-(Wide-7B-Net) on CIFAR10-DVS.",
+  "captionBoundary": {
+    "x1": 190.38400268554688,
+    "x2": 421.6158447265625,
+    "y1": 372.6515197753906,
+    "y2": 378.65399169921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 102.72,
+    "y2": 358.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure9-1.png"
+}, {
+  "caption": "Figure 10: CBP-QSNN-(SNN-calibration) on CIFAR-10. The QSNN topology is of VGG-16.",
+  "captionBoundary": {
+    "x1": 118.78299713134766,
+    "x2": 493.2171936035156,
+    "y1": 700.33056640625,
+    "y2": 706.3330078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 430.56,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure10-1.png"
+}, {
+  "caption": "Figure 5: CBP-QSNN-STBP on CIFAR-100. The QSNN topology is of a deep SNN (7Conv and 3FC).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 369.5675354003906,
+    "y2": 386.52899169921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 99.84,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure5-1.png"
+}, {
+  "caption": "Figure 6: CBP-QSNN-(SEW-ResNet-18) on ImageNet.",
+  "captionBoundary": {
+    "x1": 195.20599365234375,
+    "x2": 416.7940673828125,
+    "y1": 702.8375244140625,
+    "y2": 708.8399658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 432.96,
+    "y2": 688.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure6-1.png"
+}, {
+  "caption": "Table 3: Comparison with previous works on QSNNs with binary, ternary, and int2 weight precision.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030517578125,
+    "y1": 92.6165542602539,
+    "y2": 98.6190185546875
+  },
+  "figType": "Table",
+  "imageText": ["CBP-QSNN-(wide-7B-Net)", "Wide-7B-Net", "Binary/1.33M", "73.89±0.62", "(74.7)", "Ternary/2.58M", "74.83±0.46", "(75.3)", "a25%", "connection-pruned.", "CIFAR10-DVS", "BSNN", "Qiao", "et", "al.", "(2021)", "2Conv,", "2FC", "Binary/1.68M", "62.10", "CBP-QSNN-(7B-Net)", "7B-Net", "Binary/159K", "97.11±0.33", "(97.57)", "Ternary/288K", "97.68±0.16", "(97.92)", "DVS128", "Gesture", "BSNN", "(Qiao", "et", "al.,", "2021)", "2Conv,", "2FC", "Binary/1.68M", "97.57", "SEW-ResNet34", "Binary/37.9M", "60.10", "Ternary/59.2M", "62.98", "CBP-QSNN-(SEW-ResNet)", "SEW-ResNet18", "Binary/27.8M", "54.34", "Ternary/39.0M", "58.04", "ImageNet", "BWN-SNN", "(Lu", "&", "Sengupta,", "2020)", "VGG-15", "Binary/249M", "62.71", "Direct-training", "+", "STE", "(Zhou", "et", "al.,", "2021)", "GoogLeNet", "int2/44.5M", "60.0", "CBP-QSNN-(SNN-Calibration)", "VGG-16", "Binary/16.6M", "66.32±0.16", "(66.53)", "Ternary/31.2M", "66.37±0.08", "(66.46)", "CBP-QSNN-STBP", "7Conv,", "3FC", "Binary/63.8M", "60.81±0.01", "(60.83)", "Ternary/126M", "60.85±0.18", "(61.09)", "CIFAR-100", "BinaryConnect-SNN", "(Wang", "et", "al.,", "2020)", "6Conv,", "2FC", "Binary/13.0M", "62.02", "BWN-SNN", "(Lu", "&", "Sengupta,", "2020)", "VGG-15", "Binary/32.1M", "62.00", "STBP", "+", "ADMM", "(Deng", "et", "al.,", "2021)", "7Conv,", "3FC", "Ternarya/126M", "55.95", "CBP-QSNN-(SNN-Calibration)", "VGG-16", "Binary/15.1M", "91.40±0.09", "(91.51)", "Ternary/29.8M", "91.49±0.13", "(91.66)", "CBP-QSNN-(TSSL-BP)", "AlexNet", "Binary/21.6M", "89.45±0.37", "(89.95)", "Ternary/42.7M", "88.92±0.03", "(88.96)", "CBP-QSNN-STBP", "7Conv,", "3FC", "Binary/62.4M", "89.51±0.05", "(89.59)", "Ternary/124M", "89.58±0.08", "(89.67)", "BNN-SNN", "(Rueckauer", "et", "al.,", "2017)", "6Conv,", "3FC", "Binary/14.0M", "88.25", "BinaryConnect-SNN", "(Rueckauer", "et", "al.,", "2017)", "6Conv,", "3FC", "Binary/14.0M", "83.35", "BinaryConnect-SNN", "(Wang", "et", "al.,", "2020)", "6Conv,", "3FC", "Binary/14.0M", "90.19", "STBP", "+", "ADMM", "(Deng", "et", "al.,", "2021)", "7Conv,", "3FC", "Ternary/124M", "89.01", "Direct-training", "+", "STE", "(Zhou", "et", "al.,", "2021)", "SpikingVGG16", "int2/109M", "90.93", "Algorithm", "Network", "Weight", "precision", "/", "memory", "usage", "(bit)", "Accuracy", "(%)", "CIFAR-10"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 110.88,
+    "y2": 450.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Table3-1.png"
+}, {
+  "caption": "Figure 11: CBP-QSNN-(SNN-calibration) on CIFAR-100. The QSNN topology is of VGG-16.",
+  "captionBoundary": {
+    "x1": 116.29299926757812,
+    "x2": 495.70849609375,
+    "y1": 536.5165405273438,
+    "y2": 542.5189819335938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 266.88,
+    "y2": 522.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure11-1.png"
+}, {
+  "caption": "Figure 4: CBP-QSNN-STBP on CIFAR-10. The QSNN topology is of a deep SNN (7Conv and 3FC).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 711.132568359375,
+    "y2": 728.093017578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 441.59999999999997,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure4-1.png"
+}, {
+  "caption": "Figure 3: CBP-QSNN-(TSSL-BP) on CIFAR-10. The QSNN topology is of AlexNet.",
+  "captionBoundary": {
+    "x1": 135.37600708007812,
+    "x2": 476.62481689453125,
+    "y1": 376.4295349121094,
+    "y2": 382.4320068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 106.56,
+    "y2": 362.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P7h7UT9uDzb-Figure3-1.png"
+}]

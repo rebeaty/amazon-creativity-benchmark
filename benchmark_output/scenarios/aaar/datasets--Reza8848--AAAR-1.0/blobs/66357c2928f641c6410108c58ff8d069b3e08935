@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 4: Training loss curve of K-FAC optimizer on RoBERTalarge + Adapter with and without our Newton-step clipping approach. All settings and hyperparameters are the same except for whether or not to use Newton-step clipping.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1740417480469,
+    "y1": 189.15554809570312,
+    "y2": 217.07598876953125
+  },
+  "figType": "Figure",
+  "imageText": ["lo", "ss", "ni", "ng", "Tr", "ai", "Epoch", "MRPC", "w", "clipping", "w/o", "clipping", "100", "0", "10", "20", "30", "40", "50", "RTE", "w", "clipping", "w/o", "clipping", "100", "0", "10", "20", "30", "40", "50", "CoLA", "w", "clipping", "w/o", "clipping", "100", "0", "10", "20", "30", "40", "50", "SST-2", "w", "clipping", "w/o", "clipping", "101", "100", "0", "5", "10", "15", "20", "0"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 497.28,
+    "y1": 84.0,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Figure4-1.png"
+}, {
+  "caption": "Figure 3: An illustration of the Newton-step clipping strategy.",
+  "captionBoundary": {
+    "x1": 353.51800537109375,
+    "x2": 503.9947204589844,
+    "y1": 523.6685791015625,
+    "y2": 540.6300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["uclp", "u", "=", "H", "1g", "<latexit", "sha1_base64=\"mqZ9NZQ/weawUV6E5+eWEwrGyvQ=\">AAAB7nicbVDLSgNBEOyNrxhfUY9eBoPgKexKUI9BLx4jmAcka5idzCZDZmeHeQhhyUd48aCIV7/Hm3/jJNmDJhY0FFXddHdFkjNtfP/bK6ytb2xuFbdLO7t7+wflw6OWTq0itElSnqpOhDXlTNCmYYbTjlQUJxGn7Wh8O/PbT1RplooHM5E0TPBQsJgRbJzUto8Z4XLaL1f8qj8HWiVBTiqQo9Evf/UGKbEJFYZwrHU38KUJM6wMI5xOSz2rqcRkjIe066jACdVhNj93is6cMkBxqlwJg+bq74kMJ1pPksh1JtiM9LI3E//zutbE12HGhLSGCrJYFFuOTIpmv6MBU5QYPnEEE8XcrYiMsMLEuIRKLoRg+eVV0rqoBpfV2n2tUr/J4yjCCZzCOQRwBXW4gwY0gcAYnuEV3jzpvXjv3seiteDlM8fwB97nD7Uhj9M=</latexit>", "<latexit", "sha1_base64=\"w0bKWN5q/9JY0In+HXiaowmk53w=\">AAAB/XicbVDLSsNAFL2pr1pf8bFzM1gEN5ZEiroRim66rGAf0MYymU7aoZMHMxOhhuCvuHGhiFv/w51/46TNQlsPDBzOuZd75rgRZ1JZ1rdRWFpeWV0rrpc2Nre2d8zdvZYMY0Fok4Q8FB0XS8pZQJuKKU47kaDYdzltu+ObzG8/UCFZGNypSUQdHw8D5jGClZb65kGMrlDPx2rkekk9vU9O7XTYN8tWxZoCLRI7J2XI0eibX71BSGKfBopwLGXXtiLlJFgoRjhNS71Y0giTMR7SrqYB9ql0kmn6FB1rZYC8UOgXKDRVf28k2Jdy4rt6Mssp571M/M/rxsq7dBIWRLGiAZkd8mKOVIiyKtCACUoUn2iCiWA6KyIjLDBRurCSLsGe//IiaZ1V7PNK9bZarl3ndRThEI7gBGy4gBrUoQFNIPAIz/AKb8aT8WK8Gx+z0YKR7+zDHxifP3ASlJc=</latexit>", "<latexit", "sha1_base64=\"uSW0H71JUat1zrUvRTNUif2jrkk=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOl5rBfrrhVdw6ySrycVCBHo1/+6g1ilkYoDRNU667nJsbPqDKcCZyWeqnGhLIxHWLXUkkj1H42P3RKzqwyIGGsbElD5urviYxGWk+iwHZG1Iz0sjcT//O6qQmv/YzLJDUo2WJRmApiYjL7mgy4QmbExBLKFLe3EjaiijJjsynZELzll1dJ+6LqXVZrzVqlfpPHUYQTOIVz8OAK6nAHDWgBA4RneIU359F5cd6dj0VrwclnjuEPnM8fz2OM9A==</latexit>g", "<latexit", "sha1_base64=\"XYDDIvRU3xu/8nhkxsymTQRs/LM=\">AAAB7nicbVBNSwMxEJ3Ur1q/qh69BIvgqexKUY9FLx4r2A9o15JNs21oNhuSrFCW/ggvHhTx6u/x5r8xbfegrQ8GHu/NMDMvVIIb63nfqLC2vrG5Vdwu7ezu7R+UD49aJkk1ZU2aiER3QmKY4JI1LbeCdZRmJA4Fa4fj25nffmLa8EQ+2IliQUyGkkecEuuk9vAxo0JN++WKV/XmwKvEz0kFcjT65a/eIKFpzKSlghjT9T1lg4xoy6lg01IvNUwROiZD1nVUkpiZIJufO8VnThngKNGupMVz9fdERmJjJnHoOmNiR2bZm4n/ed3URtdBxqVKLZN0sShKBbYJnv2OB1wzasXEEUI1d7diOiKaUOsSKrkQ/OWXV0nroupfVmv3tUr9Jo+jCCdwCufgwxXU4Q4a0AQKY3iGV3hDCr2gd/SxaC2gfOYY/gB9/gCflY/F</latexit>", "gclp"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 356.64,
+    "x2": 501.12,
+    "y1": 385.91999999999996,
+    "y2": 513.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Figure3-1.png"
+}, {
+  "caption": "Table 4: The training hyper-parameters for AdamW.",
+  "captionBoundary": {
+    "x1": 201.81199645996094,
+    "x2": 409.8808288574219,
+    "y1": 682.9615478515625,
+    "y2": 688.9639892578125
+  },
+  "figType": "Table",
+  "imageText": ["RTE", "Adapter", "1e-4", "0.1", "WSC", "Adapter", "1e-4", "0.1", "CB", "Adapter", "1e-4", "0.1", "COPA", "Adapter", "1e-4", "0.1", "T5XL", "STS-B", "Adapter", "1e-4", "0.1", "LoRA", "1e-4", "0.1", "MRPC", "Adapter", "1e-4", "1.0", "LoRA", "1e-3", "0.1", "CoLA", "Adapter", "1e-3", "0.1", "LoRA", "1e-4", "1.0", "RTE", "Adapter", "1e-4", "0.1", "LoRA", "1e-3", "0.1", "SST-2", "Adapter", "1e-4", "0.1", "LoRA", "1e-3", "0.1", "QNLI", "Adapter", "1e-4", "0.1", "LoRA", "1e-3", "0.1", "RoBERTalarge", "Model", "Dataset", "Method", "Learning", "Rate", "Max.", "Norm"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 170.88,
+    "x2": 443.03999999999996,
+    "y1": 446.88,
+    "y2": 671.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Table4-1.png"
+}, {
+  "caption": "Table 3: The training hyper-parameters for K-FAC with the Newton-step clipping strategy.",
+  "captionBoundary": {
+    "x1": 125.65299987792969,
+    "x2": 486.0399475097656,
+    "y1": 354.8835144042969,
+    "y2": 360.885986328125
+  },
+  "figType": "Table",
+  "imageText": ["WSC", "Adapter", "0.1", "10.0", "1e-2", "WSC", "Adapter", "0.1", "10.0", "1e-3", "CB", "Adapter", "0.1", "10.0", "1e-2", "COPA", "Adapter", "0.1", "10.0", "1e-2", "T5XL", "STS-B", "Adapter", "0.1", "1.0", "1e-2", "LoRA", "0.1", "1.0", "1e-6", "MRPC", "Adapter", "0.5", "0.1", "1e-2", "LoRA", "0.05", "1.0", "1e-3", "CoLA", "Adapter", "1e-2", "1.0", "1e-2", "LoRA", "0.01", "1.0", "1e-2", "RTE", "Adapter", "0.05", "1.5", "1e-3", "LoRA", "0.1", "1.5", "1e-5", "SST-2", "Adapter", "0.1", "1.0", "1e-3", "LoRA", "0.1", "1.0", "1e-4", "QNLI", "Adapter", "0.1", "1.0", "1e-4", "LoRA", "0.05", "1.0", "1e-3", "RoBERTalarge", "Model", "Dataset", "Method", "Learning", "Rate", "Max.", "Norm", "Damping", "Factor"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 343.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Table3-1.png"
+}, {
+  "caption": "Figure 5: Training loss curve of RoBERTalarge + Adapter on NLU tasks with AdamW optimizer and K-FAC optimizer equipped with our Newton-step clipping strategy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99737548828125,
+    "y1": 582.3035888671875,
+    "y2": 599.2650146484375
+  },
+  "figType": "Figure",
+  "imageText": ["lo", "ss", "ni", "ng", "Tr", "ai", "Epoch", "AdamW", "K-FAC", "4", "STS-B", "3", "2", "1", "10", "20", "30", "40", "50", "0", "MRPC", "AdamW", "K-FAC", "0.6", "0.4", "0.2", "10", "20", "30", "40", "50", "0.0", "AdamW", "K-FAC", "0.6", "CoLA", "0.4", "0.2", "10", "20", "30", "40", "50", "0.0", "RTE", "AdamW", "K-FAC", "0.6", "0.4", "0.2", "10", "20", "30", "40", "0.0", "SST-2", "AdamW", "K-FAC", "0.6", "0.4", "0.2", "5", "10", "15", "20", "0.0", "QNLI", "AdamW", "K-FAC", "0.6", "0.4", "0.2", "5", "10", "15", "20", "0.0"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 490.56,
+    "y1": 386.88,
+    "y2": 577.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Figure5-1.png"
+}, {
+  "caption": "Figure 2: An example of GPU memory variation during training on the STS-B dataset with adapters. The used model is RoBERTalarge and the batch size is 128. Both experiments are run on a single NVIDIA A100 GPU.",
+  "captionBoundary": {
+    "x1": 317.31201171875,
+    "x2": 497.1687927246094,
+    "y1": 251.41055297851562,
+    "y2": 301.2489929199219
+  },
+  "figType": "Figure",
+  "imageText": ["AdamW", "K-FAC", "(G", ")", "or", "y", "M", "em", "30", "25", "20", "15", "10", "5", "0", "0", "500", "1000", "1500", "2000", "Time", "(s)"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 301.92,
+    "x2": 493.44,
+    "y1": 89.75999999999999,
+    "y2": 233.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Training loss curve of models with different LoRA ranks. Experiments are conducted on MRPC with RoBERTalarge and batch size is 128.",
+  "captionBoundary": {
+    "x1": 119.91100311279297,
+    "x2": 299.7657165527344,
+    "y1": 270.2225036621094,
+    "y2": 309.10198974609375
+  },
+  "figType": "Figure",
+  "imageText": ["LoRA", "rank", "8", "12", "16", "20", "24", "28", "32", "36", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "Tr", "ai", "ni", "ng", "lo", "ss", "5", "10", "15", "20", "25", "30", "35", "Epoch"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 123.36,
+    "x2": 295.2,
+    "y1": 154.56,
+    "y2": 264.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Figure6-1.png"
+}, {
+  "caption": "Table 3: Results on COPA, CB, WiC, and WSC datasets of T5XL + Adapter.",
+  "captionBoundary": {
+    "x1": 299.7510070800781,
+    "x2": 504.0042419433594,
+    "y1": 355.1955261230469,
+    "y2": 373.6510009765625
+  },
+  "figType": "Table",
+  "imageText": ["Method", "COPA", "CB", "RTE", "WSC", "Avg.", "AdamW", "82.00", "89.29", "79.86", "67.31", "79.62", "NewtonClip", "80.00", "89.29", "82.01", "69.23", "80.13"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 301.92,
+    "x2": 505.44,
+    "y1": 384.96,
+    "y2": 423.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Table3-1.png"
+}, {
+  "caption": "Figure 7: The change of test metrics (F1) and number of trainable parameters with different LoRA ranks. Experiments are conducted on MRPC with RoBERTalarge, batch size is 128.",
+  "captionBoundary": {
+    "x1": 313.8900146484375,
+    "x2": 492.0932922363281,
+    "y1": 270.6725158691406,
+    "y2": 311.0459899902344
+  },
+  "figType": "Figure",
+  "imageText": ["ric", "M", "et", "100", "95", "90", "85", "80", "8", "12", "16", "20", "24", "28", "32", "36", "LoRA", "rank", "M", ")", "er", "s", "(", "m", "et", "pa", "ra", "bl", "e", "ai", "na", "#", "Tr", "3", "2", "1", "0"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 316.8,
+    "x2": 498.71999999999997,
+    "y1": 152.16,
+    "y2": 260.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Fi-5Jiyy5w-Figure7-1.png"
+}]

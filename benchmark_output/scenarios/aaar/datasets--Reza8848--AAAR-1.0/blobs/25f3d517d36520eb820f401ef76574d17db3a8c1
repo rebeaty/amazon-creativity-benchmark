@@ -1,0 +1,281 @@
+[{
+  "caption": "Table 1: Results on systematic generalization to novel combinations of known visual attributes and linguistic constructs. Mean and standard deviation of accuracy (%) across at least three repetitions when possible (only one trained model is provided in NS-VQA and MDETR). All methods are tested on in-distribution (CLEVR-CoGenT validation condition A and CLEVR validation) and systematic generalization (CLEVR-CoGenT validation condition B and CLOSURE, indicated in yellow). We trained and test Vector-NMN on CLEVR-CoGenT in our environment while its performances on CLEVR and CLOSURE are cited from the original paper (Bahdanau et al., 2020). “Overall” at the right end is the mean value of accuracies on CoGenT-B and CLOSURE.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032958984375,
+    "y1": 92.64151763916016,
+    "y2": 175.35589599609375
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Visual", "attributes", "Linguistic", "constructs", "CoGenT-A", "CoGenT-B", "CLEVR", "CLOSURE", "Overall", "(In-Dist.)", "(Syst.", "Gen.)", "(In-Dist.)", "(Syst.", "Gen.)", "(Syst.", "Gen.)", "Transformer", "97.5", "±", "0.18", "78.9", "±", "0.80", "97.4", "±", "0.23", "57.4", "±", "1.6", "68.2", "Transformer", "w/", "PR", "97.4", "±", "0.56", "81.7", "±", "1.1", "97.1", "±", "0.14", "64.5", "±", "2.5", "73.1", "TMN-Stack", "(ours)", "97.9", "±", "0.03", "80.6", "±", "0.21", "98.0", "±", "0.03", "90.9", "±", "0.49", "85.3", "TMN-Tree", "(ours)", "98.0", "±", "0.02", "80.1", "±", "0.72", "97.9", "±", "0.01", "95.4", "±", "0.20", "87.8", "Vector-NMN", "98.0", "±", "0.2", "73.2", "±", "0.2", "98.0", "±", "0.07", "94.4", "83.8", "NS-VQA", "99.8", "63.9", "99.8", "76.4", "70.2", "MDETR", "99.7", "76.2", "99.7", "53.3", "64.8"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 182.88,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table1-1.png"
+}, {
+  "caption": "Table 2: Results on an application to complex natural images with novel combinations of known linguistic constructs. Mean and standard deviation of accuracy (%) on GQA test-dev and GQASGL across at least three repetitions. We use a pre-trained object detector as a feature extractor. The numbers in ( ) denote the mean accuracy on only four question types contained in GQA-SGL (verify, query, choose, and logical). Systematic generalization performance is indicated in yellow.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 344.6115417480469,
+    "y2": 394.448974609375
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "GQA", "GQA-SGL", "(In-Distribution)", "(Systematic", "generalization)", "Transformer", "54.9", "±", "0.004", "(67.6)", "47.7", "±", "2.1", "Transformer", "w/", "PR", "54.7", "±", "0.22", "(67.0)", "52.2", "±", "3.2", "TMN-Stack", "(ours)", "52.8", "±", "0.10", "(64.7)", "50.7", "±", "0.94", "TMN-Tree", "(ours)", "53.5", "±", "0.24", "(65.2)", "53.7", "±", "1.7", "MMN", "55.6", "±", "0.12", "(67.8)", "51.0", "±", "1.5"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 457.44,
+    "y1": 401.76,
+    "y2": 481.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table2-1.png"
+}, {
+  "caption": "Table 7: Supplemental results on CLOSURE. Mean and standard deviation of accuracy (%) on each CLOSURE test across at least three repetitions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036926269531,
+    "y1": 335.8675231933594,
+    "y2": 352.8289794921875
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "embed", "spa", "mat", "embed", "mat", "spa", "compare", "mat", "compare", "mat", "spa", "Transformer", "97.0", "±", "1.3", "55.2", "±", "4.4", "65.7", "±", "2.8", "62.7", "±", "2.3", "Transformer", "w/", "PR", "59.7", "±", "2.8", "78.1", "±", "5.0", "85.7", "±", "4.4", "74.4", "±", "6.6", "TMN-Stack", "(ours)", "98.8", "±", "0.00", "92.7", "±", "0.84", "77.8", "±", "1.5", "72.7", "±", "2.6", "TMN-Tree", "(ours)", "98.7", "±", "0.16", "92.8", "±", "0.42", "99.0", "±", "0.03", "99.3", "±", "0.11", "Vector-NMN", "98.5", "±", "0.13", "98.7", "±", "0.19", "98.5", "±", "0.17", "98.4", "±", "0.3", "MDETR", "99.3", "77.4", "69.3", "66.0", "Methods", "and", "mat", "spa", "or", "mat", "or", "mat", "spa", "Transformer", "77.0", "±", "5.2", "19.1", "±", "0.55", "25", "±", "11", "Transformer", "w/", "PR", "77.6", "±", "6.9", "39.7", "±", "1.9", "36.4", "±", "5.8", "TMN-Stack", "(ours)", "98.4", "±", "0.19", "77.8", "±", "1.5", "72.7", "±", "2.6", "TMN-Tree", "(ours)", "98.5", "±", "0.03", "89.5", "±", "0.62", "90.1", "±", "0.8", "Vector-NMN", "86.3", "±", "2.5", "91.5", "±", "0.77", "88.6", "±", "1.2", "MDETR", "8.63", "34.1", "18.4"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 360.0,
+    "y2": 536.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table7-1.png"
+}, {
+  "caption": "Table 8: Supplemental results on GQA-SGL. Mean and standard deviation of accuracy (%) for four question types in GQA-SGL across at least three repetitions. We use a pre-trained object detector as a feature extractor.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 578.0975341796875,
+    "y2": 606.0180053710938
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Four", "question", "types", "in", "GQA-SGL", "verify", "query", "choose", "logical", "Transformer", "50.0", "±", "1.6", "35.3", "±", "5.0", "50.0", "±", "7.5", "55.3", "±", "4.1", "Transformer", "w/", "PR", "51.6", "±", "7.7", "45.6", "±", "5.6", "56.0", "±", "6.6", "55.6", "±", "5.4", "TMN-Stack", "(ours)", "51.6", "±", "4.1", "49.6", "±", "5.0", "44.8", "±", "3.7", "56.4", "±", "7.1", "TMN-Tree", "(ours)", "56.0", "±", "7.3", "48.0", "±", "5.5", "47.2", "±", "3.2", "64.0", "±", "4.6", "MMN", "46.7", "±", "4.7", "50.7", "±", "5.0", "47.3", "±", "1.9", "59.3", "±", "3.4"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 461.28,
+    "y1": 612.0,
+    "y2": 691.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table8-1.png"
+}, {
+  "caption": "Table 6: Supplemental results on CLEVR-CoGenT. Mean and standard deviation of accuracy (%) for each question type in CLEVR-CoGenT Condition B across at least three repetitions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9997253417969,
+    "y1": 92.64151763916016,
+    "y2": 109.60296630859375
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Compare", "Integer", "Compare", "Attribute", "Query", "Attribute", "Transformer", "88.6", "±", "0.41", "85.8", "±", "0.68", "73.2", "±", "1.7", "Transformer", "w/", "PR", "89.8", "±", "0.45", "88.3", "±", "1.1", "76.3", "±", "1.6", "TMN-Stack", "(ours)", "88.1", "±", "0.20", "86.3", "±", "0.22", "76.6", "±", "0.28", "TMN-Tree", "(ours)", "89.0", "±", "0.66", "87.8", "±", "0.69", "75.3", "±", "0.75", "Vector-NMN", "81.3", "±", "0.52", "78.1", "±", "0.79", "66.5", "±", "1.05", "MDETR", "81.3", "82.6", "68.9", "Methods", "Exist", "Count", "Transformer", "87.8", "±", "0.69", "73.3", "±", "0.13", "Transformer", "w/", "PR", "90.4", "±", "0.90", "76.8", "±", "0.99", "TMN-Stack", "(ours)", "88.4", "±", "0.069", "75.1", "±", "0.27", "TMN-Tree", "(ours)", "87.8", "±", "0.62", "74.3", "±", "0.83", "Vector-NMN", "84.4", "±", "0.35", "70.4", "±", "0.44", "MDETR", "85.4", "75.2"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 439.2,
+    "y1": 116.64,
+    "y2": 299.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table6-1.png"
+}, {
+  "caption": "Figure 4: GQA-SGL test dataset for systematic generalization with natural images. GQA-SGL is a novel test set we built based on GQA to evaluate systematic generalization performance. We generate new questions with ground-truth programs that belong to four question types (verify, query, choose, and logical) by combining the existing programs. <A,...,D> and <Attr> denote an object (e.g., chair) and an attribute (e.g., blue). <Spatial referring> and <Matching referring> are a referring expression such as “ is right of ” and “ is the same color as ”, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 242.19253540039062,
+    "y2": 302.98895263671875
+  },
+  "figType": "Figure",
+  "imageText": ["What", "<A>", "<Spatial", "referring>", "<B>", "<Spatial", "referring>", "<C>?", "Does", "<A>", "<Matching", "referring>", "<B>", "…", "<Attr>?", "Is", "<A>", "<Matching", "referring>", "…", "<B>,", "<C>", "or", "<D>?", "Are", "there", "both", "<A>", "and", "<B>", "…?", "Is", "there", "<Attr>", "<A>", "or", "<B>", "…?", "Are", "there", "both", "<Attr", "1>", "<A>", "and", "<Attr", "2>", "<B>", "...?", "Is", "<A>", "<Spatial", "referring>", "…", "<Attr", "1>", "or", "<Attr", "2>?", "Does", "<A>", "<Spatial", "referring>", "<B>", "…", "<Attr>?", "What", "<A>", "<Matching", "referring>", "<B>", "…?", "What", "is", "<A>", "<Spatial", "referring>", "<B>", "…?", "Choose", "Query", "Verify", "Logical"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 499.68,
+    "y1": 153.6,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Examples of test questions from GQA and GQA-SGL for the same images.",
+  "captionBoundary": {
+    "x1": 136.08399963378906,
+    "x2": 475.91827392578125,
+    "y1": 536.5105590820312,
+    "y2": 542.5130004882812
+  },
+  "figType": "Figure",
+  "imageText": ["What", "is", "sitting", "in", "front", "of", "the", "table", "that", "looks", "yellow", "and", "black?", "luggage", "Does", "the", "palm", "tree", "to", "the", "left", "of", "the", "flag", "look", "blue?", "no", "Does", "the", "piece", "of", "furniture", "that", "is", "the", "same", "color", "as", "the", "umbrella", "look", "open?", "no", "What", "is", "the", "animal", "that", "looks", "orange", "doing?", "lying", "Are", "the", "colorful", "books", "to", "the", "right", "of", "a", "radio?", "yes", "What", "color", "is", "the", "animal", "to", "the", "left", "of", "the", "books", "near", "the", "water", "bottle?", "orange", "Are", "there", "any", "traffic", "signs", "or", "fire", "hydrants", "that", "are", "not", "made", "of", "metal?", "no", "Are", "there", "any", "grinders", "or", "traffic", "lights", "in", "the", "photograph?", "yes", "blue", "house", "in", "this", "photo?", "yes", "logical", "Are", "there", "both", "a", "straight", "street", "and", "a", "query", "verify", "choose", "Does", "the", "napkin", "have", "the", "same", "color", "as", "the", "notebook?", "no", "Does", "the", "blue", "umbrella", "look", "closed", "or", "open?", "closed", "Is", "the", "device", "that", "is", "the", "same", "color", "as", "the", "umbrella", "large", "or", "small?", "small"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 467.03999999999996,
+    "y1": 348.96,
+    "y2": 518.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Figure5-1.png"
+}, {
+  "caption": "Table 4: Ablation analysis. Mean and standard deviation of accuracy (%) on CLEVR and CLOSURE across three repetitions. We add imitations of properties of TMN, i.e., Variable number of layers (VL) and Split tokens (ST) to the standard Transformer w/ PR. SoM stands for the specialization of the modules.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 257.3355407714844,
+    "y2": 296.2149658203125
+  },
+  "figType": "Table",
+  "imageText": ["5.2", "ANALYSIS", "Methods", "Properties", "CLEVR", "CLOSURE", "VL", "ST", "SoM", "(In-Distribution)", "(Syst.", "Generalization)", "Transformer", "w/", "PR", "97.1", "±", "0.14", "64.5", "±", "2.5", "Transformer", "w/", "PR", "+", "VL", "✓", "94.0", "±", "1.8", "60.2", "±", "2.9", "Transformer", "w/", "PR", "+", "VL", "+", "ST", "✓", "✓", "56.8", "±", "0.042", "43.6", "±", "0.59", "TMN-Stack", "✓", "✓", "✓", "98.0", "±", "0.030", "90.9", "±", "0.49"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 301.92,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table4-1.png"
+}, {
+  "caption": "Table 3: Effect of specialization of modules. Mean and standard deviation of accuracy (%) on CLEVR and CLOSURE across three repetitions with different libraries of modules. “Individual” denotes that a module is assigned to a single sub-task. “Semantic group” and “Random group” denote that a module is assigned to a group including sub-tasks that are semantically similar or randomly selected, respectively. “Order” denotes that a module is selected by the order of a sub-task in a program.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 92.64151763916016,
+    "y2": 153.43792724609375
+  },
+  "figType": "Table",
+  "imageText": ["Library", "The", "number", "Specialization", "CLEVR", "CLOSURE", "of", "modules", "of", "modules", "of", "modules", "(In-Distribution)", "(Syst.", "Generalization)", "Individual", "26", "✓", "98.0", "±", "0.030", "90.9", "±", "0.49", "Semantic", "group", "12", "✓", "98.1", "±", "0.014", "93.7", "±", "0.55", "Random", "group", "12", "✓", "97.9", "±", "0.059", "93.0", "±", "0.29", "Order", "12", "92.2", "±", "1.5", "68.4", "±", "1.8"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 160.79999999999998,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table3-1.png"
+}, {
+  "caption": "Figure 2: TMN Architecture and Modular Structures. (a) Given an image and a program related to a question, TMNs construct a question-specific Transformer network as a composition of modules that tackle a sub-task. Each module takes as input the representations of the visual features, the head token and the module’s argument from the program. A classifier outputs an answer from the final representation of the head token. (b) We investigate two modular structures. Stack structure simply stacks all the modules. Tree structure runs two threads and then merges their outputs with a module (AND/OR in this example). The numbers in ( ) denotes the order of each sub-task in the program.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 287.7904968261719,
+    "y2": 359.5458984375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Stack", "and", "Tree", "modular", "structures", "(Stack)", "(Tree)", "Image", "ProgramImage", "AND", "/", "OR", "(5)", "Module", "(4)", "Module", "(3)", "Module", "(2)", "Module", "(1)", "Module", "(6)", "Answer", "Image", "Program", "AND", "/", "OR", "(5)", "Module", "(4)", "Module", "(3)", "Module", "(2)", "Module", "(1)", "Module", "(6)", "Answer", "Program", "(a)", "TMN", "Architecture", "Classifier", "ICLR", "…", "Library", "of", "modules", "0", "1", "2", "3", "…", "Embedding", "Embedding", "1", "red", "FILTER", "Module", "Image", "Program", "Head", "token", "null", "square", "2", "COUNT", "Module", "0", "Feature", "extractor", "FILTER", "Module", "FILTER(square)", "FILTER(red)", "COUNT", "Answer", ":", "2"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 497.28,
+    "y1": 85.44,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Figure2-1.png"
+}, {
+  "caption": "Table 5: Effect of pre-training. Mean accuracy (%) on CLEVR-CoGenT validation condition B and CLOSURE with two different feature extractors, which are an object detector pre-trained on Visual Genome (VG) and a ResNet-101 (without pre-training on VG).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 92.64151763916016,
+    "y2": 120.56195068359375
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "CLEVR-CoGenT", "CLOSURE", "w/o", "VG", "w/", "VG", "∆", "w/o", "VG", "w/", "VG", "∆", "Transformer", "78.9", "87.5", "8.6", "57.4", "62.1", "4.7", "Transformer", "w/", "PR", "81.7", "88.7", "6.9", "64.5", "64.5", "0.005", "TMN-Stack", "(ours)", "80.6", "86.9", "6.3", "90.9", "92.7", "1.7", "TMN-Tree", "(ours)", "80.1", "86.4", "6.4", "95.4", "96.4", "1.0"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 464.15999999999997,
+    "y1": 127.67999999999999,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table5-1.png"
+}, {
+  "caption": "Figure 3: Transformer-based Baseline Methods. (a) Standard Transformer (Transformer) takes an image and a question as inputs. (b) Standard Transformer with programs (Transformer w/ PR) takes a program as an input instead of the question. Emb denotes visual/word embeddings. These approaches use the same visual inputs and Transformer encoder structure.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 182.96652221679688,
+    "y2": 221.844970703125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Transformer", "w/", "PR", "Emb", "Emb", "Emb", "Emb", "FILTER(circle)", "COLOR", "circle", "COLOR", "Answer", "Encoders", "Transformer", "Stack", "of", "FILTER", "Extractor", "Program", "Answer", "Image", "Encoders", "Transformer", "Stack", "of", "What", "color", "…", "Extractor", "Question", "What", "color", "is", "the", "circle?", "Image", "(a)", "Transformer", "Emb", "Emb", "Emb", "Emb", "FILTER(circle)", "COLOR", "circle", "COLOR", "Answer", "Encoders", "Transformer", "Stack", "of", "FILTER", "Extractor", "Program", "Answer", "Image", "Encoders", "Transformer", "Stack", "of", "What", "color", "…", "Extractor", "Question", "What", "color", "is", "the", "circle?", "Image"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 103.2,
+    "x2": 511.2,
+    "y1": 85.92,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Figure3-1.png"
+}, {
+  "caption": "Table 9: Libraries of modules. “Individual” library has 26 modules, while “Semantic group” and “Random group” libraries have 12 modules.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99615478515625,
+    "y1": 103.5035171508789,
+    "y2": 120.4649658203125
+  },
+  "figType": "Table",
+  "imageText": ["12", "equal", "shape", "13", "equal", "size", "14", "filter", "color", "15", "filter", "material", "16", "filter", "shape", "17", "filter", "size", "18", "query", "color", "19", "query", "material", "20", "query", "shape", "21", "query", "size", "22", "same", "color", "23", "same", "material", "24", "same", "shape", "25", "same", "size", "same", "color", "filter", "size", "same", "material", "equal", "integer", "same", "shape", "filter", "color", "same", "size", "same", "color", "11", "equal", "material", "query", "color", "query", "size", "query", "material", "less", "than", "query", "shape", "exist", "query", "size", "relate", "10", "equal", "integer", "filter", "color", "equal", "size", "filter", "material", "query", "material", "filter", "shape", "scene", "filter", "size", "equal", "color", "9", "equal", "color", "equal", "color", "same", "material", "equal", "material", "filter", "material", "equal", "shape", "count", "equal", "size", "same", "size", "8", "less", "than", "equal", "integer", "unique", "7", "greater", "than", "greater", "than", "filter", "shape", "less", "than", "intersect", "Module", "number", "Individual", "Semantic", "group", "Random", "group", "0", "scene", "scene", "query", "color", "1", "count", "count", "query", "shape", "2", "exist", "exist", "union", "3", "intersect", "intersect", "same", "shape", "4", "relate", "relate", "equal", "shape", "5", "union", "union", "greater", "than", "6", "unique", "unique", "equal", "material"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 127.67999999999999,
+    "y2": 589.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table9-1.png"
+}, {
+  "caption": "Table 10: Effect of regional features. Mean and standard deviation of accuracy (%) on CLEVRCoGenT validation condition B with grid features and regional features.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.99517822265625,
+    "y1": 633.7295532226562,
+    "y2": 650.6909790039062
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Grid", "features", "Regional", "features", "Transformer", "78.9", "±", "0.80", "77.4", "±", "0.68", "Transformer", "w/", "PR", "81.7", "±", "1.1", "78.2", "±", "0.44", "TMN-Stack", "(ours)", "80.6", "±", "0.21", "79.4", "±", "0.37", "TMN-Tree", "(ours)", "80.1", "±", "0.72", "80.9", "±", "0.25"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 187.68,
+    "x2": 424.32,
+    "y1": 657.6,
+    "y2": 715.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0bLE93R9d0O-Table10-1.png"
+}]

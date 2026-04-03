@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: On the two class MNIST problem, G&C performs comparably to SGD across different train loss level and number of samples. This shows us that despite the large number of parameters, G&C solutions are implicitly regularized. To show that the degree of generalization of G&C is indeed substantial, we train an additional linear model, which has a much more restricted hypothesis class, but has on average 10% worse generalization performance. The empty cells correspond to linear models where we could not find solutions with 100% training accuracy. We also show the estimated standard deviations of the averages computed over 175 random data split and training seeds. For most cells, the standard deviation is less than 1%.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 166.24493408203125
+  },
+  "figType": "Table",
+  "imageText": ["2", "G&C", "66.89%±1.04%", "66.89%±1.04%", "65.87%±1.05%", "64.03%±0.92%", "62.81%±0.90%", "61.02%±0.84%", "59.90%±0.91%", "56.82%±0.95%", "SGD", "69.67%±0.98%", "69.67%±0.98%", "67.11%±0.93%", "64.94%±0.95%", "63.42%±0.87%", "64.38%±0.88%", "63.82%±0.89%", "62.33%±0.87%", "Linear", "58.93%±0.94%", "58.93%±0.94%", "58.45%±0.92%", "56.59%±0.89%", "54.11%±0.91%", "54.21%±0.87%", "53.13%±0.93%", "51.59%±0.89%", "4", "G&C", "76.28%±0.90%", "76.28%±0.90%", "73.93%±0.92%", "72.63%±0.86%", "70.89%±0.90%", "68.27%±0.83%", "65.63%±0.92%", "62.38%±0.91%", "SGD", "77.35%±0.81%", "77.35%±0.81%", "75.01%±0.85%", "75.61%±0.83%", "73.95%±0.85%", "73.28%±0.85%", "69.15%±0.84%", "67.65%±0.84%", "Linear", "65.12%±0.81%", "65.12%±0.81%", "61.94%±0.82%", "62.14%±0.78%", "58.11%±0.88%", "57.21%±0.91%", "55.38%±0.88%", "53.60%±0.83%", "8", "G&C", "83.05%±0.67%", "83.05%±0.67%", "80.72%±0.75%", "78.23%±0.81%", "78.05%±0.72%", "76.40%±0.79%", "70.76%±0.74%", "67.48%±0.78%", "SGD", "84.82%±0.63%", "83.63%±0.63%", "84.82%±0.63%", "82.62%±0.74%", "81.85%±0.72%", "79.70%±0.70%", "79.74%±0.63%", "76.51%±0.71%", "Linear", "74.29%±0.72%", "74.29%±0.72%", "71.72%±0.75%", "67.79%±0.69%", "67.36%±0.76%", "63.46%±0.75%", "58.65%±0.79%", "54.87%±0.75%", "16", "G&C", "89.21%±0.47%", "89.21%±0.47%", "87.01%±0.50%", "85.18%±0.56%", "84.69%±0.54%", "81.91%±0.62%", "78.61%±0.65%", "75.37%±0.63%", "SGD", "91.24%±0.40%", "91.24%±0.40%", "90.87%±0.41%", "90.84%±0.38%", "88.77%±0.48%", "87.93%±0.48%", "86.98%±0.47%", "83.90%±0.49%", "Linear", "80.68%±0.55%", "80.68%±0.55%", "78.50%±0.56%", "75.69%±0.60%", "72.09%±0.56%", "67.16%±0.67%", "69.51%±3.40%", "-", "32", "G&C", "93.02%±0.27%", "93.02%±0.27%", "92.39%±0.29%", "90.59%±0.34%", "89.18%±0.38%", "87.22%±0.43%", "86.23%±0.44%", "83.15%±0.51%", "SGD", "94.04%±0.25%", "-", "-", "94.04%±0.25%", "93.49%±0.28%", "92.54%±0.28%", "91.63%±0.33%", "88.60%±0.35%", "Linear", "84.75%±0.47%", "84.75%±0.47%", "82.69%±0.43%", "81.24%±0.44%", "79.04%±3.14%", "78.94%±4.74%", "-", "-", "Sample", "Count", "Optimizer", "Best", "Test", "Acc", "Train", "Loss", "(0.3,", "0.35)", "(0.35,", "0.4)", "(0.4,", "0.45)", "(0.45,", "0.5)", "(0.5,", "0.55)", "(0.55,", "0.6)", "(0.6,", "0.65)"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 506.4,
+    "y1": 178.56,
+    "y2": 304.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Table1-1.png"
+}, {
+  "caption": "Table 2: On the two class CIFAR10 problem, G&C performs comparably to SGD across different training losses and number of samples. This shows us that despite the large number of parameters, G&C solutions are implicitly regularized. We do note that G&C in this low data regime consistently performs better than SGD though. We computed the standard deviation over 75 random data split and training seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 327.4775390625,
+    "y2": 377.31597900390625
+  },
+  "figType": "Table",
+  "imageText": ["2", "G&C", "52.39%±0.67%", "51.66%±0.74%", "52.39%±0.67%", "52.00%±0.60%", "51.37%±0.56%", "50.01%±0.71%", "50.66%±0.62%", "SGD", "51.98%±0.59%", "51.93%±0.66%", "51.39%±0.47%", "51.98%±0.59%", "51.16%±0.48%", "50.65%±0.45%", "50.05%±0.43%", "4", "G&C", "55.51%±0.84%", "55.51%±0.84%", "53.59%±0.96%", "52.78%±0.82%", "52.30%±0.67%", "52.38%±0.63%", "54.07%±0.72%", "SGD", "53.75%±0.62%", "53.49%±0.68%", "52.14%±0.51%", "53.75%±0.62%", "51.53%±0.63%", "52.18%±0.66%", "50.44%±0.55%", "8", "G&C", "57.17%±0.94%", "54.39%±0.80%", "53.99%±0.76%", "57.17%±0.94%", "54.61%±0.68%", "52.66%±0.66%", "52.82%±0.62%", "SGD", "56.76%±0.71%", "56.76%±0.71%", "55.02%±0.62%", "54.79%±0.72%", "54.62%±0.68%", "53.39%±0.66%", "53.53%±0.55%", "16", "G&C", "61.10%±0.98%", "61.10%±0.98%", "59.54%±0.98%", "59.21%±0.90%", "57.53%±0.86%", "57.71%±0.81%", "55.06%±0.70%", "SGD", "58.98%±0.69%", "58.58%±0.77%", "58.98%±0.69%", "57.86%±0.79%", "57.11%±0.61%", "56.77%±0.62%", "53.90%±0.50%", "24", "G&C", "66.59%±0.74%", "66.59%±0.74%", "65.91%±0.80%", "64.09%±0.96%", "61.08%±0.89%", "59.33%±0.88%", "57.18%±0.89%", "SGD", "63.16%±0.87%", "63.16%±0.87%", "62.02%±0.84%", "60.74%±0.73%", "58.21%±0.75%", "57.62%±0.69%", "56.24%±0.55%", "Sample", "Count", "Optimizer", "Best", "Test", "Acc", "Train", "Loss", "(0.55,", "0.57)", "(0.57,", "0.59)", "(0.59,", "0.61)", "(0.61,", "0.63)", "(0.63,", "0.65)", "(0.65,", "0.67)"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 514.0799999999999,
+    "y1": 389.76,
+    "y2": 497.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Table2-1.png"
+}, {
+  "caption": "Table 4: 1-shot-5-way classification performance on both CIFAR-FS and mini-ImageNet with ResNet-12 backbone. We provide mean test accuracy over 600 episodes and the one standard error. Compared to SGD, Pattern Search can always achieve better performance by a large margin.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 254.94851684570312,
+    "y2": 282.86895751953125
+  },
+  "figType": "Table",
+  "imageText": ["SGD", "68.35", "±", "0.46", "55.76", "±", "0.42", "Pattern", "Search", "70.25", "±", "0.45", "58.53", "±", "0.41", "Optimizer", "CIFAR-FS", "mini-ImageNet"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 204.95999999999998,
+    "x2": 404.15999999999997,
+    "y1": 295.68,
+    "y2": 340.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Table4-1.png"
+}, {
+  "caption": "Table 3: In this table, we trained the same LeNet, but with more number of examples and more classes. We found that the generalization performance is still fairly similar between SGD and alternative zeroth order optimizers that do not use any gradient information. The empty cells indicate the the experiments has timed out, and we failed to find models achieving 100% training accuracy within a reasonable time limit.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR-10", "SGD", "36.01%±0.25%", "29.91%±0.31%", "25.88%±0.34%", "19.86%±0.27%", "Pattern", "Search", "-", "30.00%±0.69%", "25.04%±0.66%", "18.70%±1.22%", "Random", "Greedy", "34.44%±0.54%", "27.06%±0.75%", "24.04%±0.58%", "16.80%±0.13%", "MNIST", "SGD", "93.46%±0.11%", "90.15%±0.22%", "87.48%±0.26%", "78.67%±0.51%", "Pattern", "Search", "93.68%±0.12%", "90.33%±0.12%", "87.26%±0.30%", "78.43%±0.46%", "Random", "Greedy", "93.34%±0.08%", "90.35%±0.10%", "87.33%±0.21%", "78.51%±0.50%", "Sample", "Count", "1000", "500", "300", "100"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 508.32,
+    "y1": 145.92,
+    "y2": 230.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Table3-1.png"
+}, {
+  "caption": "Figure 8: Decision boundaries as we increase the number of samples",
+  "captionBoundary": {
+    "x1": 169.02000427246094,
+    "x2": 442.9815979003906,
+    "y1": 695.0665283203125,
+    "y2": 701.0689697265625
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "Decision", "boundaries", "of", "Guess", "&", "Check", "trained", "models", "64", "samples", "(e)", "Decision", "boundaries", "of", "Guess", "&", "Check", "trained", "models", "32", "samples", "(d)", "Decision", "boundaries", "of", "SGD", "trained", "models", "64", "samples", "(c)", "Decision", "boundaries", "of", "SGD", "trained", "models", "32", "samples", "(b)", "Decision", "boundaries", "of", "a", "poisoned", "neural", "network", "64", "samples", "(a)", "Decision", "boundaries", "of", "a", "poisoned", "neural", "network", "32", "samples"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 106.56,
+    "y2": 682.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Figure8-1.png"
+}, {
+  "caption": "Figure 1: On the left, we have the true underlying distribution of the toy problem. On the left, we have the sampled training data.",
+  "captionBoundary": {
+    "x1": 345.6019592285156,
+    "x2": 503.9973449707031,
+    "y1": 447.03851318359375,
+    "y2": 485.91796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 344.64,
+    "x2": 499.2,
+    "y1": 348.96,
+    "y2": 425.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Figure1-1.png"
+}, {
+  "caption": "Table 5: We show that when we increase the number of b terms, the Guess & Check solution becomes much more biased towards linear solutions. In other words, we have increased the volume of linear solutions relative to quadratic solutions in the parameter space by overparameterization.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["k", "-2", "-1", "0", "1", "2", "#", "of", "b", "terms", "1", "3", "5", "10", "1", "3", "5", "10", "1", "3", "5", "10", "1", "3", "5", "10", "1", "3", "5", "10", "E(a|S)", "-0.95", "-0.16", "-0.06", "-0.01", "-0.47", "-0.08", "-0.03", "-0.01", "0.00", "0.00", "0.00", "0.00", "0.47", "0.08", "0.03", "0.01", "0.95", "0.16", "0.06", "0.01", "E(", "∑", "i", "bi|S)", "-1.23", "-1.87", "-1.95", "-1.99", "-0.62", "-0.94", "-0.98", "-1.00", "0.00", "0.00", "0.00", "0.00", "0.62", "0.94", "0.98", "1.00", "1.23", "1.87", "1.95", "1.99", "E(c|S)", "0.19", "0.03", "0.01", "0.00", "0.09", "0.02", "0.01", "0.00", "0.00", "0.00", "0.00", "0.00", "-0.09", "-0.02", "-0.01", "0.00", "-0.19", "-0.03", "-0.01", "0.00"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 502.08,
+    "y1": 124.32,
+    "y2": 155.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Table5-1.png"
+}, {
+  "caption": "Figure 2: In this figure, we show that even though the model becomes much more expressive as we increase the number of parameters, as shown in the possible decision boundaries of the poisoned network of various sizes, both SGD and Guess & Check produce decision boundaries that are relatively stable as we increase the number of parameters. From left to right, we have decision boundaries produced by 2, 4, 10, 15, 20 hidden units single layer neural networks with different training methods. For each (training method, model size) pair, we show 9 randomly sampled decision boundaries of the trained network. We showed even more samples of the decision boundaries in Appendix A",
+  "captionBoundary": {
+    "x1": 107.9999771118164,
+    "x2": 504.0039978027344,
+    "y1": 393.07452392578125,
+    "y2": 464.8309326171875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Decision", "boundaries", "of", "Guess", "&", "Check", "trained", "models", "(b)", "Decision", "boundaries", "of", "SGD", "trained", "models", "(a)", "Decision", "boundaries", "of", "a", "poisoned", "neural", "network"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 379.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Figure2-1.png"
+}, {
+  "caption": "Figure 3: The volume of the decision boundary on the left as measured by G&C is 10−4 whereas the volume of the robust/complex decision boundary has volume smaller than 10−10. The large volume disparity may explain trained network’s strong preference for the linear solution.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0007019042969,
+    "y1": 302.32452392578125,
+    "y2": 363.1219482421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 499.2,
+    "y1": 183.84,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QC10RmRbZy9-Figure3-1.png"
+}]

@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: Comparison on ImageNet-1K. T denotes simulation length.",
+  "captionBoundary": {
+    "x1": 169.95700073242188,
+    "x2": 442.0455322265625,
+    "y1": 527.060302734375,
+    "y2": 533.062744140625
+  },
+  "figType": "Table",
+  "imageText": ["Spiking", "MLP", "(our", "model)", "MLP-SPE-T", "25M", "4", "66.39", "Spiking", "MLP", "(our", "model)", "MLP-SPE-T", "25M", "6", "69.09", "Spiking", "MLP", "(our", "model)", "MLP-S", "34M", "4", "63.25", "Spiking", "MLP", "(our", "model)", "MLP-SPE-S", "38M", "4", "68.84", "TET", "Deng", "et", "al.", "(2022)", "ResNet-34", "22M", "6", "64.79", "STBP-tdBN", "Zheng", "et", "al.", "(2021)", "ResNet-34-large", "86M", "6", "67.05", "Diet-SNN", "Rathi", "&", "Roy", "(2021)", "VGG-16", "138M", "5", "69.00", "ANN-SNN", "Hu", "et", "al.", "(2018)", "ResNet-34", "22M", "768", "71.6", "ANN-SNN", "Sengupta", "et", "al.", "(2019)", "VGG-16", "138M", "2500", "69.96", "Hybrid", "training", "Rathi", "et", "al.", "(2020)", "ResNet-34", "22M", "250", "61.48", "Hybrid", "training", "Lee", "et", "al.", "(2020)", "VGG-16", "138M", "250", "65.19", "STBP-tdBN", "Zheng", "et", "al.", "(2021)", "ResNet-34", "22M", "6", "63.72", "Method", "Architecture", "Model", "Size", "T", "Accuracy[%]"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 534.24,
+    "y2": 677.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Table1-1.png"
+}, {
+  "caption": "Table 2: Comparison on CIFAR. T denotes simulation length.",
+  "captionBoundary": {
+    "x1": 183.04196166992188,
+    "x2": 428.958740234375,
+    "y1": 384.3282470703125,
+    "y2": 390.3307189941406
+  },
+  "figType": "Table",
+  "imageText": ["Spiking", "MLP", "(our", "model)", "MLP-SPE-T", "4", "80.57", "TET", "Deng", "et", "al.", "(2022)", "ResNet-19", "6", "74.72±", "0.28", "TET", "Deng", "et", "al.", "(2022)", "ResNet-19", "4", "74.47±", "0.15", "Diet-SNN", "Rathi", "&", "Roy", "(2021)", "ResNet-20", "5", "64.07", "STBP-tdBN", "Zheng", "et", "al.", "(2021)", "ResNet-19", "6", "71.12±", "0.57", "STBP-tdBN", "Zheng", "et", "al.", "(2021)", "ResNet-19", "4", "70.86±", "0.22", "CIFAR100", "TET", "Deng", "et", "al.", "(2022)", "ResNet-19", "4", "94.44±", "0.08", "Spiking", "MLP", "(our", "model)", "MLP-SPE-T", "4", "96.08", "Diet-SNN", "Rathi", "&", "Roy", "(2021)", "ResNet-20", "10", "92.54", "STBP-tdBN", "Zheng", "et", "al.", "(2021)", "ResNet-19", "6", "93.16", "STBP-tdBN", "Zheng", "et", "al.", "(2021)", "ResNet-19", "4", "92.92", "CIFAR10", "Dataset", "Method", "Architecture", "T", "Accuracy[%]"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 392.64,
+    "y2": 529.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Table2-1.png"
+}, {
+  "caption": "Table 3: Network performance under different skip connection configurations on CIFAR10.",
+  "captionBoundary": {
+    "x1": 123.33599853515625,
+    "x2": 488.6643981933594,
+    "y1": 281.7755126953125,
+    "y2": 287.7779846191406
+  },
+  "figType": "Table",
+  "imageText": ["✓", "✓", "10.53", "✓", "10.00", "✓", "✓", "80.53", "✓", "✓", "✓", "81.35", "✓", "✓", "✓", "✓", "79.46", "PT(1)", "PC(2)", "TC(3)", "CT(4)", "Accuracy[%]"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 200.64,
+    "x2": 411.35999999999996,
+    "y1": 290.4,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Table3-1.png"
+}, {
+  "caption": "Figure 4: Mean network sparsity of spiking MLP-SPE-T on the ImagNet-1K test set. We distinguish each stage with different colors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 538.5025634765625,
+    "y2": 555.4639892578125
+  },
+  "figType": "Figure",
+  "imageText": ["1st", "stage", "2nd", "stage", "3rd", "stage", "4th", "stage", "sit", "y", "Sp", "ar", "0.20", "0.15", "0.10", "0.05", "0.00", "0", "5", "10", "15", "20", "25", "30", "Layer", "Index"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 465.12,
+    "y1": 406.56,
+    "y2": 523.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Potential skip connections for the spiking MLP-Mixer.",
+  "captionBoundary": {
+    "x1": 177.50799560546875,
+    "x2": 434.4931640625,
+    "y1": 250.02151489257812,
+    "y2": 256.02398681640625
+  },
+  "figType": "Figure",
+  "imageText": ["+", "+", "2", "3", "4", "B", "N", "LI", "F", "1", "4", "or", "3", "B", "N", "LI", "F", "1", "2", "3", "4", "3", "2", "…P", "T", "C", "T", "C"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 439.2,
+    "y1": 84.0,
+    "y2": 230.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Overall network architecture (a) and the spiking MLP-Mixer (b-d). The multi-stage network is downsampled with a spiking patch encoding (SPE) module at each stage. Within each stage, the SPE is followed by a sequential of spiking MLP-Mixers with identical architecture each containing a spiking token block with axial sampling (b) and a spiking channel block with full sampling (c). For simplicity, we denote the repeated FC-BatchNorm-LIF block as a spiking MLP layer (d).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 319.5255432128906,
+    "y2": 369.36297607421875
+  },
+  "figType": "Figure",
+  "imageText": ["𝐶𝑊", "×𝐻", "Spiking", "MLP", "𝐶𝐻", "×𝑊", "Spiking", "MLP", "𝐶𝐻", "×𝑊𝐶𝑊", "×𝐻", "Rearrange", "(c)", "Spiking", "Channel", "Block", "FC", "BatchNorm", "LIF", "Rearrange", "𝐻𝑊", "×", "𝐶", "(b)", "Spiking", "Token", "Block", "(d)", "Spiking", "MLP", "LIF", "Skip", "Add", "BatchNorm", "FC", "Spiking", "MLP", "Concat", "RearrangeRearrange", "Conv", "1×1", "BatchNorm", "Skip", "Add", "LIF", "Rearrange", "Rearrange", "𝐶", "×", "𝐻", "×𝑊", "(a)", "Architecture", "𝑁𝑖", "×𝑀", "×", "Input", "SPE", "Token", "Block", "Channel", "Block", "FC", "BatchNorm", "LIF", "FC", "Output"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 487.68,
+    "y1": 89.75999999999999,
+    "y2": 284.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Spiking patch encoding with a directed acyclic graph structure. The structure follows MFI principle with additions performed on BN states and multiplications performed between convolution weights and binary spikes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 551.717529296875,
+    "y2": 579.636962890625
+  },
+  "figType": "Figure",
+  "imageText": ["(2𝐶,", "𝐻", "2", ",", "𝑊", "2", ")", "(", "2𝐶", "3", ",", "𝐻", "2", ",", "𝑊", "2", ")", "(", "2𝐶", "3", ",", "𝐻", "2", ",", "𝑊", "2", ")", "(", "2𝐶", "3", ",", "𝐻", "2", ",", "𝑊", "2", ")", "(𝐶,", "𝐻,𝑊)", "LIF", "Identity", "Conv2d", "+", "BatchNorm", "ca", "t", "co", "n", "+", "+"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 154.07999999999998,
+    "x2": 458.4,
+    "y1": 396.96,
+    "y2": 535.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Axial sampling weights from token blocks across different stages after training on ImageNet-1K. (a) Randomly selected token weights ploted in H × H or W × W 2D matrix. 1, 2 and 4 weight matrices from stage 1, 2 and 3 are displayed. The diagonal distribution of values in early stages indicates local sampling. (b) Weights of several neurons from the same token block in stage 2. For simplicity we only plot several neurons here, this ’M’ shaped weight kernel is found universal in early stages of the network.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0038146972656,
+    "y1": 202.70852661132812,
+    "y2": 263.50494384765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Stage", "1", "(b)", "Stage", "2", "(c)", "Stage", "3", "（d）Weights", "selected", "from", "stage", "2"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 182.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Figure5-1.png"
+}, {
+  "caption": "Table 4: The computation and estimated energy cost.",
+  "captionBoundary": {
+    "x1": 200.4919891357422,
+    "x2": 411.5097961425781,
+    "y1": 357.4704284667969,
+    "y2": 363.472900390625
+  },
+  "figType": "Table",
+  "imageText": ["4.5", "VISUALIZATION", "Spiking", "ResNet-34", "22M", "63.72", "1.85G", "118M", "2.21", "mJ", "Spiking", "MLP-SPE-T", "25M", "66.39", "1.18G", "12M", "1.12", "mJ", "Model", "#Param.", "Accuracy[%]", "#Add.", "#Mult.", "Energy"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 453.12,
+    "y1": 366.24,
+    "y2": 444.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-1x2-lp1eZf-Table4-1.png"
+}]

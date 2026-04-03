@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 1: Distributions of softmax inputs qϕ(z|y), z ∈R2, under the three VC training objectives (MNIST dataset): (left) standard softmax Cross Entropy - “MLE” treatment; (centre) with classconditional Gaussian priors pθ(z|y) - “MAP” treatment; (right) and entropy - “Bayesian” treatment. (Note: softmax inputs have been artificially restricted to 2-dimensional for visualisation purposes.)",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7413024902344,
+    "y1": 224.61355590820312,
+    "y2": 263.49298095703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure1-1.png"
+}, {
+  "caption": "Table 1: Classification Accuracy (%)",
+  "captionBoundary": {
+    "x1": 232.1479949951172,
+    "x2": 379.5446472167969,
+    "y1": 720.571533203125,
+    "y2": 726.573974609375
+  },
+  "figType": "Table",
+  "imageText": ["WideResNet-28-10", "96.11", "95.02", "96.27", "80.21", "79.53", "80.44", "ResNet-50", "93.76", "92.97", "93.28", "73.19", "74.31", "73.42", "CIFAR-10", "CIFAR-100", "CE", "GM", "VC", "CE", "GM", "VC"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 169.92,
+    "x2": 442.08,
+    "y1": 667.68,
+    "y2": 709.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Table1-1.png"
+}, {
+  "caption": "Figure 8: Interpolating in the latent space: Ambiguous MNIST when mapped on the latent space. (l) VC, (r) CE",
+  "captionBoundary": {
+    "x1": 107.86000061035156,
+    "x2": 504.6678161621094,
+    "y1": 662.6305541992188,
+    "y2": 679.5919799804688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 479.03999999999996,
+    "y1": 442.56,
+    "y2": 602.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Classification accuracy under distributional shift, (l) CIFAR-10-C (r) CIFAR-100-C",
+  "captionBoundary": {
+    "x1": 114.18099975585938,
+    "x2": 497.5699768066406,
+    "y1": 272.4775085449219,
+    "y2": 278.47998046875
+  },
+  "figType": "Figure",
+  "imageText": ["Model", "CE", "LVC", "ra", "cy", "Ac", "cu", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "1.0", "2.0", "3.0", "4.0", "5.0", "Shift", "Intensity", "Model", "CE", "LVC", "ra", "cy", "Ac", "cu", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "1.0", "2.0", "3.0", "4.0", "5.0", "Shift", "Intensity"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 486.24,
+    "y1": 144.0,
+    "y2": 259.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Calibration under distribution shift (corruption). (l) CIFAR-10-C, (r) CIFAR-100-C",
+  "captionBoundary": {
+    "x1": 114.4010009765625,
+    "x2": 497.3509216308594,
+    "y1": 720.571533203125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["Model", "CE", "LVC", "EC", "E", "0.40", "0.35", "0.30", "0.25", "0.20", "0.15", "0.10", "0.05", "1.0", "2.0", "3.0", "4.0", "5.0", "Shift", "Intensity", "Model", "CE", "LVC", "EC", "E", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "1.0", "2.0", "3.0", "4.0", "5.0", "Shift", "Intensity"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 486.24,
+    "y1": 591.84,
+    "y2": 708.9599999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure4-1.png"
+}, {
+  "caption": "Table 3: AUROC for the OOD detection task. Models are trained on CIFAR-10 and evaluated on in and out-of-domain samples.",
+  "captionBoundary": {
+    "x1": 333.61199951171875,
+    "x2": 504.00030517578125,
+    "y1": 393.99853515625,
+    "y2": 421.91900634765625
+  },
+  "figType": "Table",
+  "imageText": ["Model", "SVHN", "C-100", "CelebA", "PCE(y|x)", "0.92", "0.88", "0.90", "PVC(y|z)", "0.93", "0.86", "0.89"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 339.84,
+    "x2": 498.24,
+    "y1": 350.88,
+    "y2": 383.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Table3-1.png"
+}, {
+  "caption": "Table 2: Expected Calibration Error (%) (lower is better).",
+  "captionBoundary": {
+    "x1": 191.39100646972656,
+    "x2": 420.30157470703125,
+    "y1": 134.53952026367188,
+    "y2": 140.5419921875
+  },
+  "figType": "Table",
+  "imageText": ["WideResNet-28-10", "3.10", "3.51", "2.06", "10.23", "19.58", "4.81", "ResNet-50", "3.72", "4.13", "3.17", "8.72", "10.60", "5.21", "CIFAR-10", "CIFAR-100", "CE", "GM", "VC", "CE", "GM", "VC"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 81.6,
+    "y2": 123.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Table2-1.png"
+}, {
+  "caption": "Figure 3: Reliability Diagrams: (l) CE, (r) VC",
+  "captionBoundary": {
+    "x1": 311.5320129394531,
+    "x2": 498.2192077636719,
+    "y1": 296.1255187988281,
+    "y2": 302.12799072265625
+  },
+  "figType": "Figure",
+  "imageText": ["ra", "cy", "ac", "cu", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "confidence", "ra", "cy", "ac", "cu", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "confidence"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 313.92,
+    "x2": 489.59999999999997,
+    "y1": 203.04,
+    "y2": 282.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure3-1.png"
+}, {
+  "caption": "Figure 2: The Variation Classier: (l) qϕ(z|x) stochastically maps data to the latent domain, where class-conditional distributions qϕ(z|y) are fitted to priors pθ(z|y) with known analytical form; class predictions pθ(y|z) are “read off” by Bayes’ rule. (r-bottom) images from a line in the data domain X that passes through two data samples (dog and cat images); (r-middle) p(z) for the corresponding latent variables z = fω(x); (r-top) corresponding output predictions pθ(y|x). Note that output predictions may seem confident even where p(z) indicates lower confidence should be attributed.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0029296875,
+    "y1": 337.3985900878906,
+    "y2": 398.195068359375
+  },
+  "figType": "Figure",
+  "imageText": ["P(z|y=cat)", "P(z|y=dog)", "bird", "P(y=cat|z)", "P(y=dog|z)", "pθ(z|y=bird)", "cat", "dog", "pθ(x|y=bird)", "pθ(y|z)", "qϕ(z|x)", "∆|Y|", "Z", "X"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 519.36,
+    "y1": 82.56,
+    "y2": 321.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure2-1.png"
+}, {
+  "caption": "Figure 6: t-SNE plots of the feature space for a classifier trained on CIFAR-10. (l) Trained using CE. (r) Trained using VC. We posit that similar to CE, VC model is unable to meaningfully represent data from an entirely different distribution.",
+  "captionBoundary": {
+    "x1": 107.33200073242188,
+    "x2": 505.74383544921875,
+    "y1": 496.1395263671875,
+    "y2": 524.0599975585938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 506.4,
+    "y1": 351.84,
+    "y2": 485.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure6-1.png"
+}, {
+  "caption": "Figure 5: Prediction accuracy as FGSM adversarial attacks increase (l) MNIST; (r) CIFAR-10",
+  "captionBoundary": {
+    "x1": 118.625,
+    "x2": 493.3757019042969,
+    "y1": 216.22854614257812,
+    "y2": 222.23101806640625
+  },
+  "figType": "Figure",
+  "imageText": ["LVC", "CE", "GM", "ra", "cy", "Ac", "cu", "100", "80", "60", "40", "20", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Epsilon", "LVC", "CE", "GM", "ra", "cy", "Ac", "cu", "100", "90", "80", "70", "60", "50", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Epsilon"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 485.28,
+    "y1": 95.03999999999999,
+    "y2": 208.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Figure5-1.png"
+}, {
+  "caption": "Table 4: Classification accuracy with low data (mean and standard error over 5 runs)",
+  "captionBoundary": {
+    "x1": 333.61199951171875,
+    "x2": 504.3616027832031,
+    "y1": 467.5855407714844,
+    "y2": 484.5469970703125
+  },
+  "figType": "Table",
+  "imageText": ["CE", "GM", "VC", "93.1", "±", "0.5", "94.4", "±", "0.3", "94.2", "±", "0.4"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 342.71999999999997,
+    "x2": 495.35999999999996,
+    "y1": 434.88,
+    "y2": 456.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MCe881WzBr0-Table4-1.png"
+}]

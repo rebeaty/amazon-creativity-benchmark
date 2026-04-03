@@ -1,0 +1,341 @@
+[{
+  "caption": "Table 1: Recourse method performance across various cost and distance metrics (Section 4.1). The numbers reported are averaged across 5 different runs. For all the metrics higher is better except for PAC.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 503.9997863769531,
+    "y1": 83.00335693359375,
+    "y2": 98.7979736328125
+  },
+  "figType": "Table",
+  "imageText": ["COLS", "82.23", "0.24", "82.23", "29.32", "77.82", "70.05", "95.48", "P-COLS", "83.73", "0.24", "83.73", "29.38", "78.48", "71.30", "92.78", "DICE", "0.40", "0.54", "0.40", "11.30", "65.00", "32.00", "98.90", "Face-Eps", "12.20", "0.29", "12.20", "2.50", "94.20", "60.60", "100.0", "Face-Knn", "12.20", "0.29", "12.20", "2.60", "94.10", "60.60", "100.0", "Act.", "Recourse", "65.80", "0.40", "66.60", "11.87", "80.53", "74.07", "44.23", "COMPAS", "COLS", "72.57", "0.38", "76.07", "25.77", "80.22", "76.48", "97.15", "P-COLS", "75.82", "0.40", "79.20", "25.57", "81.67", "78.00", "94.78", "DICE", "2.47", "1.37", "8.32", "3.90", "65.80", "47.20", "97.90", "Face-Eps", "15.23", "0.76", "22.60", "4.75", "92.22", "74.98", "100.0", "Face-Knn", "25.30", "0.74", "35.00", "8.62", "89.07", "71.85", "100.0", "Act.", "Recourse", "49.93", "0.55", "56.85", "18.38", "74.68", "73.57", "78.67", "Adult-Income", "FS@1", "PAC(↓)", "Cov", "Div", "Prox", "Spars", "Val", "Data", "Method", "Metrics", "Cost", "Metrics", "Distance", "Metrics"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 463.2,
+    "y1": 111.36,
+    "y2": 270.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table1-1.png"
+}, {
+  "caption": "Table 11: Cost metrics for additional k values in FS@k for the results presented in the main Table 1.",
+  "captionBoundary": {
+    "x1": 123.87999725341797,
+    "x2": 488.1230773925781,
+    "y1": 331.1473693847656,
+    "y2": 336.9800109863281
+  },
+  "figType": "Table",
+  "imageText": ["COLS", "73.07", "82.23", "82.23", "82.23", "P-COLS", "74.33", "83.73", "83.73", "83.73", "DICE", "0.2", "0.4", "0.4", "0.4", "Face-Eps", "10.4", "12.2", "12.2", "12.2", "Face-Knn", "10.4", "12.2", "12.2", "12.2", "Act.", "Recourse", "42.47", "65.8", "66.6", "66.6", "Random", "7.85", "29.95", "39.2", "39.2", "COMPAS", "COLS", "53.4", "72.57", "76.05", "76.07", "P-COLS", "53.42", "75.82", "79.18", "79.2", "DICE", "0.4", "2.47", "6.9", "8.23", "Face-Eps", "7.32", "15.23", "22.57", "22.6", "Face-Knn", "11.08", "25.3", "34.82", "35", "Act.", "Recourse", "28.03", "49.93", "56.78", "56.85", "Random", "0.82", "6.27", "28.5", "31.68", "Adult-Income", "Data", "Method", "Cost", "Metrics", "FS@0.5", "FS@1", "FS@2", "FS@3"],
+  "name": "11",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 188.64,
+    "x2": 423.35999999999996,
+    "y1": 349.44,
+    "y2": 511.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table11-1.png"
+}, {
+  "caption": "Table 10: Table comparing different recourse methods across various cost and distance metrics for a logistic regression black-box model. The numbers reported are averaged across 5 different runs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0012512207031,
+    "y1": 83.00335693359375,
+    "y2": 98.7979736328125
+  },
+  "figType": "Table",
+  "imageText": ["COLS", "87.88", "0.18", "87.88", "31.92", "76.93", "71.63", "89.33", "P-COLS", "89.25", "0.17", "89.25", "28.17", "81.13", "74.73", "91.62", "D", "0.00", "-", "0.00", "11.10", "63.10", "29.20", "100.00", "FE", "6.30", "0.16", "6.30", "3.60", "95.00", "60.50", "100.00", "FK", "6.30", "0.16", "6.30", "3.60", "95.00", "60.50", "100.00", "AR", "74.32", "0.31", "74.32", "15.66", "80.98", "74.26", "53.66", "R", "28.76", "0.77", "36.96", "43.22", "56.22", "32.00", "82.10", "COMPAS", "COLS", "67.93", "0.39", "69.97", "27.83", "78.40", "74.43", "99.13", "P-COLS", "69.17", "0.40", "71.57", "27.20", "79.30", "76.70", "95.67", "D", "1.30", "1.47", "7.10", "6.50", "64.80", "49.20", "76.60", "FE", "2.82", "0.99", "5.46", "9.44", "83.08", "65.90", "100.00", "FK", "17.04", "0.90", "28.08", "7.22", "83.98", "67.80", "100.00", "AR", "44.40", "0.62", "52.62", "21.74", "74.00", "72.92", "87.58", "R", "3.60", "1.59", "24.10", "48.14", "54.76", "38.94", "79.46", "Adult-Income", "FS@1", "PAC(↓)", "Cov", "Div", "Prox", "Spars", "Val", "Cost", "Metrics", "Distance", "Metrics", "Data", "Method", "Metrics"],
+  "name": "10",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 111.36,
+    "y2": 317.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table10-1.png"
+}, {
+  "caption": "Figure 1: Diagram showing the intuition behind the Expected Minimum Cost Objective. This figure represents an abstract cost function space where squares denote cost function samples that are the same color if they are similar and form a cluster. We aim to find a recourse set where each cf (here, {s1, s2, s3}) does well under a particular cluster of cost functions. The shaded big circles each represent a single cf si that caters to the enclosed cost functions. Here the user’s hidden groundtruth cost function (grey circle) is served well by s1.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0049133300781,
+    "y1": 376.8533630371094,
+    "y2": 473.3460998535156
+  },
+  "figType": "Figure",
+  "imageText": [":", ":", ":", ":", "Sampled", "Cost", "Functions", ":", "True", "Cost", "Function"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 500.15999999999997,
+    "y1": 209.76,
+    "y2": 355.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure1-1.png"
+}, {
+  "caption": "Table 4: Fairness analysis of recourse methods for Gender based subgroups. DIR: Disparate Impact Ratio; M: Male, F: Female.",
+  "captionBoundary": {
+    "x1": 334.781005859375,
+    "x2": 498.8101501464844,
+    "y1": 83.00335693359375,
+    "y2": 108.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["P-COLS", "F", "76.5", "80.2", "1.004", "1.0M", "76.8", "80.2", "COLS", "F", "72.7", "76.2", "0.994", "0.992M", "72.3", "75.6", "Random", "F", "7.8", "34.6", "0.859", "0.792M", "6.7", "27.4", "Act.", "Recourse", "F", "53.8", "58.7", "0.881", "0.959M", "47.4", "56.3", "Face-Knn", "F", "29.9", "36.3", "0.719", "0.89M", "21.5", "32.3", "Face-Eps", "F", "12.5", "22.1", "1.504", "1.118M", "18.8", "24.7", "DICE", "F", "0.0", "0.0", "-", "-M", "4.7", "15.6", "Method", "Gender", "FS@1", "Cov", "DIR-FS", "DIR-Cov"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 500.15999999999997,
+    "y1": 120.96,
+    "y2": 246.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table4-1.png"
+}, {
+  "caption": "Figure 2: This figure shows the performance of the method on FS@k when recourses are generated with Monte Carlo cost samples from a distribution with α-weight varying between 0 and 1, where the user costs follow different α-weight values varying between 0, 1. Performance is robust to misspecification of α. Refer to Section A.2 for more details.",
+  "captionBoundary": {
+    "x1": 118.63400268554688,
+    "x2": 304.758544921875,
+    "y1": 219.236328125,
+    "y2": 284.844970703125
+  },
+  "figType": "Figure",
+  "imageText": ["100", "90", "80", "70", "60", "50", "t", "Linear", "vs", "Percentile", "Cost", "Robustness", "ei", "gh", "-w", "ar", "lo", "te", "C", "M", "on", "1.", "0", "0.", "8", "0.", "6", "0.", "4", "0.", "2", "0.", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "User", "-weight"],
+  "name": "2",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 301.92,
+    "y1": 84.0,
+    "y2": 204.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure2-1.png"
+}, {
+  "caption": "Figure 3: In this plot we show the fraction of users satisfied vs the distance between the train and test distributions. The results demonstrate that as the distance increases the performance drops a bit and then plateaus, which means that the method is robust to this kind of distribution shift. Please refer to Section A.2 for more details.",
+  "captionBoundary": {
+    "x1": 307.2449951171875,
+    "x2": 493.3695068359375,
+    "y1": 204.88836669921875,
+    "y2": 270.4959716796875
+  },
+  "figType": "Figure",
+  "imageText": ["Methods", "Robustness", "to", "Distribution", "Shifts", "COLS", "S@", "1", "ed", "F", "Bi", "nn", "100", "99", "98", "97", "96", "95", "0.00", "0.05", "0.10", "0.15", "0.20", "0.25", "0.30", "Distribution", "Shift"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 310.08,
+    "x2": 491.03999999999996,
+    "y1": 98.39999999999999,
+    "y2": 189.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure3-1.png"
+}, {
+  "caption": "Table 7: Table providing qualitative examples for two users from the dataset. We show each users state vector, the features that user is willing to edit, the preference scores for those editable features, the recourses provided and the cost of the generated recourses. In the first example we see that user highly prefers the feature capital loss and the recourse which suggests edit to that has the lowest cost for the user. Whereas, the recourse which makes changes to both Occupation and Capital Loss has the highest cost as its changing multiple features. For the second user, we see that the most preferred feature is Education-Num but the changes suggested in the recourse requires three steps 7-8-9-10, hence the cost for that recourse is not the lowest but still relatively low. Whereas, the recourse suggesting smaller changes to Capital Loss which is the second most preferred feature has the lowest cost for the user.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00457763671875,
+    "y1": 83.00335693359375,
+    "y2": 168.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["0.695#", "Work", "Hours", "32", "Yes", "0.142", "Country", "US", "No", "0", "#", "Work", "Hours:", "32→", "70", ")", "0.187Gender", "Female", "No", "0", "Capital", "Gain", "0", "Yes", "0.078", "Capital", "Loss", "0", "Yes", "0.240", "(", "Education-Num:", "7→", "10", ")", "0.106Occupation", "Other", "No", "0", "Relationship", "Non-Husband", "No", "0", "Race", "White", "No", "0", "(", "Capital", "Gain:", "0→", "1", ")", ")", "0.387Capital", "Loss", "0", "Yes", "0.944", "#", "Work", "Hours", "40", "No", "0", "Country", "US", "No", "0", "Age", "45", "No", "0", "(", "Capital", "Loss:", "0→", "1", ")", "0.071Workclass", "Private", "No", "0", "Education-Num", "7", "Yes", "0.537", "Martial-Status", "Married", "No", "0", "(", "Occupation:", "Other→", "Manager", "Capital", "Loss:", "0→", "1", "0.378Relationship", "Husband", "No", "0", "Race", "White", "No", "0", "Gender", "Male", "No", "0", "Capital", "Gain", "0", "No", "0", "(", "Occupation:", "Other→", "Manager", ")", "Feature", "Name", "State", "Vector", "Editable", "Features", "Preference", "scores", "Recourses", "Cost", "Age", "24", "No", "0", "(", "Capital", "Loss:", "0→", "1", ")", "0.009Workclass", "Private", "No", "0", "Education-Num", "10", "No", "0", "Martial-Status", "Married", "No", "0", "Occupation", "Other", "Yes", "0.055", "("],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 180.95999999999998,
+    "y2": 378.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table7-1.png"
+}, {
+  "caption": "Table 5: Table containing data statistics and black-box model details. The binary version of the datasets are take from (Pawelczyk et al., 2021) whereas the non-binary version are taken from (Mothilal et al., 2020).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9991760253906,
+    "y1": 83.00335693359375,
+    "y2": 98.7979736328125
+  },
+  "figType": "Table",
+  "imageText": ["#", "Continuous", "features", "3", "4", "2", "3", "#", "Categorical", "features", "9", "3", "10", "12", "Undesired", "class", "≤", "50k", "Will", "Recidivate", "≤", "50k", "Will", "Recidivate", "Desired", "class", ">", "50k", "Won’t", "Recidivate", ">", "50k", "Won’t", "Recidivate", "Train/val/test", "20088/2338/749", "1415/229/491", "13172/1569/748", "5491/705/444", "Model", "Type", "ANN(2,", "20)", "ANN(2,", "20)", "ANN(2,", "20)", "ANN(2,", "20)", "Val", "Accuracy", "82%", "69%", "81%", "61%", "Adult-Income", "Binary", "COMPAS", "Binary", "Adult-Income", "COMPAS"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 111.36,
+    "y2": 188.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table5-1.png"
+}, {
+  "caption": "Table 8: Table comparing different recourse methods across various cost and distance metrics on Non-Binary versions of the datasets (Section A.1.1).The numbers reported are averaged across 5 different runs. Variance values have been as 89% of them were lower than 0.05, with the maximum being 0.86. FS@1: Fraction of users satisfied at k = 1. PAC: Population Average Cost. Cov: Population Coverage. For all the metrics higher is better except for PAC where lower is better.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036315917969,
+    "y1": 83.00335693359375,
+    "y2": 128.68597412109375
+  },
+  "figType": "Table",
+  "imageText": ["COLS", "67.34", "0.31", "68.11", "20.53", "85.47", "82.34", "95.97", "P-COLS", "70.86", "0.35", "72.03", "21.03", "85.48", "82.88", "91.93", "DICE", "14.86", "1.02", "25.45", "27.88", "82.38", "69.44", "99.86", "Random", "1.31", "1.87", "21.76", "49.07", "54.10", "42.34", "67.82", "COMPAS", "-", "NB", "COLS", "72.67", "0.36", "74.60", "29.27", "79.06", "76.64", "97.85", "P-COLS", "70.03", "0.39", "72.81", "29.85", "78.45", "76.29", "92.30", "DICE", "6.28", "1.45", "27.01", "53.01", "57.02", "47.80", "86.20", "Random", "0.08", "2.42", "17.41", "70.35", "33.32", "22.45", "75.71", "Adult-Income", "-", "NB", "FS@1", "PAC(↓)", "Cov", "Div", "Prox", "Spars", "Val", "Cost", "Metrics", "Distance", "Metrics", "Data", "Method", "Metrics"],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 463.2,
+    "y1": 140.64,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table8-1.png"
+}, {
+  "caption": "Figure 8: Screenshots of how the human evaluation test was conducted. Please refer to Section A.1.4 for more details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0028381347656,
+    "y1": 658.9503173828125,
+    "y2": 674.7449951171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 499.68,
+    "y2": 648.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Instructions for Human Evaluation. Please refer to Section A.1.4 for more details.",
+  "captionBoundary": {
+    "x1": 140.4290008544922,
+    "x2": 471.57550048828125,
+    "y1": 379.33331298828125,
+    "y2": 385.16595458984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 132.96,
+    "y2": 369.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure7-1.png"
+}, {
+  "caption": "Table 9: Table comparing different recourse methods across various cost and distance metrics for a black-box model with different seed but belonging to the same model family. The numbers reported are averaged across 5 different runs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00177001953125,
+    "y1": 83.00335693359375,
+    "y2": 108.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["COLS", "77.08", "0.24", "77.90", "29.33", "76.90", "68.87", "95.78", "P-COLS", "78.32", "0.24", "79.02", "29.02", "77.88", "70.08", "92.10", "Act.", "Recourse", "56.24", "0.45", "58.48", "9.72", "80.12", "73.62", "39.10", "Random", "27.44", "0.78", "35.70", "41.76", "58.14", "33.06", "49.34", "DICE", "0.90", "0.88", "1.50", "12.50", "63.90", "30.70", "99.30", "Face-Eps", "6.80", "0.29", "6.80", "2.40", "95.00", "60.40", "100.00", "Face-Knn", "6.80", "0.29", "6.80", "2.40", "94.90", "60.30", "100.00", "COMPAS", "COLS", "75.12", "0.36", "77.40", "25.43", "81.00", "77.70", "98.28", "P-COLS", "75.76", "0.38", "79.14", "25.54", "81.84", "78.38", "95.10", "Act.", "Recourse", "46.55", "0.58", "53.82", "19.07", "74.33", "73.25", "80.72", "Random", "5.71", "1.42", "28.24", "48.93", "55.10", "39.30", "78.73", "DICE", "2.70", "1.24", "7.10", "3.80", "66.20", "47.30", "97.80", "Face-Eps", "13.32", "0.79", "19.88", "5.43", "91.97", "74.80", "100.00", "Face-Knn", "21.78", "0.83", "34.13", "8.67", "88.68", "71.43", "100.00", "Adult-Income", "FS@1", "PAC(↓)", "Cov", "Div", "Prox", "Spars", "Val", "Cost", "Metrics", "Distance", "Metrics", "Data", "Method", "Metrics"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 121.44,
+    "y2": 316.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table9-1.png"
+}, {
+  "caption": "Figure 4: Figure showing the performance of different recourse methods as the Budget is increased. These are the average number across 5 different runs along with the standard deviation error bars. For some methods the standard deviation is very low hence not visible as bars in the plot. It can be seen that as the budget increases the performance of COLS and P-COLS increases. Please refer to Section A.2 for more details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 294.1245422363281,
+    "y1": 212.9273681640625,
+    "y2": 298.4610290527344
+  },
+  "figType": "Figure",
+  "imageText": ["User", "Satisfaction", "vs", "#", "black-box", "access", "D", "FE", "FK", "AR", "R", "COLS", "P-COLS", "60", "80", "FS", "@", "1", "40", "20", "0", "500", "1000", "2000", "3000", "5000", "10000", "Budget"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 292.32,
+    "y1": 89.28,
+    "y2": 199.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Figure showing the performance of different recourse methods as the the number of counterfacuals to be generated is increased. These are the average number across 5 different runs along with standard deviation error bars. We see that there is a monotonic increase in the fraction of users satisfied as the size of the set increases. We also observe that most of the performance can be obtained with a small set size. Please refer to Section A.2 for more details.",
+  "captionBoundary": {
+    "x1": 317.8800048828125,
+    "x2": 504.004638671875,
+    "y1": 208.2613525390625,
+    "y2": 303.7580261230469
+  },
+  "figType": "Figure",
+  "imageText": ["1", "User", "Satisfaction", "vs", "#", "Counterfactuals", "D", "FE", "FK", "AR", "R", "COLS", "P-COLS", "FS", "@", "80", "60", "40", "20", "0", "1", "2", "3", "5", "10", "20", "30", "Number", "of", "Counterfactuals", "|", "|"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 320.64,
+    "x2": 502.08,
+    "y1": 84.0,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Figure showing the performance of the COLS method as the number of Monte Carlo samples increase. These are the average number across 5 different runs along with standard deviation error bars. There is a steep increase and then the performance saturates. This implies that in practice we do not need a large number of samples to converge to the higher user satisfaction. Refer to Section A.2 for more details.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 504.0024108886719,
+    "y1": 434.73736572265625,
+    "y2": 530.2330932617188
+  },
+  "figType": "Figure",
+  "imageText": ["User", "Satisfaction", "vs", "#", "Monte", "Carlo", "Sample", "COLS", "1", "FS", "@", "80", "75", "70", "65", "60", "55", "1", "5", "10", "20", "30", "100", "200", "300", "500", "1000", "Num", "MC", "Samples"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 502.08,
+    "y1": 321.59999999999997,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Figure6-1.png"
+}, {
+  "caption": "Table 6: Fairness analysis of recourse methods for subgroups with respect to Race. DIR: Disparate Impact Ratio; W: White, NW: Non-White (Section 4.2).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 329.7591857910156,
+    "y1": 327.71539306640625,
+    "y2": 353.4730529785156
+  },
+  "figType": "Table",
+  "imageText": ["P-COLS", "NW", "72.5", "74.6", "1.07", "1.092W", "77.6", "81.5", "COLS", "NW", "67.6", "71.1", "1.089", "1.082W", "73.6", "76.9", "Random", "NW", "4.9", "28.9", "1.571", "1.076W", "7.7", "31.1", "Act.", "Recourse", "NW", "46.5", "54.9", "1.101", "1.056W", "51.2", "58.0", "Face-Knn", "NW", "12.7", "25.4", "2.228", "1.425W", "28.3", "36.2", "Face-Eps", "NW", "7.7", "12.7", "2.312", "2.047W", "17.8", "26.0", "DICE", "NW", "0.0", "0.0", "-", "-W", "3.1", "10.4", "Method", "Race", "FS@1", "Cov", "DIR-FS", "DIR-Cov"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 323.03999999999996,
+    "y1": 365.76,
+    "y2": 527.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LUQ2Csy_LUm-Table6-1.png"
+}]

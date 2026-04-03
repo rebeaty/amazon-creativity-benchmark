@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 3: Performance of ERM and local ERM for various models on synthetic data.",
+  "captionBoundary": {
+    "x1": 361.44000244140625,
+    "x2": 504.0007629394531,
+    "y1": 514.5465698242188,
+    "y2": 542.4669799804688
+  },
+  "figType": "Figure",
+  "imageText": ["Retrieve+Linear", "Retrieve+Poly(deg=3)", "Retrieve+RBF", "Retrieve+MLP(layers=2)", "Linear", "Poly(deg=3)", "RBF", "MLP(layers=2)", "kNN", "ra", "cy", "Ac", "cu", "0.9", "0.8", "0.7", "0.6", "0.5", "Number", "of", "nearest", "neighbor", "100", "101", "102", "103"],
+  "name": "3",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 366.24,
+    "x2": 497.28,
+    "y1": 363.84,
+    "y2": 498.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0nroZT5gHsS-Figure3-1.png"
+}, {
+  "caption": "Figure 2: Performance of local ERM with size of retrieved set across models of different complexity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.7937316894531,
+    "y1": 220.27255249023438,
+    "y2": 226.2750244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "ImageNet", "kNN", "Retrieve+Linear", "Retrieve+MLP(layers=2)", "Retrieve+MobileNetV3", "Linear", "MLP(layers=2)", "ViT-G/14", "(SoTA)", "MobileNetV3", "ra", "cy", "Ac", "cu", "90", "85", "80", "75", "70", "65", "Number", "of", "nearest", "neighbor", "100", "101", "102", "103", "104", "105", "(b)", "CIFAR-10", "Retrieve+Linear", "Retrieve+MLP(layers=2)", "Linear", "MLP(layers=2)", "kNN", "ra", "cy", "Ac", "cu", "0.63", "0.62", "0.61", "0.60", "0.59", "0.58", "0.57", "Number", "of", "nearest", "neighbor", "100", "101", "102", "103", "(a)", "Synthetic", "Retrieve+Linear", "Retrieve+Poly(deg=3)", "Retrieve+RBF", "Retrieve+MLP(layers=2)", "Linear", "Poly(deg=3)", "RBF", "MLP(layers=2)", "kNN", "0.8", "0.9", "Ac", "cu", "ra", "cy", "0.7", "0.6", "0.5", "Number", "of", "nearest", "neighbor", "100", "101", "102", "103"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 494.4,
+    "y1": 67.67999999999999,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0nroZT5gHsS-Figure2-1.png"
+}, {
+  "caption": "Figure 1: An illustration of a retrieval-based classification model. Given an input instance x, similar to an instance-based model, it retrieves similar (labeled) examples Rx = {(x′j , y′j)}j from training data. Subsequently, it processes (potentially via a nonparametric method) input instance along with the retrieved examples to make the final prediction ŷ = f(x,Rx).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1683654785156,
+    "y1": 191.02352905273438,
+    "y2": 229.90301513671875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Modern", "retrieval-based", "setup", "data", "Training", ",", ",", ",", "(a)", "Classical", "learning", "setups", "Nonparametric", "data", "Training", "Parametric"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 155.51999999999998,
+    "x2": 476.15999999999997,
+    "y1": 70.56,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0nroZT5gHsS-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Performance of ERM and local ERM for various models on (binary) CIFAR-10.",
+  "captionBoundary": {
+    "x1": 361.1109924316406,
+    "x2": 504.0007629394531,
+    "y1": 213.84854125976562,
+    "y2": 241.76898193359375
+  },
+  "figType": "Figure",
+  "imageText": ["Retrieve+Linear", "Retrieve+MLP(layers=2)", "Linear", "MLP(layers=2)", "kNN", "ra", "cy", "Ac", "cu", "0.63", "0.62", "0.61", "0.60", "0.59", "0.58", "0.57", "Number", "of", "nearest", "neighbor", "100", "101", "102", "103"],
+  "name": "4",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 366.24,
+    "x2": 498.24,
+    "y1": 72.0,
+    "y2": 205.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0nroZT5gHsS-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Performance of ERM and local ERM for various models on on ImageNet.",
+  "captionBoundary": {
+    "x1": 361.44000244140625,
+    "x2": 504.00445556640625,
+    "y1": 408.8175354003906,
+    "y2": 436.73699951171875
+  },
+  "figType": "Figure",
+  "imageText": ["kNN", "Retrieve+Linear", "Retrieve+MLP(layers=2)", "Retrieve+MobileNetV3", "Linear", "MLP(layers=2)", "ViT-G/14", "(SoTA)", "MobileNetV3", "ra", "cy", "Ac", "cu", "90", "85", "80", "75", "70", "65", "Number", "of", "nearest", "neighbor", "100", "101", "102", "103", "104", "105"],
+  "name": "5",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 366.24,
+    "x2": 496.32,
+    "y1": 266.88,
+    "y2": 400.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_0nroZT5gHsS-Figure5-1.png"
+}]

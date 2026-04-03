@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 1: Comparison to prior work. (a) Prior work in efficient ensembling (e.g., (Lee et al., 2015; Wen et al., 2020; Wenzel et al., 2020)) uses hand-crafted strategies that required ensemble members to have identical architectures and adds diversity by perturbing weights and/or features. In contrast, (b) illustrates our SuperWeight Ensembles, which learn optimal soft parameter sharing between members, even for diverse architectures. As shown in (c), this enables our approach to support a range of inference times while outperforming prior work in efficient ensembling and anytime inference (Ruiz & Verbeek, 2021; Havasi et al., 2021; Wen et al., 2020; Yu et al., 2019; Yu & Huang, 2019a) on CIFAR-100 using WRN-28-5 (Zagoruyko & Komodakis, 2016).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 252.03854370117188,
+    "y2": 334.75390625
+  },
+  "figType": "Figure",
+  "imageText": ["EnsemblePerturber", "M1", "M2", "M", "Base", "Model", "Member", "Architecture", "Member", "Architecture", "*Same", "colors", "indicate", "shared", "params", "Different", "shades", "indicate", "perturbed", "weights", "c.)", "Flexible", "Inference", "Results", "b.)", "SuperWeight", "Ensembles", "(Our", "Work)", "Automated", "Sharing", "Pattern", "for", "Multi-Architecture", "Ensemble", "a.)", "Prior", "Work", "Manual", "Sharing", "Patterns", "for", "Single", "Architecture", "Ensemble", "M4M1", "M2", "M3"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 501.12,
+    "y1": 80.64,
+    "y2": 252.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure1-1.png"
+}, {
+  "caption": "Table 1: Homogeneous ensembling comparison on CIFAR-100 (clean) (Krizhevsky et al., 2009) CIFAR-100-C (corrupt) (Hendrycks & Dietterich, 2019), and CIFAR-10 using WideResNets (Zagoruyko & Komodakis, 2016) averaged over three runs. (a) shows that our approach outperforms prior work in efficient ensembling (Wen et al., 2020; Havasi et al., 2021). (c) compares the performance of increasing the number of parameters (without changing the architecture) using our approach compared to Deep Ensembles, which trains 4 independent networks as members.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0040283203125,
+    "y1": 92.68656158447266,
+    "y2": 153.48297119140625
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "Deep", "Ensembles", "146M", "82.7", "0.666", "2.1", "54.1", "2.27", "13.8", "96.6", "0.114", "1.0", "SWE-HO", "(Ours)", "120M", "82.9", "0.666", "2.2", "54.7", "2.00", "10.3", "96.6", "0.119", "0.8", "(a)", "WRN-28-10", "36.5M", "79.8", "0.875", "8.6", "51.4", "2.70", "23.9", "96.0", "0.159", "2.3", "BE", "36.5M", "81.5", "0.740", "5.6", "54.1", "2.49", "19.1", "96.2", "0.143", "2.1", "BE", "+", "EnsBN", "36.5M", "81.9", "n/a", "2.8", "54.1", "n/a", "19.1", "96.2", "n/a", "1.8", "MIMO", "36.5M", "82.0", "0.690", "2.2", "53.7", "2.28", "12.9", "96.4", "0.123", "1.0", "Thin", "Deep", "Ensembles", "36.5M", "81.5", "0.694", "1.7", "53.7", "2.19", "11.1", "96.3", "0.115", "0.8", "SWE-HO", "(Ours)", "36.5M", "82.2", "0.702", "2.7", "52.9", "2.17", "10.3", "96.3", "0.120", "0.8", "SWE-HE", "(Ours)", "36.5M", "82.4", "0.663", "3.0", "53.0", "2.17", "10.0", "96.5", "0.115", "0.8", "CIFAR-100", "(clean)", "CIFAR-100-C", "CIFAR-10", "Method", "Params", "Top-1", "↑", "NLL", "↓", "ECE", "↓", "Top-1", "↑", "NLL", "↓", "ECE", "↓", "Top-1", "↑", "NLL", "↓", "ECE", "↓"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 514.0799999999999,
+    "y1": 156.48,
+    "y2": 293.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Table1-1.png"
+}, {
+  "caption": "Table 5: Changing parameter constraint: CIFAR-100 Top-1 accuracies. The gradient conflict criterion becomes more important at lower parameter counts. The improvement of the heterogenous ensemble over the homogenous ensemble also increases with decreased parameter counts.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 92.68656158447266,
+    "y2": 120.60601806640625
+  },
+  "figType": "Table",
+  "imageText": ["SWE-", "Heterogenous", "80.8%", "81.6%", "82.4%", "Method", "7", "million", "15", "million", "36.5", "million", "SWE-Single", "Superweight", "79.2%", "81.3%", "82.3%", "SWE", "-", "Gradient", "Conflict", "80.1%", "81.4%", "82.2%"],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 122.88,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Table5-1.png"
+}, {
+  "caption": "Table 6: Diverse Architechture Families: Here we show an ensemble consisting of a Mobilenetv2 and WRN-28-5, shown in Table. We can see that our sharing procedure even helps compared to standard DeepEnsemble performance, despite diverse architectures.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0045166015625,
+    "y1": 191.57052612304688,
+    "y2": 219.489990234375
+  },
+  "figType": "Table",
+  "imageText": ["SWE-HE", "80.3%", "0.762", "5.33%", "Deep", "Ensembles", "80.1%", "0.776", "6.5%", "Method", "Top-1", "NLL", "ECE"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 210.72,
+    "x2": 401.28,
+    "y1": 222.23999999999998,
+    "y2": 272.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Table6-1.png"
+}, {
+  "caption": "Figure 2: SuperWeight Ensembles . Left: Weight Templates are clustered into SuperWeight Clusters; layers can only share SuperWeights from Weight Templates in the same cluster (Section 3.2.2) Center Left: SuperWeights are constructed from linear combinations of Weight Templates (see Eq. (1)) using the SuperWeight Clusters learned in Section 3.3. Center Right: The SuperWeights assigned to a layer are then concatenated to generate layer weights. We automatically identify when we should use the same linear coefficients or different coefficients for generating a layer’s SuperWeight using the procedure in Section 3.2.2. Right: These layer weights are then assembled into ensemble members, which can have diverse architectures.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 242.20053100585938,
+    "y2": 324.9149169921875
+  },
+  "figType": "Figure",
+  "imageText": ["Weight", "Templates", "SuperWeight", "Construction", "(Section", "3.1)", "*Different", "shades", "represent", "shared", "Weight", "Templates", "with", "different", "linear", "coefficients", "✦SuperWeights", "can", "be", "concatenated", "in", "multiple", "dimensions,", "for", "sharing", "between", "layers", "of", "different", "input", "and", "output", "channels", "Layer", "4", "Layer", "3*", "Layer", "2*", "Layer", "1*✦", "Member", "2", "Member", "1", "Layer", "Weight", "Construction", "(Section", "3.1)", "Weight", "Templates", "Model", "Construction", "(Section", "3.1)", "Weight", "Templates", "Weight", "Templates", "SuperWeight", "Cluster", "1", "(Section", "3.3)", "SuperWeight", "Cluster", "2", "(Section", "3.3)"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 493.44,
+    "y1": 80.64,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Gradient analysis hyperparameter sensitivity. Anytime inference results on CIFAR100 (Krizhevsky et al., 2009) using SWE-Multi-Width architecture when: a) varying the gradient similarity threshold β from Eq. (2) for coefficient sharing, no coefficient sharing, and strict coefficient sharing; and b) varying the gradient similarity threshold τ from Eq. (3) for SuperWeight Cluster forming. For both β and τ best performance is between 0.0 and 1.0, indicating that too much sharing and too little sharing are both harmful.",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.00372314453125,
+    "y1": 280.1975402832031,
+    "y2": 340.99395751953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 92.64,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure6-1.png"
+}, {
+  "caption": "Figure 7: SuperWeight Cluster Membership of a two member ensemble, a WRN-28-7 and WRN16-7. The initial depthwise sharing pattern would segment each network into four equal groups of layers. Our gradient-based learning of SuperWeight clusters allows indvidual layers to specialize. Interestingly, it seems like our method learns to separate adjacent layers into separate SuperWeight clusters. This could increase diversity between ensebmle members.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 666.1985473632812,
+    "y2": 716.0360107421875
+  },
+  "figType": "Figure",
+  "imageText": ["WRN-16-7", "WRN-28-7", "SuperWeight", "Cluster", "ID", "SuperWeight", "Clusters", "membership", "for", "a", "WRN-28-7/WRN-16-7", "ensemble", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "4x", "44", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "2x", "22", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "x1", "12", "3x", "16", "v", "3x", "C", "on", "16", "3x", "3x", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "8x", "44", "3x", "44", "v", "3x", "C", "on", "8", "4x", "44", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "4x", "22", "3x", "22", "v", "3x", "C", "on", "4", "2x", "22", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "2", "2x", "11", "3x", "11", "v", "3x", "C", "on", "x1", "12", "3x", "16", "v", "3x", "C", "on", "16", "3x", "3x", "v", "3x", "C", "on"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 377.76,
+    "y2": 641.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Linear interpolations in parameter space on CIFAR-100, with different numbers of parameters in an ensemble of size 4. We plot accuracy vs interpolation point. Because the accuracy dips, we know the ensemble members are diverse and find different local minima.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 252.23153686523438,
+    "y2": 280.1519775390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure5-1.png"
+}, {
+  "caption": "Table 3: Multi-width SuperWeight Cluster creation comparison using top-1 accuracy on CIFAR100 averaged over three runs. See Section 4.1 for discussion",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9986267089844,
+    "y1": 291.2544860839844,
+    "y2": 308.2159423828125
+  },
+  "figType": "Table",
+  "imageText": ["Depth-binning", "76.8", "±", "0.15", "77.7", "±", "0.17", "79.2", "±", "0.19", "81.4", "±", "0.15", "Coefficient", "clustering", "(Plummer", "et", "al.,", "2022)", "76.1", "±", "0.19", "77.0", "±", "0.15", "78.9", "±", "0.15", "80.7", "±", "0.14", "SWE-HE", "(Ours)", "78.9", "±", "0.26", "79.7", "±", "0.08", "80.9", "±", "0.03", "81.5", "±", "0.13", "Method", "WRN-28-3", "WRN-28-4", "WRN-28-7", "Full", "Ensemble"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 309.59999999999997,
+    "y2": 366.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Table3-1.png"
+}, {
+  "caption": "Figure 3: Anytime Inference comparison using top-1 accuracy vs. inference time (ms) averaged over three runs using a single P100 GPU on CIFAR-100 and CIFAR-10 (Krizhevsky et al., 2009) with WRN backbones (Zagoruyko & Komodakis, 2016) for most methods (Huang et al., 2018; Plummer et al., 2022; Yu & Huang, 2019a; Yu et al., 2019; Yu & Huang, 2019b), except HNE (Ruiz & Verbeek, 2021) which modifies ResNet-50 (He et al., 2016).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 226.77151489257812,
+    "y2": 276.60894775390625
+  },
+  "figType": "Figure",
+  "imageText": ["MSDNet", "(Multi-Depth)", "HNE", "(Multi-Depth)", "Slimmable", "(Multi-Width)", "AutoSlim", "(NAS", "Multi-Width)", "US", "(Multi-Width)", "[35]", "SSN", "(Multi-Depth/Width)", "SWE-HE", "Multi-Depth/Width(Ours)", "SWE-HE", "Multi-Width(Ours)", "CIFAR-10", "ra", "cy", "Ac", "cu", "97.0", "96.5", "96.0", "95.5", "95.0", "94.5", "94.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "Average", "Inference", "Time", "(ms)", "MSDNet", "(Multi-Depth)", "HNE", "(Multi-Depth)", "Slimmable", "(Multi-Width)", "AutoSlim", "(NAS", "Multi-Width)", "US", "(Multi-Width)", "SSN", "(Multi-Depth/Width)", "SWE-HE", "Multi-Depth/Width(Ours)", "SWE-HE", "Multi-Width(Ours)", "CIFAR-100", "ra", "cy", "Ac", "cu", "83", "81", "79", "77", "75", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "Average", "Inference", "Time", "(ms)"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 141.12,
+    "x2": 470.4,
+    "y1": 83.52,
+    "y2": 220.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Slimmable Networks and Universally Slimmable Networks ensemble comparison. Anytime inference results using Slimmable (Yu et al., 2019) and Universally Slimmable (Yu & Huang, 2019b) as ensembles of multiple widths compared to our SWE-Multi-Width.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 268.5285339355469,
+    "y2": 296.448974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Figure4-1.png"
+}, {
+  "caption": "Table 4: Diversity on CIFAR-100. Diversity is measured as the proportion of samples two ensemble members disagree on, normalized by the error rate of one of the member as in Fort et al. (2019). SuperWeight Ensembles are more diverse than BatchEnsembles, the other shared parameter model. Although our 120M model is slightly less diverse than Standard Deep Ensembles, the performance is higher, due to the average member accuracy being higher than Standard Deep Ensembles",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0050048828125,
+    "y1": 590.1774291992188,
+    "y2": 640.015869140625
+  },
+  "figType": "Table",
+  "imageText": ["SuperWeight", "Ensembles(ours)", "36.5M", "0.78", "SuperWeight", "Ensembles(ours)", "120.0M", "0.85", "BatchEnsembles", "Havasi", "et", "al.", "(2021)", "36.5M", "0.40", "MIMO", "Havasi", "et", "al.", "(2021)", "36.5M", "0.91", "Method", "Params", "Diversity", "Standard", "Deep", "Ensemble", "Havasi", "et", "al.", "(2021)", "146.0M", "0.88"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 159.84,
+    "x2": 449.28,
+    "y1": 642.72,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GF4A49QlqjN-Table4-1.png"
+}]

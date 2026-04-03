@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 8: Immediate regret for different BO algorithms on Hartmann3 function ensembles (D = 3) with different levels of multiplicative noise.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 503.9994812011719,
+    "y1": 327.91351318359375,
+    "y2": 344.875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Hartmann3", "(ϵ", "=", "0.0)", "(b)", "Hartmann3", "(ϵ", "=", "0.1)", "(c)", "Hartmann3", "(ϵ", "=", "1.0)"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 220.79999999999998,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Immediate regret for different BO algorithms on Forrester function ensembles (D = 1) with different levels of multiplicative noise.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99951171875,
+    "y1": 187.84249877929688,
+    "y2": 204.803955078125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Forrester", "(ϵ", "=", "0.0)", "(b)", "Forrester", "(ϵ", "=", "0.1)", "(c)", "Forrester", "(ϵ", "=", "1.0)"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 174.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure7-1.png"
+}, {
+  "caption": "Figure 3: Immediate regret for different BO algorithms on the HPOBench neural network tuning problems (D = 9) for 4 datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 316.45050048828125,
+    "y2": 333.4119873046875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Slice", "(d)", "Naval", "(a)", "Protein", "(b)", "Parkinsons"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 487.2,
+    "y1": 80.64,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Immediate regret for different BO algorithms on the NASBench201 neural architecture search problems (D = 6) on 3 datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 187.84249877929688,
+    "y2": 204.803955078125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "CIFAR-10", "(b)", "CIFAR-100", "(c)", "ImageNet-16"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 174.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Immediate regret for different BO algorithms on the HPOBench hyperparamter tuning problems for 5 different machine learning algorithms.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 703.7035522460938,
+    "y2": 720.6649780273438
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "SVM", "(e)", "LogReg", "(a)", "MLP", "(b)", "RandomForest", "(c)", "XGBoost"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 493.91999999999996,
+    "y2": 686.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure5-1.png"
+}, {
+  "caption": "Figure 1: Illustration of meta-learning the acquisition function. Left: Observations (crosses) from 10 related tasks and the target task. The top performing observations (γ = 1/3) in each task are shown in red, otherwise in blue. Right: The top panel shows the approximated predictive distribution (see Eq. 7) while the others show Thompson samples. MALIBO successfully identifies the promising areas, and the Thompson samples show variability in the meta-learned acquisition function.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 251.89352416992188,
+    "y2": 301.73193359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure1-1.png"
+}, {
+  "caption": "Table 3: Configuration spaces for NASBench201",
+  "captionBoundary": {
+    "x1": 208.1829833984375,
+    "x2": 403.8185119628906,
+    "y1": 149.23043823242188,
+    "y2": 155.23291015625
+  },
+  "figType": "Table",
+  "imageText": ["ARC", "0", "{", "none,", "skip-connect,", "conv-1×", "1,", "conv-3×", "3,", "avg-pool-3×", "3", "}", "ARC", "1", "{", "none,", "skip-connect,", "conv-1×", "1,", "conv-3×", "3,", "avg-pool-3×", "3", "}", "ARC", "2", "{", "none,", "skip-connect,", "conv-1×", "1,", "conv-3×", "3,", "avg-pool-3×", "3", "}", "ARC", "3", "{", "none,", "skip-connect,", "conv-1×", "1,", "conv-3×", "3,", "avg-pool-3×", "3", "}", "ARC", "4", "{", "none,", "skip-connect,", "conv-1×", "1,", "conv-3×", "3,", "avg-pool-3×", "3", "}", "ARC", "5", "{", "none,", "skip-connect,", "conv-1×", "1,", "conv-3×", "3,", "avg-pool-3×", "3", "}", "Hyperparameter", "Range"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 170.88,
+    "y2": 259.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Table3-1.png"
+}, {
+  "caption": "Figure 6: Immediate regret for different BO algorithms on Branin function ensembles (D = 2) with different levels of multiplicative noise.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9991149902344,
+    "y1": 187.84249877929688,
+    "y2": 204.803955078125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Branin", "(ϵ", "=", "0.0)", "(b)", "Branin", "(ϵ", "=", "0.1)", "(c)", "Branin", "(ϵ", "=", "1.0)"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 174.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Schematic representation of our meta-learning classifier. A ResNet (He et al., 2016) maps the input xt to a latent feature representation ϕ. From this, a global mean prediction m(ϕ) and taskspecific embedding zt are combined and translated into a class prediction via a sigmoid function.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0038146972656,
+    "y1": 164.81350708007812,
+    "y2": 194.22796630859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 154.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Figure2-1.png"
+}, {
+  "caption": "Table 1: Configuration spaces for HPOBench",
+  "captionBoundary": {
+    "x1": 215.47999572753906,
+    "x2": 396.52032470703125,
+    "y1": 143.08053588867188,
+    "y2": 149.0830078125
+  },
+  "figType": "Table",
+  "imageText": ["Layer", "2", "Width", "{", "24,", "25,", "26,", "27,", "28,", "29", "}", "Activation", "{", "relu,", "tanh", "}", "Dropout", "rate", "{", "0.0,", "0.3,", "0.6", "}", "Activation", "{", "relu,", "tanh", "}", "Dropout", "rate", "{", "0.0,", "0.3,", "0.6", "}", "Initial", "LR", "{", "5×", "10−4,", "1×", "10−3,", "5×", "10−3,", "1×", "10−2,", "5×", "10−2,", "1×", "10−1", "}", "LR", "Schedule", "{", "cosine,", "fixed", "}", "Batch", "size", "{", "23,", "24,", "25,", "26", "}", "Layer", "1", "Width", "{", "24,", "25,", "26,", "27,", "28,", "29", "}", "Hyperparameter", "Range"],
+  "name": "1",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 164.64,
+    "y2": 288.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Table1-1.png"
+}, {
+  "caption": "Table 2: Configuration spaces for ML algorithms in HPOBench",
+  "captionBoundary": {
+    "x1": 179.08700561523438,
+    "x2": 432.9140930175781,
+    "y1": 416.3485412597656,
+    "y2": 422.35101318359375
+  },
+  "figType": "Table",
+  "imageText": ["MLP", "alpha", "float", "✓", "[", "1.0e−8,", "1.0", "]", "batch", "size", "int", "✓", "[", "4,", "256", "]", "depth", "int", "✗", "[", "1,", "3", "]", "learning", "rate", "init", "float", "✓", "[", "1.0e−5,", "1.0", "]", "width", "int", "✓", "[", "16,", "1024", "]", "RandomForest", "max", "depth", "int", "✓", "[", "1,", "50", "]", "max", "features", "float", "✗", "[", "0.0,", "1.0", "]", "min", "samples", "leaf", "int", "✗", "[", "1,", "2", "]", "min", "samples", "split", "int", "✓", "[", "2,", "128", "]", "XGBoost", "colsample", "bytree", "float", "✗", "[", "0.1,", "1.0", "]", "eta", "float", "✓", "[", "2−10,", "1.0", "]", "max", "depth", "int", "✓", "[", "1,", "50", "]", "reg", "lambda", "float", "✓", "[", "2−10,", "2−10", "]", "LogReg", "alpha", "float", "✓", "[", "1e−5,", "1.0", "]", "eta0", "float", "✓", "[", "1e−5,", "1.0", "]", "SVM", "C", "float", "✓", "[", "2−10,", "210", "]", "gamma", "float", "✓", "[", "2−10,", "210", "]", "Benchmark", "Hyperparameter", "type", "Log", "Range"],
+  "name": "2",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 508.32,
+    "y1": 437.76,
+    "y2": 670.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K2spEiswXVf-Table2-1.png"
+}]

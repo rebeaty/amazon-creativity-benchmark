@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 5: CAM visualization of the images after reverse adversarial update.",
+  "captionBoundary": {
+    "x1": 155.6009979248047,
+    "x2": 456.4017639160156,
+    "y1": 394.8965148925781,
+    "y2": 400.89898681640625
+  },
+  "figType": "Figure",
+  "imageText": ["CAM", "(Reversely", "Updated)", "CAM", "(Clean", "image)", "Clean", "image", "CAM", "(Reversely", "Updated)", "CAM", "(Clean", "image)", "Clean", "image", "CAM", "(Reversely", "Updated)", "CAM", "(Clean", "image)", "Clean", "image", "CAM", "(Reversely", "Updated)", "CAM", "(Clean", "image)", "Clean", "image"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 83.52,
+    "y2": 381.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure5-1.png"
+}, {
+  "caption": "Table 6: Top-1 accuracy of the models under the example with reverse adversarial update from different source models. The source model “-” indicates clean example without any perturbation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 460.76751708984375,
+    "y2": 477.72900390625
+  },
+  "figType": "Table",
+  "imageText": ["-", "75.86%", "78.30%", "70.48%", "75.36%", "74.55%", "ResNet50", "80.70%", "82.70%", "73.70%", "80.70%", "79.84%", "Inception", "V3", "80.54%", "81.54%", "73.04%", "78.80%", "79.37%", "VGG19", "80.58%", "81.02%", "74.38%", "79.00%", "79.42%", "Source", "model", "Target", "model", "DenseNet", "ResNeXt", "MobileNet", "SENet", "Average", "-", "75.08%", "76.44%", "77.58%", "70.54%", "71.34%", "ResNet50", "92.20%", "79.48%", "82.22%", "74.06%", "72.84%", "Inception", "V3", "78.58%", "94.60%", "80.70%", "73.62%", "72.88%", "VGG19", "78.46%", "79.56%", "80.06%", "89.98%", "71.76%", "Source", "model", "Target", "model", "ResNet50", "Inception", "v3", "WRN", "VGG19", "PNASNet"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 495.84,
+    "y2": 620.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table6-1.png"
+}, {
+  "caption": "Figure 1: Visualization of the generated images among: clean image, I-FGSM, and I-FGSM + ILA-DA (Ours), with the perturbation budget ϵ = 16/255 (0.063).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 204.07455444335938,
+    "y2": 221.0360107421875
+  },
+  "figType": "Figure",
+  "imageText": ["Clean", "Image", "I-FGSM", "I-FGSM", "+", "ILA-DA"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 152.64,
+    "x2": 459.35999999999996,
+    "y1": 81.11999999999999,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure1-1.png"
+}, {
+  "caption": "Table 4: Attack success rates of ImageNet adversarial examples on nine undefended models, generated from ResNet50 with ϵ = 13/255 (0.05). The column ‘Average’ is the average of all models except the source model.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["I-FGSM", "+", "ILA-DA", "(Ours)", "98.1%", "96.9%", "97.7%", "98.4%", "96.0%", "∗", "The", "source", "model", "used", "to", "generate", "the", "attack.", "MI-CT-FGSM", "91.1%", "86.4%", "87.5%", "93.5%", "87.5%", "NI-CT-FGSM", "93.1%", "86.4%", "90.5%", "95.4%", "88.8%", "VMI-CT-FGSM", "93.6%", "90.9%", "91.7%", "95.3%", "90.5%", "VNI-CT-FGSM", "95.4%", "93.1%", "92.0%", "96.5%", "91.8%", "I-FGSM", "57.8%", "70.9%", "54.5%", "71.9%", "53.8%", "I-FGSM", "+", "ILA", "85.5%", "91.0%", "84.0%", "91.9%", "81.1%", "I-FGSM", "+", "ILA++", "92.3%", "92.3%", "89.3%", "96.2%", "86.3%", "I-FGSM", "+", "LinBP", "+", "SGM", "96.6%", "94.9%", "93.2%", "98.9%", "89.1%", "Method", "(cont.)", "DenseNet", "ResNeXt", "MobileNet", "SENet", "Average", "I-FGSM", "+", "ILA-DA", "(Ours)", "99.7%", "88.4%", "98.7%", "98.6%", "91.6%", "MI-CT-FGSM", "99.7%", "81.3%", "91.0%", "85.7%", "83.6%", "NI-CT-FGSM", "100.0%", "80.9%", "92.9%", "89.4%", "82.0%", "VMI-CT-FGSM", "100.0%", "84.7%", "94.4%", "88.0%", "85.0%", "VNI-CT-FGSM", "100.0%", "85.7%", "95.1%", "89.7%", "87.2%", "I-FGSM", "100.0%", "25.8%", "72.1%", "48.3%", "29.6%", "I-FGSM", "+", "ILA", "100.0%", "51.5%", "93.2%", "86.6%", "65.2%", "I-FGSM", "+", "ILA++", "99.9%", "63.6%", "96.3%", "90.5%", "70.3%", "I-FGSM", "+", "LinBP", "+", "SGM", "100.0%", "63.4%", "98.5%", "94.7%", "73.0%", "Method", "ResNet50∗", "Inc-v3", "WRN", "VGG19", "PNASNet"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 124.32,
+    "y2": 379.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table4-1.png"
+}, {
+  "caption": "Table 5: Changes in loss and confidence after applying reverse adversarial update on the images for ResNet50.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 674.4905395507812,
+    "y2": 691.4520263671875
+  },
+  "figType": "Table",
+  "imageText": ["VGG19", "Clean", "1.1431", "0.7419", "70.54%", "Reversely", "updated", "0.5756", "0.8998", "89.98%", "ResNet50", "Clean", "0.9755", "0.7913", "75.08%", "Reversely", "updated", "0.3070", "0.8847", "92.20%", "Inception", "V3", "Clean", "1.1165", "0.7339", "76.44%", "Reversely", "updated", "0.3525", "0.8296", "94.60%", "Model", "Image", "Loss", "Confidence", "Accuracy"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 580.8,
+    "y2": 663.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table5-1.png"
+}, {
+  "caption": "Table 11: Attack success rates of CIFAR-10 adversarial examples on different models, generated from VGG19.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 144.05245971679688,
+    "y2": 161.013916015625
+  },
+  "figType": "Table",
+  "imageText": ["∗", "The", "source", "model", "used", "to", "generate", "the", "attack.", "CIFAR-100", "I-FGSM", "98.8%", "38.9%", "31.9%", "33.8%", "50.9%", "+", "ILA", "98.9%", "80.8%", "72.7%", "73.9%", "81.6%", "+", "ILA++", "98.5%", "81.2%", "74.8%", "74.6%", "82.3%", "+", "DI", "&", "MI", "96.1%", "69.3%", "62.8%", "63.0%", "72.8%", "+", "LinBP", "98.9%", "75.2%", "69.7%", "70.5%", "78.6%", "+", "ILA-DA", "97.5%", "87.1%", "81.9%", "81.6%", "87.0%", "Dataset", "Method", "VGG19∗", "WRN", "ResNeXt", "DenseNet", "Average", "CIFAR-10", "I-FGSM", "99.3%", "57.2%", "57.2%", "53.6%", "12.5%", "40.2%", "41.1%", "+", "ILA", "99.4%", "90.5%", "91.5%", "88.9%", "39.5%", "76.0%", "77.3%", "+", "ILA++", "99.5%", "90.7%", "92.4%", "89.1%", "41.3%", "77.1%", "78.1%", "+", "DI", "&", "MI", "94.8%", "72.8%", "71.4%", "70.0%", "29.3%", "57.5%", "60.2%", "+", "LinBP", "100.0%", "92.4%", "92.9%", "90.5%", "45.3%", "81.1%", "80.4%", "+", "ILA-DA", "97.3%", "92.0%", "92.7%", "90.5%", "52.6%", "81.6%", "81.9%", "Dataset", "Method", "VGG19∗", "WRN", "ResNeXt", "DenseNet", "P.Net†", "GDAS", "Average"],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 178.56,
+    "y2": 354.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table11-1.png"
+}, {
+  "caption": "Figure 6: Average attack success rates over different values of α, using ResNet50 as the source model with ϵ = 8/255 (0.03).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013732910156,
+    "y1": 704.631591796875,
+    "y2": 721.593017578125
+  },
+  "figType": "Figure",
+  "imageText": ["Adaptive", "on", "Average", "Fixed", "on", "Average", "(%", ")", "at", "e", "ss", "R", "uc", "ce", "ck", "S", "At", "ta", "90", "80", "70", "60", "50", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "40"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 171.35999999999999,
+    "x2": 441.12,
+    "y1": 511.68,
+    "y2": 688.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure6-1.png"
+}, {
+  "caption": "Figure 4: Convergence of the learned augmentation parameters.",
+  "captionBoundary": {
+    "x1": 179.072021484375,
+    "x2": 432.92901611328125,
+    "y1": 595.9055786132812,
+    "y2": 601.9080200195312
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Value", "of", "p", "over", "the", "first", "50", "batches.", "translation", "rotation", "cropping", "lo", "g", "10", "8", "6", "4", "2", "0", "2", "4", "0", "10", "20", "30", "40", "50", "(a)", "Value", "of", "p", "over", "the", "first", "50", "iterations.", "translation", "rotation", "cropping", "lo", "g", "10", "8", "6", "4", "2", "0", "2", "4", "0", "10", "20", "30", "40", "50"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 440.64,
+    "y2": 577.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Attack transferability over different choices of the intermediate layer for ResNet50, VGG19 and Inception V3. The dotted curve shows the performance of ILA without augmentation. ‘3-1’ in ResNet50 refers to the first residual block of the third meta-block. The naming of layers of Inception V3 follows the PyTorch convention.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 224.43551635742188,
+    "y2": 263.31396484375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Inception", "V3", "Inception", "V3", "intermediate", "layers", "Average", "(ILA-DA)", "Average", "(ILA)", "(%", ")", "at", "e", "ss", "R", "uc", "ce", "ck", "S", "At", "ta", "60", "55", "50", "45", "40", "35", "30", "4b", "5b", "5c", "5d", "6a", "6b", "6c", "6d", "Model", "layer", "(b)", "VGG19", "VGG19", "intermediate", "layers", "Average", "(ILA-DA)", "Average", "(ILA)", "(%", ")", "at", "e", "ss", "R", "uc", "ce", "ck", "S", "At", "ta", "62", "60", "58", "56", "54", "52", "6", "7", "8", "9", "10", "11", "Model", "layer", "(a)", "ResNet50", "Resent50", "intermediate", "layers", "Average", "(ILA-DA)", "Average", "(ILA)", "(%", ")", "at", "e", "ss", "R", "uc", "ce", "ck", "S", "At", "ta", "90", "85", "80", "75", "70", "65", "2-1", "2-2", "2-3", "2-4", "3-1", "3-2", "3-3", "3-4", "3-5", "3-6", "Model", "layer"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 502.08,
+    "y1": 84.0,
+    "y2": 206.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure3-1.png"
+}, {
+  "caption": "Table 1: Attack success rates of ImageNet adversarial examples on nine undefended models, generated from ResNet50 with ϵ = 8/255 (0.03). The column ‘Average’ is the average of all models except the source model.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["I-FGSM", "+", "ILA-DA", "(Ours)", "89.8%", "86.2%", "87.9%", "91.3%", "84.5%", "∗", "The", "source", "model", "used", "to", "generate", "the", "attack.", "MI-CT-FGSM", "77.2%", "71.6%", "74.0%", "80.8%", "72.9%", "NI-CT-FGSM", "76.0%", "67.0%", "73.6%", "81.1%", "70.9%", "VMI-CT-FGSM", "82.9%", "77.3%", "80.5%", "86.7%", "77.8%", "VNI-CT-FGSM", "85.1%", "80.3%", "81.5%", "88.9%", "79.8%", "I-FGSM", "31.4%", "41.8%", "31.9%", "44.0%", "31.1%", "I-FGSM", "+", "ILA", "69.2%", "78.5%", "67.6%", "80.2%", "65.0%", "I-FGSM", "+", "ILA++", "79.1%", "78.5%", "75.3%", "87.6%", "71.7%", "I-FGSM", "+", "LinBP", "+", "SGM", "81.4%", "77.1%", "75.1%", "91.0%", "74.7%", "Method", "(cont.)", "DenseNet", "ResNeXt", "MobileNet", "SENet", "Average", "I-FGSM", "+", "ILA-DA", "(Ours)", "99.0%", "64.1%", "92.6%", "91.6%", "72.4%", "MI-CT-FGSM", "97.9%", "65.0%", "77.5%", "69.7%", "67.6%", "NI-CT-FGSM", "99.4%", "59.6%", "78.1%", "67.1%", "64.9%", "VMI-CT-FGSM", "99.4%", "66.6%", "84.8%", "73.0%", "70.2%", "VNI-CT-FGSM", "99.8%", "67.3%", "87.4%", "76.1%", "71.8%", "I-FGSM", "99.9%", "14.9%", "41.3%", "26.4%", "17.4%", "I-FGSM", "+", "ILA", "99.9%", "34.6%", "79.9%", "66.7%", "43.3%", "I-FGSM", "+", "ILA++", "99.9%", "41.5%", "87.1%", "75.2%", "49.2%", "I-FGSM", "+", "LinBP", "+", "SGM", "100.0%", "35.3%", "88.7%", "78.7%", "45.0%", "Method", "ResNet50∗", "Inc-v3", "WRN", "VGG19", "PNASNet"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 121.44,
+    "y2": 376.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table1-1.png"
+}, {
+  "caption": "Table 2: Attack success rates of ImageNet adversarial examples on six defended methods, generated from Inception V3 with ϵ = 16/255 (0.063).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 389.322509765625,
+    "y2": 406.28399658203125
+  },
+  "figType": "Table",
+  "imageText": ["VNI-CT-FGSM", "79.1%", "77.4%", "65.3%", "72.7%", "63.5%", "70.8%", "71.5%", "+", "ILA-DA", "88.0%", "86.1%", "74.5%", "84.2%", "75.8%", "78.0%", "81.1%", "VMI-CT-FGSM", "77.6%", "75.2%", "63.6%", "72.1%", "63.0%", "69.7%", "70.2%", "+", "ILA-DA", "89.1%", "85.7%", "74.5%", "84.1%", "75.6%", "78.7%", "81.3%", "MI-Admix-TI-DIM", "73.4%", "70.7%", "53.9%", "65.4%", "53.7%", "58.0%", "62.5%", "+", "ILA-DA", "88.9%", "86.3%", "74.6%", "85.2%", "77.1%", "79.7%", "81.9%", "NI-CT-FGSM", "58.8%", "54.4%", "40.0%", "49.2%", "38.0%", "46.1%", "47.8%", "+", "ILA-DA", "87.3%", "83.9%", "68.5%", "81.0%", "71.0%", "74.7%", "77.7%", "MI-CT-FGSM", "65.5%", "62.1%", "45.5%", "56.6%", "44.5%", "52.5%", "54.5%", "+", "ILA-DA", "88.1%", "84.4%", "72.3%", "84.4%", "73.3%", "76.2%", "79.8%", "MI-FGSM", "14.1%", "13.0%", "6.6%", "4.6%", "5.0%", "8.3%", "8.6%", "+", "ILA-DA", "83.6%", "79.2%", "64.6%", "79.5%", "65.9%", "70.2%", "73.8%", "I-FGSM", "12.1%", "10.9%", "5.8%", "2.7%", "4.0%", "8.3%", "7.3%", "+", "ILA-DA", "86.3%", "81.8%", "66.4%", "82.2%", "68.3%", "70.9%", "75.9%", "Attack", "Inc-v3ens3", "Inc-v3ens4", "IncRes-v2ens", "HGD", "R&P", "MMD", "Average"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 415.68,
+    "y2": 607.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table2-1.png"
+}, {
+  "caption": "Table 12: Running time comparison between ILA-DA and other state-of-the-art attacks. The number in subscript indicates the number of iterations applied.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 605.801513671875,
+    "y2": 622.762939453125
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Running", "Time", "(s)", "Average", "Attack", "Success", "Rate", "Undefended", "Defended", "MI-CT-FGSM", "12.2±1.6", "72.9%", "54.5%", "VNI-CT-FGSM", "67.5±1.2", "79.8%", "71.5%", "LinBP", "91.2±1.8", "80.4%", "-", "ILA-DA50", "15.4±0.7", "84.5%", "38.8%", "ILA-DA200", "70.0±1.3", "87.4%", "68.7%", "ILA-DA500", "152.5±1.8", "88.7%", "75.9%"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 636.0,
+    "y2": 725.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table12-1.png"
+}, {
+  "caption": "Table 9: Attack success rates of ImageNet adversarial examples on undefended models, generated from Inception V3 with ϵ = 8/255 (0.03).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["I-FGSM", "+", "ILA-DA", "(Ours)", "49.3%", "42.8%", "71.4%", "51.1%", "56.5%", "∗", "The", "source", "model", "used", "to", "generate", "the", "attack.", "MI-CT-FGSM", "38.7%", "30.2%", "43.8%", "37.5%", "39.3%", "NI-CT-FGSM", "33.9%", "25.4%", "42.1%", "34.0%", "36.1%", "VMI-CT-FGSM", "43.3%", "35.2%", "46.2%", "40.5%", "42.4%", "VNI-CT-FGSM", "45.7%", "36.1%", "49.0%", "43.4%", "45.1%", "I-FGSM", "+", "ILA", "27.0%", "23.7%", "43.3%", "29.6%", "32.4%", "I-FGSM", "+", "ILA++", "29.1%", "25.6%", "43.8%", "31.5%", "34.1%", "Method", "(cont.)", "DenseNet", "ResNeXt", "MobileNet", "SENet", "Average", "MI-CT-FGSM", "36.4%", "94.2%", "34.5%", "41.9%", "51.3%", "NI-CT-FGSM", "33.9%", "98.2%", "30.5%", "38.6%", "50.7%", "VMI-CT-FGSM", "39.6%", "96.7%", "37.7%", "43.8%", "52.6%", "VNI-CT-FGSM", "42.6%", "98.8%", "40.6%", "46.6%", "56.4%", "I-FGSM", "+", "ILA-DA", "(Ours)", "58.4%", "91.1%", "55.8%", "70.1%", "53.1%", "I-FGSM", "+", "ILA", "34.1%", "96.9%", "29.6%", "37.5%", "34.0%", "I-FGSM", "+", "ILA++", "36.7%", "97.1%", "31.9%", "38.9%", "35.1%", "Method", "ResNet50", "Inc-v3∗", "WRN", "VGG19", "PNASNet"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 118.56,
+    "y2": 349.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table9-1.png"
+}, {
+  "caption": "Table 10: A table matching the names between the baseline attacks and the previous works.",
+  "captionBoundary": {
+    "x1": 122.25599670410156,
+    "x2": 486.65802001953125,
+    "y1": 404.3634948730469,
+    "y2": 410.365966796875
+  },
+  "figType": "Table",
+  "imageText": ["I-FGSM", "×", "×", "×", "×", "×", "×", "×", "MI-FGSM", "✓", "×", "×", "×", "×", "×", "×", "MI-CT-FGSM", "✓", "×", "✓", "✓", "✓", "×", "×", "NI-CT-FGSM", "✓", "✓", "✓", "✓", "✓", "×", "×", "MI-Admix-TI-DIM", "✓", "×", "✓", "✓", "×", "×", "✓", "VMI-CT-FGSM", "✓", "×", "✓", "✓", "✓", "✓", "×", "VNI-CT-FGSM", "✓", "✓", "✓", "✓", "✓", "✓", "×", "Methods", "Momentum", "Nesterov", "Accelerated", "DIM", "TIM", "SIM", "Variance", "Tuning", "Admix", "Source", "Dong", "et", "al.", "(2018)", "Lin", "et", "al.", "(2020)", "Xie", "et", "al.", "(2019a)", "Dong", "et", "al.", "(2019)", "Lin", "et", "al.", "(2020)", "Wang", "&", "He", "(2021)", "Wang", "et", "al.", "(2021)"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 427.68,
+    "y2": 527.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table10-1.png"
+}, {
+  "caption": "Figure 2: Average attack success rates for the defended and undefended models over different number of ILA iterations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 613.0955810546875,
+    "y2": 630.0570068359375
+  },
+  "figType": "Figure",
+  "imageText": ["Defended", "Models", "Undefended", "Models", "at", "e", "ss", "R", "uc", "ce", "ck", "S", "At", "ta", "90", "80", "70", "60", "50", "40", "30", "20", "10", "0", "500", "1000", "1500", "2000", "No.", "of", "Iterations"],
+  "name": "2",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 420.47999999999996,
+    "y1": 427.68,
+    "y2": 594.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure2-1.png"
+}, {
+  "caption": "Table 3: Comparison of the attack success rates of ImageNet adversarial examples on various models using ILA-DA with different augmentation configurations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["∗", "The", "source", "model", "used", "to", "generate", "the", "attack.", "I-FGSM", "+", "ILA-DA", "89.8%", "86.2%", "87.9%", "91.3%", "84.5%", "w/o", "Augmentation", "77.0%", "76.0%", "75.6%", "85.9%", "71.3%", "w/", "Random", "Augmentation", "87.3%", "83.8%", "88.0%", "89.3%", "82.9%", "w/", "All", "Augmentation", "74.3%", "70.2%", "78.0%", "78.7%", "72.8%", "w/o", "Reverse", "adversarial", "update", "85.7%", "82.1%", "88.3%", "88.6%", "79.9%", "w/o", "Attack", "interpolation", "87.2%", "86.0%", "83.9%", "91.8%", "80.0%", "Method", "(cont.)", "DenseNet", "ResNeXt", "MobileNet", "SENet", "Average", "I-FGSM", "+", "ILA-DA", "99.0%", "64.1%", "92.6%", "91.6%", "72.4%", "w/o", "Augmentation", "99.7%", "39.7%", "86.6%", "79.8%", "49.7%", "w/", "Random", "Augmentation", "98.4%", "62.6%", "90.4%", "90.9%", "71.3%", "w/", "All", "Augmentation", "93.4%", "59.4%", "78.0%", "79.9%", "64.3%", "w/o", "Reverse", "adversarial", "update", "97.3%", "50.6%", "88.0%", "92.1%", "65.9%", "w/o", "Attack", "interpolation", "99.9%", "54.0%", "91.8%", "83.8%", "61.6%", "Method", "ResNet50∗", "Inc-v3", "WRN", "VGG19", "PNASNet"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 118.56,
+    "y2": 293.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table3-1.png"
+}, {
+  "caption": "Figure 7: Visualization of the generated images among: clean image, ILA, and ILA-DA (Ours), with the ϵ = 16/255 (0.063).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 545.6825561523438,
+    "y2": 562.6439819335938
+  },
+  "figType": "Figure",
+  "imageText": ["Clean", "Image", "I-FGSM", "I-FGSM", "+", "ILA-DA", "Clean", "Image", "I-FGSM", "I-FGSM", "+", "ILA-DA", "Clean", "Image", "I-FGSM", "I-FGSM", "+", "ILA-DA", "Clean", "Image", "I-FGSM", "I-FGSM", "+", "ILA-DA"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 458.4,
+    "y1": 114.72,
+    "y2": 531.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Figure7-1.png"
+}, {
+  "caption": "Table 7: Hyper-parameters used in the baselines.",
+  "captionBoundary": {
+    "x1": 207.406005859375,
+    "x2": 401.5073547363281,
+    "y1": 292.0565185546875,
+    "y2": 298.0589904785156
+  },
+  "figType": "Table",
+  "imageText": ["LinBP", "I-FGSM", "iteration", "300,", "100", "(ImageNet,", "CIFAR-10)", "Layer", "‘3-1’", "for", "ResNet50", "SGM", "λ", "0.5", "Admix", "η", "0.2", "Variance", "Tuning", "N", "20", "β", "1.5", "SIM", "Scale", "copies", "5", "(i", "=", "0,", "1,", "2,", "3,", "4)", "TIM", "Kernel", "size", "7×", "7", "DIM", "Probability", "0.5", "Upscale", "ratio", "1.1", "NI-FGSM", "α", "1.0", "MI-FGSM", "α", "1.0", "Method", "Hyper-parameter", "Value"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table7-1.png"
+}, {
+  "caption": "Table 8: Attack success rates of ImageNet adversarial examples on undefended models, generated from VGG19 with ϵ = 8/255 (0.03).",
+  "captionBoundary": {
+    "x1": 108.00004577636719,
+    "x2": 504.0034484863281,
+    "y1": 436.9204406738281,
+    "y2": 453.88189697265625
+  },
+  "figType": "Table",
+  "imageText": ["∗", "The", "source", "model", "used", "to", "generate", "the", "attack.", "I-FGSM", "+", "ILA-DA", "(Ours)", "58.6%", "57.9%", "81.9%", "66.7%", "61.5%", "MI-CT-FGSM", "+", "ILA-DA", "(Ours)", "65.3%", "58.5%", "82.1%", "71.7%", "67.2%", "MI-CT-FGSM", "58.7%", "42.9%", "74.2%", "63.2%", "60.9%", "NI-CT-FGSM", "51.1%", "38.4%", "70.2%", "57.1%", "56.0%", "VMI-CT-FGSM", "62.2%", "48.4%", "78.2%", "68.6%", "65.0%", "VNI-CT-FGSM", "62.5%", "48.9%", "79.3%", "69.4%", "65.7%", "I-FGSM", "+", "ILA", "40.1%", "36.3%", "66.5%", "49.4%", "46.0%", "I-FGSM", "+", "ILA++", "44.9%", "39.7%", "68.7%", "53.6%", "49.4%", "Method", "(cont.)", "DenseNet", "ResNeXt", "MobileNet", "SENet", "Average", "MI-CT-FGSM", "64.4%", "59.5%", "55.6%", "99.3%", "68.7%", "NI-CT-FGSM", "60.7%", "53.9%", "49.7%", "100.0%", "66.7%", "VMI-CT-FGSM", "68.9%", "62.0%", "60.5%", "99.7%", "71.2%", "VNI-CT-FGSM", "70.3%", "62.3%", "60.7%", "100.0%", "71.9%", "I-FGSM", "+", "ILA-DA", "(Ours)", "68.1%", "32.0%", "67.5%", "98.2%", "59.0%", "MI-CT-FGSM", "+", "ILA-DA", "(Ours)", "72.8%", "48.5%", "69.1%", "99.6%", "69.6%", "I-FGSM", "+", "ILA", "53.8%", "25.9%", "49.5%", "99.3%", "46.3%", "I-FGSM", "+", "ILA++", "57.9%", "27.9%", "52.9%", "99.3%", "49.5%", "Method", "ResNet50", "Inc-v3", "WRN", "VGG19∗", "PNASNet"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 471.84,
+    "y2": 724.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OM7doLjQbOQ-Table8-1.png"
+}]

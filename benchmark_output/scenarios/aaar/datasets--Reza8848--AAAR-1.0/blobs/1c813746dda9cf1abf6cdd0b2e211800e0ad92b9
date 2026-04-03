@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 4: Measuring the tradeoff between recourse outcome instability and the number of deletion requests for the Admission, Heloc, Diabetes and Compas data sets for logistic regression, kernel svm, and ANN models across recourse methods on classification tasks. Results were obtained by greedy optimization. The dotted lines indicate the random baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.24139404296875,
+    "y1": 472.19354248046875,
+    "y2": 511.072998046875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Diabetes", "greedy,", "logreg", "greedy,", "kernellssvm", "random,", "logreg", "random,", "kernellssvm", "greedy,", "ann", "random,", "ann", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(c)", "Compas", "greedy,", "logreg", "greedy,", "kernellssvm", "random,", "logreg", "random,", "kernellssvm", "greedy,", "ann", "random,", "ann", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(b)", "Heloc", "greedy,", "logreg", "greedy,", "kernellssvm", "random,", "logreg", "random,", "kernellssvm", "greedy,", "ann", "random,", "ann", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(a)", "Admission", "greedy,", "logreg", "greedy,", "kernellssvm", "random,", "logreg", "random,", "kernellssvm", "greedy,", "ann", "random,", "ann", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 458.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Measuring the tradeoff between recourse outcome instability and the number of deletion requests for both the Admission and the Heloc data sets for regression and NTK models and various recourse methods. Results were obtained by greedy optimization; see Appendix B for SGD results.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041198730469,
+    "y1": 292.2915344238281,
+    "y2": 320.2120056152344
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Heloc", "greedy,", "linreg", "greedy,", "ntk", "random,", "linreg", "random,", "ntk", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(a)", "Admission", "greedy,", "linreg", "greedy,", "ntk", "random,", "linreg", "random,", "ntk", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 278.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Visualizing the two key robustness notions. In Fig. 1a, recourse x̃1 for an input x is invalidated due to a model update. In Fig. 1b, recourse is additionally recomputed (i.e., x̃ω) to avoid recourse invalidation.",
+  "captionBoundary": {
+    "x1": 380.4939880371094,
+    "x2": 505.7432556152344,
+    "y1": 470.5205383300781,
+    "y2": 542.2760009765625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Recourse", "Action", "Instability", "x2", "x̃1", "x", "Invalidated", "recourse", "Updated", "recourse", "x̃ω", "Updated", "boundary:", "fw(ω)", "Original", "boundary:", "fw(1)", "f", "′", "=", "1", "f", "′", "=", "0", "x1", "(a)", "Recourse", "Outcome", "Instability", "x2", "x̃1", "x", "Invalidated", "recourse", "Updated", "boundary:", "fw(ω)", "Original", "boundary:", "fw(1)", "f", "′", "=", "1", "f", "′", "=", "0", "x1"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 384.47999999999996,
+    "x2": 511.2,
+    "y1": 223.67999999999998,
+    "y2": 457.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Measuring the tradeoff between recourse outcome instability and the number of deletion requests for the Admission and Heloc data sets for linear regression and NTK models across recourse methods on regression tasks. Results were obtained by both SGD and Greedy optimization. The dotted lines indicate the random baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041198730469,
+    "y1": 489.5595397949219,
+    "y2": 528.43798828125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Heloc", "(SGD)", "sgd,", "linreg", "sgd,", "ntk", "random,", "linreg", "random,", "ntk", "ed", "cem", "lid", "at", "In", "va", "rs", "e", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "e", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "e", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(c)", "Heloc", "(Greedy)", "greedy,", "linreg", "greedy,", "ntk", "random,", "linreg", "random,", "ntk", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(b)", "Admission", "(SGD)", "sgd,", "linreg", "sgd,", "ntk", "random,", "linreg", "random,", "ntk", "ed", "cem", "lid", "at", "In", "va", "rs", "e", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "e", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "e", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(a)", "Admission", "(Greedy)", "greedy,", "linreg", "greedy,", "ntk", "random,", "linreg", "random,", "ntk", "ed", "cem", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "ed", "dice", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 476.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure5-1.png"
+}, {
+  "caption": "Table 1: Model hyperparameters used in this work",
+  "captionBoundary": {
+    "x1": 204.197998046875,
+    "x2": 405.0041198730469,
+    "y1": 634.8035888671875,
+    "y2": 640.8060302734375
+  },
+  "figType": "Table",
+  "imageText": ["ANN", "2-Layer,", "30", "Hidden", "units,", "Sigmoid,", "α", "=", "10", "(L2-Regularization)", "Logistic", "Regression", "L2-Regularization", "with", "C", "=", "1.0", "Kernel-LSSVM", "Gaussian", "Kernel", "with", "γ", "=", "1.0", "(see", "Cawley", "&", "Talbot", "(2004))", "Linear", "Regression", "OLS,", "no", "hyperparameters.", "NTK", "Regression", "β", "=", "2", "(Admission),", "β", "=", "5", "(other", "data", "sets)", "Model", "Parameters"],
+  "name": "1",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 545.76,
+    "y2": 623.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Table1-1.png"
+}, {
+  "caption": "Figure 3: Quantifying the tradeoff between recourse action instability as measured in Definition 2 and the number of deletion requests for both the Admission and the Heloc data sets for the SCFE method when the underlying model is linear or an NTK (results by SGD optimization).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0002746582031,
+    "y1": 212.92654418945312,
+    "y2": 240.84698486328125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Heloc", "s", "g", "d,", "ntk", "random,", "ntk", "s", "g", "d,", "linreg", "random,", "linreg", "an", "ge", "scfe", "e", "ch", "ol", "ut", ".a", "bs", "A", "ve", "10", "0", "2", "4", "6", "8", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "Number", "Training", "Instances", "Removed", "(a)", "Admission", "s", "g", "d,", "ntk", "random,", "ntk", "s", "g", "d,", "linreg", "random,", "linreg", "an", "ge", "scfe", "e", "ch", "ol", "ut", ".a", "bs", "A", "ve", "0.0", "0.3", "0.6", "0.9", "1.2", "1.5", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "Number", "Training", "Instances", "Removed"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.96,
+    "y1": 85.44,
+    "y2": 199.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure3-1.png"
+}, {
+  "caption": "Figure 6: Measuring the efficacy of a simple removal strategy on the Heloc and Admission data set for linear and NTK regression models. We removed the 15 critical points identified for the linear and NTK models when the underlying recourse method is SCFE and reran the removal algorithm on the remaining training set. Results were obtained by Greedy optimization. The dotted lines indicate the random baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0027770996094,
+    "y1": 254.96054077148438,
+    "y2": 304.7980041503906
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Admission", "(Greedy)", "greedy,", "linreg", "(removal)", "greedy,", "ntk", "(removal)", "random,", "linreg", "(removal)", "random,", "ntk", "(removal)", "greedy,", "linreg", "greedy,", "ntk", "random,", "linreg", "random,", "ntk", "scfe", "ed", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed", "(a)", "Heloc", "(Greedy)", "greedy,", "linreg", "(removal)", "greedy,", "ntk", "(removal)", "random,", "linreg", "(removal)", "random,", "ntk", "(removal)", "greedy,", "linreg", "greedy,", "ntk", "random,", "linreg", "random,", "ntk", "scfe", "ed", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Number", "Training", "Instances", "Removed"],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 497.76,
+    "y1": 88.32,
+    "y2": 241.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Measuring the tradeoff between recourse outcome instability and the number of deletion requests for the Admission data set for a neural network regression model. We used the critical points identified for the NTK model to invalidate the recourses identified by a wide 2-layer ReLU network with 10000 hidden nodes. Results were obtained by Greedy optimization. The dotted lines indicate the random baselines.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.2456970214844,
+    "y1": 468.4715270996094,
+    "y2": 518.3099975585938
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Admission", "(Greedy)", "greedy,", "annreg", "random,", "annreg", "ed", "scfe", "lid", "at", "In", "va", "rs", "es", "ec", "ou", "%", "R", "100", "75", "50", "25", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "101112131415", "Number", "Training", "Instances", "Removed"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 214.07999999999998,
+    "x2": 399.84,
+    "y1": 324.47999999999996,
+    "y2": 455.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HWt4BBZjVW-Figure7-1.png"
+}]

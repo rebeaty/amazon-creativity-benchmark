@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 4: Convergence analysis of different best-response Jacobian algorithms on the data reweighting task",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00146484375,
+    "y1": 352.33453369140625,
+    "y2": 369.2959899902344
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 115.67999999999999,
+    "y2": 338.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Figure4-1.png"
+}, {
+  "caption": "Figure 1: In Engine (left), users define their MLO program as a hierarchy/graph of optimization problems. In Problem (middle), users define an optimization problem with a data loader, cost function, module, and optimizer, while upper/lower level constraint problems (i.e. Uk,Lk) are injected by Engine. The “step” function in Problem serves as the base of gradient-based optimization, abstracting the one-step gradient descent update process. Finally, users can easily try out different best-response Jacobian algorithms & system features (right) via Config in a modular manner.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2475280761719,
+    "y1": 215.85452270507812,
+    "y2": 276.6510009765625
+  },
+  "figType": "Figure",
+  "imageText": ["grad", "accum.", "data-parallel", "fp16", "Systems", "Support", "AID-NMN", "AID-CG", "ITD-RMAD", "AID-FD", "upper-to-lower", "lower-to-upper", "Best-response", "Jacobian", "if", "inner", "loop", "is", "done", "upper", "prob.", "config", "lower", "prob.", "parent", "step", "grad", "calc.cost", "calc.", "update", "load", "data", "optimizer", "costdata", "loader", "module", "Step", "Problem", "Problem", "2", "Problem", "1", "Problem", "3", "Problem", "4", "Engine"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 85.92,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Figure1-1.png"
+}, {
+  "caption": "Table 1: MWN experiment results. IF denotes an imbalance factor. AID-CG/NMN/FD respectively stand for implicit differentiation with conjugate gradient/Neumann series/finite difference.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3495178222656,
+    "y1": 229.37350463867188,
+    "y2": 246.33502197265625
+  },
+  "figType": "Table",
+  "imageText": ["MWN", "(ours,", "step=1)", "ITD-RMAD", "71.96", "75.13", "79.50", "2381MiB", "36.0m", "MWN", "(ours,", "step=1)", "AID-CG", "66.23±1.88", "70.88±1.68", "75.41±0.61", "2435MiB", "67.4m", "MWN", "(ours,", "step=1)", "AID-NMN", "66.45±1.18", "70.92±1.35", "75.90", "±1.73", "2419MiB", "67.1m", "MWN", "(ours,", "step=1)", "AID-FD", "75.45±0.63", "78.11±0.43", "81.15±0.25", "2051MiB", "28.5m", "MWN", "(ours,", "step=5)", "AID-FD", "76.56±1.19", "80.45±0.73", "83.11±0.54", "2051MiB", "65.5m", "MWN", "(original)", "ITD-RMAD", "68.91", "75.21", "80.06", "2381MiB", "35.8m", "Algorithm", "IF", "200", "IF", "100", "IF", "50", "Memory", "Time"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 134.4,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table1-1.png"
+}, {
+  "caption": "Table 2: MWN+BERT experiment results. fp32 and fp16 respectively stand for full-precision and mixed-precision training.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00347900390625,
+    "y1": 445.5945129394531,
+    "y2": 462.5559997558594
+  },
+  "figType": "Table",
+  "imageText": ["MWN", "(fp32)", "AID-FD", "-", "-", "Out-of-memory", "MWN", "(fp16)", "AID-FD", "91.06±0.09", "89.79±0.65", "10511MiB", "Baseline", "AID-FD", "89.99±0.38", "87.54±0.70", "8319MiB", "Algorithm", "IF", "20", "IF", "50", "Memory"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 161.76,
+    "x2": 450.24,
+    "y1": 380.64,
+    "y2": 437.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table2-1.png"
+}, {
+  "caption": "Table 7: GPU memory usage analysis for MWN with ResNet-50.",
+  "captionBoundary": {
+    "x1": 175.77499389648438,
+    "x2": 436.2272033691406,
+    "y1": 373.14752197265625,
+    "y2": 379.1499938964844
+  },
+  "figType": "Table",
+  "imageText": ["GPU", "Memory", "Usage", "6817MiB", "4397MiB", "3185/3077MiB", "(GPU0/1)", "Baseline", "+", "mixed-precision", "+", "data-parallel", "(2", "GPUs)"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 480.47999999999996,
+    "y1": 322.56,
+    "y2": 357.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table7-1.png"
+}, {
+  "caption": "Table 6: GPU memory usage analysis for DARTS.",
+  "captionBoundary": {
+    "x1": 205.322998046875,
+    "x2": 406.6771545410156,
+    "y1": 227.82553100585938,
+    "y2": 233.8280029296875
+  },
+  "figType": "Table",
+  "imageText": ["GPU", "Memory", "Usage", "9867MiB", "5759MiB", "Baseline", "+", "mixed-precision"],
+  "name": "6",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 189.6,
+    "x2": 422.4,
+    "y1": 177.6,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table6-1.png"
+}, {
+  "caption": "Table 8: Supported features in BETTY",
+  "captionBoundary": {
+    "x1": 229.802001953125,
+    "x2": 381.95208740234375,
+    "y1": 309.9205322265625,
+    "y2": 315.9230041503906
+  },
+  "figType": "Table",
+  "imageText": ["Miscellaneous", "·", "Gradient", "clipping", "·", "Early", "stopping", "Logging", "·", "Default", "Python", "logging", "·", "TensorBoard", "·", "Weights", "&", "Biases", "Systems", "·", "Mixed-precision", "·", "Data-parallel", "·", "Gradient", "accumulation", "·", "ITD-RMAD", "·", "AID-FD", "·", "AID-NMN", "·", "AID-CG", "algorithms", "Best-response", "Jacobian", "Category", "Features"],
+  "name": "8",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 214.56,
+    "x2": 397.44,
+    "y1": 128.64,
+    "y2": 298.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table8-1.png"
+}, {
+  "caption": "Table 5: DARTS re-implementation results. AID-FD refers to implicit differentiation with a finite difference method, and ∗ indicates the difference in the implementation of AID-FD explained above.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7405700683594,
+    "y1": 456.3385314941406,
+    "y2": 473.29998779296875
+  },
+  "figType": "Table",
+  "imageText": ["DARTS", "(ours,", "step=1)", "AID-FD", "97.39%", "3.8M", "10485MiB", "23.6h", "DARTS", "(ours,", "step=3)", "AID-FD", "97.22%", "3.2M", "10485MiB", "28.5h", "Random", "Search", "Random", "96.71%", "3.2M", "N/A", "N/A", "DARTS", "(original)", "AID-FD∗", "97.24%", "3.3M", "10493MiB", "25.4h", "Algorithm", "Test", "Acc.", "Parameters", "Memory", "Wall", "Time"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 491.03999999999996,
+    "y1": 368.15999999999997,
+    "y2": 440.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table5-1.png"
+}, {
+  "caption": "Table 3: Wrench Results. RWT stands for reweighting and CRT for correction",
+  "captionBoundary": {
+    "x1": 149.89199829101562,
+    "x2": 462.10986328125,
+    "y1": 251.61953735351562,
+    "y2": 257.62200927734375
+  },
+  "figType": "Table",
+  "imageText": ["Baseline", "53.88±1.83", "80.74±0.20", "72.26±0.81", "71.50±0.44", "54.47±0.78", "88.16±1.56", "+RWT", "57.56±1.41", "82.79±0.10", "77.18±0.13", "77.23±3.38", "65.33±0.72", "91.60±0.75", "+RWT&CRT", "66.76±1.31", "83.16±0.20", "77.80±0.26", "84.34±1.43", "67.69±1.17", "91.52±0.66", "Snorkel", "57.52±0.18", "62.00±0.07", "71.03±0.55", "71.00±0.00", "51.54±0.41", "77.44±0.22", "TREC", "AGNews", "IMDB", "SemEval", "ChemProt", "YouTube"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 178.56,
+    "y2": 245.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table3-1.png"
+}, {
+  "caption": "Figure 2: An example dataflow graph for MLO.",
+  "captionBoundary": {
+    "x1": 405.0,
+    "x2": 505.4628601074219,
+    "y1": 449.8265380859375,
+    "y2": 466.7879943847656
+  },
+  "figType": "Figure",
+  "imageText": ["P2", "P1", "P3", "P4"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 410.88,
+    "x2": 499.2,
+    "y1": 344.64,
+    "y2": 441.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Figure2-1.png"
+}, {
+  "caption": "Table 4: Domain Adaptation for Pretraining & Finetuning results. Reported numbers are classification accuracy on the target domain (right of arrow), after pretraining on the source domain (left of arrow). We note that Baseline is a two-layer, and Baseline + Reweight a three-layer, MLO program.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.73834228515625,
+    "y1": 136.61355590820312,
+    "y2": 164.53399658203125
+  },
+  "figType": "Table",
+  "imageText": ["+", "RWT", "AID-FD", "67.76±0.83", "88.53±0.42", "78.58±0.17", "69.75±0.43", "8.2GiB", "869s", "Baseline", "N/A", "65.43±0.36", "87.62±0.33", "77.43±0.41", "68.76±0.13", "3.8GiB", "290s", "Algorithm", "Cl→Ar", "Ar→Pr", "Pr→Rw", "Rw→Cl", "Memory", "Time"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 128.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Table4-1.png"
+}, {
+  "caption": "Figure 3: Convergence analysis of different best-response Jacobian algorithms on the synthetic hyperparameter optimization task",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9973449707031,
+    "y1": 612.0205688476562,
+    "y2": 628.9819946289062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 375.84,
+    "y2": 598.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LV_MeMS38Q9-Figure3-1.png"
+}]

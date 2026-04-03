@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 4: (a) Sparse Replica Manifold Analysis enables simulation-theory validation in real neural data with limited number of the neurons. Given N0 neurons in the data, capacity under dense labels tends to be outside the testable regime (top). Conversely, under sparse labels, the theoretical capacity can be validated empirically (bottom). In (b) and (c), we demonstrate this phenomenon. We estimate critical number of features Nc = P/αc from the neural data in V4 and IT regions (Majaj et al., 2015) and the V1 and V2 regions (Freeman et al., 2013) under dense labels (left) and sparse labels (right). The testable regime (highlighted blue) depends on the number of neurons/features available. Sample images of each dataset are shown on the bottom of their respective panel. Observe that under dense labeling, there is no simulated data available for validation.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74383544921875,
+    "y1": 505.3225402832031,
+    "y2": 598.9959716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 320.64,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Theoretical vs simulated sparse manifold capacity (a) on smooth manifolds in layers of a VGG16 (b) on pointcloud manifolds in layers of a VGG16 (c) on neural data from the ventral stream of Macaque monkeys engaged in a classification task. Each dot is a layer or a brain region.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99700927734375,
+    "y1": 228.45150756835938,
+    "y2": 256.37200927734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure3-1.png"
+}, {
+  "caption": "Figure 7: This figure shows the match between simulated and theoretical sparse manifold capacity on neural datasets when different methods are used to take into account of manifold correlation. In (a), the method presented in Cohen et al. (2020) is employed. The manifold centroids are used to recover the space of low correlation. In (b), CLLD are used to recover the space of low correlation. Refer to appendix A.2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.24566650390625,
+    "y1": 280.29351806640625,
+    "y2": 330.1310119628906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 80.64,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure7-1.png"
+}, {
+  "caption": "Table 2: Sparse Replica Manifold Analysis Computation Time (seconds) for 40 smooth manifolds in VGG-16 Layers",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0035705566406,
+    "y1": 354.9585266113281,
+    "y2": 371.91900634765625
+  },
+  "figType": "Table",
+  "imageText": ["Dense", "Labels", "Sparse", "Labels", "Vgg16", "Layers", "R,D", "Capacity", "Total", "Time", "Rg", ",Dg", "Capacity", "Total", "Time", "Input", "51.68", "51.68", "159.99", "1.01", "771.75", "857.46", "ReLU-2", "50.21", "50.21", "111.09", "1.24", "762.17", "851.72", "ReLU-4", "50.00", "50.00", "99.41", "1.16", "846.37", "932.27", "ReLU-7", "50.30", "50.30", "84.51", "1.23", "832.91", "918.44", "ReLU-9", "50.92", "50.92", "82.18", "1.20", "768.40", "856.76", "ReLU-14", "48.53", "48.53", "68.31", "1.14", "715.54", "802.85", "ReLU-16", "48.34", "48.34", "69.76", "1.21", "798.93", "893.71", "ReLU-21", "46.34", "46.34", "69.98", "1.15", "1336.58", "1424.74", "ReLU-23", "46.34", "46.34", "61.31", "1.28", "1153.42", "1245.36", "ReLU-28", "45.76", "45.76", "62.43", "0.76", "1290.43", "1379.53", "ReLU-30", "45.97", "45.97", "81.88", "0.82", "1086.01", "1177.79", "ReLU-37", "45.10", "45.10", "105.36", "1.07", "1198.15", "1284.02"],
+  "name": "2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 379.68,
+    "y2": 540.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Table2-1.png"
+}, {
+  "caption": "Figure 1: Dense vs Sparse labels (left) Computer science theories such as VC dimension and Cover’s Theorem are interested in capacity under all random dichotomies. Under this regime, manifolds are densely labeled where more than one manifold has a positive label. (right) Conversely, neuroscience studies cognitive tasks such as object recognition, where one-vs-rest dichotomies are more relevant. Under this regime, manifolds are sparsely labeled where only one manifold is assigned a positive labeling at a time. In each dichotomy, (red) is the positive label 1 and (blue) is the negative label -1.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74420166015625,
+    "y1": 283.19952392578125,
+    "y2": 343.99700927734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure1-1.png"
+}, {
+  "caption": "Table 1: Sparse Replica Manifold Analysis Computation Time (seconds): Manifold Radius and Dimension computed sequentially for 40 manifolds.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0034484863281,
+    "y1": 203.00155639648438,
+    "y2": 219.9630126953125
+  },
+  "figType": "Table",
+  "imageText": ["VGG-16", "Layers", "Input", "ReLU-4", "ReLU-7", "ReLU-14", "ReLU-21", "ReLU-28", "ReLU-37", "Sparse", "Labels", "1.01", "1.16", "1.23", "1.14", "1.15", "0.76", "1.07", "Dense", "Labels", "51.68", "50.00", "50.30", "48.53", "46.34", "45.76", "45.10"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 232.79999999999998,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Table1-1.png"
+}, {
+  "caption": "Figure 5: This figure plots (i) capacity, (ii) mean manifold Gaussian dimension, (iii) mean manifold radius, (iv) mean manifold effective dimension , and (v) mean manifold effective radius for smooth manifolds in ReLU layers of the (a) VGG16, (b) neural data in the V4 and IT regions, and (c) in the V1 and V2 regions. Effective dimension is also known as participation ratio, computed as ∥λ∥2 1",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00225830078125,
+    "y1": 360.676513671875,
+    "y2": 403.0469970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure5-1.png"
+}, {
+  "caption": "Figure 6: (a) illustrates the relationship between ambient dimension N (shown as orange axes), manifold intrinsic dimension D (shown as green axes), and separability. Manifolds are most easily separable in the regime of high ambient dimension and low manifold dimension. (b) shows that with a fixed α, increasing Nc (critical number of features) will increase the population capacity, which is the number of separable manifolds, P . Recall that we only need N ≫ Nc. Otherwise α is not dependent on N . (b) holds true as long as N ≫ Nc. Refer to section 2 for notations. (c)-(g) are empirical results on sparse manifold capacity and the mean margin achieved by a SVM when separability is plausible. (c)-(d) demonstrate that the per neuron capacity, which is the sparse manifold capacity, decreases as effective dimension (participation ratio) and Gaussian mean width (Rg √ Dg) increase respectively. (e) illustrates that the margin of the SVM increases as the ambient dimension increases. We increase ambient dimension using random projections. (f)-(g) on the other hand demonstrate that margin decreases as effective dimension and the Gaussian mean width increases.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.74346923828125,
+    "y1": 265.2835388183594,
+    "y2": 392.83099365234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 240.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Pseudocode for computing sparse manifold capacity with center correlation using CLLD.",
+  "captionBoundary": {
+    "x1": 108.27799987792969,
+    "x2": 503.723388671875,
+    "y1": 445.8565368652344,
+    "y2": 451.8590087890625
+  },
+  "figType": "Figure",
+  "imageText": ["Theorem", "1.", "Cohen", "et", "al.", "(2020).", "5.", "Project", "each", "manifold", "into", "the", "low", "center", "correlation", "space", "and", "compute", "capacity", "via", "back", "to", "the", "original,", "high", "dimensional", "space", "to", "obtain", "local", "linear", "centroids.", "3.", "Sample", "CLLD", "by", "sampling", "differences", "between", "local", "linear", "centroids.", "4.", "Use", "CLLD", "to", "recover", "the", "space", "of", "low", "center", "correlation", "via", "the", "technique", "described", "in", "1.", "Use", "LLE", "to", "project", "each", "manifold", "into", "a", "low", "dimensional", "space.", "2.", "For", "each", "manifold,", "compute", "its", "Euclidean", "center", "in", "the", "new", "space", "and", "project", "the", "center", "Pseudocode", "for", "Computing", "Sparse", "Manifold", "Capacity", "via", "CLLD"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 280.8,
+    "y2": 427.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-itAMjwvDJC-Figure2-1.png"
+}]

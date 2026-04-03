@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: Point-wise Anomalies (Top) versus Subsequence Anomalies (Bottom). The top is a website traffic time series with anomalies labeled by red dots that might be caused by cyberattacks. The bottom is an insect’s activity signal recorded with an EPG apparatus, where time intervals marked in grey are subsequences exhibiting different anomalous characteristics, including period length variation, spike, and temporal morphological change.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 309.95916748046875,
+    "y1": 178.10153198242188,
+    "y2": 253.843017578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 305.28,
+    "y1": 75.84,
+    "y2": 159.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Figure1-1.png"
+}, {
+  "caption": "Figure 2: An Illustration of Selecting Proper Length for Subsequence Anomaly Detection. An anomalous subsequence is inside the dark grey zone. If we directly detect anomalies using this length, the anomaly might not be found as it is very similar to normal subsequences, e.g., the green zone. Instead, it is better to select a longer window size (marked in light grey) including the anomaly with its context to highlight the anomalous pattern.",
+  "captionBoundary": {
+    "x1": 320.6080017089844,
+    "x2": 490.8890075683594,
+    "y1": 157.49850463867188,
+    "y2": 253.1639404296875
+  },
+  "figType": "Figure",
+  "imageText": ["Normal", "Subsequence", "Anomaly", "with", "a", "Context", "Anomalous", "Subsequence"],
+  "name": "2",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 321.59999999999997,
+    "x2": 488.15999999999997,
+    "y1": 76.8,
+    "y2": 137.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Figure2-1.png"
+}, {
+  "caption": "Table 5: Hyperparamter settings",
+  "captionBoundary": {
+    "x1": 241.77194213867188,
+    "x2": 370.2296447753906,
+    "y1": 231.58450317382812,
+    "y2": 237.58697509765625
+  },
+  "figType": "Table",
+  "imageText": ["regularization", "0.2", "µ", "the", "coefficient", "of", "Laplacian", "regularization", "1.0", "λ", "the", "coefficient", "of", "auto-encoding", "and", "temporal", "anomaly", "score", "0.8", "α", "the", "coefficient", "to", "balance", "semantic", "contexts", "2", "S", "the", "number", "of", "hops", "when", "calculating", "L", "the", "maximum", "subsequence", "length", "2P∆", "P", "the", "maximum", "length", "scale", "5", "τ", "stride", "length", "2∆", "∆", "the", "length", "of", "an", "indivisible", "segment", "0.125", "times", "of", "period", "length", "for", "periodic", "time", "series,", "and", "10", "otherwise", "Hyperparameter", "Description", "Value"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 240.48,
+    "y2": 411.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Table5-1.png"
+}, {
+  "caption": "Table 3: F1 score of models on multivariate datasets.",
+  "captionBoundary": {
+    "x1": 200.7860107421875,
+    "x2": 411.2160339355469,
+    "y1": 651.6104736328125,
+    "y2": 657.6129150390625
+  },
+  "figType": "Table",
+  "imageText": ["GraphSAD", "96.67", "95.32", "91.12", "THOC", "95.18", "93.67", "–", "NCAD", "94.45", "95.6", "80.16", "Deep", "SVDD", "71.71", "88.12", "–", "OmniAnomaly", "84.34", "89.89", "88.57", "Dataset", "SMAP", "MSL", "SMD"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 232.79999999999998,
+    "x2": 379.2,
+    "y1": 658.56,
+    "y2": 724.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Table3-1.png"
+}, {
+  "caption": "Table 1: Performance of models on UCR.",
+  "captionBoundary": {
+    "x1": 222.1929931640625,
+    "x2": 389.8066711425781,
+    "y1": 92.62955474853516,
+    "y2": 98.63201904296875
+  },
+  "figType": "Table",
+  "imageText": ["GraphSAD", "0.8864", "0.444", "0.572", "0.640", "0.696", "LOF", "0.5995", "0.312", "0.360", "0.409", "0.461", "NCAD", "0.6413", "0.352", "0.412", "0.520", "0.648", "Matrix", "Profile", "0.8631", "0.436", "0.548", "0.596", "0.644", "Series2Graph", "0.6847", "0.276", "0.348", "0.372", "0.408", "Metric", "AUC", "Recall@1", "Recall@3", "Recall@5", "Recall@10"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 177.6,
+    "x2": 434.4,
+    "y1": 99.84,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Table1-1.png"
+}, {
+  "caption": "Table 2: Performance of models on UCR-Aug.",
+  "captionBoundary": {
+    "x1": 211.4709930419922,
+    "x2": 400.5286560058594,
+    "y1": 187.60153198242188,
+    "y2": 193.60400390625
+  },
+  "figType": "Table",
+  "imageText": ["GraphSAD", "0.9022", "0.792", "0.925", "0.953", "0.981", "LOF", "0.6129", "0.594", "0.736", "0.798", "0.861", "NCAD", "0.8414", "0.722", "0.803", "0.839", "0.890", "Matrix", "Profile", "0.8683", "0.709", "0.841", "0.873", "0.899", "Series2Graph", "0.7252", "0.442", "0.610", "0.687", "0.761", "Metric", "AUC", "Recall@1", "Recall@3", "Recall@5", "Recall@10"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 177.6,
+    "x2": 434.4,
+    "y1": 195.84,
+    "y2": 262.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Table2-1.png"
+}, {
+  "caption": "Figure 5: GraphSAD Can Handle Recurring Anomalies Compared with Matrix Profile. There are 5 subsequence anomalies (marked in grey) in time series, where Anomaly 3 and 4 share a similar anomalous pattern. Matrix Profile find 1 of 5 anomalies in its top-5 scored subsequences which cannot deal with recurring anomalies, while GraphSAD find 4 of 5.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 232.03353881835938,
+    "y2": 270.9129638671875
+  },
+  "figType": "Figure",
+  "imageText": ["GraphSAD", "Matrix", "Profile", "4", "51", "2", "3", "Ground", "Truth"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 162.72,
+    "x2": 455.03999999999996,
+    "y1": 89.28,
+    "y2": 219.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Figure5-1.png"
+}, {
+  "caption": "Table 4: Performance of model variations on UCR and UCR-Aug",
+  "captionBoundary": {
+    "x1": 173.2030029296875,
+    "x2": 438.6584777832031,
+    "y1": 299.2825012207031,
+    "y2": 305.28497314453125
+  },
+  "figType": "Table",
+  "imageText": ["GraphSAD", "0.8864", "0.444", "0.640", "0.9022", "0.792", "0.953", "fixed", "length", "0.8765", "0.396", "0.594", "0.8647", "0.741", "0.900", "w/o", "semantic", "graph", "0.7498", "0.366", "0.609", "0.8513", "0.714", "0.881", "w/o", "temporal", "graph", "0.8832", "0.446", "0.587", "0.8991", "0.766", "0.923", "w/o", "anomaly", "injection", "0.8640", "0.440", "0.587", "0.9003", "0.745", "0.939", "w/o", "length", "selection", "0.8339", "0.428", "0.620", "0.8731", "0.762", "0.936", "Metric", "AUC", "Recall@1", "Recall@5", "AUC", "Recall@1", "Recall@5", "Dataset", "UCR", "UCR-Aug"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 460.32,
+    "y1": 306.71999999999997,
+    "y2": 395.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_73U_NlKaNx-Table4-1.png"
+}]

@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 1: Generation results on the six datasets for all the methods. We report the MMD distance between the test datasets and generated graphs. Best results are bold and the second best values are underlined (smaller the better). “-” denotes out-of-resources that take more than 10 days to run.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 365.7635192871094,
+    "y2": 393.6839599609375
+  },
+  "figType": "Table",
+  "imageText": ["DeepGMG", "-", "-", "-", "-", "-", "-", "-", "-", "0.040", "0.100", "0.020", "477", "GraphRNN", "0.103", "0.138", "0.005", "31.0", "0.017", "0.062", "0.046", "19.2", "0.090", "0.220", "0.003", "18.7", "GraphAF", "0.111", "0.407", "0.003", "53.1", "1.669", "1.283", "0.266", "28.6", "0.030", "0.110", "0.001", "6.9", "GraphDF", "0.283", "0.078", "0.035", "62.4", "1.503", "1.061", "0.202", "39.8", "0.040", "0.130", "0.010", "10.2", "GraphVAE", "1.591", "1.993", "1.050", "0.2", "1.369", "0.629", "0.191", "0.7", "0.130", "0.170", "0.050", "0.3", "GNF", "-", "-", "-", "-", "-", "-", "-", "-", "0.030", "0.100", "0.001", "-", "GRAN", "0.073", "0.413", "0.010", "2.1", "0.054", "0.078", "0.017", "3.2", "0.030", "0.029", "0.014", "1.2", "OA", "0.042", "0.140", "0.005", "2.8", "0.051", "0.083", "0.024", "2.4", "0.024", "0.035", "0.018", "1.4", "EDP-GNN", "0.131", "0.038", "0.019", "3694.2", "0.023", "0.268", "0.082", "2155.5", "0.052", "0.093", "0.007", "3851.9", "GDSS", "0.113", "0.020", "0.003", "858.4", "0.026", "0.061", "0.009", "443.0", "0.021", "0.024", "0.007", "260.9", "GRAPHARM", "0.031", "0.046", "0.002", "2.3", "0.033", "0.059", "0.019", "3.5", "0.016", "0.014", "0.012", "1.2", "Deg.", "Clus.", "Orbit", "Time/s", "Deg.", "Clus.", "Orbit", "Time/s", "Deg.", "Clus.", "Orbit", "Time/s", "Model", "Breast", "Enzymes", "Ego-small", "DeepGMG", "0.220", "0.950", "0.400", "496.6", "1.752", "1.642", "0.2122", "530.2", "-", "-", "-", "-", "GraphRNN", "0.080", "0.120", "0.040", "16.4", "0.371", "1.035", "0.033", "27.0", "1.689", "0.608", "0.308", "33.3", "GraphAF", "0.180", "0.200", "0.020", "19.3", "0.269", "0.587", "0.422", "20.5", "0.176", "0.080", "0.094", "108.5", "GraphDF", "0.060", "0.120", "0.030", "10.3", "0.077", "0.373", "0.051", "18.5", "0.454", "0.074", "0.256", "129.7", "GraphVAE", "0.350", "0.980", "0.540", "0.2", "1.402", "1.086", "1.391", "0.2", "1.521", "1.740", "0.788", "0.3", "GNF", "0.200", "0.200", "0.110", "-", "-", "-", "-", "-", "-", "-", "-", "-", "GRAN", "0.060", "0.110", "0.050", "1.8", "0.043", "0.130", "0.018", "2.5", "0.125", "0.272", "0.127", "5.1", "OA", "0.047", "0.130", "0.008", "2.0", "0.032", "0.076", "0.027", "3.0", "0.249", "0.201", "0.145", "5.6", "EDP-GNN", "0.053", "0.144", "0.026", "2898.7", "0.032", "0.168", "0.030", "1823.4", "0.093", "0.269", "0.062", "4655.1", "GDSS", "0.045", "0.086", "0.007", "435.1", "0.019", "0.048", "0.006", "514.0", "0.160", "0.376", "0.187", "421.4", "GRAPHARM", "0.038", "0.090", "0.003", "1.9", "0.048", "0.022", "0.014", "2.7", "0.281", "0.134", "0.114", "4.5", "Deg.", "Clus.", "Orbit", "Time/s", "Deg.", "Clus.", "Orbit", "Time/s", "Deg.", "Clus.", "Orbit", "Time/s", "Model", "Community-small", "Caveman", "Cora"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 507.35999999999996,
+    "y1": 81.6,
+    "y2": 350.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Table1-1.png"
+}, {
+  "caption": "Table 2: Constrained graph generation results on the Caveman dataset.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9966125488281,
+    "y1": 703.5965576171875,
+    "y2": 720.5579833984375
+  },
+  "figType": "Table",
+  "imageText": ["EDP-GNN", "39%", "-", "-", "-", "GDSS", "34%", "-", "-", "-", "GRAN", "100%", "0.208", "0.231", "0.158", "OA", "100%", "0.190", "0.168", "0.132", "GRAPHARM", "100%", "0.179", "0.135", "0.141", "Method", "Validity", "Deg.", "Clus.", "Orbit"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 499.2,
+    "y1": 614.88,
+    "y2": 692.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Table2-1.png"
+}, {
+  "caption": "Figure 3: The graph generative process of GRAPHARM and OA-ARM for community generation. As we can see, GRAPHARM first generates one community and then adds another one, which show that GRAPHARM captures graph structural topology for generation. In contrast, OA-ARM generates the graph with a random order.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99798583984375,
+    "y1": 204.64450073242188,
+    "y2": 243.52392578125
+  },
+  "figType": "Figure",
+  "imageText": ["Step", "5", "Step", "7", "Step", "5", "Step", "7", "Step", "9", "Step", "11", "Step", "12", "Step", "9", "Step", "11", "Step", "12", "A", "R", "M", "O", "A", "-A", "R", "M", "p", "h", "G", "ra"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 119.03999999999999,
+    "x2": 500.15999999999997,
+    "y1": 85.92,
+    "y2": 187.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Figure3-1.png"
+}, {
+  "caption": "Table 4: Comparison between GRAPHARM and OA-ARM on the Community-small and Breast datasets.",
+  "captionBoundary": {
+    "x1": 266.39801025390625,
+    "x2": 504.0040588378906,
+    "y1": 472.9875183105469,
+    "y2": 489.948974609375
+  },
+  "figType": "Table",
+  "imageText": ["OA-ARM", "0.159", "0.372", "0.291", "0.152", "0.231", "0.105", "GRAPHARM", "0.038", "0.090", "0.003", "0.031", "0.05", "0.002", "Deg.", "Clus.", "Orbit", "Deg.", "Clus.", "Orbit", "Community-small", "Breast"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 262.56,
+    "x2": 508.32,
+    "y1": 396.96,
+    "y2": 457.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Table4-1.png"
+}, {
+  "caption": "Table 3: Test set negative log-likelihood (NLL) on Community-small and Breast datasets. N/A represents the model cannot provide the NLL.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9966735839844,
+    "y1": 275.8485412597656,
+    "y2": 303.76898193359375
+  },
+  "figType": "Table",
+  "imageText": ["GRAN", "23.04", "247.18", "OA", "16.82", "187.22", "EDP-GNN", "N/A", "N/A", "GDSS", "N/A", "N/A", "GRAPHARM", "15.79", "190.34", "Community-small", "Breast"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 316.8,
+    "x2": 491.03999999999996,
+    "y1": 186.72,
+    "y2": 264.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Table3-1.png"
+}, {
+  "caption": "Figure 1: The autoregressive graph diffusion process. In the forward pass, the nodes are autoregressively decayed into the absorbing states, dictated by an ordering generated by the diffusion ordering network qϕ(σ|G0). In the reverse pass, the generator network work pθ(Gt|Gt+1) reconstructs the graph structure using the reverse node ordering.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 184.78854370117188,
+    "y2": 223.66796875
+  },
+  "figType": "Figure",
+  "imageText": ["3", "...", "4", "1", "2", "Masked", "edge", "Masked", "node", "3", "4", "1", "3", "...", "2", "4", "1", "3", "2", "4", "1", "2"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.47999999999999,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Figure1-1.png"
+}, {
+  "caption": "Figure 2: The generation procedure at step t with the denoising network pθ(Gt|Gt+1).",
+  "captionBoundary": {
+    "x1": 130.4429931640625,
+    "x2": 478.4686584472656,
+    "y1": 186.18753051757812,
+    "y2": 193.68402099609375
+  },
+  "figType": "Figure",
+  "imageText": ["Mixture", "of", "Bernoulli", "GAT", "Masked", "edge", "Masked", "node"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 484.32,
+    "y1": 89.28,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_98J48HZXxd5-Figure2-1.png"
+}]

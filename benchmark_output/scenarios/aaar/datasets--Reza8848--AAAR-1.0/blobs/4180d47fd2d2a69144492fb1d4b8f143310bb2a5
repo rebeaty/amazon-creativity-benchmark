@@ -1,0 +1,421 @@
+[{
+  "caption": "Figure 5: ATSP attack on Nearest Neighbour algorithm. The directed edge represents the distance between two nodes. The attack action on edge AC will cause 2 further distance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 644.2405395507812,
+    "y2": 661.2020263671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 450.71999999999997,
+    "y2": 630.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure5-1.png"
+}, {
+  "caption": "Table 10: Hyperparameter tuning for Gurobi on MC(100-200). We focus on tuning two important hyperparameters: MIPFocus and Heuristics through Gurobi’s API, which are described more detailedly in text.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.65496826171875,
+    "y1": 92.5765151977539,
+    "y2": 120.49700927734375
+  },
+  "figType": "Table",
+  "imageText": ["Hyperparameter", "Hard", "Example", "Weight↑", "Clean", "Weight", "ROCO-RL", "Attack", "Ratio↓", "MIPFocus=0,", "Heurstics=0.00", "0.7414", "0.7480", "0.7418", "0.83%", "MIPFocus=0,", "Heurstics=0.05", "0.7409", "0.7491", "0.7409", "1.09%", "MIPFocus=0,", "Heurstics=0.10", "0.7386", "0.7483", "0.7383", "1.34%", "MIPFocus=1,", "Heurstics=0.00", "0.7488", "0.7478", "0.7430", "0.64%", "MIPFocus=1,", "Heurstics=0.05", "0.7472", "0.7490", "0.7427", "0.84%", "MIPFocus=1,", "Heurstics=0.10", "0.7455", "0.7480", "0.7410", "0.94%", "MIPFocus=2,", "Heurstics=0.00", "0.7466", "0.7460", "0.7395", "0.87%", "MIPFocus=2,", "Heurstics=0.05", "0.7448", "0.7475", "0.7398", "1.03%", "MIPFocus=2,", "Heurstics=0.10", "0.7433", "0.7466", "0.7383", "1.11%"],
+  "name": "10",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 120.96,
+    "y2": 225.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table10-1.png"
+}, {
+  "caption": "Table 1: We make a (no strict) analogy by comparing the proposed ROCO framework with two popular attacking paradigms FGSM (Goodfellow et al., 2015) and RL-S2V (Dai et al., 2018). εperturb means the change of one pixel should be bounded in ε. B-hop neighbourhood means the new attack edges can only connect two nodes with distance less than B.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6539001464844,
+    "y1": 92.5765151977539,
+    "y2": 131.45599365234375
+  },
+  "figType": "Table",
+  "imageText": ["RL-S2V", "graph", "classiﬁcation", "edges", "(connectivity)", "#", "edge", "B-hop", "neighbour", "ROCO", "(ours)", "CO", "instance", "CO", "solution", "edges", "(constraints/cost)", "#", "edge", "no", "worse", "optimum", "Method", "Data", "Task", "Attack", "target", "Attack", "budget", "Attack", "principle", "FGSM", "image", "classiﬁcation", "pixels", "ε-Perturb", "invisible", "change"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 133.92,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table1-1.png"
+}, {
+  "caption": "Table 2: Evaluation on DAG scheduling. Clean makespans are reported on the clean test set. Larger attacked makespans mean stronger attacker. Random denotes the random attack baseline with the mean and std tested for 100 trials. ROCO-RA/OG/SA are tested for 10 trials to calculate the mean and std. ROCO-RL is reported with a single value since it is invariant to different random seeds. All four attack methods perform better than the random attack baseline, which usually leads to a shorter makespan (unsuccessful attack), proving that our attack framework can find more hard instances than those because of the inherent instability of CO problems. Tetris is the most robust solver with size of 50 and 150 while Critical path is more robust on size 100.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1723937988281,
+    "y1": 92.5765151977539,
+    "y2": 175.291015625
+  },
+  "figType": "Table",
+  "imageText": ["Tetris", "(Grandl", "et", "al.,", "2014)", "150", "2.2469", "2.3581±", "0.0270", "2.4988±", "0.0191", "2.5039±", "0.0202", "2.5399±", "0.0058", "2.5329", "Shortest", "Job", "First", "150", "2.8578", "2.8281±", "0.0074", "2.8818±", "0.0020", "2.8898±", "0.0023", "2.8950±", "0.0014", "2.8964", "Critical", "Path", "150", "2.4398", "2.4254±", "0.0203", "2.5698±", "0.0093", "2.5928±", "0.0090", "2.6020±", "0.0029", "2.6069", "Tetris", "(Grandl", "et", "al.,", "2014)", "50", "0.8227", "0.8582±", "0.0079", "0.8952±", "0.0049", "0.9218±", "0.0066", "0.9380±", "0.1153", "0.9397", "Shortest", "Job", "First", "100", "1.9160", "1.8832±", "0.0075", "1.9210±", "0.0006", "1.9239±", "0.0008", "1.9239±", "0.0008", "1.9263", "Critical", "Path", "100", "1.6018", "1.6279±", "0.0167", "1.7391±", "0.0045", "1.7456±", "0.0043", "1.7480±", "0.0003", "1.7498", "Tetris", "(Grandl", "et", "al.,", "2014)", "100", "1.5186", "1.5830±", "0.0196", "1.7201±", "0.0055", "1.7099±", "0.0111", "1.7418±", "0.0074", "1.7526", "Shortest", "Job", "First", "50", "1.0461", "1.0406±", "0.0035", "1.0574±", "0.0013", "1.0600±", "0.0019", "1.0622±", "0.0007", "1.0608", "Critical", "Path", "50", "0.8695", "0.8828±", "0.0077", "0.9402±", "0.0038", "0.9480±", "0.0021", "0.9528±", "0.0013", "0.9500", "Solver", "Size:", "Clean", "Makespan", "Attack", "Method", "(Attacked", "Makespans", "(×105))", "#job", "(×105)", "↓", "Random", "ROCO-RA", "ROCO-OG", "ROCO-SA", "ROCO-RL"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 483.35999999999996,
+    "y1": 177.6,
+    "y2": 252.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table2-1.png"
+}, {
+  "caption": "Figure 2: DAG attack on Shortest Job First algorithm. The edges show sequential dependencies. The (x, y) tuple of each node means running time (x) and resource occupancy rate (y).",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 505.6491394042969,
+    "y1": 487.7705383300781,
+    "y2": 537.6090087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 344.64,
+    "x2": 504.0,
+    "y1": 405.59999999999997,
+    "y2": 477.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Left: RL Attack results w.r.t. attack budgets K on TPC-H-50 dataset for solvers Shortest Job First(SJF), Critical Path(CP) and Tetris(TS). Attack ratio is the ratio of the increased makespan after the attack to the clean makespan. Right: RL Attack results w.r.t. attack budgets K on TPC-H50/100/150 datasets for the Tetris (TS) solver.",
+  "captionBoundary": {
+    "x1": 305.6409912109375,
+    "x2": 505.7456359863281,
+    "y1": 645.1905517578125,
+    "y2": 716.9459838867188
+  },
+  "figType": "Figure",
+  "imageText": ["50", "100", "150", "(%", ")", "at", "io", "ck", "R", "At", "ta", "15.0", "12.5", "10.0", "7.5", "5.0", "2.5", "0.0", "0", "5", "10", "15", "20", "Attack", "Budget", "K", "STF", "CP", "TS", "(%", ")", "at", "io", "ck", "R", "At", "ta", "15.0", "12.5", "10.0", "7.5", "5.0", "2.5", "0.0", "0", "5", "10", "15", "20", "Attack", "Budget", "K"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 308.64,
+    "x2": 499.2,
+    "y1": 583.68,
+    "y2": 638.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Gurobi’s average time cost (no time limit) in solving clean or attacked MCSCC problems. Experiments are run on 3 datasets (20 instances) of different sizes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.74542236328125,
+    "y1": 264.0975036621094,
+    "y2": 281.0580139160156
+  },
+  "figType": "Figure",
+  "imageText": ["e(", "s)", "Clean", "Attacked", "Ti", "m", "io", "n", "ol", "ut", "ob", "i", "S", "G", "ur", "10", "8", "6", "4", "2", "0", "30-150-3K", "60-300-6K", "100-500-10K", "Dataset", "Size"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 170.4,
+    "x2": 439.68,
+    "y1": 85.92,
+    "y2": 243.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure4-1.png"
+}, {
+  "caption": "Table 5: Evaluation of solvers for MCSCC (notations are kept in line with MC in Table 4). Since MCSCC incorporates more constraints and is more challenging, our ROCO attackers show a more significant effect compared to MC, suggesting that solvers may be more vulnerable on CO problems that are inherently more challenging (e.g. with more complicated constraints). The greedy average algorithm is the most robust probably due to its worst-case guarantee known as submodularity (Hochbaum, 1996).",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 505.6556701660156,
+    "y1": 307.9995422363281,
+    "y2": 368.7959899902344
+  },
+  "figType": "Table",
+  "imageText": ["Gurobi(5s)", "100-500-10K", "49.3296", "52.8192±", "0.3803", "48.1375±", "0.3597", "47.4386±", "0.4933", "49.2013±", "0.2467", "43.4866", "Local", "Search", "100-500-10K", "22.9359", "22.9634±", "0.0482", "22.7616±", "0.0206", "22.6538±", "0.0183", "22.7455±", "0.0206", "22.5804", "Greedy", "Average", "100-500-10K", "51.3905", "51.4008±", "0.0308", "50.7481±", "0.0719", "50.5169±", "0.1747", "50.6865±", "0.0411", "50.5631", "Gurobi(1s)", "30-150-3K", "18.8934", "19.2297±", "0.1795", "16.9266±", "0.2135", "15.4132±", "0.3552", "15.3055±", "0.3684", "14.2740", "Local", "Search", "60-300-6K", "24.9913", "25.0413±", "0.0625", "24.8738±", "0.0100", "24.7914±", "0.035", "24.8189±", "0.0375", "24.8014", "Greedy", "Average", "60-300-6K", "43.1625", "43.1539±", "0.0475", "42.7697±", "0.0388", "42.7611±", "0.0475", "42.7222±", "0.0388", "42.1741", "Gurobi(2s)", "60-300-6K", "41.1828", "41.8005±", "0.4407", "38.2382±", "0.3459", "37.3322±", "0.4201", "38.2918±", "0.3665", "36.0432", "Local", "Search", "30-150-3K", "9.5713", "9.5474±", "0.0325", "9.4966±", "0.0057", "9.4976±", "0.0105", "9.4899±", "0.0029", "9.4861", "Greedy", "Average", "30-150-3K", "18.0038", "18.2541±", "0.1710", "17.5141±", "0.0288", "17.4331±", "0.0414", "17.5177±", "0.0396", "17.1414", "Solver", "Problem", "Size:", "Clean", "Weight", "↑", "Attack", "Method", "(Attacked", "Weight)", "#set-#b", "elem.-#w", "elem.", "Random", "ROCO-RA", "ROCO-OG", "ROCO-SA", "ROCO-RL"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 106.08,
+    "x2": 504.0,
+    "y1": 370.08,
+    "y2": 446.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table5-1.png"
+}, {
+  "caption": "Figure 7: The distribution of black element weights covered by different sets. The x − y pair in legends means the set can cover weights in range [x, y].",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99871826171875,
+    "y1": 491.9955139160156,
+    "y2": 508.9570007324219
+  },
+  "figType": "Figure",
+  "imageText": ["0-1.5", "1.5-3", "3-4.5", "4.5-6", "6+", "4.0%", "8.0%", "14.0%", "33.0%", "41.0%"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 224.64,
+    "x2": 452.15999999999997,
+    "y1": 271.68,
+    "y2": 453.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure7-1.png"
+}, {
+  "caption": "Table 3: Evaluation of solvers for ATSP. A larger tour length means a stronger attacker. Random denotes the random attack baseline with the mean and std tested for 100 trials. ROCO-RA/OG/SA are tested for 10 trials to calculate the mean and std. ROCO-RL is reported with a single value since it is invariant to different random seeds. MatNet (fixed) represents training MatNet with 10000 fixed ATSP instances. LKH3 and MatNet are more robust than peer solvers.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.3575744628906,
+    "y1": 92.5765151977539,
+    "y2": 142.41497802734375
+  },
+  "figType": "Table",
+  "imageText": ["LKH3", "(Helsgaun,", "2017)", "100", "1.5763", "1.5716±", "0.0016", "1.5826±", "0.0006", "1.5848±", "0.0005", "1.5856±", "0.0003", "1.5862", "MatNet", "(Kwon", "et", "al.,", "2021)", "100", "1.6545", "1.6492±", "0.0036", "1.6772±", "0.0012", "1.6815±", "0.0005", "1.6841±", "0.0007", "1.6873", "MatNet", "(ﬁxed)", "(Kwon", "et", "al.,", "2021)", "100", "1.6556", "1.6498±", "0.0037", "1.6788±", "0.0008", "1.6823±", "0.0003", "1.6846±", "0.0015", "1.6919", "LKH3", "(Helsgaun,", "2017)", "50", "1.6621", "1.6493±", "0.0042", "1.6653±", "0.0007", "1.6656±", "0.0007", "1.6682±", "0.0010", "1.6679", "MatNet", "(Kwon", "et", "al.,", "2021)", "50", "1.6915", "1.6786±", "0.0051", "1.7153±", "0.0012", "1.7204±", "0.0016", "1.7255±", "0.0012", "1.7279", "MatNet(ﬁxed)", "(Kwon", "et", "al.,", "2021)", "50", "1.6972", "1.6894±", "0.0054", "1.7171±", "0.0021", "1.7205±", "0.0005", "1.7279±", "0.0007", "1.7349", "Nearest", "Neighbour", "100", "2.1456", "2.1423±", "0.0079", "2.2319±", "0.0099", "2.2213±", "0.0152", "2.2273±", "0.0112", "2.2533", "Furthest", "Insertion", "100", "1.9209", "1.9188±", "0.0061", "1.9762±", "0.0088", "1.9782±", "0.0111", "1.9853±", "0.0063", "2.0144", "Nearest", "Neighbour", "20", "1.9354", "1.9143±", "0.0259", "2.1307±", "0.0153", "2.1162±", "0.0323", "2.1344±", "0.0159", "2.1858", "Furthest", "Insertion", "20", "1.6092", "1.5847±", "0.0142", "1.6953±", "0.0105", "1.6926±", "0.0117", "1.7183±", "0.0114", "1.7469", "LKH3", "(Helsgaun,", "2017)", "20", "1.4595", "1.4201±", "0.0089", "1.4599±", "0.0003", "1.4599±", "0.0004", "1.4610±", "0.0017", "1.4611", "MatNet", "(Kwon", "et", "al.,", "2021)", "20", "1.4616", "1.4237±", "0.0089", "1.4674±", "0.0012", "1.4683±", "0.0006", "1.4683±", "0.0009", "1.4708", "MatNet", "(ﬁxed)", "(Kwon", "et", "al.,", "2021)", "20", "1.4623", "1.4227±", "0.0086", "1.4665±", "0.0013", "1.4687±", "0.0004", "1.4714±", "0.0013", "1.4737", "Nearest", "Neighbour", "50", "2.2247", "2.2221±", "0.0131", "2.3635±", "0.0082", "2.3809±", "0.0096", "2.4058±", "0.0151", "2.4530", "Furthest", "Insertion", "50", "1.9772", "1.9730±", "0.0091", "2.0593±", "0.0071", "2.0466±", "0.0125", "2.0632±", "0.0089", "2.1150", "Solver", "Problem", "Clean", "Tour", "Attack", "Method", "(Attacked", "Tour", "Length", "Length(×106))", "Size:", "#", "city", "(×106)", "↓", "Random", "ROCO-RA", "ROCO-OG", "ROCO-SA", "ROCO-RL"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 483.35999999999996,
+    "y1": 144.96,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table3-1.png"
+}, {
+  "caption": "Figure 1: Overview and intuition of our attack framework. Left: Overview of our attack framework ROCO for CO solvers. ROCO targets on the CO problems which can be encoded by graph (often holds in practice). Here modifying the edges in the encoded graph represents modifying constraints or lowering the cost in CO. Right: The definition of a successful attack.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.245849609375,
+    "y1": 218.57949829101562,
+    "y2": 257.4580078125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "ROCO", "framework", "(b)", "Successful", "attack", "Constraint:", "c", "𝐱𝐱∗,𝑄𝑄", "≥", "c(�𝐱𝐱∗,", "�𝑄𝑄)", "1", "2", "K", "iterate", "K", "actions", "Reward:", "c", "𝑓𝑓𝜃𝜃", "�𝑄𝑄", ",", "�𝑄𝑄", "−", "c(𝑓𝑓𝜃𝜃(𝑄𝑄),𝑄𝑄)", "Attacker:", "RL/Search", "Attacked", "Objective", "c(𝑓𝑓𝜃𝜃(", "�𝑄𝑄),", "�𝑄𝑄)", "Black-box", "Solver", "Objective", "c(𝑓𝑓𝜃𝜃(𝑄𝑄),𝑄𝑄)", "Black-box", "Solver", "Attacked", "graph", "Optimal", "cost", "=", "c(�𝐱𝐱∗,", "�𝑄𝑄)", "Original", "graph", "Optimal", "cost", "=", "c(𝐱𝐱∗,𝑄𝑄)"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 80.64,
+    "y2": 201.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure1-1.png"
+}, {
+  "caption": "Table 7: Comparison of our attackers. Randomness means it will produce different results in different trials. Trained means whether the parameters are tuned by a training set.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0049133300781,
+    "y1": 248.92453002929688,
+    "y2": 265.885986328125
+  },
+  "figType": "Table",
+  "imageText": ["Attack", "Method", "Randomness", "Trained", "Time", "Complexity", "ROCO-RA", "X", "O(NK)", "ROCO-OG", "X", "O(BMK)", "ROCO-SA", "X", "X", "O(NMK)", "ROCO-RL", "X", "O(B2K)"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 268.8,
+    "y2": 346.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table7-1.png"
+}, {
+  "caption": "Table 8: The ratio of budget K to average number of edges in different task. Each task has three datasets of different sizes, which is denoted by small, medium and large in the table.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 362.0365295410156,
+    "y2": 378.99798583984375
+  },
+  "figType": "Table",
+  "imageText": ["MC", "1260", "1873", "2497", "10", "0.40%", "∼", "0.79%", "MCSCC", "4680", "9567", "16171", "10", "0.06%", "∼", "0.21%", "Tasks", "Average", "Number", "of", "edges", "|E|", "in", "three", "sizes", "Budget", "K", "Ratio", "K/|E|Small", "Size", "Medium", "Size", "Large", "Size", "DAG", "468", "930", "1386", "20", "1.44%", "∼", "4.27%", "ATSP", "400", "2500", "10000", "10", "0.10%", "∼", "2.50%"],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 381.59999999999997,
+    "y2": 449.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table8-1.png"
+}, {
+  "caption": "Table 6: RL parameter configuration in tasks DAG, ATSP, MC and MCSCC.",
+  "captionBoundary": {
+    "x1": 153.18899536132812,
+    "x2": 458.811767578125,
+    "y1": 92.5765151977539,
+    "y2": 98.5789794921875
+  },
+  "figType": "Table",
+  "imageText": ["Node", "feature", "dimensions#", "64", "20", "16", "GNN", "type", "GCN", "GCN", "SAGEConv", "GNN", "layers#", "5", "3", "3", "Learning", "rate", "1e-4", "1e-3", "1e-3", "Actions#", "20", "10", "10", "Reward", "discount", "factor", "0.95", "0.95", "0.95", "Trust", "region", "clip", "factor", "0.1", "0.1", "0.1", "Parameters", "DAG", "ATSP", "MC", "&", "MCSCC"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 485.28,
+    "y1": 101.28,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table6-1.png"
+}, {
+  "caption": "Table 4: Evaluation of solvers for MC. The time limit is shown in brackets for branch-and-bound solvers, which should be long enough to output a feasible solution in the clean dataset. Smaller attacked weight means stronger attacker. Random denotes the random attack baseline with the mean and std tested for 100 trials. ROCO-RA/OG/SA are tested for 10 trials to calculate the mean and std. ROCO-RL is reported with a single value since it is invariant to different random seeds. Gurobi turns out to be the most robust model among all compared solvers, possibly because of its SOTA branch-and-bound strategy.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3532409667969,
+    "y1": 92.5765151977539,
+    "y2": 164.33197021484375
+  },
+  "figType": "Table",
+  "imageText": ["CBC(1s)", "150-300", "1.0510", "1.0181±", "0.0192", "0.8975±", "0.0386", "0.8054±", "0.0487", "0.7959±", "0.0482", "0.7527", "SCIP(1s)", "150-300", "1.0847", "1.0867±", "0.0027", "1.0544±", "0.0017", "1.0467±", "0.0016", "1.0486±", "0.0012", "1.0443", "Gurobi(1s)", "150-300", "1.1485", "1.1486±", "0.0009", "1.1391±", "0.0008", "1.1358±", "0.0011", "1.1332±", "0.0005", "1.1314", "Greedy", "200-400", "1.4659", "1.4665±", "0.0013", "1.4537±", "0.0019", "1.4533±", "0.0019", "1.4552±", "0.0013", "1.4466", "CBC(1.5s)", "200-400", "1.4248", "1.4088±", "0.0219", "1.2053±", "0.0475", "1.0966±", "0.0575", "1.0866±", "0.0705", "1.0418", "SCIP(1.5s)", "200-400", "1.3994", "1.3952±", "0.0049", "1.3636±", "0.0013", "1.3608±", "0.0017", "1.3629±", "0.0018", "1.3536", "Gurobi(1.5s)", "200-400", "1.4889", "1.4879±", "0.0013", "1.4754±", "0.0022", "1.4721±", "0.0018", "1.4697±", "0.0003", "1.4684", "Greedy", "100-200", "0.7349", "0.7353±", "0.0007", "0.7252±", "0.0012", "0.7255±", "0.0013", "0.7253±", "0.0007", "0.7239", "CBC(0.5s)", "100-200", "0.7184", "0.7020±", "0.0122", "0.6161±", "0.0206", "0.5448±", "0.0255", "0.5423±", "0.0315", "0.5029", "SCIP(0.5s)", "100-200", "0.7115", "0.7116±", "0.0053", "0.6850±", "0.0013", "0.6808±", "0.0025", "0.6803±", "0.0015", "0.6788", "Gurobi(0.5s)", "100-200", "0.7491", "0.7495±", "0.0004", "0.7460±", "0.0004", "0.7441±", "0.0006", "0.7426±", "0.0008", "0.7409", "Greedy", "150-300", "1.1328", "1.1330±", "0.0011", "1.1207±", "0.0019", "1.1183±", "0.0021", "1.1201±", "0.0017", "1.1182", "Solver", "Problem", "Size:", "Clean", "Weight", "Attack", "Method", "(Attacked", "Weight", "(×104))", "#set-#element", "(×104)", "↑", "Random", "ROCO-RA", "ROCO-OG", "ROCO-SA", "ROCO-RL"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 483.35999999999996,
+    "y1": 166.56,
+    "y2": 265.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table4-1.png"
+}, {
+  "caption": "Table 9: Adversarial training(AT) for MatNet on dataset ATSP-20. MatNet-X means we use X fixed ATSP instances for training while MatNet-X-AT means we use X hard cases generated from the clean instances by our framework.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0030212402344,
+    "y1": 256.0425109863281,
+    "y2": 283.9630126953125
+  },
+  "figType": "Table",
+  "imageText": ["ATSP-20", "MatNet-1000", "MatNet-1000-AT", "MatNet-10000", "MatNet-10000-AT", "MatNet", "Clean", "instances", "1.4687", "1.4691", "1.4623", "1.4626", "1.4616", "Hard", "instances", "1.4761", "1.4742", "1.4737", "1.4703", "1.4708"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 286.56,
+    "y2": 319.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Table9-1.png"
+}, {
+  "caption": "Figure 8: Relation between attack percentage to attack budget K in the DAG task with problem size 50.",
+  "captionBoundary": {
+    "x1": 121.70999908447266,
+    "x2": 301.5646667480469,
+    "y1": 202.46652221679688,
+    "y2": 230.38702392578125
+  },
+  "figType": "Figure",
+  "imageText": ["Shortest", "Job", "First", "Critical", "Path", "Tetris", ")", "e(", "%", "nt", "ag", "er", "ce", "ck", "P", "At", "ta", "100", "80", "60", "40", "20", "0", "0", "5", "10", "15", "20", "Attack", "Budget", "K"],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 293.28,
+    "y1": 82.08,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure8-1.png"
+}, {
+  "caption": "Figure 11: Relation between attack percentage to attack budget K in the MCSCC task with problem size 30-150-3k.",
+  "captionBoundary": {
+    "x1": 311.73199462890625,
+    "x2": 491.9457702636719,
+    "y1": 572.87158203125,
+    "y2": 600.7919921875
+  },
+  "figType": "Figure",
+  "imageText": ["Local", "Search", "Greedy", "Average", "Gurobi(1s)", ")", "e(", "%", "nt", "ag", "er", "ce", "ck", "P", "At", "ta", "100", "80", "60", "40", "20", "0", "0", "2", "4", "6", "8", "10", "Attack", "Budget", "K"],
+  "name": "11",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 316.8,
+    "x2": 483.35999999999996,
+    "y1": 452.64,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure11-1.png"
+}, {
+  "caption": "Figure 9: Relation between attack percentage to attack budget K in the ATSP task with problem size 20.",
+  "captionBoundary": {
+    "x1": 312.09100341796875,
+    "x2": 490.29034423828125,
+    "y1": 202.46652221679688,
+    "y2": 230.38702392578125
+  },
+  "figType": "Figure",
+  "imageText": ["Nearest", "Neighbour", "Furthest", "Insertion", "LKH3", "MatNet", ")", "e(", "%", "nt", "ag", "er", "ce", "ck", "P", "At", "ta", "100", "80", "60", "40", "20", "0", "0", "2", "4", "6", "8", "10", "Attack", "Budget", "K"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 316.8,
+    "x2": 483.35999999999996,
+    "y1": 82.08,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Relation between attack percentage to attack budget K in the MC task with problem size 100-200.",
+  "captionBoundary": {
+    "x1": 121.70999908447266,
+    "x2": 301.564697265625,
+    "y1": 572.87158203125,
+    "y2": 600.7919921875
+  },
+  "figType": "Figure",
+  "imageText": ["Greedy", "CBC(0.5s)", "SCIP(0.5s)", "Gurobi(0.5s)", ")", "e(", "%", "nt", "ag", "er", "ce", "ck", "P", "At", "ta", "100", "80", "60", "40", "20", "0", "0", "2", "4", "6", "8", "10", "Attack", "Budget", "K"],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 126.24,
+    "x2": 293.28,
+    "y1": 452.64,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure10-1.png"
+}, {
+  "caption": "Figure 6: Left: MC attack on Greedy algorithm. The threshold k of the sets is 2 and all the elements have unit weight. Attacks on edges A2 and A4 will cause a lower covered weight. Right: MCSCC attack on Greedy Average algorithm. The threshold k of the white elements is 5 and the value near the black element represents its weight. Attack on edge Aa causes a lower covered black element weight.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6609191894531,
+    "y1": 225.28750610351562,
+    "y2": 264.1669921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2r6YMqz4Mml-Figure6-1.png"
+}]

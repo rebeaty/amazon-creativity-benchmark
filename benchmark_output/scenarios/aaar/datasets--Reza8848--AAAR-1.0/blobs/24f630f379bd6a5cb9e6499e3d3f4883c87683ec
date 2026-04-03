@@ -1,0 +1,141 @@
+[{
+  "caption": "Table 1: Comparisons to the previous approaches and our method in terms of unit primitives, algorithms, target conditioning, and constraint satisfaction. SA stands for sequential assembly. Note that our approach does not provide guidance (images or target shapes) when generating a new shape.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["BrECS", "(Ours)", "Two", "types", "Supervised", "learning", "Incomplete", "target", "volume", "Convolution", "operations(only", "for", "the", "completion", "task)", "SA", "with", "BayesOpt", "(Kim", "et", "al.,", "2020)", "Single", "type", "Bayesian", "optimization", "Target", "volume", "Subsampling", "DGMLG", "(Thompson", "et", "al.,", "2020)", "Single", "type", "Graph", "generative", "model", "Class", "label", "Masking", "Brick-by-Brick", "(Chung", "et", "al.,", "2021)", "Single", "type", "Reinforcement", "learning", "Single-", "or", "multi-view", "images", "Supervised", "learning", "Method", "Unit", "Primitives", "Algorithm", "Target", "Conditioning", "Constraint", "Satisfaction"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 139.68,
+    "y2": 204.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Table1-1.png"
+}, {
+  "caption": "Table 2: Quantitative results of the completion of brick structures. An asterisk after a method name denotes that partial or full ground-truth information is given to the corresponding model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 92.6165542602539,
+    "y2": 109.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["BrECS", "(2×4)", "0.571", "0.586", "0.534", "0.564", "100.0", "100.0", "100.0", "100.0", "36.3", "143.9", "151.0", "110.4", "BrECS", "(2×4", "+", "2×2)", "0.599", "0.594", "0.541", "0.578", "100.0", "100.0", "100.0", "100.0", "73.8", "224.1", "279.0", "192.3", "BayesOpt*", "0.145", "0.206", "0.233", "0.194", "100.0", "100.0", "100.0", "100.0", "1.20e6", "1.11e6", "1.05e6", "1.12e6", "Brick-By-Brick*", "0.455", "0.440", "0.434", "0.443", "12.0", "7.0", "16.0", "11.7", "305.6", "1502.4", "2785.2", "1531.1", "DGMLG", "0.315", "0.269", "0.271", "0.285", "0.0", "1.0", "0.0", "0.3", "237.3", "340.0", "473.0", "350.4", "airplane", "table", "chair", "avg.", "airplane", "table", "chair", "avg.", "airplane", "table", "chair", "avg.", "Methods", "IoU", "(↑)", "%", "valid", "(↑)", "Inference", "Time", "(sec.,", "↓)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 117.6,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Table2-1.png"
+}, {
+  "caption": "Figure 4: Detailed model architecture of U-Net.",
+  "captionBoundary": {
+    "x1": 210.66400146484375,
+    "x2": 401.3381652832031,
+    "y1": 278.8805236816406,
+    "y2": 284.88299560546875
+  },
+  "figType": "Figure",
+  "imageText": ["x3", ",", "N", "r", "3", "x3", "on", "vT", "se", "C", "Sp", "ar", "6", "x3", ",", "9", ")", "3", "x3", "ck", "(2", "vB", "lo", "C", "on", "6", "ck", ",", "9", "nB", "lo", "vD", "ow", "C", "on", "6", "x3", ",", "9", "r", "3", "x3", "on", "vT", "se", "C", "Sp", "ar", "6", "x3", ",", "9", ")", "3", "x3", "ck", "(2", "vB", "lo", "C", "on", "6", "ck", ",", "9", "nB", "lo", "vD", "ow", "C", "on", "6", "x3", ",", "9", "r", "3", "x3", "on", "vT", "se", "C", "Sp", "ar", "28", "x3", ",", "1", ")", "3", "x3", "ck", "(2", "vB", "lo", "C", "on", "28", "ck", ",", "1", "nB", "lo", "vD", "ow", "C", "on", "56", "x3", ",", "2", "r", "3", "x3", "on", "vT", "se", "C", "Sp", "ar", "56", "x3", ",", "2", ")", "3", "x3", "ck", "(2", "vB", "lo", "C", "on", "56", "ck", ",", "2", "nB", "lo", "vD", "ow", "C", "on", "56", "x3", ",", "2", "r", "3", "x3", "on", "vT", "se", "C", "Sp", "ar", "56", "x3", ",", "2", ")", "3", "x3", "ck", "(6", "vB", "lo", "C", "on", "56", "ck", ",", "2", "nB", "lo", "vD", "ow", "C", "on", "28", "3,", "1", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "28", "x3", ",", "1", ")", "3", "x3", "ck", "(4", "vB", "lo", "C", "on", "28", "ck", ",", "1", "nB", "lo", "vD", "ow", "C", "on", "4", "3,", "6", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "4", "x3", ",", "6", ")", "3", "x3", "ck", "(3", "vB", "lo", "C", "on", "4", "ck", ",", "6", "nB", "lo", "vD", "ow", "C", "on", "2", "5,", "3", "5x", "5x", "on", "v", "se", "C", "Sp", "ar", "2", "x3", ",", "3", ")", "3", "x3", "ck", "(2", "vB", "lo", "C", "on", "2", "5,", "3", "5x", "5x", "on", "v", "se", "C", "Sp", "ar", "2", "7,", "3", "7x", "7x", "on", "v", "se", "C", "Sp", "ar"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 496.32,
+    "y1": 135.84,
+    "y2": 263.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Detailed model architecture of voxel classifier.",
+  "captionBoundary": {
+    "x1": 193.53799438476562,
+    "x2": 418.463623046875,
+    "y1": 671.445556640625,
+    "y2": 677.447998046875
+  },
+  "figType": "Figure",
+  "imageText": ["ax", "so", "ftm", "FC", ",", "N", "12", "FC", ",", "5", "ca", "t", "C", "on", "oo", "l", "Av", "gP", "Po", "ol", "M", "ax", "Po", "ol", "M", "ax", "Po", "ol", "M", "ax", "Po", "ol", "M", "ax", "Po", "ol", "M", "ax", "02", "4", "3,", "1", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "12", "3,", "5", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "56", "3,", "2", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "28", "3,", "1", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "6", "3,", "9", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "4", "3,", "6", "3x", "3x", "on", "v", "se", "C", "Sp", "ar", "8", "3,", "4", "3x", "3x", "on", "v", "se", "C", "Sp", "ar"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 493.44,
+    "y1": 402.71999999999997,
+    "y2": 651.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Figure5-1.png"
+}, {
+  "caption": "Figure 1: Illustration of the proposed efficient constraint satisfaction method with convolution filters for sequential brick assembly. U-Net and a symbol ⊙ denote a U-shaped sparse 3D convolutional neural network and element-wise multiplication, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 227.15853881835938,
+    "y2": 255.0789794921875
+  },
+  "figType": "Figure",
+  "imageText": ["Next", "brick", "position", "selection", "(Sec.", "4.1.3,", "Sec.", "4.1.4)", "Brick", "position", "validator", "(Sec.", "4.1.2)", "Next", "brick", "position", "predictor", "(Sec.", "4.1.1)", "Apply", "brick-sized", "convolution", "filter", "Apply", "brick-sized", "convolution", "filter", "Place", "a", "brick", "using", "scores", "Validated", "brick", "scores", "Brick-wise", "validity", "scores", "Brick-wise", "scores", "U-Net", "Voxel-wise"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 498.24,
+    "y1": 82.56,
+    "y2": 213.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Figure1-1.png"
+}, {
+  "caption": "Table 4: Results of ablation study on completion from intermediate states of chair category in the ModelNet40 dataset. Our model without ablation performs better than ablated variants. The performance is further improved with the additional 2×2 brick type.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 92.6165542602539,
+    "y2": 120.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["BrECS", "(2×4", "+", "2×2)", "0.541", "100.0", "125.9", "279.0", "BrECS", "(w/o", "validity", "check)", "0.441", "0.0", "141.6", "335.8", "BrECS", "(w/o", "sequence", "skip)", "0.437", "100.0", "59.3", "6.0", "BrECS", "(2×4;", "default)", "0.534", "100.0", "96.7", "151.0", "IoU", "%", "valid", "#", "of", "bricks", "Inference", "time", "(sec.)"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 460.32,
+    "y1": 128.16,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Table4-1.png"
+}, {
+  "caption": "Figure 2: Illustration of brick structures and their possible brick positions. The three grids on the left of the bricks show the validity Vt+1 of each brick position on the bottommost red brick for brick type 2×2, 2×4, and rotated 2×4. The pixels in a red rectangle indicate attachable brick positions on the bottommost red brick without considering overlap. The gray pixels indicate that overlap will occur if a new brick is attached to the corresponding position.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00311279296875,
+    "y1": 227.87350463867188,
+    "y2": 277.7119140625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "33", "bricks", "are", "attachable.", "(d)", "19", "bricks", "are", "attachable.", "(a)", "61", "bricks", "are", "attachable.", "(b)", "23", "bricks", "are", "attachable."],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MRfbe7VAoqu-Figure2-1.png"
+}]

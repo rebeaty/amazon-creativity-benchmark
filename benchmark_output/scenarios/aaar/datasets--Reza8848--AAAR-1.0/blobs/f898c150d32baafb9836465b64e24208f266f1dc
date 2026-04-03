@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 3: Basis functions of IM-Net. They partially encode semantics, such as rotation and reflection symmetries, show segmentation. Each column represents the same basis function. For similar shapes, such as the last two rows, the bases have a similar effect. Red/blue denote positive/negative deformation w.r.t. the normal.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.1700439453125,
+    "y1": 213.31454467773438,
+    "y2": 252.1939697265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 503.03999999999996,
+    "y1": 80.64,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Semantic editing. Non-zero target displacement is prescribed on the highlighted regions Γ̄ and the rest is unconstrained. The right image in each pair shows to result after < 15 iterations. In most cases, a semantically plausible result is produced as a result of locally prescribed plausible displacement. The bottom-right figure serves to illustrate a counter-example: prescribing each wing to move in opposite directions is not a semantically viable displacement and the method fails to struggles to approximate the displacements and produce meaningful results.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.743896484375,
+    "y1": 241.80050659179688,
+    "y2": 302.5979919433594
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 80.64,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Rigid editing. Target displacement is prescribed in the highlighted regions Γ̄ and the rest is unconstrained. In both cases, the bottom of the shapes is anchored.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0018005371094,
+    "y1": 405.0105285644531,
+    "y2": 421.97198486328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 317.76,
+    "y2": 390.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure5-1.png"
+}, {
+  "caption": "Figure 7: Effect of Tikhonov regularization on semantic editing. Left: source shape is prescribed an inward displacement on the highlighted regions while the rest is unconstrained. The three figures on the right have decreasing amount of Tikhonov regularization λ = 101, 10−1, 10−3. Stronger regularization better preserves similarity to the source shape, which is especially noticeable on the unconstrained front of the boat remaining wider. Stronger regularization also requires much more iterations to converge to a similar result (860 for λ = 101 compared to < 10 for the other two) since the the constraint violation EC is weighted less heavily than regularization.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.1729431152344,
+    "y1": 417.28253173828125,
+    "y2": 490.531982421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 509.28,
+    "y1": 336.96,
+    "y2": 403.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure7-1.png"
+}, {
+  "caption": "Figure 6: Select iterations of smoothing via mean-curvature flow without and with a volume constraint formulated through boundary sensitivity by projecting the parameter update onto the locally linear isovolumetric subspace.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.1656494140625,
+    "y1": 244.42153930664062,
+    "y2": 272.34197998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 80.64,
+    "y2": 230.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Geometric editing. Non-zero target displacement is prescribed on the highlighted regions and the rest is fixed with δx̄n = 0. Displacements that are natural are well approximated. However, the bottom-right figure serves to illustrate a counter-example, where the prescribed displacements are too complex and outside the limits of expressible deformations.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 505.2443542480469,
+    "y1": 241.80050659179688,
+    "y2": 280.67999267578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 508.32,
+    "y1": 80.64,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Basis functions of several neural implicit shapes. Each column depicts a weight from each layer increasing in depthg left-to-right. Red/blue denote positive/negative deformation w.r.t. the outward normal. These bases do not strongly encode semantic or geometric meaning, different to latent basis functions in decoders.",
+  "captionBoundary": {
+    "x1": 108.00009155273438,
+    "x2": 504.00360107421875,
+    "y1": 488.6805419921875,
+    "y2": 527.5599975585938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 460.32,
+    "y1": 296.64,
+    "y2": 474.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CMPIBjmhpo-Figure2-1.png"
+}]

@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 1: All mini-tasks across a “diagonal” correspond to the same job.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.6551818847656,
+    "y1": 281.7495422363281,
+    "y2": 298.71099853515625
+  },
+  "figType": "Figure",
+  "imageText": ["Adaptive", "mini-task", "assignment:", "The", "other", "two", "mini-tasks", "Ti(t+", "2;", "2),", "Ti(t+", "3;", "3),", "which", "also", "involve", "partial", "gradient", "computations", "corre-", "sponding", "to", "job-t,", "are", "assigned", "adaptively,", "based", "on", "the", "straggler", "patterns", "seen", "in", "previous", "rounds.", "Specifically,", "if", "master", "did", "not", "receive", "g2i(t)", "in", "round-t,", "Ti(t+", "2;", "2)", "involves", "computing", "g2i(t).", "Else", "if", "master", "did", "not", "receive", "g2i+1(t)", "in", "round-", "(t+1),", "Ti(t+2;", "2)", "involves", "computing", "g2i+1(t).", "In", "a", "similar", "manner,", "if", "master", "did", "not", "receive", "g2i(t)", "in", "round-t", "and", "round-(t+", "2),", "Ti(t+", "3;", "3)", "involves", "computing", "g2i(t).", "Else", "if", "master", "did", "not", "receive", "g2i+1(t)", "in", "rounds", "(t+1)", "and", "(t+2),", "Ti(t+", "3;", "3)", "involves", "computing", "g2i+1(t).", "Note"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 298.08,
+    "y1": 173.28,
+    "y2": 324.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Rectangles depict mini-tasks (shaded ones have failed due to stragglers). Reattempted mini-tasks are indicated in red. Mini-task results in blue are linear combinations of 3 partial gradients.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0038146972656,
+    "y1": 672.3245849609375,
+    "y2": 711.2039794921875
+  },
+  "figType": "Figure",
+  "imageText": ["1", "2", "3", "4", "5", "6", "Round", "ℓ𝟑,𝟏(𝟑)", "ℓ𝟑,𝟎(𝟒)", "𝑔7(5)", "𝑔6(6)", "ℓ𝟑,𝟏(𝟐)", "ℓ𝟑,𝟎(𝟑)", "𝑔7(4)", "𝑔6(5)", "ℓ𝟑,𝟏(𝟏)", "ℓ𝟑,𝟎(𝟐)", "𝑔7(3)", "𝑔6(4)", "𝟎", "ℓ𝟑,𝟎(𝟏)", "𝑔7(2)", "𝑔6(3)", "𝟎", "𝟎", "𝑔7(1)", "𝑔6(2)", "𝟎", "𝟎", "𝟎", "𝑔6(1)", "Worker-3", "ℓ𝟐,𝟏(𝟑)", "𝒈𝟓(𝟒)", "𝑔5(5)", "𝑔4(6)", "ℓ𝟐,𝟏(𝟐)", "ℓ𝟐,𝟎(𝟑)", "𝑔5(4)", "𝑔4(5)", "ℓ𝟐,𝟏(𝟏)", "ℓ𝟐,𝟎(𝟐)", "𝑔5(3)", "𝑔4(4)", "𝟎", "ℓ𝟐,𝟎(𝟏)", "𝑔5(2)", "𝑔4(3)", "𝟎", "𝟎", "𝑔5(1)", "𝑔4(2)", "𝟎", "𝟎", "𝟎", "𝑔4(1)", "Worker-2", "ℓ𝟏,𝟏(𝟑)", "ℓ𝟏,𝟎(𝟒)", "𝑔3(5)", "𝑔2(6)", "𝒈𝟑(𝟐)", "𝒈𝟐(𝟑)", "𝑔3(4)", "𝑔2(5)", "𝒈𝟑(𝟏)", "𝒈𝟐(𝟐)", "𝑔3(3)", "𝑔2(4)", "𝟎", "𝒈𝟑(𝟏)", "𝑔3(2)", "𝑔2(3)", "𝟎", "𝟎", "𝑔3(1)", "𝑔2(2)", "𝟎", "𝟎", "𝟎", "𝑔2(1)", "Worker-1", "ℓ𝟎,𝟏(𝟑)", "ℓ𝟎,𝟎(𝟒)", "𝑔1(5)", "𝑔0(6)", "ℓ𝟎,𝟏(𝟐)", "ℓ𝟎,𝟎(𝟑)", "𝑔1(4)", "𝑔0(5)", "𝒈𝟏(𝟏)", "𝒈𝟎(𝟐)", "𝑔1(3)", "𝑔0(4)", "𝟎", "𝒈𝟎(𝟏)", "𝑔1(2)", "𝑔0(3)", "𝟎", "𝟎", "𝑔1(1)", "𝑔0(2)", "𝟎", "𝟎", "𝟎", "𝑔0(1)", "Worker-0"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 316.32,
+    "x2": 493.44,
+    "y1": 460.79999999999995,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure2-1.png"
+}, {
+  "caption": "Figure 8: A periodic straggler pattern conforming to the (B,W, λ)-bursty straggler model, when B = W . Here, the shaded boxes indicate stragglers.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0038757324219,
+    "y1": 383.0735168457031,
+    "y2": 400.0350036621094
+  },
+  "figType": "Figure",
+  "imageText": ["B", ".", "B", ",", "there", "are", "⌈η−ηL(n−λ)⌉", "pending", "jobs", "after", "rounds", "[1", ":", "η].", "Following", "similar", "arguments", "as", "in", "the", "B", "<", "W", "case,", "for", "sufficiently", "large", "η", "delay", "criterion", "T", "cannot", "be", "met", "and", "thus", "it", "can", "be", "inferred", "that", "L", "≥", "L∗", "•", "B", "=", "W", ":", "Consider", "the", "periodic", "straggler", "pattern", "depicted", "in", "Fig.", "8,", "which", "conforms", "to", "the", "(B,W,", "λ)-bursty", "straggler", "model", "when", "B", "=", "W", ".", "Here,", "if", "L", "<", "L∗", "B", ".", "Thus,", "we", "have", "L", "≥", "L∗", "B", ".", "pending", "jobs", "among", "[1", ":", "η(W", "−", "1", "+", "B)]", "which", "need", "to", "be", "finished.", "The", "number", "of", "pending", "jobs", "clearly", "increases", "as", "η", "increases.", "In", "order", "to", "satisfy", "the", "delay", "constraint", "T", ",", "it", "is", "necessary", "that", "all", "these", "pending", "jobs", "need", "to", "be", "processed", "in", "rounds", "[η(W", "−", "1", "+B)", "+", "1", ":", "η(W", "−", "1", "+", "B)", "+", "T", "].", "On", "the", "other", "hand,", "the", "number", "of", "jobs", "that", "can", "be", "finished", "in", "these", "rounds", "is", "at", "most", "⌈TLn⌉", "(under", "the", "best-case", "scenario", "that", "all", "the", "workers", "are", "non-", "stragglers", "in", "these", "T", "rounds),", "which", "is", "bounded.", "As", "T", "<", "∞,", "for", "a", "sufficiently", "large", "η,", "⌈TLn⌉", "<", "⌈η(W", "−", "1", "+B)−", "ηL(n(W", "−", "1", "+B)−Bλ)⌉.", "Thus,", "at", "least", "one", "of", "the", "jobs", "in", "[1", ":", "η(W", "−", "1", "+B)]", "cannot", "be", "finished", "with", "delay", "T", "if", "L", "<", "L∗", "⌈η(W", "−", "1", "+B)−", "ηL(n(W", "−", "1", "+B)−Bλ)⌉", ">", "0", "gradients.", "If", "L", "<", "L∗", "B", ",", "we", "have", "ηL(n(W", "−", "1", "+", "B)−Bλ)", "<", "η(W", "−", "1", "+", "B)", "and", "thus,", "in", "the", "end", "of", "first", "η(W", "−", "1", "+B)", "rounds,", "there", "are"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 135.35999999999999,
+    "x2": 505.91999999999996,
+    "y1": 424.8,
+    "y2": 634.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure8-1.png"
+}, {
+  "caption": "Figure 7: A periodic straggler pattern conforming to the (B,W, λ)-bursty straggler model, when B < W . Here, the shaded boxes indicate stragglers.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0038757324219,
+    "y1": 226.29055786132812,
+    "y2": 243.25201416015625
+  },
+  "figType": "Figure",
+  "imageText": ["𝐵", "𝑊", "−", "1", "𝐵", "1", "2", "𝐵", "𝐵", "+", "1", "𝐵", "+𝑊", "2𝐵", "+", "2𝑊", "−", "1", "…", ".", "…", ".", "…", ".", "…", ".", "…", ".", "…", ".", "Worker-(𝑛", "−", "1)", "Worker-𝜆", "Worker-(𝜆", "−", "1)", "Worker-0", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "Round", "…."],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 473.76,
+    "y1": 82.08,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure7-1.png"
+}, {
+  "caption": "Figure 13: Average run time scales linearly with increase in workers’ computational load.",
+  "captionBoundary": {
+    "x1": 127.36699676513672,
+    "x2": 484.63568115234375,
+    "y1": 667.1365356445312,
+    "y2": 673.1389770507812
+  },
+  "figType": "Figure",
+  "imageText": ["Linear", "Fit", "Avg.", "Run", "times", ")", "e", "(s", "ti", "m", "r", "un", "Av", "g.", "3.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Normalized", "Load"],
+  "name": "13",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 220.32,
+    "x2": 391.68,
+    "y1": 546.72,
+    "y2": 650.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure13-1.png"
+}, {
+  "caption": "Figure 6: In the figure, shaded boxes depict straggling rounds. Consider a straggler pattern conforming to the (B,W, λ)-bursty straggler model. The straggling rounds, if any, seen by worker-i among rounds [t : t+W − 2 +B] will be a subset of the B straggling rounds indicated in either situation (a) or (b). Here x ∈ [1 : B], y ∈ [0 : W − 1].",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.0014953613281,
+    "y1": 227.70053100585938,
+    "y2": 266.5789794921875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "𝑡", "+", "𝑦", "….", "𝑦", "𝐵", "𝑊", "−", "1", "−", "𝑦", "𝑡", "𝑡", "+𝑊", "−", "2", "+", "𝐵", "….Worker-𝑖", "Round", "….", "(a)", "𝑡", "+", "𝑥", "−", "1", "….", "𝑥", "𝑊", "−", "1", "𝐵", "−", "𝑥", "𝑡", "𝑡", "+𝑊", "−", "2", "+", "𝐵", "….Worker-𝑖", "Round", "…."],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 419.52,
+    "y1": 82.08,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Statistics of response time for 256 workers across 100 rounds. Each worker calculates gradients of the loss for a batch of 16 MNIST images on a convolutional neural network. (a) Each white cell represents a worker (x-axis) who is a straggler at the corresponding round (y-axis). (b) Histogram of stragglers’ burst lengths. (c) Empirical CDF of workers’ completion time, averaged over 100 rounds (shades represent standard deviation).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.6649475097656,
+    "y1": 668.694580078125,
+    "y2": 718.531982421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 422.88,
+    "y2": 651.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure3-1.png"
+}, {
+  "caption": "Figure 14: Simulated total run times of calculating 80 jobs using SR-SGC and M-SGC. Each point represents one parameter combination.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9964599609375,
+    "y1": 364.0545349121094,
+    "y2": 381.0150146484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 190.56,
+    "y2": 353.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure14-1.png"
+}, {
+  "caption": "Figure 11: Consider parameters {n = 4, B = 1,W = 2, λ = 4}; (a) SR-SGC scheme: reattempted tasks are indicated in red (b) M-SGC scheme.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9970397949219,
+    "y1": 368.36053466796875,
+    "y2": 385.3219909667969
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "1", "2", "3", "4", "5", "6", "Round", "𝑔3(5)", "𝑔3(6)", "𝑔2(5)", "𝑔2(6)", "𝑔1(5)", "𝑔1(6)", "𝑔0(5)", "𝑔0(6)", "𝟎", "𝑔3(5)", "𝟎", "𝑔2(5)", "𝟎", "𝑔1(5)", "𝟎", "𝑔0(5)", "𝑔3(3)", "𝑔3(4)", "𝑔2(3)", "𝑔2(4)", "𝑔1(3)", "𝑔1(4)", "𝑔0(3)", "𝑔0(4)", "𝟎", "𝑔3(3)", "𝟎", "𝑔2(3)", "𝟎", "𝑔1(3)", "𝟎", "𝑔0(3)", "𝑔3(1)", "𝑔3(2)", "𝑔2(1)", "𝑔2(2)", "𝑔1(1)", "𝑔1(2)", "𝑔0(1)", "𝑔0(2)", "𝟎", "𝑔3(1)", "𝟎", "𝑔2(1)", "𝟎", "𝑔1(1)", "𝟎", "Worker-3", "Worker-2", "Worker-1", "Worker-0", "𝑔0(1)", "(a)", "3", "4", "5", "6", "ℓ3(1)", "ℓ3(2)", "ℓ3(3)", "ℓ3(4)", "ℓ3(5)", "ℓ3(6)", "ℓ2(1)", "ℓ2(2)", "ℓ2(3)", "ℓ2(4)", "ℓ2(5)", "ℓ2(6)", "ℓ1(1)", "ℓ1(1)", "ℓ1(3)", "ℓ1(3)", "ℓ1(5)", "ℓ1(5)", "ℓ0(1)", "ℓ0(3)", "ℓ0(3)", "ℓ0(5)", "ℓ0(5)", "Worker-3", "Worker-2", "Worker-1", "ℓ0(1)", "1", "2", "Worker-0", "Round"],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 215.51999999999998,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure11-1.png"
+}, {
+  "caption": "Figure 5: An illustration of task assignment in SR-SGC. In the initial rounds, the task assignment is precisely as in an (n, s)-GC scheme and all tasks in round-t correspond to job-t. In any such round-t, if there are at most s stragglers, job-t can be finished in round-t itself. Let t′ denote a round where all tasks correspond to job-t′ and there are λ0 > s stragglers. Stragglers are indicated in grey color. In round-(t′ +B), there is a deviation from the (n, s)-GC scheme as λ0 − s tasks corresponding to job-t′ will be attempted in this round (these tasks which are attempted with delay B are indicated in orange). These tasks are attempted by workers who did not return task results corresponding to job-t′ in round-t′. In round-(t′ +B), n− λ1 − λ0 + s workers return task results corresponding to job-(t′ +B). If this quantity is lesser than n− s, λ0 + λ1 − 2s tasks corresponding to job-(t′ +B) will be attempted in round-(t′ + 2B) by workers who did not return task results corresponding to job-(t′ +B) in round-(t′ +B). The process is continued in a similar manner. If the straggler pattern in the window of rounds [t′ : t′ + xB] conforms to the (B,W, λ)-bursty straggler model, there exists an ℓ ∈ [1 : x] such that in round-(t′ + (ℓ+ 1)B) a “reset” happens back to the (n, s)-GC scheme, i.e., in round-(t′ + (ℓ+ 1)B) all tasks correspond to job-(t′ + (ℓ+ 1)B).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.74432373046875,
+    "y1": 302.93353271484375,
+    "y2": 451.4020080566406
+  },
+  "figType": "Figure",
+  "imageText": ["Workers", "𝑡′", "+", "(ℓ", "+", "1)𝐵", "Tasks", "corresp.", "to", "job-", "(𝑡′", "+", "ℓ𝐵", "+", "𝐵)", "𝜆0", "+⋯", "+", "𝜆ℓ−1", "−", "ℓ𝑠", "𝜆ℓ", "𝜆2", "Tasks", "corresp.", "to", "job-", "(𝑡′", "+", "ℓ𝐵", "+", "𝐵)", "job−(𝑡′", "+", "ℓ𝐵)", "Tasks", "corresp.", "to", "job−(𝑡′", "+", "ℓ𝐵)", "Tasks", "corresp.", "to", "Tasks", "corresp.", "to", "job-", "(𝑡′", "+", "ℓ𝐵", "−", "𝐵)", "job−(𝑡′", "+", "ℓ𝐵)", "Tasks", "corresp.", "to", ".….", "job−(𝑡′", "+", "2𝐵)", "Tasks", "corresp.", "to", "job−(𝑡′", "+", "2𝐵)", "Tasks", "corresp.", "to", "Tasks", "corresp.", "to", "job-", "(𝑡′", "+", "ℓ𝐵", "+", "𝐵)", "Tasks", "corresp.", "to", "job−(𝑡′", "+", "𝐵)", "job−(𝑡′", "+", "2𝐵)", "Tasks", "corresp.", "to", "𝜆0", "+", "𝜆1", "−", "2𝑠", "𝑡′", "+", "2𝐵", "𝜆0", "−", "𝑠", "Tasks", "corresp.", "to", "job−(𝑡′", "+", "𝐵)", "Tasks", "corresp.", "to", "job−(𝑡′", "+", "𝐵)", "job−𝑡’", "Tasks", "corresp.", "to", "Tasks", "corresp.", "to", "job−(𝑡′", "+", "𝐵)", "𝜆1", "𝜆0", "𝑡′", "+", "ℓ𝐵", ".….", "job−𝑡’", "Tasks", "corresp.", "to", "job−𝑡′", "Tasks", "corresp.", "to", "𝑡′", "𝑡′", "+", "𝐵", "Round"],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.56,
+    "y1": 81.6,
+    "y2": 291.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure5-1.png"
+}, {
+  "caption": "Table 1: Total run time achieved by different coding schemes",
+  "captionBoundary": {
+    "x1": 183.95899963378906,
+    "x2": 427.7338562011719,
+    "y1": 363.7815246582031,
+    "y2": 369.78399658203125
+  },
+  "figType": "Table",
+  "imageText": ["M-SGC", "B", "=", "1,W", "=", "2,", "λ", "=", "27", "0.008", "891.37±", "43.10", "SR-SGC", "B", "=", "2,W", "=", "3,", "λ", "=", "23", "(s", "=", "12)", "0.051", "994.22±", "43.66", "GC", "s", "=", "15", "0.062", "1064.96±", "46.72", "No", "Coding", "−", "0.004", "1307.79±", "61.88", "Scheme", "Parameters", "Normalized", "Load", "Run", "Time", "(s)"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 491.03999999999996,
+    "y1": 378.71999999999997,
+    "y2": 443.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Table1-1.png"
+}, {
+  "caption": "Figure 4: (a) Number of completed rounds vs. clock time, averaged over 10 independent experiments. (b) Training loss vs. clock time for the first model (out of four concurrently trained models), averaged over 10 independent runs. Shades here represent standard deviation.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.73944091796875,
+    "y1": 602.6415405273438,
+    "y2": 630.56201171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 502.08,
+    "y1": 449.76,
+    "y2": 591.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure4-1.png"
+}, {
+  "caption": "Figure 9: A periodic straggler pattern conforming to the (N,W ′, λ′)-arbitrary straggler model, when N < W ′.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9984436035156,
+    "y1": 226.69052124023438,
+    "y2": 243.6519775390625
+  },
+  "figType": "Figure",
+  "imageText": ["𝑁", "𝑊′", "−", "𝑁", "𝑁", "1", "2", "𝑁", "𝑁", "+", "1", "𝑊′", "+", "1", "2𝑊′", "+", "1", "…", ".", "…", ".", "…", ".", "…", ".", "…", ".", "…", ".", "Worker-(𝑛", "−", "1)", "Worker-𝜆′", "Worker-(𝜆′", "−", "1)", "Worker-0", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "….", "Round", "…."],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 142.07999999999998,
+    "x2": 474.71999999999997,
+    "y1": 82.08,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure9-1.png"
+}, {
+  "caption": "Figure 10: A comparison of normalized loads incurred by SR-SGC and M-SGC schemes when {n = 20, B = 3, λ = 4} and W is varied. Note however that delay parameter T values in the case of SR-SGC and M-SGC schemes are given by B and W − 2 +B, respectively. Hence, in terms of scheduling tasks (see Remark 2.1) SR-SGC scheme offers more flexibility.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0026550292969,
+    "y1": 410.1975402832031,
+    "y2": 449.0769958496094
+  },
+  "figType": "Figure",
+  "imageText": ["Optimal", "SR-SGC", "M-SGC", "ad", "d", "Lo", "al", "ize", "No", "rm", "0.14", "0.12", "0.10", "0.08", "0.06", "5", "10", "15", "20", "25", "W"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 200.16,
+    "x2": 412.32,
+    "y1": 259.68,
+    "y2": 398.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-lGvSmht7a-Figure10-1.png"
+}]

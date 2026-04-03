@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 1: Training curve in the zero-sum setting. We evaluate each method over 5 random seeds and report the mean and standard deviation of the moving average of evaluation returns, wherein for each evaluation we perform 1000 runs. We use “Oracle” to denote the ground truth NE values of the Markov game. The x-axis denotes the number of episodes and the y-axis denotes the value of returns.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6272888183594,
+    "y1": 256.6154479980469,
+    "y2": 295.49493408203125
+  },
+  "figType": "Figure",
+  "imageText": ["Oracle", "DQN", "Ours", "Zero-sum", "H10", "env3", "0.6", "0.4", "0.2", "0.0", "−0.2", "−0.4", "−0.6", "−0.8", "0", "20000", "40000", "60000", "80000", "100000", "Zero-sum", "H10", "env2", "Oracle", "DQN", "Ours", "0.6", "0.4", "0.2", "0.0", "−0.2", "−0.4", "−0.6", "−0.8", "0", "20000", "40000", "60000", "80000", "100000", "Oracle", "DQN", "Ours", "1.0", "Zero-sum", "H10", "env1", "0.8", "0.6", "0.4", "0.2", "0.0", "−0.2", "0", "20000", "40000", "60000", "80000", "100000", "Zero-sum", "H3", "env3", "Oracle", "DQN", "Ours", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0", "20000", "40000", "60000", "80000", "100000", "Oracle", "DQN", "Ours", "0.6", "Zero-sum", "H3", "env2", "0.4", "0.2", "0.0", "−0.2", "0", "20000", "40000", "60000", "80000", "100000", "Zero-sum", "H3", "env1", "Oracle", "DQN", "Ours", "0.4", "0.2", "0.0", "−0.2", "0", "20000", "40000", "60000", "80000", "100000", "−0.4"],
+  "name": "1",
+  "page": 57,
+  "regionBoundary": {
+    "x1": 137.28,
+    "x2": 473.28,
+    "y1": 83.52,
+    "y2": 239.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8FroynZv4C-Figure1-1.png"
+}, {
+  "caption": "Table 2: Hyperparameters for GERL_MG2.",
+  "captionBoundary": {
+    "x1": 217.15399169921875,
+    "x2": 394.8459167480469,
+    "y1": 516.533447265625,
+    "y2": 522.535888671875
+  },
+  "figType": "Table",
+  "imageText": ["Warm", "up", "samples", "{0,200}", "0", "LSVI", "bonus", "coefficient", "β", "{0.1,0.5,1}", "0.1", "LSVI", "regularization", "coefficient", "λ", "{1}", "1", "RepLearn", "regularization", "coefficient", "λ", "{0.01}", "0.01", "Decoder", "ϕ", "softmax", "temperature", "{1,0.5,0.1}", "1", "Decoder", "ϕ", "batch", "size", "{128,256,512}", "512", "Discriminator", "f", "batch", "size", "{128,256,512}", "512", "Decoder", "ϕ", "learning", "rate", "{1e-2}", "1e-2", "Discriminator", "f", "learning", "rate", "{1e-}", "1e-2", "Discriminator", "f", "hidden", "layer", "size", "{128,256,512}", "256", "RepLearn", "Iteration", "T", "{10,20,30,50}", "10", "Decoder", "ϕ", "number", "of", "gradient", "steps", "{64,128,256}", "256", "Discriminator", "f", "number", "of", "gradient", "steps", "{64,128,256}", "256", "Value", "Considered", "Final", "Value"],
+  "name": "2",
+  "page": 57,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 525.6,
+    "y2": 684.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8FroynZv4C-Table2-1.png"
+}, {
+  "caption": "Figure 2: Training curve of GERL_MG2 in the general sum setting. In this setting, the y-axis denotes exploitability instead of raw returns.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00262451171875,
+    "y1": 411.59246826171875,
+    "y2": 428.5539245605469
+  },
+  "figType": "Figure",
+  "imageText": ["Agent", "1", "Agent", "2", "1.6", "General", "Sum", "env3", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "10000", "20000", "30000", "40000", "General", "Sum", "env2", "Agent", "1", "Agent", "2", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "10000", "20000", "30000", "40000", "General", "Sum", "env1", "Agent", "1", "Agent", "2", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "10000", "20000", "30000", "40000"],
+  "name": "2",
+  "page": 57,
+  "regionBoundary": {
+    "x1": 125.28,
+    "x2": 483.84,
+    "y1": 311.52,
+    "y2": 394.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8FroynZv4C-Figure2-1.png"
+}, {
+  "caption": "Table 1: Top: Short Horizon (H=3) exploitability of the final policy of DQN and GERL_MG2. Bottom: Long Horizon (H=10) exploitability of the final policy of DQN and GERL_MG2. Note that lower exploitability implies that the policy is closer to the NE policy.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74346923828125,
+    "y1": 92.68656158447266,
+    "y2": 120.60601806640625
+  },
+  "figType": "Table",
+  "imageText": ["H=10", "Environment", "1", "H=10", "Environment", "2", "H=10", "Environment", "3", "DQN", "0.2730", "(0.3270)", "0.0340", "(0.0760)", "0.0320", "(0.0170)", "GERL_MG2", "0.0780", "(0.1560)", "0.0070", "(0.0160)", "0.0060", "(0.0130)", "H=3", "Environment", "1", "H=3", "Environment", "2", "H=3", "Environment", "3", "DQN", "0.0851", "(0.1152)", "0.0877", "(0.1961)", "0.0090", "(0.0200)", "GERL_MG2", "0.0013", "(0.0018)", "0.0032", "(0.0032)", "0.0004", "(0.0009)"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 123.36,
+    "y2": 205.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8FroynZv4C-Table1-1.png"
+}, {
+  "caption": "Table 4: Hyperparameters for DQN in long horizon environment.",
+  "captionBoundary": {
+    "x1": 175.843994140625,
+    "x2": 436.15667724609375,
+    "y1": 563.5045776367188,
+    "y2": 569.5070190429688
+  },
+  "figType": "Table",
+  "imageText": ["Learning", "Rate", "{0.0001}", "0.0001", "Hidden", "layer", "{[32,32,32]}", "[32,32,32]", "Self-play", "δ", "{1.5,2}", "2", "ϵ", "decay", "frequency", "{8000}", "8000", "Batch", "size", "{8000}", "8000", "Optimizer", "{Adam}", "Adam", "Target", "update", "interval", "{1000}", "1000", "ϵ0", "{1}", "1", "ϵN", "{0.01}", "0.01", "Value", "considered", "Final", "Value"],
+  "name": "4",
+  "page": 58,
+  "regionBoundary": {
+    "x1": 185.76,
+    "x2": 424.32,
+    "y1": 572.16,
+    "y2": 687.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8FroynZv4C-Table4-1.png"
+}, {
+  "caption": "Table 3: Hyperparameters for DQN in short horizon environment.",
+  "captionBoundary": {
+    "x1": 174.73800659179688,
+    "x2": 437.26239013671875,
+    "y1": 338.6695251464844,
+    "y2": 344.6719970703125
+  },
+  "figType": "Table",
+  "imageText": ["Learning", "Rate", "{0.0001}", "0.0001", "Hidden", "layer", "{[32,32,32]}", "[32,32,32]", "Self-play", "δ", "{1.5}", "1.5", "ϵ", "decay", "frequency", "{8000}", "8000", "Batch", "size", "{8000}", "8000", "Optimizer", "{Adam}", "Adam", "Target", "update", "interval", "{1000}", "1000", "ϵ0", "{1}", "1", "ϵN", "{0.01}", "0.01", "Value", "considered", "Final", "Value"],
+  "name": "3",
+  "page": 58,
+  "regionBoundary": {
+    "x1": 185.76,
+    "x2": 424.32,
+    "y1": 347.52,
+    "y2": 462.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_8FroynZv4C-Table3-1.png"
+}]

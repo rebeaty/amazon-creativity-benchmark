@@ -1,0 +1,101 @@
+[{
+  "caption": "Table 1: Inference time (ms) and test set energy (E) and force (F) mean absolute error (MAE) (meV and meV/Å) on the MD17 quantum chemical dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3538513183594,
+    "y1": 92.5765151977539,
+    "y2": 110.6829833984375
+  },
+  "figType": "Table",
+  "imageText": ["F", "24.3", "13.1", "10.4", "6.0", "4.2", "3.3", "4.054.064.04", "Uracil", "E", "6.1", "5.0", "4.8", "4.5", "-", "4.5", "4.524.54", "4.50", "F", "24.7", "9.4", "6.1", "4.1", "2.6", "2.0", "2.442.442.43", "Toluene", "E", "5.2", "4.4", "4.3", "4.1", "-", "4.0", "4.024.02", "4.01", "F", "36.9", "16.2", "12.1", "8.5", "5.4", "3.9", "5.145.175.13", "Salicylic", "acid", "E", "8.7", "5.8", "5.2", "4.9", "-", "4.0", "4.764.774.75", "F", "25.2", "9.3", "4.8", "3.3", "2.2", "1.6", "2.442.442.44", "Naphtalene", "E", "6.9", "5.3", "5.2", "5.0", "-", "4.9", "4.944.95", "4.93", "F", "28.6", "16.6", "17.8", "13.8", "6.7", "5.8", "5.175.18", "5.16", "Malonaldehyde", "E", "5.6", "4.5", "4.3", "3.9", "-", "3.3", "3.263.27", "3.26", "F", "16.9", "10.0", "14.3", "9.7", "3.7", "3.8", "3.703.77", "3.62", "Ethanol", "E", "3.5", "2.8", "3.0", "2.7", "-", "2.2", "2.262.27", "2.25", "F", "58.5", "21.6", "29.5", "14.7", "9.4", "8.2", "9.909.929.88", "Aspirin", "E", "16.0", "8.8", "8.2", "6.9", "-", "5.3", "6.466.476.43", "Inference", "time", "batch", "of", "32", "65", "88/376", "206", "12", "batch", "of", "4", "31", "38/99", "197", "4", "Model", "SchNet", "Schütt", "et", "al.,", "2017", "DimeNet", "Klicpera", "et", "al.,", "2020b", "sGDML", "Chmiela", "et", "al.,", "2019", "PaiNN", "Schütt", "et", "al.,", "2021", "GemNet(T/Q)", "Klicpera", "et", "al.,", "2021a", "NequIP", "Batzner", "et", "al.,", "2021", "SAKE"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 113.75999999999999,
+    "y2": 311.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3DIpIf3wQMC-Table1-1.png"
+}, {
+  "caption": "Table 6: Test set negative log likelihood (NLL) with different generative method and amount of training data.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 255.29354858398438,
+    "y2": 272.2540283203125
+  },
+  "figType": "Table",
+  "imageText": ["7", "DISCUSSION", "Graph", "Normalizing", "Flow", "(Liu", "et", "al.,", "2019)", "11.31", "10.38", "7.95", "42.84", "37.17", "36.49", "Simple", "dynamics", "(Köhler", "et", "al.,", "2020)", "9.51", "9.53", "9.47", "33.10", "32.79", "32.99", "Kernel", "Dynamics", "(Köhler", "et", "al.,", "2020)", "8.74", "8.67", "8.42", "31.49", "31.17", "31.25", "Equivariant", "Normalizing", "Flow", "(Satorras", "et", "al.,", "2022)", "8.31", "8.15", "7.69", "30.99", "30.56", "30.41", "SAKE", "9.70", "7.78", "3.85", "25.21", "23.29", "22.42", "DW4", "LJ13", "#", "Training", "samples", "102", "103", "104", "102", "103", "104"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 485.28,
+    "y1": 274.56,
+    "y2": 400.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3DIpIf3wQMC-Table6-1.png"
+}, {
+  "caption": "Table 7: Hyperparameters used in experiments (* A cosine warm up and annealing schedule is used, where the learning rate is gradually increased from 10−6 to the peak value in the first 10% epochs and decreased in the rest 90%.)",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2499084472656,
+    "y1": 180.73751831054688,
+    "y2": 208.65802001953125
+  },
+  "figType": "Table",
+  "imageText": ["DW4", "(Table", "6)", "4", "64", "10−5", "2000", "100", "10−5", "LJ13", "(Table", "6)", "4", "64", "10−5", "1000", "100", "10−5", "N-Body", "Forecast", "(Table", "4)", "4", "32", "5", "∗", "10−4", "1000", "100", "10−12", "QM9", "(Table", "3)", "6", "32", "10−4∗", "5000", "32", "10−10", "Experiment", "Depth", "Width", "Learning", "Rate", "Epochs", "Batch", "Size", "L2", "Regularization", "MD17", "(Table", "1)", "6", "64", "10−3∗", "5000", "4", "10−5", "ISO17", "(Table", "2)", "6", "64", "10−3∗", "100", "128", "10−12"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3DIpIf3wQMC-Table7-1.png"
+}, {
+  "caption": "Table 8: Dataset details.",
+  "captionBoundary": {
+    "x1": 257.95599365234375,
+    "x2": 354.0452880859375,
+    "y1": 346.5445251464844,
+    "y2": 352.5469970703125
+  },
+  "figType": "Table",
+  "imageText": ["ISO17", "http://quantum-machine.org/datasets/(Table", "2)", "129", "Molecules;", "5000", "snapshots", "Fixed", "QM9", "http://quantum-machine.org/datasets/", "135k", "molecules", "Fixed", "N-Body", "Forecast", "1(Table", "4)", "MIT", "5", "particles", "Fixed:", "3K", "Train;", "2K", "Valid;", "2K", "Test", "DW4", "https://github.com/vgsatorras/en_flows(Table", "6)", "MIT", "4", "particles", "Random", "LJ13", "https://github.com/vgsatorras/en_flows(Table", "6)", "MIT", "13", "particles", "Random", "Experiment", "License", "Size", "Split", "MD17", "http://quantum-machine.org/gdml/#datasets", "(Table", "1)", "8", "Systems;", "100K-1M", "snapshots", "Random:", "1K", "Train"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 269.76,
+    "y2": 331.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3DIpIf3wQMC-Table8-1.png"
+}, {
+  "caption": "Table 5: Walking motion capture performance.",
+  "captionBoundary": {
+    "x1": 311.7060241699219,
+    "x2": 498.2955322265625,
+    "y1": 538.443603515625,
+    "y2": 544.446044921875
+  },
+  "figType": "Table",
+  "imageText": ["MAE", "67.3±1.1", "59.1±2.1", "43.9±1.1", "22.7", "±1.6", "Epoch", "time", "5.66", "s", "1.81", "s", "Satorras", "et", "al.,", "2021", "GMN", "Huang", "et", "al.,", "2022", "SAKE", "GNN", "EGNN"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 505.44,
+    "y1": 546.72,
+    "y2": 585.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3DIpIf3wQMC-Table5-1.png"
+}]

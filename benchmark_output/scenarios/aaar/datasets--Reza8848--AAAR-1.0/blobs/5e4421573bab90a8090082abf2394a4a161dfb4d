@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 6: Example trial from the LexTALE pre-screening task (Lemhöfer & Broersma, 2012).",
+  "captionBoundary": {
+    "x1": 118.64900207519531,
+    "x2": 493.3523864746094,
+    "y1": 320.40753173828125,
+    "y2": 326.4100036621094
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 405.12,
+    "y1": 192.0,
+    "y2": 306.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Example trial from the headphone pre-screening test (Woods et al., 2017).",
+  "captionBoundary": {
+    "x1": 138.84300231933594,
+    "x2": 473.157958984375,
+    "y1": 603.2645263671875,
+    "y2": 609.2669677734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 406.08,
+    "y1": 448.8,
+    "y2": 589.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure7-1.png"
+}, {
+  "caption": "Table 3: All 30 image baseline models occurring in the top 50 best models reported in Figure 3A.",
+  "captionBoundary": {
+    "x1": 111.8499984741211,
+    "x2": 500.1522216796875,
+    "y1": 92.5765151977539,
+    "y2": 98.5789794921875
+  },
+  "figType": "Table",
+  "imageText": ["Note.", "Performance", "accuracy", "on", "ImageNet", "was", "based", "on", "Wightman", "(2019)", "and", "was", "not", "available", "for", "all", "models.", "1", "Swin", "0.66", "0.06", "81.52", "23.37", "2", "ConvNeXT", "0.64", "0.07", "N/A", "348.15", "3", "NF-ResNet", "0.62", "0.04", "80.65", "23.51", "4", "NFNet", "l0", "0.61", "0.08", "82.75", "32.77", "5", "ResNetV2", "0.60", "0.11", "N/A", "928.34", "6", "NF-RegNet", "0.59", "0.05", "79.29", "9.26", "7", "VGG16", "0.58", "0.11", "73.35", "134.27", "8", "VGG19", "0.58", "0.11", "74.21", "139.58", "9", "ViT", "0.58", "0.12", "75.95", "6.16", "10", "ResMLP", "0.57", "0.07", "83.59", "128.37", "11", "Twins-SVT", "0.57", "0.06", "81.68", "23.55", "12", "Twins-PCPVT", "0.57", "0.04", "81.09", "23.59", "13", "VGG13", "0.57", "0.11", "71.59", "128.96", "14", "CaiT", "0.57", "0.04", "82.19", "17.18", "15", "VGG11", "0.57", "0.10", "70.36", "128.77", "16", "gMLP", "0.56", "0.06", "79.64", "19.17", "17", "PIT", "0.56", "0.03", "78.19", "10.23", "18", "DeiT", "0.56", "0.03", "72.17", "5.52", "19", "ConViT", "0.56", "0.03", "73.11", "5.52", "20", "TNT", "0.56", "0.03", "81.52", "23.37", "21", "CoaT", "0.55", "0.04", "78.43", "5.35", "22", "gMixer", "0.55", "0.05", "78.04", "24.34", "23", "XCiT", "0.55", "0.04", "82.57", "11.92", "24", "IG", "ResNeXt", "0.53", "0.13", "85.44", "826.36", "25", "Visformer", "0.52", "0.02", "82.11", "39.45", "26", "RepVGG", "0.52", "0.11", "80.21", "81.26", "27", "CLIP", "image", "0.50", "0.11", "N/A", "102.01", "28", "JXNesT", "0.50", "0.07", "81.42", "16.67", "29", "ECAResNet", "0.47", "0.14", "80.45", "28.11", "30", "DenseNet", "0.47", "0.12", "74.74", "6.95", "accuracy", "Number", "of", "parameters", "(M)", "Model", "name", "Average", "score", "SD", "score", "Top", "1"],
+  "name": "3",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 504.0,
+    "y1": 99.84,
+    "y2": 486.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Table3-1.png"
+}, {
+  "caption": "Figure 1: Comparing human similarity scores gathered through crowdsourcing with ML pipelines. We used data from three modalities: images, audio, and video. For each modality, we extracted deep model embeddings and gathered human captions and tags. Word- and language-embedding models, as well as simple word-frequency analysis, were used to predict human similarity judgments.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7472839355469,
+    "y1": 688.8255615234375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": ["Multimodal", "datasets", "videoimagesaudio", "human", "interactions", "(", ")", "human", "interactions", "(", ")", "human", "interactions", "(1)", "human", "interactions", "(", "2)", "Tags", "+", "Stacked", "DNN", "similarity", "LLM", "similarity", "WFA", "similarity", "Captions", "Prediction", "approaches", "Human", "ground", "truthHow", "similiar", "are", "the", "animals?", "Pairwise", "similarity"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 393.12,
+    "y2": 667.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Correlation to human similarity. A: Top 50 models averaged over the 3 image datasets. B: Audio dataset. C: Video dataset. Each DNN model bar averages over multiple variants of the same architecture; the dots overlaid on the bars indicate the average correlation of each particular variant of the architecture. D: Average for each method type for each modality. The error bars are standard deviations.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.3848571777344,
+    "y1": 577.7945556640625,
+    "y2": 627.6320190429688
+  },
+  "figType": "Figure",
+  "imageText": ["Approach", "WFA", "DNN", "LLM", "Stacked", "VideoD", "0.0", "0.2", "0.4", "0.6", "0.8", "Audio", "0.6", "0.4", "0.2", "0.0", "Images", "0.0", "0.2", "0.4", "0.6", "0.8", "C", "n", "la", "tio", "rr", "e", "c", "o", "a", "n", "M", "e", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "d0.1", "x", "3", "R", "T", "B", "E", "p", "rl", "a", "v", "e", "g", "s", "o", "T", "a", "p", "-r", "e", "n", "c", "e", "rr", "e", "c", "c", "u", "o", "-o", "g", "s", "c", "T", "a", "n", "c", "e", "rr", "e", "c", "c", "u", "o", "-o", "g", "s", "c", "T", "a", "g", "e", "o", "u", "g", "s", "r", "T", "a", "e", "d", "n", "tiz", "u", "a", "g", "s", "q", "T", "a", "w", "s", "lo", "e", "s", "in", "f-", "c", "o", "f-", "id", "g", "s", "t", "T", "a", "5", "S", "m", "2", "g", "s", "b", "T", "a", "a", "R", "T", "B", "E", "D", "e", ")", "S", "E", "im", "C", "(", "S", "R", "T", "B", "E", "s", "t", "w", "fa", "s", "lo", "e", "s", "in", "f-", "c", "o", "f-", "id", "n", "s", "t", "p", "tio", "C", "a", "5", "S", "m", "2", "n", "s", "b", "p", "tio", "C", "a", "E", ")", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "lit", ")", "s", "p", "n", "o", "n", "(", "e", "a", "g", "s", "m", "T", "a", "n", "e", "a", "g", "s", "m", "T", "a", "d", "S", "X", "3", "n", "+", "e", "a", "g", "s", "m", "T", "a", "d", "M", "X", "3", "n", "+", "e", "a", "g", "s", "m", "T", "a", "5", "0", "w", "r", "S", "lo", "n", "+", "e", "a", "g", "s", "m", "T", "a", "1", "r1", "0", "s", "t", "w", "fa", "S", "lo", "n", "+", "e", "a", "g", "s", "m", "T", "a", "r5", "0", "s", "t", "w", "fa", "S", "lo", "n", "+", "e", "a", "g", "s", "m", "T", "a", "Inter-rater", "reliability", "B", "n", "la", "tio", "rr", "e", "c", "o", "a", "n", "M", "e", "0.9", "0.8", "0.7", "0.6", "0.5", "v", "e", "c", "2", ".0", "la", "rg", "e", "lv", "6", "0", "k", "R", "o", "B", "E", "R", "T", "a", "(", "S", "im", "C", "S", "E", ")+", "w", "a", "v", "2", "v", "e", "c", "2", ".0", "la", "rg", "e", "lv", "6", "0", "k", "(", "1", "0", "m", ")", "R", "o", "B", "E", "R", "T", "a", "(", "S", "im", "C", "S", "E", ")+", "w", "a", "v", "2", "v", "e", "c", "2", ".0", "la", "rg", "e", "lv", "6", "0", "k", "(", "9", "6", "0", "h", ")", "R", "o", "B", "E", "R", "T", "a", "(", "S", "im", "C", "S", "E", ")+", "w", "a", "v", "2", "v", "e", "c", "2", ".0", "la", "rg", "e", "lv", "6", "0", "k", "(", "1", "0", "0", "h", ")", "R", "o", "B", "E", "R", "T", "a", "(", "S", "im", "C", "S", "E", ")+", "w", "a", "v", "2", "v", "e", "c", "2", ".0", "la", "rg", "e", "X", "L", "S", "R", "5", "3", "R", "o", "B", "E", "R", "T", "a", "(", "S", "im", "C", "S", "E", ")", "T", "a", "g", "s", "c", "o", "-o", "c", "c", "u", "rr", "e", "n", "c", "e", "W", "a", "v", "L", "M", "T", "a", "g", "s", "m", "e", "a", "n", "T", "a", "g", "s", "m", "e", "a", "n", "(", "n", "o", "s", "p", "lit", ")", "T", "a", "g", "s", "r", "o", "u", "g", "e", "B", "E", "R", "T", "(", "S", "im", "C", "S", "E", ")", "T", "a", "g", "s", "q", "u", "a", "n", "tiz", "e", "d", "H", "u", "B", "E", "R", "T", "T", "a", "g", "s", "o", "v", "e", "rl", "a", "p", "T", "a", "g", "s", "c", "o", "-", "o", "c", "c", "u", "rr", "e", "n", "c", "e", "-r", "e", "p", "T", "a", "g", "s", "b", "m", "2", "5", "S", "T", "a", "g", "s", "t", "f-", "id", "f-", "c", "o", "s", "in", "e", "C", "a", "p", "tio", "n", "s", "t", "f-", "id", "f-", "c", "o", "s", "in", "e", "C", "a", "p", "tio", "n", "s", "b", "m", "2", "5", "S", "w", "a", "v", "2", "v", "e", "c", "2", ".0", "B", "E", "R", "T", "D", "e", "B", "E", "R", "T", "a", "0.1", "0.2", "0.3", "0.4", "v", "2", "w", "a", "E", ")+", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "Inter-rater", "reliability", "A", "n", "la", "tio", "rr", "e", "c", "o", "a", "n", "M", "e", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "t", "N", "e", "n", "s", "e", "D", "e", "e", "t", "e", "s", "N", "A", "R", "E", "C", "s", "T", "N", "e", "J", "X", "e", "a", "g", "IP", "im", "C", "L", "n", "e", "a", "g", "s", "m", "T", "a", "G", "G", "p", "V", "R", "e", "e", "r", "fo", "rm", "V", "is", "g", "e", "o", "u", "g", "s", "r", "T", "a", "t", "e", "X", "e", "s", "N", "IG", "R", "p", "-r", "e", "n", "c", "e", "rr", "e", "c", "c", "u", "o", "-o", "g", "s", "c", "T", "a", "p", "rl", "a", "v", "e", "g", "s", "o", "T", "a", "n", "c", "e", "rr", "e", "c", "c", "u", "o", "-o", "g", "s", "c", "T", "a", "iT", "X", "C", "e", "x", "t", "IP", "t", "C", "L", "r", "ix", "e", "g", "M", ")", "S", "E", "im", "C", "(", "S", "R", "T", "B", "E", "a", "T", "C", "o", "T", "T", "N", "iT", "n", "V", "C", "o", "iT", "P", "IT", "D", "e", "L", "P", "g", "M", "1", "G", "1", "V", "G", "lit", ")", "s", "p", "n", "o", "n", "(", "e", "a", "g", "s", "m", "T", "a", "5", "S", "m", "2", "g", "s", "b", "T", "a", "iT", "C", "a", "3", "G", "1", "V", "G", "V", "T", "C", "P", "in", "s", "-P", "T", "w", "V", "T", "in", "s", "-S", "T", "w", "L", "P", "s", "M", "R", "e", "e", "d", "n", "tiz", "u", "a", "g", "s", "q", "V", "iT", "T", "a", "9", "G", "1", "V", "G", "6", "G", "1", "V", "G", "e", "s", "in", "f-", "c", "o", "f-", "id", "g", "s", "t", "T", "a", "e", "t", "g", "N", "-R", "e", "N", "F", "E", ")", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "2", "e", "tV", "s", "N", "R", "e", "t", "N", "e", "N", "F", "5", "S", "m", "2", "n", "s", "b", "p", "tio", "C", "a", "e", "t", "s", "N", "-R", "e", "N", "F", "T", "e", "X", "n", "v", "N", "C", "o", "te", "x", "t", "e", "+", "a", "g", "IP", "im", "C", "L", "in", "S", "w", "e", "s", "in", "f-", "c", "o", "f-", "id", "n", "s", "t", "p", "tio", "C", "a", "a", "s", "e", "in", "b", "S", "w", "E", ")+", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "rg", "e", "in", "la", "S", "w", "E", ")+", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "a", "s", "e", "T", "b", "e", "X", "n", "v", "N", "C", "o", "E", ")+", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "s", "e", "b", "a", "V", "iT", "E", ")+", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "g", "e", "h", "u", "V", "iT", "E", ")+", "C", "S", "S", "im", "a", "(", "R", "T", "B", "E", "R", "o", "Inter-rater", "reliability"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 499.2,
+    "y1": 85.44,
+    "y2": 557.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure3-1.png"
+}, {
+  "caption": "Table 4: All audio baseline models used in the analysis.",
+  "captionBoundary": {
+    "x1": 195.13699340820312,
+    "x2": 416.8646240234375,
+    "y1": 171.13156127929688,
+    "y2": 177.134033203125
+  },
+  "figType": "Table",
+  "imageText": ["10", "wav2vec", "2.0", "(Audeering,", "emotion)", "0.49", "317", "11", "HuBERT", "base", "0.41", "90", "12", "WavLM", "large", "0.46", "316.62", "13", "HuBERT", "base", "(superb,", "emotion)", "0.42", "90", "14", "HuBERT", "base", "(superb,", "speaker)", "0.42", "90", "15", "WavLM", "base+", "0.41", "94.70", "16", "wav2vec", "2.0", "base", "(960h)", "0.38", "95", "17", "WavLM", "base", "0.39", "94.70", "18", "wav2vec", "2.0", "base", "0.34", "95", "19", "wav2vec", "2.0", "base", "(10m)", "0.34", "95", "20", "wav2vec", "2.0", "base", "(superb,", "emotion)", "0.34", "95", "21", "wav2vec", "2.0", "base", "(superb,", "speaker)", "0.34", "95", "22", "wav2vec", "2.0", "base", "(100h)", "0.32", "95", "23", "HuBERT", "large", "(superb,", "emotion)", "0.29", "300", "24", "HuBERT", "large", "(superb,", "speaker)", "0.29", "300", "25", "wav2vec", "2.0", "large", "(100h)", "0.32", "317", "26", "wav2vec", "2.0", "large", "(superb,", "emotion)", "0.31", "317", "27", "wav2vec", "2.0", "large", "(superb,", "speaker)", "0.31", "317", "28", "wav2vec", "2.0", "large", "(960h)", "0.31", "317", "29", "wav2vec", "2.0", "large", "(10m)", "0.31", "317", "30", "data2vec", "audio", "large", "(960h)", "0.31", "313.28", "31", "data2vec", "audio", "base", "(100h)", "0.23", "313.28", "32", "data2vec", "audio", "large", "(100h)", "0.23", "313.28", "33", "data2vec", "audio", "large", "(10m)", "0.21", "313.28", "34", "wav2vec", "2.0", "(SpeechBrain,", "emotion)", "0.11", "95", "35", "data2vec", "audio", "base", "(960h)", "0.16", "93.16", "36", "data2vec", "audio", "base", "(10m)", "0.15", "93.16", "1", "wav2vec", "2.0", "lv60k", "(100h)", "0.49", "317", "2", "wav2vec", "2.0", "lv60k", "(960h)", "0.49", "317", "3", "wav2vec", "2.0", "lv60k", "0.51", "317", "4", "wav2vec", "2.0", "lv60k", "(10m)", "0.51", "317", "5", "HuBERT", "xlarge", "ASR", "0.45", "1000", "6", "HuBERT", "xlarge", "0.46", "1000", "7", "HuBERT", "large", "ASR", "0.46", "300", "8", "wav2vec", "2.0", "large", "XLSR53", "0.47", "317", "9", "HuBERT", "large", "0.46", "300", "correlation", "Number", "of", "parameters", "(M)", "Model", "name", "Emotion"],
+  "name": "4",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 180.0,
+    "y2": 608.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Table4-1.png"
+}, {
+  "caption": "Table 1: Behavioral experiment summary table.",
+  "captionBoundary": {
+    "x1": 211.0919952392578,
+    "x2": 400.9093933105469,
+    "y1": 317.77752685546875,
+    "y2": 323.7799987792969
+  },
+  "figType": "Table",
+  "imageText": ["B.2", "IMPLEMENTATION", "Note.", "‘N", "’", "denotes", "the", "number", "of", "participants", "included", "in", "the", "analysis;", "‘LX’", "denotes", "the", "LexTALE", "English", "proficiency", "pre-screening", "task;", "‘HT’", "denotes", "the", "headphone", "test.", "Images", "Tags", "Animals", "120", "60", "2.2.4", "56", "LX", "Images", "Tags", "Furniture", "120", "60", "2.2.4", "58", "LX", "Images", "Tags", "Vegetables", "120", "60", "2.2.4", "57", "LX", "Audio", "Similarity", "Emotions", "100", "85", "2.2.2", "252", "HT", "Audio", "Captions", "Emotions", "1,000", "50", "2.2.3", "151", "HT,", "LX", "Audio", "Tags", "Emotions", "1,000", "50", "2.2.4", "217", "HT,", "LX", "Video", "Similarity", "Activities", "100", "85", "2.2.2", "284", "HT", "Video", "Captions", "Activities", "1,000", "50", "2.2.3", "196", "HT,", "LX", "Video", "Tags", "Activities", "1,000", "50", "2.2.4", "221", "HT,", "LX", "participant", "Section", "N", "Pre-screening", "Modality", "Paradigm", "Respect", "Total", "stimuli", "Trials", "per"],
+  "name": "1",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 516.0,
+    "y1": 324.96,
+    "y2": 513.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Table1-1.png"
+}, {
+  "caption": "Table 2: Mean, standard deviation, and total number of tags collected for each dataset.",
+  "captionBoundary": {
+    "x1": 134.13099670410156,
+    "x2": 477.8705749511719,
+    "y1": 409.69451904296875,
+    "y2": 415.6969909667969
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", "(#", "of", "stimuli)", "mean", "std", "total", "Vegetables", "(120)", "3.2", "1.1", "385", "Furniture", "(120)", "5.2", "1.7", "627", "Animals", "(120)", "8.2", "2.7", "988", "Audio-emotions", "(1000)", "9.1", "3.5", "9092", "Video-activities", "(1000)", "8.5", "2.9", "8482"],
+  "name": "2",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 405.12,
+    "y1": 332.15999999999997,
+    "y2": 398.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Table2-1.png"
+}, {
+  "caption": "Figure 9: Screenshot of an example tag mining task for videos. The tag “picking” received 5 stars (very relevant), whereas the tag “apple” is flagged (marked as irrelevant).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 503.99530029296875,
+    "y1": 299.1195373535156,
+    "y2": 316.08099365234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 285.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure9-1.png"
+}, {
+  "caption": "Table 5: All video baseline models used in the analysis.",
+  "captionBoundary": {
+    "x1": 195.13699340820312,
+    "x2": 416.8646545410156,
+    "y1": 565.008544921875,
+    "y2": 571.010986328125
+  },
+  "figType": "Table",
+  "imageText": ["1", "Slowfast", "r50", "0.65", "76.94", "92.69", "34.57", "2", "Slowfast", "r101", "0.64", "77.90", "93.27", "62.83", "3", "Slow", "r50", "0.61", "74.58", "91.63", "32.45", "4", "X3d", "M", "0.53", "75.94", "92.72", "3.79", "5", "X3d", "S", "0.49", "73.33", "91.27", "3.79", "6", "X3d", "XS", "0.48", "69.12", "88.63", "3.79", "Top1", "Acc", "Top5", "Acc", "parameters", "(M)", "Model", "name", "Correlation", "Kinetics-400", "Kinetics-400", "Number", "of"],
+  "name": "5",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 573.6,
+    "y2": 673.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Table5-1.png"
+}, {
+  "caption": "Figure 10: Scores for individual layers of audio models scaled to the total number of layers. Models are colored by their meta architecture.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 294.7865295410156,
+    "y2": 311.74798583984375
+  },
+  "figType": "Figure",
+  "imageText": ["wavlm-large", "wavlm-base+", "wavlm-base", "wav2vec-large_XLSR53", "wav2vec-large_lv60k_960h", "wav2vec-large_lv60k_10m", "wav2vec-large_lv60k_100h", "wav2vec-large_lv60k", "wav2vec-large_960h", "wav2vec-large_10m", "wav2vec-large_100h", "wav2vec-base_960h", "wav2vec-base_10m", "wav2vec-base_100h", "wav2vec-base", "hubert-xlarge_asr", "hubert-xlarge", "hubert-large_asr", "hubert-large", "hubert-base", "Models", "re", "S", "c", "o", "Layer", "depth", "0.5", "0.4", "0.3", "0.2", "0.1", "Close", "to", "output", "Close", "to", "input0.0"],
+  "name": "10",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 493.44,
+    "y1": 83.52,
+    "y2": 274.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Correlation to human similarity judgments as a function of A: number of model parameters; and B: ImageNet accuracy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.83099365234375,
+    "y1": 587.7135620117188,
+    "y2": 604.6749877929688
+  },
+  "figType": "Figure",
+  "imageText": ["rit", "y", "im", "ila", "an", "s", "h", "um", "w", "ith", "tio", "n", "re", "la", "C", "or", "60", "70", "80", "90", "ImageNet", "accuracy", "0.6", "0.4", "0.2", "XCiT", "XCiT", "ViT", "XCiT", "ViT", "ViT", "ViT", "ViT", "VGG16", "ViT", "ViT", "VGG11", "VGG11", "EfficientNet", "EfficientNetTinyNet", "TinyNet", "EfficientNet", "Swin", "ResNet", "ResNetV2", "ResNet", "ResNet", "ResNet", "RepVGG", "RegNetZ", "RegNetX", "NF-RegNet", "MixNet", "SEResNeXt", "SEResNet", "LCNet", "LCNet", "IG", "ResNeXt", "IG", "ResNeXt", "IG", "ResNeXt", "ResNet", "HRNet", "ResNet", "EfficientNet", "ResNet", "EfficientNet", "EfficientNet", "ECAResNetECAResNet", "ECAResNet", "ECAResNet", "NFNet", "NFNet", "DPN", "NFNet", "DLA", "DLADLA", "DenseNet", "DLA", "DLA", "DenseNet", "CSPResNeXt", "ConvNeXT", "ConvMixer", "ConvMixer", "CaiT", "CaiT", "CoaT", "ConViT", "CaiT", "CaiT", "CaiT", "BEiT", "BEiT", "BEiT", "BEiT", "BEiT", "Inception-v3", "ResNext", "rit", "y", "im", "ila", "an", "s", "h", "um", "w", "ith", "tio", "n", "re", "la", "C", "or", "Number", "of", "parameters", "1e+06", "1e+07", "1e+08", "1e+09", "XCiT", "XCiT", "ResNet", "ViT", "ViT", "ViT", "ViT", "ViT", "ViT", "EfficientNetTinyNet", "EfficientNet", "EfficientNet", "ResNet", "ResNeXt", "ResNetV2", "ResNet-RS", "ResMLP", "Res2NeXt", "RepVGG", "MnasNet", "Mixer", "Mixer", "Mixer", "LCNet", "LCNet", "SENet", "ResNet", "ResNet", "EfficientNet", "EfficientNet", "EfficientNet", "EfficientNet", "NFNet", "NFNet", "DPN", "DPNHaloNeXt", "DPN", "DPN", "NFNet", "NFNet", "NFNet", "DLA", "DLA", "DLADLA", "DenseNet", "DLA", "DLA", "DenseNet", "CSPDarknet53", "ConvNeXT", "ConvNeXT", "ConvMixer", "CaiTCaiTCaiT", "CaiTCaiT", "CoaT", "CoaT", "BEiT", "BEiT", "BEiT", "BEiT", "BEiT", "BEiT", "Inception-v3", "ResNext", "RoBERTa", "DeBERTa", "CLIP", "text", "CLIP", "image", "BERT", "CLIP", "image", "CLIP", "text", "CLIP", "text", "BERT", "1", "3", "10", "0.6", "0.4", "0.2", "bm25S", "tf-idf-cosine", "bm25S", "co-occurrence", "B", "A"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 499.2,
+    "y1": 236.16,
+    "y2": 567.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Guide to collecting and estimating human similarity judgments at scale.",
+  "captionBoundary": {
+    "x1": 143.26199340820312,
+    "x2": 468.7401428222656,
+    "y1": 335.3985290527344,
+    "y2": 341.4010009765625
+  },
+  "figType": "Figure",
+  "imageText": ["Use", "the", "similarity", "between", "stacked", "embeddings", "-", "O(N", ")", "Collect", "captions", "captions", "tags", "no", "no", "N<1000N>1000", "no", "yes", "no", "yes", "yes", "yes", "Use", "the", "similarity", "between", "LLM", "embeddings", "-", "O(N", ")", "Use", "the", "similarity", "between", "DNN", "embeddings", "-", "O(1)", "Collect", "text", "and", "use", "frequency", "analysis", "-", "O(N", ")", "Does", "my", "LLM", "embed", "captions", "or", "tags?", "Collect", "tags", "with", "STEP-Tag", "Pick", "a", "subset", "of", "your", "data", "Do", "I", "have", "access", "to", "a", "pre-trained", "DNN?", "Do", "I", "have", "access", "to", "a", "pre-trained", "DNN?", "Do", "I", "have", "access", "to", "a", "pre-trained", "LLM?", "Collect", "human", "similarity", "judgments", "-", "O(N", "2)", "Can", "I", "collect", "text", "descriptions?", "Start", "How", "large", "is", "my", "dataset?"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 499.2,
+    "y1": 86.88,
+    "y2": 317.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure5-1.png"
+}, {
+  "caption": "Figure 2: STEP-Tag, our novel tag-mining paradigm. We ran an adaptive process in which results of one iteration are used as inputs for subsequent iterations. In every iteration, participants can add a new tag, rate the relevance of existing tags or flag tags that are inappropriate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0022888183594,
+    "y1": 253.52951049804688,
+    "y2": 281.4490051269531
+  },
+  "figType": "Figure",
+  "imageText": ["Iteration", "5", "green", "brussel", "sprouts", "Iteration", "4", "brussel", "sprouts", "Iteration", "3", "brussel", "sprouts", "Iteration", "2", "tomatillo", "Iteration", "1"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Screenshot from the similarity judgment task over video pairs.",
+  "captionBoundary": {
+    "x1": 162.0959930419922,
+    "x2": 449.9054870605469,
+    "y1": 343.0735168457031,
+    "y2": 349.07598876953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_O-G91-4cMdv-Figure8-1.png"
+}]

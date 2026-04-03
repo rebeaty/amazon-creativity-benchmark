@@ -1,0 +1,121 @@
+[{
+  "caption": "Table 3: Numerical comparisons with non-probabilistic baselines on ModelNet10-SO3 dataset. One model is trained for each category.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0025329589844,
+    "y1": 248.67855834960938,
+    "y2": 264.64404296875
+  },
+  "figType": "Table",
+  "imageText": ["Rot.", "Laplace", "9.7", "3.5", "0.68", "8.8", "2.1", "0.84", "5.3", "2.6", "0.83", "15.5", "2.3", "0.82", "RPMG-Quat", "13.0", "5.9", "0.40", "13.0", "3.6", "0.67", "8.6", "4.2", "0.61", "23.2", "4.9", "0.51", "RPMG-6D", "12.9", "4.7", "0.53", "11.5", "2.8", "0.77", "7.8", "3.4", "0.71", "20.3", "3.6", "0.67", "RPMG-9D", "11.9", "4.4", "0.58", "10.5", "2.4", "0.82", "7.5", "3.2", "0.75", "20.0", "2.9", "0.76", "RPMG-10D", "12.8", "4.5", "0.55", "11.2", "2.4", "0.82", "7.2", "3.0", "0.76", "19.2", "2.9", "0.75", "Euler", "angles", "21.5", "10.9", "0.10", "27.5", "12.0", "0.09", "14.9", "8.5", "0.19", "27.6", "9.6", "0.17", "Axis-angle", "25.7", "14.3", "0.07", "30.3", "14.6", "0.06", "20.3", "13.0", "0.08", "36.3", "16.7", "0.04", "Quaternion", "25.8", "15.0", "0.06", "30.0", "15.7", "0.06", "20.6", "13.0", "0.08", "34.1", "15.5", "0.05", "6D", "19.6", "9.1", "0.19", "17.5", "7.3", "0.27", "10.9", "6.2", "0.37", "32.3", "11.7", "0.11", "9D", "17.5", "8.3", "0.23", "19.8", "7.6", "0.25", "11.8", "6.5", "0.34", "30.4", "11.1", "0.13", "9D-Inf", "12.1", "5.1", "0.49", "12.5", "3.5", "0.70", "7.6", "3.7", "0.67", "22.5", "4.5", "0.56", "10D", "18.4", "9.0", "0.20", "20.9", "8.7", "0.20", "11.5", "5.9", "0.39", "29.9", "11.5", "0.11", "Mean↓", "Med.↓", "Acc@5↑", "Mean↓", "Med.↓", "Acc@5↑", "Mean↓", "Med.↓", "Acc@5↑", "Mean↓", "Med.↓", "Acc@5↑", "Methods", "Chair", "Sofa", "Toilet", "Bed"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 272.64,
+    "y2": 411.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Mvetq8DO05O-Table3-1.png"
+}, {
+  "caption": "Table 2: Numerical comparisons with probabilistic baselines on Pascal3D+ dataset averaged on all categories. Numbers in parentheses (·) are our reproduced results. Please refer to supplementary for comparisons with each category.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.003662109375,
+    "y1": 92.6165542602539,
+    "y2": 118.54400634765625
+  },
+  "figType": "Table",
+  "imageText": ["Rotation", "Laplace", "0.150", "0.298", "0.566", "0.711", "0.876", "9.4", "Tulsiani", "&", "Malik", "(2015)", "-", "-", "-", "-", "0.808", "13.6", "Mahendran", "et", "al.", "(2018)", "-", "-", "-", "-", "0.859", "10.1", "Liao", "et", "al.", "(2019)", "-", "-", "-", "-", "0.819", "13.0", "Prokudin", "et", "al.", "(2018)", "-", "-", "-", "-", "0.838", "12.2", "Mohlin", "et", "al.", "(2020)", "(0.089)", "(0.215)", "(0.484)", "(0.650)", "0.825", "(0.827)", "11.5", "(11.9)", "Murphy", "et", "al.", "(2021)", "(0.102)", "(0.242)", "(0.524)", "(0.672)", "0.837", "(0.838)", "10.3", "(10.2)", "Acc@3◦↑", "Acc@5◦↑", "Acc@10◦↑", "Acc@15◦↑", "Acc@30◦↑", "Med.(◦)↓"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 487.2,
+    "y1": 126.72,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Mvetq8DO05O-Table2-1.png"
+}, {
+  "caption": "Table 1: Numerical comparisons with probabilistic baselines on ModelNet10-SO3 dataset averaged on all categories. Numbers in parentheses (·) are our reproduced results. Please refer to supplementary for comparisons with each category.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003662109375,
+    "y1": 78.44351959228516,
+    "y2": 104.3709716796875
+  },
+  "figType": "Table",
+  "imageText": ["Rotation", "Laplace", "0.446", "0.613", "0.714", "0.741", "0.770", "12.2", "Liao", "et", "al.", "(2019)", "-", "-", "-", "0.496", "0.658", "28.7", "Prokudin", "et", "al.", "(2018)", "-", "-", "-", "0.456", "0.528", "49.3", "Deng", "et", "al.", "(2022)", "(0.138)", "(0.301)", "(0.502)", "0.562", "(0.584)", "0.694", "(0.673)", "32.6", "(31.6)", "Mohlin", "et", "al.", "(2020)", "(0.164)", "(0.389)", "(0.615)", "0.693", "(0.684)", "0.757", "(0.751)", "17.1", "(17.9)", "Murphy", "et", "al.", "(2021)", "(0.294)", "(0.534)", "(0.680)", "0.719", "(0.714)", "0.735", "(0.730)", "21.5", "(20.3)", "Acc@3◦↑", "Acc@5◦↑", "Acc@10◦↑", "Acc@15◦↑", "Acc@30◦↑", "Med.(◦)↓"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 106.56,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Mvetq8DO05O-Table1-1.png"
+}, {
+  "caption": "Table 4: Numerical comparisons with non-probabilistic baselines on Pascal3D+ dataset. One model is trained for each category.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99627685546875,
+    "y1": 92.6165542602539,
+    "y2": 108.58099365234375
+  },
+  "figType": "Table",
+  "imageText": ["Rot.", "Laplace", "0.435", "0.641", "0.744", "11.2", "0.735", "0.900", "0.964", "6.3", "RPMG-Quat", "0.323", "0.500", "0.656", "15.0", "0.566", "0.796", "0.909", "8.9", "RPMG-6D", "0.354", "0.572", "0.706", "13.5", "0.696", "0.861", "0.922", "6.7", "RPMG-9D", "0.368", "0.574", "0.718", "12.5", "0.725", "0.880", "0.958", "6.7", "RPMG-10D", "0.400", "0.577", "0.713", "12.9", "0.693", "0.871", "0.939", "7.0", "Euler", "angles", "0.282", "0.481", "0.627", "15.7", "0.602", "0.809", "0.906", "8.3", "Axis-angle", "0.053", "0.081", "0.101", "79.7", "0.450", "0.709", "0.851", "11.0", "Quaternion", "0.208", "0.388", "0.546", "18.7", "0.343", "0.608", "0.735", "13.2", "6D", "0.218", "0.390", "0.553", "18.1", "0.508", "0.767", "0.890", "9.9", "9D", "0.206", "0.376", "0.569", "18.0", "0.524", "0.796", "0.903", "9.2", "9D-Inf", "0.380", "0.533", "0.699", "13.4", "0.709", "0.880", "0.935", "6.7", "10D", "0.239", "0.423", "0.567", "17.9", "0.502", "0.770", "0.896", "9.8", "Acc@10↑", "Acc@15↑", "Acc@20↑", "Med.↓", "Acc@10↑", "Acc@15↑", "Acc@20↑", "Med.↓", "Methods", "Bicycle", "Sofa"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 116.64,
+    "y2": 255.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Mvetq8DO05O-Table4-1.png"
+}, {
+  "caption": "Table 5: Numerical comparisons with our proposed Quaternion & Rotation Laplace distribution and baselines on ModelNet10-SO3 dataset. One model is trained for each category. Quaternion Laplace distribution clearly outperforms Bingham distribution (Deng et al., 2022).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00518798828125,
+    "y1": 277.38653564453125,
+    "y2": 303.31402587890625
+  },
+  "figType": "Table",
+  "imageText": ["Quat.", "Laplace", "12.6", "5.2", "0.49", "13.1", "3.7", "0.67", "5.9", "3.4", "0.69", "17.7", "3.4", "0.69", "Rot.", "Laplace", "9.7", "3.5", "0.68", "8.8", "2.1", "0.84", "5.3", "2.6", "0.83", "15.5", "2.3", "0.82", "Deng", "et", "al.", "(2022)", "16.5", "7.2", "0.31", "16.5", "4.9", "0.52", "9.6", "4.2", "0.59", "22.0", "5.1", "0.49", "Mohlin", "et", "al.", "(2020)", "10.8", "4.6", "0.55", "11.1", "3.5", "0.70", "6.4", "3.5", "0.70", "16.0", "3.8", "0.66", "Mean↓", "Med.↓", "Acc@5↑", "Mean↓", "Med.↓", "Acc@5↑", "Mean↓", "Med.↓", "Acc@5↑", "Mean↓", "Med.↓", "Acc@5↑", "Chair", "Sofa", "Toilet", "Bed"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 311.52,
+    "y2": 381.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Mvetq8DO05O-Table5-1.png"
+}, {
+  "caption": "Figure 1: Visualization of the results of matrix Fisher distribution and Rotation Laplace distribution after convergence. The horizontal axis is the geodesic distance between the prediction and the ground truth. The blue bins count the number of data points within corresponding errors (2◦ each bin). The red dots illustrate the percentage of the sum of the gradient magnitude ∥∂L/∂(dist. param.)∥ within each bin. The experiment is done on all categories of ModelNet10-SO3 dataset.",
+  "captionBoundary": {
+    "x1": 108.0000228881836,
+    "x2": 504.00433349609375,
+    "y1": 167.11154174804688,
+    "y2": 212.96502685546875
+  },
+  "figType": "Figure",
+  "imageText": ["%", ")", "en", "t", "(", "ra", "di", ".", "o", "f", "g", "M", "ag", "25", "20", "15", "10", "5", "0", "Rotation", "Laplace", "distribution", "#Data", "points", "Mag.", "of", "gradient", "in", "ts", "a", "po", "#D", "at", "5000", "4000", "3000", "2000", "1000", "0", "0", "25", "50", "75", "100", "125", "150", "175", "error", "(", ")", "%", ")", "en", "t", "(", "ra", "di", ".", "o", "f", "g", "M", "ag", "12", "10", "8", "6", "4", "2", "0", "Matrix", "Fisher", "distribution", "#Data", "points", "Mag.", "of", "gradient", "in", "ts", "a", "po", "#D", "at", "4000", "3000", "2000", "1000", "0", "0", "25", "50", "75", "100", "125", "150", "175", "error", "(", ")"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 496.79999999999995,
+    "y1": 83.03999999999999,
+    "y2": 157.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Mvetq8DO05O-Figure1-1.png"
+}]

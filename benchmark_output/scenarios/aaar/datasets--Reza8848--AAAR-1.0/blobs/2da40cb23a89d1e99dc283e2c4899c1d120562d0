@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 1: β-VAEs require multiple runs of training with different KL weights β to visualize parts of the rate-distortion curve (Pareto frontier). Our proposed Multi-Rate VAEs (MR-VAEs) can learn the full continuous rate-distortion curve in a single run with a small memory and computational overhead.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00244140625,
+    "y1": 169.94134521484375,
+    "y2": 195.70001220703125
+  },
+  "figType": "Figure",
+  "imageText": ["VAE", "β-VAEs", "β-VAEs", "(KL", "Annealing)", "MR-VAEs", "Rate-Distortion", "Curve", "io", "n", "to", "rt", "D", "is", "150", "100", "50", "0", "Rate", "Methods", "Parameters", "Training", "Time", "(s)", "RD", "Curve", "Standard", "VAE", "18.81×", "104", "4,832", "✗", "β-VAE", "18.81×", "104", "4,836", "✗", "β-VAEs", "(+8", "runs)", "15.04×", "105", "38,492", "▲", "β-VAEs", "(+", "KL", "Annealing)", "15.04×", "105", "38,640", "▲", "MR-VAEs", "(ours)", "18.84×", "104", "5,040", "✓", "0", "20", "40", "60", "80", "100", "120"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.91999999999996,
+    "y1": 82.08,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure1-1.png"
+}, {
+  "caption": "Figure 4: A comparison of MR-VAEs and β-VAEs on linear VAEs. MR-VAEs learn the optimal ratedistortion curve in a single training run.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 505.4847412109375,
+    "y1": 466.13134765625,
+    "y2": 491.8890075683594
+  },
+  "figType": "Figure",
+  "imageText": ["β-VAE", "MR-VAE", "MNIST", "(Linear", "VAE)", "io", "n", "to", "rt", "D", "is", "60", "40", "20", "0", "Rate", "0", "10", "20", "30", "40", "50", "60", "70"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 326.88,
+    "x2": 500.15999999999997,
+    "y1": 354.24,
+    "y2": 458.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure4-1.png"
+}, {
+  "caption": "Figure 5: A comparison of MR-VAEs and β-VAEs (with and without KL annealing). β-VAEs were trained multiple times on several KL weighting β to construct the rate-distortion curve. Across all tasks, MR-VAEs achieve a competitive rate-distortion curve with β-VAEs on a single run of training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00030517578125,
+    "y1": 315.3013610839844,
+    "y2": 341.0589904785156
+  },
+  "figType": "Figure",
+  "imageText": ["Omniglot", "(NVAE)", "io", "n", "to", "rt", "D", "is", "125", "100", "75", "50", "25", "0", "Rate", "0", "25", "50", "75", "100", "125", "150", "β-VAE", "MR-VAE", "MNIST", "(NVAE)", "io", "n", "to", "rt", "D", "is", "125", "100", "75", "50", "25", "0", "Rate", "0", "25", "50", "75", "100", "125", "150", "β-VAE", "MR-VAE", "Yahoo", "io", "n", "to", "rt", "D", "is", "380", "360", "340", "320", "300", "Rate", "20", "40", "60", "80", "100", "CelebA", "io", "n", "to", "rt", "D", "is", "200", "150", "100", "50", "Rate", "0", "50", "100", "150", "200", "SVHN", "io", "n", "to", "rt", "D", "is", "60", "40", "20", "0", "Rate", "0", "20", "40", "60", "80"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 499.2,
+    "y1": 147.84,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure5-1.png"
+}, {
+  "caption": "Figure 6: A comparison of independently trained β-VAEs (with KL annealing) and MR-VAEs on proxy metrics such as (top) active units (AU) and (bottom) Fréchet inception distance (FID). Note that a lower FID is better.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9966735839844,
+    "y1": 514.224365234375,
+    "y2": 530.01904296875
+  },
+  "figType": "Figure",
+  "imageText": ["CelebA", "FI", "D", "120", "100", "80", "60", "β", "10−2", "10−1", "100", "101", "β-VAE", "MR-VAE", "SVHN", "FI", "D", "200", "100", "β", "10−2", "10−1", "100", "101", "CelebA", "U", ")", "ts", "(A", "U", "ni", "iv", "e", "A", "ct", "60", "40", "20", "β", "10−1", "100", "101", "SVHN", "U", ")", "ts", "(A", "U", "ni", "iv", "e", "A", "ct", "40", "30", "20", "10", "0", "β", "10−1", "100", "101", "β-VAE", "MR-VAE", "Omniglot", "U", ")", "ts", "(A", "U", "ni", "iv", "e", "A", "ct", "40", "30", "20", "10", "0", "β", "10−1", "100", "101"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 498.71999999999997,
+    "y1": 350.4,
+    "y2": 500.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure6-1.png"
+}, {
+  "caption": "Figure 2: The MR-VAE architecture scales the pre-activations for each layer of the base VAE. This scaling term is generated with an affine transformation on the log KL weight followed by an activation function.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9963073730469,
+    "y1": 195.74737548828125,
+    "y2": 211.5419921875
+  },
+  "figType": "Figure",
+  "imageText": ["Layer", "Affine", "Transform", "Log"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 179.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Instead of training several VAEs for each desired KL weight β, MR-VAEs learn the response functions with a hypernetwork in a single training run.",
+  "captionBoundary": {
+    "x1": 329.7590026855469,
+    "x2": 505.4876403808594,
+    "y1": 415.6843566894531,
+    "y2": 451.4049987792969
+  },
+  "figType": "Figure",
+  "imageText": ["Response", "Function", "VAEs", "exp(", ")", "=", "10", "exp(", ")", "=", "0:01"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 337.91999999999996,
+    "x2": 503.52,
+    "y1": 291.84,
+    "y2": 408.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Generative samples for β-VAEs and MR-VAEs on CelebA and SVHN datasets. We use the same latent variables z sampled from the prior for all columns. For MR-VAEs, there is consistency among the generated images in each column since intermediate weights are shared for different β. While higher β values result in a worse reconstruction loss for both models, MR-VAEs produce images that are of higher quality.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.0038757324219,
+    "y1": 169.32733154296875,
+    "y2": 205.0479736328125
+  },
+  "figType": "Figure",
+  "imageText": ["MR-VAEs-VAEs"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 500.15999999999997,
+    "y1": 72.96,
+    "y2": 154.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OJ8aSjCaMNK-Figure7-1.png"
+}]

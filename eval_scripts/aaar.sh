@@ -31,11 +31,11 @@ MAX_INSTANCES="${3:-}"
 
 # ── Run entries ─────────────────────────────────────────────────────────────
 RUN_ENTRIES=()
-RUN_ENTRIES+=("aaar_experiment_design,model=${MODEL}")
-RUN_ENTRIES+=("aaar_paper_weakness,model=${MODEL}")
+RUN_ENTRIES+=("aaar_experiment_design:model=${MODEL}")
+RUN_ENTRIES+=("aaar_paper_weakness:model=${MODEL}")
 
 # ── Build and execute HELM command ──────────────────────────────────────────
-CMD=(helm-run --run-entries "${RUN_ENTRIES[@]}" --suite "$SUITE")
+CMD=(helm-run --plugins run_specs.aaar_run_specs --run-entries "${RUN_ENTRIES[@]}" --suite "$SUITE")
 if [ -n "$MAX_INSTANCES" ]; then
     CMD+=(--max-eval-instances "$MAX_INSTANCES")
 fi

@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 11: Comparison of performance between building NECSA on different backbones.",
+  "captionBoundary": {
+    "x1": 126.48999786376953,
+    "x2": 485.51214599609375,
+    "y1": 248.44754028320312,
+    "y2": 254.45001220703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 427.2,
+    "y1": 146.88,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure11-1.png"
+}, {
+  "caption": "Figure 4: The evaluation of each approach on MuJoCo tasks.",
+  "captionBoundary": {
+    "x1": 184.48199462890625,
+    "x2": 427.51959228515625,
+    "y1": 353.8895263671875,
+    "y2": 359.8919982910156
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 472.32,
+    "y1": 80.64,
+    "y2": 343.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure4-1.png"
+}, {
+  "caption": "Figure 8: Comparison between abstraction of the state and state-action pairs.",
+  "captionBoundary": {
+    "x1": 153.10499572753906,
+    "x2": 458.8970031738281,
+    "y1": 182.59451293945312,
+    "y2": 188.59698486328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 427.2,
+    "y1": 80.64,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Comparison between different granularities of grid-based abstraction.",
+  "captionBoundary": {
+    "x1": 147.6999969482422,
+    "x2": 464.30133056640625,
+    "y1": 445.76953125,
+    "y2": 451.7720031738281
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 427.2,
+    "y1": 344.64,
+    "y2": 435.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Comparison of performance between different granularities of revising rewards.",
+  "captionBoundary": {
+    "x1": 124.76599884033203,
+    "x2": 487.23516845703125,
+    "y1": 689.0005493164062,
+    "y2": 695.0029907226562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 427.2,
+    "y1": 588.0,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure10-1.png"
+}, {
+  "caption": "Figure 1: The overview of NECSA. We abstract the concrete state-action pairs, measure the abstract states and combine the state measurement with the traces. Finally, the revised traces will be stored in the replay buffer for the agent to sample.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0005798339844,
+    "y1": 213.16854858398438,
+    "y2": 241.0889892578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 80.64,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure1-1.png"
+}, {
+  "caption": "Figure 7: Density of abstract state visiting times on Walker2d-v3 (m=3).",
+  "captionBoundary": {
+    "x1": 161.802001953125,
+    "x2": 450.1992492675781,
+    "y1": 562.987548828125,
+    "y2": 568.989990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 427.2,
+    "y1": 461.76,
+    "y2": 552.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure7-1.png"
+}, {
+  "caption": "Table 2: List of main hyperparameters used in NECSA.",
+  "captionBoundary": {
+    "x1": 195.15200805664062,
+    "x2": 416.54095458984375,
+    "y1": 196.56051635742188,
+    "y2": 202.56298828125
+  },
+  "figType": "Table",
+  "imageText": ["Critic", "Learning", "Rate", "3e-4", "Actor", "Learning", "Rate", "3e-4", "Optimizer", "Adam", "Memory", "Size", "100000", "Batch", "Size", "100", "Discount", "Factor", "0.99", "Episode", "Length", "1000", "Exploration", "Policy", "N(0,", "0.1)", "Hyper-paramater", "NECSA"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 231.84,
+    "x2": 380.15999999999997,
+    "y1": 215.51999999999998,
+    "y2": 326.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Table2-1.png"
+}, {
+  "caption": "Figure 5: The evaluation of performance between one-step and m-step NECSA.",
+  "captionBoundary": {
+    "x1": 146.9980010986328,
+    "x2": 465.0041809082031,
+    "y1": 425.6495361328125,
+    "y2": 431.6520080566406
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 472.32,
+    "y1": 331.68,
+    "y2": 415.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure5-1.png"
+}, {
+  "caption": "Figure 6: The evaluation of performance between measuring the abstract state by reward confidence scores and Q values.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013732910156,
+    "y1": 678.3255615234375,
+    "y2": 695.2869873046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 472.32,
+    "y1": 584.64,
+    "y2": 667.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure6-1.png"
+}, {
+  "caption": "Table 1: The best average returns of each approach on MuJoCo tasks.",
+  "captionBoundary": {
+    "x1": 167.2310028076172,
+    "x2": 444.46026611328125,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Walker2d-v3", "387.73", "1756.09", "2338.24", "2024.94", "3768.08", "Hopper-v3", "1180.64", "2411.15", "2347.98", "1450.24", "3026.57", "Humanoid-v3", "431.69", "3858.07", "3296.64", "3846.88", "4540.12", "Ant-v3", "811.53", "5223.94", "789.99", "4107.28", "5588.44", "HalfCheetah-v3", "11314.36", "10120.34", "11052.82", "11458.70", "12097.91", "Swimmer-v3", "138.42", "60.10", "101.71", "146.65", "149.63", "Reacher-v2", "-4.05", "-4.01", "-5.01", "-5.99", "-3.97", "InvertedPendulum-v2", "1000.0", "535.97", "1000.0", "955.48", "1000.0", "InvertedDoublePendulum-v2", "9316.83", "9333.19", "9327.17", "6858.88", "9359.33", "Task", "Name", "DDPG", "TD3", "EMAC", "GEM", "NECSA"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 102.24,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Table1-1.png"
+}, {
+  "caption": "Figure 2: Take a 2-dimensional concrete state space as an example. Concrete states can be labeled by the ID of grids. For example, In trace 1, state si−1 is abstract state ŝ1. Concrete state si+2 in trace 1 and si+1 in trace 2 are located in the same grid, thus they share the same abstract state ŝ13 (red ones). In this way, trace 1 can be represented as (ŝ5, ŝ1, ŝ7, ŝ17, ŝ13).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7428283691406,
+    "y1": 231.46749877929688,
+    "y2": 271.84100341796875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Concrete", "state", "transitions.", "(b)", "Grid-based", "state", "abstraction.", "(c)", "Abstract", "state", "transitions."],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 85.92,
+    "y2": 214.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure2-1.png"
+}, {
+  "caption": "Figure 3: A schematic diagram of the multi-step analysis. We slide windows with different lengths to extract patterns.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 156.87051391601562,
+    "y2": 173.83197021484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 219.84,
+    "x2": 392.15999999999997,
+    "y1": 80.64,
+    "y2": 146.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C2fsSj3ZGiU-Figure3-1.png"
+}]

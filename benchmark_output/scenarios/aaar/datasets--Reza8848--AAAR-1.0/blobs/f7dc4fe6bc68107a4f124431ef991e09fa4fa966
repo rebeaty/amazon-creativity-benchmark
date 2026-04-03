@@ -1,0 +1,21 @@
+[{
+  "caption": "Figure 1: A simple example where the linear function class learns the correct feature and ignores the spurious feature. A simplified version of the synthetic example proposed in Saunshi et al. (2022). The orange points are the original data and blue points are augmented data (obtained by adding noise in the spurious dimension). The dimension invariant to augmentation is desired. Edges represent positive pairs that are constructed from augmentation. We say a real-valued function implements a cluster if it outputs constant 1 on the cluster and outputs 0 on all other data. The figure above shows two possible ways to partition the data into two clusters, but only the one on the left-hand side (which captures the invariant dimension) is implementable by a linear function. Note that linear model is not composed with a threshold function. The partition on the right hand side is not implementable because any linear model that outputs constant 1 on the upper-left small cluster would also output 1 on the bottom-left small cluster due to linear extrapolation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 242.31350708007812,
+    "y2": 357.90484619140625
+  },
+  "figType": "Figure",
+  "imageText": ["1", "1", "1", "1", "1", "not", "implementableimplementable", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "spurious", "dimension", "invariant", "dimension", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "1", "1", "1", "spurious", "dimension", "invariant", "dimension"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 133.44,
+    "x2": 440.15999999999997,
+    "y1": 84.0,
+    "y2": 217.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AuEgNlEAmed-Figure1-1.png"
+}]

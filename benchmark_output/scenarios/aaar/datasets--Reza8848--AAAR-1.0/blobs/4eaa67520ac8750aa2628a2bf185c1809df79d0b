@@ -1,0 +1,621 @@
+[{
+  "caption": "Table 21: The mean accuracy [%] and the share of data [%] in each entropy bucket for batch size 128 on the Health Heritage dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952392578125,
+    "y1": 547.12158203125,
+    "y2": 564.0830078125
+  },
+  "figType": "Table",
+  "imageText": ["Random", "69.8", "100", "Random", "34.2", "100", "Overall", "66.1", "100", "Overall", "60.7", "100", "0.0-0.2", "90.7", "6.2", "∞-0.72", "69.1", "1.1", "0.2-0.4", "84.7", "22.1", "0.72-1.16", "65.6", "17.0", "0.4-0.6", "70.5", "21.2", "1.16-1.6", "61.8", "52.9", "0.6-0.8", "54.8", "32.3", "1.6-2.04", "55.9", "26.5", "0.8-1.0", "50.3", "18.4", "2.04-∞", "49.4", "2.5", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Entropy", "Categorical", "Features", "Entropy", "Continuous", "Features"],
+  "name": "21",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 469.44,
+    "y1": 576.9599999999999,
+    "y2": 704.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table21-1.png"
+}, {
+  "caption": "Table 19: The mean accuracy [%] and the share of data [%] in each entropy bucket for batch size 128 on the German Credit dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952392578125,
+    "y1": 109.80753326416016,
+    "y2": 126.76898193359375
+  },
+  "figType": "Table",
+  "imageText": ["Random", "73.5", "100", "Random", "37.8", "100", "Overall", "78.2", "100", "Overall", "58.4", "100", "0.0-0.2", "98.1", "7.4", "∞-0.72", "55.7", "1.2", "0.2-0.4", "92.5", "15.3", "0.72-1.16", "62.3", "28.1", "0.4-0.6", "83.3", "22.2", "1.16-1.6", "57.7", "56.4", "0.6-0.8", "71.6", "33.7", "1.6-2.04", "53.4", "13.2", "0.8-1.0", "66.0", "21.3", "2.04-∞", "48.2", "0.2", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Entropy", "Categorical", "Features", "Entropy", "Continuous", "Features"],
+  "name": "19",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 469.44,
+    "y1": 139.68,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table19-1.png"
+}, {
+  "caption": "Table 20: The mean accuracy [%] and the share of data [%] in each entropy bucket for batch size 128 on the Lawschool Admissions dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952392578125,
+    "y1": 328.46453857421875,
+    "y2": 345.4259948730469
+  },
+  "figType": "Table",
+  "imageText": ["Random", "81.1", "100", "Random", "19.1", "100", "Overall", "83.5", "100", "Overall", "62.6", "100", "0.0-0.2", "95.5", "3.4", "∞-0.72", "69.5", "20.7", "0.2-0.4", "92.1", "14.2", "0.72-1.16", "63.3", "35.1", "0.4-0.6", "88.0", "32.7", "1.16-1.6", "60.1", "32.9", "0.6-0.8", "81.2", "30.4", "1.6-2.04", "55.5", "10.8", "0.8-1.0", "70.7", "19.3", "2.04-∞", "54.1", "0.5", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Entropy", "Categorical", "Features", "Entropy", "Continuous", "Features"],
+  "name": "20",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 469.44,
+    "y1": 358.56,
+    "y2": 485.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table20-1.png"
+}, {
+  "caption": "Figure 5: Mean and standard deviation accuracy [%] curves over batch size at varying Gaussian noise level σ added to the client gradients for differential privacy on the German Credit dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0015869140625,
+    "y1": 252.93850708007812,
+    "y2": 269.9000244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "σ", "=", "0.1", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(b)", "σ", "=", "0.01", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(a)", "σ", "=", "0.001", "Random", "Cosine", "TabLeak", "90", "100", "Re", "co", "ns", "tru", "ct", "io", "n", "Ac", "cu", "ra", "cy", "[%", "]", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 102.72,
+    "y2": 239.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Mean and standard deviation accuracy [%] curves over batch size at varying Gaussian noise level σ added to the client gradients for differential privacy on the Lawschool Admissions dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0015869140625,
+    "y1": 471.59552001953125,
+    "y2": 488.5570068359375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "σ", "=", "0.1", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(b)", "σ", "=", "0.01", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(a)", "σ", "=", "0.001", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 320.64,
+    "y2": 458.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Mean and standard deviation accuracy [%] curves over batch size at varying Gaussian noise level σ added to the client gradients for differential privacy on the Health Heritage dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0015869140625,
+    "y1": 690.2525634765625,
+    "y2": 707.2139892578125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "σ", "=", "0.1", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(b)", "σ", "=", "0.01", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(a)", "σ", "=", "0.001", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 540.0,
+    "y2": 676.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure7-1.png"
+}, {
+  "caption": "Figure 10: Mean reconstruction accuracy curves with corresponding standard deviations over varying batch size, separately for the discrete and the continuous features on all four datasets.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 579.9845581054688,
+    "y2": 596.9459838867188
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Health", "Heritage", "Cosine,", "discrete", "TabLeak,", "discrete", "Cosine,", "continuous", "TabLeak,", "continuous", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(c)", "Lawschool", "Admissions", "Cosine,", "discrete", "TabLeak,", "discrete", "Cosine,", "continuous", "TabLeak,", "continuous", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(b)", "German", "Credit", "cy", "[%", "]", "Cosine,", "discrete", "TabLeak,", "discrete", "Cosine,", "continuous", "TabLeak,", "continuous", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(a)", "Adult", "Cosine,", "discrete", "TabLeak,", "discrete", "Cosine,", "continuous", "TabLeak,", "continuous", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "10",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 212.64,
+    "y2": 566.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure10-1.png"
+}, {
+  "caption": "Figure 1: Overview of TabLeak. Our approach transforms the optimization problem into a fully continuous one by optimizing continuous versions of the discrete features, obtained by applying softmax (Step 1, middle boxes), resulting in N candidate solutions (Step 1, bottom). Then, we pool together an ensemble of N different solutions z1, z2, ..., zN obtained from the optimization to reduce the variance of the reconstruction (Step 2). Finally, we assess the quality of the reconstruction by computing the entropy from the feature distributions in the ensemble (Step 3).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3529968261719,
+    "y1": 272.3895568847656,
+    "y2": 333.18701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure1-1.png"
+}, {
+  "caption": "Table 11: Mean and standard deviation of the inversion accuracy [%] with local dataset size of 32 in FedAvg training on the German Credit dataset. The accuracy of the random baseline for 32 datapoints is 56.9± 2.1.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.24859619140625,
+    "y1": 209.16952514648438,
+    "y2": 237.0899658203125
+  },
+  "figType": "Table",
+  "imageText": ["1", "95.2±", "3.8", "87.9±", "6.2", "83.4±", "4.6", "78.2±", "4.6", "65.4±", "6.2", "62.5±", "6.1", "2", "95.5±", "3.9", "88.2±", "5.2", "84.0±", "6.6", "78.3±", "5.8", "68.8±", "6.6", "63.4±", "4.8", "4", "95.6±", "3.6", "85.5±", "6.0", "81.0±", "6.1", "79.2±", "4.9", "67.4±", "4.8", "62.6±", "6.5", "#batches", "1", "epoch", "5", "epochs", "10", "epochs", "1", "epoch", "5", "epochs", "10", "epochs", "TabLeak", "Cosine"],
+  "name": "11",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 249.6,
+    "y2": 321.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table11-1.png"
+}, {
+  "caption": "Table 10: Mean and standard deviation of the inversion accuracy [%] with local dataset size of 32 in FedAvg training on the Adult dataset. The accuracy of the random baseline for 32 datapoints is 58.0± 2.9.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.24859619140625,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["1", "77.4±", "4.5", "71.1±", "2.9", "67.6±", "3.7", "65.2±", "2.7", "56.1±", "4.1", "53.2±", "4.2", "2", "75.7±", "5.0", "71.7±", "3.9", "67.7±", "4.2", "64.8±", "3.3", "56.4±", "4.8", "56.2±", "4.8", "4", "75.9±", "4.4", "71.0±", "3.2", "67.4±", "3.4", "64.8±", "3.4", "58.7±", "4.6", "56.6±", "5.0", "#batches", "1", "epoch", "5", "epochs", "10", "epochs", "1", "epoch", "5", "epochs", "10", "epochs", "TabLeak", "Cosine"],
+  "name": "10",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 124.8,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table10-1.png"
+}, {
+  "caption": "Table 12: Mean and standard deviation of the inversion accuracy [%] with local dataset size of 32 in FedAvg training on the Lawschool Admissions dataset. The accuracy of the random baseline for 32 datapoints is 57.8± 2.3.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.24859619140625,
+    "y1": 617.8465576171875,
+    "y2": 645.7669677734375
+  },
+  "figType": "Table",
+  "imageText": ["1", "85.6±", "3.8", "83.3±", "2.9", "80.7±", "4.1", "72.2±", "2.6", "68.1±", "3.1", "65.2±", "2.8", "2", "86.0±", "3.8", "83.0±", "3.2", "79.8±", "3.5", "72.5±", "1.9", "68.3±", "4.4", "66.2±", "2.8", "4", "85.8±", "3.5", "81.7±", "3.8", "79.3±", "4.3", "72.5±", "2.4", "69.4±", "3.9", "67.9±", "3.8", "#batches", "1", "epoch", "5", "epochs", "10", "epochs", "1", "epoch", "5", "epochs", "10", "epochs", "TabLeak", "Cosine"],
+  "name": "12",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 658.56,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table12-1.png"
+}, {
+  "caption": "Figure 4: Mean and standard deviation accuracy [%] curves over batch size at varying Gaussian noise level σ added to the client gradients for differential privacy on the Adult dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0015869140625,
+    "y1": 233.57852172851562,
+    "y2": 250.53997802734375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "σ", "=", "0.1", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(b)", "σ", "=", "0.01", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(a)", "σ", "=", "0.001", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 82.56,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure4-1.png"
+}, {
+  "caption": "Figure 9: The mean and standard deviation of the Root Mean Square Error (RMSE) of the reconstructions of the continuous features on all four datasets over batch sizes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65155029296875,
+    "y1": 596.1895751953125,
+    "y2": 613.1500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Health", "Heritage", "Cosine", "TabLeak", "(no", "softmax)", "TabLeak", "(no", "pooling)", "TabLeak", "RM", "SE", "4.0", "3.5", "3.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(c)", "Lawschool", "Admissions", "Cosine", "TabLeak", "(no", "softmax)", "TabLeak", "(no", "pooling)", "TabLeak", "RM", "SE", "10", "8", "6", "4", "2", "0", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(b)", "German", "Credit", "Cosine", "TabLeak", "(no", "softmax)", "TabLeak", "(no", "pooling)", "TabLeak", "RM", "SE", "8", "6", "4", "2", "0", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)", "(a)", "Adult", "Cosine", "TabLeak", "(no", "softmax)", "TabLeak", "(no", "pooling)", "TabLeak", "RM", "SE", "8", "6", "4", "2", "0", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 120.47999999999999,
+    "x2": 491.03999999999996,
+    "y1": 196.79999999999998,
+    "y2": 583.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure9-1.png"
+}, {
+  "caption": "Table 13: Mean and standard deviation of the inversion accuracy [%] with local dataset size of 32 in FedAvg training on the Health Heritage dataset. The accuracy of the random baseline for 32 datapoints is 43.4± 3.5.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.24859619140625,
+    "y1": 111.25455474853516,
+    "y2": 139.17498779296875
+  },
+  "figType": "Table",
+  "imageText": ["1", "68.5±", "5.0", "62.2±", "3.5", "57.4±", "3.0", "53.8±", "5.5", "41.4±", "3.6", "41.1±", "3.4", "2", "68.1±", "4.9", "62.4±", "4.1", "57.0±", "2.8", "52.4±", "5.7", "43.4±", "4.28", "44.4±", "4.3", "4", "67.3±", "5.8", "62.0±", "3.5", "57.0±", "3.0", "52.5±", "6.6", "43.4±", "5.7", "44.8±", "4.4", "#batches", "1", "epoch", "5", "epochs", "10", "epochs", "1", "epoch", "5", "epochs", "10", "epochs", "TabLeak", "Cosine"],
+  "name": "13",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 151.68,
+    "y2": 222.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table13-1.png"
+}, {
+  "caption": "Table 15: The mean accuracy [%] and entropies with the corresponding standard deviations over batch sizes of the categorical and the continuous features on the German Credit dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1659240722656,
+    "y1": 527.3435668945312,
+    "y2": 544.3049926757812
+  },
+  "figType": "Table",
+  "imageText": ["1", "100.0±", "0.0", "0.00±", "0.01", "100.0±", "0.0", "−3.10±", "0.18", "2", "100.0±", "0.0", "0.03±", "0.05", "100.0±", "0.0", "−2.41±", "0.97", "4", "100.0±", "0.0", "0.07±", "0.05", "99.8±", "1.1", "−1.66±", "0.80", "8", "100.0±", "0.0", "0.10±", "0.07", "99.1±", "3.1", "−1.38±", "0.54", "16", "99.5±", "1.4", "0.25±", "0.07", "89.1±", "8.1", "−0.35±", "0.22", "32", "93.0±", "2.1", "0.43±", "0.04", "66.0±", "4.9", "0.60±", "0.13", "64", "81.9±", "1.8", "0.56±", "0.02", "57.5±", "2.2", "1.08±", "0.06", "128", "78.2±", "1.1", "0.59±", "0.02", "58.4±", "1.7", "1.30±", "0.05", "Accuracy", "Entropy", "Accuracy", "Entropy", "Discrete", "Continuous"],
+  "name": "15",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 557.28,
+    "y2": 702.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table15-1.png"
+}, {
+  "caption": "Table 14: The mean accuracy [%] and entropies with the corresponding standard deviations over batch sizes of the categorical and the continuous features on the Adult dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1659240722656,
+    "y1": 287.4635314941406,
+    "y2": 304.42498779296875
+  },
+  "figType": "Table",
+  "imageText": ["1", "100.0±", "0.0", "0.01±", "0.04", "98.7±", "6.5", "−3.1±", "0.26", "2", "99.5±", "3.5", "0.01±", "0.06", "98.8±", "8.2", "−2.82±", "0.57", "4", "99.5±", "1.4", "0.08±", "0.11", "95.8±", "9.9", "−1.89±", "0.99", "8", "98.5±", "5.6", "0.15±", "0.13", "90.9±", "14.7", "−1.11±", "0.95", "16", "97.2±", "4.3", "0.26±", "0.11", "78.8±", "13.5", "−0.11±", "0.63", "32", "91.0±", "4.4", "0.40±", "0.06", "59.2±", "6.9", "0.77±", "0.30", "64", "83.2±", "3.6", "0.48±", "0.04", "55.1±", "3.0", "1.21±", "0.19", "128", "78.5±", "1.8", "0.53±", "0.03", "55.7±", "2.0", "1.48±", "0.10", "Accuracy", "Entropy", "Accuracy", "Entropy", "Discrete", "Continuous"],
+  "name": "14",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 317.76,
+    "y2": 462.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table14-1.png"
+}, {
+  "caption": "Table 5: Resulting tolerance bounds on the Adult dataset when using ϵi = 0.319σC i , as used by us for our experiments.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.003662109375,
+    "y1": 386.7705383300781,
+    "y2": 403.73199462890625
+  },
+  "figType": "Table",
+  "imageText": ["tolerance", "4.2", "33699", "0.8", "2395", "129", "3.8", "feature", "age", "fnlwgt", "education-num", "capital-gain", "capital-loss", "hours-per-week"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 416.64,
+    "y2": 444.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table5-1.png"
+}, {
+  "caption": "Table 1: The mean inversion accuracy [%] and standard deviation of different methods over varying batch sizes with given true labels (True y) and with reconstructed labels (Rec. ŷ) on the Adult dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9974060058594,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Rec.", "ŷ", "8", "86.9±", "11.6", "84.6±", "13.4", "85.8±", "9.9", "83.3±", "9.7", "53.9±", "4.4", "16", "82.4±", "8.4", "78.3±", "9.0", "77.7±", "4.1", "73.0±", "3.5", "55.1±", "3.9", "32", "75.3±", "4.8", "70.6±", "4.3", "70.2±", "3.2", "66.3±", "3.4", "58.0±", "2.9", "64", "70.4±", "3.2", "65.9±", "3.6", "66.8±", "2.6", "63.1±", "3.2", "59.0±", "3.2", "128", "68.7±", "1.3", "64.4±", "1.5", "63.8±", "2.1", "59.5±", "2.1", "61.2±", "3.1", "True", "y", "8", "95.1±", "9.2", "93.9±", "10.2", "92.9±", "6.5", "91.1±", "7.3", "53.9±", "4.4", "16", "89.5±", "7.6", "84.5±", "9.9", "80.5±", "4.3", "75.0±", "5.2", "55.1±", "3.9", "32", "77.6±", "4.8", "72.4±", "4.6", "70.8±", "3.2", "66.6±", "3.5", "58.0±", "2.9", "64", "71.2±", "2.8", "66.2±", "2.8", "66.9±", "2.7", "62.5±", "3.1", "59.0±", "3.2", "128", "68.8±", "1.3", "64.1±", "1.4", "64.0±", "2.1", "59.5±", "2.1", "61.2±", "3.1", "Label", "Batch", "TabLeak", "TabLeak", "TabLeak", "Cosine", "Random", "Size", "(no", "pooling)", "(no", "softmax)"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 471.35999999999996,
+    "y1": 109.44,
+    "y2": 243.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table1-1.png"
+}, {
+  "caption": "Figure 3: The inversion accuracy on the Adult dataset over varying batch size separated for discrete (D) and continuous (C) features.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.1641845703125,
+    "y1": 534.4615478515625,
+    "y2": 562.3809814453125
+  },
+  "figType": "Figure",
+  "imageText": ["Cosine,", "discrete", "TabLeak,", "discrete", "Cosine,", "continuous", "TabLeak,", "continuous", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "1", "2", "4", "8", "16", "32", "64", "128", "Batchsize", "(log", "scale)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 495.35999999999996,
+    "y1": 376.8,
+    "y2": 524.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure3-1.png"
+}, {
+  "caption": "Table 7: The mean inversion accuracy [%] and standard deviation of different methods over varying batch sizes with given true labels (top) and with reconstructed labels (bottom) on the German Credit dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9998474121094,
+    "y1": 438.5545349121094,
+    "y2": 466.4750061035156
+  },
+  "figType": "Table",
+  "imageText": ["Rec.", "ŷ", "1", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "43.9±", "9.8", "2", "100.0±", "0.0", "99.5±", "3.5", "99.9±", "0.7", "98.8±", "5.2", "45.1±", "6.6", "4", "99.6±", "2.6", "99.5±", "2.9", "99.2±", "3.0", "97.4±", "6.4", "50.3±", "4.5", "8", "97.2±", "6.1", "96.8±", "6.8", "96.0±", "6.2", "94.8±", "6.5", "51.8±", "3.2", "16", "91.7±", "6.5", "90.0±", "7.3", "82.3±", "4.6", "77.9±", "4.6", "54.5±", "3.0", "32", "81.5±", "3.4", "77.6±", "2.8", "71.5±", "2.0", "69.1±", "2.1", "56.8±", "2.2", "64", "72.9±", "1.4", "70.5±", "1.4", "68.6±", "1.3", "66.5±", "1.7", "59.4±", "1.9", "128", "71.1±", "0.9", "69.1±", "0.7", "67.1±", "1.6", "64.4±", "1.6", "61.0±", "2.1", "True", "y", "1", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "43.9±", "9.8", "2", "100.0±", "0.0", "100.0±", "0.0", "99.9±", "0.7", "98.0±", "7.1", "45.1±", "6.6", "4", "99.9±", "0.4", "99.2±", "3.6", "99.5±", "1.2", "97.8±", "6.0", "50.3±", "4.5", "8", "99.7±", "1.1", "99.1±", "2.2", "98.2±", "2.5", "96.1±", "5.2", "51.8±", "3.2", "16", "95.9±", "3.4", "94.0±", "4.3", "84.1±", "3.4", "79.3±", "4.4", "54.5±", "3.0", "32", "83.6±", "2.9", "79.4±", "3.1", "72.1±", "1.9", "69.7±", "2.2", "56.8±", "2.2", "64", "73.0±", "1.3", "70.8±", "1.4", "68.9±", "1.4", "66.6±", "1.8", "59.4±", "1.9", "128", "71.3±", "0.8", "69.1±", "0.8", "67.4±", "1.5", "64.5±", "1.5", "61.0±", "2.1", "Label", "Batch", "TabLeak", "TabLeak", "TabLeak", "Cosine", "Random", "Size", "(no", "pooling)", "(no", "softmax)"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 500.15999999999997,
+    "y1": 479.52,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table7-1.png"
+}, {
+  "caption": "Table 6: The mean inversion accuracy [%] and standard deviation of different methods over varying batch sizes with given true labels (top) and with reconstructed labels (bottom) on the Adult dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00067138671875,
+    "y1": 116.7265396118164,
+    "y2": 133.68798828125
+  },
+  "figType": "Table",
+  "imageText": ["Rec.", "ŷ", "1", "99.4±", "2.8", "99.3±", "3.6", "100.0±", "0.0", "100.0±", "0.0", "43.3±", "11.8", "2", "98.2±", "8.9", "98.1±", "9.1", "98.6±", "7.5", "95.9±", "11.5", "47.1±", "7.9", "4", "89.5±", "13.8", "88.0±", "15.2", "90.0±", "13.0", "87.9±", "13.7", "49.8±", "4.9", "8", "86.9±", "11.6", "84.6±", "13.4", "85.8±", "9.9", "83.3±", "9.7", "53.9±", "4.4", "16", "82.4±", "8.4", "78.3±", "9.0", "77.7±", "4.1", "73.0±", "3.5", "55.1±", "3.9", "32", "75.3±", "4.8", "70.6±", "4.3", "70.2±", "3.2", "66.3±", "3.4", "58.0±", "2.9", "64", "70.4±", "3.2", "65.9±", "3.6", "66.8±", "2.6", "63.1±", "3.2", "59.0±", "3.2", "128", "68.7±", "1.3", "64.4±", "1.5", "63.8±", "2.1", "59.5±", "2.1", "61.2±", "3.1", "True", "y", "1", "99.4±", "2.8", "99.1±", "4.4", "100.0±", "0.0", "100.0±", "0.0", "43.3±", "11.8", "2", "99.2±", "5.5", "99.1±", "6.5", "99.9±", "1.0", "97.6±", "6.9", "47.1±", "7.9", "4", "98.0±", "4.5", "96.6±", "7.5", "98.9±", "4.0", "96.4±", "7.2", "49.8±", "4.9", "8", "95.1±", "9.2", "93.9±", "10.2", "92.9±", "6.5", "91.1±", "7.3", "53.9±", "4.4", "16", "89.5±", "7.6", "84.5±", "9.9", "80.5±", "4.3", "75.0±", "5.2", "55.1±", "3.9", "32", "77.6±", "4.8", "72.4±", "4.6", "70.8±", "3.2", "66.6±", "3.5", "58.0±", "2.9", "64", "71.2±", "2.8", "66.2±", "2.8", "66.9±", "2.7", "62.5±", "3.1", "59.0±", "3.2", "128", "68.8±", "1.3", "64.1±", "1.4", "64.0±", "2.1", "59.5±", "2.1", "61.2±", "3.1", "Label", "Batch", "TabLeak", "TabLeak", "TabLeak", "Cosine", "Random", "Size", "(no", "pooling)", "(no", "softmax)"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 500.15999999999997,
+    "y1": 146.4,
+    "y2": 363.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table6-1.png"
+}, {
+  "caption": "Figure 8: Mean attack accuracy curves with standard deviation for batch size 32 over varying network size (measured in number of parameters, #Params, log scale) on all four datasets. We mark the network we used for our other experiments with a dashed vertical line.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.2458801269531,
+    "y1": 590.7095947265625,
+    "y2": 618.6300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Health", "Heritage", "Used", "NN", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "5.6", "11.3", "21.4", "103.0", "366.0", "#Params", "(thousand)", "(c)", "Lawschool", "Admissions", "Used", "NN", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "2.1", "4.2", "14.3", "88.8", "337.6", "#Params", "(thousand)", "(b)", "German", "Credit", "Used", "NN", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "3.3", "6.6", "16.7", "93.6", "347.2", "#Params", "(thousand)", "(a)", "Adult", "Used", "NN", "Random", "Cosine", "TabLeak", "]", "cy", "[%", "cu", "ra", "n", "Ac", "ct", "io", "ns", "tru", "Re", "co", "100", "90", "80", "70", "60", "50", "40", "30", "5.4", "10.8", "20.9", "102.0", "364.0", "#Params", "(thousand)"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 120.47999999999999,
+    "x2": 491.52,
+    "y1": 192.0,
+    "y2": 577.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure8-1.png"
+}, {
+  "caption": "Table 16: The mean accuracy [%] and entropies with the corresponding standard deviations over batch sizes of the categorical and the continuous features on the Lawschool Admissions dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1659240722656,
+    "y1": 103.69754791259766,
+    "y2": 120.65899658203125
+  },
+  "figType": "Table",
+  "imageText": ["1", "100.0±", "0.0", "0.01±", "0.03", "100.0±", "0.0", "−3.28±", "0.29", "2", "100.0±", "0.0", "0.02±", "0.05", "100.0±", "0.0", "−2.85±", "0.87", "4", "100.0±", "0.0", "0.03±", "0.04", "100.0±", "0.0", "−2.45±", "0.78", "8", "99.8±", "1.1", "0.11±", "0.10", "96.4±", "11.1", "−1.77±", "0.62", "16", "98.1±", "2.8", "0.24±", "0.11", "87.1±", "13.4", "−0.65±", "0.49", "32", "93.4±", "3.0", "0.41±", "0.08", "65.1±", "8.0", "0.18±", "0.20", "64", "87.0±", "2.4", "0.55±", "0.05", "57.7±", "4.8", "0.78±", "0.12", "128", "83.5±", "1.5", "0.60±", "0.03", "62.6±", "3.4", "1.07±", "0.11", "Accuracy", "Entropy", "Accuracy", "Entropy", "Discrete", "Continuous"],
+  "name": "16",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 133.44,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table16-1.png"
+}, {
+  "caption": "Table 18: The mean accuracy [%] and the share of data [%] in each entropy bucket for batch size 128 on the Adult dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952392578125,
+    "y1": 553.2315673828125,
+    "y2": 570.1929931640625
+  },
+  "figType": "Table",
+  "imageText": ["Random", "73.8", "100", "Random", "44.4", "100", "Overall", "78.5", "100", "Overall", "55.7", "100", "0.0-0.2", "95.7", "8.1", "∞-0.72", "72.7", "1.2", "0.2-0.4", "90.5", "23.4", "0.72-1.16", "65.5", "13.6", "0.4-0.6", "79.8", "27.7", "1.16-1.6", "56.4", "50", "0.6-0.8", "69.8", "29.2", "1.6-2.04", "51.1", "32.4", "0.8-1.0", "61.2", "11.6", "2.04-∞", "41.8", "2.9", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Entropy", "Categorical", "Features", "Entropy", "Continuous", "Features"],
+  "name": "18",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 469.44,
+    "y1": 582.72,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table18-1.png"
+}, {
+  "caption": "Table 17: The mean accuracy [%] and entropies with the corresponding standard deviations over batch sizes of the categorical and the continuous features on the Health Heritage dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1659240722656,
+    "y1": 328.46453857421875,
+    "y2": 345.4259948730469
+  },
+  "figType": "Table",
+  "imageText": ["1", "100.0±", "0.0", "0.02±", "0.05", "99.6±", "2.5", "−2.97±", "0.33", "2", "100.0±", "0.0", "0.05±", "0.09", "96.5±", "12.9", "−2.55±", "0.80", "4", "99.7±", "1.8", "0.08±", "0.10", "97.5±", "9.0", "−1.71±", "0.79", "8", "99.1±", "3.7", "0.13±", "0.11", "94.3±", "11.3", "−1.06±", "0.64", "16", "96.6±", "7.5", "0.26±", "0.10", "80.2±", "11.2", "−0.11±", "0.42", "32", "85.1±", "6.4", "0.43±", "0.06", "61.7±", "3.8", "0.72±", "0.23", "64", "73.1±", "4.7", "0.52±", "0.03", "59.6±", "2.5", "1.13±", "0.20", "128", "66.1±", "2.4", "0.57±", "0.02", "60.7±", "1.6", "1.44±", "0.13", "Accuracy", "Entropy", "Accuracy", "Entropy", "Discrete", "Continuous"],
+  "name": "17",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 358.56,
+    "y2": 503.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table17-1.png"
+}, {
+  "caption": "Table 4: The mean accuracy [%] and the share of data [%] in each entropy bucket for batch size 128 on the Adult dataset.",
+  "captionBoundary": {
+    "x1": 305.6910095214844,
+    "x2": 504.00250244140625,
+    "y1": 366.0285339355469,
+    "y2": 393.9490051269531
+  },
+  "figType": "Table",
+  "imageText": ["Random", "73.8", "100", "Overall", "78.5", "100", "0.0-0.2", "95.7", "8.1", "0.2-0.4", "90.5", "23.4", "0.4-0.6", "79.8", "27.7", "0.6-0.8", "69.8", "29.2", "0.8-1.0", "61.2", "11.6", "Bucket", "Accuracy", "[%]", "Data", "[%]", "Entropy", "Categorical", "Features"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 325.92,
+    "x2": 483.35999999999996,
+    "y1": 403.68,
+    "y2": 526.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table4-1.png"
+}, {
+  "caption": "Table 3: The mean accuracy [%] and entropies with the corresponding standard deviations over batch sizes of the categorical (top) and continuous (bottom) features.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9952392578125,
+    "y1": 183.05953979492188,
+    "y2": 200.02099609375
+  },
+  "figType": "Table",
+  "imageText": ["Acc.", "90.9±", "14.7", "78.8±", "13.5", "59.2±", "6.9", "55.1±", "3.0", "55.7±", "2.0", "HC", "−1.11±", "0.95", "−0.11±", "0.63", "0.77±", "0.30", "1.21±", "0.19", "1.48±", "0.10", "Acc.", "98.5±", "5.6", "97.2±", "4.3", "91.0±", "4.4", "83.2±", "3.6", "78.5±", "1.8", "H̄D", "0.15±", "0.13", "0.26±", "0.11", "0.40±", "0.06", "0.48±", "0.04", "0.53±", "0.03", "8", "16", "32", "64", "128", "Batch", "Size"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 461.28,
+    "y1": 208.79999999999998,
+    "y2": 291.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table3-1.png"
+}, {
+  "caption": "Table 2: Mean and standard deviation of the inversion accuracy [%] on FedAvg with local dataset sizes of 32 on the Adult dataset. The accuracy of the random baseline for 32 datapoints is 58.0± 2.9.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00347900390625,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["1", "77.4±", "4.5", "71.1±", "2.9", "67.6±", "3.7", "65.2±", "2.7", "56.1±", "4.1", "53.2±", "4.2", "2", "75.7±", "5.0", "71.7±", "3.9", "67.7±", "4.2", "64.8±", "3.3", "56.4±", "4.8", "56.2±", "4.8", "4", "75.9±", "4.4", "71.0±", "3.2", "67.4±", "3.4", "64.8±", "3.4", "58.7±", "4.6", "56.6±", "5.0", "#batches", "1", "epoch", "5", "epochs", "10", "epochs", "1", "epoch", "5", "epochs", "10", "epochs", "TabLeak", "Cosine"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 475.2,
+    "y1": 109.92,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table2-1.png"
+}, {
+  "caption": "Table 8: The mean inversion accuracy [%] and standard deviation of different methods over varying batch sizes with given true labels (top) and with reconstructed labels (bottom) on the Lawschool Admissions dataset.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00042724609375,
+    "y1": 113.9195327758789,
+    "y2": 141.84002685546875
+  },
+  "figType": "Table",
+  "imageText": ["Rec.", "ŷ", "1", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "38.9±", "14.6", "2", "99.1±", "6.0", "99.3±", "5.0", "98.7±", "7.1", "95.9±", "12.0", "38.4±", "11.5", "4", "99.6±", "3.0", "99.0±", "4.9", "98.7±", "6.3", "96.8±", "8.5", "43.2±", "7.2", "8", "95.9±", "7.8", "95.3±", "8.3", "93.4±", "7.2", "91.9±", "7.9", "49.4±", "4.6", "16", "91.2±", "7.3", "89.1±", "8.3", "80.5±", "4.7", "77.4±", "5.4", "53.0±", "3.1", "32", "83.2±", "4.1", "80.9±", "4.3", "72.7±", "2.2", "71.0±", "2.0", "57.6±", "2.3", "64", "77.2±", "2.4", "76.0±", "2.2", "72.7±", "2.1", "71.5±", "2.4", "60.4±", "2.2", "128", "77.1±", "1.2", "75.9±", "1.3", "73.9±", "2.7", "71.8±", "2.8", "63.4±", "1.5", "True", "y", "1", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "100.0±", "0.0", "38.9±", "14.6", "2", "100.0±", "0.0", "100.0±", "0.0", "99.9±", "1.0", "96.3±", "10.4", "38.4±", "11.5", "4", "100.0±", "0.0", "100.0±", "0.0", "99.7±", "1.2", "97.6±", "6.9", "43.2±", "7.2", "8", "98.7±", "3.8", "98.8±", "3.7", "96.0±", "5.0", "94.5±", "5.8", "49.4±", "4.6", "16", "94.8±", "5.6", "93.5±", "6.5", "81.1±", "4.5", "77.3±", "5.5", "53.0±", "3.1", "32", "84.8±", "3.9", "82.4±", "4.1", "73.3±", "2.8", "71.0±", "2.8", "57.6±", "2.3", "64", "78.2±", "2.0", "76.6±", "2.0", "73.0±", "2.1", "71.7±", "2.2", "60.4±", "2.2", "128", "77.3±", "1.2", "76.0±", "1.1", "73.7±", "2.6", "71.8±", "2.7", "63.4±", "1.5", "Label", "Batch", "TabLeak", "TabLeak", "TabLeak", "Cosine", "Random", "Size", "(no", "pooling)", "(no", "softmax)"],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 500.15999999999997,
+    "y1": 154.56,
+    "y2": 369.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table8-1.png"
+}, {
+  "caption": "Table 9: The mean inversion accuracy [%] and standard deviation of different methods over varying batch sizes with given true labels (top) and with reconstructed labels (bottom) on the Health Heritage dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0042724609375,
+    "y1": 439.68951416015625,
+    "y2": 467.6099853515625
+  },
+  "figType": "Table",
+  "imageText": ["Rec.", "ŷ", "1", "99.8±", "1.6", "99.9±", "0.8", "99.8±", "1.6", "99.6±", "2.5", "34.8±", "13.1", "2", "95.4±", "13.6", "94.8±", "15.1", "95.2±", "13.6", "92.5±", "16.9", "36.9±", "9.8", "4", "86.6±", "20.2", "84.7±", "22.0", "84.7±", "20.8", "83.5±", "20.7", "37.0±", "5.3", "8", "82.4±", "15.6", "80.5±", "16.3", "77.3±", "13.3", "74.5±", "13.8", "39.2±", "3.8", "16", "75.9±", "12.4", "71.4±", "11.4", "64.8±", "7.6", "60.9±", "6.3", "41.4±", "3.7", "32", "64.8±", "5.7", "60.8±", "4.7", "59.8±", "3.8", "56.9±", "4.0", "43.4±", "2.8", "64", "62.6±", "2.6", "59.6±", "2.6", "60.9±", "4.0", "57.7±", "4.7", "45.0±", "3.7", "128", "62.7±", "1.6", "59.2±", "1.6", "59.6±", "5.1", "55.7±", "5.0", "46.8±", "3.2", "True", "y", "1", "99.8±", "1.6", "99.8±", "1.6", "99.8±", "1.6", "99.8±", "1.6", "34.8±", "13.1", "2", "97.7±", "8.3", "97.2±", "10.2", "98.6±", "3.3", "97.9±", "5.6", "36.9±", "9.8", "4", "98.2±", "6.5", "96.1±", "9.8", "97.8±", "4.2", "95.6±", "8.1", "37.0±", "5.3", "8", "96.0±", "8.2", "94.2±", "10.5", "89.2±", "9.1", "86.2±", "9.0", "39.2±", "3.8", "16", "86.1±", "8.8", "80.6±", "9.9", "67.8±", "4.8", "63.6±", "5.5", "41.4±", "3.7", "32", "70.0±", "4.5", "64.7±", "3.9", "61.4±", "4.0", "57.7±", "4.1", "43.4±", "2.8", "64", "64.7±", "2.8", "59.6±", "2.7", "61.5±", "4.3", "57.4±", "4.7", "45.0±", "3.7", "128", "63.0±", "1.4", "57.9±", "1.6", "59.9±", "5.0", "55.6±", "4.8", "46.8±", "3.2", "Label", "Batch", "TabLeak", "TabLeak", "TabLeak", "Cosine", "Random", "Size", "(no", "pooling)", "(no", "softmax)"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 500.15999999999997,
+    "y1": 480.47999999999996,
+    "y2": 700.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Table9-1.png"
+}, {
+  "caption": "Figure 2: Maximum similarity matching of a sample from the collection of reconstructions to the best-loss sample x̂best.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.6509704589844,
+    "y1": 370.33953857421875,
+    "y2": 398.260009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 499.2,
+    "y1": 301.92,
+    "y2": 370.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QN_VgTeOYGl-Figure2-1.png"
+}]

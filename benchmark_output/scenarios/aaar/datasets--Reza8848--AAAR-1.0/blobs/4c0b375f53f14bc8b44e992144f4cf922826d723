@@ -1,0 +1,441 @@
+[{
+  "caption": "Figure 8: Two types of dynamic topologies: (Left) in the dynamic-Boyd topology the group is divided into sub-groups of two agents and a visit takes place with probability pv and lasts Tv episodes (Right) In the dynamic-periodic topology the graph oscillates between a phase with a fullyconnected topology that lasts for Th episodes to a phase without sharing that lasts for Tl episodes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 184.01254272460938,
+    "y2": 224.38604736328125
+  },
+  "figType": "Figure",
+  "imageText": ["No-sharing", "phase", "that", "lasts", "for", "episodes", "phase", "that", "lasts", "for", "episodes", "episodes", "Fully-connected", "Visit", "with", "probability", "Return", "after", "two", "Divide", "into", "sub-groups", "of"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Examining the sensitivity of the dynamic-Boyd topology to its hyper-parameters: % of group success (SG) for the merging-paths task (left) and the best-of-ten paths task (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99981689453125,
+    "y1": 368.3785400390625,
+    "y2": 385.34002685546875
+  },
+  "figType": "Figure",
+  "imageText": ["0.4", "0.3", "0.2", "0.1", "0.0", "S", ",", "%", "of", "group", "success", "io", "n", "ur", "at", "isi", "t", "d", "T", "v", ",", "V", "1000", "100", "10", "0.005", "0.01", "0.1", "0.5", "pv,", "Visit", "probability", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "S", ",", "%", "of", "group", "success", "io", "n", "ur", "at", "isi", "t", "d", "T", "v", ",", "V", "1000", "100", "10", "0.005", "0.01", "0.1", "0.5", "pv,", "Visit", "probability"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 120.47999999999999,
+    "x2": 490.08,
+    "y1": 238.56,
+    "y2": 352.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure9-1.png"
+}, {
+  "caption": "Figure 15: Varying the learning hyper-parameters learning rate (λ) and discount factor (γ) in different social network topologies in the single path task. )",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9951171875,
+    "y1": 351.8985290527344,
+    "y2": 368.8599853515625
+  },
+  "figType": "Figure",
+  "imageText": ["=", "0.0001", ",", "=0.9", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e6", "=", "0.0001", ",", "=0.5", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1e6", "=", "0.0001", ",", "=0.1", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Training", "step,", "t", "1e6", "=", "0.001", ",", "=0.1", "=", "0.001", ",", "=0.5", "=", "0.001", ",", "=0.9", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "=", "0.01", ",", "=0.5", "=", "0.01", ",", "=0.9", "=", "0.01", ",", "=0.1", "no-sharing", "dynamic", "fully-connected", "m", "ax", "rd", ",", "R", "re", "wa", "im", "um", "M", "ax", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0"],
+  "name": "15",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 478.08,
+    "y1": 86.39999999999999,
+    "y2": 330.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure15-1.png"
+}, {
+  "caption": "Figure 4: Overall performance comparison for the single path (first column), merging paths (second column) and best-of-ten paths (third column) task. We present two metrics: group success (S) denotes whether at least one agent in the group found the optimal solution (top row) and T+, Time to first success, is the number of training time steps required for this event (bottom row). Note that T+ can be computed only for S > 0 its error bars and significance tests can only be computer for S > 1. We denote statistical significance levels with asterisks.)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 300.87652587890625,
+    "y2": 361.6739501953125
+  },
+  "figType": "Figure",
+  "imageText": ["ring", "small-world", "A2C", "Ape-X", "1.5", "1e7", "single", "no-sharing", "dynamic", "fully-connected", "1.0", "0.5", "0.0", "**", "**", "1.0", "1e7", "0.8", "0.6", "0.4", "0.2", "0.0", "**", "*", "*********", "**************", "*********", "****", "********", "1e6", "ce", "ss", "t", "s", "uc", "fi", "rs", "e", "to", ",", "T", "im", "T", "+", "3.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "Best-of-ten", "paths", "*", "*******", "****", "2.0", "1.5", "1.0", "0.5", "0.0", "******", "**", "*****", "**", "******", "Merging", "paths", "2.0", "1.5", "1.0", "0.5", "0.0", "Single", "path", "cc", "es", "s", "**", "*", "**", "*", "up", "su", ",", "G", "ro", "2.0", "1.5", "1.0", "0.5", "0.0"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 479.03999999999996,
+    "y1": 87.36,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure4-1.png"
+}, {
+  "caption": "Figure 16: Scaling of different social network structures in the merging paths (top row) and best-often paths tasks (bottom row). We highlight the element belonging to the optimal path in red.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 341.69451904296875,
+    "y2": 358.656005859375
+  },
+  "figType": "Figure",
+  "imageText": ["B_4", "A_2", "E_2", "element", "B_4", "A_2", "E_2", "element", "B_4", "A_2", "E_2", "element", "t", "m", "en", "t,%", "o", "f", "tr", "ia", "ls", "wi", "th", "e", "le", "m", "en", "S", "e", "le", "1.00", "0.75", "0.50", "0.25", "0.00", "B_4", "A_2", "E_2", "element", "dynamic", "A_8", "B_8", "C_2", "small-world", "A_8", "B_8", "C_2", "fully-connected", "N=2", "N=6", "N=10", "N=20", "N=50", "A_8", "B_8", "C_2", "ring", "en", "t", "le", "m", "th", "e", "ls", "wi", "tr", "ia", "0.75", "1.00", "S", "e", "le", "m", "en", "t,%", "o", "f", "0.50", "0.25", "A_8", "B_8", "C_2", "0.00"],
+  "name": "16",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 484.32,
+    "y1": 89.28,
+    "y2": 316.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure16-1.png"
+}, {
+  "caption": "Figure 17: Examining the effect of prioritization in experience sharing. For more details about the setup, we refer the reader to Figure 4",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 649.3325805664062,
+    "y2": 666.2940063476562
+  },
+  "figType": "Figure",
+  "imageText": ["ce", "ss", "1e6", "single", "no-sharing", "dynamic", "fully-connected", "ring", "small-world", "t", "s", "uc", "fi", "rs", "e", "to", ",", "T", "im", "T", "+", "6", "4", "2", "0", "Single", "path", "Merging", "paths", "Best-of-ten", "paths", "s", "cc", "es", "up", "su", ",", "G", "ro", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0"],
+  "name": "17",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 134.4,
+    "x2": 479.03999999999996,
+    "y1": 435.84,
+    "y2": 627.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure17-1.png"
+}, {
+  "caption": "Figure 1: (Left) Illustration of an innovation task, which consists of an initial set of elements (Earth, Water) and a recipe book that determines which element combinations create new elements. Upon creating a new element the player moves up an innovation level and receives a reward that increases monotonically with levels (Right) Dynamic social network structures oscillate between phases of low connectivity, where experience sharing takes place within clusters, and high connectivity, where experiences spread between clusters",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 195.78152465820312,
+    "y2": 256.57794189453125
+  },
+  "figType": "Figure",
+  "imageText": ["Time", "Sparse", "connectivity", "High", "connectivity", "Sparse", "connectivity", "High", "connectivity", "Reward", "7", "Reward", "5", "Reward", "2", "Level", "3", "Level", "2", "Level", "1", "+", "=", "Bricks", "Cement", "House", "Mud", "Fire", "Bricks", "=", "=", "+", "+", "Earth", "Water", "Mud"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure1-1.png"
+}, {
+  "caption": "Figure 11: Maximum reward of the group at training step t (R+ t ) in the (left) single path task (middle) merging paths task (right) best-of-ten paths task",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0009460449219,
+    "y1": 370.8995361328125,
+    "y2": 387.86102294921875
+  },
+  "figType": "Figure",
+  "imageText": ["small-world", "A2C", "dynamic", "fully-connected", "ring", "APEX-DQN", "single", "no-sharing", "m", "ax", "rd", ",", "R", "re", "wa", "im", "um", "M", "ax", "1.0", "0.5", "0.0", "0", "1", "2", "3", "Training", "step,", "t", "1e7", "small-world", "A2C", "dynamic", "fully-connected", "ring", "APEX-DQN", "single", "no-sharing", "m", "ax", "rd", ",", "R", "re", "wa", "im", "um", "M", "ax", "1.0", "0.5", "0.0", "0", "2", "4", "Training", "step,", "t", "1e6", "small-world", "A2C", "dynamic", "fully-connected", "ring", "APEX-DQN", "single", "no-sharing", "m", "ax", "rd", ",", "R", "re", "wa", "im", "um", "M", "ax", "1.0", "0.5", "0.0", "0.00", "0.25", "0.50", "0.75", "1.00", "Training", "step,", "t", "1e6"],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 510.24,
+    "y1": 89.75999999999999,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure11-1.png"
+}, {
+  "caption": "Figure 19: Performance for a group with 6 agents",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.0018615722656,
+    "y1": 260.8095397949219,
+    "y2": 277.77099609375
+  },
+  "figType": "Figure",
+  "imageText": ["small-world", "A2C", "fully-connected", "ring", "APEX-DQN", "no-sharing", "dynamic", "m", "ax", "rd", ",", "R", "re", "wa", "im", "um", "M", "ax", "6", "4", "2", "0", "0", "100000", "200000", "300000", "400000", "Training", "step,", "t"],
+  "name": "19",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 335.03999999999996,
+    "x2": 532.8,
+    "y1": 90.24,
+    "y2": 223.67999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure19-1.png"
+}, {
+  "caption": "Figure 7: Visualizing actions and states in Wordcraft: we present the first 3 time steps of an episode corresponding to playing the example in Figure 1. This task contains 7 elements, so the action space is a integer with maximum value 7. In the components current c and inventory i, each digit in the vector corresponds to the element with the corresponding index. The initial set includes Water and Earth (their indexes at τ = 0 in the inventory are non-zero). The agent first picks Earth (second index in the action vector). At t = 1, Earth becomes active in the Current vector of the state, the the agent selects Water and receives a positive reward. At t = 2, Mud is created and inserted in the inventory and c is cleared.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0047607421875,
+    "y1": 306.779541015625,
+    "y2": 389.49395751953125
+  },
+  "figType": "Figure",
+  "imageText": ["tim", "e", "od", "ic", "Ep", "is", "Idx", "=", "0", "Idx", "=", "1", "Idx", "=", "2", "Idx", "=", "3", "Idx", "=", "4", "Idx", "=", "5", "Idx", "=", "6", "0", "1", "2", "Episode", "step,", "1", "2", "4", "00000000", "0", "1", "1", "0", "0", "0", "0", "20000010", "0", "1", "1", "0", "0", "0", "0", "00000000", "0000111", "State,", "Inventory,", "Current,", "Reward,", "Action,"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 271.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Analyzing group behavior in the single path task: (Left) Conformity Ct is a behavioral metric that denotes the percentage of agents in a group that followed the same trajectory in a given evaluation trial. (Right) Average Diversity D̄t is a mnemonic metric that denotes the number of unique experiences in the replay buffer of an agent, averaged over all agents",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.003173828125,
+    "y1": 204.17550659179688,
+    "y2": 243.054931640625
+  },
+  "figType": "Figure",
+  "imageText": ["no-sharing", "dynamic", "fully-connected", "ring", "small-world", ",", "D", "t", "rs", "ity", "Di", "ve", "ag", "e", "Av", "er", "400", "300", "200", "100", "0", "0", "2", "4", "6", "Training", "step,", "t", "1e5", "t", "ity", ",", "C", "or", "m", "Co", "nf", "1.0", "0.8", "0.6", "0.4", "0", "2", "4", "6", "Training", "step,", "t", "1e5"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 459.35999999999996,
+    "y1": 87.84,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Analyzing group behavior in the single path task (first column), merging paths task (second column) and best-of-10 paths task (third column). On the top row, the Average volatility (Vt) is a behavioral metric indicating the cumulative number of changes in the trajectory followed by an agent, averaged by all agents. On the bottom row, Group Diversity DG t is a mnemonic metric that captures the diversity of the aggregated group buffer.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.00323486328125,
+    "y1": 484.3315734863281,
+    "y2": 535.2391357421875
+  },
+  "figType": "Figure",
+  "imageText": ["1e3", "4", "2", "0", "0", "1", "2", "Training", "step,", "t1e6", "2.0", "1e3", "1.5", "1.0", "0.5", "0.0", "0", "2", "Training", "step,", "t1e6", "1e3", "t", "ity", ",", "D", "ve", "sr", "p", "di", "Gr", "ou", "1.0", "0.5", "0.0", "0.0", "0.5", "1.0", "Training", "step,", "t1e6", "0.0", "0.5", "1.0", "Training", "step,", "t", "1e6", "0.0", "0.5", "1.0", "Training", "step,", "t", "1e6", "dynamic", "fully-connected", "ring", "small-world", ",", "V", "t", "no-sharing", "til", "ity", "Vo", "la", "ag", "e", "Av", "er", "15", "10", "5", "0", "0.0", "0.5", "1.0", "Training", "step,", "t", "1e6"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 444.0,
+    "y1": 269.76,
+    "y2": 461.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure6-1.png"
+}, {
+  "caption": "Figure 2: We introduce three innovation tasks called single path, merging paths and best-of-ten paths, described in Section 2.2. Each task contains one or more paths, labeled by an uppercase letter (A to J). Each path X has its own initial set of three base elements {x1, x2, x3}, which are represented in dashed circles. Crafted elements in path X are represented in upper case (Xi) in solid circles. Optimal trajectories for each tasks are represented by solid red arrows, with their corresponding reward in bold red.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 308.6025390625,
+    "y2": 369.39996337890625
+  },
+  "figType": "Figure",
+  "imageText": ["Reuse", "of", "a", "crafted", "element", "in", "an", "optimal", "trajectory", "Reuse", "of", "a", "crafted", "element", "in", "a", "non-", "optimal", "trajectory", "xi", "ith", "crafted", "element", "in", "path", "X", "xi", "ith", "base", "element", "in", "path", "X", "j3", "j1", "j3", "j2", "..", ".", "J1", "J7", "J3", "J8", "J2", "J2", "=j1", "J1", "=", "=", "=", "+", "+", "+", "+", "..", ".", "..", ".", "b3", "b1", "b3", "b2", "..", ".", "B1", "B7", "B3", "B8", "B2", "B2", "=b1", "B1", "=", "=", "=", "+", "+", "+", "+", "..", ".", "..", ".", "b3", "b1", "b3", "b2", "..", ".", "B1", "B7", "B3", "B8", "B2", "B2", "=b1", "B1", "=", "=", "=", "+", "+", "+", "+", "..", ".", "..", ".", "a3", "a1", "a3", "c3", "a2", "..", ".", "A1", "A7", "A3", "A8", "A2", "A2", "C4", "C1", "C3", "A2", "B2", "=a1", "A1", "=", "=", "=", "+", "+", "+", "+", "..", ".", "..", ".", "a3", "a1", "a3", "a2", "..", ".", "A1", "A7", "A3", "A8", "A2", "A2", "=a1", "A1", "=", "=", "=", "+", "+", "+", "+", "..", ".", "..", ".", "a3", "a1", "a3", "a2", "..", ".", "A1", "A7", "A3", "A8", "A2", "A2", "=a1", "A1", "=", "=", "=", "+", "+", "+", "+", "..", ".", ".", "Path", "BPath", "A", "Path", "J", "..", "Path", "A", "Merged", "path", "CPath", "A", "Path", "B", "8", "3", "2", "1", "..", ".", "20", "10", "8", "2", "..", ".", "8", "3", "2", "1", ".....", ".", "8", "3", "2", "1", "..", ".", "=", "=", "+", "14+", "8", "..", ".", "..", ".", "..", ".", "..", ".", "8", "5", "..", ".", "8", "3", "2", "1", "..", ".", "s", "p", "a", "th", "te", "n", "-o", "f-", "B", "e", "st", "s", "p", "a", "th", "in", "g", "M", "e", "rg", "p", "a", "th", "g", "le", "S", "in", "8", "3", "2", "1", "..", ".", ".", "Result", "Reward", "..", "8", "3", "2", "1", "l", "le", "ve", "ti", "on", "no", "va", "Combination", "In"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 146.4,
+    "x2": 463.2,
+    "y1": 82.08,
+    "y2": 293.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure2-1.png"
+}, {
+  "caption": "Figure 12: Analyzing group behavior in the merging paths task (top row) and best-of-10 paths task (bottom row). (left) Conformity Ct is a behavioral metric that denotes the percentage of agents in a group that followed the same trajectory in a given evaluation trial (right) Average Diversity D̄t is a mnemonic metric that denotes the number of unique experiences in the replay buffer of an agent, averaged over all agents.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 408.77655029296875,
+    "y2": 458.6139831542969
+  },
+  "figType": "Figure",
+  "imageText": [",", "D", "t", "rs", "ity", "Di", "ve", "ag", "e", "Av", "er", "1000", "500", "0", "0", "2", "4", "6", "Training", "step,", "t", "1e5", "t", "ity", ",", "C", "or", "m", "Co", "nf", "0.6", "0.4", "0.2", "0", "2", "4", "6", "8", "Training", "step,", "t", "1e5", "no-sharing", "dynamic", "fully-connected", "ring", "small-world", ",", "D", "t", "rs", "ity", "Di", "ve", "ag", "e", "Av", "er", "400", "200", "0", "0", "1", "2", "3", "Training", "step,", "t", "1e6", "t", "ity", ",", "C", "or", "m", "Co", "nf", "1.0", "0.8", "0.6", "0.4", "0.2", "0.00", "0.25", "0.50", "0.75", "1.00", "Training", "step,", "t", "1e6"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 510.24,
+    "y1": 132.0,
+    "y2": 386.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Intra-group alignment AG t in the single path task (left), merging paths task (middle) and best-of-ten paths task (right)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99578857421875,
+    "y1": 668.7025756835938,
+    "y2": 685.6640014648438
+  },
+  "figType": "Figure",
+  "imageText": ["A", "t", "en", "t,", "lig", "nm", "up", "a", "-g", "ro", "In", "tra", "1.0", "0.8", "0.6", "0.4", "0.0", "0.5", "1.0", "1.5", "2.0", "Training", "step,", "t", "1e6", "A", "t", "en", "t,", "lig", "nm", "up", "a", "-g", "ro", "In", "tra", "1.0", "0.8", "0.6", "0.4", "0", "1", "2", "3", "Training", "step,", "t", "1e6", "A", "t", "en", "t,", "lig", "nm", "up", "a", "-g", "ro", "In", "tra", "1.0", "0.9", "0.8", "0.7", "0.6", "0", "1", "2", "3", "Training", "step,", "t", "1e6"],
+  "name": "13",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 520.8,
+    "y1": 555.84,
+    "y2": 647.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure13-1.png"
+}, {
+  "caption": "Table 3: Evaluation metrics for the best-of-ten paths task",
+  "captionBoundary": {
+    "x1": 192.781005859375,
+    "x2": 419.2208557128906,
+    "y1": 721.7025756835938,
+    "y2": 727.7050170898438
+  },
+  "figType": "Table",
+  "imageText": ["small-world", "0.2921", "0.328", "2455000", "3970000", "1515000", "0.2", "0.4755", "0.01418", "fully-connected", "0.2183", "0.238", "4680000", "5040000", "360000", "0.1", "0.4784", "0.0065", "ring", "0.4522", "0.468", "3010000", "5030000", "2440000", "0.3", "0.4607", "0.02308", "Topology", "R+", "∞", "R∗", "∞", "T+", "T", "∗", "T>", "SG", "Cavg", "V̄avg", "no", "sharing", "0.1703", "0.268", "-", "-", "-", "0", "0.37", "0.009", "dynamic", "0.4084", "0.546", "4806666", "-", "-", "0.4", "0.41", "0.03"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 637.92,
+    "y2": 706.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Table3-1.png"
+}, {
+  "caption": "Table 1: Evaluation metrics for the single path task",
+  "captionBoundary": {
+    "x1": 204.39700317382812,
+    "x2": 407.6040954589844,
+    "y1": 161.27151489257812,
+    "y2": 167.27398681640625
+  },
+  "figType": "Table",
+  "imageText": ["small-world", "1", "1", "253333", "302666", "49333", "1", "0.912", "0.02976", "fully-connected", "1", "1", "310666", "362000", "51333", "1", "0.8912", "0.052", "ring", "1", "1", "235333", "305333", "70000", "1", "0.8986", "0.0280", "no-sharing", "0.9310", "1", "228333", "830000", "600000", "1", "0.7095", "0.0383", "dynamic", "1", "1", "270000", "500000", "230000", "1", "0.8494", "0.01383", "Topology", "R+", "∞", "R∗", "∞", "T+", "T", "∗", "T>", "SG", "Cavg", "V̄avg"],
+  "name": "1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 493.44,
+    "y1": 81.6,
+    "y2": 150.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Table1-1.png"
+}, {
+  "caption": "Table 2: Evaluation metrics for the merging paths task",
+  "captionBoundary": {
+    "x1": 197.8470001220703,
+    "x2": 414.1549377441406,
+    "y1": 262.4665222167969,
+    "y2": 268.468994140625
+  },
+  "figType": "Table",
+  "imageText": ["small-world", "0.5693", "0.662", "2800000", "-", "-", "0.15", "0.75772", "0.0411", "fully-connected", "0.5531", "0.768", "2370000", "-", "-", "0.2", "a0.7456", "0.1257", "ring", "0.6195", "0.72", "3540000", "-", "-", "0.2", "0.7779", "0.012", "Topology", "R+", "∞", "R∗", "∞", "T+", "T", "∗", "T>", "SG", "Cavg", "V̄avg", "no", "sharing", "0.6222", "0.81", "3176666", "-", "-", "0.3", "0.4253", "0.01265", "dynamic", "0.7076", "0.86", "3124000", "-", "-", "0.7", "0.6444", "0.0064"],
+  "name": "2",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 487.2,
+    "y1": 182.88,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Table2-1.png"
+}, {
+  "caption": "Figure 22: Overall performance comparison for a group with: 6 agents (first column), 10 agents (second column) and 20 agents (third column) task. We present two metrics: group success (S) denotes whether at least one agent in the group found the optimal solution (top row) and T+, Time to first success, is the number of training time steps required for this event (bottom row). Note that T+ can be computed only for S > 0 its error bars and significance tests can only be computer for S > 1. We denote statistical significance levels with asterisks.)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 300.87652587890625,
+    "y2": 361.6739501953125
+  },
+  "figType": "Figure",
+  "imageText": ["1.0", "1e6", "0.8", "0.6", "0.4", "0.2", "0.0", "1.0", "1e6", "0.8", "0.6", "0.4", "0.2", "0.0", "small-world", "A2C", "Ape-X", "no-sharing", "dynamic", "fully-connected", "ring", "1e6", "ce", "ss", "t", "s", "uc", "fi", "rs", "e", "to", ",", "T", "im", "T", "+", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "20", "agents", "********", "****************", "2.0", "1.5", "1.0", "0.5", "0.0", "10", "agents", "********", "****************", "2.0", "1.5", "1.0", "0.5", "0.0", "6", "agents", "cc", "es", "s", "********", "*******", "****", "up", "su", ",", "G", "ro", "2.0", "1.5", "1.0", "0.5", "0.0"],
+  "name": "22",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 146.4,
+    "x2": 449.28,
+    "y1": 96.47999999999999,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure22-1.png"
+}, {
+  "caption": "Figure 14: Inter-group alignment AGj ,Gj t in the single path task (left), merging paths task (middle) and best-of-ten paths task (right). In each row we compare one topology with all the rest.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0028381347656,
+    "y1": 692.216552734375,
+    "y2": 709.177978515625
+  },
+  "figType": "Figure",
+  "imageText": ["0", "1", "2", "Training", "step,", "t", "1e6", "small-world", "0", "1", "2", "3", "Training", "step,", "t", "1e6", "independent", "dynamic", "fully-connected", "ring", "j", "t", "A", "j,", "en", "t,", "lig", "nm", "up", "a", "r-g", "ro", "In", "te", "1.0", "0.5", "0.0", "0", "1", "2", "3", "Training", "step,", "t", "1e6", "ring", "independent", "dynamic", "fully-connected", "small-world", "j", "t", "A", "j,", "en", "t,", "lig", "nm", "up", "a", "r-g", "ro", "In", "te", "1.0", "0.5", "0.0", "fully-connected", "independent", "dynamic", "ring", "small-world", "j", "t", "A", "j,", "en", "t,", "lig", "nm", "up", "a", "r-g", "ro", "In", "te", "1.0", "0.5", "0.0", "dynamic", "independent", "fully-connected", "ring", "small-world", "j", "t", "A", "j,", "en", "t,", "lig", "nm", "up", "a", "r-g", "ro", "In", "te", "1.0", "0.5", "0.0", "no-sharing", "dynamic", "fully-connected", "ring", "small-world", "j", "t", "A", "j,", "en", "t,", "lig", "nm", "up", "a", "r-g", "ro", "In", "te", "1.0", "0.5", "0.0"],
+  "name": "14",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 484.32,
+    "y1": 108.0,
+    "y2": 667.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure14-1.png"
+}, {
+  "caption": "Figure 3: (Left) Social network structures (a) fully-connected (b) small-world (c) ring (d) dynamic. (Right) Schematic of two neighboring DQNs sharing experiences: agent 1 shares experiences from its own replay buffer to that of agent 2 (red arrow) and vice versa (blue arrow) while both agents are independently collecting experiences by interacting with their own copy of the environment.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 232.43051147460938,
+    "y2": 271.3099365234375
+  },
+  "figType": "Figure",
+  "imageText": ["Buffer", "2", "Env", "2", "Env", "1", "Q2", "Agent", "2", "Buffer", "1Q1", "Agent", "1", "groups", "Visit", "start", "Visit", "end", "Independent", "(d)", "(a)", "(b)", "(c)"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 472.32,
+    "y1": 80.64,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure3-1.png"
+}, {
+  "caption": "Figure 10: Examining the sensitivity of the dynamic-periodic topology to its hyper-parameters: % of group success (SG) for the merging-paths task (left) and the best-of-ten paths task (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99981689453125,
+    "y1": 230.35354614257812,
+    "y2": 247.31500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["0.5", "0.0", "S", ",", "%", "of", "group", "success", "io", "d", "p", "er", "ity", "ct", "iv", "on", "ne", "ow", "-c", "T", "l", ",", "L", "1000", "100", "10", "period", "10", "100", "1000", "Th,", "High-connectivity", "0.2", "0.0", "S", ",", "%", "of", "group", "success", "io", "d", "p", "er", "ity", "ct", "iv", "on", "ne", "ow", "-c", "T", "l", ",", "L", "1000", "100", "10", "period", "10", "100", "1000", "Th,", "High-connectivity"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.91999999999996,
+    "y1": 38.879999999999995,
+    "y2": 208.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BO5_Lm7iD_-Figure10-1.png"
+}]

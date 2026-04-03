@@ -1,0 +1,61 @@
+[{
+  "caption": "Table 1: Variance and MSE of estimators of the classical Rényi divergence between 1-D Gaussians. DV-Rényi refers to estimators built using (2) while CC-Rényi refers to estimators built using our new variational representation (3); the latter exhibits greatly reduces variance and MSE, even when α is large. The variance and MSE were estimated using results from 1000 independent runs.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7385559082031,
+    "y1": 533.9485473632812,
+    "y2": 572.8270263671875
+  },
+  "figType": "Table",
+  "imageText": ["100%", "64%", "100%", "2.4×", "1012", "1.5×", "10−2", "6.8×", "10−3", "4.8×", "1011", "2.6×", "10−3", "6.1×", "10−3", "CC-Rényi", "(poly-softplus)", "DV-Rényi", "CC-Rényi", "(abs)", "10", "0", "α", "=", "100%", "44%", "100%", "2.8×", "1010", "1.6×", "10−3", "1.6×", "10−3", "6.8×", "10−4", "1.5×", "10−3", "4.6×", "109", "CC-Rényi", "(poly-softplus)", "10", "DV-Rényi", "CC-Rényi", "(abs)", "α", "=", "100%", "50%", "100%", "2.4×", "10−4", "5.6×", "10−4", "2.2×", "109", "2.4×", "10−4", "1.9×", "10−4", "3.9×", "108", "CC-Rényi", "(poly-softplus)", "2", "DV-Rényi", "CC-Rényi", "(abs)", "α", "=", "Method", "Relative", "Variance", "Relative", "MSE", "Percent", "Completed"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 585.6,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_89GT-S49mGd-Table1-1.png"
+}, {
+  "caption": "Table 3: The median of the FIDs (lower is better), calculated every 1,000 generator update for 20,000 iterations, over three independent trials. The number of the training samples used for experiments varies from 1% (600) to 10% (6,000) of the RotMNIST training set. The NN structure and hyperparameters are the same as those used in Section 5.4 of Birrell et al. (2022b). Eqv G (resp. Inv D) denotes that the symmetry information was incorporated into the generator (resp. discriminator) while CNN implies that a convolutional NN was used (without rotational symmetry). Σ denotes the rotation group used, where Cn denotes rotations by being integer multiples of 2π/n.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.743408203125,
+    "y1": 511.4305114746094,
+    "y2": 584.6810302734375
+  },
+  "figType": "Table",
+  "imageText": ["CNN", "G&D", "Eqv", "G", "+", "CNN", "D,", "Σ", "=", "C4", "CNN", "G", "+", "Inv", "D,", "Σ", "=", "C4", "Eqv", "G", "+", "Inv", "D,", "Σ", "=", "C4", "Eqv", "G", "+", "Inv", "D,", "Σ", "=", "C8", "357", "464", "366", "151", "114", "325", "271", "321", "105", "71", "298", "263", "302", "89", "62", "Γ", ",I", "C", "2", "er", "se", "R", "R", "ev", "Architecture", "1%", "5%", "10%"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 419.03999999999996,
+    "y1": 595.68,
+    "y2": 693.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_89GT-S49mGd-Table3-1.png"
+}, {
+  "caption": "Figure 1: Comparison between IC-Γ-Rényi GAN, IC-Γ-WCR GAN, and WGAN-GP (both 1 and 2-sided) on the CIFAR-10 dataset. Here we plot the inception score as a function of the number of training epochs (moving average over the last 5 data points, with results averaged over 5 runs). We also show the averaged final FID score in the legend, computed using 50000 samples from both P and Q. For the IC GANs we enforce negativity of the discriminator by using a final layer equal to −abs. The GANs were trained using the Adam optimizer with an initial learning rate of 0.0002. The left pane shows that the IC-Γ-Rényi GANs outperform WGAN while the right pane shows that GANs based on the rescaled DΓ,IC",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.745361328125,
+    "y1": 250.99252319335938,
+    "y2": 333.7080078125
+  },
+  "figType": "Figure",
+  "imageText": ["8.5", "8", "7.5", "7", "6.5", "6", "5.5", "5", "10", "5", "10", "4", "10", "3", "8.5", "8", "7.5", "7", "6.5", "6", "5.5", "5", "10", "5", "10", "4", "10", "3"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 488.15999999999997,
+    "y1": 91.2,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_89GT-S49mGd-Figure1-1.png"
+}]

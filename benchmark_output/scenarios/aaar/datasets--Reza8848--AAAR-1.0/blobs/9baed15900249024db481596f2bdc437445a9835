@@ -1,0 +1,321 @@
+[{
+  "caption": "Table 8: Feature Pyramid Capacity. We observe that larger feature pyramid improves the base categories (APc, APf ) without compromising the novel categories (APr).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99676513671875,
+    "y1": 202.87435913085938,
+    "y2": 221.329833984375
+  },
+  "figType": "Table",
+  "imageText": ["R50x64", "FPN", "(Lin", "et", "al.,", "2017)", "32.8", "35.4", "35.4", "34.9", "R50x64", "FPN", "(N", "=", "12)", "32.9", "(+0.1)", "37.5", "(+1.9)", "38.3", "(+2.9)", "37.0", "(+2.1)", "Backbone", "Feature", "Pyramid", "APr", "APc", "APf", "AP"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 494.4,
+    "y1": 232.79999999999998,
+    "y2": 277.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table8-1.png"
+}, {
+  "caption": "Table 9: Background Weight. We study the effects of background weight of F-VLM on LVIS.",
+  "captionBoundary": {
+    "x1": 116.30799102783203,
+    "x2": 495.69293212890625,
+    "y1": 380.8645324707031,
+    "y2": 386.86700439453125
+  },
+  "figType": "Table",
+  "imageText": ["R50x64", "1.0", "32.4", "R50x64", "0.9", "32.9", "(+0.5)", "Backbone", "Background", "Weight", "APr", "R50", "1.0", "18.3", "R50", "0.9", "18.4", "(+0.1)"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 204.0,
+    "x2": 405.12,
+    "y1": 399.84,
+    "y2": 471.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table9-1.png"
+}, {
+  "caption": "Figure 1: We explore the potential of frozen VLM (e.g., CLIP) features for open-vocabulary detection. The feature grouping reveals rich semantic and locality-sensitive information where object boundaries are nicely delineated (col. 2, see Appendix B for more details). The same frozen features can classify groundtruth regions well without finetuning (col. 3). Therefore, we propose to build a open-vocabulary detector on top of a frozen VLM (col. 4) without a need for knowledge distillation, detection-tailored pretraining, or weakly supervised learning. F-VLM significantly reduces training complexity and compute requirement, and achieves the state-of-the-art performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 273.8305358886719,
+    "y2": 345.5859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 263.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Figure1-1.png"
+}, {
+  "caption": "Table 1: LVIS Open-Vocabulary Object Detection Benchmark. F-VLM outperforms the best existing approach by 6.5 mask AP on novel categories. All methods use the same instance-level supervision from LVIS (Gupta et al., 2019) base categories, CLIP (Radford et al., 2021) pretraining, and fixed prompt templates unless noted otherwise. †: Pretraining with CC-3M (Sharma et al., 2018). ‡: Prompt optimization (Zhou et al., 2022b) and SoCo pretraining (Wei et al., 2021). ∗: Joint training with IN-21k (Deng et al., 2009). ?: ALIGN model (Jia et al., 2021).",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.00439453125,
+    "y1": 83.53055572509766,
+    "y2": 144.32794189453125
+  },
+  "figType": "Table",
+  "imageText": ["R152", "ViT-B/32", "ViLD", "(Gu", "et", "al.,", "2022)", "3", "3", "18.7", "23.6", "R152", "ViT-B/32", "ViLD-Ens.", "(Gu", "et", "al.,", "2022)", "3", "3", "18.7", "26.0", "EN-B7", "ViT-L/14", "ViLD-Ens.", "(Gu", "et", "al.,", "2022)", "3", "3", "21.7", "29.6", "EN-B7", "EN-B7?", "ViLD-Ens.", "(Gu", "et", "al.,", "2022)", "3", "3", "26.3", "29.3", "R50", "ViT-B/32", "DetPro-Cascade", "(Du", "et", "al.,", "2022)‡", "3", "3", "20.0", "27.0", "R50", "ViT-B/32", "Detic-CN2", "(Zhou", "et", "al.,", "2022c)∗", "7", "3", "24.6", "32.4", "R50x4", "R50x4", "RegionCLIP", "(Zhong", "et", "al.,", "2022)†", "3", "3", "22.0", "32.3", "ViT-L/14", "ViT-L/14", "OWL-ViT", "(Minderer", "et", "al.,", "2022)", "7", "3", "25.6", "34.7", "R50x4", "R50x4", "F-VLM", "(Ours)", "7", "7", "26.3", "28.5", "R50x16", "R50x16", "F-VLM", "(Ours)", "7", "7", "30.4", "32.1", "R50x64", "R50x64", "F-VLM", "(Ours)", "7", "7", "32.8", "34.9", "System-level", "Comparison:", "R50", "ViT-B/32", "ViLD", "(Gu", "et", "al.,", "2022)", "3", "3", "16.1", "22.5", "R50", "ViT-B/32", "ViLD-Ens.", "(Gu", "et", "al.,", "2022)", "3", "3", "16.6", "25.5", "R50", "ViT-B/32", "DetPro", "(Du", "et", "al.,", "2022)‡", "3", "3", "19.8", "25.9", "R50", "ViT-B/32", "Detic-ViLD", "(Zhou", "et", "al.,", "2022c)∗", "7", "3", "17.8", "26.8", "R50", "R50", "RegionCLIP", "(Zhong", "et", "al.,", "2022)†", "3", "3", "17.1", "28.2", "R50", "R50", "F-VLM", "(Ours)", "7", "7", "18.6", "24.2", "R50", "Comparison:", "Backbone", "Pretrained", "CLIP", "Method", "Distill", "Trainable", "Backbone", "APr", "AP"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 490.08,
+    "y1": 156.96,
+    "y2": 397.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table1-1.png"
+}, {
+  "caption": "Table 2: COCO Open-Vocabulary Object Detection Benchmark. F-VLM is very competitive with the other methods trained with various sources. All methods use the ResNet50 backbone (He et al., 2016; Radford et al., 2021). RegionCLIP additionally use COCO Captions† (Lin et al., 2014) or CC3M‡ (Sharma et al., 2018) for pretraining. ?: CLIP initialization without region-level pretraining. ∗: Joint training with COCO captions.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 407.36651611328125,
+    "y2": 457.2039794921875
+  },
+  "figType": "Table",
+  "imageText": ["CLIP", "image-text", "pairs", "instance-level", "labels", "in", "CB", "26.3", "27.8", "ViLD", "(Gu", "et", "al.,", "2022)", "27.6", "51.3", "Detic∗", "(Zhou", "et", "al.,", "2022c)", "27.8", "45.0", "RegionCLIP‡", "(Zhong", "et", "al.,", "2022)", "31.4", "50.4", "RegionCLIP†", "(Zhong", "et", "al.,", "2022)", "26.8", "47.5", "RegionCLIP?", "(Zhong", "et", "al.,", "2022)", "14.2", "42.7", "F-VLM", "(Ours)", "28.0", "39.6", "CLIP-RPN", "(Gu", "et", "al.,", "2022)", "instance-level", "labels", "in", "CB", "22.8", "39.9", "OVR-CNN", "(Zareian", "et", "al.,", "2021)", "image", "captions", "in", "CB", "∪", "CN", "ZSD", "(Bansal", "et", "al.,", "2018)", "instance-level", "labels", "in", "CB", "0.31", "24.9", "DELO", "(Zhu", "et", "al.,", "2020)", "3.41", "13.0", "PL", "(Rahman", "et", "al.,", "2020)", "4.12", "27.9", "WSDDN", "(Bilen", "&", "Vedaldi,", "2016)", "image-level", "labels", "in", "CB", "∪", "CN", "19.7", "19.6", "Cap2Det", "(Ye", "et", "al.,", "2019)", "20.3", "20.1", "Method", "Training", "source", "Novel", "AP", "AP"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 474.24,
+    "y1": 469.91999999999996,
+    "y2": 648.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table2-1.png"
+}, {
+  "caption": "Table 7: Score Fusion Parameters. We study different geometric mean fusion parameters by comparing their APr on LVIS. All results are based on a trained F-VLM R50 model. Default settings",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 522.4005737304688,
+    "y2": 540.8560180664062
+  },
+  "figType": "Table",
+  "imageText": ["0.0025", "14.9", "18.7", "0.005", "17.3", "22.2", "0.01", "18.9", "24.2", "0.02", "17.8", "24.8", "0.04", "13.9", "24.4", "T", "APr", "AP", "(c)", "Temperature", "for", "VLM", "logits.", "We", "ﬁx", "β", "=", "0.65", "and", "α", "=", "0.35", "0.15", "18.2", "24.3", "0.25", "18.8", "24.5", "0.35", "18.9", "24.2", "0.55", "18.7", "22.4", "0.75", "17.3", "17.8", "α", "APr", "AP", "(b)", "VLM-score", "weights", "for", "base", "classes.", "We", "ﬁx", "β", "=", "0.65", "and", "T", "=", "0.01.", "0.0", "11.3", "22.9", "0.45", "17.8", "24.2", "0.65", "18.9", "24.2", "0.85", "16.1", "22.5", "1.00", "10.3", "17.8", "β", "APr", "AP", "(a)", "VLM-score", "weights", "for", "novel", "classes.", "We", "ﬁx", "α", "=", "0.35", "and", "T", "=", "0.01.", "are", "in", "gray", "."],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 501.59999999999997,
+    "y1": 541.92,
+    "y2": 669.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table7-1.png"
+}, {
+  "caption": "Table 5: Finetuning vs frozen backbone. Finetuning does not benefit the novel categories (APr) but improves the base categories (APc, APf ).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.9995422363281,
+    "y1": 222.69747924804688,
+    "y2": 241.1529541015625
+  },
+  "figType": "Table",
+  "imageText": ["1e-3", "18.1", "25.7", "30.2", "26.2", "1e-4", "18.1", "24.9", "28.8", "25.3", "0.0", "18.6", "(+0.5)", "24.0", "26.9", "24.2", "Backbone", "LR", "APr", "APc", "APf", "AP"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 412.32,
+    "y1": 252.48,
+    "y2": 308.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table5-1.png"
+}, {
+  "caption": "Table 6: Score Fusion. We study different score fusion mechanisms of F-VLM. We report APr and AP on LVIS. Geometric mean is significantly more effective than arithmetic mean. All results are average over 5 independent runs using R50 backbone.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 395.4324951171875,
+    "y2": 423.35198974609375
+  },
+  "figType": "Table",
+  "imageText": ["Arithmetic", "0.65", "0.35", "0.01", "9.1", "16.4", "Arithmetic", "0.65", "0.35", "0.02", "9.3", "19.8", "Arithmetic", "0.5", "0.75", "0.02", "10.3", "15.9", "Geometric", "0.65", "0.35", "0.01", "18.6", "(+8.3)", "24.2", "Fusion", "β", "α", "T", "APr", "AP"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 188.64,
+    "x2": 420.47999999999996,
+    "y1": 436.32,
+    "y2": 503.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table6-1.png"
+}, {
+  "caption": "Figure 5: F-VLM Visualization on LVIS novel categories and Objects365 transfer object detection.",
+  "captionBoundary": {
+    "x1": 108.74698638916016,
+    "x2": 503.255859375,
+    "y1": 668.3605346679688,
+    "y2": 674.3629760742188
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Objects365", "transfer", "object", "detection.", "F-VLM", "can", "be", "applied", "to", "a", "new", "dataset", "and", "detect", "many", "challenging", "categories", "without", "further", "ﬁnetuning.", "(a)", "LVIS", "novel", "category", "detection.", "F-VLM", "can", "detect", "many", "novel", "categories", "despite", "its", "simplicity", "using", "a", "frozen", "VLM.", "The", "white", "arrows", "point", "to", "the", "novel", "objects", "correctly", "detected", "by", "F-VLM.", "For", "clarity,", "we", "only", "show", "the", "novel", "categories."],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 133.92,
+    "y2": 655.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Figure5-1.png"
+}, {
+  "caption": "Table 3: Transfer detection of F-VLM. We evaluate LVIS-trained F-VLM on COCO and Objects365 without finetuning. F-VLM demonstrates strong scaling property with a gain of +7.3/+5.8 AP on COCO/Objects365 by increasing backbone capacity.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0030212402344,
+    "y1": 188.68344116210938,
+    "y2": 216.6038818359375
+  },
+  "figType": "Table",
+  "imageText": ["ViLD-R50", "(Gu", "et", "al.,", "2022)", "36.6", "55.6", "39.8", "11.8", "18.2", "12.6", "DetPro-R50", "(Du", "et", "al.,", "2022)", "34.9", "53.8", "37.4", "12.1", "18.8", "12.9", "F-VLM-R50", "(Ours)", "32.5", "53.1", "34.6", "11.9", "19.2", "12.6", "F-VLM-R50x4", "(Ours)", "36.0", "57.5", "38.7", "14.2", "22.6", "15.2", "F-VLM-R50x16", "(Ours)", "37.9", "59.6", "41.2", "16.2", "25.3", "17.5", "F-VLM-R50x64", "(Ours)", "39.8", "61.6", "43.8", "17.7", "27.4", "19.1", "Supervised", "(Gu", "et", "al.,", "2022)", "46.5", "67.6", "50.9", "25.6", "38.6", "28.0", "Method", "COCO", "Objects365", "AP", "AP50", "AP75", "AP", "AP50", "AP75"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 454.08,
+    "y1": 226.56,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table3-1.png"
+}, {
+  "caption": "Figure 2: F-VLM architecture. We present both training and inference time architectures of FVLM, where the VLM pooling layer and detection score combination are the differences.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9989013671875,
+    "y1": 413.1785583496094,
+    "y2": 430.1400146484375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "F-VLM", "inference", "architecture.", "At", "test", "time,", "F-VLM", "uses", "the", "region", "proposals", "to", "crop", "out", "the", "top-level", "features", "of", "VLM", "backbone", "and", "compute", "the", "VLM", "score", "per", "region.", "The", "trained", "detector", "head", "provides", "the", "detection", "boxes", "and", "masks,", "while", "the", "classiﬁcation", "scores", "are", "a", "combination", "of", "detection", "and", "VLM", "scores.", "Region", "Proposals", "b1,", "…,", "bk", "Novel", "Class", "Text", "Embed.", "Base", "Class", "Text", "Embed.", "t1,", "…,", "tm", "tm+1,", "…,", "tm+n", "Scores", "Open-Vocab.", "Detection", "Geometric", "Mean", "(see", "Eqn.", "5)", "t1,", "…,", "tm", "tm+1,", "…,", "tm+n", "Detection", "Scores", "ri", "·", "tj", "Detection", "Boxes", "&", "Masks", "VLM", "Region", "Embed.", "r1,", "…,", "rKv1,", "…,", "vK", "Detection", "Region", "Embed.", "Top-level", "Feature", "Map", "ROI-", "ALIGN", "t1,", "…,", "tm", "tm+1,", "…,", "tm+n", "…", "Boat", "Cat", "…", "Person", "Car", "Novel", "Categories", "Base", "Categories", "Feature", "Map", "VLM", "Scores", "vi", "·", "tj", "v", "1", ",", "…", ",", "v", "K", "VLM", "Pooling", "Layer", "FrozenOutputs", "r1", ",", "…", ",", "rK", "Legend", "Input", "Image", "Detector", "Head", "Pretrained", "Text", "Encoder", "Encoder", "Pretrained", "Image", "(a)", "F-VLM", "training", "architecture.", "At", "training", "time,", "F-VLM", "is", "simply", "a", "detector", "with", "the", "last", "classiﬁcation", "layer", "replaced", "by", "base-category", "text", "embeddings.", "The", "detector", "head", "is", "the", "only", "trainable", "part", "of", "the", "system,", "which", "includes", "RPN", "(Ren", "et", "al.,", "2015),", "FPN", "(Lin", "et", "al.,", "2017),", "and", "Mask", "R-CNN", "heads", "(He", "et", "al.,", "2017).", "t1,", "…,", "tm", "Class", "loss", "r1,", "…,", "rK", "Detection", "Region", "Embed.", "Base", "Class", "Text", "Embed.", "Loss", "Detection", "Losses", "Mask", "Loss", "Box", "Regression", "Loss", "t1,", "…,", "tm", "Legend", "Detection", "Boxes", "&", "Masks", "Detection", "Scores", "ri", "·", "tj", "r1", ",", "…", ",", "rK", "…", "Person", "Car", "Outputs", "Trainable", "Frozen", "Input", "Image", "Base", "Categories", "Detector", "Head", "Pretrained", "Text", "Encoder", "Pretrained", "Image", "Encoder"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 82.56,
+    "y2": 399.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Figure2-1.png"
+}, {
+  "caption": "Figure 6: F-VLM Visualization on Ego4D (Grauman et al., 2022) transfer object detection. Novel categories detected: light switch, light, door lock, sauce and seasoning, bag of candies, canned food, and burrito.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032043457031,
+    "y1": 626.8575439453125,
+    "y2": 654.7780151367188
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Grocery", "store", "scene.", "The", "scene", "is", "very", "crowded", "with", "a", "wide", "variety", "of", "objects.", "F-VLM", "is", "able", "to", "detect", "many", "of", "them.", "(a)", "Indoor", "scene.", "Under", "the", "challenging", "viewing", "angles,", "occlusion,", "and", "lighting", "conditions,", "F-VLM", "still", "manages", "to", "detect", "many", "objects", "in", "the", "scene."],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 152.64,
+    "y2": 613.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Figure6-1.png"
+}, {
+  "caption": "Table 4: Training Resource Benchmark. We report LVIS mask APr to show the performance vs training cost trade-off. F-VLM can outperform the state-of-the-art with 226× less compute.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9983215332031,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["ViLD-EN-B7", "(Gu", "et", "al.,", "2022)", "26.3", "180k", "460", "8000", "1×", "F-VLM", "(Ours)", "32.8", "46.1k", "118", "565", "14×", "F-VLM", "(Ours)", "31.0", "5.76k", "14.7", "71", "113×", "F-VLM", "(Ours)", "27.7", "2.88k", "7.4", "35", "226×", "Method", "Mask", "APr", "#Iters", "Epochs", "Training", "Cost", "(Per-Core-Hour)", "Training", "Cost", "Savings"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 108.96,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table4-1.png"
+}, {
+  "caption": "Figure 3: F-VLM open-vocabulary and transfer detections. 1-2nd col.: Open-vocabulary detection on LVIS. We only show the novel categories for clarity. 2-4th col.: Transfer detection on Objects365. 4-6th col.: Transfer detection on Ego4D. Novel categories detected: fedora, martini, pennant, football helmet (LVIS); camel, slide, goldfish (Objects365); exit sign, recycle bin, window, soy sauce, wooden basket, cereal, bag of cookies, instant noodle, salad dressing, ketchup (Ego4D).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0037536621094,
+    "y1": 593.4225463867188,
+    "y2": 643.260009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 375.84,
+    "y2": 582.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Understanding the frozen VLM feature clusters. Salient objects and object parts emerge naturally from the clustering of frozen VLM features.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9957275390625,
+    "y1": 370.24853515625,
+    "y2": 387.21002197265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 359.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Figure4-1.png"
+}, {
+  "caption": "Table 10: F-VLM hyper-parameter configuration.",
+  "captionBoundary": {
+    "x1": 201.07400512695312,
+    "x2": 410.9261779785156,
+    "y1": 418.8245544433594,
+    "y2": 424.8270263671875
+  },
+  "figType": "Table",
+  "imageText": ["Conﬁguration", "LVIS", "COCO", "Optimizer", "SGD", "SGD", "Momentum", "β", "=", "0.9", "β", "=", "0.9", "Weight", "decay", "1e-4", "1e-2", "Gradient", "Clipping", "none", "none", "Learning", "rate", "(LR)", "0.36", "0.02", "Step", "decay", "factor", "0.1×", "0.1×", "Step", "decay", "schedule", "[0.8,", "0.9,", "0.95]", "[0.9,", "0.95,", "0.975]", "Warmup", "LR", "/", "steps", "3.2e-3", "/", "1k", "3.2e-3", "/", "1k", "Total", "Steps", "46.1k", "11.25k", "Batch", "size", "256", "64", "Epochs", "118", "6", "Augmentation", "LSJ", "(Ghiasi", "et", "al.,", "2021)", "LSJ", "(Ghiasi", "et", "al.,", "2021)", "NMS", "Threshold", "0.5", "0.4", "Base", "VLM", "weight", "α", "0.35", "0.2", "Novel", "VLM", "weight", "β", "0.65", "0.45", "Background", "weight", "γ", "0.9", "0.2", "VLM", "Temperature", "T", "0.01", "0.01"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 464.15999999999997,
+    "y1": 438.71999999999997,
+    "y2": 642.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_MIMwy4kh9lf-Table10-1.png"
+}]

@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 1: Illustration of the proposed method. Each point is an original image x̄. Two points are connected if they can be transformed into the same augmented image using a distribution of augmentations A. Colors represent semantic (unknown) classes and light disks represent the support of augmentations for each sample x̄, A(·|x̄). From an incomplete augmentation graph (1) where intra-class samples are not connected (e.g. augmentations are insufficient or not adapted), we reconnect them using a kernel defined on prior information (either learnt with generative model, viewed as feature extractor, or given as auxiliary attributes). The extended augmentation graph (3) is the union between the (incomplete) augmentation graph (1) and the kernel graph (2). In (2), the gray disk indicates the set of points x̄′ that are close to the anchor (blue star) in the kernel space.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00421142578125,
+    "y1": 588.2865600585938,
+    "y2": 681.9609985351562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 458.88,
+    "y2": 577.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Figure1-1.png"
+}, {
+  "caption": "Table 7: A better approximation of centroids µx̄ (i.e. increasing number of views) when augmentation overlap hypothesis is (nearly) full-filled implies faster convergence. All models are pretrained with batch size n = 256. We use ResNet18 backbone for CIFAR10, CIFAR100, STL10 and ResNet50 for ImageNet100. We report linear evaluation accuracy (%) for a given number of epochs e.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0035400390625,
+    "y1": 553.41357421875,
+    "y2": 603.2520141601562
+  },
+  "figType": "Table",
+  "imageText": ["Decoupled", "Unif", "(2", "views)", "82.43", "85.82", "54.01", "58.89", "71.98", "72.24", "78.12", "79.89", "Decoupled", "Unif", "(4", "views)", "84.99", "85.34", "57.23", "59.07", "72.08", "75.00", "78.25", "80.47", "Decoupled", "Unif", "(8", "views)", "86.50", "85.80", "59.63", "59.74", "74.70", "75.00", "79.82", "80.30", "SimCLR(10)", "79.4", "81.75", "48.89", "53.02", "65.30", "66.52", "76.99", "79.02", "BYOL(26)", "80.14", "81.97", "51.57", "53.65", "72.20", "72.26", "77.62", "79.61", "Model", "CIFAR-10", "CIFAR-100", "ImageNet100", "STL10", "e", "=", "200", "e", "=", "400", "e", "=", "200", "e", "=", "400", "e", "=", "200", "e", "=", "400", "e", "=", "200", "e", "=", "400"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 468.0,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table7-1.png"
+}, {
+  "caption": "Figure 4: How we can select a priori a good kernel? Downstream accuracy on RandBits CIFAR-10 is highly correlated with kernel quality measured as fraction of 10 nearest neighbors of the same CIFAR-10 class (from test set) in the kernel graph.",
+  "captionBoundary": {
+    "x1": 297.62896728515625,
+    "x2": 475.8299255371094,
+    "y1": 608.173583984375,
+    "y2": 668.969970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 467.03999999999996,
+    "y1": 435.84,
+    "y2": 597.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Alignment metric Lalign computed on the validation set during optimization of Decoupled Uniformity loss with various batch sizes n and a fixed latent space dimension d = 128. We use 100 positive samples per image to compute Lalign.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0035095214844,
+    "y1": 299.6725158691406,
+    "y2": 329.0869445800781
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 168.95999999999998,
+    "y2": 289.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Empirical verification of our theory. The optimal ϵ∗ to add 100 edges between intra-class images in ϵ-Kernel graph is inversely correlated with the downstream accuracy, as suggested by Theorem 5. We use k = 20 bits and an RBF kernel.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 286.2010803222656,
+    "y1": 606.9535522460938,
+    "y2": 667.75
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 287.03999999999996,
+    "y1": 436.8,
+    "y2": 596.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Figure3-1.png"
+}, {
+  "caption": "Table 3: When augmentation overlap hypothesis is not fulfilled, generative models can provide a good kernel to connect intra-class points not connected by augmentations. ∗ For VAE and DCGAN, no augmentations were used during training since they model the true data distribution. Bold: best result; underlined: second best.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 574.4215698242188,
+    "y2": 613.301025390625
+  },
+  "figType": "Table",
+  "imageText": ["VAE∗", "(37)", "41.37", "41.37", "41.37", "14.34", "14.34", "14.34", "42.17", "42.17", "42.17", "DCGAN∗", "(46)", "66.71", "66.71", "66.71", "26.17", "26.17", "26.17", "70.06", "70.06", "70.06", "Decoupled", "Unif", "60.45", "39.18", "82.43", "34.16", "14.58", "54.01", "54.53", "36.81", "78.12", "KV", "AE", "Decoupled", "Unif", "72.92", "50.52", "82.52", "45.59", "28.24", "54.66", "61.39", "45.64", "78.00", "KGAN", "Decoupled", "Unif", "77.16", "69.19", "83.01", "50.07", "35.98", "54.41", "71.44", "68.11", "78.50", "SimCLR", "(10)", "62.56", "34.07", "79.4", "38.27", "15.28", "49.50", "59.01", "39.56", "76.99", "BYOL", "(26)", "64.86", "45.88", "80.14", "35.61", "22.48", "51.57", "65.36", "11.28", "77.62", "Barlow", "Twins", "(60)", "53.97", "47.52", "81.61", "28.52", "24.17", "52.27", "49.10", "34.26", "74.86", "MoCo", "v3", "(14)", "67.71", "42.12", "84.01", "36.95", "22.11", "55.86", "64.25", "38.38", "81.12", "w/o", "Color", "w/o", "Color", "and", "Crop", "All", "w/o", "Color", "w/o", "Color", "and", "Crop", "All", "w/o", "Color", "w/o", "Color", "and", "Crop", "All", "Model", "CIFAR-10", "CIFAR-100", "STL-10"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 450.71999999999997,
+    "y2": 563.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table3-1.png"
+}, {
+  "caption": "Table 4: If images attributes are accessible (e.g birds color or size for CUB200), they can be leveraged as prior in our framework to improve the representation.",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 503.9983825683594,
+    "y1": 265.4414978027344,
+    "y2": 304.3209228515625
+  },
+  "figType": "Table",
+  "imageText": ["CosKernel", "CCLK", "(52)", "15.61", "74.34", "83.23", "RBFKernel", "CCLK", "(52)", "30.49", "77.24", "84.65", "CosKernel", "Decoupled", "Unif", "27.77", "78.8", "85.56", "RBFKernel", "Decoupled", "Unif", "32.87", "76.34", "84.78", "SimCLR", "17.48", "65.30", "84.08", "BYOL", "16.82", "72.20", "85.48", "Model", "CUB", "ImageNet100", "UT-Zappos"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 505.44,
+    "y1": 190.56,
+    "y2": 254.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table4-1.png"
+}, {
+  "caption": "Table 5: AUC scores(%) under linear evaluation for discriminating 5 pathologies on CheXpert. ResNet18 backbone is trained for 400 epochs (batch size N = 1024) without labels on official CheXpert training set and results are reported on validation set.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 365.400390625,
+    "y1": 548.4925537109375,
+    "y2": 587.3709716796875
+  },
+  "figType": "Table",
+  "imageText": ["KGloRIA", "Decoupled", "Unif", "(ours)", "86.92", "85.88", "93.03", "92.39", "91.93", "Supervised", "(6)", "81.6", "79.7", "90.5", "86.8", "89.9", "GLoRIA", "(33)", "86.70", "86.39", "90.41", "90.58", "91.82", "CCLK", "(52)", "86.31", "83.67", "92.45", "91.59", "91.23", "MoCo-CXR", "(50)", "75.8", "73.7", "77.1", "86.7", "85.0", "Model", "Atelectasis", "Cardiomegaly", "Consolidation", "Edema", "Pleural", "Effusion", "SimCLR", "(10)", "82.42", "77.62", "90.52", "89.08", "86.83", "BYOL", "(26)", "83.04", "81.54", "90.98", "90.18", "85.99"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 366.24,
+    "y1": 476.64,
+    "y2": 537.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table5-1.png"
+}, {
+  "caption": "Table 6: BD detection. Linear evaluation AUC scores(%) using a 5-fold leave-site-out CV scheme.",
+  "captionBoundary": {
+    "x1": 376.8269958496094,
+    "x2": 495.6309814453125,
+    "y1": 550.7725830078125,
+    "y2": 589.6519775390625
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "67.42±0.31", "KV", "AE", "Decoupled", "Unif", "(ours)", "62.19±1.58", "VAE", "52.86±1.24", "SimCLR", "(10)", "60.46±1.23", "BYOL", "(26)", "58.81±0.91", "MoCo", "v2", "(28)", "59.27±1.50", "Model", "Genesis", "(65)", "59.94±0.81", "Model", "BD", "vs", "HC"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 375.84,
+    "x2": 496.32,
+    "y1": 473.76,
+    "y2": 539.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table6-1.png"
+}, {
+  "caption": "Table 8: Linear evaluation accuracy (%) after training for 400 epochs with batch size n = 256 and varying temperature in Decoupled Uniformity loss with SimCLR augmentations. t = 2 gives overall the best results, similarly to the uniformity loss in (54)",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0,
+    "y1": 137.46951293945312,
+    "y2": 165.38995361328125
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR10", "73.91", "83.01", "84.72", "85.82", "83.05", "74.82", "CIFAR100", "39.16", "51.33", "55.91", "58.89", "56.70", "48.29", "Datasets", "t", "=", "0.1", "t", "=", "0.5", "t", "=", "1", "t", "=", "2", "t", "=", "5", "t", "=", "10"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 126.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table8-1.png"
+}, {
+  "caption": "Table 9: Linear evaluation accuracy (%) after training for 200 epochs with a batch size n, ResNet18 backbone and latent dimension d = 128. Decoupled Uniformity is less sensitive to batch size than SimCLR thanks to its decoupling between positives and negatives, similarly to (57).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0001525878906,
+    "y1": 262.3705139160156,
+    "y2": 290.29095458984375
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR100", "SimCLR", "49.53", "53.46", "54.45", "55.32", "Decoupled", "Unif", "54.61", "54.12", "55.56", "55.20", "CIFAR10", "SimCLR", "78.89", "79.40", "80.02", "80.06", "Decoupled", "Unif", "82.67", "82.12", "82.74", "82.33", "Datasets", "Loss", "n", "=", "128", "n", "=", "512", "n", "=", "1024", "n", "=", "2048"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 179.51999999999998,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table9-1.png"
+}, {
+  "caption": "Table 10: Linear evaluation after training on RandBits-CIFAR10 with ResNet18 for 200 epochs. RBF and Cosine kernels are evaluated.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 475.051513671875,
+    "y2": 492.01300048828125
+  },
+  "figType": "Table",
+  "imageText": ["CosineKernel", "66.56±0.45", "9.68±0.18", "RBFKernel(σ", "=", "30)", "67.21±0.29", "66.46±0.19", "RBFKernel(σ", "=", "50)", "68.42±0.51", "68.58±0.17", "RBFKernel(σ", "=", "1)", "66.25±0.17", "9.91±0.13", "Kernel", "10", "bits", "20", "bits"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 202.56,
+    "x2": 409.44,
+    "y1": 396.96,
+    "y2": 464.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-WiOF7FTt-n-Table10-1.png"
+}]

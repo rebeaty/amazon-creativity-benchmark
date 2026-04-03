@@ -1,0 +1,321 @@
+[{
+  "caption": "Table 2: ImageNet-1K end-to-end fine-tuning top-1 accuracy of vanilla ResNet-50 model. RSB (Wightman et al., 2021) is the current vanilla ResNet stateof-the-art training procedure.",
+  "captionBoundary": {
+    "x1": 315.62298583984375,
+    "x2": 495.5877380371094,
+    "y1": 58.23275375366211,
+    "y2": 93.52301025390625
+  },
+  "figType": "Table",
+  "imageText": ["Fine-tuning", "for", "600", "epochs", "RSB", "A1", "(Wightman", "et", "al.,", "2021)", "80.4", "CIM-REVDET", "(Ours)", "300", "80.7", "Fine-tuning", "for", "300", "epochs", "RSB", "A2", "(Wightman", "et", "al.,", "2021)", "79.8", "SimSiam", "(Chen", "&", "He,", "2021)", "400", "79.1", "MoCo-v2", "(Chen", "et", "al.,", "2020c)", "400", "79.6", "SimCLR", "(Chen", "et", "al.,", "2020b)", "800", "79.9", "SimCLR", "(Chen", "et", "al.,", "2020b)", "2000", "80.0", "BYOL", "(Grill", "et", "al.,", "2020)", "400", "80.0", "SwAV", "(Caron", "et", "al.,", "2020)", "600", "80.1", "CIM-RESPIX", "(Ours)", "300", "79.9", "CIM-REVDET", "(Ours)", "300", "80.5", "Fine-tuning", "for", "100", "epochs", "RSB", "A3", "(Wightman", "et", "al.,", "2021)", "78.1", "CIM-REVDET", "(Ours)", "300", "78.8", "Models", "PT", "Epochs", "Top-1"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 309.59999999999997,
+    "x2": 497.28,
+    "y1": 98.88,
+    "y2": 307.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table2-1.png"
+}, {
+  "caption": "Figure 1: Overview of our Corrupted Image Modeling (CIM) and comparisons with Masked Image Modeling (MIM). MIM (Figure 1a) requires the pre-trained architecture to receive and process the artificial [MASK] tokens, while CIM (Figure 1b) relaxes these restrictions by using a trainable generator to sample corrupted images serving as the input for the enhancer. Similar to BEiT, the small generator learns to predict the golden visual token produced by the pre-trained frozen image tokenizer encoder (not shown in the figure) based on partial observations of the input. The enhancer can be various architectures including CNN and learns either a generative or a discriminative visual pre-training objective. After pre-training, we throw out the generator and fine-tune the enhancer on downstream tasks. The dice icon in Figure 1b refers to the visual tokens’ stochastic sampling process, and the lock icon means the pre-trained image tokenizer decoder is frozen.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.00494384765625,
+    "y1": 249.18472290039062,
+    "y2": 334.2879943847656
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Corrupted", "Image", "Modeling", "(CIM).", "Decoder", "Corrupted", "Image", "Masked", "Input", "OR", "(e.g.,", "all", "tokens", "binary", "classification)", "Discriminative", "Objective", "Generative", "Objective", "(e.g.,", "all", "pixels", "regression)", "Each", "Patch", "Replaced", "or", "Not", "?", "Whether", "is", "the", "Visual", "Token", "of", "Generator", "Enhancer", "ViT,", "CNN,", "etc.Small", "BEiT", "(a)", "Masked", "Image", "Modeling", "(MIM).", "Masked", "Input", "Prediction", "(e.g.,", "predict", "masked", "visual", "tokens", "or", "pixels)", "Objective:", "Masked", "Parts", "ViT"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 60.0,
+    "y2": 236.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Figure1-1.png"
+}, {
+  "caption": "Table 3: ADE20K semantic segmentation performances (mIoU) of ViT and ResNet-50 models.",
+  "captionBoundary": {
+    "x1": 297.7820129394531,
+    "x2": 503.9996337890625,
+    "y1": 87.11971282958984,
+    "y2": 102.4840087890625
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "Vanilla", "ResNet-50", "as", "encoder", "with", "a", "classic", "FCN", "as", "decoder.", "Fine-tuning", "for", "160k", "iterations", "Training", "from", "Scratch", "36.7", "IN1K", "Supervised", "(He", "et", "al.,", "2019)", "120", "36.1", "BYOL", "(Grill", "et", "al.,", "2020)", "400", "37.1", "SimSiam", "(Chen", "&", "He,", "2021)", "400", "37.1", "SwAV", "(Caron", "et", "al.,", "2020)", "600", "37.2", "MoCo-v2", "(Chen", "et", "al.,", "2020c)", "400", "37.5", "SimCLR", "(Chen", "et", "al.,", "2020b)", "800", "37.6", "SimCLR", "(Chen", "et", "al.,", "2020b)", "2000", "37.7", "CIM-RESPIX", "(Ours)", "300", "38.7", "CIM-REVDET", "(Ours)", "300", "39.0", "Fine-tuning", "for", "80k", "iterations", "Training", "from", "Scratch", "29.9", "IN1K", "Supervised†", "(He", "et", "al.,", "2019)", "120", "35.9", "CIM-REVDET", "(Ours)", "300", "36.2", "Models", "PT", "Epochs", "mIoU", "(a)", "Vanilla", "ViT-Base/16", "as", "encoder", "with", "one", "linear", "layer", "as", "decoder.", "Fine-tuning", "for", "160k", "iterations", "DINO", "(Caron", "et", "al.,", "2021)", "1600", "43.0", "BEiT", "(Bao", "et", "al.,", "2021)", "300", "43.2", "CIM-RESPIX", "(Ours)", "300", "43.5", "CIM-REVDET", "(Ours)", "300", "43.6", "Models", "PT", "Epochs", "Top-1"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 301.44,
+    "x2": 500.15999999999997,
+    "y1": 110.88,
+    "y2": 424.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table3-1.png"
+}, {
+  "caption": "Table 11: Study of the training cost for ViT-Base pre-training.",
+  "captionBoundary": {
+    "x1": 194.8179931640625,
+    "x2": 416.9065856933594,
+    "y1": 188.26071166992188,
+    "y2": 193.6629638671875
+  },
+  "figType": "Table",
+  "imageText": ["CIM", "800", "1.8x", "83.3", "CIM", "800", "4.8x", "83.4", "BEiT", "300", "1.0x", "82.9", "BEiT", "800", "2.7x", "83.2", "BEiT", "1600", "5.3x", "83.3", "Methods", "PT", "Epochs", "Relative", "PT", "Time", "Top-1", "Acc."],
+  "name": "11",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 419.03999999999996,
+    "y1": 198.72,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table11-1.png"
+}, {
+  "caption": "Table 12: Study of the training cost for ResNet-50x4 pre-training.",
+  "captionBoundary": {
+    "x1": 187.90899658203125,
+    "x2": 423.8148498535156,
+    "y1": 377.6787414550781,
+    "y2": 383.08099365234375
+  },
+  "figType": "Table",
+  "imageText": ["SimMIM", "300", "1.0x", "81.6", "CIM", "100", "0.9x", "82.2", "Methods", "PT", "Epochs", "Relative", "PT", "Time", "Top-1", "Acc."],
+  "name": "12",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 419.03999999999996,
+    "y1": 387.84,
+    "y2": 433.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table12-1.png"
+}, {
+  "caption": "Figure 2: Visualizations of some corrupted image samples. For each image set, we show (from left to right) the original image, the masked image, and four different corrupted images sampled from the generator output distribution with the same masked input. Simple stochastic sampling can greatly enrich the corrupted image distribution in terms of both low-level features and high-level semantics, which feeds the enhancer better.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.5982971191406,
+    "y1": 395.2847595214844,
+    "y2": 430.57501220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Corrupted", "image", "samples", "from", "COCO", "val", "split", "(Lin", "et", "al.,", "2014)", "using", "ImageNet-1K", "pre-trained", "model."],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 231.84,
+    "y2": 382.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Figure2-1.png"
+}, {
+  "caption": "Table 15: The ImageNet-1K image classification fine-tuning recipes for vanilla ResNet-50. We use the AdamW optimizer. The hyperparameter settings basically follows (Wightman et al., 2021). We implement the fine-tuning based on the codebase of BEiT (Bao et al., 2021). Mixed precision and deepspeed acceleration are used. For other self-supervised baseline approaches we compared in Table 2, we select the best learning rate out of {5e-3, 8e-3, 12e-3} and keep other settings unchanged.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.0036315917969,
+    "y1": 400.01373291015625,
+    "y2": 445.2659912109375
+  },
+  "figType": "Table",
+  "imageText": ["Fine-tuning", "Config.", "(ResNet-50)", "100", "Epoch", "FT", "300", "Epoch", "FT", "600", "Epoch", "FT", "Optimizer", "AdamW", "(Loshchilov", "&", "Hutter,", "2017)", "Peak", "Learning", "Rate", "12e-3", "Layer-wise", "Learning", "Rate", "Decay", "(Bao", "et", "al.,", "2021)", "✗", "Batch", "Size", "2048", "Learning", "Rate", "Schedule", "Cosine", "Decay", "Loss", "Function", "Binary", "Cross", "Entropy", "Loss", "Warmup", "Epochs", "5", "Weight", "Decay", "0.02", "0.02", "0.01", "Fine-tuning", "Resolution", "160", "224", "224", "Test", "Resolution", "224", "Test", "Crop", "Ratio", "0.95", "Repeated", "Augmentation", "(Berman", "et", "al.,", "2019;", "Hoffer", "et", "al.,", "2019)", "✗", "✓", "✓", "Random", "Augmentation", "(Cubuk", "et", "al.,", "2020)", "6", "/", "0.5", "7", "/", "0.5", "7", "/", "0.5", "Mixup", "(Zhang", "et", "al.,", "2017)", "0.1", "0.1", "0.2", "CutMix", "(Yun", "et", "al.,", "2019)", "1.0", "Label", "Smoothing", "(Szegedy", "et", "al.,", "2016)", "0.1", "✗", "0.1", "Stochastic", "Depth", "(Huang", "et", "al.,", "2016)", "✗", "✗", "0.05", "Dropout", "(Srivastava", "et", "al.,", "2014)", "✗", "Layer-wise", "Learning", "Rate", "Decay", "✗"],
+  "name": "15",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 116.64,
+    "y2": 382.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table15-1.png"
+}, {
+  "caption": "Table 10: Study of different generator tpye of CIM pre-training for ViT-Base.",
+  "captionBoundary": {
+    "x1": 166.7220001220703,
+    "x2": 445.0013427734375,
+    "y1": 394.9587707519531,
+    "y2": 400.36102294921875
+  },
+  "figType": "Table",
+  "imageText": ["MAE-style", "generator", "w/", "50%", "masking", "ratio", "82.6", "(-0.7)", "BEiT-Style", "generator", "w/", "VQGAN", "tokenizer", "82.9", "(-0.4)", "BEiT-Style", "generator", "w/", "DALL-E", "tokenizer", "(our", "default", "setting)", "83.3", "Generator", "Type", "of", "CIM", "Top-1", "Acc."],
+  "name": "10",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 451.2,
+    "y1": 405.59999999999997,
+    "y2": 461.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table10-1.png"
+}, {
+  "caption": "Table 7: Ablation study: sampling strategy for visual tokens.",
+  "captionBoundary": {
+    "x1": 315.62298583984375,
+    "x2": 494.2483215332031,
+    "y1": 178.42874145507812,
+    "y2": 193.79400634765625
+  },
+  "figType": "Table",
+  "imageText": ["Uniform", "sampling", "77.2", "argmax", "sampling", "78.5", "softmax", "sampling", "83.3", "Sampling", "Strategy", "Top-1", "Acc."],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 324.96,
+    "x2": 482.4,
+    "y1": 198.72,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table7-1.png"
+}, {
+  "caption": "Table 8: Scaling CIM pre-training to larger ResNet.",
+  "captionBoundary": {
+    "x1": 291.97198486328125,
+    "x2": 478.1488037109375,
+    "y1": 559.709716796875,
+    "y2": 565.1119995117188
+  },
+  "figType": "Table",
+  "imageText": ["ResNet-50x4", "(#params:", "375M)", "From", "Scratch", "-", "400", "80.9", "SimCLR", "(Bao", "et", "al.,", "2021)", "1000", "100", "82.6", "SimMIM", "(Xie", "et", "al.,", "2021)", "300", "100", "81.6", "CIM-REVDET", "(Ours)", "300", "100", "82.6", "ResNet-50x2", "(#params:", "94M)", "From", "Scratch", "-", "400", "81.1", "SimCLR", "(Bao", "et", "al.,", "2021)", "1000", "100", "/", "200", "81.6", "/", "82.1", "CIM-REVDET", "(Ours)", "300", "100", "/", "200", "81.7", "/", "82.2", "Methods", "PT", "Epochs", "FT", "Epochs", "Top-1", "Acc."],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 269.76,
+    "x2": 501.12,
+    "y1": 573.6,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table8-1.png"
+}, {
+  "caption": "Table 6: Ablation study: pixel reconstruction target for RESPIX pre-training objective.",
+  "captionBoundary": {
+    "x1": 117.62300109863281,
+    "x2": 296.0972595214844,
+    "y1": 178.42874145507812,
+    "y2": 193.79400634765625
+  },
+  "figType": "Table",
+  "imageText": ["w/o", "norm.", "82.8", "norm.", "w/", "non-overlap", "win.", "83.0", "norm.", "w/", "sliding", "win.", "83.3", "RESPIX", "Recon.", "Target", "Top-1", "Acc."],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 294.24,
+    "y1": 198.72,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table6-1.png"
+}, {
+  "caption": "Figure 4: Normalizations as learning templates for RESPIX. For each image triplet, we visualize the original image (left), the template of using non-overlapping window normalization (He et al., 2021), and the template of the proposed sliding window normalization paradigm. Our approach can provide more accurate and moderate hints that can boost the enhancer’s pre-training as well as improve its representation quantity.",
+  "captionBoundary": {
+    "x1": 305.677001953125,
+    "x2": 505.5718078613281,
+    "y1": 662.0177001953125,
+    "y2": 737.1580200195312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 504.0,
+    "y1": 519.84,
+    "y2": 654.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Example visualization results on COCO val split images from vanilla ViT-Base/16 model pre-trained with the RESPIX objective using ImageNet-1K training data. For each image quadruplet, we show the original input image (1st column), the masked input image for the generator (2nd column), the corrupted image sampled from the generator output (3rd column), and the enhancer output (4th column). Given the corrupted image, the enhancer is able to perform image denoising, deblurring and completion, etc., and learns to predict plausible output in terms of both low-level features as well as high-level semantics.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 503.99951171875,
+    "y1": 364.55975341796875,
+    "y2": 419.7749938964844
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "CIM-RESPIX", "pre-training", "objective", "with", "unnormalized", "pixels", "as", "the", "enhancer", "prediction", "target."],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 205.92,
+    "y2": 355.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Figure3-1.png"
+}, {
+  "caption": "Table 14: The ImageNet-1K image classification fine-tuning recipes for vanilla ViT-S/16 and ViT-B/16. We implement the fine-tuning using the codebase of BEiT (Bao et al., 2021). Mixed precision and deepspeed acceleration are used. We select the best learning rate out of {3e-3, 4e-3, 5e-3} for different sized models and pre-training objectives, and the absolute difference between the worst and the best learning rate is less than 0.3 in terms of the top-1 accuracy.",
+  "captionBoundary": {
+    "x1": 107.5790023803711,
+    "x2": 505.5666809082031,
+    "y1": 410.97174072265625,
+    "y2": 456.2250061035156
+  },
+  "figType": "Table",
+  "imageText": ["Fine-tuning", "Config.", "(ViT)", "Value", "Optimizer", "AdamW", "(Loshchilov", "&", "Hutter,", "2017)", "Fine-tuning", "Epochs", "200", "for", "ViT-S/16,", "100", "for", "ViT-B/16", "Peak", "Learning", "Rate", "3e-3", "for", "ViT-B/16", "RESPIX,", "5e-3", "for", "ViT-B/16", "REVDET,", "3e-3", "or", "4e-3", "for", "ViT-S/16", "Layer-wise", "Learning", "Rate", "Decay", "(Bao", "et", "al.,", "2021)", "0.8", "(Clark", "et", "al.,", "2020)", "Batch", "Size", "1024", "Weight", "Decay", "0.05", "Optimizer", "Momentum", "(β1,", "β2)", "(0.9,", "0.999)", "Learning", "Rate", "Schedule", "Cosine", "Decay", "Warmup", "Epochs", "5", "Gradient", "Clipping", "✗", "Dropout", "(Srivastava", "et", "al.,", "2014)", "✗", "Stochastic", "Depth", "(Huang", "et", "al.,", "2016)", "0.1", "Label", "Smoothing", "(Szegedy", "et", "al.,", "2016)", "0.1", "Mixup", "(Zhang", "et", "al.,", "2017)", "0.8", "CutMix", "(Yun", "et", "al.,", "2019)", "1.0", "Random", "Augmentation", "(Cubuk", "et", "al.,", "2020)", "9", "/", "0.5", "Patch", "Size", "16", "Fine-tuning", "Resolution", "224", "Test", "Resolution", "224", "Test", "Crop", "Ratio", "0.95", "Loss", "Function", "Cross", "Entropy", "Loss"],
+  "name": "14",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 116.64,
+    "y2": 393.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table14-1.png"
+}, {
+  "caption": "Table 9: Scaling CIM pre-training for ViT-Large.",
+  "captionBoundary": {
+    "x1": 326.2200012207031,
+    "x2": 503.3049011230469,
+    "y1": 123.6617660522461,
+    "y2": 129.06402587890625
+  },
+  "figType": "Table",
+  "imageText": ["ViT-Large", "(#params:", "304M)", "From", "Scratch", "(He", "et", "al.,", "2021)", "82.6", "MoCo-v3", "(Chen", "et", "al.,", "2021)", "84.1", "BEiT", "(Bao", "et", "al.,", "2021)", "85.2", "CIM-RESPIX", "(Ours)", "84.3", "Methods", "Top-1", "Acc."],
+  "name": "9",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 497.28,
+    "y1": 133.92,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table9-1.png"
+}, {
+  "caption": "Table 13: The ImageNet-1K CIM pre-training settings for vanilla ViT-S/16, ViT-B/16 and ResNet-50 models. Notably, the pre-training configurations are almost the same for different architectures. We implement the pre-training using the codebase of BEiT (Bao et al., 2021). Mixed precision and deepspeed acceleration are used.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 504.001953125,
+    "y1": 409.5777587890625,
+    "y2": 444.8680114746094
+  },
+  "figType": "Table",
+  "imageText": ["Pre-training", "Config.", "(ViT", "&", "ResNet)", "Value", "Optimizer", "AdamW", "(Loshchilov", "&", "Hutter,", "2017)", "Pre-training", "Epochs", "300", "Peak", "Learning", "Rate", "1.5e-3", "Batch", "Size", "2048", "Weight", "Decay", "0.05", "Optimizer", "Momentum", "(β1,", "β2)", "(0.9,", "0.98)", "(Vaswani", "et", "al.,", "2017)", "Learning", "Rate", "Schedule", "Cosine", "Decay", "Gradient", "Clipping", "3.0", "Warmup", "Epochs", "10", "#", "Masked", "Patches", "for", "the", "Generator", "100", "to", "120,", "Random", "Masking", "The", "Generator’s", "Depth", "4", "to", "6", "The", "Generator’s", "Width", "Same", "to", "the", "Enhancer", "(ViT),", "384", "(ResNet)", "The", "Enhancer’s", "Loss", "Weight", "1", "for", "REVDET,", "10", "for", "RESPIX", "Data", "Augmentation", "RandomResizedCrop", "Only", "Dropout", "(Srivastava", "et", "al.,", "2014)", "✗", "Stochastic", "Depth", "(Huang", "et", "al.,", "2016)", "✗", "LayerScale", "(Touvron", "et", "al.,", "2021b)", "✗", "Pos.", "Emb.", "in", "Transformer", "Layers", "1-D", "Absolute", "Pos.", "Emb.", "(Dosovitskiy", "et", "al.,", "2020)", "Patch", "Size", "16", "Pre-training", "Resolution", "224"],
+  "name": "13",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 136.79999999999998,
+    "y2": 391.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09hVcSDkea-Table13-1.png"
+}]

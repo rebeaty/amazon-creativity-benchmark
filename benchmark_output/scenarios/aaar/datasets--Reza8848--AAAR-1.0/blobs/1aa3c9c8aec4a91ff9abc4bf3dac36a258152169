@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 2: Training time comparisons with fixed ψ = 0.005, averaged over ten random runs with shaded standard deviations. CGAVI-IHB is faster than BPCGAVI-WIHB, which is faster than BPCGAVI.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00238037109375,
+    "y1": 196.54653930664062,
+    "y2": 224.46697998046875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "bank", "(b)", "htru", "(c)", "skin", "(d)", "synthetic"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 80.64,
+    "y2": 183.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3ZPESALKXO-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Training time comparisons, averaged over ten random runs with shaded standard deviations. For small datasets, ABM and VCA are faster than OAVI, but for synthetic, the training times of ABM and VCA scale worse than OAVI’s. See Appendix F.2 for details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 196.54653930664062,
+    "y2": 224.46697998046875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "bank", "(b)", "htru", "(c)", "skin", "(d)", "synthetic"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 80.64,
+    "y2": 183.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3ZPESALKXO-Figure3-1.png"
+}, {
+  "caption": "Table 1: Overview of datasets. All datasets are binary classification datasets and are retrieved from the UCI Machine Learning Repository (Dua & Graff, 2017) and additional references are provided.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", "Full", "name", "#", "samples", "#", "features", "bank", "banknote", "authentication", "1,372", "4", "credit", "default", "of", "credit", "cards", "(Yeh", "&", "Lien,", "2009)", "30,000", "22", "htru", "HTRU2", "(Lyon", "et", "al.,", "2016)", "17,898", "8", "skin", "skin", "(Bhatt", "&", "Dhall,", "2010)", "245,057", "3", "spam", "spambase", "4,601", "57", "synthetic", "synthetic,", "see", "Appendix", "E", "2,000,000", "3"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 112.8,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3ZPESALKXO-Table1-1.png"
+}, {
+  "caption": "Table 3: Hyperparameter ranges for numerical experiments.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 346.405029296875,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Hyperparameters", "Values", "ψ", "0.1,", "0.05,", "0.01,", "0.005,", "0.001,", "0.0005,", "0.0001", "Regularization", "coefficient", "for", "SVMs", "0.1,", "1,", "10", "Degree", "for", "polynomial", "kernel", "SVM", "1,", "2,", "3,", "4"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 104.64,
+    "y2": 151.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3ZPESALKXO-Table3-1.png"
+}, {
+  "caption": "Table 2: Numerical results averaged over ten random 60%/40% train/test partitions with best results in bold. For approaches other than BPCGAVI-WIHB∗, SPAR (G) < 0.01 and we omit the results.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99615478515625,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["BPCGAVI-WIHB∗", "0.67", "0.52", "0.03", "0.71", "R", ")", "(S", "PA", "CGAVI-IHB∗", "1.3×", "102", "2.3×", "101", "1.0×", "102", "8.3×", "101", "AGDAVI-IHB∗", "1.9×", "102", "2.8×", "101", "1.1×", "102", "3.1×", "102", "BPCGAVI-WIHB∗", "3.7×", "103", "8.0×", "102", "5.6×", "102", "4.2×", "102", "ABM∗", "1.2×", "102", "2.4×", "101", "6.×", "101", "1.7×", "102", "VCA∗", "2.4×", "101", "6.2×", "100", "1.4×", "101", "6.5×", "101", "SVM", "8.9×", "101", "4.1×", "100", "7.1×", "102", "2.2×", "100", "|G", "|+", "|O", "|", "CGAVI-IHB∗", "82.40", "27.90", "39.00", "786.60", "AGDAVI-IHB∗", "82.40", "27.90", "39.00", "786.60", "BPCGAVI-WIHB∗", "106.40", "55.20", "39.00", "653.00", "ABM∗", "51.40", "28.70", "19.30", "261.00", "VCA∗", "49.80", "19.00", "12.40", "1766.40", "e", "Ti", "m", "E", "rr", "or", "CGAVI-IHB∗", "18.08", "2.09", "0.23", "6.69", "AGDAVI-IHB∗", "18.08", "2.09", "0.23", "6.69", "BPCGAVI-WIHB∗", "17.98", "2.05", "0.22", "6.71", "ABM∗", "18.36", "2.09", "0.43", "6.67", "VCA∗", "19.85", "2.11", "0.24", "7.15", "SVM", "18.34", "2.08", "2.25", "7.13", "Algorithms", "Datasets", "credit", "htru", "skin", "spam"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 474.24,
+    "y1": 115.67999999999999,
+    "y2": 363.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3ZPESALKXO-Table2-1.png"
+}, {
+  "caption": "Figure 1: Training time comparisons with fixed ψ = 0.005, averaged over ten random runs with shaded standard deviations. On all datasets except skin, BPCGAVI is faster than PCGAVI.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00238037109375,
+    "y1": 198.58255004882812,
+    "y2": 215.54400634765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "bank", "(b)", "htru", "(c)", "skin", "(d)", "synthetic"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 80.64,
+    "y2": 185.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3ZPESALKXO-Figure1-1.png"
+}]

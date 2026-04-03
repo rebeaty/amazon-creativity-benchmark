@@ -1,0 +1,721 @@
+[{
+  "caption": "Figure 1: A ConvCNP trained on random sawtooth functions and applied in standard mode (left) and in our proposed autoregressive (AR) mode (right). The black crosses denote observed data points, the blue lines show model samples, and the bottom plots show the marginal predictive distributions at the locations marked by the dashed vertical lines. In standard mode, the CNP models each output with an independent Gaussian (left). However, the same CNP, when run in AR mode, can produce coherent samples and model multimodality (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.5693664550781,
+    "y1": 681.6196899414062,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 605.76,
+    "y2": 670.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure1-1.png"
+}, {
+  "caption": "Figure 12: Seven samples from each model in the Antarctic cloud cover sample extrapolation task for 25/06/2018.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9979248046875,
+    "y1": 712.1317138671875,
+    "y2": 717.5339965820312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 42,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 521.28,
+    "y1": 76.8,
+    "y2": 701.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure12-1.png"
+}, {
+  "caption": "Table 7: For the Gaussian experiments, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional inputs (1D; dx = 1) and two-dimensional inputs (2D; dy = 2) the performance for interpolation within the range [−2, 2]dx where the models were trained (“Int.”); interpolation within the range [2, 6]dx which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]dx to the range [2, 6]dx (“Ext.”). Models are ordered by interpolation performance for one-dimensional inputs. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.7406311035156,
+    "y1": 220.54074096679688,
+    "y2": 339.1549987792969
+  },
+  "figType": "Table",
+  "imageText": ["FullConvGNP", "0.01±0.00", "0.01±0.00", "0.00±0.00", "ConvCNP", "(AR)", "0.03±0.00", "0.03±0.00", "0.02±0.00", "0.03±0.00", "0.03±0.00", "0.02±0.00", "ConvGNP", "0.04±0.00", "0.04±0.00", "1.75±0.12", "0.12±0.00", "0.12±0.00", "0.71±0.03", "AGNP", "0.10±0.00", "4.34±0.17", "5.45±0.23", "0.17±0.00", "0.62±0.01", "0.39±0.01", "ConvLNP", "(E)", "0.19±0.01", "0.19±0.01", "0.29±0.03", "0.39±0.01", "0.39±0.01", "0.36±0.01", "ACNP", "(AR)", "0.24±0.01", "1.08±0.02", "0.86±0.01", "0.13±0.00", "0.57±0.01", "0.40±0.01", "GNP", "0.25±0.01", "F", "F", "0.25±0.01", "0.75±0.01", "0.57±0.00", "ConvLNP", "(M)", "0.31±0.01", "0.31±0.01", "0.64±0.01", "0.28±0.01", "0.28±0.01", "0.36±0.01", "Diagonal", "GP", "0.42±0.02", "0.42±0.02", "0.84±0.01", "0.29±0.01", "0.29±0.01", "0.40±0.01", "ALNP", "(M)", "0.43±0.01", "1.03±0.02", "0.78±0.01", "0.31±0.01", "0.55±0.01", "0.39±0.01", "ConvCNP", "0.43±0.02", "0.43±0.02", "0.84±0.01", "0.30±0.01", "0.30±0.01", "0.40±0.01", "CNP", "(AR)", "0.46±0.01", "F", "F", "0.36±0.01", "F", "F", "LNP", "(E)", "0.51±0.01", "F", "4.34±0.76", "0.40±0.01", "3.03±1.68", "0.60±0.01", "LNP", "(E–M)", "0.52±0.02", "F", "2.39±0.33", "0.39±0.01", "2.35±1.06", "0.57±0.01", "ALNP", "(E–M)", "0.53±0.01", "1.12±0.03", "0.85±0.02", "0.42±0.01", "0.78±1.72", "0.41±0.01", "ACNP", "0.54±0.02", "1.11±0.02", "0.84±0.01", "0.34±0.01", "0.57±0.01", "0.40±0.01", "ALNP", "(E)", "0.54±0.01", "1.60±0.06", "1.25±0.03", "0.43±0.01", "1.06±3.04", "0.42±0.01", "LNP", "(M)", "0.59±0.01", "F", "1.13±0.01", "0.41±0.01", "0.88±0.03", "0.52±0.01", "CNP", "0.63±0.01", "F", "1.08±0.02", "0.43±0.01", "1.16±0.45", "0.52±0.01", "Trivial", "1.08±0.01", "1.08±0.01", "0.85±0.01", "0.57±0.01", "0.57±0.01", "0.40±0.00", "ConvLNP", "(E–M)", "2.01±0.11", "2.01±0.11", "5.95±0.16", "0.44±0.01", "0.44±0.01", "0.47±0.01", "Model", "Int.", "(1D)", "OOID", "(1D)", "Ext.", "(1D)", "Int.", "(2D)", "OOID", "(2D)", "Ext.", "(2D)"],
+  "name": "7",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 489.12,
+    "y1": 351.84,
+    "y2": 583.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table7-1.png"
+}, {
+  "caption": "Table 8: For the non-Gaussian experiments, average log-likelihoods normalised by the number of target points. Shows for one-dimensional inputs (1D; dx = 1) and two-dimensional inputs (2D; dy = 2) the performance for interpolation within the range [−2, 2]dx where the models were trained (“Int.”); interpolation within the range [2, 6]dx which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]dx to the range [2, 6]dx (“Ext.”). Models are ordered by interpolation performance for one-dimensional inputs. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 505.57000732421875,
+    "y1": 235.48477172851562,
+    "y2": 334.17401123046875
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "1.52±0.04", "1.53±0.04", "1.32±0.04", "0.56±0.03", "0.56±0.03", "0.29±0.03", "ConvLNP", "(E)", "1.40±0.05", "1.40±0.05", "0.82±0.05", "0.06±0.03", "0.06±0.03", "−0.62±0.04", "ConvLNP", "(M)", "1.08±0.06", "1.08±0.06", "−0.36±0.03", "0.26±0.04", "0.26±0.04", "−0.70±0.02", "ConvGNP", "0.79±0.06", "0.79±0.06", "−1.03±0.07", "0.23±0.04", "0.23±0.04", "−0.79±0.02", "FullConvGNP", "0.71±0.08", "0.72±0.06", "−0.20±0.02", "ConvCNP", "0.57±0.07", "0.57±0.07", "−0.73±0.02", "0.18±0.05", "0.18±0.05", "−0.86±0.03", "ACNP", "(AR)", "0.07±0.03", "−0.85±0.03", "−0.84±0.02", "−0.53±0.02", "−1.52±0.10", "−1.51±0.09", "AGNP", "−0.31±0.03", "−1.22±0.07", "−1.58±0.11", "−0.55±0.02", "−0.79±0.02", "−0.76±0.03", "ALNP", "(E–M)", "−0.33±0.03", "−0.91±0.03", "−0.80±0.04", "−0.67±0.03", "−1.06±0.62", "−0.70±0.03", "ALNP", "(E)", "−0.35±0.03", "−5.00±0.17", "−3.37±0.06", "−0.68±0.03", "−2.59±7.64", "−0.75±0.03", "ALNP", "(M)", "−0.36±0.02", "−0.68±0.02", "−0.68±0.02", "−0.53±0.02", "−0.74±0.04", "−0.69±0.02", "GNP", "−0.38±0.02", "F", "F", "−0.69±0.02", "−0.74±0.04", "−0.70±0.03", "LNP", "(E–M)", "−0.43±0.02", "F", "−3.34±0.53", "−0.66±0.02", "F", "−0.96±0.03", "LNP", "(E)", "−0.44±0.02", "F", "F", "−0.66±0.02", "F", "F", "ACNP", "−0.50±0.03", "−0.83±0.03", "−0.85±0.03", "−0.60±0.02", "−1.50±0.10", "−0.73±0.03", "LNP", "(M)", "−0.53±0.02", "−1.28±0.05", "−0.80±0.03", "−0.62±0.02", "−1.50±0.11", "−0.75±0.03", "CNP", "(AR)", "−0.65±0.02", "−1.14±0.19", "−0.98±0.06", "−0.69±0.02", "−1.05±0.07", "−0.72±0.03", "CNP", "−0.68±0.02", "−0.79±0.04", "−0.73±0.03", "−0.69±0.02", "−1.05±0.08", "−0.71±0.03", "Trivial", "−0.82±0.00", "−0.82±0.00", "−0.82±0.00", "−0.82±0.00", "−0.82±0.00", "−0.82±0.00", "ConvLNP", "(E–M)", "F", "F", "F", "−0.04±0.05", "−0.04±0.05", "−1.47±0.87", "Model", "Int.", "(1D)", "OOID", "(1D)", "Ext.", "(1D)", "Int.", "(2D)", "OOID", "(2D)", "Ext.", "(2D)"],
+  "name": "8",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 489.12,
+    "y1": 346.56,
+    "y2": 568.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table8-1.png"
+}, {
+  "caption": "Table 12: For the Matérn– 5 2 synthetic experiments with two-dimensional inputs, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2]2 where the models where trained (“Int.”); interpolation within the range [2, 6]2 which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]2 to the range [2, 6]2 (“Ext.”). Models are ordered by interpolation performance. Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 505.56671142578125,
+    "y1": 227.30673217773438,
+    "y2": 322.37298583984375
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "0.01±0.00", "0.01±0.00", "0.01±0.00", "ACNP", "(AR)", "0.06±0.00", "0.58±0.00", "0.41±0.00", "ConvGNP", "0.14±0.00", "0.14±0.00", "0.64±0.01", "AGNP", "0.17±0.00", "0.58±0.00", "0.40±0.00", "GNP", "0.28±0.00", "0.78±0.00", "0.60±0.00", "ConvLNP", "(M)", "0.29±0.00", "0.29±0.00", "0.38±0.00", "ALNP", "(M)", "0.29±0.00", "0.56±0.00", "0.40±0.00", "Diagonal", "GP", "0.30±0.00", "0.30±0.00", "0.41±0.00", "ConvCNP", "0.30±0.00", "0.30±0.00", "0.41±0.00", "ACNP", "0.32±0.00", "0.58±0.00", "0.41±0.00", "ConvLNP", "(E)", "0.36±0.00", "0.36±0.00", "0.37±0.00", "CNP", "(AR)", "0.37±0.00", "F", "0.88±0.17", "LNP", "(E–M)", "0.41±0.00", "2.29±0.05", "0.59±0.00", "LNP", "(E)", "0.41±0.00", "2.36±0.05", "0.60±0.00", "ALNP", "(E–M)", "0.42±0.00", "0.61±0.00", "0.41±0.00", "ALNP", "(E)", "0.42±0.00", "0.61±0.00", "0.41±0.00", "LNP", "(M)", "0.43±0.00", "0.68±0.00", "0.53±0.00", "CNP", "0.44±0.00", "0.86±0.17", "0.59±0.00", "ConvLNP", "(E–M)", "0.49±0.00", "0.49±0.00", "0.61±0.00", "Trivial", "0.58±0.00", "0.58±0.00", "0.41±0.00", "FullConvGNP", "Matérn–", "5", "2", "Int.", "OOID", "Ext.", "dx=2,", "dy=2", "ConvCNP", "(AR)", "0.01±0.00", "0.01±0.00", "0.00±0.00", "ACNP", "(AR)", "0.05±0.00", "0.54±0.00", "0.38±0.00", "AGNP", "0.08±0.00", "0.83±0.01", "0.37±0.00", "ConvGNP", "0.08±0.00", "0.08±0.00", "0.60±0.01", "GNP", "0.16±0.00", "0.90±0.00", "0.75±0.00", "ConvLNP", "(M)", "0.25±0.00", "0.25±0.00", "0.34±0.00", "ALNP", "(M)", "0.26±0.00", "0.51±0.00", "0.37±0.00", "Diagonal", "GP", "0.28±0.00", "0.28±0.00", "0.39±0.00", "ConvCNP", "0.28±0.00", "0.28±0.00", "0.39±0.00", "ACNP", "0.29±0.00", "0.54±0.00", "0.39±0.00", "CNP", "(AR)", "0.31±0.00", "0.69±0.00", "0.52±0.00", "ConvLNP", "(E)", "0.32±0.00", "0.32±0.00", "0.30±0.00", "LNP", "(E–M)", "0.34±0.00", "1.07±0.01", "0.69±0.00", "LNP", "(E)", "0.35±0.00", "1.25±0.01", "0.72±0.00", "ConvLNP", "(E–M)", "0.36±0.00", "0.36±0.00", "0.43±0.00", "LNP", "(M)", "0.37±0.00", "0.75±0.01", "0.51±0.00", "ALNP", "(E–M)", "0.39±0.00", "0.65±0.01", "0.43±0.00", "CNP", "0.39±0.00", "0.67±0.00", "0.54±0.00", "ALNP", "(E)", "0.41±0.01", "0.67±0.01", "0.44±0.00", "Trivial", "0.55±0.00", "0.55±0.00", "0.39±0.00", "FullConvGNP", "Matérn–", "5", "2", "Int.", "OOID", "Ext.", "dx=2,", "dy=1"],
+  "name": "12",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 334.56,
+    "y2": 577.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table12-1.png"
+}, {
+  "caption": "Table 1: Comparison of various classes of neural processes. Shows whether a class produces consistent predictions, models dependencies, can produce non-Gaussian predictions, and can be trained without approximating the objective function. For CNPs, even though the presentation by Garnelo et al. (2018a) assumes Gaussian predictions, it is simple to relax this Gaussianity assumption; this is not the case for GNPs.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 505.4892578125,
+    "y1": 137.70773315429688,
+    "y2": 172.99798583984375
+  },
+  "figType": "Table",
+  "imageText": ["AR", "CNPs", "(this", "work)", "✗", "✓", "✓", "✓", "CNPs", "(Garnelo", "et", "al.,", "2018a)", "✓", "✗", "✓", "✓", "GNPs", "(Markou", "et", "al.,", "2022)", "✓", "✓", "✗", "✓", "LNPs", "(Garnelo", "et", "al.,", "2018b)", "✓", "✓", "✓", "✗", "Class", "Consistent", "Dependencies", "Non-Gaussian", "Exact", "Training"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 126.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table1-1.png"
+}, {
+  "caption": "Table 4: Per-datapoint predictive log-likelihoods on the EEG experiments. Significantly best results in bold.",
+  "captionBoundary": {
+    "x1": 112.427001953125,
+    "x2": 499.3001403808594,
+    "y1": 387.7117614746094,
+    "y2": 393.114013671875
+  },
+  "figType": "Table",
+  "imageText": ["INT.", "−1.02±0.01", "−0.34±0.01", "−0.93±0.01", "−0.35±0.01", "−1.04±0.01", "−1.20±0.01", "REC.", "−2.07±0.03", "−0.63±0.01", "−1.45±0.03", "−0.57±0.01", "−1.53±0.02", "−2.00±0.06", "ConvCNP", "ConvCNP", "(AR)", "ConvGNP", "FullConvGNP", "ConvLNP", "(ML)", "ConvLNP", "(ELBO)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 339.84,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table4-1.png"
+}, {
+  "caption": "Table 3: Normalised log-likelihoods in the predator–prey experiments, showing interpolation (int.), forecasting (for.), and reconstruction (rec.) on simulated (S) and real (R) data. Significantly best results in bold.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.0013122558594,
+    "y1": 316.85174560546875,
+    "y2": 332.2170104980469
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "−3.47±0.02", "−4.06±0.02", "−4.85±0.02", "−4.17±0.04", "−4.70±0.06", "−4.97±0.01", "ConvCNP", "(AR)", "−3.30±0.02", "−3.47±0.02", "−3.60±0.02", "−4.10±0.03", "−4.27±0.03", "−4.32±0.01", "ConvGNP", "−3.47±0.02", "−3.65±0.02", "−4.15±0.02", "−4.21±0.05", "−4.82±0.13", "−4.61±0.01", "FullConvGNP", "−3.29±0.02", "−3.46±0.02", "−3.79±0.02", "−4.16±0.04", "−4.28±0.04", "−4.45±0.00", "ConvLNP", "(ML)", "−3.41±0.02", "−3.84±0.02", "−4.44±0.02", "−4.13±0.04", "−4.45±0.05", "−4.54±0.01", "ConvLNP", "(ELBO)", "−3.77±0.02", "−3.83±0.02", "−4.12±0.02", "−5.45±0.05", "−5.47±0.07", "−6.39±0.05", "MODEL", "INT.", "(S)", "FOR.", "(S)", "REC.", "(S)", "INT.", "(R)", "FOR.", "(R)", "REC.", "(R)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 481.44,
+    "y1": 224.64,
+    "y2": 307.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table3-1.png"
+}, {
+  "caption": "Table 2: Performance of NPs training on the GP EQ task, sawtooth task, and mixture task. Diagonal GP denotes the exact GP predictive, but with correlations removed. Trivial denotes a model that predicts a Gaussian distribution with the empirical means and standard deviation of the context outputs. Significantly best models in bold. Note that the FullConvGNP cannot be run on tasks where dx > 1.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 504.0002746582031,
+    "y1": 180.07376098632812,
+    "y2": 216.3599853515625
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "0.41±0.01", "0.41±0.00", "2.38±0.04", "0.12±0.01", "−0.23±0.04", "−0.85±0.01", "ConvCNP", "(AR)", "0.01±0.00", "0.03±0.00", "3.60±0.01", "0.38±0.00", "0.45±0.04", "−0.62±0.01", "ConvGNP", "0.01±0.00", "0.19±0.00", "2.62±0.05", "0.26±0.01", "−0.24±0.02", "−0.74±0.01", "FullConvGNP", "0.00±0.00", "2.16±0.04", "−0.05±0.03", "ConvLNP", "(ML)", "0.25±0.01", "0.39±0.00", "3.06±0.04", "0.31±0.01", "−0.06±0.03", "−0.78±0.02", "ConvLNP", "(ELBO)", "0.06±0.00", "0.79±0.00", "3.51±0.02", "0.04±0.00", "0.12±0.04", "−0.92±0.01", "Diagonal", "GP", "0.40±0.01", "0.40±0.00", "Trivial", "1.19±0.00", "0.79±0.00", "−0.18±0.00", "−0.32±0.00", "−1.32±0.00", "−1.46±0.00", "EQ", "Sawtooth", "Mixture", "KL", "to", "ground", "truth", "(↓", "better)", "Pred.", "log-likelihood", "(↑", "better)", "Pred.", "log-likelihood", "(↑", "better)", "dx,", "dy=1", "dx,", "dy=2", "dx,", "dy=1", "dx,", "dy=2", "dx,", "dy=1", "dx,", "dy=2"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 172.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table2-1.png"
+}, {
+  "caption": "Table 11: For the Matérn– 5 2 synthetic experiments with one-dimensional inputs, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2] where the models where trained (“Int.”); interpolation within the range [2, 6] which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2] to the range [2, 6] (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.56671142578125,
+    "y1": 217.34371948242188,
+    "y2": 332.33599853515625
+  },
+  "figType": "Table",
+  "imageText": ["FullConvGNP", "0.00±0.00", "0.00±0.00", "0.00±0.00", "ConvCNP", "(AR)", "0.01±0.00", "0.01±0.00", "0.01±0.00", "ConvGNP", "0.02±0.00", "0.02±0.00", "1.71±0.04", "AGNP", "0.04±0.00", "6.14±0.08", "7.03±0.09", "ACNP", "(AR)", "0.05±0.00", "1.18±0.01", "0.96±0.01", "GNP", "0.13±0.00", "F", "F", "ConvLNP", "(E)", "0.16±0.00", "0.16±0.00", "0.29±0.00", "ConvLNP", "(M)", "0.36±0.00", "0.36±0.00", "0.76±0.00", "ALNP", "(M)", "0.40±0.00", "1.10±0.01", "0.88±0.00", "CNP", "(AR)", "0.45±0.00", "F", "F", "Diagonal", "GP", "0.46±0.01", "0.46±0.01", "0.93±0.00", "ConvCNP", "0.46±0.01", "0.46±0.01", "0.93±0.00", "ACNP", "0.49±0.01", "1.23±0.01", "0.93±0.00", "ALNP", "(E–M)", "0.51±0.01", "1.28±0.01", "0.99±0.01", "ALNP", "(E)", "0.51±0.01", "1.43±0.02", "1.10±0.01", "LNP", "(E–M)", "0.54±0.00", "F", "1.24±0.00", "LNP", "(E)", "0.54±0.00", "F", "1.79±0.01", "LNP", "(M)", "0.63±0.00", "2.33±0.02", "1.23±0.00", "CNP", "0.65±0.00", "7.72±0.69", "1.23±0.00", "Trivial", "1.18±0.00", "1.18±0.00", "0.94±0.00", "ConvLNP", "(E–M)", "3.07±0.06", "3.06±0.06", "9.83±0.09", "Matérn–", "5", "2", "Int.", "OOID", "Ext.", "dx=1,", "dy=2", "FullConvGNP", "0.00±0.00", "0.00±0.00", "0.00±0.00", "ConvCNP", "(AR)", "0.00±0.00", "0.00±0.00", "0.00±0.00", "ConvGNP", "0.01±0.00", "0.01±0.00", "2.32±0.06", "AGNP", "0.03±0.00", "4.53±0.08", "7.22±0.12", "ACNP", "(AR)", "0.04±0.00", "1.08±0.01", "0.87±0.01", "GNP", "0.09±0.00", "F", "F", "ConvLNP", "(E)", "0.13±0.00", "0.13±0.00", "0.31±0.02", "ConvLNP", "(M)", "0.26±0.01", "0.26±0.01", "0.58±0.00", "ALNP", "(M)", "0.30±0.00", "0.98±0.01", "0.78±0.01", "CNP", "(AR)", "0.34±0.01", "1.81±0.04", "1.32±0.02", "LNP", "(E)", "0.36±0.00", "F", "1.31±0.01", "LNP", "(E–M)", "0.37±0.01", "F", "1.14±0.00", "Diagonal", "GP", "0.40±0.01", "0.40±0.01", "0.84±0.01", "ConvCNP", "0.40±0.01", "0.40±0.01", "0.84±0.01", "ALNP", "(E–M)", "0.41±0.01", "1.13±0.01", "0.84±0.01", "ACNP", "0.42±0.01", "1.10±0.01", "0.84±0.01", "ALNP", "(E)", "0.43±0.01", "1.15±0.01", "0.87±0.01", "LNP", "(M)", "0.51±0.00", "1.87±0.02", "1.30±0.01", "CNP", "0.54±0.01", "1.47±0.02", "1.11±0.01", "Trivial", "1.08±0.00", "1.08±0.00", "0.85±0.00", "ConvLNP", "(E–M)", "1.37±0.04", "1.36±0.04", "4.30±0.06", "Matérn–", "5", "2", "Int.", "OOID", "Ext.", "dx=1,", "dy=1"],
+  "name": "11",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 344.64,
+    "y2": 587.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table11-1.png"
+}, {
+  "caption": "Table 20: Normalised log-likelihoods in the predator–prey experiments. Shows the performance for interpolation (“Int.”), forecasting (“For.”), and reconstruction (“Rec.”) on simulated (“S”) and real (“R”) data. Models are ordered by interpolation performance on simulated data. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.573974609375,
+    "y1": 235.41372680664062,
+    "y2": 300.59100341796875
+  },
+  "figType": "Table",
+  "imageText": ["FullConvGNP", "−3.29±0.02", "−3.46±0.02", "−3.79±0.02", "−4.16±0.04", "−4.28±0.04", "−4.45±0.00", "ConvCNP", "(AR)", "−3.30±0.02", "−3.47±0.02", "−3.60±0.02", "−4.10±0.03", "−4.27±0.03", "−4.32±0.01", "ConvNP", "(ML)", "−3.41±0.02", "−3.84±0.02", "−4.44±0.02", "−4.13±0.04", "−4.45±0.05", "−4.54±0.01", "ConvGNP", "−3.47±0.02", "−3.65±0.02", "−4.15±0.02", "−4.21±0.05", "−4.82±0.13", "−4.61±0.01", "ConvCNP", "−3.47±0.02", "−4.06±0.02", "−4.85±0.02", "−4.17±0.04", "−4.70±0.06", "−4.97±0.01", "ConvNP", "(ELBO)", "−3.77±0.02", "−3.83±0.02", "−4.12±0.02", "−5.45±0.05", "−5.47±0.07", "−6.39±0.05", "ANP", "(ML)", "−4.09±0.02", "−4.32±0.02", "−4.55±0.02", "−4.31±0.03", "−4.43±0.04", "−4.49±0.01", "ANP", "(ELBO–ML)", "−4.22±0.02", "−4.54±0.02", "−4.80±0.02", "−4.58±0.11", "−4.58±0.04", "−4.68±0.01", "ACNP", "(AR)", "−4.23±0.02", "−4.44±0.02", "−4.58±0.02", "−4.40±0.03", "−4.55±0.04", "−4.59±0.02", "ANP", "(ELBO)", "−4.32±0.03", "−4.58±0.02", "−4.82±0.02", "−4.71±0.15", "−4.63±0.05", "−4.70±0.01", "ACNP", "−4.34±0.02", "−4.65±0.02", "−4.88±0.02", "−4.43±0.04", "−4.58±0.04", "−4.74±0.00", "ConvNP", "(E.–M.)", "−6.71±0.05", "−8.44±0.11", "F", "−7.20±0.31", "F", "F", "Model", "Int.", "(S)", "For.", "(S)", "Rec.", "(S)", "Int.", "(R)", "For.", "(R)", "Rec.", "(R)"],
+  "name": "20",
+  "page": 38,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table20-1.png"
+}, {
+  "caption": "Figure 7: Samples from the sawtooth data process with one and two-dimensional inputs (dx = 1 and dx = 2) and one and two-dimensional outputs (dy = 1 and dy = 2)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.60064697265625,
+    "y1": 366.3037414550781,
+    "y2": 382.6650085449219
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "dx", "=", "2,", "dy", "=", "2", "f(", "x", ")", "0.5", "0.0", "0.5", "1.0", "1.5", "2", "1", "0", "1", "2", "x1", "x", "2", "2", "1", "0", "1", "2", "x1", "(c)", "dx", "=", "2,", "dy", "=", "1", "f(", "x", ")", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "x", "2", "2", "1", "0", "1", "2", "2", "1", "0", "1", "2", "x1", "(b)", "dx", "=", "1,", "dy", "=", "2", "0.25", "0.50", "0.75", "1.00", "1.25", "2", "1", "0", "1", "2", "x", "f(", "x", ")", "0.5", "0.0", "0.5", "1.0", "2", "1", "0", "1", "2", "x", "(a)", "dx", "=", "1,", "dy", "=", "1", "f(", "x", ")", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "2", "1", "0", "1", "2", "x"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 343.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure7-1.png"
+}, {
+  "caption": "Table 16: For the sawtooth synthetic experiments with two-dimensional inputs, average log-likelihoods normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2]2 where the models where trained (“Int.”); interpolation within the range [2, 6]2 which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]2 to the range [2, 6]2 (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 505.57171630859375,
+    "y1": 232.31472778320312,
+    "y2": 327.3810119628906
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "0.38±0.00", "0.38±0.00", "0.18±0.00", "ConvLNP", "(M)", "0.31±0.01", "0.31±0.01", "−0.32±0.00", "ConvGNP", "0.26±0.01", "0.26±0.01", "−0.33±0.00", "ConvCNP", "0.12±0.01", "0.12±0.01", "−0.32±0.00", "ConvLNP", "(E)", "0.04±0.00", "0.04±0.00", "−0.30±0.00", "ConvLNP", "(E–M)", "−0.07±0.01", "−0.07±0.01", "−0.48±0.00", "Trivial", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "ALNP", "(M)", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "CNP", "(AR)", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "CNP", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "LNP", "(M)", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "ACNP", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "ACNP", "(AR)", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "GNP", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "AGNP", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "LNP", "(E–M)", "−0.33±0.00", "−0.54±0.00", "−0.34±0.00", "LNP", "(E)", "−0.33±0.00", "−0.54±0.00", "−0.34±0.00", "ALNP", "(E–M)", "−0.36±0.00", "−0.33±0.00", "−0.33±0.00", "ALNP", "(E)", "−0.36±0.00", "−0.33±0.00", "−0.33±0.00", "FullConvGNP", "Sawtooth", "Int.", "OOID", "Ext.", "dx=2,", "dy=2", "ConvCNP", "(AR)", "2.59±0.01", "2.59±0.01", "2.10±0.01", "ConvLNP", "(M)", "2.07±0.02", "2.08±0.02", "−0.17±0.00", "ConvCNP", "1.93±0.04", "1.94±0.03", "−0.18±0.00", "ConvGNP", "1.90±0.04", "1.91±0.03", "−0.18±0.00", "ConvLNP", "(E)", "1.77±0.02", "1.77±0.02", "0.33±0.02", "ConvLNP", "(E–M)", "1.71±0.04", "1.72±0.04", "−2.30±0.87", "Trivial", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "CNP", "(AR)", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "CNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "GNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "LNP", "(M)", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "AGNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "ALNP", "(M)", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "ACNP", "(AR)", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "ACNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "LNP", "(E–M)", "−0.19±0.00", "F", "−0.86±0.02", "LNP", "(E)", "−0.19±0.00", "F", "F", "ALNP", "(E–M)", "−0.20±0.01", "−0.18±0.00", "−0.18±0.00", "ALNP", "(E)", "−0.20±0.01", "−0.71±0.00", "−0.33±0.00", "FullConvGNP", "Sawtooth", "Int.", "OOID", "Ext.", "dx=2,", "dy=1"],
+  "name": "16",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 102.72,
+    "x2": 511.2,
+    "y1": 339.84,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table16-1.png"
+}, {
+  "caption": "Figure 2: Negative log-likelihoods on non-Gaussian sawtooth data. Deploying the ConvCNP in AR mode dramatically improves performance, and outperforms state-of-the-art NPs with Gaussian (FullConvGNP) and non-Gaussian (ConvLNP) predictive distributions, at a fraction of the training cost.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 295.6063232421875,
+    "y1": 149.75473022460938,
+    "y2": 204.969970703125
+  },
+  "figType": "Figure",
+  "imageText": ["ConvCNP", "AR", "ConvCNP", "ConvLNP", "nt", "FullConvGNP", "ap", "oi", "d", "at", "L", "/", "N", "L", "1", "0", "−1", "−2", "Wallclock", "training", "time", "(min.)", "100", "101", "102", "103"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 290.4,
+    "y1": 60.0,
+    "y2": 137.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Top: generative process: mixture model of three deterministic functions with additive Gaussian noise. Bottom: at the four target locations indicated by dashed lines, the panes show the true distribution and predictions by the ideal CNP and the ideal CNP applied autoregressively at the targets from left to right. Details in Appendix C.",
+  "captionBoundary": {
+    "x1": 299.552001953125,
+    "x2": 502.9983215332031,
+    "y1": 149.75473022460938,
+    "y2": 204.969970703125
+  },
+  "figType": "Figure",
+  "imageText": ["True", "Ideal", "CNP", "AR", "Ideal", "CNP"],
+  "name": "3",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 300.96,
+    "x2": 500.15999999999997,
+    "y1": 60.0,
+    "y2": 138.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure3-1.png"
+}, {
+  "caption": "Table 15: For the sawtooth synthetic experiments with one-dimensional inputs, average log-likelihoods normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2] where the models where trained (“Int.”); interpolation within the range [2, 6] which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2] to the range [2, 6] (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 505.4881591796875,
+    "y1": 232.31472778320312,
+    "y2": 327.3810119628906
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "2.22±0.01", "2.22±0.01", "1.91±0.01", "ConvLNP", "(E)", "2.01±0.01", "2.01±0.01", "1.47±0.01", "ConvLNP", "1.73±0.03", "1.73±0.03", "−0.12±0.01", "ACNP", "(AR)", "1.01±0.01", "−0.47±0.01", "−0.45±0.01", "FullConvGNP", "0.99±0.06", "1.04±0.03", "0.11±0.00", "ConvCNP", "0.83±0.03", "0.84±0.02", "−0.29±0.00", "ConvGNP", "0.82±0.03", "0.82±0.03", "−0.29±0.00", "GNP", "−0.03±0.00", "F", "F", "ALNP", "(E–M)", "−0.06±0.01", "−0.75±0.01", "−0.35±0.00", "ALNP", "(E)", "−0.07±0.01", "−0.78±0.02", "−0.35±0.00", "AGNP", "−0.07±0.01", "−0.37±0.00", "−0.48±0.07", "ACNP", "−0.08±0.01", "−0.41±0.01", "−0.42±0.01", "LNP", "(E–M)", "−0.20±0.00", "F", "−1.33±0.00", "LNP", "(E)", "−0.20±0.00", "F", "−1.33±0.00", "ALNP", "−0.28±0.00", "−0.33±0.00", "−0.33±0.00", "CNP", "(AR)", "−0.29±0.00", "−1.96±0.19", "−1.43±0.06", "CNP", "−0.30±0.00", "−0.51±0.01", "−0.34±0.00", "LNP", "−0.32±0.00", "−0.32±0.00", "−0.32±0.00", "Trivial", "−0.33±0.00", "−0.33±0.00", "−0.33±0.00", "ConvLNP", "(E–M)", "−2.98±0.10", "−2.98±0.10", "−6.74±0.04", "Sawtooth", "Int.", "OOID", "Ext.", "dx=1,", "dy=2", "ConvCNP", "(AR)", "3.60±0.01", "3.60±0.01", "3.34±0.01", "ConvLNP", "(E)", "3.51±0.02", "3.52±0.02", "2.68±0.02", "ConvLNP", "3.06±0.04", "3.06±0.04", "0.64±0.01", "ConvGNP", "2.62±0.05", "2.61±0.08", "−0.04±0.01", "ConvCNP", "2.38±0.04", "2.37±0.04", "−0.00±0.01", "FullConvGNP", "2.16±0.04", "2.15±0.04", "0.18±0.01", "ALNP", "(E–M)", "0.27±0.01", "−0.18±0.00", "−0.31±0.02", "ALNP", "(E)", "0.27±0.01", "−15.96±0.17", "−9.14±0.04", "ALNP", "0.20±0.00", "−0.18±0.00", "−0.18±0.00", "LNP", "(E–M)", "0.07±0.01", "F", "−8.67±0.53", "LNP", "(E)", "0.06±0.01", "F", "F", "Trivial", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "LNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "CNP", "(AR)", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "CNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "GNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "AGNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "ACNP", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "ACNP", "(AR)", "−0.18±0.00", "−0.18±0.00", "−0.18±0.00", "ConvLNP", "(E–M)", "F", "F", "F", "Sawtooth", "Int.", "OOID", "Ext.", "dx=1,", "dy=1"],
+  "name": "15",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 105.6,
+    "x2": 507.35999999999996,
+    "y1": 339.84,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table15-1.png"
+}, {
+  "caption": "Table 17: For the mixture synthetic experiments with one-dimensional inputs, average log-likelihoods normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2] where the models where trained (“Int.”); interpolation within the range [2, 6] which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2] to the range [2, 6] (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.748291015625,
+    "y1": 232.31472778320312,
+    "y2": 327.3810119628906
+  },
+  "figType": "Table",
+  "imageText": ["ConvLNP", "(E)", "−0.05±0.03", "−0.05±0.03", "−0.50±0.02", "ConvCNP", "(AR)", "−0.17±0.02", "−0.17±0.02", "−0.29±0.02", "FullConvGNP", "−0.27±0.01", "−0.27±0.01", "−0.63±0.01", "ConvGNP", "−0.29±0.02", "−0.29±0.02", "−2.59±0.06", "ACNP", "(AR)", "−0.35±0.02", "−1.43±0.02", "−1.43±0.02", "ConvLNP", "−0.39±0.03", "−0.40±0.03", "−1.10±0.02", "AGNP", "−0.57±0.02", "−3.29±0.07", "−3.05±0.06", "GNP", "−0.60±0.01", "−1.70±0.03", "−1.67±0.03", "ConvCNP", "−0.68±0.02", "−0.68±0.02", "−1.39±0.01", "ALNP", "−0.76±0.02", "−1.19±0.02", "−1.19±0.02", "LNP", "−0.89±0.01", "−3.18±0.05", "−1.40±0.02", "LNP", "(E–M)", "−0.89±0.01", "−4.43±0.07", "−1.62±0.02", "ALNP", "(E–M)", "−0.92±0.02", "−1.47±0.03", "−1.46±0.03", "LNP", "(E)", "−0.92±0.01", "−4.71±0.07", "−1.86±0.01", "ACNP", "−0.93±0.02", "−1.42±0.02", "−1.53±0.03", "ALNP", "(E)", "−0.95±0.02", "−1.75±0.04", "−1.73±0.04", "CNP", "(AR)", "−1.15±0.02", "−1.27±0.02", "−1.21±0.02", "CNP", "−1.18±0.02", "−1.32±0.03", "−1.27±0.02", "ConvLNP", "(E–M)", "−3.45±0.07", "−3.40±0.07", "−5.30±0.07", "Trivial", "−1.46±0.00", "−1.46±0.00", "−1.46±0.00", "Mixture", "Int.", "OOID", "Ext.", "dx=1,", "dy=2", "ConvCNP", "(AR)", "0.45±0.04", "0.45±0.04", "0.30±0.04", "ConvLNP", "(E)", "0.12±0.04", "0.12±0.04", "−0.37±0.03", "FullConvGNP", "−0.05±0.03", "−0.05±0.03", "−0.49±0.01", "ConvLNP", "−0.06±0.03", "−0.06±0.03", "−0.88±0.02", "ACNP", "(AR)", "−0.19±0.02", "−1.32±0.01", "−1.32±0.01", "ConvCNP", "−0.23±0.04", "−0.24±0.04", "−1.23±0.01", "ConvGNP", "−0.24±0.02", "−0.23±0.02", "−1.00±0.02", "AGNP", "−0.41±0.02", "−1.03±0.03", "−2.61±0.06", "ALNP", "−0.61±0.02", "−1.01±0.02", "−1.03±0.02", "ALNP", "(E–M)", "−0.63±0.02", "−1.24±0.01", "−1.10±0.02", "ALNP", "(E)", "−0.67±0.02", "−1.52±0.02", "−2.25±0.03", "LNP", "(E–M)", "−0.68±0.01", "−3.05±0.04", "−1.75±0.01", "GNP", "−0.70±0.02", "−2.22±0.05", "−1.62±0.04", "LNP", "(E)", "−0.71±0.01", "−3.71±0.05", "−2.08±0.01", "LNP", "−0.72±0.01", "−1.46±0.01", "−1.29±0.02", "ACNP", "−0.79±0.02", "−1.31±0.01", "−1.25±0.01", "CNP", "(AR)", "−1.00±0.02", "−1.15±0.02", "−1.09±0.02", "CNP", "−1.05±0.02", "−1.14±0.02", "−1.15±0.02", "ConvLNP", "(E–M)", "−1.41±0.15", "−1.43±0.13", "−3.40±0.06", "Trivial", "−1.32±0.00", "−1.32±0.00", "−1.32±0.00", "Mixture", "Int.", "OOID", "Ext.", "dx=1,", "dy=1"],
+  "name": "17",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 339.84,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table17-1.png"
+}, {
+  "caption": "Figure 14: Multiscale architecture for the AR ConvCNP. A cascade of three convolutional deep sets (Gordon et al., 2020) representing a low-resolution, medium-resolution, and high-resolution component. Shows the resolution and positioning of the internal discretisation for every convolutional deep set. The context set D = Dlr∪Dmr∪Dhr is also divided into a low-resolution Dlr, medium-resolution Dmr, and high-resolution component Dhr. The low-resolution context data Dlr consists of the 25 coarse-grained ERA-Interim reanalysis variables. The medium-resolution Dmr and high-resolution context data Dhr both consist of the station observations and the 1 km–resolution elevation data. The functions data(D) and density(D) produce respectively the data channel and density channel for context data D; see Gordon et al. (2020). The variables zlr( • ), zmr( • ), and zhr( • ) represent intermediate representations as continuous functions, and the maps CNNlr, CNNmr, and CNNhr are translation-equivariant maps between functions on X . Following the construction of the ConvCNP (Gordon et al., 2020), these maps are all implemented with convolutional neural networks (CNN) using a discretisation. For CNNlr, the internal discretisation is the 0.75◦-resolution grid corresponding to the 25 coarse-grained ERAInterim reanalysis variables. For CNNmr, the internal discretisation is a 0.1◦-resolution grid spanning 5◦ more than the most extremal target inputs; the discretisation does not depend on the context set. For CNNhr, the internal discretisation is a 0.01◦-resolution grid spanning 0.25◦ more than the most extremal target inputs; the discretisation also does not depend on the context set.",
+  "captionBoundary": {
+    "x1": 107.53900146484375,
+    "x2": 505.5664367675781,
+    "y1": 296.9207458496094,
+    "y2": 451.7619934082031
+  },
+  "figType": "Figure",
+  "imageText": ["positioning", "of", "discretisation", "resolution", "of", "discretisation", "0.1◦", "(✓),", "covering", "a", "medium-sized", "square", "(✓)", "0.75◦", "(✗),", "covering", "all", "of", "Germany", "(✓)", "0.01◦", "(✓),", "local", "to", "target", "points", "(✗)", "])", "density(Dlr)", "([", "data(Dlr)", "zlr(", "•", ")", "=", "CNNlr", "])", "data(Dmr)", "density(Dmr)", "([", "zlr(", "•", ")", "zmr(", "•", ")", "=", "CNNmr", "])", "data(Dhr)", "density(Dhr)", "([", "zmr(", "•", ")", "zhr(", "•", ")", "=", "CNNhr"],
+  "name": "14",
+  "page": 45,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 84.96,
+    "y2": 280.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure14-1.png"
+}, {
+  "caption": "Figure 13: Locations of the 589 weather stations around Germany in the downscaling experiments.",
+  "captionBoundary": {
+    "x1": 128.66900634765625,
+    "x2": 483.33489990234375,
+    "y1": 220.95474243164062,
+    "y2": 226.35699462890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 44,
+  "regionBoundary": {
+    "x1": 225.6,
+    "x2": 386.4,
+    "y1": 80.64,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure13-1.png"
+}, {
+  "caption": "Table 21: ERA-Interim reanalysis predictors.",
+  "captionBoundary": {
+    "x1": 224.89599609375,
+    "x2": 386.82904052734375,
+    "y1": 551.9727172851562,
+    "y2": 557.375
+  },
+  "figType": "Table",
+  "imageText": ["Fractional", "position", "in", "the", "year", "t", "transformed", "encoded", "with", "t", "7→", "(cos(2πt),", "sin(2πt))", "Temporal", "Angle", "of", "sub-grid-scale", "orography", "surface", "Anisotropy", "of", "sub-grid-scale", "orography", "surface", "Standard", "deviation", "of", "filtered", "sub-grid-scale", "orography", "surface", "Standard", "deviation", "of", "orography", "surface", "Geopotential", "surface", "metres", "Longitude", "surface", "degrees", "Celsius", "Latitude", "surface", "degrees", "Celsius", "Invariant", "Specific", "humidity", "850,", "700,", "and", "500", "hPa", "degrees", "Celsius", "Mean", "temperature", "850,", "700,", "and", "500", "hPa", "degrees", "Celsius", "Northward", "wind", "850,", "700,", "and", "500", "hPa", "knots", "Eastward", "wind", "850,", "700,", "and", "500", "hPa", "knots", "Upper", "atmosphere", "Maximum", "temperature", "2", "m", "degrees", "Celsius", "Mean", "temperature", "2", "m", "degrees", "Celsius", "Northward", "wind", "10", "m", "knots", "Eastward", "wind", "10", "m", "knots", "Surface", "Variable", "Level", "Units"],
+  "name": "21",
+  "page": 44,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 514.0799999999999,
+    "y1": 261.59999999999997,
+    "y2": 541.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table21-1.png"
+}, {
+  "caption": "Table 10: For the EQ synthetic experiments with two-dimensional inputs, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2]2 where the models where trained (“Int.”); interpolation within the range [2, 6]2 which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]2 to the range [2, 6]2 (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.003173828125,
+    "y1": 217.37075805664062,
+    "y2": 332.36199951171875
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "0.03±0.00", "0.03±0.00", "0.02±0.00", "ACNP", "(AR)", "0.11±0.00", "0.79±0.00", "0.56±0.00", "ConvGNP", "0.19±0.00", "0.19±0.00", "0.74±0.01", "AGNP", "0.22±0.00", "0.87±0.01", "0.57±0.00", "GNP", "0.38±0.00", "1.06±0.00", "0.75±0.00", "ConvNP", "(M)", "0.39±0.00", "0.39±0.00", "0.52±0.00", "Diagonal", "GP", "0.40±0.00", "0.40±0.00", "0.56±0.00", "ConvCNP", "0.41±0.00", "0.41±0.00", "0.56±0.00", "ANP", "(M)", "0.42±0.00", "0.79±0.00", "0.54±0.00", "ACNP", "0.44±0.00", "0.79±0.00", "0.56±0.00", "CNP", "(AR)", "0.52±0.00", "F", "F", "NP", "(E–M)", "0.56±0.00", "1.95±0.03", "0.72±0.00", "ANP", "(E–M)", "0.56±0.00", "1.90±1.72", "0.55±0.00", "NP", "(E)", "0.57±0.00", "1.99±0.03", "0.72±0.00", "ANP", "(E)", "0.57±0.00", "3.51±3.04", "0.56±0.00", "NP", "(M)", "0.59±0.00", "1.17±0.01", "0.75±0.00", "CNP", "0.60±0.00", "3.08±0.42", "0.66±0.00", "Trivial", "0.79±0.00", "0.79±0.00", "0.56±0.00", "ConvNP", "(E–M)", "0.79±0.00", "0.79±0.00", "0.56±0.00", "ConvNP", "(E)", "0.79±0.00", "0.79±0.00", "0.56±0.00", "FullConvGNP", "EQ", "Int.", "OOID", "Ext.", "dx=2,", "dy=2", "ConvCNP", "(AR)", "0.01±0.00", "0.01±0.00", "0.01±0.00", "ConvGNP", "0.08±0.00", "0.08±0.00", "1.92±0.02", "AGNP", "0.09±0.00", "0.70±0.00", "0.50±0.00", "ACNP", "(AR)", "0.09±0.00", "0.72±0.00", "0.51±0.00", "GNP", "0.19±0.00", "1.01±0.00", "0.80±0.00", "ConvLNP", "(M)", "0.34±0.00", "0.34±0.00", "0.47±0.00", "ALNP", "(M)", "0.34±0.00", "0.70±0.00", "0.51±0.00", "Diagonal", "GP", "0.36±0.00", "0.36±0.00", "0.51±0.00", "ConvCNP", "0.37±0.00", "0.37±0.00", "0.51±0.00", "ACNP", "0.40±0.00", "0.72±0.00", "0.51±0.00", "ConvLNP", "(E)", "0.41±0.00", "0.41±0.00", "0.46±0.00", "CNP", "(AR)", "0.41±0.00", "0.90±0.00", "0.71±0.00", "LNP", "(E–M)", "0.46±0.00", "0.99±0.01", "0.65±0.00", "LNP", "(E)", "0.48±0.00", "1.04±0.01", "0.67±0.00", "ConvLNP", "(E–M)", "0.48±0.00", "0.48±0.00", "0.59±0.01", "ALNP", "(E–M)", "0.49±0.01", "0.72±0.00", "0.51±0.00", "ALNP", "(E)", "0.50±0.01", "0.73±0.00", "0.52±0.00", "LNP", "(M)", "0.51±0.00", "0.92±0.00", "0.72±0.00", "CNP", "0.52±0.00", "0.92±0.00", "0.72±0.00", "Trivial", "0.72±0.00", "0.72±0.00", "0.51±0.00", "FullConvGNP", "EQ", "Int.", "OOID", "Ext.", "dx=2,", "dy=1"],
+  "name": "10",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 492.0,
+    "y1": 344.64,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table10-1.png"
+}, {
+  "caption": "Table 25: Log likelihood values for varying context sizes using ConvCNP and ConvCNP (AuxAR) using the function mixture data generator. Column headers indicate the context set size. Log-likelihoods are shown in bold when they are significantly best (p < 0.05). Column headers are context sizes. Errors indicate central 95% confidence interval.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 504.7421875,
+    "y1": 125.8247299194336,
+    "y2": 161.114013671875
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "−1.40±0.11", "−0.91±0.28", "−0.36±0.20", "ConvCNP", "(AuxAR)", "−1.05±0.11", "−0.63±0.23", "−0.29±0.17", "Model", "0", "1", "2"],
+  "name": "25",
+  "page": 49,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 114.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table25-1.png"
+}, {
+  "caption": "Table 5: Log-likelihoods (log-lik.) and mean absolute errors (MAE, in units of cloud cover %), over the 2019-2019 test period for the cloud cover task. Note that log-likelihoods cannot be compared directly across the Gaussian and beta-categorical models. Errors indicate standard errors. Significantly best results in bold.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 504.0002746582031,
+    "y1": 120.3237533569336,
+    "y2": 145.6510009765625
+  },
+  "figType": "Table",
+  "imageText": ["Log-lik.", "0.60±0.02", "0.62±0.02", "0.58±0.02", "0.88±0.02", "1.06±0.02", "1.03±0.02", "1.27±0.02", "MAE", "(%)", "13.05±0.17", "12.98±0.16", "13.01±0.16", "13.01±0.16", "12.99±0.16", "13.13±0.16", "13.13±0.16", "GAUSSIAN", "BETA-CATEGORICAL", "ConvGNP", "ConvLNP", "(ML)", "ConvCNP", "ConvCNP", "(AR)", "ConvLNP", "(ML)", "ConvCNP", "ConvCNP", "(AR)"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 111.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table5-1.png"
+}, {
+  "caption": "Figure 11: Empirical density of ERA5 cloud cover fraction computed over the period 2000-2013.",
+  "captionBoundary": {
+    "x1": 131.42999267578125,
+    "x2": 480.5726623535156,
+    "y1": 721.470703125,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 39,
+  "regionBoundary": {
+    "x1": 161.76,
+    "x2": 450.24,
+    "y1": 564.9599999999999,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Example of trial in the EEG data set. Note that the signals for all electrodes appear correlated, but are subtly different.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99822998046875,
+    "y1": 325.6307373046875,
+    "y2": 340.9949951171875
+  },
+  "figType": "Figure",
+  "imageText": ["F", "6", "0", "−20", "Time", "(s)", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "F", "5", "20", "0", "F", "4", "0", "−20", "F", "3", "10", "−10", "0", "−10", "0", "F", "2", "10", "F", "1", "−10", "0", "F", "Z", "10", "−10", "0"],
+  "name": "10",
+  "page": 39,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 504.47999999999996,
+    "y1": 81.6,
+    "y2": 312.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure10-1.png"
+}, {
+  "caption": "Table 18: For the mixture synthetic experiments with two-dimensional inputs, average log-likelihoods normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2]2 where the models where trained (“Int.”); interpolation within the range [2, 6]2 which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]2 to the range [2, 6]2 (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.7438049316406,
+    "y1": 232.31472778320312,
+    "y2": 327.3810119628906
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "−0.62±0.01", "−0.62±0.01", "−0.79±0.01", "ConvGNP", "−0.74±0.01", "−0.74±0.01", "−1.43±0.02", "ConvLNP", "(M)", "−0.78±0.02", "−0.79±0.02", "−1.25±0.02", "ConvCNP", "−0.85±0.01", "−0.85±0.01", "−1.50±0.02", "ACNP", "(AR)", "−0.85±0.01", "−4.30±0.09", "−4.24±0.09", "ALNP", "(M)", "−0.88±0.01", "−1.41±0.03", "−1.21±0.02", "ConvLNP", "(E)", "−0.92±0.01", "−0.92±0.01", "−1.41±0.02", "AGNP", "−0.93±0.01", "−1.34±0.01", "−1.21±0.02", "ACNP", "−0.99±0.02", "−4.19±0.10", "−1.27±0.02", "ConvLNP", "(E–M)", "−1.05±0.01", "−1.05±0.01", "−1.73±0.03", "LNP", "(M)", "−1.07±0.01", "−4.04±0.11", "−1.31±0.02", "ALNP", "(E–M)", "−1.11±0.02", "−2.65±0.62", "−1.23±0.02", "ALNP", "(E)", "−1.12±0.02", "−8.22±7.64", "−1.26±0.02", "GNP", "−1.20±0.02", "−1.39±0.03", "−1.21±0.02", "CNP", "(AR)", "−1.20±0.02", "−2.61±0.07", "−1.32±0.02", "CNP", "−1.20±0.02", "−2.60±0.08", "−1.23±0.02", "LNP", "(E–M)", "−1.20±0.02", "−3.23±0.10", "−1.24±0.02", "LNP", "(E)", "−1.20±0.02", "−3.25±0.10", "−1.24±0.02", "Trivial", "−1.46±0.00", "−1.46±0.00", "−1.46±0.00", "FullConvGNP", "Mixture", "Int.", "OOID", "Ext.", "dx=2,", "dy=2", "ConvCNP", "(AR)", "−0.10±0.03", "−0.10±0.03", "−0.34±0.03", "ConvCNP", "−0.49±0.03", "−0.49±0.03", "−1.45±0.02", "ConvGNP", "−0.50±0.02", "−0.50±0.02", "−1.24±0.02", "ConvLNP", "(M)", "−0.57±0.02", "−0.57±0.02", "−1.07±0.02", "ConvLNP", "(E)", "−0.63±0.02", "−0.63±0.02", "−1.08±0.02", "ALNP", "(M)", "−0.73±0.02", "−1.04±0.02", "−1.05±0.02", "ConvLNP", "(E–M)", "−0.76±0.02", "−0.76±0.02", "−1.37±0.02", "ACNP", "(AR)", "−0.77±0.01", "−1.28±0.01", "−1.30±0.01", "AGNP", "−0.78±0.01", "−1.32±0.02", "−1.32±0.02", "ACNP", "−0.91±0.02", "−1.29±0.01", "−1.17±0.02", "LNP", "(M)", "−0.91±0.02", "−1.44±0.04", "−1.19±0.02", "LNP", "(E–M)", "−0.92±0.02", "−1.51±0.02", "−1.38±0.02", "LNP", "(E)", "−0.93±0.02", "−1.74±0.03", "−1.44±0.02", "ALNP", "(E–M)", "−1.00±0.02", "−1.07±0.02", "−1.08±0.02", "ALNP", "(E)", "−1.03±0.02", "−1.08±0.02", "−1.09±0.02", "CNP", "(AR)", "−1.06±0.02", "−1.07±0.02", "−1.08±0.02", "GNP", "−1.06±0.02", "−1.09±0.02", "−1.08±0.02", "CNP", "−1.07±0.02", "−1.09±0.02", "−1.10±0.02", "Trivial", "−1.32±0.00", "−1.32±0.00", "−1.32±0.00", "FullConvGNP", "Mixture", "Int.", "OOID", "Ext.", "dx=2,", "dy=1"],
+  "name": "18",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 102.72,
+    "x2": 511.2,
+    "y1": 339.84,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table18-1.png"
+}, {
+  "caption": "Table 23: Log likelihood values for varying context sizes using ConvCNP and ConvCNP (AuxAR) using the function mixture data generator. Column headers indicate the context set size. Log-likelihoods are shown in bold when they are significantly best (p < 0.05). Column headers are context sizes. Errors indicate central 95% confidence interval.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 504.7421875,
+    "y1": 437.91473388671875,
+    "y2": 473.2049865722656
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "−0.47±0.07", "−0.45±0.18", "−0.24±0.12", "−0.12±0.12", "0.36±0.15", "1.07±0.18", "ConvCNP", "(AuxAR)", "0.02±0.11", "0.19±0.11", "0.24±0.12", "0.31±0.11", "0.74±0.10", "1.27±0.12", "Model", "0", "1", "2", "4", "8", "16", "K.3", "RESULTS"],
+  "name": "23",
+  "page": 48,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 485.28,
+    "y1": 353.28,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table23-1.png"
+}, {
+  "caption": "Table 22: Using autoregressive sampling for marginal approximation improves held-out log-likelihoods on all experiments. Values are normalized by the number of target points. Values which are significantly best (p < 0.05) are shown in bold.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.0008544921875,
+    "y1": 135.78677368164062,
+    "y2": 161.114013671875
+  },
+  "figType": "Table",
+  "imageText": ["Function", "Mixture", "−0.63±", "0.20", "−0.46±", "0.15", "Sawtooth", "1.46±", "0.30", "1.64±", "0.28", "Synthetic", "Audio", "0.12±", "0.14", "0.55±", "0.10", "Experiment", "ConvCNP", "ConvCNP", "(AuxAR)"],
+  "name": "22",
+  "page": 48,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 124.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table22-1.png"
+}, {
+  "caption": "Table 14: For the weakly periodic synthetic experiments with two-dimensional inputs, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2]2 where the models where trained (“Int.”); interpolation within the range [2, 6]2 which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2]2 to the range [2, 6]2 (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.72200012207031,
+    "x2": 505.56671142578125,
+    "y1": 217.37075805664062,
+    "y2": 332.36199951171875
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP", "(AR)", "0.08±0.00", "0.08±0.00", "0.05±0.00", "ConvGNP", "0.13±0.00", "0.13±0.00", "0.18±0.00", "Diagonal", "GP", "0.20±0.00", "0.20±0.00", "0.28±0.00", "ConvLNP", "(M)", "0.21±0.00", "0.21±0.00", "0.25±0.00", "ConvCNP", "0.23±0.00", "0.23±0.00", "0.28±0.00", "AGNP", "0.24±0.00", "0.39±0.00", "0.27±0.00", "ACNP", "(AR)", "0.25±0.00", "0.40±0.00", "0.28±0.00", "GNP", "0.25±0.00", "0.38±0.00", "0.25±0.00", "ConvLNP", "(E)", "0.26±0.00", "0.26±0.00", "0.27±0.00", "CNP", "(AR)", "0.27±0.00", "3.21±0.14", "0.77±0.02", "ALNP", "(M)", "0.28±0.00", "0.39±0.00", "0.28±0.00", "LNP", "(M)", "0.29±0.00", "0.42±0.00", "0.31±0.00", "LNP", "(E–M)", "0.29±0.00", "1.52±0.04", "0.36±0.00", "LNP", "(E)", "0.30±0.00", "1.60±0.05", "0.39±0.00", "ConvLNP", "(E–M)", "0.30±0.00", "0.30±0.00", "0.34±0.00", "ACNP", "0.30±0.00", "0.40±0.00", "0.29±0.00", "CNP", "0.31±0.00", "0.63±0.01", "0.33±0.00", "ALNP", "(E–M)", "0.36±0.00", "0.43±0.00", "0.28±0.00", "ALNP", "(E)", "0.36±0.00", "0.44±0.00", "0.29±0.00", "Trivial", "0.40±0.00", "0.40±0.00", "0.28±0.00", "FullConvGNP", "Weakly", "Periodic", "Int.", "OOID", "Ext.", "dx=2,", "dy=2", "ConvCNP", "(AR)", "0.05±0.00", "0.05±0.00", "0.03±0.00", "ConvGNP", "0.10±0.00", "0.10±0.00", "0.19±0.00", "ConvLNP", "(M)", "0.18±0.00", "0.18±0.00", "0.21±0.00", "Diagonal", "GP", "0.19±0.00", "0.19±0.00", "0.27±0.00", "ConvCNP", "0.20±0.00", "0.20±0.00", "0.27±0.00", "ConvLNP", "(E)", "0.22±0.00", "0.22±0.00", "0.22±0.00", "AGNP", "0.23±0.00", "0.35±0.00", "0.26±0.00", "ACNP", "(AR)", "0.23±0.00", "0.37±0.00", "0.26±0.00", "ConvLNP", "(E–M)", "0.23±0.00", "0.23±0.00", "0.29±0.00", "GNP", "0.23±0.00", "0.35±0.00", "0.24±0.00", "CNP", "(AR)", "0.25±0.00", "0.82±0.01", "0.72±0.01", "ALNP", "(M)", "0.25±0.00", "0.36±0.00", "0.25±0.00", "LNP", "(M)", "0.26±0.00", "1.32±0.03", "0.33±0.00", "LNP", "(E–M)", "0.26±0.00", "6.28±1.06", "0.44±0.01", "LNP", "(E)", "0.27±0.00", "9.91±1.68", "0.52±0.01", "ACNP", "0.28±0.00", "0.37±0.00", "0.27±0.00", "CNP", "0.29±0.00", "0.81±0.01", "0.29±0.00", "ALNP", "(E–M)", "0.31±0.00", "0.39±0.00", "0.26±0.00", "ALNP", "(E)", "0.32±0.00", "0.42±0.00", "0.29±0.00", "Trivial", "0.38±0.00", "0.38±0.00", "0.27±0.00", "FullConvGNP", "Weakly", "Periodic", "Int.", "OOID", "Ext.", "dx=2,", "dy=1"],
+  "name": "14",
+  "page": 31,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 344.64,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table14-1.png"
+}, {
+  "caption": "Table 9: For the EQ synthetic experiments with one-dimensional inputs, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2] where the models where trained (“Int.”); interpolation within the range [2, 6] which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2] to the range [2, 6] (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.566650390625,
+    "y1": 217.37075805664062,
+    "y2": 332.36199951171875
+  },
+  "figType": "Table",
+  "imageText": ["FullConvGNP", "0.00±0.00", "0.00±0.00", "0.00±0.00", "ConvGNP", "0.01±0.00", "0.01±0.00", "1.73±0.05", "ConvCNP", "(AR)", "0.01±0.00", "0.01±0.00", "0.01±0.00", "AGNP", "0.04±0.00", "7.71±0.10", "7.87±0.10", "ACNP", "(AR)", "0.07±0.00", "1.31±0.01", "1.09±0.01", "ConvLNP", "(E)", "0.08±0.00", "0.08±0.00", "0.13±0.00", "GNP", "0.13±0.00", "F", "F", "ConvLNP", "(M)", "0.36±0.01", "0.36±0.01", "0.88±0.00", "ALNP", "(M)", "0.41±0.01", "1.23±0.01", "0.99±0.00", "CNP", "(AR)", "0.42±0.00", "F", "F", "Diagonal", "GP", "0.47±0.01", "0.47±0.01", "1.06±0.00", "ConvCNP", "0.48±0.01", "0.48±0.01", "1.06±0.00", "ACNP", "0.51±0.01", "1.38±0.01", "1.06±0.01", "ALNP", "(E–M)", "0.52±0.01", "1.47±0.02", "1.07±0.01", "ALNP", "(E)", "0.53±0.01", "3.79±0.05", "2.84±0.02", "LNP", "(E)", "0.54±0.01", "F", "1.47±0.01", "LNP", "(E–M)", "0.56±0.01", "F", "1.42±0.01", "LNP", "(M)", "0.64±0.00", "F", "1.52±0.00", "CNP", "0.66±0.01", "F", "1.28±0.00", "Trivial", "1.31±0.00", "1.31±0.00", "1.07±0.00", "ConvLNP", "(E–M)", "2.14±0.06", "2.14±0.06", "9.30±0.08", "EQ", "Int.", "OOID", "Ext.", "dx=1,", "dy=2", "FullConvGNP", "0.00±0.00", "0.00±0.00", "0.00±0.00", "ConvGNP", "0.01±0.00", "0.01±0.00", "3.46±0.08", "ConvCNP", "(AR)", "0.01±0.00", "0.01±0.00", "0.01±0.00", "AGNP", "0.03±0.00", "4.28±0.08", "7.38±0.13", "ConvLNP", "(E)", "0.06±0.00", "0.06±0.00", "0.11±0.01", "ACNP", "(AR)", "0.07±0.00", "1.19±0.01", "0.98±0.01", "GNP", "0.08±0.00", "F", "F", "ConvLNP", "(M)", "0.25±0.01", "0.25±0.01", "0.67±0.01", "CNP", "(AR)", "0.28±0.00", "F", "F", "ALNP", "(M)", "0.31±0.01", "1.04±0.01", "0.84±0.01", "LNP", "(E)", "0.34±0.01", "F", "1.34±0.01", "LNP", "(E–M)", "0.37±0.01", "F", "1.27±0.01", "Diagonal", "GP", "0.40±0.01", "0.40±0.01", "0.95±0.01", "ConvCNP", "0.41±0.01", "0.41±0.01", "0.95±0.01", "ANP", "(E–M)", "0.42±0.01", "1.18±0.01", "0.94±0.01", "ANP", "(E)", "0.44±0.01", "1.32±0.01", "1.25±0.01", "ACNP", "0.45±0.01", "1.22±0.01", "0.95±0.01", "LNP", "(M)", "0.49±0.01", "1.54±0.01", "1.45±0.01", "CNP", "0.54±0.01", "F", "1.41±0.01", "ConvLNP", "(E–M)", "0.90±0.04", "0.90±0.04", "4.05±0.06", "Trivial", "1.19±0.00", "1.19±0.00", "0.96±0.00", "EQ", "Int.", "OOID", "Ext.", "dx=1,", "dy=1"],
+  "name": "9",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 344.64,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table9-1.png"
+}, {
+  "caption": "Figure 8: Multi-modality of predictions by the AR ConvCNP. Shows four observations sampled from the sawtooth process. In the four rows, these four observations are revealed one data point at a time. Every row also shows a kernel density estimate of the prediction at x = 0. Filled regions are central 95%-credible regions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00103759765625,
+    "y1": 543.5287475585938,
+    "y2": 568.8560180664062
+  },
+  "figType": "Figure",
+  "imageText": ["si", "ty", "D", "en", "0.0", "0.5", "1.0", "1.0", "0.5", "−2.0", "−1.5", "−1.0", "−0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "0.0", "si", "ty", "D", "en", "0.0", "0.5", "1.0", "1.0", "0.5", "0.0", "si", "ty", "D", "en", "0.0", "0.5", "1.0", "1.0", "0.5", "0.0", "Prediction", "at", "x", "=", "0", "si", "ty", "D", "en", "0.0", "0.5", "1.0", "1.0", "0.5", "0.0"],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 241.44,
+    "y2": 531.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure8-1.png"
+}, {
+  "caption": "Figure 6: (a) Ground truth simulated cloud cover fraction on 25/06/2018. (b-e), Sample draws from the AR ConvCNP, ConvCNP, ConvLNP and ConvGNP with context points denoted by red dots. Context points were removed from the right hand side of the 2D space to test the models’ abilities to extrapolate coherent function samples far away from observations. The ConvCNP and ConvLNP models used a beta-categorical likelihood while the ConvGNP uses a low-rank Gaussian likelihood.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.001220703125,
+    "y1": 148.54672241210938,
+    "y2": 193.79998779296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 139.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure6-1.png"
+}, {
+  "caption": "Table 6: Log-likelihoods and mean absolute errors (MAEs) in the downscaling experiments, without (left) and with (right) assisting weather station observations. Significantly best results in bold. ∗Cannot use extra weather station observations.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.1551818847656,
+    "y1": 421.64874267578125,
+    "y2": 446.97601318359375
+  },
+  "figType": "Table",
+  "imageText": ["ConvCNP∗", "(MLP)", "−1.55±0.01", "0.94±0.03", "ConvGNP∗", "(MLP)", "−1.38±0.01", "1.09±0.09", "ConvCNP", "(AR)", "−1.31±0.01", "0.85±0.05", "DOWN.", "+", "STATIONS", "LOG-LIK.", "MAE", "(◦C)", "ConvCNP", "(MLP)", "−1.55±0.01", "0.94±0.03", "ConvGNP", "(MLP)", "−1.36±0.01", "1.09±0.09", "ConvCNP", "(AR)", "−1.36±0.01", "1.04±0.04", "DOWNSCALING", "LOG-LIK.", "MAE", "(◦C)"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 360.96,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table6-1.png"
+}, {
+  "caption": "Table 13: For the weakly periodic synthetic experiments with one-dimensional inputs, average Kullback–Leibler divergences of the posterior prediction map πy with respect to the model normalised by the number of target points. Shows for one-dimensional outputs (dy = 1) and two-dimensional outputs (dy = 2) the performance for interpolation within the range [−2, 2] where the models where trained (“Int.”); interpolation within the range [2, 6] which the models have never seen before (“OOID”); and extrapolation from the range [−2, 2] to the range [2, 6] (“Ext.”). Models are ordered by interpolation performance. The latent variable models are trained and evaluated with the ELBO objective (E); trained and evaluated with the ML objective (M); and trained with the ELBO objective and evaluated with the ML objective (E–M). Diagonal GP refers to predictions by the ground-truth Gaussian processes without correlations. Trivial refers to predicting the empirical means and standard deviation of the test data. Errors indicate the central 95%-confidence interval. Numbers which are significantly best (p < 0.05) are boldfaced. Numbers which are very large are marked as failed with “F”. Numbers which are missing could not be run.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.56671142578125,
+    "y1": 217.37075805664062,
+    "y2": 332.36199951171875
+  },
+  "figType": "Table",
+  "imageText": ["FullConvGNP", "0.03±0.00", "0.03±0.00", "0.00±0.00", "ConvCNP", "(AR)", "0.09±0.00", "0.09±0.00", "0.06±0.00", "ConvGNP", "0.12±0.00", "0.12±0.00", "0.72±0.01", "AGNP", "0.25±0.00", "2.17±0.02", "1.95±0.02", "ConvLNP", "(M)", "0.38±0.00", "0.38±0.00", "0.54±0.00", "ConvLNP", "(E)", "0.39±0.00", "0.39±0.00", "0.44±0.00", "Diagonal", "GP", "0.42±0.00", "0.42±0.00", "0.65±0.00", "ConvCNP", "0.46±0.00", "0.46±0.00", "0.65±0.00", "GNP", "0.50±0.00", "1.02±0.01", "0.76±0.00", "ALNP", "(M)", "0.62±0.00", "1.04±0.01", "0.64±0.00", "ACNP", "(AR)", "0.63±0.00", "0.89±0.01", "0.66±0.00", "CNP", "(AR)", "0.67±0.00", "2.52±0.07", "1.21±0.01", "LNP", "(E–M)", "0.68±0.00", "F", "5.18±0.18", "LNP", "(M)", "0.69±0.00", "1.26±0.01", "0.68±0.01", "LNP", "(E)", "0.69±0.00", "F", "F", "ALNP", "(E–M)", "0.70±0.00", "0.85±0.01", "0.64±0.00", "ACNP", "0.71±0.00", "0.89±0.01", "0.66±0.00", "ALNP", "(E)", "0.72±0.00", "0.93±0.01", "0.72±0.00", "CNP", "0.74±0.00", "1.27±0.01", "0.77±0.01", "Trivial", "0.89±0.00", "0.89±0.00", "0.67±0.00", "ConvLNP", "(E–M)", "3.02±0.03", "3.02±0.03", "5.40±0.04", "Weakly", "Periodic", "Int.", "OOID", "Ext.", "dx=1,", "dy=2", "FullConvGNP", "0.02±0.00", "0.02±0.00", "0.00±0.00", "ConvCNP", "(AR)", "0.05±0.00", "0.05±0.00", "0.04±0.00", "ConvGNP", "0.05±0.00", "0.05±0.00", "0.56±0.02", "AGNP", "0.22±0.00", "1.25±0.02", "1.25±0.02", "ConvLNP", "(M)", "0.28±0.00", "0.28±0.00", "0.43±0.00", "ConvLNP", "(E)", "0.34±0.00", "0.33±0.00", "0.45±0.02", "Diagonal", "GP", "0.38±0.01", "0.38±0.01", "0.59±0.01", "ConvCNP", "0.40±0.01", "0.40±0.01", "0.60±0.01", "ALNP", "(M)", "0.53±0.00", "0.77±0.01", "0.57±0.01", "ACNP", "(AR)", "0.57±0.01", "0.82±0.01", "0.61±0.01", "GNP", "0.59±0.01", "1.31±0.02", "0.62±0.01", "CNP", "(AR)", "0.59±0.01", "2.33±0.27", "1.46±0.05", "LNP", "(E–M)", "0.60±0.01", "F", "4.09±0.28", "ALNP", "(E–M)", "0.60±0.01", "0.78±0.01", "0.59±0.01", "LNP", "(M)", "0.60±0.01", "0.80±0.01", "0.62±0.01", "LNP", "(E)", "0.61±0.01", "F", "9.91±0.70", "ALNP", "(E)", "0.62±0.01", "1.01±0.01", "0.71±0.01", "ACNP", "0.65±0.01", "0.82±0.01", "0.61±0.01", "CNP", "0.67±0.01", "1.45±0.03", "0.68±0.01", "Trivial", "0.82±0.00", "0.82±0.00", "0.61±0.00", "ConvLNP", "(E–M)", "1.58±0.03", "1.57±0.03", "2.85±0.04", "Weakly", "Periodic", "Int.", "OOID", "Ext.", "dx=1,", "dy=1"],
+  "name": "13",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 344.64,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Table13-1.png"
+}, {
+  "caption": "Figure 4: Comparison of noiseless (left) and noisy (right) samples from an AR ConvCNP trained on data sampled from a GP with an exponentiated-quadratic kernel, and the ground truth GP. The noiseless AR samples were generated from the noisy AR samples using the procedure suggested by Proposition 2.2.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.0038146972656,
+    "y1": 115.6777572631836,
+    "y2": 141.0050048828125
+  },
+  "figType": "Figure",
+  "imageText": ["ConvCNP", "(AR)", "ConvCNP", "(AR)Ground", "Truth", "Ground", "Truth"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 104.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Conceptual diagram showing the relationships between AR CNPs and various neural distribution estimators. The vertical axis denotes whether the model learns a distribution over a finite number of random variables, a countably infinite number, or an uncountably infinite number. The axis into the page denotes whether the architecture is MLP-based, or uses attention or convolutions. From left to right, we show different modelling paradigms. Fruitful exchanges occur when NPs (highlighted in green) are introduced into other modelling paradigms. Our proposed AR CNPs can be viewed as introducing NPs to the AR modelling paradigm.",
+  "captionBoundary": {
+    "x1": 107.7760009765625,
+    "x2": 504.15191650390625,
+    "y1": 682.9957275390625,
+    "y2": 738.2109985351562
+  },
+  "figType": "Figure",
+  "imageText": ["Grover,", "2022)", "62.", "AR", "ConvCNP", "(this", "work)", "Kalchbrenner,", "2018)", "58.", "ARDMs", "(Hoogeboom", "et", "al.,", "2021)", "59.", "AR", "CNP", "(this", "work)", "60.", "AR", "ACNP", "(this", "work)", "61.", "Transformer", "NP", "(Nguyen", "&", "et", "al.,", "2017b)", "57.", "Scalable", "Pixel", "Net", "(Menick", "&", "2017)", "56.", "Fast", "PixelCNN++", "(Ramachandran", "50.", "DEformer", "(Alcorn", "&", "Nguyen,", "2021)", "51.", "XLNet", "(Yang", "et", "al.,", "2019)", "52.", "ConvNADE", "(Uria", "et", "al.,", "2016)", "53.", "WaveNet", "(Oord", "et", "al.,", "2016a)", "54.", "PixelCNN", "(Oord", "et", "al.,", "2016b)", "55.", "PixelCNN++", "(Salimans", "et", "al.,", "2019)", "Autoregressive", "models", "43.", "RNADE", "(Uria", "et", "al.,", "2013)", "44.", "NADE", "(Uria", "et", "al.,", "2016)", "45.", "DeepNADE", "(Uria", "et", "al.,", "2014)", "46.", "EoNADE", "(Uria", "et", "al.,", "2014)", "47.", "MADE", "(Germain", "et", "al.,", "2015)", "48.", "PixelSNAIL", "(Chen", "et", "al.,", "2018)", "49.", "Sparse", "Transformer", "(Child", "et", "al.,", "33.", "Conv.", "VAE", "(Salimans", "et", "al.,", "2015)", "34.", "VDVAE", "(Child,", "2020)", "35.", "GP-VAE", "(Fortuin", "et", "al.,", "2020)", "36.", "SGP-VAE", "(Ashman", "et", "al.,", "2020)", "37.", "LNP", "(Garnelo", "et", "al.,", "2018b)", "38.", "ALNP", "(Kim", "et", "al.,", "2019)", "39.", "ConvLNP", "(Foong", "et", "al.,", "2020)", "40.", "VQ-VAE", "(Oord", "et", "al.,", "2017)", "41.", "PixelVAE", "(Gulrajani", "et", "al.,", "2016)", "42.", "VLAE", "(Chen", "et", "al.,", "2016b)", "Variational", "autoencoders", "31.", "VAEs", "(Kingma", "&", "Welling,", "2013)", "32.", "IWAE", "(Burda", "et", "al.,", "2015)", "GANs", "20.", "GAN", "(Goodfellow", "et", "al.,", "2014)", "21.", "SAGAN", "(Zhang", "et", "al.,", "2019)", "22.", "DCGAN", "(Radford", "et", "al.,", "2015)", "23.", "WGAN", "(Arjovsky", "et", "al.,", "2017)", "24.", "InfoGAN", "(Chen", "et", "al.,", "2016a)", "25.", "SNGAN", "(Miyato", "et", "al.,", "2018)", "26.", "BigGAN", "(Brock", "et", "al.,", "2018)", "27.", "StyleGAN", "(Karras", "et", "al.,", "2019)", "28.", "Spatial", "GAN", "(Jetchev", "et", "al.,", "2016)", "29.", "∞-GAN", "(Lu", "et", "al.,", "2020)", "30.", "PresGAN", "(Dieng", "et", "al.,", "2019)", "17.", "BRUNO", "(Korshunova", "et", "al.,", "2020)", "18.", "Copula", "GNP", "(Markou", "et", "al.,", "2022)", "19.", "FlowGAN", "(Grover", "et", "al.,", "2018)", "10.", "FFJORD", "(Grathwohl", "et", "al.,", "2018)", "11.", "Glow", "(Kingma", "&", "Dhariwal,", "2018)", "12.", "i-ResNets", "(Behrmann", "et", "al.,", "2018)", "13.", "Res.", "Flows", "(Chen", "et", "al.,", "2019)", "14.", "IAF", "(Kingma", "et", "al.,", "2016)", "15.", "NAF", "(Huang", "et", "al.,", "2018)", "16.", "TGP", "(Maroñas", "et", "al.,", "2021)", "Normalising", "flows", "7.", "NICE", "(Dinh", "et", "al.,", "2014)", "8.", "Flow++", "(Ho", "et", "al.,", "2019)", "9.", "RealNVP", "(Dinh", "et", "al.,", "2016)", "2021)", "Neural", "processes", "1.", "CNP", "(Garnelo", "et", "al.,", "2018a)", "2.", "GNP", "(Markou", "et", "al.,", "2022)", "3.", "ACNP", "(Kim", "et", "al.,", "2019)", "4.", "ConvCNP", "Gordon", "et", "al.", "(2020)", "5.", "ConvGNP", "(Markou", "et", "al.,", "2022)", "6.", "FullConvGNP", "(Bruinsma", "et", "al.,", "Uncountable", "Countable", "Finite", "Conv.", "Attention", "MLP", "62", "60,", "61", "59", "58", "52–57", "48–51", "43–47", "40–42", "39", "38", "3735,", "36,", "33,", "34", "31,", "32", "30", "28,", "29", "22–27", "21", "20", "19", "17,", "18", "16", "9–15", "8", "7", "4-6", "3", "1,2", "e", "mod", "els", "res", "siv", "Auto", "reg", "ers", "nc", "od", "au", "toe", "on", "al", "Vari", "ati", "ork", "s", "l", "n", "etw", "rsa", "ria", "ad", "ve", "tiv", "e", "Gen", "era", "s", "sin", "g", "flow", "Norm", "ali", "sse", "s", "pro", "ce", "Neu", "ral"],
+  "name": "5",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 501.12,
+    "y1": 393.59999999999997,
+    "y2": 669.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OAsXFPBfTBh-Figure5-1.png"
+}]

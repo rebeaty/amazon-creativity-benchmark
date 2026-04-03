@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: Overview of the conditional generative modeling approach to the motif-scaffolding problem. We train our new protein backbone diffusion model, ProtDiff, to generate realistic protein backbone structures. Next, we run SMCDiff, our conditional sampling algorithm, with ProtDiff to generate scaffolds (colored in red) conditioned on the motif (colored in blue). For selfconsistency evaluation, we use a pretrained fixed-backbone sequence-design model (ProteinMPNN (Dauparas et al., 2022)) to generate the scaffold sequence from a sampled backbone. We then input the sequence to a structure prediction model, in our case AlphaFold2 (AF2) (Jumper et al., 2021), to generate the full protein structure from the generated sequence. We compare the backbone of the predicted structure with the original backbone structure using TM-score (Xu & Zhang, 2010) and root-mean-square-distance (RMSD) for the motif.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.650634765625,
+    "y1": 357.0016784667969,
+    "y2": 461.9429931640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 332.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6TxBxqNME1Y-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Motif-scaffolding case studies. (A) Example of two scaffold structures generated around a segment of 5trv. Orange: desired input motif, Grey: AlphaFold-predicted structure of two scaffolds, with the motif highlighted (purple). Both scaffolds were sampled using SMCDiff with scTM > 0.5. (B,C) Motif RMSD for 5trv and 6exz test cases, its dependence on scaffold size, and comparison of SMCDiff to two naive inpainting methods (fixed, replacement).",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.7449035644531,
+    "y1": 203.35171508789062,
+    "y2": 253.4990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6TxBxqNME1Y-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Protein backbone samples from ProtDiff. (A) Density plot of scTM for different length categories (50–70, 70–128). The dashed line at scTM = 0.5 indicates the threshold of “designability”, points to the right are considered “designable” (see text). (B) Scatter plot of scTM and the highest TM-score of each sample to all of PDB. Points represented as a grey “⇥” are detected to contain an (invalid) left-handed helix. Dashed lines indicate thresholds scTM = 0.5. (C) Example of a designable backbone sample (rainbow) with scTM > 0.5 (boxed in red in panel B) to its closest PDB example (6c59, grey) with a TM-score of 0.54.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.2443542480469,
+    "y1": 218.43771362304688,
+    "y2": 290.50299072265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6TxBxqNME1Y-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Interpolations between ProtDiff samples demonstrating the diversity of backbones captured. Top: 64-residue example. Bottom: 56-residue example. ProtDiff samples are determined by the Gaussian noise across all steps, ✏(0:T ).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65185546875,
+    "y1": 228.17568969726562,
+    "y2": 257.44500732421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6TxBxqNME1Y-Figure4-1.png"
+}]

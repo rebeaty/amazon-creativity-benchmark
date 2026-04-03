@@ -1,0 +1,601 @@
+[{
+  "caption": "Figure 12: Generated images with DEIS on VPSDE ImageNet 32× 32.",
+  "captionBoundary": {
+    "x1": 162.9219970703125,
+    "x2": 449.07867431640625,
+    "y1": 703.4945678710938,
+    "y2": 709.4970092773438
+  },
+  "figType": "Figure",
+  "imageText": ["r", "=", "0", "r", "=", "1", "r", "=", "2", "r", "=", "3", "N", "F", "E", "=", "20", "N", "F", "E", "=", "10", "N", "F", "E", "=", "5"],
+  "name": "12",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 502.08,
+    "y1": 378.71999999999997,
+    "y2": 689.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Generated images with DEIS on VPSDE CIFAR10.",
+  "captionBoundary": {
+    "x1": 180.5760040283203,
+    "x2": 431.4243469238281,
+    "y1": 325.2345275878906,
+    "y2": 331.23699951171875
+  },
+  "figType": "Figure",
+  "imageText": ["r", "=", "0", "r", "=", "1", "r", "=", "2", "r", "=", "3", "N", "F", "E", "=", "10", "N", "F", "E", "=", "5"],
+  "name": "11",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 502.08,
+    "y1": 100.8,
+    "y2": 311.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure11-1.png"
+}, {
+  "caption": "Figure 13: Generated images with DEIS on VPSDE CelebA (NFE 5).",
+  "captionBoundary": {
+    "x1": 166.93299865722656,
+    "x2": 445.0689392089844,
+    "y1": 702.7435302734375,
+    "y2": 708.7459716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 98.88,
+    "y2": 692.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure13-1.png"
+}, {
+  "caption": "Table 8: Quantitative comparison in Fig. 5 for introduced ingredients, Exponential Integrator (EI), εθ-based score parameterization, polynomial extrapolation, and optimizing time discretization {ti}, where we change uniform stepsize to quadratic one t0 = 10−4. We include Tabs. 5 to 7 for more ablation studies regarding time discretization.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0031433105469,
+    "y1": 181.30551147460938,
+    "y2": 220.1849365234375
+  },
+  "figType": "Table",
+  "imageText": ["Euler", "246.16", "90.52", "27.38", "14.99", "8.46", "4.96", "3.54", "2.81", "2.62", "+", "EI", "283.67", "216.47", "137.20", "100.74", "68.03", "37.93", "18.81", "6.66", "3.69", "+εθ", "42.38", "17.23", "9.71", "7.56", "5.76", "4.24", "3.37", "2.83", "2.67", "+", "Poly", "30.67", "10.41", "6.50", "5.13", "4.06", "3.07", "2.69", "2.58", "2.57", "+", "Opt", "{ti}", "15.37", "5.02", "3.03", "2.70", "2.59", "2.57", "2.56", "2.56", "2.56", "FID", "with", "various", "NFE", "Method", "5", "10", "20", "30", "50", "100", "200", "500", "1000"],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 81.6,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table8-1.png"
+}, {
+  "caption": "Table 9: Effects of different timesteps on the Euler method. We use t0 = 10−4 which has lower FID score compared with the default t0 = 10−3 (Song et al., 2020b) in the experiments.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0025634765625,
+    "y1": 302.4325256347656,
+    "y2": 320.88897705078125
+  },
+  "figType": "Table",
+  "imageText": ["Uniform", "246.16", "90.52", "27.38", "14.99", "8.46", "4.96", "3.54", "2.81", "2.62", "Quadratic", "294.01", "138.73", "39.82", "19.26", "8.49", "3.96", "2.88", "2.61", "2.57", "FID", "with", "various", "NFE", "Method", "5", "10", "20", "30", "50", "100", "200", "500", "1000"],
+  "name": "9",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 234.72,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table9-1.png"
+}, {
+  "caption": "Figure 1: Generated images with various DMs. Latent diffusion (Rombach et al., 2021) (Left), 256 × 256 image with text A shirt with inscription ”World peace” (15 NFE). VE diffusion (Song et al., 2020b) (Mid), FFHQ 256×256 (12 NFE). VP diffusion (Ho et al., 2020) (Right), CIFAR10 (7 NFE) and CELEBA (5 NFE).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0043029785156,
+    "y1": 251.14755249023438,
+    "y2": 290.0269775390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Fig. 4a shows relative changes of εθ(x̂∗t , t) with respect to t are relatively small, especially when t > 0.15. Fig. 4b depicts the extrapolation error with N = 10. High order polynomial can reduce approximation error effectively. Fig. 4c illustrates effects of extrapolation. When N is small, higher order polynomial approximation leads to better samples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0022888183594,
+    "y1": 214.42251586914062,
+    "y2": 253.30096435546875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "NFE", "5", "7", "10", "12", "15", "17", "20", "30", "50", "3", "2", "r", "=", "1", "r", "=", "0", "r", "=", "r", "=", "(a)", "(b)"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 90.72,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure4-1.png"
+}, {
+  "caption": "Table 11: Comparison with A-DDIM on the checkpoint and time scheduling provided by (Bao et al., 2022) on CIFAR10",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 271.1355285644531,
+    "y2": 288.09698486328125
+  },
+  "figType": "Table",
+  "imageText": ["A-DDIM", "51.47", "14.06", "6.74", "4.04", "1-iPNDM", "30.13", "13.01", "8.25", "5.65", "2-iPNDM", "84.00", "10.45", "6.79", "4.73", "3-iPNDM", "105.38", "14.03", "5.79", "4.24", "tAB1-DEIS", "20.45", "8.11", "4.91", "3.88", "tAB2-DEIS", "18.87", "7.47", "4.66", "3.79", "tAB3-DEIS", "18.43", "7.12", "4.53", "3.78", "5", "10", "20", "50", "FID", "NFE", "Method"],
+  "name": "11",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 404.15999999999997,
+    "y1": 136.79999999999998,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table11-1.png"
+}, {
+  "caption": "Table 13: Mean and standard deviation of multiple runs with 4 different random seeds on the checkpoint and time scheduling provided by Liu et al. (2022) on CELEBA.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 577.4395751953125,
+    "y2": 594.4010009765625
+  },
+  "figType": "Table",
+  "imageText": ["CELEBA", "PNDM", "-", "-", "7.60±0.12", "3.51±0.03", "iPNDM", "59.87±1.01", "7.78±0.18", "5.58±0.11", "3.34±0.04", "DDIM", "30.42±0.87", "13.53±0.48", "6.89±0.11", "4.17±0.04", "tAB1-DEIS", "26.65±0.63", "8.81±0.23", "4.33±0.07", "3.19±0.03", "tAB2-DEIS", "25.13±0.56", "7.20±0.21", "3.61±0.05", "3.04±0.02", "tAB3-DEIS", "25.07±0.49", "6.95±0.09", "3.41±0.04", "2.95±0.03", "5", "10", "20", "50", "FID", "NFE", "Method", "Dataset"],
+  "name": "13",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 453.59999999999997,
+    "y2": 566.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table13-1.png"
+}, {
+  "caption": "Table 10: Quantitative performance of RK45 ODE solver with t0 = 10−4 in Fig. 5.",
+  "captionBoundary": {
+    "x1": 140.10000610351562,
+    "x2": 471.8999328613281,
+    "y1": 117.98355865478516,
+    "y2": 125.48004150390625
+  },
+  "figType": "Table",
+  "imageText": ["NFE", "14", "26", "32", "38", "50", "62", "88.2", "344", "FID", "61.11", "36.64", "15.18", "9.88", "6.32", "2.63", "2.56", "2.55"],
+  "name": "10",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 162.72,
+    "x2": 449.28,
+    "y1": 81.6,
+    "y2": 106.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table10-1.png"
+}, {
+  "caption": "Table 14: FID results of DEIS on VESDE CIFAR10. We note the Predictor-Corrector algorithm proposed in (Song et al., 2020b) have ≥ 100 FID if sampling with limited NFE budget (≤ 50).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 708.674560546875,
+    "y2": 725.635986328125
+  },
+  "figType": "Table",
+  "imageText": ["VESDE", "tAB0-DEIS", "103.52±2.09", "46.90±0.38", "27.64±0.05", "19.86±0.03", "tAB1-DEIS", "56.33±0.87", "26.16±0.12", "18.52±0.03", "16.64±0.01", "tAB2-DEIS", "58.65±0.25", "20.89±0.09", "16.94±0.03", "16.33±0.02", "tAB3-DEIS", "96.70±0.90", "25.01±0.03", "16.59±0.03", "16.31±0.02", "5", "10", "20", "50", "FID", "NFE", "Method", "SDE"],
+  "name": "14",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 606.72,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table14-1.png"
+}, {
+  "caption": "Table 12: Sampling quality on VPSDE ImageNet32 × 32 with the checkpoint provided by Song et al. (2021a). Blackbox ODE solver reports FID 8.34 with ODE tolerance 1 × 10−5 (NFE around 130).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9988708496094,
+    "y1": 413.3285217285156,
+    "y2": 441.24896240234375
+  },
+  "figType": "Table",
+  "imageText": ["iPNDM", "54.62", "15.32", "9.26", "8.26", "DDIM", "49.08", "23.52", "13.69", "9.44", "tAB1-DEIS", "34.69", "13.94", "9.55", "8.41", "tAB2-DEIS", "29.50", "11.36", "8.79", "8.29", "tAB3-DEIS", "28.09", "10.55", "8.58", "8.25", "5", "10", "20", "50", "FID", "NFE", "Method"],
+  "name": "12",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 404.15999999999997,
+    "y1": 300.96,
+    "y2": 402.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table12-1.png"
+}, {
+  "caption": "Table 1: Two popular SDEs, variance preserving SDE (VPSDE) and variance exploding SDE (VESDE), used in DMs. The parameter αt is decreasing with α0 ≈ 1, αT ≈ 0, while σt is increasing.",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0032958984375,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["dt", "I", "I", "σ2", "t", "I", "VESDE", "(Song", "et", "al.,", "2020b)", "0", "√", "d[σ2", "t", "]", "√", "−d", "logαt", "dt", "I", "√", "αtI", "(1−", "αt)I", "VPSDE", "(Ho", "et", "al.,", "2020)", "1", "2", "d", "logαt", "dt", "I", "SDE", "Ft", "Gt", "µt", "Σt"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 470.4,
+    "y1": 118.56,
+    "y2": 174.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table1-1.png"
+}, {
+  "caption": "Table 4: PNDM and iPNDM on CELEBA",
+  "captionBoundary": {
+    "x1": 221.87100219726562,
+    "x2": 390.1293640136719,
+    "y1": 204.91751098632812,
+    "y2": 210.91998291015625
+  },
+  "figType": "Table",
+  "imageText": ["PNDM", "-", "-", "7.60", "3.51", "iPNDM", "59.87", "7.78", "5.58", "3.34", "0-DEIS", "30.42", "13.53", "6.89", "4.17", "1-DEIS", "26.65", "8.81", "4.33", "3.19", "2-DEIS", "25.13", "7.20", "3.61", "3.04", "3-DEIS", "25.07", "6.95", "3.41", "2.95", "5", "10", "20", "50", "FID", "NFE", "Method"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 212.64,
+    "x2": 399.36,
+    "y1": 81.6,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table4-1.png"
+}, {
+  "caption": "Table 16: Checkpoints for experiments",
+  "captionBoundary": {
+    "x1": 228.4219970703125,
+    "x2": 383.5794372558594,
+    "y1": 698.7145385742188,
+    "y2": 704.7169799804688
+  },
+  "figType": "Table",
+  "imageText": ["Experiment", "Citation", "License", "CIFAR10", "Tabs.", "2,", "5", "to", "7,", "10,", "13", "and", "14,", "FFHQ", "Fig.", "1", "(Song", "et", "al.,", "2020b)", "Apache", "License", "2.0", "CIFAR10", "Tab.", "11", "(Bao", "et", "al.,", "2022)", "Unknown", "CELEBA", "Tab.", "13", "(Liu", "et", "al.,", "2022)", "Apache", "License", "2.0", "ImageNet", "32×", "32", "Tab.", "12", "(Song", "et", "al.,", "2021a)", "Unknown", "Text-to-image", "(Rombach", "et", "al.,", "2021)", "MIT"],
+  "name": "16",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 527.04,
+    "y1": 619.68,
+    "y2": 687.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table16-1.png"
+}, {
+  "caption": "Table 15: Code Used and License",
+  "captionBoundary": {
+    "x1": 238.72799682617188,
+    "x2": 373.2729187011719,
+    "y1": 559.1595458984375,
+    "y2": 565.1619873046875
+  },
+  "figType": "Table",
+  "imageText": ["URL", "License", "https://github.com/yang-song/score_sde", "Apache", "License", "2.0", "https://github.com/luping-liu/PNDM", "Apache", "License", "2.0", "https://github.com/CompVis/latent-diffusion", "MIT", "https://github.com/baofff/Analytic-DPM", "Unknown"],
+  "name": "15",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 487.2,
+    "y1": 490.56,
+    "y2": 548.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table15-1.png"
+}, {
+  "caption": "Figure 6: Generated images with tABr-DEIS on VESDE CIFAR10.",
+  "captionBoundary": {
+    "x1": 170.031005859375,
+    "x2": 441.9693908691406,
+    "y1": 430.56353759765625,
+    "y2": 436.5660095214844
+  },
+  "figType": "Figure",
+  "imageText": ["r", "=", "0", "r", "=", "1", "r", "=", "2", "r", "=", "3", "N", "F", "E", "=", "20", "N", "F", "E", "=", "10", "N", "F", "E", "=", "5"],
+  "name": "6",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 502.08,
+    "y1": 105.6,
+    "y2": 416.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure6-1.png"
+}, {
+  "caption": "Figure 15: Generated images with DEIS on VPSDE CelebA (NFE 20).",
+  "captionBoundary": {
+    "x1": 164.44200134277344,
+    "x2": 447.5592346191406,
+    "y1": 702.7435302734375,
+    "y2": 708.7459716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 98.88,
+    "y2": 692.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure15-1.png"
+}, {
+  "caption": "Figure 5: Ablation study and comparison with other samplers. We notice switching from Euler to Exponential Integrator worsens FID, which we explore and explain Ingredient 2 in Sec. 3. With EI, εθ, polynomial extrapolation and optimizing timestamps can significantly improve the sampling quality. Compared with other samplers, ODE sampler based on RK45 (Song et al., 2020b), SDE samplers based on Euler-Maruyama (EM) (Song et al., 2020b) and SDE adaptive step size solver (Jolicoeur-Martineau et al., 2021), DEIS can converge much faster.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039978027344,
+    "y1": 219.44851684570312,
+    "y2": 280.24493408203125
+  },
+  "figType": "Figure",
+  "imageText": ["end", "for", "←", "run", "Eq.", "(14)", "with", "Ψ,C,", "ε-", "buffer", "Input:", "{ti}Ni=0,", "r", "Instantiate:", "x̂tN", ",", "Empty", "ε-buffer", "Calculate", "weights", "Ψ,C", "based", "on", "Eq.", "(15)", "for", "i", "in", "N,N", "−", "1,", "·", "·", "·", ",", "1", "do", "ε-buffer.append(εθ(x̂ti", ",", "ti))", "x̂ti−1", "Algorithm", "1", "tAB-DEIS"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 506.4,
+    "y1": 92.64,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure5-1.png"
+}, {
+  "caption": "Table 5: DEIS for VPSDE on CIFAR10 with t0 = 10−3.",
+  "captionBoundary": {
+    "x1": 192.89599609375,
+    "x2": 419.1036682128906,
+    "y1": 450.478515625,
+    "y2": 457.9749755859375
+  },
+  "figType": "Table",
+  "imageText": ["5", "54.58", "216+1", "335+1", "313+3", "49.25", "48.56", "48.47", "37.99", "28.45", "26.11", "10", "20.03", "14.72", "13.19+2", "28.65+2", "14.05", "12.63", "12.18", "10.36", "7.03", "5.71", "15", "11.99", "5.03+1", "5.88", "6.88+1", "7.72", "6.67", "6.29", "6.22", "4.69", "4.13", "20", "8.92", "4.12", "3.97+1", "4.14", "5.79", "5.05", "4.78", "4.97", "4.10", "3.80", "50", "5.05", "3.67", "3.75+1", "3.73+2", "4.01", "3.84", "3.79", "3.89", "3.74", "3.72", "FID", "for", "various", "DEIS", "with", "Eq.", "(36)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3", "5", "34.07", "356+1", "388+1", "377+3", "29.80", "29.35", "29.38", "24.87", "22.57", "22.06", "10", "14.59", "115", "171+2", "267+2", "10.73", "10.16", "10.11", "8.11", "6.36", "5.97", "15", "9.22", "32.94+1", "77.44", "103+1", "6.45", "6.03", "5.98", "5.21", "4.26", "4.05", "20", "7.27", "13.06", "11.55+1", "50.56", "5.17", "4.83", "4.78", "4.45", "3.88", "3.75", "50", "4.64", "3.76", "3.68+1", "3.74+2", "3.92", "3.82", "3.79", "3.81", "3.72", "3.71", "FID", "for", "various", "DEIS", "with", "κ", "=", "3", "in", "Eq.", "(34)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3", "5", "30.64", "256+1", "357+1", "342+3", "24.58", "23.60", "23.48", "20.01", "16.52", "16.10", "10", "11.71", "56.62", "56.51+2", "103+2", "7.56", "6.72", "6.50", "6.09", "4.57", "4.17", "15", "7.67", "10.62+1", "14.96", "36.15+1", "4.93", "4.40", "4.26", "4.29", "3.57", "3.37", "20", "6.11", "6.33", "4.74+1", "12.81", "4.16", "3.84", "3.77", "3.81", "3.41", "3.33", "50", "4.24", "3.88", "3.75+1", "3.78+2", "3.70", "3.68", "3.69", "3.62", "3.61", "3.36", "FID", "for", "various", "DEIS", "with", "κ", "=", "2", "in", "Eq.", "(34)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3", "5", "47.59", "207+1", "238+1", "212+3", "35.14", "32.51", "32.02", "25.99", "25.06", "44.29", "10", "16.60", "84.55", "66.81+2", "78.57+2", "10.47", "8.85", "8.18", "9.51", "7.71", "7.18", "15", "10.39", "46.36+1", "47.45", "41.27+1", "6.69", "5.70", "5.24", "6.47", "5.51", "5.01", "20", "7.93", "34.87", "28.35+1", "27.21", "5.27", "4.56", "4.24", "5.20", "4.50", "4.14", "50", "4.36", "11.58", "7.00+1", "7.48+2", "3.32", "3.08", "2.99", "3.32", "3.09", "2.99", "FID", "for", "various", "DEIS", "with", "κ", "=", "1", "in", "Eq.", "(34)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 514.0799999999999,
+    "y1": 81.6,
+    "y2": 439.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table5-1.png"
+}, {
+  "caption": "Table 3: PNDM and iPNDM on CIFAR10",
+  "captionBoundary": {
+    "x1": 221.78599548339844,
+    "x2": 390.21368408203125,
+    "y1": 627.402587890625,
+    "y2": 633.405029296875
+  },
+  "figType": "Table",
+  "imageText": ["PNDM", "-", "-", "6.42", "3.03", "iPNDM", "70.07", "9.36", "4.21", "3.00", "DDIM", "30.64", "11.71", "6.12", "4.25", "tAB1", "20.01", "6.09", "3.81", "3.32", "tAB2", "16.53", "4.57", "3.41", "3.09", "tAB3", "16.10", "4.17", "3.33", "2.99", "5", "10", "20", "50", "FID", "NFE", "Method"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 485.76,
+    "y2": 616.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table3-1.png"
+}, {
+  "caption": "Figure 14: Generated images with DEIS on VPSDE CelebA (NFE 10).",
+  "captionBoundary": {
+    "x1": 164.44200134277344,
+    "x2": 447.5592346191406,
+    "y1": 702.7435302734375,
+    "y2": 708.7459716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 98.88,
+    "y2": 692.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure14-1.png"
+}, {
+  "caption": "Figure 8: Generated images with text “A street sign that reads Diffusion” (15 NFE)",
+  "captionBoundary": {
+    "x1": 140.42300415039062,
+    "x2": 471.5798034667969,
+    "y1": 382.5735168457031,
+    "y2": 388.57598876953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 268.8,
+    "y2": 371.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Generated images with text “A artistic painting of snow trees by Pablo Picaso, oil on canvas” (15 NFE)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 210.36154174804688,
+    "y2": 227.322998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 96.96,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure7-1.png"
+}, {
+  "caption": "Figure 9: Generated images with text “The drawing of a funny husky” (15 NFE)",
+  "captionBoundary": {
+    "x1": 145.93600463867188,
+    "x2": 466.0641784667969,
+    "y1": 543.8265380859375,
+    "y2": 549.8289794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 429.59999999999997,
+    "y2": 533.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Generated images with text “Cyber punk oil painting” (15 NFE)",
+  "captionBoundary": {
+    "x1": 155.93899536132812,
+    "x2": 456.0622253417969,
+    "y1": 705.07958984375,
+    "y2": 711.08203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 591.84,
+    "y2": 694.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure10-1.png"
+}, {
+  "caption": "Table 2: More results of DEIS for VPSDE on CIFAR10 with limited NFE. For ρRK-DEIS, the upper right number indicates extra NFEs used. Bold numbers denote the best performance achieved with similar NFE budgets. For a fair comparison, we report numbers based on their best time discretization for different algorithms with different NFE. We include a comparison given the same time discretization in App. G.3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 185.65151977539062,
+    "y2": 235.48992919921875
+  },
+  "figType": "Table",
+  "imageText": ["5", "26.91", "108+1", "185+1", "193+3", "22.28", "21.53", "21.43", "19.72", "16.31", "15.37", "10", "11.14", "14.72", "13.19+2", "28.65+2", "7.56", "6.72", "6.50", "6.09", "4.57", "4.17", "15", "7.06", "4.89+1", "5.88", "6.88+1", "4.69", "4.16", "3.99", "4.29", "3.57", "3.37", "20", "5.47", "3.50", "2.97+1", "3.92", "3.70", "3.32", "3.17", "3.54", "3.05", "2.86", "50", "3.27", "2.60", "2.55+1", "2.57+2", "2.70", "2.62", "2.59", "2.67", "2.59", "2.57", "FID", "for", "various", "DEIS", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 512.16,
+    "y1": 81.6,
+    "y2": 174.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table2-1.png"
+}, {
+  "caption": "Table 7: DEIS for VPSDE on CIFAR10 with t0 and time scheduling suggested by Karras et al. (2022)",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0046081542969,
+    "y1": 592.1975708007812,
+    "y2": 609.1589965820312
+  },
+  "figType": "Table",
+  "imageText": ["5", "53.20", "108+1", "185+1", "193+3", "47.56", "46.36", "46.13", "36.98", "28.76", "25.76", "10", "18.99", "18.75", "20.27+2", "54.92+2", "13.38", "11.84", "11.21", "10.92", "8.26", "6.87", "15", "10.91", "4.89+1", "6.31", "9.79+1", "6.90", "5.86", "5.42", "6.12", "4.86", "4.33", "20", "7.81", "3.50", "2.97+1", "3.92", "4.84", "4.10", "3.80", "4.48", "3.69", "3.38", "50", "3.84", "2.60", "2.58+1", "2.59+2", "2.86", "2.69", "2.64", "2.82", "2.66", "2.61", "FID", "for", "various", "DEIS", "with", "κ", "=", "7", "in", "Eq.", "(35)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 512.16,
+    "y1": 487.68,
+    "y2": 581.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table7-1.png"
+}, {
+  "caption": "Table 6: DEIS for VPSDE on CIFAR10 with t0 = 10−4 in Eq. (34)",
+  "captionBoundary": {
+    "x1": 171.45199584960938,
+    "x2": 440.5479431152344,
+    "y1": 450.9225158691406,
+    "y2": 458.4189758300781
+  },
+  "figType": "Table",
+  "imageText": ["5", "54.85", "230+1", "382+1", "370+3", "51.94", "51.62", "51.58", "43.84", "39.91", "38.76", "10", "19.80", "23.35", "25.08+2", "82.17+2", "14.63", "13.43", "13.07", "11.14", "7.78", "6.02", "15", "11.29", "5.63+1", "7.46", "8.90+1", "7.31", "6.28", "5.90", "5.89", "4.35", "3.71", "20", "7.91", "3.84", "3.05+1", "4.14", "4.91", "4.19", "3.91", "4.23", "3.35", "3.00", "50", "3.82", "2.60", "2.56+1", "2.59+2", "2.86", "2.70", "2.64", "2.79", "2.63", "2.58", "FID", "for", "various", "DEIS", "with", "Eq.", "(36)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3", "5", "32.11", "364+1", "393+1", "383+3", "28.87", "28.58", "28.62", "25.78", "23.66", "23.38", "10", "13.18", "135", "199+2", "298+2", "9.89", "9.38", "9.33", "7.74", "6.20", "5.77", "15", "7.92", "42.04+1", "99.64", "122+1", "5.41", "4.99", "4.91", "4.48", "3.65", "3.37", "20", "5.92", "17.05", "16.66+1", "64.40", "4.04", "3.69", "3.60", "3.54", "3.05", "2.86", "50", "3.36", "2.77", "2.57+1", "2.71+2", "2.73", "2.63", "2.60", "2.67", "2.59", "2.57", "FID", "for", "various", "DEIS", "with", "κ", "=", "3", "in", "Eq.", "(34)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3", "5", "26.91", "271+1", "362+1", "348+3", "22.28", "21.53", "21.43", "19.72", "16.31", "15.37", "10", "11.14", "66.25", "63.53+2", "111+2", "7.65", "6.89", "6.67", "6.74", "5.49", "5.02", "15", "7.06", "13.48+1", "17.15", "44.83+1", "4.69", "4.16", "3.99", "4.38", "3.78", "3.50", "20", "5.47", "6.62", "4.15+1", "15.14", "3.70", "3.32", "3.17", "3.57", "3.19", "3.03", "50", "3.27", "2.65", "2.55+1", "2.57+2", "2.70", "2.62", "2.59", "2.70", "2.61", "2.59", "FID", "for", "various", "DEIS", "with", "κ", "=", "2", "in", "Eq.", "(34)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3", "5", "42.38", "239+1", "232+1", "199+3", "33.09", "31.06", "30.67", "26.01", "20.57", "42.35", "10", "17.23", "143", "95.13+2", "130+2", "12.44", "11.04", "10.41", "12.01", "10.57", "8.04", "15", "12.06", "99.76+1", "77.37", "88.56+1", "9.12", "8.25", "7.79", "9.08", "8.20", "7.50", "20", "9.71", "82.89", "57.54+1", "66.61", "7.57", "6.89", "6.50", "7.60", "6.90", "6.45", "50", "5.76", "31.56", "13.10+1", "15.73+2", "4.64", "4.25", "4.06", "4.67", "4.28", "4.10", "FID", "for", "various", "DEIS", "with", "κ", "=", "1", "in", "Eq.", "(34)", "NFE", "DDIM", "ρ2Heun", "ρ3Kutta", "ρ4RK", "ρAB1", "ρAB2", "ρAB3", "tAB1", "tAB2", "tAB3"],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 514.0799999999999,
+    "y1": 81.6,
+    "y2": 439.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Table6-1.png"
+}, {
+  "caption": "Figure 3: Fig. 3a shows average pixel difference ∆p between ground truth x̂∗0 and numerical solution x̂0 from Euler method and EI method. Fig. 3b depicts approximation error ∆s along ground truth solutions. Fig. 3d shows ∆s can be dramatically reduced if the parameterization εθ(x, t) instead of sθ(x, t) is used. This parameterization helps the EI method outperform the Euler method in Fig. 3c.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00103759765625,
+    "y1": 214.42153930664062,
+    "y2": 254.794921875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 90.72,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Loek7hfb46P-Figure3-1.png"
+}]

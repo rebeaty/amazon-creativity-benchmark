@@ -1,0 +1,101 @@
+[{
+  "caption": "Table 3: Test accuracy on CIFAR-10 with VGG-11 and ResNet-34. “k-class” indicates that each node has only the data of randomly selected k classes, and bold font indicates the highest accuracy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00238037109375,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["DSGDm", "92.2±", "0.09", "77.3±", "4.05", "39.6±", "5.92", "95.8±", "0.26", "79.0±", "3.69", "27.7±", "2.83", "QG-DSGDm", "92.0±", "0.04", "89.4±", "1.04", "77.8±", "1.96", "95.6±", "0.37", "94.0±", "1.02", "77.4±", "3.13", "DecentLaM", "92.1±", "0.09", "90.9±", "0.65", "85.2±", "0.67", "95.9±", "0.04", "95.2±", "0.51", "89.2±", "2.26", "Momentum", "Tracking", "91.9±", "0.06", "90.9±", "0.60", "87.0±", "0.48", "95.0±", "0.13", "94.4±", "0.52", "89.9±", "0.73", "DSGD", "89.7±", "0.15", "85.8±", "2.39", "70.3±", "2.73", "93.4±", "0.05", "87.5±", "3.27", "64.1±", "0.54", "Gradient", "Tracking", "88.1±", "0.19", "86.0±", "0.45", "82.9±", "0.13", "85.1±", "1.07", "81.2±", "0.73", "75.9±", "0.41", "CIFAR-10", "+", "VGG-11", "CIFAR-10", "+", "ResNet-34", "10-class", "4-class", "2-class", "10-class", "4-class", "2-class"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 105.6,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3eQEil044E-Table3-1.png"
+}, {
+  "caption": "Figure 2: Learning curves for CIFAR-10 with VGG-11 and ResNet-34 in the 2-class setting.",
+  "captionBoundary": {
+    "x1": 121.93699645996094,
+    "x2": 490.0633850097656,
+    "y1": 332.51849365234375,
+    "y2": 338.5209655761719
+  },
+  "figType": "Figure",
+  "imageText": ["DSGD", "Gradient", "Tracking", "DSGDm", "QG-DSGDm", "DecentLaM", "Momentum", "Tracking", "ResNet-34", "ra", "cy", "Ac", "cu", "90", "70", "50", "30", "10", "0", "200", "400", "600", "750", "Epoch", "VGG-11", "ra", "cy", "Ac", "cu", "90", "70", "50", "30", "10", "0", "200", "400", "600", "800", "1000", "Epoch"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 482.4,
+    "y1": 201.12,
+    "y2": 325.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3eQEil044E-Figure2-1.png"
+}, {
+  "caption": "Table 2: Test accuracy on FashionMNIST, SVHN, and CIFAR-10 with LeNet. “k-class” means that each node has only the data of randomly selected k classes. Bold font means the highest accuracy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0047912597656,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["DSGDm", "72.9±", "0.41", "72.5±", "0.20", "63.8±", "6.24", "38.8±", "1.61", "QG-DSGDm", "72.4±", "0.87", "73.1±", "0.16", "69.6±", "2.42", "55.3±", "5.30", "DecentLaM", "73.2±", "0.36", "72.9±", "0.14", "71.7±", "1.10", "63.1±", "5.43", "Momentum", "Tracking", "72.9±", "0.59", "73.0±", "0.49", "72.6±", "0.41", "70.7±", "1.38", "DSGD", "63.1±", "0.60", "64.1±", "0.52", "61.2±", "1.16", "47.6±", "5.77", "Gradient", "Tracking", "62.3±", "0.73", "62.0±", "0.80", "61.9±", "0.58", "61.8±", "0.82", "CIFAR-10", "10-class", "8-class", "6-class", "4-class", "DSGDm", "92.6±", "0.35", "92.4±", "0.19", "88.1±", "4.38", "67.2±", "9.69", "QG-DSGDm", "92.5±", "0.22", "92.5±", "0.17", "90.9±", "1.67", "83.5±", "7.14", "DecentLaM", "92.4±", "0.21", "92.2±", "0.39", "92.0±", "0.48", "88.2±", "4.75", "Momentum", "Tracking", "92.6±", "0.32", "92.4±", "0.40", "92.3±", "0.23", "91.7±", "0.53", "DSGD", "90.1±", "0.17", "89.5±", "0.61", "87.6±", "1.94", "78.8±", "8.55", "Gradient", "Tracking", "90.1±", "0.30", "89.8±", "0.38", "89.8±", "0.39", "89.4±", "0.47", "SVHN", "10-class", "8-class", "6-class", "4-class", "DSGDm", "89.5±", "0.15", "89.3±", "0.21", "82.1±", "3.23", "68.7±", "5.02", "QG-DSGDm", "89.6±", "0.10", "89.5±", "0.47", "86.9±", "1.59", "80.8±", "2.94", "DecentLaM", "89.5±", "0.14", "89.3±", "0.36", "89.2±", "0.41", "84.3±", "3.05", "Momentum", "Tracking", "89.5±", "0.36", "89.4±", "0.05", "88.9±", "0.47", "86.8±", "1.56", "DSGD", "85.6±", "0.49", "85.6±", "0.41", "82.7±", "1.12", "78.1±", "1.56", "Gradient", "Tracking", "85.0±", "0.49", "85.4±", "0.26", "85.0±", "0.37", "84.9±", "0.22", "FashionMNIST", "10-class", "8-class", "6-class", "4-class"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 105.6,
+    "y2": 440.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3eQEil044E-Table2-1.png"
+}, {
+  "caption": "Table 1: Comparison of the convergence rates. In the “Data-Heterogeneity” column, “✓” indicates that the convergence rate is independent of data heterogeneity, and “(✓)” indicates that it is independent, but there is no discussion about data heterogeneity either theoretically or experimentally. In the “Momentum,” “Stochastic,” and “Non-Convex” columns, “✓” respectively indicates that the method is accelerated using momentum, the convergence rate is provided when the stochastic gradient is used, and the convergence rate is provided when the objective function is non-convex.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036926269531,
+    "y1": 76.3305435180664,
+    "y2": 137.126953125
+  },
+  "figType": "Table",
+  "imageText": ["Momentum", "Tracking", "(our", "work)", "✓", "✓", "✓", "✓", "ABm", "(Xin", "&", "Khan,", "2020)", "(✓)", "✓", "GTAdam", "(Carnevale", "et", "al.,", "2022)", "(✓)", "✓", "DSGDm", "(Gao", "&", "Huang,", "2020)", "✓", "✓", "✓", "QG-DSGDm", "(Lin", "et", "al.,", "2021)", "✓", "✓", "✓", "DecentLaM", "(Yuan", "et", "al.,", "2021)", "✓", "✓", "✓", "DSGD", "(Lian", "et", "al.,", "2017)", "✓", "✓", "Gradient", "Tracking", "(Koloskova", "et", "al.,", "2021)", "✓", "✓", "✓", "Data-Heterogeneity", "Momentum", "Stochastic", "Non-Convex"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 142.56,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3eQEil044E-Table1-1.png"
+}, {
+  "caption": "Figure 1: (a) Learning curve on CIFAR-10 with LeNet in the 10-class (i.e., homogeneous) setting. We evaluated the test accuracy per 10 epochs. (b) Learning curve in the 4-class (i.e., heterogeneous) setting. (c) Average test accuracy for all datasets (i.e., FashionMNIST, SVHN, and CIFAR-10).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 244.50753784179688,
+    "y2": 272.427001953125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Average", "accuracy", "for", "datasets", "DSGD", "Gradient", "Tracking", "DSGDm", "QG-DSGDm", "DecentLaM", "Momentum", "Tracking", "ra", "cy", "Ac", "cu", "85", "80", "75", "70", "65", "60", "55", "50", "10", "8", "6", "4", "k-class", "(b)", "CIFAR-10", "(4-class)", "ra", "cy", "Ac", "cu", "70", "60", "50", "40", "30", "20", "10", "0", "100", "200", "300", "400", "500", "Epoch", "(a)", "CIFAR-10", "(10-class)", "ra", "cy", "Ac", "cu", "70", "60", "50", "40", "30", "20", "10", "0", "100", "200", "300", "400", "500", "Epoch"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 496.32,
+    "y1": 88.8,
+    "y2": 234.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3eQEil044E-Figure1-1.png"
+}]

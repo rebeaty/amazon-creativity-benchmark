@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 2: Comparison of the estimated Bayes error with and without noise on the labels, with mean and standard error for 10 trials. The vertical/horizontal axis is the estimated Bayes error/the number of training samples, respectively. With noisy labels, the estimation tends to become inaccurate with a larger standard error. As we increase sample size, the difference between clean labels becomes smaller, but a small bias remains. With our modified estimator, the bias vanishes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.16546630859375,
+    "y1": 382.1184997558594,
+    "y2": 431.95599365234375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Setup", "D", "20", "22", "(w/o", "noise)", "(w/", "noise)", "Noise", "(w/", "noise)", "18", "16", "14", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "12", "(c)", "Setup", "C", "14", "16", "(w/o", "noise)", "(w/", "noise)", "Noise", "(w/", "noise)", "12", "10", "8", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "6", "(b)", "Setup", "B", "4", "5", "(w/o", "noise)", "(w/", "noise)", "Noise", "(w/", "noise)", "3", "2", "1", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "0", "(a)", "Setup", "A", "9", "10", "(w/o", "noise)", "(w/", "noise)", "Noise", "(w/", "noise)", "8", "7", "6", "5", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "4"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 500.15999999999997,
+    "y1": 276.48,
+    "y2": 369.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FZdJQgy05rz-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Comparison of the proposed method (blue) with the true Bayes error (black), a recent Bayes error estimator “Ensemble” (orange) (Noshad et al., 2019), and the test error of a multilayer perceptron (hard labels: green, soft labels: purple). We also use the classifier’s probabilistic output and plug it into the Bayes error equation in Eq. 3, shown as “Classifier-BER” (hard labels: red, soft labels: brown). The vertical/horizontal axis is the test error or estimated Bayes error/# of training samples per class, respectively. Instance-free data was used for Bayes error estimation, while fully labelled data was used for training classifiers. We plot the mean and standard error for 10 trials.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3475341796875,
+    "y1": 185.67855834960938,
+    "y2": 257.43402099609375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Setup", "D", "Proposed", "method", "Ensemble", "Hard", "classifier", "Hard", "Classifier-BER", "Soft", "classifier", "Soft", "Classifier-BER", "30", "25", "20", "15", "10", "5", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "0", "(c)", "Setup", "C", "Proposed", "method", "Ensemble", "Hard", "classifier", "Hard", "Classifier-BER", "Soft", "classifier", "Soft", "Classifier-BER", "30", "25", "20", "15", "10", "5", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "0", "(b)", "Setup", "B", "Proposed", "method", "Ensemble", "Hard", "classifier", "Hard", "Classifier-BER", "Soft", "classifier", "Soft", "Classifier-BER", "25", "20", "15", "10", "5", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "0", "(a)", "Setup", "A", "Proposed", "method", "Ensemble", "Hard", "classifier", "Hard", "Classifier-BER", "Soft", "classifier", "Soft", "Classifier-BER", "10", "15", "20", "25", "30", "35", "40", "2", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "0", "5"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 82.56,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FZdJQgy05rz-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Comparison of the estimated Bayes error with two different data: PN (positive and negative) and Pconf (positive-confidence). The vertical axis is the estimated Bayes error, and the horizontal axis is the number of training samples. We plot the mean and standard error for 10 trials. We used instance-free positive and negative data for the PN method, while we used only instance-free positive data for the Pconf method. We can observe how the difference between the two becomes smaller as we increase the number of training samples.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.6654357910156,
+    "y1": 188.93453979492188,
+    "y2": 249.73095703125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Setup", "D", "20", "estimated", "Bayes", "error", "(PN)", "estimated", "Bayes", "error", "(Pconf)", "18", "16", "14", "12", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "(c)", "Setup", "C", "16", "estimated", "Bayes", "error", "(PN)", "estimated", "Bayes", "error", "(Pconf)", "14", "12", "10", "8", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "(b)", "Setup", "B", "5", "estimated", "Bayes", "error", "(PN)", "estimated", "Bayes", "error", "(Pconf)", "4", "3", "2", "1", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "0", "(a)", "Setup", "A", "10", "estimated", "Bayes", "error", "(PN)", "estimated", "Bayes", "error", "(Pconf)", "9", "8", "7", "6", "5", "4", "4", "8", "16", "32", "64", "128", "256", "512", "1028", "3"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 83.03999999999999,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FZdJQgy05rz-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Comparing the estimated Bayes error with four classifiers and four setups (Figures 4a, 4b, 4c, 4d). Although it seems that Vision Transformer B/16 has surpassed the Bayes error for all four setups for CIFAR-10 (C10), ciFAIR-10 (C10F), and CIFAR-10.1 (C10.1), while it is still comparable or larger than the Bayes error for CIFAR-10H (C10H). In Sec. 5.2, we discuss how this has to be investigated carefully. The black error bar for the Bayes error is the 95% confidence interval. The black error bar for the C10H is the standard error for sampling test labels 20 times.",
+  "captionBoundary": {
+    "x1": 107.6510009765625,
+    "x2": 505.24981689453125,
+    "y1": 232.60653686523438,
+    "y2": 293.40301513671875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "First", "5", "vs.", "last", "5", "C-10", "C-10F", "C-10.1", "C-10H", ")", "r", "(", "%", "Er", "ro", "10.0", "7.5", "5.0", "2.5", "VGG11", "ResNet50", "DenseNet169", "Vision", "Transform", "er", "B/16", "estim", "ated", "Bayes", "error", "0.0", "(c)", "Odd", "vs.", "even", "C-10", "C-10F", "C-10.1", "C-10H", ")", "r", "(", "%", "Er", "ro", "6", "4", "2", "VGG11", "ResNet50", "DenseNet169", "Vision", "Transform", "er", "B/16", "estim", "ated", "Bayes", "error", "0", "(b)", "Land", "vs.", "other", "C-10", "C-10F", "C-10.1", "C-10H", ")", "r", "(", "%", "Er", "ro", "6", "4", "2", "VGG11", "ResNet50", "DenseNet169", "Vision", "Transform", "er", "B/16", "estim", "ated", "Bayes", "error", "0", "(a)", "Animals", "vs.", "artifacts", "C-10", "C-10F", "C-10.1", "C-10H", ")", "r", "(", "%", "Er", "ro", "3", "2", "1", "VGG11", "ResNet50", "DenseNet169", "Vision", "Transform", "er", "B/16", "estim", "ated", "Bayes", "error", "0"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 498.24,
+    "y1": 82.56,
+    "y2": 219.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FZdJQgy05rz-Figure4-1.png"
+}]

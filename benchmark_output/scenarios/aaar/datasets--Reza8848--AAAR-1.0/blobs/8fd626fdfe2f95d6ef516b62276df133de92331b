@@ -1,0 +1,501 @@
+[{
+  "caption": "Figure 1: A motivating example of ELS with 3 domains on the VLCS dataset.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 505.6558837890625,
+    "y1": 669.959716796875,
+    "y2": 697.2789916992188
+  },
+  "figType": "Figure",
+  "imageText": ["0.8", "0.1", "0.1", "0.8", "0.80.1", "0.1", "0.1", "0.1", "Environment", "Label", "Smoothing", "(γ=0.8)", "One-hot", "Environment", "label", "for", "Vanilla", "DAT", "1", "0", "0", "0", "1", "0", "0", "0", "1", "C", "ar", "B", "ir", "d"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 390.71999999999997,
+    "x2": 501.12,
+    "y1": 552.96,
+    "y2": 664.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure1-1.png"
+}, {
+  "caption": "Table 1: A summary on evaluation benchmarks. Wg. acc. denotes worst group accuracy, 10 %/ acc. denotes 10th percentile accuracy. GIN (Xu et al., 2018) denotes Graph Isomorphism Networks, and CRNN (Gagnon-Audet et al., 2022) denotes Convolutional Recurrent Neural Network.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2471923828125,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["Spurious-Fourier", "3", "spurious", "correlations", "2", "Avg.", "acc.", "LSTM", "12,000Sequential", "Prediction", "HHAR", "5", "smart", "devices", "6", "Avg.", "acc.", "Deep", "ConvNets", "13,674", "Rotating", "MNIST", "8", "rotated", "angles", "10", "Avg.", "acc.", "EncoderSTN", "60,000", "Image", "Retrieval", "MS", "5", "locations", "18,530", "mAP,", "Rank", "m", "MobileNet×1.4", "121,738", "CivilComments", "8", "demographic", "groups", "2", "Avg/Wg", "acc.", "DistillBERT", "448,000Neural", "Language", "Processing", "Amazon", "7676", "reviewers", "5", "10", "%/Avg/Wg", "acc.", "DistillBERT", "100,124", "RxRx1", "51", "experimental", "batch", "1139", "Wg/Avg/Test", "ID", "acc.", "ResNet-50", "125,510Genomics", "and", "Graph", "OGB-MolPCBA", "120,084", "molecular", "scaffold", "128", "Avg.", "acc.", "GIN", "437,929", "PACS", "4", "image", "styles", "7", "Avg.", "acc.", "ResNet50", "9,991", "VLCS", "4", "image", "styles", "5", "Avg.", "acc.", "ResNet50", "10,729", "Office-31", "3", "image", "styles", "31", "Avg.", "acc.", "ResNet50/ResNet18", "4,110", "Office-Home", "4", "image", "styles", "65", "Avg.", "acc.", "ResNet50/ViT", "15,500", "Images", "Classification", "Task", "Dataset", "Domains", "Classes", "Metric", "Backbone", "#", "Data", "Examples", "Rotated", "MNIST", "6", "rotated", "angles", "10", "Avg.", "acc.", "MNIST", "ConvNet", "70,000"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 103.67999999999999,
+    "x2": 508.32,
+    "y1": 123.83999999999999,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table1-1.png"
+}, {
+  "caption": "Table 2: The domain adaptation accuracies (%) on Office-31. ↑ denotes improvement of a method with ELS compared to that wo/ ELS.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 503.99700927734375,
+    "y1": 246.12350463867188,
+    "y2": 263.08502197265625
+  },
+  "figType": "Table",
+  "imageText": ["↑", "0.9", "0.1", "0.0", "0.4", "0.2", "1.8", "0.6", "SDAT", "(Rangwani", "et", "al.,", "2022)", "92.7", "98.9", "100.0", "93.0", "78.5", "75.7", "89.8", "SDAT+ELS", "93.6", "99.0", "100.0", "93.4", "78.7", "77.5", "90.4", "DANN+ELS", "92.2", "98.5", "100.0", "85.9", "74.3", "75.3", "87.7", "↑", "0.9", "1.3", "0.0", "1.8", "1.4", "1.7", "1.2", "MCC", "(Jin", "et", "al.,", "2020)", "94.1", "98.4", "99.8", "95.6", "75.5", "74.2", "89.6", "DANN", "(Ganin", "et", "al.,", "2016)", "91.3", "97.2", "100.0", "84.1", "72.9", "73.6", "86.5", "ResNet50", "ERM", "(Vapnik,", "1999)", "75.8", "95.5", "99.0", "79.3", "63.6", "63.8", "79.5", "ADDA", "(Tzeng", "et", "al.,", "2017)", "94.6", "97.5", "99.7", "90.0", "69.6", "72.5", "87.3", "CDAN", "(Long", "et", "al.,", "2018)", "93.8", "98.5", "100.0", "89.9", "73.4", "70.4", "87.7", "SDAT+ELS", "88.9", "99.3", "100.0", "83.9", "74.1", "73.9", "86.7", "↑", "1.1", "0.5", "0.0", "1.4", "1.1", "1.2", "0.9", "↑", "1.4", "1.0", "0.2", "1.4", "1.3", "1.1", "1.1", "SDAT", "(Rangwani", "et", "al.,", "2022)", "87.8", "98.7", "100.0", "82.5", "73.0", "72.7", "85.8", "ResNet18", "ERM", "(Vapnik,", "1999)", "72.2", "97.7", "100.0", "72.3", "61.0", "59.9", "77.2", "DANN", "(Ganin", "et", "al.,", "2016)", "84.1", "98.1", "99.8", "81.3", "60.8", "63.5", "81.3", "DANN+ELS", "85.5", "99.1", "100.0", "82.7", "62.1", "64.5", "82.4", "A", "-", "W", "D", "-", "W", "W", "-", "D", "A", "-", "D", "D", "-", "A", "W", "-", "A", "Avg"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 157.92,
+    "x2": 454.08,
+    "y1": 276.0,
+    "y2": 450.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table2-1.png"
+}, {
+  "caption": "Table 4: Accuracy (%) on Office-Home for unsupervised DA (with ResNet-50 and ViT backbone). SDAT+ELS outperforms other SOTA DA techniques and improves SDAT consistently.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7466125488281,
+    "y1": 209.10153198242188,
+    "y2": 226.06298828125
+  },
+  "figType": "Table",
+  "imageText": ["72.1", "87.3", "90.6", "85.2", "88.1", "89.7", "84.1", "70.7", "90.8", "88.4", "76.5", "92.1", "84.6", "↑", "1.3", "0.3", "0.1", "0.0", "0.8", "0.0", "0.0", "0.0", "0.2", "0.1", "1.0", "0.0", "0.3", "TVT", "(Yang", "et", "al.,", "2021)", "74.9", "86.6", "89.5", "82.8", "87.9", "88.3", "79.8", "71.9", "90.1", "85.5", "74.6", "90.6", "83.6", "CDAN", "(Long", "et", "al.,", "2018)", "62.6", "82.9", "87.2", "79.2", "84.9", "87.1", "77.9", "63.3", "88.7", "83.1", "63.5", "90.8", "79.3", "SDAT", "(Rangwani", "et", "al.,", "2022)", "70.8", "87.0", "90.5", "85.2", "87.3", "89.7", "84.1", "70.7", "90.6", "88.3", "75.5", "92.1", "84.3", "SDAT+ELS", "ViT", "0.4", "2.3", "0.3", "1.0", "0.6", "1.0", "1.3", "0.9", "0.0", "0.1", "0.5", "0.3", "0.8", "ResNet-50", "↑", "Method", "Backbone", "A-C", "A-P", "A-R", "C-A", "C-P", "C-R", "P-A", "P-C", "P-R", "R-A", "R-C", "R-P", "Avg", "ResNet-50", "(He", "et", "al.,", "2016)", "34.9", "50.0", "58.0", "37.4", "41.9", "46.2", "38.5", "31.2", "60.4", "53.9", "41.2", "59.9", "46.1", "DANN", "(Ganin", "et", "al.,", "2016)", "45.6", "59.3", "70.1", "47.0", "58.5", "60.9", "46.1", "43.7", "68.5", "63.2", "51.8", "76.8", "57.6", "CDAN", "(Long", "et", "al.,", "2018)", "49.0", "69.3", "74.5", "54.4", "66.0", "68.4", "55.6", "48.3", "75.9", "68.4", "55.4", "80.5", "63.8", "MMD", "(Zhang", "et", "al.,", "2019)", "54.9", "73.7", "77.8", "60.0", "71.4", "71.8", "61.2", "53.6", "78.1", "72.5", "60.2", "82.3", "68.1", "f-DAL", "(Acuna", "et", "al.,", "2021)", "56.7", "77.0", "81.1", "63.1", "72.2", "75.9", "64.5", "54.4", "81.0", "72.3", "58.4", "83.7", "70.0", "SRDC", "(Tang", "et", "al.,", "2020)", "52.3", "76.3", "81.0", "69.5", "76.2", "78.0", "68.7", "53.8", "81.7", "76.3", "57.1", "85.0", "71.3", "SDAT", "(Rangwani", "et", "al.,", "2022)", "57.8", "77.4", "82.2", "66.5", "76.6", "76.2", "63.3", "57.0", "82.2", "75.3", "62.6", "85.2", "71.8", "SDAT+ELS", "58.2", "79.7", "82.5", "67.5", "77.2", "77.2", "64.6", "57.9", "82.2", "75.4", "63.1", "85.5", "72.6"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 238.56,
+    "y2": 363.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table4-1.png"
+}, {
+  "caption": "Table 5: Rotating MNIST accuracy (%) at the source domain and each target domain. X○ denotes the domain whose images are Rotating by [X○,X○ + 45○].",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.50177001953125,
+    "y1": 608.8485717773438,
+    "y2": 625.8099975585938
+  },
+  "figType": "Table",
+  "imageText": ["DANN+ELS", "98.4", "81.4", "55.0", "39.9", "43.7", "45.9", "53.7", "78.7", "62.1", "↑", "0.0", "0.0", "16.1", "4.5", "3.7", "2.5", "4.9", "1.4", "10.0", "ERM", "(Vapnik,", "1999)", "99.2", "79.7", "26.8", "31.6", "35.1", "37.0", "28.6", "76.2", "45.0", "ADDA", "(Tzeng", "et", "al.,", "2017)", "97.6", "70.7", "22.2", "32.6", "38.2", "31.5", "20.9", "65.8", "40.3", "DANN", "(Ganin", "et", "al.,", "2016)", "98.4", "81.4", "38.9", "35.4", "40.0", "43.4", "48.8", "77.3", "52.1", "CIDA", "(Wang", "et", "al.,", "2020)", "99.5", "80.0", "33.2", "49.3", "50.2", "51.7", "54.6", "81.0", "57.1", "Rotating", "MNIST", "Algorithm", "0○(Source)", "45○", "90○", "135○", "180○", "225○", "270○", "315○", "Average"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 101.75999999999999,
+    "x2": 512.16,
+    "y1": 638.88,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table5-1.png"
+}, {
+  "caption": "Table 3: The domain generalization accuracies (%) on VLCS, and PACS. ↑ denotes improvement of DANN+ELS compared to DANN.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.001220703125,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Algorithm", "PACS", "VLCS", "A", "C", "P", "S", "Avg", "C", "L", "S", "V", "Avg"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 114.72,
+    "y2": 136.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table3-1.png"
+}, {
+  "caption": "Figure 6: Data examples from the PACS and the VLCS datasets.",
+  "captionBoundary": {
+    "x1": 177.6230010986328,
+    "x2": 434.37921142578125,
+    "y1": 330.04254150390625,
+    "y2": 336.0450134277344
+  },
+  "figType": "Figure",
+  "imageText": ["VLCS", "PACS", "C", "ar", "B", "ir", "d", "Caltech101", "LabelMe", "SUN09", "VOC2007", "E", "le", "ph", "an", "t", "D", "og", "Art", "Painting", "Cartoon", "Photo", "Sketch"],
+  "name": "6",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 87.84,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Visualization of the embeddings on training and test datasets. Query and gallery samples of these unseen datasets are shown using different types of mark. Best viewed in color.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.351318359375,
+    "y1": 704.0615844726562,
+    "y2": 721.0230102539062
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "ERM", "(Test)", "(e)", "MetaBIN", "(Test).", "(f)", "DANN+ELS", "(Test).", "(a)", "ERM", "(All).", "(b)", "MetaBIN", "(All).", "(c)", "DANN+ELS", "(All)."],
+  "name": "7",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 526.0799999999999,
+    "y1": 362.88,
+    "y2": 687.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure7-1.png"
+}, {
+  "caption": "Table 15: Domain generalization performance on the Spurious-Fourier dataset.",
+  "captionBoundary": {
+    "x1": 305.6910095214844,
+    "x2": 496.07342529296875,
+    "y1": 317.1695251464844,
+    "y2": 334.1310119628906
+  },
+  "figType": "Table",
+  "imageText": ["DANN+ELS", "10.7", "±", "0.6", "15.6", "±", "2.8", "↑", "1.0", "4.5", "IRM", "(Arjovsky", "et", "al.,", "2019)", "9.3", "±", "0.1", "57.6", "±", "0.8", "SD", "Pezeshki", "et", "al.", "(2021)", "10.2", "±", "0.1", "9.2", "±", "0.0", "VREx", "Krueger", "et", "al.", "(2021)", "9.7", "±", "0.2", "65.3", "±", "4.8", "DANN", "(Ganin", "et", "al.,", "2016)", "9.7", "±", "0.1", "11.1", "±", "1.5", "Algorithm", "Train", "validation", "Test", "validation", "ERM", "(Vapnik,", "1999)", "9.7", "±", "0.3", "9.3", "±", "0.1", "Spurious-Fourier", "dataset"],
+  "name": "15",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 309.59999999999997,
+    "x2": 492.0,
+    "y1": 346.56,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table15-1.png"
+}, {
+  "caption": "Table 14: Domain generalization performance on the OGB-MolPCBA dataset.",
+  "captionBoundary": {
+    "x1": 113.12200164794922,
+    "x2": 303.50439453125,
+    "y1": 317.1695251464844,
+    "y2": 334.1310119628906
+  },
+  "figType": "Table",
+  "imageText": ["DANN+ELS", "18.0", "±", "0.3", "17.2", "±", "0.3", "↑", "3.0", "3.1", "IRM", "(Arjovsky", "et", "al.,", "2019)", "15.8", "±", "0.2", "15.6", "±", "0.3", "DANN", "(Ganin", "et", "al.,", "2016)", "15.0", "±", "0.6", "14.1", "±", "0.5", "Group", "DRO", "Sagawa", "et", "al.", "(2019)", "23.1", "±", "0.6", "22.4", "±", "0.6", "CORAL", "Sun", "&", "Saenko", "(2016)", "18.4", "±", "0.2", "17.9", "±", "0.5", "Algorithm", "Val", "Avg", "Acc", "Test", "Avg", "Acc", "ERM", "(Vapnik,", "1999)", "27.8", "±", "0.1", "27.2", "±", "0.3", "OGB-MolPCBA"],
+  "name": "14",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 298.08,
+    "y1": 346.56,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table14-1.png"
+}, {
+  "caption": "Table 11: Testing Datasets statistics.",
+  "captionBoundary": {
+    "x1": 233.3780059814453,
+    "x2": 378.31390380859375,
+    "y1": 632.5985717773438,
+    "y2": 638.6010131835938
+  },
+  "figType": "Table",
+  "imageText": ["PRID", "100", "100", "649", "649", "GRID", "125", "125", "1025", "1,025", "VIPeR", "316", "316", "316", "316", "i-LIDS", "60", "60", "60", "60", "Dataset", "Probe", "Gallery", "Pr.", "IDs", "Pr.", "Imgs", "Ga.", "IDs", "Ga.", "imgs"],
+  "name": "11",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 194.88,
+    "x2": 417.12,
+    "y1": 651.36,
+    "y2": 725.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table11-1.png"
+}, {
+  "caption": "Table 9: Hyper-parameters for different benchmarks. Lrg,Decayg: learning rate and weight decay for the encoder and classifier; Lrd,Decayd: learning rate and weight decay for the domain discriminator; bsz: batch size during training; dsteps: the discriminator is trained dsteps times once the encoder and classifier are trained; Wreg: tradeoff weight for the gradient penalty; λ: tradeoff weight for the adversarial loss. The default β2 for Adam and AdamW optimizer is 0.99 and the momentum for SGD optimizer is 0.9. / means domain discriminators trained on the dataset use GRL but not alternating gradient descent.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.8310852050781,
+    "y1": 260.5655212402344,
+    "y2": 332.3210144042969
+  },
+  "figType": "Table",
+  "imageText": ["Image", "Retrieval", "MS", "1E-02", "1E-02", "SGD", "5E-04", "5E-04", "80", "1", "0", "1.00", "Office-31", "(ViT)", "2E-03", "2E-03", "SGD", "1E-3", "1E-3", "24", "/", "0", "1.00", "Office-Home", "(ViT)", "2E-03", "2E-03", "SGD", "1E-3", "1E-3", "24", "/", "0", "1.00", "Rotating", "MNIST", "2E-04", "2E-04", "0.9", "5E-04", "5E-04", "100", "1", "0", "2.00", "Rotated", "MNIST", "1E-03", "1E-03", "0.5", "0E+00", "0.0", "64", "1", "1", "0.5", "PACS", "5E-05", "5E-05", "0.5", "0E+00", "0.0", "32", "5", "1", "0.5", "VLCS", "5E-05", "5E-05", "0.5", "0E+00", "0.0", "32", "5", "1", "0.5", "Office-31(ResNet50)", "1E-02", "1E-02", "SGD", "1E-3", "1E-3", "32", "/", "0", "1.00", "Office-Home", "(ResNet50)", "1E-02", "1E-02", "SGD", "1E-3", "1E-3", "32", "/", "0", "1.00", "Images", "Classification", "Task", "Datsets", "Lrg", "Lrd", "β1", "Decayg", "Decayd", "bsz", "dsteps", "Wreg", "λ"],
+  "name": "9",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 344.64,
+    "y2": 446.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table9-1.png"
+}, {
+  "caption": "Table 10: Training Datasets Statistics.",
+  "captionBoundary": {
+    "x1": 230.16000366210938,
+    "x2": 381.5317077636719,
+    "y1": 519.9365234375,
+    "y2": 525.93896484375
+  },
+  "figType": "Table",
+  "imageText": ["CUHK-SYSU", "11,934", "34,547", "Dataset", "IDs", "Images", "CUHK02", "1,816", "7,264", "CUHK03", "1,467", "14,097", "DukeMTMC-Re-Id", "1,812", "36,411", "Market-1501", "1,501", "29,419"],
+  "name": "10",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 220.79999999999998,
+    "x2": 391.2,
+    "y1": 538.56,
+    "y2": 612.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table10-1.png"
+}, {
+  "caption": "Figure 8: Training statistics on ReID datasets.",
+  "captionBoundary": {
+    "x1": 209.62799072265625,
+    "x2": 402.3726501464844,
+    "y1": 230.11557006835938,
+    "y2": 236.1180419921875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Average", "mAP", "on", "the", "test", "set.", "m", "A", "P", "Models", "DANN", "DANS", "ERM", "ra", "ge", "A", "ve", "60", "40", "20", "0", "0", "20", "40", "60", "80", "100", "Iterations", "(b)", "Identity", "classification", "loss.", "Models", "DANN", "DANS", "ERM", "ss", "n", "Lo", "ca", "tio", "ss", "ifi", "C", "la", "30", "20", "10", "0", "0", "1", "2", "3", "4", "5", "Iterations", "(a)", "Domain", "discrimination", "loss.", "Models", "DANN", "DANS", "ss", "n", "Lo", "10", "20", "D", "is", "cr", "im", "in", "at", "io", "0", "0", "1", "2", "3", "4", "5", "Iterations"],
+  "name": "8",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 117.11999999999999,
+    "x2": 514.0799999999999,
+    "y1": 98.88,
+    "y2": 211.67999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure8-1.png"
+}, {
+  "caption": "Figure 4: (a) Generalization performance of DANN+ELS compared to DANN with partial correct environment label on the PACS dataset (P as the target domain). (b) The best γ for each dataset. Civil is the CivilComments dataset and OGB is the OGB-MolPCBA dataset. (c) Average generalization accuracy on the PACS dataset with different smoothing policies.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00433349609375,
+    "y1": 693.364501953125,
+    "y2": 732.2429809570312
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "A", "cc", "95", "90", "85", "80", "Method", "DANN", "DANN+ELS", "(Optimal", ")", "DANN+ELS", "(Annealing", ")", "(b)", "im", "al", "O", "pt", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Dataset", "(#", "Domains)", "VLCS", "4", "PACS", "4", "MS", "5", "Civil", "8", "RxRx1", "51", "OGB", "120,084", "(a)", "Method", "DANN+ELS", "DANN", "A", "cc", "82.5", "80.0", "77.5", "75.0", "72.5", "70.0", "20%", "30%", "50%", "M=2", "M=5", "GT", "Environment", "Label", "Noise"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.11999999999999,
+    "x2": 500.15999999999997,
+    "y1": 564.0,
+    "y2": 682.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure4-1.png"
+}, {
+  "caption": "Table 6: Domain generalization performance on neural language datasets. The backbone is DistillBERT-base-uncased and all results are reported over 3 random seed runs.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 503.9964599609375,
+    "y1": 233.43051147460938,
+    "y2": 250.39202880859375
+  },
+  "figType": "Table",
+  "imageText": ["Amazon-Wilds", "Algorithm", "Val", "Avg", "Acc", "Test", "Avg", "Acc", "Val", "10%", "Acc", "Test", "10%", "Acc", "Val", "Worst-group", "acc", "Test", "Worst-group", "acc"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 262.56,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table6-1.png"
+}, {
+  "caption": "Figure 3: Results on the Circle dataset with 30 domains. (a) shows domain index by color, (b) shows label index by color, where red dots and blue crosses are positive and negative data sample. Source domains contain the first 6 domains and others are target domains.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7452697753906,
+    "y1": 187.28652954101562,
+    "y2": 215.20697021484375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "DANN+ELS", "6", "5", "4", "3", "2", "1", "0", "1", "6", "4", "2", "0", "2", "4", "6", "(c)", "ADDA.", "6", "5", "4", "3", "2", "1", "0", "1", "6", "4", "2", "0", "2", "4", "6", "(b)", "Ground", "Truth.", "6", "5", "4", "3", "2", "1", "0", "1", "(a)", "Domains.", "6", "4", "2", "0", "2", "4", "6", "6", "5", "4", "3", "2", "1", "0", "1", "6", "4", "2", "0", "2", "4", "6"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 499.2,
+    "y1": 85.92,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure3-1.png"
+}, {
+  "caption": "Figure 2: The sum of gradients provided to the encoder by the adversarial loss.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 503.99945068359375,
+    "y1": 233.50076293945312,
+    "y2": 260.82098388671875
+  },
+  "figType": "Figure",
+  "imageText": ["DANN", "DANN+ELS", "en", "ts", "ra", "di", "o", "f", "G", "Su", "m", "1250", "1000", "750", "500", "250", "0", "0", "1000", "2000", "3000", "4000", "5000", "Iterations"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 389.76,
+    "x2": 505.44,
+    "y1": 137.76,
+    "y2": 222.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure2-1.png"
+}, {
+  "caption": "Table 16: Comparison with recent state-of-the-art DG-ReID methods. —— denotes DANN cannot converge and attains infinite loss.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00189208984375,
+    "y1": 463.2365417480469,
+    "y2": 480.197998046875
+  },
+  "figType": "Table",
+  "imageText": ["DANN", "(Ganin", "et", "al.,", "2016)", "——", "——", "——", "——", "——", "DANN+ELS", "64.2", "72.1", "59.3", "76.4", "82.7", "67.4", "69.6", "87.7", "91.7", "77.7", "48.1", "67.5", "77.8", "57.2", "79.8", "94.7", "97.2", "86.1", "Group", "DRO", "(Sagawa", "et", "al.,", "2019)", "57.1", "65.9", "48.5", "68.4", "77.2", "57.8", "66.1", "86.5", "90.6", "74.8", "38.7", "58.8", "66.6", "48.6", "74.8", "90.8", "96.8", "81.9", "Unit-DRO", "(Zhang", "et", "al.,", "2022)", "65.4", "72.8", "60.0", "78.2", "82.8", "68.4", "73.5", "85.3", "91.7", "79.4", "47.5", "69.3", "77.4", "57.2", "80.7", "94.0", "97.0", "86.2", "DIMN", "(Song", "et", "al.,", "2019)", "47.5", "57.9", "51.2", "70.2", "76.0", "60.1", "39.2", "67.0", "76.7", "52.0", "29.3", "53.3", "65.8", "41.1", "70.2", "89.7", "94.5", "78.4", "DualNorm", "(Jia", "et", "al.,", "2019)", "57.6", "61.8", "53.9", "62.5", "75.3", "58.0", "60.4", "73.6", "84.8", "64.9", "41.4", "47.4", "64.7", "45.7", "74.8", "82.0", "91.5", "78.5", "DDAN", "(Chen", "et", "al.,", "2021)", "59.0", "63.1", "52.3", "60.6", "71.8", "56.4", "54.5", "62.7", "74.9", "58.9", "50.6", "62.1", "73.8", "55.7", "78.5", "85.3", "92.5", "81.5", "DIR-ReID", "(Zhang", "et", "al.,", "2021c)", "63.8", "71.2", "58.5", "76.9", "83.3", "67.0", "69.7", "85.8", "91.0", "77.1", "48.2", "67.1", "76.3", "57.6", "79.0", "94.8", "97.2", "83.4", "MetaBIN", "(Choi", "et", "al.,", "2021)", "64.2", "71.9", "59.3", "76.8", "81.9", "67.6", "70.6", "86.5", "91.5", "78.2", "47.3", "66.0", "74.0", "56.4", "79.5", "93.0", "97.5", "85.5", "Methods", "Average", "VIPeR", "PRID", "GRID", "i-LIDS", "R-1", "mAP", "R-1", "R-5", "R-10", "mAP", "R-1", "R-5", "R-10", "mAP", "R-1", "R-5", "R-10", "mAP", "R-1", "R-5", "R-10", "mAP"],
+  "name": "16",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 492.96,
+    "y2": 575.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table16-1.png"
+}, {
+  "caption": "Table 13: The domain generalization/adaptation accuracy on Rotated MNIST.",
+  "captionBoundary": {
+    "x1": 150.75399780273438,
+    "x2": 460.9394226074219,
+    "y1": 324.2315368652344,
+    "y2": 330.2340087890625
+  },
+  "figType": "Table",
+  "imageText": ["DANN+ELS", "96.3", "±", "0.1", "98.7", "±", "0.1", "98.9", "±", "0.3", "99.1", "±", "0.1", "98.7", "±", "0.0", "96.9", "±", "0.5", "98.1", "↑", "0.4", "0.1", "0.2", "0.1", "0.0", "0.4", "0.2", "ERM", "(Vapnik,", "1999)", "95.3", "±", "0.2", "98.7", "±", "0.1", "98.9", "±", "0.1", "98.7", "±", "0.2", "98.9", "±", "0.0", "96.2", "±", "0.2", "97.8", "IRM", "(Arjovsky", "et", "al.,", "2019)", "94.9", "±", "0.6", "98.7", "±", "0.2", "98.6", "±", "0.1", "98.6", "±", "0.2", "98.7", "±", "0.1", "95.2", "±", "0.3", "97.5", "DANN", "(Ganin", "et", "al.,", "2016)", "95.9", "±", "0.1", "98.6", "±", "0.1", "98.7", "±", "0.2", "99.0", "±", "0.1", "98.7", "±", "0.0", "96.5", "±", "0.3", "97.9", "ARM", "(Zhang", "et", "al.,", "2021b)", "95.9", "±", "0.4", "99.0", "±", "0.1", "98.8", "±", "0.1", "98.9", "±", "0.1", "99.1", "±", "0.1", "96.7", "±", "0.2", "98.1", "Rotated", "MNIST", "Algorithm", "0", "15", "30", "45", "60", "75", "Avg"],
+  "name": "13",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 349.44,
+    "y2": 430.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table13-1.png"
+}, {
+  "caption": "Table 17: Generalization performance on multiple unseen target domains. ↑ denotes improvement of DANN+ELS compared to DANN, and γ is the hyper-parameter for environment label smoothing.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9950256347656,
+    "y1": 603.8255615234375,
+    "y2": 620.7869873046875
+  },
+  "figType": "Table",
+  "imageText": ["Rotated", "MNIST", "Target", "domains", "{0○,30○,60○}", "Target", "domains", "{15○,45○,75○}"],
+  "name": "17",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 633.6,
+    "y2": 657.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table17-1.png"
+}, {
+  "caption": "Table 12: Details of our MNIST ConvNet architecture. All convolutions use 3×3 kernels and “same” padding",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.77423095703125,
+    "y1": 95.63956451416016,
+    "y2": 112.5999755859375
+  },
+  "figType": "Table",
+  "imageText": ["1", "Conv2D", "(in=d,", "out=64)", "2", "ReLU", "3", "GroupNorm", "(groups=8)", "4", "Conv2D", "(in=64,", "out=128,", "stride=2)", "5", "ReLU", "6", "GroupNorm", "(8", "groups)", "7", "Conv2D", "(in=128,", "out=128)", "8", "ReLU", "9", "GroupNorm", "(8", "groups)", "10", "Conv2D", "(in=128,", "out=128)", "11", "ReLU", "12", "GroupNorm", "(8", "groups)", "13", "Global", "average-pooling", "#", "Layer"],
+  "name": "12",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 223.67999999999998,
+    "x2": 388.32,
+    "y1": 125.75999999999999,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table12-1.png"
+}, {
+  "caption": "Table 7: Domain generalization performance on genomics dataset, RxRx1.",
+  "captionBoundary": {
+    "x1": 156.81100463867188,
+    "x2": 454.88201904296875,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["DANN+ELS", "14.1", "±", "0.1", "26.7", "±", "0.1", "21.2", "±", "0.2", "1.1", "±", "0.1", "7.2", "±", "0.3", "4.2", "±", "0.1", "↑", "1.4", "3.8", "2", "0.1", "2.6", "0.6", "IRM", "(Arjovsky", "et", "al.,", "2019)", "5.6", "±", "0.4", "9.9", "±", "1.4", "8.2", "±", "1.1", "0.8", "±", "0.2", "1.9", "±", "0.4", "1.5", "±", "0.2", "DANN", "(Ganin", "et", "al.,", "2016)", "12.7", "±", "0.2", "22.9", "±", "0.1", "19.2", "±", "0.1", "1.0", "±", "0.1", "4.6", "±", "0.4", "3.6", "±", "0.0", "ERM", "(Vapnik,", "1999)", "19.4", "±", "0.2", "35.9", "±", "0.4", "29.9", "±", "0.4", "—", "—", "—", "Group", "DRO", "(Sagawa", "et", "al.,", "2019)", "15.2", "±", "0.1", "28.1", "±", "0.3", "23.0", "±", "0.3", "—", "—", "—", "RxRx1-Wilds", "Algorithm", "Val", "Acc", "Test", "ID", "Acc", "Test", "Acc", "Val", "Worst-Group", "Acc", "Test", "ID", "Worst-Group", "Acc", "Test", "Worst-Group", "Acc"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 103.67999999999999,
+    "x2": 508.32,
+    "y1": 102.72,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table7-1.png"
+}, {
+  "caption": "Figure 5: Training statistics on PACS datasets. Alternating GD with nd = 5, ne = 1 is used. All other parameters setting are the same and only on the default hyperparameters and without the fine-grained parametric search.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99725341796875,
+    "y1": 308.6805419921875,
+    "y2": 336.60101318359375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Acc", "on", "the", "target", "domain.", "DANN", "DANN+ELS", "ai", "n", "d", "om", "rg", "et", "he", "ta", "o", "f", "t", "A", "cc", "0.8", "0.6", "0.4", "0.2", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "(b)", "Avg", "accuracy", "of", "source", "domains.", "m", "ai", "ns", "DANN", "DANN+ELS", "e", "do", "ou", "rc", "o", "f", "s", "A", "cc", "A", "vg", "1.0", "0.8", "0.6", "0.4", "0.2", "0", "1000", "2000", "3000", "4000", "5000", "Iterations", "(a)", "Classification", "loss.", "DANN", "DANN+ELS", "ss", "n", "Lo", "ca", "tio", "ss", "ifi", "C", "la", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "1000", "2000", "3000", "4000", "5000", "Iterations"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 505.44,
+    "y1": 180.0,
+    "y2": 291.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Figure5-1.png"
+}, {
+  "caption": "Table 8: Notations.",
+  "captionBoundary": {
+    "x1": 267.6189880371094,
+    "x2": 344.07196044921875,
+    "y1": 538.8035888671875,
+    "y2": 544.8060302734375
+  },
+  "figType": "Table",
+  "imageText": ["i", ".", "H,", "Ĥ,G", "Support", "sets", "for", "hypothesis,", "discriminator,", "and", "feature", "encoder.", "h,", "ĥ,", "ĥ∗,", "g", "Hypothesis,", "discriminator,", "the", "optimal", "discriminator,", "and", "feature", "encoder.", "M,ni", "Number", "of", "training", "distributions,", "number", "of", "data", "samples", "in", "Di.", "γ", "Hyper-parameter", "for", "the", "environment", "label", "smoothing.", "dH,", "d̂H", "H-divergence", "and", "EmpiricalH-divergence.", "i", "respectively.", "zs,zt,zi", "Data", "samples", "from", "Dz", "S", ",Dz", "T", ",Dz", "Dz", "S", ",Dz", "T", ",Dz", "i", "Feature", "distributions", "of", "DS", ",DT", ",Di", "respectively,", "which", "is", "also", "termed", "g", "○DS", ",", "g", "○DT", ",", "g", "○Di.", "pzs,", "p", "z", "t", ",", "p", "z", "i", "Density", "functions", "for", "Dz", "S", ",Dz", "T", ",Dz", "DS", ",DT", ",Di", "Distributions", "for", "source", "domain,", "target", "domain,", "and", "domain", "i.", "D̂S", ",", "D̂T", ",", "D̂i", "Empirical", "distributions", "for", "source", "domain,", "target", "domain,", "and", "domain", "i.", "ps,", "pt,", "pi", "Density", "functions", "for", "source", "domain,", "target", "domain,", "and", "domain", "i.", "xs,xt,xi", "Data", "samples", "from", "source", "domain,", "target", "domain,", "and", "domain", "i.", "Symbol", "Description"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 474.24,
+    "y1": 557.76,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GPTjnA57h_3-Table8-1.png"
+}]

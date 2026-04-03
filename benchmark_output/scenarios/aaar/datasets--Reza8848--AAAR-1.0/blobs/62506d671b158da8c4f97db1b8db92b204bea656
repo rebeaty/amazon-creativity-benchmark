@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: LA-SDP membership matrices to cluster labels via spectral rounding.",
+  "captionBoundary": {
+    "x1": 286.1990051269531,
+    "x2": 505.654541015625,
+    "y1": 225.18551635742188,
+    "y2": 242.14697265625
+  },
+  "figType": "Figure",
+  "imageText": ["Rounding", "G4", "G3", "G2", "G1", "LA-SDP", "output", "Overall", "membershipEigenvectors", "of", "Z", "Z", "=", "Z1", "+", "Z2", "+", "Z3", "+", "Z4", "Z3", "Z4", "Z1", "Z2"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 288.47999999999996,
+    "x2": 512.64,
+    "y1": 74.88,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BsxMeLGAmU-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Mis-clustering error (with shaded error bars) vs centroid separation ∆ under different conditional numbers of cluster covariance matrices Σ1 = Σ2 = · · · = ΣK (M = 1). The left (right) plot corresponds to a moderate (large) condition number of the common covariance matrix. Here, KM refers to K-means method; SDP refers to the original SDP (5).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.24737548828125,
+    "y1": 221.52755737304688,
+    "y2": 260.406005859375
+  },
+  "figType": "Figure",
+  "imageText": ["LA-SDP", "SDP", "KM", "Mis-clustering", "error", "when", "changes", "r", "er", "ro", "in", "g", "st", "er", "-c", "lu", "M", "is", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "1", "2", "3", "4", "5", "6", "7", "8", "0", "LA-SDP", "SDP", "KM", "Mis-clustering", "error", "when", "changes", "r", "er", "ro", "in", "g", "st", "er", "-c", "lu", "M", "is", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "1", "2", "3", "4", "5", "6", "7", "8", "0"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 495.35999999999996,
+    "y1": 75.84,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BsxMeLGAmU-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Mis-clustering error (with shaded error bars) vs γ (captures the signal strength of GMM) and α (perturbation percentage of initialization). mEM (SDP) refers to the reduced version of EM (LA-SDP) where we consider covariance matrices as fixed and equal to identity. The first plot compares the performance of mEM and SDP when separation is large with random initialization; the second plot compares all methods when we enlarge the perturbation percentage α applied to the random initialization from hierarchical clustering (HC).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.83056640625,
+    "y1": 221.51351928710938,
+    "y2": 282.3110046386719
+  },
+  "figType": "Figure",
+  "imageText": ["HC", "EM", "LA-SDP", "KM", "SDP", "Mis-clustering", "error", "when", "changes", "r", "er", "ro", "in", "g", "st", "er", "-c", "lu", "M", "is", "0.4", "0.35", "0.3", "0.25", "0.2", "0.15", "0.1", "0.05", "0", "0.2", "0.4", "0.6", "0.8", "1", "0", "mEM", "SDP", "Mis-clustering", "error", "when", "changes", "r", "er", "ro", "in", "g", "st", "er", "-c", "lu", "M", "is", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "1", "2", "3", "4", "5", "6", "7", "8", "0"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 497.28,
+    "y1": 76.32,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BsxMeLGAmU-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Box plots of mis-clustering error (with means) with different methods. The left (right) plot summarizes the results for the banknote authentication dataset (landsat satellite dataset).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9956970214844,
+    "y1": 216.71450805664062,
+    "y2": 233.676025390625
+  },
+  "figType": "Figure",
+  "imageText": ["Mean", "Mis-clustering", "error", "for", "different", "methods", "r", "er", "ro", "in", "g", "st", "er", "-c", "lu", "M", "is", "0.6", "0.55", "0.5", "0.45", "0.4", "0.35", "0.3", "0.25", "0.2", "HC", "EM", "LA-SDP", "KM", "SDP", "0.15", "Mean", "Mis-clustering", "error", "for", "different", "methods", "r", "er", "ro", "in", "g", "st", "er", "-c", "lu", "M", "is", "0.5", "0.4", "0.3", "0.2", "0.1", "HC", "EM", "LA-SDP", "KM", "SDP", "0"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 495.35999999999996,
+    "y1": 73.92,
+    "y2": 202.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BsxMeLGAmU-Figure4-1.png"
+}]

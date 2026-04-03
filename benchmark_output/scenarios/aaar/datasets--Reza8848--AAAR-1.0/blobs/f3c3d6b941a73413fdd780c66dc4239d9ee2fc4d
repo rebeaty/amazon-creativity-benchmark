@@ -1,0 +1,281 @@
+[{
+  "caption": "Table 3: Effect of Heterogeneous dropout with increasing ρ values on different datasets with varying number of tasks.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0036315917969,
+    "y1": 257.1175231933594,
+    "y2": 274.0789794921875
+  },
+  "figType": "Table",
+  "imageText": ["20", "92.40±0.38", "92.83±0.42", "93.20±0.32", "92.82±0.06", "93.09±0.47", "91.77±0.30", "Perm-MNIST", "5", "95.77±0.33", "95.70±0.29", "95.97±0.44", "96.40±0.28", "96.58±0.17", "96.48±0.26", "10", "95.06±0.29", "95.23±0.04", "95.65±0.20", "95.54±0.26", "95.74±0.22", "95.94±0.24", "20", "48.79±0.27", "48.57±0.90", "48.91±0.65", "49.84±0.59", "51.03±0.31", "51.11±0.76", "Rot-MNIST", "5", "92.28±0.20", "91.79±0.53", "92.53±0.11", "92.74±0.38", "93.19±0.32", "93.42±0.25", "10", "70.78±0.23", "71.53±1.07", "72.38±1.44", "73.63±1.00", "74.20±0.78", "75.50±0.74", "Dropout", "0.1", "0.3", "0.5", "0.7", "1.0", "Dataset", "#", "Tasks", "w/o", "Dropout", "parameter", "(ρ)"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 274.56,
+    "y2": 383.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table3-1.png"
+}, {
+  "caption": "Figure 2: Total activation counts for the test set of each task (y-axis) for a random set of 25 units in the second hidden layer of the model. Heterogeneous dropout reduces the overlap in activations and facilitates the formation of task-specific subnetworks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 202.52554321289062,
+    "y2": 230.44598388671875
+  },
+  "figType": "Figure",
+  "imageText": ["×1", "03", ")", "un", "t", "(", "n", "Co", "at", "io", "Ac", "tiv", "5", "4", "3", "2", "1", "0", "w/", "Hetrogeneous", "Dropout", "1", "3", "5", "7", "9", "11", "13", "15", "17", "19", "21", "23", "25", "w/o", "Hetrogeneous", "Dropout", "Task", "5", "Task", "4", "Task", "3", "Task", "2", "Task", "1", "1", "3", "5", "7", "9", "11", "13", "15", "17", "19", "21", "23", "25"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 85.44,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Figure2-1.png"
+}, {
+  "caption": "Table 8: Effect of layerwise dropout ρ on Rot-MNIST with 5 tasks with varying degrees of incremental rotation (θinc) in each subsequent task. Row 0 shows (ρl1 , ρl2 ) the ρ values for the first and second hidden layer respectively.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.001220703125,
+    "y1": 92.5765151977539,
+    "y2": 120.4969482421875
+  },
+  "figType": "Table",
+  "imageText": ["w/o", "Dropout", "97.72±0.29", "96.93±0.40", "92.31±0.56", "75.67±1.40", "63.68±1.36", "56.49±2.86", "0.1,", "0.1", "97.60±0.12", "96.74±0.16", "91.79±0.53", "74.99±1.16", "63.33±1.15", "57.39±2.36", "0.1,", "0.5", "97.77±0.08", "97.02±0.11", "92.39±0.39", "75.56±1.46", "64.18±1.79", "57.05±2.13", "0.5,", "0.5", "97.88±0.12", "97.22±0.11", "92.74±0.38", "76.73±1.01", "64.18±1.42", "58.35±0.73", "0.5,", "1.0", "97.88±0.04", "97.25±0.11", "92.87±0.39", "76.87±0.39", "64.84±0.65", "59.40±2.31", "1.0,", "1.0", "97.89±0.09", "97.19±0.09", "93.42±0.25", "77.48±0.94", "66.33±1.62", "61.35±1.90", "1.0,", "2.0", "97.68±0.09", "97.00±0.23", "93.46±0.78", "79.07±0.67", "68.20±2.34", "63.08±0.86", "2.0,", "2.0", "97.42±0.17", "97.00±0.11", "93.53±0.53", "80.03±0.62", "69.99±1.97", "65.74±1.21", "2.0,", "5.0", "97.39±0.03", "96.54±0.15", "92.95±0.01", "80.55±0.89", "73.74±0.21", "69.46±2.66", "5.0,", "5.0", "96.86±0.11", "96.12±0.08", "92.33±0.18", "79.53±0.42", "72.47±1.23", "70.77±2.11", "2", "4", "8", "16", "24", "32", "ρl1", ",", "ρl2", "Task", "Similarity", "(θinc)"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 123.36,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table8-1.png"
+}, {
+  "caption": "Figure 1: Architecture of one hidden layer in the biologically plausible framework. Each layer consists of separate populations of exclusively excitatory pyramidal cells and inhibitory neurons which adheres to Dale’s principle. The shade indicates the strength of weights or activations where darker shade indicating higher value. (a) The pyramidal cells are augmented with dendritic segments which receive an additional context signal c and the dendrite segment whose weights are most aligned with the context vector (bottom row) is selected to modulate the output activity of the feedforward neurons for context-dependent processing of information. (b) The Hebbian update step further strengthens the association between the context and the winning dendritic segment with maximum absolute value (indicated with darker shade for bottom row). Finally, Heterogeneous dropout keeps the activation count of each pyramidal cell (indicated with the gray shade) and drops the neurons which were most active for the previous task (darkest shade dropped) to enforce non-overlapping representations. The top-k remaining cells then project to the next layer (increased shade).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 272.4925231933594,
+    "y2": 399.0428466796875
+  },
+  "figType": "Figure",
+  "imageText": ["learnable", "weights", "context", "vector", "(a)", "(b)", "fully", "connected", "inhibitory", "cell", "active", "pyramidal", "cell", "inactive", "pyramidal", "cell", "Dendrite", "Segments", "Hebbian", "Update", "Max", "k-WTA", "Context", "Dropout"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 503.03999999999996,
+    "y1": 84.96,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Dendritic segment activations of a unit in layer 1 for the context vectors of each task for a model trained on Perm-MNIST with 5 tasks. Hebbian update strengthens the association between the context and the dendritic segments, increasing the magnitude of the modulating signal.",
+  "captionBoundary": {
+    "x1": 264.41900634765625,
+    "x2": 502.0169982910156,
+    "y1": 224.88455200195312,
+    "y2": 274.72296142578125
+  },
+  "figType": "Figure",
+  "imageText": ["w/", "Hebbian", "Update", "-0.72", "0.10", "-0.75", "0.34", "-2.75", "-0.33", "0.59", "-1.64", "-0.52", "5.77", "-0.91", "0.42", "-5.75", "0.70", "0.47", "0.79", "1.13", "-0.56", "0.24", "-4.97", "-0.71", "3.55", "0.21", "0.38", "0.26", "1", "2", "3", "4", "5", "Dendrite", "Segments", "w/o", "Hebbian", "Update", "-0.72", "0.13", "-0.83", "0.34", "-1.13", "-0.33", "0.66", "-1.53", "-0.52", "2.49", "-0.91", "0.37", "-2.34", "0.70", "0.33", "0.79", "1.08", "-0.55", "0.24", "-2.15", "-0.71", "1.38", "0.33", "0.38", "0.50", "r", "ec", "to", "ex", "t", "V", "Co", "nt", "Task", "5", "Task", "4", "Task", "3", "Task", "2", "Task", "1", "1", "2", "3", "4", "5", "Dendrite", "Segments"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 267.36,
+    "x2": 499.2,
+    "y1": 88.8,
+    "y2": 206.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Effect of dropout ρ on the overlap between the distributions of layer two activation counts for each task in Perm-MNIST with 2 tasks. Higher ρ reduces the overlap.",
+  "captionBoundary": {
+    "x1": 109.97898864746094,
+    "x2": 256.4989929199219,
+    "y1": 229.16250610351562,
+    "y2": 278.99993896484375
+  },
+  "figType": "Figure",
+  "imageText": ["Overlap", "in", "Representations", "e-", "3)", "v", "(1", "L-", "Di", "ric", "K", "m", "et", "Sy", "m", "11.0", "10.5", "10.0", "9.5", "9.0", "8.5", "8.0", "0.0", "0.1", "0.3", "0.5", "0.7", "1.0", "5.0", "Heterogeneous", "Dropout", "(", ")"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 253.44,
+    "y1": 84.96,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Figure3-1.png"
+}, {
+  "caption": "Table 7: Effect of scaling the importance estimate for Wie and Wei to reduce the parameter shift in the inhibitory weights on Rot-MNIST and Perm-MNIST datasets with varying number of tasks.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0016174316406,
+    "y1": 535.8894653320312,
+    "y2": 552.8508911132812
+  },
+  "figType": "Table",
+  "imageText": ["w/o", "SC", "92.28±0.27", "70.78±0.23", "48.79±0.27", "95.77±0.33", "95.06±0.29", "92.40±0.38", "10", "100", "92.85±0.42", "75.85±1.18", "58.94±2.15", "96.36±0.42", "96.02±0.27", "93.48±0.57", "0.5", "1", "1", "93.23±0.71", "75.24±0.62", "60.24±2.02", "96.22±0.37", "95.97±0.06", "92.94±0.85", "10", "10", "93.13±0.24", "75.95±0.38", "59.35±1.53", "96.24±0.51", "95.81±0.10", "92.86±0.87", "10", "100", "93.40±0.86", "75.87±1.35", "55.06±1.77", "96.65±0.25", "96.36±0.10", "95.18±0.29", "0.25", "1", "1", "92.77±0.69", "76.30±0.77", "55.05±2.47", "96.62±0.28", "96.07±0.02", "95.36±0.24", "10", "10", "93.54±0.79", "75.44±0.81", "54.93±2.35", "96.54±0.22", "96.23±0.16", "95.03±0.13", "10", "100", "92.50±0.65", "74.67±1.27", "52.55±1.12", "96.67±0.23", "96.26±0.26", "95.61±0.10", "0.1", "1", "1", "92.92±0.22", "75.53±1.46", "52.16±1.17", "96.59±0.17", "96.20±0.13", "95.69±0.10", "10", "10", "92.77±0.27", "74.70±1.05", "51.94±1.05", "96.57±0.34", "96.18±0.18", "95.64±0.15", "5", "10", "20", "5", "10", "20", "Rot-MNIST", "Perm-MNIST", "λ", "λWie", "λWei"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 555.84,
+    "y2": 719.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table7-1.png"
+}, {
+  "caption": "Table 6: Effect of adjusting the learning rates of Wie and Wei at the end of first task on different datasets with varying number of tasks.",
+  "captionBoundary": {
+    "x1": 107.99993133544922,
+    "x2": 504.00225830078125,
+    "y1": 254.73934936523438,
+    "y2": 271.7008056640625
+  },
+  "figType": "Table",
+  "imageText": ["3e-1", "3e-1", "92.12±0.34", "70.86±0.44", "46.30±1.03", "95.78±0.19", "94.73±0.36", "92.67±0.61", "3e-2", "3e-2", "92.23±0.53", "70.23±1.12", "47.53±1.79", "95.77±0.33", "95.06±0.29", "91.63±0.39", "3e-2", "3e-3", "92.28±0.27", "70.78±0.23", "47.32±1.43", "95.68±0.14", "94.96±0.49", "92.40±0.38", "3e-3", "3e-3", "92.34±0.51", "71.27±1.69", "47.81±1.10", "95.70±0.29", "94.44±0.70", "92.02±0.19", "3e-3", "3e-4", "92.03±0.09", "70.79±1.75", "48.79±0.27", "95.90±0.13", "94.19±0.47", "91.04±0.34", "5", "10", "20", "5", "10", "20", "ηWie", "ηWei", "Rot-MNIST", "Perm-MNIST"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 484.32,
+    "y1": 274.56,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table6-1.png"
+}, {
+  "caption": "Table 4: The selected hyperparamneters for the experiments showing the individual effect of each component (Table 1). The base learning rate for all the experiments is 0.3 and the individual components use the same learning rates for Wie and Wei as (+ Dale’s Principle). For + SC experiments, we use λWie =10 and λWei =10. For ER experiments, we use a memory budget of 500 samples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 398.9784851074219,
+    "y2": 440.3479309082031
+  },
+  "figType": "Table",
+  "imageText": ["Seq-MNIST", "5", "ηWie=3e-2,", "ηWei=3e-3", "nh=3e-07", "λ=0.25", "α=1,", "β=0", "α=1,", "β=0.25", "10", "ηWie", "=3e-2,", "ηWei", "=3e-2", "nh=3e-06", "λ=0.25", "α=1,", "β=0", "α=1,", "β=0.50", "20", "ηWie", "=3e-2,", "ηWei", "=3e-3", "nh=3e-09", "λ=0.10", "α=1,", "β=0", "α=1,", "β=0.50", "Perm-MNIST", "5", "ηWie", "=3e-2,", "ηWei", "=3e-2", "nh=3e-09", "λ=0.10", "α=1,", "β=0", "α=1,", "β=0.50", "10", "ηWie", "=3e-2,", "ηWei", "=3e-3", "nh=3e-08", "λ=0.25", "α=1,", "β=0", "α=1,", "β=0.50", "20", "ηWie", "=3e-3,", "ηWei", "=3e-4", "nh=3e-10", "λ=1.00", "α=1,", "β=0", "α=1,", "β=0.50", "Rot-MNIST", "5", "ηWie", "=3e-2,", "ηWei", "=3e-3", "nh=3e-10", "λ=0.25", "α=1,", "β=0", "α=1,", "β=0.50", "Dataset", "#Tasks", "+", "Dale’s", "Principle", "+", "Hebbian", "+", "SC", "+", "ER", "+", "ER", "+", "CR", "Update"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 440.64,
+    "y2": 554.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table4-1.png"
+}, {
+  "caption": "Table 5: The selected hyperparamneters for Bio-ANN experiments in Table 1. We use the same learning rate for each setting as + Dale’s Principle (Table A.1).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 590.9415283203125,
+    "y2": 607.9030151367188
+  },
+  "figType": "Table",
+  "imageText": ["Seq-MNIST", "5", "3e-6", "0.1", "0.1", "1", "0.25", "10", "3e-8", "0.1", "0.3", "1", "0.5", "20", "3e-8", "0.1", "0.3", "1", "0.5", "Perm-MNIST", "5", "3e-6", "0.1", "0.1", "1", "0.5", "10", "3e-8", "0.1", "0.3", "1", "0.5", "20", "3e-8", "0.1", "0.3", "1", "0.5", "Rot-MNIST", "5", "3e-8", "0.25", "0.1", "1", "0.5", "Dataset", "#Tasks", "nh", "λ", "ρ", "α", "β"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 609.12,
+    "y2": 720.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table5-1.png"
+}, {
+  "caption": "Table 1: Effect of each component of the biologically plausible framework on different datasets with varying number of tasks. We first show the effect of utilizing feedforward neurons adhering to Dale’s principle in conjunction with Active Dendrites to form the framework within which we evaluate the individual effect of brain-inspired mechanisms before combining them all together (along with Heterogeneous Dropout) to forge Bio-ANN. For all the experiments, we set the percentage of active neurons to 5. We provide the average task performance and 1 std of three runs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 92.5765151977539,
+    "y2": 153.3739013671875
+  },
+  "figType": "Table",
+  "imageText": ["Bio-ANN", "96.82±0.14", "94.64±0.23", "91.32±0.26", "97.33±0.04", "97.07±0.05", "96.51±0.03", "89.26±0.42", "+", "Hebbian", "Update", "92.68±0.36", "71.42±0.94", "49.26±0.58", "95.97±0.16", "94.96±0.14", "92.69±0.19", "19.85±0.04", "+", "SC", "93.40±0.86", "75.87±1.35", "64.78±3.43", "96.67±0.23", "96.36±0.10", "95.61±0.10", "20.26±0.56", "+", "ER", "95.15±0.37", "90.86±0.52", "83.42±0.44", "96.75±0.15", "96.01±0.14", "94.50±0.16", "86.88±0.83", "+", "ER", "+", "CR", "96.67±0.06", "93.85±0.24", "89.38±0.16", "97.34±0.03", "97.03±0.04", "96.12±0.04", "89.23±0.48", "Active", "Dendrites", "92.45±0.27", "70.85±0.60", "48.13±0.73", "95.53±0.10", "94.37±0.26", "91.76±0.39", "20.06±0.36", "+", "Dale’s", "Principle", "92.28±0.27", "70.78±0.23", "48.79±0.27", "95.77±0.33", "95.06±0.29", "92.40±0.38", "19.81±0.03", "Method", "Rot-MNIST", "Perm-MNIST", "Seq-MNIST", "5", "10", "20", "5", "10", "20"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 156.0,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table1-1.png"
+}, {
+  "caption": "Table 2: Effect of different levels of sparsity in activations on the performance of the model. Columns show the ratio of active neurons (k in k-WTA activation), and the rows provide the number of tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 293.1255187988281,
+    "y2": 321.04595947265625
+  },
+  "figType": "Table",
+  "imageText": ["10", "70.78±0.23", "71.95±1.54", "73.32±0.69", "71.61±0.76", "95.06±0.29", "93.45±0.92", "72.68±12.83", "41.33±6.72", "20", "48.79±0.27", "47.96±1.84", "48.65±0.91", "47.71±0.91", "92.40±0.38", "84.28±1.35", "63.84±3.45", "20.80±0.99", "5", "92.28±0.27", "92.26±0.31", "92.79±0.44", "92.26±0.65", "95.77±0.33", "96.32±0.20", "90.29±6.07", "74.51±13.55", "0.05", "0.10", "0.20", "0.50", "0.05", "0.10", "0.20", "0.50", "Rot-MNIST", "Perm-MNIST", "k", "#Tasks"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 321.59999999999997,
+    "y2": 386.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table2-1.png"
+}, {
+  "caption": "Table 9: Effect of different levels of sparsity in activations (ratio of active neurons, (kl1, kl2) in 1st and 2nd hidden layer respectively) and connections (ratio of zero weights, SW ) on Rot-MNIST and Perm-MNNIST with increasing number of tasks. The best performance across the different sparsity levels for each task is in bold.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 144.51651000976562,
+    "y2": 183.39593505859375
+  },
+  "figType": "Table",
+  "imageText": ["0.50", "87.31±0.82", "84.90±1.99", "83.72±0.63", "69.62±5.98", "66.27±2.74", "64.42±2.33", "51.92±3.79", "20", "0.00", "92.40±0.38", "89.41±1.73", "84.28±1.35", "73.29±2.60", "63.84±3.45", "58.85±5.00", "20.80±0.99", "0.25", "90.75±0.63", "89.22±0.94", "84.29±2.17", "75.82±6.68", "67.26±1.22", "63.96±1.19", "41.60±2.64", "0.50", "92.12±0.62", "90.31±2.01", "92.29±0.73", "88.48±0.22", "82.57±2.40", "74.42±2.84", "69.31±5.66", "10", "0.00", "95.06±0.29", "94.08±0.95", "94.38±0.73", "89.54±2.27", "78.91±5.26", "76.44±7.93", "35.86±2.04", "0.25", "94.51±0.12", "93.52±0.01", "93.62±0.64", "88.58±2.17", "84.94±3.58", "69.32±6.24", "59.53±9.57", "0.50", "93.95±0.65", "94.19±0.41", "94.90±0.22", "94.22±1.19", "94.05±0.81", "91.02±3.71", "83.94±9.58", "5", "0.00", "95.77±0.33", "95.55±0.27", "96.43±0.10", "95.85±0.29", "90.29±6.07", "88.18±8.86", "74.51±13.55", "0.25", "95.45±0.25", "95.14±0.27", "95.65±0.22", "95.75±0.32", "93.73±1.29", "87.49±2.33", "75.97±5.61", "IS", "T", "-M", "N", "Pe", "rm", "0.50", "46.20±0.26", "47.15±1.37", "48.02±1.10", "48.17±1.42", "48.30±1.41", "47.66±1.53", "47.73±0.51", "20", "0.00", "48.79±0.27", "48.01±0.58", "47.96±1.84", "48.33±1.23", "48.65±0.91", "48.19±0.14", "47.71±0.91", "0.25", "47.72±0.83", "48.61±0.30", "48.41±0.84", "48.53±1.77", "48.30±0.87", "48.29±1.59", "47.11±0.44", "0.50", "69.61±0.50", "70.59±0.62", "70.94±0.71", "72.05±0.34", "72.25±1.40", "71.37±0.65", "70.85±0.67", "10", "0.00", "70.78±0.23", "71.16±0.51", "71.95±1.54", "72.22±0.63", "73.32±0.69", "71.89±0.62", "71.61±0.76", "0.25", "70.23±0.76", "71.42±0.98", "71.84±0.72", "73.22±1.34", "72.58±0.64", "72.23±0.71", "71.23±0.84", "0.50", "90.78±0.11", "91.15±0.34", "91.25±0.14", "91.25±0.92", "90.67±0.73", "90.75±0.86", "90.41±1.48", "5", "0.00", "92.28±0.27", "92.63±0.46", "92.26±0.31", "92.25±0.71", "92.79±0.44", "92.51±0.50", "92.26±0.65", "0.25", "91.22±0.58", "91.50±0.36", "92.33±0.26", "91.75±0.30", "92.60±0.19", "91.23±1.63", "91.66±0.46", "IS", "T", "-M", "N", "R", "ot", "(0.05,", "0.05)", "(0.1,", "0.05)", "(0.1,", "0.1)", "(0.2,", "0.1)", "(0.2,", "0.2)", "(0.5,", "0.2)", "(0.5,", "0.5)", "#Tasks", "SW", "Activation", "Sparsity", "(kl1,", "kl2)"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 183.84,
+    "y2": 415.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table9-1.png"
+}, {
+  "caption": "Table 10: Effect of different levels of activation sparsity on Rot-MNIST with 5 tasks with varying degrees of incremental rotation (θinc) in each subsequent task. Row 0 shows (kl1 , kl2 ) the ratio of active neurons in the 1st and 2nd hidden layer, respectively.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.003173828125,
+    "y1": 534.0185546875,
+    "y2": 561.93896484375
+  },
+  "figType": "Table",
+  "imageText": ["0.1,", "0.1", "97.81±0.08", "96.84±0.30", "92.28±0.31", "76.80±1.20", "64.91±1.17", "58.62±1.70", "0.2,", "0.1", "97.44±0.74", "96.88±0.45", "92.47±0.69", "75.79±1.26", "64.38±1.58", "58.34±1.54", "0.2,", "0.2", "97.88±0.11", "97.27±0.15", "92.79±0.50", "76.22±1.46", "64.30±1.38", "57.22±1.06", "0.5,", "0.2", "97.67±0.64", "96.92±0.78", "92.61±0.65", "75.66±0.95", "63.86±0.61", "56.11±1.20", "0.5,", "0.5", "97.67±0.55", "97.03±0.53", "92.29±0.58", "74.55±1.01", "62.37±0.62", "53.13±3.62", "0.1,", "0.05", "97.57±0.32", "96.84±0.18", "92.49±0.59", "76.15±1.28", "64.03±1.12", "58.56±1.17", "0.05,", "0.05", "97.54±0.06", "96.56±0.14", "91.95±0.54", "75.13±0.83", "63.14±0.52", "57.01±0.89", "2", "4", "8", "16", "24", "32", "(kl1", ",", "kl2", ")", "Task", "Similarity", "(θinc)"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 564.9599999999999,
+    "y2": 680.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Zx6tTcX0SE-Table10-1.png"
+}]

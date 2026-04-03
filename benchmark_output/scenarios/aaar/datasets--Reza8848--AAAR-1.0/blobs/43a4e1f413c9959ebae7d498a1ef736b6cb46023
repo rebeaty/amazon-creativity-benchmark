@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 3: Running time of adversarial training algorithms against different sizes of training samples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9984436035156,
+    "y1": 615.7345581054688,
+    "y2": 621.7369995117188
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CIFAR100", "(s", ")", "im", "e", "in", "g", "t", "n", "n", "R", "u", "1500", "1000", "500", "0", "Training", "size", "×10", "4", "1", "2", "3", "4", "5", "(b)", "CIFAR10", "(s", ")", "im", "e", "in", "g", "t", "n", "n", "R", "u", "1500", "1000", "500", "0", "Training", "size", "10", "4", "1", "2", "3", "4", "5", "(a)", "MNIST", "(s", ")", "im", "e", "in", "g", "t", "n", "n", "R", "u", "300", "200", "100", "0", "Training", "size", "10", "4", "2", "4", "6"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 498.24,
+    "y1": 501.59999999999997,
+    "y2": 612.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Figure3-1.png"
+}, {
+  "caption": "Figure 2: The sketch map of l̂f (zi, ϵi) wrt. ϵi.",
+  "captionBoundary": {
+    "x1": 313.78399658203125,
+    "x2": 496.2156066894531,
+    "y1": 351.35052490234375,
+    "y2": 358.8479919433594
+  },
+  "figType": "Figure",
+  "imageText": ["0", "-b/k", "0"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 334.56,
+    "x2": 462.24,
+    "y1": 252.95999999999998,
+    "y2": 347.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Figure2-1.png"
+}, {
+  "caption": "Table 4: Test accuracy (%) of various defense methods trained on CIFAR100 with l∞-norm constrained perturbations on DNNs. (The results of Natural on clean data are just baselines for reference.)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.65386962890625,
+    "y1": 506.9705505371094,
+    "y2": 523.9320068359375
+  },
+  "figType": "Table",
+  "imageText": ["TRADES", "50.71±0.67", "28.99±0.84", "21.59±0.65", "17.41±0.57", "16.47±0.77", "SAAT-kernelh", "66.88±0.73", "13.64±0.81", "8.77±0.61", "7.65±0.84", "7.98±0.72", "SAAT-kernelc", "68.56±0.53", "12.71±0.66", "6.79±0.75", "6.87±0.52", "5.34±0.69", "SAAT-minimaxh", "70.72±0.47", "47.18±0.33", "39.68±0.51", "34.70±0.36", "32.77±0.57", "SAAT-minimaxc", "68.11±0.57", "43.80±0.44", "35.33±0.39", "31.69±0.67", "30.83±0.62", "Standard", "58.13±0.36", "35.99±0.44", "27.20±0.72", "23.64±0.77", "22.63±0.94", "IAAT", "59.47±0.37", "27.23±0.65", "18.58±0.59", "17.79±0.34", "13.73±0.88", "MMA", "49.03±0.77", "27.79±0.74", "20.50±0.67", "18.96±0.51", "15.39±0.74", "FAT", "61.28±0.88", "25.03±0.72", "19.73±0.56", "19.92±0.81", "13.09±0.69", "Method", "Clean", "FGSM", "10-PGD", "CW", "AutoAttack", "Natural", "77.79±0.47", "1.16±0.21", "0.00±0.00", "0.00±0.00", "0.00±0.00"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 529.92,
+    "y2": 657.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Table4-1.png"
+}, {
+  "caption": "Table 3: Test accuracy (%) of various defense methods trained on CIFAR10 with l∞-norm constrained perturbations on DNNs. (The results of Natural on clean data are just baselines for reference.)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99530029296875,
+    "y1": 350.8835144042969,
+    "y2": 367.8450012207031
+  },
+  "figType": "Table",
+  "imageText": ["TRADES", "86.74±1.27", "63.42±0.64", "49.76±0.65", "45.39±0.76", "49.55±0.72", "SAAT-kernelh", "83.89±0.37", "24.97±0.79", "18.54±0.82", "16.33±0.87", "11.95±0.58", "SAAT-kernelc", "83.06±0.73", "27.84±0.59", "20.77±0.47", "18.75±0.64", "14.33±0.71", "SAAT-minimaxh", "85.29±0.68", "61.52±0.85", "53.86±1.37", "47.00±0.96", "49.84±0.33", "SAAT-minimaxc", "86.98±0.52", "63.73±0.72", "51.70±0.66", "49.37±0.84", "50.68±0.54", "Standard", "75.65±0.37", "62.73±1.09", "48.51±0.64", "40.37±0.84", "42.44±0.63", "IAAT", "74.56±0.52", "49.88±0.82", "38.02±0.69", "36.79±0.74", "30.66±0.79", "MMA", "79.15±0.67", "62.83±0.74", "45.73±0.82", "44.34±0.96", "34.28±0.68", "FAT", "86.80±0.45", "61.49±0.62", "46.17±0.77", "45.14±0.83", "33.34±0.87", "Method", "Clean", "FGSM", "10-PGD", "CW", "AutoAttack", "Natural", "92.26±0.45", "5.79±0.36", "0.00±0.00", "0.00±0.00", "0.00±0.00"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 499.2,
+    "y1": 373.44,
+    "y2": 501.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Table3-1.png"
+}, {
+  "caption": "Table 2: Test accuracy (%) of various defense methods trained on MNIST with l∞-norm constrained perturbations on DNNs. (The results of Natural on clean data are just baselines for reference.)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9994812011719,
+    "y1": 194.79653930664062,
+    "y2": 211.75799560546875
+  },
+  "figType": "Table",
+  "imageText": ["TRADES", "98.78±0.47", "97.07±0.52", "90.44±0.66", "86.74±0.67", "88.09±0.46", "SAAT-kernelh", "98.47±0.33", "78.92±0.72", "67.76±0.85", "62.45±0.46", "52.79±0.46", "SAAT-kernelc", "98.61±0.29", "80.55±0.68", "62.86±0.55", "63.39±0.74", "53.64±0.67", "SAAT-minimaxh", "98.44±0.67", "97.42±0.82", "94.80±0.76", "94.42±0.59", "93.35±0.46", "SAAT-minimaxc", "98.88±0.27", "96.29±0.54", "91.97±0.69", "92.27±0.74", "90.03±0.57", "Standard", "97.82±0.35", "95.00±0.78", "89.55±0.89", "87.27±0.44", "86.14±0.81", "IAAT", "98.57±0.39", "92.54±0.67", "85.17±1.04", "83.64±0.79", "79.13±0.64", "MMA", "98.85±0.63", "92.87±1.07", "81.87±0.88", "75.33±1.19", "70.32±0.94", "FAT", "97.08±0.59", "94.11±0.94", "80.47±0.86", "78.92±0.77", "66.53±0.65", "Method", "Clean", "FGSM", "10-PGD", "CW", "AutoAttack", "Natural", "98.83±0.29", "14.84±0.66", "0.00±0.00", "0.00±0.00", "0.00±0.00"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 217.92,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Table2-1.png"
+}, {
+  "caption": "Table 1: Comparisons of different adversarial training algorithms which aim at achieving better generalization performance on DNNs and SVMs. (Complexity here refers to the time complexity. n is the training size, T is the number of epochs, K and τ are the numbers of steps for PGD attack, where τ ≤ K, c1 and c2 denote searching steps for ϵi.)",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2431335449219,
+    "y1": 80.6955337524414,
+    "y2": 121.06903076171875
+  },
+  "figType": "Table",
+  "imageText": ["SVMs", "adv-SVM", "(Wu", "et", "al.,", "2021)", "Minimization", "Closed-form", "solution", "−", "O(nT", ")", "SAAT-SVM", "(Ours)", "Minimization", "Closed-form", "solution", "Closed-form", "solution", "O(nT", ")", "SAAT-kernel", "(Ours)", "Minimization", "Closed-form", "solution", "Closed-form", "solution", "O(nT", ")", "SAAT-minimax", "(Ours)", "Minimax", "K-PGD", "attack", "Closed-form", "+", "fine", "search", "O(nKT", ")", "DNNs", "Standard", "(Madry", "et", "al.,", "2017)", "Minimax", "K-PGD", "attack", "−", "O(nKT", ")", "IAAT", "(Balaji", "et", "al.,", "2019)", "Minimax", "K-PGD", "attack", "Brute-force", "search", "O(c1nKT", ")", "MMA", "(Ding", "et", "al.,", "2018)", "Minimax", "K-PGD", "attack", "Bisection", "search", "O(c2nKT", ")", "FAT", "(Zhang", "et", "al.,", "2020)", "Minimax", "K-τ", "-PGD", "attack", "Early-stopped", "PGD", "attack", "O(nτT", ")", "ComplexitySolving", "inner", "problem", "Searching", "strategy", "Algorithm", "Problem", "Finding", "suitable", "ϵi"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 516.0,
+    "y1": 125.28,
+    "y2": 242.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Table1-1.png"
+}, {
+  "caption": "Figure 1: Conceptual illustration of standard adversarial training and our self-adaptive adversarial training (i.e., SAAT).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99530029296875,
+    "y1": 367.3745422363281,
+    "y2": 384.33599853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 252.0,
+    "y2": 363.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JX1OCjfABRj-Figure1-1.png"
+}]

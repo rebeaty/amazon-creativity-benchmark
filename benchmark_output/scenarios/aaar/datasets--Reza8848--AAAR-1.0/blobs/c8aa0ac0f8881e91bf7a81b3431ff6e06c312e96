@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 6: Distributions of pixel values in a 1000 random 256x256 crops of the CLIC train dataset, left for the target image x, right for the residual r = x− x̃ where the initial reconstruction x̃ is from a single-rate mean-scale hyperprior trained with λrate = 0.03. Rows corresponds to the red, green and blue channels respectively.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0032043457031,
+    "y1": 342.2295227050781,
+    "y2": 381.10894775390625
+  },
+  "figType": "Figure",
+  "imageText": ["0.10", "0.05", "0.00", "40", "20", "0", "20", "40", "value", "ity", "de", "ns", "0.006", "0.004", "0.002", "0.000", "0", "50", "100", "150", "200", "250", "value", "0.10", "0.05", "40", "20", "0", "20", "40", "0.00", "ity", "de", "ns", "0.006", "0.004", "0.002", "0", "50", "100", "150", "200", "250", "0.000", "Residual", "Space", "0.10", "0.05", "40", "20", "0", "20", "40", "0.00", "Image", "Space", "0.0050", "0.0075", "de", "ns", "ity", "0.0025", "0", "50", "100", "150", "200", "250", "0.0000"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 478.08,
+    "y1": 87.36,
+    "y2": 323.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Top left: distortion-perception curves for DIRAC, a hyperprior baseline, a HiFiC baseline, and the standard codec VTM, showing that our codec is able to navigate a wide range of distortionperception tradeoffs dynamically at test time (increasing marker size indicates number of diffusion steps). Bottom and right: Example reconstructions for various operating points, as well as the HiFiC baseline (cross). HiFiC is excellent at synthesizing textures, which often matches the contents of the image well (e.g. red/leftmost crop), but in some cases the textures appear unnatural (e.g. text in green/center crop). Image contents may be more perceptually pleasing when slightly blurrier (e.g. green neon text in blue/rightmost crop), so that a prediction with high fidelity (DIRAC-80, circle) also has higher perceptual quality. Our codec can adjust this tradeoff dynamically, e.g. to match user preferences. Rate matching of models is done using cubic spline interpolation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 388.4095153808594,
+    "y2": 493.0418701171875
+  },
+  "figType": "Figure",
+  "imageText": ["Reference", "(3815kb)", "DIRAC-1", "(110kb)", "DIRAC-80", "(110kb)", "DIRAC-100", "(110kb)", "HiFiC", "(112kb)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 501.12,
+    "y1": 81.6,
+    "y2": 377.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Selected CLIC2020 test set crops showcasing three cases where different distortionperception operating points are preferred. Based on the authors’ judgement, green dots indicate best subjective quality. Left shows how DIRAC-100 (percep. quality) fares better than HiFiC on text input, center shows how DIRAC-1 (fidelity) is beneficial for small text and faces, right shows HiFiC’s superiority for fine texture generation. Best viewed electronically.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 225.49252319335938,
+    "y2": 275.3299560546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 214.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure3-1.png"
+}, {
+  "caption": "Table 1: Hyperparameters for DIRAC and the smaller ablation model during training and sampling. We refer the reader to the official open source implementation of Dhariwal & Nichol (2021) for more details on these parameters.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 317.2975158691406,
+    "y2": 345.21795654296875
+  },
+  "figType": "Table",
+  "imageText": ["Use", "DDIM", "sampling", "use", "ddim", "true", "true", "Resampling", "timesteps", "timestep", "respacing", "ddim100", "ddim100", "Batch", "size", "batch", "size", "128", "32", "Learning", "rate", "lr", "10−4", "10−4", "Training", "steps", "iterations", "650k", "600k", "Input", "Resolution", "image", "size", "256x256", "256x256", "Diffusion", "steps", "diffusion", "steps", "1000", "1000", "Noise", "schedule", "noise", "schedule", "cosine", "cosine", "Channel", "multiplier", "channel", "mult", "1,1,2,2,4,4", "1,2,3", "Base", "num.", "channels", "num", "channels", "128", "32", "Learn", "σt", "learn", "sigma", "false", "false", "Group", "normalization", "group", "norm", "true", "true", "Attention", "resolutions", "attention", "resolutions", "none", "none", "Num.", "attention", "heads", "num", "heads", "1", "1", "Objective", "Eq.", "(3)", "predict", "xstart", "true", "true", "Num.", "ResBlocks", "num", "res", "blocks", "2", "2", "Scale", "shift", "conditioning", "use", "scale", "shift", "norm", "false", "false", "Parameter", "Command", "line", "DIRAC", "DIRAC-small"],
+  "name": "1",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 306.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Table1-1.png"
+}, {
+  "caption": "Figure 7: Architecture ablation study for DDPM model. Ablation reference (DIRAC-small) model is defined in Table 1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 592.0345458984375,
+    "y2": 608.9959716796875
+  },
+  "figType": "Figure",
+  "imageText": ["CLIC", "val", "512x512", "center", "crop", "[", "]", "FI", "D", "140", "120", "100", "80", "60", "40", "20", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "bpp", "[", "]", "CLIC", "val", "512x512", "center", "crop", "Model", "predict:", "Group", "normalization:", "OFF", "Noise", "schedule:", "linear", "Training", "crop", "size:", "64x64", "DIRAC-100", "(percep.", "quality)", "DIRAC-small", "(ablation", "reference)", "]", "[d", "B,", "PS", "NR", "45", "40", "35", "30", "25", "20", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "bpp", "[", "]"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 372.96,
+    "y2": 575.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Rate-distortion (left) and rate-perception (middle & right) curves for the CLIC2020 test set (top) and Kodak dataset (bottom). Although FID on Kodak is based on a low number of crops, we report it here for completeness.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 303.41253662109375,
+    "y2": 331.33203125
+  },
+  "figType": "Figure",
+  "imageText": ["DIRAC-100", "(percep.", "quality)", "DIRAC-1", "(fidelity)", "Hyperprior", "(Minnen", "2018)", "HifiC", "(Mentzer", "2020)", "JPEG", "VTM", "Yang", "&", "Mandt", "2022", "0.40", "LPIPS", "[", "]", "0.35", "0.30", "0.25", "0.20", "0.15", "0.10", "0.05", "0.00", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "1.6", "bpp", "[", "]", "120", "FID", "[", "]", "100", "80", "60", "40", "20", "0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "1.6", "bpp", "[", "]", "PSNR", "[dB,", "]", "s", "ll-", "re", "k", "fu", "Ko", "da", "40", "38", "36", "34", "32", "30", "28", "26", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "1.6", "bpp", "[", "]", "0.40", "LPIPS", "[", "]", "0.35", "0.30", "0.25", "0.20", "0.15", "0.10", "0.05", "0.00", "40", "FID", "[", "]", "35", "30", "25", "20", "15", "10", "5", "0", "PSNR", "[dB,", "]", "re", "s", "fu", "ll-", "te", "st", "CL", "IC", "40", "38", "36", "34", "32", "30", "28"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 84.96,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Analysis of the effect of early stopping and late starting on the CLIC2020 test set. We show tradeoffs for rate-distortion (left), rate-perception (center) and distortion-perception (right). The default sampling schedule of 100 steps is shown as a dotted line (invisible in case of perfect overlap), the solid line shows performance when skipping the first 80 steps. The performance region covered by the dashed line can be reached with a single one-shot prediction from our model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 481.7635192871094,
+    "y2": 531.6019287109375
+  },
+  "figType": "Figure",
+  "imageText": ["Full", "100", "steps", "Start", "after", "80", "steps", "One-shot", "prediction", "Rate", "=", "0.18", "bpp", "Rate", "=", "0.64", "bpp", "33", "34", "PS", "NR", "[d", "B,", "]", "32", "0", "5", "10", "15", "20", "25", "30", "35", "FID", "[", "]", "[", "]", "FI", "D", "35", "30", "25", "20", "15", "10", "5", "0", "0", "20", "40", "60", "80", "100", "Step", "]", "[d", "B,", "PS", "NR", "39", "38", "37", "36", "35", "34", "33", "32", "0", "20", "40", "60", "80", "100", "Step"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 359.03999999999996,
+    "y2": 465.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure5-1.png"
+}, {
+  "caption": "Table 2: Computational complexity for each model. Runtime mean and standard deviation were obtained using 1,000 forward passes. Note that none of the models here were explicitly optimized for inference speed, numbers are indications only.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 527.592529296875,
+    "y2": 555.5130004882812
+  },
+  "figType": "Table",
+  "imageText": ["HiFiC", "181.5M", "18.4±", "1.1", "129.2±", "0.64", "DIRAC", "hyperprior", "21.4M", "13.9±", "1.0", "82.7±", "1.81", "DIRAC", "U-Net", "108.4M", "39.3±", "1.2", "485.6±", "1.17", "Parameter", "count", "Runtime", "256", "(ms)", "Runtime", "1024", "(ms)"],
+  "name": "2",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 455.52,
+    "y2": 516.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Table2-1.png"
+}, {
+  "caption": "Figure 2: Overview of DIRAC, our proposed codec. A mean-scale hyperprior (optimized for distortion) transmits the input image x via a quantized latent y, resulting in an initial reconstruction x̃. This initial reconstruction is used as conditioning for a U-Net based DDPM (optimized for perceptual quality) to generate a residual r0. The final reconstruction is then x̂ = x̃+ r0.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 241.13851928710938,
+    "y2": 281.511962890625
+  },
+  "figType": "Figure",
+  "imageText": ["11')", "1')", "1')", ")'", "+(\")", "Gaussian", "noise", "final", "residual", "!", "−", "1", "#!\"#", "final", "reconstruction", "(!", "'!", "input", "image", "initial", "reconstruction", "+", "#$", "!", "…", "#!", "\"", "!", "0'", "1'(", "mean-scale", "hyperprior", "diffusion", "probabilistic", "model"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 491.52,
+    "y1": 86.39999999999999,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4Jq0XWCZQel-Figure2-1.png"
+}]

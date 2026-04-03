@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 2: Analytical learning dynamics for deep (panels a-b) and shallow (panels c-d) linear networks. (a,c) Comparison of predicted and actual singular value trajectories over learning, for the three unique dataset singular values. (b,d) Comparison of predicted and actual Frobenius norms of the input-output mapping to/from compositional (Ωx,Ωy) and non-compositional (Γx,Γy) features. Deep networks show distinct stages of improvement over learning. However, at no point is a systematic mapping learned. Parameters: nx = 3, ny = 1, kx = 3, ky = 1, r = 1.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.739501953125,
+    "y1": 465.26153564453125,
+    "y2": 527.552001953125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number", "(c)", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number", "(b)", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number", "(a)", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 504.0,
+    "y1": 372.0,
+    "y2": 457.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Frobenius norms of the deep network mapping partitioned by the compositional and non-compositional inputs and output on a dense linear neural module.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.997314453125,
+    "y1": 271.6975402832031,
+    "y2": 288.65899658203125
+  },
+  "figType": "Figure",
+  "imageText": ["Predicted", "ΓxΓy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΩy-Norm", "ΓxΓy-Norm", "ΩxΓy-Norm", "ΓxΩy-Norm", "ΩxΩy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 190.56,
+    "x2": 407.03999999999996,
+    "y1": 102.72,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure5-1.png"
+}, {
+  "caption": "Figure 8: Dense network architecture trained to perform the CMNIST classification task.",
+  "captionBoundary": {
+    "x1": 128.9459991455078,
+    "x2": 483.056640625,
+    "y1": 540.78955078125,
+    "y2": 546.7919921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 432.96,
+    "y2": 530.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure8-1.png"
+}, {
+  "caption": "Table 3: Table showing the hyper-parameters used for the CMNIST experiments.",
+  "captionBoundary": {
+    "x1": 144.39199829101562,
+    "x2": 467.29974365234375,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Batch", "Size", "16", "Initialization", "Variance", "0.01", "Step", "Size", "2e−3", "Hyper-parameter", "Value"],
+  "name": "3",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 237.6,
+    "x2": 374.4,
+    "y1": 101.75999999999999,
+    "y2": 154.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Table3-1.png"
+}, {
+  "caption": "Figure 3: Graphical representation of the deep network mapping. The dynamical modes π1, π2, and π3 contain contributions from compositional and non-compositional input components and they make contributions to compositional and non-compositional output components. Systematic portions of the mapping which rely only on compositional sub-structure are depicted as green. To be able to learn a systematic mapping all modes connected to the compositional output (input) component must not connect to the non-compositional input (output) component. (a) For the dense network we see that mode π1 is the only mode which impacts the mapping to the compositional output (corresponds to the ΩxΩy and ΓxΩy norms in Figure 2b being learned at the same time as the π1 mode in Figure 2a), however π1 also contributes to the non-compositional output mapping (ΩxΓy and ΓxΓy norms also rise with π1). Thus by learning the systematic mapping some non-systematic mapping is also being learned. (b and c) Impact of architectural biases. Architectures that partition compositional and non-compositional features in different ways with the corresponding graphical representation of the resulting network mappings. The output partitioned network is able to remove the impact of non-compositional output features on mode π1 but does not result in a systematic mapping. Only the fully partitioned network achieves systematicity. Comparing to Figure 3a) both graphical representations have less connections, particularly to/from the π1 mode, reflecting the inductive bias imposed by modular architectures.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.2454528808594,
+    "y1": 533.9835205078125,
+    "y2": 715.3280029296875
+  },
+  "figType": "Figure",
+  "imageText": ["a)", "b)", "c)", "Dense", "Network", "Systematic", "Mapping", "Non-systematic", "Mapping", "Output", "Partitioned", "Fully", "Partitioned"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 377.76,
+    "y2": 522.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure3-1.png"
+}, {
+  "caption": "Figure 9: Split network architecture trained to perform the CMNIST classification task.",
+  "captionBoundary": {
+    "x1": 131.97999572753906,
+    "x2": 480.0234069824219,
+    "y1": 512.1255493164062,
+    "y2": 518.1279907226562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 289.92,
+    "y2": 501.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure9-1.png"
+}, {
+  "caption": "Figure 1: Problem setting and dataset space. (a) When navigating a maze towards a target, an agent might extract various input features, mapping these to a sequence of actions. (b) We schematize this setting with a space of datasets containing compositional (Ω) and non-compositional (Γ) features in the input (middle panel) and output (right panel). Rows contain examples and columns contain features. In this case objects are identified with both a compositional component (based on features: size, shape and colour) and non-compositional component (based on absolute position).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.3891906738281,
+    "y1": 252.83352661132812,
+    "y2": 313.6300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["Actions", "(a)", "(b)", "-1", "-1", "-1", "-1", "1", "1", "1", "1", "v", "s", "v", "s", "-1", "1", "0", "0", "0", "000", "2", "0", "1", "-1", "1", "-1", "-1", "1", "-1", "1", "1", "1", "0", "0", "0", "200", "0", "0", "0", "0", "0", "002", "0", "0", "0", "0", "2", "000", "0", "0", "-1", "-1", "2", "0", "0", "000", "0", "0", "1", "-1", "0", "2", "0", "000", "0", "0", "0", "0", "0", "000", "0", "2", "0", "0", "0", "020", "0", "0", "8", "u", "r", "B", "e", "h", "a", "v", "io", "7", "u", "r", "B", "e", "h", "a", "v", "io", "6", "u", "r", "B", "e", "h", "a", "v", "io", "5", "u", "r", "B", "e", "h", "a", "v", "io", "4", "u", "r", "B", "e", "h", "a", "v", "io", "3", "u", "r", "B", "e", "h", "a", "v", "io", "2", "u", "r", "B", "e", "h", "a", "v", "io", "1", "u", "r", "B", "e", "h", "a", "v", "io", "_t", "u", "rn", "R", "s", "rn", "v", "L_", "tu", "_t", "u", "rn", "R", "s", "rn", "v", "L_", "tu", "_t", "u", "rn", "R", "s", "rn", "v", "L_", "tu", "Command", "2", "2", "0", "2", "2", "2", "2", "2", "2", "-1", "-1", "0", "0", "0", "000", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1", "1", "-1-1", "1", "1", "1", "1", "1", "0", "0", "0", "00", "0", "0", "1", "0", "0", "0", "00", "0", "0", "0", "0", "000", "0", "0", "1", "0", "0", "000", "0", "0", "1", "1", "1", "1", "0", "0", "000", "0", "0", "0", "0", "0", "000", "0", "0", "0", "0", "00", "0", "0", "a", "b", "c", "d", "e", "f", "g", "hv", "s", "a", "b", "c", "d", "e", "f", "g", "h"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 82.08,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure1-1.png"
+}, {
+  "caption": "Table 1: Probability of sampling a full-rank covariance matrix for the binary combinatorial component of the input and output with 3 features each (nx = ny = 3)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0050048828125,
+    "y1": 303.6065368652344,
+    "y2": 322.0619812011719
+  },
+  "figType": "Table",
+  "imageText": ["3", "57.5%", "4", "91.9%", "{5,...,8}", "100%", "Sample", "Size", "Probability", "of", "Full-Rank", "Covariance"],
+  "name": "1",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 195.84,
+    "x2": 416.15999999999997,
+    "y1": 241.92,
+    "y2": 292.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Table1-1.png"
+}, {
+  "caption": "Table 2: Probability of sampling a full-rank covariance matrix for the binary combinatorial component of the input and output with 4 features each (nx = ny = 4)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0050048828125,
+    "y1": 437.26153564453125,
+    "y2": 455.7179870605469
+  },
+  "figType": "Table",
+  "imageText": ["{9,...,16}", "100%", "4", "29.74%", "5", "84.76%", "6", "93.82%", "7", "99.2%", "8", "99.72%", "Sample", "Size", "Probability", "of", "Full-Rank", "Covariance"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 195.84,
+    "x2": 416.15999999999997,
+    "y1": 340.8,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Table2-1.png"
+}, {
+  "caption": "Figure 4: (a) Visual description of the CMNIST task, (b) normalized training loss, (c) test loss of a deep CNN with ReLU activation on the Compositional-MNIST dataset averaged over 10 runs. Error bars reflect one standard-deviation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1739196777344,
+    "y1": 220.51254272460938,
+    "y2": 248.4329833984375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Dense", "Compositional", "Error", "Dense", "Non-compositional", "Error", "Split", "Compositional", "Error", "Split", "Non-compositional", "Error", "or", "E", "rr", "iz", "ed", "m", "al", "N", "or", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "50", "100", "150", "200", "250", "300", "Epoch", "Number", "(b)", "Dense", "Compositional", "Error", "Dense", "Non-compositional", "Error", "Split", "Compositional", "Error", "Split", "Non-compositional", "Error", "or", "E", "rr", "iz", "ed", "m", "al", "N", "or", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "50", "100", "150", "200", "250", "300", "Epoch", "Number", "(a)", "Inputs", "Network", "Labels", "5", "5", "7", "557"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 94.56,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure4-1.png"
+}, {
+  "caption": "Figure 7: Simulated singular value trajectories and systematic/non-systematic input/output partitioned norms for the four alternative learning rules compared to the gradient descent trajectories and norms.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 672.861572265625,
+    "y2": 689.822998046875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Simulated", "singular", "value", "trajectories", "and", "partitioned", "norms", "for", "the", "quasi-predictive", "coding", "(PC)", "learning", "rule", "(γ", "=", "−1,", "η", "=", "0)", "compared", "to", "the", "gradient", "descent", "(GD)", "trajectories", "and", "norms.", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "500", "1000", "1500", "2000", "2500", "3000", "Epoch", "number", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "500", "1000", "1500", "2000", "2500", "3000", "Epoch", "number", "(c)", "Simulated", "singular", "value", "trajectories", "and", "partitioned", "norms", "for", "the", "hebbian", "(Hebb)", "learning", "rule", "(γ", "→", "0,", "η", ">", "0)", "compared", "to", "the", "gradient", "descent", "(GD)", "trajectories", "and", "norms.", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "250", "500", "750", "1000", "1250", "1500", "Epoch", "number", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "250", "500", "750", "1000", "1250", "1500", "Epoch", "number", "(b)", "Simulated", "singular", "value", "trajectories", "and", "partitioned", "norms", "for", "the", "contrastive", "hebbian", "(CH)", "learning", "rule", "(γ", "=", "1,", "η", "=", "0)", "compared", "to", "the", "gradient", "descent", "(GD)", "trajectories", "and", "norms.", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "250", "500", "750", "1000", "1250", "1500", "Epoch", "number", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "250", "500", "750", "1000", "1250", "1500", "Epoch", "number", "(a)", "Simulated", "singular", "value", "trajectories", "and", "partitioned", "norms", "for", "the", "anti-hebbian", "(AH)", "learning", "rule", "(γ", "→", "0,", "η", "<", "0)", "compared", "to", "the", "gradient", "descent", "(GD)", "trajectories", "and", "norms.", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "250", "500", "750", "1000", "1250", "1500", "Epoch", "number", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "250", "500", "750", "1000", "1250", "1500", "Epoch", "number"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 137.28,
+    "x2": 475.2,
+    "y1": 102.72,
+    "y2": 658.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure7-1.png"
+}, {
+  "caption": "Figure 6: Training dynamics of the deep network mapping partitioned by the compositional and non-compositional inputs and output on two linear neural module. One module maps exclusively to the compositional output, while the other maps exclusively to the non-compositional output. a) Learning trajectories of the three unique Singular Values learned by the output-split network. b) Frobenius norms of the output partitioned network.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6681213378906,
+    "y1": 254.96450805664062,
+    "y2": 304.802001953125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Predicted", "ΩxΩy-Norm", "Predicted", "ΓxΩy-Norm", "Predicted", "ΩxΓy-Norm", "Predicted", "ΓxΓy-Norm", "ΩxΩy-Norm", "ΓxΩy-Norm", "ΩxΓy-Norm", "ΓxΓy-Norm", "m", "N", "or", "iu", "s", "b", "en", "F", "ro", "1.75", "1.50", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number", "(a)", "Prediction", "π1", "Prediction", "π2", "Prediction", "π3", "Real", "π1", "Real", "π2", "Real", "π3", "e", "al", "u", "r", "V", "gu", "la", "S", "in", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "50", "100", "150", "200", "250", "300", "Epoch", "number"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 479.03999999999996,
+    "y1": 98.88,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Fh97BDaR6I-Figure6-1.png"
+}]

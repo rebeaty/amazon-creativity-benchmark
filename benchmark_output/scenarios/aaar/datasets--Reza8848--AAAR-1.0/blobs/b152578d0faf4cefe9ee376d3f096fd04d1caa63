@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 5: A concept diagram of our method in learning the dictionary.",
+  "captionBoundary": {
+    "x1": 179.97000122070312,
+    "x2": 432.03057861328125,
+    "y1": 215.17776489257812,
+    "y2": 220.58001708984375
+  },
+  "figType": "Figure",
+  "imageText": ["d(±a)", "(fig.1)", "<latexit", "sha1_base64=\"HNHdCiV1Tw7cgOr1CPFwyIxOGnM=\">AAAB/XicbVBLSwMxGMzWV62v9XHzEixCvZRdKeqx6MVjBfuA7lKy2WwbmmSXJCvUpfhXvHhQxKv/w5v/xmy7B20dCBlmvo9MJkgYVdpxvq3Syura+kZ5s7K1vbO7Z+8fdFScSkzaOGax7AVIEUYFaWuqGeklkiAeMNINxje5330gUtFY3OtJQnyOhoJGFCNtpIF9FNa8hEMviFmoJtxcEJ0N7KpTd2aAy8QtSBUUaA3sLy+MccqJ0Jghpfquk2g/Q1JTzMi04qWKJAiP0ZD0DRWIE+Vns/RTeGqUEEaxNEdoOFN/b2SIqzyameRIj9Sil4v/ef1UR1d+RkWSaiLw/KEoZVDHMK8ChlQSrNnEEIQlNVkhHiGJsDaFVUwJ7uKXl0nnvO5e1Bt3jWrzuqijDI7BCagBF1yCJrgFLdAGGDyCZ/AK3qwn68V6tz7moyWr2DkEf2B9/gB+c5Se</latexit>", "+", "\"𝑎#", "\"𝑎\"", "\"𝑎!", "⋯", "𝑎#", "𝑎\"", "𝑎!", "⋯", "𝐿\"", "Update", "1st", "Channel", "Representation", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "k-th", "Channel", "Representation", "2nd", "Channel", "Representation", "⋯", "Dot", "product", "<latexit", "sha1_base64=\"D2HlCMMlokGJsyXPfwXnkbAIWxc=\">AAACInicbVDJSgNBEO2JW4xb1KOXxiB4CjMiLrdgLgoeIjELZELo6VSSJj0L3TVqGPItXvwVLx4U9ST4MXaWgyY+KHi8V0VVPS+SQqNtf1mphcWl5ZX0amZtfWNzK7u9U9VhrDhUeChDVfeYBikCqKBACfVIAfM9CTWvXxz5tTtQWoTBLQ4iaPqsG4iO4AyN1MqeuwgPZi4p40BCOWIc6JC6PsMeZ5KWqatEt4dMqfB+Iis/KV5flYatbM7O22PQeeJMSY5MUWplP9x2yGMfAuSSad1w7AibCVMouIRhxo01mP191oWGoQHzQTeT8YtDemCUNu2EylSAdKz+nkiYr/XA90zn6Eg9643E/7xGjJ2zZiKCKEYI+GRRJ5YUQzrKi7aFAo5yYAjjSphbKe8xxTiaVDMmBGf25XlSPco7J/njm+Nc4WIaR5rskX1ySBxySgrkkpRIhXDySJ7JK3mznqwX6936nLSmrOnMLvkD6/sHO7aktA==</latexit>", "StyleSpace", "S", "!", "CLIP", "!", "D", "Initialize", "<latexit", "sha1_base64=\"rXu+J+kcJP2cESzbPcPgpLOstMg=\">AAAB8XicbVDLSgMxFL1TX7W+qi7dBIvgqsyIqMuiLlxWsA9sh5JJM21oJjMkd4RS+hduXCji1r9x59+YaWehrQcCh3PuJeeeIJHCoOt+O4WV1bX1jeJmaWt7Z3evvH/QNHGqGW+wWMa6HVDDpVC8gQIlbyea0yiQvBWMbjK/9cS1EbF6wHHC/YgOlAgFo2ilx25EcRgE5LbUK1fcqjsDWSZeTiqQo94rf3X7MUsjrpBJakzHcxP0J1SjYJJPS93U8ISyER3wjqWKRtz4k1niKTmxSp+EsbZPIZmpvzcmNDJmHAV2MktoFr1M/M/rpBhe+ROhkhS5YvOPwlQSjEl2PukLzRnKsSWUaWGzEjakmjK0JWUleIsnL5PmWdW7qJ7fn1dq13kdRTiCYzgFDy6hBndQhwYwUPAMr/DmGOfFeXc+5qMFJ985hD9wPn8AcgqQHw==</latexit>", "⋯", "0$%", "0!%", "⋯", "⋯", "⋯", "0$!", "0!!", "⋯", "⋯", "Unsupervised", "direction", "𝒂", "∈", "𝑆", "Estimated", "direction", "$𝒂", "∈", "𝑆", "Learning", "a", "Channel-wise", "Representation", "𝑎#", "𝑎\"", "𝑎!", "⋯", "\"𝑎#", "\"𝑎\"", "\"𝑎!", "⋯"],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure5-1.png"
+}, {
+  "caption": "Figure 16: Additional manipulation results on LSUNcar-pretrained StyleGAN-ADA. Equal configuration for both GlobalDirection (denoted as GD)and Ours. Used image instead of text as a guidance encoded into CLIP with encoder E(·).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.15301513671875,
+    "y1": 287.6617431640625,
+    "y2": 312.989013671875
+  },
+  "figType": "Figure",
+  "imageText": ["Target", "Image", "Source", "Image", "GD", "Ours", "Source", "Image", "GD", "Ours"],
+  "name": "16",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 143.04,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure16-1.png"
+}, {
+  "caption": "Figure 17: Additional manipulation results on LSUNchuch-pretrained StyleGAN-ADA. Equal configuration for both GlobalDirection (denoted as GD) and Ours. Used image instead of text as a guidance encoded into CLIP with encoder E(·).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1507873535156,
+    "y1": 641.9476928710938,
+    "y2": 667.2750244140625
+  },
+  "figType": "Figure",
+  "imageText": ["Target", "Image", "Source", "Image", "GD", "Ours", "Source", "Image", "GD", "Ours"],
+  "name": "17",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 482.4,
+    "y1": 461.76,
+    "y2": 613.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure17-1.png"
+}, {
+  "caption": "Table 2: MSE measured in StyleSpace.",
+  "captionBoundary": {
+    "x1": 130.98500061035156,
+    "x2": 274.7861022949219,
+    "y1": 162.15451049804688,
+    "y2": 168.156982421875
+  },
+  "figType": "Table",
+  "imageText": ["Top−", "r", "10", "0.224", "0.242", "0.221", "0.234", "30", "0.228", "0.249", "0.226", "0.241", "50", "0.232", "0.251", "0.229", "0.243", "100", "0.237", "0.254", "0.235", "0.246", "Global", "Direction", "Ours", "Global", "Direction", "Ours", "Source", "Image", "(Generated)", "Source", "Image", "(Real)", "MSE", "(", "α,", "α̂", "·", "I{0}(α)", ")", "0.006218", "±", "0.00658", "0.00486", "±", "0.00363", "MSE(α,", "α̂)", "0.0315", "±", "0.0037", "0.0057", "±", "0.0034", "MSE", "(", "α,", "α̂", "·", "I{R̸=0}(α)", ")", "0.0267", "±", "0.00114", "0.0005", "±", "0.00001", "Global", "Direction", "Ours"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 159.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Table2-1.png"
+}, {
+  "caption": "Table 4: We report the effect of the hyper-parameter λ and the candidates for top− r for creating the sparsified unsupervised directions. ID(., .) indicates ArcFace Loss, which measures a change in identity, between the original image and edited image. Note that ID loss tends to increase as the image is manipulated properly.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0038757324219,
+    "y1": 352.13153076171875,
+    "y2": 391.010009765625
+  },
+  "figType": "Table",
+  "imageText": ["Top-r", "10", "0.125", "0.106", "0.375", "0.175", "10,", "30", "0.098", "0.140", "0.075", "0.390", "10,", "30,", "50", "0.115", "0.141", "0.417", "0.284", "10,", "30,", "50,", "100", "0.120", "0.121", "0.225", "0.007", "λ", "0.1", "0.01", "0.1", "0.01", "RCLIP", "(t,Xedit)", "ID(X,Xedit)"],
+  "name": "4",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 403.68,
+    "y2": 487.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Table4-1.png"
+}, {
+  "caption": "Figure 11: Manipulated images using randomly selected text from Visual Semantic Ontology (VSO). We show manipulated image via GlobalDirection (denoted as GD) and Ours.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.31927490234375,
+    "y1": 641.5247192382812,
+    "y2": 656.8890380859375
+  },
+  "figType": "Figure",
+  "imageText": ["Original", "GD", "Ours", "Innocent", "Eyes", "Original", "GD", "Ours", "Smiling", "Eyes", "Sick", "Face", "Shiny", "Hair", "Sexy", "Lips", "Mad", "Eyes", "Hot", "Blonde", "Friendly", "Smile", "Crazy", "Eyes", "Crying", "Eyes"],
+  "name": "11",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 502.08,
+    "y1": 192.48,
+    "y2": 602.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure11-1.png"
+}, {
+  "caption": "Figure 1: A diagram depicting the framework of dictionary-based image manipulation via text guidance",
+  "captionBoundary": {
+    "x1": 119.81097412109375,
+    "x2": 492.19439697265625,
+    "y1": 522.5577392578125,
+    "y2": 527.9600219726562
+  },
+  "figType": "Figure",
+  "imageText": ["(a):", "d(±∆s)", "in", "Eq.", "(2)", "(b):", "GlobalDirection", "D", "<latexit", "sha1_base64=\"4BtIoxPk94Nab6EsfIsRO3IYUN4=\">AAAB+XicbVDLSgMxFL1TX7W+Rl26CRbBVZkRUZdFNy4r2gd0hpJJ0zY0yQxJplCG/okbF4q49U/c+Tdm2llo64HA4Zx7uScnSjjTxvO+ndLa+sbmVnm7srO7t3/gHh61dJwqQpsk5rHqRFhTziRtGmY47SSKYhFx2o7Gd7nfnlClWSyfzDShocBDyQaMYGOlnuvqQDOBAoHNiGCOHntu1at5c6BV4hekCgUaPfcr6MckFVQawrHWXd9LTJhhZRjhdFYJUk0TTMZ4SLuWSiyoDrN58hk6s0ofDWJlnzRorv7eyLDQeioiO5kn1MteLv7ndVMzuAkzJpPUUEkWhwYpRyZGeQ2ozxQlhk8twUQxmxWREVaYGFtWxZbgL395lbQuav5V7fLhslq/Leoowwmcwjn4cA11uIcGNIHABJ7hFd6czHlx3p2PxWjJKXaO4Q+czx/tG5M1</latexit>", "s", "⇠", "S", "<latexit", "sha1_base64=\"rXu+J+kcJP2cESzbPcPgpLOstMg=\">AAAB8XicbVDLSgMxFL1TX7W+qi7dBIvgqsyIqMuiLlxWsA9sh5JJM21oJjMkd4RS+hduXCji1r9x59+YaWehrQcCh3PuJeeeIJHCoOt+O4WV1bX1jeJmaWt7Z3evvH/QNHGqGW+wWMa6HVDDpVC8gQIlbyea0yiQvBWMbjK/9cS1EbF6wHHC/YgOlAgFo2ilx25EcRgE5LbUK1fcqjsDWSZeTiqQo94rf3X7MUsjrpBJakzHcxP0J1SjYJJPS93U8ISyER3wjqWKRtz4k1niKTmxSp+EsbZPIZmpvzcmNDJmHAV2MktoFr1M/M/rpBhe+ROhkhS5YvOPwlQSjEl2PukLzRnKsSWUaWGzEjakmjK0JWUleIsnL5PmWdW7qJ7fn1dq13kdRTiCYzgFDy6hBndQhwYwUPAMr/DmGOfFeXc+5qMFJ985hD9wPn8AcgqQHw==</latexit>", "↓", ":", "Encodes", "a", "direction", "Δ𝑆", "into", "CLIP", "Space", "<latexit", "sha1_base64=\"sDBRPwSu3ObKuk77KsrrIYidRZk=\">AAAB+HicbVBNS8NAEJ34WetHox69LBahXkoiRT0W9eCxov2AJpTNZtMu3U3C7kaopb/EiwdFvPpTvPlv3LY5aOuDgcd7M8zMC1LOlHacb2tldW19Y7OwVdze2d0r2fsHLZVkktAmSXgiOwFWlLOYNjXTnHZSSbEIOG0Hw+up336kUrEkftCjlPoC92MWMYK1kXp2Kax4qUDeDeUao/vTnl12qs4MaJm4OSlDjkbP/vLChGSCxppwrFTXdVLtj7HUjHA6KXqZoikmQ9ynXUNjLKjyx7PDJ+jEKCGKEmkq1mim/p4YY6HUSASmU2A9UIveVPzP62Y6uvTHLE4zTWMyXxRlHOkETVNAIZOUaD4yBBPJzK2IDLDERJusiiYEd/HlZdI6q7rn1dpdrVy/yuMowBEcQwVcuIA63EIDmkAgg2d4hTfryXqx3q2PeeuKlc8cwh9Ynz8RGpIR</latexit>", "d(±", "S)", "Single", "channel", "manipulation", "si", "=", "[0,", "·", "·", "·", ",", "0,", "i,", "0,", "·", "·", "·", ",", "0]", "<latexit", "sha1_base64=\"qfJgnHlyVYzTn/IuhKT/Cd2A/As=\">AAACG3icbZDLSsNAFIYnXmu9VV26GSyCi1KSUtSNUNSFywr2Am0Ik8m0HTqThJkToYS+hxtfxY0LRVwJLnwbp20WtfWHgY//nMOZ8/ux4Bps+8daWV1b39jMbeW3d3b39gsHh00dJYqyBo1EpNo+0UzwkDWAg2DtWDEifcFa/vBmUm89MqV5FD7AKGauJP2Q9zglYCyvUOneMgEEa4/jK9yxS7hLgwh0CU9Q874kHi/N265XKNpleyq8DE4GRZSp7hW+ukFEE8lCoIJo3XHsGNyUKOBUsHG+m2gWEzokfdYxGBLJtJtObxvjU+MEuBcp80LAU3d+IiVS65H0TackMNCLtYn5X62TQO/STXkYJ8BCOlvUSwSGCE+CwgFXjIIYGSBUcfNXTAdEEQomzrwJwVk8eRmalbJzXq7eV4u16yyOHDpGJ+gMOegC1dAdqqMGougJvaA39G49W6/Wh/U5a12xspkj9EfW9y+b/54N</latexit>", "Style", "GAN", "CLIP", "Encoder", "Style", "GAN", "𝑠", "+", "Δ𝑆", "CLIP", "Encoder", "𝑠", "−", "Δ𝑆", "<latexit", "sha1_base64=\"D2HlCMMlokGJsyXPfwXnkbAIWxc=\">AAACInicbVDJSgNBEO2JW4xb1KOXxiB4CjMiLrdgLgoeIjELZELo6VSSJj0L3TVqGPItXvwVLx4U9ST4MXaWgyY+KHi8V0VVPS+SQqNtf1mphcWl5ZX0amZtfWNzK7u9U9VhrDhUeChDVfeYBikCqKBACfVIAfM9CTWvXxz5tTtQWoTBLQ4iaPqsG4iO4AyN1MqeuwgPZi4p40BCOWIc6JC6PsMeZ5KWqatEt4dMqfB+Iis/KV5flYatbM7O22PQeeJMSY5MUWplP9x2yGMfAuSSad1w7AibCVMouIRhxo01mP191oWGoQHzQTeT8YtDemCUNu2EylSAdKz+nkiYr/XA90zn6Eg9643E/7xGjJ2zZiKCKEYI+GRRJ5YUQzrKi7aFAo5yYAjjSphbKe8xxTiaVDMmBGf25XlSPco7J/njm+Nc4WIaR5rskX1ySBxySgrkkpRIhXDySJ7JK3mznqwX6936nLSmrOnMLvkD6/sHO7aktA==</latexit>", "StyleSpace", "S", "!", "CLIP", "𝑑(±Δ𝑠3)", "𝑑(±Δ𝑠2)", "⋯", "<latexit", "sha1_base64=\"PWAGdEZl8WiIiakm1OJ5h9+VOiE=\">AAACAXicbVDLSsNAFJ34rPUVdSO4GSyCq5JIUZdFBV1WsA9oS5lMJ+3QySTM3Igl1I2/4saFIm79C3f+jZM0C209MHA4517unONFgmtwnG9rYXFpeWW1sFZc39jc2rZ3dhs6jBVldRqKULU8opngktWBg2CtSDESeII1vdFl6jfvmdI8lHcwjlg3IAPJfU4JGKln73eAPQBAci1Cj4grrhhNnUnPLjllJwOeJ25OSihHrWd/dfohjQMmgQqiddt1IugmRAGngk2KnViziNARGbC2oZIETHeTLMEEHxmlj/1QmScBZ+rvjYQEWo8Dz0wGBIZ61kvF/7x2DP55N+EyioFJOj3kxwJDiNM6cD8LLMaGEKq4+SumQ6IIBVNa0ZTgzkaeJ42TsntartxWStWLvI4COkCH6Bi56AxV0Q2qoTqi6BE9o1f0Zj1ZL9a79TEdXbDynT30B9bnD4Ycl5c=</latexit>", "GlobalDirection", "Explicit", "Encoding", "$𝑠#", "\"𝑠\"", "Dictionary", "Based", "Framework", "Ours<latexit", "sha1_base64=\"PWAGdEZl8WiIiakm1OJ5h9+VOiE=\">AAACAXicbVDLSsNAFJ34rPUVdSO4GSyCq5JIUZdFBV1WsA9oS5lMJ+3QySTM3Igl1I2/4saFIm79C3f+jZM0C209MHA4517unONFgmtwnG9rYXFpeWW1sFZc39jc2rZ3dhs6jBVldRqKULU8opngktWBg2CtSDESeII1vdFl6jfvmdI8lHcwjlg3IAPJfU4JGKln73eAPQBAci1Cj4grrhhNnUnPLjllJwOeJ25OSihHrWd/dfohjQMmgQqiddt1IugmRAGngk2KnViziNARGbC2oZIETHeTLMEEHxmlj/1QmScBZ+rvjYQEWo8Dz0wGBIZ61kvF/7x2DP55N+EyioFJOj3kxwJDiNM6cD8LLMaGEKq4+SumQ6IIBVNa0ZTgzkaeJ42TsntartxWStWLvI4COkCH6Bi56AxV0Q2qoTqi6BE9o1f0Zj1ZL9a79TEdXbDynT30B9bnD4Ycl5c=</latexit>", "GlobalDirection", "Style", "GAN", "Source", "image", "1st", "Channel", "Representation", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "\"𝑠!", "⋯", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "Text", "Encoding", "CLIP", "space", "<latexit", "sha1_base64=\"KvVC8nWWTTw+rb9GhK3UFQ2H1fs=\">AAAB+HicbVDLSsNAFL2pr1ofjbp0M1gEVyURUZdFNy6r2Ac0sUymk3boZBJmJkIN/RI3LhRx66e482+ctFlo64GBwzn3cs+cIOFMacf5tkorq2vrG+XNytb2zm7V3ttvqziVhLZIzGPZDbCinAna0kxz2k0kxVHAaScYX+d+55FKxWJxrycJ9SM8FCxkBGsj9e2qxwTyIqxHQYDuHpK+XXPqzgxombgFqUGBZt/+8gYxSSMqNOFYqZ7rJNrPsNSMcDqteKmiCSZjPKQ9QwWOqPKzWfApOjbKAIWxNE9oNFN/b2Q4UmoSBWYyj6gWvVz8z+ulOrz0MyaSVFNB5ofClCMdo7wFNGCSEs0nhmAimcmKyAhLTLTpqmJKcBe/vEzap3X3vH52e1ZrXBV1lOEQjuAEXLiABtxAE1pAIIVneIU368l6sd6tj/loySp2DuAPrM8f936Spw==</latexit>2", "Rp", "+", "Dot", "product", "D", "<latexit", "sha1_base64=\"rXu+J+kcJP2cESzbPcPgpLOstMg=\">AAAB8XicbVDLSgMxFL1TX7W+qi7dBIvgqsyIqMuiLlxWsA9sh5JJM21oJjMkd4RS+hduXCji1r9x59+YaWehrQcCh3PuJeeeIJHCoOt+O4WV1bX1jeJmaWt7Z3evvH/QNHGqGW+wWMa6HVDDpVC8gQIlbyea0yiQvBWMbjK/9cS1EbF6wHHC/YgOlAgFo2ilx25EcRgE5LbUK1fcqjsDWSZeTiqQo94rf3X7MUsjrpBJakzHcxP0J1SjYJJPS93U8ISyER3wjqWKRtz4k1niKTmxSp+EsbZPIZmpvzcmNDJmHAV2MktoFr1M/M/rpBhe+ROhkhS5YvOPwlQSjEl2PukLzRnKsSWUaWGzEjakmjK0JWUleIsnL5PmWdW7qJ7fn1dq13kdRTiCYzgFDy6hBndQhwYwUPAMr/DmGOfFeXc+5qMFJ985hD9wPn8AcgqQHw==</latexit>", "k-th", "Channel", "Representation", "!", "⋯", "2nd", "Channel", "Representation", "StyleSpace", "Dictionary", "CLIP", "Encoder", "𝐸(𝑡)", "Little", "Mermaid"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 98.39999999999999,
+    "x2": 485.28,
+    "y1": 260.64,
+    "y2": 510.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure1-1.png"
+}, {
+  "caption": "Figure 13: Manipulation results showing the disentanglement of Ours when using 100, 500, 1000 channels, and without pruning channels. StyleCLIP GlobalDirection manifests image collapse when using over 500 channels while Ours shows robustness against entanglement.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.12359619140625,
+    "y1": 707.3126831054688,
+    "y2": 732.6409912109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 696.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure13-1.png"
+}, {
+  "caption": "Figure 8: Manipulation by the direction with highest cosine similarity. We find the unsupervised direction with highest similarity given text ‘Little mermaid’ and ‘Joker smile’. Then we manipulate the image using the found direction. This shows that our method successfully discovers directions that has not been encountered during the course of dictionary learning.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.0009765625,
+    "y1": 691.5827026367188,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": ["Little", "mermaid", "(similarity", "0.1094)", "Joker", "smile", "(similarity", "0.1901)"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 626.4,
+    "y2": 679.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Evaluation on the ability to recover unsupervised directions. (a) Error between ground truth α and the estimate α̂ (b) Manipulation ability: Error between the non-zero entries(c) Disentanglement: Error between the zero entries (d) CLIP similarity between text and the edited image by Multi2One, GlobalDirection, and unsupervised method.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9987487792969,
+    "y1": 199.40377807617188,
+    "y2": 234.6939697265625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "MSE(α,", "α̂)", "(b)", "MSE", "(", "α,", "α̂", "·", "I{R̸=0}(α)", ")", "(c)", "MSE", "(", "α,", "α̂", "·", "I{0}(α)", ")", "(d)", "RCLIP(t,Xedited)", "MSE(↵,", "↵̂", "·", "I{R", "6=0})", "<latexit", "sha1_base64=\"jmocXWO29kZERD3TnoCR1H2g2mw=\">AAACQnicbVBNSxxBEO3RaMz6teoxlyaLoCDLjIjmKIpgDgGjWT/YXpaanl63sad76K4RlmF+mxd/gTd/gJccEoJXD+nZ3YBfBU2/eq+KqnpxpqTDMLwPJiY/TE1/nPlUm52bX1isLy2fOpNbLlrcKGPPY3BCSS1aKFGJ88wKSGMlzuKr/Uo/uxbWSaN/4iATnRQutexJDuipbv3i+8nBGouNStwg9R9loLI+bNBnXMH6gMVIKEvGE4OUpYD9OKbfugUr/ifHPtGChiUry/VuvRE2w2HQtyAagwYZx1G3fscSw/NUaOQKnGtHYYadAixKrkRZY7kTGfAruBRtDzWkwnWKoQUlXfVMQnvG+qeRDtnnHQWkrrrGV1bLutdaRb6ntXPsfe0UUmc5Cs1Hg3q5omho5SdNpBUc1cAD4Fb6XSnvgwWO3vWaNyF6ffJbcLrZjLabWz+2Grt7YztmyGfyhayRiOyQXXJIjkiLcHJDHshv8ie4DX4Ff4PHUelEMO5ZIS8iePoHG1WxtQ==</latexit>", "MSE(↵,", "↵̂", "·", "I{R", "6=0})", "<latexit", "sha1_base64=\"jmocXWO29kZERD3TnoCR1H2g2mw=\">AAACQnicbVBNSxxBEO3RaMz6teoxlyaLoCDLjIjmKIpgDgGjWT/YXpaanl63sad76K4RlmF+mxd/gTd/gJccEoJXD+nZ3YBfBU2/eq+KqnpxpqTDMLwPJiY/TE1/nPlUm52bX1isLy2fOpNbLlrcKGPPY3BCSS1aKFGJ88wKSGMlzuKr/Uo/uxbWSaN/4iATnRQutexJDuipbv3i+8nBGouNStwg9R9loLI+bNBnXMH6gMVIKEvGE4OUpYD9OKbfugUr/ifHPtGChiUry/VuvRE2w2HQtyAagwYZx1G3fscSw/NUaOQKnGtHYYadAixKrkRZY7kTGfAruBRtDzWkwnWKoQUlXfVMQnvG+qeRDtnnHQWkrrrGV1bLutdaRb6ntXPsfe0UUmc5Cs1Hg3q5omho5SdNpBUc1cAD4Fb6XSnvgwWO3vWaNyF6ffJbcLrZjLabWz+2Grt7YztmyGfyhayRiOyQXXJIjkiLcHJDHshv8ie4DX4Ff4PHUelEMO5ZIS8iePoHG1WxtQ==</latexit>", "MSE(↵,", "↵̂", "·", "I{R", "6=0})Ours:", "StyleCLIP(gd):", "<latexit", "sha1_base64=\"jmocXWO29kZERD3TnoCR1H2g2mw=\">AAACQnicbVBNSxxBEO3RaMz6teoxlyaLoCDLjIjmKIpgDgGjWT/YXpaanl63sad76K4RlmF+mxd/gTd/gJccEoJXD+nZ3YBfBU2/eq+KqnpxpqTDMLwPJiY/TE1/nPlUm52bX1isLy2fOpNbLlrcKGPPY3BCSS1aKFGJ88wKSGMlzuKr/Uo/uxbWSaN/4iATnRQutexJDuipbv3i+8nBGouNStwg9R9loLI+bNBnXMH6gMVIKEvGE4OUpYD9OKbfugUr/ifHPtGChiUry/VuvRE2w2HQtyAagwYZx1G3fscSw/NUaOQKnGtHYYadAixKrkRZY7kTGfAruBRtDzWkwnWKoQUlXfVMQnvG+qeRDtnnHQWkrrrGV1bLutdaRb6ntXPsfe0UUmc5Cs1Hg3q5omho5SdNpBUc1cAD4Fb6XSnvgwWO3vWaNyF6ffJbcLrZjLabWz+2Grt7YztmyGfyhayRiOyQXXJIjkiLcHJDHshv8ie4DX4Ff4PHUelEMO5ZIS8iePoHG1WxtQ==</latexit>", "StyleCLIP(gd):", "<latexit", "sha1_base64=\"oWZVZoVayPAzVpb/d6HvYsZ7q4I=\">AAACG3icbVDLSgMxFM34rPVVdekmWIQKUmZKUZdFEdwIFe0DOkO5k8m0oZkHSUYoQ//Djb/ixoUirgQX/o2ZtovaeiDkcM693HuPG3MmlWn+GEvLK6tr67mN/ObW9s5uYW+/KaNEENogEY9E2wVJOQtpQzHFaTsWFAKX05Y7uMr81iMVkkXhgxrG1AmgFzKfEVBa6hYqt/fXJduNuCeHgf6wDTzuwyme0VK7DyqdGKPRSbdQNMvmGHiRWFNSRFPUu4Uv24tIEtBQEQ5SdiwzVk4KQjHC6ShvJ5LGQAbQox1NQwiodNLxbSN8rBUP+5HQL1R4rM52pBDIbE1dGYDqy3kvE//zOonyL5yUhXGiaEgmg/yEYxXhLCjsMUGJ4kNNgAimd8WkDwKI0nHmdQjW/MmLpFkpW2fl6l21WLucxpFDh+gIlZCFzlEN3aA6aiCCntALekPvxrPxanwYn5PSJWPac4D+wPj+BXpMob0=</latexit>", "MSE(↵,", "↵̂)", "<latexit", "sha1_base64=\"oWZVZoVayPAzVpb/d6HvYsZ7q4I=\">AAACG3icbVDLSgMxFM34rPVVdekmWIQKUmZKUZdFEdwIFe0DOkO5k8m0oZkHSUYoQ//Djb/ixoUirgQX/o2ZtovaeiDkcM693HuPG3MmlWn+GEvLK6tr67mN/ObW9s5uYW+/KaNEENogEY9E2wVJOQtpQzHFaTsWFAKX05Y7uMr81iMVkkXhgxrG1AmgFzKfEVBa6hYqt/fXJduNuCeHgf6wDTzuwyme0VK7DyqdGKPRSbdQNMvmGHiRWFNSRFPUu4Uv24tIEtBQEQ5SdiwzVk4KQjHC6ShvJ5LGQAbQox1NQwiodNLxbSN8rBUP+5HQL1R4rM52pBDIbE1dGYDqy3kvE//zOonyL5yUhXGiaEgmg/yEYxXhLCjsMUGJ4kNNgAimd8WkDwKI0nHmdQjW/MmLpFkpW2fl6l21WLucxpFDh+gIlZCFzlEN3aA6aiCCntALekPvxrPxanwYn5PSJWPac4D+wPj+BXpMob0=</latexit>", "MSE(↵,", "↵̂)", "<latexit", "sha1_base64=\"d8GU/zPjZ6dEC3n4TFvfLyrKN2I=\">AAACMnicbVBBSxtBFJ7VWmOqbdSjl6FBSEHCbhH1KIpgDoKljQlkQng7OzFDZneWmbdCWPY3efGXCD3UgyJe+yM6m+RgjQ+G+fi+93jf+8JUSYu+/8dbWv6w8nG1slb9tL7x+Uttc+vK6sxw0eZaadMNwQolE9FGiUp0UyMgDpXohOPTUu/cCGOlTn7hJBX9GK4TOZQc0FGDWuvi51mDhVpFdhK7jzJQ6Qj26CsuZyPAfCYUBeORRspiwFEY0tYgZ7nPiuLboFb3m/606CII5qBO5nU5qN2zSPMsFglyBdb2Aj/Ffg4GJVeiqLLMihT4GK5Fz8EEYmH7+fTkgu46JqJDbdxLkE7Z1xM5xLZ07zpLp/atVpLvab0Mh0f9XCZphiLhs0XDTFHUtMyPRtIIjmriAHAjnVfKR2CAo0u56kII3p68CK6+N4OD5v6P/frxyTyOCtkhX0mDBOSQHJNzcknahJNb8ps8kifvznvwnr2XWeuSN5/ZJv+V9/cf7GarMw==</latexit>", "MSE(↵,", "↵̂", "·", "I{0})", "<latexit", "sha1_base64=\"d8GU/zPjZ6dEC3n4TFvfLyrKN2I=\">AAACMnicbVBBSxtBFJ7VWmOqbdSjl6FBSEHCbhH1KIpgDoKljQlkQng7OzFDZneWmbdCWPY3efGXCD3UgyJe+yM6m+RgjQ+G+fi+93jf+8JUSYu+/8dbWv6w8nG1slb9tL7x+Uttc+vK6sxw0eZaadMNwQolE9FGiUp0UyMgDpXohOPTUu/cCGOlTn7hJBX9GK4TOZQc0FGDWuvi51mDhVpFdhK7jzJQ6Qj26CsuZyPAfCYUBeORRspiwFEY0tYgZ7nPiuLboFb3m/606CII5qBO5nU5qN2zSPMsFglyBdb2Aj/Ffg4GJVeiqLLMihT4GK5Fz8EEYmH7+fTkgu46JqJDbdxLkE7Z1xM5xLZ07zpLp/atVpLvab0Mh0f9XCZphiLhs0XDTFHUtMyPRtIIjmriAHAjnVfKR2CAo0u56kII3p68CK6+N4OD5v6P/frxyTyOCtkhX0mDBOSQHJNzcknahJNb8ps8kifvznvwnr2XWeuSN5/ZJv+V9/cf7GarMw==</latexit>", "MSE(↵,", "↵̂", "·", "I{0})", "Ours:", "Ours:", "StyleCLIP(gd):"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Manipulation results using FFHQ-pretrained StyleGAN2-ADA via text guidance on our method and StyleCLIP GlobalDirection. The samples are manipulated with increasing number of channels that are modified leading to larger changes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0024719238281,
+    "y1": 396.48175048828125,
+    "y2": 421.8089904785156
+  },
+  "figType": "Figure",
+  "imageText": ["s", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "Y", "ou", "ng", "O", "ur", "ile", "r", "S", "m", "Jo", "ke", "s", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "O", "ur", "O", "ur", "s", "O", "ur", "s", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "Bl", "ue", "H", "ai", "r", "ai", "d", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "er", "m", "e", "M", "Li", "ttl"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 504.0,
+    "y1": 249.6,
+    "y2": 385.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure7-1.png"
+}, {
+  "caption": "Table 1: CLIP similarity score on manipulated images with unsupervised directions. r is number of non-zero entries in the unsupervised direction α.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 248.25392150878906,
+    "y1": 382.7345275878906,
+    "y2": 432.572998046875
+  },
+  "figType": "Table",
+  "imageText": ["10", "0.3295", "0.2701", "30", "0.3558", "0.3319", "50", "0.3687", "0.2924", "r", "Unsupervised", "Global", "Direction"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 265.44,
+    "y1": 445.44,
+    "y2": 516.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Table1-1.png"
+}, {
+  "caption": "Figure 14: Additional manipulation results on AFHQdog-pretrained StyleGAN-ADA. Equal configuration for both GlobalDirection (denoted as GD) and Ours.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1516418457031,
+    "y1": 622.4517211914062,
+    "y2": 637.8170166015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 192.0,
+    "y2": 609.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure14-1.png"
+}, {
+  "caption": "Figure 12: Additional manipulation results on FFHQ-pretrained StyleGAN-ADA. Equal configuration for both GlobalDirection (denoted as GD) and Ours.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9977722167969,
+    "y1": 587.4297485351562,
+    "y2": 602.7949829101562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 168.0,
+    "y2": 576.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure12-1.png"
+}, {
+  "caption": "Figure 9: Manipulation results using AFHQ cat and dog pretrained StyleGAN2-ADA via text guidance on our method and StyleCLIP GlobalDirection. The samples are manipulated with increasing number of channels that are modified leading to larger changes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0008850097656,
+    "y1": 309.4697570800781,
+    "y2": 334.7980041503906
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "F", "ur", "sBl", "ue", "O", "ur", "k", "Fu", "r", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "sBl", "ac", "O", "ur", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "oo", "ts", "in", "B", "s", "Pu", "ss", "O", "ur", "al", "C", "at", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "s", "Be", "ng", "O", "ur", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)"],
+  "name": "9",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 504.0,
+    "y1": 148.79999999999998,
+    "y2": 292.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Manipulation results using LSUN car and church pretrained StyleGAN2-ADA via text guidance on our method and StyleCLIP GlobalDirection. The samples are manipulated with increasing number of channels that are modified leading to larger changes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010986328125,
+    "y1": 500.04974365234375,
+    "y2": 525.3770141601562
+  },
+  "figType": "Figure",
+  "imageText": ["h", "hu", "rc", "k", "C", "B", "ric", "(a)", "(b)", "s", "O", "ur", "Ch", "ur", "ch", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "de", "n", "G", "ol", "uc", "h", "k", "Ch", "s", "Br", "ic", "O", "ur", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "s", "O", "ur", "C", "ab", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)", "lo", "w", "Y", "el", "ag", "on", "sBe", "nz", "G", "-W", "O", "ur", "St", "yl", "eC", "LI", "P", "(G", ".D", ".)"],
+  "name": "10",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 505.44,
+    "y1": 360.96,
+    "y2": 483.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure10-1.png"
+}, {
+  "caption": "Figure 15: Additional manipulation results on AFHQcat-pretrained StyleGAN-ADA. Equal configuration for both GlobalDirection (denoted as GD) and Ours.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1533203125,
+    "y1": 622.5046997070312,
+    "y2": 637.8699951171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 209.76,
+    "y2": 611.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure15-1.png"
+}, {
+  "caption": "Figure 4: Manipulation result of controlling the channel index 4520, 4426, and both channels in latent space of pre-trained StyleGAN. GlobalDirection is manipulated by text ‘white hair’.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001708984375,
+    "y1": 557.7037353515625,
+    "y2": 573.0689697265625
+  },
+  "figType": "Figure",
+  "imageText": ["StyleCLIP", "(gd)", "Channel", "Index", "Src", "Edit", "Src", "Edit", "4520", "(single)", "4426", "(single)", "Edit", "Src", "Edit", "Src", "4520+4426", "(multiple)"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 149.28,
+    "x2": 465.12,
+    "y1": 372.0,
+    "y2": 541.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Angle-histogram over directions E ( Gs(s+ ŝ) ) − E ( Gs(s− ŝ) )",
+  "captionBoundary": {
+    "x1": 242.7409210205078,
+    "x2": 492.0179138183594,
+    "y1": 226.72274780273438,
+    "y2": 232.922607421875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "GlobalDirection:", "ŝ", "=", "∆s", "(b)", "Unsupervised:ŝ", "=", "α(50)", "(c)", "Unsupervised:ŝ", "=", "α(100)", "<latexit", "sha1_base64=\"rIs86sU3LGFMaCNgoKzB5Fsf1hE=\">AAACCnicdVDLSsNAFJ3UV62vqEs3o0WoICFJa1t3BTcuK9haaEKZTCbt0MmDmYlQQtdu/BU3LhRx6xe482+ctBVU9MIwh3Pu5Z57vIRRIU3zQyssLa+srhXXSxubW9s7+u5eV8Qpx6SDYxbznocEYTQiHUklI72EExR6jNx444tcv7klXNA4upaThLghGkY0oBhJRQ30QydEcuQF0K84SQgdL2a+mITqgw5iyQidDPSyaZw36/aZDU3DNBt2tZ4Du1Gzq9BSTF5lsKj2QH93/BinIYkkZkiIvmUm0s0QlxQzMi05qSAJwmM0JH0FIxQS4WazU6bwWDE+DGKuXiThjP0+kaFQ5P5UZ25c/NZy8i+tn8qg6WY0SlJJIjxfFKQMyhjmuUCfcoIlmyiAMKfKK8QjxBGWKr2SCuHrUvg/6NqGVTdqV7Vy63QRRxEcgCNQARZogBa4BG3QARjcgQfwBJ61e+1Re9Fe560FbTGzD36U9vYJtn2aPQ==</latexit>", "d(±↵)", "<latexit", "sha1_base64=\"rIs86sU3LGFMaCNgoKzB5Fsf1hE=\">AAACCnicdVDLSsNAFJ3UV62vqEs3o0WoICFJa1t3BTcuK9haaEKZTCbt0MmDmYlQQtdu/BU3LhRx6xe482+ctBVU9MIwh3Pu5Z57vIRRIU3zQyssLa+srhXXSxubW9s7+u5eV8Qpx6SDYxbznocEYTQiHUklI72EExR6jNx444tcv7klXNA4upaThLghGkY0oBhJRQ30QydEcuQF0K84SQgdL2a+mITqgw5iyQidDPSyaZw36/aZDU3DNBt2tZ4Du1Gzq9BSTF5lsKj2QH93/BinIYkkZkiIvmUm0s0QlxQzMi05qSAJwmM0JH0FIxQS4WazU6bwWDE+DGKuXiThjP0+kaFQ5P5UZ25c/NZy8i+tn8qg6WY0SlJJIjxfFKQMyhjmuUCfcoIlmyiAMKfKK8QjxBGWKr2SCuHrUvg/6NqGVTdqV7Vy63QRRxEcgCNQARZogBa4BG3QARjcgQfwBJ61e+1Re9Fe560FbTGzD36U9vYJtn2aPQ==</latexit>", "d(±↵)", "<latexit", "sha1_base64=\"rIs86sU3LGFMaCNgoKzB5Fsf1hE=\">AAACCnicdVDLSsNAFJ3UV62vqEs3o0WoICFJa1t3BTcuK9haaEKZTCbt0MmDmYlQQtdu/BU3LhRx6xe482+ctBVU9MIwh3Pu5Z57vIRRIU3zQyssLa+srhXXSxubW9s7+u5eV8Qpx6SDYxbznocEYTQiHUklI72EExR6jNx444tcv7klXNA4upaThLghGkY0oBhJRQ30QydEcuQF0K84SQgdL2a+mITqgw5iyQidDPSyaZw36/aZDU3DNBt2tZ4Du1Gzq9BSTF5lsKj2QH93/BinIYkkZkiIvmUm0s0QlxQzMi05qSAJwmM0JH0FIxQS4WazU6bwWDE+DGKuXiThjP0+kaFQ5P5UZ25c/NZy8i+tn8qg6WY0SlJJIjxfFKQMyhjmuUCfcoIlmyiAMKfKK8QjxBGWKr2SCuHrUvg/6NqGVTdqV7Vy63QRRxEcgCNQARZogBa4BG3QARjcgQfwBJ61e+1Re9Fe560FbTGzD36U9vYJtn2aPQ==</latexit>", "d(±↵)", "<latexit", "sha1_base64=\"rIs86sU3LGFMaCNgoKzB5Fsf1hE=\">AAACCnicdVDLSsNAFJ3UV62vqEs3o0WoICFJa1t3BTcuK9haaEKZTCbt0MmDmYlQQtdu/BU3LhRx6xe482+ctBVU9MIwh3Pu5Z57vIRRIU3zQyssLa+srhXXSxubW9s7+u5eV8Qpx6SDYxbznocEYTQiHUklI72EExR6jNx444tcv7klXNA4upaThLghGkY0oBhJRQ30QydEcuQF0K84SQgdL2a+mITqgw5iyQidDPSyaZw36/aZDU3DNBt2tZ4Du1Gzq9BSTF5lsKj2QH93/BinIYkkZkiIvmUm0s0QlxQzMi05qSAJwmM0JH0FIxQS4WazU6bwWDE+DGKuXiThjP0+kaFQ5P5UZ25c/NZy8i+tn8qg6WY0SlJJIjxfFKQMyhjmuUCfcoIlmyiAMKfKK8QjxBGWKr2SCuHrUvg/6NqGVTdqV7Vy63QRRxEcgCNQARZogBa4BG3QARjcgQfwBJ61e+1Re9Fe560FbTGzD36U9vYJtn2aPQ==</latexit>", "d(±↵)", "<latexit", "sha1_base64=\"SlgCR5ASV9Bp6sTwCYp9e7Zthno=\">AAACAnicdVDLSsNAFJ3UV62vqCtxM1iEChKStLZ1V9CFywr2AU0ok8mkHTp5MDMRSilu/BU3LhRx61e482+ctBVU9MCFwzn3cu89XsKokKb5oeWWlldW1/LrhY3Nre0dfXevLeKUY9LCMYt510OCMBqRlqSSkW7CCQo9Rjre6CLzO7eECxpHN3KcEDdEg4gGFCOppL5+4IRIDr0A+iUnCaFzSZhEUPTpSV8vmsZ5vWqf2dA0TLNml6sZsWsVuwwtpWQoggWaff3d8WOchiSSmCEhepaZSHeCuKSYkWnBSQVJEB6hAekpGqGQCHcye2EKj5XiwyDmqiIJZ+r3iQkKhRiHnurMDha/vUz8y+ulMqi7ExolqSQRni8KUgZlDLM8oE85wZKNFUGYU3UrxEPEEZYqtYIK4etT+D9p24ZVNSrXlWLjdBFHHhyCI1ACFqiBBrgCTdACGNyBB/AEnrV77VF70V7nrTltMbMPfkB7+wT5cJZ5</latexit>", "d(±", "si)", "<latexit", "sha1_base64=\"SlgCR5ASV9Bp6sTwCYp9e7Zthno=\">AAACAnicdVDLSsNAFJ3UV62vqCtxM1iEChKStLZ1V9CFywr2AU0ok8mkHTp5MDMRSilu/BU3LhRx61e482+ctBVU9MCFwzn3cu89XsKokKb5oeWWlldW1/LrhY3Nre0dfXevLeKUY9LCMYt510OCMBqRlqSSkW7CCQo9Rjre6CLzO7eECxpHN3KcEDdEg4gGFCOppL5+4IRIDr0A+iUnCaFzSZhEUPTpSV8vmsZ5vWqf2dA0TLNml6sZsWsVuwwtpWQoggWaff3d8WOchiSSmCEhepaZSHeCuKSYkWnBSQVJEB6hAekpGqGQCHcye2EKj5XiwyDmqiIJZ+r3iQkKhRiHnurMDha/vUz8y+ulMqi7ExolqSQRni8KUgZlDLM8oE85wZKNFUGYU3UrxEPEEZYqtYIK4etT+D9p24ZVNSrXlWLjdBFHHhyCI1ACFqiBBrgCTdACGNyBB/AEnrV77VF70V7nrTltMbMPfkB7+wT5cJZ5</latexit>", "d(±", "si)", "1/2⇡", "<latexit", "sha1_base64=\"WOi65ddE6eBnoYZFkCyh4Q2uQdA=\">AAAB7nicbVBNSwMxEJ2tX7V+rXr0EiyCF+tuKeqx6MVjBfsB7VKyabYNzWZDkhXK0h/hxYMiXv093vw3pu0etPXBwOO9GWbmhZIzbTzv2ymsrW9sbhW3Szu7e/sH7uFRSyepIrRJEp6oTog15UzQpmGG045UFMchp+1wfDfz209UaZaIRzORNIjxULCIEWys1L7wL6s9yfpu2at4c6BV4uekDDkafferN0hIGlNhCMdad31PmiDDyjDC6bTUSzWVmIzxkHYtFTimOsjm507RmVUGKEqULWHQXP09keFY60kc2s4Ym5Fe9mbif143NdFNkDEhU0MFWSyKUo5Mgma/owFTlBg+sQQTxeytiIywwsTYhEo2BH/55VXSqlb8q0rtoVau3+ZxFOEETuEcfLiGOtxDA5pAYAzP8ApvjnRenHfnY9FacPKZY/gD5/MHC0aOvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"rCCI4DRh7z/4+S6cwkLqWEe4znA=\">AAAB6nicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48V7Qe0oWy2k3bpZhN2N0IJ/QlePCji1V/kzX/jts1BWx8MPN6bYWZekAiujet+O4W19Y3NreJ2aWd3b/+gfHjU0nGqGDZZLGLVCahGwSU2DTcCO4lCGgUC28H4dua3n1BpHstHM0nQj+hQ8pAzaqz00Et4v1xxq+4cZJV4OalAjka//NUbxCyNUBomqNZdz02Mn1FlOBM4LfVSjQllYzrErqWSRqj9bH7qlJxZZUDCWNmShszV3xMZjbSeRIHtjKgZ6WVvJv7ndVMTXvsZl0lqULLFojAVxMRk9jcZcIXMiIkllClubyVsRBVlxqZTsiF4yy+vktZF1bus1u5rlfpNHkcRTuAUzsGDK6jDHTSgCQyG8Ayv8OYI58V5dz4WrQUnnzmGP3A+fwBSq43W</latexit>⇡", "<latexit", "sha1_base64=\"SvEw9j+G6/nNSZebhlvQwRvlSiI=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOlptsvV9yqOwdZJV5OKpCj0S9/9QYxSyOUhgmqdddzE+NnVBnOBE5LvVRjQtmYDrFrqaQRaj+bHzolZ1YZkDBWtqQhc/X3REYjrSdRYDsjakZ62ZuJ/3nd1ITXfsZlkhqUbLEoTAUxMZl9TQZcITNiYgllittbCRtRRZmx2ZRsCN7yy6ukfVH1Lqu1Zq1Sv8njKMIJnMI5eHAFdbiDBrSAAcIzvMKb8+i8OO/Ox6K14OQzx/AHzucPfAeMvQ==</latexit>", "0", "<latexit", "sha1_base64=\"z1DE+nzBuZj5O1Wbei6ZXkUCkzs=\">AAAB7XicbVBNSwMxEJ2tX7V+VT16CRbBU90tRT0WvXisYD+gXUo2zbax2WRJskJZ+h+8eFDEq//Hm//GdLsHbX0w8Hhvhpl5QcyZNq777RTW1jc2t4rbpZ3dvf2D8uFRW8tEEdoikkvVDbCmnAnaMsxw2o0VxVHAaSeY3M79zhNVmknxYKYx9SM8EixkBBsrtb2LWj9mg3LFrboZ0CrxclKBHM1B+as/lCSJqDCEY617nhsbP8XKMMLprNRPNI0xmeAR7VkqcES1n2bXztCZVYYolMqWMChTf0+kONJ6GgW2M8JmrJe9ufif10tMeO2nTMSJoYIsFoUJR0ai+etoyBQlhk8twUQxeysiY6wwMTagkg3BW355lbRrVe+yWr+vVxo3eRxFOIFTOAcPrqABd9CEFhB4hGd4hTdHOi/Ou/OxaC04+cwx/IHz+QOhB46G</latexit>", "0", "<latexit", "sha1_base64=\"UPvcB3vLzw3Tnntt3JCEAFPn1m4=\">AAAB63icbVBNS8NAEJ3Ur1q/qh69LBbBiyWRoh6LXjxWMG2hDWWz3bRLdzdhdyOU0L/gxYMiXv1D3vw3btoctPXBwOO9GWbmhQln2rjut1NaW9/Y3CpvV3Z29/YPqodHbR2nilCfxDxW3RBrypmkvmGG026iKBYhp51wcpf7nSeqNIvlo5kmNBB4JFnECDa5dNFP2KBac+vuHGiVeAWpQYHWoPrVH8YkFVQawrHWPc9NTJBhZRjhdFbpp5ommEzwiPYslVhQHWTzW2fozCpDFMXKljRorv6eyLDQeipC2ymwGetlLxf/83qpiW6CjMkkNVSSxaIo5cjEKH8cDZmixPCpJZgoZm9FZIwVJsbGU7EheMsvr5L2Zd27qjceGrXmbRFHGU7gFM7Bg2towj20wAcCY3iGV3hzhPPivDsfi9aSU8wcwx84nz+8To4N</latexit>", "⇡", "<latexit", "sha1_base64=\"z1DE+nzBuZj5O1Wbei6ZXkUCkzs=\">AAAB7XicbVBNSwMxEJ2tX7V+VT16CRbBU90tRT0WvXisYD+gXUo2zbax2WRJskJZ+h+8eFDEq//Hm//GdLsHbX0w8Hhvhpl5QcyZNq777RTW1jc2t4rbpZ3dvf2D8uFRW8tEEdoikkvVDbCmnAnaMsxw2o0VxVHAaSeY3M79zhNVmknxYKYx9SM8EixkBBsrtb2LWj9mg3LFrboZ0CrxclKBHM1B+as/lCSJqDCEY617nhsbP8XKMMLprNRPNI0xmeAR7VkqcES1n2bXztCZVYYolMqWMChTf0+kONJ6GgW2M8JmrJe9ufif10tMeO2nTMSJoYIsFoUJR0ai+etoyBQlhk8twUQxeysiY6wwMTagkg3BW355lbRrVe+yWr+vVxo3eRxFOIFTOAcPrqABd9CEFhB4hGd4hTdHOi/Ou/OxaC04+cwx/IHz+QOhB46G</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"WOi65ddE6eBnoYZFkCyh4Q2uQdA=\">AAAB7nicbVBNSwMxEJ2tX7V+rXr0EiyCF+tuKeqx6MVjBfsB7VKyabYNzWZDkhXK0h/hxYMiXv093vw3pu0etPXBwOO9GWbmhZIzbTzv2ymsrW9sbhW3Szu7e/sH7uFRSyepIrRJEp6oTog15UzQpmGG045UFMchp+1wfDfz209UaZaIRzORNIjxULCIEWys1L7wL6s9yfpu2at4c6BV4uekDDkafferN0hIGlNhCMdad31PmiDDyjDC6bTUSzWVmIzxkHYtFTimOsjm507RmVUGKEqULWHQXP09keFY60kc2s4Ym5Fe9mbif143NdFNkDEhU0MFWSyKUo5Mgma/owFTlBg+sQQTxeytiIywwsTYhEo2BH/55VXSqlb8q0rtoVau3+ZxFOEETuEcfLiGOtxDA5pAYAzP8ApvjnRenHfnY9FacPKZY/gD5/MHC0aOvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"rCCI4DRh7z/4+S6cwkLqWEe4znA=\">AAAB6nicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48V7Qe0oWy2k3bpZhN2N0IJ/QlePCji1V/kzX/jts1BWx8MPN6bYWZekAiujet+O4W19Y3NreJ2aWd3b/+gfHjU0nGqGDZZLGLVCahGwSU2DTcCO4lCGgUC28H4dua3n1BpHstHM0nQj+hQ8pAzaqz00Et4v1xxq+4cZJV4OalAjka//NUbxCyNUBomqNZdz02Mn1FlOBM4LfVSjQllYzrErqWSRqj9bH7qlJxZZUDCWNmShszV3xMZjbSeRIHtjKgZ6WVvJv7ndVMTXvsZl0lqULLFojAVxMRk9jcZcIXMiIkllClubyVsRBVlxqZTsiF4yy+vktZF1bus1u5rlfpNHkcRTuAUzsGDK6jDHTSgCQyG8Ayv8OYI58V5dz4WrQUnnzmGP3A+fwBSq43W</latexit>⇡", "<latexit", "sha1_base64=\"SvEw9j+G6/nNSZebhlvQwRvlSiI=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOlptsvV9yqOwdZJV5OKpCj0S9/9QYxSyOUhgmqdddzE+NnVBnOBE5LvVRjQtmYDrFrqaQRaj+bHzolZ1YZkDBWtqQhc/X3REYjrSdRYDsjakZ62ZuJ/3nd1ITXfsZlkhqUbLEoTAUxMZl9TQZcITNiYgllittbCRtRRZmx2ZRsCN7yy6ukfVH1Lqu1Zq1Sv8njKMIJnMI5eHAFdbiDBrSAAcIzvMKb8+i8OO/Ox6K14OQzx/AHzucPfAeMvQ==</latexit>", "0", "<latexit", "sha1_base64=\"UPvcB3vLzw3Tnntt3JCEAFPn1m4=\">AAAB63icbVBNS8NAEJ3Ur1q/qh69LBbBiyWRoh6LXjxWMG2hDWWz3bRLdzdhdyOU0L/gxYMiXv1D3vw3btoctPXBwOO9GWbmhQln2rjut1NaW9/Y3CpvV3Z29/YPqodHbR2nilCfxDxW3RBrypmkvmGG026iKBYhp51wcpf7nSeqNIvlo5kmNBB4JFnECDa5dNFP2KBac+vuHGiVeAWpQYHWoPrVH8YkFVQawrHWPc9NTJBhZRjhdFbpp5ommEzwiPYslVhQHWTzW2fozCpDFMXKljRorv6eyLDQeipC2ymwGetlLxf/83qpiW6CjMkkNVSSxaIo5cjEKH8cDZmixPCpJZgoZm9FZIwVJsbGU7EheMsvr5L2Zd27qjceGrXmbRFHGU7gFM7Bg2towj20wAcCY3iGV3hzhPPivDsfi9aSU8wcwx84nz+8To4N</latexit>", "⇡", "<latexit", "sha1_base64=\"UPvcB3vLzw3Tnntt3JCEAFPn1m4=\">AAAB63icbVBNS8NAEJ3Ur1q/qh69LBbBiyWRoh6LXjxWMG2hDWWz3bRLdzdhdyOU0L/gxYMiXv1D3vw3btoctPXBwOO9GWbmhQln2rjut1NaW9/Y3CpvV3Z29/YPqodHbR2nilCfxDxW3RBrypmkvmGG026iKBYhp51wcpf7nSeqNIvlo5kmNBB4JFnECDa5dNFP2KBac+vuHGiVeAWpQYHWoPrVH8YkFVQawrHWPc9NTJBhZRjhdFbpp5ommEzwiPYslVhQHWTzW2fozCpDFMXKljRorv6eyLDQeipC2ymwGetlLxf/83qpiW6CjMkkNVSSxaIo5cjEKH8cDZmixPCpJZgoZm9FZIwVJsbGU7EheMsvr5L2Zd27qjceGrXmbRFHGU7gFM7Bg2towj20wAcCY3iGV3hzhPPivDsfi9aSU8wcwx84nz+8To4N</latexit>", "⇡", "<latexit", "sha1_base64=\"z1DE+nzBuZj5O1Wbei6ZXkUCkzs=\">AAAB7XicbVBNSwMxEJ2tX7V+VT16CRbBU90tRT0WvXisYD+gXUo2zbax2WRJskJZ+h+8eFDEq//Hm//GdLsHbX0w8Hhvhpl5QcyZNq777RTW1jc2t4rbpZ3dvf2D8uFRW8tEEdoikkvVDbCmnAnaMsxw2o0VxVHAaSeY3M79zhNVmknxYKYx9SM8EixkBBsrtb2LWj9mg3LFrboZ0CrxclKBHM1B+as/lCSJqDCEY617nhsbP8XKMMLprNRPNI0xmeAR7VkqcES1n2bXztCZVYYolMqWMChTf0+kONJ6GgW2M8JmrJe9ufif10tMeO2nTMSJoYIsFoUJR0ai+etoyBQlhk8twUQxeysiY6wwMTagkg3BW355lbRrVe+yWr+vVxo3eRxFOIFTOAcPrqABd9CEFhB4hGd4hTdHOi/Ou/OxaC04+cwx/IHz+QOhB46G</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"WOi65ddE6eBnoYZFkCyh4Q2uQdA=\">AAAB7nicbVBNSwMxEJ2tX7V+rXr0EiyCF+tuKeqx6MVjBfsB7VKyabYNzWZDkhXK0h/hxYMiXv093vw3pu0etPXBwOO9GWbmhZIzbTzv2ymsrW9sbhW3Szu7e/sH7uFRSyepIrRJEp6oTog15UzQpmGG045UFMchp+1wfDfz209UaZaIRzORNIjxULCIEWys1L7wL6s9yfpu2at4c6BV4uekDDkafferN0hIGlNhCMdad31PmiDDyjDC6bTUSzWVmIzxkHYtFTimOsjm507RmVUGKEqULWHQXP09keFY60kc2s4Ym5Fe9mbif143NdFNkDEhU0MFWSyKUo5Mgma/owFTlBg+sQQTxeytiIywwsTYhEo2BH/55VXSqlb8q0rtoVau3+ZxFOEETuEcfLiGOtxDA5pAYAzP8ApvjnRenHfnY9FacPKZY/gD5/MHC0aOvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"rCCI4DRh7z/4+S6cwkLqWEe4znA=\">AAAB6nicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48V7Qe0oWy2k3bpZhN2N0IJ/QlePCji1V/kzX/jts1BWx8MPN6bYWZekAiujet+O4W19Y3NreJ2aWd3b/+gfHjU0nGqGDZZLGLVCahGwSU2DTcCO4lCGgUC28H4dua3n1BpHstHM0nQj+hQ8pAzaqz00Et4v1xxq+4cZJV4OalAjka//NUbxCyNUBomqNZdz02Mn1FlOBM4LfVSjQllYzrErqWSRqj9bH7qlJxZZUDCWNmShszV3xMZjbSeRIHtjKgZ6WVvJv7ndVMTXvsZl0lqULLFojAVxMRk9jcZcIXMiIkllClubyVsRBVlxqZTsiF4yy+vktZF1bus1u5rlfpNHkcRTuAUzsGDK6jDHTSgCQyG8Ayv8OYI58V5dz4WrQUnnzmGP3A+fwBSq43W</latexit>⇡", "<latexit", "sha1_base64=\"SvEw9j+G6/nNSZebhlvQwRvlSiI=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOlptsvV9yqOwdZJV5OKpCj0S9/9QYxSyOUhgmqdddzE+NnVBnOBE5LvVRjQtmYDrFrqaQRaj+bHzolZ1YZkDBWtqQhc/X3REYjrSdRYDsjakZ62ZuJ/3nd1ITXfsZlkhqUbLEoTAUxMZl9TQZcITNiYgllittbCRtRRZmx2ZRsCN7yy6ukfVH1Lqu1Zq1Sv8njKMIJnMI5eHAFdbiDBrSAAcIzvMKb8+i8OO/Ox6K14OQzx/AHzucPfAeMvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"WOi65ddE6eBnoYZFkCyh4Q2uQdA=\">AAAB7nicbVBNSwMxEJ2tX7V+rXr0EiyCF+tuKeqx6MVjBfsB7VKyabYNzWZDkhXK0h/hxYMiXv093vw3pu0etPXBwOO9GWbmhZIzbTzv2ymsrW9sbhW3Szu7e/sH7uFRSyepIrRJEp6oTog15UzQpmGG045UFMchp+1wfDfz209UaZaIRzORNIjxULCIEWys1L7wL6s9yfpu2at4c6BV4uekDDkafferN0hIGlNhCMdad31PmiDDyjDC6bTUSzWVmIzxkHYtFTimOsjm507RmVUGKEqULWHQXP09keFY60kc2s4Ym5Fe9mbif143NdFNkDEhU0MFWSyKUo5Mgma/owFTlBg+sQQTxeytiIywwsTYhEo2BH/55VXSqlb8q0rtoVau3+ZxFOEETuEcfLiGOtxDA5pAYAzP8ApvjnRenHfnY9FacPKZY/gD5/MHC0aOvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"rCCI4DRh7z/4+S6cwkLqWEe4znA=\">AAAB6nicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48V7Qe0oWy2k3bpZhN2N0IJ/QlePCji1V/kzX/jts1BWx8MPN6bYWZekAiujet+O4W19Y3NreJ2aWd3b/+gfHjU0nGqGDZZLGLVCahGwSU2DTcCO4lCGgUC28H4dua3n1BpHstHM0nQj+hQ8pAzaqz00Et4v1xxq+4cZJV4OalAjka//NUbxCyNUBomqNZdz02Mn1FlOBM4LfVSjQllYzrErqWSRqj9bH7qlJxZZUDCWNmShszV3xMZjbSeRIHtjKgZ6WVvJv7ndVMTXvsZl0lqULLFojAVxMRk9jcZcIXMiIkllClubyVsRBVlxqZTsiF4yy+vktZF1bus1u5rlfpNHkcRTuAUzsGDK6jDHTSgCQyG8Ayv8OYI58V5dz4WrQUnnzmGP3A+fwBSq43W</latexit>⇡", "<latexit", "sha1_base64=\"SvEw9j+G6/nNSZebhlvQwRvlSiI=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOlptsvV9yqOwdZJV5OKpCj0S9/9QYxSyOUhgmqdddzE+NnVBnOBE5LvVRjQtmYDrFrqaQRaj+bHzolZ1YZkDBWtqQhc/X3REYjrSdRYDsjakZ62ZuJ/3nd1ITXfsZlkhqUbLEoTAUxMZl9TQZcITNiYgllittbCRtRRZmx2ZRsCN7yy6ukfVH1Lqu1Zq1Sv8njKMIJnMI5eHAFdbiDBrSAAcIzvMKb8+i8OO/Ox6K14OQzx/AHzucPfAeMvQ==</latexit>", "0<latexit", "sha1_base64=\"UPvcB3vLzw3Tnntt3JCEAFPn1m4=\">AAAB63icbVBNS8NAEJ3Ur1q/qh69LBbBiyWRoh6LXjxWMG2hDWWz3bRLdzdhdyOU0L/gxYMiXv1D3vw3btoctPXBwOO9GWbmhQln2rjut1NaW9/Y3CpvV3Z29/YPqodHbR2nilCfxDxW3RBrypmkvmGG026iKBYhp51wcpf7nSeqNIvlo5kmNBB4JFnECDa5dNFP2KBac+vuHGiVeAWpQYHWoPrVH8YkFVQawrHWPc9NTJBhZRjhdFbpp5ommEzwiPYslVhQHWTzW2fozCpDFMXKljRorv6eyLDQeipC2ymwGetlLxf/83qpiW6CjMkkNVSSxaIo5cjEKH8cDZmixPCpJZgoZm9FZIwVJsbGU7EheMsvr5L2Zd27qjceGrXmbRFHGU7gFM7Bg2towj20wAcCY3iGV3hzhPPivDsfi9aSU8wcwx84nz+8To4N</latexit>", "⇡", "<latexit", "sha1_base64=\"z1DE+nzBuZj5O1Wbei6ZXkUCkzs=\">AAAB7XicbVBNSwMxEJ2tX7V+VT16CRbBU90tRT0WvXisYD+gXUo2zbax2WRJskJZ+h+8eFDEq//Hm//GdLsHbX0w8Hhvhpl5QcyZNq777RTW1jc2t4rbpZ3dvf2D8uFRW8tEEdoikkvVDbCmnAnaMsxw2o0VxVHAaSeY3M79zhNVmknxYKYx9SM8EixkBBsrtb2LWj9mg3LFrboZ0CrxclKBHM1B+as/lCSJqDCEY617nhsbP8XKMMLprNRPNI0xmeAR7VkqcES1n2bXztCZVYYolMqWMChTf0+kONJ6GgW2M8JmrJe9ufif10tMeO2nTMSJoYIsFoUJR0ai+etoyBQlhk8twUQxeysiY6wwMTagkg3BW355lbRrVe+yWr+vVxo3eRxFOIFTOAcPrqABd9CEFhB4hGd4hTdHOi/Ou/OxaC04+cwx/IHz+QOhB46G</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"WOi65ddE6eBnoYZFkCyh4Q2uQdA=\">AAAB7nicbVBNSwMxEJ2tX7V+rXr0EiyCF+tuKeqx6MVjBfsB7VKyabYNzWZDkhXK0h/hxYMiXv093vw3pu0etPXBwOO9GWbmhZIzbTzv2ymsrW9sbhW3Szu7e/sH7uFRSyepIrRJEp6oTog15UzQpmGG045UFMchp+1wfDfz209UaZaIRzORNIjxULCIEWys1L7wL6s9yfpu2at4c6BV4uekDDkafferN0hIGlNhCMdad31PmiDDyjDC6bTUSzWVmIzxkHYtFTimOsjm507RmVUGKEqULWHQXP09keFY60kc2s4Ym5Fe9mbif143NdFNkDEhU0MFWSyKUo5Mgma/owFTlBg+sQQTxeytiIywwsTYhEo2BH/55VXSqlb8q0rtoVau3+ZxFOEETuEcfLiGOtxDA5pAYAzP8ApvjnRenHfnY9FacPKZY/gD5/MHC0aOvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"rCCI4DRh7z/4+S6cwkLqWEe4znA=\">AAAB6nicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48V7Qe0oWy2k3bpZhN2N0IJ/QlePCji1V/kzX/jts1BWx8MPN6bYWZekAiujet+O4W19Y3NreJ2aWd3b/+gfHjU0nGqGDZZLGLVCahGwSU2DTcCO4lCGgUC28H4dua3n1BpHstHM0nQj+hQ8pAzaqz00Et4v1xxq+4cZJV4OalAjka//NUbxCyNUBomqNZdz02Mn1FlOBM4LfVSjQllYzrErqWSRqj9bH7qlJxZZUDCWNmShszV3xMZjbSeRIHtjKgZ6WVvJv7ndVMTXvsZl0lqULLFojAVxMRk9jcZcIXMiIkllClubyVsRBVlxqZTsiF4yy+vktZF1bus1u5rlfpNHkcRTuAUzsGDK6jDHTSgCQyG8Ayv8OYI58V5dz4WrQUnnzmGP3A+fwBSq43W</latexit>⇡", "<latexit", "sha1_base64=\"SvEw9j+G6/nNSZebhlvQwRvlSiI=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOlptsvV9yqOwdZJV5OKpCj0S9/9QYxSyOUhgmqdddzE+NnVBnOBE5LvVRjQtmYDrFrqaQRaj+bHzolZ1YZkDBWtqQhc/X3REYjrSdRYDsjakZ62ZuJ/3nd1ITXfsZlkhqUbLEoTAUxMZl9TQZcITNiYgllittbCRtRRZmx2ZRsCN7yy6ukfVH1Lqu1Zq1Sv8njKMIJnMI5eHAFdbiDBrSAAcIzvMKb8+i8OO/Ox6K14OQzx/AHzucPfAeMvQ==</latexit>", "0", "<latexit", "sha1_base64=\"z1DE+nzBuZj5O1Wbei6ZXkUCkzs=\">AAAB7XicbVBNSwMxEJ2tX7V+VT16CRbBU90tRT0WvXisYD+gXUo2zbax2WRJskJZ+h+8eFDEq//Hm//GdLsHbX0w8Hhvhpl5QcyZNq777RTW1jc2t4rbpZ3dvf2D8uFRW8tEEdoikkvVDbCmnAnaMsxw2o0VxVHAaSeY3M79zhNVmknxYKYx9SM8EixkBBsrtb2LWj9mg3LFrboZ0CrxclKBHM1B+as/lCSJqDCEY617nhsbP8XKMMLprNRPNI0xmeAR7VkqcES1n2bXztCZVYYolMqWMChTf0+kONJ6GgW2M8JmrJe9ufif10tMeO2nTMSJoYIsFoUJR0ai+etoyBQlhk8twUQxeysiY6wwMTagkg3BW355lbRrVe+yWr+vVxo3eRxFOIFTOAcPrqABd9CEFhB4hGd4hTdHOi/Ou/OxaC04+cwx/IHz+QOhB46G</latexit>", "<latexit", "sha1_base64=\"UPvcB3vLzw3Tnntt3JCEAFPn1m4=\">AAAB63icbVBNS8NAEJ3Ur1q/qh69LBbBiyWRoh6LXjxWMG2hDWWz3bRLdzdhdyOU0L/gxYMiXv1D3vw3btoctPXBwOO9GWbmhQln2rjut1NaW9/Y3CpvV3Z29/YPqodHbR2nilCfxDxW3RBrypmkvmGG026iKBYhp51wcpf7nSeqNIvlo5kmNBB4JFnECDa5dNFP2KBac+vuHGiVeAWpQYHWoPrVH8YkFVQawrHWPc9NTJBhZRjhdFbpp5ommEzwiPYslVhQHWTzW2fozCpDFMXKljRorv6eyLDQeipC2ymwGetlLxf/83qpiW6CjMkkNVSSxaIo5cjEKH8cDZmixPCpJZgoZm9FZIwVJsbGU7EheMsvr5L2Zd27qjceGrXmbRFHGU7gFM7Bg2towj20wAcCY3iGV3hzhPPivDsfi9aSU8wcwx84nz+8To4N</latexit>", "⇡", "<latexit", "sha1_base64=\"z1DE+nzBuZj5O1Wbei6ZXkUCkzs=\">AAAB7XicbVBNSwMxEJ2tX7V+VT16CRbBU90tRT0WvXisYD+gXUo2zbax2WRJskJZ+h+8eFDEq//Hm//GdLsHbX0w8Hhvhpl5QcyZNq777RTW1jc2t4rbpZ3dvf2D8uFRW8tEEdoikkvVDbCmnAnaMsxw2o0VxVHAaSeY3M79zhNVmknxYKYx9SM8EixkBBsrtb2LWj9mg3LFrboZ0CrxclKBHM1B+as/lCSJqDCEY617nhsbP8XKMMLprNRPNI0xmeAR7VkqcES1n2bXztCZVYYolMqWMChTf0+kONJ6GgW2M8JmrJe9ufif10tMeO2nTMSJoYIsFoUJR0ai+etoyBQlhk8twUQxeysiY6wwMTagkg3BW355lbRrVe+yWr+vVxo3eRxFOIFTOAcPrqABd9CEFhB4hGd4hTdHOi/Ou/OxaC04+cwx/IHz+QOhB46G</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"WOi65ddE6eBnoYZFkCyh4Q2uQdA=\">AAAB7nicbVBNSwMxEJ2tX7V+rXr0EiyCF+tuKeqx6MVjBfsB7VKyabYNzWZDkhXK0h/hxYMiXv093vw3pu0etPXBwOO9GWbmhZIzbTzv2ymsrW9sbhW3Szu7e/sH7uFRSyepIrRJEp6oTog15UzQpmGG045UFMchp+1wfDfz209UaZaIRzORNIjxULCIEWys1L7wL6s9yfpu2at4c6BV4uekDDkafferN0hIGlNhCMdad31PmiDDyjDC6bTUSzWVmIzxkHYtFTimOsjm507RmVUGKEqULWHQXP09keFY60kc2s4Ym5Fe9mbif143NdFNkDEhU0MFWSyKUo5Mgma/owFTlBg+sQQTxeytiIywwsTYhEo2BH/55VXSqlb8q0rtoVau3+ZxFOEETuEcfLiGOtxDA5pAYAzP8ApvjnRenHfnY9FacPKZY/gD5/MHC0aOvQ==</latexit>", "1/2⇡", "<latexit", "sha1_base64=\"rCCI4DRh7z/4+S6cwkLqWEe4znA=\">AAAB6nicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48V7Qe0oWy2k3bpZhN2N0IJ/QlePCji1V/kzX/jts1BWx8MPN6bYWZekAiujet+O4W19Y3NreJ2aWd3b/+gfHjU0nGqGDZZLGLVCahGwSU2DTcCO4lCGgUC28H4dua3n1BpHstHM0nQj+hQ8pAzaqz00Et4v1xxq+4cZJV4OalAjka//NUbxCyNUBomqNZdz02Mn1FlOBM4LfVSjQllYzrErqWSRqj9bH7qlJxZZUDCWNmShszV3xMZjbSeRIHtjKgZ6WVvJv7ndVMTXvsZl0lqULLFojAVxMRk9jcZcIXMiIkllClubyVsRBVlxqZTsiF4yy+vktZF1bus1u5rlfpNHkcRTuAUzsGDK6jDHTSgCQyG8Ayv8OYI58V5dz4WrQUnnzmGP3A+fwBSq43W</latexit>⇡", "<latexit", "sha1_base64=\"SvEw9j+G6/nNSZebhlvQwRvlSiI=\">AAAB6HicbVBNS8NAEJ3Ur1q/qh69LBbBU0mkqMeiF48t2FpoQ9lsJ+3azSbsboQS+gu8eFDEqz/Jm//GbZuDtj4YeLw3w8y8IBFcG9f9dgpr6xubW8Xt0s7u3v5B+fCoreNUMWyxWMSqE1CNgktsGW4EdhKFNAoEPgTj25n/8IRK81jem0mCfkSHkoecUWOlptsvV9yqOwdZJV5OKpCj0S9/9QYxSyOUhgmqdddzE+NnVBnOBE5LvVRjQtmYDrFrqaQRaj+bHzolZ1YZkDBWtqQhc/X3REYjrSdRYDsjakZ62ZuJ/3nd1ITXfsZlkhqUbLEoTAUxMZl9TQZcITNiYgllittbCRtRRZmx2ZRsCN7yy6ukfVH1Lqu1Zq1Sv8njKMIJnMI5eHAFdbiDBrSAAcIzvMKb8+i8OO/Ox6K14OQzx/AHzucPfAeMvQ==</latexit>", "0", "<latexit", "sha1_base64=\"UPvcB3vLzw3Tnntt3JCEAFPn1m4=\">AAAB63icbVBNS8NAEJ3Ur1q/qh69LBbBiyWRoh6LXjxWMG2hDWWz3bRLdzdhdyOU0L/gxYMiXv1D3vw3btoctPXBwOO9GWbmhQln2rjut1NaW9/Y3CpvV3Z29/YPqodHbR2nilCfxDxW3RBrypmkvmGG026iKBYhp51wcpf7nSeqNIvlo5kmNBB4JFnECDa5dNFP2KBac+vuHGiVeAWpQYHWoPrVH8YkFVQawrHWPc9NTJBhZRjhdFbpp5ommEzwiPYslVhQHWTzW2fozCpDFMXKljRorv6eyLDQeipC2ymwGetlLxf/83qpiW6CjMkkNVSSxaIo5cjEKH8cDZmixPCpJZgoZm9FZIwVJsbGU7EheMsvr5L2Zd27qjceGrXmbRFHGU7gFM7Bg2towj20wAcCY3iGV3hzhPPivDsfi9aSU8wcwx84nz+8To4N</latexit>", "⇡"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 231.84,
+    "x2": 505.44,
+    "y1": 85.92,
+    "y2": 214.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_47B_ctC4pJ-Figure3-1.png"
+}]

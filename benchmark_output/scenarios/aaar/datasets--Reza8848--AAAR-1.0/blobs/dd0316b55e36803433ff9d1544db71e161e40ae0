@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 1: Results on training ResNet-18 on the CIFAR-10 dataset with GradientMix.",
+  "captionBoundary": {
+    "x1": 137.0649871826172,
+    "x2": 474.9346923828125,
+    "y1": 360.11651611328125,
+    "y2": 366.1189880371094
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "LAMB", "LAMB", "LAMB", "+", "GradientMix", "(Gaussian)", "LAMB", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-10", "dataset", "ce", "rm", "an", "Pe", "rfo", "95.4", "95.2", "95.0", "0.2K", "1K", "2K", "5K", "Batch", "Size", "(c)", "Adam", "Adam", "Adam", "+", "GradientMix", "(Gaussian)", "Adam", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-10", "dataset", "ce", "rm", "an", "Pe", "rfo", "95.4", "95.2", "95.0", "94.8", "0.2K", "1K", "2K", "5K", "Batch", "Size", "(b)", "LARS", "LARS", "LARS", "+", "GradientMix", "(Gaussian)", "LARS", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-10", "dataset", "ce", "rm", "an", "Pe", "rfo", "95.6", "95.4", "95.2", "0.2K", "1K", "2K", "5K", "Batch", "Size", "(a)", "SGD", "with", "momentum", "SGD", "SGD", "+", "GradientMix", "(Gaussian)", "SGD", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-10", "dataset", "ce", "rm", "an", "Pe", "rfo", "95.8", "95.6", "95.4", "95.2", "95.0", "0.2K", "1K", "2K", "5K", "Batch", "Size"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 148.32,
+    "x2": 464.15999999999997,
+    "y1": 88.32,
+    "y2": 353.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5c_nxk-dX1J-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Results on training ResNet-18 on the CIFAR-100 dataset with GradientMix.",
+  "captionBoundary": {
+    "x1": 134.57498168945312,
+    "x2": 477.4256591796875,
+    "y1": 661.2935791015625,
+    "y2": 667.2960205078125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "LAMB", "LAMB", "LAMB", "+", "GradientMix", "(Gaussian)", "LAMB", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-100", "dataset", "ce", "rm", "an", "Pe", "rfo", "78.0", "77.5", "77.0", "0.2K", "1K", "2K", "5K", "Batch", "Size", "(c)", "Adam", "Adam", "Adam", "+", "GradientMix", "(Gaussian)", "Adam", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-100", "dataset", "ce", "rm", "an", "Pe", "rfo", "78.5", "78.0", "77.5", "77.0", "76.5", "0.2K", "1K", "2K", "5K", "Batch", "Size", "(b)", "LARS", "LARS", "LARS", "+", "GradientMix", "(Gaussian)", "LARS", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-100", "dataset", "ce", "rm", "an", "Pe", "rfo", "79.25", "79.00", "78.75", "78.50", "78.25", "0.2K", "1K", "2K", "5K", "Batch", "Size", "(a)", "SGD", "with", "momentum", "SGD", "SGD", "+", "GradientMix", "(Gaussian)", "SGD", "+", "GradientMix", "(Rademacher)", "ResNet-18", "on", "CIFAR-100", "dataset", "ce", "rm", "an", "Pe", "rfo", "79.5", "79.0", "78.5", "78.0", "77.5", "0.2K", "1K", "2K", "5K", "Batch", "Size"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 144.48,
+    "x2": 468.47999999999996,
+    "y1": 387.36,
+    "y2": 654.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5c_nxk-dX1J-Figure2-1.png"
+}, {
+  "caption": "Table 3: The highly fine-tuned hyperparameter configuration for training ResNet-50 on ImageNet dataset for Nesterov and LARS optimizers.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035400390625,
+    "y1": 243.23355102539062,
+    "y2": 260.19500732421875
+  },
+  "figType": "Table",
+  "imageText": ["ηpeak", "7.05", "29.0", "ηfinal", "6×", "10−6", "10−4", "Optimizer", "momentum", "0.97603", "0.929", "Weight", "decay", "5.8×", "10−5", "10−4", "Label", "smoothing", "0.15", "0.1", "Initial", "scale", "parameter", "γ0", "of", "the", "final", "BN", "layer", "of", "each", "residual", "block", "0.4138", "0.0", "Trust", "coefficient", "(only", "for", "LARS)", "N/A", "10−3", "Total", "steps", "(Corresponding", "to", "64", "epochs)", "2512", "2512", "twarmup", "706", "706", "pwarmup", "2.0", "1.0", "pdecay", "2.0", "2.0", "BatchNorm", "momentum", "0.9", "0.9", "BatchNorm", "ϵ", "10−5", "10−5", "Nesterov", "LARS"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 495.35999999999996,
+    "y1": 272.64,
+    "y2": 440.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5c_nxk-dX1J-Table3-1.png"
+}, {
+  "caption": "Figure 3: Results on training Transformer on Multi30k dataset with GradientMix.",
+  "captionBoundary": {
+    "x1": 143.37698364257812,
+    "x2": 468.6236572265625,
+    "y1": 227.90652465820312,
+    "y2": 233.90899658203125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "LAMB", "Transformer", "on", "Multi30k", "dataset", "LAMB", "LAMB", "+", "GradientMix", "(Gaussian)", "LAMB", "+", "GradientMix", "(Rademacher)", "ce", "rm", "an", "Pe", "rfo", "70.5", "70.0", "69.5", "69.0", "68.5", "0.6K", "1K", "2K", "5K", "Batch", "Size", "(a)", "Adam", "Transformer", "on", "Multi30k", "dataset", "Adam", "Adam", "+", "GradientMix", "(Gaussian)", "Adam", "+", "GradientMix", "(Rademacher)", "ce", "rm", "an", "Pe", "rfo", "70", "69", "68", "0.6K", "1K", "2K", "5K", "Batch", "Size"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 144.48,
+    "x2": 468.47999999999996,
+    "y1": 88.32,
+    "y2": 220.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5c_nxk-dX1J-Figure3-1.png"
+}, {
+  "caption": "Table 2: Top-1 accuracy with GradientMix using 32K batch size for training ResNet-50 on ImageNet.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.003662109375,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Gaussian", "(Ours)", "76.17", "±", "0.06", "76.30", "±", "0.05", "76.33", "±", "0.06", "76.50", "±", "0.08", "Rademacher", "(Ours)", "76.25", "±", "0.04", "76.36", "±", "0.07", "76.31", "±", "0.10", "76.47", "±", "0.07", "No", "Noise", "(Baseline)", "75.93", "±", "0.03", "76.15", "±", "0.04", "76.13", "±", "0.09", "76.35", "±", "0.08", "Noise", "Type", "Nesterov", "LARS", "Adam", "LAMB", "Fine-tuned", "hyperparameters", "Standard", "hyperparameters", "with", "64", "epochs", "with", "90", "epochs", "Optimization", "Algorithm", "Top-1", "Accuracy", "(%)", "for", "32K", "Batch", "Size"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 458.4,
+    "y1": 92.64,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5c_nxk-dX1J-Table2-1.png"
+}, {
+  "caption": "Table 1: The trace comparison for trained ResNet18 on CIFAR-10 dataset.",
+  "captionBoundary": {
+    "x1": 305.25299072265625,
+    "x2": 505.65185546875,
+    "y1": 212.29855346679688,
+    "y2": 229.260009765625
+  },
+  "figType": "Table",
+  "imageText": ["SGD", "+", "GradientMix", "(Gaussian)", "4.21", "SGD", "+", "GradientMix", "(Rademacher)", "4.58", "SGD", "Baseline", "5.87", "Method", "log(Tr(G(θ)))"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 504.0,
+    "y1": 236.64,
+    "y2": 296.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5c_nxk-dX1J-Table1-1.png"
+}]

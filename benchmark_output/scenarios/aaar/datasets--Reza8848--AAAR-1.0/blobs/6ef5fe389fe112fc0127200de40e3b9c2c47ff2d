@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 4: Visualization of a solved pair on BA.",
+  "captionBoundary": {
+    "x1": 212.08299255371094,
+    "x2": 399.91778564453125,
+    "y1": 381.7455139160156,
+    "y2": 387.74798583984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 228.0,
+    "y2": 371.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Visualization of a solved pair on BRAIN.",
+  "captionBoundary": {
+    "x1": 205.02999877929688,
+    "x2": 406.97064208984375,
+    "y1": 562.486572265625,
+    "y2": 568.489013671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 408.0,
+    "y2": 551.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure5-1.png"
+}, {
+  "caption": "Figure 2: The growth of the number of solved pairs across time.",
+  "captionBoundary": {
+    "x1": 178.61898803710938,
+    "x2": 433.382568359375,
+    "y1": 449.9135437011719,
+    "y2": 455.916015625
+  },
+  "figType": "Figure",
+  "imageText": ["(g)", "ETHE", "(h)", "YT-S", "(i)", "YT-L", "(d)", "COSMOS", "(e)", "DBLP-S", "(f)", "DBLP-L", "(a)", "BA", "(b)", "BRAIN", "(c)", "HPRD"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 79.67999999999999,
+    "y2": 436.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Visualization of a solved pair on DBLP.",
+  "captionBoundary": {
+    "x1": 207.43600463867188,
+    "x2": 404.5646667480469,
+    "y1": 696.632568359375,
+    "y2": 702.635009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 542.88,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Visualization of a solved pair on HPRD.",
+  "captionBoundary": {
+    "x1": 205.0449981689453,
+    "x2": 406.95697021484375,
+    "y1": 259.3185119628906,
+    "y2": 265.32098388671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 104.64,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Visualization of a solved pair on COSMOS.",
+  "captionBoundary": {
+    "x1": 200.79600524902344,
+    "x2": 411.20465087890625,
+    "y1": 477.97552490234375,
+    "y2": 483.9779968261719
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 324.0,
+    "y2": 467.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure7-1.png"
+}, {
+  "caption": "Table 3: Ablation study results on Subgraph Matching over HPRD. The ratio of the number of solved pairs over the 50 pairs in the query set is reported. The average number of solutions (divided by 103) is reported too.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.66741943359375,
+    "y1": 154.57254028320312,
+    "y2": 182.49298095703125
+  },
+  "figType": "Table",
+  "imageText": ["Model", "Solved", "%", "#", "Solutions", "LDF", "0.08", "0.69", "NLF", "0.04", "0.37", "GRAPHQL", "0.16", "1.24", "TSO", "0.06", "0.50", "CFL", "0.02", "0.18", "DP-ISO", "0.06", "0.54", "CECI", "0.12", "1.05", "NMATCH", "0.00", "0.00", "NSUBS", "0.48", "4.17", "NSUBS-rand-neg", "0.36", "3.35", "NSUBS-no-look-ahead", "0.42", "3.68", "NSUBS-no-mm", "0.08", "0.73", "NSUBS-2-encoder-layers", "0.24", "0.25", "NSUBS-D", "=", "4", "0.04", "0.30", "NSUBS-GIN", "0.30", "2.73", "NSUBS-no-Q-matching", "0.34", "2.98", "NSUBS-no-LDP-encode", "0.26", "2.39"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 180.0,
+    "x2": 432.47999999999996,
+    "y1": 194.88,
+    "y2": 394.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Table3-1.png"
+}, {
+  "caption": "Table 2: Number of solutions found by each method after 5 minutes averaged by the number of the graph pairs in each dataset. For clarity and compactness, each result has been divided by 1000, i.e. each number is in the unit of 103.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7441101074219,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["Method", "BA", "BRAIN", "HPRD", "COSMOS", "DBLP-S", "DBLP-L", "ETHE", "YT-S", "YT-L", "LDF", "1.21", "2.05", "0.69", "4.80", "4.82", "1.51", "2.50", "2.73", "1.75", "NLF", "1.29", "2.24", "0.37", "7.05", "4.26", "1.06", "2.34", "2.52", "1.06", "GRAPHQL", "1.42", "3.95", "1.24", "7.70", "5.23", "2.55", "3.53", "2.73", "1.23", "TSO", "1.41", "1.26", "0.50", "5.53", "4.36", "1.36", "2.30", "2.57", "1.24", "CFL", "1.56", "1.12", "0.18", "6.97", "5.70", "1.13", "2.32", "2.84", "0.90", "DP-ISO", "1.31", "2.11", "0.54", "6.93", "4.86", "2.63", "2.58", "3.32", "1.88", "CECI", "1.21", "1.03", "1.05", "6.96", "4.18", "1.35", "1.70", "1.60", "0.55", "NMATCH", "1.02", "0.00", "0.00", "0.24", "1.25", "0.24", "1.39", "0.37", "0.00", "NSUBS", "2.37", "4.58", "4.17", "3.70", "8.32", "6.24", "2.53", "7.93", "3.62"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 123.83999999999999,
+    "y2": 225.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Table2-1.png"
+}, {
+  "caption": "Figure 11: Visualization of a solved pair on ETHE.",
+  "captionBoundary": {
+    "x1": 205.05999755859375,
+    "x2": 406.940673828125,
+    "y1": 696.632568359375,
+    "y2": 702.635009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 542.88,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure11-1.png"
+}, {
+  "caption": "Figure 9: Visualization of a solved pair on DBLP.",
+  "captionBoundary": {
+    "x1": 207.43600463867188,
+    "x2": 404.5646667480469,
+    "y1": 259.3185119628906,
+    "y2": 265.32098388671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 104.64,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Visualization of a solved pair on ETHE.",
+  "captionBoundary": {
+    "x1": 205.05999755859375,
+    "x2": 406.940673828125,
+    "y1": 477.97552490234375,
+    "y2": 483.9779968261719
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 523.1999999999999,
+    "y1": 324.0,
+    "y2": 467.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure10-1.png"
+}, {
+  "caption": "Figure 1: The overall process of Subgraph Matching is a search algorithm that matches one node pair at a time for the input query q and target graph G guided by a learned policy. Due to the large action space incurred by the large G in practice, we propose to train a policy network to guide the selection of local candidate nodes in G at each search state. This requires effective node embeddings to be learned that can reflect the node-to-node mapping at the current state and contribute to the prediction of the policy and reward. To achieve this end, we propose a novel QC-SGMNN encoder layer consisting of a “Propagation” module that performs intra-graph message passing as a typical GNN and a “Matching” module that performs state-dependent inter-graph matching (Section 3.2.1). The Pθ(at|st) is trained using the novel loss functions described in Section 3.1.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74755859375,
+    "y1": 241.10653686523438,
+    "y2": 336.27398681640625
+  },
+  "figType": "Figure",
+  "imageText": ["𝑆\"", "…", "…", "𝐺𝑞", "𝑆\"", "Guide", "Time", "𝒉!!", "𝑆!", "State-dependent", "graph", "matching:", "Computed", "at", "every", "search", "state", "State-independent", "node", "embeddings:", "Computed", "at", "𝑠!", "and", "cached", "during", "search", "Encoder", "Layer", "Aggregate", "Policy", "…", "Match", "Propagate", "Match", "Propagate", "Match", "Propagate", "Match", "Propagate"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7XHiDnUb_hj-Figure1-1.png"
+}]

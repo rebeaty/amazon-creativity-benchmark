@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 3: This figure shows the performance of our models for different sparsity parameters (x-axis) on the left and a comparison of our model’s communications to the ground truth event times (black) on the right. The values at which events happen are Uniformly sampled, but we shift each timeseries in the test set to align the communication and events and then average the communication over the test set.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 435.8525390625,
+    "y2": 485.69097900390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 454.08,
+    "y1": 240.95999999999998,
+    "y2": 421.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure3-1.png"
+}, {
+  "caption": "Figure 8: This figure shows an example of the reconstruction on the synthetic data for our CommsVAE model with sparsity 0.01. The red line is the input signal, the blue line the reconstructed signal, each row corresponds to a different region, and each column to a different timeseries from the validation set.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 595.3125610351562,
+    "y2": 634.1920166015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 172.79999999999998,
+    "y2": 570.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure8-1.png"
+}, {
+  "caption": "Figure 1: This figure shows the composition of a single node from a graph on the left. The communication and reconstruction RNNs are completely independent of each other, the communication RNN sends binary signals to other nodes, whereas the reconstruction RNN reconstructs the original timeseries from outside communication and an initial condition z0 (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 511.9335632324219,
+    "y2": 552.3070068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 330.71999999999997,
+    "y2": 487.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure1-1.png"
+}, {
+  "caption": "Figure 7: This figure shows the average hemodynamic response of the test set.",
+  "captionBoundary": {
+    "x1": 150.08099365234375,
+    "x2": 461.92034912109375,
+    "y1": 430.4355163574219,
+    "y2": 436.43798828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 139.68,
+    "y2": 405.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure7-1.png"
+}, {
+  "caption": "Figure 4: This figure shows four panels, each with a different window size to compute both our model’s communication density and dFNC. The y-axis shows the classification accuracy of the task given only that window on the test set.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 267.4035339355469,
+    "y2": 295.323974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 138.72,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure4-1.png"
+}, {
+  "caption": "Figure 6: This figure shows the average reconstruction of both models on the fMRI dataset, with standard deviation computed across the seeds. The Meta-CommsVAE clearly outperforms the CommsVAE for all sparsities, and performs the best at a sparsity of 0.025.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 595.3125610351562,
+    "y2": 623.2330322265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 172.79999999999998,
+    "y2": 570.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure6-1.png"
+}, {
+  "caption": "Figure 5: This figure shows the absolute temporal sum over the predicted communication dynamics from our model. The colors are scaled within each task, and the colorbar goes from 0 to the maximum of the absolute sum for each task. The reason we do not show any numbers is because they are dimensionless.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 267.8375549316406,
+    "y2": 306.71697998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 80.64,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure5-1.png"
+}, {
+  "caption": "Figure 2: This figure shows the simulated input signals on the left and the communication we would expect our model to find. The communication would happen from R1 to R2 (middle right) right before T2, and from R2 to R3 (bottom right) right before T3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 506.7455139160156,
+    "y2": 534.6659545898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 313.92,
+    "y2": 492.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5H9_FUPA9r8-Figure2-1.png"
+}]

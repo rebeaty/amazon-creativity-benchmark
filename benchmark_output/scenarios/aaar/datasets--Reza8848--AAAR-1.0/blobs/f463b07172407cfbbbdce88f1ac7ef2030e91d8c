@@ -1,0 +1,301 @@
+[{
+  "caption": "Table 1: Experiment 1: Binary cross-entropy loss across different scales.",
+  "captionBoundary": {
+    "x1": 161.2689971923828,
+    "x2": 450.7322692871094,
+    "y1": 527.4535522460938,
+    "y2": 533.4559936523438
+  },
+  "figType": "Table",
+  "imageText": ["x’=50", "x’=500", "x’=5000", "Params", "CNL-F", "0.399", "±", "0.031", "0.433", "±", "0.008", "0.639", "±", "0.014", "51", "CNL", "0.212", "±", "0.003", "0.227", "±", "0.004", "0.255", "±", "0.004", "51", "RNN", "0.521", "±", "0.317", "0.446", "±", "0.281", "0.561", "±", "0.184", "4353", "LSTM", "0.347", "±", "0.500", "0.669", "±", "0.077", "0.647", "±", "0.000", "17217", "GRU", "0.103", "±", "0.111", "0.326", "±", "0.559", "0.646", "±", "0.001", "12929", "coRNN", "0.264", "±", "0.255", "0.408", "±", "0.304", "0.647", "±", "0.000", "8385", "LMU", "0.005", "±", "0.008", "0.208", "±", "0.265", "0.732", "±", "0.103", "12610"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 453.12,
+    "y1": 421.91999999999996,
+    "y2": 516.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Table1-1.png"
+}, {
+  "caption": "Figure 6: Experiment 1: representative examples of prediction (orange lines) for different models. Input fa is shown in blue and target fb is in green. Each row corresponds to a different time scale. Top row: x′ = 50, middle row: x′ = 500 and bottom row: x′ = 5000.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 252.39151000976562,
+    "y2": 280.31097412109375
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c", "d", "e", "f", "g", "CNL-F", "CNL", "RNN", "LSTM", "GRU", "coRNN", "LMU"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 108.0,
+    "y2": 238.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Experiment 2a: Odd rows: representative examples of prediction (orange lines) for different models. Input fa is shown in blue and target fb is in green. Even rows: Modulatory inputs fc and fd. Plots are shown for three temporal scales. Top two rows: x′ = 50, third and fourth row: x′ = 500 and bottom two rows: x′ = 5000.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 556.5335693359375,
+    "y2": 595.4119873046875
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c", "d", "e", "f", "g", "CNL-F", "CNL", "RNN", "LSTM", "GRU", "coRNN", "LMU"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 300.96,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure7-1.png"
+}, {
+  "caption": "Table 2: Experiment 2a: Binary cross-entropy loss across different scales.",
+  "captionBoundary": {
+    "x1": 159.05799865722656,
+    "x2": 452.9446716308594,
+    "y1": 443.5885314941406,
+    "y2": 449.59100341796875
+  },
+  "figType": "Table",
+  "imageText": ["x’=50", "x’=500", "x’=5000", "Params", "CNL-F", "0.537", "±", "0.171", "0.585", "±", "0.006", "0.633", "±", "0.047", "53", "CNL", "0.275", "±", "0.007", "0.277", "±", "0.004", "0.336", "±", "0.018", "53", "RNN", "0.578", "±", "0.489", "0.574", "±", "0.316", "0.575", "±", "0.157", "4481", "LSTM", "0.637", "±", "0.349", "0.677", "±", "0.179", "0.617", "±", "0.179", "17729", "GRU", "0.653", "±", "0.098", "0.659", "±", "0.131", "0.594", "±", "0.096", "13313", "coRNN", "0.611", "±", "0.093", "0.593", "±", "0.071", "0.509", "±", "0.019", "8513", "LMU", "0.645", "±", "0.161", "0.592", "±", "0.258", "0.521", "±", "0.350", "12740"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 453.12,
+    "y1": 337.91999999999996,
+    "y2": 432.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Table2-1.png"
+}, {
+  "caption": "Figure 2: Temporal relationships in the presence of modulatory inputs. Delta pulse in fa predicts a delta pulse in fb. a No temporal modulation (e.g., α = 1). b and c When the modulatory signal corresponds to velocity (Experiment 2), the network represents traveled distance as manifested by units that activate sequentially as a function of distance (bottom row). d Temporal modulation with delta pulses (Experiment 3). The network represents the total count of presented pulses.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 669.1665649414062,
+    "y2": 719.0050048828125
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c", "d"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 475.68,
+    "y2": 650.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Example output from the Counting dataset used in Experiment 3 (duration and size of the pattern are shortened for illustrative purposes). Input Data columns represent modulatory inputs, and rows represent time steps. In this example, the five rows highlighted in blue contain the target pattern, with the red portions being the target pattern itself. The target number of pattern occurrences is 3, corresponding to the number of patterns between the signal to start counting ”S” (fed into the network as fa) and the hidden target ”T”.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 266.2705383300781,
+    "y2": 328.5619201660156
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 254.88,
+    "x2": 355.2,
+    "y1": 80.64,
+    "y2": 252.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure5-1.png"
+}, {
+  "caption": "Table 5: Experiment 1: The average distance between the actual timestamp of the target event and the timestamp that received the highest probability estimate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 479.779541015625,
+    "y2": 496.74102783203125
+  },
+  "figType": "Table",
+  "imageText": ["x’=50", "x’=500", "x’=5000", "Params", "CNL-F", "8.0", "±", "0.0", "141.0", "±", "0.0", "2658.6", "±", "6.1", "51", "CNL", "2.0", "±", "0.0", "19.0", "±", "0.0", "249.3", "±", "1.4", "51", "RNN", "83.1", "±", "107.0", "641.4", "±", "612.8", "7513.0", "±", "10853.5", "4353", "LSTM", "11.1", "±", "41.4", "763.5", "±", "302.9", "12560.0", "±", "0.0", "17217", "GRU", "0.8", "±", "1.7", "102.8", "±", "405.9", "12405.7", "±", "154.8", "12929", "coRNN", "4.0", "±", "3.7", "438.3", "±", "594.5", "12539.0", "±", "0", "8385", "LMU", "0.0", "±", "0.0", "0.0", "±", "0.0", "5001.3", "±", "5724.4", "12610"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 458.4,
+    "y1": 373.91999999999996,
+    "y2": 468.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Table5-1.png"
+}, {
+  "caption": "Table 6: Experiment 2a: The average distance between the actual timestamp of the target event and the timestamp that received the highest probability estimate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 621.83154296875,
+    "y2": 638.79296875
+  },
+  "figType": "Table",
+  "imageText": ["x’=50", "x’=500", "x’=5000", "Params", "CNL-F", "29.7", "±", "14.5", "354.0", "±", "0.0", "8546.1", "±", "9514.7", "53", "CNL", "2.4", "±", "0.7", "35.2", "±", "5.2", "433.4", "±", "118.1", "53", "RNN", "57.7", "±", "22.1", "735.2", "±", "139.3", "6783.5", "±", "3448.6", "4481", "LSTM", "55.9", "±", "8.7", "607.1", "±", "50.6", "8200.2", "±", "3628.6", "17729", "GRU", "62.2", "±", "13.7", "592.8", "±", "90.9", "5293.3", "±", "1597.3", "13313", "coRNN", "49.9", "±", "10.7", "568.1", "±", "57.4", "5553.4", "±", "913.9", "8513", "LMU", "47.9", "±", "31.4", "778.3", "±", "128.8", "7884.5", "±", "2141.8", "12740"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 453.12,
+    "y1": 516.96,
+    "y2": 610.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Table6-1.png"
+}, {
+  "caption": "Figure 4: Illustration of predicting distance by learning latent modulatory inputs, as highlighted in Experiment 2. a. Let us assume that we want to estimate traveled distance from location A to location B. If we integrate time steps while traveling from A to B (x axis) then the estimate would not be accurate (broad distribution shown in blue) since our velocity changes during the trip. However, if we integrate velocity (y axis) then the estimate would be more accurate (narrow distribution shown in blue) and subject only to error in the velocity estimate itself. b. If velocity is not directly observable, it needs to be estimated as a combination of observable inputs, fc and fd as in Example 2a (for example, perhaps we are riding a bicycle and only observe motor outputs and sensory inputs - those would correspond to fc and fd here). If we use only fc or fd, our estimate of traveled distance will not be accurate (broad distributions shown in blue). However if we find a correct combination of fc and fd (in this simple illustration that is fc+ fd) then the velocity estimate is more accurate (narrow distribution shown in blue) and subject again only to error in the velocity estimate itself.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0044250488281,
+    "y1": 442.6065368652344,
+    "y2": 569.1569213867188
+  },
+  "figType": "Figure",
+  "imageText": ["∫", "%\"#$", "∫", "\"#$", "∫", "%!#$", "∫", "#$", "∫", "\"#$", "a", "b"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 147.35999999999999,
+    "x2": 460.79999999999995,
+    "y1": 304.8,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure4-1.png"
+}, {
+  "caption": "Figure 3: CNL weights for the output dense layer when x′ = 50 (a), x′ = 500 (b) and x′ = 5000 (c). Since the Laplace transform is linear, the output weights are interpretable. The weights are largest",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 213.87252807617188,
+    "y2": 230.833984375
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.35999999999996,
+    "y1": 108.0,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure3-1.png"
+}, {
+  "caption": "Table 4: Experiment 3: Binary cross-entropy loss across different scales and the average distance between the actual timestamp of the target event and the timestamp that received the highest probability estimate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 360.18951416015625,
+    "y2": 388.1099853515625
+  },
+  "figType": "Table",
+  "imageText": ["CNL-F", "0.469", "±", "0.249", "24.2", "±", "53.1", "0.085", "±", "0.001", "1005.0", "±", "0.0", "196", "CNL", "0.201", "±", "0.036", "1.3", "±", "0.4", "0.077", "±", "0.004", "75.8", "±", "21.5", "196", "RNN", "0.323", "±", "0.076", "69.8", "±", "24.5", "0.108", "±", "0.023", "1365.1", "±", "421.1", "5377", "LSTM", "0.303", "±", "0.140", "62.0", "±", "14.2", "0.096", "±", "0.010", "1264.4", "±", "941.1", "21313", "GRU", "0.324", "±", "0.119", "28.8", "±", "1.7", "0.116", "±", "0.072", "629.0", "±", "1006.0", "16001", "coRNN", "0.636", "±", "0.117", "60.8", "±", "25.3", "0.093", "±", "0.000", "1619.3", "±", "0.0", "9409", "LMU", "0.402", "±", "0.297", "65.5", "±", "87.8", "0.146", "±", "0.135", "597.7", "±", "781.4", "13650", "count=10", "count=200", "Params", "Loss", "Distance", "Loss", "Distance"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 486.24,
+    "y1": 243.84,
+    "y2": 349.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Table4-1.png"
+}, {
+  "caption": "Table 3: Experiment 2b: Binary cross-entropy loss across different scales and the average distance between the actual timestamp of the target event and the timestamp that received the highest probability estimate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 198.22055053710938,
+    "y2": 226.1409912109375
+  },
+  "figType": "Table",
+  "imageText": ["CNL-F", "0.601", "±", "0.220", "17.4", "±", "7.6", "0.498", "±", "0.004", "229.7", "±", "0.0", "1352", "CNL", "0.2031", "±", "0.019", "7.4", "±", "0.6", "0.2601", "±", "0.020", "52.6", "±", "8.8", "1352", "RNN", "0.658", "±", "0.162", "70.4", "±", "15.9", "0.676", "±", "0.229", "746.6", "±", "96.0", "7553", "LSTM", "0.627", "±", "0.064", "67.3", "±", "3.7", "0.657", "±", "0.170", "675.4", "±", "224.0", "30017", "GRU", "0.578", "±", "0.134", "57.1", "±", "16.6", "0.640", "±", "0.075", "573.9", "±", "22.2", "22529", "coRNN", "0.627", "±", "0.196", "54.8", "±", "21.9", "0.627", "±", "0.043", "733.1", "±", "112.4", "11585", "LMU", "0.614", "±", "0.062", "104.3", "±", "2.7", "0.639", "±", "0.120", "561.3", "±", "239.0", "15860", "x’=50", "x’=500", "Params", "Loss", "Distance", "Loss", "Distance"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 488.15999999999997,
+    "y1": 81.6,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Table3-1.png"
+}, {
+  "caption": "Figure 1: The activity of neurons in CNL with and without modulatory input. a. Impulse response of the Laplace transform approximation decays exponentially with decay rate s. The impulse response of the inverse Laplace transform approximation has a unimodal form such that each curve peaks",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0040588378906,
+    "y1": 231.42550659179688,
+    "y2": 259.345947265625
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 507.35999999999996,
+    "y1": 82.56,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure1-1.png"
+}, {
+  "caption": "Figure 8: Experiment 2b: Odd rows: representative examples of prediction (orange lines) for different models. Input fa is shown in blue and target fb is in green. Even rows: Modulatory inputs. Plots are shown for two temporal scales. Top two rows: x′ = 50, third and fourth row: x′ = 500.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 336.3585510253906,
+    "y2": 364.2790222167969
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c", "d", "e", "f", "g", "CNL-F", "CNL", "RNN", "LSTM", "GRU", "coRNN", "LMU"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 155.04,
+    "y2": 322.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Experiment 3: Top row: representative examples of prediction (orange lines) for different models. Input fa is shown in blue and target fb is in green. Plots are shown for two temporal scales. Top row: fb = 1 after 10 counts, bottom row: fb = 1 after 200 counts.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 627.2655639648438,
+    "y2": 656.6810302734375
+  },
+  "figType": "Figure",
+  "imageText": ["a", "b", "c", "d", "e", "f", "g", "CNL-F", "CNL", "RNN", "LSTM", "GRU", "coRNN", "LMU"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 519.84,
+    "y2": 613.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_KJ8iuccbPB-Figure9-1.png"
+}]

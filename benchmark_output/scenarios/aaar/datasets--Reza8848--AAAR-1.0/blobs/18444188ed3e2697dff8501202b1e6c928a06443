@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 5: The flow matching loss of different algorithm.",
+  "captionBoundary": {
+    "x1": 194.2949981689453,
+    "x2": 417.70623779296875,
+    "y1": 688.5655517578125,
+    "y2": 694.5679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["CFN", "FCN", "Lo", "ss", "10", "8", "6", "4", "2", "0", "50", "100", "150", "200", "250", "300", "Training", "Steps", "CFN", "FCN", "Lo", "ss", "8", "7", "6", "5", "4", "3", "2", "1", "0", "0", "50", "100", "150", "200", "250", "300", "Training", "Steps"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 473.28,
+    "y1": 540.0,
+    "y2": 674.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Figure5-1.png"
+}, {
+  "caption": "Table 1: The best reward found of different methods.",
+  "captionBoundary": {
+    "x1": 200.5709991455078,
+    "x2": 411.4293518066406,
+    "y1": 689.7715454101562,
+    "y2": 695.7739868164062
+  },
+  "figType": "Table",
+  "imageText": ["Hyper-Grid", "v1", "2.0", "1.84", "1.78", "2.0", "2.0", "2.0", "Hyper-Grid", "v2", "1.90", "1.76", "1.70", "1.85", "1.85", "1.82", "Hyper-Grid", "v3", "1.84", "1.66", "1.62", "1.82", "1.82", "1.78", "Environment", "MAPPO", "MASAC", "MCMC", "CFN", "FCN", "v1", "FCN", "v2"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 622.56,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Table1-1.png"
+}, {
+  "caption": "Figure 3: L1 error and Mode Found performance of different algorithms on various Hyper-grid environments. Top and bottom are respectively Mode Found (higher is better) and L1 Error (lower is better). Left: Hyper-Grid v1, Middle: Hyper-Grid v2, Right: Hyper-Grid v3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 323.8695373535156,
+    "y2": 351.78900146484375
+  },
+  "figType": "Figure",
+  "imageText": ["MAPPO", "MASAC", "MCMC", "CFN", "FCN", "v1", "FCN", "v2", "rro", "r", "L1", "E", "1.95", "1.90", "1.85", "1.80", "1.75", "0", "5", "10", "15", "20", "Epochs", "MAPPO", "MASAC", "MCMC", "CFN", "FCN", "v1", "FCN", "v2", "rro", "r", "L1", "E", "1.98", "1.96", "1.94", "1.92", "1.90", "1.88", "1.86", "1.84", "0", "5", "10", "15", "20", "Epochs", "MAPPO", "MASAC", "MCMC", "CFN", "FCN", "v1", "FCN", "v2", "rro", "r", "L1", "E", "1.9", "1.8", "1.7", "1.6", "1.5", "1.4", "0", "5", "10", "15", "20", "Epochs", "MAPPO", "MASAC", "MCMC", "JFN", "FDN", "v1", "FDN", "v2", "un", "d", "e", "Fo", "M", "od", "400", "350", "300", "250", "200", "150", "100", "50", "0", "0", "5", "10", "15", "20", "Epochs", "MAPPO", "MASAC", "MCMC", "CFN", "FCN", "v1", "FCN", "v2", "un", "d", "e", "Fo", "M", "od", "250", "200", "150", "100", "50", "0", "5", "10", "15", "20", "Epochs", "MAPPO", "MASAC", "MCMC", "CFN", "FCN", "v1", "FCN", "v2", "un", "d", "e", "Fo", "M", "od", "100", "80", "60", "40", "20", "0", "0", "5", "10", "15", "20", "Epochs"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 508.32,
+    "y1": 92.64,
+    "y2": 310.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Figure3-1.png"
+}, {
+  "caption": "Figure 1: The performance of the centralized training and independent learning on Hyper-grid task.",
+  "captionBoundary": {
+    "x1": 365.39801025390625,
+    "x2": 503.9975891113281,
+    "y1": 645.758544921875,
+    "y2": 673.6790161132812
+  },
+  "figType": "Figure",
+  "imageText": ["Centralized", "Independent", "un", "d", "e", "Fo", "M", "od", "100", "80", "60", "40", "20", "0", "5", "10", "15", "20", "Epochs"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 367.68,
+    "x2": 502.08,
+    "y1": 560.64,
+    "y2": 632.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Framework of GMFlowNets. For each state, each agent obtains its own observation and computes its independent flow to sample actions. During training, the agent seeks the parent nodes for computing inflows and outflows, and performs policy optimization through flow matching.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 249.31155395507812,
+    "y2": 277.23199462890625
+  },
+  "figType": "Figure",
+  "imageText": ["Terminal", "State", "Observation", "root", "Flow", "Match", "Training", "Process", "...", "Sampling", "Process", "MADAG"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 485.28,
+    "y1": 86.39999999999999,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Figure2-1.png"
+}, {
+  "caption": "Table 4: Hyper-parameter of FCN under different environments",
+  "captionBoundary": {
+    "x1": 179.11700439453125,
+    "x2": 432.8843078613281,
+    "y1": 154.17550659179688,
+    "y2": 160.177978515625
+  },
+  "figType": "Table",
+  "imageText": ["ϵ", "0.0005", "0.0005", "0.0005", "Optimizer", "Adam", "Adam", "Adam", "Learning", "Rate", "0.0001", "0.0001", "0.0001", "Trajectories", "per", "steps", "16", "16", "16", "Flow", "Network", "Hidden", "Layers", "[256,256]", "[256,256]", "[256,256]", "Grid", "Dim", "2", "3", "3", "Grid", "Size", "[8,8]", "[8,8]", "[8,8]", "Train", "Steps", "20000", "20000", "20000", "R2", "2", "2", "2", "R1", "0.5", "0.5", "0.5", "Hyper-Grid-v1", "Hyper-Grid-v2", "Hyper-Grid-v3"],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 173.28,
+    "y2": 331.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Table4-1.png"
+}, {
+  "caption": "Table 5: Hyper-parameter of CFN under different environments",
+  "captionBoundary": {
+    "x1": 179.11700439453125,
+    "x2": 432.8843078613281,
+    "y1": 482.1615295410156,
+    "y2": 488.16400146484375
+  },
+  "figType": "Table",
+  "imageText": ["Learning", "Rate", "0.0001", "0.0001", "0.0001", "ϵ", "0.0005", "0.0005", "0.0005", "Flow", "Network", "Hidden", "Layers", "[256,256]", "[256,256]", "[256,256]", "Optimizer", "Adam", "Adam", "Adam", "Grid", "Dim", "2", "3", "3", "Grid", "Size", "[8,8]", "[8,8]", "[8,8]", "R2", "2", "2", "2", "R1", "0.5", "0.5", "0.5", "Train", "Steps", "20000", "20000", "20000", "Trajectories", "per", "steps", "16", "16", "16", "Hyper-Grid-v1", "Hyper-Grid-v2", "Hyper-Grid-v3"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 501.59999999999997,
+    "y2": 659.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Table5-1.png"
+}, {
+  "caption": "Figure 4: Performance of FCN and MAPPO on molecules generation task.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.9972839355469,
+    "y1": 390.8415222167969,
+    "y2": 407.802978515625
+  },
+  "figType": "Figure",
+  "imageText": ["MAPPO", "FCN", "un", "d", "e", "Fo", "M", "od", "50", "40", "30", "20", "10", "0", "0", "100", "200", "300", "400", "Epochs"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 347.03999999999996,
+    "x2": 503.03999999999996,
+    "y1": 264.96,
+    "y2": 377.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Figure4-1.png"
+}, {
+  "caption": "Figure 6: The effect of different reward R0 on different algorithm according to L1 error and mode found.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0018005371094,
+    "y1": 237.95755004882812,
+    "y2": 254.91900634765625
+  },
+  "figType": "Figure",
+  "imageText": ["CFN", "R0", "=", "10", "1", "CFN", "R0", "=", "10", "2", "CFN", "R0", "=", "10", "4", "FCN", "R0", "=", "10", "1", "FCN", "R0", "=", "10", "2", "FCN", "R0", "=", "10", "4", "rro", "r", "L1", "E", "1.9", "1.8", "1.7", "1.6", "1.5", "1.4", "0", "5", "10", "15", "20", "Epochs", "CFN", "R0", "=", "10", "1", "CFN", "R0", "=", "10", "2", "CFN", "R0", "=", "10", "4", "FCN", "R0", "=", "10", "1", "FCN", "R0", "=", "10", "2", "FCN", "R0", "=", "10", "4", "un", "d", "e", "Fo", "M", "od", "80", "60", "40", "20", "0", "5", "10", "15", "20", "Epochs"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 473.28,
+    "y1": 91.67999999999999,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Figure6-1.png"
+}, {
+  "caption": "Table 3: Hyper-parameter of MASAC under different environments",
+  "captionBoundary": {
+    "x1": 171.29100036621094,
+    "x2": 440.70953369140625,
+    "y1": 532.3455810546875,
+    "y2": 538.3480224609375
+  },
+  "figType": "Table",
+  "imageText": ["SAC", "Alpha", "0.98", "0.98", "0.98", "Target", "Network", "Update", "0.001", "0.001", "0.001", "Batchsize", "64", "64", "64", "Discount", "Factor", "0.99", "0.99", "0.99", "Optimizer", "Adam", "Adam", "Adam", "Learning", "Rate", "0.0001", "0.0001", "0.0001", "Actor", "Network", "Hidden", "Layers", "[256,256]", "[256,256]", "[256,256]", "Critic", "Network", "Hidden", "Layers", "[256,256]", "[256,256]", "[256,256]", "Train", "Steps", "20000", "20000", "20000", "Grid", "Dim", "2", "3", "3", "Grid", "Size", "[8,8]", "[8,8]", "[8,8]", "Hyper-Grid-v1", "Hyper-Grid-v2", "Hyper-Grid-v3"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 551.52,
+    "y2": 721.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Table3-1.png"
+}, {
+  "caption": "Table 2: Hyper-parameter of MAPPO under different environments",
+  "captionBoundary": {
+    "x1": 171.6449737548828,
+    "x2": 440.3561706542969,
+    "y1": 336.75146484375,
+    "y2": 342.7539367675781
+  },
+  "figType": "Table",
+  "imageText": ["Discount", "Factor", "0.99", "0.99", "0.99", "PPO", "Entropy", "1e-1", "1e-1", "1e-1", "Learning", "Rate", "0.0001", "0.0001", "0.0001", "Batchsize", "64", "64", "64", "Actor", "Network", "Hidden", "Layers", "[256,256]", "[256,256]", "[256,256]", "Optimizer", "Adam", "Adam", "Adam", "Grid", "Dim", "2", "3", "3", "Grid", "Size", "[8,8]", "[8,8]", "[8,8]", "Train", "Steps", "20000", "20000", "20000", "Agent", "2", "2", "3", "Hyper-Grid-v1", "Hyper-Grid-v2", "Hyper-Grid-v3"],
+  "name": "2",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 355.68,
+    "y2": 513.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OTIhUlChVaT-Table2-1.png"
+}]

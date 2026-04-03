@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 1: Visualization of the extended minimum in a 2-layer linear network with loss L = ∥Y − UV X∥2. Points along the minum are related to each other by scaling symmetry U → Ug−1 and V → gV . Conserved quantities, Q, associated with scaling symmetry parametrize points along the minimum.",
+  "captionBoundary": {
+    "x1": 345.6019592285156,
+    "x2": 504.0028381347656,
+    "y1": 545.2705688476562,
+    "y2": 627.9859619140625
+  },
+  "figType": "Figure",
+  "imageText": ["!#", "!\""],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 356.64,
+    "x2": 496.32,
+    "y1": 387.36,
+    "y2": 526.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure1-1.png"
+}, {
+  "caption": "Figure 11: Adversarial attacks on the original model and the ensemble models with various strengths. In FGSM, the group ensemble model improves robustness. In PGD, the ensemble has negligible effects on robustness.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 540.695556640625,
+    "y2": 568.6160278320312
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "PGD", "original", "group", "g", "1", "perm_interp", "ra", "cy", "Ac", "cu", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "0.0", "0", "1", "2", "3", "PGD", "iterations", "(a)", "FGSM", "original", "group", "g", "1", "perm_interp", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "Ac", "cu", "ra", "cy", "0.000", "0.004", "0.008", "0.012", "FGSM", "epsilon"],
+  "name": "11",
+  "page": 56,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 483.35999999999996,
+    "y1": 388.8,
+    "y2": 523.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Change in accuracy compared to the original single model when using the ensemble model and 4 baselines. The red color indicates degradation in model performance. The ensemble created by group actions has similar loss values when ε is small.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 333.6045227050781,
+    "y2": 361.52496337890625
+  },
+  "figType": "Figure",
+  "imageText": ["0.4", "0.2", "0.0", "0.2", "0.4", "accuracy", "(shuffle", "-", "original)", "20.0", "10.0", "1.0", "0.1", "0.01", "0.001", "0.0001", "-0.414", "-0.464", "-0.386", "-0.463", "-0.467", "-0.474", "-0.493", "-0.414", "-0.41", "-0.476", "-0.466", "-0.326", "-0.452", "-0.395", "-0.42", "-0.46", "-0.439", "-0.486", "-0.415", "-0.426", "-0.472", "-0.39", "-0.441", "-0.445", "-0.436", "-0.513", "-0.499", "-0.484", "-0.382", "-0.447", "-0.512", "-0.469", "-0.346", "-0.352", "-0.38", "-0.491", "-0.45", "-0.353", "-0.417", "-0.38", "-0.431", "-0.505", "-0.447", "-0.319", "-0.397", "-0.423", "-0.428", "-0.406", "-0.4", "#", "of", "transformed", "models", "(num_g)", "10", "20", "40", "60", "80", "10", "0", "12", "0", "accuracy", "(random", "-", "original)", "20.0", "10.0", "1.0", "0.1", "0.01", "0.001", "0.0001", "-0.447", "-0.458", "-0.383", "-0.464", "-0.47", "-0.505", "-0.504", "-0.448", "-0.433", "-0.458", "-0.491", "-0.365", "-0.459", "-0.409", "-0.399", "-0.466", "-0.486", "-0.485", "-0.407", "-0.411", "-0.454", "-0.024", "-0.024", "-0.159", "-0.066", "-0.082", "-0.157", "-0.12", "0.004", "0.003", "-0.007", "-0.001", "-0.006", "-0.005", "0.001", "-0.002", "-0.002", "0", "0.001", "-0.001", "0.001", "-0.001", "0", "0", "0", "0", "0", "0", "0", "#", "of", "transformed", "models", "(num_g)", "10", "20", "40", "60", "80", "10", "0", "12", "0", "accuracy", "(g", "1", "-", "original)", "20.0", "10.0", "1.0", "0.1", "0.01", "0.001", "0.0001", "-0.423", "-0.476", "-0.378", "-0.488", "-0.454", "-0.481", "-0.489", "-0.41", "-0.439", "-0.428", "-0.468", "-0.374", "-0.438", "-0.387", "-0.396", "-0.467", "-0.495", "-0.514", "-0.416", "-0.411", "-0.488", "0.012", "-0.012", "0.008", "0", "-0.003", "-0.004", "-0.009", "-0.001", "-0.001", "0", "-0.001", "0.002", "-0.001", "0", "0.001", "0.001", "0", "0.001", "-0.001", "0", "0", "0", "0", "0", "0", "0", "0", "0", "#", "of", "transformed", "models", "(num_g)", "10", "20", "40", "60", "80", "10", "0", "12", "0", "accuracy", "(interpolated", "permute", "-", "original)", "20.0", "10.0", "1.0", "0.1", "0.01", "0.001", "0.0001", "-0.271", "-0.318", "-0.135", "-0.169", "-0.169", "-0.242", "-0.133", "-0.225", "-0.107", "-0.037", "-0.217", "-0.096", "-0.19", "-0.252", "-0.035", "-0.096", "-0.146", "-0.122", "-0.169", "-0.09", "-0.082", "-0.002", "0.001", "0.004", "-0.015", "0.002", "-0.007", "-0.013", "-0.001", "0.001", "0", "-0.004", "-0.002", "0.001", "0", "0", "0.002", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "#", "of", "transformed", "models", "(num_g)", "10", "20", "40", "60", "80", "10", "0", "12", "0", "accuracy", "(group", "-", "original)", "20.0", "10.0", "1.0", "0.1", "0.01", "0.001", "0.0001", "-0.392", "-0.437", "-0.381", "-0.463", "-0.44", "-0.472", "-0.493", "-0.352", "-0.286", "-0.163", "-0.281", "-0.181", "-0.246", "-0.224", "-0.282", "-0.214", "-0.256", "-0.23", "-0.097", "-0.144", "-0.098", "0.005", "-0.037", "0", "-0.024", "-0.002", "-0.005", "-0.02", "0.001", "-0.001", "0.003", "0.002", "0.001", "0.001", "-0.001", "0.002", "0.001", "0", "0.001", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "#", "of", "transformed", "models", "(num_g)", "10", "20", "40", "60", "80", "10", "0", "12", "0", "where", "S", "∈", "R32×32", "is", "a", "random", "permutation", "matrix.", "I+ε", "V", "),", ",", "I+", "ε", "2", "(I+S)", ")−1", "I+ε", "fling", "π(g,H).", "•", "‘interpolated", "permute’", "or", "’perm", "interp’:", "(U,", "V", ")", "7→", "(U", "(", "I+", "ε", "2", "(I+S)", "•", "‘group’:", "(U,", "V", ")", "7→", "(Uπ(g,H),", "gV", ").", "This", "is", "the", "model", "created", "by", "group", "actions.", "•", "‘g−1’:", "(U,", "V", ")", "7→", "(Ug−1,", "gV", ").", "•", "‘random’:", "(U,", "V", ")", "7→", "(Ug′,", "gV", "),", "where", "g′", "=", "I", "+", "εD", "and", "D", "is", "a", "random", "diagonal", "matrix.", "•", "‘shuffle’:", "(U,", "V", ")", "7→", "(Uπ′(g,H),", "gV", "),", "where", "π′(g,H)", "is", "constructed", "by", "randomly", "shuf-"],
+  "name": "10",
+  "page": 56,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.47999999999996,
+    "y1": 116.16,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure10-1.png"
+}, {
+  "caption": "Figure 2: Gradient flow for L(U, V ) = 1 2∥Y −UV X∥2, where U, V ∈ R, Y = 2, and X = 1. Trajectories corresponding to different values of Q intersect the minima at different points.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.99993896484375,
+    "y1": 326.0045166015625,
+    "y2": 375.84197998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 350.88,
+    "x2": 501.12,
+    "y1": 168.48,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Training curve for the loss function defined in Proposition M.2. Smaller value of Q = Tr[UTU + V TV ] at initialization leads to faster convergence.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9998779296875,
+    "y1": 339.2105407714844,
+    "y2": 356.1719970703125
+  },
+  "figType": "Figure",
+  "imageText": ["Q=0.00206", "Q=0.206", "Q=20.6", "Q=2.06e+03", "Lo", "ss", "10", "1", "10", "4", "10", "7", "10", "10", "0.2", "0.4", "0.6", "0.8", "1.0", "Training", "steps", "1e6"],
+  "name": "8",
+  "page": 54,
+  "regionBoundary": {
+    "x1": 229.44,
+    "x2": 383.03999999999996,
+    "y1": 217.92,
+    "y2": 328.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Training curves of two-layer networks initialized with different Q. The value of Q affects convergence rate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00030517578125,
+    "y1": 184.99057006835938,
+    "y2": 201.9520263671875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "sigmoid", "Q=-500", "Q=-502", "Q=-663", "Lo", "ss", "102", "100", "10", "2", "0", "4e+05", "8e+05", "Training", "steps", "(c)", "tanh", "Q=-500", "Q=-502", "Q=-1364", "Lo", "ss", "102", "100", "10", "2", "0", "2e+05", "4e+05", "Training", "steps", "(b)", "ReLU", "Q=0.00309", "Q=0.309", "Q=30.9", "Lo", "ss", "102", "100", "10", "2", "0", "2e+05", "4e+05", "Training", "steps", "(a)", "linear", "Q=-0.0193", "Q=-1.93", "Q=-193", "Lo", "ss", "102", "100", "10", "2", "0", "2e+05", "4e+05", "Training", "steps"],
+  "name": "7",
+  "page": 54,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure7-1.png"
+}, {
+  "caption": "Figure 6: Distribution of Q for 2-layer linear NN with different nonlinearities, with parameter dimensions m = h = n = 100.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9975280761719,
+    "y1": 203.11355590820312,
+    "y2": 220.07501220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "sigmoid", "en", "cy", "fre", "qu", "250", "200", "150", "100", "50", "0", "10050", "10000", "9950", "Q", "(b)", "tanh", "en", "cy", "fre", "qu", "250", "200", "150", "100", "50", "0", "6", "4", "2", "0", "2", "4", "Q", "1e4", "(a)", "ReLU", "en", "cy", "fre", "qu", "200", "150", "100", "50", "0", "46", "48", "50", "52", "54", "Q"],
+  "name": "6",
+  "page": 49,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 497.28,
+    "y1": 88.32,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure6-1.png"
+}, {
+  "caption": "Figure 4: Dynamics of conserved quantities in GD. The amount of change in Q is small relative to its magnitude, and Q converges when loss converges.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00067138671875,
+    "y1": 182.91653442382812,
+    "y2": 199.87799072265625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "sigmoid", "lr=0.1", "lr=0.01", "lr=0.001", "Lo", "ss", "100", "10", "2", "10", "4", "0", "4e+05", "8e+05", "Training", "steps", "0", "2e-05", "4e-05", "6e-05", "Q", "(c)", "tanh", "lr=0.1", "lr=0.01", "lr=0.001", "Lo", "ss", "100", "10", "2", "10", "4", "0", "2e+05", "4e+05", "Training", "steps", "Q", "1.5e-05", "1e-05", "5e-06", "0", "(b)", "ReLU", "lr=0.1", "lr=0.01", "lr=0.001", "Lo", "ss", "100", "10", "2", "10", "4", "0", "2e+05", "4e+05", "Training", "steps", "Q", "0", "0.0002", "0.0004", "-0.0006", "-0.0004", "-0.0002", "(a)", "linear", "10", "2", "100", "Lo", "ss", "lr=0.1", "lr=0.01", "lr=0.001", "10", "4", "0", "2e+05", "4e+05", "Training", "steps", "0", "0.0002", "0.0004", "0.0006", "Q"],
+  "name": "4",
+  "page": 48,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Distribution of Q for 2-layer linear NN with different layer dimensions.",
+  "captionBoundary": {
+    "x1": 143.5780029296875,
+    "x2": 468.42291259765625,
+    "y1": 578.717529296875,
+    "y2": 584.719970703125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "m,h,", "n", "=", "200,", "100,", "100", "en", "cy", "fre", "qu", "200", "150", "100", "50", "0", "94", "96", "98", "100", "102", "104", "106", "Q", "(b)", "m,h,", "n", "=", "100,", "200,", "100", "en", "cy", "fre", "qu", "200", "150", "100", "50", "0", "106", "103", "100", "97", "94", "Q", "(a)", "m,h,", "n", "=", "100,", "100,", "100", "en", "cy", "fre", "qu", "250", "200", "150", "100", "50", "0", "4", "2", "0", "2", "4", "6", "Q"],
+  "name": "5",
+  "page": 48,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 497.28,
+    "y1": 464.15999999999997,
+    "y2": 561.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure5-1.png"
+}, {
+  "caption": "Figure 9: Eigenvalues of the Hessian from trained models initialized with different conserved quantity values (Q). The distribution of the eigenvalues and the value of Q appear to be related.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 379.98651123046875,
+    "y2": 396.947998046875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "sigmoid", "Q=-250", "Q=-243", "Q=-222", "Q=-200", "y", "ue", "nc", "Fr", "eq", "40", "30", "20", "10", "0", "0", "50", "100", "150", "Eigenvalues", "of", "Hessian", "(c)", "tanh", "Q=-250", "Q=-235", "Q=-226", "Q=-418", "y", "ue", "nc", "Fr", "eq", "15", "10", "5", "0", "0", "50", "100", "Eigenvalues", "of", "Hessian", "(b)", "ReLU", "Q=3.25e-04", "Q=29.2", "Q=117", "Q=263", "y", "ue", "nc", "Fr", "eq", "10", "15", "20", "25", "0", "5", "0", "50", "100", "150", "Eigenvalues", "of", "Hessian", "(a)", "linear", "Q=1.93e-04", "Q=17.3", "Q=69.3", "Q=156", "y", "ue", "nc", "Fr", "eq", "20", "15", "10", "5", "0", "0", "50", "100", "150", "200", "250", "Eigenvalues", "of", "Hessian"],
+  "name": "9",
+  "page": 55,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 499.2,
+    "y1": 285.12,
+    "y2": 362.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure9-1.png"
+}, {
+  "caption": "Figure 3: Overview of empirical observations with more details in Appendix M, N, and O. (a) In a two-layer neural network, the convergence rate depends on the conserved quantity Q. (b) The distribution of the eigenvalues of the Hessian at the minimum is related to the value of Q. (c) The ensemble created by group actions has similar loss values when ε is small. (d) The ensemble model improves robustness against fast gradient sign method attacks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 144.57150268554688,
+    "y2": 194.408935546875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 63.36,
+    "y2": 138.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9ZpciCOunFb-Figure3-1.png"
+}]

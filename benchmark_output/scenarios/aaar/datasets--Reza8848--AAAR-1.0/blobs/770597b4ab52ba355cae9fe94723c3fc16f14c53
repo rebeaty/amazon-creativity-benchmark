@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 3: We plot L(z) := log(−ψ′(z)) z vs. z, where ψ′(·) is the first derivative of the underlying self-training loss. Left: L(z) vs. z of hard + exp and conj + exp. Right: L(z) vs. z of hard + logistic and conj + logistic.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 183.58053588867188,
+    "y2": 199.5460205078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 458.4,
+    "y1": 80.64,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FJXf1FXN8C-Figure3-1.png"
+}, {
+  "caption": "Figure 2: Plots of some self-training loss functions that satisfy the set of properties ♣.",
+  "captionBoundary": {
+    "x1": 149.87899780273438,
+    "x2": 462.12158203125,
+    "y1": 171.71054077148438,
+    "y2": 177.7130126953125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Hard+Exp.", "(b)", "Conj+Exp.", "(c)", "Hard+Logistic.", "(d)", "Conj+Logistic."],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 499.2,
+    "y1": 90.72,
+    "y2": 158.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FJXf1FXN8C-Figure2-1.png"
+}, {
+  "caption": "Table 1: Summary of {Hard, Conjugate} pseudo-labels and the resulting self-training loss functions using square loss, logistic loss, and exponential loss.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00006103515625,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Hard", "yhardw", "(x)", "=", "sign(w>x)", "`hard(w;x)", "=", "exp(−|w>x|)", "Conjugate", "yconjw", "(x)", "=", "tanh", "(", "w>x", ")", "`conj(w;x)", "=", "sech", "(", "w>x", ")", "Exponential", "loss:", "`exp(w;", "(x,", "y))", ":=", "exp(−yw>x),", "where", "y", "=", "{+1,−1}.", "Conjugate", "yconjw", "(x)", "=", "tanh", "(", "w>x", ")", "`conj(w;x)", "=", "log", "(", "cosh", "(", "w>x", "))", "−", "tanh", "(", "w>x", ")", "w>x", "Hard", "yhardw", "(x)", "=", "sign(w>x)", "`hard(w;x)", "=", "log", "(", "cosh", "(", "w>x", "))", "−", "|w>x|", "Logistic", "loss:", "`logit(w;", "(x,", "y))", ":=", "log", "(", "cosh", "(", "w>x", "))", "−", "y(w>x),", "where", "y", "=", "{+1,−1}.", "Conjugate", "yconjw", "(x)", "=", "w>x", "`conj(w;x)", "=", "−", "1", "2", "(w>x)2", "Hard", "yhardw", "(x)", "=", "sign(w>x)", "`hard(w;x)", "=", "1", "2", "(sign(w>x)−", "w>x)2", "Square", "loss:", "`exp(w;", "(x,", "y))", ":=", "1", "2", "(y", "−", "w>x)2."],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 117.6,
+    "y2": 285.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FJXf1FXN8C-Table1-1.png"
+}, {
+  "caption": "Figure 1: Expected 0−1 loss vs. test-time iteration of GD. GD with hard labels under square loss (blue solid line) can not converge to an optimal classifier in direction, while GD with conjugate labels under square loss (green dash dot line) learns an optimal classifier. Here, “no-adaptation” means simply predicting according to the initial model without any updates. The detailed setup is described in Appendix B.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.004638671875,
+    "y1": 203.38650512695312,
+    "y2": 239.2769775390625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Small", "step", "size", "η", "=", "1", "(b)", "Large", "step", "size", "η", "=", "100"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 152.64,
+    "x2": 457.44,
+    "y1": 90.72,
+    "y2": 190.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_FJXf1FXN8C-Figure1-1.png"
+}]

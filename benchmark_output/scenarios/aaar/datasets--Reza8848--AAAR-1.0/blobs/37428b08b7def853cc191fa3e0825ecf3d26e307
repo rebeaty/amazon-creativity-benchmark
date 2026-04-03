@@ -1,0 +1,361 @@
+[{
+  "caption": "Figure 2: Flow fields of gnODE with N = 2 performing four different versions of the 2-bit flip-flop task. The input pulses c1 in Channel 1 and c2 in Channel 2 are given by (A) c1, c2 ∈ {−1,+1}. The light gray lines indicate example trajectories taken by gnODE. (B) Square: real-valued input pulses in the interval c1, c2 ∈ [−1, 1]. Numerically-identified fixed points are omitted for better visualization. (C) Rectangle: c1 ∈ [−2, 2] and c2 ∈ [−1, 1]. (D) Annulus: 1 ≤ √ c21 + c22 ≤ 2.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.99969482421875,
+    "y1": 172.41854858398438,
+    "y2": 226.9000244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 161.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure2-1.png"
+}, {
+  "caption": "Figure 9: The gnODE assuming N = 2 performing the rectangle and the disk 2-bit flip-flop task. (A) An example validation trial on the rectangle task with inputs in each channel shown in black, and the trained gnODE traces maintaining the previous pulse value shown in colors. (B) Same as (A) but for the disk task.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 175.42355346679688,
+    "y2": 214.302001953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 164.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Flow fields of gnODE withN = 2 performing the ring 2-bit flip-flop task. (A) The initial state of gnODE is set to be (0, 0). (B) The initial state of gnODE is set to be (2, 0).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013732910156,
+    "y1": 437.1275329589844,
+    "y2": 454.0889892578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 414.24,
+    "y1": 322.56,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure10-1.png"
+}, {
+  "caption": "Figure 11: (A) Vanilla RNN assuming τ ∈ {1s, 10s, 30s, 100s} fitting samples from the OU trajetory. (B) mGRU. (C) GRU. (D) nODE with 1 hidden layer (H = N1 = 316).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99822998046875,
+    "y1": 281.6665344238281,
+    "y2": 300.12298583984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 185.76,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure11-1.png"
+}, {
+  "caption": "Table 4: Test MSE for Walker2D (mean ± std, error bars computed from training the networks 5 times with different random seeds).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0002746582031,
+    "y1": 173.35842895507812,
+    "y2": 190.31988525390625
+  },
+  "figType": "Table",
+  "imageText": ["mGRU", "223,", "113", "(10−2,", "10−3,", "316,N/A,", "G)", "1.074±", "0.070", "GRU", "328,", "973", "(10−2,", "10−3,", "316,N/A,K)", "0.772±", "0.028", "LEM", "440,", "837", "(10−2,", "10−3,", "316,N/A,", "G)", "1.030±", "0.022", "nODE", "1,", "223,", "717", "(10−3,", "10−3,", "100,", "1000,", "G)", "0.707±", "0.023", "gnODE", "1,", "086,", "833", "(10−3,", "10−1,", "32,", "1000,K)", "0.552±", "0.019", "Model", "#", "of", "parameters", "(η,", "w,N,Nℓ,", "init)", "Test", "MSE"],
+  "name": "4",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 459.35999999999996,
+    "y1": 202.56,
+    "y2": 278.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Table4-1.png"
+}, {
+  "caption": "Figure 6: Networks performing the original fixed-amplitude 3-bit flip-flop task (Sussillo & Barak, 2013). (A) An example validation trial with inputs in each channel shown in black, and the trained vanilla RNN traces maintaining the previous pulse value shown in colors. (B) Validation loss traces as a function of the number of iterations. (C) The first 3 principal components of the vanilla RNN (N = 18) trajectories and fixed points. Cyan indicates stable fixed point. Magenta indicates unstable fixed point.",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.00323486328125,
+    "y1": 328.92352294921875,
+    "y2": 389.719970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure6-1.png"
+}, {
+  "caption": "Figure 5: All non-gating weights (W ℓ) set to Kaiming normal with overall scale σw = 1.5. All gating weights (Wz) set to Kaiming normal with overall scale σz = 0 (i.e., no gating, top row) and σz = 5 (bottom row).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99951171875,
+    "y1": 548.0365600585938,
+    "y2": 577.4509887695312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 161.76,
+    "x2": 451.2,
+    "y1": 353.76,
+    "y2": 536.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure5-1.png"
+}, {
+  "caption": "Figure 7: Networks assuming N = 6 performing the variable-amplitude 3-bit flip-flop task. Each circle is the spectral abscissa of the Jacobian evaluated at a detected fixed point. Bold horizontal lines indicate medians.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0046691894531,
+    "y1": 194.22055053710938,
+    "y2": 222.1409912109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 233.76,
+    "x2": 378.24,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure7-1.png"
+}, {
+  "caption": "Table 2: We compute the spectral abscissa max(Re [λ(D)]) at a numerically-detected fixed point. We provide below the medians and quartiles of the distribution of max(Re [λ(D)]).",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 503.9969787597656,
+    "y1": 518.654296875,
+    "y2": 535.6157836914062
+  },
+  "figType": "Table",
+  "imageText": ["RNN", "2.750", "[−0.768,", "4.703]", "mGRU", "0.004", "[0.002,", "0.009]", "GRU", "0.005", "[0.001,", "0.023]", "nODE", "2.626", "[−2.030,", "13.151]", "gnODE", "0.002", "[0.002,", "0.003]", "Model", "Median", "Quartiles", "(b)", "N", "=", "6", "RNN", "2.587", "[−1.969,", "6.360]", "mGRU", "−0.472", "[−0.473,−0.470]", "GRU", "−0.033", "[−0.474,", "0.070]", "nODE", "4.988", "[−1.627,", "9.453]", "gnODE", "0.842", "[−0.461,", "1.698]", "Model", "Median", "Quartiles", "(a)", "N", "=", "100"],
+  "name": "2",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 490.08,
+    "y1": 549.6,
+    "y2": 637.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Table2-1.png"
+}, {
+  "caption": "Figure 14: Increasing the number of hidden layers in Fθ does not significantly increase practical expressivity of networks. (A) nODE with H = 1000, assuming τ = 1s. Mint indicates nODE with 1 hidden layer (H = N1 = 1000), and pink indicates nODE with 2 hidden layers (H = N1 = N2 = 1000). (B) nODE with H = 1000, assuming τ = 3s. (C) nODE with H = 1000, assuming τ = 10s. (D) nODE with H = 1000, assuming τ = 100s. (E) gnODE with H = 1000, assuming τ = 1s. (F) gnODE with H = 1000, assuming τ = 3s. (G) gnODE with H = 1000, assuming τ = 10s. (H) gnODE with H = 1000, assuming τ = 100s.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0043029785156,
+    "y1": 263.8725280761719,
+    "y2": 335.62890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure14-1.png"
+}, {
+  "caption": "Table 3: Test accuracy for classification of Latin alphabet character trajectories (mean ± std, error bars computed from training the networks 5 times with different random seeds). G is Glorot Normal and K is Kaiming Normal initialization.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00128173828125,
+    "y1": 353.6654357910156,
+    "y2": 381.58587646484375
+  },
+  "figType": "Table",
+  "imageText": ["mGRU", "23,", "520", "(10−3,", "10−1,", "100,N/A,", "G)", "0.987±", "0.005", "0.987±", "0.001", "GRU", "312,", "228", "(10−3,", "10−3,", "316,N/A,", "G)", "0.990±", "0.001", "0.990±", "0.004", "LEM", "415,", "244", "(10−3,", "10−3,", "316,N/A,K)", "0.986±", "0.006", "0.990±", "0.002", "nODE", "33,", "220", "(10−4,", "10−3,", "100,", "100,K)", "0.924±", "0.095", "0.807±", "0.247", "gnODE", "178,", "072", "(10−3,", "10−3,", "100,", "316,K)", "0.984±", "0.005", "0.981±", "0.003", "Name", "#", "of", "parameters", "(η,", "w,N,Nℓ,", "init)", "30%", "dropped", "50%", "dropped", "Model", "Test", "Accuracy"],
+  "name": "3",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 394.56,
+    "y2": 486.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Table3-1.png"
+}, {
+  "caption": "Figure 3: Practical expressivities of vanilla RNN, mGRU, GRU and gnODE, and their dependence on network timescale. (B–F) show means and standard deviations across 5 runs. (A) gnODE with 1 hidden layer (N = N1 = 316) assuming τ ∈ {1s, 10s, 30s, 100s} fitting samples from the OU trajectory. (B) Training MSEs of gnODE in (A). (C) Training MSEs of gnODE with 1 hidden layer, assuming τ = 1s. (D) N = 316 across all networks, N1 = 1000 for nODE and gnODE. (E) τ = 1s across all networks,N1 = 1000 for nODE and gnODE. (F) τ = 30s across all networks,N1 = 1000 for nODE and gnODE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 294.478515625,
+    "y2": 366.23394775390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 487.2,
+    "y1": 80.64,
+    "y2": 283.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure3-1.png"
+}, {
+  "caption": "Figure 4: To obtain these curves, we used ϕ(x) = tanh(x). This shows the critical curve separating stability from chaos as a function of bias and weight variances. The different curves correspond to MLP functions of differing depth. We used Kaiming scaling such that α = β = 0. For a fixed depth L, the region below the plotted curve is chaotic, whereas the region above the plotted curve is stable.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 356.2125244140625,
+    "y2": 395.09197998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 180.0,
+    "x2": 433.44,
+    "y1": 166.56,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure4-1.png"
+}, {
+  "caption": "Figure 12: Increasing the number of units H in each hidden layer of Fθ increases practical expressivity of networks. (A) Training MSEs of nODE with 1 hidden layer (i.e., L = 2), assuming τ = 1s. (B) Training MSEs of nODE with 2 hidden layers (i.e., L = 3), assuming τ = 1s. (C) Training MSEs of nODE with L = 2 and τ = 30s. (D) Training MSEs of nODE with L = 3 and τ = 30s. (E) Training MSEs of gnODE with L = 3 and τ = 1s.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 316.0835266113281,
+    "y2": 365.92193603515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 305.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure12-1.png"
+}, {
+  "caption": "Figure 13: (A) N = 10 across all networks. nODE and gnODE has Fθ with 1 hidden layer, where H = N1 = 1000. (B) N = 32 across all networks. nODE and gnODE has Fθ with 1 hidden layer, whereH = N1 = 1000. (C)N = 100 across all networks. nODE and gnODE has Fθ with 1 hidden layer, where H = N1 = 1000.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00439453125,
+    "y1": 502.8525390625,
+    "y2": 543.2260131835938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 381.59999999999997,
+    "y2": 492.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure13-1.png"
+}, {
+  "caption": "Figure 8: Networks assuming N = 2 performing the square 2-bit flip-flop task (Section E.5.2). (A) An example validation trial with inputs in each channel shown in black, and the trained gnODE traces maintaining the previous pulse value shown in colors. (B) For each network, we tried 27 different hyperparameter configurations. Each circle represents the minimum validation MSE achieved during 200 epochs of training. Circles with black edges represent the minimum out of the 27 configurations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 362.61651611328125,
+    "y2": 423.4129638671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 244.79999999999998,
+    "y2": 351.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure8-1.png"
+}, {
+  "caption": "Table 1: Testing model performances on irregularly-sampled time-series datasets. (a) Test accuracy (mean ± std, across 5 runs) on CharacterTrajectories (Bagnall et al., 2018). (b) Test MSE (mean ± std, across 5 runs) on Walker2D kinematic simulation (Todorov et al., 2012; Lechner & Hasani, 2020).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00115966796875,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["6", "DISCUSSION", "mGRU", "223,", "113", "1.074±", "0.070", "GRU", "328,", "973", "0.772±", "0.028", "LEM", "440,", "837", "1.030±", "0.022", "nODE", "1,", "223,", "717", "0.707±", "0.023", "gnODE", "1,", "086,", "833", "0.552±", "0.019", "Model", "#", "of", "parameters", "Test", "MSE", "(b)", "Walker2D", "mGRU", "23,", "520", "0.983±", "0.002", "GRU", "312,", "228", "0.987±", "0.003", "LEM", "415,", "244", "0.987±", "0.005", "nODE", "33,", "220", "0.898±", "0.089", "gnODE", "178,", "072", "0.986±", "0.003", "Model", "#", "of", "parameters", "Test", "Accuracy", "(a)", "CharacterTrajectories"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 499.2,
+    "y1": 136.32,
+    "y2": 258.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Table1-1.png"
+}, {
+  "caption": "Figure 1: Networks assumingN = 6 (A–C) andN = 100 (D–E) performing the variable-amplitude 3-bit flip-flop task. (A) An example validation trial with inputs in each channel shown in black, and the trained gnODE traces maintaining the previous pulse value shown in colors. (B) For each network, we tried 27 different hyperparameter configurations. Each circle represents the minimum validation MSE achieved during 600 epochs of training. Circles with black edges represent the minimum out of the 27 configurations. (C) Validation loss traces as a function of epoch is shown for the circles with black edges. Color codes are the same as in (B). (D) Same as (B). (E) Each circle is the spectral abscissa of the Jacobian evaluated at a detected fixed point. Bold horizontal lines indicate medians.",
+  "captionBoundary": {
+    "x1": 107.9999771118164,
+    "x2": 504.0033264160156,
+    "y1": 280.96453857421875,
+    "y2": 374.637939453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 80.64,
+    "y2": 270.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ArPM-xtsFrk-Figure1-1.png"
+}]

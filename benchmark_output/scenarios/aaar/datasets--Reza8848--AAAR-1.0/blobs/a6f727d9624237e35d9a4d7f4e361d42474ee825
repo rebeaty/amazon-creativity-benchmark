@@ -1,0 +1,341 @@
+[{
+  "caption": "Table 1: Benefit of energy-based test sample adaptation. Experiments on PACS using a ResNet-18 averaged over five runs. Optimized by eq. (7), our model improves after adaptation. With the latent variable (eq. 10) performance improves further, both before and after adaptation.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00238037109375,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["✓", "96.05", "±0.37", "82.28", "±0.31", "81.55", "±0.65", "79.81", "±0.41", "84.92", "±0.59", "With", "latent", "variable", "(eq.", "10)", "✗", "95.12", "±0.41", "79.79", "±0.64", "79.15", "±0.37", "79.28", "±0.82", "83.33", "±0.43", "✓", "94.59", "±0.16", "80.45", "±0.52", "79.98", "±0.51", "79.23", "±0.32", "83.51", "±0.30", "Without", "latent", "variable", "(eq.", "7)", "✗", "94.73", "±0.22", "78.66", "±0.59", "78.24", "±0.71", "78.34", "±0.62", "82.49", "±0.26", "Adaptation", "Photo", "Art-painting", "Cartoon", "Sketch", "Mean"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 499.2,
+    "y1": 124.32,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table1-1.png"
+}, {
+  "caption": "Figure 2: Benefit of energy-based test sample adaptation. Different shapes denote different classes. From left to right: adaptation to the source domains photo, cartoon, and sketch of samples from the",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.74298095703125,
+    "y1": 312.4804992675781,
+    "y2": 329.44195556640625
+  },
+  "figType": "Figure",
+  "imageText": ["Source", "samples", "Target", "samples", "Target", "samples", "after", "adaptation", "Source", "domain:", "photo", "Source", "domain:", "cartoon", "Source", "domain:", "sketch"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 503.03999999999996,
+    "y1": 197.76,
+    "y2": 300.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure2-1.png"
+}, {
+  "caption": "Table 7: Generalization beyond image data. Rumour detection on the PHEME microblog dataset. Our method achieves the best overall performance and is competitive in each domain.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7452087402344,
+    "y1": 80.6955337524414,
+    "y2": 97.656982421875
+  },
+  "figType": "Table",
+  "imageText": ["ERM", "Baseline", "79.4", "±0.25", "77.1", "±0.36", "75.7", "±0.12", "68.2", "±0.48", "75.0", "±0.28", "75.1", "±0.29", "Wang", "et", "al.", "(2021)", "80.1", "±0.18", "76.9", "±0.56", "74.7", "±0.52", "72.0", "±0.48", "75.4", "±0.34", "75.8", "±0.23", "Xiao", "et", "al.", "(2022)", "81.0", "±0.52", "77.2", "±0.25", "75.7", "±0.31", "70.0", "±0.46", "76.5", "±0.22", "76.1", "±0.21", "This", "paper", "81.8", "±0.43", "77.8", "±0.37", "75.3", "±0.14", "71.9", "±0.28", "75.6", "±0.15", "76.5", "±0.18", "Charlie", "Hebdo", "Ferguson", "German", "Wings", "Ottawa", "Shooting", "Sydney", "Siege", "Mean"],
+  "name": "7",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 110.39999999999999,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table7-1.png"
+}, {
+  "caption": "Table 8: Comparison with Tent. With limited test samples, Tent performs similar or even worse compared with the baseline while our method overcomes the lack of target samples.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0037536621094,
+    "y1": 174.25454711914062,
+    "y2": 191.21600341796875
+  },
+  "figType": "Table",
+  "imageText": ["This", "paper", "1", "96.11", "128", "95.25", "Wang", "et", "al.", "(2021)", "1", "94.11", "32", "94.46", "Baseline", "-", "94.22", "Method", "Number", "of", "samples", "for", "adaptation", "Test", "accuracy"],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 178.56,
+    "x2": 433.44,
+    "y1": 200.64,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table8-1.png"
+}, {
+  "caption": "Table 9: Experiments on CIFAR-10-C. The model is trained on original data and evaluated on 15 different types of corruption. Our method achieves competitive results with Sun et al. (2020). Mimicking good domain shifts during training is important for our method.",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 505.7398986816406,
+    "y1": 286.9605407714844,
+    "y2": 314.8810119628906
+  },
+  "figType": "Table",
+  "imageText": ["Sun", "et", "al.", "(2020)", "17.5", "Wang", "et", "al.", "(2021)", "14.3", "This", "paper", "(noisy", "data", "as", "negative", "samples)", "21.5", "This", "paper", "(corrupted", "data", "as", "negative", "samples)", "17.0", "Method", "Error"],
+  "name": "9",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 198.72,
+    "x2": 413.28,
+    "y1": 324.96,
+    "y2": 388.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table9-1.png"
+}, {
+  "caption": "Table 10: Domain similarity for ensemble prediction. The experiments are conducted on PACS using ResNet-18. The results with cosine similarity and averaging are similar.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0043640136719,
+    "y1": 395.9605407714844,
+    "y2": 412.9219970703125
+  },
+  "figType": "Table",
+  "imageText": ["Cosine", "similarity", "95.93", "±0.33", "82.18", "±0.37", "81.24", "±0.52", "79.54", "±0.77", "84.76", "±0.55", "Average", "96.05", "±0.37", "82.28", "±0.31", "81.55", "±0.65", "79.81", "±0.41", "84.92", "±0.59", "Settings", "Photo", "Art-painting", "Cartoon", "Sketch", "Mean"],
+  "name": "10",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 461.28,
+    "y1": 425.76,
+    "y2": 467.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table10-1.png"
+}, {
+  "caption": "Figure 4: Benefit for larger domain gaps. We train on different source set distributions and evaluate on target sets with rotation angles of 0◦ and 90◦. As the domain gap between source and target sets increases, our method performs better than alternatives.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 410.19451904296875,
+    "y2": 438.114990234375
+  },
+  "figType": "Figure",
+  "imageText": ["Source", "domains", "Source", "domains", "15°,", "30°,", "45°,", "60°,", "75°", "30°,", "45°,", "60°", "30°,", "45°", "Rotated", "MNIST", "Rotated", "Fashion-MNIST", "Ac", "cu", "ra", "cy", "Ac", "cu", "ra", "cy", "15°,", "30°,", "45°,", "60°,", "75°", "30°,", "45°,", "60°", "30°,", "45°"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 499.2,
+    "y1": 286.08,
+    "y2": 397.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Adaptation with different Langevin dynamics steps. As the number of steps increases, energy decreases while accuracy increases. When the number of steps is too large, the accuracy without z or with p(z|x) drops slightly while the accuracy with q(z|dx) is more stable and better.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.65631103515625,
+    "y1": 609.2705688476562,
+    "y2": 671.56201171875
+  },
+  "figType": "Figure",
+  "imageText": ["Number", "of", "Langevin", "dynamics", "updating", "steps"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 313.92,
+    "x2": 496.32,
+    "y1": 482.88,
+    "y2": 595.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Iterative adaptation of target samples. We adapt the samples from target domain (artpainting) to different source domains (photo, cartoon, and sketch in (a), (b), (c)). Each subfigure shows the adaptation of one target sample. The adaptation procedure of the target samples is represented by the gradient color from green to red. In each figure, the target sample has the same label as the source data, but is mispredicted due to domain shifts. During adaptation, the target samples gradually approach the source distributions and eventually get correct predictions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65386962890625,
+    "y1": 211.26351928710938,
+    "y2": 272.05999755859375
+  },
+  "figType": "Figure",
+  "imageText": ["Probability", "on", "guitar:", "1.9%", "84.8%", "Probability", "on", "person:", "46.0%", "86.7%", "Probability", "on", "house:", "0.02%", "99.7%", "(a)", "(b)", "(c)", "Category:", "guitar", "Source:", "sketch", "Target:", "art-painting", "Source:", "cartoon", "Target:", "art-painting", "Category:", "person", "Source:", "photo", "Target:", "art-painting", "Category:", "house"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 84.96,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Illustration of the proposed energy-based model. It aims to adapt the target samples to the source distributions, which can be more accurately classified by the source domain classifier (left). With Langevin dynamics, each target sample is adapted iteratively to the source data distributions, which are represented as the gradient colors from green to red (right). Best viewed in color.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7393798828125,
+    "y1": 236.62954711914062,
+    "y2": 275.50897216796875
+  },
+  "figType": "Figure",
+  "imageText": ["Adaptation:", "Class", "1", "Class", "2", "Source", "Target", "Adaptation", "r", "clas", "sifie", "Sou", "rce"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 499.2,
+    "y1": 86.88,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure1-1.png"
+}, {
+  "caption": "Figure 8: More visualizations of the iterative adaptation on PACS. We visualize the adaptation of samples from different target domains to source domains on PACS. Each subfigure shows the adaptation of one target sample to one source domain. The adaptation procedure of the target samples is represented by the gradient color from green to red. In each figure, the target sample has the same label as the source data, but is mispredicted due to domain shifts. During adaptation, the target samples gradually approach the source distributions and eventually get correct predictions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 550.8025512695312,
+    "y2": 611.5999755859375
+  },
+  "figType": "Figure",
+  "imageText": ["Probability", "on", "guitar:", "37.7%", "84.9%", "Probability", "on", "horse:", "33.2%", "90.6%", "Probability", "on", "dog:", "8.7%", "100%", "Source:", "cartoon", "Target:", "sketch", "Category:", "guitar", "Category:", "horse", "Source:", "art-painting", "Target:", "sketch", "Source:", "photo", "Target:", "sketch", "Category:", "dog", "Probability", "on", "person:", "12.2%", "92.6%", "Probability", "on", "horse:", "6.5%", "77.8%", "Probability", "on", "elephant", ":", "33.6%", "67.8%", "Source:", "sketch", "Target:", "cartoon", "Category:", "person", "Source:", "photo", "Target:", "cartoon", "Category:", "horse", "Source:", "art-painting", "Target:", "cartoon", "Category:", "elephant", "Probability", "on", "house:", "16.1%", "82.2%", "Probability", "on", "giraffe:", "2.6%", "89.1%", "Probability", "on", "horse:", "16.5%", "84.7%", "Source:", "sketch", "Target:", "art-painting", "Category:", "house", "Category:", "giraffe", "Source:", "cartoon", "Target:", "art-painting", "Category:", "horse", "Source:", "photo", "Target:", "art-painting", "Probability", "on", "guitar:", "17.9%", "100%", "Probability", "on", "giraffe:", "24.5%", "89.3%", "Probability", "on", "dog:", "18.3%", "87.0%", "Source:", "sketch", "Target:", "photo", "Category:", "guitar", "Category:", "giraffe", "Source:", "cartoon", "Target:", "photo", "Source:", "art-painting", "Target:", "photo", "Category:", "dog"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 498.24,
+    "y1": 82.56,
+    "y2": 534.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure8-1.png"
+}, {
+  "caption": "Table 2: Comparisons on image and text datasets. Our method achieves the best mean accuracy for all datasets, independent of the backbone.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3515625,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["This", "paper", "w/o", "adaptation", "83.33", "±0.43", "86.05", "±0.37", "65.01", "±0.47", "70.44", "±0.25", "42.90", "±0.34", "75.4", "±0.13", "This", "paper", "w/", "adaptation", "84.92", "±0.59", "87.70", "±0.28", "66.31", "±0.21", "72.07", "±0.38", "44.66", "±0.51", "76.5", "±0.18", "Iwasawa", "&", "Matsuo", "(2021)", "81.40", "85.10", "57.00", "68.30", "-", "-", "Zhao", "et", "al.", "(2020)", "81.46", "85.34", "-", "-", "-", "-", "Zhou", "et", "al.", "(2020a)", "82.83", "84.90", "65.63", "67.66", "-", "-", "Gulrajani", "&", "Lopez-Paz", "(2020)", "-", "85.50", "-", "66.50", "40.90", "-", "Wang", "et", "al.", "(2021)", "83.09", "86.23", "64.13", "67.99", "-", "75.8", "±0.23", "Dubey", "et", "al.", "(2021)", "-", "84.50", "-", "68.90", "43.90", "-", "Xiao", "et", "al.", "(2022)", "84.15", "87.51", "66.02", "71.07", "-", "76.1", "±0.21", "PACS", "Office-Home", "DomainNet", "PHEME", "ResNet-18", "ResNet-50", "ResNet-18", "ResNet-50", "ResNet-50", "DistilBERT"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 113.28,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table2-1.png"
+}, {
+  "caption": "Table 4: Training cost of the proposed method. Compared with ERM, our method has about 20% more parameters, most of which come from the energy functions of source domains. Similar to test time, the time cost of training increases along with the number of steps of the energy-based model.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.8292541503906,
+    "y1": 545.4055786132812,
+    "y2": 573.3259887695312
+  },
+  "figType": "Table",
+  "imageText": ["100", "14.0", "h", "20", "7.9", "h", "40", "9.4", "h", "60", "10.6", "h", "80", "12.1", "h", "This", "paper", "13.73M", "ERM", "11.18M", "-", "6.2", "h", "Parameters", "Adaptation", "steps", "10000", "iterations", "training", "time"],
+  "name": "4",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 147.84,
+    "x2": 461.28,
+    "y1": 585.6,
+    "y2": 682.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table4-1.png"
+}, {
+  "caption": "Figure 9: Failure case visualizations of our method on PACS. The visualization settings are the same as Figure 8. Our method makes wrong predictions on samples with complex background or multiple objects. However, our method still achieves good adaptation of these target samples to some source domains, which shows its effectiveness.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1702575683594,
+    "y1": 485.54351806640625,
+    "y2": 524.4229736328125
+  },
+  "figType": "Figure",
+  "imageText": ["Source:", "photo", "Source:", "art-painting", "Source:", "cartoon", "Source:", "photo", "Source:", "art-painting", "Source:", "sketch", "Source:", "photo", "Source:", "cartoon", "Source:", "sketch", "Probability", "on", "person:", "21.8%", "56.1%", "Probability", "on", "person:", "12.3%", "17.1%", "Probability", "on", "person:", "5.8%", "10.3%", "Probability", "on", "person:", "0.8%", "0.1%", "Probability", "on", "person:", "3.1%", "71.4%", "Probability", "on", "person:", "3.7%", "3.6%", "Probability", "on", "dog:", "0.01%", "7.5%", "Probability", "on", "dog:", "0.01%", "0.01%", "Probability", "on", "dog:", "0.01%", "10.3%", "Probability", "on", "guitar:", "4.7%", "14.1%", "Probability", "on", "guitar:", "5.4%", "24.5%", "Source:", "cartoon", "Source:", "sketch", "Probability", "on", "guitar:", "8.3%", "57.5%", "Source:", "art-painting", "Label:", "person", "Prediction:", "guitar", "Label:", "person", "Prediction:", "dog", "Label:", "dog", "Prediction:", "horse", "Label:", "guitar", "Prediction:", "person"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 496.32,
+    "y1": 84.0,
+    "y2": 468.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure9-1.png"
+}, {
+  "caption": "Figure 7: Visualizations of the target features xt and categorical latent variables zt. We use art-painting on PACS as the target domain. Different colors denote different categories. zt is obtained by pϕ(zt|xt). Most data points of zt are clustered according to their labels, demonstrating that zt can capture the categorical information.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.002197265625,
+    "y1": 229.14852905273438,
+    "y2": 268.0269775390625
+  },
+  "figType": "Figure",
+  "imageText": ["Visualizations", "of", "𝐱!", "Visualizations", "of", "𝐳!"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 84.96,
+    "y2": 213.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Figure7-1.png"
+}, {
+  "caption": "Table 5: Comparisons on PACS. Our method achieves best mean accuracy with a ResNet-18 backbone and is competitive with ResNet-50.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9996337890625,
+    "y1": 80.6955337524414,
+    "y2": 97.656982421875
+  },
+  "figType": "Table",
+  "imageText": ["ResNet-50", "Dou", "et", "al.", "(2019)", "95.01", "82.89", "80.49", "72.29", "82.67", "Dubey", "et", "al.", "(2021)", "-", "-", "-", "-", "84.50", "Iwasawa", "&", "Matsuo", "(2021)", "-", "-", "-", "-", "85.10", "Zhao", "et", "al.", "(2020)", "98.25", "87.51", "79.31", "76.30", "85.34", "Gulrajani", "&", "Lopez-Paz", "(2020)", "97.20", "84.70", "80.80", "79.30", "85.50", "Wang", "et", "al.", "(2021)", "97.96", "86.30", "82.53", "78.11", "86.23", "Seo", "et", "al.", "(2020)", "95.99", "87.04", "80.62", "82.90", "86.64", "Xiao", "et", "al.", "(2022)", "97.88", "88.09", "83.83", "80.21", "87.51", "This", "paper", "97.67", "±0.14", "88.00", "±0.29", "84.75", "±0.39", "80.40", "±0.38", "87.70", "±0.28", "ResNet-18", "Dou", "et", "al.", "(2019)", "94.99", "80.29", "77.17", "71.69", "81.04", "Iwasawa", "&", "Matsuo", "(2021)", "-", "-", "-", "-", "81.40", "Zhao", "et", "al.", "(2020)", "96.65", "80.70", "76.40", "71.77", "81.46", "Wang", "et", "al.", "(2021)", "95.49", "81.55", "77.67", "77.64", "83.09", "Zhou", "et", "al.", "(2020b)", "96.10", "84.10", "78.80", "75.90", "83.70", "Xiao", "et", "al.", "(2022)", "95.87", "82.02", "79.73", "78.96", "84.15", "This", "paper", "96.05", "±0.37", "82.28", "±0.31", "81.55", "±0.65", "79.81", "±0.41", "84.92", "±0.59", "Backbone", "Method", "Photo", "Art-painting", "Cartoon", "Sketch", "Mean"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 110.39999999999999,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table5-1.png"
+}, {
+  "caption": "Table 6: Comparisons on Office-Home. Our method achieves the best mean accuracy using both a ResNet-18 and ResNet-50 backbone.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99652099609375,
+    "y1": 304.1535339355469,
+    "y2": 321.114990234375
+  },
+  "figType": "Table",
+  "imageText": ["ResNet-50", "Gulrajani", "&", "Lopez-Paz", "(2020)", "61.30", "52.40", "75.80", "76.60", "66.50", "Wang", "et", "al.", "(2021)", "62.12", "56.65", "75.61", "77.58", "67.99", "Dubey", "et", "al.", "(2021)", "-", "-", "-", "-", "68.90", "Xiao", "et", "al.", "(2022)", "67.21", "57.97", "78.61", "80.47", "71.07", "This", "paper", "69.33", "±0.14", "58.37", "±0.30", "79.29", "±0.32", "81.26", "±0.26", "72.07", "±0.38", "ResNet-18", "Iwasawa", "&", "Matsuo", "(2021)", "47.00", "46.80", "68.00", "66.10", "57.00", "Wang", "et", "al.", "(2021)", "56.45", "52.06", "73.19", "74.82", "64.13", "Xiao", "et", "al.", "(2022)]", "59.39", "53.94", "74.68", "76.07", "66.02", "This", "paper", "60.08", "±0.33", "53.93", "±0.34", "74.50", "±0.39", "76.74", "±0.24", "66.31", "±0.21", "Backbone", "Method", "Art", "Clipart", "Product", "Real", "World", "Mean"],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 333.59999999999997,
+    "y2": 445.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3dnrKbeVatv-Table6-1.png"
+}]

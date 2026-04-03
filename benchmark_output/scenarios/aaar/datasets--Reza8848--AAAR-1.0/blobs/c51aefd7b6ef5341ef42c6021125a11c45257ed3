@@ -1,0 +1,201 @@
+[{
+  "caption": "Figure 8: Iterations per second for each model.",
+  "captionBoundary": {
+    "x1": 212.46200561523438,
+    "x2": 399.5397033691406,
+    "y1": 721.7025756835938,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 217.44,
+    "x2": 394.08,
+    "y1": 606.72,
+    "y2": 717.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure8-1.png"
+}, {
+  "caption": "Figure 1: Illustration of how oversmoothing happens. Stacking GNN layers will increase both the mixing and denoising effects counteracting each other. Depending on the graph characteristics, either the denoising effect dominates the mixing effect, resulting in less difficulty classifying nodes (A), or the mixing effect dominates the denoising effect, resulting in more difficulty classifying nodes (B)—this is when oversmoothing starts to happen.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003662109375,
+    "y1": 176.23855590820312,
+    "y2": 226.07696533203125
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 497.28,
+    "y1": 82.56,
+    "y2": 167.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure1-1.png"
+}, {
+  "caption": "Figure 7: A geometric proof of Proposition 1.",
+  "captionBoundary": {
+    "x1": 214.93699645996094,
+    "x2": 397.0632019042969,
+    "y1": 584.9515380859375,
+    "y2": 590.9539794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 489.12,
+    "y1": 348.96,
+    "y2": 557.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure7-1.png"
+}, {
+  "caption": "Figure 9: The change of variance with respect to the number of layers using random walk convolution D−1A and symmetric message-passing convolution D−1/2AD−1/2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 190.75753784179688,
+    "y2": 208.759033203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 460.32,
+    "y1": 85.92,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Counterexamples.",
+  "captionBoundary": {
+    "x1": 247.8040008544922,
+    "x2": 364.1969909667969,
+    "y1": 626.1615600585938,
+    "y2": 632.1640014648438
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B"],
+  "name": "10",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 460.32,
+    "y1": 522.72,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure10-1.png"
+}, {
+  "caption": "Figure 2: The influence of graph community structure on oversmoothing. When graphs have stronger community structure (higher intra-community edge density p), oversmoothing would happen later. Our theory predicts the optimal number of layers n⋆ with high accuracy (A). A classifier has significantly better performance on such graphs (B,C).",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0049133300781,
+    "y1": 232.23855590820312,
+    "y2": 271.11798095703125
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B", "C"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 499.2,
+    "y1": 136.32,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Comparison of node classification performance between the baseline GNN and APPNP. The performance of APPNP is more robust when we increase the model depth. However, compared to the base case (A), APPNP tends to have worse optimal performance than GNN on graphs with larger size (B) or stronger community structure (C), as predicted by the theory.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 385.7555236816406,
+    "y2": 424.63397216796875
+  },
+  "figType": "Figure",
+  "imageText": ["A", "(base", "case)", "B", "(larger", "graph)", "C", "(stronger", "community)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 282.24,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure3-1.png"
+}, {
+  "caption": "Figure 4: The effect of optimizing weights on oversmoothing using synthetic CSBM data. Compared to the GNN without weights, oversmoothing happens much sooner after adding learnable weights in each GNN layer, although these two models have the same representation power (A). As we increase the width of each GNN layer, the performance of GNN with weights is able to gradually match that of GNN without weights (B,C).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 181.41854858398438,
+    "y2": 231.2569580078125
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B", "C"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 84.96,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure4-1.png"
+}, {
+  "caption": "Figure 5: The effect of optimizing weights on oversmoothing using real-world benchmark datasets. Adding learnable weights in each GNN layer does not improve node classification performance but rather leads to optimization difficulty.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 336.5615234375,
+    "y2": 364.48199462890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 496.32,
+    "y1": 240.95999999999998,
+    "y2": 330.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Comparison of the mean estimation in Lemma 2 against simulation results.",
+  "captionBoundary": {
+    "x1": 136.78199768066406,
+    "x2": 475.22149658203125,
+    "y1": 182.48153686523438,
+    "y2": 188.4840087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 222.72,
+    "x2": 382.08,
+    "y1": 81.6,
+    "y2": 177.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CJd-BtnwtXq-Figure6-1.png"
+}]

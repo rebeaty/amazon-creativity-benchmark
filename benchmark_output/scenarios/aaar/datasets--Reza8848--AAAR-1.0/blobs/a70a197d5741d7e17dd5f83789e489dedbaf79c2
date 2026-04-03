@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 1: Comparison of relevant prior works on object-centric generative models and its utilization for model-based RL. The models can be categorized based on whether it models interactions, is action-conditioned or not, and type of factorization of object representations. OP3 (Veerapaneni et al., 2020) is similar to our work as it models object interactions and actions by an agent but represents objects as a single latent variable. DDPAE (Hsieh et al., 2018) is also close to our work as it learns factorization implicitly, but interactions are not modeled and is not action-conditioned. For thorough comparison, see Appendix F.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 83.53055572509766,
+    "y2": 155.28594970703125
+  },
+  "figType": "Table",
+  "imageText": ["STEDIE", "(ours)", "\"", "\"", "Implicitly", "factorized", "ViMON", "%", "%", "Single", "OP3", "\"", "\"", "Single", "SQAIR,", "SCALOR", "%", "%", "Explicitly", "factorized", "GSWM", "\"", "%", "Explicitly", "factorized", "STOVE", "\"", "\"", "Explicitly", "factorized", "DDPAE", "%", "%", "Implicitly", "factorized", "Method", "Models", "interactions", "Action-Conditioned", "(Plannable)", "Type", "of", "factorization"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 488.15999999999997,
+    "y1": 168.0,
+    "y2": 293.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Table1-1.png"
+}, {
+  "caption": "Table 2: Color MSE and mask IoU on swapping global or dynamic latent variables between two sequences in the test dataset using STEDIE. Lower MSE indicates color are similar before and after swapping the feature. Higher IoU indicates position are similar.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 389.0604553222656,
+    "y2": 416.98089599609375
+  },
+  "figType": "Table",
+  "imageText": ["Same", "global,", "Different", "dynamic", "0.0838", "47.4", "Same", "dynamic,", "Different", "global", "0.1574", "62.8", "Swapping", "feature", "MSE", "(↓)", "IoU", "(↑)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 189.6,
+    "x2": 419.03999999999996,
+    "y1": 429.59999999999997,
+    "y2": 473.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Table2-1.png"
+}, {
+  "caption": "Figure 2: Visualization of swapping global features between two sequences. The columns represent timesteps. The blue arrows indicates that global features were swapped and the red arrows indicates that relational features were kept unswapped. In (b) and (c), the top row is the reconstructed whole image and the second to fifth row are the reconstructed image for each slot. The slots are sorted in ascending order of mask size and global features are swapped between the slots with the same slot #.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 314.4405212402344,
+    "y2": 375.2369384765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Figure2-1.png"
+}, {
+  "caption": "Table 6: Detailed comparison of relevant prior works on object-centric and its utilization for modelbased RL. The models can be categorized based on whether it models interactions, is actionconditioned or not, type of factorization of object representations, and objective function.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 308.7395324707031,
+    "y2": 336.65899658203125
+  },
+  "figType": "Table",
+  "imageText": ["STEDIE", "(ours)", "\"", "\"", "implicitly", "factorized", "ELBO", "ViMON", "%", "%", "single", "ELBO", "TBA", "%", "%", "single", "Pixel-based", "DDPAE", "%", "%", "implicitly", "factorized", "ELBO", "SQAIR,", "SCALOR", "%", "%", "explicitly", "factorized", "ELBO", "CSWM,", "SAVI,", "SAVI++", "\"", "%", "single", "Pixel-based", "OP3", "\"", "\"", "single", "ELBO", "GSWM", "\"", "%", "explicitly", "factorized", "ELBO", "STOVE", "\"", "\"", "explicitly", "factorized", "ELBO", "Objective", "fn.", "Method", "Models", "Interactions", "Action-Conditioned", "(Plannable)", "Type", "of", "factorization"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 518.4,
+    "y1": 349.44,
+    "y2": 501.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Table6-1.png"
+}, {
+  "caption": "Table 3: Accuracy (%), MSE, and average CEM steps until reaching goal state of multi-step planning for building block towers by OP3 and our STEDIE model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["1", "OP3", "85%", "0.0014", "1.17", "STEDIE", "(ours)", "84%", "0.0012", "1.00", "2", "OP3", "58%", "0.0049", "1.63", "STEDIE", "(ours)", "63%", "0.0041", "1.45", "3", "OP3", "42%", "0.0102", "3.50", "STEDIE", "(ours)", "55%", "0.0075", "1.82", "#", "Blocks", "Model", "Acc.", "(↑)", "MSE", "(↓)", "Average", "CEM", "steps", "(↓)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 113.28,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Table3-1.png"
+}, {
+  "caption": "Figure 3: Visualization of start, goal, and reconstruction of reached state by OP3 and STEDIE. STEDIE reach the goal state more accurately.",
+  "captionBoundary": {
+    "x1": 390.614013671875,
+    "x2": 503.9984130859375,
+    "y1": 491.4165344238281,
+    "y2": 552.2129516601562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 389.76,
+    "x2": 504.0,
+    "y1": 342.71999999999997,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Figure3-1.png"
+}, {
+  "caption": "Figure 1: σ1:K and δ (t) 1:K) denotes global features and relational features respectively. (a) A graphical model visualization of our proposed method, STEDIE. Solid black arrow indicates generation process and dashed red arrow indicates inference procedure. (a) In the inference process, images and actions up to the timestep of interest is used as inputs. (b) To generate at a certain timestep, the relational feature at that timestep is concatenated with the global feature. As two features are inferred independently, the global feature inferred at a previous timestep can be reused.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00341796875,
+    "y1": 295.3375244140625,
+    "y2": 356.13494873046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Figure1-1.png"
+}, {
+  "caption": "Table 5: Ablation results on multi-step planning for building block towers on using interactive inference (int. inf.) or not. Evaluation metrics are accuracy (%), MSE, and average CEM steps until reaching goal state. N/A indicates that the model could only predict not to move objects already at its goal position.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 365.67144775390625,
+    "y2": 404.5509033203125
+  },
+  "figType": "Table",
+  "imageText": ["1", "w/", "int.", "inf.", "26%", "0.0035", "1.00", "w/o", "int.", "inf.", "84%", "0.0012", "1.00", "2", "w/", "int.", "inf.", "15%", "0.0071", "1.00", "w/o", "int.", "inf.", "63%", "0.0041", "1.45", "3", "w/", "int.", "inf.", "18%", "0.0096", "N/A", "w/o", "int.", "inf.", "55%", "0.0075", "1.82", "#", "Blocks", "STEDIE", "Acc.", "(↑)", "MSE", "(↓)", "Average", "CEM", "steps", "(↓)"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 458.4,
+    "y1": 417.59999999999997,
+    "y2": 505.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Table5-1.png"
+}, {
+  "caption": "Figure 6: MSE of mean color for slots which include the objects. Mask size of the slots were used to identify whether a slot includes information about an object or not. STEDIE is able to reduce color MSE by a large margin, as it ensures temporal consistency by disentangling based on interactions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 223.34054565429688,
+    "y2": 251.260986328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 405.12,
+    "y1": 80.64,
+    "y2": 212.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Figure6-1.png"
+}, {
+  "caption": "Table 4: Reconstruction MSE for CausalMBRL dataset calculated at t = 1, 5, 10. Except for OP3 and STEDIE, the models were trained in two stages, in which the encoder and the decoder were trained first without transition and the transition module was trained afterwards.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["OP3", "ELBO", "218.79", "218.99", "218.61", "STEDIE", "(ours)", "ELBO", "25.96", "28.62", "47.73", "VAE", "ELBO", "110.11", "263.43", "318.17", "CSWM", "Pixel", "MSE", "92.57", "215.49", "229.85", "Unobserved", "OP3", "ELBO", "222.34", "223.52", "223.08", "STEDIE", "(ours)", "ELBO", "50.48", "58.78", "114.31", "VAE", "ELBO", "111.37", "269.79", "310.84", "CSWM", "Pixel", "MSE", "95.57", "221.61", "234.32", "FixedUnobserved", "OP3", "ELBO", "160.15", "211.79", "247.76", "STEDIE", "(ours)", "ELBO", "45.07", "60.14", "131.07", "VAE", "ELBO", "167.75", "329.83", "365.01", "CSWM", "Pixel", "MSE", "121.91", "282.18", "307.91", "Observed", "Dataset", "Model", "Loss", "MSE", "(↓)", "(t", "=", "1)", "(t", "=", "5)", "(t", "=", "10)"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 124.32,
+    "y2": 288.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Table4-1.png"
+}, {
+  "caption": "Figure 4: Reconstruction example of every possible single rollout on Weights dataset (Observed). Our model achieves realistic reconstruction for most cases.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 458.5075378417969,
+    "y2": 475.468994140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 303.84,
+    "y2": 447.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Long-term roll-out results of OP3 and STEDIE. Columns represent timestep. Both models were trained with sequences with a maximum length of 5. Although STEDIE does not reconstruct all timesteps accurately, it is able to track the same object.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 356.0465393066406,
+    "y2": 383.96697998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JQc2VowqCzz-Figure5-1.png"
+}]

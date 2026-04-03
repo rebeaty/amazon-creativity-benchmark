@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: BLEU score [%] of different methods on clients and server test sets. “△” refers to the improvement of the method compared with the Public Model. The subscript “1/∞” indicate that the server perform model aggregation after one or infinite epochs (i.e., client model convergence) of client model updates, respectively. The superscript “s” indicates that the server data is also involved in model training of FedAvg. “Comm.” and “Comp.” refer to communication and computational overhead in “GB” and “K Step” respectively.",
+  "captionBoundary": {
+    "x1": 90.47599792480469,
+    "x2": 521.9439697265625,
+    "y1": 105.9195327758789,
+    "y2": 155.75799560546875
+  },
+  "figType": "Table",
+  "imageText": ["FT-Ensemble", "36.74", "51.34", "47.49", "16.42", "45.19", "+14.26", "38.00", "+8.14", "4.85", "30", "0.39×", "FedNN", "34.64", "54.45", "47.98", "23.15", "45.69", "+14.76", "40.06", "+10.20", "5.08", "5", "0.75×", "FedAvgs", "∞", "29.23", "39.67", "34.49", "26.28", "34.46", "+3.53", "32.42", "+2.56", "4.85", "30", "1.00×FedAvg∞", "34.71", "48.68", "44.79", "16.23", "42.73", "+11.79", "36.10", "+6.25", "FedAvgs", "1", "30.83", "43.47", "39.22", "26.36", "37.84", "+6.91", "34.97", "+5.11", "388.12", "300", "1.00×FedAvg1", "37.99", "54.53", "50.23", "14.80", "47.58", "+16.65", "39.39", "+9.53", "II", "D", "FT-Ensemble", "30.11", "38.14", "39.15", "17.13", "35.80", "+4.87", "31.13", "+1.28", "4.85", "30", "0.39×", "FedNN", "35.62", "55.57", "49.21", "22.29", "46.80", "+15.87", "40.67", "+10.82", "5.08", "5", "0.75×", "FedAvgs", "∞", "27.04", "38.37", "32.32", "26.33", "32.66", "+1.72", "31.08", "+1.22", "4.85", "30", "1.00×FedAvg∞", "17.03", "47.06", "30.61", "13.33", "31.57", "+0.63", "27.01", "-", "2.85", "FedAvgs", "1", "26.99", "37.65", "32.36", "26.63", "32.33", "+1.40", "30.91", "+1.05", "388.12", "300", "1.00×FedAvg1", "28.26", "53.00", "45.90", "13.45", "42.39", "+11.45", "35.15", "+5.30", "II", "D", "no", "n-", "Centralized", "Model", "37.30", "49.72", "47.40", "26.58", "44.81", "—", "40.25", "—", "—", "—", "1.00×", "Public", "Model", "26.62", "35.91", "30.27", "26.63", "30.93", "—", "29.86", "—", "—", "—", "1.00×", "Methods", "Client", "Test", "Server", "Test", "Overall", "Performance", "Cost", "Inference", "IT", "Law", "Medical", "WMT14", "Client", "△", "Global", "△", "Comm.", "Comp.", "Speed"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 92.64,
+    "x2": 519.36,
+    "y1": 158.4,
+    "y2": 356.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Table1-1.png"
+}, {
+  "caption": "Table 5: Impact of Public Model’s Quality. “△” refers to the improvement of the method compared with the model mentioned in Table 1.",
+  "captionBoundary": {
+    "x1": 91.49199676513672,
+    "x2": 520.1983032226562,
+    "y1": 338.51153564453125,
+    "y2": 355.4729919433594
+  },
+  "figType": "Table",
+  "imageText": ["FedAvg1", "28.63", "+0.37", "58.32", "+5.32", "49.08", "+3.18", "16.05", "+2.60", "45.34", "+2.95", "38.02", "+2.87", "FedNN", "38.24", "+2.62", "55.76", "+0.19", "50.65", "+1.44", "22.65", "+0.36", "48.22", "+1.42", "41.83", "+1.16", "Public", "Model", "30.72", "+4.10", "38.69", "+2.78", "35.90", "+5.63", "29.77", "+3.14", "35.10", "+4.17", "33.77", "+3.91", "Methods", "IT", "Law", "Medical", "WMT14", "Clients", "Avg.", "Global", "Avg.", "BLEU", "△", "BLEU", "△", "BLEU", "△", "BLEU", "△", "BLEU", "△", "BLEU", "△"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 96.96,
+    "x2": 515.04,
+    "y1": 355.68,
+    "y2": 417.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Table5-1.png"
+}, {
+  "caption": "Table 4: The communication cost and computation cost of different methods, where “M, N, R and D” respectively represent the model size (414MB), number of client, rounds of communication (160) and the total size of all encrypted datastores (1785MB).",
+  "captionBoundary": {
+    "x1": 91.49199676513672,
+    "x2": 521.9684448242188,
+    "y1": 90.8515396118164,
+    "y2": 118.77197265625
+  },
+  "figType": "Table",
+  "imageText": ["FedAvg", "M×N×R×2", "388.12", "776.25", "1552.50", "3105.00", "300", "300", "300", "300", "300", "FT-Ensemble", "M×N×(N+1)", "4.85", "16.98", "63.07", "138.27", "10×N", "30", "60", "120", "180", "FedNN", "(D+M)×N", "5.08", "12.08", "26.10", "40.12", "5", "5", "5", "5", "5", "Communication", "Cost", "(GB)", "Computation", "Cost", "(K", "Step)", "Compl.", "3", "6", "12", "18", "Compl.", "3", "6", "12", "18"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 488.15999999999997,
+    "y1": 121.44,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Table4-1.png"
+}, {
+  "caption": "Figure 4: Threat Model.",
+  "captionBoundary": {
+    "x1": 257.83099365234375,
+    "x2": 354.1693115234375,
+    "y1": 354.3805236816406,
+    "y2": 360.38299560546875
+  },
+  "figType": "Figure",
+  "imageText": ["<2tgt>", "IchI", "like", "dogs", "hundemag", "Embd", "Embd", "EmbdFFN", "Embd", "Embd", "Embd", "Embd", "Reconstruction", "Transformer", "Decoder", "Ich", "magI", "like", "dogs", "<2tgt>", "</s>hunde"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 164.64,
+    "x2": 448.32,
+    "y1": 186.72,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Figure4-1.png"
+}, {
+  "caption": "Table 3: Statistics of the training sets of multi-domain and WMT14.",
+  "captionBoundary": {
+    "x1": 170.36500549316406,
+    "x2": 441.6366271972656,
+    "y1": 341.95751953125,
+    "y2": 347.9599914550781
+  },
+  "figType": "Table",
+  "imageText": ["Tokens", "(DE)", "113,", "526,", "532", "2,", "907,", "789", "5,", "650,", "447", "16,", "418,", "294", "Sentences", "3,", "900,", "502", "177,", "734", "208,", "201", "449,", "771", "WMT14", "IT", "Medical", "Laws"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 200.64,
+    "x2": 408.47999999999996,
+    "y1": 350.88,
+    "y2": 381.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Table3-1.png"
+}, {
+  "caption": "Figure 2: The impact of the number of clients.",
+  "captionBoundary": {
+    "x1": 213.69700622558594,
+    "x2": 398.3039855957031,
+    "y1": 302.6495361328125,
+    "y2": 308.6520080566406
+  },
+  "figType": "Figure",
+  "imageText": ["g", "et", "tin", "ID", "S", "(b", ")", "I", "FL", "Methods:", "FedAvg", "FT-Ensemble", "FedNN", "FT", "AK-MTPersonalized", "Methods:", "(a", ")", "N", "on", "-I", "ID", "S", "et", "tin", "g"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 102.72,
+    "x2": 508.32,
+    "y1": 94.56,
+    "y2": 293.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Figure2-1.png"
+}, {
+  "caption": "Figure 3: The impact of data distribution heterogeneity on performance.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 520.5496826171875,
+    "y1": 579.6575927734375,
+    "y2": 596.6190185546875
+  },
+  "figType": "Figure",
+  "imageText": ["FedAvg", "FT-Ensemble", "FT", "AK-MT", "FedNN", "Server", "WMT14", "re", "S", "co", "E", "U", "B", "L", "24", "22", "20", "18", "16", "14", "12", "0", "0.2", "0.4", "0.6", "0.8", "10", "Client", "Medical", "re", "S", "co", "E", "U", "B", "L", "55", "50", "45", "40", "35", "0", "0.2", "0.4", "0.6", "0.8", "30", "Client", "Law", "re", "S", "co", "E", "U", "B", "L", "55", "50", "45", "40", "0", "0.2", "0.4", "0.6", "0.8", "35", "Client", "IT", "re", "S", "co", "E", "U", "B", "L", "40", "36", "32", "28", "24", "0", "0.2", "0.4", "0.6", "0.8", "20"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 310.56,
+    "x2": 514.0799999999999,
+    "y1": 365.76,
+    "y2": 565.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Figure3-1.png"
+}, {
+  "caption": "Figure 1: The workflow of our FedNN.",
+  "captionBoundary": {
+    "x1": 227.98300170898438,
+    "x2": 384.0172119140625,
+    "y1": 338.79254150390625,
+    "y2": 344.7950134277344
+  },
+  "figType": "Figure",
+  "imageText": ["I", "like", "dogs", "Ich", "m", "ag", "...", "Sie", "...", "hunde", "Ich", "Global", "Memorization", "Private", "Memorization", "Private", "Memorization", "Public", "Memorization", "Final", "Prediction", "Die", "...", "Ich", "Value", "hunde", "20", "40", "...", "100", "40", "...", "200", ".", "1", "1", "...", "5", "20", "Distinct ", "Values", "Query", "Weight", "Prediction", "& ", "-Encryption", "Memorization", "Aggregation", "③", "Gbobal", "Federated", "Nearest", "Neighbor ", "②", "Private", "Memorization", "Construction", "Public", "Data", "Server", "Client", "hunde", "...Content", "Decryption", "für", "...", "Sie", "hunde", "für", "hunde", "...", "Sie", "für", "Folgen", "Die", "...", "Data", "für", "...", "Private", "...", "Folgen", "Die", "Content", "Encryption", "-Encryption", "Process", "...Passing", "Public", "Model", "für", "...", "Folgen", "Die", "Passing", "Public", "Model", "Client", "1", "Broadcast", "U", "pload", "...", "für", "Die", "Folgen", "...", "Sie", "hunde", "Ich", "...", "für", "Sie", "hunde", "...", "...", "Learning", "-Encryption", "...Passing", "Public", "Model", "für", "...", "Folgen", "Die", "①", "Initialization", "Sie", "hunde", "Ich", "...", "Data", "...", "Private", "Sie", "...", "hunde", "Ich", "Content", "Encryption", "-Encryption", "Process", "Passing", "Public", "Model", "④", "Inference"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 105.6,
+    "x2": 502.08,
+    "y1": 94.56,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Figure1-1.png"
+}, {
+  "caption": "Table 2: The reconstruction BLEU score (%) of the attack model.",
+  "captionBoundary": {
+    "x1": 369.947998046875,
+    "x2": 520.201171875,
+    "y1": 141.95950317382812,
+    "y2": 158.9210205078125
+  },
+  "figType": "Table",
+  "imageText": ["K", "11.25", "8.73", "9.21", "KfKE", "7.81", "6.81", "6.52", "Input", "IT", "Law", "Medical"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 375.84,
+    "x2": 514.0799999999999,
+    "y1": 161.28,
+    "y2": 204.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R1U5G2spbLd-Table2-1.png"
+}]

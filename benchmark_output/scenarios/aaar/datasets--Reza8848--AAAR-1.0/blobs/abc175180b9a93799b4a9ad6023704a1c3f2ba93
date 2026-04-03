@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 10: Different data augmentation strategies for discriminators on Finger-Spin with 10 expert trajectories over 5 random seeds, tested on two encoder-based baseline methods. Compared to observations in Fig. 4, it is easy to conclude that augmentation strategies are not the key to make independent-encoder AIL success, but patch rewards can make discriminator works directly on pixels; in comparison, Random-Crop-Resize and Random-Shifts lead share-encoder AIL into similar training efficiency, while RandAugment may promote the efficiency and final performance, causing more instability. Nevertheless, we can still conclude the effectiveness of learning with patch rewards. But this also motivates us that improving the data-augmentation strategy with shared-encoder AIL may worth further investigation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010681152344,
+    "y1": 202.52377319335938,
+    "y2": 277.6650390625
+  },
+  "figType": "Figure",
+  "imageText": ["Independent-Encoder", "AIL", "Random-Shift", "(default)", "Random-Cutout", "Random-Crop-Resize", "RandAugment", "Expert", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Share-Encoder", "AIL", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 159.35999999999999,
+    "x2": 450.71999999999997,
+    "y1": 83.03999999999999,
+    "y2": 187.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure10-1.png"
+}, {
+  "caption": "Figure 1: Visualization of patch rewards by the proposed PatchAIL on seven DeepMind Control Suite tasks. The patch rewards are calculated regarding several stacked frames and are mapped back on each pixel weighted by the spatial attention map. We use the final model trained with around 200M frames. Strikingly, the patch rewards align with the movement of key elements (e.g., moving foot, inclined body) on both expert and random samples, indicating where the high rewards (red areas) or low ones (blue areas) come from, compared with the reward on backgrounds. With the patch rewards recovered from expert’s visual demonstrations, we can easily reason why and where agents are rewarded or penalized in these tasks compared with expert demonstrations without any task prior. Figure best viewed in color. A corresponding video is provided in the supplementary file and the anonymous demo page https://sites.google.com/view/patchail/.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0022888183594,
+    "y1": 302.1137390136719,
+    "y2": 387.2170715332031
+  },
+  "figType": "Figure",
+  "imageText": ["ns", "Pa", "tc", "h", "Re", "w", "ar", "ds", "w", "ar", "ds", "O", "bs", "er", "va", "tio", "h", "Re", "Pa", "tc", "tio", "ns", "er", "va", "O", "bs", "Cartpole", "Swingup", "Cheetah", "Run", "Finger", "Spin", "Hopper", "Stand", "Quadruped", "Run", "Walker", "Stand", "Walker", "Walk", "ol", "ic", "y", "Ra", "nd", "om", "P", "ol", "ic", "y", "rt", "P", "Ex", "pe"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 295.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure1-1.png"
+}, {
+  "caption": "Figure 8: Learning curves on 7 DMC tasks over 5 random seeds using 5 expert trajectories. The observations are almost consistent with the results using 10 trajectories except on Cartpole-Swingup and Hopper-Stand.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0009765625,
+    "y1": 273.1667175292969,
+    "y2": 288.531982421875
+  },
+  "figType": "Figure",
+  "imageText": ["PatchAIL", "w.o.", "Reg.", "(Ours)", "PatchAIL-Weight", "(Ours)", "PatchAIL-Bonus", "(Ours)", "Shared-Encoder", "AIL", "Independent-Encoder", "AIL", "BC", "Expert", "Quadruped", "Run", "n", "et", "ur", "de", "R", "Ep", "iso", "600", "400", "200", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Walker", "Walk", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Walker", "Stand", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Hopper", "Stand", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Finger", "Spin", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cheetah", "Run", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cartpole", "Swingup", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 259.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Learning curves by augmenting PatchAIL with annealing BC using 1 expert trajectories over 5 random seeds. PatchAIL and PatchAIL-W shows faster convergence speed but POT tends to have a slightly better final performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001220703125,
+    "y1": 504.2607421875,
+    "y2": 529.5889892578125
+  },
+  "figType": "Figure",
+  "imageText": ["PatchAIL", "PatchAIL-W", "POT", "Expert", "Finger", "Spin", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Frames", "1e6", "Cartpole", "Swingup", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.00", "0.25", "0.50", "0.75", "1.00", "Frames", "1e6"],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 169.44,
+    "x2": 442.08,
+    "y1": 358.08,
+    "y2": 488.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure9-1.png"
+}, {
+  "caption": "Figure 7: Ablation for the choice of observation pairs over 5 random seeds.",
+  "captionBoundary": {
+    "x1": 171.13299560546875,
+    "x2": 440.8691711425781,
+    "y1": 554.6636962890625,
+    "y2": 560.0659790039062
+  },
+  "figType": "Figure",
+  "imageText": ["Hopper", "Stand", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Finger", "Spin", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "PatchAIL", "w.o", "Reg-D(s,s)", "PatchAIL", "w.o", "Reg-D(s)", "Shared-Encoder", "AIL-D(s,s)", "Shared-Encoder", "AIL-D(s)", "Expert", "Cheetah", "Run", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cartpole", "Swingup", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 445.44,
+    "y2": 539.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Learning curves on 7 DMC tasks over 5 random seeds using 10 expert trajectories. The curve and shaded zone represent the mean and the standard deviation, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00091552734375,
+    "y1": 257.1997375488281,
+    "y2": 272.56500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["PatchAIL", "w.o.", "Reg.", "(Ours)", "PatchAIL-Weight", "(Ours)", "PatchAIL-Bonus", "(Ours)", "Shared-Encoder", "AIL", "Independent-Encoder", "AIL", "BC", "Expert", "Quadruped", "Run", "n", "et", "ur", "de", "R", "Ep", "iso", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Walker", "Walk", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Walker", "Stand", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Hopper", "Stand", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Finger", "Spin", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cheetah", "Run", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cartpole", "Swingup", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 250.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Illustration of the patch discriminator, where each pixel of the right-side mosaic represents the patch reward corresponding to a local region of the left-side image.",
+  "captionBoundary": {
+    "x1": 317.8800048828125,
+    "x2": 504.0044250488281,
+    "y1": 321.3817443847656,
+    "y2": 356.6720275878906
+  },
+  "figType": "Figure",
+  "imageText": ["（D", ")="],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 324.47999999999996,
+    "x2": 490.08,
+    "y1": 265.92,
+    "y2": 317.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure2-1.png"
+}, {
+  "caption": "Figure 3: The framework of PatchAIL.",
+  "captionBoundary": {
+    "x1": 351.0740051269531,
+    "x2": 490.6091003417969,
+    "y1": 626.7107543945312,
+    "y2": 632.113037109375
+  },
+  "figType": "Figure",
+  "imageText": ["Inference", "Train", "Data", "Expert", "Data", "Sampled", "Regularize", "Patch", "Discriminator", "Image", "Encoder", "Policy", "Critic", "Patch", "Discriminator", "Patch", "Reward"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 341.76,
+    "x2": 503.03999999999996,
+    "y1": 471.84,
+    "y2": 619.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure3-1.png"
+}, {
+  "caption": "Figure 12: Architectures for the two visual imitation learning baselines (not our proposal) and the proposed method. (a) The discriminator shares the encoder with the policy and the critic. The encoder of the policy/critic is only updated by the critic loss. (b) The encoder of the discriminator is independent of the policy/critic. (c) PatchAIL, where discriminator is also independent to the critic’s encoder.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0040283203125,
+    "y1": 250.54678344726562,
+    "y2": 285.8370361328125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "PatchAIL", "structure.", "Inference", "Train", "Data", "Expert", "Data", "Sampled", "Regularize", "Patch", "Discriminator", "Image", "Encoder", "Policy", "Critic", "Patch", "Discriminator", "Patch", "Reward", "(b)", "Independent-encoder", "AIL", "structure.", "Reward", "Image", "Encoder", "Image", "Encoder", "Discriminator", "Policy", "Critic", "(a)", "Shared-encoder", "AIL", "structure.", "Reward", "Inference", "Train", "Image", "Encoder", "Discriminator", "Policy", "Critic"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 518.4,
+    "y1": 105.6,
+    "y2": 236.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure12-1.png"
+}, {
+  "caption": "Table 2: List of hyperparameters.",
+  "captionBoundary": {
+    "x1": 246.2259979248047,
+    "x2": 365.7749328613281,
+    "y1": 698.4937133789062,
+    "y2": 703.89599609375
+  },
+  "figType": "Table",
+  "imageText": ["reward", "scale", "0.5", "PatchAIL-B", "λ", "initial", "value", "0.5", "PatchAIL-W", "λ", "initial", "value", "1.3", "Data", "augmentation", "strategy", "random", "shift", "Reward", "scale", "factor", "10", "Target", "feature", "processor", "update", "frequency(steps)", "20000", "Gradient", "penalty", "coefficient", "10", "DDPG", "exploration", "schedule", "linear(1,0.1,500000)", "Exploration", "steps", "2000", "Optimizer", "Adam", "Hidden", "dim", "1024", "Feature", "dim", "50", "Critic", "soft-update", "rate", "0.01", "Agent", "update", "frequency", "2", "Mini-batch", "size", "256", "Action", "repeat", "2", "Frame", "stack", "/", "n-step", "returns", "3", "Discount", "γ", "0.99", "Learning", "rate", "1e−4", "Common", "Replay", "buffer", "size", "150000", "Method", "Parameter", "Value"],
+  "name": "2",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 333.59999999999997,
+    "y2": 682.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Table2-1.png"
+}, {
+  "caption": "Figure 6: Ablation studies, only tested with PatchAIL w.o. Reg.",
+  "captionBoundary": {
+    "x1": 191.44700622558594,
+    "x2": 420.5564270019531,
+    "y1": 185.90274047851562,
+    "y2": 191.30499267578125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Ablation", "study", "for", "the", "number", "of", "patches.", "Finger", "Spin", "84", "x", "84", "Patches", "(Pixels)", "46", "x", "46", "Patches", "42", "x", "42", "Patches", "39", "x", "39", "Patches", "(default)", "35", "x", "35", "Patches", "25", "x", "25", "Patches", "Expert", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cheetah", "Run", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "(a)", "Ablation", "study", "for", "aggregation", "function.", "Finger", "Spin", "n", "et", "ur", "de", "R", "Ep", "iso", "1000", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6", "Cheetah", "Run", "median", "mean", "(default)", "min", "max", "Expert", "n", "et", "ur", "de", "R", "Ep", "iso", "800", "600", "400", "200", "0", "0.0", "0.5", "1.0", "1.5", "Frames", "1e6"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure6-1.png"
+}, {
+  "caption": "Figure 11: Visual interpretation by GradCAM for each method. PatchAIL and shared-encoder AIL show an advantage over independent-encoder in terms of focusing more on the robot and focusing less on the background. This is especially obvious in five out of seven environments (Cartpole-Swingup, Cheetah-Run, QuadrupedRUn, Walker-Stand and Walker-Walk).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011291503906,
+    "y1": 440.9287414550781,
+    "y2": 476.2190246582031
+  },
+  "figType": "Figure",
+  "imageText": ["True", "reward", "=", "1.93", "True", "reward", "=", "1.41", "True", "reward", "=", "2.00", "True", "reward", "=", "0.00", "True", "reward", "=", "1.03", "True", "reward", "=", "1.99", "True", "reward", "=", "1.77", "Walker", "Walk", "ns", "O", "bs", "er", "va", "tio", "-E", "xp", "er", "t", "l", "N", "on", "La", "be", "l", "Ex", "pe", "rt", "La", "be", "Cartpole", "Swingup", "Cheetah", "Run", "Finger", "Spin", "Hopper", "Stand", "Quadruped", "Run", "Walker", "Stand", "-E", "nc", "od", "er", "In", "de", "pe", "nd", "en", "t-E", "nc", "od", "er", "La", "be", "l", "Ex", "pe", "rt", "La", "be", "l", "N", "on", "-E", "xp", "er", "t", "La", "be", "l", "Ex", "pe", "rt", "La", "be", "l", "N", "on", "-E", "xp", "er", "t", "Sh", "ar", "ed", "IL", "-W", "Pa", "tc", "hA"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 428.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OnM3R47KIiU-Figure11-1.png"
+}]

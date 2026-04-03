@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 2: (Top) Model performance comparison on Mazes. All recurrent networks outperform the ResNet-based feedforward baselines. We observe a trend that increasing depth improves the performance of ResNets on Mazes. (Bottom) Model performance comparison on PathFinder. Differences between the recurrent networks becomes clearer on the more difficult task of PathFinder.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 690.8435668945312,
+    "y2": 729.7219848632812
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 516.96,
+    "y2": 676.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3mji6eUxzY-Figure2-1.png"
+}, {
+  "caption": "Figure 1: (Left) Example images from Mazes at three difficult levels (small, medium, large); (Right) Example images from PathFinder at three difficulty levels (PathFinder-9, PathFinder-14, PathFinder18). Scales for different difficulties within Mazes are as shown; Pathfinder images have five times the resolution of Large Mazes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 688.8255615234375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 595.68,
+    "y2": 674.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3mji6eUxzY-Figure1-1.png"
+}, {
+  "caption": "Figure 3: A) (Top) Task extrapolation performance of models to easier (Small) maze by decreasing number of recurrent steps as we move horizontally in each plot from the right (timesteps used during training) to the left. (Bottom) Task extrapolation performance of models to harder (Large) maze by increasing number of recurrent steps as we move horizontally in each plot from the left (timesteps used during training) to the right. Dotted blue line shows the zero-shot generalization performance of the feedforward ResNet-36 model to small and large mazes. ResNet-36 is significantly worse than all recurrent models in generalizing to the harder Maze. Number of recurrent timesteps used during training is circled on each plot’s x-axis. B) Visualizing validation accuracy of LocRNN (top) and ConvGRU (bottom) as a function of the recurrent iterations. Number of iterations used during training is highlighted with a circle on the horizontal axis. We observe that LocRNN is unstable when we heavily increase the number of recurrent iterations on contrary to the more stable ConvGRU.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 512.7245483398438,
+    "y2": 639.2749633789062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 279.84,
+    "y2": 498.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3mji6eUxzY-Figure3-1.png"
+}, {
+  "caption": "Figure 5: Visualizing predictions of LocRNN (trained on medium mazes) for Medium Maze image samples at subsequent timesteps shows that the model is most stable near the number of recurrent steps used during training. As we increase t > T used during train, the predictions of maze solution become blurred and the overall activity of the prediction grows without bounds.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 361.9765319824219,
+    "y2": 400.85498046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 150.72,
+    "y2": 348.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3mji6eUxzY-Figure5-1.png"
+}, {
+  "caption": "Figure 6: (Top) Example images from Large Mazes processed by a model to produce the solution as a segmentation prediction. (Bottom) Example input images from PathFinder-14 processed by a classifier to produce binary classification output.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 684.342529296875,
+    "y2": 712.2630004882812
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 482.88,
+    "y2": 670.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3mji6eUxzY-Figure6-1.png"
+}, {
+  "caption": "Figure 4: Task extrapolation performance of LocRNN from Pathfinder-14 to Pathfinder-9 and PathFinder-18. ConvGRU and R-ResNet not shown here as they were unable to converge on PathFinder within the provided training budget. The number of recurrent steps used during training is highlighted with a circle on the x-axis of each plot.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 245.29055786132812,
+    "y2": 284.16998291015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 194.88,
+    "x2": 414.24,
+    "y1": 73.92,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_3mji6eUxzY-Figure4-1.png"
+}]

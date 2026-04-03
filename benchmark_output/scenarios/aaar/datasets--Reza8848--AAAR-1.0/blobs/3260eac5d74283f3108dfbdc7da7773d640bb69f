@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 5: Global board state input features",
+  "captionBoundary": {
+    "x1": 223.37100219726562,
+    "x2": 388.6305236816406,
+    "y1": 159.50753784179688,
+    "y2": 165.510009765625
+  },
+  "figType": "Table",
+  "imageText": ["Feature", "Type", "Channels", "Season", "(spring/fall/winter)", "One-hot", "3", "Year", "(encoded", "as", "(y", "−", "1901)/10)", "Float", "1", "Game", "has", "dialogue?", "Binary", "1", "Scoring", "system", "used", "One-hot", "2"],
+  "name": "5",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 148.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table5-1.png"
+}, {
+  "caption": "Table 6: Hyper-parameter values used to train the IL anchor policy on human data.",
+  "captionBoundary": {
+    "x1": 155.9409942626953,
+    "x2": 456.06231689453125,
+    "y1": 708.0415649414062,
+    "y2": 714.0440063476562
+  },
+  "figType": "Table",
+  "imageText": ["Learning", "rate", "2×", "10−3", "Learning", "rate", "decay", "per", "epoch", "0.99", "Linear", "LR", "warmup", "epochs", "10", "Total", "epochs", "390", "Gradient", "clip", "max", "norm", "0.5", "Batch", "size", "16000", "Batches", "per", "epoch", "270", "Value", "loss", "weight", "0.7", "Policy", "loss", "weight", "0.3", "Optimizer", "ADAM", "Transformer", "encoder", "dropout", "0.3", "Policy", "head", "LSTM", "dropout", "0.3"],
+  "name": "6",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 212.64,
+    "x2": 396.47999999999996,
+    "y1": 557.76,
+    "y2": 696.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table6-1.png"
+}, {
+  "caption": "Figure 4: Model architecture used for policy/value learning in no-press Diplomacy.",
+  "captionBoundary": {
+    "x1": 155.01300048828125,
+    "x2": 456.9897155761719,
+    "y1": 573.3355712890625,
+    "y2": 579.3380126953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 534.24,
+    "y1": 80.64,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Figure4-1.png"
+}, {
+  "caption": "Table 8: For each starting country, the empirical advantage/disadvantage of starting as that country measured in Elo rating equivalent units, fitted jointly with all players’ Elo ratings on the 200 Diplomacy games of the tournament. The values roughly agree with common opinions among Diplomacy players, particularly that France is one of the best starting countries in no-press, while Austria and England are among the weaker starts.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00439453125,
+    "y1": 431.6515197753906,
+    "y2": 467.5420227050781
+  },
+  "figType": "Table",
+  "imageText": ["Austria", "-24", "England", "-43", "France", "59", "Germany", "18", "Italy", "-21", "Russia", "-16", "Turkey", "27", "Starting", "Country", "bi", "(Elo)"],
+  "name": "8",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 243.84,
+    "x2": 366.24,
+    "y1": 320.64,
+    "y2": 420.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table8-1.png"
+}, {
+  "caption": "Table 7: Hyper-parameter values used to train RL agents.",
+  "captionBoundary": {
+    "x1": 201.5659942626953,
+    "x2": 410.43621826171875,
+    "y1": 330.20751953125,
+    "y2": 336.2099914550781
+  },
+  "figType": "Table",
+  "imageText": ["Search", "algorithm", "DiL-piKL", "DiL-piKL", "DiL-piKL", "RM", "Type", "distribution", "(self)", "{10−2,", "10−1}", "{10−4,", "10−1}", "{+∞}", "{0}", "Type", "distribution", "(other)", "{10−2,", "10−1}", "{10−4,", "10−1}", "{0}", "{0}", "Search", "iterations", "256", "256", "256", "256", "Number", "of", "candidate", "actions", "(Nc)", "50", "50", "50", "50", "Max", "candidate", "actions", "per", "unit", "6", "6", "6", "6", "Nash", "explore", "(ε)", "0.1", "0.1", "0.1", "0.1", "Nash", "explore,", "S1901M", "0.1", "0.1", "0.1", "0.3", "Nash", "explore,", "F1901M", "0.1", "0.1", "0.1", "0.2", "Learning", "rate", "10−4", "Gradient", "clip", "max", "norm", "0.5", "Warmup", "updates", "10k", "Batch", "size", "1024", "Buffer", "size", "1,280,000", "Max", "train/generation", "ratio", "6", "Optimizer", "ADAM", "Transformer", "encoder", "dropout", "0", "Policy", "head", "LSTM", "dropout", "0", "Diplodocus", "Diplodocus", "BRBot", "DORA", "High", "Low"],
+  "name": "7",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 493.44,
+    "y1": 81.6,
+    "y2": 319.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table7-1.png"
+}, {
+  "caption": "Figure 6: Performance of different search algorithms at inference time for models trained with RL and IL. Applying DiL-piKL at inference time rather than Hedge only slightly improves an IL-based search agent, but greatly improves RL agents trained with DiL-piKL.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 485.2575378417969,
+    "y2": 513.177978515625
+  },
+  "figType": "Figure",
+  "imageText": ["Imitation", "Learning", "Reinforced-DiL-PiKL-High", "Reinforced-DiL-PiKL-Low", ",", "\\", "%", "Policy", "and", "Value", "Function", "ra", "te", "W", "in", "25", "20", "15", "10", "5", "0", "Hedge", "DiL-piKL", "Inference", "search", "method"],
+  "name": "6",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 152.16,
+    "x2": 455.03999999999996,
+    "y1": 356.64,
+    "y2": 463.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Figure6-1.png"
+}, {
+  "caption": "Table 1: Performance of different agents in a population of various agents. Agents above the line were trained using identical neural network architectures. Agents below the line were evaluated using the models and the parameters provided by the authors. The ± shows one standard error.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 226.66250610351562,
+    "y2": 252.5899658203125
+  },
+  "figType": "Table",
+  "imageText": ["FPPI-2", "(Anthony", "et", "al.,", "2020)", "9%", "±", "1%", "SearchBot", "(Gray", "et", "al.,", "2020)", "7%", "±", "1%", "SL", "(Anthony", "et", "al.,", "2020)", "6%", "±", "1%", "Agent", "Score", "against", "population", "Diplodocus-Low", "29%", "±", "1%", "Diplodocus-High", "28%", "±", "1%", "DNVI-NPU", "(retrained)", "(Bakhtin", "et", "al.,", "2021)", "20%", "±", "1%", "BRBot", "18%", "±", "1%", "DNVI", "(retrained)", "(Bakhtin", "et", "al.,", "2021)", "15%", "±", "1%", "HedgeBot", "(retrained)", "(Jacob", "et", "al.,", "2022)", "14%", "±", "1%", "DORA", "(retrained)", "(Bakhtin", "et", "al.,", "2021)", "13%", "±", "1%"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 219.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table1-1.png"
+}, {
+  "caption": "Table 2: Performance of four different agents in a population of human players, ranked by Elo, among all 43 participants who played at least 5 games. The ± shows one standard error.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9971923828125,
+    "y1": 436.57952880859375,
+    "y2": 452.5450134277344
+  },
+  "figType": "Table",
+  "imageText": ["Rank", "Elo", "Avg", "Score", "#", "Games", "Diplodocus-High", "1", "181", "27%", "±", "4%", "50", "Human", "2", "162", "25%", "±", "6%", "13", "Diplodocus-Low", "3", "152", "26%", "±", "4%", "50", "Human", "4", "138", "22%", "±", "9%", "7", "Human", "5", "136", "22%", "±", "3%", "57", "BRBot", "6", "119", "23%", "±", "4%", "50", "Human", "7", "102", "18%", "±", "8%", "8", "Human", "8", "96", "17%", "±", "3%", "51", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "DORA", "32", "-20", "13%", "±", "3%", "50", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "·", "Human", "43", "-187", "1%", "±", "1%", "7"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 432.47999999999996,
+    "y1": 274.56,
+    "y2": 429.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table2-1.png"
+}, {
+  "caption": "Figure 5: High-level description of DNVI-style algorithms. The DORA agent is initialized from scratch and requires a Double Oracle action exploration procedure to perform well. The NPU (no policy update) modification uses the behavioral cloning policy for the policy proposal network throughout the whole training. DORA, DNVI, and DNVI-NPU use RM as the search algorithm, while the other training methods use DiL-piKL. .",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 354.36553955078125,
+    "y2": 404.2039794921875
+  },
+  "figType": "Figure",
+  "imageText": ["14", "function", "TRAININGLOOP()", "15", "θv", "←", "BCV", "alue()", "//", "Not", "used", "for", "DORA", "16", "θπ", "←", "BCPolicy()", "//", "Not", "used", "for", "DORA", "17", "while", "true", "do", "18", "s,σ,u←", "READFROMBUFFER()", "19", "Loss←", "POLICYLOSS(s,σ,", "θπ)", "+", "VALUELOSS(s,u,", "θv)", "20", "GRADIENTSTEP(Loss)", "21", "SAVENEWVALUEFUNCTION(θv)", "22", "SAVENEWPOLICYFUNCTION(θπ)", "Algorithm", "2:", "RL", "Loop", "1", "function", "DATAGENERATIONLOOP()", "2", "while", "true", "do", "3", "Game←", "NEWGAME()", "4", "θv", "←", "GETNEWVALUEFUNCTION()", "5", "θπ", "←", "GETNEWPOLICYFUNCTION()", "//", "Not", "used", "for", "NPU", "algorithm", "6", "while", "not", "ISDONE(Game)", "do", "7", "s←", "ENCODESTATE(Game)", "8", "A←", "GETPLAUSIBLEACTION(θπ)", "9", "A←", "DOUBLEORACLEACTIONEXPLORATION(A,", "θπ,", "θv)", "//", "Only", "used", "for", "DORA", "10", "σ,u←", "RUNSEARCH(s,A,", "θv,", "τ)", "//", "Regret", "Matching", "or", "DiL-piKL", "11", "SENDTOBUFFER(s,σ,u)", "//", "Sample", "from", "the", "policy", "with", "possible", "ϵ-exploration", "12", "a←", "SELECTACTION(σ)", "13", "Game←", "NEXTSTATE(Game,a)"],
+  "name": "5",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 336.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Figure5-1.png"
+}, {
+  "caption": "Table 4: Per-player board state input features",
+  "captionBoundary": {
+    "x1": 216.28199768066406,
+    "x2": 395.71832275390625,
+    "y1": 689.9065551757812,
+    "y2": 695.9089965820312
+  },
+  "figType": "Table",
+  "imageText": ["Feature", "Type", "Number", "of", "Channels", "Number", "of", "builds", "allowed", "during", "winter", "Float", "1"],
+  "name": "4",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 458.4,
+    "y1": 644.64,
+    "y2": 678.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table4-1.png"
+}, {
+  "caption": "Table 3: Per-location board state input features",
+  "captionBoundary": {
+    "x1": 212.68099975585938,
+    "x2": 399.32025146484375,
+    "y1": 619.66455078125,
+    "y2": 625.6669921875
+  },
+  "figType": "Table",
+  "imageText": ["Feature", "Type", "Number", "of", "Channels", "Presence", "of", "army/fleet?", "Binary", "2", "Army/fleet", "owner", "One-hot", "(7", "players),", "or", "all", "zero", "7", "Build", "turn", "build/disband", "Binary", "2", "Dislodged", "army/fleet?", "Binary", "2", "Dislodged", "unit", "owner", "One-hot", "(7", "players),", "or", "all", "zero", "7", "Land/coast/water", "One-hot", "3", "Supply", "center", "owner", "One-hot", "(7", "players),", "or", "all", "zero", "8", "Home", "center", "One-hot", "(7", "players),", "or", "all", "zero", "7"],
+  "name": "3",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 478.08,
+    "y1": 497.76,
+    "y2": 608.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Table3-1.png"
+}, {
+  "caption": "Figure 3: Performance of different agents as a function of the number of RL training steps. Left: Scores against 6 human-like HedgeBot agents. The gray dotted line at score 1/7 ≈ 14.3% corresponds to tying HedgeBot. The error bars show one standard error. Right: Order prediction accuracy of each agent’s raw RL policy on a held-out set of human games. The gray dotted line corresponds to the behavioral cloning policy. Overall: Diplodocus-High achieves a high score while also maintaining high prediction accuracy. Unregularized agents DNVI and DORA do far worse on both metrics.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0047912597656,
+    "y1": 206.75454711914062,
+    "y2": 262.57000732421875
+  },
+  "figType": "Figure",
+  "imageText": ["DORA", "DNVI", "DNVI-NPU", "Diplodocus-Low", "Diplodocus-High", "Prediction", "accuracy", "of", "human", "actions", "y,", "%", "ur", "ac", "A", "cc", "60", "40", "20", "0", "100000", "200000", "300000", "Num", "updates", "Score", "vs", "6", "HedgeBot", "agents", "%", "re", ",", "S", "co", "20", "15", "10", "5", "0", "100000", "200000", "300000", "Num", "updates"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 491.52,
+    "y1": 86.88,
+    "y2": 193.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_F61FwJTZhb-Figure3-1.png"
+}]

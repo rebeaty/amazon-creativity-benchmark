@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 6: Potential models for SQA3D. We split the considered models into three groups: 3D model, video / image model, and zero-shot model. The 3D model is modified from the ScanQA model (Azuma et al., 2022) and maps 3D scan input to the answer. While the video / image models are effectively borrowed from canonical video QA and VQA tasks but we augment them with the additional situation input. The zero-shot model explores the potential of large pre-trained LLMs on our tasks. But they have to work with an additional 3D caption model that converts the 3D scene into text.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011291503906,
+    "y1": 236.76077270507812,
+    "y2": 291.9760437011719
+  },
+  "figType": "Figure",
+  "imageText": ["^", "3D", "Model", "Video", "/", "Image", "Model", "Zero-shot", "Model", "Captions", "Vision", "Encoder", "txts", "q[SEP]", "q[SEP]", "[SEP]", "Prompts", "Answer", "a", "3D", "ScanScan2Cap", "GPT-3", "/", "Unified", "QA", "(zero-shot)", "Language", "Encoder", "Egocentric", "video", "/", "BEV", "picture", "Answer", "a^", "Answer", "a", "ClipBERT", "/", "MCAN", "MLP", "MLPLocation", "Object", "features", "Fusion", "Cross-", "attention", "Cross-", "attention", "VoteNet3D", "Scan", "^", "Description", "txts", "txts", "Language", "Encoder", "Question", "q", "Language", "Encoder"],
+  "name": "6",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 82.56,
+    "y2": 233.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure6-1.png"
+}, {
+  "caption": "Figure 8: Dataset collection Web UI for Stage I.",
+  "captionBoundary": {
+    "x1": 219.8070068359375,
+    "x2": 392.1950378417969,
+    "y1": 420.98974609375,
+    "y2": 426.3919982910156
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 417.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure8-1.png"
+}, {
+  "caption": "Table 3: Quantitative results on the SQA3D benchmark. Results are presented in accuracy (%) on different types of questions. In the “Format” column: V = 3D visual input S; S = situation description stxt; Q = question q; A = answer a; L = location ⟨spos, srot⟩. In ScanQA, aux. task indicates the use of both Lpos and Lrot as additional losses. We use the Large variant as Unified QA (Khashabi et al., 2020) as it works better. Note that we only evaluate GPT-3 on 10% of our testing data due to the limited API access resources.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0002746582031,
+    "y1": 248.13076782226562,
+    "y2": 293.3830261230469
+  },
+  "figType": "Table",
+  "imageText": ["Human", "(amateur)", "3D", "scan", "VSQ→A", "88.53", "93.84", "88.44", "95.27", "87.22", "88.57", "90.06", "Unified", "QALarge", "ScanRefer", "VSQ→A", "33.01", "50.43", "31.91", "56.51", "45.17", "41.11", "41.00", "Unified", "QALarge", "ReferIt3D", "VSQ→A", "27.58", "47.99", "34.05", "59.47", "40.91", "39.77", "38.71", "GPT-3", "(10%", "data)", "ScanRefer", "VSQ→A", "31.36", "46.97", "44.64", "51.28", "40.62", "41.67", "40.67", "GPT-3", "(10%", "data)", "ReferIt3D", "VSQ→A", "28.00", "56.06", "27.78", "36.11", "20.51", "37.50", "34.82", "MCAN", "BEV", "VSQ→A", "28.86", "59.66", "44.09", "68.34", "40.74", "40.46", "43.42", "ClipBERT", "Ego.", "video", "VSQ→A", "30.24", "60.12", "38.71", "63.31", "42.45", "42.71", "43.31", "ScanQA", "(w/o", "stxt)", "3D", "scan", "VQ→A", "28.58", "65.03", "47.31", "66.27", "43.87", "42.88", "45.27", "ScanQA", "3D", "scan", "VSQ→A", "31.64", "63.80", "46.02", "69.53", "43.87", "45.34", "46.58", "ScanQA", "+", "aux.", "task", "3D", "scan", "VSQ→AL", "33.48", "66.10", "42.37", "69.53", "43.02", "46.40", "47.20", "Blind", "test", "-", "SQ→A", "26.75", "63.34", "43.44", "69.53", "37.89", "43.41", "43.65", "S", "Format", "test", "set", "Avg.What", "Is", "How", "Can", "Which", "Others"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 244.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Table3-1.png"
+}, {
+  "caption": "Table 1: An overview of the different benchmark datasets covering grounded 3D scene understanding. In general, we consider semantic grounding, language-driven navigation, and question answering in photorealistic 3D scenes. In the first row, situated indicates whether the benchmark task is supposed to be completed by a “situated” agent with its egocentric perspective. navigation, common sense and multi-hop reasoning show whether the task requires certain capability or knowledge level of 3D understanding. ∗Rather than observing a complete 3D scan of the scene, the learner needs to navigate in a simulator to perceive the 3D scene incrementally.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0027160644531,
+    "y1": 83.4337387084961,
+    "y2": 148.6109619140625
+  },
+  "figType": "Table",
+  "imageText": ["SQA3D", "(Ours)", "q.a.", "✓", "scan", "human", "✓", "✓", "✓", "650", "rooms", "33.4k", "ScanQA", "(Azuma", "et", "al.,", "2022)", "q.a.", "✗", "scan", "template", "✗", "✗", "✗", "800", "rooms", "41k", "3D-QA", "(Ye", "et", "al.,", "2021)", "q.a.", "✗", "scan", "human", "✗", "✗", "✗", "806", "rooms", "5.8k", "CLEVR3D", "(Yan", "et", "al.,", "2021)", "q.a.", "✗", "scan", "template", "✗", "✗", "✓", "478", "rooms", "60k", "MP3D-R2R", "(Anderson", "et", "al.,", "2018)", "nav.", "✓", "∗nav.", "human", "✓", "✗", "✗", "190", "floors", "22k", "MP3D-EQA", "(Wijmans", "et", "al.,", "2019a)", "q.a.", "✓", "∗nav.", "template", "✓", "✗", "✗", "146", "floors", "1.1k", "ScanRefer", "(Chen", "et", "al.,", "2020)", "det.", "✗", "scan", "human", "✗", "✗", "✗", "800", "rooms", "52k", "ReferIt3D", "(Achlioptas", "et", "al.,", "2020)", "det.", "✗", "scan", "human", "✗", "✗", "✗", "707", "rooms", "41k", "ScanNet", "(Dai", "et", "al.,", "2017)", "seg.", "✗", "scan", "n/a", "✗", "✗", "✗", "800", "rooms", "1.5k", "dataset", "task", "situated?", "3D", "text", "navi-", "common", "multi-hop", "#scenes", "#taskstype", "collection", "gation?", "sense?", "reasoning?"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 503.03999999999996,
+    "y1": 153.6,
+    "y2": 263.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Table1-1.png"
+}, {
+  "caption": "Figure 13: Answer distribution (organized by question prefixes) after balancing.",
+  "captionBoundary": {
+    "x1": 162.55299377441406,
+    "x2": 449.4508361816406,
+    "y1": 237.90573120117188,
+    "y2": 243.3079833984375
+  },
+  "figType": "Figure",
+  "imageText": ["Context:", "There", "is", "a", "book", "on", "the", "desk.", "A", "laptop", "with", "a", "green", "cover", "is", "to", "the", "left", "of", "the", "book.", "Q:", "I’m", "working", "by", "the", "desk.", "What", "is", "on", "the", "desk", "beside", "the", "book?", "A:", "laptop", "Context:{stxt}", "Q:", "{q}", "A:", "(b)", "Histogram", "of", "question", "q", "length.", "0.12", "0.10", "0.08", "0.06", "0.04", "0.02", "0", "5", "10", "15", "20", "25", "30", "35", "40", "0.00", "(a)", "Histogram", "of", "situation", "description", "stxt", "length.", "0.08", "0.07", "0.06", "0.05", "0.04", "0.03", "0.02", "0.01", "0", "10", "20", "30", "40", "50", "60", "0.00"],
+  "name": "13",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 520.3199999999999,
+    "y1": 273.59999999999997,
+    "y2": 518.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure13-1.png"
+}, {
+  "caption": "Figure 7: Qualitative results. We show the predicted answer and bbox with highest attention for the variants of ScanQA (Azuma et al., 2022) models. We anticipate the bbox to indicate the object that situation description stxt or question q refers to. We observe that better situation understanding (via comprehension on stxt or auxiliary tasks) could result in more reasonable attention over objects, which positively correlates to more robust answer prediction.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.001220703125,
+    "y1": 298.99774169921875,
+    "y2": 344.25103759765625
+  },
+  "figType": "Figure",
+  "imageText": ["𝒔txt:", "I", "am", "working", "at", "the", "counter", "with", "cabinets", "over", "my", "head", "and", "the", "wall", "on", "my", "left", "is", "within", "reach.", "𝒒:", "If", "I", "walked", "backwards,", "what", "would", "I", "hit", "behind", "me?", "𝒂:", "Wall", "✅", "𝒂:", "Wall", "✅", "𝒂:", "Front", "❌", "𝒂:", "Two✅", "𝒂:", "Couch", "✅", "𝒂:", "Red", "✅", "𝒂:", "Unknown", "❌𝒂:", "One", "❌", "𝒂:", "Black", "❌", "𝒔", "tx", "t", ")", "(w", "/o", "Q", "A", "Sc", "an", "Q", "A", "Sc", "an", "as", "k", "ux", ".", "t", "+", "a", "Q", "A", "Sc", "an", "𝒂:", "One", "❌", "𝒂:", "Couch", "✅", "𝒂:", "Black", "❌", "𝒔txt:", "I", "am", "entering", "the", "room.", "𝒒:", "What", "is", "the", "color", "of", "the", "backpack", "on", "my", "10", "o’clock", "chair?", "𝒔txt:", "I", "am", "sitting", "on", "the", "rightmost", "side", "of", "my", "couch,", "and", "there", "is", "an", "end", "table", "to", "my", "right.", "𝒒:", "The", "coffee", "table", "that", "is", "furthest", "from", "me", "is", "surrounded", "by", "what?", "𝒔txt:", "I", "am", "picking", "up", "my", "backpack", "with", "a", "chair", "to", "my", "left", "within", "reach.", "𝒒:", "How", "many", "chairs", "are", "behind", "me?"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure7-1.png"
+}, {
+  "caption": "Figure 3: Data collection pipeline of SQA3D. Since our dataset comprises multiple types of annotations (situations and their descriptions, questions, answers, etc.), we found it more manageable to break down a single annotation task into three sub-tasks: i) Situation Identification; ii) Question Preparation; iii) Answer Collection & Human Study, where the participants recruited on AMT only need to focus on a relatively simple sub-task at a time.",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.0028991699219,
+    "y1": 209.53677368164062,
+    "y2": 254.7900390625
+  },
+  "figType": "Figure",
+  "imageText": ["II.", "Question", "Preparation", "Participants", "are", "asked", "to", "write", "question", "q", "given", "the", "situation", "depicted", "in", "both", "and", ".", "III.", "Answer", "Collection", "&", "Human", "Study", "More", "participants", "are", "asked", "to", "answer", "question", "q", "given", "the", "situation", "depicted", "only", "in", ".txts", "txts", "txts", "poss", "rot,s", "I.", "Situation", "Identification", "Participants", "are", "asked", "to", "pick", "and", "write", "description", "."],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 205.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure3-1.png"
+}, {
+  "caption": "Figure 15: Additional qualitative results.",
+  "captionBoundary": {
+    "x1": 233.0590057373047,
+    "x2": 378.9422302246094,
+    "y1": 329.4777526855469,
+    "y2": 334.8800048828125
+  },
+  "figType": "Figure",
+  "imageText": ["𝒔txt:", "I", "am", "sitting", "on", "one", "side", "of", "the", "bed", "facing", "the", "window", "with", "the", "desk", "in", "my", "5", "o’clock", "direction.", "𝒒:", "What", "is", "above", "the", "shelf", "that", "is", "in", "my", "7", "o’clock?", "𝒂:", "Lamp", "✅", "𝒂:", "Window❌", "𝒂:", "Shelf", "❌", "𝒔txt:", "I", "am", "standing", "facing", "the", "desk", "with", "a", "chair", "to", "my", "left", "within", "reach.", "𝒒:", "What", "is", "the", "first", "object", "I", "run", "into", "on", "my", "right?", "𝒂:", "Bed", "✅", "𝒂:", "Bed", "✅", "𝒂:", "Trash", "can", "❌", "𝒂:", "Right✅", "𝒂:", "Dresser", "✅", "𝒂:", "Left", "❌", "𝒂:", "Door", "❌", "𝒔", "tx", "t", ")", "(w", "/o", "Q", "A", "Sc", "an", "Q", "A", "Sc", "an", "as", "k", "ux", ".", "t", "+", "a", "Q", "A", "Sc", "an", "𝒂:", "Right", "✅", "𝒂:", "Dresser", "✅", "𝒔txt:", "I", "am", "standing", "in", "front", "of", "the", "door", "and", "the", "bookshelf", "is", "on", "my", "right", "side.", "𝒒", ":", "What", "is", "to", "my", "left", "against", "the", "wall?", "𝒔txt:", "I", "am", "throwing", "trash", "into", "the", "green", "trash", "bin", "with", "the", "office", "chair", "to", "my", "immediate", "right.", "𝒒:", "Which", "way", "will", "I", "leave", "the", "room?"],
+  "name": "15",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 112.32,
+    "y2": 320.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure15-1.png"
+}, {
+  "caption": "Figure 16: Failure mode. Models are likely to predict the wrong answers when they do not attend to relevant objects.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9990539550781,
+    "y1": 681.0277099609375,
+    "y2": 696.3930053710938
+  },
+  "figType": "Figure",
+  "imageText": ["𝒂:", "Bulletin", "board", "✅", "𝒂:", "White", "✅", "𝒂:", "Right", "✅", "𝒂:", "Zero", "✅", "er", "an", "sw", "G", "T", "𝒔txt:", "I", "am", "facing", "an", "end", "table", "and", "there", "is", "a", "couch", "on", "my", "left", "within", "reach.", "𝒒:", "How", "many", "chairs", "does", "the", "table", "on", "my", "left", "have?", "𝒂:", "Four", "❌", "𝒂:", "Four❌", "𝒂:", "Four❌", "𝒂:", "TV❌", "𝒂:", "Brown", "❌", "𝒂:", "Left", "❌", "𝒂:", "Black", "❌𝒂:", "Light", "❌", "𝒂:", "Left", "❌", "𝒔", "tx", "t", ")", "(w", "/o", "Q", "A", "Sc", "an", "Q", "A", "Sc", "an", "as", "k", "ux", ".", "t", "+", "a", "Q", "A", "Sc", "an", "𝒂:", "Picture", "❌", "𝒂:", "Red", "❌", "𝒂:", "Forward", "❌", "𝒔txt:", "I", "am", "facing", "the", "table", "and", "there", "is", "a", "coffee", "table", "and", "a", "foosball", "table", "to", "my", "left.", "𝒒:", "Which", "way", "should", "I", "go", "to", "sit", "on", "the", "couch?", "𝒔txt:", "I", "am", "facing", "an", "ottoman", "with", "a", "couch", "to", "my", "right", "within", "reach", "and", "an", "armchair", "to", "my", "left.", "𝒒:", "What", "color", "is", "the", "armchair", "to", "my", "left?", "𝒔txt:", "I", "am", "sitting", "on", "the", "armchair", "in", "front", "of", "the", "window.", "𝒒:", "What", "is", "above", "the", "armchair", "that", "is", "far", "away", "in", "front", "of", "me?"],
+  "name": "16",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 406.56,
+    "y2": 672.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure16-1.png"
+}, {
+  "caption": "Figure 12: Answer distribution (organized by question prefixes) before balancing.",
+  "captionBoundary": {
+    "x1": 159.3159942626953,
+    "x2": 452.6875915527344,
+    "y1": 599.8887329101562,
+    "y2": 605.291015625
+  },
+  "figType": "Figure",
+  "imageText": ["end", "table", "hamper", "wardrobe", "cabinet", "mini", "fridge", "stuffed", "animal", "soap", "dustpan", "slippers", "pillow", "ledge", "printer", "laundry", "hamper", "breakfast", "bar", "cabinet", "plant", "door", "book", "alarm", "paper", "towel", "step", "backward", "keyboard", "piano", "vacuum", "cleaner", "potted", "plant", "candle", "board", "headphones", "blinds", "wardrobe", "closet", "range", "hood", "range", "hood", "bowl", "monitor", "conditioner", "bottle", "kitchen", "counter", "clothes", "hanger", "bowl", "basket", "floral", "patttern", "breakfast", "bar", "reach", "left", "door", "laundry", "hamper", "look", "left", "studio", "clothing", "step", "forward", "paper", "tray", "chairs", "banner", "computer", "bag", "stool", "music", "books", "office", "chair", "speaker", "clothes", "mirror", "clothes", "dryers", "ball", "bunk", "bed", "lamp", "exercise", "machine", "shelves", "gold", "bag", "kitchen", "cabinet", "pipes", "lamp", "washing", "machine", "blackboard", "scanner", "refrigerator", "minifridge", "toilet", "paper", "stairs", "box", "trashcan", "bar", "marker", "ping", "pong", "kitchen", "counter", "sinks", "statue", "walk", "right", "alarm", "clock", "mural", "bathroom", "vanity", "file", "cabinet", "nightstand", "chairs", "picture", "luggage", "stairs", "curtain", "furnace", "map", "shelf", "toilet", "towels", "statue", "vending", "machine", "soap", "dispenser", "fireplace", "garage", "suitcase", "bunk", "bed", "cup", "bag", "headphones", "office", "chairs", "clock", "kitchen", "counter", "structure", "suitcase", "sewing", "machine", "wooden", "chairs", "keyboard", "stool", "plants", "turn", "backward", "laptop", "electricity", "paper", "cutter", "book", "armchair", "photocopier", "water", "cooler", "gas", "round", "plate", "hand", "dryer", "eraser", "soap", "dispenser", "car", "bench", "radiator", "bed", "coffee", "maker", "shorts", "fan", "trashcan", "ping", "pong", "bathroom", "vanity", "rope", "music", "book", "garage", "door", "chair", "wardrobe", "closet", "refrigerator", "copier", "clean", "folded", "table", "basketball", "tray", "rack", "bulletin", "board", "bunker", "bed", "paper", "towel", "wooden", "shelf", "paper", "bag", "round", "table", "dress", "rack", "kitchen", "cabinet", "dinning", "table", "thermostat", "washing", "machine", "board", "dining", "set", "wardrobe", "cabinet", "ladder", "cloth", "dryer", "dresser", "trash", "hat", "dry", "rack", "stand", "cart", "towal", "file", "cabinet", "leave", "massage", "chair", "armless", "office", "square", "paper", "towel", "counter", "pizza", "box", "magazine", "coffee", "table", "mirror", "doors", "clothing", "rack", "pictures", "hanged", "on", "water", "heater", "piano", "stepstool", "fire", "extinguisher", "dish", "rack", "left", "blinds", "to", "my", "music", "stand", "bulletin", "board", "vacuum", "jacket", "end", "table", "clothes", "blackboard", "across", "trash", "bin", "foosball", "table", "cook", "clothes", "dryer", "bird", "trash", "cans", "kitchen", "cabinets", "eight", "o'clock", "shower", "curtain", "cart", "sign", "toilet", "paper", "poster", "printer", "kitchen", "counter", "fan", "yes", "ladder", "whiteboard", "eraser", "bicycle", "box", "sheer", "curtains", "kitchen", "cabinets", "carpet", "up", "entire", "wall", "wardrobe", "closet", "ball", "toast", "ironing", "board", "laundry", "machines", "seven", "glass", "outside", "tube", "dryers", "bathroom", "cabinet", "elliptical", "machine", "doll", "house", "side", "table", "piano", "bench", "printer", "bathtub", "mountains", "computer", "tower", "ledge", "type", "boiler", "wood", "paneling", "bathroom", "counter", "closet", "landscape", "board", "mat", "starbucks", "cup", "garbage", "bag", "blue", "bathtub", "clothing", "underneath", "oval", "both", "messy", "bench", "sofa", "chair", "blackboard", "cubicles", "bench", "end", "table", "turn", "around", "nightstand", "squares", "oven", "coffee", "table", "dryer", "sheets", "jar", "monitor", "projector", "screen", "ball", "true", "fridge", "yellow", "storage", "bin", "footstool", "step", "tool", "cutting", "board", "stainless", "steal", "board", "ottoman", "toilet", "paper", "recycling", "bin", "wooden", "dishwasher", "stool", "plunger", "kitchen", "apron", "coffee", "table", "stool", "copier", "stairs", "above", "sink", "passage", "coach", "carpet", "tissue", "recliner", "chair", "desk", "poster", "cutter", "recycling", "bin", "box", "shelf", "dinner", "plate", "bookshelf", "laptop", "picture", "scale", "kitchen", "hood", "chairs", "paper", "towel", "to", "right", "well", "made", "bulletin", "board", "seat", "step", "stool", "wet", "floor", "computer", "monitors", "purse", "toilet", "paper", "book", "paper", "towel", "two", "my", "six", "bathtub", "detergent", "bike", "lock", "monitors", "bag", "monitor", "copier", "wardrobe", "smooth", "seat", "hamper", "shampoo", "hair", "dryer", "dresser", "boxes", "nightstand", "zero", "counter", "curve", "arm", "chair", "washing", "machine", "blanket", "calendar", "love", "seat", "behind", "bag", "desk", "refrigerator", "cone", "toilet", "paper", "laundry", "basket", "clothes-dryer", "globe", "standing", "lamp", "ottoman", "armchair", "break", "armchair", "semi", "circle", "TV", "light", "pillows", "jacket", "telephone", "clear", "water", "cooler", "curtains", "shelf", "to", "my", "curved", "disorganized", "whiteboard", "suitcase", "metal", "bar", "pillow", "frosted", "glass", "cart", "office", "chair", "open", "it", "to", "my", "j-shaped", "round", "bench", "curtain", "wheels", "handicap", "bar", "purse", "towel", "jacket", "ottoman", "ahead", "cylindrical", "pillow", "towel", "paper", "cutter", "mat", "suitcase", "sofa", "chair", "picture", "stove", "curtains", "table", "rectabgular", "little", "printer", "paper", "tray", "chair", "paper", "cutter", "snake", "drawer", "clothes", "shower", "curtain", "front", "left", "rectanglular", "bathtub", "chairs", "mailboxes", "mailbox", "bed", "towel", "seat", "wood", "kitchen", "cabinets", "floor", "beige", "odd", "clothes", "board", "reach", "forward", "shampoo", "hotel", "coffee", "maker", "windows", "backpack", "center", "cone", "wood", "frame", "sofa", "chair", "radiator", "turn", "around", "cabinet", "drum", "set", "bucket", "black", "nightstand", "desk", "rectangle", "in", "objects", "on", "moniter", "fireplace", "keyboard", "curtain", "banana", "holder", "pillow", "curtain", "messy", "three", "laundry", "hamper", "j", "shape", "blanket", "TV", "stand", "kitchen", "cabinets", "bathrobe", "elliptical", "machine", "one", "tools", "left", "side", "bathtub", "both", "microwave", "office", "chair", "l-", "shape", "taller", "monitor", "dining", "table", "clothing", "paper", "towel", "behind", "me", "toolboxes", "tub", "refrigerator", "tall", "lamp", "dish", "rack", "spiral", "restaurant", "dresser", "shower", "curtain", "toilet", "paper", "stove", "slightly", "left", "bookshelf", "chest", "microwave", "empty", "TV", "trashcan", "l", "cold", "dish", "rack", "ottoman", "hat", "cup", "move", "right", "coils", "dishwasher", "dresser", "white", "partially", "towel", "around", "cylinder", "wheels", "recycling", "bin", "pillow", "bed", "to", "my", "trash", "can", "90", "degrees", "pool", "trash", "bin", "toilet", "front", "up", "whiteboard", "on", "cabinet", "rectangles", "woman", "box", "bookshelf", "bookshelf", "around", "projector", "screen", "front", "bookshelves", "sink", "brown", "soft", "bed", "trash", "can", "at", "center", "u-shape", "red", "copier", "bike", "stove", "turn", "right", "office", "chair", "right", "back", "desktop", "front", "rectangular", "desk", "five", "windows", "front", "right", "oval", "one", "short", "fridge", "microwave", "money", "to", "my", "stool", "forward", "metal", "scale", "coffee", "table", "tall", "long", "bookshelf", "on", "counter", "squarec", "rectangular", "soap", "dispenser", "curtains", "glass", "in", "my", "refrigerator", "walk", "to", "table", "toilet", "paper", "plant", "in", "front", "neat", "stove", "trash", "can", "letter", "l", "it", "has", "kitchen", "cabinet", "cabinet", "table", "to", "my", "keyboard", "ack", "right", "stools", "ball", "TV", "rectangle", "rectangle", "bathtub", "front", "oval", "-", "clean", "picture", "bathroom", "stall", "mirror", "it", "is", "copier", "right", "and", "closet", "doors", "coffee", "table", "mirror", "long", "soft", "toilet", "hamper", "hexagon", "egg", "right", "refrigerator", "trash", "can", "foward", "table", "it", "is", "cubicle", "desk", "door", "white", "neat", "front", "coffee", "table", "window", "trash", "can", "oval", "shape", "rounded", "shelf", "sink", "ottoman", "straight", "ahead", "plant", "on", "immediate", "office", "chair", "dresser", "box", "wood", "on", "on", "table", "couch", "smaller", "round", "three", "round", "edges", "ottoman", "desk", "toilet", "front", "microwave", "turn", "right", "pool", "table", "window", "lamp", "up", "light", "brown", "three", "couch", "even", "armchair", "sqaure", "electricity", "rigjt", "end", "table", "box", "shelf", "directly", "in", "shower", "curtain", "straight", "then", "arm", "chair", "TV", "radiator", "large", "maroon", "wood", "on", "desk", "one", "mini", "fridge", "semi-circle", "zero", "behind", "me", "cabinet", "jacket", "curtains", "to", "your", "bathtub", "reach", "out", "glass", "door", "trashcan", "pillow", "tidy", "black", "and", "tidy", "chair", "two", "window", "u-shaped", "panic", "hardware", "foreard", "stove", "printer", "curtain", "ladder", "book", "go", "forward", "chairs", "printer", "towel", "round", "gold", "picture", "different", "bookshelf", "odd", "whiteboard", "cubes", "sink", "l", "suitcase", "picture", "TV", "behind", "me", "desk", "90", "degrees", "armchair", "whiteboard", "sink", "down", "purple", "curtains", "round", "sink", "mirror", "backward", "cube", "circle", "behind", "pillow", "shelf", "lamp", "north", "west", "fan", "turnaround", "and", "dinner", "table", "recycling", "bin", "bookshelf", "behind", "pink", "cabinet", "same", "bed", "behind", "triangle", "classroom", "gloss", "to", "right", "toilet", "whiteboard", "bar", "my", "nine", "radiator", "to", "my", "turn", "around", "closet", "shelf", "desk", "on", "silver", "tray", "off", "back", "left", "cabinet", "l-shape", "toilet", "sharp", "to", "left", "desk", "toilet", "couch", "my", "two", "recycling", "bin", "back", "back", "swivel", "two", "backpack", "shelf", "square", "dark", "brown", "ottoman", "identical", "infront", "bed", "square", "semicircle", "refrigerator", "yes", "window", "mirror", "backpack", "my", "eight", "backpack", "behind", "walk", "forward", "stainless", "marker", "microwave", "trash", "can", "off", "ten", "gray", "behind", "down", "directly", "in", "door", "more", "l-shaped", "kitchen", "backward", "left", "bathtub", "clock", "bathtub", "my", "ten", "mirror", "width", "straight", "ahead", "office", "front", "copier", "backpack", "messy", "nine", "table", "orange", "behind", "to", "my", "sink", "blinds", "octagon", "backpack", "leftwards", "TV", "lamp", "radiator", "my", "four", "monitor", "front", "left", "in", "front", "stool", "behind", "bookshelf", "couch", "right", "seven", "beige", "bed", "two", "back", "right", "chair", "left", "l", "shape", "stove", "eight", "o'clock", "backpack", "trash", "can", "window", "my", "six", "coffee", "maker", "right", "and", "front", "left", "sectional", "backward", "refrigerator", "whiteboard", "left", "eight", "yellow", "two", "right", "in", "front", "table", "left", "circular", "closed", "two", "o'clock", "trash", "can", "towel", "sink", "my", "seven", "chair", "south", "to", "right", "jacket", "back", "desk", "bed", "open", "six", "grey", "radiator", "open", "behind", "me", "window", "boardroom", "l", "shaped", "tidy", "straight", "sink", "plant", "towels", "in", "front", "sink", "righ", "front", "right", "wood", "paper", "towel", "nightstand", "cabinet", "closed", "five", "green", "front", "left", "left", "to", "my", "no", "sink", "rectangular", "up", "forwards", "window", "coffee", "table", "towel", "my", "one", "towel", "behind", "me", "back", "left", "sunlight", "zero", "cabinet", "door", "rectangular", "zero", "blue", "behind", "right", "odd", "backward", "forward", "right", "circle", "even", "rightwards", "couch", "chair", "coins", "my", "five", "couch", "back", "right", "back", "right", "laptop", "open", "couch", "picture", "no", "four", "red", "forward", "odd", "even", "forward", "behind", "door", "oval", "messy", "forward", "door", "left", "backpack", "paper", "cutter", "forward", "printer", "front", "right", "backward", "loft", "bed", "left", "bed", "window", "yes", "three", "black", "even", "backward", "closed", "left", "backward", "bathroom", "rectangle", "backward", "open", "bed", "right", "whiteboard", "door", "backward", "whiteboard", "front", "left", "flat", "screen", "right", "trash", "can", "chair", "odd", "two", "no", "white", "left", "no", "no", "yes", "left", "yes", "round", "no", "right", "couch", "forward", "copier", "chair", "right", "TV", "right", "180", "degrees", "stainless", "steel", "no", "toilet", "even", "table", "one", "yes", "brown", "right", "yes", "yes", "right", "right", "no", "square", "left", "yes", "table", "backward", "microwave", "table", "left", "window", "left", "right", "sliding", "door", "yes", "table", "1.0", "0.8", "0.6", "0.4", "0.2", "Which", "is", "Do", "What", "type", "How", "do", "Which", "side", "Which", "objectWhat", "direction", "What", "can", "What", "object", "How", "should", "Which", "one", "Which", "way", "Does", "What", "shape", "Am", "Where", "If", "Are", "Is", "there", "Which", "directionWhat", "color", "Can", "How", "many", "Is", "the", "What", "is", "0.0"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 499.2,
+    "y1": 468.0,
+    "y2": 582.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Dataset collection Web UI for Stage III.",
+  "captionBoundary": {
+    "x1": 214.5800018310547,
+    "x2": 397.4228820800781,
+    "y1": 421.7067565917969,
+    "y2": 427.1090087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 418.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure11-1.png"
+}, {
+  "caption": "Table 4: Hyper-parameters for the considered models.",
+  "captionBoundary": {
+    "x1": 209.19500732421875,
+    "x2": 402.806396484375,
+    "y1": 117.75472259521484,
+    "y2": 123.156982421875
+  },
+  "figType": "Table",
+  "imageText": ["Learning", "rate", "schedule", "No", "learning", "rate", "schedule", "Batch", "size", "16", "Total", "training", "epochs", "10", "Beta", "hyperparameters", "for", "Adam", "[0.9,", "0.98]", "Learning", "rate", "5e−5", "Weight", "decay", "factor", "1e−3", "ClipBERT", "Optimizer", "AdamW", "Gradient", "clipping", "norm", "5.0", "Epsilon", "1e−6", "Learning", "rate", "schedule", "No", "learning", "rate", "schedule", "Batch", "size", "16", "Total", "training", "epochs", "12", "Number", "of", "layers", "for", "transformer", "6", "Number", "of", "heads", "for", "transformer", "8", "MLP", "hidden", "size", "in", "MCAN", "512", "MCAN", "flatten", "output", "size", "1024", "Model", "hidden", "size", "512", "Weight", "decay", "factor", "0", "Beta", "hyperparameters", "for", "Adam", "[0.9,", "0.999]", "Learning", "rate", "1e−4", "MCAN", "Optimizer", "AdamW", "Gradient", "clipping", "norm", "0.5", "Epsilon", "1e−8", "Learning", "rate", "schedule", "No", "learning", "rate", "schedule", "Batch", "size", "16", "Total", "training", "epochs", "50", "Number", "of", "layers", "for", "transformer", "2", "Number", "of", "heads", "for", "transformer", "8", "MLP", "hidden", "size", "in", "MCAN", "256", "MCAN", "flatten", "output", "size", "512", "Model", "hidden", "size", "256", "Number", "of", "VoteNet", "output", "proposals", "256", "Position", "regression", "loss", "weight", "α", "for", "auxiliary", "task", "1.0", "Rotation", "regression", "loss", "weight", "β", "for", "auxiliary", "task", "1.0", "Beta", "hyperparameters", "for", "Adam", "[0.9,", "0.999]", "Learning", "rate", "5e−4", "Weight", "decay", "factor", "1e−5", "ScanQA(modified)", "Optimizer", "Adam", "Gradient", "clipping", "norm", "1.0", "Epsilon", "1e−8", "Parameter", "Value"],
+  "name": "4",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 478.08,
+    "y1": 131.51999999999998,
+    "y2": 684.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Table4-1.png"
+}, {
+  "caption": "Figure 9: Dataset collection Web UI for Stage II.",
+  "captionBoundary": {
+    "x1": 218.31399536132812,
+    "x2": 393.68780517578125,
+    "y1": 416.5717468261719,
+    "y2": 421.9739990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Additional instruction set to the AMT participants in Stage II.",
+  "captionBoundary": {
+    "x1": 175.2270050048828,
+    "x2": 436.77679443359375,
+    "y1": 577.0297241210938,
+    "y2": 582.4320068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 448.8,
+    "y2": 573.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_IDJx97BC38-Figure10-1.png"
+}]

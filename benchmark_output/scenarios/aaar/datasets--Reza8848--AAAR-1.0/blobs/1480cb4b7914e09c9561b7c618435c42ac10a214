@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: An illustration of bipartite graphs and their related representations and statistics.",
+  "captionBoundary": {
+    "x1": 126.53494262695312,
+    "x2": 485.4674072265625,
+    "y1": 167.41555786132812,
+    "y2": 173.41802978515625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "BJDD", "matrix", "PJ", "with", "supports", "du", "=", "deg(nu),dv", "=", "deg(nv)", "2", "0", "0", "2", "3", "1", "0", "2", "u", ")", "1", "0", "0", "2", "d", "eg", "(n", "1", "2", "3", "deg(nv)", "(b)", "Adjacency", "matrix", "G", "(left)", "and", "biadjacency", "matrix", "B", "(right)", "", "1", "1", "1", "1", "0", "0", "1", "1", "0", "0", "1", "0", "", "0", "0", "0", "0", "1", "1", "1", "0", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "1", "1", "0", "0", "0", "0", "0", "0", "1", "0", "1", "1", "1", "0", "0", "0", "0", "1", "0", "1", "1", "0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "", "(a)", "Bipartite", "graph", "B", "with", "annotations", "for", "node", "degrees", "deg(n3", "v)", "=", "1", "deg(n2", "v)", "=", "3", "deg(n1", "v)", "=", "3", "deg(n4", "u)", "=", "1", "deg(n3", "u)", "=", "2", "deg(n2", "u)", "=", "1", "deg(n1", "u)", "=", "3"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.47999999999996,
+    "y1": 64.8,
+    "y2": 154.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q120_4COf-K-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Illustrations of how the proposed framework works during learning and sampling phases. • p(V | U) (the table-conditional table model) requires to generate one table conditioned on",
+  "captionBoundary": {
+    "x1": 108.76200866699219,
+    "x2": 503.9947204589844,
+    "y1": 180.96548461914062,
+    "y2": 199.65899658203125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Sampling", "(generation", "is", "sequential)", "p(V", "|", "L,U)", "aggregator", "γ", "p(L)", "set", "embedding", "p(U", "|", "L)", "node", "encoder", "β", "node", "embedding", "L", "U", "V", "(a)", "Learning", "(models", "can", "be", "fitted", "in", "parallel)", "p(V", "|", "L,U)", "aggregator", "γ", "set", "embedding", "p(U", "|", "L)", "node", "encoder", "β", "node", "embedding", "p(L)", "(BJDD", "matrix", "PJ)", "L", "U", "V"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 72.0,
+    "y2": 168.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q120_4COf-K-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Cross-table similarity with privacy budgets ϵ on MOVIELENS",
+  "captionBoundary": {
+    "x1": 345.3529968261719,
+    "x2": 505.6490173339844,
+    "y1": 426.4555358886719,
+    "y2": 443.4159851074219
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 344.64,
+    "x2": 505.44,
+    "y1": 345.59999999999997,
+    "y2": 424.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q120_4COf-K-Figure3-1.png"
+}, {
+  "caption": "Table 1: Quality of many-to-many modelling on MOVIELENS. All metrics are bounded between 0 and 1 with 1 being the theoretical maximal value, i.e. higher the better. Numbers are mean and standard deviation based on 5 runs with different random seeds.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0036315917969,
+    "y1": 73.56754302978516,
+    "y2": 101.48797607421875
+  },
+  "figType": "Table",
+  "imageText": ["NeuralM2M", "0.846±", "0.045", "0.562±", "0.031", "0.613±", "0.016", "0.955±", "0.016", "0.634±", "0.028", "0.756±", "0.041", "0.345±", "0.016", "0.561±", "0.031", "SDV", "0.867±", "0.003", "0.614±", "0.012", "0.547±", "0.033", "0.334±", "0.017", "0.440±", "0.035", "BayesM2M", "Method", "Degree", "Similarity", "Mutual", "Information", "Similarity", "Marginal", "Joint", "U", "V", "Cross-Table"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 114.24,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Q120_4COf-K-Table1-1.png"
+}]

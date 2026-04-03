@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 1: Plot showing run time in seconds for different sample sizes, for discovery of causal graphs with 500 nodes. Most causal discovery methods have prohibitive run time and memory cost for datasets with many samples; the previous state-of-the-art SCORE algorithm (Rolland et al., 2022) which is included in this graph cannot be computed beyond 2000 samples in a machine with 64GB of RAM. By contrast, our method DiffAN has a reasonable run time even for numbers of samples two orders of magnitude larger than capable by most existing methods.",
+  "captionBoundary": {
+    "x1": 286.1990051269531,
+    "x2": 504.0013427734375,
+    "y1": 562.1495361328125,
+    "y2": 677.740966796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 296.64,
+    "x2": 493.44,
+    "y1": 416.64,
+    "y2": 558.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Visualisation of the diagonal of the score’s Jacobian estimated with a diffusion model as in Equation 7 for a two-variable SCM where A→ B.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 201.49349975585938,
+    "y2": 218.4549560546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 474.24,
+    "y1": 80.64,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure5-1.png"
+}, {
+  "caption": "Table 2: MLP architecture. The hyperparameters of each Linear layer depend on d such that big = max(1024, 5 ∗ d) and small = max(128, 3 ∗ d).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.9971008300781,
+    "y1": 234.44046020507812,
+    "y2": 251.40191650390625
+  },
+  "figType": "Table",
+  "imageText": ["Layer", "Hyperparameters", "Linear", "Ch:", "(d+", "1,", "small)", "LeakyReLU", "LayerNorm", "Dropout", "Prob:", "0.2", "Linear", "Ch:", "(small,", "big)", "LeakyReLU", "LayerNorm", "Linear", "Ch:", "(big,", "big)", "LeakyReLU", "Linear", "Ch:", "(big,", "big)", "LeakyReLU", "Linear", "Ch:", "(big,", "d)"],
+  "name": "2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 230.88,
+    "x2": 381.12,
+    "y1": 264.0,
+    "y2": 408.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Table2-1.png"
+}, {
+  "caption": "Table 3: Erdös-Rényi (ER) graphs.",
+  "captionBoundary": {
+    "x1": 236.58599853515625,
+    "x2": 375.4146423339844,
+    "y1": 221.65652465820312,
+    "y2": 227.65899658203125
+  },
+  "figType": "Table",
+  "imageText": ["gauss", "CAM", "64.675.85", "214.6711.11", "130.8226.10", "DiffAN", "68.508.12", "289.0042.31", "29.581.99", "DiffAN", "Greedy", "63.176.18", "228.8332.86", "178.177.17", "GranDAG", "81.006.72", "273.0046.72", "319.1718.81", "SCORE", "63.506.69", "233.8339.65", "21.296.63", "laplace", "CAM", "68.007.04", "228.5027.86", "157.7022.55", "DiffAN", "68.837.86", "248.6730.36", "29.521.73", "DiffAN", "Greedy", "67.338.55", "238.0035.19", "176.714.80", "GranDAG", "82.676.47", "271.3335.19", "305.2913.93", "SCORE", "66.337.09", "218.6725.81", "23.014.33", "20ER5", "exp", "CAM", "60.679.77", "240.0033.02", "105.6527.49", "DiffAN", "67.504.32", "278.8322.83", "30.332.12", "DiffAN", "Greedy", "63.006.07", "266.3350.25", "186.213.28", "GranDAG", "80.177.99", "304.1726.90", "310.2413.71", "SCORE", "55.837.55", "190.6732.91", "18.413.73", "gauss", "CAM", "1.331.03", "6.506.69", "83.2711.75", "DiffAN", "8.174.02", "41.6724.21", "30.982.28", "DiffAN", "Greedy", "3.332.16", "18.3311.40", "129.109.54", "GranDAG", "10.508.62", "44.5037.90", "304.0717.39", "SCORE", "8.674.13", "41.6721.54", "24.770.20", "laplace", "CAM", "0.830.98", "4.006.96", "90.8515.49", "DiffAN", "2.332.07", "8.674.68", "31.011.18", "DiffAN", "Greedy", "3.001.67", "14.334.76", "175.3019.71", "GranDAG", "10.335.82", "41.1724.98", "302.0016.23", "SCORE", "4.173.43", "24.1719.57", "26.621.88", "20ER1", "exp", "CAM", "6.503.21", "35.5027.54", "112.1769.57", "DiffAN", "7.674.68", "38.8324.94", "30.071.60", "DiffAN", "Greedy", "6.674.68", "34.1718.37", "121.664.19", "GranDAG", "12.835.60", "65.1721.99", "341.6974.82", "SCORE", "4.172.86", "17.5011.26", "50.4941.87", "Exp", "Name", "noisetype", "method", "shd", "sid", "runtime", "(seconds)"],
+  "name": "3",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 240.48,
+    "y2": 592.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Table3-1.png"
+}, {
+  "caption": "Figure 4: Accuracy of DiffAN as the dataset size is scaled up in numbers of data samples n (left) and as the batch size for computing the Hessian variance is changed (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0002136230469,
+    "y1": 636.2395629882812,
+    "y2": 653.2009887695312
+  },
+  "figType": "Figure",
+  "imageText": ["d", "10", "20", "50", "e", "ge", "nc", "iv", "er", "er", "D", "O", "rd", "40", "20", "0", "Ordering", "Batch", "Size", "102", "103"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.35999999999996,
+    "y1": 487.2,
+    "y2": 624.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure4-1.png"
+}, {
+  "caption": "Figure 3: SHD (left) and run time in seconds (right) for experiments of synthetic data graphs for graphs with 20 nodes. The variation in the violinplots come from 3 different seeds over dataset generated from 3 different noise type and 3 different noise scales. Therefore, we run a total of 27 experiments for each method and synthetic datasets type",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 235.35549926757812,
+    "y2": 274.23394775390625
+  },
+  "figType": "Figure",
+  "imageText": ["im", "e", "ru", "nt", "400", "200", "0", "Experiment", "20ER5", "20SF5", "20ER1", "20SF1", "method", "GranDAG", "CAM", "SCORE", "DiffAN", "SH", "D", "100", "80", "60", "40", "20", "0", "Experiment", "20ER5", "20SF5", "20ER1", "20SF1"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 88.8,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure3-1.png"
+}, {
+  "caption": "Table 4: Scale Free (SF) graphs.",
+  "captionBoundary": {
+    "x1": 241.6320037841797,
+    "x2": 370.3687744140625,
+    "y1": 221.65652465820312,
+    "y2": 227.65899658203125
+  },
+  "figType": "Table",
+  "imageText": ["gauss", "CAM", "46.838.11", "199.1753.13", "130.4120.55", "DiffAN", "50.834.62", "259.5047.54", "28.581.16", "DiffAN", "Greedy", "45.176.15", "224.1741.80", "174.903.69", "GranDAG", "61.674.03", "241.6743.11", "292.777.29", "SCORE", "44.505.24", "217.8350.05", "19.772.51", "laplace", "CAM", "49.509.01", "191.3327.43", "160.5323.16", "DiffAN", "52.005.66", "230.6750.66", "29.051.60", "DiffAN", "Greedy", "47.009.94", "191.3326.16", "173.423.52", "GranDAG", "65.007.13", "262.5044.23", "295.407.72", "SCORE", "46.6710.03", "193.8334.14", "43.8427.14", "20SF5", "exp", "CAM", "47.835.78", "228.8353.89", "113.8213.32", "DiffAN", "46.8311.48", "243.5034.68", "30.032.17", "DiffAN", "Greedy", "43.506.89", "236.8323.17", "173.133.52", "GranDAG", "60.678.80", "275.0022.56", "284.345.33", "SCORE", "38.509.14", "180.3357.44", "19.792.92", "gauss", "CAM", "1.832.23", "9.1710.21", "84.4619.07", "DiffAN", "9.836.24", "56.6741.59", "30.190.92", "DiffAN", "Greedy", "7.335.32", "46.8338.42", "175.638.82", "GranDAG", "12.172.71", "46.6716.22", "299.2513.14", "SCORE", "8.174.45", "41.6728.75", "26.291.83", "laplace", "CAM", "2.833.92", "7.8310.93", "85.1521.84", "DiffAN", "6.003.74", "24.1716.18", "29.682.00", "DiffAN", "Greedy", "4.833.66", "17.1717.47", "177.058.82", "GranDAG", "9.503.27", "35.6720.84", "295.122.88", "SCORE", "5.673.50", "22.5015.27", "26.391.79", "20SF1", "exp", "CAM", "7.172.86", "32.6719.54", "85.0827.71", "DiffAN", "8.672.80", "38.6720.99", "29.231.36", "DiffAN", "Greedy", "9.172.32", "35.3317.26", "183.804.81", "GranDAG", "15.502.59", "68.6724.19", "298.884.96", "SCORE", "5.835.04", "23.5023.65", "26.131.39", "Exp", "Name", "noisetype", "method", "shd", "sid", "runtime", "(seconds)"],
+  "name": "4",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 240.48,
+    "y2": 592.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Table4-1.png"
+}, {
+  "caption": "Figure 8: Runtime in seconds for different versions of DiffAN.",
+  "captionBoundary": {
+    "x1": 180.68099975585938,
+    "x2": 431.32000732421875,
+    "y1": 655.6485595703125,
+    "y2": 661.6510009765625
+  },
+  "figType": "Figure",
+  "imageText": ["im", "e", "ru", "nt", "200", "150", "100", "50", "Experiment", "20ER5", "20SF5", "20ER1", "20SF1"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 149.28,
+    "x2": 463.2,
+    "y1": 486.71999999999997,
+    "y2": 631.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure8-1.png"
+}, {
+  "caption": "Figure 7: SID metric for different versions of DiffAN.",
+  "captionBoundary": {
+    "x1": 197.9810028076172,
+    "x2": 414.0198669433594,
+    "y1": 328.65753173828125,
+    "y2": 334.6600036621094
+  },
+  "figType": "Figure",
+  "imageText": ["300", "400", "SI", "D", "method", "DiffAN", "DiffANM_masking", "DiffAN_greedy", "200", "100", "0", "Experiment", "20ER5", "20SF5", "20ER1", "20SF1"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 463.2,
+    "y1": 154.07999999999998,
+    "y2": 302.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure7-1.png"
+}, {
+  "caption": "Table 1: SHD and SID results over real datasets.",
+  "captionBoundary": {
+    "x1": 209.54800415039062,
+    "x2": 402.4538269042969,
+    "y1": 142.12142944335938,
+    "y2": 148.1239013671875
+  },
+  "figType": "Table",
+  "imageText": ["CAM", "12", "55", "40.5", "152.3", "GraN-DAG", "13", "47", "34.0", "161.7", "SCORE", "12", "45", "36.2", "193.4", "DiffAN", "(ours)", "13", "56", "39.7", "173.5", "Sachs", "SynTReN", "SHD", "SID", "SHD", "SID"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 404.15999999999997,
+    "y1": 162.23999999999998,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Table1-1.png"
+}, {
+  "caption": "Figure 2: Topological ordering with diffusion models by iteratively finding leaf nodes. At each iteration, one leaf node is found using Equation 9. In the subsequent iteration, the previous leaves are removed, reducing the search space. After topological ordering (as illustrated on the right side), the presence of edges (causal mechanisms) between variables can be inferred such that parents of each variable are selected from the preceding variables in the ordered list. Spurious edges can be pruned with feature selection as a post-processing step (Bühlmann et al., 2014; Lachapelle et al., 2020; Rolland et al., 2022).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039367675781,
+    "y1": 412.175537109375,
+    "y2": 483.93096923828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 495.35999999999996,
+    "y1": 224.64,
+    "y2": 388.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure2-1.png"
+}, {
+  "caption": "Figure 6: The distribution of order divergence measured for different values of t is highly variable. Therefore, we show that we obtain a better approximation with majority voting.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99835205078125,
+    "y1": 476.7995300292969,
+    "y2": 493.760986328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 434.4,
+    "y1": 321.59999999999997,
+    "y2": 461.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Idusfje4-Wq-Figure6-1.png"
+}]

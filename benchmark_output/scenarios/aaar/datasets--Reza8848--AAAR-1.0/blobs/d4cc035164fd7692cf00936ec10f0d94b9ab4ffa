@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 4: Synthetic data. a) top left to right: groundtruth segmentation, raw data, superpixels and visualization of the actions (merge actions in green, split actions in red). Bottom left to right: pretrained pixel embeddings, superpixel edges, segmentation result and visualization of the rewards (light green for high rewards, dark red for low rewards. b) comparison of segmentation from our method and the mutex watershed.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.6486511230469,
+    "y1": 245.34152221679688,
+    "y2": 295.17999267578125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Reinforcement", "learning", "output.", "(b)", "Mutex", "watershed", "baseline."],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 90.72,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Figure4-1.png"
+}, {
+  "caption": "Table 1: Nuclei segmentation: for mAP and IoU higher values are better. Methods above the first middle line were trained fully supervised. Methods below the first middle line were trained without groundtruth, the results below the second middle line indicate the quality of the superpixels projected to the groundtruth (best possible result that can be achieved with the given superpixels).",
+  "captionBoundary": {
+    "x1": 317.5710144042969,
+    "x2": 505.65087890625,
+    "y1": 319.34552001953125,
+    "y2": 413.0199890136719
+  },
+  "figType": "Table",
+  "imageText": ["Features", "are", "learned", "end-to-end.", "In", "the", "unsuper-", "vised", "setting,", "we", "compute", "the", "reward", "by", "combining", "several", "object", "descriptors:", "eccentricity,", "extent,", "mi-", "nor", "diameter,", "perimeter,", "solidity", "as", "well", "as", "mean,", "maximum", "and", "minimum", "intensity", "per", "object.", "The", "object", "reward", "is", "then", "given", "by", "the", "normalized", "sum", "of", "square", "distances", "of", "these", "quantities", "and", "their", "expected", "value.", "Objects", "larger", "than", "15,000", "pixels", "are", "considered", "to", "belong", "to", "the", "background", "and", "are", "not", "assigned", "a", "reward.", "Since", "the", "superpixels", "serve", "as", "fixed", "input", "into", "our", "model", "that", "do", "not", "get", "modi-", "fied,", "the", "accuracy", "of", "our", "segmentations", "is", "bound", "by", "their", "accuracy.", "To", "investigate", "their", "influence,", "we", "evaluate", "our", "approach", "with", "three", "different", "sets", "of", "superpixels:", "“GT”,", "where", "we", "intersect", "the", "superpix-", "els", "with", "the", "groundtruth", "object", "masks", "to", "ensure", "that", "a", "correct", "segmentation", "can", "be", "recovered,", "“UNET”,", "where", "we", "compute", "the", "superpixels", "using", "predic-", "tions", "of", "a", "pre-trained", "U-Net", "as", "an", "edge", "detector", "and", "“RAW”,", "where", "we", "only", "take", "into", "account", "the", "raw", "image", "data.", "See", "A.12", "for", "more", "details", "on", "superpix-", "els", "and", "object", "descriptors."],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 309.59999999999997,
+    "y1": 189.6,
+    "y2": 428.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Table1-1.png"
+}, {
+  "caption": "Figure 1: Interaction of the agent with the environment: (a) shows the state, which is composed of the image and superpixels; (b) depicts the agent, which consists of the actor and critic networks as well as the feature extractor that computes the node input features; (c) given the state, the agent performs the actions by predicting edge weights on the graph; (d) the environment, which includes the image, superpixels, graph and graph partitioning based on the weights predicted through agent actions ; (e) rewards are obtained by evaluating the segmentation arising from the graph partitioning, based on pre-defined and data dependent rules. The rewards are given back to the agent where they are used for training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.24908447265625,
+    "y1": 254.36654663085938,
+    "y2": 337.0820007324219
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 243.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Figure1-1.png"
+}, {
+  "caption": "Table 2: Cell segmentation results, measured by variation of information (VI) (Meilă 2003). This entropy-based metric is commonly used to evaluate crowded segmentations in microscopy. We also report its merge and split component that measure the over-/under-segmentation error respectively. Lower values are better.",
+  "captionBoundary": {
+    "x1": 317.4110107421875,
+    "x2": 505.7463684082031,
+    "y1": 292.85052490234375,
+    "y2": 364.6059875488281
+  },
+  "figType": "Table",
+  "imageText": ["ours", "2.213", "0.839", "1.374", "ours", "(semisup.)", "1.634", "0.733", "0.901", "ours", "(handcrafted)", "2.523", "0.987", "1.536", "UNet", "+", "MC", "3.361", "3.019", "0.342", "contrastive", "4.440", "1.155", "3.28", "sp", "gt", "1.266", "0.672", "0.594", "Method", "VI", "VI", "merge", "VI", "split"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 336.96,
+    "x2": 484.32,
+    "y1": 217.92,
+    "y2": 279.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Table2-1.png"
+}, {
+  "caption": "Figure 5: Cell segmentation experiment. Top left to right: groundtruth segmentation; raw data; boundary predictions; superpixel over-segmentation; visualization for the actions on every edge (green = merge action, red = split action). Bottom left to right: a) handcrafted features per superpixel; b) learned features averaged over superpixels; c) learned features per pixel; Multicut segmentations; visualization of the rewards (light green = high reward, dark red = low reward). For all features, we use the first 3 PCA components for visualisation. White arrows point to remaining errors.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.8305358886719,
+    "y1": 291.1095275878906,
+    "y2": 351.906005859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 475.2,
+    "y1": 80.64,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Figure5-1.png"
+}, {
+  "caption": "Figure 2: The graph is subdivided into subgraphs, each sub-graph is highlighted by a different color. All sub-graphs have the same number of edges (here 3). Overall, we use a variety of sizes covering different notions of locality.",
+  "captionBoundary": {
+    "x1": 115.16100311279297,
+    "x2": 295.2646789550781,
+    "y1": 237.34854125976562,
+    "y2": 298.14599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 294.24,
+    "y1": 80.64,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Figure2-1.png"
+}, {
+  "caption": "Figure 3: An example reward landscape Circle Hough Transform (CHT) rewards. High rewards are given if the overall number of predicted objects is not too high and if the respective object has a large CHT value.",
+  "captionBoundary": {
+    "x1": 318.3909912109375,
+    "x2": 498.24822998046875,
+    "y1": 248.30752563476562,
+    "y2": 298.14599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 326.88,
+    "x2": 488.15999999999997,
+    "y1": 112.8,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C3ukgkqJuh0-Figure3-1.png"
+}]

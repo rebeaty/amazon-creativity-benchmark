@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 2: We compare the performance of our method, ShICA, Infomax, GroupICA, MultiViewICA and ShICA-ML Amari distance (the lower the better) for different number of shared sources (xaxis). The error bars correspond to 95% confidence intervals based on 50 independent runs of the experiment. Figure 2a: The datasets come from two different views with total number of sources 100 and sample size 1000. We vary the number of shared sources from 10 to 100. Figure 2b: The data is generated according to a model, where no individual sources are present and the noise per view is uniformly sampled from the interval [1, 2]. The number of views is set to 10 and the sample size is 1000. We vary the number of sources from 10 to 50 (y-axis).",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.00445556640625,
+    "y1": 234.17153930664062,
+    "y2": 316.88690185546875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Noiseless", "views", "(b)", "Noisy", "views"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure2-1.png"
+}, {
+  "caption": "Figure 8: We have the two view case again with number of total sources and observed signals 100 and number of samples 1000. We consider three cases of noise standard deviation: σ = 0.1, 0.5, 1. As soon as enough shared sources are present (around 60) our method lower value of Amari distance (the lower the better) in all cases. In the the first two cases (σ = 0.1 or 0.5) the Amari distance gets closer to 0 when the shared sources are 60. The error bars correspond to 95% confidence intervals based on 50 independent runs of the experiment.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0042419433594,
+    "y1": 218.34249877929688,
+    "y2": 279.138916015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 199.68,
+    "x2": 412.32,
+    "y1": 80.64,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Comparison of MultiViewICA and our method on a two-view shared response model setting. In Figure 9a we fix the sample size and measure the Amari distance for sources 60, 70, . . . 110. In Figure 9b the number of sources is set to 100 and we conduct the experiments for different sample sizes (x-axis). It seems that our method outperforms MultiViewICA in both scenarios.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 419.3335266113281,
+    "y2": 458.21295166015625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "9",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 293.76,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure9-1.png"
+}, {
+  "caption": "Figure 11: The data is generated according to a model, where no individual sources are present and the noise per view is uniformly samples from the interval [1, 2]. The number of views is set to 10 and the sample size is 1000 for all experiments. We vary the number of sources from 10 to 50. The experiment is repeated 50 times. We fit the model with 5 different hyperparameters. Our method shows better results in the case when the hyperparameter is 0.1 and 0.5.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 364.2835388183594,
+    "y2": 414.1219482421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 218.88,
+    "x2": 393.12,
+    "y1": 236.64,
+    "y2": 353.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Choice of Hyperparameter λ. The data comes from a two-view model with 50 shared and 50 individual sources per view. The x-axis is represents the noise standard deviation and the y-axis the Amari distance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 194.29153442382812,
+    "y2": 222.21197509765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 233.76,
+    "x2": 379.2,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure10-1.png"
+}, {
+  "caption": "Figure 1: A graphical representation of 1",
+  "captionBoundary": {
+    "x1": 339.1969909667969,
+    "x2": 502.4839172363281,
+    "y1": 201.03952026367188,
+    "y2": 207.0419921875
+  },
+  "figType": "Figure",
+  "imageText": ["d", "=", "1", "...", "D", "xd", "sd", "ϵd", "s0"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 341.76,
+    "x2": 500.15999999999997,
+    "y1": 84.96,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Induced subgraph with vertices from a selected regulon (in the main text denoted by R) (not dotted nodes) and its neighbors (dotted nodes). The green edges belong to the ground truth and the red one are possibly false positives.",
+  "captionBoundary": {
+    "x1": 298.0780029296875,
+    "x2": 504.0047912597656,
+    "y1": 634.9955444335938,
+    "y2": 684.8330078125
+  },
+  "figType": "Figure",
+  "imageText": ["True", "positive", "edges", "from", "selected", "regulon", "True", "positive", "edges", "from", "other", "regulons", "Possibly", "false", "positive", "edges", "Undirected", "graph", "Genes", "not", "part", "of", "the", "regulon", "Legend", "Selected", "regulon", "genes"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 301.92,
+    "x2": 497.28,
+    "y1": 517.4399999999999,
+    "y2": 621.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure4-1.png"
+}, {
+  "caption": "Table 1: Shared Sources Recovery Performance",
+  "captionBoundary": {
+    "x1": 210.66299438476562,
+    "x2": 401.3371887207031,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["10", "0.980±", "0.002", "0.972±", "0.002", "0.95±", "0.003", "0.741±", "0.08", "2", "0.975±", "0.002", "0.940±", "0.003", "0.812±", "0.003", "0.281±", "0.01", "5", "0.981±", "0.001", "0.967±", "0.001", "0.922±", "0.003", "0.5±", "0.04", "Views", "σ", "=", "0.1", "σ", "=", "0.5", "σ", "=", "1", "σ", "=", "2"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 108.47999999999999,
+    "y2": 159.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Table1-1.png"
+}, {
+  "caption": "Figure 7: Boxplots of the regulons F1 score for two groups of regulons depending on their size (between 10 and 50, and between 50 and 400).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 351.9615173339844,
+    "y2": 368.9229736328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 80.64,
+    "y2": 341.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure7-1.png"
+}, {
+  "caption": "Figure 5: After the proposed hyperparameter tuning, we compare the top ten EBIC glasso models with our model, PLS, Infomax, and IVA-L-SOS. We order the edges from the selected networks according to their strength. In Figure 5a we count the true positives (y-axis) and possibly false positive edges in the first 100, 200,... edges (x-axis). It seems that our method and PLS outperform the other two methods, and for our method, the true positive/false positive rate increases faster than for PLS. In Figure 5b, we compute the average regulon F1 score (y-axis) from the selected edges (x-axis). Our method seems to perform better than PLS but worse than IVA-L-SOS and Infomax. That might result from the proposed F1 score prioritizing sparse graphs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 248.03652954101562,
+    "y2": 330.75091552734375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "True", "Positive", "vs", "False", "Positive", "pairs", "(b)", "F1", "score"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 235.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure5-1.png"
+}, {
+  "caption": "Figure 6: F1 score curves per model (left) and best model F1 regulon performance (right) for two groups of regulons depending on their size (between 10 and 50, and between 50 and 400). In the first group all methods show comperable results. In the second case (regulon size > 50) it seems that our method shows better F1 score for the large regulons.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 291.9455261230469,
+    "y2": 330.824951171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 80.64,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Comparison of the computing time (x-axis) and Amari distance (y-axis). The data is generated according to a shared response model with 5 views, 5 sources and 1000 samples and noise with the variance σ = 1. The addition ”O” to the model’s name refers to learning with orthogonal constraints.",
+  "captionBoundary": {
+    "x1": 357.4819641113281,
+    "x2": 504.0019226074219,
+    "y1": 647.9185791015625,
+    "y2": 741.5919799804688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 360.96,
+    "x2": 501.12,
+    "y1": 536.64,
+    "y2": 637.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7WiIzqeqBNL-Figure3-1.png"
+}]

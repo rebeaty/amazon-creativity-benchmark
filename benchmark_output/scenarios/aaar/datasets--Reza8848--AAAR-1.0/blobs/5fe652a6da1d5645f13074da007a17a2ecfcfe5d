@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 4: Latent and Rate Prediction. The models faeLVM-n,s,b are described in the main text, mGP is a previous model from Jensen et al. (2020), VAE a traditional approach using an MLP decoder. A, Mean NLLH (negative log-likelihood, lower is better) of predicted test neuron rate, as a function of amount of training neurons. As the performance is averaged over 20 seeds of varying data, error bars would also reflect the variability in NLLH across data, resulting in inappropriate visualization. Hence, we report the mean rank of 20 seeds for each model at each condition, in an effort to more appropriately capture the variability of the models. B, Same as A, now as a function of training time points. C, Mean GE (geodesic error, lower is better) between true latent and inferred latent, on test data, with corresponding SEM error bars, as a function of number of training neurons. D, Same as C, now as a function of training time points.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0035095214844,
+    "y1": 191.79251098632812,
+    "y2": 296.42486572265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure4-1.png"
+}, {
+  "caption": "Table 2: Hyperparameter search. We show our selected hyperparameters and their corresponding ranges.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0020751953125,
+    "y1": 157.45553588867188,
+    "y2": 174.4169921875
+  },
+  "figType": "Table",
+  "imageText": ["kernel", "size", "choice([1,", "9,", "17])", "1", "num", "hidden", "choice([16,", "32,", "64,", "128,", "256,", "512])", "128", "shared", "choice([True,", "False])", "False", "learn", "coeff", "choice([True,", "False])", "True", "learn", "mean", "choice([True,", "False])", "False", "learn", "var", "choice([True,", "False])", "False", "isotropic", "choice([True,", "False])", "False", "num", "basis", "choice([1,", "2,", "4,", "8])", "4", "nonlinearity", "choice([exp,", "softplus])", "softplus", "batch", "size", "choice([1,", "16,", "32])", "32", "batch", "length", "choice([64,", "128])", "64", "learning", "rate", "loguniform(1e-4,", "1e-1)", "0.001003", "num", "worse", "choice([10,", "50,", "100])", "10", "weight", "kl", "choice([0.,", "loguniform(1e-9,", "1e0)])", "0.0", "weight", "time", "choice([0.,", "loguniform(1e-9,", "1e0)])", "0.0", "weight", "entropy", "choice([0.,", "loguniform(1e-9,", "1e0)])", "0.0", "Hyperparameter", "Ranges", "Best"],
+  "name": "2",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 446.4,
+    "y1": 185.76,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Table2-1.png"
+}, {
+  "caption": "Figure 13: Correlations with test LLH. A, Spearman correlation. B, P-values.",
+  "captionBoundary": {
+    "x1": 147.7550048828125,
+    "x2": 464.2451171875,
+    "y1": 656.863525390625,
+    "y2": 662.865966796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 382.56,
+    "y2": 647.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure13-1.png"
+}, {
+  "caption": "Figure 10: All rate maps, first grid cell module.",
+  "captionBoundary": {
+    "x1": 207.18699645996094,
+    "x2": 404.81365966796875,
+    "y1": 719.236572265625,
+    "y2": 725.239013671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 93.6,
+    "y2": 709.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure10-1.png"
+}, {
+  "caption": "Figure 1: Schematic outline of our model. Our main contributions are outlined in purple. The input is a matrix of neural spiking activity. The encoder (1) is a standard multilayer neural network. The latent spaces are separate and, potentially, with different topologies (here shown for R1 and T2). The decoder is a parametric tuning curve model with feature sharing (2). The ensemble detection is a weighted (ideally one-hot) selection of latent spaces for each neuron (3). Lastly, we assume Poisson spiking and decode the activity of all neurons. Please see main text for further details.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00445556640625,
+    "y1": 208.68453979492188,
+    "y2": 269.48095703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Ensemble Detection. Ensemble detection accuracy, with corresponding SEM error bars, on two (A) and three (B) equally sized ensembles of neurons tuned to separate S1 latent variables. The models are: k-means on PCA reduced data (‘raw-pca’), k-means on PCA reduced covariance matrix of the data (‘cov-pca’), supervised clustering based on the mutual information scores between the cell responses and the latent variables, faeLVM with heat kernel tuning curves (‘faeLVMb’), and the same model optimized over 5 seeds, selecting the one that produced the highest LLH (‘faeLVM-b5’). Chance levels are computed from 100, 000 random labels with optimal permutations. C, Relation between likelihood and accuracy for different data amounts.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0033264160156,
+    "y1": 184.17752075195312,
+    "y2": 266.89288330078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 164.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Application to head direction data. A, Variational mean of faeLVM-n plotted against recorded mouse head direction (for additional visualizations, see Appx. H). We trained 20 models, selecting the one with highest training likelihood on training neurons, before performing inference at test-time. B, True test neuron spikes (grey), and predicted test neuron rates (black) from the model used in A, per bin, for three randomly selected neurons. C, NLLH of test neuron rate, over 20 seeds, as a violin plot. Performance of the best model, based on train LLH, is indicated by the black dot. D, Same as C, but comparing GE between recorded head direction and inferred latent, on test data.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033264160156,
+    "y1": 511.5585632324219,
+    "y2": 583.3150024414062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 411.84,
+    "y2": 501.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure6-1.png"
+}, {
+  "caption": "Figure 11: All rate maps, second grid cell module.",
+  "captionBoundary": {
+    "x1": 201.3730010986328,
+    "x2": 410.62664794921875,
+    "y1": 707.1385498046875,
+    "y2": 713.1409912109375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 105.6,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure11-1.png"
+}, {
+  "caption": "Figure 2: The feature sharing assumption. A, Tuning curves for 26 head direction tuned neurons. B, The same 26 tuning curves, shifted and scaled to visualize structural similarity, along with a standard Gaussian shape (dotted line).",
+  "captionBoundary": {
+    "x1": 358.5019836425781,
+    "x2": 501.06671142578125,
+    "y1": 82.72354888916016,
+    "y2": 154.47894287109375
+  },
+  "figType": "Figure",
+  "imageText": ["2", "BACKGROUND"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 349.44,
+    "y1": 151.2,
+    "y2": 190.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure2-1.png"
+}, {
+  "caption": "Figure 7: Application to grid cell data. A, Learned ensemble weights. Neurons are ordered by decreasing spatial information, dashed line separates first and second reported module (Gardner et al., 2022). B, Greedy test for each neuron, checking which latent provides higher likelihood (i.e., onehot ensemble weights), colored by reported module. C, Classification accuracy when successively removing neurons with low spatial selectivity. The same number of neurons were removed from each ensemble, starting with least spatially informative ones. Accuracy is measured against supervised ensemble detection from Gardner et al. (2022). D, Rate map of every 25th neuron, first grid cell module (smoothed for visualization purposes). Maps shown as function of rat’s position in arena, as well as inferred coordinates on latent torus. Red circles indicate inferred receptive field mean and width (SD) for the heat kernel (i.e., Gaussian-like bump). E, Same as D for second module. For a full set of rate maps, as well as latent dynamics, see Appx. G & H.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00482177734375,
+    "y1": 315.6375427246094,
+    "y2": 431.2288818359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 305.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure7-1.png"
+}, {
+  "caption": "Table 1: Hybrid inference comparison. Table showing mean negative log-likelihood (NLLH) and mean geodesic error (GE) for the six models specified (lower is better for both criterions), under varying amounts of synthetically generated training data with different numbers of training neurons (N ) and different training dataset lengths (T ).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 82.72354888916016,
+    "y2": 121.60296630859375
+  },
+  "figType": "Table",
+  "imageText": ["fae-n", "11975", "0.58", "8775", "0.20", "8608", "0.17", "9018", "0.44", "8415", "0.09", "fae-s", "10963", "0.42", "8694", "0.13", "8657", "0.14", "9460", "0.29", "8491", "0.13", "fae-b", "10040", "0.25", "8636", "0.12", "8501", "0.12", "9227", "0.23", "8267", "0.05", "v-fae-n", "12745", "0.57", "8971", "0.28", "8781", "0.27", "9110", "0.45", "8642", "0.27", "v-fae-s", "11798", "0.64", "9167", "0.34", "8949", "0.31", "9718", "0.40", "8820", "0.31", "v-fae-b", "10912", "0.50", "9152", "0.36", "8830", "0.30", "9492", "0.33", "8633", "0.26", "LVM", "NLLH", "GE", "NLLH", "GE", "NLLH", "GE", "NLLH", "GE", "NLLH", "GE", "N", "/", "T", "30", "/", "100", "30", "/", "500", "30", "/", "1000", "15", "/", "1000", "45", "/", "1000"],
+  "name": "1",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 133.44,
+    "y2": 242.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Table1-1.png"
+}, {
+  "caption": "Figure 8: Model performance comparison, with convolutional filter size 1. The models faeLVMn,s,b are described in the main text, mGP is a previous model from Jensen et al. (2020). A, Mean NLLH (negative log-likelihood, lower is better) of predicted test neuron rate, as a function of amount of training neurons. As the performance is averaged over 20 seeds of varying data, error bars would also reflect the variability in NLLH across data, resulting in inappropriate visualization. Hence, we report the mean rank of 20 seeds for each model at each condition, in an effort to more appropriately capture the variability of the models. B, Same as in A, now as a function of training time points. C, Mean GE (geodesic error, lower is better) between true latent and inferred latent, on test data, with corresponding SEM error bars, as a function of number of training neurons. D, Same as in C, now as a function of amount of training time points.",
+  "captionBoundary": {
+    "x1": 107.9998779296875,
+    "x2": 504.00457763671875,
+    "y1": 190.35751342773438,
+    "y2": 294.9898681640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Visual data, toy example. A, Scatter plot of trajectory of simulated visual stimulus, colored according to its temporal evolution. B, Receptive fields for three training neurons. C, Same three training neurons, showing firing rate in shaded dark blue and the corresponding Poisson spikes in orange. D, Neural responses after passing the neural activity from C through a calcium kernel. E, Scatter plot of true latent trajectory against inferred latent trajectory (variational mean). F True Ca2+ neural responses (grey) plotted against predicted neural responses for three test neurons (black).",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.00457763671875,
+    "y1": 450.1205139160156,
+    "y2": 510.91693115234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 308.64,
+    "y2": 440.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure9-1.png"
+}, {
+  "caption": "Figure 3: Schematic outline of model evaluation. Evaluation pipeline as suggested in Pei et al. (2021). During training, the models are all trained on spikes from ‘train’ neurons (1), learning their tuning curves, and the latent variable representation which is used to infer tuning curves on ‘test’ neurons at train time (2). For testing, we fix all tuning curve shapes and infer the latents from test data (3), before performing spike prediction on held-out data from held-out neurons (4). Thus, our encoder only receives train neurons (1, 3) to infer latents.",
+  "captionBoundary": {
+    "x1": 257.52294921875,
+    "x2": 503.04559326171875,
+    "y1": 84.38651275634766,
+    "y2": 178.05987548828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 84.47999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UCaQYUdE_o-Figure3-1.png"
+}]

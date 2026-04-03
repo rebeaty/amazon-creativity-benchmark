@@ -1,0 +1,261 @@
+[{
+  "caption": "Table 4: Graph representation learning (GRL) models and their hyperparameter settings, which collectively comprise the model set M with 423 unique GRL models. For details of the hyperparameters, please refer to the cited paper.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.6549377441406,
+    "y1": 309.6585388183594,
+    "y2": 337.5790100097656
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Hyperparameter", "Settings", "Count"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 345.59999999999997,
+    "y2": 364.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Table4-1.png"
+}, {
+  "caption": "Table 3: Summary of notations.",
+  "captionBoundary": {
+    "x1": 243.01199340820312,
+    "x2": 368.6802062988281,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["k", "embedding", "size", "P", "performance", "matrix", "of", "m", "models", "on", "n", "graphs", "U", "latent", "graph", "factors", "obtained", "by", "factorizing", "P", "(P", "≈", "UVᵀ)", "V", "latent", "model", "factors", "obtained", "by", "factorizing", "P", "(P", "≈", "UVᵀ)", "f(·)", "learnable", "embedding", "function", "for", "models", "and", "graphs", "Ψ", "set", "of", "structural", "meta-node/edge", "feature", "extractors", "Σ", "set", "of", "meta-graph", "feature", "extractors", "M", "meta-graph", "feature", "matrix", "where", "M", "∈", "Rn×d", "d", "number", "of", "meta-graph", "features", "mtest", "meta-graph", "feature", "vector", "for", "the", "new", "unseen", "test", "graph", "Gtest", "G", "set", "of", "graphs", "{G1,", ".", ".", ".", ",", "Gn}", "in", "the", "training", "set", "n", "number", "of", "graphs", "in", "training", "set", "n", "=", "|G|", "Gtest", "new", "unseen", "test", "graph", "Gtest", "6∈", "G", "M", "model", "set", "{M1,", ".", ".", ".", ",Mm}", "to", "search", "over", "m", "number", "of", "models", "to", "search", "over", "m", "=", "|M|"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 104.64,
+    "x2": 502.08,
+    "y1": 97.44,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Table3-1.png"
+}, {
+  "caption": "Figure 7: An illustration of the G-M network (Section 4.4), which is a multi-relational bipartite network between model nodes and graph nodes that are connected via five types of edges (e.g., Pm2m, M-g2g). Note that only a subset of the edges in the G-M network is shown here for illustration purposes. See Section 4.4 for more details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6536560058594,
+    "y1": 515.674560546875,
+    "y2": 554.5540161132812
+  },
+  "figType": "Figure",
+  "imageText": ["......", "...", "...", "M-g2g", "P-g2gP-m2m", "P-g2m", "P-m2g", "models", "graphs", "𝑔$", "𝑔#", "𝑚\"", "𝑚!"],
+  "name": "7",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 241.92,
+    "x2": 370.08,
+    "y1": 375.36,
+    "y2": 497.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure7-1.png"
+}, {
+  "caption": "Figure 1: (a) Given an unseen graph G and a large space M of models to search over, METAGL efficiently infers the best modelM∗ ∈M without having to train a single model from M on the new graphG. (b) Existing approaches, by contrast, need to train and evaluate multiple modelsMi ∈M to be able to select the best one. (c) Given observed performance with varying sparsity levels, METAGL consistently outperforms existing meta-learners, with up to 47% better model selection performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3605651855469,
+    "y1": 258.9285583496094,
+    "y2": 308.7669982910156
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "MetaGL", "infers", "the", "best", "model", "with", "no", "model", "training/evaluation.", "No", "model", "training/", "evaluation", "inferred", "model", "performances", "𝐌∗", "best", "model", "𝐆", "MetaGL", "Model𝐆", "new", "graph", "Existing", "Proposed", "(c)", "MetaGL", "consistently", "performs", "the", "best.(b)", "Existing", "model", "selection", "methods", "train/evaluate", "multiple", "models.", "new", "graph", "model", "performances", "𝐌∗", "best", "model", "𝐸\"", "Validation", "Graph", "𝑮!", "......", "...", "...", "evaluate", "models", "𝐸!", "train", "models", "𝑀\"", "𝑀!"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 496.32,
+    "y1": 64.8,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure1-1.png"
+}, {
+  "caption": "Table 7: METAGL is fast and incurs negligible overhead. The runtime (in secs) of naive model selection (i.e., training each method using all configurations in the model set M), versus the runtime of METAGL, i.e., the time to generate meta-graph features (the penultimate row) plus the time taken for model prediction on average (the last row). Datasets are taken from (Rossi & Ahmed, 2015).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0016174316406,
+    "y1": 397.8615417480469,
+    "y2": 436.7409973144531
+  },
+  "figType": "Table",
+  "imageText": ["METAGL", "(meta", "feat.", "gen.)", "0.16", "0.97", "0.36", "0.4", "1.07", "0.78", "0.61", "2.05", "(model", "pred.)", "0.39", "line", "5.45", "5.85", "5.40", "6.47", "8.23", "7.28", "8.19", "10.15", "node2vec", "65.28", "504.38", "154.54", "159.32", "315.35", "317.55", "184.09", "722.66", "deepwalk", "7.03", "55.01", "16.89", "17.95", "35.62", "33.09", "18.24", "84.35", "HONE", "203.71", "53.15", "552.31", "276.11", "127.4", "882.35", "737.49", "2082.06", "node2bits", "64.85", "113.06", "92.22", "93.37", "211.3", "117.55", "106.66", "284.42", "deepGL", "145.93", "633.44", "331.87", "504.2", "1027.25", "880.03", "445.89", "2349.3", "GraphSage", "272.97", "1451.87", "513.18", "283.35", "115.86", "1020.30", "2586.93", "1171.54", "GCN", "26.30", "57.10", "45.64", "52.96", "57.38", "66.12", "94.65", "163.4", "soc-wiki-", "Vote", "ia-", "reality", "tech-", "routers-rf", "ca-cora", "power-", "US-Grid", "web-EPA", "socfb-", "Caltech", "tech-pgp"],
+  "name": "7",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 503.03999999999996,
+    "y1": 444.47999999999996,
+    "y2": 566.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Table7-1.png"
+}, {
+  "caption": "Figure 8: Using the proposed meta-graph features (Section 4.3), all meta-learners nearly consistently perform better than when they use existing graph-level embedding methods (most of the points are below the diagonal).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.35186767578125,
+    "y1": 347.5185241699219,
+    "y2": 375.43798828125
+  },
+  "figType": "Figure",
+  "imageText": ["MetaGL", "(Ours)", "ISAC", "AS", "S2", "NCF", "MetaOD", "ALORS", "MetaGL", "wins", "P", "/", "L", "D", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "/", "S", "F", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.0", "0.0", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "r.", "C", "ha", "el", "et", "/", "W", "av", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "oG", "ph", "L", "/", "G", "ra", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "ec", "ph", "2V", "/", "G", "ra", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "0.2", "0.3", "M", "R", "R", "w", "/", "G", "L", "2V", "ec", "0.1", "0.0", "0.0", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features"],
+  "name": "8",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 502.08,
+    "y1": 75.84,
+    "y2": 331.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure8-1.png"
+}, {
+  "caption": "Figure 4: METAGL consistently performs the best, as the sparsity of performance matrix P varies. METAGL and all baseline meta-learners used the same meta-graph features proposed in this work.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7397766113281,
+    "y1": 657.0025634765625,
+    "y2": 673.9639892578125
+  },
+  "figType": "Figure",
+  "imageText": ["MetaGL", "(Ours)", "ISAC", "AS", "S2", "NCF", "MetaOD", "ALORS", "GB-AvgPerf", "GB-AvgRank", "te", "r", "B", "et", "@", "1", "C", "G", "N", "D", "0.96", "0.95", "0.94", "0.93", "0.92", "0.91", "0.90", "0.1", "0.3", "0.5", "0.7", "0.9", "Sparsity", "of", "Performance", "Matrix", "P", "te", "r", "B", "et", "C", "A", "U", "0.9", "0.8", "0.7", "0.6", "0.1", "0.3", "0.5", "0.7", "0.9", "Sparsity", "of", "Performance", "Matrix", "P", "te", "r", "B", "et", "R", "M", "R", "0.25", "0.20", "0.15", "0.10", "0.05", "0.1", "0.3", "0.5", "0.7", "0.9", "Sparsity", "of", "Performance", "Matrix", "P", "sparse", "settings", "as", "they", "learn", "to", "reconstruct", "P", "by", "modeling", "the", "relation", "between", "graphs", "and", "models."],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 505.91999999999996,
+    "y1": 503.52,
+    "y2": 649.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Given a new graph G, METAGL extracts meta-graph features, and applies a meta-learned model to them, which efficiently infers the best model M∗ ∈M for G, with no model evaluation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010681152344,
+    "y1": 138.58450317382812,
+    "y2": 155.5460205078125
+  },
+  "figType": "Figure",
+  "imageText": ["𝐌∗", "new", "graph", "𝐆", "best", "model", "𝐆", "features", "inferred", "performancesmeta-graph", "MetaGL", "Model", "f", "Meta-Graph", "Features"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 459.84,
+    "y1": 69.6,
+    "y2": 131.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure2-1.png"
+}, {
+  "caption": "Table 6: Summary of the 301 graph datasets that comprise the testbed.",
+  "captionBoundary": {
+    "x1": 168.40399169921875,
+    "x2": 448.18365478515625,
+    "y1": 151.23153686523438,
+    "y2": 157.2340087890625
+  },
+  "figType": "Table",
+  "imageText": ["Continued", "on", "the", "next", "page", "1", "BA-1_10_60", "804", "46410", "152", "enzymes_g297", "121", "149", "2", "BA-1_11_40", "917", "35860", "153", "enzymes_g349", "64", "118", "3", "BA-1_12_10", "827", "8215", "154", "enzymes_g355", "66", "112", "4", "BA-1_13_10", "1043", "10375", "155", "enzymes_g504", "66", "120", "5", "BA-1_14_40", "829", "32340", "156", "enzymes_g523", "48", "111", "6", "BA-1_16_40", "1126", "44220", "157", "enzymes_g526", "58", "110", "7", "BA-1_17_10", "895", "8895", "158", "enzymes_g527", "57", "107", "8", "BA-1_18_40", "1141", "44820", "159", "enzymes_g532", "74", "120", "9", "BA-1_1_10", "862", "8565", "160", "enzymes_g575", "51", "110", "10", "BA-1_20_10", "830", "8245", "161", "enzymes_g578", "60", "103", "11", "BA-1_22_10", "1094", "10885", "162", "enzymes_g594", "52", "114", "12", "BA-1_24_40", "946", "37020", "163", "enzymes_g597", "52", "116", "13", "BA-1_3_40", "1017", "39860", "164", "enzymes_g598", "55", "100", "14", "BA-1_4_40", "970", "37980", "165", "enzymes_g8", "88", "133", "15", "BA-1_5_10", "1050", "10445", "166", "ER-1_11_5", "917", "20841", "16", "BA-1_6_60", "803", "46350", "167", "ER-1_14_5", "829", "17092", "17", "BA-1_7_40", "832", "32460", "168", "ER-1_15_5", "826", "17099", "18", "BA-1_8_10", "1040", "10345", "169", "ER-1_24_5", "946", "22383", "19", "bio-CE-GN", "2220", "53683", "170", "ER-1_4_5", "970", "23747", "20", "bio-CE-GT", "924", "3239", "171", "ER-2_6_5", "8115", "16868", "21", "bio-CE-HT", "2617", "2985", "172", "inf-euroroad", "1174", "1417", "22", "bio-CE-LC", "1387", "1648", "173", "inf-openﬂights", "2939", "15677", "23", "bio-CE-PG", "1871", "47754", "174", "KPGM-log10-10-trial1", "845", "7194", "24", "bio-DM-CX", "4040", "76717", "175", "KPGM-log10-10-trial2", "830", "7265", "25", "bio-DM-HT", "2989", "4660", "176", "KPGM-log10-10-trial3", "837", "7251", "26", "bio-DM-LC", "658", "1129", "177", "KPGM-log10-12-trial1", "845", "8467", "27", "bio-DR-CX", "3289", "84940", "178", "KPGM-log10-12-trial2", "864", "8339", "28", "bio-grid-ﬁssion-yeast", "2026", "12637", "179", "KPGM-log10-12-trial3", "856", "8393", "29", "bio-HS-CX", "4413", "108818", "180", "KPGM-log10-14-trial2", "885", "9405", "30", "bio-HS-HT", "2570", "13691", "181", "KPGM-log10-8-trial1", "824", "6055", "31", "bio-HS-LC", "4227", "39484", "182", "KPGM-log10-8-trial2", "796", "6040", "32", "bio-SC-CC", "2223", "34879", "183", "KPGM-log10-8-trial3", "813", "6052", "33", "bio-SC-GT", "1716", "33987", "184", "KPGM-log8-10-trial1", "220", "1502", "34", "bio-SC-HT", "2084", "63027", "185", "KPGM-log8-10-trial2", "220", "1518", "35", "bio-SC-LC", "2004", "20452", "186", "KPGM-log8-10-trial3", "224", "1520", "36", "bio-SC-TS", "636", "3959", "187", "KPGM-log8-12-trial1", "224", "1729", "37", "biogrid-human", "2005", "3959", "188", "KPGM-log8-12-trial2", "229", "1756", "38", "biogrid-mouse", "1450", "1636", "189", "KPGM-log8-12-trial3", "230", "1761", "39", "biogrid-plant", "523", "838", "190", "KPGM-log8-14-trial1", "229", "1947", "40", "biogrid-worm", "1930", "3576", "191", "KPGM-log8-14-trial2", "233", "1950", "41", "biogrid-yeast", "836", "1049", "192", "KPGM-log8-14-trial3", "230", "1943", "42", "bn-cat-mixed-species-brain1", "65", "730", "193", "KPGM-log8-16-trial1", "232", "2117", "43", "bn-ﬂy-drosophila-medulla1", "1781", "9016", "194", "KPGM-log8-16-trial2", "230", "2152", "44", "bn-macaque-rhesus-brain1", "242", "3054", "195", "KPGM-log8-16-trial3", "235", "2178", "45", "bn-macaque-rhesus-brain2", "91", "582", "196", "KPGM-log8-8-trial1", "223", "1324", "46", "bn-macaque-rhesus-cerebral-cortex1", "91", "1401", "197", "KPGM-log8-8-trial2", "218", "1312", "47", "bn-macaque-rhesus-interareal-cortical2", "93", "2262", "198", "KPGM-log8-8-trial3", "215", "1303", "48", "bn-mouse-brain1", "213", "16242", "199", "nci1_g1677", "102", "106", "49", "bn-mouse-kasthuri-v4", "1029", "1559", "200", "nci1_g1863", "107", "111", "50", "bn-mouse-visual-cortex2", "193", "214", "201", "nci1_g1893", "96", "102", "51", "ca-AstroPh", "17903", "196972", "202", "nci1_g1894", "104", "108", "52", "ca-CondMat", "21363", "91286", "203", "nci1_g2079", "88", "103", "53", "ca-cora", "2708", "5278", "204", "nci1_g2082", "86", "101", "54", "ca-CSphd", "1882", "1740", "205", "nci1_g2172", "106", "107", "55", "ca-DBLP-kang", "2879", "11326", "206", "nci1_g2228", "92", "98", "56", "ca-Erdos992", "5094", "7515", "207", "nci1_g2229", "92", "98", "57", "ca-GrQc", "4158", "13422", "208", "nci1_g2443", "91", "97", "58", "ca-HepPh", "11204", "117619", "209", "nci1_g2455", "90", "96", "59", "ca-netscience", "379", "914", "210", "nci1_g3139", "107", "112", "60", "ca-sandi-auths", "86", "123", "211", "nci1_g3141", "92", "98", "61", "CL-1000-1d7-trial1", "928", "4653", "212", "nci1_g3145", "91", "97", "62", "CL-1000-1d7-trial2", "932", "4888", "213", "nci1_g3444", "93", "102", "63", "CL-1000-1d7-trial3", "938", "4840", "214", "nci1_g3449", "95", "99", "64", "CL-1000-1d8-trial1", "925", "3776", "215", "nci1_g3585", "105", "107", "65", "CL-1000-1d8-trial2", "930", "4136", "216", "nci1_g3700", "111", "119", "Graph", "#", "Nodes", "#", "Edges", "Graph", "#", "Nodes", "#", "Edges"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 509.28,
+    "y1": 169.92,
+    "y2": 731.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Table6-1.png"
+}, {
+  "caption": "Figure 10: Ablation study of METAGL on several components that METAGL uses for meta-learning. The proposed METAGL achieves the best performance, in comparison to the variants that adopt different modeling choices.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74456787109375,
+    "y1": 259.7174987792969,
+    "y2": 287.63800048828125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Graph", "neural", "networks.", "MetaGL", "MetaGL-RGCN", "MetaGL-GCN", "MetaGL-GAT", "Better", "C", "A", "U", "0.95", "0.90", "0.85", "0.80", "0.75", "0.70", "0.0", "0.1", "0.2", "0.3", "MRR", "(b)", "G-M", "network.", "MetaGL", "MetaGL-SingleType", "GM", "MetaGL-No", "GM", "Better", "C", "A", "U", "0.94", "0.92", "0.90", "0.88", "0.200", "0.225", "0.250", "MRR", "(a)", "Meta-learning", "objective.", "MetaGL", "MetaGL-MSE", "MetaGL-MLE", "MetaGL-lambda", "Better", "0.94", "0.96", "A", "U", "C", "0.92", "0.90", "0.88", "0.86", "0.84", "0.10", "0.15", "0.20", "0.25", "MRR"],
+  "name": "10",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 246.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure10-1.png"
+}, {
+  "caption": "Figure 5: Using the proposed meta-graph features (Section 4.3), all meta-learners nearly consistently perform better (i.e., points are below the diagonal) than with existing graph-level embedding methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.35186767578125,
+    "y1": 211.77951049804688,
+    "y2": 228.74102783203125
+  },
+  "figType": "Figure",
+  "imageText": ["MetaGL", "(Ours)", "ISAC", "AS", "S2", "NCF", "MetaOD", "ALORS", "MetaGL", "wins", "oG", "ph", "L", "/", "G", "ra", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "ec", "ph", "2V", "/", "G", "ra", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features", "MetaGL", "wins", "2V", "ec", "/", "G", "L", "R", "w", "M", "R", "0.3", "0.2", "0.1", "0.0", "0.0", "0.1", "0.2", "0.3", "MRR", "w/", "MetaGL's", "Features"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 72.96,
+    "y2": 203.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure5-1.png"
+}, {
+  "caption": "Figure 6: METAGL is fast (∼1 sec.), and incurs negligible overhead. Red and green lines denote the median and mean, respectively.",
+  "captionBoundary": {
+    "x1": 331.4909973144531,
+    "x2": 509.85888671875,
+    "y1": 445.64154052734375,
+    "y2": 473.56201171875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "METAGL’s", "runtime", "/", "Time", "to", "train", "GL", "mod-", "els", "for", "5%", "of", "their", "potential", "settings", "(in", "pct.).", "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "Better", "0.5s", "1.0s", "1.5s", "2.0s", "2.5s", "3.0s", "Better", "(a)", "METAGL’s", "runtime", "(seconds)", "at", "test", "time."],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 335.03999999999996,
+    "x2": 505.91999999999996,
+    "y1": 344.64,
+    "y2": 436.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Figure6-1.png"
+}, {
+  "caption": "Table 5: Summary of the global statistical functions Σ for deriving a set of meta-graph features from a graph invariant (e.g., k-core numbers, node degrees, and so on). Let x denote an arbitrary graph invariant vector for some graph Gi = (Vi, Ei) and π(x) is the sorted vector of x. Note x can be any representation, e.g., node degree vector (value for each node in Gi) or a degree distribution vector.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3486328125,
+    "y1": 219.14651489257812,
+    "y2": 259.52001953125
+  },
+  "figType": "Table",
+  "imageText": ["Histogram", "prob.", "dist.", "ph", "=", "h", "hT", "e", "(with", "ﬁxed", "#", "of", "bins)", "x", "Entropy", "H(x)", "=", "−", "∑", "i", "xi", "log", "xi", "Norm.", "entropy", "H(x)/log2|x|", "Gini", "coefﬁcient", "−", "Quartile", "max", "gap", "max(Qi+1", "−Qi)", "Centroid", "max", "gap", "maxij", "|ci", "−", "cj", "|", "Signal-to-noise", "ratio", "(SNR)", "µ2", "x/σ2", "Variance-to-mean", "ratio", "σ2", "x/µx", "x", "Coeff.", "of", "Variation", "σx/µx", "Efﬁciency", "ratio", "σ2", "x/µ2", "|x|e", "T", "|x−", "µx|", "Median", "Absolute", "Deviation", "med(|x−med(x)|)", "Avg.", "Absolute", "Deviation", "1", "Q3+Q1", "Quartile", "Dispersion", "Coeff.", "Q3−Q1", "Harmonic", "Mean", "|x|", "/", "∑", "i", "1", "xi", "Mean,", "Stdev,", "Variance", "µx,", "σx,", "σ2", "x", "Skewness", "E(x−µx)3/σ3", "x", "Kurtosis", "E(x−µx)4/σ4", "x", "Geometric", "Mean", "|x|−1∏", "i", "xi", "Min,", "max", "min(x),", "max(x)", "Range", "max(x)−min(x)", "Median", "med(x)", "Total", "outliers", "α", "∈", "{1.5,", "3}", "∑", "i", "I(xi<Q1−αIQR)", "+", "∑", "i", "I(xi>Q3", "+", "αIQR)", "(α-std)", "outliers", "α", "∈", "{2,", "3}", "µx", "±", "ασx", "Spearman", "(ρ,", "p-val)", "spearman(x,", "π(x))", "Kendall", "(τ", ",", "p-val)", "kendall(x,", "π(x))", "Pearson", "(r,", "p-val)", "pearson(x,", "π(x))", "Outlier", "UB", "α", "∈", "{1.5,", "3}", "∑", "i", "I(xi", ">", "Q3", "+", "αIQR)", "Q1,", "Q3", "median", "of", "the", "|x|", "/2", "smallest", "(largest)", "values", "IQR", "Q3", "−Q1", "Outlier", "LB", "α", "∈", "{1.5,", "3}", "∑", "i", "I(xi", "<", "Q1", "−", "αIQR)", "Name", "Equation", "Num.", "unique", "values", "card(x)", "Density", "nnz(x)/|x|"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 276.48,
+    "y2": 701.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_C1ns08q9jZ-Table5-1.png"
+}]

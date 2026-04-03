@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: Conditional samples: The blue curves are posterior samples conditioned on the context dataset (black dots) from different probabilistic models. We also plot the empirical mean and two standard deviations of the samples in black.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974670410156,
+    "y1": 164.14468383789062,
+    "y2": 192.3740234375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "GP", "Regression", "(b)", "Attentive", "Latent", "NP", "(c)", "Neural", "Diffusion", "Process", "(ours)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 498.24,
+    "y1": 84.0,
+    "y2": 151.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Kernel lengthscale marginalisation: Samples from the NDP, conditioned on an increasing number of data points (black dots), are illustrated in the top row. A sample is coloured according to its most likely lengthscale. As the NDP has no notion of a lengthscale, we infer the most likely lengthscale by retrospectively fitting a set of GPs and matching the lengthscale of the GP corresponding to the highest marginal likelihood to the sample. The bottom row shows a histogram of likely lengthscales from the produced samples. As more data points are provided, the distribution of likely lengthscales converges from the prior over lengthscales (red dashed line) to the lengthscale that was used to produce the data (orange dashed line).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0025634765625,
+    "y1": 257.9316711425781,
+    "y2": 340.95599365234375
+  },
+  "figType": "Figure",
+  "imageText": ["¸", "=", "2.3", "¸", "=", "1.4", "lengthscale", "(¸)", "0", "1", "2", "lengthscale", "(¸)", "0", "1", "2", "lengthscale", "(¸)", "0", "1", "2", "lengthscale", "(¸)", "0", "1", "2", "≠0.5", "0", "0.5", "≠0.5", "0", "0.5", "≠0.5", "0", "0.5", "≠0.5", "0", "0.5"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 242.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Representing a step function using NDP.",
+  "captionBoundary": {
+    "x1": 205.5279998779297,
+    "x2": 406.4736022949219,
+    "y1": 466.1907043457031,
+    "y2": 472.50201416015625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Prior", "(b)", "Conditional", "(c)", "p(y", "|", "x", "=", "0.0)"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 497.28,
+    "y1": 365.76,
+    "y2": 453.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Illustration of the forward and reverse process of NDPs. (Left-to-right) During the forward process, function values (blue dots) from a function draw (blue line) are perturbed by increasing levels of noise until the points are given by white noise. (Right-to-left) The reverse process consists of gradually removing noise until we arrive at a data point.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99951171875,
+    "y1": 215.35971069335938,
+    "y2": 254.5469970703125
+  },
+  "figType": "Figure",
+  "imageText": ["q0", "N", "(0,", "I)", "p✓(·", "|", "·,", "1)", "p✓(·", "|", "·,", "T", ")", "q(·", "|", "·,", "1)", "q(·", "|", "·,", "T", ")", "reverse", "process", "forward", "process", "·", "·", "·x0,y0", "x1,y1", "...", "...", "xT", ",yT"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 492.0,
+    "y1": 82.56,
+    "y2": 194.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure2-1.png"
+}, {
+  "caption": "Table 1: Average Negative Log-Likelihood (NLL) across different synthetic datasets and input dimensions (Dx). The performance is measured on held-out functions that are conditioned on a random number of points between 1 and (30Dx). Smaller is better.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0032958984375,
+    "y1": 83.22171020507812,
+    "y2": 112.94500732421875
+  },
+  "figType": "Table",
+  "imageText": ["NDP", "(ours)", "0.38±0.05", "1.01±0.03", "1.20±0.01", "0.13±0.05", "1.15±0.02", "1.19±0.01", "ANP", "[11]", "0.29±0.10", "1.05±0.06", "1.25±0.03", "0.60±0.07", "1.14±0.05", "1.29±0.02", "NP", "[8]", "0.67±0.06", "1.23±0.04", "1.35±0.02", "0.84±0.04", "1.26±0.03", "1.36±0.01", "CNP", "[7]", "0.77±0.09", "1.26±0.05", "1.35±0.02", "0.91±0.07", "1.30±0.04", "1.37±0.02", "trivial", "1.41±0.03", "1.42±0.02", "1.45±0.02", "1.43±0.02", "1.43±0.02", "1.45±0.02", "Squared", "Exponential", "Matérn-5/2", "D", "=", "1", "D", "=", "2", "D", "=", "3", "D", "=", "1", "D", "=", "2", "D", "=", "3"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 124.32,
+    "y2": 206.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Table1-1.png"
+}, {
+  "caption": "Figure 6: The regret of different probabilistic models used in Thompson sampling based Bayesian Optimisation on the 3D (left) and 6D (right) Hartmann problem. The uncertainty estimates are based on repeating the experiment five times with different random seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0025329589844,
+    "y1": 341.8046875,
+    "y2": 370.03399658203125
+  },
+  "figType": "Figure",
+  "imageText": ["NP", "[8]", "ANP", "[11]", "GPR", "NDP", "(ours)", "(b)", "Hartmann", "6D", "Iteration", "8", "6", "4", "2", "0", "0", "20", "40", "60", "80", "(a)", "Hartmann", "3D", "R", "e", "g", "r", "e", "t", "Iteration", "4", "2", "0", "0", "10", "20", "30"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 487.68,
+    "y1": 220.79999999999998,
+    "y2": 328.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Global optimisation by diffusing the input locations. We condition the model at each step on a target y⇤ value (dashed line), and use the NDP to sample from p(y ⇤ | x ⇤ ,D). The panels in the upper row illustrate the progression of the optimisation. Bottom row shows the distribution",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9973449707031,
+    "y1": 252.63766479492188,
+    "y2": 280.86700439453125
+  },
+  "figType": "Figure",
+  "imageText": ["step", "3", "≠1", "0", "1", "step", "2", "≠1", "0", "1", "step", "1", "≠1", "0", "1", ")", "ú", ",D", "ú", "|y", "p", "(", "x", "step", "0", "≠1", "0", "1", "2", "0", "Objective", "Target", "yú", "Data", "D", "Next", "query", "point", "Last", "query", "point"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 84.0,
+    "y2": 237.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure7-1.png"
+}, {
+  "caption": "Figure 3: Architecture of the noise prediction model, utilised at each step within the Neural Diffusion Process. The greyed box represents the bi-dimensional attention block, as discussed in Section 4.2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001220703125,
+    "y1": 208.48068237304688,
+    "y2": 225.7509765625
+  },
+  "figType": "Figure",
+  "imageText": ["Residual", "connection", "✏✓", "[B,N,H]", "[B,N,1]", "[B,N,D,H]", "At", "[B,128]", "[B,H]", "[B,1]", "t", "yt", "[B,N,1]", "xt", "D", "e", "n", "s", "e", "[B,N,D,2]", "[B,N,D,H]", "st[B,N,D]", "...", "+", "+", "P", "D", "+", "ReLU", "Multi-Head", "Attention", "N", "Multi-Head", "Attention", "D", "+", "D", "e", "n", "s", "e", ".", "D", "e", "n", "s", "e", "⇠", "D", "e", "n", "s", "e", "P", "r", "e", "p", "r", "o", "c", "e", "s", "s", "⇠", "Time", "embedding", "+", "Element-wise", "addition", ".", "Broadcasting", "—", "B:", "batch", "N:", "num.", "data", "D:", "dimension", "H:", "latent", "dim"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 498.71999999999997,
+    "y1": 86.39999999999999,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_09I1M8YRJBR-Figure3-1.png"
+}]

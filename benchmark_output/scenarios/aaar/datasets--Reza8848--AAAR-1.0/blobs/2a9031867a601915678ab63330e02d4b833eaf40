@@ -1,0 +1,301 @@
+[{
+  "caption": "Table 1: Top: 10-fold cross validation mean (standard deviation) on 1D sequence and 3D structure modeling. Bottom: evaluations under the setting of Jin et al. (2021), denoted with a superscript ∗.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 85.41556549072266,
+    "y2": 102.37701416015625
+  },
+  "figType": "Table",
+  "imageText": ["RefineGNN∗", "30.07%", "0.97", "27.70%", "0.73", "27.60%", "2.12", "MEAN∗", "62.78%", "0.94", "52.04%", "0.89", "39.87%", "2.20", "MEAN", "58.29±7.27%", "0.98±0.16", "47.15±3.09%", "0.95±0.05", "36.38±3.08%", "2.21±0.16", "LSTM∗", "28.02%", "-", "24.39%", "-", "18.92%", "-", "RefineGNN", "39.40±5.56%", "3.22±0.29", "37.06±3.09%", "3.64±0.40", "21.13±1.59%", "6.00±0.55", "C-RefineGNN", "33.19±2.99%", "3.25±0.40", "33.53±3.23%", "3.69±0.56", "18.88±1.37%", "6.22±0.59", "LSTM", "40.98±5.20%", "-", "28.50±1.55%", "-", "15.69±0.91%", "-", "C-LSTM", "40.93±5.41%", "-", "29.24±1.08%", "-", "15.48±1.17%", "-", "Model", "CDR-H1", "CDR-H2", "CDR-H3", "AAR", "RMSD", "AAR", "RMSD", "AAR", "RMSD"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 508.32,
+    "y1": 111.83999999999999,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table1-1.png"
+}, {
+  "caption": "Table 6: Hyperparameters for each model.",
+  "captionBoundary": {
+    "x1": 221.72195434570312,
+    "x2": 390.2791748046875,
+    "y1": 203.06838989257812,
+    "y2": 209.07086181640625
+  },
+  "figType": "Table",
+  "imageText": ["n", "layers", "3", "Number", "of", "layers", "in", "MEAN.", "alpha", "0.8", "The", "weight", "to", "balance", "sequence", "loss", "and", "structure", "loss.", "n", "iter", "3", "Number", "of", "iterations", "for", "progressive", "full-shot", "decoding.", "MEAN", "embed", "size", "64", "Size", "of", "trainable", "embeddings", "for", "each", "type", "of", "amino", "acids.", "hidden", "size", "128", "Size", "of", "hidden", "states", "in", "MEAN.", "hidden", "size", "256", "Size", "of", "the", "hidden", "states", "in", "the", "message", "passing", "network", "(MPN).", "k", "neighbors", "9", "Number", "of", "neighbors", "to", "include", "in", "k-nearest", "neighbor", "(KNN)", "graph.", "block", "size", "4", "Number", "of", "residues", "in", "a", "block.", "n", "layers", "4", "Number", "of", "layers", "in", "MPN.", "num", "rbf", "16", "Number", "of", "RBF", "kernels", "to", "consider.", "n", "layers", "2", "Number", "of", "layers", "of", "LSTM.", "(C-)RefineGNN", "(C-)LSTM", "hidden", "size", "256", "Size", "of", "the", "hidden", "states", "in", "LSTM.", "4", "special", "tokens", "for", "heavy", "chain,", "light", "chain,", "antigen", "and", "mask.", "dropout", "0.1", "Dropout", "rate.", "shared", "vocab", "size", "25", "There", "are", "21", "categories", "of", "amino", "acids", "in", "eukaryote,", "plus", "the", "hyperparameter", "value", "description"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 210.23999999999998,
+    "y2": 452.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table6-1.png"
+}, {
+  "caption": "Figure 1: (A) The structure of a residue, where the backbone atoms we use are N,Cα,C,O1. (B) The structure of an antibody which is symmetric and Y-shaped, and we focus on the three versatile CDRs on the variable domain of the heavy chain. (C) Schematic graph construction for the antigenantibody complex, with global nodes, internal context edges Ein and external interaction edges Eex.",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.0032958984375,
+    "y1": 328.89154052734375,
+    "y2": 369.2649841308594
+  },
+  "figType": "Figure",
+  "imageText": ["Global", "nodes", "εin", "εex", "Antigen", "Light", "Chain", "Heavy", "Chain", "A", "B", "C", "O2", "N", "C", "O1", "R", "Cɑ", "CDR", "V", "Variable", "Domain", "C", "Constant", "Domain", "Antigen", "Light", "Chain", "Heavy", "Chain", "S", "S", "V", "L", "C", "L", "V", "H", "C", "H1", "CH2", "CH3", "SS", "S", "S", "S", "S", "V", "L", "C", "L", "V", "H", "C", "H1", "CH2", "CH3"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 204.95999999999998,
+    "y2": 322.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure1-1.png"
+}, {
+  "caption": "Table 8: Results of antigen-binding CDR-H3 design given different forms of antigen information.",
+  "captionBoundary": {
+    "x1": 111.48100280761719,
+    "x2": 500.5203857421875,
+    "y1": 149.56747436523438,
+    "y2": 155.5699462890625
+  },
+  "figType": "Table",
+  "imageText": ["epitope-only", "36.77%", "0.9812", "1.81", "full", "37.92%", "0.9798", "2.00", "Antigen", "AAR", "TM-score", "RMSD"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 205.92,
+    "x2": 406.08,
+    "y1": 165.6,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table8-1.png"
+}, {
+  "caption": "Table 4: Statistics of each fold of 10-fold cross validation.",
+  "captionBoundary": {
+    "x1": 190.2850341796875,
+    "x2": 421.7161865234375,
+    "y1": 154.24252319335938,
+    "y2": 160.2449951171875
+  },
+  "figType": "Table",
+  "imageText": ["fold", "10", "76", "520", "109", "347", "165", "331", "Total", "765", "3,127", "1,093", "3,127", "1659", "3,127", "fold", "1", "77", "299", "110", "237", "166", "317", "fold", "2", "77", "260", "110", "343", "166", "301", "fold", "3", "77", "363", "110", "288", "166", "348", "fold", "4", "77", "286", "109", "315", "166", "271", "fold", "5", "77", "195", "109", "419", "166", "279", "fold", "6", "76", "241", "109", "217", "166", "345", "fold", "7", "76", "427", "109", "266", "166", "306", "fold", "8", "76", "326", "109", "321", "166", "320", "fold", "9", "76", "210", "109", "374", "166", "309", "CDR-H1", "CDR-H2", "CDR-H3", "cluster", "antibody", "cluster", "antibody", "cluster", "antibody"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 144.96,
+    "x2": 467.03999999999996,
+    "y1": 160.79999999999998,
+    "y2": 315.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table4-1.png"
+}, {
+  "caption": "Table 5: Number of antibodies in the training/validation/test set of Jin et al. (2021) as well as their subsets of complete complexes.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0031433105469,
+    "y1": 414.0114440917969,
+    "y2": 430.972900390625
+  },
+  "figType": "Table",
+  "imageText": ["test", "326", "184", "376", "209", "437", "207", "Total", "4,735", "2,485", "4,735", "2,485", "4,735", "3,127", "training", "4,050", "2,131", "3,876", "2,035", "3,896", "2,051", "validation", "359", "170", "483", "241", "403", "227", "CDR-H1", "CDR-H2", "CDR-H3", "full", "subset", "full", "subset", "full", "subset"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 451.2,
+    "y1": 433.91999999999996,
+    "y2": 511.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table5-1.png"
+}, {
+  "caption": "Table 2: Left: Amino acid recovery (AAR), TM-score and RMSD on CDR-H3 Design benchmark. Middle: Average affinity change after optimization. Right: Average CDR lengths and training/inference speedups by our full-shot decoding compared to the iterative-refinement decoding.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 421.0563049316406,
+    "y2": 448.97674560546875
+  },
+  "figType": "Table",
+  "imageText": ["CDR-H1", "2.1x", "/", "1.5x", "CDR-H2", "2.1x", "/", "1.6x", "CDR-H3", "4.1x", "/", "2.8x", "CDR-H1", "7.9", "CDR-H2", "7.6", "CDR-H3", "14.1", "speedup", "(train", "/", "infer)", "length", "C-LSTM", "-1.83", "RefineGNN", "-3.98", "C-RefineGNN", "-3.79", "MEAN", "-5.33", "Random", "+1.52", "LSTM", "-1.48", "Model", "∆∆G", "C-LSTM", "22.18%", "-", "-", "RefineGNN", "29.79%", "0.8303", "7.55", "C-RefineGNN", "28.90%", "0.8317", "7.21", "MEAN", "36.77%", "0.9812", "1.81", "RosettaAD", "22.50%", "0.9435", "5.52", "LSTM", "22.36%", "-", "-", "Model", "AAR", "TM-score", "RMSD"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 456.47999999999996,
+    "y2": 529.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table2-1.png"
+}, {
+  "caption": "Figure 3: (A) The structure of two antigen-binding CDR-H3s (PDB: 1ic7) designed by MEAN (left, RMSD=0.49) and RefineGNN (right, RMSD=3.04). The sequences are also provided in the annotations. (B) The antibody-antigen complex structure after affinity optimization (PDB: 2vis, ∆∆G = -5.13), with the original and optimized sequences displayed in the annotations.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0031433105469,
+    "y1": 191.68350219726562,
+    "y2": 230.56292724609375
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B", "CDR-H3", "Original:", "ARDFYDYDVFYYAMDY", "Optimized:", "YRVFYIYGYMYLYFDV", "CDR-H3", "Ground", "truth:", "ANWAGDY", "RefineGNN:", "GSYYFDY", "CDR-H3", "Ground", "truth:", "ANWAGDY", "MEAN:", "ANGDGDY"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 66.72,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure3-1.png"
+}, {
+  "caption": "Figure 2: The overview of MEAN and the progressive full-shot decoding. In each iteration, we alternate the internal context encoding and external interaction encoding over L layers, and then update the input features and coordinates of CDRs for the next iteration with the predicted values.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 188.86550903320312,
+    "y2": 216.78594970703125
+  },
+  "figType": "Figure",
+  "imageText": ["Update", "graph", "with", "weighted", "residue", "embedding", "and", "structure", "Light", "ChainHeavy", "Chain", "Antigen", "Q", "N", "P", "Q", "L", "S", "L", "Context", "P", "K", "L-round", "Alternate", "message", "passing", "Internal", "Internal", "Context", "Message", "Passing", "Internal", "Context", "Q", "N", "P", "Q", "L", "S", "L", "K", "P", "External", "Interaction", "Message", "Passing", "Q", "N", "P", "Q", "L", "S", "L", "K", "P", "External", "Interaction", "External", "Interaction", "Jointly", "predict", "sequence", "and", "structure"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 66.72,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure2-1.png"
+}, {
+  "caption": "Figure 7: More examples from antigen-binding CDR-H3 design by our MEAN.",
+  "captionBoundary": {
+    "x1": 147.08200073242188,
+    "x2": 464.9187316894531,
+    "y1": 640.9945678710938,
+    "y2": 646.9970092773438
+  },
+  "figType": "Figure",
+  "imageText": ["PDB=4g6j,", "RMSD=0.50", "MEAN:", "ARDDDYGAFDY", "Ground", "truth:", "ARDLRTGPFDY", "CDR-H3", "PDB=4cmh,", "RMSD=0.47", "MEAN:", "AREGDYGYYYFDY", "Ground", "truth:", "ARGDYYGSNSLDY", "CDR-H3", "PDB=3s35,", "RMSD=0.48", "MEAN:", "AREGSDYMDY", "Ground", "truth:", "TRHDGTNFDY", "CDR-H3", "PDB=2vxt,", "RMSD=0.44", "MEAN:", "ARGFDY", "Ground", "truth:", "ARGLRF", "CDR-H3", "PDB=3l95,", "RMSD=0.39", "MEAN:", "ARDGGYGSAMDY", "Ground", "truth:", "ARGSGFRWVMDY", "CDR-H3", "PDB=1fe8,", "RMSD=0.40", "MEAN:", "AREYYGFDY", "Ground", "truth:", "AGNYYGMDY", "CDR-H3", "PDB=5d93,", "RMSD=0.46", "MEAN:", "ARDSDYFDY", "Ground", "truth:", "ARSEDWFAY", "CDR-H3", "PDB=1uj3,", "RMSD=0.42", "MEAN:", "AREYYYYFDY", "Ground", "truth:", "ARDSGYAMDY", "CDR-H3", "PDB=1a2y,", "RMSD=0.39", "MEAN:", "AREGDGYFDY", "Ground", "truth:", "ARERDYRLDY", "CDR-H3"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 463.2,
+    "y1": 161.76,
+    "y2": 626.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure7-1.png"
+}, {
+  "caption": "Figure 5: (A) The left is the attention weights from the residues in CDR-H3 to those in antigen (PDB: 4ydk). The right is the relative energy contribution of each pair of residues calculated by Rosetta. (B) The density maps of the relative ranks for the most contributing residue pairs.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00482177734375,
+    "y1": 191.66751098632812,
+    "y2": 219.58697509765625
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 73.92,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure5-1.png"
+}, {
+  "caption": "Table 7: RMSD of bond lengths and dihedral angles of the backbone structure.",
+  "captionBoundary": {
+    "x1": 149.07501220703125,
+    "x2": 462.92669677734375,
+    "y1": 537.1434326171875,
+    "y2": 543.1458740234375
+  },
+  "figType": "Table",
+  "imageText": ["MEAN", "0.37", "0.302", "RefineGNN", "10.56", "0.456", "C-RefineGNN", "9.49", "0.423", "Model", "Bond", "lengths", "Angles(ϕ,", "ψ,", "ω)"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 200.64,
+    "x2": 411.35999999999996,
+    "y1": 552.96,
+    "y2": 609.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table7-1.png"
+}, {
+  "caption": "Figure 6: The density of PPL and RMSD of different rounds in progressive full-shot decoding. The area under each curve integrates to 1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 356.6515197753906,
+    "y2": 373.61297607421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 463.2,
+    "y1": 225.6,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure6-1.png"
+}, {
+  "caption": "Figure 4: (A) CDR-H3 designed by MEAN based on a docked template targeting the antigen from PDB 5b8c (Affinity=-59.6). (B) The affinity distribution of the antibodies.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0019226074219,
+    "y1": 289.1225280761719,
+    "y2": 306.083984375
+  },
+  "figType": "Figure",
+  "imageText": ["Light", "Antigen", "CDR-H3:", "ARRGRGGGYYFDY", "Heavy", "A", "B"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 147.35999999999999,
+    "x2": 465.12,
+    "y1": 162.72,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Figure4-1.png"
+}, {
+  "caption": "Table 3: Ablations of MEAN.",
+  "captionBoundary": {
+    "x1": 246.468994140625,
+    "x2": 365.531982421875,
+    "y1": 514.8043823242188,
+    "y2": 520.8068237304688
+  },
+  "figType": "Table",
+  "imageText": ["6", "CONCLUSION", "MEAN", "36.38±3.08%", "2.21±0.16", "36.77%", "0.9812", "1.81", "-5.33", "heavy", "chain", "only", "33.62±6.20%", "2.23±0.17", "35.82%", "0.9728", "1.97", "failed", "iterative", "refinement", "25.85±1.88%", "3.61±0.75", "35.19%", "0.9629", "3.20", "-5.19", "w/o", "global", "node", "33.89±6.81%", "2.62±1.03", "35.07%", "0.9798", "1.81", "-3.68", "w/o", "attention", "35.89±3.44%", "2.24±0.31", "36.56%", "0.9745", "1.95", "failed", "Model", "SAbDab", "(CDR-H3)", "RAbD", "SKEMPI", "AAR", "RMSD", "AAR", "TM-score", "RMSD", "∆∆G"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 481.44,
+    "y1": 526.56,
+    "y2": 628.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LFHFQbjxIiP-Table3-1.png"
+}]

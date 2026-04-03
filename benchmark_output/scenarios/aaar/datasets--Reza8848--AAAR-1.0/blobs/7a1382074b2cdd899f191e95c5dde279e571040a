@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: The parameter space S of GBT. Parameters ϵ = (ϵP , ϵη, ϵθ) can take the value ∞, rendering the corresponding regularization to a strict constraint. The two dashed edges with ϵP = ∞ are not generally well-defined since the limits do not exist. The vertices corresponding to θ ⊗ η, Frequentist (η ⊗ 1) and 1⊗ θ are the limits taken along the vertical edges. Given (C, θ, η) as shown in the left corner, each colored map plots each GBT learner (differ by constraints)’s estimation of the mapping between hypotheses and data (UOT plan).",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.3160400390625,
+    "y1": 437.4677429199219,
+    "y2": 482.7200012207031
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 406.08,
+    "y1": 307.68,
+    "y2": 436.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QHevLM-OnA-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Evidence of general consistency: we plot the percentage of episodes that reaches a threshold (0.999) by round number (in colors of the bars). Each bar represents a size of matrix, for each bar 100 matrices were randomly sampled, and 1000 rounds were simulated per matrix. “exact” means learner uses ηk = η, (PS), “update” means learner uses statistics on current data in the episode (RS). “uot” takes ϵ = (1, 40, 40) and “ot” comes with exact and ϵ = (1,∞,∞).",
+  "captionBoundary": {
+    "x1": 106.80699920654297,
+    "x2": 505.59912109375,
+    "y1": 305.5827331542969,
+    "y2": 350.8349914550781
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 189.6,
+    "y2": 305.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QHevLM-OnA-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Left: Behavior of models spanning the line segment between BI and CI. With ϵP = 1 and ϵθ = ∞, when ϵη varies from 0 to ∞, the theory changes from BI to CI. Each bar graphs the Monte-Carlo result of 400,000 teaching sequences, we empirically observe that the coefficients a(h) of the limit in terms of ∑ h∈H a(h)δh changes from BI to CI continuously from δ(h3) by Bernstein-von Mises to θ0(h) by Theorem 11. Right: the Euclidean distances of each coefficient a(h) to BI result (blue crosses), and to CI result (orange dots).",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.1211853027344,
+    "y1": 312.0617370605469,
+    "y2": 359.2749938964844
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 194.88,
+    "y2": 311.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QHevLM-OnA-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Top: For a learning problem C, behaviors of 9 different learners with ϵP = 1, ϵθ = ∞ and various ϵη (denoted in figure) on conclusion distributions, a(h) in bar graph, plots below bars are estimated convergence rates E ln(θk(h)/(1− θk(h))) averaged on episodes converging to h, one curve per hypothesis.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.0033874511719,
+    "y1": 189.99172973632812,
+    "y2": 216.3819580078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 538.0799999999999,
+    "y1": 80.64,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QHevLM-OnA-Figure4-1.png"
+}]

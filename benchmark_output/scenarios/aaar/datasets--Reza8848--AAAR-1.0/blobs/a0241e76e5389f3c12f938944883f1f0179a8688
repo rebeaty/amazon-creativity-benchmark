@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 1: Zero-Shot-CoT (Kojima et al., 2022) and Manual-CoT (Wei et al., 2022b) with example inputs and outputs of a large language model (LLM).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9975891113281,
+    "y1": 718.1165771484375,
+    "y2": 735.0780029296875
+  },
+  "figType": "Figure",
+  "imageText": ["Q:", "A", "pet", "store", "had", "64", "puppies.", "In", "one", "day", "they", "sold", "28", "of", "them", "and", "put", "the", "rest", "into", "cages", "with", "4", "in", "each", "cage.", "How", "many", "cages", "did", "they", "use?", "A:", "Let’s", "think", "step", "by", "step.", "LLM", "LLM", "Answer", "Rationale", "Question", "(a)", "Zero-Shot-CoT", "(b)", "Manual-CoT", "Q:", "A", "pet", "store", "had", "64", "puppies.", "In", "one", "day", "they", "sold", "28", "of", "them", "and", "put", "the", "rest", "into", "cages", "with", "4", "in", "each", "cage.", "How", "many", "cages", "did", "they", "use?", "A:", "The", "pet", "store", "had", "64", "puppies.", "They", "sold", "28", "of", "them.", "So", "they", "had", "64", "-", "28", "=", "36", "puppies", "left.", "They", "put", "them", "into", "cages", "with", "4", "in", "each", "cage.", "So", "they", "used", "36", "/", "4", "=", "9", "cages.", "The", "answer", "is", "9.", "Answer", "Extraction", "LLM", "9.", "Rationale", "Generation", "A:", "There", "are", "15", "trees", "originally.", "Then", "there", "were", "21", "trees", "after", "some", "more", "were", "planted.", "So", "there", "must", "have", "been", "21", "-", "15", "=", "6.", "The", "answer", "is", "6.", "…", "Q:", "There", "are", "15", "trees", "in", "the", "grove.", "Grove", "workers", "will", "plant", "trees", "in", "the", "grove", "today.", "After", "they", "are", "done,", "there", "will", "be", "21", "trees.", "How", "many", "trees", "did", "the", "grove", "workers", "plant", "today?", "Q:", "A", "pet", "store", "had", "64", "puppies.", "In", "one", "day", "they", "sold", "28", "of", "them", "and", "put", "the", "rest", "into", "cages", "with", "4", "in", "each", "cage.", "How", "many", "cages", "did", "they", "use?", "A", "Few", "Manual", "Demos", "Generated", "Rationale", "Therefore,", "the", "answer", "(arabic", "numerals)", "is", "Test", "Question", "4", "puppies,", "so", "we", "need", "9", "cages.", "them", "were", "sold.", "This", "leaves", "36", "puppies.", "Each", "cage", "has", "A:", "Let’s", "think", "step", "by", "step.", "There", "are", "64", "puppies.", "28", "of"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 503.03999999999996,
+    "y1": 514.56,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Overview of the Auto-CoT method. Different from Manual-CoT in Figure 1, a few (k) demonstrations (on the right) are automatically constructed.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66790771484375,
+    "y1": 601.1145629882812,
+    "y2": 618.0759887695312
+  },
+  "figType": "Figure",
+  "imageText": ["Test", "Question", "k", "Auto", "Demos", "The", "pet", "store", "had", "64", "puppies.", "They", "sold", "28", "of", "them.", "That", "means", "they", "have", "36", "puppies", "left.", "They", "put", "the", "rest", "into", "cages", "with", "4", "in", "each", "cage.", "That", "means", "they", "have", "9", "cages.", "The", "answer", "is", "9.", "Q:", "A", "pet", "store", "had", "64", "puppies.", "In", "one", "day", "they", "sold", "28", "of", "them", "and", "put", "the", "rest", "into", "cages", "with", "4", "in", "each", "cage.", "How", "many", "cages", "did", "they", "use?", "A:", "Let’s", "think", "step", "by", "step.", "Sampling", "by", "Selection", "Criteria", "1", "k", "Clustering", "Q:", "A", "chef", "needs", "to", "cook", "9", "potatoes", "...", "A:", "Let’s…k", "Q:", "While", "shopping", "for", "music", "online", "…", "A:", "Let’s", "…1", "LLM", "Q:", "A", "chef", "needs", "to", "cook", "9", "potatoes.", "He", "has", "already…", "Q:", "While", "shopping", "for", "music", "online,", "Zoe", "bought", "3", "…", "LLM", "In-Context", "Reasoning", "Demo", "Construction", "Q:", "A", "chef", "needs", "to", "cook", "9", "potatoes.", "He", "has", "already", "cooked", "7.", "If", "each", "potato", "takes", "3", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?", "A:", "Let’s", "think", "step", "by", "step.", "The", "chef", "has", "already", "cooked", "7", "potatoes.", "That", "means", "it", "has", "taken", "him", "7", "*", "3", "minutes", "to", "cook", "those", "7", "potatoes.", "That", "means", "it", "will", "take", "him", "3", "more", "minutes", "to", "cook", "each", "of", "the", "remaining", "2", "potatoes", "…", "Q:", "While", "shopping", "for", "music", "online,", "Zoe", "bought", "3", "country", "albums", "and", "5", "pop", "albums.", "Each", "album", "came", "with", "a", "lyric", "sheet", "and", "had", "3", "songs.", "How", "many", "songs", "did", "Zoe", "buy", "total?", "A:", "Let’s", "think", "step", "by", "step.", "Zoe", "bought", "3", "country", "albums.", "Each", "album", "has", "3", "songs.", "So", "she", "bought", "3*3=9", "songs", "from", "the", "country", "albums.", "Zoe", "bought", "5", "pop", "albums.", "Each", "album", "has", "3", "songs.", "So", "she", "bought", "5*3=15", "songs", "from", "the", "pop", "albums.", "Zoe", "bought", "9+15=24", "songs", "in", "total.", "The", "answer", "is", "24.", "…"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 375.36,
+    "y2": 583.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure4-1.png"
+}, {
+  "caption": "Table 18: Automatically constructed demonstrations for Last Letter Concatenation.",
+  "captionBoundary": {
+    "x1": 140.06399536132812,
+    "x2": 471.62921142578125,
+    "y1": 507.3695373535156,
+    "y2": 513.3720092773438
+  },
+  "figType": "Table",
+  "imageText": [],
+  "name": "18",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 471.35999999999996,
+    "x2": 503.03999999999996,
+    "y1": 456.47999999999996,
+    "y2": 528.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table18-1.png"
+}, {
+  "caption": "Figure 8: Question clustering in different datasets. (∆ is computed by the difference of largest and smallest values.",
+  "captionBoundary": {
+    "x1": 108.00100708007812,
+    "x2": 503.99615478515625,
+    "y1": 202.87454223632812,
+    "y2": 219.83599853515625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "CSQA", "(∆=19)", "(%", ")", "at", "e", "or", "R", "E", "rr", "50", "40", "30", "1", "2", "3", "4", "5", "6", "7", "(c)", "SingleEq", "(∆=48)", "(%", ")", "at", "e", "or", "R", "E", "rr", "60", "40", "20", "1", "2", "3", "4", "5", "6", "7", "8", "0", "(b)", "AddSub", "(∆=46)", "(%", ")", "at", "e", "or", "R", "E", "rr", "60", "40", "20", "1", "2", "3", "4", "5", "6", "7", "8", "0", "(a)", "MultiArith", "(∆=43)", "(%", ")", "at", "e", "or", "R", "E", "rr", "60", "40", "20", "1", "2", "3", "4", "5", "6", "7", "8", "0"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 507.35999999999996,
+    "y1": 38.879999999999995,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Question clustering with different numbers of clusters.",
+  "captionBoundary": {
+    "x1": 177.57400512695312,
+    "x2": 434.4296569824219,
+    "y1": 358.6255187988281,
+    "y2": 364.62799072265625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Clusters", "Num.", "=", "8", "(%", ")", "at", "e", "or", "R", "E", "rr", "60", "40", "20", "1", "2", "3", "4", "5", "6", "7", "8", "0", "(c)", "Clusters", "Num.", "=", "6", "(%", ")", "at", "e", "or", "R", "E", "rr", "60", "40", "20", "1", "2", "3", "4", "5", "6", "0", "(b)", "Clusters", "Num.", "=", "4", "(%", ")", "at", "e", "or", "R", "E", "rr", "40", "30", "20", "10", "1", "2", "3", "4", "0", "(a)", "Clusters", "Num.", "=", "2", "(%", ")", "at", "e", "or", "R", "E", "rr", "30", "20", "10", "1", "2", "0"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 507.35999999999996,
+    "y1": 240.48,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure9-1.png"
+}, {
+  "caption": "Table 5: Impact of different components in the demonstrations.",
+  "captionBoundary": {
+    "x1": 180.03399658203125,
+    "x2": 431.6593322753906,
+    "y1": 240.84255981445312,
+    "y2": 246.84503173828125
+  },
+  "figType": "Table",
+  "imageText": ["Shuffle", "Questions", "73.8", "Shuffle", "Rationales", "43.8", "Shuffle", "Answers", "17.0", "Manual-CoT", "91.7", "Method", "Accuracy"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 241.92,
+    "x2": 367.2,
+    "y1": 259.68,
+    "y2": 327.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table5-1.png"
+}, {
+  "caption": "Table 6: Mistakes made by rationale-answer inconsistency in the demonstration. The first block shows the demonstration used for the test question in the second block.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.24725341796875,
+    "y1": 407.6505432128906,
+    "y2": 424.6109924316406
+  },
+  "figType": "Table",
+  "imageText": ["Q:", "A", "chef", "needs", "to", "cook", "13", "potatoes.", "He", "has", "already", "cooked", "5.", "If", "each", "potato", "takes", "6", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?", "A:", "Let’s", "think", "step", "by", "step.", "A", "chef", "needs", "to", "cook", "15", "potatoes.", "He", "has", "already", "cooked", "8.", "If", "each", "potato", "takes", "9", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?We", "can", "set", "up", "an", "equation", "to", "solve", "this", "problem.", "A", "chef", "needs", "to", "cook", "15", "potatoes.", "He", "has", "already", "cooked", "8.", "If", "each", "potato", "takes", "9", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?We", "can", "set", "up", "an", "equation", "to", "solve", "this", "problem.", "8", "potatoes", "+", "(15-8)", "potatoes", "=", "15", "potatoes.", "The", "answer", "is", "72", "minutes.", "✗", "Q:", "For", "the", "school", "bake", "sale", "Wendy", "made", "pastries.", "She", "baked", "4", "cupcakes", "and", "29", "cookies.", "After", "the", "sale", "she", "had", "24", "to", "take", "back", "home.", "How", "many", "pastries", "did", "she", "sell?", "A:", "Let’s", "think", "step", "by", "step.", "Wendy", "made", "4", "cupcakes", "and", "29", "cookies.", "She", "sold", "some", "pastries.", "She", "had", "24", "to", "take", "back", "home.", "How", "many", "pastries", "did", "she", "sell?We", "can", "set", "up", "an", "equation", "to", "solve", "this", "problem.", "Wendy", "made", "4", "cupcakes", "and", "29", "cookies.", "She", "sold", "some", "pastries.", "She", "had", "24", "to", "take", "back", "home.", "How", "many", "pastries", "did", "she", "sell?We", "can", "set", "up", "an", "equation", "to", "solve", "this", "problem.", "4", "cupcakes", "+", "29", "cookies", "-", "pastries", "sold", "=", "24", "past.", "The", "answer", "is", "29.", "✗"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 501.12,
+    "y1": 437.76,
+    "y2": 589.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table6-1.png"
+}, {
+  "caption": "Figure 5: Question clustering on ten datasets of reasoning tasks. Stars denote cluster centers.",
+  "captionBoundary": {
+    "x1": 121.26000213623047,
+    "x2": 490.7429504394531,
+    "y1": 720.571533203125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["CSQASVAMP", "AQUA", "StrategyQA", "MultiArith", "Last", "Letter", "Concatenation", "GSM8K", "Coin", "Flip", "AddSub", "SingleEq"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 569.76,
+    "y2": 703.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure5-1.png"
+}, {
+  "caption": "Table 4: Accuracy using the Codex LLM.",
+  "captionBoundary": {
+    "x1": 331.5740051269531,
+    "x2": 497.9195556640625,
+    "y1": 207.06350708007812,
+    "y2": 213.06597900390625
+  },
+  "figType": "Table",
+  "imageText": ["Auto-CoT", "93.2", "62.8", "91.9", "Zero-Shot-CoT", "64.8", "31.8", "65.6", "Manual-CoT", "96.8", "59.4", "84.6", "Method", "MultiArith", "GSM8K", "AddSub"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 325.92,
+    "x2": 504.0,
+    "y1": 225.6,
+    "y2": 283.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table4-1.png"
+}, {
+  "caption": "Table 3: Accuracy on ten datasets from three categories of reasoning tasks.",
+  "captionBoundary": {
+    "x1": 156.6959991455078,
+    "x2": 454.99615478515625,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Auto-CoT", "92.0", "47.9", "84.8", "36.5", "87.0", "69.5", "74.4", "65.4", "59.7", "99.9", "Few-Shot", "33.8", "15.6", "83.3", "24.8", "82.7", "65.7", "79.5", "65.9", "0.2", "57.2", "Manual-CoT", "91.7", "46.9", "81.3", "35.8", "86.6", "68.9", "73.5", "65.4", "59.0", "97.2", "Zero-Shot", "22.7", "12.5", "77.0", "22.4", "78.7", "58.8", "72.6", "54.3", "0.2", "53.8", "Zero-Shot-CoT", "78.7", "40.7", "74.7", "33.5", "78.7", "63.7", "64.6", "54.8", "57.6", "91.4", "MultiArith", "GSM8K", "AddSub", "AQuA", "SingleEq", "SVAMP", "CSQA", "Strategy", "Letter", "Coin", "Model", "Arithmetic", "Commonsense", "Symbolic"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 93.6,
+    "y2": 191.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table3-1.png"
+}, {
+  "caption": "Table 1: Accuracy (%) of different sampling methods. Symbol † indicates using training sets with annotated reasoning chains.",
+  "captionBoundary": {
+    "x1": 345.29400634765625,
+    "x2": 504.0019226074219,
+    "y1": 188.59353637695312,
+    "y2": 227.4730224609375
+  },
+  "figType": "Table",
+  "imageText": ["Zero-Shot-CoT", "78.7", "40.7", "33.5", "Manual-CoT", "91.7", "46.9", "35.8†", "Random-Q-CoT", "86.2", "47.6†", "36.2†", "Retrieval-Q-CoT", "82.8", "48.0†", "39.7†", "Method", "MultiArith", "GSM8KAQuA"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 344.64,
+    "x2": 504.0,
+    "y1": 234.72,
+    "y2": 302.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table1-1.png"
+}, {
+  "caption": "Figure 2: Unresolving Rate.",
+  "captionBoundary": {
+    "x1": 368.8810119628906,
+    "x2": 480.7210998535156,
+    "y1": 631.736572265625,
+    "y2": 637.739013671875
+  },
+  "figType": "Figure",
+  "imageText": [")", "e", "(%", "R", "at", "50", "40", "30", "Retrieval-Q-CoT", "Random-Q-CoT", "20"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 348.96,
+    "x2": 498.24,
+    "y1": 528.96,
+    "y2": 622.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure2-1.png"
+}, {
+  "caption": "Figure 11: Bootstrapping for the streaming setting.",
+  "captionBoundary": {
+    "x1": 204.5570068359375,
+    "x2": 407.44525146484375,
+    "y1": 717.2105712890625,
+    "y2": 723.2130126953125
+  },
+  "figType": "Figure",
+  "imageText": ["Zero-Shot-CoT", "Manual-CoT", "Auto-CoT*", ")", "y", "(%", "ur", "ac", "A", "cc", "Batch", "100", "90", "80", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "60"],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 496.32,
+    "y1": 540.96,
+    "y2": 702.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure11-1.png"
+}, {
+  "caption": "Table 9: Average mistakes in three runs of demonstration construction.",
+  "captionBoundary": {
+    "x1": 164.77099609375,
+    "x2": 446.92169189453125,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Simple", "heuristics", "0.3", "1.7", "1.7", "1", "1", "0.7", "2.7", "2.3", "0", "0", "w/o", "heuristics", "1.3", "5", "3", "2.7", "2", "3.3", "3.3", "2.3", "3", "1", "Num.", "of", "Demos", "8", "8", "8", "4", "8", "8", "7", "6", "4", "8", "MultiArith", "AddSub", "GSM8K", "AQuA", "SingleEq", "SVAMP", "CSQA", "Strategy", "Letter", "Coin"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 102.24,
+    "y2": 159.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table9-1.png"
+}, {
+  "caption": "Figure 10: Average error rate (%) of sampled demonstrations.",
+  "captionBoundary": {
+    "x1": 182.88800048828125,
+    "x2": 429.1136169433594,
+    "y1": 317.4895324707031,
+    "y2": 323.49200439453125
+  },
+  "figType": "Figure",
+  "imageText": ["Simple", "heuristics", "w/o", "heuristics", "12", "75", "38", "41", "47", "25", "66", "37", "62", "16", "0", "0", "38", "38", "12", "8", "20", "20", "25", "4", "100", "80", "60", "40", "20", "MultiArith", "AddSub", "GSM8K", "AQuA", "SingleEq", "SVAMP", "CSQA", "Strategy", "Last", "Letter", "Coin", "Flip", "0"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 488.15999999999997,
+    "y1": 170.88,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure10-1.png"
+}, {
+  "caption": "Table 2: Examples of Retrieval-Q-CoT and Random-Q-CoT for constructing demonstrations and prediction. The upper part contains the automatically constructed demonstrations, and the lower part contains test questions along with predicted reasoning chains.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035400390625,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["Q:", "A", "chef", "needs", "to", "cook", "15", "potatoes.", "He", "has", "already", "cooked", "8.", "If", "each", "potato", "takes", "9", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?", "Q:", "A", "chef", "needs", "to", "cook", "15", "potatoes.", "He", "has", "already", "cooked", "8.", "If", "each", "potato", "takes", "9", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?", "A:", "Let’s", "think", "step", "by", "step.", "The", "chef", "has", "already", "cooked", "8", "potatoes.", "That", "means", "it", "has", "taken", "him", "8", "*", "9", "minutes", "to", "cook", "those", "8", "potatoes.", "That", "means", "it", "will", "take", "him", "9", "minutes", "to", "cook", "each", "of", "the", "remaining", "7", "potatoes.", "That", "means", "it", "will", "take", "him", "a", "total", "of", "8", "*", "9", "+", "7", "*", "9", "=", "135", "minutes", "to", "cook", "all", "15", "potatoes.", "The", "answer", "is", "135.", "✗", "A:", "Let’s", "think", "step", "by", "step.", "The", "chef", "needs", "to", "cook", "15", "potatoes.", "He", "has", "already", "cooked", "8.", "That", "means", "he", "has", "to", "cook", "15-8=7", "more", "potatoes.", "Each", "potato", "takes", "9", "minutes", "to", "cook.", "That", "means", "it", "will", "take", "him", "9*7=63", "minutes", "to", "cook", "the", "rest", "of", "the", "potatoes.", "The", "answer", "is", "63.", "✓", "Q:", "A", "chef", "needs", "to", "cook", "9", "potatoes.", "He", "has", "already", "cooked", "7.", "If", "each", "potato", "takes", "3", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?", "Q:", "Wendy", "uploaded", "79", "pictures", "to", "Facebook.", "She", "put", "44", "pics", "into", "one", "album", "and", "put", "the", "rest", "into", "5", "different", "albums.", "How", "many", "pictures", "were", "in", "each", "album?", "A:", "Let’s", "think", "step", "by", "step.", "The", "chef", "has", "already", "cooked", "7", "potatoes.", "That", "means", "it", "has", "taken", "him", "7", "*", "3", "minutes", "to", "cook", "those", "7", "potatoes.", "That", "means", "it", "will", "take", "him", "3", "more", "minutes", "to", "cook", "each", "of", "the", "remaining", "2", "potatoes.", "That", "means", "it", "will", "take", "him", "a", "total", "of", "7", "*", "3", "+", "2", "*", "3", "=", "21", "minutes", "to", "cook", "all", "9", "potatoes.", "The", "answer", "is", "21.", "✗", "A:", "Let’s", "think", "step", "by", "step.", "Wendy", "uploaded", "79", "pictures", "to", "Facebook.", "She", "put", "44", "pictures", "into", "one", "album.", "That", "means", "she", "put", "the", "rest", "of", "the", "pictures", "into", "5", "different", "albums.", "That", "means", "each", "album", "would", "have", "(79-44)/5", "=", "15", "pictures", "in", "each", "album.", "The", "answer", "is", "15.✓", "Q:", "A", "chef", "needs", "to", "cook", "13", "potatoes.", "He", "has", "already", "cooked", "5.", "If", "each", "potato", "takes", "6", "minutes", "to", "cook,", "how", "long", "will", "it", "take", "him", "to", "cook", "the", "rest?", "Q:", "At", "a", "restaurant", "each", "adult", "meal", "costs", "$5", "and", "kids", "eat", "free.", "If", "a", "group", "of", "15", "people", "came", "in", "and", "8", "were", "kids,", "how", "much", "would", "it", "cost", "for", "the", "group", "to", "eat?", "A:", "Let’s", "think", "step", "by", "step.", "The", "chef", "has", "already", "cooked", "5", "potatoes.", "That", "means", "it", "has", "taken", "him", "30", "minutes", "so", "far.", "There", "are", "13", "potatoes", "in", "total.", "5", "have", "been", "cooked", "so", "far.", "That", "means", "there", "are", "8", "left", "to", "cook.", "Each", "potato", "takes", "6", "minutes", "to", "cook.", "That", "means", "it", "will", "take", "the", "chef", "48", "minutes", "to", "cook", "the", "8", "remaining", "potatoes.", "In", "total,", "it", "will", "take", "the", "chef", "78", "minutes", "to", "cook", "all", "13", "potatoes.", "The", "answer", "is", "78.", "✗", "A:", "Let’s", "think", "step", "by", "step.", "There", "are", "8", "kids,", "so", "that", "means", "there", "are", "7", "adults.", "Each", "adult", "meal", "costs", "$5,", "so", "that", "means", "that", "the", "7", "adults", "will", "cost", "$5*7=$35.", "Now", "we", "just", "need", "to", "add", "the", "two", "numbers", "together.", "$35+8=43$.", "So", "it", "would", "cost", "$43", "for", "the", "group", "to", "eat.", "The", "answer", "is", "43.", "✗", "Retrieval-Q-CoT", "Random-Q-CoT"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 115.67999999999999,
+    "y2": 340.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table2-1.png"
+}, {
+  "caption": "Figure 3: Clusters of similar questions.",
+  "captionBoundary": {
+    "x1": 347.0140075683594,
+    "x2": 502.58990478515625,
+    "y1": 529.0005493164062,
+    "y2": 535.0029907226562
+  },
+  "figType": "Figure",
+  "imageText": ["(%", ")", "at", "e", "or", "R", "E", "rr", "60", "40", "20", "1", "2", "3", "4", "5", "6", "7", "8", "0"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 348.96,
+    "x2": 501.12,
+    "y1": 432.96,
+    "y2": 520.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Figure3-1.png"
+}, {
+  "caption": "Table 7: Dataset Description.",
+  "captionBoundary": {
+    "x1": 247.56500244140625,
+    "x2": 364.12738037109375,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["MultiArith", "600", "31.8", "Number", "Unspecified", "AddSub", "395", "31.5", "Number", "Unspecified", "GSM8K", "1319", "46.9", "Number", "MIT", "License", "AQUA", "254", "51.9", "Multiple", "choice", "Apache-2.0", "SingleEq", "508", "27.4", "Number", "No", "License", "SVAMP", "1000", "31.8", "Number", "MIT", "License", "CSQA", "1221", "27.8", "Multiple", "choice", "Unspecified", "StrategyQA", "2290", "9.6", "Yes", "or", "No", "Apache-2.0", "Last", "Letters", "500", "15.0", "String", "Unspecified", "Coin", "Flip", "500", "37.0", "Yes", "or", "No", "Unspecified", "Dataset", "Number", "of", "samples", "Average", "words", "Answer", "Format", "Licence"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 484.32,
+    "y1": 91.67999999999999,
+    "y2": 214.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table7-1.png"
+}, {
+  "caption": "Table 8: Influence of demonstration sampling.",
+  "captionBoundary": {
+    "x1": 213.802001953125,
+    "x2": 397.8908996582031,
+    "y1": 392.2195129394531,
+    "y2": 398.22198486328125
+  },
+  "figType": "Table",
+  "imageText": ["In-Cluster", "Min", "Dist", "93.7", "In-Cluster", "Random", "89.2", "In-Cluster", "Max", "Dist", "88.7", "Auto-CoT", "93.7", "Method", "MultiArith"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 216.0,
+    "x2": 389.28,
+    "y1": 410.88,
+    "y2": 478.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5NTt8GFjUHkr-Table8-1.png"
+}]

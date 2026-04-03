@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 3: Audio to video retrieval results. Since the spectrogram is hard to read, we show its paired image in dashed box just for visualization purpose.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 611.257568359375,
+    "y2": 628.218017578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 503.03999999999996,
+    "y1": 182.88,
+    "y2": 592.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Figure3-1.png"
+}, {
+  "caption": "Table 1: Comparing audio-visual classification performance on AudioSet and VGGSound. IN SL=ImageNet supervised learning; SSL=self-supervised learning; †Industry-level computation. *Nonstandard data split; ensEnsemble of single-modal models. We bold the best methods without supervised pretraining, and underline the overall best methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0015563964844,
+    "y1": 83.53055572509766,
+    "y2": 122.4100341796875
+  },
+  "figType": "Table",
+  "imageText": ["Our", "Multi-Modal", "MAE", "Vanilla", "AV-MAE", "SSL", "32.7", "15.8", "36.5", "43.7", "24.0", "48.3", "56.4", "45.4", "63.4", "AV-MAE", "SSL", "33.4", "15.1", "37.4", "44.8", "24.0", "49.6", "57.2", "45.3", "64.1", "CAV-MAE", "SSL", "36.8", "18.7", "40.5", "45.8", "25.6", "50.5", "59.2", "46.6", "65.4", "CAV-MAEScale+", "SSL", "37.7", "19.8", "42.0", "46.6", "26.2", "51.2", "59.5", "47.0", "65.5", "Our", "Contrastive", "Audio-Visual", "Learning", "CAV", "SSL", "34.6", "18.4", "38.5", "43.6", "24.4", "48.1", "57.3", "45.1", "64.1", "Our", "Single-Modal", "MAE", "Audio-MAE", "SSL", "34.2", "-", "36.7ens", "44.9", "-", "46.9ens", "57.7", "-", "63.1ens", "Visual-MAE", "SSL", "-", "15.7", "-", "24.2", "-", "45.7", "Existing", "Audio-Visual", "Models", "GBlend†*", "(Wang", "et", "al.,", "2020)", "-", "29.1", "22.1", "37.8", "32.4", "18.8", "41.8", "-", "-", "-", "Perceiver†", "(Jaegle", "et", "al.,", "2021)", "-", "-", "-", "-", "38.4", "25.8", "44.2", "-", "-", "-", "Attn", "AV", "(Fayek", "&", "Kumar,", "2020)", "IN", "SL", "-", "-", "-", "38.4", "25.7", "46.2", "-", "-", "-", "MBT†*", "(Nagrani", "et", "al.,", "2021)", "IN", "SL", "31.3", "27.7", "43.9", "44.3", "32.3", "52.1", "52.3", "51.2", "64.1", "Existing", "Audio-Based", "Models", "PANNs", "(Kong", "et", "al.,", "2020)", "-", "27.8", "-", "-", "43.9", "-", "-", "-", "-", "-", "AST", "(Gong", "et", "al.,", "2021a)", "IN", "SL", "34.7", "-", "-", "45.9", "-", "-", "-", "-", "-", "HTS-AT", "Chen", "et", "al.", "(2022)", "IN", "SL", "-", "-", "-", "47.1", "-", "-", "-", "-", "-", "PaSST", "Koutini", "et", "al.", "(2021)", "IN", "SL", "-", "-", "-", "47.1", "-", "-", "-", "-", "-", "SSAST", "(Gong", "et", "al.,", "2022)", "SSL", "31.0", "-", "-", "-", "-", "-", "-", "-", "-", "MAE-AST", "(Baade", "et", "al.,", "2022)", "SSL", "30.6", "-", "-", "-", "-", "-", "-", "-", "-", "Audio-MAE†(vanilla)", "(Xu", "et", "al.,", "2022)", "SSL", "36.6", "-", "-", "46.8", "-", "-", "-", "-", "-", "Audio-MAE†", "(Xu", "et", "al.,", "2022)", "SSL", "37.1", "-", "-", "47.3", "-", "-", "-", "-", "-", "Chen", "et", "al.", "(2020)", "-", "-", "-", "-", "-", "-", "-", "48.8", "-", "-", "AudioSlowFast", "(Kazakos", "et", "al.,", "2021)", "-", "-", "-", "-", "-", "-", "-", "50.1", "-", "-", "A", "V", "A-V", "A", "V", "A-V", "A", "V", "A-V", "Pretrain", "AudioSet-20K", "(mAP)", "AudioSet-2M", "(mAP)", "VGGSound", "(Acc)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 126.24,
+    "y2": 405.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Table1-1.png"
+}, {
+  "caption": "Table 5: Audio to visual retrieval results on AudioSet and VGGSound.",
+  "captionBoundary": {
+    "x1": 165.15899658203125,
+    "x2": 446.8414611816406,
+    "y1": 142.22549438476562,
+    "y2": 148.22796630859375
+  },
+  "figType": "Table",
+  "imageText": ["CAV-MAE(Scale),", "C=0.01", "15.1", "34.0", "43.0", "12.8", "30.4", "40.3", "Constrastive", "Audio-Visual", "Masked", "Auto-Encoders", "CAV-MAE,", "C=0.1", "13.5", "32.5", "43.2", "12.1", "31.6", "42.4", "CAV-MAE,", "C=0.01", "9.5", "22.6", "32.4", "8.3", "23.8", "32.4", "Audio-Visual", "Models", "with", "Only", "Contrastive", "Loss", "CAV,", "C=0.1", "15.5", "32.7", "42.8", "12.4", "33.2", "44.7", "CAV,", "C=0.01", "11.5", "27.5", "36.5", "10.0", "25.6", "36.9", "Audio-Visual", "Models", "with", "Only", "MDM", "Loss", "Vanilla", "AV-MAE", "0.2", "0.4", "0.9", "0.0", "0.4", "0.8", "AV-MAE", "0.2", "0.4", "0.9", "0.0", "0.2", "0.6", "R@1", "R@5", "R@10", "R@1", "R@5", "R@10", "Audio→Visual", "Retrieval", "AudioSet", "Eval", "Subset", "VGGSound", "Eval", "Subset"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 160.79999999999998,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Table5-1.png"
+}, {
+  "caption": "Figure 1: An illustration of our method. A) We tokenize audio spectrograms and RGB images into 16×16 square patches and use them as the input to all models. B) Conventional contrastive audiovisual learning model (top) and vanilla audio-visual masked auto-encoder (bottom, also novel and first introduced in this paper). C) Our proposed contrastive audio-visual masked auto-encoder (CAVMAE) model. CAV-MAE integrates two major self-supervised frameworks: contrastive audio-visual learning and cross-modal masked data modeling, which learns a joint and coordinate representations and performs well on both multi-modal joint classification tasks and cross-modal retrieval tasks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 309.04351806640625,
+    "y2": 380.7999267578125
+  },
+  "figType": "Figure",
+  "imageText": ["Pooling", "B)", "Pooling", "Audio-Visual", "Contrastive", "Learning", "LNv", "LNa", "C)", "Contrastive", "Audio-Visual", "Masked", "Auto-Encoder", "Pooling", "Reconstruction", "Loss", "Cv", "CA", "Cv2", "Cv3", "CA1", "CA3", "EA1", "EA3", "Ev2", "Ev3", "Ev2", "Ev3", "EA1", "EA3", "Ev3", "Ev2", "EA3", "EA1", "EA1", "EA3", "Ev2", "Ev3", "Visual", "Encoder", "Audio", "Encoder", "V4", "V3", "V2", "V1", "A4", "A3", "A2", "A1", "Ev2", "Ev3", "[M]", "[M]", "[M]", "EA3", "[M]", "EA1", "V3", "V4", "V3", "V2", "V1", "A4", "A3", "A2", "A1", "V2", "A3", "A1", "A)", "Audio", "and", "Image", "Tokenization", "14", "...", "V1", "V2", "V196", "...", "...", "14", "224", "224", "128", "...", "A1", "A2", "A512", "1024", "8", "64", "...", "...", "...", "Cv", "CA", "Ev2", "Ev3", "Ev4", "Ev1", "EA4", "EA3", "EA2", "EA1", "Visual", "Encoder", "Audio", "Encoder", "V4", "V3", "V2", "V1", "A4", "A3", "A2", "A1", "V4", "V3", "V2", "V1", "A4", "A3", "A2", "A1", "Ev2", "Ev3", "[M]", "[M]", "[M]", "EA3", "[M]", "EA1", "Ev3", "Ev2", "EA3", "EA1", "V3", "V4", "Vanilla", "Audio-Visual", "Masked", "Auto-Encoder", "Reconstruction", "Loss", "V3", "V2", "V1", "A4", "A3", "A2", "A1", "V2", "A3", "A1"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 500.15999999999997,
+    "y1": 80.64,
+    "y2": 297.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Figure1-1.png"
+}, {
+  "caption": "Figure 6: CAV-MAE reconstruction samples when 75% of the input is masked. Samples are from VGGSound, a different dataset from the pretraining dataset. The model is pretrained on AudioSet with 75% masking ratio without target normalization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 706.8475341796875,
+    "y2": 734.7680053710938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 80.64,
+    "y2": 696.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Figure6-1.png"
+}, {
+  "caption": "Table 4: Our pre-training and fine-tuning hyperparameters.",
+  "captionBoundary": {
+    "x1": 188.67596435546875,
+    "x2": 423.3249816894531,
+    "y1": 466.7363586425781,
+    "y2": 472.73883056640625
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", "AS-2M", "AS-2M", "AS-20K", "AS-2M", "VGG", "Optimizer", "Adam,", "weight", "decay=5e-7,", "betas=(0.95,", "0.999)", "Backbone", "learning", "rate", "1e-4", "5e-5", "5e-5", "1e-5", "1e-4", "Classification", "head", "LR", "-", "-", "5e-2", "5e-4", "1e-3", "LR", "decay", "start", "epoch", "10", "10", "5", "2", "2", "LR", "decay", "rate", "0.5", "0.5", "0.5", "0.5", "0.5", "LR", "decay", "step", "5", "5", "1", "1", "1", "Epochs", "25", "12", "15", "10", "10", "Batch", "size", "4×27", "4×12", "36", "48", "48", "GPUs", "4", "A5000", "4", "Titan", "X", "Pascal", "Class", "Balance", "Sampling", "No", "No", "No", "Yes", "Yes", "Mixup", "No", "No", "Yes", "Yes", "Yes", "Random", "Time", "Shifting", "Yes", "Yes", "Yes", "Yes", "Yes", "Loss", "Function", "-", "BCE", "BCE", "CE", "Weight", "Averaging", "No", "No", "Yes", "Yes", "Yes", "Ensemble", "No", "No", "No", "No", "No", "Input", "Norm", "Mean", "-5.081", "-5.081", "-5.081", "-5.081", "-5.081", "Input", "Norm", "STD", "4.485", "4.485", "4.485", "4.485", "4.485", "CAV-MAEScale+", "All", "Other", "Models", "All", "Models", "Pretraining", "Finetuning"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 485.76,
+    "y2": 722.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Table4-1.png"
+}, {
+  "caption": "Table 3: Retrieval results on AudioSet and VGGSound.",
+  "captionBoundary": {
+    "x1": 112.301025390625,
+    "x2": 333.3810729980469,
+    "y1": 504.4452819824219,
+    "y2": 510.44775390625
+  },
+  "figType": "Table",
+  "imageText": ["Constrastive", "Audio-Visual", "Masked", "Auto-Encoders", "CAV-MAE,", "λc", "=", "0.1", "16.1", "38.6", "49.3", "14.7", "35.3", "45.9", "CAV-MAE,", "λc", "=", "0.01", "12.3", "31.4", "41.9", "12.5", "28.6", "39.1", "CAV-MAEScale+,", "λc", "=", "0.01", "18.8", "39.5", "50.1", "14.8", "34.2", "44.0", "Figure", "2:", "Sample", "retrieval", "results.", "Audio-Visual", "Models", "with", "Only", "Contrastive", "Loss", "CAV,", "λc", "=", "0.1", "17.4", "36.1", "47.3", "14.2", "35.2", "46.2", "CAV,", "λc", "=", "0.01", "14.6", "32.9", "42.8", "10.9", "28.7", "39.8", "Audio-Visual", "Models", "with", "Only", "MDM", "Loss", "Vanilla", "AV-MAE", "0.1", "0.3", "0.8", "0.2", "0.7", "1.4", "AV-MAE", "0.1", "0.3", "0.7", "0.1", "0.7", "1.2", "R@1", "R@5", "R@10", "R@1", "R@5", "R@10", "Visual", "→", "Audio", "AudioSet", "Eval", "Subset", "VGGSound", "Eval", "Subset"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 510.24,
+    "y2": 623.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Table3-1.png"
+}, {
+  "caption": "Table 2: Ablation studies on audio-visual classification. MM=multi-modal, SM=single-modal.",
+  "captionBoundary": {
+    "x1": 116.12899780273438,
+    "x2": 492.7849426269531,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["CAV-MAE", "29.8", "SM", "Ensemble", "24.2", "AV-MAE", "24.0", "Model", "AS-20K", "(i)", "Linear", "probe", "Middle", "17.4", "40.9", "Aggregation", "19.8", "42.0", "Frame", "AS-", "20K", "Used", "V", "A-V", "(h)", "Inference", "frame", "Missing", "Modality", "36.7", "14.4", "SM", "Fine-tune", "37.7", "19.8", "Setting", "AS-", "20K", "A", "V", "(g)", "SM", "experiment", "MM", "42.0", "SM", "41.3", "MM+SM", "41.7", "Strategy", "AS-20K", "(f)", "Finetuning", "AS-2M", "65.5", "VS", "64.2", "AS-2M+VS", "65.9", "Dataset", "VGGSound", "(e)", "Pretrain", "dataset", "w/o", "norm", "40.5", "w/norm", "40.5", "Norm", "AS-20K", "(d)", "Pretrain", "target", "48", "40.5", "108", "40.8", "Size", "AS-20K", "(c)", "Pretrain", "batch", "12", "40.8", "25", "42.0", "1", "37.3", "3", "39.1", "Epochs", "AS-20K", "(b)", "Pretrain", "epochs", "0.001", "38.6", "0.1", "39.3", "0.01", "40.5", "λc", "AS-20K", "(a)", "Pretrain", "λc"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 99.84,
+    "x2": 507.35999999999996,
+    "y1": 98.39999999999999,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Table2-1.png"
+}, {
+  "caption": "Figure 7: CAV-MAE reconstruction samples when 90% of the input is masked. Samples are from VGGSound, a different dataset from the pretraining dataset. The model is pretrained on AudioSet with 75% masking ratio without target normalization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 697.9005737304688,
+    "y2": 725.8209838867188
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 470.4,
+    "y1": 81.6,
+    "y2": 687.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Figure7-1.png"
+}, {
+  "caption": "Figure 5: CAV-MAE reconstruction samples when 50% of the input is masked. Samples are from VGGSound, a different dataset from the pretraining dataset. The model is pretrained on AudioSet with 75% masking ratio without target normalization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 704.24755859375,
+    "y2": 732.16796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 470.4,
+    "y1": 80.64,
+    "y2": 693.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Figure5-1.png"
+}, {
+  "caption": "Figure 4: Video to audio retrieval results. Since the spectrogram is hard to read, we show its paired image in dashed box just for visualization purpose.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 618.632568359375,
+    "y2": 635.593994140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 178.56,
+    "y2": 599.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QPtMRyk5rb-Figure4-1.png"
+}]

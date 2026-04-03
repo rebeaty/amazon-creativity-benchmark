@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 2: Plots showing the first epoch to fall beaneath 0.01 training error, the minimal test error and the epoch at which the model achieved it (see Section 4.1). Columns represent the results for each dataset. Each number is the average over three runs. Marginals show the mean and standard deviation of the row / column. More desirable values have brighter colors.",
+  "captionBoundary": {
+    "x1": 305.6709899902344,
+    "x2": 505.6499938964844,
+    "y1": 309.83453369140625,
+    "y2": 392.54901123046875
+  },
+  "figType": "Figure",
+  "imageText": ["o", "r", "E", "rr", "s", "t", "a", "l", "Te", "o", "c", "h", "@", "M", "in", "im", "E", "p", "0", "²", "x", "1", "o", "r", "E", "rr", "s", "t", "im", "a", "l", "Te", "M", "in", "o", "r", "E", "rr", "in", "g", "ra", "in", "o", "c", "h", "@", "0", ".0", "1", "T", "E", "p", "CelebA", "Chess", "STL-10"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 306.24,
+    "x2": 502.08,
+    "y1": 136.79999999999998,
+    "y2": 297.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Loss plots for the scaling experiment (see Section 3.2) averaged over three runs. Each quadrant shows training and test losses from one model. Colors correspond to the fraction of data used for training, as shown in the legend at the top. Brighter means more training data.",
+  "captionBoundary": {
+    "x1": 305.6709899902344,
+    "x2": 505.7386779785156,
+    "y1": 658.487548828125,
+    "y2": 719.2850341796875
+  },
+  "figType": "Figure",
+  "imageText": ["1%", "5%", "10%", "25%", "50%", "95%", "M", "1/16", "Test", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "Steps", "1e4", "S", "1/16", "Test", "0.00", "0.01", "0.02", "0.03", "0.04", "0.05", "M", "SE", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "Steps", "1e4", "S", "1/16", "Training", "M", "1/16", "Training", "0.00", "0.01", "0.02", "0.03", "0.04", "0.05", "M", "SE", "S", "1/64", "Test", "M", "1/64", "Test", "0.00", "0.01", "0.02", "0.03", "0.04", "0.05", "M", "SE", "S", "1/64", "Training", "M", "1/64", "Training", "0.00", "0.01", "0.02", "0.03", "0.04", "0.05", "M", "SE"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 502.08,
+    "y1": 412.8,
+    "y2": 645.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure3-1.png"
+}, {
+  "caption": "Figure 8: Results of the iteration experiment. Each column shows the reconstruction after 8 iterations.",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 505.74737548828125,
+    "y1": 563.0985717773438,
+    "y2": 591.0189819335938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 317.76,
+    "x2": 500.15999999999997,
+    "y1": 384.0,
+    "y2": 552.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Results of the autoencoder interpolation. Images are grouped by area and increasing with number of channels.",
+  "captionBoundary": {
+    "x1": 313.56298828125,
+    "x2": 505.6560363769531,
+    "y1": 332.0545349121094,
+    "y2": 359.9750061035156
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 317.76,
+    "x2": 500.15999999999997,
+    "y1": 163.68,
+    "y2": 321.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Results linear probes. AUROC for Chess and CelebA,macro F1 for STL-10. Marginals show the mean and standard deviation. Red signifies improvement over baseline.",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 505.7474670410156,
+    "y1": 346.6615295410156,
+    "y2": 385.5409851074219
+  },
+  "figType": "Figure",
+  "imageText": ["S", "T", "L", "-1", "0", "C", "h", "e", "s", "s", "C", "e", "le", "b", "A"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 318.71999999999997,
+    "x2": 500.15999999999997,
+    "y1": 128.64,
+    "y2": 336.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Difference in the average MSE on both datasets in the outlier detection experiment.",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 504.0047912597656,
+    "y1": 533.717529296875,
+    "y2": 550.6790161132812
+  },
+  "figType": "Figure",
+  "imageText": ["M", "SE", "0.030", "0.025", "0.020", "0.015", "0.010", "0.005", "0.000", "Bottleneck", "Shape", "S", "6", ".25", "%", "S", "2", "5%", "S", "1", "00", "%", "M", "1.", "56", "%", "M", "6.", "25", "%", "M", "25", "%", "M", "10", "0%", "L", "1", ".56", "%", "L", "6", ".25", "%", "L", "2", "5%", "L", "1", "00", "%", "%", "S", "1", ".56"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 329.76,
+    "x2": 486.71999999999997,
+    "y1": 406.56,
+    "y2": 519.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure5-1.png"
+}, {
+  "caption": "Figure 6: AUROC organized into a grid of area x number of channels",
+  "captionBoundary": {
+    "x1": 313.6730041503906,
+    "x2": 504.0007019042969,
+    "y1": 672.6485595703125,
+    "y2": 689.6090087890625
+  },
+  "figType": "Figure",
+  "imageText": ["0.0", "0.5", "0.5", "0.0", "0.655", "0.512", "0.506", "0.705", "0.466", "0.551", "0.714", "0.625", "0.557", "0.697", "0.685", "0.568", "S", "M", "L", "11/161/41/64"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 354.24,
+    "x2": 464.15999999999997,
+    "y1": 571.68,
+    "y2": 658.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Loss plots for the three datasets. Every bottleneck configuration is shown as a distinct line. Each line is the average over three runs. Configurations that have a common bottleneck area share the same color. Color intensity represents the bottleneck depth (darker = more channels)",
+  "captionBoundary": {
+    "x1": 313.9219970703125,
+    "x2": 505.65594482421875,
+    "y1": 306.926513671875,
+    "y2": 378.6820068359375
+  },
+  "figType": "Figure",
+  "imageText": ["L", "1/4", "L", "1", "L", "1/64", "L", "1/16", "M", "1/4", "M", "1", "M", "1/64", "M", "1/16", "S", "1/4", "S", "1", "S", "1/64", "S", "1/16", "STL-10", "Test", "Loss", "200", "400", "600", "800", "1000", "Epochs", "STL-10", "Training", "Loss", "M", "SE", "0.05", "0.04", "0.03", "0.02", "0.01", "0.00", "200", "400", "600", "800", "1000", "Epochs", "CelebA", "Training", "Loss", "CelebA", "Test", "Loss", "M", "SE", "0.05", "0.04", "0.03", "0.02", "0.01", "0.00", "Chess", "Training", "Loss", "Chess", "Test", "Loss", "M", "SE", "0.05", "0.04", "0.03", "0.02", "0.01", "0.00"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 315.36,
+    "x2": 502.56,
+    "y1": 114.72,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7zv_wSgP-LN-Figure1-1.png"
+}]

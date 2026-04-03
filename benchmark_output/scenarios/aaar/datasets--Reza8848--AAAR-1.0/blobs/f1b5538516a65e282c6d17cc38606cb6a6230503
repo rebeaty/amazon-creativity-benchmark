@@ -1,0 +1,101 @@
+[{
+  "caption": "Table 2: Fraction of solved mazes with teleports of S(ym)BA* , Delfi(1), Merc(ury14), and A* algorithm with heuristic function implemented by CNN and CoAt networks optimized with respect to L2 and L∗. All solvers have solved all mazes of size 15–40, hence they are not shown Standard deviations of repeated experiments were between 0.005 and 0.008 are shown in Suplementary.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 329.7765197753906,
+    "y2": 368.65594482421875
+  },
+  "figType": "Table",
+  "imageText": ["CNN", "CoAt", "n", "SBA*", "Delfi", "Merc", "FDSS", "L2", "L∗", "L2", "L∗", "50", "92", "90", "75", "100", "100", "100", "100", "100", "55", "52", "50", "-", "100", "85", "85", "86", "88", "60", "-", "-", "-", "100", "73", "74", "76", "79"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 213.6,
+    "x2": 398.4,
+    "y1": 268.32,
+    "y2": 318.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2_B-eiVbgBs-Table2-1.png"
+}, {
+  "caption": "Figure 2: The average number of expanded states in A* for Sokoban (left) and Maze problems (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 228.99649047851562,
+    "y2": 245.95794677734375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Maze", "with", "teleports", "CNN-L2", "CNN-L∗", "CoAt-L2", "CoAt-L∗", "Avg", "no", "of", "expanded", "states", "vs.", "Grid", "size", "st", "a", "t", "e", "s", "n", "d", "e", "d", "o", "f", "e", "x", "pa", "n", "o", "A", "v", "g", "Grid", "size", "3,000", "2,000", "1,000", "0", "15", "20", "30", "40", "50", "55", "60", "(a)", "Sokoban", "CNN-L2", "CNN-L∗", "CoAt-L2", "CoAt-L∗", "Avg", "no", "of", "expanded", "states", "vs.", "No", "of", "boxes", "st", "a", "t", "e", "s", "n", "d", "e", "d", "o", "f", "e", "x", "pa", "n", "o", "A", "v", "g", "No", "of", "boxes", "3,000", "2,000", "1,000", "3", "4", "5", "6", "7", "0"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 138.24,
+    "x2": 476.15999999999997,
+    "y1": 83.52,
+    "y2": 216.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2_B-eiVbgBs-Figure2-1.png"
+}, {
+  "caption": "Table 1: Left: Fraction of solved mazes (in percents) of S(ym)BA* , Delfi(1), Merc(ury14), FDSS (Fast Downward Stone Soup), CoAt and CoAt* on test data sets containing variable number of boxes. Column captioned #b indicates the number of boxes in different categories. The standard deviation of all repeated experiments was between 0.004 and 0.008 and it is not shown to save space. Right: Fraction of solved mazes (in percents) from Boxoban dataset. DRC 900k / DRC 10k optimizes on 10k levels. Results of MCTSNet Guez et al. (2018), I2A Racanière et al. (2017), and DRC Guez et al. (2019) have been copied from Table 2 of Guez et al. (2019).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0046691894531,
+    "y1": 200.89053344726562,
+    "y2": 272.64593505859375
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "model", "coverage", "MCTSNet", "84", "I2A", "84", "DRC", "(3,3)", "10k", "93", "DRC", "(3,3)", "900k", "99", "CoAt−", "L∗", "97", "CL", "CoAt−", "L∗", "100", "SBA*", "100", "(a)", "3", "100", "100", "100", "100", "81", "87", "91", "94", "95", "4", "100", "100", "81", "100", "74", "80", "89", "93", "94", "5", "97", "91", "67", "94", "72", "82", "85", "89", "90", "6", "55", "55", "49", "56", "61", "71", "73", "80", "85", "7", "46", "44", "31", "42", "51", "59", "63", "77", "83", "8", "-", "-", "-", "-", "-", "-", "-", "32", "59", "9", "-", "-", "-", "-", "-", "-", "-", "12", "38", "CNN", "CoAt", "#b", "SBA*", "Delfi", "Merc", "FDSS", "L2", "L∗", "L2", "L∗", "CL", "w.L∗"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 477.12,
+    "y1": 82.56,
+    "y2": 187.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2_B-eiVbgBs-Table1-1.png"
+}, {
+  "caption": "Table 3: Fraction of solved mazes (in percents) when the networks are optimized only on mazes they have previously solved. First row corresponds to A* with untrained network.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 209.85653686523438,
+    "y2": 226.8179931640625
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "Maze", "with", "teleports", "0", "25", "25", "19", "19", "15", "15", "1", "42", "45", "29", "35", "18", "20", "2", "45", "68", "39", "51", "34", "34", "3", "69", "83", "59", "67", "41", "59", "4", "84", "90", "78", "83", "66", "75", "1000", "3000", "5000", "epoch", "L2", "L∗", "L2", "L∗", "L2", "L∗", "(a)", "Sokoban", "0", "7.4", "7.4", "7.7", "7.7", "8.5", "8.5", "8.3", "8.3", "1", "11", "11", "9.8", "11", "10", "10", "9.6", "10", "2", "15", "18", "11", "16", "12", "18", "14", "16", "3", "29", "33", "20", "31", "21", "24", "20", "32", "4", "34", "62", "27", "69", "36", "49", "31", "48", "5", "62", "75", "44", "75", "57", "73", "34", "66", "6", "67", "77", "51", "80", "61", "80", "49", "77", "7", "63", "76", "62", "80", "74", "82", "50", "86", "3000", "4000", "5000", "6000", "epoch", "L2", "L∗", "L2", "L∗", "L2", "L∗", "L2", "L∗"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 82.56,
+    "y2": 196.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2_B-eiVbgBs-Table3-1.png"
+}, {
+  "caption": "Figure 1: A visualization of a search space of an A* algorithm. In sub-figure (a), path s0 → s1 → s2 represents the optimal plan, states {s3, s4, s5}/s6 are off the optimal path but have / have not been generated by the A* . In sub-figure (b), path s0 → s1 → s2 → s4 and s0 → s1 → s3 → s4 represents the optimal plan, states s5/s6 are off the optimal path but have / have not been generated.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 188.80355834960938,
+    "y2": 229.177978515625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "s2", "s1", "s4", "s3", "s0", "s5s6", "(a)", "s2", "s1", "s0", "s5", "s4s6", "s3"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 453.12,
+    "y1": 80.64,
+    "y2": 175.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2_B-eiVbgBs-Figure1-1.png"
+}]

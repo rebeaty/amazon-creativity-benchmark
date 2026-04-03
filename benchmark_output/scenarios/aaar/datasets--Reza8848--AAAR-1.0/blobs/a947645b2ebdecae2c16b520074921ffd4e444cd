@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: The change of downstream performance per task due to the selective removal of each augmentation during SSL, relative to one baseline SSL method MoCo (He et al., 2020) trained with 5 standard data augmentations, including Color Jitter, Gaussian Blur, Random Flip, Random Grayscale, RandomResizedCrop. Performance drop after removing one augmentation indicates that it helps the corresponding task, while performance gain indicates harm. We observe that RandomResizedCrop strongly benefits all tasks. Other augmentations encode their specific invariances that can be more helpful for some tasks than others. Some augmentations (e.g., Color Jitter) even hurt one task (CUB-200 bird classification) despite being quite helpful for other tasks.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00347900390625,
+    "y1": 182.38351440429688,
+    "y2": 265.098876953125
+  },
+  "figType": "Figure",
+  "imageText": ["Remove", "Color", "Jitter", "Remove", "Gaussian", "Blur", "Remove", "Random", "Flip", "Remove", "Grayscale", "Remove", "RandomResizedCrop", "-1.5", "-0.9", "0.3", "0", "-0.3", "-0.6", "Augmentations", "removed", "-1.2", "COCO", "segmentation", "(AP)", "-15", "VOC", "detection", "(AP50)", "-9", "3", "0", "-3", "-6", "Augmentations", "removed", "-12", "-2.5", "-1.5", "0.5", "0", "-0.5", "-1.0", "Augmentations", "removed", "-2.0", "CUB-200", "birds", "classify", "(Acc)", "-50", "ImageNet", "classify", "(Acc)", "-30", "10", "0", "-10", "-20", "Augmentations", "removed", "-40", "e", "ha", "ng", "ce", "c", "rm", "an", "pe", "rfo", "tiv", "e", "Re", "la"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 68.64,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Figure1-1.png"
+}, {
+  "caption": "Table 1: Evaluation on ImageNet using representations trained with a ResNet-50 backbone in terms of Top-1 and Top-5 accuracies (%). We evaluate linear classification using the frozen representations from ImageNet, and semi-supervised classification using the fine-tuned representations from 1% and 10% ImageNet samples. Most methods in the middle cell (including our MAST-5) use the same 5 augmentations in (Chen et al., 2020a), while the bottom cell compares methods using much more augmentations, e.g., from RandAugment (Cubuk et al., 2019).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00390625,
+    "y1": 78.28653717041016,
+    "y2": 139.08294677734375
+  },
+  "figType": "Table",
+  "imageText": ["InfoMin", "Aug", "(Tian", "et", "al.,", "2020)", "73.0", "91.1", "-", "-", "-", "-", "CLSA", "(Wang", "&", "Qi,", "2021)", "72.2", "-", "-", "-", "-", "-", "MAST-15", "(ours)", "75.8", "92.1", "55.8", "71.4", "81.0", "90.9", "MoCo", "(He", "et", "al.,", "2020)", "60.6", "-", "-", "-", "-", "-", "SimCLR", "(Chen", "et", "al.,", "2020a)", "69.3", "89.0", "48.3", "65.6", "75.5", "87.8", "PCL", "(Li", "et", "al.,", "2020)", "71.0", "-", "-", "-", "-", "-", "MoCo", "v2", "(Chen", "et", "al.,", "2020b)", "71.1", "-", "-", "-", "-", "-", "SimSiam", "(Chen", "&", "He,", "2021)", "71.3", "-", "-", "-", "-", "-", "SwAV", "(Caron", "et", "al.,", "2020)", "71.8", "-", "-", "-", "-", "-", "OBoW", "(Gidaris", "et", "al.,", "2021)", "73.8", "-", "-", "-", "82.9", "90.7", "BYOL", "(Grill", "et", "al.,", "2020)", "74.3", "91.6", "53.2", "68.8", "78.4", "89.0", "SwAV", "(w/", "multi-crop)", "(Caron", "et", "al.,", "2020)", "75.3", "-", "53.9", "70.2", "78.5", "89.9", "Barlow", "Twins", "(Zbontar", "et", "al.,", "2021)", "73.2", "91.0", "55.0", "69.7", "79.2", "89.3", "VICReg", "(Bardes", "et", "al.,", "2022)", "73.2", "91.1", "54.8", "69.5", "79.4", "89.5", "MAST-5", "(ours)", "74.9", "91.8", "55.2", "70.2", "80.1", "90.2", "Supervised", "76.5", "-", "25.4", "56.4", "48.4", "80.4", "Top-1", "Top-5", "Top-1", "Top-5", "1%", "10%", "1%", "10%", "Method", "Linear", "Semi-supervised"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 146.88,
+    "y2": 357.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Table1-1.png"
+}, {
+  "caption": "Table 2: Transfer performance on downstream tasks using the pretrained representations on ImageNet. We evaluate linear classification using frozen representations on datasets Places205 (Top-1 accuracy %), VOC07 (mAP %) and iNat18 (Top-1 accuracy %). We also evaluate fine-tuning performance for object detection on VOC07+12 (AP50) and for instance segmentation on COCO (AP).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 378.134521484375,
+    "y2": 418.5079650878906
+  },
+  "figType": "Table",
+  "imageText": ["InfoMin", "Aug", "(Tian", "et", "al.,", "2020)", "-", "-", "-", "82.7", "40.6", "36.7", "CLSA", "(Wang", "&", "Qi,", "2021)", "-", "93.6", "-", "83.2", "42.3", "-", "MAST-15", "(ours)", "59.6", "92.8", "50.2", "84.0", "43.1", "38.3", "MoCo", "(He", "et", "al.,", "2020)", "46.9", "79.8", "31.5", "-", "-", "-", "SimCLR", "(Chen", "et", "al.,", "2020a)", "52.5", "85.5", "37.2", "-", "-", "-", "MoCo", "v2", "(Chen", "et", "al.,", "2020b)", "51.8", "86.4", "38.6", "82.5", "39.8", "36.1", "SimSiam", "(Chen", "&", "He,", "2021)", "-", "-", "-", "82.4", "-", "-", "BYOL", "(Grill", "et", "al.,", "2020)", "54.0", "86.6", "47.6", "-", "40.4", "37.0", "SwAV", "(w/", "multi-crop)", "(Caron", "et", "al.,", "2020)", "56.7", "88.9", "48.6", "82.6", "41.6", "37.8", "OBoW", "(Gidaris", "et", "al.,", "2021)", "56.8", "89.3", "-", "82.9", "-", "-", "Barlow", "Twins", "(Zbontar", "et", "al.,", "2021)", "54.1", "86.2", "46.5", "82.6", "40.0", "36.7", "VICReg", "(Bardes", "et", "al.,", "2022)", "54.3", "86.6", "47.0", "82.4", "39.4", "36.4", "MAST-5", "(ours)", "58.9", "91.1", "49.5", "83.1", "41.9", "37.2", "Supervised", "53.2", "87.5", "46.7", "81.3", "39.0", "35.4", "Places205", "VOC07", "iNat18", "VOC07+12", "COCO", "det", "COCO", "seg", "Method", "Linear", "Classification", "Detection", "Segmentation"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 426.24,
+    "y2": 615.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Table2-1.png"
+}, {
+  "caption": "Table 6: Evaluation of linear classification on Flowers-17 and Cars using representations pretrained on the respective datasets in terms of Top-1 and Top-5 accuracies (%).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0027160644531,
+    "y1": 92.68656158447266,
+    "y2": 109.64801025390625
+  },
+  "figType": "Table",
+  "imageText": ["SimSiam", "(Chen", "&", "He,", "2021)", "24.6", "51.5", "12.7", "33.2", "VI-SimSiam", "(Nakamura", "et", "al.,", "2022)", "19.7", "43.9", "14.9", "37.2", "MAST-5", "(uncertainty", "only)", "26.5", "55.7", "16.4", "40.3", "MAST-5", "(uncertainty", "+", "disentangled", "learning)", "28.9", "59.1", "18.7", "44.1", "Top-1", "Top-5", "Top-1", "Top-5", "Method", "Flowers-17", "Cars"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 472.32,
+    "y1": 117.6,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Table6-1.png"
+}, {
+  "caption": "Table 4: Downstream performance of ImageNet-100 pretrained representations. We evaluate linear classification on the fine-grained classification dataset CUB-200 (in Top-1 and Top-5 accuracies %) and Flowers-102 dataset (in 5-shot and 10-shot classification accuracies %).",
+  "captionBoundary": {
+    "x1": 313.385986328125,
+    "x2": 511.38580322265625,
+    "y1": 76.5755386352539,
+    "y2": 137.3719482421875
+  },
+  "figType": "Table",
+  "imageText": ["MAST-5", "40.3", "69.8", "70.1", "81.2", "MAST-15", "41.1", "70.0", "72.4", "81.9", "MoCo", "v2", "(Chen", "et", "al.,", "2020b)", "36.7", "64.7", "67.9", "77.3", "LooC", "(Xiao", "et", "al.,", "2021)", "39.6", "69.2", "70.9", "80.8", "LooC++", "(Xiao", "et", "al.,", "2021)", "39.3", "69.3", "68.1", "78.8", "Top-1", "Top-5", "5-shot", "10-shot", "Method", "CUB-200", "Flowers-102"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 514.0799999999999,
+    "y1": 146.88,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Table4-1.png"
+}, {
+  "caption": "Table 3: Evaluation of linear classification on ImageNet-100 using representations pre-trained with a ResNet-50 backbone on the same dataset in terms of Top-1 and Top-5 accuracies (%). Ensemble: feature ensembling. Repr: effective representation dimensionality used for classification.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 306.0047607421875,
+    "y1": 74.68656158447266,
+    "y2": 135.48297119140625
+  },
+  "figType": "Table",
+  "imageText": ["MAST-5", "(default)", "81.9", "95.4", "2048", "MAST-5", "(ensemble)", "82.1", "95.4", "2048×5", "MAST-15", "82.5", "95.5", "2048", "MoCo", "v2", "(Chen", "et", "al.,", "2020b)", "81.0", "95.2", "2048", "IFM-MoCo", "v2", "(Robinson", "et", "al.,", "2021)", "81.4", "-", "2048", "LooC", "(Xiao", "et", "al.,", "2021)", "79.2", "94.7", "2048", "LooC++", "(Xiao", "et", "al.,", "2021)", "(ensemble)", "81.2", "95.2", "2048×3", "Method", "Top-1", "Top-5", "Repr."],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 308.15999999999997,
+    "y1": 142.56,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Table3-1.png"
+}, {
+  "caption": "Table 5: Ablation study of different MAST components (ImageNet pretraining → 4 testing tasks).",
+  "captionBoundary": {
+    "x1": 108.6520004272461,
+    "x2": 503.3482360839844,
+    "y1": 63.88650894165039,
+    "y2": 69.88897705078125
+  },
+  "figType": "Table",
+  "imageText": ["No", "uncertainty", "8", "MAST-5", "74.1", "57.5", "82.7", "36.8", "Handcrafted", "masks", "7", "MAST-5", "74.3", "58.1", "82.5", "36.9", "Staged", "aug.", "schedule", "6", "VICReg", "(K", "=", "5)", "73.4", "54.6", "82.4", "36.5", "Baseline", "4", "VICReg", "(K", "=", "5)", "73.2", "54.3", "82.4", "36.4", "5", "MAST-5", "74.9", "58.9", "83.1", "37.2", "Will", "more", "aug.", "help?", "3", "MAST-19", "75.8", "59.4", "84.0", "38.4", "Disentangled", "learning", "1", "MAST-15", "75.8", "59.6", "84.0", "38.3", "or", "richer", "aug.?", "2", "VICReg", "(K", "=", "15)", "73.1", "53.5", "82.6", "36.9", "ImageNet", "(Top-1)", "Places205", "(Top-1)", "VOC07+12", "(AP50)", "COCO", "(AP)", "Comment", "Row", "Method", "Linear", "classify", "Linear", "classify", "Detection", "Segmentation"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 77.75999999999999,
+    "y2": 187.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Table5-1.png"
+}, {
+  "caption": "Figure 4: (a) Correlation between augmentations measured by their masks’ cosine similarity. (b) ImageNet linear classification Top-1 accuracy vs. increasing number of augmentations during SSL. Augmentations with low correlation with others provide diverse priors and large performance gains.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 349.7044982910156,
+    "y2": 377.6249694824219
+  },
+  "figType": "Figure",
+  "imageText": ["rpn", "es", "s", "+G", "_n", "ois", "e", "+M", "_B", "lur", "+E", "qu", "ali", "ze", "+P", "os", "ter", "ize", "+S", "ola", "riz", "e", "K=5", "Aug", "s", "+S", "ha", "sla", "teY", "+In", "ve", "rt", "+C", "uto", "ut", "+T", "ran", "sla", "teX", "+T", "ran", "+S", "ob", "el", "+R", "ota", "te", "+S", "he", "arY", "+S", "he", "arX", "75.9", "75.5", "75.1", "75.7", "74.9", "75.3", ")", "cy", "(%", "cu", "ra", "1", "ac", "To", "p-", "More", "Augs.Augs.", "used", "by", "MAST-15", "Adding", "Augs.", "sorted", "by", "increasing", "mean", "correlation", "with", "others", "(b)(a)", "gs", ".", "M", "or", "e", "Au", "T-", "15", "M", "AS", "d", "by", ".", "u", "se", "Au", "gs", "More", "Augs.Augs.", "used", "by", "MAST-15", "0", "5", "50", "0.20", "35", "0.8", "0.7", "0.6", "0.5", "0.4", "Sobel", "G_Noise", "Cutout", "Solarize", "Equalize", "Posterize", "M_Blur", "0", "0.1", "0.2", "0.3", "Invert", "Sharpness", "Rotate", "ShearX", "ShearY", "TranslateX", "TranslateY", "Crop", "Color", "G_Blur", "Grayscale", "Flip", "Cr", "op", "Co", "lor", "G_", "Blu", "r", "Gr", "ay", "sca", "le", "Fli", "p", "Ro", "tat", "e", "Sh", "ea", "rX", "Sh", "ea", "rY", "Tra", "ns", "lat", "eX", "Tra", "ns", "lat", "eY", "Inv", "ert", "Sh", "arp", "ne", "ss", "So", "be", "l", "G_", "No", "ise", "Cu", "tou", "t", "So", "lar", "ize", "Eq", "ua", "lize", "Po", "ste", "riz", "e", "M_", "Blu", "r"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 502.08,
+    "y1": 204.48,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5KUPKjHYD-l-Figure4-1.png"
+}]

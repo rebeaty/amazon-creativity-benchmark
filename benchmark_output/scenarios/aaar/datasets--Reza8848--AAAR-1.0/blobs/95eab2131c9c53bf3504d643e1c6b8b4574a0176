@@ -1,0 +1,61 @@
+[{
+  "caption": "Figure 1: DNN (depth L = 10 and width nℓ = 100) trained on a MSE task with rank 5 true function f∗ : R50 → R50, with N = 2000 and λ = 2 · 10−4. At the end of training, we obtain ∥W∥2 /L = 12.8. (A) First 10 normalized singular values si/s1of the (centered) hidden representation Zℓ − mℓ1 T N of every layer ℓ. The middle layers are approximately rank 5. (C) First 10 singular values of the Jacobian JfW(x) at 10 random points. These are rank approximately rank 1 again.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042724609375,
+    "y1": 200.38253784179688,
+    "y2": 251.7149658203125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "s", "i", "100", "10", "1", "10", "2", "10", "3", "10", "4", "10", "5", "10", "6", "10", "7", "0", "2", "4", "6", "8", "10", "i", "(a)", "1", "s", "i", "/s", "100", "10", "1", "0", "2", "4", "6", "8", "10"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 464.15999999999997,
+    "y1": 67.67999999999999,
+    "y2": 181.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6iDHce-0B-a-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Classification on 4 classes (whose sampling distribution are 4 identical inverted ‘S’ shapes translated along the x-axis) for two depths and with or without L2-regularization. The class boundaries in shallow networks (A,B) feature tripoints, which are not observed in deeper networks (C,D).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 183.07351684570312,
+    "y2": 210.99395751953125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "L", "=", "9,", "λ", "=", "10−3", "3", "2", "1", "0", "1", "2", "3", "2", "1", "0", "1", "2", "3", "3", "(c)", "L", "=", "9,", "λ", "=", "0", "3", "2", "1", "0", "1", "2", "3", "2", "1", "0", "1", "2", "3", "3", "(b)", "L", "=", "2,", "λ", "=", "10−3", "3", "2", "1", "0", "1", "2", "3", "2", "1", "0", "1", "2", "3", "3", "(a)", "L", "=", "2,", "λ", "=", "0", "3", "2", "1", "0", "1", "2", "3", "2", "1", "0", "1", "2", "3", "3"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 494.88,
+    "y1": 64.8,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6iDHce-0B-a-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Autoencoders trained on MNIST (A) and a 1D dataset on the plane (B, C) with a ridge λ = 10−4. Plot (A) shows noisy inputs in the first line with corresponding outputs below. In plots (B) and (C) the blue dots are the training data, and the green dots are random inputs that are mapped to the orange dots pointed by the arrows. We see that for large depths (A, B) the learned autoencoder is naturally denoising, projecting points to the data distribution, which is not the case for shallow networks (C).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 201.37954711914062,
+    "y2": 262.17596435546875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "L", "=", "2", "1.00", "0.75", "0.50", "0.25", "0.00", "0.25", "0.50", "0.75", "1.00", "0.5", "0.0", "0.5", "1.0", "(b)", "L", "=", "6", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "0.50", "0.25", "0.00", "0.25", "0.50", "0.75", "1.00", "(a)", "L", "=", "5"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 493.44,
+    "y1": 75.84,
+    "y2": 182.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6iDHce-0B-a-Figure3-1.png"
+}]

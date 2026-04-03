@@ -1,0 +1,261 @@
+[{
+  "caption": "Table 8: AUC-PR of competitors under two assumptions on UW-CSE. Better results are in bold.",
+  "captionBoundary": {
+    "x1": 114.15106201171875,
+    "x2": 497.8505859375,
+    "y1": 438.61346435546875,
+    "y2": 444.6159362792969
+  },
+  "figType": "Table",
+  "imageText": ["HL-MRF", "Open-world", "0.06", "0.06", "0.02", "0.04", "0.03", "Closed-world", "0.26", "0.18", "0.06", "0.27", "0.19", "MC-SAT", "Open-world", "0.03", "0.05", "0.06", "0.02", "0.02", "Closed-world", "0.13", "0.04", "0.03", "0.11", "0.08", "BP/Lifted", "BP", "Open-world", "0.01", "0.01", "0.01", "0.01", "0.01", "Closed-world", "0.21", "0.04", "0.01", "0.14", "0.05", "MCMC", "Open-world", "-", "-", "-", "-", "-", "Closed-world", "0.19", "0.04", "0.03", "0.15", "0.08", "Method", "Assumption", "UW-CSE", "AI", "Graphics", "Language", "Systems", "Theory"],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 169.92,
+    "x2": 440.15999999999997,
+    "y1": 457.44,
+    "y2": 564.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table8-1.png"
+}, {
+  "caption": "Figure 7: The illustration of the mean-field update by formulating the grounding messages as a set of hyper-edges in a graph. The computation can be achieved via scattering and gathering operations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 248.17855834960938,
+    "y2": 265.1400146484375
+  },
+  "figType": "Figure",
+  "imageText": ["g−C(A)", "g−C(A)", "g−C(A)", "g−C(B)", "g−S(B)", "f2(B)", "f2(A)", "g−S(A)", "g−S(A)", "g−S(A)", "g−F(B,A)", "g−S(B)", "g−F(A,B)", "g−S(B)", "C(A)", "=?", "F(B,A)", "=?", "S(B)", "=?", "S(A)", "=1", "F(A,B)", "=1", "f1(B,", "A)", "f1(A,", "B)", "g−C(B)", "C(B)", "=0", "g−S(B)", "f2(B)", "f2(A)", "g−S(A)", "g−S(A)", "g−S(A)", "g−F(B,A)", "g−S(B)", "g−F(A,B)", "g−S(B)", "C(A)", "=?", "F(B,A)", "=?", "S(B)", "=?", "S(A)", "=1", "F(A,B)", "=1", "f1(B,", "A)", "f1(A,", "B)", "g−C(B)", "C(B)", "=0", "g−S(B)", "f2(B)", "f2(A)", "g−S(A)", "g−S(A)", "g−S(A)", "g−F(B,A)", "g−S(B)", "g−F(A,B)", "g−S(B)", "C(A)", "=?", "F(B,A)", "=?", "S(B)", "=?", "S(A)", "=1", "F(A,B)", "=1", "f1(B,", "A)", "f1(A,", "B)", "f2(B)", "C(B)", "=1", "Iteration", "1", "Iteration", "2", "Iteration", "3", "cM", "P", "f2(A)KG", "M", "LN", "Lo", "gi", "f1(B,", "A)", "f1(A,", "B)", "C(A)", "=?", "S(A)", "=1", "C(B)", "=1", "S(B)", "=?", "F(B,A)", "=?", "F(A,B)", "=1", "B", "S(A)", "=1A", "F(A,B)", "=1", "C(B)", "=0", "C(A)", "=?", "S(A)", "=1", "C(B)", "=1", "S(B)", "=?", "F(B,A)", "=?", "F(A,B)", "=1"],
+  "name": "7",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 484.32,
+    "y1": 82.56,
+    "y2": 236.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Left: A Markov logic network (MLN) with two entities {A,B}, predicates F (Friend) and S (Smoke) and C (Cancer), and formulae f1(a, b) := ¬S(a) ∨ ¬F(a, b) ∨ S(b), f2(a) := (¬S(a) ∨ C(a)) ∧ (S(a) ∨ ¬C(a)). The circles are the ground atoms where the shaded ones are latent and the blocks like f1(A,B) denote the ground formulae. Right: We expand the MLN inference into several mean-field iterations and each iteration is implemented by a LogicMP layer. The marginals of ground atoms are grouped by the predicates as the basic units of computation (the gray border denotes the marginals with ¬). In each iteration, LogicMP takes them as input and performs Einstein summation (Einsum) for each logic rule (shown in the middle block). Intuitively, Einsum counts the groundings that derive the hypothesis for each implication statement of the logic rules (cf. Sec. 4). The outputs of Einsum are then used to update the grouped marginals. Such procedure loops for T steps until convergence. Note that f2 is in conjunctive normal form and its two clauses can be treated separately. The Einsum is also applicable for the predicates with more than two arguments.",
+  "captionBoundary": {
+    "x1": 107.99994659423828,
+    "x2": 504.0032653808594,
+    "y1": 224.20150756835938,
+    "y2": 350.7518310546875
+  },
+  "figType": "Figure",
+  "imageText": ["Clause 2: 𝚂(a)", "∨", "¬𝙲(a)", "Clause 1: ¬𝚂(a)", "∨", "𝙲(a)", "×", "T", "Marginals", "Qr", "Marginals", "Qr", "a", "𝙲(a)", "A", "B", "→", "a", "→", "→", "𝚂(a)", "A", "B", "a", "¬𝚂(a)", "A", "B", "→", "a", "→", "→", "¬𝙲(a)", "A", "B", "f1(a,", "b)", ":=", "¬𝚂(a)", "∨", "¬𝙵(a,", "b)", "∨", "𝚂(b)", "f2(a)", ":=", "(¬𝚂(a)", "∨", "𝙲(a))", "∧", "(𝚂(a)", "∨", "¬𝙲(a))", "LogicMP", "Layer", "M", "LN", "e", "of", "pd", "at", "ld", "U", "n-", "ﬁe", "M", "ea", "or", "k", "et", "w", "c", "N", "Lo", "gi", "ko", "v", "M", "ar", "f2(B)", "f2(A)", "f1(B,", "B)", "f1(B,", "A)", "f1(A,", "B)", "f1(A,", "A)", "𝙲(B)", "=", "1", "𝙲(A)", "=", "?", "𝚂(B)", "=", "?", "𝚂(A)", "=", "1", "𝙵(B,", "B)", "=", "?", "𝙵(B,", "A)", "=", "?", "𝙵(A,", "B)", "=", "1", "𝙵(A,", "A)", "=", "?", "𝙲(", "⋅", ")", "A", "B", "𝚂(", "⋅", ")", "A", "B", "𝙵(", "⋅", ",", "⋅", ")", "(A,A)", "(A,B)", "(B,A)", "(B,B)", "𝙲(", "⋅", ")", "A", "B", "𝚂(", "⋅", ")", "A", "B", "𝙵(", "⋅", ",", "⋅", ")", "(A,A)", "(A,B)", "(B,A)", "(B,B)", "a", "¬𝙲(a)", "A", "B", "→", "a", "→", "→", "¬𝚂(a)", "A", "B", "a", "𝚂(a)", "A", "B", "→", "a", "→", "→", "𝙲(a)", "A", "B", "∧", "→", "→", "→", "a", "¬𝚂(a)", "A", "B", "b", ",", "ab", "⋅", "𝙵(a,", "b)¬𝚂(b)", "(A,A)", "(A,B)", "(B,A)", "(B,B)", "A", "B", "→∧", "→", "→", "b", "¬𝚂(b)", "A", "B", "a", ",", "ab", "⋅", "¬𝙵(a,", "b)𝚂(a)", "(A,A)", "(A,B)", "(B,A)", "(B,B)", "A", "B", "∧", "→", "→", "→", "b", "𝚂(b)", "A", "B", "a", ",", "ab", "⋅", "𝙵(a,", "b)𝚂(a)", "(A,A)", "(A,B)", "(B,A)", "(B,B)", "A", "B"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 492.0,
+    "y1": 84.0,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Figure1-1.png"
+}, {
+  "caption": "Table 9: The comparison of training efficiency and runtime.",
+  "captionBoundary": {
+    "x1": 186.90798950195312,
+    "x2": 425.09375,
+    "y1": 267.0854797363281,
+    "y2": 273.08795166015625
+  },
+  "figType": "Table",
+  "imageText": ["groundings/second", "225", "2,844", "85", "1,229", "64", "499", "runtime", "(minutes)", "80", "8", "4,024", "276", "5,333", "684", "method", "ExpressGNN", "LogicMP", "ExpressGNN", "LogicMP", "ExpressGNN", "LogicMP", "Kinship/S1", "UW-CSE/AI", "Cora/S1"],
+  "name": "9",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 464.15999999999997,
+    "y1": 285.59999999999997,
+    "y2": 334.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table9-1.png"
+}, {
+  "caption": "Table 3: The used symbols and the corresponding denotations.",
+  "captionBoundary": {
+    "x1": 181.4430694580078,
+    "x2": 430.5577697753906,
+    "y1": 295.2532653808594,
+    "y2": 301.2557373046875
+  },
+  "figType": "Table",
+  "imageText": ["[f,i]", "ri", "the", "summation", "of", "grounding", "messages", "w.r.t.", "the", "implication", "[f,", "i]", "[f,", "i]", "the", "implication", "statement", "of", "formula", "f", "to", "i-th", "atom", "Q̌", "g−i", "the", "set", "of", "ground", "predicates", "in", "the", "grounding", "g", "except", "i", "vg−i", "the", "set", "of", "variables", "in", "the", "grounding", "g", "except", "i", "Qr", "the", "collection", "of", "marginals", "of", "predicate", "r", "Q̂i,g", "the", "grounding", "message", "of", "grounding", "g", "to", "the", "variable", "i", "Qi", "the", "marginal", "of", "variable", "i", "nf", "the", "set", "of", "negations", "of", "ground", "predicates", "in", "the", "grounding", "g", "vg", "the", "set", "of", "variables", "w.r.t.", "ground", "predicates", "in", "the", "grounding", "g", "wf", "the", "weight", "of", "formula", "f", "Gf", "(i)", "the", "set", "of", "groundings", "of", "formula", "f", "that", "contains", "i", "ϕu", "the", "independent", "unary", "potential", "Φu", "the", "collection", "of", "unary", "potentials", "ϕf", "the", "potential", "of", "formula", "f", "Gf", "the", "set", "of", "groundings", "of", "formula", "f", "g", "the", "ground", "formula", "(grounding)", "O", "the", "set", "of", "observed", "facts", "H", "the", "set", "of", "unobserved", "facts", "vi", "the", "single", "variable", "associated", "with", "a", "ground", "atom", "i", "|Af", "|", "the", "arity", "of", "formula", "f", "Af", "the", "arguments", "of", "formula", "f", "f", "the", "formula", "|f", "|", "the", "number", "of", "atoms", "in", "the", "formula", "f", "Symbol", "Definition"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 449.28,
+    "y1": 313.92,
+    "y2": 637.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table3-1.png"
+}, {
+  "caption": "Table 4: The details of the benchmark datasets.",
+  "captionBoundary": {
+    "x1": 212.02796936035156,
+    "x2": 399.9724426269531,
+    "y1": 271.6333312988281,
+    "y2": 277.63580322265625
+  },
+  "figType": "Table",
+  "imageText": ["Cora/S1", "670", "10", "11K", "2K", "175K", "621B", "Cora/S2", "602", "10", "9K", "2K", "156K", "431B", "Cora/S3", "607", "10", "18K", "3K", "156K", "438B", "Cora/S4", "600", "10", "12K", "2K", "160K", "435B", "Cora/S5", "600", "10", "11K", "2K", "140K", "339B", "UW-CSE/AI", "300", "22", "731", "4K", "95K", "73M", "UW-CSE/Graphics", "195", "22", "449", "4K", "70K", "64M", "UW-CSE/Language", "82", "22", "182", "1K", "15K", "9M", "UW-CSE/Systems", "277", "22", "733", "5K", "95K", "121M", "UW-CSE/Theory", "174", "22", "465", "2K", "51K", "54M", "Kinship/S1", "62", "15", "187", "38", "50K", "550K", "Kinship/S2", "110", "15", "307", "62", "158K", "3M", "Kinship/S3", "160", "15", "482", "102", "333K", "9M", "Kinship/S4", "221", "15", "723", "150", "635K", "23M", "Kinship/S5", "266", "15", "885", "183", "920K", "39M", "Dataset", "#entity", "#relation", "#fact", "#query", "#ground", "#ground", "predicate", "formula"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 438.24,
+    "y1": 290.4,
+    "y2": 448.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table4-1.png"
+}, {
+  "caption": "Table 2: The AUC-PR on the UW-CSE and Cora datasets. The best results are in bold. The bracket denotes the standard deviation for which we rerun ExpressGNN 5 times. “A., G., L., S., T.” are abbreviations for “AI, Graphics, Language, Systems, Theory”.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0035400390625,
+    "y1": 228.78652954101562,
+    "y2": 256.70599365234375
+  },
+  "figType": "Table",
+  "imageText": ["LogicMP", ".25", ".30", ".42", ".25", ".28", ".30", ".80", ".88", ".72", ".83", ".89", ".82", "(.02)", "(.04)", "(.03)", "(.02)", "(.05)", "(.03)", "(.01)", "(.01)", "(.01)", "(.01)", "(.00)", "(.01)", "-", "batchsize=16", ".15", ".26", ".28", ".15", ".20", ".21", ".58", ".82", ".41", ".63", ".78", ".64", "(.03)", "(.04)", "(.06)", "(.02)", "(.06)", "(.04)", "(.01)", "(.01)", "(.01)", "(.01)", "(.01)", "(.01)", "-", "nlayers=1", ".25", ".30", ".38", ".23", ".27", ".29", ".80", ".88", ".71", ".82", ".89", ".82", "(.02)", "(.04)", "(.03)", "(.02)", "(.04)", "(.03)", "(.01)", "(.01)", "(.01)", "(.01)", "(.01)", "(.01)", "(.02)", "(.02)", "(.03)", "(.02)", "(.02)", "(.02)", "(.02)", "(.01)", "(.02)", "(.03)", "(.02)", "(0.2)", "MCMC", ".19", ".04", ".03", ".15", ".08", ".10", ".43", ".63", ".24", ".46", ".56", ".46", "BP/Lifted", "BP", ".21", ".04", ".01", ".14", ".05", ".09", ".44", ".62", ".24", ".45", ".57", ".46", "MC-SAT", ".13", ".04", ".03", ".11", ".08", ".08", ".43", ".63", ".24", ".46", ".57", ".47", "HL-MRF", ".26", ".18", ".06", ".27", ".19", ".19", ".60", ".78", ".52", ".70", ".81", ".68", "ExpressGNN", ".09", ".19", ".14", ".06", ".09", ".11", ".62", ".79", ".46", ".57", ".75", ".64", "A.", "G.", "L.", "S.", "T.", "avg.", "S1", "S2", "S3", "S4", "S5", "avg.", "Method", "UW-CSE", "Cora"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 478.08,
+    "y1": 269.76,
+    "y2": 403.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table2-1.png"
+}, {
+  "caption": "Table 5: Several logic rules in the datasets. # P denotes the number of predicates.",
+  "captionBoundary": {
+    "x1": 144.41299438476562,
+    "x2": 467.5898132324219,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["¬Author(bc1,", "a1)", "∨", "¬Author(bc2,", "a2)", "∨", "¬HasWordAuthor(a1,+w)", "∨", "¬HasWordAuthor(a2,+w)", "∨", "SameBib(bc1,", "bc2)", "5", "¬Author(bc1,", "a1)", "∨", "¬Author(bc2,", "a2)", "∨", "HasWordAuthor(a1,+w)", "∨", "¬HasWordAuthor(a2,+w)", "∨", "SameBib(bc1,", "bc2)", "5", "¬Title(bc1,", "t1)", "∨", "¬Title(bc2,", "t2)", "∨", "¬HasWordTitle(t1,+w)", "∨", "¬HasWordTitle(t2,+w)", "∨", "SameBib(bc1,", "bc2)", "5", "¬Title(bc1,", "t1)", "∨", "¬Title(bc2,", "t2)", "∨", "HasWordTitle(t1,+w)", "∨", "¬HasWordTitle(t2,+w)", "∨", "SameBib(bc1,", "bc2)", "5", "¬Venue(bc1,", "v1)", "∨", "¬Venue(bc2,", "v2)", "∨", "¬HasWordVenue(v1,+w)", "∨", "¬HasWordVenue(v2,+w)", "∨", "SameBib(bc1,", "bc2)", "5", "¬taughtBy(c,", "p,", "q)", "∨", "¬courseLevel(c,", "Level", "500)", "∨", "¬ta(c,", "s,", "q)", "∨", "advisedBy(s,", "p)", "∨", "tempAdvisedBy(s,", "p)", "5", "¬publication(p,", "x)", "∨", "¬publication(p,", "y)", "∨", "¬student(x)", "∨", "student(y)", "∨", "advisedBy(x,", "y)", "∨", "tempAdvisedBy(x,", "y)", "5", "¬inPhase(s,", "Post", "Quals)", "∨", "¬taughtBy(c,", "p,", "q)", "∨", "¬ta(c,", "s,", "q)", "∨", "courseLevel(c,", "Level", "100)", "∨", "advisedBy(s,", "p)", "5", "¬student(x)", "∨", "advisedBy(x,", "y)", "∨", "tempAdvisedBy(x,", "y)", "3", "¬publication(t,", "a)", "∨", "¬publication(t,", "b)", "∨", "samePerson(a,", "b)", "∨", "advisedBy(a,", "b)", "∨", "advisedBy(b,", "a)", "5", "¬female(x)", "∨", "¬child(y,", "x)", "∨", "mother(x,", "y)", "3", "¬male(x)", "∨", "¬child(y,", "x)", "∨", "father(x,", "y)", "3", "¬female(x)", "∨", "¬child(x,", "y)", "∨", "daughter(x,", "y)", "3", "¬male(x)", "∨", "¬child(x,", "y)", "∨", "son(x,", "y)", "3", "¬male(x)", "∨", "¬female(x)", "2", "¬smoke(a)", "∨", "¬friend(a,", "b)", "∨", "smoke(b)", "3", "¬smoke(a)", "∨", "cancer(a)", "2", "smoke(a)", "∨", "¬cancer(a)", "2", "¬friend(a,", "a)", "1", "¬friend(a,", "b)", "∨", "friend(a,", "b)", "2", "First-order", "Logic", "Formula", "#", "P"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 492.0,
+    "y1": 102.24,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table5-1.png"
+}, {
+  "caption": "Figure 6: The illustration of incorporating the logic rules into the models via posterior regularization. In this learning paradigm, LogicMP plays the role of logical inference layer for the backbone model with parameters θ. Specifically, we are given a set of variables v. The backbone model takes the variables as input and output scores Φu as the unary potentials of variables. Then the unary potentials are fed into the LogicMP layers to perform MF inference to derive updated marginals Q. They in turn become the targets of unary prediction through the distillation loss. The dotted line means no gradients in the back-propagation. The right bottom block gives the details of the backbone model: for each variable of the ground atom, it converts the constants into a list of embedding vectors. The concatenation of the vectors is fed into a bilinear layer to obtain the unary potential.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 457.8285217285156,
+    "y2": 551.501953125
+  },
+  "figType": "Figure",
+  "imageText": ["A", "B", "ϕu(𝙵(A,", "B))", "Predicate", "Bilinear", "LayerF", "Constant", "Embedding", "Inference", "by", "LogicMP", "conditioned", "on", "observation", "O", "Distillation", "Loss", "Variables", "{vr}r", "LogicMP", "Layers", "Backbone", "Model", "θ", "Joint", "Prediction", "{Qr(vr)}r", "Unary", "Prediction{Φu(vr)}r"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 405.12,
+    "y1": 295.68,
+    "y2": 447.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Figure6-1.png"
+}, {
+  "caption": "Figure 4: AUC-PR w.r.t. the number of LogicMP layers.",
+  "captionBoundary": {
+    "x1": 193.3730010986328,
+    "x2": 418.62738037109375,
+    "y1": 172.69149780273438,
+    "y2": 178.6939697265625
+  },
+  "figType": "Figure",
+  "imageText": ["#Layer=1", "#Layer=2", "#Layer=3", "#Layer=4", "#Layer=5", "#Layer=10", "0.90", "cora", "0.85", "0.80", "0.75", "0.70", "0.65", "S1", "S2", "S3", "S4", "S5", "0.60", "0.45", "uw_cse", "0.40", "0.35", "0.30", "0.25", "0.20", "0.15", "ai", "graphics", "language", "systems", "theory", "1.025", "kinship", "1.000", "0.975", "0.950", "0.925", "0.900", "0.875", "S1", "S2", "S3", "S4", "S5"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 118.08,
+    "x2": 494.4,
+    "y1": 82.56,
+    "y2": 161.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Left two: AUC-PR in minutes. Right: #Groundings/second w.r.t. batch size in Kinship.",
+  "captionBoundary": {
+    "x1": 112.54199981689453,
+    "x2": 499.4593505859375,
+    "y1": 293.10052490234375,
+    "y2": 299.1029968261719
+  },
+  "figType": "Figure",
+  "imageText": ["3000", "2000", "1000", "16", "64", "256", "1024", "nosampling", "0", "400000", "600000", "ExpressGNN", "Orignal", "MF", "Update", "LogicMP", "w/o", "Einsum", "LogicMP", "200000", "LogicMP-batchsize1024", "LogicMP-batchsize256", "LogicMP-batchsize64", "ExpressGNN-batchsize64", "ExpressGNN-batchsize256", "ExpressGNN-batchsize1024", "0.40", "uw_cse.language", "0.35", "0.30", "0.25", "0.20", "0.15", "0.10", "0.05", "0", "50", "100", "150", "200", "250", "300", "350", "400", "0.00", "LogicMP-batchsize1024", "LogicMP-batchsize256", "LogicMP-batchsize64", "ExpressGNN-batchsize64", "ExpressGNN-batchsize256", "ExpressGNN-batchsize1024", "0.30", "uw_cse.ai", "0.25", "0.20", "0.15", "0.10", "0.05", "0", "50", "100", "150", "200", "250", "300", "350", "400", "0.00"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 495.35999999999996,
+    "y1": 204.95999999999998,
+    "y2": 281.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Figure5-1.png"
+}, {
+  "caption": "Table 7: The number of parameters of our backbone model and ExpressGNN. “A., G., L., S., T.” are abbreviations for “AI, Graphics, Language, Systems, Theory”.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 198.38455200195312,
+    "y2": 215.34600830078125
+  },
+  "figType": "Table",
+  "imageText": ["ExpressGNN", "598K", "591K", "584K", "596K", "589K", "277K", "223K", "224K", "223K", "223K", "Ours", "39K", "25K", "11K", "36K", "23K", "85K", "77K", "78K", "77K", "77K", "A.", "G.", "L.", "S.", "T.", "S1", "S2", "S3", "S4", "S5", "UW-CSE", "Cora"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 463.2,
+    "y1": 228.0,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table7-1.png"
+}, {
+  "caption": "Table 6: The comparison of AUC-PR with different pg . The bracket denotes the standard deviation. “A., G., L., S., T.” are abbreviations for “AI, Graphics, Language, Systems, Theory”.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["pg", "=", "0.0", ".08", ".13", ".44", ".06", ".13", ".17", ".44", ".62", ".25", ".46", ".57", ".47", "(.01)", "(.04)", "(.12)", "(.02)", "(.13)", "(.06)", "(.02)", "(.01)", "(.01)", "(.01)", "(.02)", "(.01)", "pg", "=", "0.9", ".25", ".30", ".42", ".25", ".28", ".30", ".80", ".88", ".72", ".83", ".89", ".82", "(.02)", "(.04)", "(.03)", "(.02)", "(.05)", "(.03)", "(.01)", "(.01)", "(.01)", "(.01)", "(.00)", "(.01)", "A.", "G.", "L.", "S.", "T.", "avg.", "S1", "S2", "S3", "S4", "S5", "avg.", "UW-CSE", "Cora"],
+  "name": "6",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 113.75999999999999,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7UrHaeZ5Ie7-Table6-1.png"
+}]

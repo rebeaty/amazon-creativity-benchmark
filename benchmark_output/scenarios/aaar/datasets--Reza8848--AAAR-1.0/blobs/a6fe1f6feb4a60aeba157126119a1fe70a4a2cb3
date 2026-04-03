@@ -1,0 +1,461 @@
+[{
+  "caption": "Table 2: RMSE (×10−2) results on synthetic data.",
+  "captionBoundary": {
+    "x1": 205.406005859375,
+    "x2": 406.28533935546875,
+    "y1": 74.00650787353516,
+    "y2": 80.00897216796875
+  },
+  "figType": "Table",
+  "imageText": ["with", "the", "corner", "cases:", "heat", "α", "=", "0", "and", "Burgers’", "equation", "α", "=", "1.", "∂2u", "∂x2", ",", "x", "∈", "(0,", "1)", ",", "t", "∈", "(0,", "T", "]", ",", "(5)", "∂u", "∂t", "+", "αu", "∂u", "∂x", "=", "ν", "•", "Heat", "(Baron", "Fourier,", "1878)", "and", "Burgers’", "equations", "(Bateman,", "1915)", "are", "canonical", "one-", "dimensional", "linear", "and", "nonlinear", "PDEs.", "They", "take", "the", "form", "•", "Reaction", "ODE", "is", "commonly", "used", "to", "model", "chemical", "reactions", "and", "is", "of", "the", "form", "∂u/∂t", "=", "6u", "(1−", "u).", "Unlike", "to", "aforementioned", "ODEs,", "a", "solution", "to", "Reaction", "ODE", "is", "regarded", "as", "a", "function", "and", "in", "implementation", "it", "can", "be", "regarded", "as", "a", "high-dimensional", "ODE.", "•", "Sawtooth", "and", "Square", "(Biloš", "et", "al.,", "2021)", "are", "considered", "to", "evaluate", "the", "capability", "on", "modeling", "waveform", "signals.", "These", "are", "piecewise", "differentiable", "having", "cusps.", "CTFNO", "16.53", "1.87", "3.90", "11.69", "0.239", "0.0269", "1.952", "DON", "-", "-", "-", "-", "3.055", "0.473", "6.022", "PDN", "-", "-", "-", "-", "3.316", "0.3234", "5.796", "FNO2d", "-", "-", "-", "-", "0.472", "0.0330", "3.136", "Neural", "Flow", "26.39", "3.26", "7.93", "20.40", "10.300", "3.038", "12.602", "Neural", "Laplace", "20.83", "4.25", "4.84", "17.06", "2.804", "2.205", "5.291", "NODE", "44.23", "3.26", "28.09", "97.50", "5.109", "0.351", "5.348", "ANODE", "37.18", "3.26", "9.92", "80.95", "4.241", "0.351", "4.214", "Model", "Stiff", "Spiral", "Sawtooth", "Square", "Reaction", "Heat", "Burgers"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 505.91999999999996,
+    "y1": 87.84,
+    "y2": 351.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table2-1.png"
+}, {
+  "caption": "Figure 5: The visualization of architecture of three baselines: (a) Concatenates the input time t to an input function. (b) Concatenates the encoded time φ(t) to the lifted input function. (c) Concatenates",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9983215332031,
+    "y1": 289.37152099609375,
+    "y2": 306.3330078125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Scenario", "3", "(b)", "Scenario", "2", "𝐴0", "ℒ3", "𝑣3(𝑡,", "𝑥)", "ℒ2", "𝑣2(𝑡,", "𝑥)", "ℒ1", "𝑣0(𝑡,", "𝑥)", "𝑣1(𝑡,", "𝑥)", "𝑢(𝑡,", "𝑥)𝑄𝑡", "𝑠ℎ𝑎𝑟𝑖𝑛𝑔", "𝑛𝑒𝑡", "𝜑(𝑡)", "𝑢0(𝑥)", "𝑃", "𝐴1𝐴0", "𝐴2", "𝐴3", "ℒ3", "𝑣3(𝑡,", "𝑥)", "ℒ2", "𝑣2(𝑡,", "𝑥)", "ℒ1", "𝑣0(𝑡,", "𝑥)", "𝑣1(𝑡,", "𝑥)", "𝑢(𝑡,", "𝑥)𝑄𝑡", "𝑠ℎ𝑎𝑟𝑖𝑛𝑔", "𝑛𝑒𝑡", "𝜑(𝑡)", "𝑢0(𝑥)", "𝑃"],
+  "name": "5",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 130.07999999999998,
+    "x2": 483.35999999999996,
+    "y1": 122.88,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure5-1.png"
+}, {
+  "caption": "Table 11: Results of time-aware FNO models in Synthetic Data",
+  "captionBoundary": {
+    "x1": 179.4759979248047,
+    "x2": 432.2171936035156,
+    "y1": 393.76953125,
+    "y2": 399.7720031738281
+  },
+  "figType": "Table",
+  "imageText": ["D.2", "STABILITY", "FNO2d", "0.16", "0.58", "10.32", "CTFNO", "0.04", "0.22", "5.68", "Scenario", "1", "0.19", "11.60", "19.6", "Scenario", "2", "0.13", "2.84", "18.6", "Scenario", "3", "0.14", "2.68", "18.9", "Relative", "L2", "(×10−2)", "Reaction", "ODE", "Heat", "Burgers"],
+  "name": "11",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 425.28,
+    "y1": 412.8,
+    "y2": 521.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table11-1.png"
+}, {
+  "caption": "Figure 6: The Trade-off between the accuracy and robustness on PGD-5/255 attack (left) and observation for overfitting (right). Tests are conducted on CIFAR10 (§4.3).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9975280761719,
+    "y1": 295.1875305175781,
+    "y2": 312.14898681640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 158.88,
+    "y2": 284.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Plot of the singular values of weights of CTFNO with (left) and without (right) stabilization on the plane vibration dataset (§4.3).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 614.5125732421875,
+    "y2": 631.4739990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 451.68,
+    "y2": 603.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure7-1.png"
+}, {
+  "caption": "Table 12: Resolution invariance of FNO.",
+  "captionBoundary": {
+    "x1": 345.29400634765625,
+    "x2": 503.99725341796875,
+    "y1": 675.4405517578125,
+    "y2": 681.4429931640625
+  },
+  "figType": "Table",
+  "imageText": ["MNIST", "98.8", "98.6", "98.6", "98.6", "CIFAR10", "65.5", "64.8", "64.6", "64.7", "×2", "×4", "×8", "Dataset", "Original", "Resolution"],
+  "name": "12",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 345.59999999999997,
+    "x2": 501.12,
+    "y1": 687.36,
+    "y2": 748.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table12-1.png"
+}, {
+  "caption": "Figure 4: The architecture of multi-head CTFNO.",
+  "captionBoundary": {
+    "x1": 206.7830047607422,
+    "x2": 405.2180480957031,
+    "y1": 192.90652465820312,
+    "y2": 198.90899658203125
+  },
+  "figType": "Figure",
+  "imageText": ["𝜑(4)", "𝜑(3)", "𝜑(2)", "𝑅(4)", "𝑅(3)", "𝑅(2)", "𝑅(1)", "𝜑(1)", "𝑆ℎ𝑎𝑟𝑖𝑛𝑔", "𝑛𝑒𝑡1", "MLP", "𝑅", "𝑡", "𝜑(𝑡)", "𝐴Embedding"],
+  "name": "4",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 132.48,
+    "x2": 480.47999999999996,
+    "y1": 84.96,
+    "y2": 177.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure4-1.png"
+}, {
+  "caption": "Figure 10: Heatmap of exact and predicted solution for Burgers’ equation (§4.1).",
+  "captionBoundary": {
+    "x1": 144.6959991455078,
+    "x2": 467.30474853515625,
+    "y1": 675.6995849609375,
+    "y2": 681.7020263671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 125.75999999999999,
+    "y2": 665.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure10-1.png"
+}, {
+  "caption": "Table 4: MSE (×10−3) on PhysioNet and per-timepoint classification accuracies (%) on Activity.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 313.23675537109375,
+    "y1": 603.4365234375,
+    "y2": 620.39697265625
+  },
+  "figType": "Table",
+  "imageText": ["CTFNO", "1.80", "2.10", "85.0", "RNN-VAE", "5.93", "3.05", "34.3", "ODE-RNN", "2.36", "-", "82.9", "LODE", "(RNN", "enc)", "3.16", "5.78", "83.5", "LODE", "(ODE", "enc)", "2.23", "2.95", "84.6", "Neural", "Flow", "2.94", "-", "65.7", "Interpolation", "Prediction", "Accuracy", "Model", "PhysioNet", "Activity"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 311.03999999999996,
+    "y1": 629.28,
+    "y2": 734.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table4-1.png"
+}, {
+  "caption": "Table 3: MSE (×10−3) on the MuJoCo dataset.",
+  "captionBoundary": {
+    "x1": 210.94000244140625,
+    "x2": 400.7509765625,
+    "y1": 59.06253433227539,
+    "y2": 65.06500244140625
+  },
+  "figType": "Table",
+  "imageText": ["•", "Human", "Activity", "Human", "Activity", "dataset", "consists", "of", "sporadically", "observed", "sensor", "data", "collected", "from", "five", "individuals", "performing", "several", "activities", "(i.e.", "walking,", "standing,", "laying,", "etc).", "We", "use", "the", "Activity", "dataset", "together", "with", "all", "pre-processing", "steps", "as", "they", "were", "provided", "by", "(Rubanova", "et", "al.,", "2019),", "resulting", "in", "6554", "sequences", "of", "211", "time", "points.", "We", "train", "our", "model", "to", "classify", "the", "type", "of", "human", "activities", "from", "sequential", "data.", "•", "PhysioNet", "2012", "(Silva", "et", "al.,", "2012)", "To", "investigate", "sparsely", "observed", "time", "series,", "we", "evaluate", "our", "model", "on", "a", "real-world", "clinical", "dataset.", "PhysioNet", "Challenge", "2012", "dataset", "is", "irregularly", "sampled", "and", "sparsely", "observed.", "The", "goal", "is", "to", "interpolate", "and", "predict", "41", "biomedical", "features,", "such", "as", "heart", "rate", "and", "glucose,", "of", "intensive", "care", "unit", "(ICU)", "patients.", "•", "MuJoCo", "(Tassa", "et", "al.,", "2018)", "We", "consider", "the", "hopper", "physics", "environments", "from", "the", "Deepmind", "Control", "Suite.", "Data", "records", "14-dimensional", "attributes,", "including", "state", "and", "action,", "with", "100", "timestamps.", "To", "deal", "with", "partial", "observations,", "we", "conduct", "interpolation", "and", "prediction", "tasks,", "in", "which", "we", "reveal", "either", "10%,", "20%,", "30%,", "or", "50%", "of", "the", "ground", "truth.", "CTFNO", "1.53", "1.18", "1.12", "1.15", "9.26", "8.93", "8.42", "8.70", "LODE", "(RNN", "enc)", "24.77", "5.78", "27.68", "4.47", "16.63", "16.53", "14.85", "13.77", "LODE", "(ODE", "enc)", "3.60", "2.95", "3.00", "2.85", "14.41", "14.00", "11.75", "12.58", "Neural", "Flow", "7.15", "5.58", "4.96", "4.60", "17.99", "16.10", "15.48", "15.29", "RNN-VAE", "65.14", "64.08", "63.05", "61.00", "23.78", "21.35", "20.21", "17.82", "ODE-RNN", "16.47", "12.09", "9.86", "6.65", "135.08", "319.5", "154.65", "264.63", "10%", "20%", "30%", "50%", "10%", "20%", "30%", "50%", "Model", "Interpolation", "(%", "Observed", "Points)", "Prediction", "(%", "Observed", "Points)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 70.56,
+    "y2": 348.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table3-1.png"
+}, {
+  "caption": "Figure 3: Effect of stabilization on the Plane Vibration dataset.",
+  "captionBoundary": {
+    "x1": 329.1839904785156,
+    "x2": 506.2449951171875,
+    "y1": 729.5375366210938,
+    "y2": 746.4990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 502.08,
+    "y1": 605.76,
+    "y2": 725.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure3-1.png"
+}, {
+  "caption": "Figure 9: Heatmap of exact and predicted solution for heat equation (§4.1).",
+  "captionBoundary": {
+    "x1": 156.22799682617188,
+    "x2": 455.77337646484375,
+    "y1": 675.6995849609375,
+    "y2": 681.7020263671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 125.75999999999999,
+    "y2": 665.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure9-1.png"
+}, {
+  "caption": "Table 7: The number of parameters of each model in synthetic experiments. Low indicates the experiments on Spiral, Stiff, Sawtooth, and Square. High denotes the high dimensional experiments, including Heat and Burgers’ equations. LODE, NF, NL, DON, and PDN stand for Latent ODE, Neural Flow, Neural Laplace, DeepONet, and POD-DeepONet, respectively.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.24798583984375,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["Low", "17025", "17282", "18565", "18307", "17194", "-", "-", "17858", "High", "5.24M", "5.45M", "-", "16.57M", "4.51M", "1.58M", "1.78M", "2.38M", "Data", "NODE", "ANODE", "LODE", "NF", "NL", "DON", "PDN", "CTFNO"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 133.92,
+    "x2": 476.15999999999997,
+    "y1": 135.35999999999999,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table7-1.png"
+}, {
+  "caption": "Figure 1: Visualization of learned solutions to synthetic datasets.",
+  "captionBoundary": {
+    "x1": 176.91099548339844,
+    "x2": 435.0917053222656,
+    "y1": 195.85055541992188,
+    "y2": 201.85302734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 65.75999999999999,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure1-1.png"
+}, {
+  "caption": "Table 8: Hyperparameter settings of CTFNO, FNO2d, and FNOseq on synthetic data. Low indicates the experiments on Spiral, Stiff, Sawtooth, and Square data. Layers, Modes, and Channels are the number of Fourier layers, Fourier modes, and channels, respectively. The first value in Time channels is the dimension used for time embedding and the second value is the dimension of sinusoidal embedding of time. Params denotes the size of model parameters.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0013732910156,
+    "y1": 83.53055572509766,
+    "y2": 133.3690185546875
+  },
+  "figType": "Table",
+  "imageText": ["CTFNO", "Low", "3", "4", "16", "(32,", "16)", "17858", "Reaction", "2", "32", "64", "(512,", "128)", "1.82M", "PDEs", "2", "64", "64", "(512,", "128)", "2.38M", "FNO2d", "Reaction", "3", "(32,", "16)", "32", "-", "7.00M", "PDEs", "3", "(64,", "16)", "32", "-", "12.00M", "FNOseq", "PDEs", "4", "64", "64", "-", "2.02M", "Model", "Data", "Layers", "Modes", "Channels", "Time", "channels", "Params"],
+  "name": "8",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 467.03999999999996,
+    "y1": 146.4,
+    "y2": 235.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table8-1.png"
+}, {
+  "caption": "Table 9: Hyperparameter settings of CTFNO on real-world time-series data. Layers, Modes, and Channels are the number of Fourier layers, Fourier modes, and channels, respectively. The first value in Time channels is the dimension used for time embedding and the second value is the dimension of sinusoidal embedding of time. M stands for the stabilization constant. Params denotes the number of model parameters.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00335693359375,
+    "y1": 249.12551879882812,
+    "y2": 298.9630126953125
+  },
+  "figType": "Table",
+  "imageText": ["Plane", "Vibration", "2", "10", "8", "(16,", "8)", "1.2", "6K", "MuJoCo", "3", "10", "32", "(64,", "32)", "10", "150K", "PhysioNet", "1", "10", "32", "(64,", "8)", "-", "68K", "Activity", "2", "10", "32", "(64,", "32)", "10", "124K", "Data", "Layers", "Modes", "Channels", "Time", "channels", "M", "Params"],
+  "name": "9",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 144.0,
+    "x2": 468.47999999999996,
+    "y1": 312.0,
+    "y2": 379.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table9-1.png"
+}, {
+  "caption": "Figure 8: Heatmap of exact and predicted solution for reaction ODE (§4.1). This shows that our model can exactly represent the dynamics of the reaction ODE.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1700439453125,
+    "y1": 670.2205810546875,
+    "y2": 687.1820068359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 120.96,
+    "y2": 659.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure8-1.png"
+}, {
+  "caption": "Table 5: Classification accuracy (%) and robustness of different models on MNIST.",
+  "captionBoundary": {
+    "x1": 139.77000427246094,
+    "x2": 471.923095703125,
+    "y1": 513.4745483398438,
+    "y2": 519.4769897460938
+  },
+  "figType": "Table",
+  "imageText": ["CNN", "99.0", "29.7", "10.4", "27.3", "15.3", "10.8", "4.6", "ANODE", "97.9", "91.8", "56.4", "26.9", "1.5", "62.5", "9.7", "FNO", "98.6", "90.2", "45.6", "36.9", "25.8", "8.1", "4.1", "FNO", "(WD)", "98.9", "90.0", "43.6", "57.6", "35.6", "22.1", "11.7", "FNO", "(Stab)", "98.8", "97.8", "88.2", "36.2", "3.43", "62.6", "47.1", "Model", "σ", "=", "50", "σ", "=", "100", "FGSM-30/255", "FGSM-50/255", "PGD-30/255", "PGD-50/255", "Clean", "Gaussian", "noise", "Adversarial", "attack"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 527.52,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table5-1.png"
+}, {
+  "caption": "Table 6: Classification accuracy (%) and robustness of different models on CIFAR10.",
+  "captionBoundary": {
+    "x1": 135.61599731445312,
+    "x2": 476.077880859375,
+    "y1": 632.0875244140625,
+    "y2": 638.0899658203125
+  },
+  "figType": "Table",
+  "imageText": ["CNN", "75.5", "60.0", "51.1", "23.0", "4.7", "16.7", "0.43", "ANODE", "59.4", "40.9", "34.9", "0.1", "0.0", "0.0", "0.0", "FNO", "64.0", "57.9", "52.2", "3.4", "1.4", "1.5", "0.0", "FNO", "(WD)", "66.9", "54.9", "46.2", "5.8", "0.6", "2.0", "0.0", "FNO", "(Stab)", "65.5", "64.3", "63.3", "38.6", "11.1", "38.1", "9.1", "Model", "σ", "=", "15", "σ", "=", "20", "FGSM-2/255", "FGSM-5/255", "PGD-2/255", "PGD-5/255", "Clean", "Gaussian", "noise", "Adversarial", "attack"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 645.6,
+    "y2": 740.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table6-1.png"
+}, {
+  "caption": "Table 1: Relative L2 (×10−2) errors of ablation studies.",
+  "captionBoundary": {
+    "x1": 384.8900146484375,
+    "x2": 504.6677551269531,
+    "y1": 407.9845275878906,
+    "y2": 424.9460144042969
+  },
+  "figType": "Table",
+  "imageText": ["Baseline", "1", "11.60", "19.63", "Baseline", "2", "2.84", "18.68", "Baseline", "3", "2.68", "18.92", "FNOseq", "75.61", "73.10", "FNO2d", "0.58", "10.32", "CTFNO", "0.22", "5.68", "Model", "Heat", "Burgers"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 388.8,
+    "x2": 498.24,
+    "y1": 430.56,
+    "y2": 520.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table1-1.png"
+}, {
+  "caption": "Figure 2: The visualization of CTFNO architecture. Two time embedding networks specify the time t into hidden representations φ(t) and ψ(t). Then φ(t) and ψ(t) incorporate the temporal information into each Fourier layer through time modulation operators Aℓ and Bℓ.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00140380859375,
+    "y1": 184.02651977539062,
+    "y2": 213.4420166015625
+  },
+  "figType": "Figure",
+  "imageText": ["𝐴2", "𝐵2", "F", "F", "−1", "𝜎", "𝑊1", "𝑅1", "𝑣0(𝑥)", "𝑣1(𝑡,", "𝑥)", "𝑣2(𝑡,", "𝑥)", "𝑣3(𝑡,", "𝑥)", "𝑡", "𝐵1", "𝐴1", "F", "F", "−1", "𝜎", "𝑊1", "𝑅1", "𝑢(𝑡,", "𝑥)𝑄", "𝜓(𝑡)𝑠ℎ𝑎𝑟𝑖𝑛𝑔", "𝑛𝑒𝑡", "2", "𝑠ℎ𝑎𝑟𝑖𝑛𝑔", "𝑛𝑒𝑡", "1", "𝜑(𝑡)", "𝑢0(𝑥)", "𝑃", "F", "F", "−1", "𝜎", "𝑊0", "𝑅0", "𝐵0", "𝐴0"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 481.91999999999996,
+    "y1": 76.8,
+    "y2": 168.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Figure2-1.png"
+}, {
+  "caption": "Table 13: Measured training and inference time",
+  "captionBoundary": {
+    "x1": 211.0469970703125,
+    "x2": 400.64520263671875,
+    "y1": 146.08554077148438,
+    "y2": 152.0880126953125
+  },
+  "figType": "Table",
+  "imageText": ["CTFNO", "7.39", "0.89", "Neural", "ODE", "23.6", "2.20", "Neural", "Flow", "4.38", "0.62", "Model", "Training", "(second/epoch)", "Inference", "(second/epoch)"],
+  "name": "13",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 164.64,
+    "x2": 444.47999999999996,
+    "y1": 159.84,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table13-1.png"
+}, {
+  "caption": "Table 10: The number of parameters for each models for image classification.",
+  "captionBoundary": {
+    "x1": 151.00799560546875,
+    "x2": 460.6854553222656,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["MNIST", "78K", "83K", "66K", "CIFAR10", "154K", "168K", "153K", "Data", "CNN", "ANODE", "FNO"],
+  "name": "10",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 222.72,
+    "x2": 389.28,
+    "y1": 102.24,
+    "y2": 147.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B-dM7df9Axo-Table10-1.png"
+}]

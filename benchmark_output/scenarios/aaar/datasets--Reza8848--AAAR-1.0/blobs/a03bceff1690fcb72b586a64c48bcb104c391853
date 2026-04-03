@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 6: Certified over standard accuracy for different certified training methods. The upper right-hand corner is best.",
+  "captionBoundary": {
+    "x1": 349.55999755859375,
+    "x2": 503.99725341796875,
+    "y1": 584.74072265625,
+    "y2": 610.0679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["IBP-R", "COLT", "CROWN-IBP", "IBP", "SABR", "ε", "=", "2/255", "ε", "=", "8/255", "ε", "=", "0.1", "ε", "=", "0.3", "-1", "0", "A", "R", "C", "IF", "IS", "T", "M", "N", "Cert.", "Acc.", "Std.", "Acc.", "Cert.", "Acc.", "Std.", "Acc.", "Cert.", "Acc.", "Std.", "Acc.", "Cert.", "Acc.", "Std.", "Acc."],
+  "name": "6",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 356.15999999999997,
+    "x2": 498.24,
+    "y1": 404.64,
+    "y2": 576.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Comparison of exact (blue) and BOX (red) propagation through a one layer network. We show the concrete points maximizing the logit difference y2−y1 as a black× and the corresponding relaxation as a red ×.",
+  "captionBoundary": {
+    "x1": 329.7590026855469,
+    "x2": 504.0030822753906,
+    "y1": 388.4747619628906,
+    "y2": 433.7280578613281
+  },
+  "figType": "Figure",
+  "imageText": ["y", "=", "[", "0.7,−0.3", "−0.3,", "0.7", "]", "x2", "+", "[", "0.4", "−0.4", "]", "x2", "=", "ReLU(x1)", "x1", "=", "[", "0.5,", "0.3", "0.2,", "0.5", "]", "x0", "+", "[", "0.4", "0.4", "]", "B1", "∞(x0)", "=", "[−1,", "1]2", "x2", "x1", "BOX", "Propagation"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 328.8,
+    "x2": 501.12,
+    "y1": 208.79999999999998,
+    "y2": 383.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure1-1.png"
+}, {
+  "caption": "Table 1: Comparison of the standard (Acc.) and certified (Cert. Acc.) accuracy for different certified training methods on the full MNIST, CIFAR-10, and TINYIMAGENET test sets. We use MN-BAB (Ferrari et al., 2022) for certification and report other results from the relevant literature.",
+  "captionBoundary": {
+    "x1": 107.98999786376953,
+    "x2": 504.014892578125,
+    "y1": 83.35890197753906,
+    "y2": 108.40716552734375
+  },
+  "figType": "Table",
+  "imageText": ["TINYIMAGENET", "1/255", "CROWN-IBP", "Shi", "et", "al.", "(2021)", "25.62", "17.93", "IBP", "Shi", "et", "al.", "(2021)", "25.92", "17.87", "SABR", "this", "work", "28.64", "20.34", "8/255", "COLT", "Balunovic", "&", "Vechev", "(2020)", "51.7", "27.5", "CROWN-IBP", "Xu", "et", "al.", "(2020)", "46.29", "33.38", "IBP", "Shi", "et", "al.", "(2021)", "48.94", "34.97", "IBP-R", "Palma", "et", "al.", "(2022)", "51.43", "27.87", "SABR", "this", "work", "52.00", "35.25", "2/255", "COLT", "Balunovic", "&", "Vechev", "(2020)", "78.4", "60.5", "CROWN-IBP", "Zhang", "et", "al.", "(2020)", "71.52", "53.97", "IBP", "Shi", "et", "al.", "(2021)", "66.84", "52.85", "IBP-R", "Palma", "et", "al.", "(2022)", "78.19", "61.97", "SABR", "this", "work", "79.52", "62.57", "CIFAR-10", "COLT", "Balunovic", "&", "Vechev", "(2020)", "97.3", "85.7", "CROWN-IBP", "Zhang", "et", "al.", "(2020)", "98.18", "92.98", "IBP", "Shi", "et", "al.", "(2021)", "97.67", "93.10", "SABR", "this", "work", "98.82", "93.38", "0.3", "COLT", "Balunovic", "&", "Vechev", "(2020)", "99.2", "97.1", "CROWN-IBP", "Zhang", "et", "al.", "(2020)", "98.83", "97.76", "IBP", "Shi", "et", "al.", "(2021)", "98.84", "97.95", "SABR", "this", "work", "99.25", "98.06", "0.1", "MNIST", "Dataset", "ε∞", "Training", "Method", "Source", "Acc.", "[%]", "Cert.", "Acc.", "[%]"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 505.44,
+    "y1": 114.72,
+    "y2": 360.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Table1-1.png"
+}, {
+  "caption": "Figure 7: Standard, adversarial and certified accuracy depending on the certification method (BOX, DEEPPOLY, and MN-BAB) for the first 1000 test set samples of CIFAR-10.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 503.9996643066406,
+    "y1": 488.64874267578125,
+    "y2": 504.01300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CNN7-narrow", "ε", "=", "2/255", "(b)", "CNN7", "ε", "=", "2/255", "(a)", "CNN7", "ε", "=", "8/255"],
+  "name": "7",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 370.56,
+    "y2": 483.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure7-1.png"
+}, {
+  "caption": "Table 2: Comparison of standard (Std.) and certified (Cert.) accuracy [%] to `∞-distance Net (Zhang et al., 2022a).",
+  "captionBoundary": {
+    "x1": 310.0325622558594,
+    "x2": 501.9943542480469,
+    "y1": 522.705810546875,
+    "y2": 537.6480102539062
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR-10", "2/255", "60.61", "54.12", "79.52", "62.57", "8/255", "54.30", "40.06", "52.00", "35.25", "MNIST", "0.1", "98.93", "97.95", "99.25", "98.06", "0.3", "98.56", "93.20", "98.82", "93.38", "Std.", "Cert.", "Std.", "Cert.", "Dataset", "ε", "`∞-distance", "Net", "SABR", "(ours)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 309.59999999999997,
+    "x2": 502.08,
+    "y1": 541.92,
+    "y2": 619.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Table2-1.png"
+}, {
+  "caption": "Table 4: Average percentage of active, inactive, and unstable ReLUs for concrete points and boxes depending on training method.",
+  "captionBoundary": {
+    "x1": 339.7391662597656,
+    "x2": 501.94793701171875,
+    "y1": 637.9100952148438,
+    "y2": 660.9884033203125
+  },
+  "figType": "Table",
+  "imageText": ["IBP", "26.2", "73.8", "1.18", "25.6", "73.2", "SABR", "35.9", "64.1", "3.67", "34.3", "62.0", "PGD", "36.5", "63.5", "65.5", "15.2", "19.3", "Method", "Act", "Inact", "Unst", "Act", "Inact", "Point", "Whole", "Region"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 338.88,
+    "x2": 502.08,
+    "y1": 664.3199999999999,
+    "y2": 724.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Table4-1.png"
+}, {
+  "caption": "Figure 8: Standard (Std.) and robust crossentropy loss, computed with BOX (Box) and DEEPPOLY (DP) bounds for an IBP and SABR trained network over subselection ratio λ.",
+  "captionBoundary": {
+    "x1": 329.75897216796875,
+    "x2": 504.0028991699219,
+    "y1": 372.4647521972656,
+    "y2": 407.7550354003906
+  },
+  "figType": "Figure",
+  "imageText": ["Box", "DP", "Std", "IBP", "SABR", "101", "Loss", "100", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "λ"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 335.52,
+    "x2": 492.96,
+    "y1": 258.71999999999997,
+    "y2": 365.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure8-1.png"
+}, {
+  "caption": "Table 3: Cosine similarity between∇θLrob for IBP and SABR and ∇θLCE for adversarial (Adv.) and unperturbed (Std.) examples.",
+  "captionBoundary": {
+    "x1": 403.1983947753906,
+    "x2": 501.8475646972656,
+    "y1": 502.96343994140625,
+    "y2": 546.1085815429688
+  },
+  "figType": "Table",
+  "imageText": ["Std.", "0.5586", "0.8071", "Adv.", "0.8047", "0.9062", "Loss", "IBP", "SABR"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 402.71999999999997,
+    "x2": 502.08,
+    "y1": 552.48,
+    "y2": 591.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Table3-1.png"
+}, {
+  "caption": "Figure 2: Illustration of SABR training. Instead of propagating a BOX approximation (dashed box ) of the whole input region (red and green shapes in input space), SABR propagates a small subset of this region (solid box ), selected to contain the adversarial example (black ×) and thus the misclassified region (red). The smaller BOX accumulates much fewer approximation errors during propagation, leading to a significantly smaller output relaxation, which induces much less regularization (medium blue ) than training with the full region (large blue ), but more than training with just the adversarial example (small blue ).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.004638671875,
+    "y1": 177.23776245117188,
+    "y2": 233.65704345703125
+  },
+  "figType": "Figure",
+  "imageText": ["Exact", "propagation", "Box", "relaxation", "Adversarial", "example", "incorrect", "correct", "Output", "y∆", ".", ".", ".", "FC", "U", "R", "eL", "Latent", "Space", "x1", "FC", "Input", "x0"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Illustration of SABR’s propagation region selection process.",
+  "captionBoundary": {
+    "x1": 395.10198974609375,
+    "x2": 503.9988708496094,
+    "y1": 488.50775146484375,
+    "y2": 513.8350219726562
+  },
+  "figType": "Figure",
+  "imageText": ["x∗0", "x", "x∗x′", "τ", "ε"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 402.71999999999997,
+    "x2": 493.44,
+    "y1": 397.91999999999996,
+    "y2": 479.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Input distribution for last ReLU layer depending on training method.",
+  "captionBoundary": {
+    "x1": 369.3609924316406,
+    "x2": 504.00048828125,
+    "y1": 387.9117431640625,
+    "y2": 413.2400207519531
+  },
+  "figType": "Figure",
+  "imageText": ["PGD", "SABR", "IBP", "Frequency", "−2", "−1", "0", "1", "2", "Pre-Activation", "Value", "x"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 372.0,
+    "x2": 498.71999999999997,
+    "y1": 279.84,
+    "y2": 378.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Comparison of the actual (purple) mean output size and a linear growth (orange) around the black × for a ReLU layer where input box centres x̄ ∼ N (−0.8, 0.4).",
+  "captionBoundary": {
+    "x1": 369.3609924316406,
+    "x2": 504.00048828125,
+    "y1": 569.439697265625,
+    "y2": 614.6929931640625
+  },
+  "figType": "Figure",
+  "imageText": ["linear", "0.5", "Output", "Size", "E[δy]", "actual", "0.4", "0.3", "0.2", "0.1", "0.0", "0.0", "0.5", "1.0", "1.5", "2.0", "Input", "Size", "δx"],
+  "name": "5",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 374.4,
+    "x2": 496.32,
+    "y1": 434.4,
+    "y2": 560.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7oFuxtJtUMH-Figure5-1.png"
+}]

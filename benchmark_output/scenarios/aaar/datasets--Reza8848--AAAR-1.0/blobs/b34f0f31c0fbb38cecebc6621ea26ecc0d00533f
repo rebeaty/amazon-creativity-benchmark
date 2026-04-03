@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 3: Plots of the normalized MSE (smaller is better) with an error bar for Advection eq. (Left), Burgers eq. (Middle), and 2D Compressible NS equations (Right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 182.28567504882812,
+    "y2": 199.5560302734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 485.28,
+    "y1": 84.0,
+    "y2": 170.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Figure3-1.png"
+}, {
+  "caption": "Figure 1: The standard autoregressive approach (left) and the proposed CAPE approach (right) which consists of two interdependent steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00006103515625,
+    "y1": 163.17166137695312,
+    "y2": 180.44097900390625
+  },
+  "figType": "Figure",
+  "imageText": ["Step", "1", "Step", "2", "Neural", "base", "model", "Autoregressive", "PDE", "Solver", "CAPE𝝀", "Space", "N0", "Time"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 152.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Visualization of the results: Advection eq. at the final time-step (t = 2.0) (Left), Burgers eq. at tk = 20(t = 1.0) (2nd-left) at the final time-step, and Vx of 2D NS equations at tk = 5(t = 0.25) (Right). Here “Base” is the vanilla FNO, “CAPE ” is the FNO with CAPE, “CAPE module” is the direct output from CAPE module only; the CAPE module provides a higher frequency proposal to the BASE model which then more accurately predicts the field data.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0028381347656,
+    "y1": 172.38467407226562,
+    "y2": 222.531005859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 82.56,
+    "y2": 151.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Figure4-1.png"
+}, {
+  "caption": "Table 2: List of the normalized MSE (the smaller, the better) for Advection eq., Burgers eq., and 2D Compressible NS equations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 358.32269287109375,
+    "y2": 375.5929870605469
+  },
+  "figType": "Table",
+  "imageText": ["Unet", "0.77±3.6⇥10", "2", "–", "0.74±3.5⇥10", "2", "0.70", "±3.7⇥10", "2", "0.80", "±8.3⇥10", "2", "2D", "NS", "FNO", "1.06±2.5⇥10", "2", "–", "0.91±0.10", "0.50±6.3⇥10", "2", "0.45", "±3.8⇥10", "2", "Unet", "0.53±4.9⇥10", "2", "0.85±3.2⇥10", "1", "Burgers", "FNO", "0.54±0.40", "0.49±1.3⇥10", "1", "0.17±2.1⇥10", "2", "0.12", "±2.9⇥10", "3", "0.33±3.9⇥10", "2", "0.11", "±8.3⇥10", "3", "Unet", "0.72±1.0⇥10", "2", "0.76±1.8⇥10", "2", "0.13±3.9⇥10", "2", "0.04", "±1.4⇥10", "3", "Advection", "FNO", "0.69±2.2⇥10", "3", "0.70±1.6⇥10", "4", "PDE", "model", "BASE", "BASE", "w.t.", "PINO", "prev.", "2-steps", "CAPE"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 484.32,
+    "y1": 240.0,
+    "y2": 347.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Table2-1.png"
+}, {
+  "caption": "Figure 5: Plots of the normalized MSE (smaller is better) in terms of each PDE parameter for Advection eq. (Left), Burgers eq. (Middle-Left), 2D NS with M = 0.1 (Middle-right), and 2D NS with M = 1 (Right). The results were obtained using the FNO.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 164.46170043945312,
+    "y2": 192.69000244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 82.56,
+    "y2": 152.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Figure5-1.png"
+}, {
+  "caption": "Table 3: Ablation study for the Advection and 2D CFD equations with FNO as BASE model.",
+  "captionBoundary": {
+    "x1": 120.98999786376953,
+    "x2": 491.0101623535156,
+    "y1": 345.69769287109375,
+    "y2": 352.0090026855469
+  },
+  "figType": "Table",
+  "imageText": ["without", "curriculum", "learning", "(pure", "AR)", "1.3⇥", "10+0", "(+0.5)", "without", "curriculum", "learning", "(pure", "TF)", "3.2⇥", "10+0", "(+2.4)", "2D", "NS", "full-method", "8.0⇥", "10", "1", "without", "curriculum", "learning", "(pure", "AR)", "1.6⇥", "10", "1", "(+0.3⇥", "10", "1)", "without", "curriculum", "learning", "(pure", "TF)", "1.3⇥", "10", "1", "(+0.0)", "Burgers", "full-method", "1.3⇥", "10", "1", "without", "curriculum", "learning", "(pure", "AR)", "1.1⇥", "10", "1", "(+5.1⇥", "10", "2)", "without", "curriculum", "learning", "(pure", "TF)", "3.9⇥", "10", "2", "(", "0.7⇥", "10", "2)", "Advection", "full-method", "4.5⇥", "10", "2", "Model", "Ablation", "nMSE"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 469.44,
+    "y1": 206.88,
+    "y2": 334.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Table3-1.png"
+}, {
+  "caption": "Figure 2: The CAPE module for one type of convolution (residual connections are omitted).",
+  "captionBoundary": {
+    "x1": 123.44100189208984,
+    "x2": 488.5596008300781,
+    "y1": 182.22366333007812,
+    "y2": 188.53497314453125
+  },
+  "figType": "Figure",
+  "imageText": ["c", "channels", "d", "attention", "weights", "kernels", "d", "channels", "1x1", "Conv", "Channel", "attention", "Conv", "M", "LP"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 81.6,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Figure2-1.png"
+}, {
+  "caption": "Table 4: Inference time comparison of simulation (initial steps=10) + FNO and CAPE + FNO in the case of 2D CFD (⌘ = ⇣ = 0.1). The time-step size is t = 0.05 and the computations were performed until t = 1.0 as in this paper’s other experiments.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0017395019531,
+    "y1": 135.54666137695312,
+    "y2": 163.7760009765625
+  },
+  "figType": "Table",
+  "imageText": ["Simulation", "+", "FNO", "5122", "582.8", "582.6", "CAPE", "+", "FNO", "5122", "1.3", "–", "PDE", "Resolution", "Total", "Inference", "time", "[sec]", "simulation", "time", "[sec]"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 124.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Table4-1.png"
+}, {
+  "caption": "Table 1: PDE parameters used in the experiments.",
+  "captionBoundary": {
+    "x1": 206.2899932861328,
+    "x2": 405.71136474609375,
+    "y1": 144.82266235351562,
+    "y2": 151.13397216796875
+  },
+  "figType": "Table",
+  "imageText": ["1D", "Advection", "=", "(0.2,", "0.4,", "0.7,", "2.0,", "4.0)", "=", "(0.1,", "1.0,", "7.0)", "1D", "Burgers", "⌫", "=", "(0.002,", "0.007,", "0.02,", "0.04,", "0.2,", "0.4,", "2.0)", "⌫", "=", "(0.001,", "0.01,", "0.1,", "1.0,", "4.0)", "2D", "NS", "⌘", "=", "⇣", "=", "(10", "8,", "0.001,", "0.004,", "0.01,", "0.04,", "0.1)", "⌘", "=", "⇣", "=", "(0.007,", "0.07)", "PDE", "training", "parameters", "testing", "(unseen)", "parameters"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 134.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_22z1JIM6mwI-Table1-1.png"
+}]

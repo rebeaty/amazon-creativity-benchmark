@@ -1,0 +1,401 @@
+[{
+  "caption": "Figure 1: High-level illustration of ΠGDM. (Top) Problem-agnostic diffusion models perform an iterative denoising operation to produce random samples. (Bottom) ΠGDM utilizes problem-agnostic diffusion models to solve inverse problems, a key component of which is pseudoinverse guidance (ΠG). ΠG converts the problem-agnostic score function into a problem-specific one, using information about the measurements y and measurement model, denoted as h here (h is JPEG compression + masking in this figure, best viewed zoomed in). The additional guidance term is a vector-Jacobian product (VJP) that encourages consistency between the denoising result and the measurements, after a pseudoinverse transformation h†. ΠGDM applies the denoising process from ΠG in an iterative fashion to generate valid solutions to the inverse problem.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0034484863281,
+    "y1": 632.9005737304688,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["VJP", "……", "…", "Random", "images", "…", "Images", "satisfying", "measurement", "Measurement", "Denoise", "Pseudoinverse", "guidance", "(", ")", "Denoise"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 501.12,
+    "y1": 446.88,
+    "y2": 619.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure1-1.png"
+}, {
+  "caption": "Figure 15: Super-resolution results with ΠGDM for the Pool case on the LSUN Bedroom dataset (Yu et al., 2015).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.99853515625,
+    "y1": 606.7845458984375,
+    "y2": 623.7459716796875
+  },
+  "figType": "Figure",
+  "imageText": ["Reference", "Low-res", "(4x)", "GDM", "(4x)", "Low-res", "(8x)", "GDM", "(8x)"],
+  "name": "15",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 501.12,
+    "y1": 187.68,
+    "y2": 591.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure15-1.png"
+}, {
+  "caption": "Figure 7: Singular values of the bicubic downsampling and uniform blurring measurement matrix.",
+  "captionBoundary": {
+    "x1": 110.1760025024414,
+    "x2": 501.8256530761719,
+    "y1": 434.6645202636719,
+    "y2": 440.6669921875
+  },
+  "figType": "Figure",
+  "imageText": ["3x3", "Uniform", "Blur", "ue", "v", "al", "ul", "ar", "Si", "ng", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "20000", "40000", "60000", "80000", "100000", "120000", "140000", "160000", "Singular", "value", "index", "Bicubic", "4x", "Downsampling", "ue", "v", "al", "ul", "ar", "Si", "ng", "0.25", "0.20", "0.15", "0.10", "0.05", "0.00", "0", "2000", "4000", "6000", "8000", "10000", "12000", "Singular", "value", "index"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 498.71999999999997,
+    "y1": 328.8,
+    "y2": 417.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure7-1.png"
+}, {
+  "caption": "Figure 11: Inpainting results using ΠGDM for the Freeform problem with multiple random samples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9952087402344,
+    "y1": 651.2335205078125,
+    "y2": 657.2359619140625
+  },
+  "figType": "Figure",
+  "imageText": ["Masked", "GDM", "(Seed=1)", "GDM", "(Seed=2)", "GDM", "(Seed=3)", "GDM", "(Seed=4)", "GDM", "(Seed=5)"],
+  "name": "11",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 634.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure11-1.png"
+}, {
+  "caption": "Figure 2: ΠGDM applies a single problem-agnostic diffusion model for various inverse problems, avoiding the cost of training multiple problem-specific ones. Best viewed zoomed in.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 249.41751098632812,
+    "y2": 266.37896728515625
+  },
+  "figType": "Figure",
+  "imageText": ["GDM", "GDM", "GDM", "GDM"],
+  "name": "2",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 496.32,
+    "y1": 91.2,
+    "y2": 234.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Results on JPEG restoration. From left to right: the compressed JPEG image, restoration results from Palette (task-specific) and ΠGDM (task-agnostic), and the reference image.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 240.57852172851562,
+    "y2": 257.53997802734375
+  },
+  "figType": "Figure",
+  "imageText": ["JPEG", "(QF", "=", "5)", "Palette", "GDM", "Reference"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 225.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure5-1.png"
+}, {
+  "caption": "Figure 12: Results for the JPEG restoration problem, including Palette (Saharia et al., 2022a) and ΠGDM. Palette results are obtained from the official website.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 698.5585327148438,
+    "y2": 715.52001953125
+  },
+  "figType": "Figure",
+  "imageText": ["JPEG", "(QF", "=", "5)", "Palette", "GDM", "Reference"],
+  "name": "12",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 96.96,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure12-1.png"
+}, {
+  "caption": "Table 7: 4× super-resolution results (Bicubic) from ΠGDM using the class-conditional model.",
+  "captionBoundary": {
+    "x1": 117.625,
+    "x2": 494.3762512207031,
+    "y1": 198.86453247070312,
+    "y2": 204.86700439453125
+  },
+  "figType": "Table",
+  "imageText": ["0.0", "7.5", "4.1", "3.9", "73.0", "74.0", "72.6", "0.5", "8.0", "4.2", "3.4", "72.7", "74.6", "73.7", "1.0", "10.8", "5.5", "3.2", "70.8", "74.2", "75.1", "η", "Steps", "20", "50", "100", "20", "50", "100", "FID", "↓", "CA", "↑"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 212.64,
+    "y2": 296.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Table7-1.png"
+}, {
+  "caption": "Table 6: 4× super-resolution results (Pool) from ΠGDM using the class-unconditional model.",
+  "captionBoundary": {
+    "x1": 118.84500122070312,
+    "x2": 493.1557922363281,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["0.0", "6.5", "4.4", "4.3", "70.0", "70.3", "69.2", "0.5", "7.2", "4.5", "3.9", "70.0", "71.4", "70.6", "1.0", "10.9", "6.1", "3.8", "68.2", "71.3", "72.3", "η", "Steps", "20", "50", "100", "20", "50", "100", "FID", "↓", "CA", "↑"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 97.44,
+    "y2": 180.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Table6-1.png"
+}, {
+  "caption": "Figure 13: Restoration results with ΠGDM over various composed measurements. The same random seed is used for different problems.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0016174316406,
+    "y1": 702.507568359375,
+    "y2": 719.468994140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 198.72,
+    "x2": 487.2,
+    "y1": 621.6,
+    "y2": 686.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure13-1.png"
+}, {
+  "caption": "Figure 6: Results on noisy inpainting problems. Reconstruction guidance (third column) does not handle measurement noise and will keep the noisy measurements, so only the masked regions are denoised.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 256.4305114746094,
+    "y2": 284.3499755859375
+  },
+  "figType": "Figure",
+  "imageText": ["Reference", "Mask", "+", "0.1", "Gaussian", "Reconstruction", "Guidance", "GDM", "Reference", "Mask", "+", "0.1", "Gaussian", "Reconstruction", "Guidance", "GDM"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 462.24,
+    "y1": 84.0,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure6-1.png"
+}, {
+  "caption": "Table 3: Inpainting results. Dark-colored rows indicate methods using problem-specific models.",
+  "captionBoundary": {
+    "x1": 313.47198486328125,
+    "x2": 503.55047607421875,
+    "y1": 307.5247497558594,
+    "y2": 322.8900146484375
+  },
+  "figType": "Table",
+  "imageText": ["Freeform", "DeepFillv2", "(Yu", "et", "al.,", "2019)", "9.4", "68.8%", "Palette", "(Saharia", "et", "al.,", "2022a)", "5.2", "72.3%", "DDRM", "(Kawar", "et", "al.,", "2022a)", "8.6", "71.9%", "ΠGDM", "(Ours)", "5.3", "75.3%", "ΠGDM", "(noisy,", "Ours)", "7.3", "74.5%", "DeepFillv2", "(Yu", "et", "al.,", "2019)", "18.0", "64.3%", "Palette", "(Saharia", "et", "al.,", "2022a)", "6.6", "69.3%", "DDRM", "(Kawar", "et", "al.,", "2022a)", "24.4", "62.1%", "ΠGDM", "(Ours)", "7.3", "72.6%", "ΠGDM", "(noisy,", "Ours)", "9.5", "72.2%", "Center", "Mask", "Method", "FID-10k", "↓", "CA", "↑"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 506.4,
+    "y1": 331.2,
+    "y2": 432.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Table3-1.png"
+}, {
+  "caption": "Table 2: 4× super-resolution results. Dark-colored rows indicate methods using problem-specific models.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 306.00469970703125,
+    "y1": 308.19171142578125,
+    "y2": 323.5569763183594
+  },
+  "figType": "Table",
+  "imageText": ["5.1.2", "INPAINTING", "Bicubic", "SR3", "(Saharia", "et", "al.,", "2021)", "5.2", "68.3%", "ADM", "(cc,", "Dhariwal", "&", "Nichol", "(2021))", "14.8", "66.7%", "DDRM", "(Kawar", "et", "al.,", "2022a)", "21.3", "63.2%", "ΠGDM", "(Ours)", "3.6", "72.1%", "DDRM", "(cc,", "Kawar", "et", "al.", "(2022a))", "19.6", "65.3%", "ΠGDM", "(cc,", "Ours)", "3.2", "75.1%", "ADM", "(cc,", "Dhariwal", "&", "Nichol", "(2021))", "3.1", "73.4%", "DDRM", "(Kawar", "et", "al.,", "2022a)", "14.8", "64.6%", "ΠGDM", "(Ours)", "3.8", "72.3%", "DDRM", "(cc,", "Kawar", "et", "al.", "(2022a))", "14.1", "65.2%", "ΠGDM", "(cc,", "Ours)", "3.6", "72.2%", "Pool", "Filter", "Method", "FID", "↓", "CA", "↑"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 299.03999999999996,
+    "y1": 330.71999999999997,
+    "y2": 468.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Table2-1.png"
+}, {
+  "caption": "Figure 9: Comparing methods for the Pool 4× super-resolution problem, including reconstruction guidance (Ho et al., 2022), ADM-U (Dhariwal & Nichol, 2021), and ΠGDM. Best viewed zoomed in.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.000732421875,
+    "y1": 673.2745361328125,
+    "y2": 701.1950073242188
+  },
+  "figType": "Figure",
+  "imageText": ["Pool", "Reconstruction", "guidance", "ADM-U", "GDM", "Reference"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 110.88,
+    "y2": 657.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure9-1.png"
+}, {
+  "caption": "Figure 8: Two examples that compare our adaptive weight schedule with the different weights wr in Video Diffusion Models (VDM, (Ho et al., 2022)) on JPEG (QF=10) restoration.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9998779296875,
+    "y1": 254.36752319335938,
+    "y2": 271.3289794921875
+  },
+  "figType": "Figure",
+  "imageText": ["Low", "res", "(64x64)", "Our", "weights", "VDM", "weights", "(wr=1)", "VDM", "weights", "(wr=2)", "VDM", "weights", "(wr=5)", "Reference", "Low", "res", "(64x64)", "Our", "weights", "VDM", "weights", "(wr=1)", "VDM", "weights", "(wr=2)", "VDM", "weights", "(wr=5)", "Reference"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure8-1.png"
+}, {
+  "caption": "Figure 14: Inpainting results with ΠGDM for the Center problem on the LSUN Bedroom dataset (Yu et al., 2015).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 503.9983825683594,
+    "y1": 645.7535400390625,
+    "y2": 662.7149658203125
+  },
+  "figType": "Figure",
+  "imageText": ["Masked", "GDM", "(Seed=1)", "GDM", "(Seed=2)", "GDM", "(Seed=3)", "GDM", "(Seed=4)", "GDM", "(Seed=5)"],
+  "name": "14",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 628.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure14-1.png"
+}, {
+  "caption": "Figure 10: Comparing methods for the Bicubic 4× super-resolution problem, including reconstruction guidance (Ho et al., 2022), ADM-U (Dhariwal & Nichol, 2021), and ΠGDM. Best viewed zoomed in.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00274658203125,
+    "y1": 673.2745361328125,
+    "y2": 701.1950073242188
+  },
+  "figType": "Figure",
+  "imageText": ["Bicubic", "Reconstruction", "guidance", "ADM-U", "GDM", "Reference"],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 110.88,
+    "y2": 657.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Two examples that compare our adaptive weight schedule with the different weights wr in Video Diffusion Models (VDM, (Ho et al., 2022)) on 4× super-resolution (Bicubic). For fair comparison, ΠG is used for all cases.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0047302246094,
+    "y1": 338.7005310058594,
+    "y2": 366.6209716796875
+  },
+  "figType": "Figure",
+  "imageText": ["Low", "res", "(64x64)", "Our", "weights", "VDM", "weights", "(wr=1)", "VDM", "weights", "(wr=2)", "VDM", "weights", "(wr=5)", "Reference", "Low", "res", "(64x64)", "Our", "weights", "VDM", "weights", "(wr=1)", "VDM", "weights", "(wr=2)", "VDM", "weights", "(wr=5)", "Reference"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 462.24,
+    "y1": 202.56,
+    "y2": 319.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure4-1.png"
+}, {
+  "caption": "Table 1: Comparison of different guidance methods.",
+  "captionBoundary": {
+    "x1": 201.77194213867188,
+    "x2": 410.22930908203125,
+    "y1": 653.841552734375,
+    "y2": 659.843994140625
+  },
+  "figType": "Table",
+  "imageText": ["Reconstruction", "σ2", "t∇xt", "∥y", "−Hx̂t∥22", "Required", "No", "No", "Pseudoinverse", "Eqs.", "6", "to", "8", "Not", "required", "No", "Yes", "Classifier", "∇xt", "log", "q(y|xt)", "Required", "Yes", "-", "Guidance", "Expression", "xt", "→", "y", "differentiable", "Train", "on", "(xt,y)", "Noisy", "y"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 672.9599999999999,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Table1-1.png"
+}, {
+  "caption": "Figure 3: Left: σt as a function of t. Right: the ratio between our guidance weights and the Video Diffusion Models (VDM) weight wr = 1 (Ho et al., 2022) under different η values. We take 100 uniformly spaced timesteps (out of a possible of 1000 timesteps).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0044250488281,
+    "y1": 156.60751342773438,
+    "y2": 184.5279541015625
+  },
+  "figType": "Figure",
+  "imageText": ["=", "1.0", "10", "8", "6", "4", "0", "250", "500", "750", "1000", "1", "2", "=", "0.5", "15", "10", "5", "0", "250", "500", "750", "1000", "1", "20", "=", "0.0", "15", "10", "5", "0", "250", "500", "750", "1000", "1", "150", "t", "100", "50", "0", "250", "500", "750", "1000", "0"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 141.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9_gsMA8MRKQ-Figure3-1.png"
+}]

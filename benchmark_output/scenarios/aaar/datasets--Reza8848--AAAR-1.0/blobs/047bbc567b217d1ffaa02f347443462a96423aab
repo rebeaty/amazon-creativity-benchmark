@@ -1,0 +1,341 @@
+[{
+  "caption": "Table 3: Our proposed three splits on LVIS (LVIS-ARShift) cause serious problems for current stateof-the-art few-shot detectors, which are resolved by using CoRPN’s. As a reference, we also provide the results on all rare classes in the entire LVIS test set. Our CoRPN’s outperform the baseline by large margins on all the splits with aspect ratio distribution shift, especially in AP75, suggesting that CoRPN’s improve the quality of detection under aspect ratio shift. CoRPN’s also marginally outperform the baseline on the entire test set in mAP and AP75. Results in red are the best.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 217.47750854492188,
+    "y2": 278.27490234375
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "DeFRCN", "+", "CoRPN’s", "12.3", "31.0", "9.4", "16.0", "27.5", "18.8", "13.7", "20.4", "16.8", "15.3", "26.4", "15.6", "Baseline", "DeFRCN", "Qiao", "et", "al.", "(2021)", "9.6", "22.9", "7.0", "8.0", "19.1", "1.7", "9.0", "18.8", "6.3", "15.0", "26.6", "14.2", "DeFRCN", "Ensemble", "of", "Experts", "11.5", "26.0", "8.4", "14.8", "24.3", "12.1", "12.4", "20.1", "14.7", "14.8", "25.0", "13.9", "Split", "1", "Split", "2", "Split", "3", "Entire", "test", "set", "Method", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 171.35999999999999,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table3-1.png"
+}, {
+  "caption": "Table 2: Our proposed split COCO-ARShift causes serious problems for current state-of-the-art few-shot detectors, which are resolved by using CoRPN’s. CoRPN’s consistently outperform the DeFRCN Qiao et al. (2021) baseline in all cases (novel split in 1, 2 and 3 shots) and are superior to the ensemble of experts method overall. Results in red are the best.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 117.6495132446289,
+    "y2": 156.5289306640625
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "DeFRCN", "+", "CoRPN’s", "8.7", "15.3", "8.7", "12.4", "20.5", "13.4", "14.7", "24.4", "15.9", "Baselines", "DeFRCN", "Qiao", "et", "al.", "(2021)", "7.1", "13.0", "7.0", "11.5", "20.3", "12.5", "14.3", "24.4", "15.1", "DeFRCN", "Ensemble", "of", "Experts", "8.0", "14.3", "7.9", "12.3", "20.6", "13.0", "14.2", "23.5", "15.0", "1-shot", "2-shot", "3-shot", "Method", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 503.03999999999996,
+    "y1": 62.879999999999995,
+    "y2": 111.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table2-1.png"
+}, {
+  "caption": "Table 8: When there are many shots (our proposed COCO-ARShift in 5, 10 and 30 shots), while the impact of using CoRPN’s is reduced, CoRPN’s still outperform the DeFRCN Qiao et al. (2021) baseline in most cases. The reduced improvement is likely because missing objects in the RPN stage becomes a less important effect. Results in red are the best.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 127.3035659790039,
+    "y2": 166.1829833984375
+  },
+  "figType": "Table",
+  "imageText": ["5-shot", "10-shot", "30-shot", "Method", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "DeFRCN", "Qiao", "et", "al.", "(2021)", "16.9", "27.4", "18.0", "18.9", "30.8", "20.2", "21.2", "34.5", "22.2", "DeFRCN", "+", "CoRPN’s", "(Ours)", "17.2", "27.0", "18.3", "19.3", "31.0", "21.0", "21.4", "34.9", "22.0"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 483.35999999999996,
+    "y1": 77.28,
+    "y2": 116.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table8-1.png"
+}, {
+  "caption": "Table 9: In Table 1 of the main paper, we mainly compare our method against the state-of-theart method DeFRCN Qiao et al. (2021) on our VOC-ARShift. Here we evaluate the result of an additional baseline FSCE Sun et al. (2021) (marked in blue). Note that other recently published methods represented by FSCE underperform our DeFRCN baseline by significant margins on our ARShift splits as well, so we do not include these methods in our main paper.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 260.6805114746094,
+    "y2": 310.5189208984375
+  },
+  "figType": "Table",
+  "imageText": ["Method", "shot=1", "2", "3", "5", "10", "TFA", "w/", "cos", "+", "CoRPN’s", "28.1", "31.7", "36.0", "38.6", "44.7", "DeFRCN", "+", "CoRPN’s", "37.0", "49.3", "55.1", "56.7", "59.0", "TFA", "w/", "cos", "Wang", "et", "al.", "(2020)", "19.1", "27.2", "28.0", "34.4", "42.1", "FSCE", "Sun", "et", "al.", "(2021)", "23.7", "33.5", "35.8", "41.5", "48.1", "DeFRCN", "Qiao", "et", "al.", "(2021)", "31.0", "44.6", "47.5", "55.2", "57.2", "DeFRCN", "Ensemble", "29.7", "42.7", "50.9", "55.3", "56.0"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 442.08,
+    "y1": 175.68,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table9-1.png"
+}, {
+  "caption": "Figure 1: RPN is severely affected by the distribution shift of object aspect ratios from base to novel classes, leading to degenerated few-shot detection performance. After training on the base classes which are mostly boxy objects (bike, chair, table, tv, animals, etc.), (Left) state-of-the-art few-shot detector DeFRCN Qiao et al. (2021) built on the conventional RPN misses the elongated novel class (train) object at the proposal stage – this is a disaster (the classifier of DeFRCN will not see a train box proposal, and so it cannot detect the train). By contrast, (Right) our CoRPN’s remedy this issue and thus improve few-shot detection for DeFRCN. Red boxes are the groundtruth box of the novel class train object; green boxes are box proposals output by the model. We plot positive proposals with IoUgt > 0.7 following Qiao et al. (2021).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033264160156,
+    "y1": 200.38552856445312,
+    "y2": 295.5528869628906
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 60.96,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Figure1-1.png"
+}, {
+  "caption": "Table 4: CoRPN’s not only improve performance on our hard split, but also perform comparably with state of the art on more traditional splits without forgetting the base classes, hence improving model fairness for aspect ratio distribution. CoRPN’s mostly beat strong baselines in few-shot detection performance on the (extremely difficult) COCO novel classes task for 1, 2, and 3-shot cases. Results in bold are the better result between ours and the baselines. All approaches are evaluated following the standard procedure in Xiao & Marlet (2020). *Model re-evaluated using the standard procedure (with base and novel classes joint space) for a fair comparison. **Model evaluated using public code and pre-trained base classes detector.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 131.33651733398438,
+    "y2": 214.0509033203125
+  },
+  "figType": "Table",
+  "imageText": ["Method", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "TFA", "w/", "cos", "+", "CoRPN’s", "4.1", "7.2", "4.4", "5.4", "9.6", "5.6", "7.1", "13.2", "7.2", "34.1", "55.1", "36.5", "34.7", "55.3", "37.3", "34.8", "55.2", "37.6", "DeFRCN", "+", "CoRPN’s", "5.0", "9.7", "4.8", "8.6", "16.1", "7.8", "10.9", "20.0", "10.4", "30.3", "45.6", "33.2", "31.2", "47.9", "34.2", "32.0", "48.1", "35.1", "TFA", "w/", "cos", "Wang", "et", "al.", "(2020)", "3.4", "5.8", "3.8", "4.6", "8.3", "4.8", "6.6", "12.1", "6.5", "34.1", "54.7", "36.4", "34.7", "55.1", "37.6", "34.7", "54.8", "37.9", "DeFRCN", "Qiao", "et", "al.", "(2021)", "4.8", "9.5", "4.4", "8.5", "16.3", "7.8", "10.7", "20.0", "10.3", "30.3", "45.7", "33.4", "31.2", "47.1", "34.5", "31.8", "47.9", "35.1", "MPSR**", "Wu", "et", "al.", "(2020)", "2.3", "4.1", "2.3", "3.5", "6.3", "3.4", "5.2", "9.5", "5.1", "12.1", "17.1", "14.2", "14.4", "20.7", "16.9", "15.8", "23.3", "18.3", "FsDetView", "Xiao", "&", "Marlet", "(2020)", "3.2", "8.9", "1.4", "4.9", "13.3", "2.3", "6.7", "18.6", "2.9", "2.4", "7.0", "1.0", "4.4", "11.9", "2.2", "4.9", "13.6", "2.2", "FSOD*", "Fan", "et", "al.", "(2020)", "2.4", "4.8", "2.0", "2.9", "5.9", "2.7", "3.7", "7.2", "3.3", "11.9", "20.3", "12.5", "15.6", "24.4", "17.2", "17.4", "27.3", "19.0", "Novel", "Class", "Base", "Class", "1-shot", "2-shot", "3-shot", "1-shot", "2-shot", "3-shot"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 62.4,
+    "y2": 125.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table4-1.png"
+}, {
+  "caption": "Table 7: Base classes AP50 on VOC-ARShift after base class training (phase 1) and after fine-tuning (phase 2). The same hyperparameter setting applies to both models. Notice that ours is higher after phase 1 and slightly lower but comparable with the results of DeFRCN after phase 2, but our method achieves significantly better performance on test classes as shown in Table 1 of the main paper (e.g., 7.3AP on 1-shot and 6.6 AP on 2-shot). Neither our method nor the baseline forgets base classes significantly.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 134.38650512695312,
+    "y2": 195.18292236328125
+  },
+  "figType": "Table",
+  "imageText": ["After", "Phase", "1", "After", "Phase", "2", "Method", "w/o", "fine-tuning", "1-shot", "2-shot", "3-shot", "5-shot", "10-shot", "DeFRCN", "Qiao", "et", "al.", "(2021)", "81.4", "76.5", "77.0", "76.9", "77.0", "76.7", "DeFRCN", "+", "CoRPN’s", "(Ours)", "82.8", "75.6", "75.8", "75.7", "75.5", "75.4"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 475.2,
+    "y1": 82.56,
+    "y2": 120.47999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table7-1.png"
+}, {
+  "caption": "Figure 4: Additional qualitative results of our CoRPN’s + DeFRCN on COCO-ARShift on 5-shots, compared with the DeFRCN baseline. The results illustrate that our approach discovers novel objects missed by the baseline, and also has less misclassification.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 632.8425903320312,
+    "y2": 660.7630004882812
+  },
+  "figType": "Figure",
+  "imageText": ["OursBaseline", "Baseline", "Baseline", "Ours", "Baseline", "Ours", "Baseline", "Ours", "Baseline", "Ours", "Baseline", "Ours", "Baseline", "OursBaseline", "Ours", "Baseline", "Ours", "Baseline", "Ours"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 150.72,
+    "y2": 612.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Figure4-1.png"
+}, {
+  "caption": "Table 5: Aspect ratio coverage of different RPN classifiers on VOC standard splits. For example, RPN1 refers to the first RPN classifier in the CoRPN’s. This provides evidance that CoRPN’s indeed learn to specialize in box aspect ratios, despite no direct supervision.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 115.7995376586914,
+    "y2": 143.719970703125
+  },
+  "figType": "Table",
+  "imageText": ["Ratio", "Novel", "Set", "1", "Novel", "Set", "2", "Novel", "Set", "3", "0.5", "RPN2", "99.68%", "RPN5", "99.72%", "RPN2", "98.64%", "1.0", "RPN3", "99.68%", "RPN2", "99.67%", "RPN2", "99.83%", "2.0", "RPN1", "99.67%", "RPN1", "99.59%", "RPN1", "10.75%,", "RPN2", "89.25%"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 471.35999999999996,
+    "y1": 60.96,
+    "y2": 110.39999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table5-1.png"
+}, {
+  "caption": "Table 1: Our proposed split VOC-ARShift causes serious problems for current state-of-the-art fewshot detectors, which are resolved by using CoRPN’s. CoRPN’s bring significant improvements (AP50) to all baseline models under distribution shift of base/novel class box aspect ratios. Note that naı̈ve ensemble of RPN experts sometimes leads to even worse results, potentially due to the overspecialization of its individual RPNs. Results in bold are the better result between ours and the baselines. Results in red are the best.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 137.37350463867188,
+    "y2": 198.1708984375
+  },
+  "figType": "Table",
+  "imageText": ["Method", "shot=1", "2", "3", "5", "10", "TFA", "w/", "cos", "+", "CoRPN’s", "28.1", "31.7", "36.0", "38.6", "44.7", "DeFRCN", "+", "CoRPN’s", "37.0", "49.3", "55.1", "56.7", "59.0", "TFA", "w/", "cos", "Wang", "et", "al.", "(2020)", "19.1", "27.2", "28.0", "34.4", "42.1", "DeFRCN", "Qiao", "et", "al.", "(2021)", "31.0", "44.6", "47.5", "55.2", "57.2", "DeFRCN", "Ensemble", "of", "Experts", "29.7", "42.7", "50.9", "55.3", "56.0"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 123.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table1-1.png"
+}, {
+  "caption": "Figure 2: The choice of base and novel class split can have a strong effect on the distribution of box aspect ratios. This histogram on COCO (a) and LVIS (b) shows: (blue) the distribution of aspect ratios for base classes; (pink) a randomly selected set of novel classes — note the bimodal structure, suggesting that different classes might have quite different bounding box distributions; and (yellow) for each of our selected hard set of novel classes in COCO-ARShift and LVIS-ARShift. Note that these classes are “rare” classes in LVIS so the histogram appears sparse. Experimental evidence (Tables 1, 2 and 3) suggests that a standard RPN trained on the base set performs poorly on our novel classes, while our CoRPN’s address the issue and substantially improve the performance. We believe that our hard splits in ARShift are relatively easy to generate and examples are provided in the appendix.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 383.72052001953125,
+    "y2": 488.3529052734375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 220.79999999999998,
+    "y2": 376.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Figure2-1.png"
+}, {
+  "caption": "Table 13: Performance improvements of CoRPN’s are not due to the increased number of parameters in CoRPN’s. This table shows the novel class AP50 of TFA Wang et al. (2020) with large RPN and even larger RPN, and compares with CoRPN’s with different numbers of RPN’s. All results are with PASCAL VOC novel split 3, shot 1. The second column presents how many additional parameters are introduced to the original TFA model. Using larger RPN sub-networks does not improve the performance, while CoRPN’s significantly improve with fewer added parameters.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 282.26654052734375,
+    "y2": 343.06396484375
+  },
+  "figType": "Table",
+  "imageText": ["Method", "#", "param", "added", "AP50", "TFA,", "original", "0", "30.8", "TFA,", "Large", "RPN", "28×256", "25.9", "TFA,", "Larger", "RPN", "268×256", "27.8", "TFA", "+", "CoRPN’s,", "2", "RPN’s", "3×256", "35.8", "TFA", "+", "CoRPN’s,", "5", "RPN’s", "12×256", "34.8", "TFA", "+", "CoRPN’s,", "10", "RPN’s", "27×256", "35.7"],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 189.6,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table13-1.png"
+}, {
+  "caption": "Table 12: Our diversity term – the log-determinant loss – offers improvements over a bootstrapping baseline and a pairwise cosine similarity based diversity loss in Dvornik et al. (2019). The table shows novel class AP50 under PASCAL VOC novel split 3, shot 1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 146.85055541992188,
+    "y2": 174.77099609375
+  },
+  "figType": "Table",
+  "imageText": ["2", "RPN’s,", "Bootstrapping", "31.8", "2", "RPN’s,", "Dvornik", "et", "al.", "(2019)", "32.4", "2", "RPN’s,", "CoRPN’s", "(Ours)", "35.8", "Method", "AP50"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 133.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table12-1.png"
+}, {
+  "caption": "Table 6: Our diversity loss and cooperation loss are both required for CoRPN’s to obtain the largest improvement. A sub-optimal threshold in the cooperation loss also has an adverse effect on performance. The table shows 1-shot novel class performance of all models under our proposed VOCARShift novel split.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 158.35952758789062,
+    "y2": 197.23895263671875
+  },
+  "figType": "Table",
+  "imageText": ["Method", "AP", "AP50", "AP75", "DeFRCN", "Qiao", "et", "al.", "(2021)", "13.6", "31.0", "9.6", "CoRPN’s", "18.8", "37.0", "17.2", "No", "Cooperation", "Loss", "14.7", "30.9", "11.7", "No", "Diversity", "Loss", "13.8", "30.2", "10.0", "Threshold", "ϕ", "=", "0.1", "14.2", "31.0", "11.1", "ϕ", "=", "0.4", "16.8", "35.2", "13.5", "ϕ", "=", "0.7", "14.7", "31.5", "11.6", "ϕ", "=", "0.9", "14.8", "33.6", "10.1"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 202.56,
+    "x2": 407.03999999999996,
+    "y1": 60.96,
+    "y2": 153.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table6-1.png"
+}, {
+  "caption": "Figure 3: Top: Illustration of two-phase training for few-shot learning in Faster R-CNN. In phase 1, all blocks are trained. In phase 2, part of the model is frozen while others are fine-tuned. TFA Wang et al. (2020) and DeFRCN Qiao et al. (2021) follow this pipeline. For TFA, only the top-layer of the bounding box classifier and regressor are fine-tuned. For DeFRCN, the whole model is fine-tuned except for the convolutions in the bounding box classifier and regressor. Bottom: Left is the original structure for the RPN in Faster R-CNN; right is our CoRPN’s, consisting of cooperating bounding box classifiers. Note that we only add multiple classifier heads that share features, so the model complexity of CoRPN’s does not significantly exceeds a regular RPN. For convenience, we use the term RPN and RPN classifier interchangeably.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 293.9045104980469,
+    "y2": 387.5779113769531
+  },
+  "figType": "Figure",
+  "imageText": ["RPN", "feature", "extractor", "classifier", "N", "Non-", "maximum", "suppression", "classifier", "2", "Bounding", "box", "regressor", "RPN", "feature", "extractor", "classifier", "1", "Non-", "maximum", "suppression", "Bounding", "box", "regressor", "Foreground/", "background", "classifier", "Single", "RPN", "Cooperating", "RPN's", "Many-shot", "base", "classes", "Few-shot", "novel", "classes", "Region", "Proposal", "Network", "Backbone", "feature", "extractor", "Box", "regressor", "Box", "classifier", "ROI", "pooling", "Box", "regressor", "Box", "classifier", "ROI", "pooling", "Region", "Proposal", "Network", "Backbone", "feature", "extractor", "Phase", "2:", "Novel", "classes", "fine-tuning", "Phase", "1:", "Base", "classes", "training"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 140.64,
+    "x2": 474.24,
+    "y1": 64.32,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Figure3-1.png"
+}, {
+  "caption": "Table 11: When there are many shots, the impact of using CoRPN’s on the conventional split is reduced, likely because missing objects in the RPN stage becomes a less important effect. CoRPN’s perform acceptably for few-shot detection performance on the difficult COCO novel classes task for 5-shot, 10-shot, and 30-shot. *Model re-evaluated using the standard procedure (with base and novel classes joint space) for a fair comparison. ‘–’ denotes that numbers are not reported in the corresponding paper. CoRPN’s consistently outperform the main baseline DeFRCN except for the 30-shot case.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 403.3285217285156,
+    "y2": 475.08489990234375
+  },
+  "figType": "Table",
+  "imageText": ["Other", "baselines", "FsDetView", "Xiao", "&", "Marlet", "(2020)", "ResNet-101", "8.1", "20.1", "4.4", "10.7", "25.6", "6.5", "15.9", "31.7", "15.1", "FSCE", "Sun", "et", "al.", "(2021)", "ResNet-101", "–", "–", "–", "11.9", "–", "10.5", "16.4", "–", "16.2", "CME", "Sun", "et", "al.", "(2021)", "ResNet-101", "–", "–", "–", "15.1", "24.6", "16.4", "16.9", "28.0", "17.8", "SRR-FSD", "Zhu", "et", "al.", "(2021)", "ResNet-101", "–", "–", "–", "11.3", "23.0", "9.8", "14.7", "29.2", "13.5", "Ours", "TFA", "w/", "fc", "+", "CoRPN’s", "ResNet-101", "8.9", "16.9", "8.6", "10.5", "20.2", "9.8", "13.5", "25.0", "12.9", "TFA", "w/", "cos", "+", "CoRPN’s", "ResNet-101", "8.8", "16.4", "8.7", "10.6", "19.9", "10.1", "13.9", "25.1", "13.9", "DeFRCN", "+", "CoRPN’s", "ResNet-101", "14.1", "25.2", "13.6", "16.7", "29.7", "16.8", "20.8", "39.6", "20.9", "Main", "baselines", "TFA", "w/", "fc", "Wang", "et", "al.", "(2020)", "ResNet-101", "8.4", "16.0", "8.4", "10.0", "19.2", "9.2", "13.4", "24.7", "13.2", "TFA", "w/", "cos", "Wang", "et", "al.", "(2020)", "ResNet-101", "8.3", "15.3", "8.0", "10.0", "19.1", "9.3", "13.7", "24.9", "13.4", "DeFRCN", "Qiao", "et", "al.", "(2021)", "ResNet-101", "13.5", "24.7", "13.0", "16.7", "29.6", "16.7", "21.0", "36.7", "21.4", "5-shot", "10-shot", "30-shot", "Method", "Backbone", "AP", "AP50", "AP75", "AP", "AP50", "AP75", "AP", "AP50", "AP75"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 487.2,
+    "y1": 302.4,
+    "y2": 392.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table11-1.png"
+}, {
+  "caption": "Table 10: CoRPN’s not only improve performance on our ARShift split, but also perform comparably with state of the art on more traditional splits: Few-shot detection (AP50) on PASCAL VOC novel classes under three base/novel splits in the generalized few-shot learning setting. CoRPN’s outperform the main baselines TFA and DeFRCN mostly in the very low shots, with comparable performance in the higher shots, regardless of classifier choice. Note that these other baselines address different aspects of few-shot detection, and could be combined with them for further improvements. All models are based on Faster R-CNN with a ResNet-101 backbone, and follow the evaluation procedure in Wang et al. (2020). Results in bold are the better result between ours and the main baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 192.00253295898438,
+    "y2": 285.6768798828125
+  },
+  "figType": "Table",
+  "imageText": ["Other", "baselines", "FRCN+ft-full", "Wang", "et", "al.", "(2020)", "15.2", "20.3", "29.0", "40.1", "45.5", "13.4", "20.6", "28.6", "32.4", "38.8", "19.6", "20.8", "28.7", "42.2", "42.1", "MPSR", "Wu", "et", "al.", "(2020)", "41.7", "42.5", "51.4", "55.2", "61.8", "24.4", "29.3", "39.2", "39.9", "47.8", "35.6", "41.8", "42.3", "48.0", "49.7", "NP-RepMet", "Yang", "et", "al.", "(2020)", "37.8", "40.3", "41.7", "47.3", "49.4", "41.6", "43.0", "43.4", "47.4", "49.1", "33.3", "38.0", "39.8", "41.5", "44.8", "CME", "Li", "et", "al.", "(2021a)", "41.5", "47.5", "50.4", "58.2", "60.9", "27.2", "30.2", "41.4", "42.5", "46.8", "34.3", "39.6", "45.1", "48.3", "51.5", "SRR-FSD", "Zhu", "et", "al.", "(2021)", "47.8", "50.5", "51.3", "55.2", "56.8", "32.5", "35.3", "39.1", "40.8", "43.8", "40.1", "41.5", "44.3", "46.9", "46.4", "Ours", "TFA", "w/", "fc", "+", "CoRPN’s", "40.8", "44.8", "45.7", "53.1", "54.8", "20.4", "29.2", "36.3", "36.5", "41.5", "29.4", "40.4", "44.7", "51.7", "49.9", "TFA", "w/", "cos", "+", "CoRPN’s", "44.4", "38.5", "46.4", "54.1", "55.7", "25.7", "29.5", "37.3", "36.2", "41.3", "35.8", "41.8", "44.6", "51.6", "49.6", "DeFRCN", "+", "CoRPN’s", "44.1", "56.8", "62.2", "66.0", "65.5", "31.8", "41.2", "46.1", "49.9", "53.3", "38.9", "51.3", "54.6", "59.4", "61.5", "Main", "baselines", "TFA", "w/", "fc", "Wang", "et", "al.", "(2020)", "36.8", "29.1", "43.6", "55.7", "57.0", "18.2", "29.0", "33.4", "35.5", "39.0", "27.7", "33.6", "42.5", "48.7", "50.2", "TFA", "w/", "cos", "Wang", "et", "al.", "(2020)", "39.8", "36.1", "44.7", "55.7", "56.0", "23.5", "26.9", "34.1", "35.1", "39.1", "30.8", "34.8", "42.8", "49.5", "49.8", "DeFRCN", "Qiao", "et", "al.", "(2021)", "43.8", "57.5", "61.4", "65.3", "67.0", "31.5", "40.9", "45.6", "50.1", "52.9", "38.2", "50.9", "54.1", "59.2", "61.9", "Novel", "Set", "1", "Novel", "Set", "2", "Novel", "Set", "3", "Method", "shot=1", "2", "3", "5", "10", "shot=1", "2", "3", "5", "10", "shot=1", "2", "3", "5", "10"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 83.03999999999999,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9BXSGPfRhX-Table10-1.png"
+}]

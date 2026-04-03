@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 12: Raw anomaly scores and detected anomalies (after optimal thresholding) among DRAEM (Zavrtanik et al., 2021), RASL (Peng et al., 2012) and PatchCore (Roth et al., 2022): The first row indicates the input images and true anomalous region segmentation masks. The following rows are raw anomaly scores and detected anomalous region masks (after optimal thresholding) by different methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 637.985595703125,
+    "y2": 687.823974609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 402.71999999999997,
+    "y2": 627.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Comparison between the restored backgrounds and detected anomalies (after optimal thresholding) among AnoGAN (Schlegl et al., 2017), RGI and R-RGI: The first row indicates the input images and true anomalous region segmentation masks. The following rows are restored backgrounds and detected anomalous region masks by different methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 343.5105285644531,
+    "y2": 382.38897705078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 108.96,
+    "y2": 332.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure11-1.png"
+}, {
+  "caption": "Figure 6: Case (ii): Restored images by Yeh et al. (2017) (w/ and w/o mask), Pan et al. (2021) (w/ mask), RGI and R-RGI on Stanford cars (Krause et al., 2013) dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 684.6415405273438,
+    "y2": 701.6019897460938
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Case", "(ii):", "random", "missing", "(a)", "Case", "(i):", "block", "missing"],
+  "name": "6",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 193.92,
+    "y2": 671.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Inverting a corrupted test image in Stanford cars dataset (Krause et al., 2013) (i) the GANinversion restored background can significantly deviate from the ground truth; In contrast, the RGI method achieves a robust background restoration under unknown gross corruptions; (ii) due to the GAN approximation gap, the true clean image may not live on the GAN learned image manifold; R-RGI can further fine tune the learned manifold toward the true image manifold.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 237.11550903320312,
+    "y2": 286.95391845703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure1-1.png"
+}, {
+  "caption": "Table 1: Semantic inpainting performance of Yeh et al. (2017) (w/ and w/o mask), Pan et al. (2021) (w/ mask), RGI and R-RGI",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Case", "(i)", "PSNR", "↑", "16.15", "19.27", "17.67", "21.36", "18.72", "SSIM", "↑", "0.405", "0.428", "0.416", "0.587", "0.567", "Case", "(ii)", "PSNR", "↑", "19.26", "19.66", "19.72", "22.30", "22.29", "SSIM", "↑", "0.419", "0.433", "0.420", "0.599", "0.557", "LSUN", "bedroom", "Case", "(ii)", "PSNR", "↑", "17.36", "17.71", "17.52", "21.61", "21.18", "SSIM", "↑", "0.361", "0.382", "0.363", "0.650", "0.588", "Cars", "Case", "(i)", "PSNR", "↑", "16.57", "17.50", "16.89", "20.98", "19.31", "SSIM", "↑", "0.359", "0.377", "0.363", "0.636", "0.618", "Case", "(ii)", "PSNR", "↑", "19.64", "22.63", "21.52", "27.63", "23.73", "SSIM", "↑", "0.440", "0.536", "0.490", "0.766", "0.655", "Datasets", "Cases", "metrics", "methods", "Yeh", "et", "al.", "w/o", "mask", "Yeh", "et", "al.", "w/", "mask", "RGI", "Pan", "et", "al.", "w/", "mask", "R-RGI", "CelebA", "Case", "(i)", "PSNR", "↑", "11.50", "20.82", "19.70", "21.74", "20.05", "SSIM", "↑", "0.358", "0.492", "0.451", "0.570", "0.509"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 117.6,
+    "y2": 285.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Table1-1.png"
+}, {
+  "caption": "Figure 3: Case (i): Restored images by various methods on CelebA (Liu et al., 2015) dataset.",
+  "captionBoundary": {
+    "x1": 120.68699645996094,
+    "x2": 491.3157043457031,
+    "y1": 583.9185791015625,
+    "y2": 589.9210205078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 402.71999999999997,
+    "y2": 573.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Restored images by Yeh et al. (2017) (w/ and w/o mask), Pan et al. (2021) (w/ mask), RGI and R-RGI on LSUN bedroom (Yu et al., 2015) dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 571.8585205078125,
+    "y2": 588.8200073242188
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Case", "(ii):", "random", "missing", "(a)", "Case", "(i):", "block", "missing"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 558.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure7-1.png"
+}, {
+  "caption": "Figure 8: Example defective products and their annotations from the MVTec AD dataset: The blue circle indicates the defects. we can see that the annotation tends to cover extra regions of the real anomaly contour.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 268.3645324707031,
+    "y2": 296.28497314453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 257.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Comparison between the restored backgrounds and detected anomalies on wood product: the first row indicates the input image and reconstructed background by various methods; the second row indicates the defective region segmentation mask annotation from the MVTec AD dataset and the detected anomalous region segmentation mask by various methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 550.3935546875,
+    "y2": 589.2730102539062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 421.91999999999996,
+    "y2": 539.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure9-1.png"
+}, {
+  "caption": "Figure 2: RGI/R-RGI for mask semantic inpainting and unsupervised anomaly detection",
+  "captionBoundary": {
+    "x1": 129.71299743652344,
+    "x2": 482.289306640625,
+    "y1": 458.3355407714844,
+    "y2": 464.3380126953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 236.64,
+    "y2": 447.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure2-1.png"
+}, {
+  "caption": "Figure 10: Generated synthetic defective images.",
+  "captionBoundary": {
+    "x1": 208.23300170898438,
+    "x2": 403.7689514160156,
+    "y1": 551.6265869140625,
+    "y2": 557.6290283203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 316.8,
+    "y2": 540.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Comparison between the restored backgrounds and detected anomalies (after optimal thresholding) among different methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 215.81350708007812,
+    "y2": 232.77496337890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 205.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure4-1.png"
+}, {
+  "caption": "Table 2: Pixel-wise anomaly detection performance on synthetic defect dataset",
+  "captionBoundary": {
+    "x1": 149.16000366210938,
+    "x2": 462.8423767089844,
+    "y1": 256.6864929199219,
+    "y2": 262.68896484375
+  },
+  "figType": "Table",
+  "imageText": ["methods", "metrics", "Defects", "crack", "irregular", "scratch", "mixed", "large", "RASL", "Dice", "↑", "0.293", "(0.101)", "0.246", "(0.181)", "0.280", "(0.167)", "0.355", "(0.100)", "AUROC", "↑", "0.868", "(0.044)", "0.817", "(0.061)", "0.834", "(0.079)", "0.784", "(0.066)", "PatchCore", "Dice", "↑", "0.277", "(0.157)", "0.448", "(0.167)", "0.350", "(0.103)", "0.683", "(0.138)", "AUROC", "↑", "0.936", "(0.040)", "0.973", "(0.036)", "0.966", "(0.033)", "0.972", "(0.029)", "AnoGAN", "Dice", "↑", "0.457", "(0.117)", "0.422", "(0.208)", "0.436", "(0.212)", "0.540", "(0.131)", "AUROC", "↑", "0.954", "(0.021)", "0.956", "(0.030)", "0.947", "(0.030)", "0.949", "(0.023)", "RGI", "Dice", "↑", "0.458", "(0.119)", "0.420", "(0.194)", "0.430", "(0.192)", "0.617", "(0.110)", "AUROC", "↑", "0.951", "(0.021)", "0.952", "(0.027)", "0.944", "(0.029)", "0.949", "(0.022)", "DRAEM", "Dice", "↑", "0.473", "(0.212)", "0.697", "(0.152)", "0.639", "(0.169)", "0.825", "(0.108)", "AUROC", "↑", "0.951", "(0.035)", "0.988", "(0.013)", "0.982", "(0.017)", "0.989", "(0.195)", "R-RGI", "Dice", "↑", "0.809", "(0.109)", "0.758", "(0.135)", "0.745", "(0.167)", "0.810", "(0.064)", "AUROC", "↑", "0.977", "(0.037)", "0.988(0.015)", "0.980", "(0.020)", "0.968", "(0.015)"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 280.8,
+    "y2": 436.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Table2-1.png"
+}, {
+  "caption": "Figure 5: RMSE of image restoration by RGI and GAN-inversion with l1, l2 loss.",
+  "captionBoundary": {
+    "x1": 143.43099975585938,
+    "x2": 468.5694274902344,
+    "y1": 255.87350463867188,
+    "y2": 263.3709716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 245.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1UbNwQC89a-Figure5-1.png"
+}]

@@ -1,0 +1,421 @@
+[{
+  "caption": "Figure 2: Speedup factor tb/tn wrt. maximum accuracy achieved on average with SGD-Scan, relaxed with varying tolerance ϵ (from 0 to 0.01). Results of ResNet50 on CIFAR10 (left) and CIFAR100 (right) for baselines, competitors and our approach with γ = 0.5 and variable E.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0005187988281,
+    "y1": 210.49551391601562,
+    "y2": 238.41595458984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 469.44,
+    "y1": 84.0,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Class weights implicitly learned by LeNet, PyramidNet110, GoogleNet, ResNet18, ResNet34, ResNet50 and ResNet101 on CIFAR10 using our method for 4 different initializations (error bars) and class weights induced from EL2N scores before and after pruning 30% of the samples with lowest scores. Captions on top give average Spearman rank correlation ρ of sample weights over the 4 initializations for the architectures, whereas those on bottom give the number of parameters and the epoch E.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0048522949219,
+    "y1": 348.81951904296875,
+    "y2": 409.616943359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 258.71999999999997,
+    "y2": 335.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure3-1.png"
+}, {
+  "caption": "Figure 11: Class weights implicitly learned by LeNet, PyramidNet110, GoogleNet, ResNet18, ResNet34, ResNet50 and ResNet101 on CIFAR10 using our method for 4 different initializations (error bars) and class weights induced from EL2N scores before and after pruning 30% of the samples with lowest scores. Captions on top give average Spearman rank correlation ρ of sample weights over the 4 initializations for the architectures, whereas those on bottom give the amount of parameters and the epoch E.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0048522949219,
+    "y1": 335.6795349121094,
+    "y2": 396.4759521484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 245.76,
+    "y2": 322.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Sensitivity of γ when using our method with ResNet50 on CIFAR10 with E = 10 (left) and CIFAR100 with E = 1 (right). The blue lines correspond to the results shown in the main paper.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0024719238281,
+    "y1": 211.72555541992188,
+    "y2": 228.68701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Test accuracy of all (solid lines), augmented (aug, dashed lines) and non-augmented classes (others, dotted lines) of ResNet50 on CIFAR100 using standard training (SGD-Scan) and our method, when the 20% of the classes are randomly selected and augmented 5 (left) and 20 (right) times.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 211.71853637695312,
+    "y2": 250.59796142578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure4-1.png"
+}, {
+  "caption": "Figure 8: Sensitivity of E when using our method with ResNet50 on CIFAR10 (left) and CIFAR100 (right) with γ = 0.5. The blue lines correspond to the results shown in the main paper.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.001220703125,
+    "y1": 211.72555541992188,
+    "y2": 228.68701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Class weights implicitly learned at different epochs by ResNet50 on CIFAR10 using our method for 4 different initializations (error bars). Captions on top give the epoch at which weights are computed and the Spearman rank correlation ρ between the mean sample weights in a chart and the chart on its right (e.g. ρ between mean E=0 and E=1 weights on the first chart, E=1 and E=2 on the second, and so on).",
+  "captionBoundary": {
+    "x1": 107.9999771118164,
+    "x2": 504.00323486328125,
+    "y1": 325.1775207519531,
+    "y2": 375.01495361328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 246.72,
+    "y2": 311.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure9-1.png"
+}, {
+  "caption": "Figure 15: Class weights implicitly learned by ResNet50 on CIFAR100 where 20% of the classes are randomly selected once and augmented 5 times (top) or 20 times (bottom). Error bars show the standard error over 4 different initializations. Caption on top give average Spearman rank correlation ρ of per sample weights over the 4 initializations. Non-augmented classes are shown as other.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 314.08551025390625,
+    "y2": 352.9639587402344
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 85.92,
+    "y2": 297.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure15-1.png"
+}, {
+  "caption": "Figure 16: Test accuracy (left) and speedup in terms of iterations (right) of ResNet50 on ImageNet1K using standard training (SGD-Scan) and our method.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 508.0834655761719,
+    "y2": 525.044921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 469.44,
+    "y1": 379.68,
+    "y2": 494.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure16-1.png"
+}, {
+  "caption": "Figure 7: Different values of γ in Focal Loss for CIFAR10 (left) and CIFAR100 (right). Note that γ = 0.5 leads to unstable results, therefore it is not reported.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9960632324219,
+    "y1": 211.72555541992188,
+    "y2": 228.68701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Test accuracy of ResNet50 on CIFAR10 (left) and CIFAR100 (right) using the baseline approach where classes are balanced (SGD-Scan), our sample importance approach with variable E and γ = 0.5, and our class-importance sampled method (SGD-SCI).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 211.72555541992188,
+    "y2": 239.64599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Test accuracy of ResNet50 on CIFAR10 (left) and CIFAR100 (right) using the baseline approaches and our method with variable E and γ = 0.5 in presence of multiple augmentations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 388.4935302734375,
+    "y2": 405.45501708984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 260.64,
+    "y2": 375.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure6-1.png"
+}, {
+  "caption": "Table 2: Maximum mean test accuracy achieved by all methods and respective standard deviation when using multiple augmentations. For the learning curves refer to Figure 6.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.0032958984375,
+    "y1": 655.6735229492188,
+    "y2": 672.635009765625
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR10", "95.7±", "0.2", "95.8±", "0.2", "95.4±", "0.2", "95.8±", "0.1", "95.7±", "0.1", "95.7±", "0.3", "96.2±", "0.2", "CIFAR100", "79.9±", "0.5", "79.0±", "0.5", "79.1±", "0.5", "79.9±", "0.8", "78.8±", "1.2", "79.2±", "0.2", "80.1±", "0.7", "Data", "SGD-Scan", "EL2N", "Focal", "Loss", "SGD-SPV", "SGD-Rank", "SGD-Prop", "Ours"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 685.4399999999999,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Table2-1.png"
+}, {
+  "caption": "Figure 17: (Left) Test accuracy of all (solid lines), augmented (aug, dashed lines) and nonaugmented classes (others, dotted lines) of ResNet50 on ImageNet-1K using standard training (SGD-Scan) and our method, when 20% of the classes are randomly selected and augmented 20 times. (Right) Speedup in terms of iterations of SGD-Scan and our method with respect to the maximum accuracy achieved by SGD-Scan.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0035400390625,
+    "y1": 211.71853637695312,
+    "y2": 261.55694580078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 469.44,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure17-1.png"
+}, {
+  "caption": "Figure 14: Class weights implicitly learned by ResNet18 and ResNet50 using our method for 4 different initializations (error bars) on CIFAR9, a subset of CIFAR10 without class dog. As for Figure 3, captions report average Spearman rank correlation ρ of sample weights over the initializations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 204.81552124023438,
+    "y2": 232.7349853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 170.88,
+    "x2": 441.12,
+    "y1": 84.96,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure14-1.png"
+}, {
+  "caption": "Figure 19: Sample with the highest weight per class (columns) for 4 different initializations (rows) of ResNet50 on CIFAR10 with E = 10.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 582.757568359375,
+    "y2": 599.718994140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "19",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 500.15999999999997,
+    "y1": 410.88,
+    "y2": 564.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure19-1.png"
+}, {
+  "caption": "Figure 18: Sample with the lowest weight per class (columns) for 4 different initializations (rows) of ResNet50 on CIFAR10 with E = 10.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 385.1145324707031,
+    "y2": 402.07598876953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 500.15999999999997,
+    "y1": 212.64,
+    "y2": 367.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure18-1.png"
+}, {
+  "caption": "Figure 1: Test accuracy of ResNet50 on CIFAR10 (left) and CIFAR100 (right) of baselines, competitors and our approach with γ = 0.5 and variable E. Solid lines indicate the mean, shaded regions 16th and 84th percentiles of 4 independent runs (i.e. different random seeds). The horizontal red dashed line is average maximum accuracy by standard training (SGD-Scan), the vertical dashed lines the first iteration in which a method on average reaches that maximum accuracy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00482177734375,
+    "y1": 211.73049926757812,
+    "y2": 261.56890869140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure1-1.png"
+}, {
+  "caption": "Table 1: Maximum mean test accuracy achieved by all methods and respective standard deviation.",
+  "captionBoundary": {
+    "x1": 110.530029296875,
+    "x2": 501.472412109375,
+    "y1": 281.2414245605469,
+    "y2": 287.243896484375
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR10", "95.1±", "0.1", "95.2±", "0.1", "94.8±", "0.1", "95.0±", "0.1", "95.1±", "0.1", "95.1±", "0.3", "95.2±", "0.2", "CIFAR100", "77.8±", "0.2", "77.8±", "0.6", "77.5±", "0.6", "77.9±", "0.2", "77.4±", "0.4", "76.3±", "0.9", "78.1±", "0.4", "Data", "SGD-Scan", "EL2N", "Focal", "Loss", "SGD-SPV", "SGD-Rank", "SGD-Prop", "Ours"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 300.0,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Table1-1.png"
+}, {
+  "caption": "Figure 12: Test accuracy of ResNet50 on CIFAR10 using our method with E = 10, but using other weights instead of computing them, as explained in the following. In both Figures, SGD-Scan and Ours E=10 are respectively the uniform sampling and our method with E = 10. (Left) ResNet18 E = 5 and ResNet18 E = 10 respectively use the weights computed by ResNet18 with the same initialization at the specified epochs, LeNet uses weights computed by LeNet at epoch E = 5. (Right) Mean uses the average sample weights over the 4 runs computed with ResNet50, 2023 uses sample weights computed with ResNet50 when using seed=2023 (seed used for the last run).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 211.73049926757812,
+    "y2": 283.48590087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 84.0,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Sample weights wi over four different initializations for four different models trained on CIFAR10. Samples are sorted by their mean assigned weight w̄i. The x-axis is the resulting rank r ∈ {1, ...,M} (M = 50k for CIFAR10) from lowest w̄ to highest w̄. The dashed red line indicates w̄. In case plotted points overlap, color changes according to the number of overlapping points.",
+  "captionBoundary": {
+    "x1": 107.99994659423828,
+    "x2": 504.00469970703125,
+    "y1": 412.4475402832031,
+    "y2": 451.32696533203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 300.96,
+    "y2": 391.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_D4aZrqLDFtE-Figure13-1.png"
+}]

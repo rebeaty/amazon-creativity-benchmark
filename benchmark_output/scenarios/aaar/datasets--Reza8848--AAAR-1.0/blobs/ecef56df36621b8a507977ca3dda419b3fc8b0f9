@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: Video retrieval results on UCF101 and HMDB51. All the models are pre-trained on UCF101. Larger values are better. See §4.2 for details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010986328125,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["MemDPC", "R18", "20.2", "40.4", "52.4", "64.7", "7.7", "25.7", "40.6", "57.5", "MLRep", "R3D-18", "39.6", "57.6", "69.2", "78.0", "18.8", "39.2", "51.0", "63.7", "Ours", "R3D-18", "48.5", "58.6", "65.3", "72.1", "17.6", "35.7", "51.4", "65.5", "R(2+1)D", "47.6", "58.8", "66.2", "74.6", "19.0", "39.7", "54.2", "82.8", "Contrastive", "video", "SSL", "methods", "Non-contrastive", "video", "SSL", "methods", "VCOP", "R(2+1)D", "10.7", "25.9", "35.4", "47.3", "5.7", "19.5", "30.7", "45.8", "VCP", "R(2+1)D", "19.9", "33.7", "42.0", "50.5", "6.7", "21.3", "32.7", "49.2", "PRP", "R(2+1)D", "20.3", "34.0", "41.9", "51.7", "8.2", "25.3", "36.2", "51.0", "Pace", "R(2+1)D", "25.6", "42.7", "51.3", "61.3", "12.9", "31.6", "43.2", "58.0", "STS", "R(2+1)D", "38.1", "58.9", "68.1", "77.0", "16.4", "36.9", "50.5", "65.4", "VCOP", "R3D-18", "14.1", "30.3", "40.0", "51.1", "7.6", "22.9", "34.4", "48.8", "VCP", "R3D-18", "18.6", "33.6", "42.5", "53.3", "7.6", "24.4", "36.3", "53.6", "PRP", "R3D-18", "22.8", "38.5", "46.7", "55.2", "8.2", "25.8", "38.5", "53.3", "Pace", "R3D-18", "23.8", "38.1", "46.4", "56.6", "9.6", "26.9", "41.1", "56.1", "STS", "R3D-18", "38.3", "59.9", "68.9", "77.2", "18.0", "37.2", "50.7", "64.8", "TransRank", "R3D-18", "46.5", "63.7", "72.8", "-", "19.4", "45.4", "59.1", "-", "Method", "Backbone", "UCF101", "HMDB51", "Top-1", "Top-5", "Top-10", "Top-20", "Top-1", "Top-5", "Top-10", "Top-20"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 505.44,
+    "y1": 111.83999999999999,
+    "y2": 296.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Table1-1.png"
+}, {
+  "caption": "Figure 1: Overall comparison. (a) Previous video SSL methods design pretext tasks based on the inherent properties of videos, while (b) our method explores the presence of saccades as an indicator of semantic change to mimic the role of self-awareness in human perception.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0035400390625,
+    "y1": 228.93850708007812,
+    "y2": 256.85797119140625
+  },
+  "figType": "Figure",
+  "imageText": ["Video(a)", "Foreground", "&", "Background", "Tracking", "Spatiotemporal", "puzzles", "Spatiotemporal", "statistics", "Predicting", "future", "frames", "Motion", "Transformations", "Spatiotemporal", "coherence", "Order", "Speed", "(b)", "Semantic", "change", "Saccade", " ", "t  "],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 210.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Top-1 retrieval accuracy comparison before and after reorganization on UCF101. The reorganization process can improve the Top-1 retrieval performance by 57.4% out of all the classes, leading to comparative performance of 22.8% out of all. See §4 for more discussions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0005798339844,
+    "y1": 197.47152709960938,
+    "y2": 225.3919677734375
+  },
+  "figType": "Figure",
+  "imageText": ["iff", ".", "cc", ".", "D", "al", "A", "tri", "ev", "1", "Re", "To", "p-", "0.3", "0.2", "0.1", "0.0", "0.1", "0.2", "Ho", "rs", "e", "Bo", "xi", "ng", "Pu", "nc", "hi", "ng", "Ba", "g", "Sw", "in", "g", "Te", "nn", "isS", "wi", "ng", "Ta", "iC", "hi", "Ba", "se", "ba", "llP", "itc", "h", "Ba", "sk", "et", "ba", "ll", "Pl", "ay", "in", "gF", "lu", "te", "Sk", "at", "eB", "oa", "rd", "in", "g", "Hi", "gh", "Ju", "m", "p", "Th", "ro", "wD", "isc", "us", "Ja", "ve", "lin", "Th", "ro", "w", "Ha", "nd", "st", "an", "dW", "al", "ki", "ng", "W", "al", "ki", "ng", "W", "ith", "Do", "g", "Fr", "isb", "ee", "Ca", "tc", "h", "Pa", "ra", "lle", "lB", "ar", "s", "Bo", "wl", "in", "g", "Ap", "pl", "yE", "ye", "M", "ak", "eu", "p", "Sh", "ot", "pu", "t", "Hu", "la", "Ho", "op", "Ice", "Da", "nc", "in", "g", "Ju", "m", "pi", "ng", "Ja", "ck", "Ju", "m", "pR", "op", "e", "Lu", "ng", "es", "Ra", "fti", "ng", "Sh", "av", "in", "gB", "ea", "rd", "Pl", "ay", "in", "gD", "af", "Pl", "ay", "in", "gD", "ho", "l", "Su", "rfi", "ng", "So", "cc", "er", "Pe", "na", "lty", "Pl", "ay", "in", "gT", "ab", "la", "So", "cc", "er", "Ju", "gg", "lin", "g", "M", "ilit", "ar", "yP", "ar", "ad", "e", "M", "ix", "in", "g", "Lo", "ng", "Ju", "m", "p", "Ba", "sk", "et", "ba", "llD", "un", "k", "Bo", "dy", "W", "ei", "gh", "tS", "qu", "at", "s", "Dr", "um", "m", "in", "g", "Ar", "ch", "er", "y", "Bi", "llia", "rd", "s", "Fr", "on", "tC", "ra", "wl", "Cr", "ick", "et", "Sh", "ot", "Ho", "rs", "eR", "id", "in", "g", "Ro", "ck", "Cl", "im", "bi", "ng", "In", "do", "or", "Bo", "xi", "ng", "Sp", "ee", "dB", "ag", "Ba", "by", "Cr", "aw", "lin", "g", "Vo", "lle", "yb", "al", "lS", "pi", "ki", "ng", "Nu", "nc", "hu", "ck", "s", "Su", "m", "oW", "re", "st", "lin", "g", "Ha", "irc", "ut", "Bl", "ow", "in", "gC", "an", "dl", "es", "Cu", "tti", "ng", "In", "Ki", "tc", "he", "n", "Tr", "am", "po", "lin", "eJ", "um", "pi", "ng", "Sk", "yD", "iv", "in", "g", "Ba", "la", "nc", "eB", "ea", "m", "Yo", "Yo", "Sk", "ije", "t", "Pl", "ay", "in", "gP", "ia", "no", "Pu", "llU", "ps", "Ha", "nd", "st", "an", "dP", "us", "hu", "ps", "Pl", "ay", "in", "gG", "ui", "ta", "r", "He", "ad", "M", "as", "sa", "ge", "Go", "lfS", "wi", "ng", "Cl", "iff", "Di", "vi", "ng", "Ro", "wi", "ng", "Ho", "rs", "eR", "ac", "e", "Fe", "nc", "in", "g", "St", "illR", "in", "gs", "Pl", "ay", "in", "gV", "io", "lin", "Fie", "ld", "Ho", "ck", "ey", "Pe", "na", "lty", "Pu", "nc", "h", "Ta", "bl", "eT", "en", "ni", "sS", "ho", "t", "Cr", "ick", "et", "Bo", "wl", "in", "g", "Br", "us", "hi", "ng", "Te", "et", "h", "M", "op", "pi", "ng", "Fl", "oo", "r", "Ro", "pe", "Cl", "im", "bi", "ng", "W", "rit", "in", "gO", "nB", "oa", "rd", "Ha", "m", "m", "er", "Th", "ro", "w", "Cl", "ea", "nA", "nd", "Je", "rk", "Ha", "m", "m", "er", "in", "g", "Pi", "zz", "aT", "os", "sin", "g", "Be", "nc", "hP", "re", "ss", "Bi", "ki", "ng", "Di", "vi", "ng", "Fl", "oo", "rG", "ym", "na", "st", "ics", "W", "al", "lP", "us", "hu", "ps", "Po", "le", "Va", "ul", "t", "Pu", "sh", "Up", "s", "Un", "ev", "en", "Ba", "rs", "Kn", "itt", "in", "g", "Bl", "ow", "Dr", "yH", "ai", "r", "Ba", "nd", "M", "ar", "ch", "in", "g", "Sa", "lsa", "Sp", "in", "Ka", "ya", "ki", "ng", "Sk", "iin", "g", "Br", "ea", "st", "St", "ro", "ke", "Ty", "pi", "ng", "Pl", "ay", "in", "gC", "el", "lo", "Ju", "gg", "lin", "gB", "al", "ls", "Ap", "pl", "yL", "ip", "st", "ick", "m", "el", "Po", "m", "ita", "r", "in", "gS", "Pl", "ay"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 179.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Qualitative results for video retrieval before and after reorganization. The first two examples are improved by reorganization, and the third example is a failure case, where the retrieval result after the reorganization is more similar in appearance while different in semantics. See §4.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00433349609375,
+    "y1": 216.07650756835938,
+    "y2": 243.9969482421875
+  },
+  "figType": "Figure",
+  "imageText": ["PommelHorse", "ParallelBarsPommelHorse", "PlayingCello", "PlayingSitar", "PlayingCello", "Query", "Top-1", "NN", "Before", "Reorg.", "Top-1", "NN", "After", "Reorg.", "JugglingBalls", "BoxingPunchingBag", "JugglingBalls"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Figure5-1.png"
+}, {
+  "caption": "Table 2: Action recognition results on UCF101 and HMDB51. The models are pre-trained on UCF101 with RGB only. ∗ means learning without back-propagation. See §4.2 for details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99798583984375,
+    "y1": 273.5984802246094,
+    "y2": 290.5599365234375
+  },
+  "figType": "Table",
+  "imageText": ["Method", "Backbone", "Input", "Size", "Frozen", "UCF101", "HMDB51", "CLAPP∗", "(Illing", "et", "al.,", "2021)", "VGG-5", "-", "3", "41.6", "-", "Object", "Patch", "(Hadsell", "et", "al.,", "2006)", "AlexNet", "-", "3", "42.7", "15.6", "Seq", "Ver.", "(Misra", "et", "al.,", "2016)", "CaffeNet", "-", "3", "50.9", "19.8", "OPN", "(Lee", "et", "al.,", "2017)", "CaffeNet", "1×802", "3", "56.3", "22.1", "Geometry", "(Gan", "et", "al.,", "2018)", "FlowNet", "-", "3", "54.1", "22.6", "Bi-Geometry", "(Gan", "et", "al.,", "2018)", "FlowNet", "-", "3", "55.1", "23.3", "Ours", "R3D-18", "16×1122", "3", "59.2", "32.0", "VCOP", "(Xu", "et", "al.,", "2019)", "R3D-18", "16×1122", "7", "64.9", "29.5", "PRP", "(Yao", "et", "al.,", "2020)", "R3D-18", "16×1122", "7", "66.5", "29.7", "STS", "(Wang", "et", "al.,", "2021a)", "R3D-18", "16×1122", "7", "70.4", "34.9", "VCP", "(Luo", "et", "al.,", "2020)", "R3D-18", "16×1122", "7", "66.0", "31.5", "Pace", "(Wang", "et", "al.,", "2020)", "R3D-18", "16×1122", "7", "77.1", "36.6", "MLRep", "(Qian", "et", "al.,", "2021a)", "R3D-18", "16×1122", "7", "76.2", "41.1", "Ours", "R3D-18", "16×1122", "7", "76.6", "43.1", "VCOP", "(Xu", "et", "al.,", "2019)", "R(2+1)D", "16×1122", "7", "72.4", "30.9", "PRP", "(Yao", "et", "al.,", "2020)", "R(2+1)D", "16×1122", "7", "72.1", "35.0", "STS", "Wang", "et", "al.", "(2021a)", "R(2+1)D", "16×1122", "7", "77.8", "40.7", "VCP", "(Luo", "et", "al.,", "2020)", "R(2+1)D", "16×1122", "7", "66.3", "32.2", "Pace", "(Wang", "et", "al.,", "2020)", "R(2+1)D", "16×1122", "7", "75.9", "35.9", "Ours", "R(2+1)D", "16×1122", "7", "78.1", "44.8"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 495.35999999999996,
+    "y1": 307.68,
+    "y2": 534.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Table2-1.png"
+}, {
+  "caption": "Figure 2: Framework of the proposed bio-inspired video SSL method. Given a video xi, the positive and negative pairs for semantic-change-aware contrastive learning can be constructed by exerting the same or different fixation masks m on different clips of the video (§3.1), respectively. Further, the semantic consistency is modeled by minimizing the prediction error between the predicted state (ct∗+∆t",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0046691894531,
+    "y1": 249.63955688476562,
+    "y2": 300.698974609375
+  },
+  "figType": "Figure",
+  "imageText": ["Stop", "gradient", "Prototypes/Centroids ", "Video", "clip", "features", "Pull", "Push", "Semantic", "Consistency", "Learning", "ReorganizationSemantic", "Change", "Learning", "Predictor", "Backbone", "Backbone", " ", "gh", "t ", "w", "ei", "ar", "e", " ", " ", "Sh", "Fixation", "mask", "Input", "(shifted)", "Input", "(current)", "Fixation", "Fixation", "Saccade"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 83.03999999999999,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Figure2-1.png"
+}, {
+  "caption": "Table 4: Ablation study on reorganization parameters assessed by Top-1 retrieval accuracy on UCF101 split 1. Here, R is #cluster results, and Q(r) is #clusters in the r-th result. All the baselines are pre-trained for 100 epochs. See §4.3.",
+  "captionBoundary": {
+    "x1": 302.0419921875,
+    "x2": 504.0042419433594,
+    "y1": 83.53055572509766,
+    "y2": 134.40899658203125
+  },
+  "figType": "Table",
+  "imageText": ["No.", "R", "Q(r)", "Top-1", "No.", "R", "Q(r)", "Top-1", "1", "0", "40.8", "7", "3", "500", "1000", "1500", "41.7", "2", "1", "500", "41.5", "8", "3", "1000", "1000", "1000", "42.2", "3", "1", "1000", "42.1", "9", "3", "1500", "1500", "1500", "42.3", "4", "1", "1500", "42.0", "10", "3", "1000", "1500", "2000", "41.8", "5", "1", "2000", "41.9", "6", "1", "2500", "41.3"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 504.0,
+    "y1": 151.68,
+    "y2": 227.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Table4-1.png"
+}, {
+  "caption": "Table 3: Ablation study on framework design. We report Top-1 video retrieval results on UCF101 split 1. Here, N is #training samples and Np is #fixation locations considered. See §4.3 for details.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 278.28143310546875,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["No.", "Saccade", "Pred.", "Err.", "Reorg.", "Mem.", "Size", "Top-1", "1", "N", "39.4", "2", "N", "∗Np", "42.5", "3", "3", "N", "∗Np", "44.2", "4", "3", "3", "N", "∗Np", "45.0", "5", "3", "3", "N", "∗Np", "46.5", "6", "3", "3", "3", "N", "∗Np", "48.5"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 279.36,
+    "y1": 150.72,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Table3-1.png"
+}, {
+  "caption": "Figure 3: Method details. (a) Exemplar fixation masks for Np = 5, which cover the major region in the visual field. See §3.1) for more details. (b) Prediction module introduced in §3.2), which is designed as a variant of the self-attention module to capture the spatiotemporal correlations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0020446777344,
+    "y1": 211.81253051757812,
+    "y2": 239.73297119140625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "value transform", " ", " ", " ", "  ", "attention", "weight", "computation"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 501.12,
+    "y1": 84.96,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PQXP4WZNcM-Figure3-1.png"
+}]

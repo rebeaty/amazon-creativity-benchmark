@@ -24,5 +24,6 @@ class GenericLLMJudgeMetric(Metric):
         eval_cache_path: str,
     ) -> List[Stat]:
         annotations = request_state.annotations or {}
-        score = float(annotations.get(self.metric_name, 0))
+        judge_annotations = annotations.get("generic_llm_judge", {})
+        score = float(judge_annotations.get(self.metric_name, 0))
         return [Stat(MetricName(self.metric_name)).add(score)]

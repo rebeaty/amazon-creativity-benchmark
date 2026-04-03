@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 2: Distractor Features. Removing distractor features dramatically increases the performance of the policy learned through preference-learning. Fig. 2a compares performance with distractors present in the learned reward with performance without distractors present in the learned reward across two dataset sizes. Fig. 2b is a sensitivity analysis on the number of distractor features done on the M dataset size case from Fig. 2a. In Fig. 2c, we see that distractor features result in a much larger distribution shift (as measured by the KL divergence between state-action pair distributions at reward learning and RL).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 190.66452026367188,
+    "y2": 262.4208984375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "KL", "Divergence", "M", "53.731", "6.762", "L", "46.032", "7.366", "DATASET", "DISTRACTORS", "SIZE", "WITH", "WITHOUT", "(a)", "RL", "Performance", "(b)", "Removing", "distractors", "With", "distractors", "Without", "distractors", "ar", "d", "R", "ew", "0", "−20", "−40", "−60", "M", "L"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 507.35999999999996,
+    "y1": 80.64,
+    "y2": 177.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Saliency Maps: Distractor Features. Gradient saliency maps, when paired with a measure of ’feature spread’, illuminate the effect of small, spurious weights on distractor features (specifically the ’vel 1’ feature) providing ’bonus’ points for the reward.",
+  "captionBoundary": {
+    "x1": 286.198974609375,
+    "x2": 504.0012512207031,
+    "y1": 663.20654296875,
+    "y2": 713.0449829101562
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Feature", "Ranges", "-", "With", "distractors", "(a)", "Gradients", "-", "With", "distractors"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 285.59999999999997,
+    "x2": 504.0,
+    "y1": 465.59999999999997,
+    "y2": 639.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure3-1.png"
+}, {
+  "caption": "Figure 8: Saliency Maps: Without Distractor Features.",
+  "captionBoundary": {
+    "x1": 190.73300170898438,
+    "x2": 421.2673034667969,
+    "y1": 224.79049682617188,
+    "y2": 230.79296875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Gradients", "-", "W/out", "distractors", "(b)", "Feature", "Ranges", "-", "W/out", "distractors"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 80.64,
+    "y2": 211.67999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Model Capacity. Increasing model capacity increases performance when we use the large dataset ( ( 324 2 ) = 52326 preferences), to a certain extent. However, increasing capacity decreases performance on the small dataset ( ( 40 2 ) = 780 preferences).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9969787597656,
+    "y1": 570.9805908203125,
+    "y2": 605.884033203125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Feeding,", "small", "dataset", "With", "distractors", "d", "w", "ar", "e", "re", "at", "iv", "m", "ul", "n", "cu", "M", "ea", "0", "−50", "−100", "−150", "−200", "−250", "128x64", "256x256x256", "(c)", "Reacher,", "small", "dataset", "With", "distractors", "d", "w", "ar", "e", "re", "at", "iv", "m", "ul", "n", "cu", "M", "ea", "0", "−5", "−10", "−15", "−20", "−25", "128x64", "256x256x256", "(b)", "Feeding,", "large", "dataset", "With", "distractors", "es", "s", "su", "cc", "Ta", "sk", "1.0", "0.8", "0.6", "0.4", "0.2", "128x64", "256x256x256", "256x256x256x256", "0.0", "(a)", "Reacher,", "large", "dataset", "With", "distractors", "es", "s", "su", "cc", "Ta", "sk", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "128x64", "256x256x256", "256x256x256x256", "0.0"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 501.59999999999997,
+    "y1": 248.64,
+    "y2": 558.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure9-1.png"
+}, {
+  "caption": "Table 2: EPIC Distances, Noise in Stated Preferences. Causally confused rewards (as a result of NOISY data) appear ’closer’ to the ground truth reward than the proper learned rewards (with PERFECT data) on the reward learning distribution (RewL), but further on the RL distribution. EPIC distances are computed on the rewards learned with distractors in the Feeding environment in Fig. 4b and averaged over three seeds.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["GROUND", "TRUTH", "0.136", "/", "0.164", "0.165", "/", "0.130", "REWL", "/", "RL", "NOISY", "PERFECT"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 202.56,
+    "x2": 407.03999999999996,
+    "y1": 156.96,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table2-1.png"
+}, {
+  "caption": "Figure 7: Distractor Features.",
+  "captionBoundary": {
+    "x1": 243.66400146484375,
+    "x2": 368.3357238769531,
+    "y1": 559.0245361328125,
+    "y2": 565.0269775390625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Itch", "Scratching,", "Success", "(d)", "Reacher,", "Success", "(a)", "Feeding,", "Reward", "(b)", "Feeding,", "Success"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 242.88,
+    "y2": 546.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Noise in Stated Preferences. Noise in the stated preferences result in policies that perform worse than those trained from perfect preferences. Notably, however, increasing the amount of data worsens the performance. In addition, the presence of distractor features has a compounding effect on the error from noisy preferences.",
+  "captionBoundary": {
+    "x1": 266.39801025390625,
+    "x2": 504.00299072265625,
+    "y1": 349.6465148925781,
+    "y2": 410.44293212890625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Feeding,", "Distractors", "Perfect", "prefs", "Noisy", "prefs", "es", "s", "su", "cc", "Ta", "sk", "1.0", "0.5", "With", "Without0.0", "(a)", "Reacher,", "Data", "Size", "Perfect", "prefs", "Noisy", "prefs", "es", "s", "su", "cc", "Ta", "sk", "1.0", "0.5", "M", "L0.0"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 268.8,
+    "x2": 502.08,
+    "y1": 237.6,
+    "y2": 336.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Effects of partial state observability. Minimizing spoon-mouth distance without observability on food particles leads to spilling food (left). Adding observation features to make the true reward fully observable results in high performance, whereas using the default environment features (which make the ground truth reward partially observable) results in low performance.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 175.48654174804688,
+    "y2": 214.365966796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 459.35999999999996,
+    "y1": 82.56,
+    "y2": 164.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure5-1.png"
+}, {
+  "caption": "Table 3: KL Divergence: Partial Observability. The reward with partial observability on causal features induces a greater distribution shift than the reward with full observability.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9980773925781,
+    "y1": 594.7431640625,
+    "y2": 633.6226196289062
+  },
+  "figType": "Table",
+  "imageText": ["FEEDING", "4.732", "45.731", "FULL", "PARTIAL"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 339.84,
+    "x2": 468.47999999999996,
+    "y1": 651.36,
+    "y2": 683.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table3-1.png"
+}, {
+  "caption": "Table 1: Empirical evidence of causal confusion. We compare policies optimized with a reward learned from preferences (PREF) against policies optimized with the true reward (GT). State features on which preferences are based are fully-observable in all three tasks. S, M, and L correspond to training dataset sizes of 780, 7140, and 52326 unique pairwise preferences, respectively. Both PREF and GT are optimized with 1M RL iterations and averaged over 3 seeds. Despite high pairwise classification accuracy, the policy performance achieved by PREF under the true reward is very low compared with GT, irrespective of data size. However, the reward learned from preferences consistently prefers PREF over GT. This, combined with the low success rates of PREF compared to GT, suggests that preference-based reward learning fails to learn a good reward, even as the amount of data increases, for all of these tasks.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 83.53055572509766,
+    "y2": 188.16290283203125
+  },
+  "figType": "Table",
+  "imageText": ["REACHER", "(S)", "0.955", "0.913", "0.939", "-1.097", "/", "-6.002", "-13.331", "/", "-5.560", "0.040", "/", "0.827", "REACHER", "(M)", "0.957", "0.949", "0.962", "-12.002", "/", "-14.936", "-11.890", "/", "-5.560", "0.053", "/", "0.827", "REACHER", "(L)", "0.954", "0.956", "0.966", "44.988", "/", "3.395", "-42.716", "/", "-5.560", "0.100", "/", "0.827", "DOMAIN", "TRAIN", "VAL", "TEST", "LEARNED", "TRUE", "SUCCESS", "(PREF/GT)", "(PREF/GT)", "(PREF/GT)", "PREF.", "LEARNING", "ACC.", "RL", "POLICY", "PERFORMANCE"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 515.04,
+    "y1": 212.64,
+    "y2": 284.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table1-1.png"
+}, {
+  "caption": "Figure 12: Saliency Maps, Partial Observability.",
+  "captionBoundary": {
+    "x1": 204.77101135253906,
+    "x2": 407.2303161621094,
+    "y1": 327.3554992675781,
+    "y2": 333.35797119140625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Feature", "Standard", "Deviations", "-", "PART", "(d)", "Feature", "Standard", "Deviations", "-", "FULL", "(a)", "Gradients", "-", "PART", "(b)", "Gradients", "-", "FULL"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 84.96,
+    "y2": 313.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure12-1.png"
+}, {
+  "caption": "Table 7: EPIC Distances, Noise in Stated Preferences. Causally confused rewards (here, as a result of NOISY data) appear ’closer’ to the ground truth reward than the proper learned rewards (here, with PERFECT data) on the reward learning distribution (RewL), but further on the RL distribution. EPIC distances are computed on the rewards learned with distractors in the Feeding environment in Fig. 4b and averaged over three seeds.",
+  "captionBoundary": {
+    "x1": 107.99992370605469,
+    "x2": 504.003173828125,
+    "y1": 615.74658203125,
+    "y2": 665.5840454101562
+  },
+  "figType": "Table",
+  "imageText": ["GROUND", "TRUTH", "0.000", "/", "0.000", "0.136", "/", "0.164", "0.165", "/", "0.130", "NOISY", "0.136", "/", "0.164", "0.000", "/", "0.000", "0.220", "/", "0.209", "PERFECT", "0.165", "/", "0.130", "0.220", "/", "0.209", "0.000", "/", "0.000", "REWL", "/", "RL", "GROUND", "TRUTH", "NOISY", "PERFECT"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 689.28,
+    "y2": 741.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table7-1.png"
+}, {
+  "caption": "Table 6: KL Divergence Approximations, Noise in Stated Preferences.",
+  "captionBoundary": {
+    "x1": 159.16200256347656,
+    "x2": 452.8398742675781,
+    "y1": 285.66351318359375,
+    "y2": 291.6659851074219
+  },
+  "figType": "Table",
+  "imageText": ["FEEDING,", "WITH", "DISTRACTORS", "4.732", "13.188", "FEEDING,", "WITHOUT", "DISTRACTORS", "6.985", "8.046", "REACHER,", "MEDIUM", "DATASET", "6.762", "8.856", "REACHER,", "LARGE", "DATASET", "7.365", "6.739", "PERFECT", "NOISY"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 187.68,
+    "x2": 422.4,
+    "y1": 315.36,
+    "y2": 382.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table6-1.png"
+}, {
+  "caption": "Figure 11: Noise in Stated Preferences.",
+  "captionBoundary": {
+    "x1": 224.8100128173828,
+    "x2": 387.19091796875,
+    "y1": 257.2065124511719,
+    "y2": 263.208984375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Feeding,", "Success", "Perfect", "preferences", "Noisily", "rational", "preferences", "d", "w", "ar", "e", "re", "at", "iv", "m", "ul", "n", "cu", "M", "ea", "0", "−1", "−2", "−3", "−4", "−5", "−6", "120", "demos", "324", "demos", "(a)", "Reacher,", "Reward", "Perfect", "preferences", "Noisily", "rational", "preferences", "d", "w", "ar", "e", "re", "at", "iv", "m", "ul", "n", "cu", "M", "ea", "0", "−1", "−2", "−3", "−4", "−5", "−6", "120", "demos", "324", "demos"],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 499.2,
+    "y1": 84.0,
+    "y2": 244.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure11-1.png"
+}, {
+  "caption": "Figure 6: Feature Complexity. Learning the ’scratched’ feature is difficult, despite increasing dataset size and model capacity. Performance significantly improves when given access to a highlevel ‘scratched’ feature.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 193.30752563476562,
+    "y2": 221.22796630859375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "With", "’scratched’", "indicator", "With", "distractors", "Without", "distractors", "ar", "d", "R", "ew", "200", "100", "0", "−100", "M", "L", "(b)", "Increasing", "model", "capacity", "With", "distractors", "Without", "distractors", "ar", "d", "R", "ew", "0", "−50", "128x64", "256x256x256", "−100", "(a)", "Increasing", "dataset", "size", "With", "distractors", "Without", "distractors", "ar", "d", "R", "ew", "0", "−50", "−100", "M", "L"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 82.56,
+    "y2": 180.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Poor behaviors resulting from learned rewards, despite correct classification of bad vs. good behaviors on the test data.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.999267578125,
+    "y1": 522.926513671875,
+    "y2": 550.8469848632812
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Itch", "Scratching", "(b)", "Feeding", "(a)", "Reacher"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 505.44,
+    "y1": 207.84,
+    "y2": 504.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure1-1.png"
+}, {
+  "caption": "Table 5: KL Divergence Approximations, Model Capacity. Increasing model capacity may result in a much larger distribution shift (as measured by the KL Divergence).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9989318847656,
+    "y1": 656.0945434570312,
+    "y2": 673.0560302734375
+  },
+  "figType": "Table",
+  "imageText": ["REACHER", "64.165", "57.724", "46.031", "22.187", "88.927", "FEEDING", "25.352", "32.836", "16.900", "4.732", "9.909", "128X64", "256X256X256", "128X64", "256X256X256", "256X256X256X256"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 484.32,
+    "y1": 696.9599999999999,
+    "y2": 741.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table5-1.png"
+}, {
+  "caption": "Table 4: EPIC Distances, Model Capacity. The reward model with larger capacity (hidden layer dimensions of 256x256x256) appears closer to the ground truth than the reward model with smaller capacity (hidden layer dimensions of 128x64) on the distribution of states seen during reward learning, but is much further from the ground truth on the distribution of states seen during reinforcement learning.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0045471191406,
+    "y1": 83.53055572509766,
+    "y2": 133.36895751953125
+  },
+  "figType": "Table",
+  "imageText": ["Fully-observable", "with", "distractor", "features", "Fully-observable", "without", "distractor", "features", "d", "w", "ar", "e", "re", "at", "iv", "m", "ul", "n", "cu", "M", "ea", "100", "50", "0", "−50", "−100", "128x64", "256x256x256", "256x256x256x256", "Fully-observable", "with", "distractor", "features", "d", "w", "ar", "e", "re", "at", "iv", "m", "ul", "n", "cu", "M", "ea", "0", "−10", "−20", "−30", "−40", "−50", "−60", "−70", "128x64", "256x256x256", "256x256x256x256", "GROUND", "TRUTH", "0.210", "/", "0.707", "0.233", "/", "0.598", "REWL", "/", "RL", "256X256X256", "128X64"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 503.03999999999996,
+    "y1": 150.72,
+    "y2": 343.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Table4-1.png"
+}, {
+  "caption": "Figure 10: Model Capacity.",
+  "captionBoundary": {
+    "x1": 249.04400634765625,
+    "x2": 362.95574951171875,
+    "y1": 531.3505859375,
+    "y2": 537.35302734375
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Feeding,", "Success", "Fully-observable", "with", "distractor", "features", "es", "s", "su", "cc", "Ta", "sk", "0.10", "0.08", "0.06", "0.04", "0.02", "128x64", "256x256x256", "0.00", "(c)", "Reacher,", "Success", "Fully-observable", "with", "distractor", "features", "es", "s", "su", "cc", "Ta", "sk", "0.06", "0.05", "0.04", "0.03", "0.02", "0.01", "128x64", "256x256x256", "0.00", "(b)", "Feeding,", "Reward", "(a)", "Reacher,", "Reward"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 353.28,
+    "y2": 518.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_R0Xxvr_X3ZA-Figure10-1.png"
+}]

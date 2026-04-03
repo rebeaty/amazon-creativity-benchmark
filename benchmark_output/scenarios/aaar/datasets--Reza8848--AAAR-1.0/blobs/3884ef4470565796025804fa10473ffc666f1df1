@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 6: Multimodal densities over weights using KDE",
+  "captionBoundary": {
+    "x1": 193.91200256347656,
+    "x2": 418.0903625488281,
+    "y1": 286.5625305175781,
+    "y2": 292.56500244140625
+  },
+  "figType": "Figure",
+  "imageText": ["ity", "De", "ns", "3.5", "3.0", "2.5", "2.0", "1.5", "1.0", "0.5", "0.25", "0.50", "0.75", "1.00", "1.25", "1.50", "0.0", "ity", "De", "ns", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "1.0", "0.5", "0.0", "0.5", "1.0", "0.0", "ity", "De", "ns", "7", "6", "5", "4", "3", "2", "1", "0.2", "0.1", "0.0", "0.1", "0.2", "0.3", "0", "ity", "De", "ns", "0.35", "0.30", "0.25", "0.20", "0.15", "0.10", "0.05", "4", "2", "0", "2", "0.00", "ity", "De", "ns", "16", "14", "12", "10", "8", "6", "4", "2", "0.1", "0.0", "0.1", "0", "ity", "De", "ns", "10", "8", "6", "4", "2", "0.1", "0.0", "0.1", "0.2", "0", "ity", "De", "ns", "6", "5", "4", "3", "2", "1", "0.2", "0.1", "0.0", "0.1", "0.2", "0", "ity", "De", "ns", "10", "8", "6", "4", "2", "0.5", "0.4", "0.3", "0.2", "0.1", "0"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 190.56,
+    "x2": 417.12,
+    "y1": 103.2,
+    "y2": 247.67999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Figure6-1.png"
+}, {
+  "caption": "Figure 1: Model confidence on toy regression. We compare both lower bounds for implicit variational inference presented (LIVI) in this work with standard uncertainty quantification approaches deep ensembles (DE), mean-field variational inference (MVI), Hamiltonian Monte Carlo (HMC) and multiplicative normalizing flows (MNF, Louizos & Welling, 2017). We train using 25 dimensional noise input to a MLP generator having a single hidden layer consisting of 25 weights modeling 105 neural network parameters. Here we plot the 5-95% percentile of the BMA to represent model uncertainty. Notably both our approaches capture in-between uncertainties (Foong et al., 2019).",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 504.0019226074219,
+    "y1": 193.06454467773438,
+    "y2": 264.82000732421875
+  },
+  "figType": "Figure",
+  "imageText": ["10", "15MNF", "mean", "predictive", "conf", "interval", "test", "points", "train", "points", "Ground", "truth", "5", "0", "5", "1", "0", "1", "HMC", "1", "0", "1", "LIVI", "diff-lb", "1", "0", "1", "LIVI", "acc-jac", "1", "0", "1", "MFVI", "1", "0", "1", "15", "DE", "10", "5", "0", "5", "1", "0", "1"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 82.08,
+    "y2": 176.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Figure1-1.png"
+}, {
+  "caption": "Table 1: UCI regression datasets. We report RMSE and log-likelihoods on the test set and average across three different seeds for each model to quantify the variance in the results.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0032653808594,
+    "y1": 92.68656158447266,
+    "y2": 109.64801025390625
+  },
+  "figType": "Table",
+  "imageText": ["Boston", "2.461±", "0.131", "3.28", "±", "1.00", "2.798±", "0.173", "−2.318±", "0.092", "−2.41", "±", "0.25", "−2.527±", "0.102", "Concrete", "5.150±", "0.169", "6.03", "±", "0.58", "4.702±", "0.116", "−3.068±", "0.120", "3.06", "±", "0.18", "−3.054±", "0.043", "Energy", "0.580±", "0.270", "2.09", "±", "0.29", "0.467±", "0.015", "−1.170±", "0.110", "−1.38", "±", "0.22", "−1.298±", "0.005", "Kin8nm", "0.081±", "0.001", "0.09", "±", "0.00", "0.0075±0.0010", "1.180±", "0.011", "1.20", "±", "0.02", "1.162±", "0.008", "Naval", "0.001±", "0.000", "0.000±", "0.000", "0.00", "±", "0.00", "5.523±", "0.170", "5.63", "±", "0.05", "5.501±", "0.121", "Test", "RMSE", "↓", "Test", "LL", "↑", "Dataset", "LIVI", "Deep", "Ensembles", "KIVI", "LIVI", "Deep", "Ensembles", "KIVI"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 500.15999999999997,
+    "y1": 112.32,
+    "y2": 182.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Table1-1.png"
+}, {
+  "caption": "Figure 4: Zero-Centered weights",
+  "captionBoundary": {
+    "x1": 240.54100036621094,
+    "x2": 371.45947265625,
+    "y1": 227.37155151367188,
+    "y2": 233.3740234375
+  },
+  "figType": "Figure",
+  "imageText": ["2", "1", "0", "1", "2", "Weight", "Samples"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 152.64,
+    "x2": 497.28,
+    "y1": 97.92,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Weights activated after down-weighting the prior",
+  "captionBoundary": {
+    "x1": 188.74099731445312,
+    "x2": 423.260498046875,
+    "y1": 399.2765197753906,
+    "y2": 405.27899169921875
+  },
+  "figType": "Figure",
+  "imageText": ["6", "4", "2", "0", "2", "Weight", "Samples", "4"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 152.64,
+    "x2": 497.28,
+    "y1": 269.76,
+    "y2": 373.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Rotated MNIST benchmark. We compare a Bayesian neural network trained via our method with MAP, deep ensembles (DE) and last-layer laplace (LAP) where our best model achieves results competitive with deep ensembles and with post-hoc method like laplace.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1677551269531,
+    "y1": 239.34152221679688,
+    "y2": 267.26202392578125
+  },
+  "figType": "Figure",
+  "imageText": ["0.6", "ECE", "with", "R-MNIST", "0.4", "0.2", "0", "50", "100", "1500.0", "NLL", "with", "R-MNIST", "LIVI", "1", "LIVI", "2", "LIVI", "3", "DE", "LAP", "MAP", "7.5", "5.0", "2.5", "0", "50", "100", "150", "0.0"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 160.32,
+    "x2": 449.28,
+    "y1": 91.67999999999999,
+    "y2": 213.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Empirical CDF plot. On the x-axis is the entropy of individual predictions and empirical CDF on the y-axis. As we count over the whole dataset, we would like to encounter more high entropy predictions closer to the value 2.30 on the x-axis.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9991760253906,
+    "y1": 253.01950073242188,
+    "y2": 280.9389953613281
+  },
+  "figType": "Figure",
+  "imageText": ["LIVI", "DE", "lap", "1.0", "Empirical", "CDF", "of", "entropies", "over", "FMNIST", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.5", "1.0", "1.5", "2.0", "Entropy", "of", "predictions"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 219.35999999999999,
+    "x2": 387.36,
+    "y1": 92.16,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_6uv5W_DXvRr-Figure3-1.png"
+}]

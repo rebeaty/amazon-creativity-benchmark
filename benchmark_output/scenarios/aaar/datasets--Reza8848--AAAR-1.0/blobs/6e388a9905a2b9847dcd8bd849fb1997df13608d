@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 1: Performance of algorithms (BL: green, BICHO: red, UARF: blue) in (top to bottom) Cartpole, Pusher, Reacher, and Masspoint sector1. From left to right column: episode reward, time per episode (s), cumulative number of observations stored in the replay buffer, new experiences added to the buffer per episode. The rightmost plots illustrate with dashed vertical lines episodes that resulted in UARF updating its model parameters.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 611.5736083984375,
+    "y2": 661.4119873046875
+  },
+  "figType": "Figure",
+  "imageText": ["12:", "Execute", "in", "the", "environment", "at", "to", "obtain", "st+1", "and", "rt+1", "13:", "Discard", "first", "action", "and", "keep", "the", "rest", "a∗", "t", "=", "a∗", "t+1:t+H", "14:", "Get", "p′r(t+i+1:t+H)", "given", "(st,", "f̂", ",", "a∗", "t+i:t+H", ")", "15:", "//", "Trustworthy", "imagination", "16:", "L", "=", "min(H,", "c", "-", "i)", "//", "Calculate", "the", "number", "steps", "ahead", "to", "consider", "17:", "r", "error", "=", "WassersteinDistance(p′r(t+i+1:t+i+L)||p∗r(t+1:t+L))", "18:", "if", "r", "error", ">", "β", "then", "unreliableModel", "=", "TRUE", "else", "unreliableModel", "=", "False", "19:", "if", "unreliableModel", "then", "20:", "Record", "outcome:", "D", "←", "D", "∪", "{st,", "at,", "st+1}", "21:", "//", "Updates", "on", "novel", "information", "22:", "if", "new", "data", "in", "D", ">", "new", "data", "threshold", "∗", "length(D)", "then", "23:", "trainModel", "=", "True", "t:t+H", "9:", "i", "=", "0", "10:", "else", "i", "+=", "1", "11:", "Get", "first", "action", "at", "from", "available", "optimal", "actions", "a∗", "8:", "Get", "p∗r(t+1:t+H)", "given", "(st,", "f̂", ",", "a", "∗", "t:t+H)", "//", "Use", "f̂", "to", "predict", "H", "rewards", "ahead", "t:t+H", "from", "ComputeOptimalTrajectory", "(st,", "f̂)", "Algorithm", "2", "UARF", "1:", "Initialize", "dynamics", "model", "f̂", "parameters;", "Initialize", "replay", "bufferD", "with", "an", "iteration", "of", "a", "random", "controller", "2:", "unreliableModel", "=", "True", "and", "trainModel", "=", "False", "3:", "for", "Iteration", "l", "=", "1", "to", "NIterations", "do", "4:", "if", "trainModel", "then", "Train", "f̂", "given", "D", "5:", "for", "Time", "t", "=", "0", "to", "TaskHorizon", "do", "6:", "if", "unreliableModel", "then", "7:", "Get", "a∗"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 506.4,
+    "y1": 81.6,
+    "y2": 597.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Per-step reward and cumulative steps added to the replay buffer for episodes 1 (left), 4 (middle), and 99 (right) in the Masspoint Sector 1 maneuver. These plots show that UARF adds fewer redundant experiences to the replay buffer as the model converges.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9966735839844,
+    "y1": 208.01351928710938,
+    "y2": 268.8109130859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 310.56,
+    "x2": 499.2,
+    "y1": 124.8,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Per episode wall time for the three methods during the training process of Ex.2. Vertical lines indicate task switch points.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9966125488281,
+    "y1": 233.37051391601562,
+    "y2": 261.28997802734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 504.0,
+    "y1": 84.96,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Performance of the examined algorithms in Cartpole using different maximum prediction distances (MPD). The blue line represents UARF with an MPD=1. The red line is UARF with an MPD=2. The green line is UARF with an MPD=4. From left to right column: episode reward, time per episode (s), cumulative number of observations stored in the replay buffer, new experiences added to the buffer per episode.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 359.66253662109375,
+    "y2": 409.5009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 490.08,
+    "y1": 297.59999999999997,
+    "y2": 345.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Distribution of experiences from each sub-task in the replay buffers of each algorithm immediately following training. Detail shows a zoomed-in version for UARF.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 286.2010498046875,
+    "y1": 449.2225341796875,
+    "y2": 488.10198974609375
+  },
+  "figType": "Figure",
+  "imageText": ["Each", "algorithm", "trains", "a", "model", "on", "a", "sequence", "of324", "seven", "separate", "sub-tasks:", "two", "corners", "and", "their", "in-325", "verses,", "a", "chicane", "and", "its", "inverse,", "and", "a", "straight", "(de-326", "tails", "illustrated", "in", "Appendix", "B).", "The", "models", "retain327", "their", "parameters", "and", "replay", "buffers", "between", "training328", "on", "each", "task", "individually.", "After", "training", "on", "the", "last329", "task,", "the", "methods", "are", "each", "tested", "on", "the", "full", "track,330", "which", "contains", "some", "of", "the", "sub-tasks", "seen", "during331", "training", "(colored", "in", "the", "full-track", "image,", "Appendix332", "B)", "and", "tasks", "unseen", "during", "training", "(shown", "in", "black333", "in", "the", "full-track", "image).", "The", "model", "must", "remember334"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 87.84,
+    "x2": 504.47999999999996,
+    "y1": 322.56,
+    "y2": 440.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Training performance of Baseline, BICHO and UARF in a Task Agnostic Continual Learning. Models trained on seven maneuvers: corner1, corner1 inverse, chicane, chicane inverse, corner14, corner14 inverse, and straight. Vertical lines indicate a task switch. In the middle-right plot, cyan vertical lines also indicate when UARF triggers a model update. Full-track evaluation in the far-right plot; cumulative reward achieved at each step on the full-track without further training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 157.57650756835938,
+    "y2": 207.4149169921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 490.08,
+    "y1": 80.64,
+    "y2": 143.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure3-1.png"
+}, {
+  "caption": "Figure 5: Tasks for the Masspoint environment. The x-axis and the y-axis of each figure represents the x,y coordinates of the path to be followed by the mass point bot. The red dot represents the starting point. Top left-to-right: c1, c1 inverted, chicane, chicane inverted and c14. Bottom left-toright: c14 inverted, straight, full track (comprising sub-tasks. chicane, c14. straight, c1), sector1 and sector1 inverted",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 271.0505065917969,
+    "y2": 320.888916015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 161.76,
+    "y2": 252.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Figure5-1.png"
+}, {
+  "caption": "Table 1: Fixed Buffer Experiment. Results demonstrate susceptibility to catastrophic forgetting when not using UARF. The BL forgets previous maneuvers after the FIFO mechanism of the fixedsize replay buffer eliminates experiences from them with an impact of about 10% in reward.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 305.27252197265625,
+    "y2": 333.1929931640625
+  },
+  "figType": "Table",
+  "imageText": ["BASELINE", "22172", "20235", "1787", "1561", "UARF", "21975", "22102", "1781", "1795", "Unlimited", "Buffer", "Fixed", "Buffer", "Fixed", "Buffer", "Fixed", "Buffer", "Full", "Track", "Full", "Track", "c1", "inverse", "First", "Pass", "c1", "inverse", "Post-Training"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 514.0799999999999,
+    "y1": 244.79999999999998,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-5fSvp1ofdd-Table1-1.png"
+}]

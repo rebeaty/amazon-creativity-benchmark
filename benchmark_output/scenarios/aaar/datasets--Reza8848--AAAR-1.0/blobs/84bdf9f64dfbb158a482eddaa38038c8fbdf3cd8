@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 1: Transformed circles test set from scikit-learn (red and blue) and out-of-distribution points (green) after blocks 6 and 9 of a ResNet-9. In the second row, we add our proposed regularization during training, which makes the movements of the clean points (red and blue) more similar to each other and more different from the movements of the green out-of-distribution points than when using the vanilla network in the first row. In particular, without the regularization, the green points have a similar dynamic to the red points lying on the data distribution support which is undesirable.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00384521484375,
+    "y1": 628.5785522460938,
+    "y2": 689.3759765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 493.44,
+    "y1": 364.8,
+    "y2": 614.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Histogram of transport cost C for clean and FGM-attacked test samples with different values of ϵ on CIFAR100. The vertical lines represents the 0.02 and 0.98 empirical quantiles of the transport cost of the clean samples. Left: ResNeXt50. Right: LAP-ResNeXt50.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.0025939941406,
+    "y1": 498.7765197753906,
+    "y2": 526.697021484375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 316.8,
+    "y2": 473.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Test accuracy of ResNets of various depths without batch-normalization on CIFAR10.",
+  "captionBoundary": {
+    "x1": 114.7239990234375,
+    "x2": 497.2777404785156,
+    "y1": 636.070556640625,
+    "y2": 642.072998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 331.68,
+    "y2": 611.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Figure4-1.png"
+}, {
+  "caption": "Table 1: Average detection accuracy (5 runs) of seen white-box attacks using Network/LAP-Network.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74273681640625,
+    "y1": 479.4375305175781,
+    "y2": 485.44000244140625
+  },
+  "figType": "Table",
+  "imageText": ["WideResNet", "Transport", "(ours)", "95.9/95.9", "96.0/96.2", "96.6/96.6", "TinyImageNet", "Mahalanobis", "84.6/85.3", "84.2/85.1", "84.5/85.2", "ResNet110", "Transport", "(ours)", "97.1/98.7", "94.3/97.4", "97.4/99.2", "98.1/98.0", "98.0/98.1", "CIFAR10", "Mahalanobis", "87.5/95.5", "81.8/90.4", "86.6/95.1", "88.9/95.7", "85.4/93.2", "ResNeXt50", "Transport", "(ours)", "97.2/98.4", "96.1/97.9", "97.9/98.9", "91.9/91.2", "95.7/95.8", "CIFAR100", "Mahalanobis", "95.7/96.8", "93.9/94.7", "96.0/97.7", "87.1/86.8", "94.7/94.7", "Network/Data", "Detector", "FGM", "PGD", "BIM", "DF", "CW", "Attack"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 492.96,
+    "y2": 608.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table1-1.png"
+}, {
+  "caption": "Table 4: Average adversarial detection accuracy and standard deviation over 5 runs using ResNeXt50 on CIFAR100.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9988708496094,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["VAN", "Maha", "95.72", "±", "0.38", "93.92", "±", "0.67", "95.96", "±", "0.51", "87.14", "±", "0.59", "94.66", "±", "0.71", "LAP", "Maha", "96.82", "±", "0.38", "94.66", "±", "0.69", "97.74", "±", "0.43", "86.82", "±", "0.78", "94.74", "±", "0.34", "VAN", "Transport", "97.20", "±", "0.46", "96.06", "±", "0.37", "97.90", "±", "0.42", "91.92", "±", "0.65", "95.66", "±", "0.43", "LAP", "Transport", "98.42", "±", "0.42", "97.92", "±", "0.60", "98.92", "±", "0.18", "91.24", "±", "1.14", "95.78", "±", "0.48", "Detector", "FGM", "PGD", "BIM", "DF", "CW", "Attack"],
+  "name": "4",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 115.19999999999999,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table4-1.png"
+}, {
+  "caption": "Table 7: Average adversarial detection accuracy of unseen attacks after training on FGM and standard deviation over 5 runs using ResNeXt50 on CIFAR100.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99517822265625,
+    "y1": 617.5185546875,
+    "y2": 634.47998046875
+  },
+  "figType": "Table",
+  "imageText": ["VAN", "Tra", "90.8", "±", "0.5", "96.1", "±", "0.6", "87.6", "±", "0.2", "87.5", "±", "0.4", "89.9", "±", "2.2", "81.7", "±", "1.6", "LAP", "Tra", "89.3", "±", "0.8", "97.7", "±", "0.3", "76.0", "±", "1.0", "74.7", "±", "1.1", "78.1", "±", "3.4", "71.9", "±", "3.9", "VAN", "Maha", "86.9", "±", "0.1", "90.9", "±", "1.0", "83.1", "±", "0.7", "84.0", "±", "1.1", "84.1", "±", "3.4", "78.7", "±", "1.4", "LAP", "Maha", "86.7", "±", "0.9", "93.9", "±", "0.4", "79.4", "±", "1.6", "80.9", "±", "2.0", "80.5", "±", "3.7", "78.2", "±", "2.0", "Detector", "PGD", "BIM", "DF", "CW", "HSJ", "BA", "Attack"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 642.24,
+    "y2": 725.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table7-1.png"
+}, {
+  "caption": "Table 5: Average adversarial detection accuracy and standard deviation over 5 runs using ResNet110 on CIFAR10.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 258.4995422363281,
+    "y2": 275.46099853515625
+  },
+  "figType": "Table",
+  "imageText": ["VAN", "Maha", "87.46", "±", "3.65", "81.80", "±", "3.26", "86.62", "±", "3.28", "88.94", "±", "2.36", "85.44", "±", "2.70", "LAP", "Maha", "95.46", "±", "0.46", "90.38", "±", "0.38", "95.10", "±", "0.58", "95.74", "±", "0.55", "93.22", "±", "0.64", "VAN", "Transport", "97.12", "±", "0.65", "94.34", "±", "0.65", "97.42", "±", "0.32", "98.06", "±", "0.44", "98.04", "±", "0.44", "LAP", "Transport", "98.74", "±", "0.26", "97.36", "±", "0.48", "99.24", "±", "0.21", "97.98", "±", "0.32", "98.06", "±", "0.37", "Detector", "FGM", "PGD", "BIM", "DF", "CW", "Attack"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 280.8,
+    "y2": 364.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table5-1.png"
+}, {
+  "caption": "Table 6: Average adversarial detection accuracy and standard deviation over 5 runs using WideResNet on TinyImageNet.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99517822265625,
+    "y1": 424.4225158691406,
+    "y2": 441.3840026855469
+  },
+  "figType": "Table",
+  "imageText": ["VAN", "Maha", "84.62", "±", "1.32", "84.20", "±", "1.32", "84.46", "±", "1.29", "LAP", "Maha", "85.26", "±", "0.96", "85.10", "±", "0.60", "85.24", "±", "1.11", "VAN", "Transport", "95.92", "±", "0.10", "96.04", "±", "0.14", "96.56", "±", "0.07", "LAP", "Transport", "95.86", "±", "0.11", "96.16", "±", "0.07", "96.56", "±", "0.07", "Detector", "FGM", "PGD", "BIM", "Attack"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 440.15999999999997,
+    "y1": 448.8,
+    "y2": 532.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table6-1.png"
+}, {
+  "caption": "Figure 3: Adversarial detection dataset creation. A+B1+B2 is the original dataset, where A is the given training set and B1+B2 is the given test set. We create a noisy version of B1+B2 by adding random noise to each sample in B1+B2 to get C1+C2. Noisy samples are considered clean (i.e. not attacked) in adversarial detection training. We create an attacked version of B1+B2 by creating an attacked image from each image in B1+B2 to get D1+D2. In the case of generalization to unseen attacks, Attack 2 used to create D2 from B2 is different from Attack 1 used to create D1 from B1. Otherwise, Attack 1 and Attack 2 are the same. B1+C1+D1 is the adversarial detection training set and B2+C2+D2 is the adversarial detection test set.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7453308105469,
+    "y1": 575.134521484375,
+    "y2": 657.8489990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 210.72,
+    "y2": 550.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Figure3-1.png"
+}, {
+  "caption": "Table 3: Average detection accuracy (5 runs) of unseen attacks after training on FGM.",
+  "captionBoundary": {
+    "x1": 134.53500366210938,
+    "x2": 477.46759033203125,
+    "y1": 352.508544921875,
+    "y2": 358.5110168457031
+  },
+  "figType": "Table",
+  "imageText": ["WideResNet", "Transport", "(ours)", "93.28", "95.06", "90.72", "91.56", "TinyImageNet", "Mahalanobis", "77.00", "77.00", "72.58", "74.90", "ResNet110", "Transport", "(ours)", "89.58", "96.28", "91.04", "93.24", "93.10", "92.30", "CIFAR10", "Mahalanobis", "76.88", "76.56", "79.70", "79.54", "79.10", "79.90", "ResNeXt50", "Transport", "(ours)", "90.82", "96.12", "87.60", "87.54", "89.90", "81.70", "CIFAR100", "Mahalanobis", "86.90", "90.92", "83.08", "84.02", "84.10", "78.70", "Network/Data", "Detector", "PGD", "BIM", "DF", "CW", "HSJ", "BA", "Attack"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 366.24,
+    "y2": 481.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table3-1.png"
+}, {
+  "caption": "Table 2: Average detection accuracy and standard deviation (5 runs) of seen black-box attacks using ResNet110/LAP-ResNet110 on CIFAR10.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0020446777344,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["Transport", "(ours)", "97.38", "±", "0.60", "/", "97.38", "±", "0.43", "96.56", "±", "0.56", "/", "97.02", "±", "0.18", "Mahalanobis", "84.14", "±", "1.07", "/", "92.30", "±", "0.46", "80.20", "±", "2.11", "/", "89.62", "±", "0.43", "Detector", "HSJ", "BA", "Attack"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 135.84,
+    "x2": 476.15999999999997,
+    "y1": 115.19999999999999,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table2-1.png"
+}, {
+  "caption": "Table 8: Average adversarial detection accuracy of unseen white attacks after training on FGM and standard deviation over 5 runs using ResNet110 on CIFAR10.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9957580566406,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["VAN", "Tra", "89.6", "±", "1.3", "96.3", "±", "0.5", "91.0", "±", "1.0", "93.2", "±", "1.2", "93.1", "±", "2.5", "92.3", "±", "3.2", "LAP", "Tra", "93.0", "±", "0.4", "98.7", "±", "0.2", "75.4", "±", "0.3", "75.2", "±", "0.6", "77.2", "±", "3.4", "74.7", "±", "2.1", "VAN", "Maha", "76.9", "±", "2.4", "76.6", "±", "2.1", "79.7", "±", "3.0", "79.5", "±", "2.5", "79.1", "±", "4.2", "79.9", "±", "2.6", "LAP", "Maha", "87.6", "±", "1.3", "84.3", "±", "1.0", "80.5", "±", "0.9", "81.0", "±", "0.8", "81.1", "±", "2.5", "82.3", "±", "3.3", "Detector", "PGD", "BIM", "DF", "CW", "HSJ", "BA", "Attack"],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 117.11999999999999,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table8-1.png"
+}, {
+  "caption": "Table 9: Average adversarial detection accuracy of unseen attacks after training on FGM and standard deviation over 5 runs using WideResNet on TinyImageNet.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99517822265625,
+    "y1": 240.54153442382812,
+    "y2": 257.50299072265625
+  },
+  "figType": "Table",
+  "imageText": ["VAN", "Tra", "93.3", "±", "0.1", "95.1", "±", "0.1", "90.7", "±", "0.04", "91.6", "±", "0.1", "LAP", "Tra", "93.4", "±", "0.1", "94.9", "±", "0.2", "90.6", "±", "0.2", "91.7", "±", "0.1", "VAN", "Maha", "77.0", "±", "1.0", "77.0", "±", "1.0", "72.6", "±", "1.1", "74.9", "±", "1.1", "LAP", "Maha", "77.4", "±", "0.6", "77.7", "±", "0.9", "73.3", "±", "0.7", "75.6", "±", "0.8", "Detector", "PGD", "BIM", "DF", "CW", "Attack"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 164.64,
+    "x2": 447.35999999999996,
+    "y1": 265.44,
+    "y2": 348.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NYjXrU_f20G-Table9-1.png"
+}]

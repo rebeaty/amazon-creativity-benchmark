@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 3: G-SHAP results for the image classification task, taken from MS COCO, Flower5, Pascal VOC dataset, where superpixels are chosen as graph-based, graph-based, and quick-shift, for each image, respectively. The 3-5th columns stand for β = 0.25, 0.00 and −0.25, respectively. For each image, heatmap of the upper row indicates the attribution score and the lower row indicates the attribution reliability. Heatmaps are area-normalized ratio to their base values, which are their sum divided by entire area of the image. Here the GR, CR, and TR score indicates the NGR, NCR, and the total score L, respectively. More experimental results and codes are available at https://anonymous.4open.science/r/G_SHAP-5F4E/README.md",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 508.1675720214844,
+    "y2": 590.8820190429688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 494.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Trade-off of reliability loss of group score and component-estimated score of a group attribution. Grouping x1, x2 resolves their component-wise non-linearity so that reliability loss of the group score φ{1,2} decreases but that of estimated component-wise score from the group score increases. Here the metric of attribution score and its reliability loss are defined as φi(x) = ∂ ∂xi f(x) and ξ2i (x) = Et∼N (0,1)[(f(x + tei)− f(x)− tφi)2], respectively.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00323486328125,
+    "y1": 237.98654174804688,
+    "y2": 295.3420104980469
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Comparison results of G-SHAP with various heuristic methods, where the images are taken from COCO, Flower5, and Pascal VOC dataset, and the superpixels are chosen from quickshift, quick-shift, and graph-based method, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 348.8615417480469,
+    "y2": 376.781982421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 334.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Figure4-1.png"
+}, {
+  "caption": "Table 1: Reliability scores of the G-SHAP for β = 0.25, 0.00 and −0.25",
+  "captionBoundary": {
+    "x1": 161.3419952392578,
+    "x2": 450.6575622558594,
+    "y1": 183.00155639648438,
+    "y2": 189.0040283203125
+  },
+  "figType": "Table",
+  "imageText": ["Flower5", "0.603", "0.779", "0.840", "0.605", "0.950", "0.653", "VOC", "0.719", "0.776", "0.905", "0.626", "0.975", "0.667", "Graph-based", "COCO", "0.704", "0.779", "0.892", "0.630", "0.973", "0.692", "Flower5", "0.593", "0.831", "0.758", "0.642", "0.919", "0.616", "VOC", "0.602", "0.829", "0.824", "0.670", "0.942", "0.680", "Quick-shift", "COCO", "0.596", "0.832", "0.799", "0.679", "0.939", "0.667", "Superpixel", "method", "Datasets", "β", "=", "0.25", "β", "=", "0.00", "β", "=", "−0.25", "NGR", "NCR", "NGR", "NCR", "NGR", "NCR"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 171.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Table1-1.png"
+}, {
+  "caption": "Table 2: Comparison with baseline heuristics, where scores are averaged on the datasets",
+  "captionBoundary": {
+    "x1": 130.7239990234375,
+    "x2": 481.27801513671875,
+    "y1": 317.8375244140625,
+    "y2": 323.8399963378906
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Quick-Shift", "Graph-based", "NGR", "NCR", "NGR", "NCR", "2-grouping", "0.786", "0.552", "0.818", "0.558", "3-grouping", "0.696", "0.646", "0.754", "0.635", "K-means", "grouping", "0.476", "0.701", "0.493", "0.646", "Adjacency", "greedy", "0.443", "0.720", "0.423", "0.711", "G-SHAP", "greedy", "0.678", "0.584", "0.648", "0.561", "G-SHAP", "porposed", "0.794", "0.664", "0.879", "0.620"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 419.03999999999996,
+    "y1": 216.95999999999998,
+    "y2": 306.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Table2-1.png"
+}, {
+  "caption": "Table 3: Estimation game result of component attribution (SHAP) and group attribution (G-SHAP)",
+  "captionBoundary": {
+    "x1": 108.74700164794922,
+    "x2": 503.2558288574219,
+    "y1": 147.25350952148438,
+    "y2": 153.2559814453125
+  },
+  "figType": "Table",
+  "imageText": ["Graph-based", "SHAP", "0.532", "0.674", "0.786", "0.458", "0.494", "0.563", "0.469", "0.537", "0.646", "G-SHAP", "0.223", "0.176", "0.223", "0.191", "0.161", "0.190", "0.177", "0.149", "0.180", "Quick-shift", "SHAP", "0.476", "0.566", "0.671", "0.444", "0.438", "0.515", "0.446", "0.465", "0.587", "G-SHAP", "0.171", "0.158", "0.204", "0.159", "0.144", "0.191", "0.147", "0.131", "0.169", "min-deletion", "max-deletion", "random-deletion", "Superixel", "method", "Attribution", "Flower5", "COCO", "VOC", "Flower5", "COCO", "VOC", "Flower5", "COCO", "VOC"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 136.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Table3-1.png"
+}, {
+  "caption": "Figure 2: Illustration of the G-SHAP algorithm: The algorithm starts with component-attribution that (NGR, NCR)=(0, 1), continues to apply the optimal grouping of the subset, and finishes with all-grouped attribution. G-SHAP finally takes the best group attribution among the grouping steps. Here ε is not considered for simplicity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 232.33651733398438,
+    "y2": 271.2149658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 80.64,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_BeI1fdNH_X-Figure2-1.png"
+}]

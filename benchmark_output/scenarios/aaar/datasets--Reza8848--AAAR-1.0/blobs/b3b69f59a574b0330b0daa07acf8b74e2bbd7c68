@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: Comparison between high-order diffusion ODE solvers based on exponential integrators, including DEIS (Zhang & Chen, 2022), DPM-Solver (Lu et al., 2022) and DPM-Solver++ (ours).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0003967285156,
+    "y1": 83.53055572509766,
+    "y2": 99.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["Applicable", "for", "thresholding", "(High-Order)", "×", "×", "X", "Analytical", "Form", "(High-Order)", "×", "X", "X", "Solver", "Type", "(High-Order)", "Multistep", "Singlestep", "Singlestep", "+", "Multistep", "Taylor", "Expansion", "εθ", "for", "t", "ε̂θ", "for", "λ", "x̂θ", "for", "λ", "Model", "Type", "εθ", "εθ", "xθ", "First-Order", "DDIM", "DDIM", "DDIM", "DPM-Solver++", "(ours)", "DEIS", "(Zhang", "&", "Chen,", "2022)", "DPM-Solver", "(Lu", "et", "al.,", "2022)"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 111.83999999999999,
+    "y2": 219.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Table1-1.png"
+}, {
+  "caption": "Table 2: Sample quality measured by FID ↓ on ImageNet 256×256 (discrete-time model (Dhariwal & Nichol, 2021)), varying the methods between DDIM (Song et al., 2021a) and different types of DEIS (Zhang & Chen, 2022). The number of function evaluations (NFE) is fixed by 10.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.1224670410156,
+    "y1": 357.6845397949219,
+    "y2": 383.61199951171875
+  },
+  "figType": "Table",
+  "imageText": ["DDIM", "13.04", "12.38", "11.81", "11.55", "11.62", "11.95", "13.01", "16.35", "29.33", "DEIS-2,", "κ", "=", "1", "19.12", "14.83", "12.39", "10.94", "10.13", "9.76", "9.74", "11.01", "20.34", "DEIS-2,", "κ", "=", "2", "33.37", "24.66", "18.03", "13.57", "11.16", "10.54", "10.88", "13.67", "26.26", "DEIS-2,", "κ", "=", "3", "55.69", "44.01", "33.04", "24.50", "18.66", "16.35", "16.87", "21.91", "38.41", "DEIS-3,", "κ", "=", "1", "66.81", "48.71", "33.89", "22.56", "15.84", "11.96", "10.18", "10.19", "18.70", "DEIS-3,", "κ", "=", "2", "34.51", "25.42", "18.52", "13.68", "11.20", "10.46", "10.75", "13.36", "25.59", "DEIS-3,", "κ", "=", "3", "56.49", "44.51", "33.34", "24.68", "18.72", "16.38", "16.79", "21.76", "38.02", "Method", "\\", "Guidance", "scale", "8.0", "7.0", "6.0", "5.0", "4.0", "3.0", "2.0", "1.0", "0.0"],
+  "name": "2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 396.0,
+    "y2": 490.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Table2-1.png"
+}, {
+  "caption": "Figure 1: Previous high-order solvers are unstable for guided sampling: Samples using the pre-trained DPMs (Dhariwal & Nichol, 2021) on ImageNet 256×256 with a classifier guidance scale 8.0, varying different samplers (and different solver orders) with only 15 function evaluations. †: DDIM with the dynamic thresholding (Saharia et al., 2022b). Our proposed DPM-Solver++ (detailed in Algorithm 2) can generate better samples than the first-order DDIM, while other high-order samplers are worse than DDIM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.49224853515625,
+    "y1": 334.63653564453125,
+    "y2": 380.489990234375
+  },
+  "figType": "Figure",
+  "imageText": ["DPM-Solver++", "(order", "=", "2)", "(ours)", "DEIS-2", "(order", "=", "3)", "(Zhang", "&", "Chen,", "2022)", "†DDIM", "(thresholding)", "(Saharia", "et", "al.,", "2022b)", "DEIS-1", "(order", "=", "2)", "(Zhang", "&", "Chen,", "2022)", "DPM-Solver-3", "(order", "=", "3)", "(Lu", "et", "al.,", "2022)", "PNDM", "(order", "=", "2)", "(Liu", "et", "al.,", "2022b)", "DPM-Solver", "(order", "=", "2)", "(Lu", "et", "al.,", "2022)", "DDIM", "(order", "=", "1)", "(Song", "et", "al.,", "2021a)"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 496.32,
+    "y1": 80.64,
+    "y2": 322.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Samples using the pre-trained latent-space DPMs (Stable-Diffusion (Rombach et al., 2022)) with a classifier-free guidance scale 7.5 (the default setting), varying different samplers and different number of function evaluations N .",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011291503906,
+    "y1": 714.7975463867188,
+    "y2": 740.7249755859375
+  },
+  "figType": "Figure",
+  "imageText": ["(ours)", "DPM-Solver++(2M)", "(N", "=", "50)", "DEIS-1", "(N", "=", "50)", "(Lu", "et", "al.,", "2022)", "DPM-Solver-2", "(N", "=", "50)", "(Lu", "et", "al.,", "2022)", "PNDM", "(N", "=", "50)", "(Liu", "et", "al.,", "2022b)", "DDIM", "(N", "=", "50)", "(Song", "et", "al.,", "2021a)", "(ours)", "DPM-Solver++(2M)", "(N", "=", "20)", "DEIS-1", "(N", "=", "20)", "(Lu", "et", "al.,", "2022)", "DPM-Solver-2", "(N", "=", "20)", "(Lu", "et", "al.,", "2022)", "PNDM", "(N", "=", "20)", "(Liu", "et", "al.,", "2022b)", "DDIM", "(N", "=", "20)", "(Song", "et", "al.,", "2021a)", "(ours)", "DPM-Solver++(2M)", "(N", "=", "15)", "DEIS-1", "(N", "=", "15)", "(Lu", "et", "al.,", "2022)", "DPM-Solver-2", "(N", "=", "15)", "(Lu", "et", "al.,", "2022)", "PNDM", "(N", "=", "15)", "(Liu", "et", "al.,", "2022b)", "DDIM", "(N", "=", "15)", "(Song", "et", "al.,", "2021a)", "(Song", "et", "al.,", "2021a)", "DDIM", "(N", "=", "999,", "converged)"],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 496.32,
+    "y1": 81.6,
+    "y2": 701.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Ablation study for DPM-Solver++. Sample quality measured by FID ↓ of different sampling methods for DPMs on ImageNet 256x256 with guidance scale 8.0, varying the number of function evaluations (NFE).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9996337890625,
+    "y1": 196.50650024414062,
+    "y2": 212.47100830078125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Thresholding.", "1st-order", "(DDIM)", "2nd-order,", "multistep", "(DPM-Solver++)", "†1st-order", "(DDIM)", "†2nd-order,", "multistep", "(DPM-Solver++)", "F", "ID", "15", "14", "13", "12", "11", "10", "9", "8", "NFE", "10", "15", "20", "25", "50", "100", "250", "(b)", "From", "singlestep", "to", "multistep.", "1st-order", "(DDIM)", "2nd-order,", "singlestep", "(DPM-Solver++)", "2nd-order,", "multistep", "(DPM-Solver++)", "F", "ID", "15", "14", "13", "12", "11", "10", "9", "NFE", "10", "15", "20", "25", "50", "100", "250", "(a)", "From", "εθ", "to", "xθ", ".", "1st-order", "(DDIM)", "2nd-order,", "εθ", "(DPM-Solver)", "2nd-order,", "xθ", "(DPM-Solver++)", "F", "ID", "50", "40", "30", "20", "10", "11", "12", "13", "9", "NFE", "10", "15", "20", "25", "50", "100", "250"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 481.44,
+    "y1": 81.6,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Figure2-1.png"
+}, {
+  "caption": "Figure 3: (a-c) Sample quality measured by FID ↓ of different sampling methods for DPMs on ImageNet 256x256 with different guidance scale s, varying the number of function evaluations (NFE). †: results by combining the solver with dynamic thresholding method (Saharia et al., 2022b). (d) Convergence error measured by L2-norm ↓ (divided by dimension) between different sampling methods and 1000-step DDIM, varying the number of function evaluations (NFE), for the latent-space DPM “stable-diffusion” (Rombach et al., 2022) on MS-COCO2014 validation set, with the default guidance scale s = 7.5 in their official code.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3183898925781,
+    "y1": 316.6275329589844,
+    "y2": 373.5929870605469
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Latent-space", "DPM", "(s", "=", "7.5)", "DPM-Solver++", "DDIM", "PNDM", "DPM-Solver", "DEIS", "E", "M", "S", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "NFE", "10", "15", "20", "25", "50", "100", "250", "(c)", "Pixel-space", "DPM", "(s", "=", "2.0)", "†DPM-Solver++", "†DDIM", "DDIM", "PNDM", "DPM-Solver", "DEIS", "F", "ID", "15", "14", "13", "12", "11", "10", "9", "8", "NFE", "10", "15", "20", "25", "50", "100", "250", "(b)", "Pixel-space", "DPM", "(s", "=", "4.0)", "†DPM-Solver++", "†DDIM", "DDIM", "PNDM", "DPM-Solver", "DEIS", "F", "ID", "30", "20", "12", "13", "14", "15", "11", "10", "9", "8", "NFE", "10", "15", "20", "25", "50", "100", "250", "(a)", "Pixel-space", "DPM", "(s", "=", "8.0)", "†DPM-Solver++", "†DDIM", "DDIM", "PNDM", "DPM-Solver", "DEIS", "F", "ID", "50", "40", "30", "20", "9", "10", "11", "12", "13", "14", "15", "8", "NFE", "10", "15", "20", "25", "50", "100", "250"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 496.32,
+    "y1": 216.0,
+    "y2": 304.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Samples of different sampling methods for DPMs on ImageNet 256x256 with guidance scale 8.0.",
+  "captionBoundary": {
+    "x1": 111.21200561523438,
+    "x2": 500.78857421875,
+    "y1": 486.695556640625,
+    "y2": 492.6980285644531
+  },
+  "figType": "Figure",
+  "imageText": ["DPM-Solver++(2M)", "(xθ", ",", "multistep,", "thresholdin)", "DPM-Solver++(2S)", "(xθ", ",", "singlestep)", "DPM-Solver-2", "(εθ", ",", "singelstep)"],
+  "name": "4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 482.4,
+    "y1": 329.76,
+    "y2": 474.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Figure4-1.png"
+}, {
+  "caption": "Table 4: Sample quality measured by MSE ↓ on COCO2014 validation set (discrete-time latent model (Rombach et al., 2022)), varying the number of function evaluations (NFE). Guidance scale is 7.5, which is the recommended setting for stable-diffusion (Rombach et al., 2022).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.99835205078125,
+    "y1": 561.967529296875,
+    "y2": 587.89599609375
+  },
+  "figType": "Table",
+  "imageText": ["DDIM", "(Song", "et", "al.,", "2021a)", "0.59", "0.42", "0.48", "0.45", "0.34", "0.23", "0.12", "PNDM", "(Liu", "et", "al.,", "2022b)", "0.66", "0.43", "0.50", "0.46", "0.32", "\\", "\\", "DPM-Solver-2", "(Lu", "et", "al.,", "2022)", "0.66", "0.47", "0.40", "0.34", "0.20", "\\", "\\", "DPM-Solver-3", "(Lu", "et", "al.,", "2022)", "0.59", "0.48", "0.43", "0.37", "0.23", "\\", "\\", "DEIS-1", "(Zhang", "&", "Chen,", "2022)", "0.47", "0.39", "0.34", "0.29", "0.16", "\\", "\\", "DEIS-2", "(Zhang", "&", "Chen,", "2022)", "0.48", "0.40", "0.34", "0.29", "0.15", "\\", "\\", "DEIS-3", "(Zhang", "&", "Chen,", "2022)", "0.57", "0.45", "0.38", "0.34", "0.19", "\\", "\\", "DPM-Solver++(S)", "(ours)", "0.48", "0.41", "0.36", "0.32", "0.19", "\\", "\\", "DPM-Solver++(M)", "(ours)", "0.49", "0.40", "0.34", "0.29", "0.16", "\\", "\\", "7.5", "No", "Guidance", "Scale", "Thresholding", "Sampling", "Method", "\\", "NFE", "10", "15", "20", "25", "50", "100", "250"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 600.48,
+    "y2": 708.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Table4-1.png"
+}, {
+  "caption": "Table 3: Sample quality measured by FID ↓ on ImageNet 256×256 (discrete-time model (Dhariwal & Nichol, 2021)), varying the number of function evaluations (NFE).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.1224670410156,
+    "y1": 105.6595230102539,
+    "y2": 121.625
+  },
+  "figType": "Table",
+  "imageText": ["DPM-Solver++(S)", "(ours)", "9.23", "8.18", "7.81", "7.60", "\\", "\\", "\\", "DPM-Solver++(M)", "(ours)", "9.28", "8.56", "8.28", "8.18", "\\", "\\", "\\", "Yes", "DDIM", "(Song", "et", "al.,", "2021a)", "11.19", "9.20", "8.42", "8.05", "7.65", "7.59", "7.63", "DDIM", "(Song", "et", "al.,", "2021a)", "13.01", "9.60", "9.02", "8.45", "7.72", "7.60", "7.44", "PNDM", "(Liu", "et", "al.,", "2022b)", "11.58", "8.48", "8.17", "7.97", "\\", "\\", "\\", "DPM-Solver-2", "(Lu", "et", "al.,", "2022)", "14.12", "8.20", "8.59", "7.48", "\\", "\\", "\\", "DPM-Solver-3", "(Lu", "et", "al.,", "2022)", "21.06", "8.57", "8.19", "7.85", "\\", "\\", "\\", "DEIS-1", "(Zhang", "&", "Chen,", "2022)", "10.40", "9.11", "8.52", "8.21", "\\", "\\", "\\", "DEIS-2", "(Zhang", "&", "Chen,", "2022)", "9.74", "8.80", "8.28", "8.06", "\\", "\\", "\\", "DEIS-3", "(Zhang", "&", "Chen,", "2022)", "10.18", "8.63", "8.20", "7.98", "\\", "\\", "\\", "DPM-Solver++(S)", "(ours)", "9.18", "8.17", "7.77", "7.56", "\\", "\\", "\\", "DPM-Solver++(M)", "(ours)", "9.19", "8.47", "8.17", "8.07", "\\", "\\", "\\", "No", "2.0", "DPM-Solver++(S)", "(ours)", "8.94", "8.26", "7.95", "7.87", "\\", "\\", "\\", "DPM-Solver++(M)", "(ours)", "8.91", "8.21", "7.99", "7.96", "\\", "\\", "\\", "Yes", "DDIM", "(Song", "et", "al.,", "2021a)", "10.45", "8.95", "8.51", "8.25", "7.91", "7.82", "7.87", "DDIM", "(Song", "et", "al.,", "2021a)", "11.62", "9.67", "8.96", "8.58", "8.22", "8.06", "7.99", "PNDM", "(Liu", "et", "al.,", "2022b)", "22.71", "10.03", "8.69", "8.47", "\\", "\\", "\\", "DPM-Solver-2", "(Lu", "et", "al.,", "2022)", "37.68", "9.42", "8.22", "8.08", "\\", "\\", "\\", "DPM-Solver-3", "(Lu", "et", "al.,", "2022)", "74.97", "15.65", "9.99", "8.15", "\\", "\\", "\\", "DEIS-1", "(Zhang", "&", "Chen,", "2022)", "10.55", "9.47", "8.88", "8.65", "\\", "\\", "\\", "DEIS-2", "(Zhang", "&", "Chen,", "2022)", "10.13", "9.09", "8.68", "8.45", "\\", "\\", "\\", "DEIS-3", "(Zhang", "&", "Chen,", "2022)", "15.84", "9.25", "8.63", "8.43", "\\", "\\", "\\", "DPM-Solver++(S)", "(ours)", "9.08", "8.51", "8.00", "8.07", "\\", "\\", "\\", "DPM-Solver++(M)", "(ours)", "8.98", "8.26", "8.06", "8.06", "\\", "\\", "\\", "No", "4.0", "DPM-Solver++(S)", "(ours)", "9.26", "8.93", "8.40", "8.63", "\\", "\\", "\\", "DPM-Solver++(M)", "(ours)", "9.56", "8.64", "8.50", "8.39", "\\", "\\", "\\", "Yes", "DDIM", "(Song", "et", "al.,", "2021a)", "10.58", "9.53", "9.12", "8.94", "8.58", "8.49", "8.48", "DDIM", "(Song", "et", "al.,", "2021a)", "13.04", "11.27", "10.21", "9.87", "9.82", "9.52", "9.37", "PNDM", "(Liu", "et", "al.,", "2022b)", "99.80", "37.59", "15.50", "11.54", "\\", "\\", "\\", "DPM-Solver-2", "(Lu", "et", "al.,", "2022)", "114.62", "44.05", "20.33", "9.84", "\\", "\\", "\\", "DPM-Solver-3", "(Lu", "et", "al.,", "2022)", "164.74", "91.59", "64.11", "29.40", "\\", "\\", "\\", "DEIS-1", "(Zhang", "&", "Chen,", "2022)", "15.20", "10.86", "10.26", "10.01", "\\", "\\", "\\", "DEIS-2", "(Zhang", "&", "Chen,", "2022)", "19.12", "11.37", "10.08", "9.75", "\\", "\\", "\\", "DEIS-3", "(Zhang", "&", "Chen,", "2022)", "66.86", "24.48", "12.98", "10.87", "\\", "\\", "\\", "DPM-Solver++(S)", "(ours)", "12.20", "9.85", "9.19", "9.32", "\\", "\\", "\\", "DPM-Solver++(M)", "(ours)", "14.44", "9.46", "9.10", "9.11", "\\", "\\", "\\", "No", "8.0", "Guidance", "Scale", "Thresholding", "Sampling", "Method", "\\", "NFE", "10", "15", "20", "25", "50", "100", "250"],
+  "name": "3",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 133.92,
+    "y2": 508.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4vGwQqviud5-Table3-1.png"
+}]

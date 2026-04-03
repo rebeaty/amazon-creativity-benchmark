@@ -1,0 +1,201 @@
+[{
+  "caption": "Figure 1: Earphone measurements: (a) Audio signal recorded without interference, (b) Audio recording with interference, (c) IMU recording from earphone. (d) Zoomed in view of IMU signal.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 195.38052368164062,
+    "y2": 212.34197998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 74.88,
+    "y2": 191.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure1-1.png"
+}, {
+  "caption": "Figure 6: Performance across different users for (a) SI-SNR, (b) KWS 10, (c) KWS 35 accuracy.",
+  "captionBoundary": {
+    "x1": 113.39399719238281,
+    "x2": 498.60797119140625,
+    "y1": 605.6705322265625,
+    "y2": 611.6729736328125
+  },
+  "figType": "Figure",
+  "imageText": ["c", "y", "c", "c", "u", "ra", "S", "3", "5", "A", "K", "W", "100%", "80%", "60%", "40%", "20%", "User", "1", "User", "2", "User", "3", "User", "4", "0%", "Supervised", "Denoiser", "Self-Supervised", "IMUV", "Supervised", "IMUV", "c", "y", "c", "c", "u", "ra", "S", "1", "0", "A", "K", "W", "100%", "80%", "60%", "40%", "20%", "User", "1", "User", "2", "User", "3", "User", "4", "0%", ")", "d", "B", "R", "(", "S", "N", "S", "I-", "15", "10", "5", "User", "1", "User", "2", "User", "3", "User", "4", "0"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 510.71999999999997,
+    "y2": 593.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure6-1.png"
+}, {
+  "caption": "Table 1: Performance comparison across models and metrics.",
+  "captionBoundary": {
+    "x1": 183.37600708007812,
+    "x2": 428.3165588378906,
+    "y1": 194.59951782226562,
+    "y2": 200.60198974609375
+  },
+  "figType": "Table",
+  "imageText": ["Models", "SI-SNR", "Accuracy", "(KWS10)", "Accuracy", "(KWS35)", "SI-SNR", "Accuracy", "(KWS10)", "Accuracy", "(KWS35)", "Unprocessed", "5.27", "dB", "49.24%", "48.92%", "5.27", "dB", "49.24%", "48.92%", "Supervised", "Denoiser", "8.34dB", "65.72%", "64.02%", "2.85dB", "51.37%", "46.22%", "Self-supervised", "IMUV", "9.31dB", "64.45%", "62.83%", "5.76dB", "48.67%", "45.19%", "Supervised", "IMUV", "9.94dB", "69.02%", "66.78%", "6.03dB", "55.27%", "52.96%", "Personal", "Model", "General", "Model"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 212.64,
+    "y2": 293.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Table1-1.png"
+}, {
+  "caption": "Figure 2: Proposed architecture composed of a Translator on top, that attempts super-resolution from L to H , and generates an “attention map”. The model below is a multimodal Denoiser that uses the attention map to enhance the target audio. The enhanced target audio is returned to the Translator to improve the super-resolution, resulting in an improved attention map. This iteration continues.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0003967285156,
+    "y1": 582.45654296875,
+    "y2": 621.3359985351562
+  },
+  "figType": "Figure",
+  "imageText": ["ℒ2𝑑𝑒𝑛𝑜𝑖𝑠𝑒𝑟", "⋮", "ℒ1𝑑𝑒𝑛𝑜𝑖𝑠𝑒𝑟", "Masked", "noisy", "audio", "𝐻𝑇′", "ℒ𝑡𝑟𝑎𝑛𝑠", "Denoised", "audio", "෡𝐻𝑇", "Noisy", "audio", "𝐻", "&", "IMU", "vibrations", "𝐿", "Audio", "&", "IMU", "spectrogram", "Deep", "auto-encoder", "Denoiser:", "(𝐻,", "𝐿)", "→", "෡𝐻𝑇", "Translator:", "𝐿", "→", "𝐻𝑇′", "Attention", "map", "𝑀", "Guided", "auto-encoder", "spectrogram", "IMU", "vibrations", "𝐿", "IMU"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 136.79999999999998,
+    "x2": 466.08,
+    "y1": 388.8,
+    "y2": 580.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Performance versus SNR regimes.",
+  "captionBoundary": {
+    "x1": 319.41400146484375,
+    "x2": 495.6922607421875,
+    "y1": 243.56454467773438,
+    "y2": 249.5670166015625
+  },
+  "figType": "Figure",
+  "imageText": ["Supervised", "IMUV", "Self-Supervised", "IMUV", "Supervised", "Denoiser", ")", "d", "B", "R", "(", "S", "N", "S", "I-", "20", "15", "10", "5", "0", "Noisy", "audio", "SIR", "(dB)", "0", "5", "10"],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 319.68,
+    "x2": 495.35999999999996,
+    "y1": 121.44,
+    "y2": 229.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure8-1.png"
+}, {
+  "caption": "Figure 7: IMUV offers gain with increasing percentage of clean-data in training samples.",
+  "captionBoundary": {
+    "x1": 115.3479995727539,
+    "x2": 293.5476989746094,
+    "y1": 237.03652954101562,
+    "y2": 253.99798583984375
+  },
+  "figType": "Figure",
+  "imageText": ["Self-Supervised", "IMUV", "Supervised", "Denoiser", "15", "20", "S", "I-", "S", "N", "R", "(", "d", "B", ")", "10", "5", "0", "Percentage", "of", "Clean", "Samples", "0%", "25%", "50%", "75%"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 292.32,
+    "y1": 117.11999999999999,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure7-1.png"
+}, {
+  "caption": "Table 2: Performance for varying weights on the skip connection in the Denoiser. The metrics are [SI-SNR(dB) / KWS 10 accuracy(%) / KWS 35 accuracy(%)]. P% denotes the skip connection contributes P% weight when joining the decoder latent space. 100% setting ignores all inputs from the latent space, and only takes the results from the skip connection.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00341796875,
+    "y1": 401.4525146484375,
+    "y2": 440.33197021484375
+  },
+  "figType": "Table",
+  "imageText": ["4", "RELATED", "WORK", "0%", "10%", "50%", "100%", "Self-S.", "IMUV", "11.0", "/", "68.4", "/", "70", "13.9", "/", "74.2", "/", "73.7", "12.1", "/", "65.3", "/", "68.6", "11.1", "/", "65.1", "/", "70.1", "Super.", "IMUV", "12.1", "/", "80.2", "/", "79.8", "14", "/", "81.4", "/", "77.8", "12.5", "/", "82.5", "/", "82.16", "13.6", "/", "83.0", "/", "83.0"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 452.64,
+    "y2": 519.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Table2-1.png"
+}, {
+  "caption": "Figure 3: Denoiser architecture: The audio is encoded into a latent space, one part of which mimics the IMU and the other parts are representations of high frequency speech signals and interference.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99713134765625,
+    "y1": 398.9945373535156,
+    "y2": 415.95599365234375
+  },
+  "figType": "Figure",
+  "imageText": ["Audio", "output", "෡𝐻𝑇", "(800,21)", "Append", "as", "2nd", "channel", "Skip", "connection", ")", "(0", ".2", "u", "t", "p", "o", "D", "ro", ",2", ")", "2", ",7", "e", "(3", "o", "d", "D", "ec", ",2", ")", "4", ",5", "e", "(6", "o", "d", "D", "ec", ",2", ")", "2", ",7", "e", "(3", "o", "d", "D", "ec", ",2", ")", "6", ",7", "e", "(1", "o", "d", "D", "ec", ")", ",5", ",1", "e", "(8", "o", "d", "D", "ec", ")", ",7", ",1", "e", "(4", "o", "d", "D", "ec", "IMU", "input", "𝐿", "(20,21)", "Conv2DTranspose", "(n,k,stride=s)", "Decode", "(n=2,", "k=9,", "s=1)", "ZH", "(30,21)", "ZL", "(20,21)", "Latent", "space", "𝑍", ",1", ")", "(1", ",5", "d", "e", "En", "co", ",1", ")", "(2", ",9", "d", "e", "En", "co", ",1", ")", "(4", ",7", "d", "e", "En", "co", ",1", ")", "(8", ",5", "d", "e", "En", "co", ")", ",7", ",2", "(1", "6", "d", "e", "En", "co", ")", ",7", ",2", "(3", "2", "d", "e", "En", "co", ")", ",5", ",2", "(6", "4", "d", "e", "En", "co", "Maxpool(p)", "Conv2D(n,k)", "Encode", "(n=32,", "k=7,", "p=2)", "Audio", "input", "𝐻", "(800,21)"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 317.28,
+    "y2": 387.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure3-1.png"
+}, {
+  "caption": "Figure 4: (Column 1) Spectrogram of clean target signal HT on top, and the noisy microphone signal H at the bottom. (Column 2) Translator’s attention map after the first cycle on top, and the Denoiser’s output after the first cycle at the bottom. (Column 3) Translator’s attention map after the last cycle on top, and the Denoiser’s output after the last cycle at the bottom.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 428.7611083984375,
+    "y1": 204.84451293945312,
+    "y2": 254.6829833984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 421.44,
+    "y1": 80.64,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure4-1.png"
+}, {
+  "caption": "Figure 5: IMU placement for data collection",
+  "captionBoundary": {
+    "x1": 443.7030029296875,
+    "x2": 503.2718200683594,
+    "y1": 205.70449829101562,
+    "y2": 233.625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 442.56,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OqPD_6kukm-Figure5-1.png"
+}]

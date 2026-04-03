@@ -1,0 +1,461 @@
+[{
+  "caption": "Figure 6: Increasing environment complexity by including additional shapes improves transfer performance. World models trained on tasks including lines, circles, and squares create diversity, enabling generalization to unseen tasks. Right: Sampled tasks generated with varying types of shapes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 189.79452514648438,
+    "y2": 228.6739501953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure6-1.png"
+}, {
+  "caption": "Figure 22: Reinforcement learning training curves on environments with increasing numbers of lines. The Validation loss represents the performance of the RL agents on tasks sampled from their training distribution (i.e. 1 line, 2 lines, etc.) Note that these tasks are never actually seen during training. The Benchmark loss represents performance over an arbitrarily-chosen set of tasks, specifically, worlds with 5 lines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00494384765625,
+    "y1": 263.7525329589844,
+    "y2": 313.5909423828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "22",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 156.96,
+    "y2": 257.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure22-1.png"
+}, {
+  "caption": "Figure 23: Reinforcement learning training curves on increasing amounts of training tasks. Larger amounts of training tasks generally improve agent performance across all tasks.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 503.9982604980469,
+    "y1": 635.5735473632812,
+    "y2": 652.5350341796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "23",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 528.0,
+    "y2": 628.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure23-1.png"
+}, {
+  "caption": "Figure 1: Examples of tasks created in the Powderworld engine. Powderworld provides a physics-inspired simulation over which many distributions of tasks can be defined. Pictured above are human-designed challenges where a player must construct unstable arches, transport sand through a tunnel, freeze water to create a bridge, and draw a path with plants. Tasks in Powderworld creates challenges from a set of core rules, allowing agents to learn generalizable knowledge.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 202.33352661132812,
+    "y2": 252.17193603515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 510.24,
+    "y1": 80.64,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure1-1.png"
+}, {
+  "caption": "Figure 8: World models trained on more elements showcase better performance when finetuned on novel elements. When transferring to an environment containing three held-out elements (gas, stone, acid), models exposed to more elements during training perform better. These results show that Powderworld provides a rich enough simulation that world models learn robust representations capable of adaptation. The richer the simulation, the stronger these representations become.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 358.4955139160156,
+    "y2": 408.33392333984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 249.6,
+    "y2": 351.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure8-1.png"
+}, {
+  "caption": "Figure 7: Training on environments with more lines results in stronger generalization. Models are trained on environments with varying numbers of lines, then evaluated on test tasks. In each task, a random number of lines are drawn up to the maximum specified. A higher number of lines increases the diversity of the training distribution, but may also create destructive reactions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 189.79452514648438,
+    "y2": 228.6739501953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Powderworld runs on the GPU and can simulate many worlds in parallel. GPU simulation provides a significant speedup and allows simulation time to scale with batch size. World size can be increased to simulate more elements in a single world. Simulation speed is limited largely by the memory of the GPU, as shown in the right graph.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 191.32949829101562,
+    "y2": 230.20794677734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 510.24,
+    "y1": 80.64,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure2-1.png"
+}, {
+  "caption": "Figure 16: World model predictions over test tasks. This figure showcases the eight test tasks simulated for 16 timesteps into the future. World models are trained to predict 8 timesteps forwards, thus results are shown with each world model applying two updates.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0046691894531,
+    "y1": 672.4775390625,
+    "y2": 700.3980102539062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 108.96,
+    "y2": 660.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure16-1.png"
+}, {
+  "caption": "Figure 13: The Powderworld Web GUI allows users to directly edit the state of a world by drawing on various elements. World states can be generated at custom resolutions, and the simulation runs in real-time. Powderworld runs on a GPU server, with the web app acting only as a display and controller.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 240.27053833007812,
+    "y2": 279.14996337890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 405.12,
+    "y1": 80.64,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure13-1.png"
+}, {
+  "caption": "Figure 9: The Sand-Pushing task domain highlights a range of agent skills. A robust agent must interact with the world in a variety of ways to maneuver sand into the goal. The above test tasks each measure a specific skill, such as pushing sand around a wall, dealing with sand submerged in water, or removing a plant wall by setting it on fire.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 139.10153198242188,
+    "y2": 177.97998046875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 132.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure9-1.png"
+}, {
+  "caption": "Figure 10: An agent creating wind to push sand towards the goal. In the Sand-Pushing task, wind (shown in yellow/purple) is used to push a block of sand elements (shown in red) between obstacles to reach the goal slot on the right. Tasks are randomly generated via a procedural algorithm.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 263.5115051269531,
+    "y2": 291.43096923828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 198.72,
+    "y2": 256.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure10-1.png"
+}, {
+  "caption": "Figure 3: A list of elements and reactions in the Powderworld simulation. Elements each contain gravity and density information. A set of element-specific reactions dictates how each element behaves and reacts to neighbors. Certain reactions manipulate the world’s velocity field, which can push further elements away. Together, the gravity, velocity, and reaction systems create a core set of rules by which interesting simulations arise.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 186.82650756835938,
+    "y2": 236.6649169921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 510.24,
+    "y1": 80.64,
+    "y2": 179.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure3-1.png"
+}, {
+  "caption": "Figure 17: Cont: World model predictions over test tasks.",
+  "captionBoundary": {
+    "x1": 184.89999389648438,
+    "x2": 427.1011962890625,
+    "y1": 664.381591796875,
+    "y2": 670.384033203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 138.72,
+    "y2": 652.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure17-1.png"
+}, {
+  "caption": "Figure 15: Training tasks at various numbers of lines. Note that each line number represents the maximum possible number of lines, thus the 4-Line environment can generate [0,1,2,3,4] lines. Blank worlds appear when no lines are generated, or lines are generated out of unstable elements (e.g. fire) that disappear over time.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 626.7755737304688,
+    "y2": 665.6539916992188
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 142.56,
+    "y2": 615.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure15-1.png"
+}, {
+  "caption": "Figure 12: Test vs. Validation show opposite correlations in world-modelling and RL. Plotted are test and validation scores on models trained over increasing environment complexity (# of lines). Validation scores are computed on tasks sampled from the training distribution. Both world models and RL agents achieve worse validation scores on environments with higher complexity. However, high-complexity world models show increased generalization to test tasks, whereas high-complexity RL agents fail on both validation and test tasks. RL agents may suffer from learning issues in highcomplexity environments, leading to general failure.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 410.52752685546875,
+    "y2": 482.282958984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 265.92,
+    "y2": 403.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Left: Agents trained on larger numbers of training tasks achieve higher test reward. While there is negligible difference at larger numbers, agents require a baseline number of training tasks to generalize without overfitting. Right: In contrast to the world-modelling results, increasing complexity in the reinforcement learning harms performance. Reinforcement learning methods are sensitive to variance, and high-complexity tasks may inhibit the reward signal to an extent that agents struggle to correctly learn.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 188.58255004882812,
+    "y2": 249.37896728515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 80.64,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure11-1.png"
+}, {
+  "caption": "Figure 19: World model training curves on environments with increasing number of lines. Note the mirrored correlations: world models trained on more complex environments show higher validation loss (as the tasks are harder) but lower benchmark loss.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 367.5805358886719,
+    "y2": 395.5009765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "19",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 259.68,
+    "y2": 360.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure19-1.png"
+}, {
+  "caption": "Figure 18: World model training curves on environments with increasing complexity. The Validation loss represents the performance of the world models on tasks sampled from their training distribution (i.e. only circle, only squares, etc.) Note that these tasks are never actually seen during training. The loss represents performance over an arbitrarily-chosen set of tasks, specifically, worlds with 5 lines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 193.35855102539062,
+    "y2": 243.19696044921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 85.92,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure18-1.png"
+}, {
+  "caption": "Figure 20: World model training curves on increasing number of training tasks. More training tasks consistently improves both Validation and Benchmark performance.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0037536621094,
+    "y1": 521.5125732421875,
+    "y2": 538.4739990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "20",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 413.76,
+    "y2": 514.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure20-1.png"
+}, {
+  "caption": "Figure 21: Transfer performance to novel elements, over fine-tune time. Showcased are world models trained on increasing numbers of elements, then fine-tuned on an environment with three novel elements (gas, stone, acid). While in the zero-shot setting there is little correlation in performance, fine-tuning reveals that models trained on larger numbers of elements can more efficiently adapt to the new environment.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 673.090576171875,
+    "y2": 722.927978515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "21",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 557.76,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure21-1.png"
+}, {
+  "caption": "Figure 4: World modelling test tasks are designed to showcase specific element interactions. Test tasks are out-of-distribution and unseen during training, but follow the same rules as training tasks. The generalization capability of a world model is measured by how accurate its future predictions are on all eight tasks. Shown are starting and ending states of the test tasks, each focused on a certain emergent interaction.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 190.90554809570312,
+    "y2": 240.74395751953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 184.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure4-1.png"
+}, {
+  "caption": "Figure 5: World model generalization improves as the number of training tasks is increased. Shown are the test performances of world models trained with data from 10 tasks, 100 tasks, 1000 tasks, etc. Models trained on less data show greater instability, as observed by the spikes in test loss. Right: Comparison of world model predictions on a test task.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 375.2505187988281,
+    "y2": 414.12994384765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 257.76,
+    "y2": 368.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure5-1.png"
+}, {
+  "caption": "Figure 14: Training tasks at various environment complexities. Environment complexity is defined as the number of shapes included within the procedural generation algorithm. Each shape is generated up to five times, at random positions, sizes, and with a random element.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 632.2545776367188,
+    "y2": 660.1749877929688
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "14",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 148.79999999999998,
+    "y2": 620.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AWZgXGmsbA-Figure14-1.png"
+}]

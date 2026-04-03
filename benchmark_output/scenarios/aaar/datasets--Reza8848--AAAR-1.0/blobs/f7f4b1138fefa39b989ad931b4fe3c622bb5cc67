@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 1: Visualisation of the 5V space of architectures with the validation performance Pv and the corresponding training energy cost (E) for four training epoch budgets (4,12,36,108).",
+  "captionBoundary": {
+    "x1": 365.3979797363281,
+    "x2": 504.0047607421875,
+    "y1": 541.134521484375,
+    "y2": 601.9320068359375
+  },
+  "figType": "Figure",
+  "imageText": ["12", "epochs", "36", "epochs", "4", "epochs", "108", "epochs", "P", "v", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "E", "0", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 368.15999999999997,
+    "x2": 501.59999999999997,
+    "y1": 432.47999999999996,
+    "y2": 517.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Figure1-1.png"
+}, {
+  "caption": "Table 2: Metrics for models in single- and multi-objective setting seen in Figure 2. For SOO the optimal solution (Ar∗ /Red) is reported. For MOO the two extrema (Ar0 /Blue, Ar1 /Green) and the knee point (Ark /yellow) are reported.",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0032958984375,
+    "y1": 633.3505859375,
+    "y2": 663.822021484375
+  },
+  "figType": "Table",
+  "imageText": ["(Y)", "MOO", "5.09", "1916.65", "0.932", "0.324", "Ar∗", "(R)", "SOO", "21.22", "5482.78", "0.944", "1.032", "Ar0", "(B)", "MOO", "12.08", "3878.66", "0.942", "0.709", "Ar1", "(G)", "MOO", "0.88", "818.94", "0.834", "0.137", "Ark", "Model", "Strategy", "|θ|(M)↓", "T", "(s)", "↓", "Pv", "↑", "E(kWh)↓"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 412.32,
+    "y1": 567.36,
+    "y2": 622.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Table2-1.png"
+}, {
+  "caption": "Figure 2: a) Pareto front obtained for one of the MOO runs shows the family of solutions as discrete points b) Radar plot showing three solutions from a Pareto front that is close to the median in subfigure a). The three architectures are chosen to correspond to the two extrema (Ar0 in blue, Ar1 in green) and the knee point (Ark in yellow). The plot has four axes capturing the performance Pv and resource consumption measured in E, T, |θ|. c) The attainment curve showing the median solutions and the inter-quartile variations for 100 random initialisations of the MOO algorithm on the EC-NAS-Bench dataset. The two objectives being optimised (−Pv, E) are shown on the two axes. d) Radar plot for the solution obtained using SOO, which spans a larger area on the resource axes but also achieves the highest accuracy.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.003173828125,
+    "y1": 445.5905456542969,
+    "y2": 539.263916015625
+  },
+  "figType": "Figure",
+  "imageText": ["d)", "8.0715.8523.6231.39", "1.35", "1.05", "0.75", "0.44", "0.65", "0.75", "0.85", "0.95", "7830.78", "6072.66", "4314.53", "2556.41", "|θ|(M)", "E(kWh)", "Pv", "T", "(s)", "c)", "median", "h", ")", "(k", "W", "r", "1", ",E", "1.0", "0.8", "0.6", "0.4", "0.2", "r0,−Pv", "−0.94", "−0.92", "−0.90", "−0.88", "−0.86", "−0.84", "b)", "8.0715.8523.6231.39", "1.35", "1.05", "0.75", "0.44", "0.65", "0.75", "0.85", "0.95", "7830.78", "6072.66", "4314.53", "2556.41", "|θ|(M)", "E(kWh)", "Pv", "T", "(s)", "a)", "h", ")", "(k", "W", "r", "1", ",E", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "r0,−Pv", "−0.94", "−0.92", "−0.90", "−0.88", "−0.86", "−0.84"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.47999999999999,
+    "x2": 491.03999999999996,
+    "y1": 85.92,
+    "y2": 433.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Figure2-1.png"
+}, {
+  "caption": "Table 1: Metrics reported in EC-NAS-Bench.",
+  "captionBoundary": {
+    "x1": 310.85400390625,
+    "x2": 499.14666748046875,
+    "y1": 592.4005737304688,
+    "y2": 598.4030151367188
+  },
+  "figType": "Table",
+  "imageText": ["Carbon", "footprint", "kgCO2eq", "–", "Carbon", "intensity", "g/kWh", "–", "Model", "parameters", "Million", "(M)", "|θ|", "Test/Train/Eval.", "time", "Seconds", "(s)", "T", "(s)", "Test/Train/Val.", "Acc.", "R", "∈", "[0;", "1]", "Pv", "Energy", "consumption", "Kilowatt-hour", "(kWh)", "E(kWh)", "Power", "consumption", "Joule", "(J),", "Watt", "(W)", "E(J),", "E(W)", "Metrics", "Unit", "of", "measurement", "Notation"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 307.68,
+    "x2": 501.12,
+    "y1": 502.56,
+    "y2": 581.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Table1-1.png"
+}, {
+  "caption": "Table 4: Metrics for models in single- and multi-objective setting seen in Figure 3. For SOO the optimal solution (Ar∗ /Red) is reported. For MOO the two extrema (Ar0 /Blue, Ar1 /Green) and the knee point (Ark /yellow) are reported.",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0032958984375,
+    "y1": 140.51553344726562,
+    "y2": 170.98687744140625
+  },
+  "figType": "Table",
+  "imageText": ["(Y)", "MOO", "3.20", "1782.80", "0.925", "0.355", "Ar∗", "(R)", "SOO", "21.22", "5482.78", "0.944", "1.032", "Ar0", "(B)", "MOO", "21.22", "5461.66", "0.944", "1.015", "Ar1", "(G)", "MOO", "0.88", "815.93", "0.83", "0.153", "Ark", "Model", "Strategy", "|θ|(M)↓", "T", "(s)", "↓", "Pv", "↑", "E(kWh)↓"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 129.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Table4-1.png"
+}, {
+  "caption": "Table 3: Estimated reduction in total training costs w.r.t GPU days, kWh and kgCO2eq of the 4V and 5V space.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0030212402344,
+    "y1": 400.2345275878906,
+    "y2": 428.15496826171875
+  },
+  "figType": "Table",
+  "imageText": ["5V", "121.109", "1970.495", "252.571", "4V", "3.758", "48.931", "6.327", "Space", "Red.", "GPU", "days", "Red.", "kWh", "Red.", "kgCO2eq"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 495.35999999999996,
+    "y1": 339.84,
+    "y2": 389.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Table3-1.png"
+}, {
+  "caption": "Figure 3: Results for the 4V space. a) Pareto front obtained for one of the MOO runs shows the family of solutions as discrete points b) Radar plot showing three solutions from a Pareto front that is close to the median in subfigure a). The three architectures are chosen to correspond to the two extrema (Ar0 in blue, Ar1 in green) and the knee point (Ark in yellow). The plot has four axes capturing the performance Pv and resource consumption measured in E, T, |θ|. c) The attainment curve showing the median solutions and the inter-quartile variations for 100 random initialisations of the MOO algorithm on the EC-NAS-Bench dataset. The two objectives being optimised (−Pv, E) are shown on the two axes. d) Radar plot for the solution obtained using SOO, which spans larger area on the resource axes but also achieves the highest accuracy.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.003662109375,
+    "y1": 535.3175659179688,
+    "y2": 628.990966796875
+  },
+  "figType": "Figure",
+  "imageText": ["d)", "8.0715.8523.6231.39", "1.35", "1.05", "0.75", "0.44", "0.65", "0.75", "0.85", "0.95", "7830.78", "6072.66", "4314.53", "2556.41", "|θ|(M)", "E(kWh)", "Pv", "T", "(s)", "c)", "median", "h", ")", "(k", "W", "r", "1", ",E", "1.0", "0.8", "0.6", "0.4", "0.2", "r0,−Pv", "−0.94", "−0.92", "−0.90", "−0.88", "−0.86", "−0.84", "b)", "5.6410.8316.0321.22", "1.02", "0.80", "0.58", "0.37", "0.82", "0.86", "0.90", "0.94", "5461.67", "4300.21", "3138.75", "1977.29", "|θ|(M)", "E(kWh)", "Pv", "T", "(s)", "a)", "h", ")", "(k", "W", "r", "1", ",E", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "r0,−Pv", "−0.94", "−0.92", "−0.90", "−0.88", "−0.86", "−0.84"],
+  "name": "3",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 491.03999999999996,
+    "y1": 175.68,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35PLkGkJOQ4-Figure3-1.png"
+}]

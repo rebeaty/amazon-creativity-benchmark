@@ -1,0 +1,41 @@
+[{
+  "caption": "Figure 1: Causal graph of the data generating process for offline RL in POMDP. Here Sh is the state at step h. Besides, Ah, Rh, and Oh are the action, immediate reward, and observation, respectively. The dotted nodes indicate that the variables are not stored in the offline dataset. Solid arrows indicate the dependency among the variables. In specific, the action Ah is specified by the behavior policy which is a function of Sh (blue arrows). Moreover, both the observation Oh and reward Rh depend on the state Sh (red arrows). We remark that Sh affects both Ah and (Oh, Rh) and thus serves as an unobserved confounder.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 307.7414245605469,
+    "y1": 320.06451416015625,
+    "y2": 457.5740051269531
+  },
+  "figType": "Figure",
+  "imageText": ["Such", "a", "confounding", "issue", "is", "illustrated", "by", "a", "causal", "graph", "in", "Figure", "1.", "As", "a", "result,", "directly", "applying", "offline", "RL", "methods", "for", "MDPs", "will", "nev-", "ertheless", "incur", "a", "considerable", "confounding", "bias.", "Besides,", "since", "the", "latent", "states", "evolve", "according", "to", "the", "Markov", "transition", "kernel,", "the", "causal", "struc-", "ture", "is", "thus", "dynamic,", "which", "makes", "the", "confound-", "ing", "issue", "more", "challenging", "to", "handle", "than", "that", "in", "static", "causal", "problems.", "Furthermore,", "apart", "from", "the", "confounding", "issue,", "since", "we", "aim", "to", "learn", "the", "optimal", "policy,", "our", "algorithm", "also", "needs", "to", "handle", "the", "distributional", "shift", "between", "the", "tra-", "jectories", "induced", "by", "the", "behavior", "policy", "and", "the", "family", "of", "target", "policies.", "Finally,", "to", "handle", "large", "observation", "spaces,", "we", "need", "to", "employ", "powerful", "function", "approximators.", "As", "a", "result,", "the", "coupled", "challenges", "due", "to", "(i)", "the", "confounding", "bias,", "(ii)", "distributional", "shift,", "and", "(iii)", "large", "observation", "spaces", "that", "are", "distinctive", "in", "our", "problem", "neces-", "sitates", "new", "algorithm", "design", "and", "theory."],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 505.91999999999996,
+    "y1": 239.04,
+    "y2": 456.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PbkBDQ5_UbV-Figure1-1.png"
+}, {
+  "caption": "Table 1: We compare with most related representative works in closely related lines of research. The first line of research studies offline RL in standard MDPs without any partial observability. The second line of research studies online RL in POMDPs where the actions are specified by history-dependent policies. Thus, the actions does not directly depends on the latent states and thus these works do not involve the challenge due to confounded data. The third line of research studies OPE in POMDPs where the goal is to learn the value of the target policy as opposed to learning the optimal policy. As a result, these works do not to need to handle the challenge of distributional shift via pessimism.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0041809082031,
+    "y1": 209.03054809570312,
+    "y2": 280.7860107421875
+  },
+  "figType": "Table",
+  "imageText": ["P3O", "(ours)", "✓", "✓", "✓", "✓", "Bennett", "and", "Kallus", "(2021)", "✓", "✓", "✓", "✘", "Shi", "et", "al.", "(2021)", "✓", "✓", "✓", "✘", "Liu", "et", "al.", "(2022)", "✘", "✓", "✘", "✓", "Jin", "et", "al.", "(2020)", "✘", "✓", "✘", "✓", "Efroni", "et", "al.", "(2022)", "✘", "✓", "✘", "✓", "Uehara", "and", "Sun", "(2021)", "✓", "✘", "✘", "✓", "Offline", "Partial", "Obs.", "Confounded", "Data", "Policy", "Opt.", "Xie", "et", "al.", "(2021)", "✓", "✘", "✘", "✓"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 487.2,
+    "y1": 81.6,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PbkBDQ5_UbV-Table1-1.png"
+}]

@@ -1,0 +1,481 @@
+[{
+  "caption": "Figure 1: Deep Latent Variable Models for Neural Processes. Here DC and DT respectively denote the context points for the functional prior inference and the target points for the function prediction. The global latent variable z is to summarize function properties. The model involves a functional prior distribution p(z|DC ;ϑ) and a functional generative distribution p(DT |z;ϑ). Please refer to Section (2) for detailed notation descriptions.",
+  "captionBoundary": {
+    "x1": 385.1990051269531,
+    "x2": 504.0030212402344,
+    "y1": 519.6365966796875,
+    "y2": 690.0220336914062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 388.8,
+    "x2": 499.2,
+    "y1": 435.84,
+    "y2": 498.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure1-1.png"
+}, {
+  "caption": "Figure 8: From the Left to the Right are population fitting results with ±1 standard deviation in the predator and prey datasets with the meta trained SI-NPs. The x-axis corresponds to normalized years from 1845 to 1935 in order.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00408935546875,
+    "y1": 360.90252685546875,
+    "y2": 388.822998046875
+  },
+  "figType": "Figure",
+  "imageText": ["Fitting", "Results", "for", "the", "Prey", "(SI-NPs)", "Predictive", "Mean", "Prey", "Context", "Target", "n", "la", "tio", "Po", "pu", "2", "1", "0", "1", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2", "Fitting", "Results", "for", "the", "Predator", "(SI-NPs)", "Predictive", "Mean", "Predator", "Context", "Target", "n", "la", "tio", "Po", "pu", "2", "1", "0", "1", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0"],
+  "name": "8",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 145.44,
+    "x2": 465.12,
+    "y1": 248.16,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure8-1.png"
+}, {
+  "caption": "Table 6: Test average log-likelihoods of target data points with reported standard deviations for Sim2Real (4 runs). We test the performance of different optimization objectives in both context data points and target data points. For each run, we randomly sample 1000 functions as tasks to evaluate.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.0034484863281,
+    "y1": 447.9195251464844,
+    "y2": 475.8399658203125
+  },
+  "figType": "Table",
+  "imageText": ["LSI-NP", "(ours)", "-0.240±0.052", "-2.934±0.33", "LNP", "-0.457±0.015", "-3.275±0.507", "LCNP", "-0.273±0.026", "-3.012±0.034", "LML-NP", "-1.381±0.196", "-2.969±0.165", "#", "Sim", "(Lotka-Volterra)", "Real(Predator-Prey)"],
+  "name": "6",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 438.24,
+    "y1": 478.56,
+    "y2": 544.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table6-1.png"
+}, {
+  "caption": "Table 3: A Summary of Optimization Objectives in NPs Family. We list the available optimization objectives in Section (3)/(4). For Importance Weighted Estimates, multiple Monte Carlo samples are required in meta training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 501.0452880859375,
+    "y2": 528.9657592773438
+  },
+  "figType": "Table",
+  "imageText": ["LSI-NP", "(Ours)", "Biased", "Estimate", "✓", "Optimization", "Objective", "Connection", "with", "L(ϑ)", "in", "Eq.", "(4)", "Importance", "Weighted", "Estimates", "LNP(ϑ,", "ϕ)", "Approximate", "ELBO", "✗", "LCNP(ϑ)", "Biased", "Estimate", "✗", "LML-NP(ϑ)", "Biased", "Estimate", "✓"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 531.84,
+    "y2": 602.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table3-1.png"
+}, {
+  "caption": "Figure 12: Examples of Curve Fitting in RBF Kernel Cases.",
+  "captionBoundary": {
+    "x1": 186.35000610351562,
+    "x2": 425.6516418457031,
+    "y1": 377.74456787109375,
+    "y2": 383.7470397949219
+  },
+  "figType": "Figure",
+  "imageText": ["0.6", "Curve", "Fitting", "with", "ML-ANPs", "Ground", "Truth", "Predictive", "Mean", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "0.8", "Curve", "Fitting", "with", "ANPs", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "0.6", "Curve", "Fitting", "with", "ML-ANPs", "Ground", "Truth", "Predictive", "Mean", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Curve", "Fitting", "with", "ANPs", "Ground", "Truth", "Predictive", "Mean", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ML-ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x"],
+  "name": "12",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 449.28,
+    "y1": 104.64,
+    "y2": 362.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Examples of Curve Fitting in Periodic Kernel Cases.",
+  "captionBoundary": {
+    "x1": 179.16200256347656,
+    "x2": 432.8396301269531,
+    "y1": 703.8685913085938,
+    "y2": 709.8710327148438
+  },
+  "figType": "Figure",
+  "imageText": ["Ground", "Truth", "Predictive", "Mean", "2.0", "Curve", "Fitting", "with", "ML-ANPs", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "1.5", "Curve", "Fitting", "with", "ANPs", "1.0", "0.5", "0.0", "0.5", "1.0", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "2", "1", "0", "1", "2", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "2", "Curve", "Fitting", "with", "ML-ANPs", "1", "0", "1", "2", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "ANPs", "1", "0", "1", "2", "3", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "2", "1", "0", "1", "2", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "2", "Curve", "Fitting", "with", "ML-ANPs", "Ground", "Truth", "Predictive", "Mean", "1", "0", "1", "2", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Curve", "Fitting", "with", "ANPs", "Ground", "Truth", "Predictive", "Mean", "2", "1", "0", "1", "2", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "2", "1", "0", "1", "2", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x"],
+  "name": "13",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 159.84,
+    "x2": 449.28,
+    "y1": 434.4,
+    "y2": 688.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure13-1.png"
+}, {
+  "caption": "Table 1: Test average log-likelihoods of target data points for 1-dimensional Gaussian process dataset with various kernels (reported standard deviations in 5 runs). For each run, we randomly sample 1000 functions as tasks to evaluate.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032653808594,
+    "y1": 496.4244689941406,
+    "y2": 524.3439331054688
+  },
+  "figType": "Table",
+  "imageText": ["LSI-NP", "(ours)", "0.305±0.006", "0.493±0.007", "-0.532±0.036", "LNP", "(Garnelo", "et", "al.,", "2018b)", "-0.225±0.03", "-0.183±0.03", "-0.611±0.034", "LCNP", "(Garnelo", "et", "al.,", "2018a)", "0.295±0.017", "0.463±0.023", "-0.533±0.009", "LML-NP", "(Foong", "et", "al.,", "2020)", "0.303±0.013", "0.439±0.009", "-0.547±0.036", "LGP", "(Oracle)", "0.821±0.03", "1.18±0.013", "0.833±0.017", "RBF", "Periodic", "#", "Matern", "−", "5", "2"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 526.56,
+    "y2": 606.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table1-1.png"
+}, {
+  "caption": "Figure 3: Examples of Curve Fitting in RBF Kernel Cases. The plots report predictive mean functions with ±3 standard deviations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 340.94354248046875,
+    "y2": 357.905029296875
+  },
+  "figType": "Figure",
+  "imageText": ["Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "ML-NPs", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "CNPs", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "0.5", "Curve", "Fitting", "with", "NPs", "0.0", "0.5", "1.0", "2", "1", "0", "1", "2", "x", "Curve", "Fitting", "with", "SI-NPs", "Ground", "Truth", "Predictive", "Mean", "0.75", "0.50", "0.25", "0.00", "0.25", "0.50", "0.75", "y", "2", "1", "0", "1", "2", "x"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 495.35999999999996,
+    "y1": 262.56,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure3-1.png"
+}, {
+  "caption": "Figure 11: Examples of Curve Fitting in Matern Kernel Cases.",
+  "captionBoundary": {
+    "x1": 181.37899780273438,
+    "x2": 430.623291015625,
+    "y1": 709.9215698242188,
+    "y2": 715.9240112304688
+  },
+  "figType": "Figure",
+  "imageText": ["Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ML-ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "SI-ANPs", "y", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ML-ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "SI-ANPs", "y", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "x", "0.6", "Curve", "Fitting", "with", "ML-ANPs", "Ground", "Truth", "Predictive", "Mean", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ANPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Curve", "Fitting", "with", "SI-ANPs", "Ground", "Truth", "Predictive", "Mean", "y", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x"],
+  "name": "11",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 449.28,
+    "y1": 442.56,
+    "y2": 695.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Examples of curve fitting in all kernel cases. From the up to the down in rows are respectively Marten, RBF, and Periodic cases.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 387.3025207519531,
+    "y2": 404.26397705078125
+  },
+  "figType": "Figure",
+  "imageText": ["Ground", "Truth", "Predictive", "Mean", "2.0", "Curve", "Fitting", "with", "ML-NPs", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "2.0", "Curve", "Fitting", "with", "CNPs", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "NPs", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "2.0", "2", "1", "0", "1", "2", "x", "Curve", "Fitting", "with", "SI-NPs", "Ground", "Truth", "Predictive", "Mean", "y", "2", "1", "0", "1", "2", "2", "1", "0", "1", "2", "x", "0.6", "Curve", "Fitting", "with", "ML-NPs", "Ground", "Truth", "Predictive", "Mean", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "CNPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "NPs", "0.50", "0.25", "0.00", "0.25", "0.50", "0.75", "1.00", "1.25", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "SI-NPs", "y", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "ML-NPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "2", "1", "0", "1", "2", "x", "0.6", "Curve", "Fitting", "with", "CNPs", "Ground", "Truth", "Predictive", "Mean", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "0.6", "Curve", "Fitting", "with", "NPs", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2", "1", "0", "1", "2", "x", "Ground", "Truth", "Predictive", "Mean", "Curve", "Fitting", "with", "SI-NPs", "y", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "2", "1", "0", "1", "2", "x"],
+  "name": "10",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 149.28,
+    "x2": 456.47999999999996,
+    "y1": 98.88,
+    "y2": 372.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure10-1.png"
+}, {
+  "caption": "Table 4: Summary of Typical Neural Process Related Models (Meta-Testing Scenarios). The recognition model and the generative model respectively correspond to the encoder and the decoder in the family of neural processes. Here [xC , yC ] are context data points and we consider (x∗, y∗) a data point in target dataset.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.00335693359375,
+    "y1": 481.02947998046875,
+    "y2": 519.907958984375
+  },
+  "figType": "Table",
+  "imageText": ["FNP", "(Louizos", "et", "al.,", "2019)", "fϕ(z∗|[xC", ",", "yC", "],", "x∗)", "pθ(y∗|z∗)", "latent", "DAG", "Conv-CNP", "(Gordon", "et", "al.,", "2019)", "fϕ(z∗|[xC", ",", "yC", "],", "x∗)", "pθ(y∗|[x∗,", "z∗])", "convolutional", "functional", "ConvNP", "(Foong", "et", "al.,", "2020)", "pϕ(z|[xC", ",", "yC", "])", "pθ(y∗|[x∗,", "z])", "convolutional", "functional", "FCRL", "(Gondal", "et", "al.,", "2021)", "fϕ(z|[xC", ",", "yC", "])", "pθ(y∗|[x∗,", "z])", "contrastive", "functional", "ANP", "(Kim", "et", "al.,", "2019;", "2021)", "qϕ1(z|[xC", ",", "yC", "])", "pθ(y∗|[x∗,", "z,", "z∗])", "global", "functional", "fϕ2(z∗|[xC", ",", "yC", "],", "x∗)", "local", "embedding", "NP", "(Garnelo", "et", "al.,", "2018b)", "qϕ(z|[xC", ",", "yC", "])", "pθ(y∗|[x∗,", "z])", "global", "functional", "CNP", "(Garnelo", "et", "al.,", "2018a)", "z", "=", "fϕ(xC", ",", "yC)", "pθ(y∗|[x∗,", "z])", "conditional", "functional", "Models", "Recognition", "Model", "Generative", "Model", "Inductive", "Bias"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 522.72,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table4-1.png"
+}, {
+  "caption": "Table 9: Test average log-likelihoods of target data points with reported standard deviations for Sim2Real (4 runs). We test the performance of different optimization objectives augmented by attention inductive bias (Kim et al., 2019) in both context data points and target data points. For each run, we randomly sample 1000 functions as tasks to evaluate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 92.6165542602539,
+    "y2": 131.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["LSI-ANP", "(ours)", "2.203±0.026", "-2.822±0.316", "LANP", "2.211±0.017", "-3.174±0.121", "LML-ANP", "2.203±0.042", "-3.624±0.152", "#", "Sim", "(Lotka-Volterra)", "Real(Predator-Prey)"],
+  "name": "9",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 151.68,
+    "x2": 458.4,
+    "y1": 134.4,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table9-1.png"
+}, {
+  "caption": "Figure 9: From the Left to the Right are population fitting results with ±1 standard deviation in the predator and prey datasets with the meta trained SI-ANPs. The x-axis corresponds to normalized years from 1845 to 1935 in order.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0037841796875,
+    "y1": 326.176513671875,
+    "y2": 354.09698486328125
+  },
+  "figType": "Figure",
+  "imageText": ["Fitting", "Results", "for", "the", "Prey", "(SI-ANPs)", "Predictive", "Mean", "Prey", "Context", "Target", "n", "la", "tio", "Po", "pu", "3", "2", "1", "0", "1", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "Fitting", "Results", "for", "the", "Predator", "(SI-ANPs)", "Predictive", "Mean", "Predator", "Context", "Target", "n", "la", "tio", "Po", "pu", "3", "2", "1", "0", "1", "2.0", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5"],
+  "name": "9",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 145.44,
+    "x2": 465.12,
+    "y1": 217.44,
+    "y2": 305.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure9-1.png"
+}, {
+  "caption": "Figure 5: Asymptotic Performance in Image Completion. We meta test pixel average log-likelihoods with varying number of context points in image datasets. Context points are randomly selected for each image in testing processes. For MNIST/FMNIST datasets, the numbers of context pixels in testing are {10, 100, 300, 500, 700}. For CIFAR10/SVHN datasets, the numbers of context pixels in testing are {10, 100, 300, 500, 800, 1000}.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 481.41552734375,
+    "y2": 531.2539672851562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 372.96,
+    "y2": 465.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure5-1.png"
+}, {
+  "caption": "Table 5: Inference Gaps in vanilla NPs. The ↓ indicates the minimization to obtain the optimal inference solution. The sign − − means not applicable in deriving equivalent KL divergence form. The sign ∗ indicates the optimal posterior approximation in the family of variational distributions ϕ∗ = argminϕ∈ΦDKL [ qϕ(z) ∥ p(z|DT τ ;ϑ ∗) ] . Here ϑ∗ consists of the optimal parameters in priors p(z|DC τ ;ϑ ∗) and the conditional distribution p(DT τ |z;ϑ∗).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0048828125,
+    "y1": 161.08145141601562,
+    "y2": 215.28778076171875
+  },
+  "figType": "Table",
+  "imageText": ["NP", "Prior", "Approximation", "|LELBO(ϑ", "∗,", "ϕ∗)−", "LNP(ϑ", "∗,", "ϕ∗)|", "−", "Surrogate", "Likelihood", "L(ϑ∗)−", "L(ϑ;ϑk)", "↓", "L(ϑ∗)−", "L(ϑH)", "Amortization", "LELBO(ϑ", "∗,", "ϕ∗)−", "LELBO(ϑ", "∗,", "ϕ)", "↓", "DAI", "KL", "−DPA", "KL", "Posterior", "Approximation", "L(ϑ∗)−", "LELBO(ϑ", "∗,", "ϕ∗)", "↓", "DKL", "[", "qϕ∗(z)", "∥", "p(z|DT", "τ", ";ϑ", "∗)", "]", "Approximate", "Inference", "L(ϑ∗)−", "LELBO(ϑ", "∗,", "ϕ)", "↓", "DKL", "[", "qϕ(z)", "∥", "p(z∗|DT", "τ", ";ϑ)", "]", "Terms", "Optimization", "Objective", "KL", "Divergence", "or", "Gaps"],
+  "name": "5",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 216.0,
+    "y2": 315.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table5-1.png"
+}, {
+  "caption": "Figure 7: Computational Diagram of Vanilla NPs. The blue one and the pink one are, respectively, the encoder and the decoder structures in vanilla NPs. The approximate posterior, the approximate prior, the learned prior, and the proposal distributions are in the same neural structure as the encoder. For the generative distribution in the form of the decoder, the diagram shows one instance (x∗, y∗) ∈ DT τ in a generation and the sampled global latent variable z ∼ p(z|DC τ ;ϑ) or z ∼ qϕ(z|DC τ ) is shared across all data points in one realization.",
+  "captionBoundary": {
+    "x1": 107.9998779296875,
+    "x2": 504.00335693359375,
+    "y1": 352.7815246582031,
+    "y2": 413.57891845703125
+  },
+  "figType": "Figure",
+  "imageText": ["or", "(b)", "Generative", "Distributions", "(a)", "Approximate", "or", "Learned", "Functional", "Priors", "......", "...", "Eembedding", "Eembedding", "Eembedding", "Mean", "Pooling"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 464.15999999999997,
+    "y1": 85.92,
+    "y2": 332.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure7-1.png"
+}, {
+  "caption": "Figure 17: Examples of FMNIST Image Completion Results using SI-ANPs. From left to right and top to bottom are cases with 10, 100, 300, 500, and 700 randomly selected pixels as the context points.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 473.6255187988281,
+    "y2": 501.54595947265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "17",
+  "page": 31,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 307.68,
+    "y2": 459.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure17-1.png"
+}, {
+  "caption": "Table 7: Test average log-likelihoods of target data points with reported standard deviations for 1-dimensional Gaussian process dataset with various kernels (5 runs). For each run, we randomly sample 1000 functions as tasks to evaluate. All NP models are augmented with attention networks. Settings are same as in the main paper.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.0033264160156,
+    "y1": 186.71951293945312,
+    "y2": 225.59893798828125
+  },
+  "figType": "Table",
+  "imageText": ["LSI-ANP", "(ours)", "0.995±0.017", "1.071±0.017", "0.56±0.024", "LANP", "(Kim", "et", "al.,", "2019)", "0.98±0.021", "1.06±0.020", "-1.346±0.102", "LML-ANP", "(Foong", "et", "al.,", "2020)", "0.985±0.019", "1.062±0.019", "0.574±0.023", "#", "Matern", "−", "5", "2", "RBF", "Periodic"],
+  "name": "7",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 228.48,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table7-1.png"
+}, {
+  "caption": "Table 8: Test average log-likelihoods of target data points with reported standard deviations for image completion in MNIST/FMNIST/SVHN/CIFAR10 (4 runs). All NP models are augmented with attention networks. Same as in the main paper, we test the performance of different optimization objectives in target data points. We use 32 Monte Carlo samples from the functional prior to evaluate the average log-likelihoods.",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 504.00335693359375,
+    "y1": 425.3695373535156,
+    "y2": 475.20794677734375
+  },
+  "figType": "Table",
+  "imageText": ["H.3.3", "SIM2REAL", "LSI-ANP", "(ours)", "1.212±0.004", "1.174±0.005", "4.040±0.002", "3.710±0.028", "#", "MNIST", "FMNIST", "SVHN", "CIFAR10", "LANP", "(Kim", "et", "al.,", "2019)", "1.173±0.008", "1.101±0.01", "4.011±0.005", "3.605±0.016", "LML-ANP", "(Foong", "et", "al.,", "2020)", "1.216±0.003", "1.172±0.009", "4.017±0.002", "3.545±0.01"],
+  "name": "8",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 498.24,
+    "y1": 477.59999999999997,
+    "y2": 572.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Table8-1.png"
+}, {
+  "caption": "Figure 6: Statistics of Learned Functional Priors in ML-NPs/SI-NPs. In meta testing, we still vary the number of context points in image datasets. The trace of learned functional priors’ covariance matrices Tr[Σϑ(DC τ )] is computed based on p(z|DC τ ;ϑ) = N (z;µϑ(DC τ ),Σϑ(DC τ )).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 218.21652221679688,
+    "y2": 248.5999755859375
+  },
+  "figType": "Figure",
+  "imageText": ["SI-NP", "(SVHN)", "1e", "2", "1.44", "1.46", "1.48", "1.50", "1.52", "1.54", "0", "200", "400", "600", "800", "1000", "Number", "of", "Context", "Pixels", "SI-NP", "(CIFAR10)", "1e", "2", "2.05", "2.10", "2.15", "2.20", "2.25", "2.30", "0", "200", "400", "600", "800", "1000", "Number", "of", "Context", "Pixels", "SI-NP", "(FMNIST)", "1e", "3", "8.6", "8.4", "8.2", "8.0", "0", "200", "400", "600", "Number", "of", "Context", "Pixels", "SI-NP", "(MNIST)", "1e", "16", "ac", "e", "e", "Tr", "ria", "nc", "Co", "va", "6", "4", "2", "0", "0", "200", "400", "600", "Number", "of", "Context", "Pixels", "ML-NP", "(SVHN)", "1e", "8", "ML-NP", "(CIFAR10)", "0", "200", "400", "600", "800", "1000", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "1e", "8", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0", "0", "200", "400", "600", "800", "1000", "ML-NP", "(FMNIST)", "1e", "5", "8", "6", "4", "2", "0", "200", "400", "600", "ML-NP", "(MNIST)", "1e", "4", "0", "200", "400", "600", "0", "1", "2", "3", "4", "5", "6", "Co", "va", "ria", "nc", "e", "Tr", "ac", "e"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure6-1.png"
+}, {
+  "caption": "Figure 15: Examples of Image Completion Results using SI-NPs. From top to bottom in rows are original images, context points, means, and variances of completed images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 294.6985168457031,
+    "y2": 311.65997314453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 500.15999999999997,
+    "y1": 216.0,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure15-1.png"
+}, {
+  "caption": "Figure 14: Evaluation of KL Divergence Terms in Vanilla NPs. In meta testing, we still vary the number of context points in image datasets. For NPs, the KL divergence value DKL [ qϕ(z) ∥ qϕ(z|DC τ ) ] is computed.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 172.84750366210938,
+    "y2": 203.23095703125
+  },
+  "figType": "Figure",
+  "imageText": ["700", "NP", "(SVHN)", "600", "500", "400", "300", "200", "100", "0", "200", "400", "600", "800", "1000", "0", "NP", "(CIFAR10)", "1000", "1250", "1500", "1750", "2000", "250", "500", "750", "0", "200", "400", "600", "800", "1000", "0", "500", "NP", "(FMNIST)", "400", "300", "200", "100", "0", "200", "400", "600", "0", "NP", "(MNIST)", "KL", "D", "400", "300", "200", "100", "0", "200", "400", "600", "0"],
+  "name": "14",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 155.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure14-1.png"
+}, {
+  "caption": "Figure 16: Examples of CIFAR10 Image Completion Results using SI-ANPs. From left to right and top to bottom are cases with 10, 100, 300, 500, and 800 randomly selected pixels as the context points.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 556.2975463867188,
+    "y2": 584.218017578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "16",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 389.76,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure16-1.png"
+}, {
+  "caption": "Figure 2: Illustration of Expectation Maximization for NPs. Green lines indicate the results after the E-steps while the red lines are for the M-steps in Algorithm (1). In the convergence iteration, the performance gap L(ϑH)− L(ϑH−1) is close to zero and the algorithm results in at least a local optimal solution. Values of these quantities are increased from the left to the right.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00445556640625,
+    "y1": 162.66152954101562,
+    "y2": 201.54095458984375
+  },
+  "figType": "Figure",
+  "imageText": ["-th", "Iteration-st", "Iteration", "Optimization", "Gap", "Convergence", "Iteration"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 146.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_A7v2DqLjZdq-Figure2-1.png"
+}]

@@ -1,0 +1,321 @@
+[{
+  "caption": "Table 5: Data statistics of MarKG. # refers to the number of.",
+  "captionBoundary": {
+    "x1": 185.32899475097656,
+    "x2": 426.6730041503906,
+    "y1": 476.8435363769531,
+    "y2": 482.84600830078125
+  },
+  "figType": "Table",
+  "imageText": ["MarKG", "11,292", "192", "34,420", "76,424", "Wikidata", "WN9-IMG", "6,555", "9", "14,319", "65,550", "WordNet", "FB15k-IMG", "11,757", "1,231", "350,293", "107,570", "Freebase", "#", "entity", "#", "relation", "#", "triple", "#", "image", "source"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 159.84,
+    "x2": 452.15999999999997,
+    "y1": 409.91999999999996,
+    "y2": 465.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table5-1.png"
+}, {
+  "caption": "Figure 7: Relation distribution of MARS.",
+  "captionBoundary": {
+    "x1": 223.3260040283203,
+    "x2": 388.6751708984375,
+    "y1": 635.2875366210938,
+    "y2": 641.2899780273438
+  },
+  "figType": "Figure",
+  "imageText": ["metaphor", "probabilis1c", "a>ribute", "takes", "place", "in", "subject-predicate", "contradictory", "to", "target", "of", "prerequisite", "diﬀerent", "from", "subject-object", "iden1cal", "to", "verb-object", "antonym", "has", "use", "head-modiﬁer", "intersec1on", "to", "synonym", "made", "from", "material", "follow", "has", "quality", "tool", "of", "opposite", "of", "loca1on", "has", "cause", "part", "of", "corresponds", "to", "instance", "of", "juxtaposi1on", "to"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 214.56,
+    "x2": 397.44,
+    "y1": 500.64,
+    "y2": 620.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure7-1.png"
+}, {
+  "caption": "Table 2: The main performance results on MARS. We report pipeline baselines with multimodal knowledge graph embedding (MKGE) methods and replace their backbone models with analogyaware model ANALOGY. We also utilize our MarT on end-to-end baselines with multimodal pretrained Transformer (MPT) methods and obtain the best performance in MarT MKGformer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 291.175537109375,
+    "y2": 330.05499267578125
+  },
+  "figType": "Table",
+  "imageText": ["MarT", "VisualBERT", "Single-Stream", "0.261", "0.292", "0.308", "0.321", "0.284", "MarT", "ViLT", "Single-Stream", "0.245", "0.275", "0.287", "0.303", "0.266", "MarT", "ViLBERT", "Dual-Stream", "0.256", "0.312", "0.327", "0.347", "0.292", "MarT", "FLAVA", "Mixed-Stream", "0.264", "0.303", "0.309", "0.319", "0.288", "MarT", "MKGformer", "Mixed-Stream", "0.301", "0.367", "0.380", "0.408", "0.341", "VisualBERT", "Single-Stream", "0.247", "0.281", "0.289", "0.303", "0.269", "ViLT", "Single-Stream", "0.235", "0.266", "0.274", "0.286", "0.257", "ViLBERT", "Dual-Stream", "0.252", "0.308", "0.320", "0.338", "0.287", "FLAVA", "Mixed-Stream", "0.257", "0.299", "0.312", "0.325", "0.284", "MKGformer", "Mixed-Stream", "0.293", "0.335", "0.344", "0.367", "0.321", "MPT", "IKRL", "ANALOGY", "0.266", "0.294", "0.301", "0.310", "0.283", "TransAE", "ANALOGY", "0.261", "0.285", "0.289", "0.293", "0.276", "RSME", "ANALOGY", "0.266", "0.298", "0.307", "0.311", "0.285", "IKRL", "TransE", "0.254", "0.285", "0.290", "0.304", "0.274", "TransAE", "TransE", "0.203", "0.233", "0.241", "0.253", "0.223", "RSME", "ComplEx", "0.255", "0.274", "0.282", "0.291", "0.268", "MKGE", "Method", "Baselines", "Backbone", "Hits@1", "Hits@3", "Hits@5", "Hits@10", "MRR"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 81.6,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table2-1.png"
+}, {
+  "caption": "Figure 1: Overview of the Multimodal Analogical Reasoning task. We divide the task into single and blended settings with a multimodal knowledge graph. Note that the relation marked by dashed arrows (99K) and the text around parentheses under images are only for annotation and not provided in the input.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00323486328125,
+    "y1": 252.11953735351562,
+    "y2": 290.99896240234375
+  },
+  "figType": "Figure",
+  "imageText": ["Multimodal", "Knowledge", "Graph", "Single", "Analogical", "Reasoning", "Blended", "Analogical", "Reasoning", "Gauss", "?", "correspond", "to", "correspond", "to", "occupation", "correspond", "to", "identical", "to", "(Luogeng", "Hua)", "Mathematician", "Physicist", "identical", "to", "Young", "Tesla", "identical", "to", "Nikola", "Tesla", "?", "Young", "Tesla", "(Albert", "Einstein)", "(Young", "Einstein)", "(Young", "Einstein)", "Mathematician", "(Gauss)", "instance", "of", "occupation", "instance", "of", "occupation", "subclass", "of", "Nikola", "Tesla", "Physicist", "Man", "Scientist", "instance", "of", "(Albert", "Einstein)", "subclass", "of", "instance", "of", "(Luogeng", "Hua)", "same", "relation", "?", "occupation", "occupation", "(Albert", "Einstein)", "Physicist", "Mathematician", "(Luogeng", "Hua)"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 500.15999999999997,
+    "y1": 82.08,
+    "y2": 236.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure1-1.png"
+}, {
+  "caption": "Figure 9: Error case examples.",
+  "captionBoundary": {
+    "x1": 244.77000427246094,
+    "x2": 367.2303161621094,
+    "y1": 275.9085388183594,
+    "y2": 281.9110107421875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "(b)", "(a)", "ID", "963", "rice", "978", "277", "406", "furniture", "habit", "army", "property", "astronaut", "stationery", "error", "hailstorm", "disease", "death", "extinction", "pain", "TransAE*", "TransAE", "MKGformer*", "intersection", "to", "MKGformer", "tuberculosis", "infectious", "diseases", "intersection", "to", "?", "fruit", "Analogical", "Example", "Question-Answer", "PairTask", "Setting", "211", "125", "1", "79", "animal", "plant", "traffic", "dinosaur", "traffic", "shipping", "snake", "animal", "insect", "zinc", "Warriors", "animal", "TransAE*", "TransAE", "MKGformer*", "MKGformer", "138", "254", "43", "294", "Top-3", "Entity", "Gold", "Rank", "correspond", "to", "rural", "keep", "alphabet", "rural", "insect", "seaport", "rural", "people", "peasant", "rural", "body", "officer", "TransAE*", "TransAE", "MKGformer*", "MKGformer", "correspond", "to", "farmercontrolmanagement", "laborer", "?", "instance", "of", "Memba", "snake", "instance", "of", "?", "fruit", "watermelon"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 82.56,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure9-1.png"
+}, {
+  "caption": "Table 4: Ablation experiments on MARS. w/o MarKG refers to the model without pre-training on MarKG dataset. w/o MarT refers to ablate all components of MarT that equivalents to MKGformer.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 197.58853149414062,
+    "y2": 214.54901123046875
+  },
+  "figType": "Table",
+  "imageText": ["MarT", "MKGformer", "0.301", "0.367", "0.380", "0.408", "0.341", "w/o", "MarKG", "0.270", "0.305", "0.309", "0.315", "0.289", "w/o", "Relaxation", "loss", "0.295", "0.349", "0.373", "0.399", "0.332", "w/o", "Adaptive", "interaction", "0.285", "0.345", "0.365", "0.395", "0.324", "w/o", "MarT", "0.293", "0.335", "0.344", "0.367", "0.321", "TransAE", "0.203", "0.233", "0.241", "0.253", "0.223", "w/o", "MarKG", "0.191", "0.224", "0.235", "0.245", "0.214", "MarT", "ViLBERT", "0.256", "0.312", "0.327", "0.347", "0.292", "w/o", "MarKG", "0.253", "0.292", "0.297", "0.310", "0.270", "Model", "Hits@1", "Hits@3", "Hits@5", "Hits@10", "MRR"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 186.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table4-1.png"
+}, {
+  "caption": "Table 3: Results of novel relation generalization, we test the most strong baseline MKGformer on novel target relations data. “w/ Full MARS” is the result trained with full data (upper bound).",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.99658203125,
+    "y1": 431.0075378417969,
+    "y2": 469.885986328125
+  },
+  "figType": "Table",
+  "imageText": ["MarT", "MKGformer", "0.254", "0.285", "0.292", "0.273", "w/o", "MarKG", "0.217", "0.228", "0.231", "0.224", "w/", "Full", "MARS", "0.365", "0.419", "0.433", "0.395", "Hits@1", "Hits@3", "Hits@10", "MRR", "Model", "Novel", "Relation", "Transfer"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 309.59999999999997,
+    "x2": 500.15999999999997,
+    "y1": 366.24,
+    "y2": 419.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table3-1.png"
+}, {
+  "caption": "Table 1: Comparison between MARS and previous analogical reasoning datasets. “KB” refers to the knowledge base, and # denotes the number. “Knowledge Intensive” means reasoning requires external knowledge. Our MarKG focuses on knowledge-intensive reasoning across multiple modalities.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 288.0655212402344,
+    "y2": 326.9449462890625
+  },
+  "figType": "Table",
+  "imageText": ["RAVEN", "42,000", "/", "14,000", "/", "14,000", "✘", "Vision", "-", "8", "1,120,000", "✘", "Classification", "SAT", "0", "/", "37", "/", "337", "✘", "Text", "-", "19", "-", "✘", "Linear", "Word", "Analogy", "Google", "0", "/", "50", "/", "500", "✘", "Text", "919", "14", "-", "✘", "Linear", "Word", "Analogy", "BATs", "0", "/", "199", "/", "1,799", "✘", "Text", "6,218", "40", "-", "✘", "Linear", "Word", "Analogy", "E-KAR", "870", "/", "119", "/", "262", "✘", "Text", "2,651", "28", "-", "✔", "Multiple", "Choice", "QA", "MARS", "10,685", "/", "1,228", "/", "1,415", "MarKG", "Vision+Text", "2,063", "27", "13,398", "✔", "Entity", "Prediction", "Dataset", "Size", "(train", "/", "dev", "/", "test)", "KB", "Modality", "#", "Entity", "#", "Relation", "#", "Images", "Knowledge", "Intensive", "Task", "Format"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 207.84,
+    "y2": 277.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table1-1.png"
+}, {
+  "caption": "Figure 2: An illustration of data collection and processing steps to create MARS and MarKG.",
+  "captionBoundary": {
+    "x1": 117.7979965209961,
+    "x2": 494.2049560546875,
+    "y1": 184.95553588867188,
+    "y2": 190.9580078125
+  },
+  "figType": "Figure",
+  "imageText": ["MARS", "MarKG", "(", "relations", "retrieved", "from", "Wikidata)", "Filter", "Luogeng", "Hua", "Gromov", "Gromov", "Google", "scientist", "man", "mathematician", "Luogeng", "Hua", "instance", "of", "occupation", "mathematician", "Luogeng", "Hua", "MediaAPI", "Laion-5B"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 492.0,
+    "y1": 96.96,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure2-1.png"
+}, {
+  "caption": "Table 7: Hyper-parameter settings. We use the same parameter settings of MKGE baseline methods as the original paper except for the learning rate.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00347900390625,
+    "y1": 240.68252563476562,
+    "y2": 257.64398193359375
+  },
+  "figType": "Table",
+  "imageText": ["learning", "rate", "{1e-2,", "5e-3}", "{3e-5,", "4e-5,", "5e-5}", "batch", "size", "1000", "64", "optimizer", "{Adagrad,", "SGD}", "AdamW", "adam", "epsilon", "-", "1e-8", "λ", "-", "{0.38,", "0.43,", "0.45}", "epoch", "{300,", "1000}", "15", "sequence", "length", "-", "128", "Hyper-parameters", "MKGE", "Baselines", "MPT", "Baselines"],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 180.0,
+    "x2": 432.47999999999996,
+    "y1": 129.6,
+    "y2": 229.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table7-1.png"
+}, {
+  "caption": "Table 8: Pre-training results on MarKG. Note that these results are from the training process as we do not divide MarKG. Since we follow the link prediction task to pre-train the models for MKGE baselines, we only report the entity prediction results.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 509.9995422363281,
+    "y2": 537.9199829101562
+  },
+  "figType": "Table",
+  "imageText": ["MarT", "MKGformer", "0.527", "0.670", "0.779", "0.616", "0.762", "0.870", "0.923", "0.823", "MarT", "VisualBERT", "0.466", "0.598", "0.692", "0.546", "0.758", "0.873", "0.927", "0.822", "MarT", "ViLT", "0.466", "0.586", "0.675", "0.539", "0.737", "0.847", "0.902", "0.799", "MarT", "ViLBERT", "0.489", "0.621", "0.711", "0.569", "0.764", "0.876", "0.930", "0.827", "MarT", "FLAVA", "0.506", "0.634", "0.716", "0.582", "0.771", "0.877", "0.921", "0.829", "MPT", "MKGE", "IKRL", "0.157", "0.257", "0.338", "0.272", "-", "-", "-", "-", "TransAE", "0.307", "0.361", "0.442", "0.353", "-", "-", "-", "-", "RSME", "0.417", "0.460", "0.520", "0.452", "-", "-", "-", "-", "Hits@1", "Hits@3", "Hits@10", "MRR", "Hits@1", "Hits@3", "Hits@10", "MRR", "Method", "Baselines", "Entity", "Prediction", "Relation", "Prediction"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 397.91999999999996,
+    "y2": 498.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table8-1.png"
+}, {
+  "caption": "Figure 8: The results of pre-training on MarKG and fine-tuning on MARS. * refers to the baseline model applied MarT.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 677.6785888671875,
+    "y2": 694.6400146484375
+  },
+  "figType": "Figure",
+  "imageText": ["Pre-train", "Fine-tune", "M", "RR", "0.8", "0.6", "0.5", "0.3", "0.2", "TransAE", "RSME", "ViLBERT*", "FLAVA*", "MKGformer*"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 223.2,
+    "x2": 389.76,
+    "y1": 556.8,
+    "y2": 661.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure8-1.png"
+}, {
+  "caption": "Figure 5: Performance on MARS in different sub-task settings.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 286.2010192871094,
+    "y1": 509.7755432128906,
+    "y2": 526.7369995117188
+  },
+  "figType": "Figure",
+  "imageText": ["Case", "Analysis.", "As", "shown", "in", "Figure", "6,", "we", "pro-", "vide", "case", "analysis", "and", "observe", "that", "the", "top", "rank-", "ing", "entities", "(film,", "life,", "etc.)", "of", "the", "baselines", "with-", "out", "analogical", "components", "are", "usually", "irrelevant", "to", "the", "question", "entity", "“campaign”.", "Analogical", "com-", "ponents", "make", "the", "predictions", "more", "reasonable", "and", "successfully", "predict", "the", "answer", "entity", "“battle”.", "In", "the", "difficult", "blended", "analogical", "reasoning", "setting,", "the", "blended", "modal", "input", "of", "visual", "and", "text", "is", "challeng-", "ing.", "We", "find", "that", "vanilla", "MKGformer", "and", "TransAE", "fail", "to", "understand", "the", "visual", "semantic", "of", "“apple”", "and", "incorrectly", "linked", "with", "“capital,", "phone,", "shipping”", "that", "related", "to", "“Apple", "Company”.", "We", "also", "notice", "that", "TransAE", "with", "ANALOGY", "as", "backbone", "signifi-", "cantly", "decreases", "the", "prediction", "error", "but", "incorrectly", "predicts", "“plant”", "as", "the", "top-1", "entity", "due", "to", "the", "inter-"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 296.15999999999997,
+    "x2": 504.47999999999996,
+    "y1": 366.71999999999997,
+    "y2": 540.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Case examples of MARS. We show the analogy example and analogy question-answer pair with their implicit relations. “Top-3 Entity” means top-3 ranking entities in the prediction. “Gold Rank” refers to the rank of the gold answer entity in the prediction. * denotes the baseline model with analogical components (MarT or ANALOGY).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 231.89151000976562,
+    "y2": 270.76995849609375
+  },
+  "figType": "Figure",
+  "imageText": ["Analogical", "Example", "Question-Answer", "PairTask", "Setting", "6", "125", "1", "80", "plant", "Citrus", "dessert", "Citrus", "grain", "shipping", "bread", "capital", "phone", "fruit", "dried", "fruit", "citrus", "TransAE*", "TransAE", "MKGformer*", "MKGformer", "1", "254", "1", "207", "Top-3", "Entity", "Gold", "Rank", "correspond", "to", "battle", "reaction", "court", "life", "aircraft", "ocean", "battle", "war", "siege", "film", "increment", "scheme", "TransAE*", "TransAE", "MKGformer*", "MKGformer", "correspond", "to", "Inland", "LakeQinghai", "Lake", "battle", "?", "campaign", "instance", "of", "Apple", "fruit", "instance", "of", "Medicine", "?", "Traditional", "Chinese", "Panax", "notoginseng"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 82.56,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Overview of baseline methods. (a) Pipeline of MKGE methods for multimodal analogical reasoning. (b) and (c) are two stages of multimodal pre-trained Transformer (MPT) baselines.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 231.60952758789062,
+    "y2": 248.57098388671875
+  },
+  "figType": "Figure",
+  "imageText": ["is", "matrix", "multiplication", "is", "the", "image", "of", "the", "entity", "is", "the", "text", "of", "the", "entity", "[PAD]is", "a", "blank", "image", "for", "padding", "[CLS]", "[R]", "[SEP]", "[R][MASK][SEP]", "a.", "MKGE", "Methods", "?", "Single", "B", "lended", "[PAD]", "[CLS]", "[MASK]", "[SEP]", "[CLS]", "[R]", "[SEP]", "[R][MASK][SEP]", "[CLS]", "[R]", "[SEP]", "[R][MASK][SEP]", "Abduction", "Induction", "②Mapping", "[PAD][PAD][CLS][MASK]", "[SEP]", "b.", "Pre-train", "over", "MarKG ", "c.", "Prompt-based", "Analogical", "Reasoning", "Analogy", "Answer", "Analogy", "Question", "①", "Abduction", "?", "(Young", "Tesla)", "IKRL", "TransAE", "RSME", "(Tesla)", "IKRL", "TransAE", "RSME", "identical", "to", "③", "Induction", "Analogy", "Example", "···", "···Analogy", "Entity", "and", "Relation", "Embeddings", "Learnable", "···", "···"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 82.56,
+    "y2": 217.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Figure3-1.png"
+}, {
+  "caption": "Table 6: The complete relations with definitions, examples of MARS. Some relations and definitions refer to (Chen et al., 2022a) and Wikidata Properties.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 413.1955261230469,
+    "y2": 430.156982421875
+  },
+  "figType": "Table",
+  "imageText": ["rectly.", "pigeon", ":", "peace", "subject-object", "The", "originator", "and", "receiver", "of", "an", "action.", "school", ":", "education", "contradictory", "to", "Two", "term", "are", "contradictory", "to", "each", "other.", "english", ":", "chinese", "identical", "to", "The", "meanings", "of", "two", "terms", "are", "identical.", "highway", ":", "road", "head-modifier", "The", "preceding", "term", "modifies", "the", "other.", "affluence", ":", "living", "different", "from", "Item", "that", "is", "different", "from", "another", "item,", "with", "which", "it", "may", "be", "confused.", "apple", ":", "nuts", "probabilistic", "attribute", "One", "term", "is", "probably", "the", "attribute", "of", "the", "other.", "liquid", ":", "fluidity", "instance", "of", "That", "class", "of", "which", "this", "subject", "is", "a", "particular", "example", "and", "member.", "coffee", ":", "drink", "has", "use", "Main", "use", "of", "the", "subject.", "ballot", ":", "election", "location", "Location", "of", "the", "object,", "structure", "or", "event.", "student", ":", "classroom", "verb-object", "The", "action", "and", "the", "object", "on", "which", "the", "action", "acts.", "drilling", ":", "petroleum", "has", "quality", "The", "entity", "has", "an", "inherent", "or", "distinguishing", "non-material", "characteristic.", "knife", ":", "sharp", "tool", "of", "One", "term", "is", "the", "tool", "of", "the", "other.", "piano", ":", "play", "subject-predicate", "The", "originator", "of", "the", "action", "and", "the", "action", "itself.", "stone", ":", "throwing", "target", "of", "One", "term", "is", "the", "target", "of", "the", "other.", "harvest", ":", "sow", "metaphor", "A", "term", "is", "the", "metaphor", "of", "the", "other,", "reflecting", "something", "abstract", "indi-", "before", "joining", "or", "obtaining", "the", "item", "topic.", "aim", ":", "shoot", "intersection", "to", "The", "extension", "of", "the", "two", "terms", "intersects.", "odd", ":", "integer", "takes", "place", "in", "A", "term", "takes", "place", "in", "the", "other.", "doctor", ":", "hospital", "prerequisite", "Prior", "event", "or", "achievement", "that", "a", "person", "or", "team", "needs", "to", "complete", "term", "does", "not", "cause", "the", "other.", "implement", ":", "evaluate", "synonym", "Sense", "of", "another", "lexeme", "with", "the", "same", "meaning", "as", "this", "sense.", "tired", ":", "exhausted", "made", "from", "material", "Material", "the", "subject", "or", "the", "object", "is", "made", "of", "or", "derived", "from.", "building", ":", "cement", "antonym", "Sense", "of", "a", "lexeme", "with", "the", "opposite", "meaning", "to", "this", "sense.", "warm", ":", "cool", "has", "cause", "Underlying", "cause,", "thing", "that", "ultimately", "resulted", "in", "this", "effect.", "cleaning", ":", "tidy", "opposite", "of", "Item", "that", "is", "the", "opposite", "of", "this", "item.", "black", ":", "white", "follow", "The", "terms", "have", "a", "chronological", "or", "other", "sequential", "relationship,", "but", "one", "functions.", "child", ":", "minor", "part", "of", "Object", "of", "which", "the", "subject", "is", "a", "part.", "mouse", ":", "computer", "corresponds", "to", "Terms", "generally", "correspond", "to", "each", "other.", "entrepreneur", ":", "laborer", "juxtaposition", "to", "Two", "terms", "belong", "to", "the", "same", "hypernym", "or", "have", "the", "same", "properties", "or", "Relations", "Definition", "Example"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 120.96,
+    "y2": 402.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRHajbzg8y0P-Table6-1.png"
+}]

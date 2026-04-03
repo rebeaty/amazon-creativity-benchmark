@@ -1,0 +1,121 @@
+[{
+  "caption": "Figure 3: The tabular version of ESCHER with an oracle value function is competitive with the tabular version of DREAM with an oracle value function and with OS-MCCFR in terms of exploitability (top row). The regret estimator in ESCHER has orders of magnitude lower variance than those of DREAM and OS-MCCFR (bottom row).",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.3478698730469,
+    "y1": 558.7735595703125,
+    "y2": 597.6530151367188
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Leduc", "Variance", "(e)", "Battleship", "Variance", "(f)", "Liar’s", "Dice", "Variance", "(a)", "Leduc", "Exploitability", "(b)", "Battleship", "Exploitability", "(c)", "Liar’s", "Dice", "Exploitability"],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 332.64,
+    "y2": 541.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35QyoZv8cKO-Figure3-1.png"
+}, {
+  "caption": "Table 1: These results track the average variance of the regret estimator of each algorithm over all iterations. The top table shows results of deep algorithms on large games. Ablation 1 is ESCHER but with a bootstrapped baseline, and ablation 2 is ESCHER but with reach weighting. The bottom table shows tabular versions of the algorithms with oracle value functions on small games. Because ESCHER does not use importance sampling, the variance of its estimator is orders of magnitude smaller than baselines. Colors scale with the ratio of the minimum value in each row, according to",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0033874511719,
+    "y1": 240.13455200195312,
+    "y2": 300.9320068359375
+  },
+  "figType": "Table",
+  "imageText": ["Liar’s", "Dice", "(9.0±", "0.1)×10−1", "(7.8±", "0.9)×101", "(4.0±", "0.8)×102", "(1.2±", "0.1)×103", "Battleship", "(1.4±", "0.0)×100", "(7.1±", "0.3)×102", "(1.2±", "0.0)×103", "(2.4±", "0.0)×103", "Leduc", "(5.3±", "0.0)×100", "(3.3±", "0.7)×102", "(2.8±", "0.0)×102", "(2.2±", "0.0)×103", "Game", "ESCHER", "(Ours)", "Ablation", "2", "DREAM", "OS-MCCFR", "Dark", "Hex", "5", "(1.3±", "0.1)×10−1", "(3.3±", "1.6)×102", "(2.0±", "0.6)×105", "(5.3±", "3.9)×108", "Dark", "Hex", "4", "(1.8±", "0.1)×10−1", "(1.3±", "0.9)×102", "(3.1±", "1.7)×108", "(2.8±", "2.0)×108", "Phantom", "Tic-Tac-Toe", "(2.6±", "0.1)×10−1", "(4.1±", "0.7)×101", "(1.4±", "0.4)×107", "(4.6±", "1.0)×107", "Game", "ESCHER", "(Ours)", "Ablation", "1", "Ablation", "2", "DREAM"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 81.6,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35QyoZv8cKO-Table1-1.png"
+}, {
+  "caption": "Table 4: ESCHER and Ablations Hyperparameters for Variance Experiments",
+  "captionBoundary": {
+    "x1": 152.54200744628906,
+    "x2": 459.4597473144531,
+    "y1": 363.7575378417969,
+    "y2": 369.760009765625
+  },
+  "figType": "Table",
+  "imageText": ["Parameter", "Value", "n", "regret", "network", "traversals", "1,000", "n", "history", "value", "network", "traversals", "1,000", "batch", "size", "regret", "network", "2048", "batch", "size", "history", "value", "network", "2048", "train", "steps", "regret", "network", "500", "train", "steps", "history", "value", "network", "500", "train", "steps", "average", "policy", "network", "10,000"],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 252.95999999999998,
+    "y2": 352.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35QyoZv8cKO-Table4-1.png"
+}, {
+  "caption": "Table 5: DREAM Hyperparameters for Phantom TTT, Dark Hex 4, Dark Hex 5",
+  "captionBoundary": {
+    "x1": 147.52999877929688,
+    "x2": 464.47021484375,
+    "y1": 660.841552734375,
+    "y2": 666.843994140625
+  },
+  "figType": "Table",
+  "imageText": ["Parameter", "Value", "n", "batches", "adv", "training", "4,000", "n", "traversals", "per", "iter", "1,000", "n", "batches", "per", "iter", "baseline", "1,000", "periodic", "restart", "10", "max", "n", "las", "sync", "simultaneously", "12", "mini", "batch", "size", "adv", "10,000", "max", "buffer", "size", "adv", "2,000,000", "mini", "batch", "size", "avrg", "10,000", "max", "buffer", "size", "avrg", "2,000,000", "batch", "size", "baseline", "2048", "n", "batches", "avrg", "training", "4000"],
+  "name": "5",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 505.91999999999996,
+    "y2": 649.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35QyoZv8cKO-Table5-1.png"
+}, {
+  "caption": "Table 3: ESCHER and Ablations Hyperparameters for Phantom TTT, Dark Hex 4, Dark Hex 5",
+  "captionBoundary": {
+    "x1": 117.36399841308594,
+    "x2": 494.6376953125,
+    "y1": 219.49655151367188,
+    "y2": 225.4990234375
+  },
+  "figType": "Table",
+  "imageText": ["Parameter", "Value", "n", "regret", "network", "traversals", "1,000", "n", "history", "value", "network", "traversals", "1,000", "batch", "size", "regret", "network", "2048", "batch", "size", "history", "value", "network", "2048", "train", "steps", "regret", "network", "5,000", "train", "steps", "history", "value", "network", "5,000", "train", "steps", "average", "policy", "network", "10,000", "10.1", "ESCHER"],
+  "name": "3",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35QyoZv8cKO-Table3-1.png"
+}, {
+  "caption": "Table 6: NFSP Hyperparameters for Phantom TTT, Dark Hex 4, Dark Hex 5",
+  "captionBoundary": {
+    "x1": 153.61199951171875,
+    "x2": 458.38787841796875,
+    "y1": 258.1375427246094,
+    "y2": 264.1400146484375
+  },
+  "figType": "Table",
+  "imageText": ["Parameter", "Value", "circular", "buffer", "size", "2e5", "total", "rollout", "experience", "gathered", "each", "iter", "1024", "steps", "learning", "rate", "0.01", "batch", "size", "4096", "TD-error", "loss", "type", "MSE", "target", "network", "update", "frequency", "every", "10,000", "steps", "RL", "learner", "params", "DDQN", "anticipatory", "param", "0.1", "avg", "policy", "reservoir", "buffer", "size", "2e6", "avg", "policy", "learning", "starts", "after", "16,000", "steps", "avg", "policy", "learning", "rate", "0.1", "avg", "policy", "batch", "size", "4096", "avg", "policy", "optimizer", "SGD"],
+  "name": "6",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 246.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_35QyoZv8cKO-Table6-1.png"
+}]

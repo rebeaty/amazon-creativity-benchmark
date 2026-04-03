@@ -1,0 +1,321 @@
+[{
+  "caption": "Figure 2: The toy example inherited from Arjovsky et al. (2017). The first row plots the distributions of data with diffusion noise injected for t. The second row shows the JS divergence and the optimal discriminator value with and without our noise injection.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0009460449219,
+    "y1": 241.35568237304688,
+    "y2": 266.68292236328125
+  },
+  "figType": "Figure",
+  "imageText": ["t", "=", "0", "t", "=", "200", "t", "=", "400", "t", "=", "500", "t", "=", "600", "t", "=", "800", "x)", "D", "*", "(", "al", "ue", "or", "V", "in", "at", "isc", "rim", "al", "D", "Op", "tim", "1.00", "0.75", "0.50", "0.25", "0.00", "2", "0", "2", "4", "6", "x", "t", "=", "0", "t", "=", "200", "t", "=", "400", "t", "=", "500", "t", "=", "600", "t", "=", "800", "t))", "g(", "y|", "|t)", "||q", "(q", "(y", "D", "JS", "6", "4", "2", "0", "10.0", "7.5", "5.0", "2.5", "0.0", "2.5", "5.0", "7.5", "10.0", "t=800", "y", "1", "0", "1", "1", "0", "1", "x", "t=600", "y", "1", "0", "1", "1", "0", "1", "2", "x", "t=500", "y", "1", "0", "1", "0", "2", "x", "t=400", "y", "1", "0", "1", "0", "2", "x", "t=200", "y", "1", "0", "0", "2", "4", "x", "t=0", "y", "1.0", "0.5", "0.0", "0", "2", "4", "x"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 492.0,
+    "y1": 85.44,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure2-1.png"
+}, {
+  "caption": "Figure 9: More generated images for FFHQ from Diffusion StyleGAN2 (FID 3.71, Recall 0.43).",
+  "captionBoundary": {
+    "x1": 132.89199829101562,
+    "x2": 479.11163330078125,
+    "y1": 671.4327392578125,
+    "y2": 676.8350219726562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 130.56,
+    "y2": 660.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure9-1.png"
+}, {
+  "caption": "Table 6: The config setting of StyleGAN2 based models and ProjectedGAN based models. For StyleGAN2 based models, we borrow the config settings provided by Karras et al. (2020a), which includes [‘auto’, ‘stylegan2’, ‘cifar’, ‘paper256’, ‘paper512’, ‘paper1024’]. We create the ‘stl’ config based on ’cifar’ with small modifications that we change the gamma term to be 0.01. For ProjectedGAN models, we use the recommended default config (Sauer et al., 2021), which is based on FastGAN.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010986328125,
+    "y1": 344.353759765625,
+    "y2": 389.6070556640625
+  },
+  "figType": "Table",
+  "imageText": ["StyleGAN2", "stylegan2", "-", "Diffusion", "StyleGAN2", "stylegan2", "diffusion-pixel,", "dtarget", "=", "0.8,", "‘uniform’", "InsGen", "default", "-", "Diffusion", "InsGen", "stylegan2", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘uniform’", "FFHQ", "(1024×", "1024)", "AFHQ-Cat/Dog/Wild", "(512×", "512)", "StyleGAN2", "paper512", "-", "Diffusion", "StyleGAN2", "paper512", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘priority’", "InsGen", "default", "-", "Diffusion", "InsGen", "paper512", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘uniform’", "StyleGAN2", "paper256", "-", "Diffusion", "StyleGAN2", "paper256", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘priority’", "ProjectedGAN", "default", "diffusion-feature", "Diffusion", "ProjectedGAN", "default", "diffusion-feature", "LSUN-Church", "(256×", "256)", "StyleGAN2", "paper256", "-", "Diffusion", "StyleGAN2", "paper256", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘priority’", "ProjectedGAN", "default", "diffusion-feature", "Diffusion", "ProjectedGAN", "default", "diffusion-feature", "LSUN-Bedroom", "(256×", "256)", "StyleGAN2", "stl", "-", "Diffusion", "StyleGAN2", "stl", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘priority’", "ProjectedGAN", "default", "diffusion-feature", "Diffusion", "ProjectedGAN", "default", "diffusion-feature", "STL-10", "(64×", "64)", "StyleGAN2", "cifar", "-", "Diffusion", "StyleGAN2", "cifar", "diffusion-pixel,", "dtarget", "=", "0.6,", "‘priority’", "ProjectedGAN", "default", "diffusion-feature", "Diffusion", "ProjectedGAN", "default", "diffusion-feature", "CIFAR-10", "(32×", "32)", "Dataset", "Models", "Config", "Specification"],
+  "name": "6",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table6-1.png"
+}, {
+  "caption": "Figure 1: Flowchart for Diffusion-GAN. The top-row images represent the forward diffusion process of a real image, while the bottom-row images represent the forward diffusion process of a generated fake image. The discriminator learns to distinguish a diffused real image from a diffused fake image at all diffusion steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00091552734375,
+    "y1": 255.53775024414062,
+    "y2": 280.864990234375
+  },
+  "figType": "Figure",
+  "imageText": ["Diffusion", "Process:", "𝒚𝒈", "∼", "𝒒", "𝒚𝒈", "𝒙𝒈,", "𝒕", ",", "𝒕", "∼", "𝒑𝝅", "Diffusion", "Process:", "𝒚", "∼", "𝒒", "𝒚", "𝒙,", "𝒕", ",", "𝒕", "∼", "𝒑𝝅", "Generator:", "𝒙𝒈", "=", "𝑮", "𝒛", ",", "𝒛", "∼", "𝒑(𝒛)", "T", "is", "adaptively", "adjusted.", "Timestep-Dependent", "Discriminator:", "𝑫(𝒚,", "𝒕)", "𝑦!", "|", "𝑡", "=", "100", "𝑦!", "|", "𝑡", "=", "300", "𝑦!", "|", "𝑡", "=", "600", "𝑦!", "|", "𝑡", "=", "𝑇", "=", "1000", "𝑥", "∼", "𝑝(𝑥)", "𝑦", "|", "𝑡", "=", "100", "𝑦", "|", "𝑡", "=", "300", "𝑦", "|", "𝑡", "=", "600", "𝑦", "|", "𝑡", "=", "𝑇", "=", "1000"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 456.47999999999996,
+    "y1": 84.96,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure1-1.png"
+}, {
+  "caption": "Table 1: Image generation results on benchmark datasets: CIFAR-10, CelebA, STL-10, LSUN-Bedroom, LSUN-Church, and FFHQ. We highlight the best and second best results in each column with bold and underline, respectively. Lower FIDs indicate better fidelity, while higher Recalls indicate better diversity.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.001220703125,
+    "y1": 83.4337387084961,
+    "y2": 108.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["StyleGAN2", "(Karras", "et", "al.,", "2020a)", "8.32∗", "0.41∗", "2.32", "0.55", "11.70", "0.44", "3.98", "0.32", "3.93", "0.39", "4.41", "0.42", "StyleGAN2", "+", "DiffAug", "(Zhao", "et", "al.,", "2020)", "5.79∗", "0.42∗", "2.75", "0.52", "12.97", "0.39", "4.25", "0.19", "4.66", "0.33", "4.46", "0.41", "StyleGAN2", "+", "ADA", "(Karras", "et", "al.,", "2020a)", "2.92∗", "0.49∗", "2.49", "0.53", "13.72", "0.36", "7.89", "0.05", "4.12", "0.18", "4.47", "0.41", "Diffusion", "StyleGAN2", "3.19", "0.58", "1.69", "0.67", "11.43", "0.45", "3.65", "0.32", "3.17", "0.42", "2.83", "0.49", "FID", "Recall", "FID", "Recall", "FID", "Recall", "FID", "Recall", "FID", "Recall", "FID", "Recall", "Methods", "CIFAR-10", "CelebA", "STL-10", "LSUN-Bedroom", "LSUN-Church", "FFHQ", "(32×", "32)", "(64×", "64)", "(64×", "64)", "(256×", "256)", "(256×", "256)", "(1024×", "1024)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 109.92,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table1-1.png"
+}, {
+  "caption": "Figure 3: Randomly generated images from Diffusion StyleGAN2 trained on CIFAR-10, CelebA, STL-10, LSUN-Bedroom, LSUN-Church, and FFHQ datasets.",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.0011291503906,
+    "y1": 384.1688232421875,
+    "y2": 399.5330810546875
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "FFHQ", "(d)", "LSUN-Bedroom", "(e)", "LSUN-Church", "(a)", "CIFAR-10", "(b)", "CelebA", "(c)", "STL-10"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 499.2,
+    "y1": 197.76,
+    "y2": 373.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure3-1.png"
+}, {
+  "caption": "Table 7: Ablation study on the mixing procedure. “Priority Mixing” refers to the mixing procedure in Equation (6) and “Uniform Mixing” refers to sample t uniformly at random.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0008239746094,
+    "y1": 152.33969116210938,
+    "y2": 167.7049560546875
+  },
+  "figType": "Table",
+  "imageText": ["Priority", "Mixing", "3.19", "11.43", "3.22", "Uniform", "Mixing", "3.44", "11.75", "2.83", "CIFAR-10", "STL-10", "FFHQ"],
+  "name": "7",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 228.0,
+    "x2": 386.4,
+    "y1": 180.0,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table7-1.png"
+}, {
+  "caption": "Table 8: FIDs on CIFAR-10 for DCGAN, Diffusion-DCGAN, SNGAN, and Diffusion-SNGAN.",
+  "captionBoundary": {
+    "x1": 132.82000732421875,
+    "x2": 479.1832580566406,
+    "y1": 329.084716796875,
+    "y2": 334.4869689941406
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR-10", "28.65", "24.67", "20.76", "17.23", "DCGAN", "(Radford", "et", "al.,", "2015)", "Diffusion-DCGAN", "SNGAN", "(Miyato", "et", "al.,", "2018b)", "Diffusion-SNGAN"],
+  "name": "8",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 346.56,
+    "y2": 374.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table8-1.png"
+}, {
+  "caption": "Figure 6: We show the data distribution and DJS(Pr||Pg).",
+  "captionBoundary": {
+    "x1": 200.80499267578125,
+    "x2": 411.19464111328125,
+    "y1": 247.02468872070312,
+    "y2": 253.42291259765625
+  },
+  "figType": "Figure",
+  "imageText": ["t", "=", "0", "t", "=", "200", "t", "=", "400", "t", "=", "500", "t", "=", "600", "t", "=", "800", "x)", "D", "*", "(", "al", "ue", "or", "V", "in", "at", "isc", "rim", "al", "D", "Op", "tim", "1.00", "0.75", "0.50", "0.25", "0.00", "2", "0", "2", "4", "6", "x", "t", "=", "0", "t", "=", "200", "t", "=", "400", "t", "=", "500", "t", "=", "600", "t", "=", "800", "t))", "g(", "y|", "|t)", "||q", "(q", "(y", "D", "JS", "6", "4", "2", "0", "10.0", "7.5", "5.0", "2.5", "0.0", "2.5", "5.0", "7.5", "10.0", "t=800", "y", "1", "0", "1", "1", "0", "1", "x", "t=600", "y", "1", "0", "1", "1", "0", "1", "2", "x", "t=500", "y", "1", "0", "1", "0", "2", "x", "t=400", "y", "1", "0", "1", "0", "2", "x", "t=200", "y", "1", "0", "0", "2", "4", "x", "t=0", "y", "1.0", "0.5", "0.0", "0", "2", "4", "x"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 492.47999999999996,
+    "y1": 85.44,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure6-1.png"
+}, {
+  "caption": "Figure 7: More generated images for LSUN-Bedroom (FID 1.43, Recall 0.58) and LSUN-Church (FID 1.85, Recall 0.65) from Diffusion ProjectedGAN.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0012512207031,
+    "y1": 672.4287109375,
+    "y2": 687.7940063476562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 120.0,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Plot of adaptively adjusted maximum diffusion steps T and discriminator outputs of Diffusion-GANs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 191.53372192382812,
+    "y2": 196.93597412109375
+  },
+  "figType": "Figure",
+  "imageText": ["Discriminator", "outputs", "on", "CIFAR-10", "Real", "images", "Generated", "images", "D(", "x)", "4", "2", "0", "2", "4", "0M", "5M", "10M", "15M", "20M", "25M", "Training", "Progress", "(#", "million", "real", "images)", "T", "of", "Diffusion", "StyleGAN2", "on", "CIFAR-10", "T", "of", "Diffusion", "StyleGAN2", "on", "STL-10", "T", "of", "Diffusion", "ProjectedGAN", "on", "CIFAR-10", "T", "of", "Diffusion", "ProjectedGAN", "on", "STL-10", "T", "Schedule", "on", "CIFAR-10", "and", "STL-10", "T", "1000", "800", "600", "400", "200", "0", "1M", "2M", "5M", "10M", "15M", "20M", "25M", "Training", "Progress", "(#", "million", "real", "images)"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 152.16,
+    "x2": 448.32,
+    "y1": 88.32,
+    "y2": 180.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure4-1.png"
+}, {
+  "caption": "Figure 8: More generated images for AFHQ-Cat (FID 2.40), AFHQ-Dog (FID 4.83) and AFHQ-Wild (FID 1.51) from Diffusion InsGen.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0010986328125,
+    "y1": 700.4476928710938,
+    "y2": 715.81201171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 91.67999999999999,
+    "y2": 689.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure8-1.png"
+}, {
+  "caption": "Figure 5: The 25-Gaussians example. We show the true data samples, the generated samples from vanilla GANs, the discriminator outputs of the vanilla GANs, the generated samples from our Diffusion-GAN, and the discriminator outputs of Diffusion-GAN.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00091552734375,
+    "y1": 165.80172729492188,
+    "y2": 191.1300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["Discriminator", "outputs", "of", "DiffusionGAN", "Real", "samples", "Fake", "samples", ")", "D", "(x", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "0", "1000", "2000", "3000", "4000", "5000", "Epochs", "DiffusionGAN", "y", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x", "Discriminator", "outputs", "of", "GAN", "Real", "samples", "Fake", "samples", ")", "D", "(x", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "0", "1000", "2000", "3000", "4000", "5000", "Epochs", "GAN", "y", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2", "1.4", "x", "Groud", "Truth", "y", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "1.5", "1.0", "0.5", "0.0", "0.5", "1.0", "1.5", "x"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 155.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Figure5-1.png"
+}, {
+  "caption": "Table 3: FFHQ (1024 × 1024) FID results with 200, 500, 1k, 2k, and 5k training samples; AFHQ (512 × 512) FID results. To ensure convergence, all models are trained across 10M images for FFHQ and 25M images for AFHQ. We bold the best number in each column.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0008239746094,
+    "y1": 530.2435913085938,
+    "y2": 555.5709228515625
+  },
+  "figType": "Table",
+  "imageText": ["5", "CONCLUSION", "Diffusion", "InsGen", "63.34", "50.39", "30.91", "16.43", "8.48", "2.40", "4.83", "1.51", "Models", "FFHQ", "(200)", "FFHQ", "(500)", "FFHQ", "(1k)", "FFHQ", "(2k)", "FFHQ", "(5k)", "Cat", "Dog", "Wild", "InsGen", "(Yang", "et", "al.,", "2021)", "102.58", "54.762", "34.90", "18.21", "9.89", "2.60∗", "5.44∗", "1.77∗"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 562.56,
+    "y2": 630.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table3-1.png"
+}, {
+  "caption": "Table 2: Domain-agnostic experiments on ProjectedGAN.",
+  "captionBoundary": {
+    "x1": 201.81600952148438,
+    "x2": 410.1861877441406,
+    "y1": 323.212646484375,
+    "y2": 328.6148986816406
+  },
+  "figType": "Table",
+  "imageText": ["ProjectedGAN", "(Sauer", "et", "al.,", "2021)", "3.10", "0.45", "7.76", "0.35", "2.25", "0.55", "3.42", "0.56", "Diffusion", "ProjectedGAN", "2.54", "0.45", "6.91", "0.35", "1.43", "0.58", "1.85", "0.65", "Domain-agnostic", "Tasks", "CIFAR-10", "(32×", "32)", "STL-10", "(64×", "64)", "LSUN-Bedroom", "(256×", "256)", "LSUN-Church", "(256×", "256)", "FID", "Recall", "FID", "Recall", "FID", "Recall", "FID", "Recall"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 336.0,
+    "y2": 377.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table2-1.png"
+}, {
+  "caption": "Table 5: Diffusion config.",
+  "captionBoundary": {
+    "x1": 259.6310119628906,
+    "x2": 352.3704528808594,
+    "y1": 721.470703125,
+    "y2": 726.8729858398438
+  },
+  "figType": "Table",
+  "imageText": ["Diffusion", "config", "for", "feature", "β0", "=", "0.0001,", "βT", "=", "0.01,", "Tmin", "=", "5,", "Tmax", "=", "500,", "σ", "=", "0.5", "Diffusion", "config", "for", "pixel,", "priority", "β0", "=", "0.0001,", "βT", "=", "0.02,", "Tmin", "=", "5,", "Tmax", "=", "1000,", "σ", "=", "0.05", "Diffusion", "config", "for", "pixel,", "uniform", "β0", "=", "0.0001,", "βT", "=", "0.02,", "Tmin", "=", "5,", "Tmax", "=", "500,", "σ", "=", "0.05"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 662.4,
+    "y2": 706.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HZf7UbpWHuA-Table5-1.png"
+}]

@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 4: Discriminator AUC. Each point corresponds to a different discriminator.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 491.32952880859375,
+    "y1": 551.2255859375,
+    "y2": 568.18701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 324.96,
+    "x2": 505.44,
+    "y1": 412.8,
+    "y2": 532.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Hyperparameter search results. Each point corresponds to a different generator.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 297.2694396972656,
+    "y1": 551.4765625,
+    "y2": 568.43701171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 322.08,
+    "y1": 412.8,
+    "y2": 532.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure3-1.png"
+}, {
+  "caption": "Table 5: RS discriminator architecture.",
+  "captionBoundary": {
+    "x1": 228.48699951171875,
+    "x2": 383.51495361328125,
+    "y1": 452.7015075683594,
+    "y2": 458.7039794921875
+  },
+  "figType": "Table",
+  "imageText": ["Concatenate", "ratings", "and", "probabilities", "(128,)", "3", "ResBlock(128,128)", "(128,)", "4", "ResBlock(128,128)", "(128,)", "5", "Linear(128,1)", "(1,)", "Index", "Layer", "Output", "shape", "0", "Dense(3706,64)", "(64,)", "1", "ResBlock(64,128)", "(128,)", "2", "ResBlock(128,64)", "(64,)"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 175.68,
+    "x2": 436.32,
+    "y1": 351.84,
+    "y2": 441.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Table5-1.png"
+}, {
+  "caption": "Figure 5: Hyperparameter search results. Each point corresponds to a different generator. The x-axis corresponds to the alpha value, the y-axis to the number of users with the target item on their top-10, and the colour to the KL divergence between real and generated data. We include the number of generated users above each panel. The green line represents the best baseline in each panel.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 470.01654052734375,
+    "y2": 508.89599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 321.59999999999997,
+    "y2": 451.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure5-1.png"
+}, {
+  "caption": "Table 4: RS generator architecture.",
+  "captionBoundary": {
+    "x1": 236.24200439453125,
+    "x2": 375.7582092285156,
+    "y1": 553.4425659179688,
+    "y2": 559.4450073242188
+  },
+  "figType": "Table",
+  "imageText": ["Categorical", "sampling", "(3706,)", "Split", "ratings", "and", "probabilities", "(128,)", "2", "ResBlock(128,128)", "(128,)", "3", "ResBlock(128,64)", "(64,)", "4", "Linear(64,3706)", "(3706,)", "Index", "Layer", "Output", "shape", "0", "ResBlock(128,128)", "(128,)", "1", "ResBlock(128,128)", "(128,)"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 190.56,
+    "x2": 421.44,
+    "y1": 452.64,
+    "y2": 542.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Table4-1.png"
+}, {
+  "caption": "Table 3: Hyperparameter search space on the AML use case.",
+  "captionBoundary": {
+    "x1": 184.93002319335938,
+    "x2": 427.0711364746094,
+    "y1": 138.76351928710938,
+    "y2": 144.7659912109375
+  },
+  "figType": "Table",
+  "imageText": ["alpha", "1", "beta", "[102,", "105]", "gamma", "[103,", "4×", "103]", "lr", "[10−4,", "3×", "10−3]"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 128.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Table3-1.png"
+}, {
+  "caption": "Figure 10: Comparison distributions of total money flow, amounts and counts between G and real.",
+  "captionBoundary": {
+    "x1": 110.40499877929688,
+    "x2": 501.5964660644531,
+    "y1": 398.926513671875,
+    "y2": 404.9289855957031
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 264.0,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure10-1.png"
+}, {
+  "caption": "Figure 1: The GANfather framework. Its main components comprise a generator, C1, which generates realistic attacks, and a discriminator, C2, which detects these attacks. Our method includes an optimization objective, C3, to incentivise realistic instances. Finally, our method supports the inclusion of an existing alert system, C4.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00164794921875,
+    "y1": 242.51254272460938,
+    "y2": 282.886962890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 80.64,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure1-1.png"
+}, {
+  "caption": "Table 1: AML generator architecture.",
+  "captionBoundary": {
+    "x1": 231.2659912109375,
+    "x2": 380.7348327636719,
+    "y1": 549.9905395507812,
+    "y2": 555.9929809570312
+  },
+  "figType": "Table",
+  "imageText": ["Categorical", "sampling", "(5,10,320)", "Reshape", "(5,10,10,10)", "3", "ConvTranspose1d(10,10,4,2,1)", "(5,10,20,10)", "4", "ConvTranspose1d(10,10,4,2,1)", "(5,10,40,10)", "5", "ConvTranspose1d(10,10,4,2,1)", "(5,10,80,10)", "6", "ConvTranspose1d(10,10,4,2,1)", "(5,10,160,10)", "Split", "amounts", "and", "probabilities", "(5,10,160,10)", "7", "ConvTranspose1d(10,10,4,2,1)", "(5,10,320,10)", "8", "Conv1d(10,1,1,1,0)", "(5,10,320)", "Index", "Layer", "Output", "shape", "0", "Linear(100,", "400)", "(400,)", "1", "Linear(400,", "1600)", "(1600,)", "2", "Linear(1600,", "5000)", "(5000,)"],
+  "name": "1",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 394.56,
+    "y2": 539.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Table1-1.png"
+}, {
+  "caption": "Table 2: AML discriminator architecture.",
+  "captionBoundary": {
+    "x1": 223.50999450683594,
+    "x2": 388.4906005859375,
+    "y1": 711.1185302734375,
+    "y2": 717.1209716796875
+  },
+  "figType": "Table",
+  "imageText": ["Concatenate", "amounts", "and", "probabilities", "(100,)", "3", "Linear(100,128)", "(128,)", "4", "Linear(128,32)", "(32,)", "5", "Linear(32,1)", "(1,)", "Reshape", "(5,2,5,25)", "Mean", "pooling", "(1,2,1,25)", "Index", "Layer", "Output", "shape", "0", "Conv1d(1,10,6,4,1)", "(5,10,80,10)", "1", "Conv1d(10,10,6,4,1)", "(5,10,20,10)", "2", "Conv1d(10,5,6,4,1)", "(5,10,5,5)"],
+  "name": "2",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 439.2,
+    "y1": 588.9599999999999,
+    "y2": 700.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Table2-1.png"
+}, {
+  "caption": "Figure 8: Discriminator AUC. Each point corresponds to a different discriminator.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 273.528564453125,
+    "y1": 418.57952880859375,
+    "y2": 435.541015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 303.36,
+    "y1": 270.71999999999997,
+    "y2": 404.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Projection of multi-dimensional scaling of user embeddings.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 274.6444091796875,
+    "y1": 231.89553833007812,
+    "y2": 248.85601806640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 303.36,
+    "y1": 84.0,
+    "y2": 217.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Histogram of distances between the distributions of generated attacks and real data.",
+  "captionBoundary": {
+    "x1": 319.8609924316406,
+    "x2": 503.9996337890625,
+    "y1": 234.77755737304688,
+    "y2": 251.739013671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 318.71999999999997,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure7-1.png"
+}, {
+  "caption": "Figure 9: We can train a discriminator with almost perfect performance.",
+  "captionBoundary": {
+    "x1": 309.9580078125,
+    "x2": 482.1415710449219,
+    "y1": 416.3725280761719,
+    "y2": 433.333984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 308.64,
+    "x2": 504.0,
+    "y1": 272.64,
+    "y2": 402.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure9-1.png"
+}, {
+  "caption": "Figure 2: Data representation of transactional data. From the raw tabular data, we build the tripartite graph of the transactions, which is in turn represented as a 3D tensor.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 393.29052734375,
+    "y2": 410.2510070800781
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 259.68,
+    "y2": 374.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9Y0P3YoERSy-Figure2-1.png"
+}]

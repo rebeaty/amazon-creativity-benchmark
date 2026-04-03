@@ -1,0 +1,321 @@
+[{
+  "caption": "Figure 5: Achieved returns, losses and errors across a range of input G.pt prompts. G.pt can train unseen neural network parameters to a range of desired values in one update. Each blue curve corresponds to a different randomly-initialized input parameter vector. We also show the best value of each metric present in the training split of the checkpoint dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011901855469,
+    "y1": 195.40353393554688,
+    "y2": 234.281982421875
+  },
+  "figType": "Figure",
+  "imageText": ["E", "rro", "r", "CIFAR−10", "Generated", "Identity", "Data", "Best", "ev", "ed", "Ac", "hi", "90", "80", "70", "60", "50", "40", "40", "50", "60", "70", "80", "90", "Prompted", "Error", "MNIST", "Generated", "Identity", "Data", "Best", "s", "L", "os", "ev", "ed", "Ac", "hi", "2.0", "1.5", "1.0", "0.5", "0.0", "0.0", "0.5", "1.0", "1.5", "2.0", "Prompted", "Loss", "Generated", "Identity", "Data", "Best", "ur", "n", "Cartpole", "R", "et", "ev", "ed", "Ac", "hi", "500", "400", "300", "200", "100", "0", "0", "100", "200", "300", "400", "500", "Prompted", "Return"],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 500.15999999999997,
+    "y1": 86.39999999999999,
+    "y2": 176.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure5-1.png"
+}, {
+  "caption": "Figure 11: G.pt training curves with and without parameter augmentation. Left: We show G.pt’s loss over the course of training on different splits from our Cartpole checkpoint dataset. Right: Prompt alignment scores over the course of training (+1 indicates perfect alignment).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74444580078125,
+    "y1": 623.2225341796875,
+    "y2": 651.1430053710938
+  },
+  "figType": "Figure",
+  "imageText": ["no", "aug", "with", "aug", "0", "45K", "90K", "135K", "180K", "Training", "Steps", "no", "aug", "with", "aug", "Pr", "om", "pt", "A", "lig", "nm", "en", "t", "1", "0", "1", "2", "0", "45K", "90K", "135K", "180K", "Training", "Steps"],
+  "name": "11",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 502.08,
+    "y1": 540.0,
+    "y2": 607.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Varying input θ yields significant variation in synthesized θ∗. We compute the perparameter variance of θ∗ as we re-sample the input θ vector and hold diffusion reverse process noise fixed (blue). And, we compute the per-parameter variance as we re-sample reverse process noise and hold the input θ fixed (yellow). The 750 parameters with highest θ-variance are visualized. Input θ appear to affect G.pt’s predictions more strongly than reverse process noise.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.655029296875,
+    "y1": 223.12155151367188,
+    "y2": 272.9599609375
+  },
+  "figType": "Figure",
+  "imageText": ["𝜃∗"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 209.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure10-1.png"
+}, {
+  "caption": "Figure 1: Generative pre-training from checkpoints. Left: We build a dataset of neural network checkpoints from many training runs. Each checkpoint includes the neural network’s parameters and relevant metadata (test losses and test errors for supervised learning tasks, returns for RL tasks). Right: G.pt, a generative model of checkpoints. G.pt takes a parameter vector and a loss/error/return prompt as input and predicts the distribution over updated parameters that achieve the prompt.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.65435791015625,
+    "y1": 240.17752075195312,
+    "y2": 290.0150146484375
+  },
+  "figType": "Figure",
+  "imageText": ["Pre-training", "dataset", "of", "neural", "network", "checkpoints", "A", "generative", "model", "of", "checkpoints", "Prompted", "Loss", "(or", "Error)Starting", "𝜃", "G.pt", "Updated", "𝜃", "(", "(", ")", ")", "Error", "=", "5%", "Error", "=", "63%", "Error", "=", "90%", "Loss", "=", "0.18𝜃$", "…", "Loss", "=", "1.6", "(", ")", "𝜃\"#", "𝜃!", "Loss", "=", "2.3"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 118.08,
+    "x2": 497.28,
+    "y1": 84.96,
+    "y2": 220.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure1-1.png"
+}, {
+  "caption": "Figure 6: G.pt generalizes to out-of-distribution parameter initializations. We query G.pt with randomly-initialized weights sampled from a different distribution than those in our MNIST checkpoint dataset. By recursively applying G.pt to its own output and prompting for low test error, we rapidly optimize out-of-distribution random initializations.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.24468994140625,
+    "y1": 242.06649780273438,
+    "y2": 280.94500732421875
+  },
+  "figType": "Figure",
+  "imageText": ["Kaiming", "Uniform", "(Fan-Out)", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Recursive", "Prompts", "Kaiming", "Uniform", "(Fan-In)", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Recursive", "Prompts", "Kaiming", "Normal", "(Fan-Out)", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Recursive", "Prompts", "Kaiming", "Normal", "(Fan-In)", "r", "Er", "ro", "100", "80", "60", "40", "20", "0", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Recursive", "Prompts", "In-Distribution", "Initialization", "Xavier", "Normal", "Xavier", "Uniform", "Orthogonal", "r", "Er", "ro", "100", "80", "60", "40", "20", "0"],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 84.96,
+    "y2": 225.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Scaling studies.",
+  "captionBoundary": {
+    "x1": 388.30499267578125,
+    "x2": 492.9727783203125,
+    "y1": 714.2455444335938,
+    "y2": 720.2479858398438
+  },
+  "figType": "Figure",
+  "imageText": ["en", "t", "lig", "nm", "pt", "A", "Pr", "om", "0.5", "0.0", "−0.5", "−1.0", "−1.5", "−2.0", "−2.5", "104", "105", "106", "107", "108", "Dataset", "Size", "(Checkpoints)", "en", "t", "lig", "nm", "pt", "A", "Pr", "om", "0.5", "0.0", "−0.5", "−1.0", "−1.5", "−2.0", "−2.5", "G.pt", "Size", "(Parameters)", "106", "107", "108", "109"],
+  "name": "7",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 381.12,
+    "x2": 499.2,
+    "y1": 521.76,
+    "y2": 702.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure7-1.png"
+}, {
+  "caption": "Figure 9: Visualizing synthetic parameters generated by G.pt versus real parameters. Each row visualizes the first layer weights of a single MNIST MLP with 10 hidden neurons. The j-th column shows the 28× 28 weights incoming to the j-th hidden neuron. Left: We show G.pt samples when querying for low error. In each row, we feed a different unseen, randomly-initialized input network to G.pt. Right: The “ground truth” parameters obtained by training the same randomly-initialized nets with gradient-based optimization instead.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.3567810058594,
+    "y1": 266.0175476074219,
+    "y2": 326.8139953613281
+  },
+  "figType": "Figure",
+  "imageText": ["Generated", "Parameters", "Real", "Parameters"],
+  "name": "9",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 84.0,
+    "y2": 252.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure9-1.png"
+}, {
+  "caption": "Figure 14: G.pt predictions on held-out (unseen) random initializations tend to lie closer to the ground truth outcome of SGD/Adam than any parameter vector from our checkpoint dataset’s training split. For each test run in our dataset, we feed the initial parameters and a metric prompt to G.pt, and we sample a prediction. We count the percentage of runs for which the prediction is closer to one of the 200 checkpoints in that same test run than all checkpoints in the training split (Cartpole has 10M training split checkpoints, CIFAR-10 has 11.3M and MNIST has 2.1M). Each plot corresponds to a different G.pt model, and we repeat the test for a wide range of prompts.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.00384521484375,
+    "y1": 345.0345153808594,
+    "y2": 416.7900085449219
+  },
+  "figType": "Figure",
+  "imageText": ["MNIST", "20", "40", "60", "80", "Promp%ed", "Error", "MNIST", "0.0", "0.5", "1.0", "1.5", "2.0", "Promp%ed", "Loss", ")", "Car%pole", "NN", "S", "co", "re", "(%", "100", "80", "60", "40", "20", "0", "0", "100", "200", "300", "400", "500", "Promp%ed", "Re%ur", "CIFAR-10", "40", "50", "60", "70", "80", "90", "Pr", "mpted", "Err", "r", "CIFAR-10", ")", "NN", "S", "c", "re", "(%", "100", "80", "60", "40", "20", "0", "1.2", "1.4", "1.6", "1.8", "2.0", "2.2", "Pr", "mpted", "L", "ss"],
+  "name": "14",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 119.52,
+    "y2": 309.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure14-1.png"
+}, {
+  "caption": "Figure 8: G.pt learns a multimodal distribution over local error minima. We visualize the test error landscape for an MNIST MLP via parameter space PCA directions (Li et al., 2018). The dots are samples from G.pt when prompted for low test error; the two plots use different MLP initializations. With fixed inputs, G.pt samples diverse solutions that cover distinct positive-curvature regions of the error landscape. We show G.pt samples that reconstruct accurately from PCA encoding.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7438659667969,
+    "y1": 258.2795104980469,
+    "y2": 308.1180114746094
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 233.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure8-1.png"
+}, {
+  "caption": "Figure 2: The G.pt architecture. During training, we sample two checkpoints from the same run—a “starting” network’s parameters and a “future” network’s parameters from later in the run—as well as their losses/errors/returns. Each layer’s parameters are flattened and linearly encoded. The future network’s parameters are noised via a diffusion forward process prior to encoding.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0033264160156,
+    "y1": 254.61355590820312,
+    "y2": 293.4930114746094
+  },
+  "figType": "Figure",
+  "imageText": ["Starting", "𝜃Future", "𝜃", "Tokenize", "…", "Noise", "and", "Tokenize", "…", "Per-token", "Encoding", "Future", "Loss", "(or", "Return)", "Starting", "Loss", "(or", "Return)", "Diffusion", "Timestep", "Diffusion", "Transformer"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 112.8,
+    "y2": 234.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure2-1.png"
+}, {
+  "caption": "Figure 13: G.pt pre-trained on CIFAR-10 test losses generalize to CIFAR-10.1. We examine if G.pt overfits to CIFAR-10 test losses by evaluating its generated networks on CIFAR-10.1. Prompting for smaller CIFAR-10 test losses yields networks that perform better on CIFAR-10.1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7440490722656,
+    "y1": 600.517578125,
+    "y2": 628.43798828125
+  },
+  "figType": "Figure",
+  "imageText": ["CIFAR-10", "CIFAR-10.1", "Data", "Best", "s", "L", "os", "ev", "ed", "Ac", "hi", "2.50", "2.25", "2.00", "1.75", "1.50", "1.25", "1.00", "1.2", "1.4", "1.6", "1.8", "2.0", "2.2", "Prompted", "Loss"],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 230.39999999999998,
+    "x2": 379.2,
+    "y1": 477.59999999999997,
+    "y2": 585.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure13-1.png"
+}, {
+  "caption": "Table 1: G.pt Hyperparameters. When prompting G.pt with ℓ∗ for one-step optimization, we choose a value close to the smallest loss/error or highest return present in our checkpoint dataset.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0002746582031,
+    "y1": 287.0045166015625,
+    "y2": 303.96600341796875
+  },
+  "figType": "Table",
+  "imageText": ["Diffusion", "steps", "(J)", "1000", "1000", "1000", "1000", "1000", "Noise", "schedule", "linear", "linear", "linear", "linear", "linear", "Transformer", "layers", "12", "12", "12", "12", "12", "Transformer", "dim", "1536", "1536", "1536", "2048", "2048", "Self-attention", "heads", "12", "16", "16", "16", "16", "Model", "parameters", "347M", "378M", "378M", "639M", "639M", "Layer", "tokenizer", "layer-by-layer", "layer", "chunk", "layer", "chunk", "layer", "chunk", "layer", "chunk", "Max", "parameters", "per", "token", "(M", ")", "-", "1000", "1000", "576", "576", "Scalar", "encoder:", "number", "of", "frequencies", "128", "128", "128", "128", "128", "Scalar", "encoder:", "max", "frequency", "(log2)", "14", "14", "14", "14", "14", "Data", "scale", "factor", "2.06", "4.185", "4.185", "1.646", "1.646", "AdamW", "β2", "0.999", "0.999", "0.95", "0.999", "0.999", "Base", "learning", "rate", "2×", "10−4", "4×", "10−4", "4×", "10−4", "4×", "10−4", "4×", "10−4", "Learning", "rate", "warmup", "linear", "linear", "linear", "linear", "linear", "Learning", "rate", "decay", "cosine", "cosine", "cosine", "cosine", "cosine", "Weight", "decay", "0.1", "0.1", "0.1", "0.1", "0.1", "Batch", "size", "8192", "1024", "512", "550", "550", "Gradient", "clip", "-", "0.75", "0.75", "0.1", "0.1", "EMA", "decay", "0.9999", "0.9999", "0.9999", "0.9999", "0.9999", "Training", "iterations", "to", "best", "performance", "128K", "110K", "288K", "425K", "792K", "Prompted", "ℓ∗", "for", "one-step", "optimization", "500.0", "0", "5.0", "1.2", "35.0", "G.pt", "Hyperparameters", "Cartpole", "MNIST", "(Loss)", "MNIST", "(Error)", "CIFAR-10", "(Loss)", "CIFAR-10", "(Error)"],
+  "name": "1",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Table1-1.png"
+}, {
+  "caption": "Table 2: Checkpoint dataset statistics.",
+  "captionBoundary": {
+    "x1": 226.54400634765625,
+    "x2": 385.4556579589844,
+    "y1": 430.62152099609375,
+    "y2": 436.6239929199219
+  },
+  "figType": "Table",
+  "imageText": ["#RUNS", "10728", "56840", "50026", "#TRAIN", "RUNS", "10228", "54790", "47976", "#TEST", "RUNS", "500", "2050", "2050", "CHECKPOINTS/RUN", "200", "200", "200", "#CHECKPOINTS", "2.1M", "11.3M", "10M", "ARCHITECTURE", "MLP", "CNN", "MLP", "#PARAMETERS", "7960", "5370", "1250", "MNIST", "CIFAR-10", "CARTPOLE"],
+  "name": "2",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 180.95999999999998,
+    "x2": 428.15999999999997,
+    "y1": 312.0,
+    "y2": 408.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Table2-1.png"
+}, {
+  "caption": "Figure 4: Optimization curves. We compare one step of G.pt optimization to training curves produced by SGD and Adam. Error bars are computed over five initializations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0022888183594,
+    "y1": 334.33154296875,
+    "y2": 351.2929992675781
+  },
+  "figType": "Figure",
+  "imageText": ["CIFAR−10", "SGD", "Adam", "Ours", "Er", "ro", "r", "90", "80", "70", "60", "50", "40", "0", "5K", "10K", "15K", "20K", "Steps", "MNIST", "SGD", "Adam", "Ours", "Lo", "ss", "0.6", "0.5", "0.4", "0.3", "0.2", "0", "2K", "4K", "6K", "8K", "10K", "12K", "Steps", "Cartpole", "SGD", "Adam", "Ours", "Re", "tu", "rn", "500", "400", "300", "200", "100", "0", "0", "2K", "4K", "6K", "8K", "Steps"],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 499.2,
+    "y1": 230.88,
+    "y2": 320.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure4-1.png"
+}, {
+  "caption": "Figure 3: G.pt optimizes unseen network parameters in one step. We compare performance after a single update from G.pt versus a single step of gradient-based optimizers. Error bars are computed over five input parameter vectors, all of which are randomly-initialized.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00091552734375,
+    "y1": 189.73355102539062,
+    "y2": 217.65399169921875
+  },
+  "figType": "Figure",
+  "imageText": ["Er", "ro", "r", "90", "80", "70", "60", "50", "40", "CIFAR−10", "AdamW", "Momentum", "SGD", "NAG", "RMSprop", "Ours", "Lo", "ss", "2.0", "1.5", "1.0", "0.5", "0.0", "MNIST", "AdamW", "Momentum", "SGD", "NAG", "RMSprop", "Ours", "Re", "tu", "rn", "500", "400", "300", "200", "100", "0", "Cartpole", "AdamW", "Momentum", "SGD", "NAG", "RMSprop", "Ours"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 500.15999999999997,
+    "y1": 86.39999999999999,
+    "y2": 174.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure3-1.png"
+}, {
+  "caption": "Figure 12: Uncurated error surface plots. All nine surface plots visualize the test error landscape of an MNIST MLP. Different plots correspond to different random initializations of the MLP that are input to G.pt. The dots are samples produced by G.pt when prompted for low error. We visualize the surface by moving in the top-two PCA directions computed over 256 G.pt samples. We show G.pt samples that reconstruct accurately from two-dimensional PCA encoding (less than 10−3 reconstruction distance in parameter space). The plots suggest that G.pt has learned a multimodal distribution over parameters, even when given fixed inputs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3544921875,
+    "y1": 572.3435668945312,
+    "y2": 644.0999755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 164.64,
+    "y2": 561.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JXkz3zm8gJ-Figure12-1.png"
+}]

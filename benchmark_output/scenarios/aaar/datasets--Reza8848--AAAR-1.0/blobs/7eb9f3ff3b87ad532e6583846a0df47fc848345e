@@ -1,0 +1,361 @@
+[{
+  "caption": "Figure 1: The Merlin-Arthur classifier consists of two interactive agents that communicate over an exchanged feature. This feature serves as an interpretation of the classification.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.00360107421875,
+    "y1": 544.4015502929688,
+    "y2": 580.2919921875
+  },
+  "figType": "Figure",
+  "imageText": ["Merlin-Arthur", "Classiﬁer", "Feature", "Classiﬁer", "Arthur:", "Feature", "Selector", "Merlin:"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 325.92,
+    "x2": 504.0,
+    "y1": 399.84,
+    "y2": 534.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure1-1.png"
+}, {
+  "caption": "Figure 8: Conceptual illustration of a biased dataset regarding a hiring process and a feature selector that hides this bias. a) Two candidates applied for a position, both are proficient in C++ and PHP and only differ by sex. The female candidate was accepted, while the male candidate was rejected. b) A feature selector highlights one feature for each candidate. In a faithfulness test (Jain et al., 2020), one would retrain a model to reproduce the classification given the selected features to check how much information they carry about the decision. It is clear from this example that the selected features indeed carry this information, not in themselves, but rather through the way they have been selected.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 518.5345458984375,
+    "y2": 601.25
+  },
+  "figType": "Figure",
+  "imageText": ["PHP", "C++", "P1", "P2", "Accepted", "Rejected", "♀", "♂", "PHP", "C++", "P1", "P2", "Accepted", "Rejected"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 475.68,
+    "y1": 420.0,
+    "y2": 504.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure8-1.png"
+}, {
+  "caption": "Figure 12: An example of a dataset with very high asymmetric feature concentration. The completely red image shares a feature with each of the m-red-pixel images (here m = 5), of which there are ( d m ) many. In the worst case m = d 2 , resulting in k = ( d d/2 ) thus exponential growth in d.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.003173828125,
+    "y1": 695.66552734375,
+    "y2": 728.3670043945312
+  },
+  "figType": "Figure",
+  "imageText": ["l=1:", "All", "blue", "or", "ﬁve", "red", "blue", "l=-1:", "All", "red", "or", "ﬁve"],
+  "name": "12",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 620.64,
+    "y2": 682.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure12-1.png"
+}, {
+  "caption": "Figure 14: This figure depicts the mean and standard deviation over 10 training runs for the error probability, cooperative information and the class entropy. This was obtained from 5-class classification with classes 1,2,3,4 and 5 with γ = 0.75 for the purely cooperative setup (left) and the adversarial setup (right), where Merlin was realised as an optimiser (top) or as a neural network (bottom).",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0025939941406,
+    "y1": 355.6505432128906,
+    "y2": 391.5410461425781
+  },
+  "figType": "Figure",
+  "imageText": ["1", "2", "4", "8", "16", "32", "1", "2", "4", "8", "16", "32", "k", "k", "Pe", "Icoop", "H(C(Y)|Y", "M(X))", "Pe", "Icoop", "H(C(Y)|Y", "M(X))", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "1", "2", "4", "8", "16", "32", "1", "2", "4", "8", "16", "32", "Merlin:", "Net", "Merlin:", "Net,", "Morgana:", "Opt", "Merlin:", "Opt", "Merlin:", "Opt,", "Morgana:", "Opt", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Pe", "Icoop", "H(C(Y", ")|Y", "∈M(X))"],
+  "name": "14",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 155.04,
+    "x2": 429.12,
+    "y1": 83.03999999999999,
+    "y2": 339.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure14-1.png"
+}, {
+  "caption": "Figure 2: Illustration of “cheating” behaviour. In the original dataset, the features “sea” and “sky” appear equally in both classes “boat” and “island”. In the new set of images that Merlin creates by masking features of the original image, the “sea” feature is visible only in the images labelled “boat” and the “sky” feature is visible only in the images labelled “island”. Thus, these features now strongly indicate the class of the image. This allows Merlin to communicate the correct class with uninformative features — in contrast to our concept of an interpretable classifier.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.00469970703125,
+    "y1": 254.25253295898438,
+    "y2": 369.8440856933594
+  },
+  "figType": "Figure",
+  "imageText": ["I(C", ";", "“sea”)", "=", "0", "P", "(C", "=", "“isle”|“sea”)", "=", "0.5", "P", "(C", "=", "“boat”|“sea”)", "=", "0.5", "I(C", ";", "“sea”)", "=", "1", "P", "(C", "=", "“isle”|“sea”)", "=", "0", "P", "(C", "=", "“boat”|“sea”)", "=", "1", "Masked", "Images:", "Original", "Images:", "“Isle!”“Boat!”"],
+  "name": "2",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 324.96,
+    "x2": 504.0,
+    "y1": 147.84,
+    "y2": 243.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Strategy evolution with Morgana. a) Due to the “cheating” strategy from Figure 2, Arthur expects the “sea” feature for boats and the “sky” for islands. Morgana can exploit the situation and send the “sky” feature to trick Arthur into classifying a “boat” image as an “island” (and vice versa with the “sea” feature). b) To not be fooled into stating the wrong class when represented with an ambiguous feature, Arthur refrains from giving a concrete classification. c) Since Arthur does not know who sends the features, he now cannot leverage the uninformative features sent by Merlin. d) Merlin adapts his strategy to only send unambiguous features that cannot be used by Morgana to fool Arthur.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0046691894531,
+    "y1": 662.142578125,
+    "y2": 727.9209594726562
+  },
+  "figType": "Figure",
+  "imageText": ["a)", "b)", "c)", "d)", "“Don’t", "know!”", "“Don’t", "know!”", "“Isle!”“Boat!”", "“Isle!”", "“Boat!”", "“Don’t", "know!”", "“Don’t", "know!”"],
+  "name": "3",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 499.2,
+    "y1": 550.56,
+    "y2": 650.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure3-1.png"
+}, {
+  "caption": "Table 3: Values of various parameters used in training.",
+  "captionBoundary": {
+    "x1": 195.8040008544922,
+    "x2": 413.10821533203125,
+    "y1": 210.06649780273438,
+    "y2": 216.0689697265625
+  },
+  "figType": "Table",
+  "imageText": ["Arthur", "LR", "1e-4", "Merlin", "LR", "1e-4", "Morgana", "LR", "1e-6", "FW", "Momentum", "0.9", "Regularisation", "λ", "0.25", "Max", "NN", "Passes", "5", "Baseline", "Value", "0.3", "Max", "FW", "Iterations", "200", "Parameter", "Value", "Batch", "Size", "128"],
+  "name": "3",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Table3-1.png"
+}, {
+  "caption": "Figure 7: Different failure modes of unrepresentative distributions. Left: Independent, random inpainting, similar to Macdonald et al. (2019). From a black image, the shape of a cat is selected, and the rest is filled with uniform noise. The shape of a cat is detected by a classifier. Right: Data-driven inpainting, similar to Agarwal & Nguyen (2020). The image of a ship is given and the ship-feature is selected. The data driven distribution inpaints the water back into the image, since in the dataset, ships are always on water. The faulty classifier that relies on the water feature is undetected, as the ship-feature indirectly leads to the correct classification.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0043640136719,
+    "y1": 286.5045166015625,
+    "y2": 358.25994873046875
+  },
+  "figType": "Figure",
+  "imageText": ["Data-driven", "Distribution", "Independent", "Distribution", "p", "le", "ti", "on", "C", "om", "O", "ri", "gi", "n", "al", "Im", "ag", "e", "S", "el", "ec", "te", "d", "F", "ea", "tu", "re", "“Cat!”", "“Boat!”"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure7-1.png"
+}, {
+  "caption": "Figure 5: Hiring only men while hiding “sex” as the explanation. 1. No soundness is required (γ = 0). a) Merlin has no punishment for showing “sex” (β = 0). He sends Arthur the “sex” feature and they discriminate successfully (high completeness). b) Merlin is incentivised not to use “sex” (β > 0). He successfully communicates the “sex” to Arthur via different features, here “hours per week” and “education”. Morgana can exploit this strategy. 2. High soundness is now required (γ = 0.67). Merlin either a) shows the “sex” feature despite the punishment (β = 3.5) and achieves high completeness, or b) hides the “sex” feature (β = 10) and reduces completeness below 50%, which corresponds to no discrimination.",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0025634765625,
+    "y1": 284.00152587890625,
+    "y2": 349.7800598144531
+  },
+  "figType": "Figure",
+  "imageText": ["Chosen", "by", "Merlin", "Chosen", "by", "Morgana", "Completeness", "=", "45%", "Soundness", "=", "90.11%", "ce", "re", "n", "cc", "u", "e", "O", "at", "iv", "R", "el", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "y", "in", "co", "m", "e", "un", "tr", "e-", "co", "na", "tiv", "k", "-w", "ee", "s-p", "er", "ho", "ur", "os", "s", "ta", "l-l", "ca", "pi", "ai", "n", "ta", "l-g", "ca", "pi", "n", "ra", "ce", "se", "x", "pa", "tio", "oc", "cu", "ag", "e", "wor", "kc", "la", "ss", "ed", "uc", "at", "io", "n", "2b)", "β", "=", "10", "γ", "=", "0.67", "0.8", "1.0", "R", "el", "at", "iv", "e", "O", "cc", "u", "re", "n", "ce", "Completeness", "=", "100%", "Soundness", "=", "90.62%", "0.6", "0.4", "0.2", "0.0", "y", "in", "co", "m", "e", "un", "tr", "e-", "co", "na", "tiv", "k", "-w", "ee", "s-p", "er", "ho", "ur", "os", "s", "ta", "l-l", "ca", "pi", "ai", "n", "ta", "l-g", "ca", "pi", "n", "ra", "ce", "se", "x", "pa", "tio", "oc", "cu", "ag", "e", "wor", "kc", "la", "ss", "ed", "uc", "at", "io", "n", "2a)", "β", "=", "3.5", "γ", "=", "0.67", "Completeness", "=", "100%", "ce", "re", "n", "cc", "u", "e", "O", "at", "iv", "R", "el", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "1b)", "β", "=", "3.5", "γ", "=", "0", "Completeness", "=", "100%", "ce", "re", "n", "cc", "u", "e", "O", "at", "iv", "R", "el", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "1a)", "β", "=", "0", "γ", "=", "0"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 119.03999999999999,
+    "x2": 482.4,
+    "y1": 86.88,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Left: For four different setups of Merlin and Morgana, we compare the lower bound on QD(M) with the experimental results on the MNIST dataset. The top row is for the labels {“2”, “4”}, and the bottom row for {“6”, “9”}. The bound is tight for large masks, but loosens sharply for very small mask sizes k. Right: Examples of the features selected by Merlin for two images. For the “4” feature, there are 13 images in MNIST that share it, all of them of class “4” (we show four here). For the “2” there are 16 images, all of them in “2”.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00091552734375,
+    "y1": 560.3115234375,
+    "y2": 606.1640014648438
+  },
+  "figType": "Figure",
+  "imageText": ["εs", "εc", "QD(M)", "QD(M)-Bound", "k", "k", "k", "1", "2", "4", "8", "16", "32", "64", "1", "2", "4", "8", "16", "32", "64", "1", "2", "4", "8", "16", "32", "64", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "“6”", "vs", "“9”", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "“2”", "vs", "“4”", "Opt", "Hybrid", "Net", "Example", "Features"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 500.15999999999997,
+    "y1": 368.15999999999997,
+    "y2": 539.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure6-1.png"
+}, {
+  "caption": "Figure 10: Illustration of a data space with strong asymmetric feature concentration. a): A dataset with fish and fruit features. The features are asymmetrically correlated, because all the fruit features are maximally correlated in class −1 (they are all in the same image) and maximally uncorrelated in 1 (no two fruits share the same image). The reverse is true for the fruits. See Figure 11 for a strategy for Merlin that ensures strong completeness and soundness with uninformative features. b): Asymmetric feature concentration for a specific feature selection. For the class −1, we select the set F of all “fish” features. Each individual fish feature in F covers a fraction of 1 6 of (∪F )∩D−1 and all images (one) in (∪F )∩D1. The expected value in Equation (5) thus evaluates to k = 6. This is also the maximum AFC for the entire dataset as no different feature selection gives a higher value.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0034484863281,
+    "y1": 287.2635192871094,
+    "y2": 372.967041015625
+  },
+  "figType": "Figure",
+  "imageText": ["l=1:", "One", "fruit", "or", "many", "ﬁsh", "l=-1:", "One", "ﬁsh", "or", "many", "fruit", "b)", "l=1:", "One", "fruit", "or", "many", "ﬁsh", "l=-1:", "One", "ﬁsh", "or", "many", "fruit", "a)"],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 84.96,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure10-1.png"
+}, {
+  "caption": "Figure 9: Schematic of Dex as defined in Example A.1. a) The data space forms a tri-partite graph, where every data point shares exactly one feature each with two data points from the opposite class. b) Classification on data point x3. Merlin chooses the feature with the smallest index from this data point, so ϕ2. Arthur chooses the class of the data point with the highest index compatible with the presented features. Morgana can choose ∅, ϕ2 or ϕ3, but in all cases Arthur can correctly identify the original data point and return class l = −1.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00335693359375,
+    "y1": 314.1845397949219,
+    "y2": 374.98193359375
+  },
+  "figType": "Figure",
+  "imageText": ["a)", "b)", "ϕ8", "ϕ7", "ϕ6", "ϕ5", "ϕ4", "ϕ3", "ϕ2", "ϕ1", "x7", "x8", "x5", "x6", "x3", "x4", "x1", "x2", "ϕ8", "ϕ7", "ϕ6", "ϕ5", "ϕ4", "ϕ3", "ϕ2", "ϕ1", "x7", "x8", "x5", "x6", "x3", "x4", "x1", "x2"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 193.92,
+    "x2": 418.08,
+    "y1": 105.6,
+    "y2": 300.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure9-1.png"
+}, {
+  "caption": "Table 1: Configurations for pre-training Arthur and training the Merlin-Arthur classifiers.",
+  "captionBoundary": {
+    "x1": 128.04400634765625,
+    "x2": 483.95770263671875,
+    "y1": 136.36654663085938,
+    "y2": 142.3690185546875
+  },
+  "figType": "Table",
+  "imageText": ["Merlin-Arthur", "Classifier", "0.5", "512", "0.1", "20", "Model", "Learning", "Rate", "Batch", "Size", "Frank-Wolfe", "Learning", "Rate", "Epochs", "Pre-training", "Arthur", "10−4", "512", "-", "100"],
+  "name": "1",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 121.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Table1-1.png"
+}, {
+  "caption": "Table 2: Description of the neural network architecture used for the Arthur classifier.",
+  "captionBoundary": {
+    "x1": 137.24000549316406,
+    "x2": 474.7628173828125,
+    "y1": 604.4915771484375,
+    "y2": 610.4940185546875
+  },
+  "figType": "Table",
+  "imageText": ["Conv2D", "I=32,", "O=64,", "K=3", "ReLU", "Conv2D", "I=64,", "O=64,", "K=3", "ReLU", "MaxPool2d", "K=2", "Linear", "I=7744,", "O=1024", "ReLU", "Linear", "I=1024,", "O=128", "ReLU", "Linear", "I=128,", "O=1", "Layer", "Name", "Parameters", "Conv2D", "I=3,", "O=32,", "K=3", "ReLU"],
+  "name": "2",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 230.88,
+    "x2": 379.2,
+    "y1": 441.59999999999997,
+    "y2": 593.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Table2-1.png"
+}, {
+  "caption": "Figure 13: Illustration of a dataset with strong context dependence. Class −1 consists of k-sparse images whose pixel values sum to some number S. For each of these images, there is a non-sparse image in class 1 that shares all non-zero values (marked in red for the first image). Merlin can use the strategy to show all k non-zero pixels for an image from class −1 and k + 1 arbitrary non-zero pixels for class 1. Arthur checks if the sum is equal to S or if the number of pixels equal to k+1, otherwise he says “I don’t know!”. He will then classify with 100% accuracy. Nevertheless, the features Merlin uses for class −1 are completely uncorrelated with the class label. To exploit this, however, Morgana would have to solve the NP-hard (Kleinberg & Tardos, 2006) subset sum problem to find the pixels for images in class 1 that sum to S. The question is not in which class we can find the features, but in which class we can find the features efficiently.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9997863769531,
+    "y1": 203.43954467773438,
+    "y2": 289.1430358886719
+  },
+  "figType": "Figure",
+  "imageText": [".", ".", ".", ".", ".", ".", "l", "=", "1", "l", "=", "−1"],
+  "name": "13",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure13-1.png"
+}, {
+  "caption": "Figure 15: We show the mean and standard deviation over 10 training runs for completeness and soundness, along with the average precision and its bound as obtained from 2-class classification with classes 6 and 9 with γ = 0.75 for different settings.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0010681152344,
+    "y1": 453.301513671875,
+    "y2": 479.22900390625
+  },
+  "figType": "Figure",
+  "imageText": ["k", "k", "εs", "εc", "QD(M)", "QD(M)-Bound", "1", "2", "4", "8", "16", "32", "64", "1", "2", "4", "8", "16", "32", "64", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "k", "k", "Net", "CN", "1", "2", "4", "8", "16", "32", "64", "1", "2", "4", "8", "16", "32", "64", "0.0", "0.2", "0.4", "0.6", "0.8", "Opt", "Hybrid", "1.0"],
+  "name": "15",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 158.4,
+    "x2": 455.03999999999996,
+    "y1": 103.2,
+    "y2": 433.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure15-1.png"
+}, {
+  "caption": "Figure 16: This figure depicts the error probability, cooperative information and the class entropy as obtained from 2-class classification with classes 6 and 9 for different values of γ at a mask size of 16 for the Hybrid (left) and Network (right) settings",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 679.424560546875,
+    "y2": 707.344970703125
+  },
+  "figType": "Figure",
+  "imageText": ["Icoop", "H(C(Y", ")|Y", "∈M(X))", "0.03", "Pe", "0.02", "0.01", "0.00", "−0.01", "0.2", "0.4", "0.6", "0.8", "γ", "Icoop", "H(C(Y", ")|Y", "∈M(X))", "0.150", "Pe", "0.125", "0.100", "0.075", "0.050", "0.025", "0.000", "0.2", "0.4", "0.6", "0.8", "γ"],
+  "name": "16",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 133.44,
+    "x2": 476.15999999999997,
+    "y1": 529.92,
+    "y2": 664.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure16-1.png"
+}, {
+  "caption": "Figure 11: In the dataset presented in Figure 10, Merlin can use the strategy to always select the fish features for class l = −1 and the fruit features for class l = 1 if they exist and choose something arbitrary otherwise. Arthur can then guess l = 1 if he gets a fish and l = −1 for a fruit. This strategy fails only for the images containing all fruits or fish, and can only be exploited by Morgana for those same two images out of 14. The completeness and soundness constants in this case are both 1 7 . But as illustrated here, each “fish” feature is completely uninformative of the class. Conditioned on the selected fish, it could either be the image from class l = −1 or from l = 1.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00408935546875,
+    "y1": 177.57052612304688,
+    "y2": 243.3489990234375
+  },
+  "figType": "Figure",
+  "imageText": ["l=-1l=1"],
+  "name": "11",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 244.79999999999998,
+    "x2": 365.28,
+    "y1": 80.64,
+    "y2": 163.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7hvbaJ1AbaM-Figure11-1.png"
+}]

@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 7: Environment Visualization. We provide key screenshots of three testing environment rollouts to compare the initialization of our proposed HDT and HDT-Rand, which randomly initialize the adapter layers.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 526.1605224609375,
+    "y2": 554.0799560546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 183.84,
+    "y2": 522.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Efficient online policy adaptation of pre-trained transformer models with few-shot demonstrations. To facilitate data efficiency, we introduce a demonstration-conditioned adaptation module that helps leverage prior knowledge in the demonstration and guide exploration. When adapting to novel tasks, we only fine-tune the adaptation module to maintain parameter efficiency.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 172.92251586914062,
+    "y2": 211.80194091796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure1-1.png"
+}, {
+  "caption": "Table 1: Quantitative results on Meta-World meta-learning benchmarks.",
+  "captionBoundary": {
+    "x1": 162.5449981689453,
+    "x2": 449.4578857421875,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["HDT", "69K", "0.5%", "0.84±", "0.00", "0.20±", "0.00", "0.89", "±", "0.11", "0.80", "±", "0.16", "PDT", "6K", "0.05%", "0.61±", "0.04", "0.27±", "0.02", "0.27", "±", "0.17", "0.13", "±", "0.14", "DT", "13M", "100%", "0.86", "±", "0.00", "0.10±", "0.02", "0.89", "±", "0.12", "0.36", "±", "0.19", "HDT-IA3", "6K", "0.05%", "0.85±", "0.00", "0.22±", "0.03", "0.18", "±", "0.33", "0.09", "±", "0.11", "HDT-TrainOnce", "69K", "0.5%", "0.60±", "0.05", "0.12±", "0.01", "0.68", "±", "0.20", "0.19", "±", "0.16", "Model", "Sizes", "Meta-World", "Peformances", "Adaptation", "Percentage", "Train", "Test", "(no-FT)", "Test", "(meta-IL,", "1", "shot)", "Test", "(meta-LfO)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 96.47999999999999,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table1-1.png"
+}, {
+  "caption": "Table 7: Per-task Quantitative results with expert actions (meta-IL).",
+  "captionBoundary": {
+    "x1": 169.927001953125,
+    "x2": 442.0732116699219,
+    "y1": 286.8285217285156,
+    "y2": 292.83099365234375
+  },
+  "figType": "Table",
+  "imageText": ["HDT-medium", "1.00", "±", "0.00", "0.30", "±", "0.10", "1.00", "±", "0.00", "1.00", "±", "0.00", "1.00", "±", "0.00", "HDT-small", "0.50", "±", "0.50", "0.25", "±", "0.05", "0.05", "±", "0.05", "1.00", "±", "0.00", "1.00", "±", "0.00", "HDT-hidden-8", "1.00", "±", "0.00", "0.50", "±", "0.25", "0.75", "±", "0.25", "0.75", "±", "0.25", "1.00", "±", "0.00", "HDT-hidden-4", "0.00", "±", "0.00", "0.20", "±", "0.20", "1.00", "±", "0.00", "1.00", "±", "0.00", "1.00", "±", "0.00", "HDT-hidden-2", "0.50", "±", "0.50", "0.85", "±", "0.15", "0.50", "±", "0.50", "1.00", "±", "0.00", "0.00", "±", "0.00", "HDT", "1.00", "±", "0.00", "0.73", "±", "0.31", "0.77", "±", "0.33", "1.00", "±", "0.00", "0.93", "±", "0.09", "PDT", "0.25", "±", "0.43", "0.25", "±", "0.17", "0.00", "±", "0.00", "0.33", "±", "0.41", "0.50", "±", "0.50", "DT", "0.67", "±", "0.47", "0.80", "±", "0.28", "1.00", "±", "0.00", "1.00", "±", "0.00", "1.00", "±", "0.00", "HDT-IA3", "0.00", "±", "0.00", "0.00", "±", "0.00", "0.00", "±", "0.00", "0.00", "±", "0.00", "0.00", "±", "0.00", "bin-picking", "box-close", "hand-insert", "door-lock", "door-unlock"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 443.03999999999996,
+    "y1": 300.0,
+    "y2": 400.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table7-1.png"
+}, {
+  "caption": "Figure 6: Training curves of models with different sizes.",
+  "captionBoundary": {
+    "x1": 193.59800720214844,
+    "x2": 418.404052734375,
+    "y1": 686.8555908203125,
+    "y2": 692.8580322265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 448.8,
+    "y2": 683.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure6-1.png"
+}, {
+  "caption": "Table 6: Per-task Quantitative results for ablation studies without expert actions (meta-LfO).",
+  "captionBoundary": {
+    "x1": 120.53301239013672,
+    "x2": 491.46722412109375,
+    "y1": 184.61941528320312,
+    "y2": 190.62188720703125
+  },
+  "figType": "Table",
+  "imageText": ["HDT-medium", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "HDT-small", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "HDT-hidden-8", "0.00", "±", "0.00", "700", "0.05", "±", "0.05", "100", "0.00", "±", "0.00", "x", "1.00", "±", "0.00", "70", "0.00", "±", "0.00", "x", "HDT-hidden-4", "0.00", "±", "0.00", "200", "0.70", "±", "0.30", "20", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "HDT-hidden-2", "0.00", "±", "0.00", "x", "0.85", "±", "0.15", "3120", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "bin-picking", "box-close", "hand-insert", "door-lock", "door-unlock", "success", "rate", "rollouts", "success", "rate", "rollouts", "success", "rate", "rollouts", "success", "rate", "rollouts", "success", "rate", "rollouts"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 197.76,
+    "y2": 263.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table6-1.png"
+}, {
+  "caption": "Table 4: Model sizes when different base DT models and adapter’s bottleneck sizes.",
+  "captionBoundary": {
+    "x1": 138.69400024414062,
+    "x2": 473.307861328125,
+    "y1": 351.8575134277344,
+    "y2": 357.8599853515625
+  },
+  "figType": "Table",
+  "imageText": ["A.5", "HYPER-PARAMETERS", "HDT-small", "128", "3", "1", "16", "0.9M", "0.7M", "13K", "HDT-hidden-8", "512", "4", "8", "8", "13.6M", "13.1M", "37K", "HDT-hidden-4", "512", "4", "8", "4", "13.4M", "13.1M", "20K", "HDT-hidden-2", "512", "4", "8", "2", "13.3M", "13.1M", "12K", "HDT", "512", "4", "8", "16", "14.0M", "13.1M", "69K", "HDT-medium", "128", "6", "4", "16", "1.5M", "1.3M", "26K", "Embedding", "blocks", "heads", "bottleneck", "size", "total", "DT", "updated"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 482.4,
+    "y1": 364.8,
+    "y2": 492.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table4-1.png"
+}, {
+  "caption": "Table 5: Hyperparameters for DT-related models",
+  "captionBoundary": {
+    "x1": 208.760986328125,
+    "x2": 403.2408752441406,
+    "y1": 515.422607421875,
+    "y2": 521.425048828125
+  },
+  "figType": "Table",
+  "imageText": ["SiMPL", "learning", "rate", "5e-5", "online", "rollout", "budget", "Nepi", "4000", "online", "rollout", "budget", "in", "each", "training", "iteration", "20", "fine-tuning", "iterations", "200", "exploration", "ϵ", "0.2", "K", "(length", "of", "context", "τ", ")", "20", "demonstration", "length", "200", "training", "batch", "size", "for", "each", "task", "M", "16", "pre-training", "iterations", "4000", "number", "of", "gradient", "updates", "in", "each", "iteration", "10", "number", "of", "evaluation", "episodes", "for", "each", "task", "10", "learning", "rate", "αθ,", "αϕ,", "αψ", ",", "1e-4", "learning", "rate", "decay", "weight", "1e-4", "activation", "GELU", "Hyperparameters", "Value"],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 534.24,
+    "y2": 720.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table5-1.png"
+}, {
+  "caption": "Table 3: Detailed Model sizes for experiments with a large base DT model.",
+  "captionBoundary": {
+    "x1": 156.1640167236328,
+    "x2": 455.8390808105469,
+    "y1": 245.40737915039062,
+    "y2": 251.40985107421875
+  },
+  "figType": "Table",
+  "imageText": ["PDT", "13M", "-", "6K", "demonstrations", "0.05%", "DT", "13M", "-", "13M", "full", "model", "parameters", "100%", "HDT", "14M", "731K", "69K", "Adapter", "layer", "parameters", "0.5%", "HDT-IA3", "13M", "81K", "6K", "IA3", "parameters", "0.05%", "Base", "model", "Hypernet", "Adaptation", "fine-tune", "type", "Percentage"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 472.32,
+    "y1": 258.71999999999997,
+    "y2": 320.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table3-1.png"
+}, {
+  "caption": "Table 2: Per-task Quantitative results without expert actions (meta-LfO). For each testing task, we present the success rate and measure the data efficiency based on the top-2 number of online rollout episodes until a success episode. The symbol ”x” means that no successful episodes are sampled during online rollouts. We highlight the best performances.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00341796875,
+    "y1": 230.27743530273438,
+    "y2": 269.1568603515625
+  },
+  "figType": "Table",
+  "imageText": ["HDT-Rand", "0.00", "±", "0.00", "x", "0.07", "±", "0.12", "280", "0.00", "±", "0.00", "2600", "0.42", "±", "0.45", "110", "0.25", "±", "0.36", "30", "HDT-small-train", "0.00", "±", "0.00", "1360", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.00", "±", "0.00", "x", "0.67", "±", "0.24", "20", "HDT", "0.80", "±", "0.40", "20", "0.86", "±", "0.13", "20", "0.32", "±", "0.41", "40", "1.00", "±", "0.00", "80", "1.00", "±", "0.00", "20", "PDT", "0.00", "±", "0.00", "40", "0.06", "±", "0.12", "20", "0.00", "±", "0.00", "20", "0.59", "±", "0.48", "20", "0.00", "±", "0.00", "170", "DT", "0.16", "±", "0.37", "1880", "0.37", "±", "0.31", "1480", "0.16", "±", "0.37", "640", "0.38", "±", "0.36", "50", "0.80", "±", "0.40", "20", "HDT-IA3", "0.00", "±", "0.00", "1910", "0.00", "±", "0.00", "60", "0.00", "±", "0.00", "1480", "0.38", "±", "0.38", "90", "0.00", "±", "0.00", "20", "HDT-TrainOnce", "0.00", "±", "0.00", "2880", "0.07", "±", "0.06", "310", "0.00", "±", "0.00", "x", "0.10", "±", "0.20", "x", "0.80", "±", "0.40", "20", "bin-picking", "box-close", "hand-insert", "door-lock", "door-unlock", "success", "rate", "data", "eff.", "success", "rate", "data", "eff.", "success", "data", "eff.", "success", "data", "eff.", "success", "data", "eff."],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 280.8,
+    "y2": 359.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Table2-1.png"
+}, {
+  "caption": "Figure 3: Qualitative results in Meta-World benchmark. Each curve is averaged across 5 seeds. We show the training curves of our proposed HDT and baselines in (a), the adaptation performance with a one-shot demonstration containing expert actions (meta-IL) in (b), and adaption performance with a demonstration containing no expert actions (meta-LfO) in (c). When expert actions are unavailable, HDT outperforms baselines by a large margin.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0034484863281,
+    "y1": 169.30050659179688,
+    "y2": 219.138916015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 165.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure3-1.png"
+}, {
+  "caption": "Figure 5: Model Architecture of HDT-IA3.",
+  "captionBoundary": {
+    "x1": 220.11300659179688,
+    "x2": 391.8880615234375,
+    "y1": 688.2405395507812,
+    "y2": 694.2429809570312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 556.8,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure5-1.png"
+}, {
+  "caption": "Figure 4: Ablation results to show the effect of training tasks and model size. Decreasing the adapter’s bottleneck hidden size would slow down the convergence when there are expert actions as in (a), and cause a significant performance drop when no expert actions as in (b). Similar trends are observed with decreased base DT’s model size as in (c) and (d). With 10 training tasks, HDT-smalltrain underperforms HDT.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 138.73855590820312,
+    "y2": 188.57598876953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 38.879999999999995,
+    "y2": 131.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure4-1.png"
+}, {
+  "caption": "Figure 2: Model architecture of Hyper-Decision Transformer (HDT). Similar to DT, HDT takes recent contexts as input and outputs fine-grind actions. To encode task-specific information, HDT injects adapter layers into each decoder block. The adapter layer’s parameters come from a standalone hyper-network that takes both demonstrations without actions and the decoder’s layer id.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 212.69851684570312,
+    "y2": 251.57794189453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AatUEvC-Wjv-Figure2-1.png"
+}]

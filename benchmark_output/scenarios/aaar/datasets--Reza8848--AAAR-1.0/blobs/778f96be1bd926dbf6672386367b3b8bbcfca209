@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 4: The comparison among the average processing GPU time per epoch of different model components. ’Forward’ indicates the forward propagation that is a part of the calculation in uncertainty metric.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 179.67648315429688,
+    "y2": 207.596923828125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Amazon", "Computer", "0.7766", "0.9279", "0.0071", "0.1316", "ch", ")", "/e", "po", "e", "(s", "Ti", "m", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Model", "components", "SAT", "Forward", "process", "Uncertainty", "Representativeness", "(c)", "Amazon", "Photo", "0.00", "0.05", "0.10", "0.15", "0.20", "0.25", "0.30", "0.35", "0.40", "Ti", "m", "e", "(s", "/e", "po", "ch", ")", "0.0858", "0.0045", "0.3230", "0.2881", "Model", "components", "SAT", "Forward", "process", "Uncertainty", "Representativeness", "(b)", "Citeseer", "0.1308", "0.0775", "0.0047", "0.0853", "ch", ")", "/e", "po", "e", "(s", "Ti", "m", "0.14", "0.12", "0.10", "0.08", "0.06", "0.04", "0.02", "0.00", "Model", "components", "SAT", "Forward", "process", "Uncertainty", "Representativeness", "(a)", "Cora", "0.0933", "0.0613", "0.0047", "ch", ")", "0.0714", "/e", "po", "e", "(s", "Ti", "m", "0.10", "0.08", "0.06", "0.04", "0.02", "0.00", "Model", "components", "SAT", "Forward", "process", "Uncertainty", "Representativeness"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 162.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PuEOL1hhyrF-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Results with different cluster numbers when calculating the density score in the representativeness metric. (a-c) show the Recall@20 results for profiling task. (d-f) show the attribute-only classification accuracy with the use of MLP classifier. (g-h) show the classification accuracy considering both the structure and attribute information.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 633.6515502929688,
+    "y2": 672.531005859375
+  },
+  "figType": "Figure",
+  "imageText": ["(i)", "A+X", "-", "Amazon", "Photo", "ra", "cy", "Ac", "cu", "0.9205", "0.9200", "0.9195", "0.9190", "0.9185", "0.9180", "8", "10", "12", "15", "20", "30", "Cluster", "numbers", "(h)", "A+X", "-", "Citeseer", "ra", "cy", "Ac", "cu", "0.6750", "0.6740", "0.6730", "0.6720", "0.6710", "0.6700", "0.6690", "0.6680", "0.6670", "10", "12", "15", "20", "25", "Cluster", "numbers", "(g)", "A+X", "-", "Cora", "ra", "cy", "Ac", "cu", "0.8360", "0.8340", "0.8320", "0.8300", "0.8280", "0.8260", "0.8240", "8", "10", "12", "15", "20", "Cluster", "numbers", "(f)", "X", "-", "Amazon", "Photo", "ra", "cy", "Ac", "cu", "0.8840", "0.8830", "0.8820", "0.8810", "0.8800", "8", "10", "12", "15", "20", "30", "Cluster", "numbers", "(e)", "X", "-", "Citeseer", "ra", "cy", "Ac", "cu", "0.6390", "0.6380", "0.6370", "0.6360", "0.6350", "0.6340", "0.6330", "0.6320", "10", "12", "15", "20", "25", "Cluster", "numbers", "(d)", "X", "-", "Cora", "ra", "cy", "Ac", "cu", "0.7850", "0.7825", "0.7800", "0.7775", "0.7750", "0.7725", "0.7700", "0.7675", "8", "10", "12", "15", "20", "Cluster", "numbers", "(c)", "Recall", "on", "Amazon", "Photo", "ll@", "20", "Re", "ca", "0.0763", "0.0762", "0.0761", "0.0760", "0.0759", "0.0758", "8", "10", "12", "15", "20", "30", "Cluster", "numbers", "(b)", "Recall", "on", "Citeseer", "ll@", "20", "Re", "ca", "0.0855", "0.0850", "0.0845", "0.0840", "0.0835", "10", "12", "15", "20", "25", "Cluster", "numbers", "(a)", "Recall", "on", "Cora", "ll@", "20", "Re", "ca", "0.2230", "0.2220", "0.2210", "0.2200", "0.2190", "0.2180", "0.2170", "0.2160", "8", "10", "12", "15", "20", "Cluster", "numbers"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 487.2,
+    "y1": 309.59999999999997,
+    "y2": 616.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PuEOL1hhyrF-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Ablation study of different metrics in ATS. We show the recall@20 result of different combinations of the sampling metrics on 3 benchmarks. The horizontal coordinate refers to the different sampling criteria combinations. ’E’ indicates the entropy metric; ’D’ indicates the density metric; ’C’ indicates the centrality metric; ’E+D+C’ indicates our ATS algorithm.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 198.84555053710938,
+    "y2": 237.7249755859375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Amazon", "photo", "0.0765", "ll@", "20", "0.0757", "0.0749", "0.0762", "0.0758", "0.0759", "0.0759", "Re", "ca", "0.080", "0.078", "0.076", "0.074", "0.072", "0.070", "Query", "Strategy", "E", "D", "C", "E+D", "E+C", "D+C", "E+D+C", "(b)", "Citeseer", "0.1386", "0.1400", "0.1400", "0.1390", "0.1376", "0.1368", "0.1363", "ll@", "20", "Re", "ca", "0.1500", "0.1475", "0.1450", "0.1425", "0.1400", "0.1375", "0.1350", "0.1325", "0.1300", "Query", "Strategy", "E", "D", "C", "E+D", "E+C", "D+C", "E+D+C", "(a)", "Cora", "0.2243", "0.2228", "0.2215", "0.2201", "0.2112", "0.2239", "0.2195", "ll@", "20", "Re", "ca", "0.2300", "0.2275", "0.2250", "0.2225", "0.2200", "0.2175", "0.2150", "0.2125", "0.2100", "Query", "Strategy", "E", "D", "C", "E+D", "E+C", "D+C", "E+D+C"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 496.32,
+    "y1": 83.03999999999999,
+    "y2": 192.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PuEOL1hhyrF-Figure3-1.png"
+}, {
+  "caption": "Table 1: Node classification of the node-level evaluation for node attribute completion. ”X” indicates the MLP classifier that only considers the node attributes. ”A+X” indicates the GCN classifier that considers both the structures and node attributes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 233.56533813476562,
+    "y2": 261.48577880859375
+  },
+  "figType": "Table",
+  "imageText": ["5.3.2", "PROFILING", "ATS+SAT(GCN)", "0.8366", "0.6750", "0.8752", "0.9181", "ATS+SAT(GAT)", "0.8573", "0.6851", "0.8822", "0.9251", "GraphSage", "0.5779", "0.4278", "0.4019", "0.3784", "GAT", "0.4525", "0.2688", "0.4034", "0.3789", "Hers", "0.3405", "0.3229", "0.4025", "0.3794", "GraphRNA", "0.8198", "0.6394", "0.8650", "0.9207", "ARWMF", "0.8025", "0.2764", "0.7400", "0.6146", "SAT(GCN)", "0.8327", "0.6599", "0.8519", "0.9163", "SAT(GAT)", "0.8579", "0.6767", "0.8766", "0.9260", "NeighAggre", "0.6494", "0.5413", "0.8715", "0.901", "VAE", "0.3011", "0.2663", "0.4023", "0.3781", "GCN", "0.4387", "0.4079", "0.3974", "0.3656", "A+X", "ATS+SAT(GCN)", "0.7850", "0.6370", "0.8198", "0.8827", "ATS+SAT(GAT)", "0.8065", "0.6662", "0.8402", "0.9028", "GraphSage", "0.4852", "0.3933", "0.3747", "0.2598", "GAT", "0.4143", "0.2129", "0.3747", "0.2598", "Hers", "0.3046", "0.2585", "0.3747", "0.2598", "GraphRNA", "0.7581", "0.6320", "0.6968", "0.8407", "ARWMF", "0.7769", "0.2267", "0.5608", "0.4675", "SAT(GCN)", "0.7644", "0.6010", "0.7410", "0.8762", "SAT(GAT)", "0.7937", "0.6475", "0.8201", "0.8976", "NeighAggre", "0.6248", "0.5539", "0.8365", "0.8846", "VAE", "0.2826", "0.2551", "0.3747", "0.2598", "GCN", "0.3943", "0.3768", "0.3660", "0.2683", "X", "Method", "Cora", "Citeseer", "Amazon-Computer", "Amazon-Photo"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 444.47999999999996,
+    "y1": 268.32,
+    "y2": 493.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PuEOL1hhyrF-Table1-1.png"
+}, {
+  "caption": "Figure 1: The general architecture of SAT. The attributes and the structure are encoded by EX and EA and reconstructed by DX and DA. Meanwhile, SAT matches the latent codes of structures and attributes to a prior distribution by adversarial distribution matching.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 188.16555786132812,
+    "y2": 216.08599853515625
+  },
+  "figType": "Figure",
+  "imageText": ["p(𝑧)", "𝐷𝐴𝐸𝐴", "𝐸𝑋", "𝐷𝑋", "Adversarial", "Distribution", "Matching", "𝑧𝑎", "？", "𝑧𝑥", "？"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 201.6,
+    "x2": 407.03999999999996,
+    "y1": 105.6,
+    "y2": 181.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PuEOL1hhyrF-Figure1-1.png"
+}]

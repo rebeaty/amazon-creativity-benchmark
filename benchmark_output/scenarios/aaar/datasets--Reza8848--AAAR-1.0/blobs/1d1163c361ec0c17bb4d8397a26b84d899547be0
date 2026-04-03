@@ -1,0 +1,201 @@
+[{
+  "caption": "Figure 1: The proposed framework of FedPSE.",
+  "captionBoundary": {
+    "x1": 221.5909881591797,
+    "x2": 390.410400390625,
+    "y1": 192.87680053710938,
+    "y2": 198.279052734375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Downstream", "personalized", "sparsi-", "fication", "sparseDownload", "Personalized", "sparsiﬁcation", "Server", "Client", "2", "Client", "N", "Data", "Data", "…", "Data", "Client", "1", "(b)", "Element-wise", "aggregation", "Server", "Element-wise", "Aggregation", "(a)", "Upstream", "personalized", "sparsifica-", "tion", "Personalized", "sparsiﬁcation", "sparseUpload", "Server", "Client", "2", "Client", "N", "Train", "Train", "Train", "Data", "Data", "…", "Data", "Client", "1"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.47999999999999,
+    "x2": 501.12,
+    "y1": 86.88,
+    "y2": 184.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure1-1.png"
+}, {
+  "caption": "Figure 6: Aggregation results of different methods.",
+  "captionBoundary": {
+    "x1": 313.41400146484375,
+    "x2": 496.5885925292969,
+    "y1": 208.72775268554688,
+    "y2": 214.1300048828125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Non-IID", "Y", "3", "2", "1", "0", "0", "1", "2", "3", "X", "(a)", "IID", "Y", "3", "2", "1", "0", "0", "1", "2", "3", "X", "Dense", "Sparse", "EWA"],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 312.47999999999996,
+    "x2": 495.35999999999996,
+    "y1": 133.92,
+    "y2": 200.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure6-1.png"
+}, {
+  "caption": "Table 1: Performance comparison of algorithms on datasets with different Non-IID ratios λ.",
+  "captionBoundary": {
+    "x1": 141.031005859375,
+    "x2": 470.9686279296875,
+    "y1": 83.4337387084961,
+    "y2": 88.83599853515625
+  },
+  "figType": "Table",
+  "imageText": ["10", "1.0", "0.7909", "0.8040", "0.8305", "0.9334", "0.7630", "0.7668", "0.7696", "0.8722", "0.5", "0.8697", "0.8850", "0.8655", "0.8910", "0.7800", "0.7804", "0.7820", "0.7846", "0.0", "0.8993", "0.8960", "0.8644", "0.8725", "0.7815", "0.7811", "0.7779", "0.7761", "5", "1.0", "0.8068", "0.8388", "0.8403", "0.9243", "0.7654", "0.7733", "0.7735", "0.8512", "0.5", "0.8835", "0.8952", "0.8512", "0.8967", "0.7760", "0.7766", "0.7781", "0.7791", "0.0", "0.8995", "0.8839", "0.8641", "0.8760", "0.7805", "0.7805", "0.7804", "0.7778", "0.7508", "0.7503", "0.7657", "0.8562", "0.5", "0.8804", "0.8926", "0.8624", "0.8953", "0.7712", "0.7726", "0.7721", "0.7721", "0.0", "0.9003", "0.8906", "0.8523", "0.8911", "0.7736", "0.7701", "0.7724", "0.7715", "Cifar10", "2", "1.0", "0.8781", "0.8842", "0.9025", "0.9466", "FMNIST", "10", "1.0", "0.9530", "0.9800", "0.9589", "0.9914", "0.9080", "0.9582", "0.9620", "0.9989", "0.5", "0.9725", "0.9880", "0.9788", "0.9895", "0.8900", "0.8922", "0.8846", "0.8850", "0.0", "0.9904", "0.9905", "0.9819", "0.9865", "0.8908", "0.8846", "0.8672", "0.8602", "5", "1.0", "0.9694", "0.9710", "0.9735", "0.9937", "0.8494", "0.9066", "0.9366", "0.9966", "0.5", "0.9899", "0.9907", "0.9812", "0.9902", "0.8864", "0.8907", "0.8853", "0.8911", "0.0", "0.9904", "0.9901", "0.9849", "0.9902", "0.8827", "0.8835", "0.8833", "0.8792", "0.8406", "0.8409", "0.8438", "0.9953", "0.5", "0.9901", "0.9908", "0.9834", "0.9901", "0.8804", "0.8871", "0.8804", "0.8911", "0.0", "0.9905", "0.9901", "0.9857", "0.9902", "0.8810", "0.8812", "0.8802", "0.8869", "IMDB", "2", "1.0", "0.9785", "0.9887", "0.9904", "0.9944", "MNIST", "Dataset", "Clients", "λ", "FedAVG", "FedSTC", "FedSCR", "FedPSE", "Dataset", "FedAVG", "FedSTC", "FedSCR", "FedPSE"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 502.08,
+    "y1": 101.28,
+    "y2": 300.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Table1-1.png"
+}, {
+  "caption": "Figure 2: Test accuracy regarding rounds.",
+  "captionBoundary": {
+    "x1": 350.0539855957031,
+    "x2": 499.5508117675781,
+    "y1": 526.5717163085938,
+    "y2": 531.9739990234375
+  },
+  "figType": "Figure",
+  "imageText": ["FedAVG", "FedSTC", "FedSCR", "FedPSE", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "Te", "st", "A", "cc", "ur", "ac", "y", "0", "50", "100", "150", "200", "250", "300", "Federated", "Round"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 502.08,
+    "y1": 421.91999999999996,
+    "y2": 514.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure2-1.png"
+}, {
+  "caption": "Table 3: Variance of correlation distances in FedPSE with different Non-IID ratios.",
+  "captionBoundary": {
+    "x1": 157.0430145263672,
+    "x2": 454.9605407714844,
+    "y1": 640.6116943359375,
+    "y2": 646.0139770507812
+  },
+  "figType": "Table",
+  "imageText": ["λ", "=", "1.0", "5.8e-3", "6.3e-3", "2.0e-3", "2.8e-3", "1.2e-2", "1.7e-3", "λ", "=", "0.5", "3.6e-5", "4.7e-5", "4.0e-4", "2.3e-4", "4.5e-4", "1.3e-3", "λ", "=", "0.0", "1.0e-8", "3.3e-6", "2.9e-4", "1.7e-4", "2.0e-4", "4.1e-4", "clients", "2", "clients", "5", "clients", "10", "clients", "2", "clients", "5", "clients", "10", "clients", "Datasets", "FMNIST", "IMDB"],
+  "name": "3",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 469.44,
+    "y1": 658.56,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Table3-1.png"
+}, {
+  "caption": "Figure 7: Accuracy comparison over sampling ratios on Non-IID datasets.",
+  "captionBoundary": {
+    "x1": 172.95799255371094,
+    "x2": 439.0448303222656,
+    "y1": 227.63278198242188,
+    "y2": 233.0350341796875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Comparison", "on", "IMDB", "FedAVG", "FedSTC", "FedSCR", "FedPSE", "y", "ur", "ac", "A", "cc", "Te", "st", "0.99", "0.95", "0.91", "0.87", "0.83", "0.79", "0.2", "0.4", "0.6", "0.8", "1.0", "Sampling", "Rate", "(a)", "Comparison", "on", "FMNIST", "y", "ur", "ac", "A", "cc", "Te", "st", "0.95", "0.91", "0.87", "0.83", "0.79", "0.75", "0.2", "0.4", "0.6", "0.8", "1.0", "Sampling", "Rate"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 127.19999999999999,
+    "x2": 485.28,
+    "y1": 89.75999999999999,
+    "y2": 210.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure7-1.png"
+}, {
+  "caption": "Table 2: Performance comparison of algorithms with the different number of clients on Non-IID datasets.",
+  "captionBoundary": {
+    "x1": 116.82499694824219,
+    "x2": 495.1800842285156,
+    "y1": 357.2787170410156,
+    "y2": 362.68096923828125
+  },
+  "figType": "Table",
+  "imageText": ["100", "0.7921", "0.8011", "0.8344", "0.8772", "9.50%", "0.8401", "0.9036", "0.9101", "0.9975", "10.39%", "Average", "0.8133", "0.8308", "0.8503", "0.9129", "9.89%", "0.8551", "0.9017", "0.9120", "0.9965", "10.32%", "2", "0.8781", "0.8842", "0.9025", "0.9466", "7.06%", "0.8406", "0.8409", "0.8438", "0.9953", "18.36%", "5", "0.8068", "0.8388", "0.8403", "0.9243", "10.19%", "0.8494", "0.9066", "0.9366", "0.9966", "9.93%", "10", "0.7909", "0.8040", "0.8305", "0.9334", "16.09%", "0.9080", "0.9582", "0.9620", "0.9989", "4.25%", "25", "0.8045", "0.8231", "0.8412", "0.9021", "9.60%", "0.8570", "0.9104", "0.9112", "0.9923", "9.00%", "50", "0.8071", "0.8333", "0.8531", "0.8939", "7.27%", "0.8356", "0.9003", "0.9085", "0.9986", "10.92%", "clients", "FedAVG", "FedSTC", "FedSCR", "FedPSE", "Promotion", "FedAVG", "FedSTC", "FedSCR", "FedPSE", "Promotion", "Datasets", "FMNIST", "IMDB"],
+  "name": "2",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 501.12,
+    "y1": 375.36,
+    "y2": 479.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Table2-1.png"
+}, {
+  "caption": "Figure 4: Accuracy comparison of EWA in FedPSE over compression sparsity ratios on Non-IID datasets.",
+  "captionBoundary": {
+    "x1": 115.84298706054688,
+    "x2": 496.1617126464844,
+    "y1": 278.7867431640625,
+    "y2": 284.1889953613281
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Comparison", "on", "10", "clients", "FedPSE", "without", "EWA", "FedPSE", "with", "EWA", "y", "ur", "ac", "A", "cc", "Te", "st", "0.93", "0.91", "0.89", "0.87", "0.85", "0.1", "0.3", "0.5", "0.7", "0.9", "Sparsity", "ratio", "(b)", "Comparison", "on", "5", "clients", "FedPSE", "without", "EWA", "FedPSE", "with", "EWA", "y", "ur", "ac", "A", "cc", "Te", "st", "0.93", "0.92", "0.91", "0.90", "0.89", "0.88", "0.1", "0.3", "0.5", "0.7", "0.9", "Sparsity", "ratio", "(a)", "Comparison", "on", "2", "clients", "FedPSE", "without", "EWA", "FedPSE", "with", "EWA", "y", "ur", "ac", "A", "cc", "Te", "st", "0.950", "0.945", "0.940", "0.935", "0.930", "0.1", "0.3", "0.5", "0.7", "0.9", "Sparsity", "ratio"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 489.12,
+    "y1": 203.04,
+    "y2": 273.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Accuracy with Non-IID ratios.",
+  "captionBoundary": {
+    "x1": 352.13800048828125,
+    "x2": 497.4654235839844,
+    "y1": 435.9637451171875,
+    "y2": 441.3659973144531
+  },
+  "figType": "Figure",
+  "imageText": ["FedPSE", "without", "EWA", "FedPSE", "with", "EWA", "y", "ur", "ac", "A", "cc", "Te", "st", "0.94", "0.92", "0.90", "0.88", "0.86", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Non-IID", "Ratio"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 502.08,
+    "y1": 328.32,
+    "y2": 420.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Correlation distance on 5 clients.",
+  "captionBoundary": {
+    "x1": 347.95098876953125,
+    "x2": 501.65289306640625,
+    "y1": 193.86172485351562,
+    "y2": 199.26397705078125
+  },
+  "figType": "Figure",
+  "imageText": ["FMNIST", "IMDB", "0.2318", "0.2239", "0.2668", "nc", "e", "is", "ta", "B", "D", "IM", "D", "0.32", "0.30", "0.28", "0.26", "0.24", "0.22", "0.36270.3593", "0.3741", "e", "ta", "nc", "D", "is", "IS", "T", "FM", "N", "0.40", "0.38", "0.36", "0.34", "0.32", "0.30", "0.0", "0.5", "1.0", "Non-IID", "Ratio"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 500.15999999999997,
+    "y1": 85.92,
+    "y2": 178.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_OK6LV2q50l-Figure3-1.png"
+}]

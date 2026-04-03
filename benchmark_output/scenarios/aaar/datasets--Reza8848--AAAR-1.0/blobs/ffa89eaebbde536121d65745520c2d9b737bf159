@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 1: Causal graph G1 and its undersampled version G2: unrolled and compressed versions.",
+  "captionBoundary": {
+    "x1": 362.26800537109375,
+    "x2": 505.48626708984375,
+    "y1": 333.4517517089844,
+    "y2": 358.77899169921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 361.91999999999996,
+    "x2": 505.44,
+    "y1": 168.0,
+    "y2": 322.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Time behavior of graphs of size 64 with various sub SCC sizes. The time out for this experiment was 24 hours (1440 Minutes).",
+  "captionBoundary": {
+    "x1": 313.5989990234375,
+    "x2": 505.4913024902344,
+    "y1": 249.87673950195312,
+    "y2": 275.2039794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 505.44,
+    "y1": 84.96,
+    "y2": 239.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Time behavior of graphs of size 8, 16 and 32. The time out for this experiment indicated by the red line was 24 hours. Green dots represent graphs that has been computed within the 24-hours window. Gray represent graphs that could not be fully computed within 24−hours window.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 299.64776611328125,
+    "y1": 248.69375610351562,
+    "y2": 303.90899658203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 296.15999999999997,
+    "y1": 84.96,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure3-1.png"
+}, {
+  "caption": "Figure 2: Comparison of sRASL (red) with previous state-of-the-art RASL (blue).",
+  "captionBoundary": {
+    "x1": 333.6969909667969,
+    "x2": 505.48553466796875,
+    "y1": 352.88873291015625,
+    "y2": 368.25299072265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 344.64,
+    "x2": 495.35999999999996,
+    "y1": 120.0,
+    "y2": 340.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure2-1.png"
+}, {
+  "caption": "Figure 8: A knowledge of a definite presence of an edge in G1 between, for example, nodes 3 and 4, i.e. V t 3 → V t+1 4 , can be easily encoded by adding ‘ edge1(3,4).‘ to Listing 1. In this experiment, we have added knowledge about a pair of arbitrary selected edges of G1 to the problem specification (orange dots) and compared the run time with the ASP specification that does not include this additional information about the solution (blue dots). The time out for the new computation was set to 1 hours and the examples were all the same as the ones already shown in Figure 1. The speed up with the additional constraints is clearly visible on the plots.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.56610107421875,
+    "y1": 209.50674438476562,
+    "y2": 265.88800048828125
+  },
+  "figType": "Figure",
+  "imageText": ["SCC", "Flase", "(original)", "SCC", "False", "(with", "domain", "knowledge)", "0.3", "0.3", "0.3", "0.3", "0.3", "0.3"],
+  "name": "8",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 489.12,
+    "y1": 85.92,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure8-1.png"
+}, {
+  "caption": "Figure 5: Time behaviour of graphs with the same SCCs sizes but with multiple number of SCCs. Top row graphs of SCC size 7 with 1, 2, ..., 14 number of SCCs. Middle row graphs of SCC size 8. Bottom row graphs of SCC size 10.Bottom right corner is an example of a structured graph with 98 nodes structured as 14 SCCs of size 7. Each color represents one Strongly Connected Component.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.32086181640625,
+    "y1": 353.26776123046875,
+    "y2": 388.5580139160156
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure5-1.png"
+}, {
+  "caption": "Table 1: Number of SCCs and nodes per SCC of the graphs in the benchmark dataset",
+  "captionBoundary": {
+    "x1": 153.16799926757812,
+    "x2": 458.5545654296875,
+    "y1": 478.6197509765625,
+    "y2": 484.0220031738281
+  },
+  "figType": "Table",
+  "imageText": ["Num", "Nodes", "8", "9", "10", "11", "12", "13", "14", "15", "Num", "SCCs", "2", "3", "3", "3", "3", "3", "3", "3", "SCC", "Sizes", "4,4", "3,3,3", "3,3,4", "3,4,4", "4,4,4", "4,4,5", "4,5,5", "5,5,5"],
+  "name": "1",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 459.35999999999996,
+    "y1": 496.79999999999995,
+    "y2": 531.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Table1-1.png"
+}, {
+  "caption": "Figure 7: Time behavior of the same set of graphs when solved with and without accounting for additional constraints accounting for the SCC structure. While sRASL most of the 15-node graphs in a 24 hours period without the SCC constraints due to either timeout or Out Of Memory error(OOM), the longest it takes to solve a 15-node graph with SCC constraints is 14 seconds. None of the graphs failed to compute the complete equivalence class within the time and memory allocated when solved accounting for the SCC structure.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 504.0021667480469,
+    "y1": 407.2657470703125,
+    "y2": 452.5190124511719
+  },
+  "figType": "Figure",
+  "imageText": ["50G", "RAM", "24", "hours", "0.3", "0.3", "0.3", "0.3", "0.3", "0.3", "0.3", "0.3", "2", "36", "3811", "223", "3", "7", "10", "9", "8"],
+  "name": "7",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 501.12,
+    "y1": 256.8,
+    "y2": 394.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure7-1.png"
+}, {
+  "caption": "Figure 6: The omission (top) and commission (bottom) error of different graph sizes and undersampling of two, three and four from left to right.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.1231994628906,
+    "y1": 281.0157470703125,
+    "y2": 296.3800048828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_B_pCIsX8KL_-Figure6-1.png"
+}]

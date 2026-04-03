@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 3: Hyperparameters for NF models for supervised pre-training phase on locomotion and maze2 tasks. Medium, medium-replay, and medium-expert datasets are marked as m, m-r, and m-e correspondingly. We sample learning rate and weight decay from the continuous uniform distribution. We sample batch size from three available values, presented in the table.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 325.84552001953125,
+    "y2": 364.7249755859375
+  },
+  "figType": "Table",
+  "imageText": ["number", "of", "layers", "(locomotion", "m", "and", "m-e", "datasets)", "12", "number", "of", "layers", "(locomotion", "m-r", "and", "maze2d", "datasets)", "4", "hidden", "size", "(locomotion", "m", "and", "m-e", "datasets)", "256", "hidden", "size", "(locomotion", "m-r", "and", "antmaze", "datasets)", "256", "learning", "rate", "min", "=", "1e-5,", "max", "=", "3e-3", "weight", "decay", "min", "=", "0.0,", "max", "=", "1e-2", "batch", "size", "[512,", "1024,", "2048]", "Hyperparameter", "value"],
+  "name": "3",
+  "page": 10,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 388.32,
+    "y2": 488.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Table3-1.png"
+}, {
+  "caption": "Figure 4: Average normalized performance on D4RL locomotion tasks. The x-axis denotes the training steps. Each curve is averaged over 3 random seeds. Shaded area represents one standard deviation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 330.71356201171875,
+    "y2": 358.6340026855469
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 320.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Comparison of CNF trained in original (blue) and latent (red) action spaces. Final performance is slightly lower for the training directly in latent space.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 468.6315612792969,
+    "y2": 485.5930480957031
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 377.76,
+    "y2": 458.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Figure5-1.png"
+}, {
+  "caption": "Table 2: Hyperparameters for latent policy and critics models for RL training phase on locomotion and maze2 tasks. All hyperparameters are fixed for all environments except the batch size.",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.003173828125,
+    "y1": 580.1434936523438,
+    "y2": 597.1038818359375
+  },
+  "figType": "Table",
+  "imageText": ["number", "of", "layers", "4", "hidden", "size", "256", "learning", "rate", "3e-4", "batch", "size", "(locomotion)", "256", "batch", "size", "(maze2d)", "10240", "Hyperparameter", "value"],
+  "name": "2",
+  "page": 9,
+  "regionBoundary": {
+    "x1": 233.76,
+    "x2": 378.24,
+    "y1": 620.64,
+    "y2": 698.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Table2-1.png"
+}, {
+  "caption": "Figure 1: Schematic visualization and comparison of PLAS and CNF (ours) approach. Both methods use an action encoder-decoder model trained in a supervised manner on an offline dataset and a controller model to select actions from the latent space of the encoder. PLAS algorithm uses VAE with normal latent distribution with unbounded support (represented as the blue circle) and restricts latent policy outputs to only a part of the latent space (represented as the black borders inside of latent space). Our algorithm use normalizing flow instead of VAE and bound base distribution itself, allowing the latent policy to use the whole latent space.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 305.4955139160156,
+    "y2": 377.25189208984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 103.67999999999999,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Figure1-1.png"
+}, {
+  "caption": "Figure 2: A toy example to demonstrate that both NFs either with Normal or Uniform latent distributions can recover the training data. However, as we will demonstrate further, a potential controller trained in the latent space of normal-based NFs is still able to sample actions outside of the training dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 687.694580078125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "NF-Normal,", "Density", "(b)", "NF-Normal,", "Samples", "(c)", "NF-Uniform,", "Density", "(d)", "NF-Uniform,", "Samples"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 561.6,
+    "y2": 674.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Comparison of CNF with uniform (blue) and normal (red) latent spaces. Policy performance is significantly worse when latent space is normal.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 171.90255737304688,
+    "y2": 188.864013671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 161.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Figure6-1.png"
+}, {
+  "caption": "Table 1: Normalized performance on D4RL benchmark. The scores are averaged over 10 final evaluations and 3 random seeds. The results are reproduced for all of the algorithms except LAPO, for which we take the values stated in the original paper. CNF outperforms all the other methods on a large portion of the considered datasets.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00323486328125,
+    "y1": 319.08746337890625,
+    "y2": 357.9669189453125
+  },
+  "figType": "Table",
+  "imageText": ["maze2d-umaze-v1", "-", "37.69", "53.9", "118.9", "62.9", "±", "10.36", "maze2d-medium-v1", "-", "35.45", "66.4", "142.8", "155.89", "±", "10.49", "maze2d-large-v1", "-", "49.64", "107.2", "200.6", "212.8", "±", "2.23", "walker2d-medium-v2", "78.20", "78.80", "71.2", "80.75", "83.60", "±", "3.01", "walker2d-medium-replay-v2", "76.76", "74.49", "2.74", "-", "81.96", "±", "1.98", "walker2d-medium-expert-v2", "112.97", "111.96", "108.13", "-", "71.03", "±", "37.24", "hopper-medium-v2", "62.59", "63.7", "52.93", "51.63", "69.32", "±", "1.04", "hopper-medium-replay-v2", "73.12", "87.72", "3.17", "-", "67.22", "±", "8.50", "hopper-medium-expert-v2", "109.64", "109.05", "106.5", "-", "46.08", "±", "5.45", "halfcheetah-medium-v2", "43.15", "47.4", "43.78", "45.97", "50.55", "±", "0.53", "halfcheetah-medium-replay-v2", "42.00", "43.2", "44.8", "-", "45.84", "±", "0.31", "halfcheetah-medium-expert-v2", "87.40", "78.95", "86.63", "-", "96.23", "±", "0.20", "Environment", "AWAC", "IQL", "PLAS", "LAPO", "CNF"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 381.59999999999997,
+    "y2": 541.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Table1-1.png"
+}, {
+  "caption": "Figure 3: A toy example demonstrates that normal-based NF can be manipulated by a controller to produce out-of-distribution training points. We model this by increasing the amplitude of the latent space samples, as we found this to happen in the preliminary experiments when the controller tries to maximize q-values. Note that the model with uniform latent space does not suffer from this problem because it already uses the whole latent distribution support during the training and sampling processes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 401.7135314941406,
+    "y2": 462.51092529296875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Amplitude", "=", "2", "(b)", "Amplitude", "=", "4", "(c)", "Amplitude", "=", "10", "(d)", "Amplitude", "=", "30"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 276.0,
+    "y2": 388.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1Wo0vqaZ8WJ-Figure3-1.png"
+}]

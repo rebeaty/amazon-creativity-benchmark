@@ -1,0 +1,461 @@
+[{
+  "caption": "Figure 1: Unsupervised semantic segmentation predictions on PASCAL VOC (Everingham et al., 2012). Our COMUS does not use human annotations to discover objects and their precise localization. In contrast to the prior state-of-the-art method MaskContrast (Van Gansbeke et al., 2021), COMUS yields more precise segmentations, avoids confusion of categories, and is not restricted to only one object category per image.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 574.5225830078125,
+    "y2": 624.3599853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 385.91999999999996,
+    "y2": 563.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure1-1.png"
+}, {
+  "caption": "Table 9: Spectral Clustering parameters study, performance after the first iteration.",
+  "captionBoundary": {
+    "x1": 141.79800415039062,
+    "x2": 470.20513916015625,
+    "y1": 218.23153686523438,
+    "y2": 224.2340087890625
+  },
+  "figType": "Table",
+  "imageText": ["mIoU", "44.1±", "0.7", "37.7±", "5.36", "45.4±", "0.3", "Range", "[20−", "50]", "[10−", "40]", "[10−", "60]", "n", "neighbors", "n", "components", "n", "init"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 180.95999999999998,
+    "x2": 431.03999999999996,
+    "y1": 236.64,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table9-1.png"
+}, {
+  "caption": "Table 10: Clustering of random subsets of ImageNet classes.",
+  "captionBoundary": {
+    "x1": 185.04502868652344,
+    "x2": 426.9569396972656,
+    "y1": 608.8434448242188,
+    "y2": 614.8458862304688
+  },
+  "figType": "Table",
+  "imageText": ["DINO", "91.3±", "5.1", "88.0±", "0.2", "83.1±", "0.4", "SCAN", "76.8", "68.9", "58.1", "SwAV", "81.6±", "0.5", "71.5±", "0.4", "59.2±", "0.8", "Supervised", "91.2±", "0.9", "87.5±", "0.3", "82.2±", "0.4", "50", "Classes", "100", "Classes", "200", "Classes", "Top-1", "Accuracy,", "%"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 188.64,
+    "x2": 423.35999999999996,
+    "y1": 627.84,
+    "y2": 715.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table10-1.png"
+}, {
+  "caption": "Figure 6: (a) COMUS (Iteration 1) performance with different clustering methods. (b) Effect of ”% filtered” on final performance of COMUS. The results are mean ± standard dev. over 5 runs.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Figure",
+  "imageText": ["48.0", "47.5", "47.0", "46.5", "%", "filtered", "46.0", "m", "Io", "U", "0", "10", "20", "30", "40", "50", "47.5", "45.0", "42.5", "40.0", "37.5", "SC", "kmeans", "HACkmedoids", "Clustering"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 442.08,
+    "y1": 115.19999999999999,
+    "y2": 199.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure6-1.png"
+}, {
+  "caption": "Table 1: Comparison to prior art and iterative improvement via self-training (evaluated by IoU after Hungarian matching) on the PASCAL 2012 val set. The results for SwAV and IIC methods are taken from MaskContast (Van Gansbeke et al., 2021). Our method results are mean ± standard dev. over 5 runs and DeepSpectral results are mean ± standard dev. over 4 runs.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.003173828125,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["Colorization", "(Zhang", "et", "al.,", "2016)", "4.9", "IIC", "(Ji", "et", "al.,", "2019)", "9.8", "Method", "mIoU"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 414.24,
+    "y1": 135.35999999999999,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table1-1.png"
+}, {
+  "caption": "Table 2: COMUS performance on PASCAL VOC 2007 test (evaluated by IoU after Hungarian matching). The test data was never seen during self-learning or validation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 279.0465393066406,
+    "y2": 296.00799560546875
+  },
+  "figType": "Table",
+  "imageText": ["Pseudo-masks", "(Iteration", "0)", "41.8", "±", "0.1", "COMUS", "(Iteration", "1)", "45.2", "±", "0.4", "COMUS", "(Iteration", "2)", "47.3", "±", "0.4", "SwAV", "(Caron", "et", "al.,", "2020)", "4.4", "MaskContrast", "(Van", "Gansbeke", "et", "al.,", "2021)", "35.1", "DeepSpectral", "(Melas-Kyriazi", "et", "al.,", "2022)", "37.2", "±", "3.8"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 414.24,
+    "y1": 181.92,
+    "y2": 259.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table2-1.png"
+}, {
+  "caption": "Figure 5: Visualization of discovered subcategories on PASCAL VOC val set after clustering of self-supervised representations into 30 clusters. The pseudo-masks were randomly sampled for each cluster. Each row shows two clusters of the same category. The clusters have clear semantic interpretation, such as different dog breeds, flying or staying on land airplanes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 618.215576171875,
+    "y2": 657.094970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 410.88,
+    "y2": 606.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure5-1.png"
+}, {
+  "caption": "Table 8: Over-clustering results on PASCAL VOC evaluated with mIoU after majority voting. We present the results for 30 clusters, whereas also include the results for 50 clusters for comparison with MaskContrast (Van Gansbeke et al., 2021).",
+  "captionBoundary": {
+    "x1": 108.00001525878906,
+    "x2": 504.00335693359375,
+    "y1": 145.08755493164062,
+    "y2": 173.00701904296875
+  },
+  "figType": "Table",
+  "imageText": ["COMUS", "(Iteration", "1)", "47.4", "45.0", "COMUS", "(Iteration", "2)", "49.0", "48.1", "MaskContrast", "-", "41.4", "30", "clusters", "50", "clusters"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 205.92,
+    "x2": 415.2,
+    "y1": 185.76,
+    "y2": 246.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table8-1.png"
+}, {
+  "caption": "Figure 2: Overview of our self-supervised semantic segmentation framework. First, the selfsupervised representation learning network (e.g., DINO (Caron et al., 2021)) and the unsupervised saliency detector (e.g., DeepUSPS (Nguyen et al., 2019)) are trained without manual annotation on object-centric and saliency datasets (e.g., ImageNet (Deng et al., 2009) and MSRA (Cheng et al., 2015)). Next, we use the saliency detector to estimate object proposal masks from the original semantic segmentation dataset. After this, the original images are cropped to the boundaries of object proposal masks and resized. We compute feature vectors within these regions and cluster them with spectral clustering to discover different object categories. We filter the clusters by removing the most uncertain examples. The cluster IDs are combined with the saliency masks to form unsupervised pseudo-masks for self-training of a semantic segmentation network (e.g., DeepLabv3).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0035400390625,
+    "y1": 294.5055236816406,
+    "y2": 399.13787841796875
+  },
+  "figType": "Figure",
+  "imageText": ["Self-supervised", "saliency", "detectorSelf-supervised", "representation", "learning", "saliency", "detector", "Self-", "supervised", "(no", "labels)", "Saliency", "Dataset", "Localization", "Prior", "(Where?)", "Crop", "and", "resize", "Multiply", "mask", "to", "cluster", "ID", "Spectral", "Clustering", "Self-supervised", "object", "representations", "Object", "proposals", "masks", "Object", "proposals", "Self-training", "(2", "iterations)", "network", "Semantic", "segmentation", "Noisy", "pseudo", "masks", "Noisy", "pseudo", "masks", "Self-supervised", "pretraining", "Iterative", "Self-training", "Images", "Object", "Clusters", "Unsupervised", "Object", "Categories", "Discovery", "Categorization", "Prior", "(What?)", "representation", "learning", "Self-", "supervised", "dataset", "(no", "labels)", "Object-", "centric"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure2-1.png"
+}, {
+  "caption": "Table 14: Self-training parameters for COMUS on PASCAL VOC and MS COCO datasets.",
+  "captionBoundary": {
+    "x1": 123.70999908447266,
+    "x2": 488.29144287109375,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Number", "of", "epochs.", "Iteration", "1", "10", "1", "Number", "of", "epochs.", "Iteration", "2", "5", "-", "Crop", "scales", "[0.5,", "2]", "[0.2,", "1.0]", "Number", "of", "iterations", "2", "1", "Learning", "rate", "0.00006", "0.00006", "Batch", "size", "56", "56", "Input", "size", "512", "256", "Hyper-parameter", "PASCAL", "VOC", "MS", "COCO", "Optimizer", "Adam", "with", "default", "settings", "Adam", "with", "default", "settings"],
+  "name": "14",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 102.24,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table14-1.png"
+}, {
+  "caption": "Table 4: Transfer from PASCAL VOC to MS COCO for the 21 PASCAL VOC classes. Training on the simpler PASCAL dataset yields better performance on COCO than learning on COCO itself.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 210.12954711914062,
+    "y2": 227.09100341796875
+  },
+  "figType": "Table",
+  "imageText": ["COMUS", "(trained", "on", "PASCAL)", "79.5", "40.7", "12.4", "31.9", "25.7", "14.0", "50.6", "12.1", "56.1", "0.0", "31.0", "20.1", "47.6", "39.6", "40.6", "43.5", "6.8", "47.6", "8.0", "39.7", "22.8", "31.9", "COMUS", "(trained", "on", "COCO)", "76.5", "39.9", "28.2", "29.7", "34.3", "0.1", "56.8", "6.8", "34.9", "0.7", "50.2", "4.4", "42.1", "38.7", "48.4", "15.1", "0.0", "54.4", "0.0", "40.4", "2.6", "28.8", "mIoU"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 240.0,
+    "y2": 268.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table4-1.png"
+}, {
+  "caption": "Table 3: Unsupervised semantic segmentation before and after self-learning evaluated by mIoU after Hungarian matching on the MS COCO val set. As discovered object category we count those categories with an IoU > 20% from all 81 categories. Also, we show IoU for categories that have corresponding cluster (i.e., with IoU larger than zero).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["Pseudo-masks", "18.2", "33", "36.6", "73", "20.2", "COMUS", "19.6", "34", "40.7", "60", "26.5", "mIoU", "number", "mIoU", "number", "mIoU", "all", "discovered", "(with", "IoU≥", "20%)", "have", "cluster", "(with", "IoU>", "0%)"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 503.03999999999996,
+    "y1": 135.35999999999999,
+    "y2": 189.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table3-1.png"
+}, {
+  "caption": "Figure 3: Visualization of unsupervised pseudo-masks on PASCAL VOC val set. (left) 2D t-SNE projection of object proposal features. Colors correspond to cluster IDs. (right) Pseudo-masks from different clusters. The pseudo-masks were randomly sampled for each cluster from both cluster core pseudo-masks (green columns) and filtered pseudo-masks (red columns).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033264160156,
+    "y1": 257.7205505371094,
+    "y2": 296.5999755859375
+  },
+  "figType": "Figure",
+  "imageText": ["Core", "cluster", "pseudo", "masks", "Filtered", "pseudo", "masks"],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 84.47999999999999,
+    "y2": 246.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure3-1.png"
+}, {
+  "caption": "Figure 8: IoU for COCO categories after Hungarian matching of the cluster IDs to ground-truth categories.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 700.216552734375,
+    "y2": 717.177978515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 90.72,
+    "y2": 689.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure8-1.png"
+}, {
+  "caption": "Table 13: Spectral clustering parameters for COMUS on PASCAL VOC and MS COCO datasets.",
+  "captionBoundary": {
+    "x1": 111.67597198486328,
+    "x2": 500.3270568847656,
+    "y1": 326.4815368652344,
+    "y2": 332.4840087890625
+  },
+  "figType": "Table",
+  "imageText": ["F.2", "SELF-TRAINING", "Number", "of", "neighbors", "30", "30", "Number", "of", "components", "20", "80", "Affinity", "nearest", "neightbors", "nearest", "neightbors", "Hyper-parameter", "PASCAL", "VOC", "MS", "COCO", "Number", "of", "clusters", "20", "80"],
+  "name": "13",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 479.03999999999996,
+    "y1": 345.59999999999997,
+    "y2": 446.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table13-1.png"
+}, {
+  "caption": "Figure 7: Connection between mean relative size of objects and IoU for each COCO category. The Spearman’s rank correlation between relative size and IoU is equal to 0.43.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 193.89852905273438,
+    "y2": 210.8599853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 231.84,
+    "x2": 380.15999999999997,
+    "y1": 80.64,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Visualization of foreground masks obtained with different foreground segmentation methods.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 345.5980224609375,
+    "y1": 208.18350219726562,
+    "y2": 225.14495849609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 346.08,
+    "y1": 228.95999999999998,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure4-1.png"
+}, {
+  "caption": "Table 7: Comparison between different class-agnostic foreground segmentation methods.",
+  "captionBoundary": {
+    "x1": 357.48199462890625,
+    "x2": 504.0018615722656,
+    "y1": 211.21450805664062,
+    "y2": 239.13397216796875
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "saliency", "60.5", "IoU", "Unsupervised", "saliency", "51.0", "LOST", "34.8", "DINOSeg", "24.5"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 361.91999999999996,
+    "x2": 497.28,
+    "y1": 242.88,
+    "y2": 314.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table7-1.png"
+}, {
+  "caption": "Table 5: Ablation experiment to identify the effect of individual components of the unsupservised learning process.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 345.5979309082031,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["✗", "✗", "✗", "✗", "40.8", "✓", "✗", "✗", "✗", "41.8", "✓", "✓", "✗", "✗", "44.5", "✓", "✓", "✓", "✗", "45.2", "✓", "✓", "✓", "✓", "47.3", "Self-", "training", "Filtering", "2nd", "self-", "training", "mIoU", "Laplacian", "Eigenmap"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 357.12,
+    "y1": 112.8,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table5-1.png"
+}, {
+  "caption": "Figure 9: Predictions of the COMUS method trained on PASCAL VOC on COCO val set. We notice that the predictions from models trained on PASCAL VOC transfer reasonably well to COCO.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.997802734375,
+    "y1": 333.1595153808594,
+    "y2": 350.1209716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 152.64,
+    "y2": 322.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Several failure samples of the COMUS method on PASCAL VOC val set. The failures show the limitation and biases of our method, such as bias towards salient objects and misclassifications in multi-object images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 627.2295532226562,
+    "y2": 655.1500244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 504.0,
+    "y2": 616.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Figure10-1.png"
+}, {
+  "caption": "Table 11: Effect of object proposals from supervised saliency detector.",
+  "captionBoundary": {
+    "x1": 165.46800231933594,
+    "x2": 446.5328063964844,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["COMUS", "(Iteration", "1)", "45.2", "47.7", "COMUS", "(Iteration", "2)", "47.3", "49.3", "MaskContrast", "35.1", "38.9", "Unsupervised", "Saliency", "Supervised", "Saliency"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 170.88,
+    "x2": 441.12,
+    "y1": 102.24,
+    "y2": 167.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table11-1.png"
+}, {
+  "caption": "Table 12: More detailed comparison to prior art and iterative improvement via self-training (evaluated by IoU after Hungarian matching) on the PASCAL 2012 val set. Our method results are averaged over 5 runs.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.003173828125,
+    "y1": 486.2753601074219,
+    "y2": 514.19580078125
+  },
+  "figType": "Table",
+  "imageText": ["E.2", "COCO", "COMUS", "84.5", "51.9", "17.5", "51.1", "50.6", "58.9", "72.0", "58.6", "65.2", "0.0", "46.7", "19.3", "61.9", "48.4", "53.0", "50.7", "34.2", "55.7", "15.6", "63.2", "35.0", "47.3", "±", "0.4", "Pseudo-masks", "(Iteration", "0)", "82.2", "44.7", "16.7", "56.9", "46.2", "53.4", "61.5", "51.6", "50.3", "0.1", "55.6", "0.0", "36.1", "51.5", "47.5", "35.0", "25.6", "62.7", "16.8", "51.0", "32.9", "41.8", "±", "0.1", "COMUS", "(Iteration", "1)", "84.5", "47.8", "17.2", "47.2", "48.6", "57.1", "68.5", "59.8", "61.0", "0.0", "44.4", "17.3", "57.6", "45.2", "52.7", "48.6", "31.9", "54.2", "15.6", "56.7", "34.2", "45.2", "±", "0.4", "GroupViT", "(text", "supervision)", "(Xu", "et", "al.,", "2022)", "80.6", "38.1", "31.4", "51.6", "32.7", "63.5", "78.8", "65.1", "79.2", "18.8", "73.4", "31.6", "76.4", "59.4", "55.3", "44.0", "40.9", "66.6", "31.5", "49.5", "29.7", "52.3", "MaskContrast", "(Van", "Gansbeke", "et", "al.,", "2021)", "84.4", "39.1", "20.0", "59.5", "34.2", "38.1", "57.8", "60.7", "46.9", "0.29", "0.42", "3.51", "28.6", "39.6", "54.7", "23.2", "0.00", "40.0", "14.9", "54.0", "37.7", "35.1", "Method", "mIoU"],
+  "name": "12",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 526.56,
+    "y2": 628.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1_jFneF07YC-Table12-1.png"
+}]

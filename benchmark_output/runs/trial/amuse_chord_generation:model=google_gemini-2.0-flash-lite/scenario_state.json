@@ -1,0 +1,1052 @@
+{
+  "adapter_spec": {
+    "method": "generation",
+    "global_prefix": "",
+    "global_suffix": "",
+    "instructions": "",
+    "input_prefix": "",
+    "input_suffix": "\n",
+    "reference_prefix": "A. ",
+    "reference_suffix": "\n",
+    "chain_of_thought_prefix": "",
+    "chain_of_thought_suffix": "\n",
+    "output_prefix": "",
+    "output_suffix": "\n",
+    "instance_prefix": "\n",
+    "substitutions": [],
+    "max_train_instances": 0,
+    "max_eval_instances": 10,
+    "num_outputs": 8,
+    "num_train_trials": 1,
+    "num_trials": 1,
+    "sample_train": true,
+    "model_deployment": "google/gemini-2.0-flash-lite",
+    "model": "google/gemini-2.0-flash-lite",
+    "temperature": 0.7,
+    "max_tokens": 512,
+    "stop_sequences": [],
+    "multi_label": false
+  },
+  "request_states": [
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Phonk\nKey: Eb\nMode: Phr\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id158"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Phonk\nKey: Eb\nMode: Phr\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Ebm7b5 Dbmaj7 Gbmaj7b5 Cb7\nEbm7b5 Dbmaj7 Cbmaj7b5 Bbm7\nEbm7b5 Dbmaj7 Cbm7b5 Abm7\nEbm7b5 Dbmaj7 Gbmaj7 Cb9\nEbm7b5 Abm7b5 Dbmaj7 Gbmaj7\nEbm7b5 Abm7b5 Cbmaj7 Dbmaj7\nEbm7b5 Bbm7 Cbmaj7 Dbmaj7\nEbm7b5 Cbmaj7 Dbmaj7 Gbmaj7\nEbm7b5 Cbmaj7 Cbmin7 Dbmaj7\nEbm7b5 Dbmaj7 Gbmin7 Cb7\nEbm7b5 Cbmaj7 Gbmin7 Abm7\nEbm7b5 Dbmaj7 Gbmin7 Cbmin7\nEbm7b5 Cbmin7 Dbmaj7 Gbmaj7\nEbm7b5 Bbm7 Cbmin7 Dbmaj7\nEbm7b5 Cbmin7 Abm7 Dbmaj7\nEbm7b5 Gbmaj7 Cbmaj7 Dbmaj7\nEbm7b5 Gbmaj7 Dbmaj7 Bbm7\nEbm7b5 Gbmaj7 Bbm7 Cb7\nEbm7b5 Ab7 Dbmaj7 Gbmaj7\nEbm7b5 Ab7 Gbmaj7 Dbmaj7\nEbm7b5 Ab7 Bbm7 Cbmaj7\nEbm7b5 Bbm7 Gbmaj7 Cbmaj7\nEbm7b5 Gbmaj7b5 Dbmaj7 Cb7\nEbm7b5 Dbmaj7b5 Gbmaj7 Cb7\nEbm7b5 Gbmaj7b5 Cb7 Dbmaj7\nEbm7b5 Dbmaj7 Cb7 Gbmaj7\nEbm7b5 Dbmaj7 Cb7 Bbm7\nEbm7b5 Bbm7 Dbmaj7 Gbmaj7\nEbm7b5 Cb7 Dbmaj7 Gbmaj7\nEbm7b5 Gbmaj7 Cb7 Dbmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm7b5 Dbmaj7 Gbmaj7b5 Cbmaj7\nEbm7b5 Dbmaj7 Cbmaj7 Db/F\nEbm7b5 Dbmaj7 Gbmaj7 Cb7\nEbm7b5 Dbmaj7 Cbmaj7/Bb Abm7b5\nEbm7b5 Dbmaj7 Cb7 Gbmin7\nEbm7b5 Dbmaj7 Gbmin7 Cb7\nEbm7b5 Ab7 Dbmaj7 Gbmin7\nEbm7b5 Dbmaj7 Gbmaj7 Ab7\nEbm7b5 Dbmaj7 Cbmaj7/Eb Abm7b5\nEbm7b5 Dbmaj7 Gbmin7/Db Cb7\nEbm7b5 Dbmaj7 Gb7 Cbmin7\nEbm7b5 Cbmaj7 Gbmin7 Ab7\nEbm7b5 Cbmaj7 Gb7 Dbmaj7\nEbm7b5 Dbmaj7 Gbmin7 Ab7\nEbm7b5 Dbmaj7 Cb7/Eb Abm7b5\nEbm7b5 Dbmaj7 Gbmaj7/Bb Cb7\nEbm7b5 Dbmaj7 Gb7 Abm7b5\nEbm7b5 Gbmaj7 Cb7/Eb Ab7\nEbm7b5 Ab7 Gbmin7 Dbmaj7\nEbm7b5 Dbmaj7 Cb7 Gbmin7\nEbm7b5 Cbmaj7 Gbmin7 Ab7\nEbm7b5 Dbmaj7 Gb7 Ab7\nEbm7b5 Gb7 Dbmaj7 Cbmaj7\nEbm7b5 Dbmaj7 Ab7 Gbmin7\nEbm7b5 Gbmin7 Ab7 Dbmaj7\nEbm7b5 Ab7 Gb7 Dbmaj7\nEbm7b5 Cbmaj7 Dbmaj7 Gbmin7\nEbm7b5 Gbmin7 Dbmaj7 Cb7\nEbm7b5 Dbmaj7 Ab7 Gb7\nEbm7b5 Gb7 Cb7 Ab7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm7b5 Dbmaj7 Gbmaj7b5 Cbmaj7\nEbm7b5 Dbmaj7 Cbmaj7 Ebm7b5\nEbm7b5 Cbmaj7 Dbmaj7 Gbmaj7\nCbmaj7 Ebm7b5 Dbmaj7 Gbmaj7\nEbm7b5 Gbmaj7 Cbmaj7 Dbmaj7\nDbmaj7 Gbmaj7 Cbmaj7 Ebm7b5\nGbmaj7 Cbmaj7 Ebm7b5 Dbmaj7\nEbm7b5 Dbmaj7 Gbmaj7 Cbmaj7\nDbmaj7 Ebm7b5 Cbmaj7 Gbmaj7\nGbmaj7 Dbmaj7 Cbmaj7 Ebm7b5\nCbmaj7 Dbmaj7 Ebm7b5 Gbmaj7\nEbm7b5 Cbmaj7 Gbmaj7 Dbmaj7\nDbmaj7 Gbmaj7 Ebm7b5 Cbmaj7\nGbmaj7 Ebm7b5 Dbmaj7 Cbmaj7\nCbmaj7 Gbmaj7 Dbmaj7 Ebm7b5\nEbm7b5 Gbmaj7 Dbmaj7 Cbmaj7\nDbmaj7 Cbmaj7 Gbmaj7 Ebm7b5\nGbmaj7 Dbmaj7 Ebm7b5 Cbmaj7\nCbmaj7 Ebm7b5 Gbmaj7 Dbmaj7\nEbm7b5 Dbmaj7 Cbmaj7 Gbmaj7\nDbmaj7 Ebm7b5 Gbmaj7 Cbmaj7\nGbmaj7 Cbmaj7 Dbmaj7 Ebm7b5\nCbmaj7 Gbmaj7 Ebm7b5 Dbmaj7\nEbm7b5 Cbmaj7 Dbmaj7 Gbmaj7\nDbmaj7 Gbmaj7 Cbmaj7 Ebm7b5\nGbmaj7 Ebm7b5 Cbmaj7 Dbmaj7\nCbmaj7 Dbmaj7 Gbmaj7 Ebm7b5\nEbm7b5 Dbmaj7 Cbmaj7 Gbmaj7\nDbmaj7 Cbmaj7 Ebm7b5 Gbmaj7\nGbmaj7 Ebm7b5 Dbmaj7 Cbmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm7 Db7b9 Cbmaj7 Bbm7\nEbm7b5 Db7b9 Cbmaj7/Bb Abm7\nEbm7 Db7b9 Cbmaj7/Bb Abm7b5\nEbm7 Db7b9 Cbmaj7 Bbm7b5\nEbm7b5 Db7b9 Cbmaj7/Bb Bbm7\nEbm7 Db7b9 Cbmaj7/Bb Abm7\nEbm7b5 Db7b9 Cbmaj7/Bb Bbm7b5\nEbm7 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7b5 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7 Db7b9 Cbmaj7 Bbm7\nEbm7 Db7b9 Cbmaj7 Abm7\nEbm7b5 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7 Db7b9 Cbmaj7/Bb Abm7b5\nEbm7 Db7b9 Cbmaj7/Bb Bbm7\nEbm7b5 Db7b9 Cbmaj7/Bb Bbm7\nEbm7 Db7b9 Cbmaj7 Bbm7b5\nEbm7 Db7b9 Cbmaj7/Bb Abm7\nEbm7 Db7b9 Cbmaj7 Cbmaj7\nEbm7 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7b5 Db7b9 Cbmaj7/Bb Bbm7\nEbm7 Db7b9 Cbmaj7/Bb Abm7b5\nEbm7 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7 Db7b9 Cbmaj7/Bb Abm7\nEbm7b5 Db7b9 Cbmaj7/Bb Cbmaj7\nEbm7 Db7b9 Cbmaj7 Bbm7b5\nEbm7 Db7b9 Cbmaj7/Bb Abm7\nEbm7b5 Db7b9 Cbmaj7/Bb Bbm7\nEbm7 Db7b9 Cbmaj",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Ebm7b5 Dbmaj7 Bbm7b5 Abm7b5\nEbm7b5 Dbmaj7/F Gm7b5 Cbmaj7\nEbm7b5 Abm7b5 Dbmaj7/F Cbmaj7\nEbm7b5 Cbmaj7 Dbmaj7 Abm7b5\nEbm7b5 Bbm7b5 Cbmaj7 Ebm7b5\nEbm7b5 Abm7b5 Dbmaj7/F Cbmaj7\nEbm7b5 Dbmaj7 Bbm7b5 Cbmaj7\nEbm7b5 Cbmaj7/G Bbm7b5 Abm7b5\nEbm7b5 Bbm7b5/Db Cbmaj7/Eb Abm7b5\nEbm7b5 Abm7b5 Cbmaj7/Eb Dbmaj7\nEbm7b5 Dbmaj7/F Bbm7b5 Cbmaj7\nEbm7b5 Cbmaj7/G Bbm7b5 Abm7b5\nEbm7b5 Bbm7b5 Cbmaj7/Eb Abm7b5\nEbm7b5 Abm7b5 Dbmaj7 Cbmaj7\nEbm7b5 Dbmaj7 Bbm7b5/Db Cbmaj7\nEbm7b5 Dbmaj7/F Cbmaj7/Eb Abm7b5\nEbm7b5 Cbmaj7/G Bbm7b5 Dbmaj7\nEbm7b5 Bbm7b5 Cbmaj7 Abm7b5\nEbm7b5 Abm7b5 Dbmaj7/F Cbmaj7\nEbm7b5 Dbmaj7/F Cbmaj7 Abm7b5\nEbm7b5 Cbmaj7 Bbm7b5 Abm7b5\nEbm7b5 Bbm7b5 Dbmaj7 Cbmaj7\nEbm7b5 Dbmaj7 Cbmaj7 Abm7b5\nEbm7b5 Abm7b5 Cbmaj7 Dbmaj7/F\nEbm7b5 Cbmaj7/G Dbmaj7/F Abm7b5\nEbm7b5 Bbm7b5",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Ebm7 Dbm7 Cbmaj7 Bbm7\nEbm7b5 Dbm7b5 Cbmaj7 Bbm7\nEbm7 Abm7b5 Dbm7b5 Gb7\nEbm7b5 Dbm7b5 Cbmaj7/Bb Abm7\nEbm7 Abm7b5 Dbmaj7 Cbmaj7\nEbm7b5 Abm7b5 Gb7 Cbmaj7\nEbm7 Dbm7 Cbmaj7 Bbm7b5\nEbm7b5 Dbm7b5 Gb7 Cbmaj7\nEbm7 Abm7b5 Dbmaj7 Cbmaj7/Bb\nEbm7 Dbm7b5 Cbmaj7 Bbm7\nEbm7b5 Dbm7b5 Cbmaj7/Bb Abm7/Gb\nEbm7 Abm7b5 Dbmaj7/C Cbmaj7\nEbm7b5 Dbm7b5 Gb7 Cbmaj7/Bb\nEbm7 Dbm7 Cbmaj7/Bb Abm7\nEbm7b5 Abm7b5 Dbmaj7 Cbmaj7\nEbm7 Dbm7b5 Gb7 Cbmaj7\nEbm7b5 Abm7b5 Cbmaj7 Bbm7\nEbm7 Abm7b5 Dbmaj7/C Cbmaj7/Bb\nEbm7 Dbm7/Db Cbmaj7 Bbm7\nEbm7b5 Dbm7b5 Gb7/F Cbmaj7\nEbm7 Abm7b5 Dbmaj7/C Cbmaj7\nEbm7 Dbm7/Db Cbmaj7/Bb Abm7\nEbm7b5 Abm7b5 Cbmaj7/Bb Bbm7\nEbm7 Dbm7 Gb7 Cbmaj7\nEbm7b5 Dbm7b5 Gb7/F Cbmaj7/Bb\nEbm7 Abm7b5 Dbmaj7 Cbmaj7/Bb\nEbm7 Dbm7/Db Cbmaj7/Bb Abm7/Gb\nEbm7b5 Abm7b5 Gb7 Cbmaj7/Bb\nEbm7 Abm7b5 Dbmaj7 Cbmaj7/",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Ebm7b5 Dbmaj7 Cbmaj7 Bbm7b5\nEbm7b5 Ab7 Dbmaj9 Cbmaj7\nEbm7b5 Bbm7b5 Dbmaj7 Gbmaj7\nEbmin7b5 Ab7b9 Dbmaj7 Cbmaj7\nEbm7b5 Dbmaj7/F Gbmaj9 Cbmaj7\nEbm7b5 Gbmaj7 Bbm7b5 Ab7\nEbm7b5 Cbmaj7 Dbmaj7/F Gbmaj7\nEbm7b5 Bbm7b5 Gbmaj7 Ab7sus4\nEbm7b5 Ab7sus4 Dbmaj7 Cbmaj7\nEbm7b5 Gbmaj7/Bb Cbmaj7 Ab7\nEbm7b5 Dbmaj7 Gbmaj7/Bb Cbmaj7\nEbm7b5 Ab7 Dbmaj9/F Gbmaj7\nEbm7b5 Cbmaj7/Eb Dbmaj7 Gbmaj7\nEbm7b5 Gbmaj7 Cbmaj7 Ab7sus2\nEbm7b5 Ab7 Dbmaj7/F Gbmaj7\nEbm7b5 Dbmaj7 Cbmaj7/Eb Ab7\nEbm7b5 Gbmaj7 Ab7sus4 Bbm7b5\nEbm7b5 Ab7 Dbmaj7/F Gbmaj7\nEbm7b5 Cbmaj7 Ab7 Gbmaj7\nEbm7b5 Bbm7b5 Ab7sus2 Gbmaj7\nEbm7b5 Gbmaj7 Ab7sus4 Cbmaj7\nEbm7b5 Cbmaj7/Eb Ab7sus4 Gbmaj7\nEbm7b5 Bbm7b5 Gbmaj7/Bb Ab7\nEbm7b5 Ab7 Dbmaj9/F Cbmaj7\nEbm7b5 Ab7sus4 Gbmaj7/Bb Cbmaj7\nEbm7b5 Dbmaj7 Cbmaj7 Ab7sus4\nEbm7b5 Gbmaj7 Ab7 Dbmaj7/F\nEbm7b5 Cbmaj7 Ab7 Gbmaj7/Bb\nEbm7b5 Ab7sus4 Gbmaj7 Cbmaj7\nEbm7b5 Gbmaj7/Bb Cbmaj7 Ab",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Ebm7b5 Dbmaj7 Gbmaj7b5 Cbmaj7\nEbm7b5 Dbmaj7b5 Cbmaj7b5 Bbm7b5\nEbm7b5 Ab7b9 Dbmaj7 Gbmaj7\nEbm7b5 Dbmaj7b5 Cbmaj7 Bbm7b5\nEbm7b5 Abm7b5 Dbmaj7b5 Gbmaj7\nEbm7b5 Dbmaj7b5 Gbmaj7b5 Cbmaj7\nEbm7b5 Ab7b9 Dbmaj7 Cbmaj7\nEbm7b5 Dbmaj7b5 Gbmaj7 Cbmaj7\nEbm7b5 Cbmaj7 Bbm7b5 Abm7b5\nEbm7b5 Ab7b9 Dbmaj7 Gbmaj7b5\nEbm7b5 Dbmaj7 Gbmaj7 Cbmaj7b5\nEbm7b5 Abm7b5 Dbmaj7 Gbmaj7\nEbm7b5 Dbmaj7b5 Cbmaj7 Abm7b5\nEbm7b5 Gbmaj7b5 Cbmaj7 Bbm7b5\nEbm7b5 Cbmaj7 Bbm7b5 Ab7\nEbm7b5 Dbmaj7 Gbmaj7 Cbmaj7\nEbm7b5 Abm7b5 Dbmaj7 Cbmaj7\nEbm7b5 Gbmaj7b5 Cbmaj7 Bbm7b5\nEbm7b5 Dbmaj7 Cbmaj7 Abm7b5\nEbm7b5 Ab7 Dbmaj7 Gbmaj7\nEbm7b5 Cbmaj7 Abm7b5 Dbmaj7\nEbm7b5 Dbmaj7b5 Gbmaj7 Cbmaj7b5\nEbm7b5 Ab7b9 Dbmaj7 Cbmaj7\nEbm7b5 Gbmaj7b5 Cbmaj7 Abm7b5\nEbm7b5 Dbmaj7 Cbmaj7 Bbm7b5\nEbm7b5 Abm7b5 Dbmaj7 Gbmaj7b5\nEbm7b5 Ab7 Dbmaj7 Cbmaj7\nEbm7b5 Dbmaj7 Gbmaj7b5 Cbmaj7\nE",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 4.01606822013855,
+        "request_datetime": 1775237319
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Afro-Cuban\nKey: Eb\nMode: Mix\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id83"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Afro-Cuban\nKey: Eb\nMode: Mix\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Eb7 Abmaj7 Bbmin7 Eb7\nBbmin7 Eb7 Abmaj7 Dbmaj7\nEb7 Ab7 Dbmaj7 Gm7\nCm7b5 F7 Bbmin7 Eb7\nAbmaj7 Bbmin7 Eb7 Gm7\nEb7 Abmin7b5 Dbmaj7 Gm7\nBbmin7b5 Eb7 Abmaj7 Dbmaj7\nCm7 F7 Bbmin7 Eb7\nAbmaj7 Gm7 Cm7 F7\nEbmaj7 Ab7 Dbmaj7 Gm7\nBbmin7 Eb7 Abmaj7 Cm7\nGm7 Cm7 F7 Bbmin7\nEb7 Abmaj7 Cm7 F7\nCm7b5 F7 Bbmin7 Eb7\nEb7 Ab7 Dbmaj7 Gm7\nAbmaj7 Dbmaj7 Gm7 Cm7\nCm7 F7 Bbmin7b5 Eb7\nGm7 Cm7 F7 Bbmin7\nEb7 Ab7 Cm7 F7\nBbmin7 Eb7 Abmaj7 Cm7\nCm7b5 F7 Bbmin7 Eb7\nEb7 Abmaj7 Gm7 Cm7\nGm7 Cm7 F7 Bbmin7\nEbmaj7 Ab7 Dbmaj7 Gm7\nCm7b5 F7 Bbmin7 Eb7\nAbmaj7 Gm7 Cm7 F7\nEb7 Ab7 Gm7 Cm7\nBbmin7 Eb7 Abmaj7 Cm7\nGm7 Cm7 F7 Bbmin7\nEb7 Abmaj7 Cm7 F7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Eb7 Abmaj7 Bbmin7 Eb7\nBbmin7 Eb7 Abmaj7 Dbmaj7\nEb7 Abmin7 Db7 Gbmaj7\nCm7b5 F7 Bbmin7 Eb7\nAbmaj7 Bbmin7 Eb7 Abmaj7\nEbmaj7 Ab7 Dbmin9 Gbmaj7\nBbmin7 Eb7 Abmaj9 Dbmin7\nEb7sus4 Abmaj7 Bbmin7 Eb7\nCm7 F7 Bbmin7 Eb7\nAbmaj7 Db7 Gbmaj7 Cm7\nEbmaj7 Abmin7 Db7 Gbmaj7\nBbmin7 Eb7 Abmaj7 Abmin7\nEb7 Abmin7 Db7sus4 Gbmaj7\nCm7 F7 Bbmin7 Eb9\nAbmaj7 Dbmin7 Gbmaj7 Cm7\nEb7 Abmaj7 Dbmin7 Gbmaj7\nBbmin7 Eb7 Abmaj7 Db7\nCm9 F7 Bbmin7 Eb7\nAbmaj7 Db7 Gbmaj7 Cm7b5\nEb7sus2 Abmaj7 Bbmin7 Eb7\nBbmin7 Eb7 Abmaj7 Dbmaj9\nCm7 F7 Bbmin7 Eb7sus4\nAbmaj7 Db7 Gbmaj7 Cm9\nEb7 Abmin7 Db7sus2 Gbmaj7\nBbmin7 Eb7 Abmaj7 Dbmin7\nCm7 F7 Bbmin7 Eb7b9\nAbmaj7 Dbmin7 Gbmaj7 Cm11\nEb7 Abmin7 Db7 Gbmaj7sus4\nBbmin7 Eb7 Abmaj7 Db7sus2\nCm11 F7 Bbmin7 Eb7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Eb7 Abmaj7 Bbmin7 Eb7\nCm7b5 F7 Bbmin7b5 Eb7\nAbmaj7 Gm7 Cm7 F7\nBbmin7 Eb7 Abmaj7 Eb7\nFmin7 Bb7 Ebmaj7 Abmaj7\nEb7 Abmin7 Dbmaj7 Gm7\nCm7 F7 Bbmin7 Eb7\nAbmaj7 Bbmin7 Eb7 Abmaj7\nGm7 Cm7 F7 Bb7\nEbmaj7 Abmaj7 Gm7 Cm7\nF7 Bb7 Ebmaj7 Abmaj7\nCm7 F7 Bb7 Eb7\nAbmaj7 Eb7 Gm7 Cm7\nBbmin7 Eb7 Abmaj7 Gm7\nEb7 Abmin7 Dbmaj7 Cm7\nCm7 F7 Bbmin7 Eb7\nAbmaj7 Gm7 Cm7 F7\nGm7 Cm7 F7 Bb7\nFmin7 Bb7 Ebmaj7 Abmaj7\nEb7 Abmin7 Dbmaj7 Gm7\nCm7 F7 Bb7 Eb7\nAbmaj7 Eb7 Gm7 Cm7\nBbmin7 Eb7 Abmaj7 Gm7\nEb7 Abmin7 Dbmaj7 Cm7\nCm7 F7 Bb7 Eb7\nFmin7 Bb7 Ebmaj7 Abmaj7\nEb7 Abmin7 Dbmaj7 Gm7\nCm7 F7 Bbmin7 Eb7\nAbmaj7 Gm7 Cm7 F7\nGm7 Cm7 F7 Bb7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Eb7 Abmin7 Dbmaj7 Gbmin7\nEb7sus4 Abmin7b5 Db9 Gbmin7\nEbmaj9 Abmin7 Db9/F Gbmin7\nEb7 Abmin7b5 Dbmaj7/G Gbmin7\nEbmin7/Bb Ab7 Dbmaj7 Gbmaj7\nEb7sus4 Ab7b9 Dbmaj9 Gbmin7\nEb9 Abmin7 Dbmaj9/F Gb7\nEb7 Abmin7 Dbmaj7 Gb6\nEb7sus4 Abmin7b5 Dbmaj7 Gbmin7\nEbmaj7 Abmin7 Db7 Gbmin7\nEb7 Abmin7b5 Dbmaj7/G Gb7sus4\nEb9 Ab7 Dbmaj9 Gbmin7\nEb7 Abmin7 Dbmaj7 Gbmin7\nEb7sus4 Ab7 Dbmaj7 Gbmin7\nEbmaj9 Abmin7 Db9 Gbmin7\nEb7 Abmin7b5 Dbmaj7/G Gb7\nEbmin7/Bb Ab7 Dbmaj7 Gbmin7\nEb7sus4 Ab7b9 Dbmaj7 Gbmin7\nEb9 Abmin7 Dbmaj7/F Gb7sus4\nEb7 Abmin7 Dbmaj7 Gb6\nEb7 Abmin7b5 Dbmaj7 Gb7\nEbmaj7 Abmin7 Db7 Gbmin7\nEb7sus4 Ab7 Dbmaj7/G Gb7sus4\nEb9 Abmin7 Dbmaj7 Gb7\nEb7 Abmin7 Dbmaj7 Gbmin7\nEb7sus4 Ab7b9 Dbmaj7 Gb6\nEbmaj9 Abmin7 Db9/F Gbmin7\nEb7 Abmin7 Dbmaj7 Gb7\nEbmin7/Bb Ab7 Dbmaj7 Gbmin7\nEb7sus4 Ab7 Dbmaj7 Gbmin7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebmaj7 Ab7 Dbmaj7 Gm7\nEb7 Abmin7 Dbmaj7 Gm7\nEbmaj9 Ab7b9 Dbmaj9 Cm7\nEbmin7b5 Ab7sus4 Dbmaj7b5 Gm7\nEbmaj7 Ab7sus2 Dbmaj9 Gm7\nEb7sus4 Abmin7 Dbmaj7b9 Gm7\nEbmaj7 Ab7 Dbmaj7/G Cm7\nEbmin7 Ab7b9 Dbmaj7 Gm7\nEbmaj9 Ab7 Dbmaj7/F Gm7\nEb7 Abmin9 Dbmaj7 Gm7\nEbmaj7 Ab7sus4 Dbmaj7 Gm7\nEbmin7 Ab7 Dbmaj7b9 Gm7\nEbmaj7 Ab/Eb Dbmaj7 Cm7\nEb7b9 Abmin7 Dbmaj9 Gm7\nEbmaj9 Ab7sus2 Dbmaj7 Gm7\nEbmin7 Ab7b9 Dbmaj7/G Gm7\nEb7 Abmin7 Dbmaj7 Gm7\nEbmaj7 Ab7b9 Dbmaj9 Cm7\nEbmin7 Ab7 Dbmaj7 Gm7\nEb7sus4 Abmin9 Dbmaj7 Gm7\nEbmaj9 Ab7sus4 Dbmaj7/G Cm7\nEbmin7 Ab7 Dbmaj7b9 Gm7\nEb7 Abmin7 Dbmaj9 Cm7\nEbmaj7 Ab/Eb Dbmaj7 Gm7\nEbmin7 Ab7b9 Dbmaj7/G Gm7\nEb7sus4 Abmin9 Dbmaj7 Gm7\nEbmaj9 Ab7sus2 Dbmaj7/G Cm7\nEbmin7 Ab7 Dbmaj7 Gm7\nEb7b9 Abmin7 Dbmaj7 Gm7\nEbmaj7 Ab7 Dbmaj9 Cm7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Eb7 Abmaj7 Bb7 Eb7\nCm7b5 F7 Bbmin7b5 Eb7\nEbmaj7 Abmin7b5 Dbmaj7 Gb7\nAbmaj9 Ebmin7b5 Bb7 Ebmaj7\nFmin7 Bb7 Ebmaj9 Ab7\nCm7 F7 Bbmin7b5 Eb7\nEbmaj7 Abmin7 Dbmaj7 Gb7sus4\nEb7 Abmin7b5 Bb7 Eb7\nCm7b5 F7 Bb7 Ebmaj7\nEbmaj9 Abmin7 Dbmaj7 Gb7\nFmin7 Bb7 Ebmaj7 Ab7\nEb7 Abmin7 Dbmaj7 Gb7\nCm7 F7 Bbmin7 Eb7\nEbmaj7 Abmin7 Dbmaj7 Gb7\nEb7 Ab7b9 Bb7sus4 Eb7\nCm7 F7 Bb7 Eb7\nEbmaj7 Abmin7b5 Dbmaj7 Gb7\nEb7 Abmin7 Dbmaj7 Gb7\nCm7 F7 Bb7 Ebmaj7\nEbmaj7 Abmin7b5 Dbmaj7 Gb7\nFmin7 Bb7 Ebmaj7 Ab7\nEb7 Abmin7 Dbmaj7 Gb7\nCm7 F7 Bb7 Ebmin7\nEbmaj7 Abmin7 Dbmaj7 Gb7\nEb7 Abmin7 Dbmaj7 Gb7sus4\nCm7 F7 Bb7 Eb7\nEbmaj7 Abmin7 Dbmaj7 Gb7\nEb7 Abmin7b5 Bb7 Ebmaj7\nCm7 F7 Bb7 Eb7\nEbmaj7 Abmin7b5 Dbmaj7 Gb7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Eb7 Abmaj7 Bb7 Eb7\nCm7b5 F7 Bbmin7 Eb7\nAbmaj7 Eb7 Gm7 Cm7\nBbmin7 Eb7 Abmaj7 Eb7\nCm7 F7 Bbmin7 Eb7\nEbmaj7 Abmin7b5 Dbmaj7 Gb7\nAb7 Db7 Gbmaj7 Cm7\nBbmin7b5 Eb7 Abmaj7b9 Eb7\nEb7 Ab7 Dbmaj7 Eb7\nCm7b5 F7 Bbmin7b5 Eb7\nAbmaj9 Eb7 Cm7 F7\nGm7 Cm7 F7 Bb7\nEb7 Abmaj9 Bbmin7 Eb7\nCm7 F7 Bb7 Eb7\nAbmaj7 Eb7 Cm7 F7\nBb7 Eb7 Abmaj7 Eb7\nCm7b5 F9 Bbmin7 Eb7\nAbmaj7 Eb7 Cm7b5 F7\nEb7 Abmin7 Dbmaj7 Gm7\nCm9 F11 Bb7 Eb7\nAbmaj7b9 Eb7 Cm7 F7\nGm7 Cm7 F9 Bb7\nEb7 Abmaj7 Bbmin7 Eb7\nCm7 F7 Bb7sus4 Eb7\nAbmaj7 Eb7 Cm11 F7\nBb7 Eb7 Abmaj9 Eb7\nCm7 F7 Bb7sus2 Eb7\nAbmaj7 Eb7 Cm7b5 F7\nGm7 Cm7 F9sus4 Bb7\nEb7 Abmin7 Dbmaj7 Gm7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Eb7 Abmaj7 Bbmin7 Eb7\nEbmaj7 Abmin7 Db7 Gm7\nBbmin7 Eb7 Abmaj7 Db9\nCm7b5 F7 Bbmin7 Eb7\nEbmaj9 Abmin9 Dbmaj7 Gm7\nAbmin7b5 Db7 Gm7 Cm7\nEb7sus4 Abmaj7 Bbmin7 Eb7\nCm7 F7 Bbmin7 Eb7\nEbmaj7 Abmin9 Db7 Gm7\nBbmin7 Eb7 Abmaj7b9 Db7\nGm7 Cm7 F7 Bbmin7\nEb7sus4 Abmaj7 Db7 Gm7\nCm7b5 F7 Bbmin7 Eb7\nEbmaj9 Abmin7 Db7 Gm7\nBbmin7 Eb7 Abmaj7 Db7\nCm7 F7 Bbmin7 Eb7\nEb7sus4 Abmaj7 Db7 Gm7\nGm7 Cm7 F7 Bbmin7\nEbmaj7 Abmin9 Db7 Gm7\nBbmin7 Eb7 Abmaj7 Db7\nCm7b5 F7 Bbmin7 Eb7\nEb7 Abmin7 Db7 Gm7\nGm7 Cm7 F7 Bbmin7\nEbmaj9 Abmin7 Db7 Gm7\nCm7 F7 Bbmin7 Eb7\nEb7sus4 Abmaj7 Db7 Gm7\nBbmin7 Eb7 Abmaj7 Db7\nGm7 Cm7 F7 Bbmin7\nEbmaj7 Abmin9 Db7 Gm7\nCm7 F7 Bbmin7 Eb7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.325429677963257,
+        "request_datetime": 1775237319
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Strut\nKey: G\nMode: Phdm\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id170"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Strut\nKey: G\nMode: Phdm\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Gm7 C7b9 Fmaj7b5 Bbmaj7\nEbmaj9 Dm7b5 G7#9 Cm7\nCm7 F7 Bbmaj9 Ebmaj7\nFmaj7b5 Bbmaj7 Ebmaj7 Abmaj7\nGm7b5 C7b9 Fmaj7b5 Bbmaj7\nCm7 F7b9 Bbmaj7b5 Ebmaj7\nEbmaj7 Dm7b5 G7 Cm7\nCm7 F7 Bbmaj9b5 Ebmaj7\nBbmaj7 Ebmaj7 Dm7b5 G7\nCm7 F7 Bbmaj7 Ebmaj7\nFmaj7b5 Bbmaj7 Ebmaj7 Abmaj7\nGm7b5 C7b9 Fmaj7b5 Bbmaj7\nCm7 F7 Bbmaj7b5 Ebmaj7\nEbmaj7 Dm7b5 G7 Cm7\nCm7 F7 Bbmaj7 Ebmaj7\nBbmaj7 Ebmaj7 Dm7b5 G7\nGm7 C7b9 Fmaj7b5 Bbmaj7\nEbmaj7 Dm7b5 G7 Cm7\nCm7 F7 Bbmaj7b5 Ebmaj7\nFmaj7b5 Bbmaj7 Ebmaj7 Abmaj7\nGm7b5 C7b9 Fmaj7b5 Bbmaj7\nCm7 F7 Bbmaj9 Ebmaj7\nEbmaj7 Dm7b5 G7 Cm7\nCm7 F7 Bbmaj7 Ebmaj7\nBbmaj7 Ebmaj7 Dm7b5 G7\nGm7 C7b9 Fmaj7b5 Bbmaj7\nEbmaj7 Dm7b5 G7 Cm7\nCm7 F7 Bbmaj7b5 Ebmaj7\nFmaj7b5 Bbmaj7 Ebmaj7 Abmaj7\nGm7b5 C7b9 Fmaj7b5 Bbmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "G7 Cmin7 F7 Bbmaj7\nG7b9 Cmin9 F7b9 Ebmaj7\nG7sus4 Cmin7 F7#9 Bbmaj7\nG7 Cmin7 F7b9 Ebmaj7\nG7b9 Cmin7 F7 Bbmaj9\nG7 Cmin9 F7b9 Ebmaj9\nG7sus4 Cmin9 F7#9 Ebmaj7\nG7 Cmin7 F7 Bbmaj7\nG7b9 Cmin7 F7b9 Ebmaj7\nG7 Cmin9 F7 Bbmaj9\nG7sus4 Cmin7 F7#9 Ebmaj9\nG7 Cmin7 F7 Bbmaj7\nG7b9 Cmin9 F7b9 Ebmaj7\nG7 Cmin7 F7 Bbmaj9\nG7sus4 Cmin9 F7#9 Ebmaj7\nG7 Cmin7 F7 Bbmaj7\nG7b9 Cmin7 F7b9 Ebmaj7\nG7 Cmin9 F7 Bbmaj9\nG7sus4 Cmin7 F7#9 Ebmaj7\nG7 Cmin7 F7 Bbmaj7\nG7b9 Cmin9 F7b9 Ebmaj7\nG7 Cmin7 F7 Bbmaj9\nG7sus4 Cmin9 F7#9 Ebmaj7\nG7 Cmin7 F7 Bbmaj7\nG7b9 Cmin7 F7b9 Ebmaj7\nG7 Cmin9 F7 Bbmaj9\nG7sus4 Cmin7 F7#9 Ebmaj7\nG7 Cmin7 F7 Bbmaj7\nG7b9 Cmin9 F7b9 Ebmaj7\nG7 Cmin7 F7 Bbmaj9\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "G min7 C min7 F Bb\nG min7 C min7 Ebmaj7 F7\nG min7 Ebmaj7 Bbmaj7 C\nG min7 C min7 Fmaj7 Ebmaj7\nG min7 D7 C min7 F\nG min7 C min7 Ebmaj7 F\nG min7 C7 Fmaj7 Bbmaj7\nG min7 D7 C min7 Ebmaj7\nG min7 C min7 F Bbmaj7\nG min7 D7 C min7 Ebmaj7\nG min7 C7 F Bb\nG min7 D7 C min7 Ebmaj7\nG min7 C min7 Fmaj7 Ebmaj7\nG min7 C7 F Bbmaj7\nG min7 D7 C min7 F\nG min7 C7 Fmaj7 Bbmaj7\nG min7 C min7 F Bb\nG min7 D7 C min7 F\nG min7 C7 Fmaj7 Bb\nG min7 D7 C min7 Ebmaj7\nG min7 C min7 F Bbmaj7\nG min7 C7 F Bb\nG min7 D7 C min7 F\nG min7 C min7 F Eb\nG min7 D7 C min7 F\nG min7 C min7 F Bb\nG min7 D7 C min7 F\nG min7 C7 F Bbmaj7\nG min7 C min7 F Ebmaj7\nG min7 D7 C min7 F\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmin7 Abmaj7 Bbm7 C7\nGmin7 C7 Fmin7 Ebmaj7\nGmin7 Abmaj7 Dbmaj7/F C7\nGmin7 C7 Fmin7 Bb7\nGmin7 Abmaj7 Dbmaj7/F Gm/D\nGmin7 C7 Fmin7 Ebmaj7\nGmin7 Bbm7 Ebmaj7 C7\nGmin7 C7 Fmin7 Abmaj7\nGmin7 Dbmaj7/F C7 Fmin7 Abmaj7\nGmin7 Bbm7 Ebmaj7/G Fmin7\nGmin7 Abmaj7 Dbmaj7/F C7sus4\nGmin7 C7 Fmin7/Eb Abmaj7\nGmin7 Bbm7 Ebmaj7 C7sus4\nGmin7 C7 Fmin7 Abmaj7/C\nGmin7 Abmaj7 Dbmaj7/F Cm7\nGmin7 C7 Fmin7/Eb Bb7\nGmin7 Bbm7 Ebmaj7 C7b9\nGmin7 C7 Fmin7 Ebmaj7/G\nGmin7 Abmaj7 Dbmaj7 C7\nGmin7 C7 Fmin7 Abmaj7/C\nGmin7 Bbm7 Ebmaj7 C7#9\nGmin7 C7 Fmin7 Ebmaj7sus4\nGmin7 Abmaj7 Dbmaj7/F Gmin7/D\nGmin7 Bbm7 Ebmaj7/G Bb7\nGmin7 C7 Fmin7/Eb Abmaj7\nGmin7 Abmaj7 Dbmaj7 C7sus4\nGmin7 C7 Fmin7 Abmaj7/C\nGmin7 Bbm7 Ebmaj7 C7b9\nGmin7 C7 Fmin7 Ebmaj7sus4\nGmin7 Abmaj7 Dbmaj7 Gmin7/D\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmin7 Abmaj7 Fmin7 Ebmaj7\nGmin7 Abmaj7 Bb7 Ebmaj9\nGmin7 Cm7 F7 Bbmaj9\nGmin Abmaj7 Ebmaj7 Ddim\nGmin7 Abmaj7 Dm7b5 G7\nGmin Abmaj7 Ebmaj7 Dm7b5\nGmin7 Ebmaj9 Ddim Cm7\nGmin7 Abmaj7 Cm7 D7\nGmin7 Abmaj7 Dm7b5 G7\nGmin7 Ebmaj7 Dm7b5 Cm7\nGmin Abmaj7 Cm7 D7\nGmin7 Abmaj7 Bb7 Ebmaj7\nGmin7 Cm7 F7 Bbmaj7\nGmin7 Abmaj7 Ebmaj7 D7\nGmin Abmaj7 Dm7b5 G7\nGmin7 Abmaj7 D7 Cm7\nGmin Ebmaj7 Dm7b5 G7\nGmin7 Abmaj7 Cm7 D7\nGmin Abmaj7 Gm7 Cm7\nGmin7 Abmaj7 D7 Cm7\nGmin7 Abmaj7 Cm7 D7\nGmin7 Ebmaj7 Dm7b5 Cm7\nGmin7 Abmaj7 Bb7 Ebmaj7\nGmin Abmaj7 Dm7b5 G7\nGmin7 Ebmaj7 Dm7b5 Cm7\nGmin Abmaj7 Cm7 D7\nGmin7 Abmaj7 D7 Cm7\nGmin7 Cm7 F7 Bbmaj7\nGmin Abmaj7 Gm7 Cm7\nGmin7 Abmaj7 Ebmaj7 D7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmin7 Abmaj7 Bbm7 C7\nGmin7 C7 Fmin7 Ebmaj7\nGmin Abmaj7 Dbmaj7 Ddim\nGmin7 C7 Fmin7 Abmaj7\nGmin9 C7 Fmin9 Ebmaj9\nGmin C7 Fmin Ebmaj7\nGmin7 Abmaj7 Bbm7 Dbmaj7\nGmin C7b9 Fmin Ebmaj7\nGmin Abmaj7 Dbmaj7/Eb Ddim\nGmin7 C7 Fmin7b5 Ebmaj7\nGmin C7b9 Fmin Ebmaj7\nGmin Abmaj7 Dbmaj7 Ddim/F\nGmin7 C7sus4 Fmin7 Ebmaj7\nGmin Abmaj7 Dbmaj7 Fdim\nGmin C7 Fmin Ebmaj7\nGmin7 C7 Fmin7 Ebmaj7\nGmin Abmaj7 Dbmaj7 Ddim\nGmin9 C7 Fmin9 Ebmaj7\nGmin C7b9 Fmin Ebmaj7\nGmin7 C7sus4 Fmin7b5 Ebmaj7\nGmin Abmaj7 Dbmaj7 Ddim/F\nGmin C7 Fmin Ebmaj7\nGmin7 C7 Fmin7 Ebmaj9\nGmin Abmaj7 Dbmaj7 Fdim\nGmin C7b9 Fmin Ebmaj9\nGmin7 C7sus4 Fmin7 Ebmaj7\nGmin Abmaj7 Dbmaj7 Ddim\nGmin C7 Fmin Ebmaj7\nGmin7 C7 Fmin7 Ebmaj7\nGmin Abmaj7 Dbmaj7 Ddim/F\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gm7 C7b9 Fmaj7 Ebmaj7\nGm7 C7 Fmaj7/A Dm7\nGm7b5 C7b9 Fmaj7 Ebmaj9\nGm7 C7sus4 Fmaj9 Ebmaj7\nGm Am7b5 D7b9 Gm7\nGm7 C7 Fmaj9/A Ebmaj7\nGm7 C7#9 Fmaj7 Ebmaj7\nGm7 C7b9 Fmaj7/A Dm7\nGm7 C7 Fmaj7 Ebmaj7sus4\nGm7 C7#9 Fmaj7/A Dm7\nGm7 C7sus4 Fmaj7 Ebmaj7\nGm7 C7 Fmaj7/A Dm7\nGm7 C7b9 Fmaj7 Ebmaj7\nGm7 C7sus4 Fmaj7 Ebmaj7\nGm7 C7#9 Fmaj7 Ebmaj7\nGm7 C7 Fmaj7/A Cm7\nGm7 C7#9 Fmaj7 Ebmaj7sus4\nGm7 C7 Fmaj7/A Dm7\nGm7 C7sus4 Fmaj7 Ebmaj7\nGm7 C7 Fmaj7/A Ebmaj7\nGm7 C7b9 Fmaj7 Ebmaj7\nGm7 C7sus4 Fmaj7 Ebmaj7\nGm7 C7#9 Fmaj7 Ebmaj7\nGm7 C7 Fmaj7/A Dm7\nGm7 C7sus4 Fmaj7 Ebmaj7\nGm7 C7b9 Fmaj7 Ebmaj7\nGm7 C7#9 Fmaj7 Ebmaj7sus4\nGm7 C7 Fmaj7/A Cm7\nGm7 C7sus4 Fmaj7 Ebmaj7\nGm7 C7#9 Fmaj7 Ebmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj7 Dm7 G7\nGmaj7 Cmaj7 Dm7 Ebmaj7\nG Bbmaj7 Cmaj7 D/F#\nG7 Cmaj7 Dm7 G7\nGmaj7 Cmaj7 Dm7 D7\nGmaj7 Cmaj7 Ebmaj7 Fmaj7\nG7 Cmaj7 Fmaj7 Ebmaj7\nGmaj7 Cmaj7 G/B D/F#\nGmaj7 Cmaj7 Ebmaj7 Dm7\nG7 Cmaj7 D7 G7\nGmaj7 Dm7 Cmaj7 G7\nG Cmaj7 G/B D7\nG7 Cmaj7 D7 Ebmaj7\nG Cmaj7 Dm7 Ebmaj7\nG Cmaj7 Dm7 G/B\nG Cmaj7 Ebmaj7 Dm7\nG7 Cmaj7 Ebmaj7 Gm7\nG Cmaj7 Gm7 Dm7\nGmaj7 Cmaj7 G/B Cmaj7\nG Cmaj7 Ebmaj7 D7\nG7 Cmaj7 G/B Dm7\nG Cmaj7 Dm7 Ebmaj7\nG Cmaj7 G/B G7\nG Cmaj7 Dm7 Cmaj7\nG7 Cmaj7 Dm7 Ebmaj7\nG Cmaj7 D7 G7\nG Cmaj7 Ebmaj7 Dm7\nG7 Cmaj7 Ebmaj7 Cmaj7\nG Bbmaj7 Cmaj7 Gm7\nG Cmaj7 D7 Ebmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.4991297721862793,
+        "request_datetime": 1775237319
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Electronic\nKey: Db\nMode: Min\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id101"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Electronic\nKey: Db\nMode: Min\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Dbm Abm7 Gbmaj7 Cb\nDbm7b5 Gb7 Cbmaj7 Fbm7\nDbm Eb/Db Cbmaj7 Abm\nGbmaj7 Dbm7 Cbmaj9 Fbm7\nDbm7 Abmaj7 Gbmaj7 Cb\nFbm7 Cbmaj7 Dbm7 Gb\nDbm Gb/Db Cb Fbm7\nCbmaj7 Fbm7 Dbm7 Gb7\nDbm7b5 Gb7 Cbmaj7 Abm7\nGbmaj7 Cb Fbm Dbm\nDbm Abmaj7 Cbmaj7 Gb\nFbm7 Cbmaj7 Dbm7 Gb7\nDbm Eb/Db Cbmaj7 Ab\nCbmaj9 Fbm7 Dbm7 Gb7\nDbm Abm Gbmaj7 Cb\nDbm7b5 Gb7 Cbmaj7 Fbm\nGbmaj7 Dbm7 Cbmaj7 Fbm7\nDbm Abm7 Cbmaj7 Gb\nFbm7 Cbmaj7 Dbm7 Gb\nDbm Eb/Db Cb Abm7\nCbmaj7 Gbmaj7 Dbm Fbm7\nDbm7b5 Gb7 Cb Fbm7\nGbmaj7 Cb Fbm7 Dbm\nDbm Abmaj7 Gbmaj7 Cb\nFbm7 Cbmaj9 Dbm7 Gb7\nDbm Eb/Db Cbmaj7 Abm\nCbmaj7 Gbmaj7 Dbm7 Fbm\nDbm Abm7 Cb Gbmaj7\nFbm7 Cb Dbm7 Gb7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Dbm7 Gb7 Cbmaj7 Fbm7\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Ab\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Db\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/F\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/G\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Bb\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Db\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/F\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/G\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Bb\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Db\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/F\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/G\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Bb\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Db\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/F\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/G\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Bb\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Db\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/F\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/G\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Bb\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7/Db\nDbm7b5 Gb7b9 Cbmaj7b6 Fbm7",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Dbm7 Gbmaj7 Cbmaj7b5 Fm7\nDbm7b5 Gbmaj7b9 Cbmaj7 Fm7\nDbm Eb/Db Cbmaj7b5 Abm7\nDbm7 Abm7 Gbmaj7 Cb\nDbm7b5 Gbmaj9 Cbmaj7b5 Fm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7 Gbmaj7b9 Cbmaj7b5 Fm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm Eb/Db Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm Ab/Db Cbmaj7b5 Fm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Dbm7 Gbmaj7 Cbmaj7b5 Fm7\nDbm Eb7b9 Abmaj7 Gbmaj7\nFbm7 Cbmaj7 Dbmaj7b5 Gbmaj7\nDbm7 Abm7 Gb7 Cbmaj7\nGbmaj7 Cbmaj7 Db/F Abm7\nDbm7 Gb7 Cbmaj7b5 Fm7\nAbm7 Dbmaj7 Cbmaj7b5 Gbmaj7\nDbm7 Cbmaj7 Gb/Bb Abm7\nGb7 Cbmaj7b9 Dbm7b5 Abm7\nDbm Eb7b9 Abm7 Gbmaj7\nFm7 Dbmaj7 Gbmaj7 Cbmaj7\nDbm7b5 Gbmaj7 Cbmaj7 Abm7\nCbmaj7 Gbmaj7 Abm7 Dbm7\nDbm7b5 Abm7 Gbmaj7 Cbmaj7\nGbmaj7 Cbmaj7 Abm7b5 Dbm7\nDbm7 Cm7b5 Gbmaj7 Cbmaj7\nAbm7b5 Gbmaj7 Cbmaj7 Dbm7\nDbm Eb7 Abm7b5 Gbmaj7\nCbmaj7 Gbmaj7 Dbm7b5 Abm7\nDbm Gbmaj7b9 Cbmaj7 Abm7\nGbmaj7 Cbmaj7 Dbm7b5 Abm7\nDbm7 Abm7b5 Gbmaj7 Cbmaj7\nFm7 Cbmaj7 Gbmaj7 Dbm7\nGbmaj7b9 Cbmaj7 Dbm7 Abm7\nDbm7 Abm7b5 Gbmaj7b9 Cbmaj7\nCbmaj7b5 Dbm7 Gbmaj7 Abm7\nDbm7 Gbmaj7b9 Cbmaj7 Abm7\nAbm7 Dbm7 Gb7b9 Cbmaj7\nGbmaj7 Cbmaj7b5 Abm7 Dbm7\nDbm Eb7b9 Abm7b5 Cbmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Dbm7 Gbmaj7 Cbmaj7b5 Fbm7\nDbm Eb7b9 Abm7 Gbmaj7\nFbm7 Cbmaj7 Dbmaj7b5 Gb7\nDbm7 Gb/Db Cbmaj7 Fbm7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\nDbm7 Cbmaj7b5 Gbmaj7 Abm7\nDbm7 Gbmaj7 Cbmaj7b5 Abm7\nFbm7 Cbmaj7 Dbmaj7b5 Gb7sus4\nDbm7 Gbmaj7 Cbmaj7b5 Abm7\nDbm Eb7 Abm7 Dbmaj7\nFbm7 Cbmaj7 Gbmaj7 Dbm9\nDbm7 Gbmaj7 Cbmaj9 Fbm7\nDbm7 Ab7b9 Gbmaj7 Cbmaj7\nFbm7 Cbmaj7 Gbmaj7 Dbmaj7\nDbm7 Eb7b9 Abm7 Gbmaj7\nDbm7 Cbmaj7 Gbmaj7 Fbm7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\nDbm Eb7 Abm7 Dbmaj7\nDbm7 Gbmaj7 Cbmaj7 Fbm7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\nDbm7 Eb7 Abm7 Dbmaj7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\nDbm7 Gbmaj7 Cbmaj7 Fbm7\nDbm Eb7 Abm7 Dbmaj7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\nDbm7 Gbmaj7 Cbmaj7 Fbm7\nDbm7 Eb7 Abm7 Dbmaj7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\nDbm Eb7 Abm7 Dbmaj7\nFbm7 Cbmaj7 Gbmaj7 Dbm7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Dbm Abm7 Gbmaj7 Cb\nDbm7b5 Gbmaj7b9 Cb7b9 Fbm\nDbm Ebmaj7/Db Gb/Db Cb\nAbm7b5 Dbmaj7 Cbm7 Gb7\nDbm Ebmaj7b9/Db Gbmaj7 Cbadd9\nDbm7 Gbmaj7b9 Cb7b9 Fbm\nDbm7b5 Abm7b5 Gbmaj7 Cb\nDbm Gbmaj7 Cb Fbm7\nDbm7b5 Gbmaj7b9/Db Cb7b9 Fbm\nDbm7 Abm7 Gbmaj7 Cb\nDbm Ebmaj7/Db Gbmaj7 Cbadd9\nDbm Abm7 Gbmaj7/Bb Cb\nDbm7b5 Gbmaj7 Cb Fbm\nDbm7 Abm7b5 Gbmaj7 Cbadd9\nDbm Ebmaj7/Db Gbmaj7 Cb\nDbm7b5 Gbmaj7b9 Cb Fbm7\nDbm Abm Gbmaj7 Cb\nDbm7 Ebmaj7/Db Gbmaj7 Cbadd9\nDbm Abm7b5 Gbmaj7 Cb\nDbm7 Gbmaj7 Cb7b9 Fbm\nDbm Ebmaj7/Db Gbmaj7 Cb\nDbm7 Abm7 Gbmaj7/Bb Cb\nDbm7b5 Gbmaj7b9 Cb Fbm7\nDbm7 Abm7 Gbmaj7 Cbadd9\nDbm Ebmaj7/Db Gbmaj7 Cb\nDbm Abm Gbmaj7 Cb\nDbm7 Gbmaj7b9 Cb Fbm\nDbm7b5 Abm7 Gbmaj7 Cbadd9\nDbm Ebmaj7/Db Gbmaj7 Cb\nDbm Abm7 Gbmaj7 Cb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Dbm Abm7 Gbmaj7 Cbmaj7\nDbm7b5 Gbmaj7 Cbmaj7 Fbm7\nDbm Eb7b9 Abm7b5 Dbmaj7\nGbmaj7 Cbmaj7 Dbm Ebm7b5\nEbm7b5 Abm7b5 Dbmaj7 Gbmaj7\nCbmaj7 Fbm7 Dbm Abm\nDbm7 Gbmaj7 Cbmaj7 Fbm\nAbm7 Dbmaj7 Gbmaj7 Cbmaj7\nGbmaj7 Cbmaj7 Fbm7 Ebm7\nDbm Cbmaj7 Gbmaj7 Fbm7\nFbm7 Ebm7 Dbm7 Gbmaj7\nCbmaj7 Fbm Dbmaj7 Gbmaj7\nDbm7b5 Gbmaj7 Cbmaj7 Fbm7b5\nEbm7b5 Abm7b5 Dbmaj7 Gbmaj9\nCbmaj9 Fbm7 Dbm7 Ebm\nDbm7 Gbmaj9 Cbmaj7 Fbm7\nAbm7 Dbmaj7 Gbmaj7 Cb6\nGbmaj7 Cbmaj7 Dbm7 Ebm7b5\nDbm Cbmaj7 Gbmaj7 Abm\nFbm7 Ebm7 Dbm7 Gbmaj9\nCbmaj7 Fbm7 Dbm Eb7b9\nDbm Gbmaj7 Cbmaj7 Abm\nAbm7b5 Dbmaj7 Gbmaj7 Cbmaj7\nGbmaj7 Cbmaj7 Fbm7 Ebm\nDbm7b5 Eb7b9 Abm7b5 Dbmaj7\nCbmaj7 Fbm7 Dbm7 Gbmaj7\nDbm Cbmaj7 Gbmaj7 Fbm7\nFbm Ebm7 Dbm7 Gbmaj7\nCbmaj7 Fbm7 Dbm Eb7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Dbm7 Gbmaj7 Cbmaj7b5 Fm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7b9 Cbmaj7b5 Fm7\nDbm7 Abmaj7 Cbmaj7b5 Gb7\nDbm7b5 Gbmaj7b9 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7 Gbmaj7b9 Cbmaj7b5 Fm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7b9 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cbmaj7b5 Abm7\nDbm7b5 Gbmaj7 Cb",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.8839051723480225,
+        "request_datetime": 1775237319
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Rock\nKey: Eb\nMode: Hmin\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id150"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Rock\nKey: Eb\nMode: Hmin\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Ebm F7 Gm7b5 Abmaj7\nEbm Cm7b5 Dbmaj7 G7\nEbm Abmaj7 Bbm7b5 Eb7\nAbm Db7b9 Gbm Cm\nEbm7b5 Abm7 Db7b9 Gbmaj7\nEbm Abm7b5 Db7 Gbmaj7\nCm7b5 F7 Bbm7b5 Eb7\nEbm7 Ab7b9 Dbmaj7 Gbmaj7\nEbm Bbm7b5 Abmaj7 Db7\nCm7b5 F7 Bbm Eb7\nEbm7b5 Abm7b5 Db7b9 Gbmaj7\nEbm Ab7b9 Dbmaj7 Gbmaj7\nEbm7b5 Ab7b9 Dbmaj9 Gbmaj7\nEbm7b5 F7 Bbm Eb7\nEbm Ab7b9 Dbmaj7 Gbmaj7\nEbm Bbm7b5 Ab7b9 Db7\nEbm7b5 Ab7b9 Dbmaj7 Gbmaj7\nCm7b5 F7 Bbm Eb7\nEbm7 Abm7b5 Db7b9 Gbmaj7\nEbm Abm Dbmaj7 Gbmaj7\nEbm7b5 Ab7b9 Dbmaj7 Gbmaj7\nCm7b5 F7 Bbm Eb7\nEbm Abm7b5 Db7 Gbmaj7\nEbm Bbm7b5 Abmaj7 Db7\nCm7b5 F7 Bbm Eb7\nEbm7 Abm Dbmaj7 Gbmaj7\nEbm Ab7b9 Dbmaj7 Gbmaj7\nEbm Bbm7b5 Ab7b9 Db7\nCm7b5 F7 Bbm Eb7\nEbm7b5 Ab7b9 Dbmaj7 Gbmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm7 F7b9 Abmaj7 G7\nEbm Bbm7 Cbmaj7 Db7\nEbm7b5 Ab7 Cbmaj7 Db7sus4\nEbm Gbm7b5 Cbmaj7 Db7\nEbm Abm7b5 Dbmaj7 G7\nEbm7b5 Ab7 Dbmaj7 C7\nEbm7 F7 Bbmin Ebmin\nEbm Abm7b5 Dbmaj7 G7sus4\nEbm Gbm7b5 Cbmaj7 F7\nEbm7 F7b9 Bbmin Ebmin\nEbm Abm7b5 Dbmaj7 G7b9\nEbm7b5 F7 Bbmin Ebmin\nEbm Abm7b5 Dbmaj7 F7\nEbm Gbm7b5 Cbmaj7 Db7sus4\nEbm7 F7b9 Abmaj7 G7\nEbm Abm7b5 Dbmaj7 G7\nEbm Gbm7b5 Cbmaj7 F7sus4\nEbm7b5 Ab7 Cbmaj7 F7\nEbm7 F7 Bbmin Ebmin\nEbm Abm7b5 Dbmaj7 Eb7\nEbm Gbm7b5 Cbmaj7 Db7b9\nEbm7 F7 Bbmin Ebmin\nEbm Abm7b5 Dbmaj7 G7sus4\nEbm Gbm7b5 Cbmaj7 F7\nEbm7 F7 Bbmin Ebmin\nEbm Abm7b5 Dbmaj7 Eb7\nEbm Gbm7b5 Cbmaj7 Db7b9\nEbm7 F7 Abmaj7 G7\nEbm Abm7b5 Dbmaj7 G7\nEbm Gbm7b5 Cbmaj7 F7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebmin Fmin7b5 G#maj7/C C7\nEbmin Abmaj7 Bbmin7 Eb/G\nEbmin G#maj7/C C7 Fmin\nEbmin7 Fmin7b5 G#maj7 C7sus4\nEbmin Abmaj7 Bbmin7b5 Ebmin/G\nEbmin G#maj7 Cmin7 Fmin7\nEbmin7 F7 G#maj7 Cmin7\nEbmin Abmaj7 Bbmin7b5 Eb/G\nEbmin G#dim C7 Fmin7\nEbmin7 Fmin7b5 G#maj7/C C7\nEbmin Abmaj7 Bbmin Eb/G\nEbmin G#maj7 Cmin7b5 Fmin7\nEbmin7 F7 G#maj7 Cmin\nEbmin Abmaj7 Bb/D Eb/G\nEbmin G#dim C7sus4 Fmin7\nEbmin7 Fmin7b5 G#maj7 C7\nEbmin Abmaj7 Bbdim Eb/G\nEbmin G#maj7 Cmin7 F7\nEbmin7 F7 G#maj7/C Cmin7\nEbmin Abmaj7 Bbmin7 Eb/G\nEbmin G#dim C7 Fmin\nEbmin7 Fmin7b5 G#maj7 Cmin7\nEbmin Abmaj7 Bbmin7 Eb/G\nEbmin G#maj7 Cmin F7\nEbmin7 F7 G#maj7/C C7\nEbmin Abmaj7 Bbmin7 Eb/G\nEbmin G#dim C7sus4 Fmin7\nEbmin7 Fmin7b5 G#maj7 C7\nEbmin Abmaj7 Bbmin7 Eb/G\nEbmin G#maj7 Cmin F7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm F7 Gm7b5 Abmaj7\nEbm Cm7b5 Dbmaj7 Gbmaj7\nEbmin Abmin/Db Bdim Ebmin\nEbm7b5 Ab7 Dbmin Gbmin\nEbm Gbm7b5 Ab7 Dbmin\nEbm7 Bbm7b5 Dbmaj7 Gbmaj7\nEbm Ab/Eb Bdim Gbmaj7\nEbm Dbmaj7/Eb Bbm7b5 Ab7\nEbm7b5 F7 Bbm7 Ebmin\nEbm Ab7 Dbmin Gbmin\nEbm Ebmin/Db Bdim Ab7\nEbm7 Ab7b9 Dbmin Gbmin\nEbm Cm7b5 Dbmaj7 Gbmin\nEbm7b5 Ab7 Dbmin/Gb Gbmin\nEbm Ab Bdim Gb\nEbm Ab7 Dbmin Gbmin/Bb\nEbm7b5 F7 Bbm7b5 Ebmin\nEbm Ab7b9 Dbmin/Gb Gbmin\nEbm Dbmaj7/Eb Cm7b5 Ab7\nEbm F7 Bbm7b5 Ebmin\nEbm Ab/Eb Bdim/F Gbmaj7\nEbm Ab7b9 Dbmin Ebmin/G\nEbm Cm7b5 Dbmaj7 Gbmin/Bb\nEbm Ab7 Dbmin Gbmin/Bb\nEbm7 Bbm7b5 Dbmaj7 Gbmaj7\nEbm F7 Bbm7b5 Ebmin\nEbm Ab/Eb Bdim Gbmaj7\nEbm7b5 Ab7 Dbmin Gbmin\nEbm Ab7 Dbmin Gbmin\nEbm Ab Bdim Gb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm F7 Gm7b5 Abmaj7\nEbm Cm7b5 Dbmaj7 Gbmaj7\nEbm7b5 Ab7 Dbmin Gbmin\nEbm Ab/Eb Dbmaj7 Gbmin7\nEbm7b5 F7b9 Bbm Eb7\nEbm Abmaj7 Dbmin7 Gb7\nEbm7b5 F7b9 Bbm Eb7b9\nEbm Abmaj7 Dbmin Gbmin\nEbm Gbmaj7 F7b9 Bbm7\nEbm7b5 Ab7b9 Dbmin Gbmin7\nEbm F7 Gm7b5 Abmaj7\nEbm Abmaj7 Dbmin Gbmin\nEbm7b5 F7b9 Bbm Eb7\nEbm Abmaj7 Dbmin Gbmin7\nEbm F7 Gm7b5 Abmaj7\nEbm7b5 Ab7 Dbmin Gbmin\nEbm Abmaj7 Dbmin7 Gb7\nEbm F7 Gm7b5 Abmaj7\nEbm Abmaj7 Dbmin Gbmin\nEbm7b5 F7b9 Bbm Eb7b9\nEbm Abmaj7 Dbmin Gbmin7\nEbm F7 Gm7b5 Abmaj7\nEbm Abmaj7 Dbmin Gbmin\nEbm7b5 F7b9 Bbm Eb7\nEbm Abmaj7 Dbmin Gbmin7\nEbm F7 Gm7b5 Abmaj7\nEbm Abmaj7 Dbmin Gbmin\nEbm7b5 F7b9 Bbm Eb7\nEbm Abmaj7 Dbmin Gbmin7\nEbm F7 Gm7b5 Abmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebmin7 Fmin7/G G#maj7/C C7\nEbmin Abmaj7 Dbmaj7/Eb Gmin7b5\nEbmin7 Fmin7 G#maj7/C Fmin7b5\nAbmin7 Dbmaj7 Gmin7 Fmin7\nEbmin Cbmaj7 Dbmaj7/Eb Fmin7b5\nEbmin7 Fmin7 G#maj7 C7\nEbmin Abmin7 Dbmaj7/Eb Fmin7b5\nEbmin7 Fmin7 G#maj7 C7sus4\nEbmin7 Fmin7b5 G#maj7/C C7\nEbmin7 Abmaj7/C Gmin7b5 Fmin7\nEbmin Abmaj7 Dbmaj7/Eb F7\nEbmin7 Fmin7 G#maj7/C Cm7b5\nEbmin Abmaj7 Dbmaj7/Eb Gmin7\nEbmin Fmin7b5 G#maj7 C7sus4\nEbmin Abmaj7 Dbmaj7/Eb C7\nEbmin7 Fmin7 G#maj7/C Abmaj7\nEbmin7 Fmin7 G#maj7 C7b9\nEbmin Abmaj7/C Gmin7b5 Fmin7\nEbmin7 Fmin7 G#maj7 C7\nEbmin Abmaj7 Dbmaj7/Eb Fmin7b5\nEbmin Cbmaj7 Dbmaj7/Eb Fmin7\nEbmin7 Fmin7 G#maj7 C7sus2\nEbmin Abmaj7/C Gmin7b5 Fmin7\nEbmin7 Fmin7 G#maj7 C7#9\nEbmin Abmaj7 Dbmaj7/Eb Gmin7b5\nEbmin Cbmaj7 Dbmaj7/Eb F7\nEbmin Fmin7b5 G#maj7 C7\nEbmin Abmaj7 Dbmaj7/Eb C7sus4\nEbmin7 Fmin7 G#maj7/C Abmaj7\nEbmin Abmaj7 Dbmaj7/Eb Gmin7b5\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebmin Fmin7b5 G#maj7/C C7\nEbmin Abmaj7 Bbmin7 Ebmin\nCm7b5 F7 Bbmin Ebmin\nEbmin G#aug Cmin7b5 F7\nEbmin Fmin G#maj7 C7\nEbmin Abmaj7 Dbmaj7/F Gm7b5\nEbmin7b5 Ab7 Cmin7b5 F7\nCmin7b5 F7 Bbmin Ebmin\nEbmin Abmaj7 Dbmaj7/F Gm7\nEbmin Fmin G#maj7 C7sus4\nEbmin Abmaj7 Bbmin Ebmin\nEbmin G#maj7 Cmin7b5 F7\nCm7b5 F7 Bbmin Ebmin/G\nEbmin Abmaj7 Bbmin7 Ebmin\nEbmin G#dim C7 F7\nEbmin Fmin7b5 G#maj7 C7\nEbmin Ab/Eb Bbmin Ebmin\nEbmin Fmin G#maj7 C7sus2\nEbmin Abmaj7 Dbmaj7/F Gm\nEbmin Fmin7b5 G#maj7 C7sus4\nEbmin Abmaj7 Bbmin Ebmin/G\nEbmin G#dim Cmin7b5 F7\nEbmin Ab Bbmin7 Ebmin\nEbmin Fmin G#maj7 C7b9\nEbmin Abmaj7 Dbmaj7/F Gm7b5\nCm7b5 F7 Bbmin Ebmin/G\nEbmin Fmin G#maj7 C7\nEbmin Ab Bbmin Ebmin/G\nEbmin G#dim Cmin7b5 F7\nEbmin Abmaj7 Dbmaj7/F Gm7b5\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm F7 Gm7b5 Abm\nEbm Bbm7 Cbmaj7 Dbm\nEbm7b5 Ab7 Dbmaj7 Gm7b5\nEbm Ab7 Dbmin Gb7\nEbm7b5 Ab7b9 Dbmaj7/F Gm7\nEbm Bbm7 Cbmaj7 Dbm7\nEbm7 F7b9 Bbm7b5 Eb7\nEbm Ab/Eb Dbmaj7/F Gm7b5\nEbm7b5 Ab7b9 Dbmin7 Gb7\nEbm Bbm7b5 Cbmaj9 Dbm\nEbm Ab7 Dbmin Gb7b9\nEbm7b5 Ab7 Dbmaj7/F Gm7\nEbm7 F7b9 Bbm7b5 Eb7b9\nEbm Ab/Eb Dbmaj7 Gb7sus4\nEbm Bbm7 Cbmaj9 Dbm7\nEbm7b5 Ab7b9 Dbmin7 Gb7b9\nEbm Ab7 Dbmaj7/F Gm7b5\nEbm Bbm7 Cbmaj7 Dbm7b5\nEbm7 F7 Bbm7 Eb7b9\nEbm Ab7b9 Dbmin Gb7sus4\nEbm Ab/Eb Dbmaj7/F Gm7\nEbm Bbm7 Cbmaj9 Dbm\nEbm7b5 Ab7 Dbmaj7/F Gm7b5\nEbm Ab7b9 Dbmin7 Gb7b9\nEbm Bbm7 Cbmaj7 Dbm7\nEbm7 F7 Bbm7b5 Eb7b9\nEbm Ab/Eb Dbmaj7 Gb7\nEbm Bbm7b5 Cbmaj9 Dbm7\nEbm7b5 Ab7b9 Dbmin Gb7sus4\nEbm Ab7 Dbmaj7/F Gm7b5\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.702566623687744,
+        "request_datetime": 1775237322
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Symphonic\nKey: B\nMode: Phdm\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id200"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Symphonic\nKey: B\nMode: Phdm\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Bmin G#dim7 A#m7b5 E\nG#m7b5 C#m7 F#7 Bmin\nBmin E/G# F#7 Bmin\nEmaj7 F#7 Bmin G#m7b5\nBmin F#7 E G#m7b5\nBmin E/G# F#/A# Bmin\nE F#7 Bmin G#m7b5\nBmin G#dim A#m7b5 E\nEmaj7 F#7 Bmin G#m7b5\nBmin E F#7 Bmin\nG#m7b5 C#m7 F#7 Bmin\nBmin E/G# F#sus4 Bmin\nE F# Bmin G#m7b5\nBmin G#dim7 A#m7b5 E\nE F#7 Bmin G#m7b5\nBmin F#7 E G#m7b5\nG#m7b5 C#m7 F#7 Bmin\nBmin E F#7 Bmin\nE F#7 Bmin G#m7b5\nBmin E/G# F#7 Bmin\nBmin G#dim A#m7b5 E\nE F#7 Bmin G#m7b5\nBmin G#dim7 A#m7b5 E\nE F#7 Bmin G#m7b5\nBmin E/G# F#sus4 Bmin\nBmin F#7 E G#m7b5\nG#m7b5 C#m7 F#7 Bmin\nE F#7 Bmin G#m7b5\nBmin E/G# F#7 Bmin\nBmin E F#7 Bmin\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bm Em F#m7 G\nEm7b5 A7 D Bm7\nEm F#m7 Gmaj7 Bm\nBm7b5 E7 Amaj7 D#dim\nEm7 F#m Gmaj7 Bm\nBm F#m G A\nEm7 A7 Dmaj7 Bm\nBm7 Em7 F#7 Bm\nEm F#m7 G Bm\nBm Em7 A7 D\nEm7 A7 D Bm\nBm7 Em F#m7 Bm\nEm7 A7 Dmaj7 Gmaj7\nBm F#m7 Gmaj7 E\nEm7 A7 Bm7 F#m\nBm F#m Gmaj7 A\nEm A7 D Bm\nBm7 Em7 F#m7 B\nEm A7 D Bm\nBm F#m G A\nEm7 A7 D Bm\nBm Em7 F#m7 G\nEm7 A7 Bm7 F#7\nBm F#m G A\nEm A7 D Bm\nBm Em F#m G\nEm A7 D Bm\nBm F#m G A\nEm A7 D Bm\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bm7 E7 A7 Dmaj7\nEm7 A7 Dmaj7 Gmaj7\nF#m7 B7 Emaj7 Amaj7\nG#m7 C#m7 F#7 Bmaj7\nC#m7 F#7 Bmaj7 Em7\nF#m7 B7 Em7 A7\nBm7 E7 Amaj7 Dmaj7\nEm7 A7 Dmaj7 G#dim\nF#m7 B7 E7 A7\nG#m7 C#m7 F#7 Bmaj7\nC#m7 F#7 Bm7 Em7\nF#m7 B7 Em7 A7\nBm7 E7 A7 Dmaj7\nEm7 A7 Dmaj7 Gmaj7\nF#m7 B7 Emaj7 Amaj7\nG#m7 C#m7 F#7 Bmaj7\nC#m7 F#7 Bm7 Em7\nF#m7 B7 Em7 A7\nBm7 E7 Amaj7 Dmaj7\nEm7 A7 Dmaj7 G#dim\nF#m7 B7 E7 A7\nG#m7 C#m7 F#7 Bmaj7\nC#m7 F#7 Bm7 Em7\nF#m7 B7 Em7 A7\nBm7 E7 A7 Dmaj7\nEm7 A7 Dmaj7 Gmaj7\nF#m7 B7 Emaj7 Amaj7\nG#m7 C#m7 F#7 Bmaj7\nC#m7 F#7 Bm7 Em7\nF#m7 B7 Em7 A7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bmin7 E7 Aadd9 Dmaj7\nBmin7 E7 A Bmin/D\nBmin7 E7 F#min7 Bmin\nBmin F#7 Emaj7 Bmin\nE7 A Bmin7 E7/G#\nF#min7 Bmin7 E7 A\nE7 A Bmin7 F#7\nBmin E7 A/C# Dmaj7\nBmin F#7 Bmin E7\nBmin A/C# E7 F#7\nE7 A Dmaj7 G#dim\nBmin7 E7 A F#7\nBmin F#7 Bmin E7\nBmin E7/G# A F#7\nBmin7 E7 A6 F#7\nE7 A Bmin7 E7\nBmin7 E7 A Bmin\nBmin F#7 E7 A\nBmin E7 A/C# F#7\nBmin F#7 Bmin/D E7\nE7 A Dmaj7 G#dim\nBmin7 E7 A E7\nBmin E7 A F#7\nBmin7 E7 A/C# Dmaj7\nBmin F#7 E7 A\nBmin E7 A F#7\nE7 A Dmaj7 G#dim\nBmin7 E7 Amaj7 E7\nBmin F#7 Bmin E7\nBmin E7 A F#7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bm Ebdim F#m C#m\nF#m7 Bm E7 A\nBm7b5 E7 Amaj7 D#m7b5\nE7 Amaj7 D#m7b5 G#m7\nC#m7 F#7 Bm E7\nBm E7 Amaj7 D#m7b5\nE7 Amaj7 D#m7b5 F#m\nBm F#m E7 A\nE7 A D#m7b5 G#m7\nBm E7 A D#m7b5\nF#m7 Bm E7 A\nBm7b5 E7 A D#m7b5\nG#m7 C#m F#7 Bm\nE7 A D#m7b5 G#m7\nA D#m7b5 G#m7 C#m\nBm E7 A F#m\nBm E7 A D#m7b5\nF#m Bm E7 A\nE7 A G#m7 C#m\nBm E7 A F#m7\nC#m7 F#7 Bm E7\nE7 A D#m7b5 F#m\nBm E7 A G#m7\nF#m Bm E7 A\nE7 A F#m Bm\nBm E7 A G#m\nC#m7 F#7 Bm E\nA D#m7b5 G#m C#m\nBm7b5 E7 A F#m\nE7 A G#m C#m\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bmin C#dim F#min7 E\nE F#m7 Bmin E/G#\nF#min7 Bmin E A\nEmaj7 Bmin F#min7 Emaj7\nBmin7 E/G# F#min7 E\nF#dim7 E Bmin7 E\nBmin E F#min7 A\nE F#min7 Bmin E/G#\nBmin7 E A F#min7\nF#min7 Bmin E A/C#\nE Bmin F#min7 E\nBmin7 E/G# F#min7 E\nF#min7 Bmin E A\nE F#min7 Bmin E/G#\nBmin7 E A F#min7\nF#min7 E Bmin A\nE Bmin F#min7 E/G#\nBmin7 E/G# F#min7 E\nF#min7 Bmin E A\nE F#min7 Bmin E\nBmin7 E A F#min7\nF#min7 Bmin E A\nE Bmin F#min7 E/G#\nBmin7 E/G# F#min7 E\nF#min7 Bmin E A\nE F#min7 Bmin E\nBmin7 E A F#min7\nF#min7 Bmin E A\nE Bmin F#min7 E/G#\nBmin7 E/G# F#min7 E\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bmin7 Ebmaj7#11 F#7sus4 Emaj7\nBmin7 C#dim7 D#m7b5 Emaj7\nBmin9 Ebmaj7#11 F#7 Bmin7/E\nBmin Ebmaj9b5 F#7sus4 Emaj7\nBmin7 C#dim F#7/A# Emaj9\nBmin7 Ebmaj7 F#7sus4 E/G#\nBmin Ebmaj7#11 F#7 Emaj7\nBmin7 C#dim7 D#m7b5 Emaj9\nBmin9 Ebmaj7#11 F#7/A Emaj7\nBmin7 Ebmaj9b5 F#7 Emaj7\nBmin C#dim F#7sus4 Emaj7\nBmin7 Ebmaj7 F#7/A Emaj7\nBmin Ebmaj7#11 F#7sus4 Emaj7\nBmin7 C#dim7 D#m7b5 Emaj7\nBmin9 Ebmaj7#11 F#7 Emaj9\nBmin7 Ebmaj9b5 F#7sus4 Emaj7\nBmin C#dim F#7 E/G#\nBmin7 Ebmaj7 F#7sus4 Emaj7\nBmin Ebmaj7#11 F#7 Emaj7\nBmin7 C#dim7 D#m7b5 Emaj9\nBmin9 Ebmaj7#11 F#7/A Emaj7\nBmin7 Ebmaj9b5 F#7 Emaj7\nBmin C#dim F#7sus4 Emaj7\nBmin7 Ebmaj7 F#7 Emaj7\nBmin Ebmaj7#11 F#7sus4 Emaj7\nBmin7 C#dim7 D#m7b5 Emaj9\nBmin9 Ebmaj7#11 F#7/A Emaj7\nBmin7 Ebmaj9b5 F#7 Emaj7\nBmin C#dim F#7sus4 Emaj7\nBmin7 Ebmaj7 F#7 Emaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bm7b5 E7b9 Am6 D7 Gmaj7\nBm7b5 E7b9 C#m7b5 F#7\nEm7b5 A7 Dm7 G7\nF#m7b5 B7 Em7 A7\nBm7b5 E7b9 Am6 D7/F#\nGm7 C7 Fmaj7 Dm7\nEm7b5 A7b9 Dm6 G7\nF#m7b5 B7 Em7 A7sus4\nBm7b5 E7b9 Am7 D7\nEm7b5 A7 Dm7 G7sus4\nF#m7b5 B7 Em7 A7b9\nBm7b5 E7b9 Am6 D7/F#\nGm7 C7 Fmaj7 Dm7\nEm7b5 A7 Dm7 G7\nF#m7b5 B7 Em7 A7sus2\nBm7b5 E7b9 Am7 D7\nGm7 C7 Fmaj7 Dm7\nEm7b5 A7 Dm7 G7sus4\nF#m7b5 B7 Em7 A7\nBm7b5 E7b9 Am6 D7/F#\nGm7 C7 Fmaj7 Dm7\nEm7b5 A7 Dm7 G7\nF#m7b5 B7 Em7 A7sus4\nBm7b5 E7b9 Am7 D7\nGm7 C7 Fmaj7 Dm7\nEm7b5 A7 Dm7 G7sus4\nF#m7b5 B7 Em7 A7\nBm7b5 E7b9 Am7 D7\nGm7 C7 Fmaj7 Dm7\nEm7b5 A7 Dm7 G7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.7174854278564453,
+        "request_datetime": 1775237323
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Forr\u00f3\nKey: Bb\nMode: Loc\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id118"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Forr\u00f3\nKey: Bb\nMode: Loc\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Bbm7b5 Eb7b9 Abmaj7/C Ddim7\nBbm7b5 Eb7#11 Abmaj9/C F7sus4\nBbm7b5 Eb7sus4 Abmaj7/C Gbmaj7\nBbm7b5 Eb7b9 Dbmaj7/F Gm7b5\nBbm7b5 Eb7#9 Cbmaj7/Eb F7\nBbm7b5 Eb7b9 Abm7b5 Dbmaj7\nBbm7b5 Eb7sus4 Dbm7b5 F7\nBbm7b5 Eb7#11 Dbm7b5 Eb/Bb\nBbm7b5 Eb7b9 Cbmaj7/Eb F7sus4\nBbm7b5 Eb7#9 Gm7b5 F7sus2\nBbm7b5 Eb7#11 Abmaj7/C Gbdim7\nBbm7b5 Eb7sus4 Cbmaj7/Eb Gbm7\nBbm7b5 Eb7b9 Dbmaj7/F Gm7\nBbm7b5 Eb7#9 Dbm7b5 Fm7\nBbm7b5 Eb7sus4 Cbmaj7/Eb F7b9\nBbm7b5 Eb7b9 Abm7b5 Dbmaj7/F\nBbm7b5 Eb7#11 Dbmaj7/F Gm7b5\nBbm7b5 Eb7sus4 Dbm7b5 Eb/Bb\nBbm7b5 Eb7b9 Cbmaj7/Eb F7#9\nBbm7b5 Eb7#9 Gm7b5 F7sus4\nBbm7b5 Eb7#11 Abmaj7/C Gbdim7\nBbm7b5 Eb7sus4 Cbmaj7/Eb Gbm7\nBbm7b5 Eb7b9 Dbmaj7/F Gm7\nBbm7b5 Eb7#9 Dbm7b5 Fm7\nBbm7b5 Eb7sus4 Cbmaj7/Eb F7b9\nBbm7b5 Eb7b9 Abm7b5 Dbmaj7/F\nBbm7b5 Eb7#11 Dbmaj7/F Gm7b5\nBbm7b5 Eb7",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Bbm7b5 Eb7b9 Abmaj7 Dbm7b5\nBbm7b5 Eb7b9 Dbm7b5 Gbmaj7\nBbm7b5 Ebm7b5 Gbmaj7 F7\nDbm7b5 Gbmaj7 Bbm7b5 Eb7b9\nEb7b9 Dbm7b5 Gbmaj7 Bbm7b5\nGbmaj7 Eb7b9 Bbm7b5 Dbm7b5\nEb7b9 Bbm7b5 Dbm7b5 Gbmaj7\nDbm7b5 Bbm7b5 Eb7b9 Gbmaj7\nGbmaj7 Dbm7b5 Eb7b9 Bbm7b5\nBbm7b5 Gbmaj7 Dbm7b5 Eb7b9\nEb7b9 Gbmaj7 Bbm7b5 Dbm7b5\nDbm7b5 Eb7b9 Gbmaj7 Bbm7b5\nGbmaj7 Bbm7b5 Eb7b9 Dbm7b5\nBbm7b5 Dbm7b5 Eb7b9 Gbmaj7\nEb7b9 Gbmaj7 Dbm7b5 Bbm7b5\nDbm7b5 Gbmaj7 Bbm7b5 Eb7b9\nGbmaj7 Eb7b9 Dbm7b5 Bbm7b5\nBbm7b5 Eb7b9 Gbmaj7 Dbm7b5\nEb7b9 Bbm7b5 Gbmaj7 Dbm7b5\nDbm7b5 Eb7b9 Bbm7b5 Gbmaj7\nGbmaj7 Dbm7b5 Eb7b9 Bbm7b5\nBbm7b5 Gbmaj7 Dbm7b5 Eb7b9\nEb7b9 Bbm7b5 Gbmaj7 Dbm7b5\nDbm7b5 Eb7b9 Bbm7b5 Gbmaj7\nGbmaj7 Dbm7b5 Eb7b9 Bbm7b5\nBbm7b5 Eb7b9 Dbm7b5 Gbmaj7\nEb7b9 Gbmaj7 Bbm7b5 Dbm7b5\nDbm7b5 Gbmaj7 Bbm7b5 Eb7b9\nGbmaj7 Bbm7b5 Eb7",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Bbdim Gbdim Cbdim Fbbdim\nCbdim Fbbdim Ebbdim Dbbdim\nFdim Cbdim Gbbdim Dbbdim\nEbbdim Dbbdim Cbdim Fbbdim\nDbbdim Cbdim Fbbdim Ebbdim\nGbdim Fbbdim Cbdim Bbdim\nCbdim Dbbdim Fbbdim Gbdim\nFbbdim Ebbdim Dbbdim Cbdim\nBbdim Cbdim Gbdim Fbbdim\nCbdim Bbdim Fbbdim Ebbdim\nEbbdim Gbdim Bbdim Cbdim\nDbbdim Gbdim Bbdim Fbbdim\nGbdim Dbbdim Cbdim Fbbdim\nBbdim Fbbdim Ebbdim Cbdim\nCbdim Fbbdim Bbdim Dbbdim\nFbbdim Bbdim Cbdim Gbdim\nBbdim Ebbdim Cbdim Fbbdim\nCbdim Gbdim Dbbdim Fbbdim\nFbbdim Cbdim Gbdim Bbdim\nDbbdim Fbbdim Bbdim Gbdim\nGbdim Cbdim Fbbdim Dbbdim\nEbbdim Cbdim Bbdim Gbdim\nBbdim Gbdim Fbbdim Ebbdim\nCbdim Fbbdim Ebbdim Dbbdim\nFbbdim Dbbdim Gbdim Cbdim\nDbbdim Bbdim Gbdim Ebbdim\nGbdim Ebbdim Cbdim Fbbdim\nBbdim Cbdim Dbbdim Fbbdim\nCbdim Dbbdim Gbdim Bbdim\nFbbdim Gbdim Bbdim Cbdim\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bbm7b5 Eb7b9 Abmaj7 Dbm7b5\nBbm7b5 Eb7b9 Dbm7b5 Gbmaj7\nBbm7b5 Gbmaj7 Dbm7b5 Eb7b9\nEb7b9 Bbm7b5 Gbmaj7 Dbm7b5\nGbmaj7 Dbm7b5 Bbm7b5 Eb7b9\nDbm7b5 Eb7b9 Bbm7b5 Gbmaj7\nEb7b9 Dbm7b5 Gbmaj7 Bbm7b5\nGbmaj7 Eb7b9 Bbm7b5 Dbm7b5\nBbm7b5 Dbm7b5 Gbmaj7 Eb7b9\nDbm7b5 Gbmaj7 Eb7b9 Bbm7b5\nEb7b9 Bbm7b5 Dbm7b5 Gbmaj7\nGbmaj7 Bbm7b5 Eb7b9 Dbm7b5\nBbm7b5 Eb7b9 Gbmaj7 Dbm7b5\nDbm7b5 Eb7b9 Bbm7b5 Gbmaj7\nEb7b9 Gbmaj7 Dbm7b5 Bbm7b5\nGbmaj7 Dbm7b5 Eb7b9 Bbm7b5\nBbm7b5 Gbmaj7 Eb7b9 Dbm7b5\nDbm7b5 Gbmaj7 Bbm7b5 Eb7b9\nEb7b9 Dbm7b5 Gbmaj7 Bbm7b5\nGbmaj7 Bbm7b5 Dbm7b5 Eb7b9\nBbm7b5 Eb7b9 Dbm7b5 Gbmaj7\nDbm7b5 Bbm7b5 Gbmaj7 Eb7b9\nEb7b9 Gbmaj7 Bbm7b5 Dbm7b5\nGbmaj7 Eb7b9 Dbm7b5 Bbm7b5\nBbm7b5 Dbm7b5 Eb7b9 Gbmaj7\nDbm7b5 Eb7b9 Gbmaj7 Bbm7b5\nEb7b9 Bbm7b5 Gbmaj7 Dbm7b5\nGbmaj7 Dbm7b5 Bbm7b5 Eb7b9\nBbm7b5 Gbmaj7",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "length"
+            }
+          },
+          {
+            "text": "Bbdim Ebdim Fdim Bbdim\nBbm7b5 Ebm7b5 Fdim Bbdim\nBdim Ebm7b5 Fdim Bbdim\nBbdim Ebdim Fdim Bbdim/G\nBbdim Ebm7b5 Fdim Bbdim/F\nBbdim Ebm7b5 Fdim Bbdim/Ab\nBbdim Ebm7b5 Fdim Bbdim/F\nBbdim Ebdim Fdim7 Bbdim\nBbdim Ebdim Fdim7 Bbdim/G\nBbdim Ebdim Fdim7 Bbdim/F\nBbdim Ebdim Fdim7 Bbdim/Ab\nBbdim Ebdim Fdim7 Bbdim/F\nBbdim Ebdim Fdim7 Bbdim/D\nBbdim Ebdim Fdim7 Bbdim/C\nBbdim Ebdim Fdim7 Bbdim/A\nBbdim Ebdim Fdim7 Bbdim/Bb\nBbdim Ebdim Fdim7 Bbdim/Eb\nBbdim Ebdim Fdim7 Bbdim/G\nBbdim Ebdim Fdim7 Bbdim/F\nBbdim Ebdim Fdim7 Bbdim/Ab\nBbdim Ebdim Fdim7 Bbdim/F\nBbdim Ebdim Fdim7 Bbdim/D\nBbdim Ebdim Fdim7 Bbdim/C\nBbdim Ebdim Fdim7 Bbdim/A\nBbdim Ebdim Fdim7 Bbdim/Bb\nBbdim Ebdim Fdim7 Bbdim/Eb\nBbdim Ebdim Fdim7 Bbdim/G\nBbdim Ebdim Fdim7 Bbdim/F\nBbdim Ebdim Fdim7 Bbdim/Ab\nBbdim Ebdim Fdim7 Bbdim/F\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bbdim Ebmin7b5/D F#dim7 G#dim\nAbdim7 Dbm7b5 Gbm7b5 Cbdim7\nC#dim7 G#m7b5 F#m7b5 D#dim\nDbm7b5 Gbm7b5 Cbdim7 F#dim7\nEbmin7b5/D Abdim7 Dbm7b5 G#dim\nF#dim7 G#dim Bbdim Ebmin7b5/D\nG#dim Bbdim Ebmin7b5/D F#dim7\nAbdim7 Bbdim Ebmin7b5/D F#dim7\nDbm7b5 F#dim7 G#dim Bbdim\nF#dim7 Bbdim Ebmin7b5/D G#dim\nG#dim Dbm7b5 F#dim7 Bbdim\nBbdim G#dim Dbm7b5 F#dim7\nEbmin7b5/D F#dim7 Bbdim G#dim\nF#dim7 G#dim Bbdim Ebmin7b5/D\nBbdim Ebmin7b5/D G#dim F#dim7\nG#dim F#dim7 Dbm7b5 Bbdim\nDbm7b5 Bbdim Ebmin7b5/D F#dim7\nF#dim7 Dbm7b5 G#dim Bbdim\nBbdim F#dim7 Ebmin7b5/D G#dim\nG#dim Bbdim F#dim7 Dbm7b5\nEbmin7b5/D G#dim Bbdim F#dim7\nF#dim7 Bbdim G#dim Dbm7b5\nDbm7b5 G#dim F#dim7 Bbdim\nBbdim Ebmin7b5/D F#dim7 G#dim\nG#dim F#dim7 Bbdim Ebmin7b5/D\nEbmin7b5/D Bbdim G#dim F#dim7\nF#dim7 G#dim Ebmin7b5/D Bbdim\nBbdim G#dim F#dim7 Ebmin7b5/D\nEbmin7b5/D F#dim7 G#dim Bbdim\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bbdim Ebdim Fdim Bbdim\nFdim Bbdim Ebdim Fdim\nBbdim Ebdim Fdim Abdim\nFdim Ebdim Bbdim Abdim\nBbdim Abdim Ebdim Fdim\nFdim Abdim Bbdim Ebdim\nBbdim Fdim Abdim Ebdim\nEbdim Fdim Bbdim Abdim\nBbdim Ebdim Abdim Fdim\nFdim Abdim Ebdim Bbdim\nBbdim Fdim Ebdim Abdim\nEbdim Abdim Fdim Bbdim\nBbdim Abdim Fdim Ebdim\nFdim Ebdim Abdim Bbdim\nBbdim Ebdim Bbdim Fdim\nFdim Bbdim Ebdim Bbdim\nBbdim Fdim Bbdim Abdim\nEbdim Bbdim Fdim Abdim\nBbdim Abdim Bbdim Ebdim\nFdim Bbdim Abdim Ebdim\nBbdim Ebdim Fdim Bb\nFdim Bbdim Ebdim Bb\nBbdim Abdim Fdim Bb\nEbdim Fdim Bbdim Bb\nBbdim Fdim Bb Ebdim\nFdim Bbdim Bb Abdim\nBbdim Abdim Bb Fdim\nEbdim Bb Fdim Abdim\nBbdim Ebdim Bb Fdim\nFdim Ebdim Bb Abdim\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Bbdim Ebdim Fdim Bbdim\nFdim Bbdim Ebdim Fdim\nEbdim Fdim Bbdim Ebdim\nBbdim/Db Ebdim/E Fdim/G Bbdim/A\nFdim/Ab Bbdim/C Ebdim/F Fdim/Bb\nEbdim/F Bbdim/G Fdim/A Bbdim/C\nBbdim/D Ebdim/F Fdim/Ab Bbdim/C\nFdim/Bb Bbdim/D Ebdim/F Fdim/Ab\nEbdim/C Fdim/Bb Bbdim/D Ebdim/F\nBbdim/Eb Ebdim/F Fdim/Bb Bbdim/D\nFdim/G Bbdim/Eb Ebdim/F Fdim/Bb\nEbdim/Bb Fdim/G Bbdim/Eb Ebdim/F\nBbdim/F Ebdim/Bb Fdim/G Bbdim/Eb\nFdim/C Bbdim/F Ebdim/Bb Fdim/G\nEbdim/D Fdim/C Bbdim/F Ebdim/Bb\nBbdim/G Ebdim/D Fdim/C Bbdim/F\nFdim/Eb Bbdim/G Ebdim/D Fdim/C\nEbdim/Bb Fdim/Eb Bbdim/G Ebdim/D\nBbdim/C Ebdim/Bb Fdim/Eb Bbdim/G\nFdim/F Bbdim/C Ebdim/Bb Fdim/Eb\nEbdim/G Fdim/F Bbdim/C Ebdim/Bb\nBbdim/D Ebdim/G Fdim/F Bbdim/C\nFdim/C Bbdim/D Ebdim/G Fdim/F\nEbdim/Eb Fdim/C Bbdim/D Ebdim/G\nBbdim/Bb Ebdim/Eb Fdim/C Bbdim/D\nFdim/G Bbdim/Bb Ebdim/Eb Fdim/C\nEbdim/F Fdim/G Bbdim/Bb Ebdim/Eb\nBbdim/A Ebdim/F Fdim/G Bbdim/Bb\nFdim/D Bbdim/A Ebdim/F Fdim/G\nEbdim/C Fdim/D Bbdim/A Ebdim/F\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 4.021759986877441,
+        "request_datetime": 1775237323
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Sultry\nKey: G\nMode: Lyd\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id228"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Sultry\nKey: G\nMode: Lyd\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Dmaj7 Gmaj7/B Em7\nGmaj7 Dmaj9 Em7 Cmaj7\nDmaj7 Gmaj9 Cmaj7 Dmaj7\nGmaj7 Cmaj7 Gmaj7 Dmaj9\nCmaj9 Dmaj7 Gmaj7 Em7\nGmaj7 Dmaj7/F# Em7 Cmaj7\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj7 Cmaj7 Dmaj7 Em7\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Dmaj9 Em7 Cmaj9\nDmaj7 Em7 Cmaj9 Gmaj7\nGmaj7 Em7 Cmaj9 Dmaj7\nCmaj7 Dmaj7 Gmaj7 Em7\nGmaj7 Em7 Cmaj7 Dmaj7\nDmaj7 Em7 Gmaj7 Cmaj7\nGmaj7 Cmaj9 Dmaj7 Em7\nCmaj7 Gmaj7 Em7 Dmaj7\nGmaj7 Em7 Dmaj7 Cmaj9\nDmaj7 Cmaj7 Em7 Gmaj7\nGmaj7 Cmaj9 Em7 Dmaj7\nCmaj7 Dmaj7 Em7 Gmaj7\nGmaj7 Dmaj7/F# Cmaj7 Em7\nDmaj7 Em7 Gmaj7 Cmaj7\nGmaj7 Cmaj7 Em7 Dmaj7\nCmaj7 Em7 Dmaj7 Gmaj7\nGmaj7 Em7 Dmaj9 Cmaj7\nDmaj7 Cmaj7 Gmaj7 Em7\nGmaj7 Dmaj7 Em7/B Cmaj7\nCmaj7 Em7 Dmaj9 Gmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Dmaj7 Gmaj7/B Cmaj7\nGmaj7 Dmaj9 Em7 A7\nCmaj9 Dmaj7 Gmaj7 Bm7\nGmaj7 Cmaj7 Dmaj7 Gmaj7/B\nGmaj7 Dmaj9 Em7 Cmaj7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj9 Dmaj7 Em7 Cmaj7\nGmaj7 Cmaj9 Dmaj7/F# Em7\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Dmaj9 Em7 Cadd9\nCmaj7 Dmaj7 Gmaj7 Cmaj7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Dmaj7 Em7 Gmaj7\nGmaj7 Cmaj7 Dmaj7 Em7\nCmaj9 Dmaj7 Gmaj7 D/F#\nGmaj7 Dmaj7 Cmaj7 Em7\nCmaj9 Dmaj7 Em7 Cadd9\nGmaj7 Dmaj7 Em7/G D/F#\nCmaj7 Dmaj7 Em7 Gmaj7\nGmaj7 Dmaj7 Cmaj7 Dmaj7\nCmaj9 Dmaj7 Gmaj7 A7sus4\nGmaj7 Dmaj9 Em7 Bm7\nCmaj7 Dmaj7 Em7 Gmaj7/D\nGmaj7 Dmaj7 Cmaj7 D7\nCmaj7 Dmaj7 Em7 Cmaj7\nGmaj7 Dmaj7 Bm7 Cmaj7\nCmaj9 Dmaj7 Em7 A7sus4\nGmaj7 Dmaj7 Cmaj7 D9\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7/F# Gmaj7\nC#m7 F#7 Bmaj9 Emaj7\nGmaj7 Dmaj9 Em7 A7\nC#m7b5 F#7 Bm7 E7\nGmaj7 Cmaj7 Dmaj9/F# Gmaj7\nDmaj7 Gmaj7 Cmaj9 Dmaj7\nGmaj7 Am7 D7 Gmaj7\nCmaj9 Dmaj9 Gmaj7 Bm7\nGmaj9 Dmaj7 Em7 Cmaj7\nGmaj7 Cmaj7 Dmaj7 Em7\nCmaj7 Dmaj7 Gmaj7 Gmaj7\nGmaj9 Dmaj9 Em7 Cmaj7\nGmaj7 Cmaj7 Dmaj7 Gmaj7\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Gmaj7\nGmaj7 Cmaj7 Dmaj7 Em7\nC#m7 F#7 Bm7 E7\nGmaj7 Cmaj7 Dmaj7 Gmaj7\nDmaj7 Gmaj7 Cmaj7 Cmaj7\nGmaj7 Dmaj7 Cmaj7 Gmaj7\nC#m7 F#7 Bm7 E7\nGmaj7 Cmaj7 Dmaj7 Gmaj7\nDmaj7 Gmaj7 Cmaj7 Dmaj7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Gmaj7\nGmaj7 Cmaj7 Dmaj7 Em7\nC#m7 F#7 Bm7 E7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Dmaj7 Gmaj7 Gmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Dmaj7/F# Em7 Gmaj7\nGmaj7 Dmaj9/F# Cmaj7 Dmaj7\nCmaj9 Gmaj7 Dmaj7/F# Em7\nGmaj7 Dmaj7 Cmaj7 Gmaj7/B\nCmaj9 Dmaj7/F# Gmaj7 Cmaj9\nGmaj7 Cmaj9 Dmaj7/F# Em7\nCmaj9 Gmaj7 Em7 Dmaj7\nGmaj7 Dmaj7 Cmaj9 Gmaj7\nCmaj9 Gmaj7 Dmaj7/F# Gmaj7\nGmaj7 Cmaj9 Dmaj7/F# Em7\nCmaj9 Gmaj7 Em7 Dmaj7\nGmaj7 Dmaj7 Cmaj9 Gmaj7\nCmaj9 Dmaj7/F# Em7 Gmaj7\nGmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Gmaj7 Em7 Dmaj7\nGmaj7 Cmaj9/E Dmaj7 Gmaj7\nCmaj9 Gmaj7 Dmaj7/F# Em7\nGmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Dmaj7/F# Em7 Gmaj7\nGmaj7 Dmaj7 Cmaj9 Gmaj7\nCmaj9 Gmaj7 Dmaj7/F# Em7\nGmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Gmaj7 Em7 Dmaj7\nGmaj7 Dmaj7 Cmaj9 Gmaj7\nCmaj9 Gmaj7 Dmaj7/F# Gmaj7\nGmaj7 Cmaj9 Dmaj7/F# Em7\nCmaj9 Gmaj7 Em7 Dmaj7\nGmaj7 Dmaj7 Cmaj9 Gmaj7\nCmaj9 Dmaj7/F# Gmaj7 Cmaj9\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Dmaj7/F# Gmaj7 Cmaj9\nGmaj7 Dmaj9 Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj9 Em7\nEm7 Cmaj7 Gmaj7 Dmaj9\nDmaj9 Em7 Cmaj7 Gmaj7\nGmaj7 Dmaj7 Em7/B Cmaj7\nCmaj7 Dmaj7/F# Gmaj7 Cmaj7\nGmaj7 Cmaj9 Dmaj7 Gmaj7/B\nCmaj7 Gmaj7 Dmaj9 Em7\nEm7 Cmaj7 Gmaj7/B Dmaj9\nDmaj9/F# Gmaj7 Cmaj7 Dmaj7\nGmaj7 Dmaj7 Em7 Cmaj9\nCmaj9 Gmaj7 Dmaj7 Em7\nEm7 Cmaj7 Gmaj7 Dmaj7\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj9 Dmaj9/F# Em7 Cmaj7\nCmaj7 Gmaj9 Dmaj9 Em7\nEm7 Cmaj7 Gmaj9 Dmaj9\nDmaj9 Em7 Cmaj7 Gmaj9\nGmaj7 Dmaj7/F# Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Em7\nEm7/B Cmaj7 Gmaj7 Dmaj7\nDmaj7 Em7/B Cmaj7 Gmaj7\nGmaj9 Cmaj7 Dmaj7 Em7\nEm7 Cmaj7 Gmaj9 Dmaj7\nDmaj7 Em7 Cmaj7 Gmaj9\nCmaj7 Gmaj7 Dmaj7 Em7\nEm7 Cmaj7 Dmaj7 Gmaj7\nGmaj7 Dmaj7/F# Em7/B Cmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7/F# Gmaj7\nCmaj9 Dmaj7/F# Em7 A7\nGmaj7 Dmaj7 Em7 Cmaj7\nDmaj7 Gmaj7 Cmaj7 Dmaj7\nGmaj7 Cmaj9 Dmaj7 Gmaj7/B\nCmaj9 Gmaj7 Dmaj7 Em7\nGmaj7 Cmaj7 Dmaj7/F# Gmaj7\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj7 Dmaj7/F# Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Cmaj9 Dmaj7 Gmaj7\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj7 Cmaj9 Dmaj7/F# Em7\nCmaj7 Gmaj7 Em7 Dmaj7\nGmaj7 Dmaj7 Em7 Cmaj7\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj7 Cmaj9 Dmaj7 Gmaj7/B\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Cmaj9 Dmaj7/F# Em7\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj7 Cmaj7 Dmaj7/F# Gmaj7\nEm7 Cmaj7 Gmaj7 Dmaj7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Em7\nGmaj7 Cmaj9 Dmaj7 Gmaj7/B\nDmaj7 Em7 Cmaj7 Gmaj7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj7 Gmaj7 Dmaj7 Em7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj7 Dmaj7 Gmaj7\nCmaj9 Dmaj7 Gmaj7 F#m7b5\nGmaj7 F#m7b5 Em7 A7\nGmaj9 D/F# Em7 Cmaj7\nGmaj7 Cmaj7 Dmaj7 Em7\nCmaj9 Dmaj7 Em7 A7\nGmaj7 A7 Dmaj7 Gmaj7\nGmaj9 Em7 Cmaj7 D7\nGmaj7 Dmaj7 Cmaj7 G/B\nCmaj7 G/B Am7 D7\nGmaj9 A7 Dmaj7 Em7\nGmaj7 F#m7b5 Em7 A7sus4\nGmaj7 Cmaj9 Dmaj7 G/B\nCmaj9 G/B Am7 D7sus4\nGmaj7 A7 Dmaj7 Gmaj9\nGmaj7 D/F# Em7 Cmaj7\nCmaj7 Dmaj7 Em7 A7\nGmaj7 Cmaj7 Dmaj7 Em7\nGmaj9 Dmaj7 Cmaj7 Em7\nGmaj7 F#m7b5 Em7 A7\nGmaj7 Dmaj7 Em7 Cmaj7\nCmaj9 Dmaj7 Gmaj7 D/F#\nGmaj7 A7 Em7 Cmaj7\nGmaj9 Cmaj7 Dmaj7 Em7\nGmaj7 D/F# Em7 Cmaj7\nCmaj7 Dmaj7 Gmaj7 A7\nGmaj7 Cmaj7 Dmaj7 A7sus4\nGmaj9 Em7 Cmaj7 D7\nGmaj7 Dmaj7 Cmaj7 Em7\nCmaj9 Dmaj7 Em7 A7sus4\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Gmaj7 Cmaj9 Dmaj7 Gmaj7\nCmaj9 Dmaj7 Gmaj7 F#m7b5\nGmaj7 D/F# Em7 Am7\nGmaj7 Dmaj7 Em7 Cmaj7\nGmaj9 Dmaj7 Em7 Am7\nCmaj7 Dmaj7 Gmaj7 G/B\nGmaj7 Cmaj9 Dmaj7 Em7\nGmaj7 Am7 Bm7 Cmaj7\nGmaj7 Dmaj7 Em7 Cmaj9\nGmaj7 Cmaj7 Dmaj7 Em7\nGmaj7 Dmaj7 Em7 C#dim7\nGmaj7 C#m7b5 Dmaj7 Gmaj7\nGmaj7 Em7 Am7 Dmaj7\nGmaj9 Dmaj9 Cmaj7 Bm7\nGmaj7 Dmaj7 Em7 D/F#\nGmaj7 Cmaj7 Dmaj7 G/B\nGmaj7 Dmaj9 Em7 Cmaj9\nGmaj7 Cmaj9 Dmaj7 Am7\nGmaj7 Dmaj9 Em7 C#m7b5\nGmaj9 Cmaj7 Dmaj7 Em7\nGmaj7 Dmaj9 Em7 Am7\nGmaj7 Cmaj9 Bm7 Am7\nGmaj7 Dmaj7 Cmaj9 Em7\nGmaj7 Am7 Dmaj7 Bm7\nGmaj7 Em7 Cmaj7 Dmaj7\nGmaj7 Bm7 Cmaj7 Am7\nGmaj9 Dmaj7 Em7 Cmaj7\nGmaj7 Cmaj9 G/B Dmaj7\nGmaj7 Dmaj7 Cmaj7 Em7\nGmaj7 Em7 Am7 D/F#\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.3374874591827393,
+        "request_datetime": 1775237323
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Bangra\nKey: Eb\nMode: Min\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id63"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Bangra\nKey: Eb\nMode: Min\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Ebm Abm7 Dbmaj7 Gb\nEbm7 Bbm7b5 Ab7 Dbmaj9\nEbm Cm7b5 Dbmaj7 Gb7\nAbm7 Dbmaj7 Gb Ebm\nEbm7 Ab Dbmaj7 Gb\nBbm7b5 Eb7 Abm Db\nEbm Abm Db Gb\nEbm7 Ab7 Dbmaj7 Gb\nCm7b5 F7 Bbm7 Eb7\nEbm Ab Dbmaj7 Gb7\nEbm Cm7b5 Db7 Gb\nAbm7 Db7 Gb Ebm\nEbm7 Ab7 Db Gb\nEbm Abm7 Db7 Gb\nCm7b5 F7 Bbm Eb\nEbm Ab Db Gb\nEbm7 Ab7 Db Gb\nEbm Cm7b5 Db Gb\nAbm Db7 Gb Ebm\nEbm Abm Db7 Gb\nEbm7 Ab7 Dbmaj9 Gb\nCm7b5 F7 Bbm7 Eb7\nEbm Ab Dbmaj7 Gb7\nEbm Cm7b5 Db7 Gb\nAbm7 Db7 Gb Ebm\nEbm Ab Db Gb\nEbm7 Ab7 Db Gb\nCm7b5 F7 Bbm Eb\nEbm Ab Dbmaj7 Gb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm Db Gbm\nEbm7 Bbm7b5 Abm7b5 Db7\nEbm Bbm Db/F Gb\nEbm7 Ab Dbmaj7 Gbmaj7\nEbm7 Abm7 Dbmaj9 Gb\nEbm Bbm7b5 Gb Ab\nEbm Abm7b5 Db/F Gb/Bb\nEbm7 Abm Dbadd9 Gb\nEbm Bbm7 Db/F Gbmaj7\nEbm Ab Db Gb\nEbm7 Abm7 Dbmaj7 Gbmaj7\nEbm Bbm7b5 Abm Db\nEbm7 Abm Db/F Gb\nEbm Abm7 Db Gb\nEbm Bbm Db/F Gbmaj7\nEbm7 Ab Db Gb\nEbm Abm7b5 Db Gb\nEbm Bbm7 Db Gb\nEbm Ab Dbmaj7 Gb\nEbm7 Abm Db Gb\nEbm Bbm7b5 Gb/Bb Ab\nEbm Abm Db/F Gb\nEbm7 Ab Db Gbmaj7\nEbm Bbm7b5 Db Gb\nEbm Abm7 Db Gbmaj7\nEbm7 Ab Db/F Gb\nEbm Abm7b5 Db/F Gb\nEbm Bbm Db Gb\nEbm7 Abm Db Gb\nEbm Bbm7 Dbmaj7 Gb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm7 Dbmaj7 Gb\nEbm7 Bbm7b5 Ab7 Dbmaj9\nEbm Cm7b5 Dbmaj7 Gb\nEbm Ab Dbmaj7 Gb/F\nEbm7 Abm7 Db7 Gbmaj7\nEbm Bbm7 Gbmaj7 Ab\nEbm Cm7 Dbadd9 Gb\nEbm Abm Dbmaj7 Gb/Bb\nEbm7 Abm7b5 Db7sus4 Gb\nEbm Bbm7 Dbmaj9 Gbsus4\nEbm Cm7b5 Dbmaj7sus4 Gb\nEbm Ab Dbmaj9 Gb/F\nEbm7 Abm7 Db7 Gb6\nEbm Bbm7 Gbmaj7sus2 Ab\nEbm Cm7 Dbadd9 Gb6\nEbm Abm Dbmaj9 Gb/Bb\nEbm7 Abm7 Db7 Gbadd9\nEbm Bbm7 Gbmaj9 Ab\nEbm Cm7b5 Dbadd9 Gb6\nEbm Ab Dbmaj9 Gb/F\nEbm7 Abm7 Db7sus2 Gb\nEbm Bbm7 Gbmaj9sus4 Ab\nEbm Cm7 Dbadd9sus2 Gb\nEbm Ab Dbmaj9 Gb/Bb\nEbm7 Abm7 Db7sus4 Gb6\nEbm Bbm7 Gbmaj7sus2 Ab\nEbm Cm7 Dbadd9sus4 Gb\nEbm Ab Dbmaj9 Gb/F\nEbm7 Abm7b5 Db7sus2 Gb6\nEbm Bbm7 Gbmaj9sus4 Ab\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm7 Dbmaj7 Gb\nEbm7 Bbm7b5 Abm Dbmaj7\nEbm Db/F Gb Abm\nAbm7 Db7 Gbmaj7 Ebm\nEbm Bbm7 Gbmaj7 Ab\nEbm7 Ab Dbmaj9 Gb\nEbm Abm Dbmaj7 Gb7\nEbm Gb Ab Ebm/Bb\nAbm Db7 Gb Ebm\nEbm Gb/Bb Abm Db\nEbm Db Gb Abm7\nAbm7 Db7 Gb Ebm\nEbm Abm Db Gb\nEbm7 Gb Ab Db\nEbm Db7 Gb Abm\nEbm Gb Abm Db7\nEbm Bbm7b5 Ab Db\nEbm Abm7 Db Gbmaj7\nEbm Db Gb/Bb Abm\nEbm Gb/Bb Ab Db\nEbm7 Ab Db Gb\nEbm Ab Db7 Gb\nEbm Gb Ab Db7\nEbm Db Gbmaj7 Abm\nEbm Db/F Gb Ab\nEbm Ab Db Gb\nEbm Gb Ab/C Db\nEbm7 Abm Db Gb\nEbm Gb/Bb Ab Db\nEbm Db Gb Abm7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm Db Gb\nEbm7 Bbm7b5 Ab7 Dbmaj7\nEbm Db/F Gb Abm\nEbm7 Ab7 Dbmaj7 Gbmaj7\nEbm Cm7b5 Dbmaj7 Gb\nEbm Ab Dbmaj7 Gbmaj7\nEbm Bbm7 Ab7b9 Dbmaj7\nEbm7 Abm7 Dbmaj7 Gb6\nEbm Gb Ab Db\nEbm Abm7 Db7 Gbmaj7\nEbm Bbm Db Gb\nEbm Ab7 Dbmaj7 Gb\nEbm Cm7b5 Fm7 Bb7\nEbm Abm7 Dbmaj7 Gb/Bb\nEbm7 Ab7sus4 Dbmaj7 Gbmaj7\nEbm Db/F Gbmaj7 Abm\nEbm Ab Db/F Gb\nEbm Bbm7b5 Ab7sus4 Dbmaj7\nEbm Cm7 Db/F Gb\nEbm7 Abm Db7 Gb6\nEbm Gb/Bb Abm Db\nEbm Cm7b5 Db6 Gbmaj7\nEbm7 Abm7 Db7sus4 Gb\nEbm Db/F Gb Ab\nEbm Abm7 Dbmaj7sus4 Gbmaj7\nEbm Bbm7b5 Ab7 Dbmaj7\nEbm Gb/Bb Abm7 Db\nEbm Cm Db Gb\nEbm7 Abm Dbmaj7 Gb/Bb\nEbm Ab7sus4 Db Gb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm7b5 Dbmaj7 Gb\nEbm7 Abm7 Dbmaj7 Gb7\nEbm Bb7sus4 Dbmaj7 Gb\nEbm Ab Dbmaj7 Gb\nEbm7 Bb7 Eb/G Abm\nEbm Cm7b5 Dbmaj7 Gb\nEbm Ab Dbmaj7sus4 Gb\nEbm7 Bb7sus2 Eb/G Abm\nEbm Abm Db Gb/F\nEbm Bb7 Eb/G Abm7\nEbm Cm7b5 Dbmaj9 Gb\nEbm Bb7sus4 Eb/G Abm\nEbm Ab Dbmaj9 Gb\nEbm Bb7 Eb/G Abm7b5\nEbm7 Abm7 Dbmaj9 Gb7\nEbm Cm7b5 Dbmaj7sus4 Gb\nEbm Bb7sus2 Eb/G Abm7\nEbm Ab Dbmaj7sus2 Gb\nEbm Abm Db/C Gb\nEbm7 Bb7 Eb/G Abm7b5\nEbm Cm7b5 Dbmaj9 Gb7\nEbm Bb7 Eb/G Abm\nEbm Ab Db Gb/F\nEbm7 Abm Dbmaj7 Gb\nEbm Cm7b5 Dbmaj7 Gb7\nEbm Bb7 Eb/G Abm\nEbm Ab Dbmaj9 Gb7\nEbm Abm7 Dbmaj7sus2 Gb\nEbm Bb7sus4 Eb/G Abm7b5\nEbm Cm7b5 Dbmaj9 Gb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm7 Dbmaj7 Gb\nEbm7 Abm7b5 Dbmaj7 Gb7\nEbm Bb7 Ebmaj7 Abm\nEbm Gbmaj7 Db Ab\nEbm7 Abm Dbmaj7 Gbadd9\nEbm Bb7sus4 Eb Abm\nEbm Ab Dbmaj9 Gb6\nEbm Bb7 Eb Abm7\nEbm7 Ab Dbadd9 Gb\nEbm Gbmaj7 Db/F Bb7\nEbm Bb7sus4 Ebmaj7 Abm\nEbm Abm Db Gb/Bb\nEbm7 Bb7 Eb Abm7\nEbm Gbmaj7 Db Abm7\nEbm Bb7sus2 Eb Abm\nEbm Ab Db Gb\nEbm7 Gb Db/F Bb7\nEbm Bb7 Ebmaj7 Ab\nEbm Abm7 Db Gb\nEbm7 Bb7sus4 Eb Ab\nEbm Gb Db Abm\nEbm7 Bb7 Eb Ab/C\nEbm Abm Dbmaj7 Gb/Bb\nEbm Bb7sus2 Eb Abm7\nEbm Gb Db/F Bb\nEbm7 Abm Db Gb6\nEbm Bb7 Eb Ab/C\nEbm Gb Db/F Bb\nEbm7 Abm Dbmaj7 Gbadd9\nEbm Bb7sus4 Eb Ab\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Ebm Abm7b5 Dbmaj7 Gb\nEbm7 Abm7 Dbmaj7 Gbmaj7\nEbm Bb7b9 Abm7b5 Db\nEbm7 Ab Dbmaj7 Gbmaj9\nEbm7 Abm7b5 Dbmaj7/F Gb\nEbm Bb7 Eb/G Abm\nEbm7 Db/F Gb Abm\nEbm Abm7 Dbmaj7/F Gbadd9\nEbm Bb7 Eb/G Abm7\nEbm7 Abm Dbmaj7 Gb\nEbm Abm7b5 Dbmaj7 Gb6\nEbm Bb7b9 Eb/G Abm7\nEbm7 Dbmaj7/F Gb Abm\nEbm Abm Dbmaj7 Gb\nEbm Bb7 Eb/G Abm\nEbm7 Abm Db Gb\nEbm Bb7b9 Eb/G Abm7\nEbm Abm7b5 Dbmaj7 Gb\nEbm7 Ab Bb7 Eb/G\nEbm Abm Dbmaj7 Gbmaj7\nEbm Bb7 Eb/G Abm7\nEbm7 Abm Dbmaj7 Gb6\nEbm Ab Bb7 Eb/G\nEbm7 Abm7 Db Gb\nEbm Bb7b9 Eb/G Abm\nEbm Abm Dbmaj7 Gbmaj9\nEbm Bb7 Eb/G Abm7\nEbm7 Abm7 Dbmaj7 Gb\nEbm Ab Bb7 Eb/G\nEbm7 Abm Db Gb\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 3.083953380584717,
+        "request_datetime": 1775237326
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    },
+    {
+      "instance": {
+        "input": {
+          "text": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Pop\nKey: A\nMode: Dor\nBars: 4\n\nGenerate 30 progressions:"
+        },
+        "references": [],
+        "split": "test",
+        "id": "id135"
+      },
+      "train_trial_index": 0,
+      "request": {
+        "model_deployment": "google/gemini-2.0-flash-lite",
+        "model": "google/gemini-2.0-flash-lite",
+        "embedding": false,
+        "prompt": "You are a musical assistant generating chord progressions based on user-provided keywords, key, mode, and bar. The keywords describe the genre, style, and song type. The key specifies a root note that is in [C, G, D, A, E, B, F#, Db, Ab, Eb, Bb, F]. The mode specifies a scale that is in [Maj, Min, Dor, Phr, Lyd, Mix, Loc, Hmin, Phdm]. The bar specifies the number of chords to generate for each progression. Your task is to create 30 diverse chord progressions conforming to the keywords, key, and mode. Each progression should consist of the same number of chords as the bar input, with each chord separated by a space ' ' and each progression on a new line.\n\nInstructions:\n1. Analyze Chord Functions: Determine the functions of chords in the given key and mode. Tonic (I, vi) provides resolution and stability. Subdominant (IV, ii) creates movement away from the tonic. Dominant (V, vii\u00b0) creates tension that needs to resolve to the tonic.\n2. Analyze the Keywords: Determine the chord components and progression patterns based on the keywords. For example, for jazz-related keywords, consider using seventh chords, altered chords, and common jazz progressions like ii-V-I. For keywords like 'sadness' or 'emotional,' use minor chords, diminished chords, and progressions that create tension.\n3. Generate 30 Chord Progressions: Create 30 distinct chord progressions that fit the specified key and mode and match the keywords. Each progression should be unique and align with the bar parameter (i.e., if bars = 4, each progression should have 4 chords). Ensure diversity by varying the chord components (root, quality, extensions, alterations, etc.), progression patterns (diatonic/chromatic), and cadences.\n\nEach chord text can have the following components, in order:\n1. Root Note: A-G, with optional accidentals (#, b, x).\n2. Chord Quality: maj, min, aug, dim.\n3. Extensions: Specific chord extensions such as 6/9, 7, 9, 11, 13.\n4. Suspended Chords: Suspended chords such as sus2, sus4, sus#2, sus#4.\n5. Added Notes: Added notes such as add2, add4, add6, add9, add11, add13.\n6. Altered Notes: Alterations such as b5, #5, b9, #9, #11, b13.\n7. Slash Chords: Alternate bass notes such as /E, /G#, /Bb, /Dx.\n\nEnsure the chord progressions are musically coherent, stylistically appropriate, and diverse. Include extensions, suspensions, adds, altered notes, slash chords as needed to achieve maximum diversity. Use both diatonic and chromatic chords to enhance the progressions. Respond only with the chord progressions, avoiding any additional commentary or formatting.\n\nExamples:\nUser keywords: dreamy, jazz, soft | Key: B | Mode: Maj | Bars: 4\nExample Progressions:\nC#m7 F#7 Bmaj9 d#dim/C\nEmaj7 A#m7b5 D#m7 G#7\nUser keywords: singer-songwriter, acoustic, emotional | Key: F# | Mode: Maj | Bars: 3\nExample progressions:\nF# B/F# C#/G#\nC# D#msus2 D#m/\nUser keywords: orchestral, adventurous, epic | Key: D | Mode: Min | Bars: 4\nExample progressions:\ndm gm/Bb gm dm\nBb F C C#dim\n\nGenerate 30 progressions for each user input, following the above guidelines and ensuring diversity and musical coherence. Keep the chord format the same as the examples provided (e.g., G, Amaj7, Cm are valid formats, but Gmaj, Cmin are invalid formats).\n\nUser keywords: Pop\nKey: A\nMode: Dor\nBars: 4\n\nGenerate 30 progressions:\n",
+        "temperature": 0.7,
+        "num_completions": 8,
+        "top_k_per_token": 1,
+        "max_tokens": 512,
+        "stop_sequences": [],
+        "echo_prompt": false,
+        "top_p": 1,
+        "presence_penalty": 0,
+        "frequency_penalty": 0
+      },
+      "result": {
+        "success": true,
+        "embedding": [],
+        "completions": [
+          {
+            "text": "Am7 D7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj7 Cmaj7\nAm7 D7 Gmaj7 Fmaj7\nAm7 Fmaj7 Cmaj7 Gmaj7\nAm7 Dm7 Gmaj7 Em7\nGmaj7 Cmaj7 Am7 D7\nCmaj7 Gmaj7 Dm7 Am7\nAm7 D7 Gmaj7 Am7\nAm7 Dm7 Gmaj7 Em7\nAm7 Gmaj7 Fmaj7 Dm7\nCmaj7 D7 Gmaj7 Am7\nAm7 D7sus4 Gmaj7 Cmaj7\nAm7 Dm7 G6 Cmaj7\nAm7 Gmaj7 Cmaj7 D7\nAm7 D7 Gmaj9 Cmaj7\nDm7 Gmaj7 Cmaj7 Am7\nAm7 D7 Gmaj7 Fmaj7\nCmaj7 Gmaj7 Am7 D7\nAm7 Dm7 Gmaj9 Em7\nAm7 Fmaj7 Gmaj7 Cmaj7\nGmaj7 Cmaj7 Dm7 Am7\nAm7 D7sus2 Gmaj7 Cmaj7\nCmaj7 D7 Am7 Gmaj7\nAm7 Gmaj7 Cmaj7 Dm7\nAm7 D7 G6 Em7\nGmaj7 D7 Am7 Cmaj7\nCmaj7 Am7 Dm7 Gmaj7\nAm7 D7 Gmaj9 Fmaj7\nAm7 Fmaj7 Gmaj7 Dm7\nCmaj7 Gmaj7 D7 Am7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 Dm7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj9 Fmaj7\nAm7 Dm7 G7 Cmaj9\nAm Dm G C\nAm7 Dm7 Gsus4 Cmaj7\nA7 Dm7 Gmaj7 Cmaj7\nAm Dm7 G6 Cmaj9\nAm7 Dm7 G9 Cmaj7\nAm7 Dm7 G7sus4 C\nAm Dm G C/E\nAm7 Dm7 G7 Cmaj7/E\nAm Dm G7 C\nAm9 Dm7 Gmaj7 Cmaj9\nAm7 Dm7 G7 C6\nAm Dm Gsus2 C\nAm7 Dm7 G7b9 Cmaj7\nAm11 Dm9 G13 Cmaj9\nAm7 Dm9 G7 Cmaj7\nAm Dm7 G6 C\nAm9 Dm7 G9 C\nAm Dm G7sus4 C/G\nAm7 Dm7 Gmaj9 C6\nAm Dm G7sus2 Cmaj7\nAm7 Dm9 G7 C\nAm Dm G C/A\nAm7 Dm7 G6 Cmaj9/E\nAm7 Dm7 G9 C6\nAm Dm G7 C/G\nAm9 Dm7 Gmaj7 C\nAm7 Dm9 G7sus4 C\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 Dm7 Gmaj7 Cmaj7\nAm7 Dm7 Gsus4 C\nAm7 Dm7 Em7 Am7\nAm Dm G C\nAm7 Dm7 G6 Cmaj9\nAm Dm G/B C\nAm7 Dm G C/E\nAm Dm7 Gsus2 Cmaj7\nAm7 Dm7 G C\nAm Dm7 G7 Cmaj7\nAm Dm7 Gmaj7/B C\nAm Dm Gmaj7 Cmaj7\nAm Dm7 Gadd9 C\nAm7 Dm7 G7sus4 C\nAm Dm G6 Cmaj9\nAm7 Dm7 G9 C\nAm Dm Gsus4 Cmaj7\nAm7 Dm7 G7 C/E\nAm Dm G C/G\nAm Dm7 G Cmaj9\nAm Dm7 G9 Cmaj7\nAm Dm G/B Cmaj7\nAm Dm7 Gsus4 C/E\nAm Dm Gadd9 C\nAm7 Dm G7 C\nAm Dm7 G C\nAm7 Dm Gsus2 C\nAm Dm7 G/B Cmaj7\nAm Dm G C\nAm Dm7 G9 C/E\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 Dm7 Gmaj7 Cmaj7\nAm7 Dm7 G7 Cmaj7\nAm7 Dm7 Em7 Am7\nAm Dm G C\nAm7 Dm7 E7 Am\nAm Dm G6 Cmaj7\nAm7 Dm7 Gsus4 C\nAm Dm G/B C\nAm7 Dm7  C/E F\nAm Dm C G\nAm Dm7 Fmaj7 G\nAm9 Dm9 Gmaj7 Cmaj9\nAm7 Dm7 Em7 F\nAm7 Dm7 G/B Cmaj7\nAm Dm7 G/A C\nAm Dm G C/E\nAm7 Dm7 G6 C\nAm Dm Fmaj7 Esus4\nAm Dm G7 C\nAm7 Dm9 Gsus4 Cmaj7\nAm7 Dm7 C G\nAm Dm E7 Am/G\nAm Dm C/E Fmaj7\nAm Dm G C/G\nAm7 Dm7 Gsus2 C\nAm Dm7 G C\nAm9 Dm7 Em7 Am\nAm Dm7 Cmaj7 G\nAm7 Dm9 G C\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 Dm7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj9 Fmaj7\nAm7 Dm7 Em7 Am7\nAm7 Gmaj7 Fmaj7 Dm7\nCmaj7 Gmaj7 Am7 Dm7\nAm7 Dm9 Gmaj7 Cmaj7\nAm7 Dm7 Gsus4 Cmaj7\nAm7 Cmaj7 Dm7 Gmaj7\nAm7 Dm7 G6 Cmaj7\nAm7 Dm7 Gmaj7/B Cmaj7\nAm7 Fmaj7 Cmaj7 Gmaj7\nDm7 Gmaj7 Cmaj7 Am7\nAm9 Dm9 Gmaj9 Cmaj9\nAm7 Em7 Fmaj7 Gmaj7\nAm7 Dm7 Gmaj7/E Am7\nAm7 Gmaj7 Cmaj7 Dm7\nAm7 Dm7 Gmaj7 E7\nAm7 Dm7 Gmaj7 F#m7b5\nAm7 Fmaj7 Gmaj7 Cmaj7\nAm7 Dm7 Em7 Fmaj7\nAm7 Cmaj7 Gmaj7 Dm7\nAm7 Dm7 Cmaj7 Gmaj7\nAm7 Gmaj7 Fmaj9 Cmaj7\nAm7 Dm9 G7 Cmaj7\nAm7 Dm7 Cmaj9 Gmaj7\nAm7 Em7 Fmaj7 Cmaj7\nGmaj7 Cmaj7 Am7 Dm7\nAm7 Dm7 Fmaj7 Gmaj7\nAm7 Dm7 Gsus4/C Cmaj7\nAm7 Dm7 Gmaj7 Esus4\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 D7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj7 Am7\nAm Dm7 Gmaj7 Cmaj7\nA7 D7 Gmaj7 Cmaj7\nAm7 D7 Gmaj9 Cmaj7\nAm7 Dm Gmaj9 Cmaj7\nAm D7 Gmaj7 Cmaj9\nAm7 Dm7 G6 Cmaj7\nAm D7 Gmaj9 C6\nAm7 D7sus4 Gmaj7 Cmaj7\nA7 D7 Gmaj9 Cmaj7\nAm7 D7 Gmaj7/B Cmaj7\nAm D7 G/B Cmaj7\nAm7 D7 Gmaj7 C/E\nAm D7 Gmaj7 C/G\nA7 Dm7 Gmaj7 Cmaj7\nAm D7 Gmaj7 C/E\nAm D7sus4 Gmaj7 C/G\nAm7 D7 G6 Cmaj7\nAm7 D7 Gmaj9 C6\nAm D7 G6 C/E\nA7 Dm7 Gmaj9 C6\nAm D7sus4 Gmaj7 C6\nAm7 D7 G6 C/E\nAm Dm7 G6 C/G\nA7 D7 Gmaj7 C/G\nAm D7 G/B C/E\nAm7 D7sus4 Gmaj9 Cmaj7\nAm Dm G6 Cmaj7\nA7 D7 G6 C6\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 D7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj7 Fmaj7\nAm7 D7 Gmaj9 Fmaj7\nAm7b5 D7sus4 Gmaj9 Fmaj7\nA7 D7 Gmaj9 Fmaj7\nAm7 D7 Gmaj7 Fmaj9\nAm7 Dm7 Gmaj7 Fmaj9\nAm7 D7sus4 Gmaj7 Fmaj7\nAm7 D7 G6 Fmaj7\nAm7 D7 Gmaj7 Fadd9\nAm9 D9 Gmaj9 Fmaj7\nAm7 D7sus4 Gmaj9 Fadd9\nAm7 D7 Gmaj7 Fmaj9/E\nAm7 D7sus4 G6 Fmaj7\nAm7 D7 Gmaj7 Fmaj9/A\nAm9 D7 G6 Fmaj7\nAm7 D9 Gmaj9 Fmaj7\nAm7 D7sus#4 Gmaj9 Fmaj7\nAm7 D7 Gmaj7 Fmaj7/E\nAm7 D7 Gmaj9 Fadd9\nAm7 D7 G6 Fadd9\nAm7b5 D7sus4 Gmaj7 Fmaj7\nAm7 D7sus4 Gmaj7 Fmaj9\nAm9 D9 Gmaj7 Fmaj7\nAm7 D7 Gmaj7 Fmaj7/A\nAm7 D7 Gmaj9 Fmaj7/E\nAm7 D9 G6 Fmaj7\nAm7 D7sus4 G6 Fadd9\nAm7 D7sus#4 Gmaj9 Fmaj9\nAm7 D7sus#4 G6 Fmaj7\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          },
+          {
+            "text": "Am7 D7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj7 Am7\nAm7 D7 Gmaj7 Fmaj7\nAm7 Fmaj7 Gmaj7 Am7\nAm D7 Gmaj9 Cmaj7\nAm7 D7sus4 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj7/B Cmaj7\nAm7 D7 G6 Cmaj7\nAm7 Dm7 Gmaj9 Fmaj7\nAm D7 Gmaj7 Em7\nAm7 D7 Gmaj7 Fmaj7\nAm7 D7 Gmaj7 E7\nAm7 Dm7 Gmaj9 Cmaj7\nAm Em7 Fmaj7 Gmaj7\nAm7 D7 Gmaj7 Asus2\nAm7 D7 G F\nAm7 D7 Gmaj7 Cmaj9\nAm7 Dm7 Gmaj7 C6\nAm7 Fmaj7 Cmaj7 Gmaj7\nAm7 D7 Gmaj7 Cmaj7\nAm7 D7 Gmaj7 Cmaj7\nAm7 Dm7 Gmaj7 Am7\nAm D7 Gmaj7 C\nAm7 Dm7 Gmaj7 Fmaj7\nAm7 D7sus4 Gmaj7 Cmaj7\nAm7 Fmaj7 Gmaj7 Am7\nAm7 D7 Gmaj7 E7\nAm7 Dm7 Gmaj9 Cmaj7\nAm Em F G\nAm7 D7 Gsus4 C\n",
+            "logprob": 0.0,
+            "tokens": [],
+            "finish_reason": {
+              "reason": "stop"
+            }
+          }
+        ],
+        "cached": false,
+        "request_time": 2.9498448371887207,
+        "request_datetime": 1775237326
+      },
+      "num_train_instances": 0,
+      "prompt_truncated": false,
+      "num_conditioning_tokens": 0
+    }
+  ]
+}

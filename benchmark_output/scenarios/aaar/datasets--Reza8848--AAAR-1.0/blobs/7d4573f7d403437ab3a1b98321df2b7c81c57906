@@ -1,0 +1,701 @@
+[{
+  "caption": "Figure 2: Three-step Training Regime. Green outlines denote the module currently being trained. Gray hatches on the ConvMixer denote when it is frozen.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9996337890625,
+    "y1": 260.5455017089844,
+    "y2": 299.4249267578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 485.28,
+    "y1": 129.6,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure2-1.png"
+}, {
+  "caption": "Table 5: Split CIFAR100 Validation Accuracy - We bold the best performing model within the 1K and 10K neuron settings. Oracle was trained on the full CIFAR10 dataset. SI has a * denoting some of its runs failed. Average of 3 random task splits.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 681.9306030273438,
+    "y2": 709.8510131835938
+  },
+  "figType": "Table",
+  "imageText": ["Oracle", "10K", "NA", "0.72", "SDM", "10K", "10", "0.43", "FlyModel", "10K", "32", "0.58", "MAS", "10K", "NA", "0.40", "EWC", "10K", "NA", "0.16", "SDM+EWC", "10K", "10", "0.51", "Method", "Neurons", "k", "Val.", "Acc.", "SDM", "1K", "1", "0.32", "SDM", "1K", "10", "0.39", "Top-K", "1K", "10", "0.11", "FlyModel", "1K", "32", "0.36", "MAS", "1K", "NA", "0.24", "EWC", "1K", "NA", "0.12", "SDM+EWC", "1K", "10", "0.42", "Method", "Neurons", "k", "Val.", "Acc."],
+  "name": "5",
+  "page": 42,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.35999999999996,
+    "y1": 560.64,
+    "y2": 660.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table5-1.png"
+}, {
+  "caption": "Figure 21: Top - Rank ordering of continual learning algorithms remains similar for CIFAR100. The FlyModel with neurons (magenta) now outperforms SDM+EWC (green). The SDM algorithm does the next best (yellow) with MAS (blue) again close behind and then EWC (purple) and Top-K (orange) performing poorly. Bottom - SDM methods are robust to forgetting. The first task of CIFAR100 and its validation accuracy for this task over the entire course of training on 49 other tasks is shown for each method. SDM+EWC is the most robust to forgetting (green), then the FlyModel (magenta) and SDM. It is interesting that the SDM+EWC forgets less for this first task than the FlyModel. Top-K shows some retained memory but only a small amount while MAS nad EWC both catastrophically forget over time within ∼ 5 tasks (2,500 epochs).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 423.18756103515625,
+    "y2": 516.8609619140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "21",
+  "page": 42,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 97.92,
+    "y2": 412.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure21-1.png"
+}, {
+  "caption": "Figure 17: Toy experiment of how Adam, RMSProp and SGDM introduce stale momenta. (a) Gradient updates of 0.2 are injected at four different time points visible by the large RMSProp green dots. We first apply two gradient updates, then four, then one and one. Note how RMSProp amplifies the gradient magnitudes but does not apply any gradient update when the neuron is inactive. Meanwhile, Adam (orange) and SGDM (blue) will keep applying gradient updates that slowly decay over time. Also note that the Adam gradient magnitudes are larger than those for SGDM. (b) We inject gradients at single time points twice and observe how the numerators (darker color) and denominators (lighter color) for Adam and RMSProp change. The denominators decay very slowly. (c) We see how the delta between the actual gradient value of 0.2 and the gradient value applied by the different optimizers changes depending on the interval between the last gradient update. Note that the y-axis is log10. RMSProp has a 10/0.2 =50x amplified gradient and Adam is a 1/0.2 = 5x. Note that SGDM without a denominator term is the only optimizer that over longer periods of time stops amplifying the gradient value. All results generalize for gradient values that are < 1.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 443.17950439453125,
+    "y2": 580.6889038085938
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "(c)", "(a)"],
+  "name": "17",
+  "page": 37,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 80.64,
+    "y2": 430.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure17-1.png"
+}, {
+  "caption": "Figure 8: Summary of GABA Switch Biology. Here we visualize the ion transporters inside young versus adult neurons and how they change over time. The left side of the figure shows how as a neuron gets activated more times it swaps out the concentration of its ion transporters from NKCC1 (blue) to KCC2 (red). This causes the neuron to go from importing chloride ions (Cl-) to exporting them. The right side of the figure shows the consequence of this transition where the reversal potential of chloride goes from being more positive than the neuron’s resting potential – resulting in GABA being excitatory – to more negative – resulting in GABA being inhibitory.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 448.6065368652344,
+    "y2": 520.3629150390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 288.0,
+    "y2": 432.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure8-1.png"
+}, {
+  "caption": "Figure 28: Neurons colored by the number of times they have been activated. This plot makes it clear how SDM with no L2 norm (c) only activates a few neurons to do all of its learning, resulting in catastrophic forgetting. Meanwhile, ReLU in (e) activates almost all of its neurons. All models that use Top-K: SDM (a), SDM with Top-K masking (b) and Top-K (d) activate subsets of neurons making it harder to distinguish their learning dynamics without the additional analyses presented in this section.",
+  "captionBoundary": {
+    "x1": 107.99995422363281,
+    "x2": 504.0032653808594,
+    "y1": 605.0365600585938,
+    "y2": 665.8330078125
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "(c)", "(d)", "(a)", "(b)"],
+  "name": "28",
+  "page": 52,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 141.6,
+    "y2": 586.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure28-1.png"
+}, {
+  "caption": "Table 8: Mean Neuron Entropy Weighted by Top-K Presence",
+  "captionBoundary": {
+    "x1": 176.31698608398438,
+    "x2": 435.68341064453125,
+    "y1": 350.71124267578125,
+    "y2": 357.1919250488281
+  },
+  "figType": "Table",
+  "imageText": ["SDM", "0.99", "0.54", "SDM", "Linear", "Mask", "1.36", "0.35", "SDM", "No", "L2", "Norm", "1.96", "0.20", "Top-K", "1.48", "0.29", "ReLU", "2.25", "0.21", "Name", "Mean", "Weighted", "Entropy", "Val.", "Accuracy"],
+  "name": "8",
+  "page": 46,
+  "regionBoundary": {
+    "x1": 171.84,
+    "x2": 440.15999999999997,
+    "y1": 369.59999999999997,
+    "y2": 448.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table8-1.png"
+}, {
+  "caption": "Figure 22: SDM Neurons are more specialized than Top-K or ReLU. We track the number of times every neuron is activated during continual learning and present this as a histogram with a log10 scale. (a) We compare SDM (blue) to the Top-K (orange) and ReLU (green) baselines. (a) We compare SDM (blue) to two ablations, SDM with a Top-K mask (orange) and SDM without L2 normalization (green).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 241.43551635742188,
+    "y2": 291.2739562988281
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "22",
+  "page": 46,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 80.64,
+    "y2": 228.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure22-1.png"
+}, {
+  "caption": "Figure 11: The GABA switch needs to account for the learning rate. We train SDM directly on CIFAR10 pixels to test its ability to learn the manifold and avoid dead neurons. The GABA switch occurs at epoch ∼150 and each line denotes a different learning rate “lr”. For reasons outlined in Appendix D, SGD should result in the fewest dead neurons. However, the learning rate needs to be carefully set in relation to the GABA switch threshold, s. If the learning rate is too small, neurons won’t update onto the data manifold quickly enough and will die instead.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00384521484375,
+    "y1": 455.4995422363281,
+    "y2": 516.2959594726562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 458.4,
+    "y1": 283.68,
+    "y2": 444.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure11-1.png"
+}, {
+  "caption": "Figure 3: SDM outperforms regularization methods and their combination is positive sum. We plot validation accuracy across tasks for the best performing methods and baselines on Split CIFAR10. SDM+EWC (green line) does the best, then the FlyModel (magenta), then SDM (yellow) with MAS (blue) close behind. The Top-K (orange) without SDM modifications and ReLU (purple) baselines do poorly. The FlyModel was only trained for one epoch on each task as per Shen et al. (2021) but we visually extend the validation accuracy on each task to make method comparison easier. Appendix F.1 visualizes how SDM gradually forgets each task compared to catastrophic forgetting of the ReLU baseline. We use the average of 5 random seeds and error bars show standard error of the mean but the variance is small making it hard to see.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 406.9995422363281,
+    "y2": 500.67291259765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 238.56,
+    "y2": 396.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure3-1.png"
+}, {
+  "caption": "Figure 10: (a) Subtraction beats Masking for Continual Learning. However, as shown in (b) it is worse for pretraining. During pretraining, neither method creates any dead neurons. (c) During continual learning, across each task, there are fewer dead neurons when subtracting that may explain the better memory retention of previous tasks. Because these plots are not crowded, error bars show the min and max range across the five random continual learning data splits instead of the standard error of the mean.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 375.9665222167969,
+    "y2": 436.763916015625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "(c)", "(a)"],
+  "name": "10",
+  "page": 28,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 80.64,
+    "y2": 362.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure10-1.png"
+}, {
+  "caption": "Figure 18: Rank ordering of continual learning algorithms remains approximately the same for training directly on CIFAR10. Here SDM with 10K neurons (yellow) actually does better than SDM+EWC (green) that was the best performer in the main text Fig. 3(a). However, we did not tune the hyperparameters for the EWC loss coefficient or the β parameter for training directly on pixels. SDM+EWC with 10K neurons fails to terminate within the 15 hours of GPU time allocated however it is clear that SDM outperforms it. Results are for the 5 random seed splits of Split CIFAR 10.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032653808594,
+    "y1": 444.5775146484375,
+    "y2": 516.3339233398438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "18",
+  "page": 38,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 223.67999999999998,
+    "y2": 433.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure18-1.png"
+}, {
+  "caption": "Figure 14: Sufficiently small k values harm network training. ConvMixers with an SDM layer at the end trained on CIFAR10. All networks perform the same for the first 20 epochs at which point Top-K is approximately fully implemented (the GABA switch occurs around epoch 10). (a) Validation accuracy for all models. The smaller the k value, the worse accuracy is. (b) The fraction of neurons that are not active for any of the validation inputs (this is an upper bound on the true number of dead neurons that may be inactive for the training data). Training the CNN portion of the network along with the SDM neurons leads to many dead neurons. We think this is because the manifold is still updating. As more neurons die, the representational capacity of the model declines.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0035095214844,
+    "y1": 339.6415100097656,
+    "y2": 422.35589599609375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "14",
+  "page": 33,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 207.84,
+    "y2": 326.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure14-1.png"
+}, {
+  "caption": "Figure 29: SDM neurons tile the regions of the manifold that they are most activated by. We use the same UMAP plot as in Fig. 25 but color the data by its class in (a) and the neurons by the class that activates each the most in (b).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00201416015625,
+    "y1": 470.0445251464844,
+    "y2": 497.9649658203125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "29",
+  "page": 53,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 309.59999999999997,
+    "y2": 456.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure29-1.png"
+}, {
+  "caption": "Figure 20: SDM gradually forgets previous tasks. Solid lines along the top show SDM forgetting previous tasks over time in comparison to ReLU that catastrophically forgets (dashed lines along the bottom). Validation accuracy is now computed within tasks and to avoid clutter we only show the learning curves for the first three tasks. Both plots use the average of 5 random seeds and error bars show standard error of the mean.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 339.7105407714844,
+    "y2": 389.5489501953125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "20",
+  "page": 41,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 171.84,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure20-1.png"
+}, {
+  "caption": "Figure 1: Graphical Summary of the SDM Write and Read Operations. Top Row - Three patterns being written into nearby neurons. 1. The first write operation; 2. Patterns are stored inside neurons and the original pattern address is shown; 3. Writing a second pattern; 4. Writing a third pattern and neurons storing a superposition of multiple patterns. Bottom Row - The SDM read operation. The query reads from nearby neurons with the inset showing the number of times each pattern is read. Blue is read the most as its original pattern location (shown by the hollow circle) is closest to the query. Figure adapted with permission from Bricken & Pehlevan (2021).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 434.08154296875,
+    "y2": 505.83795166015625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 226.56,
+    "y2": 418.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure1-1.png"
+}, {
+  "caption": "Figure 13: Two perspectives on how the k value influences the ability to learn the ImageNet32 pretraining task and the Split CIFAR10 continual learning task. (a) Validation Accuracies for final NCL ImageNet pretraining (blue) and final CL Split-CIFAR10 (orange) over all tasks as a function of k values. (b) The pareto frontier between ImageNet pretraining accuracy (x-axis) and CIFAR10 continual learning (y-axis). Each blue dot is a different k value. This plot makes evident the better pretraining performance for k < 8.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0049743652344,
+    "y1": 499.48651123046875,
+    "y2": 560.282958984375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "13",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 338.88,
+    "y2": 486.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure13-1.png"
+}, {
+  "caption": "Figure 15: The GABA switch occurs by epoch ∼100 and Top-K is fully implemented by ∼200 epochs. At this point, the RMS and Adam optimizers begin continuously killing off neurons such that they are never activated for any training or validation data. These results are for training directly on CIFAR10 images. See the text for a discussion of training on ConvMixer embeddings.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 632.4825439453125,
+    "y2": 671.3609619140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "15",
+  "page": 34,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 474.71999999999997,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure15-1.png"
+}, {
+  "caption": "Figure 6: Another perspective on the mapping from SDM to the cerebellar circuitry. (a) The computational circuitry necessary to implement SDM. (b) The biological implementation of SDM where the labels of (a) have been replaced by their biological components. The Purkinje cell is shown as an oval to represent the synaptic contacts with the granule cells. See the text for explanations of the architectural features.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 491.1805419921875,
+    "y2": 541.0189819335938
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 266.88,
+    "y2": 478.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure6-1.png"
+}, {
+  "caption": "Table 7: Improved Regularization Baselines on Split MNIST",
+  "captionBoundary": {
+    "x1": 177.5179443359375,
+    "x2": 434.4833068847656,
+    "y1": 489.31011962890625,
+    "y2": 495.7908020019531
+  },
+  "figType": "Table",
+  "imageText": ["EWC", "(Kirkpatrick", "et", "al.,", "2017)", "200", "0.005", "63.23", "19.80", "SI", "(Zenke", "et", "al.,", "2017)", "1500", "0.005", "35.76", "19.67", "MAS", "(Aljundi", "et", "al.,", "2018)", "0.5", "NA", "24.99", "19.52", "L2", "(Goodfellow", "et", "al.,", "2014)", "10", "NA", "36.77", "22.52", "Name", "Loss", "Coef.", "β", "New", "Val.", "Acc.", "Original"],
+  "name": "7",
+  "page": 44,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 508.79999999999995,
+    "y2": 575.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table7-1.png"
+}, {
+  "caption": "Figure 9: Linear k Annealing needs Positive Weights. All lines overlap at the bottom of the plot aside from Linear Annealing when negative weights are allowed (green). The GABA Switch excites neurons that can otherwise be inactivated due to their negative weights. This ensures all neurons update onto the data manifold and are not dead. However, linear k annealing presented in Eq. 4 does not excite leaving these neurons dead. Training is directly on the CIFAR10 manifold which is more difficult to learn than the ConvMixer embeddings.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 213.00753784179688,
+    "y2": 273.804931640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 80.64,
+    "y2": 202.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure9-1.png"
+}, {
+  "caption": "Figure 25: SDM Weights Tile the CIFAR10 UMAP Embedding the Best. The two SDM models in the top row ((a) and (b)) do the best tiling of the manifold. This is unlike the previous Fig. 24 where only SDM in (a) showed good tililng. The CIFAR10 data manifold looks different here for the top row, forming three distinct blobs because of the L2 normalization operation.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00286865234375,
+    "y1": 615.9955444335938,
+    "y2": 654.8740234375
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "(c)", "(d)", "(a)", "(b)"],
+  "name": "25",
+  "page": 49,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 152.64,
+    "y2": 597.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure25-1.png"
+}, {
+  "caption": "Table 1: Split CIFAR10 Final Validation Accuracy - We highlight the best performing SDM, baseline, and overall performer within the 1K (left) and 10K (right) neuron settings. Oracle was trained on the full CIFAR10 dataset. SI has a * denoting some of its runs failed. NISPA uses a three hidden layer network with 400 hidden units per layer but this is close in parameter count to one hidden layer with 1K neurons. All results are the average of 5 random task splits.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033874511719,
+    "y1": 290.96551513671875,
+    "y2": 340.802978515625
+  },
+  "figType": "Table",
+  "imageText": ["SDM", "10K", "10", "0.71", "FlyModel", "10K", "32", "0.82", "MAS", "10K", "NA", "0.67", "SI*", "10K", "NA", "0.44", "ReLU", "10K", "NA", "0.21", "EWC", "10K", "NA", "0.65", "SDM+MAS", "10K", "10", "0.84", "SDM+EWC", "10K", "10", "0.86", "Oracle", "10K", "NA", "0.92", "Method", "Neurons", "k", "Val.", "Acc.", "SDM", "1K", "1", "0.70", "SDM", "1K", "10", "0.63", "Top-K", "1K", "10", "0.29", "FlyModel", "1K", "32", "0.69", "MAS", "1K", "NA", "0.69", "EWC", "1K", "NA", "0.67", "SI*", "1K", "NA", "0.34", "NISPA", "∼1K", "NA", "0.19", "L2", "1K", "NA", "0.23", "Dropout", "1K", "NA", "0.21", "SDM+MAS", "1K", "10", "0.83", "SDM+EWC", "1K", "10", "0.83", "Method", "Neurons", "k", "Val.", "Acc."],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.35999999999996,
+    "y1": 115.67999999999999,
+    "y2": 269.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table1-1.png"
+}, {
+  "caption": "Table 3: Pixel Training - Split CIFAR10 Validation Accuracy",
+  "captionBoundary": {
+    "x1": 176.81100463867188,
+    "x2": 435.1910095214844,
+    "y1": 140.00328063964844,
+    "y2": 146.48394775390625
+  },
+  "figType": "Table",
+  "imageText": ["SDM", "1K", "1", "0.33", "SDM", "10K", "10", "0.42", "EWC", "1K", "NA", "0.19", "SDM+EWC", "1K", "10", "0.28", "SDM+EWC*", "10K", "10", "0.32", "Method", "Neurons", "k", "Val.", "Acc."],
+  "name": "3",
+  "page": 39,
+  "regionBoundary": {
+    "x1": 211.67999999999998,
+    "x2": 400.32,
+    "y1": 159.35999999999999,
+    "y2": 237.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table3-1.png"
+}, {
+  "caption": "Figure 16: Empirical Stale Momenta Seen During Training. (a) We take all neurons that are dead during a batch and record the mean L2 magnitude that its weights experience during the update. Adam (teal) has the largest updates to dead neurons. Note that these magnitudes are still 5-10x smaller than the average for alive neurons. SGDM (purple) also updates dead neurons but to a lesser degree. SGD (yellow) and RMSProp (orange) are not visible because they do not apply any updates to dead neurons. We start our x-axis at training step 300k because this is when there are enough dead neurons for their gradient updates to be meaningfully calculated. (b) We track all gradient updates applied to ten random neurons during the course of training and pick a representative to display here. We track gradient updates starting right as the GABA switch occurs around epoch 100 and all training steps from this point on are shown along the x-axis. RMSProp (orange) has the highest variance and magnitude in gradient updates followed by Adam (teal).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 338.1075439453125,
+    "y2": 453.69891357421875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "16",
+  "page": 35,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 205.92,
+    "y2": 324.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure16-1.png"
+}, {
+  "caption": "Figure 24: CIFAR10 projected onto a UMAP embedding of the SDM weights tiles the manifold the best. (a) is shown as Fig. 6 of the main text and the only approach that manages to tile the manifold such that the UMAP plot has meaningful structure.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0020446777344,
+    "y1": 621.4745483398438,
+    "y2": 649.39501953125
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "(c)", "(d)", "(a)", "(b)"],
+  "name": "24",
+  "page": 48,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 158.88,
+    "y2": 603.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure24-1.png"
+}, {
+  "caption": "Figure 26: Learned Neuron Weights for SDM (a) versus ReLU (b). We train our models directly on CIFAR10 and visualize the weights of nine randomly chosen neurons by reshaping them into their image dimensions. SDM results in significantly more interpretable receptive fields for the neurons.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 617.8755493164062,
+    "y2": 656.7540283203125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "26",
+  "page": 50,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 389.76,
+    "y2": 604.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure26-1.png"
+}, {
+  "caption": "Figure 5: SDM Mapping to the Cerebellum. The operations are as follows: #1. A pattern pa (blue) or query ξ (red) enters via firing of the Mossy Fibers (Mo). #2. Mossy fibers activate Granule Cells (Gr), with the Gr dendrites representing xa. Here we show two different Granule cells and their addresses x1 a and x2 a. These Granule Cells project their axons (called Parallel Fibers (Pa)) upwards and across Purkinje Cells (Pu) where their synaptic connections encode their storage vectors. Each contact with a Purkinje Cell encodes a single element of the storage vector. Here we show one of these elements with the first Purkinje Cell with the subscript 1, [x1 v]1 and [x2 v]1. We will come back to these. #3. A Golgi (Go) inhbitory interneuron gets input from a number of neuron types including Granule cells, it inhibits these Granule cells with a value of −I , implementing an approximate Top-K. #4. If and only if we are writing in a pattern pv , it comes through a climbing fiber (Cl) that wraps around a single Purkinje Cell to produce large action potentials that induce long term potentiation/depression (LTP/LTD). Here we show the Climbing fiber that writes to the Purkinje Cell representing the first element of the storage vectors with [pv]1. #5. The Granule Cells that are firing excite the Purkinje cells in proportion to the strength of their synaptic connections that represent their storage vectors. In the case of writing, this updates these synapses. #6. If we are reading from the system, the Purkinje Cell integrates signals from all activate neurons’ storage vectors and determines whether or not to fire, implementing a non-linear activation function that outputs [y]1 (the first element of the vector in this case). The neuron types not mentioned previously are, going clockwise starting in the top right: St=Stellate cell (inhibitory interneuron) and Ba=Basket cell (inhibitory interneuron). Displayed originally without the SDM notation overlayed as Figure 3.11 of (Kanerva, 1993), reprinted with permission from Pentti Kanerva to whom all rights belong.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 445.86553955078125,
+    "y2": 671.0469970703125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 136.79999999999998,
+    "y2": 430.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure5-1.png"
+}, {
+  "caption": "Table 6: Split MNIST Validation Accuracy",
+  "captionBoundary": {
+    "x1": 215.15196228027344,
+    "x2": 396.8498229980469,
+    "y1": 320.925048828125,
+    "y2": 327.4057312011719
+  },
+  "figType": "Table",
+  "imageText": ["Oracle", "1K", "NA", "0.93", "SDM", "1K", "1", "0.67", "SDM", "10K", "10", "0.56", "FlyModel", "1K", "32", "0.73", "FlyModel", "10K", "32", "0.91", "EWC", "1K", "NA", "0.49", "MAS", "1K", "NA", "0.30", "SI", "1K", "NA", "0.36", "Top-K", "1K", "10", "0.21", "NISPA", "*", "NA", "0.40", "Active", "Dendrites", "1K", "NA", "0.20", "ReLU", "1K", "NA", "0.21", "SDM+EWC", "1K", "10", "0.81", "SDM+EWC", "10K", "10", "0.83", "Method", "Neurons", "k", "Val.", "Acc."],
+  "name": "6",
+  "page": 43,
+  "regionBoundary": {
+    "x1": 204.0,
+    "x2": 405.12,
+    "y1": 340.32,
+    "y2": 521.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table6-1.png"
+}, {
+  "caption": "Table 4: No Pretraining - Embedded Split CIFAR10 Validation Accuracy",
+  "captionBoundary": {
+    "x1": 150.9380340576172,
+    "x2": 461.0638427734375,
+    "y1": 522.9742431640625,
+    "y2": 529.4548950195312
+  },
+  "figType": "Table",
+  "imageText": ["SDM", "1K", "1", "0.56", "SDM", "10K", "10", "0.77", "FlyModel", "1K", "32", "0.69", "FlyModel", "10K", "32", "0.82", "EWC", "1K", "NA", "0.52", "SDM+EWC", "1K", "10", "0.54", "SDM+EWC", "10K", "10", "0.84", "Oracle", "10K", "NA", "0.92", "Method", "Neurons", "k", "Val.", "Acc."],
+  "name": "4",
+  "page": 40,
+  "regionBoundary": {
+    "x1": 212.64,
+    "x2": 396.47999999999996,
+    "y1": 542.4,
+    "y2": 658.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Table4-1.png"
+}, {
+  "caption": "Figure 19: Rank ordering of continual learning algorithms remains for no ImageNet32 pretraining. Solid lines denote different algorithms. Dotted lines denote variants of an algorithm. SDM+EWC (green) with 10K neurons does the best then SDM with 10K neurons (yellow). The 1K algorithms all do approximately the same including EWC (purple), SDM+EWC (dotted brown), and SDM k=1 (pink). Results are for the 5 random seed splits of Split CIFAR 10. TopK and ReLU benchmarks both do poorly and were not run for the full set of random seeds or shown as a result.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 327.1485290527344,
+    "y2": 387.9449462890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "19",
+  "page": 40,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 106.56,
+    "y2": 316.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure19-1.png"
+}, {
+  "caption": "Figure 7: Weighting neuron read and write operations has a negligible effect on SDM. The Exponential weighting (green) as expected gives the same result as if there was a Binary weighting (blue) making it overlap perfectly. The Linear weighting (orange) results in a negligible difference that is barely visible due to high overlap.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 541.5255737304688,
+    "y2": 580.405029296875
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "(a)", "(b)"],
+  "name": "7",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 228.0,
+    "y2": 523.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure7-1.png"
+}, {
+  "caption": "Figure 12: Inhibitory Interneuron Approximates Top-K. We reproduce the Hebbian learning rule of (Gozel & Gerstner, 2021). (a) We show that it approximates having k ≈ 200 of the 1000 neurons active for 50 different MNIST inputs. (b) We show an example of the average neuron activity running the ODEs given in Eq. 13 until convergence.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.00347900390625,
+    "y1": 623.1835327148438,
+    "y2": 662.06298828125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "12",
+  "page": 30,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 451.68,
+    "y2": 610.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure12-1.png"
+}, {
+  "caption": "Figure 27: Analyzing neuron receptive fields of SDM in relation to the data manifold. (a) A UMAP plot fit on neuron weights trained on CIFAR10 pixels (orange) with the CIFAR10 data (blue). The black dot in the top left shows the location of the neuron weights that give the frog image displayed as an inset. (b) The neuron weights are shown in the center, in the top row above are the three CIFAR10 images that maximally activate this neuron showing that the neuron weights learn a superposition of similar frog images. In the bottom row are the three closest images determined by euclidian distance on the UMAP embedding. This embedding will be less precise but still shows that the manifold largely captures similar classes, aside from the horse.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0043640136719,
+    "y1": 299.7125244140625,
+    "y2": 382.42694091796875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)"],
+  "name": "27",
+  "page": 51,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 467.03999999999996,
+    "y1": 80.64,
+    "y2": 286.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure27-1.png"
+}, {
+  "caption": "Figure 23: SDM Neurons are specialized and participate democratically in learning. Plotting the entropy of each neuron (the distribution of data classes that the neuron is activated by) against the percentage of time that it is in the Top-K for all inputs.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 621.4745483398438,
+    "y2": 649.39501953125
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "(c)", "(d)", "(a)", "(b)"],
+  "name": "23",
+  "page": 47,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 506.4,
+    "y1": 158.88,
+    "y2": 603.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_JknGeelZJpHP-Figure23-1.png"
+}]

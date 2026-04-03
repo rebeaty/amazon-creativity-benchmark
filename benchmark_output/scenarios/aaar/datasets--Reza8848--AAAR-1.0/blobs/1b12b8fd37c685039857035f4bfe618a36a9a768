@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 4: Masked Siamese ConvNets (MSCN) framework. MSCN first generates multiple views from the preprocessed image using a series of standard augmentations. Then it applies random masks on each view using our masking strategy. An off-the-shelf ConvNet encoder computes the representations of these masked views. Then it applies joint-embedding loss is applied to pairs of these representation vectors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99749755859375,
+    "y1": 228.79055786132812,
+    "y2": 278.6290283203125
+  },
+  "figType": "Figure",
+  "imageText": ["𝑓.", "𝑓.", "masking", "encoder", "input", "preprocessing", "embeddings", "𝑡′", "~", "𝑇+", "𝑡", "~", "𝑇+", "𝐿(𝑍,", "𝑍’)", "𝑍\"", "𝑍"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 482.4,
+    "y1": 86.88,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Figure4-1.png"
+}, {
+  "caption": "Table 1: Few-shot Semi-supervised Learning on ImageNet-1K. We first evaluate the MSCN representations semi-supervised classification. We finetune the network with 1% of the labels. MSCN demonstrates siggnificant improvement over baselines on both SimCLR and BYOL frameworks.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9994812011719,
+    "y1": 155.85952758789062,
+    "y2": 183.780029296875
+  },
+  "figType": "Table",
+  "imageText": ["BYOL", "(Grill", "et", "al.,", "2020)", "74.3", "53.2", "+MSCN", "74.5", "(+0.2)", "55.2", "(+2.0)", "SimCLR", "(Chen", "et", "al.,", "2020a)", "69.5", "48.3", "+MSCN", "71.5", "(+2.0)", "54.0", "(+5.7)", "Method", "Linear", "Evaluation", "Finetuning", "Label", "fraction", "100%", "1%"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 165.6,
+    "x2": 444.47999999999996,
+    "y1": 204.95999999999998,
+    "y2": 281.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Table1-1.png"
+}, {
+  "caption": "Table 2: Effect of Masking on ConvNets and ViTs. We compare the effect of masking on ConvNets and ViTs. MSCN with a ConvNet backbone demonstrates similar behaviors to MSN with a ViT backbone.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.312255859375,
+    "y1": 301.6025390625,
+    "y2": 329.52301025390625
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "(He", "et", "al.,", "2016)", "ResNet-50", "24M", "76.5", "BYOL", "(Grill", "et", "al.,", "2020)", "ResNet-50", "24M", "✗", "74.3", "MSCN", "(ours)", "ResNet-50", "24M", "✓", "74.5", "Method", "Architecture", "Parameters", "Use", "Mask", "Accuracy", "Supervised", "(Touvron", "et", "al.,", "2021)", "ViT-S", "22M", "79.9", "DINO", "(Caron", "et", "al.,", "2021)", "ViT-S", "22M", "✗", "78.3", "MSN", "(Assran", "et", "al.,", "2022)", "ViT-S", "22M", "✓", "76.9"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 495.35999999999996,
+    "y1": 350.4,
+    "y2": 438.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Table2-1.png"
+}, {
+  "caption": "Table 5: Impact of view-sharing during pretraining on ImageNet-1K linear probe accuracy (in %). A view is generated with standard augmentations, including RandomResizedCrop, ColorJitter, HorizontalFlip, GaussianBlur, and Grayscale. Our standard approach applies masks to two different views. Here, we find that applying masks on a shared view results in significantly worse performance.",
+  "captionBoundary": {
+    "x1": 107.1729965209961,
+    "x2": 505.2461242675781,
+    "y1": 530.882568359375,
+    "y2": 569.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["Augmentation", "strategy", "Accuracy", "Same", "view", "+", "random", "mask", "29.1", "Different", "views", "+", "random", "mask", "65.6"],
+  "name": "5",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 209.76,
+    "x2": 399.36,
+    "y1": 590.88,
+    "y2": 629.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Table5-1.png"
+}, {
+  "caption": "Figure 6: Impact of high-pass filter parameter σ during pretraining on ImageNet-1K linear probe accuracy.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00396728515625,
+    "y1": 402.363525390625,
+    "y2": 419.32501220703125
+  },
+  "figType": "Figure",
+  "imageText": [")", "y", "(%", "ur", "ac", "a", "cc", "eN", "et", "Im", "ag", "67.5", "67.3", "67.1", "66.9", "66.7", "1", "3", "5", "7", "9", "high-pass", "filter", "sigma", "(pixel)"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 213.12,
+    "x2": 399.36,
+    "y1": 301.92,
+    "y2": 387.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Figure6-1.png"
+}, {
+  "caption": "Table 4: Object detection and instance segmentation transfer learning with a ResNet-50 pretrained on ImageNet-1K. All VOC07+12 results using Faster R-CNN (Ren et al., 2015) with C4 backbone variant (Wu et al., 2019) finetuned 24K iterations. All COCO results using Mask R-CNN (He et al., 2017) with C4 backbone variant (Wu et al., 2019) finetuned using the 1× schedule. 0.3 within the best are underlined",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2455749511719,
+    "y1": 211.77450561523438,
+    "y2": 261.61199951171875
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "53.5", "81.3", "58.8", "38.2", "58.2", "41.2", "33.3", "54.7", "35.2", "MoCo", "v2", "57.4", "82.5", "64.0", "39.3", "58.9", "42.5", "34.4", "55.8", "36.5", "SwAV", "56.1", "82.6", "62.7", "38.4", "58.6", "41.3", "33.8", "55.2", "35.9", "SimSiam", "57", "82.4", "63.7", "39.2", "59.3", "42.1", "34.4", "56.0", "36.7", "Barlow", "Twins", "56.8", "82.6", "63.4", "39.2", "59.0", "42.5", "34.3", "56.0", "36.5", "MSCN", "57.5", "83.0", "64.4", "39.1", "59.1", "42.1", "34.2", "55.7", "36.4", "APall", "AP50", "AP75", "APbb", "APbb", "50", "APbb", "75", "APmk", "APmk", "50", "APmk", "75", "Method", "VOC07+12", "det", "COCO", "det", "COCO", "instance", "seg"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 262.56,
+    "y2": 382.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Table4-1.png"
+}, {
+  "caption": "Table 3: Image classification transfer learning with a ResNet-50 pretrained on ImageNet-1K. We follow the standard evaluation protocol that trains the linear classifiers on fixed features with the same hyperparameters as other methods except for the learning rate.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00347900390625,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["BYOL", "Grill", "et", "al.", "(2020)", "54.0", "47.6", "+MSCN", "54.5", "(+0.5)", "45.7", "(-1.9)", "+MSCN", "53.8", "(+1.3)", "38.2", "(+1.0)", "Method", "Place-205", "iNat18", "SimCLR", "Chen", "et", "al.", "(2020a)", "52.5", "37.2"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 422.4,
+    "y1": 132.96,
+    "y2": 198.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Table3-1.png"
+}, {
+  "caption": "Figure 1: Underlying problems in masked siamese networks with ConvNets. Each pair in a subfigure corresponds to the original input and the masked version. (a) visualization of the input image and the masked version; (b) the color histogram was distorted with masks. The values close to the assigned mask value now represent missing information and could confuse the network; (c) visualization of the encoder’s first convolutional layer kernels after pretraining.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042724609375,
+    "y1": 164.55453491210938,
+    "y2": 214.39300537109375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "input", "images", "(b)", "histogram", "(c)", "learned", "convolution", "kernels"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 80.64,
+    "y2": 151.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Preprocessing: A high-pass filter is able to solve the problem caused by masks on ConvNets. The high-pass filter shifts the pixel value distribution so that zeros represent null information. These zeros mean that the original information can be interpolated from surrounding pixels. In addition, the mask edges on the image become invisible after applying the high-pass filter.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74530029296875,
+    "y1": 601.3355712890625,
+    "y2": 640.2139892578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 224.64,
+    "x2": 387.36,
+    "y1": 509.76,
+    "y2": 590.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Ablation Study. (a) a masking ratio of 15% is optimal for masked siamese ConvNets; (b) masked siamese ConvNets prefer a large masking grid size of 32; (c) a focal mask probability of 40% is optimal; (d) independent mask with high probability benefits siamese networks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66864013671875,
+    "y1": 295.3995361328125,
+    "y2": 323.32000732421875
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "independent", "mask", "probability", ")", "y", "(%", "ur", "ac", "a", "cc", "eN", "et", "Im", "ag", "67.5", "67.4", "67.3", "67.2", "67.1", "0", "20", "40", "60", "80", "100", "independent", "mask", "probability", "(%)", "(c)", "focal", "mask", "probability", ")", "y", "(%", "ur", "ac", "a", "cc", "eN", "et", "Im", "ag", "67.0", "67.1", "67.2", "67.3", "67.4", "67.5", "67.6", "67.7", "0", "10", "20", "30", "40", "50", "focal", "mask", "probability", "(%)", "(b)", "grid", "size", ")", "y", "(%", "ur", "ac", "a", "cc", "eN", "et", "Im", "ag", "67.4", "67.3", "67.2", "67.1", "7", "14", "28", "32", "56", "grid", "size", "(a)", "masking", "ratio", ")", "y", "(%", "ur", "ac", "a", "cc", "eN", "et", "Im", "ag", "63", "64", "65", "66", "67", "68", "10", "15", "20", "30", "50", "70", "90", "masking", "ratio", "(%)"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 484.32,
+    "y1": 81.6,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Figure5-1.png"
+}, {
+  "caption": "Figure 3: Masking Strategy: We present five effective design components that allow siamese networks to benefit from masked input. These design components are general-purpose and can work with various input formats.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.2448425292969,
+    "y1": 184.67453002929688,
+    "y2": 212.594970703125
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "asymmetry", "(e)", "multicrops", "Strong", "Augmentation", "Weak", "Augmentation", "(a)", "noisy", "mask", "(b)", "independent", "(c)", "focal", "mask"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 171.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnHz2rU0Hjp-Figure3-1.png"
+}]

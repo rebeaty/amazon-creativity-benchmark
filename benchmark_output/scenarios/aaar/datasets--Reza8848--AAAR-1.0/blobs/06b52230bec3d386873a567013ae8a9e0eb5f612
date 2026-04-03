@@ -1,0 +1,141 @@
+[{
+  "caption": "Figure 4: Impact of bias grows linearly with gradient norm and has a quadratic relationship with the amount of bias when the gradient norm tends to 0, i.e. validating expression from Theorem 2.4: ∆L(b, 0) = 1 2b 2Q∆t2 + b∥∇wL[w(t)]∥P∆t. (A) Impact of bias grows linearly with gradient norm, with the slope being the amount of bias (see second term in equation). (B) Impact of bias grows quadratically with amount of bias when gradient norm is small (see first term in equation).",
+  "captionBoundary": {
+    "x1": 107.1729965209961,
+    "x2": 505.38720703125,
+    "y1": 308.6295166015625,
+    "y2": 358.4679870605469
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 169.92,
+    "y2": 297.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Impact of variance is lower for deeper and wider VGG networks when training on CIFAR10. (A) Deeper VGG configurations, both pretrained on Imagenet or untrained, exhibit lower impact of variance. (B) Wider networks of the VGG-19 configuration exhbit lower impact of variance. Factor of downsampling indicates that the reduction in the number of filters in convolutional layers and dimensionality of intermediate fully connected layers compared to the original VGG-19 network.",
+  "captionBoundary": {
+    "x1": 107.25299835205078,
+    "x2": 505.6532897949219,
+    "y1": 578.0895385742188,
+    "y2": 627.927978515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 426.71999999999997,
+    "y2": 567.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure5-1.png"
+}, {
+  "caption": "Figure 1: Train and test accuracy of a VGG-16 network trained for 50 epochs (to convergence) on CIFAR-10 using full-batch gradient descent (with no learning rate schedule) with varying amount of variance and bias (as a fraction of the gradient norm) added to the gradient estimates.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 504.0022888183594,
+    "y1": 275.3205261230469,
+    "y2": 303.239990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 148.79999999999998,
+    "y2": 264.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure1-1.png"
+}, {
+  "caption": "Figure 6: Impact of bias is lower for (A) deeper VGG networks when training on CIFAR-10. (B) Deeper VGG networks exhibit lower gradient norm, thereby mitigating the impact of bias in training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66815185546875,
+    "y1": 228.49850463867188,
+    "y2": 245.46002197265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 80.64,
+    "y2": 217.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Empirical verification of Theorems 3.1 and 3.2 in linear ANNs. Dashed lines indicate the theoretical limit and colours indicate the empirical probability of descent. (A) True gradient descent. (B) Noise in gradient estimates, σ = ∥∇wL∥. (C) Bias in gradient estimates, where the ratio b",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7468566894531,
+    "y1": 555.4225463867188,
+    "y2": 584.8370361328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 423.84,
+    "y2": 544.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure7-1.png"
+}, {
+  "caption": "Figure 2: Experimental setup for empirical validation of our results. We restrict our focus to ∆L to understand how gradient approximations impact learning in one update step. (A) The student-teacher framework motivated by Raman et al. (2019). (B) Illustration of ∆L(bias = b, var = σ2) (defined in Eq. (2))",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1640319824219,
+    "y1": 219.49453735351562,
+    "y2": 258.3740234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 166.56,
+    "x2": 445.44,
+    "y1": 80.64,
+    "y2": 208.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Impact of variance is lower for wider, deeper and ReLU networks. Solid lines represent networks with no non-linearity, dashed lines indicate networks with ReLU non-linearity and dotted line indicates the teacher network architecture. (A) Varying width in one hidden layer linear ANNs. The width of the hidden layer is varied, keeping input/output dimensions same. (B) Linear and ReLU networks with varying width and depth plotted with number of parameters in x-axis. (C) Same as B but plotted with network width in x-axis.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.7410583496094,
+    "y1": 539.2645263671875,
+    "y2": 600.06201171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 394.56,
+    "y2": 528.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EBC60mxBwyw-Figure3-1.png"
+}]

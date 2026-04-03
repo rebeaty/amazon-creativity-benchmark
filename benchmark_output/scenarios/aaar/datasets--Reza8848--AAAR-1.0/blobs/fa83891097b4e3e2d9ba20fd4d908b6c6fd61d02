@@ -1,0 +1,161 @@
+[{
+  "caption": "Figure 4: An example of a updated gene regulatory network U (where Ui,j = |W̃i,j − α| with α = 0.2) after refining the original ATAC-seq-based network Kamimoto et al. (2020) using the Schmidt et al. (2022) dataset. Source nodes are shown as rows and targets are shown as columns for key immune-related genes. The learned edge weights in (b) recapitulate known biology such as STAT1 regulating IRF1. Also note that while many of the edges are present in the original ATAC-seq data from (a), we see some novel edges in (b) such as IFNg regulating MYC (Ramana et al., 2000).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 244.31954956054688,
+    "y2": 305.115966796875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "original", "(b)", "updated"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 80.64,
+    "y2": 229.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Figure4-1.png"
+}, {
+  "caption": "Table 1: R̄2 of OOD predictions",
+  "captionBoundary": {
+    "x1": 241.52394104003906,
+    "x2": 370.4757995605469,
+    "y1": 505.2123107910156,
+    "y2": 511.21478271484375
+  },
+  "figType": "Table",
+  "imageText": ["AE§", "0.740", "±", "0.043", "0.421", "±", "0.021", "0.804", "±", "0.020", "0.448", "±", "0.009", "0.948", "±", "0.010", "0.729", "±", "0.041", "CEVAE", "0.760", "±", "0.019", "0.436", "±", "0.014", "0.795", "±", "0.014", "0.424", "±", "0.015", "0.941", "±", "0.010", "0.632", "±", "0.034", "GANITE¶", "0.751", "±", "0.013", "0.417", "±", "0.014", "0.795", "±", "0.017", "0.443", "±", "0.025", "0.946", "±", "0.009", "0.730", "±", "0.030", "CPA", "0.836", "±", "0.002", "0.474", "±", "0.014", "0.876", "±", "0.005", "0.549", "±", "0.019", "0.962", "±", "0.005", "0.849", "±", "0.021", "VCI", "0.828", "±", "0.006", "0.492", "±", "0.011", "0.884", "±", "0.010", "0.604", "±", "0.044", "0.962", "±", "0.002", "0.865", "±", "0.038", "graphVCI", "0.841", "±", "0.002", "0.497", "±", "0.014", "0.892", "±", "0.003", "0.642", "±", "0.016", "0.965", "±", "0.002", "0.831", "±", "0.018", "all", "genes", "DE", "genes", "all", "genes", "DE", "genes", "all", "genes", "DE", "genes", "Sciplex", "Marson", "L008"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 523.68,
+    "y2": 609.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Table1-1.png"
+}, {
+  "caption": "Figure 1: The causal relation diagram. Each individual has a feature state Z following a conditional distribution p(Z|G , X). Treatment T (or counterfactual treatment T ′) along with Z determines outcome Y (or counterfactual outcome Y ′). In the causal diagram, white nodes are observed and dark grey nodes are unobserved; dashed relations are optional (case dependant). In the context of this paper, graph G is a deterministic variable that is invariant across all individuals.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0045471191406,
+    "y1": 208.12954711914062,
+    "y2": 257.96795654296875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "unfolded", "G", "Y", "′", "ZY", "T", "′", "XT", "(a)", "folded", "G", "Z", "Y", "X", "T", "Y", "′", "T", "′"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 477.12,
+    "y1": 84.96,
+    "y2": 194.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Model predictions versus true distributions for overexpression of genes in CRISPRa experiments (Schmidt et al., 2022). For two perturbations in CD8+ T cells, (a) MAP4K1 overexpression and (b) GATA3 overexpression, we plot the distribution of gene expression for unperturbed cells (”Control”) as well as ground truth gene expression for perturbed cells (”True”). Having not seen the true distribution following the perturbation, the model’s prediction (”Pred”) is shown for each gene. The predicted distributional shift relative to control often matches the true shift.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032653808594,
+    "y1": 243.08255004882812,
+    "y2": 303.87994384765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "MAP4K1", "Overexpression", "(b)", "GATA3", "Overexpression"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 486.24,
+    "y1": 80.64,
+    "y2": 229.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Figure5-1.png"
+}, {
+  "caption": "Table 2: Comparison of marginal estimators on Marson",
+  "captionBoundary": {
+    "x1": 195.36593627929688,
+    "x2": 416.6352233886719,
+    "y1": 536.08642578125,
+    "y2": 542.0888671875
+  },
+  "figType": "Table",
+  "imageText": ["40", "0.9177", "±", "0.0015", "0.9329", "±", "0.0008", "0.7211", "±", "0.0116", "0.9048", "±", "0.0040", "80", "0.9193", "±", "0.0019", "0.9337", "±", "0.0008", "0.7339", "±", "0.0149", "0.9076", "±", "0.0043", "120", "0.9178", "±", "0.0037", "0.9340", "±", "0.0008", "0.7234", "±", "0.0175", "0.9104", "±", "0.0038", "160", "0.9191", "±", "0.0009", "0.9356", "±", "0.0010", "0.7343", "±", "0.0079", "0.9175", "±", "0.0034", "Episode", "mean", "robust", "mean", "robust", "All", "Genes", "DE", "Genes"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 554.88,
+    "y2": 631.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Table2-1.png"
+}, {
+  "caption": "Figure 2: The Graph Variational Causal Inference (graphVCI) framework for counterfactual generations. In a forward pass, the encoder takes graph G (e.g. gene relation graph), outcome Y (e.g. gene expressions), covariates X (e.g. cell types, donors) and treatment T (e.g. drug perturbation) as inputs and generates latent Z; (Z, T ) and (Z, T ′) where T ′ is the counterfactual treatment are separately passed into the decoder to attain reconstruction of Y and construction of counterfactual outcome Y ′ (note that the decoder estimates the conditional outcome distribution of Y ′, in which case T ′ need not necessarily be sampled according to a certain true distribution p(T ′|X) during optimization); Y ′ is then passed back into the encoder along with G , X , T ′ to attain counterfactual latent Z ′. The objective consists of the reconstruction loss of Y , the distribution loss of Y ′ and the KL-divergence between the conditional distributions of Z and Z ′.",
+  "captionBoundary": {
+    "x1": 107.99981689453125,
+    "x2": 504.0031433105469,
+    "y1": 252.68655395507812,
+    "y2": 357.31890869140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 242.39999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Figure2-1.png"
+}, {
+  "caption": "Figure 6: (a) Graph refinement improves model training. We learned a GRN with graph refinement as described in section 2.3, and edges were retained using a threshold of α = 0.3. Following the refinement, the model is better able to reconstruct all genes and differentially expressed (DE) genes during training as can be seen in a graph of R2 vs. number of training epochs. (b) We examine whether the edges learned in refinement are accurate by comparing to a database of targets for two important TFs, STAT1 and IRF1. Refined edges between these TFs and their targets agree well with the interactions in the database, according to a precision-recall curve where we treat the database as the true label and edge weights as a probability of interaction. We also compare the refined edges (“GCN”) to a gene-gene correlation benchmark (“Corr”) and find that the refined graph can outperform the benchmark.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0033264160156,
+    "y1": 321.3005065917969,
+    "y2": 425.932861328125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "runs", "with", "different", "GRNs", "(b)", "Agreement", "of", "learned", "graph", "with", "TF", "targets"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 157.92,
+    "y2": 308.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Figure6-1.png"
+}, {
+  "caption": "Figure 3: Structure of the graphVCI encoder and decoder defined by Equations (5) to (10).",
+  "captionBoundary": {
+    "x1": 125.4429931640625,
+    "x2": 486.5572814941406,
+    "y1": 303.8045349121094,
+    "y2": 309.8070068359375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "encoder", "(b)", "decoder"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ICYasJBlZNs-Figure3-1.png"
+}]

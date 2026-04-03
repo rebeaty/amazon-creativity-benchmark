@@ -1,0 +1,321 @@
+[{
+  "caption": "Figure 3: Self-supervised pre-training for learning object-ness addresses perceptual challenges in Procgen identified by the LCD. (a) We measured the impact of our self-supervised perceptual front-end for learning games classified as having perceptual challenges (Hard ϕ) or not (Easy ϕ). The game which is helped the least by the front-end, “Leaper”, requires agents to recognize colors – a feature that is not preserved in the front-end. (b) When looking at aggregate performance across the entirety of Procgen, the benefit of pre-training is only seen on those games that the LCD deems as perceptually challenging (Hard ϕ), indicating that the current state of progress in dRL is being slowed by an inability to find benchmarks (or subsets of benchmarks) which are aligned with the algorithmic solutions being tested. One-tailed t−tests assessing the effect of learning from the perceptual front-end versus pixels are denoted by lines, * = p < 0.05.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0047302246094,
+    "y1": 318.44354248046875,
+    "y2": 423.075927734375
+  },
+  "figType": "Figure",
+  "imageText": ["*", "*", "(a)", "(b)", "Hardϕ", "EasyϕAll games", "0.6", "0.3", "0.0", "e", "sc", "or", "ize", "d", "rm", "al", "n", "no", "M", "ea", "Self-supervised", "Pixels", "Sc", "or", "e", "Sc", "or", "e", "ClimberStarpilotDodgeball", "Easyϕ", "Leaper", "Chaser", "Bossﬁght", "Bigﬁsh", "Hardϕ"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 503.03999999999996,
+    "y1": 82.56,
+    "y2": 304.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure3-1.png"
+}, {
+  "caption": "Table 2: Outlining the “Semantic” organization of each environment in the Procgen benchmark.",
+  "captionBoundary": {
+    "x1": 65.4800033569336,
+    "x2": 471.1258850097656,
+    "y1": 662.8895263671875,
+    "y2": 668.8919677734375
+  },
+  "figType": "Table",
+  "imageText": ["There", "are", "eleven", "entity", "IDs:", "(1)", "the", "player,", "(2)", "player", "projectiles,", "(3)", "slow", "enemies", "flyers,", "(4)", "fast", "enemies", "flyers,", "(5)", "enemy", "flyer", "projectiles,", "(6)", "en-", "emy", "turrets,", "(7)", "enemy", "turret", "projectiles,", "(8)", "meteors,", "(9)", "clouds,", "(10)", "the", "finish", "line,", "and", "(11)", "explosions.", "starpilot", "There", "are", "eight", "entity", "IDs:", "(1)", "the", "player", "and", "ally", "ships,", "(2)", "player", "projec-", "tiles,", "(3)", "enemy", "ships,", "including", "the", "cue", "ship,", "(4)", "the", "circle", "behind", "the", "cue", "ship,", "(5)", "barriers,", "(6)", "explosions,", "(7)", "the", "time-countdown", "status", "bar,", "and", "(8)", "the", "points-accrued", "status", "bar.", "plunder", "ninja", "There", "are", "seven", "entity", "IDs:", "(1)", "the", "player,", "(2)", "player", "projectiles,", "(3)", "the", "goal", "mushroom,", "(4)", "bombs,", "(5)", "explosions,", "(6)", "the", "bar", "indicating", "jump", "charge,", "and", "(7)", "the", "surrounding", "walls,", "ground,", "and", "platforms.", "miner", "There", "are", "five", "entity", "IDs:", "(1)", "the", "player,", "(2)", "boulders,", "(3)", "crystals,", "(4)", "the", "exit,", "and", "(5)", "dirt.", "maze", "There", "are", "three", "entity", "IDs:", "(1)", "the", "player,", "(2)", "the", "goal", "cheese,", "and", "(3)", "the", "walls.", "leaper", "There", "are", "six", "entity", "IDs:", "(1)", "the", "player,", "(2)", "cars,", "(3)", "the", "road,", "(4)", "log", "plat-", "forms,", "(5)", "the", "water,", "and", "(6)", "the", "finish", "line.", "jumper", "There", "are", "six", "entity", "IDs:", "(1)", "the", "player,", "(2)", "spikes,", "(3)", "the", "goal,", "(4)", "the", "needle", "of", "the", "compass", "and", "the", "bar", "indicating", "the", "distance", "to", "the", "goal,", "(5)", "the", "circle", "of", "the", "compass,", "and", "(6)", "the", "surrounding", "terrain.", "heist", "There", "are", "six", "entity", "IDs:", "(1)", "the", "player,", "(2-4)", "up", "to", "three", "unique", "keys", "and", "their", "corresponding", "locks,", "(5)", "the", "goal", "crystal,", "and", "(6)", "the", "walls.", "Image", "Game", "Mask", "Implementation"],
+  "name": "2",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 64.8,
+    "x2": 553.4399999999999,
+    "y1": 139.68,
+    "y2": 651.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Table2-1.png"
+}, {
+  "caption": "Table 3: Outlining the “Figure/Ground” organization of each environment in the Procgen benchmark.",
+  "captionBoundary": {
+    "x1": 65.4800033569336,
+    "x2": 496.2408752441406,
+    "y1": 664.7445678710938,
+    "y2": 670.7470092773438
+  },
+  "figType": "Table",
+  "imageText": ["fruitbot", "All", "entities", "share", "the", "same", "ID.", "dodgeball", "All", "entities", "share", "the", "same", "ID.", "coinrun", "All", "entities", "share", "the", "same", "ID.", "climber", "All", "entities", "share", "the", "same", "ID.", "chaser", "All", "entities", "share", "the", "same", "ID.", "caveflyer", "All", "entities", "share", "the", "same", "ID.", "bossfight", "All", "entities", "share", "the", "same", "ID.", "bigfish", "All", "entities", "share", "the", "same", "ID.", "Image", "Game", "Mask", "Details"],
+  "name": "3",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 64.8,
+    "x2": 541.4399999999999,
+    "y1": 138.72,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Table3-1.png"
+}, {
+  "caption": "Figure 11: Training dRL agents with varying levels of stochastic feedback using the proximal policy gradient algorithm. X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes rewards on training levels. We trained these agents for a total of 100M steps. The perceptual inputs to these agents were semantic representations. While performing evaluations, the reward mechanisms were set to the original configuration thus effectively only testing the impact of these perturbations on policy learning.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0033264160156,
+    "y1": 576.695556640625,
+    "y2": 637.4929809570312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 171.84,
+    "y2": 562.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure11-1.png"
+}, {
+  "caption": "Figure 1: The Learning Challenge Diagnosticator (LCD) separately measures the reinforcement learning or the perceptual challenge of an environment and task. (a) We use LCD to compute perceptual and reinforcement learning challenges in each game of the Procgen Benchmark. (b) Perceptual challenges are assessed by comparing the total reward accrued by agents that learn over visual representations with different amounts of structure: pixels, figure/ground segmentation masks, and semantic segmentation masks (see Appendix. A.6). (c) Reinforcement learning challenges are computed by feeding agents perceptually organized scenes (i.e., semantically segmented; second and third rows), and then comparing the total reward accrued by one agent playing in an environment with stochastic manipulations of reward (randomly masked and modulated; third row) to another agent playing in the normal environment (second row). (d) The taxonomy of Procgen reveals each game’s relative perceptual and reinforcement learning challenge.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039367675781,
+    "y1": 467.3705139160156,
+    "y2": 582.9619140625
+  },
+  "figType": "Figure",
+  "imageText": ["Easy", "Hard", "!", "\"", "Hard", "Easy", "!", "\"", "Easy", "Easy", "!", "\"", "Hard", "Hard", "!", "\"", "Plunder", "Caveﬂyer", "Dodgeball", "Fruitbot", "Ninja", "Coinrun", "Starpilot", "Climber", "HeistMinerJumper", "Chaser", "Bossﬁght", "Leaper", "Maze", "Bigﬁsh", "(", ")", "\"", "ng", "e", "al", "le", "g", "ch", "rn", "in", "t", "l", "ea", "em", "en", "fo", "rc", "Re", "in", "Perceptual", "challenge", "(", ")!", "Reward:", "+0", "Reward:", "+0", "Reward:", "+0", "Reward:", "+0", "True", "reward:", "+1", "Acquired:", "+2", "True", "reward:", "+1", "Acquired:", "+0", "True", "reward:", "+1", "Acquired:", "+2", "Reward:", "+1", "Reward:", "+1", "Reward:", "+1", "Time", "Time", "Reward:", "+1", "Miner", "Heist", "Climber", "Bigﬁsh", "Ninja", "Jumper", "Coinrun", "Chaser", "Plunder", "Leaper", "Dodgeball", "Caveﬂyer", "Starpilot", "Maze", "Fruitbot", "Bossﬁght", "(d)", "(b)", "(c)", "(a)", "Pixels", "Semantic", "segmentation", "Semantic", "segmentation", "C", "om", "pute", "diﬀerence", "in", "total", "rew", "ard", "Reinforcement", "learning", "challenge", "(", ")", "Measure", "the", "impact", "of", "reward", "stochasticity", "on", "performance.", "\"", "Bigﬁsh:", "Eat", "ﬁshes", "smaller", "than", "you", "(green)", "tio", "ns", "en", "ta", "pr", "es", "al", "re", "Vi", "su", "Pixels", "Fig/ground", "seg.", "Semantic", "segmentation", "C", "om", "pute", "diﬀerence", "in", "total", "rew", "ard", "ur", "ed", "tru", "ct", "as", "t", "s", "ed", "Le", "ct", "ur", "t", "s", "tru", "M", "os", "Perceptual", "challenge", "(", ")", "Measure", "the", "impact", "of", "diﬀerent", "visual", "representations", "on", "performance.", "!", "Reward:", "+1", "Reward:", "+1", "Reward:", "+1", "a", "ball", "Dodgeball:", "You", "(green)", "tag", "the", "other", "players", "with"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 451.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure1-1.png"
+}, {
+  "caption": "Figure 4: LCD measurements of the perceptual and reinforcement learning challenges in Procgen translate across dRL algorithms. Measurements of visual challenges ϕ (left) and reinforcement learning challenges ψ (right) faced by PPO agents were significantly correlated with the challenges of PPG agents, indicating that results derived from applying the LCD to simpler and loweroverhead algorithms can guide the development of agents pushing the state-of-the-art.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032043457031,
+    "y1": 242.47854614257812,
+    "y2": 292.31597900390625
+  },
+  "figType": "Figure",
+  "imageText": ["#", "=", "0.63,", "p", "<", "0.01", "#", "=", "0.45,", "p", "<", "0.05", "1", "0", "1", "G", "\"", "PP", "0", "\"PPO", "1", "0", "1", "!P", "PG", "0", "!PPO", "Caveﬂyer", "Ninja", "Jumper", "Plunder", "Miner", "Starpilot", "Climber", "Maze", "Coinrun", "Bossﬁght", "Bigﬁsh", "Fruitbot", "Heist", "Chaser", "Leaper", "Dodgeball", "Bigﬁsh", "Caveﬂyer", "Plunder", "Fruitbot", "Dodgeball", "Coinrun", "Ninja", "Starpilot", "Climber", "Jumper", "Miner", "Bossﬁght", "Heist", "Chaser", "Leaper", "Maze"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.47999999999999,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 226.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure4-1.png"
+}, {
+  "caption": "Figure 12: Policy learning experiments in dRL agents operating on visual representations learned from natural language supervision. We test the extent to which generalist visual representations support policy learning. We find that while CLIP Radford et al. (2021), a transformer-based architecture, is state-of-the-art on zero-shot image classification, its representations do not support policy learning adeptly. We train agents on both the “easy” and “hard” versions of Procgen. While our agent was able to learn certain tasks in the “easy” mode, they predominantly struggled in the “hard” mode. X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes rewards. We trained these agents for a total of 200M steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036315917969,
+    "y1": 568.8855590820312,
+    "y2": 651.5999755859375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 156.96,
+    "y2": 554.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure12-1.png"
+}, {
+  "caption": "Figure 8: Normalized reward curves, on i.i.d. generalization levels, while systematically varying perceptual complexity. X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes normalized rewards. We trained all these agents for a total of 200M steps. Agents were evaluated approximately every 60K steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0048828125,
+    "y1": 588.4325561523438,
+    "y2": 627.31201171875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 181.92,
+    "y2": 574.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure8-1.png"
+}, {
+  "caption": "Figure 13: The effect of “reward shaping” on Leaper – a high ψ task as predicted by our taxonomy. In the traditionally challenging reinforcement learning problem we find that encouraging agents to discover sub-goals significantly improved both the sample efficiency and generalization capacity (t = 41.03, p < .001). X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes normalized rewards. We trained both these agents on semantic representations for a total of 200M steps. While performing evaluations, we revert to the original reward scheme to remain compatible for comparing to the “naive” model.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 306.4695129394531,
+    "y2": 378.22491455078125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "13",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 156.96,
+    "x2": 455.03999999999996,
+    "y1": 80.64,
+    "y2": 292.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure13-1.png"
+}, {
+  "caption": "Figure 9: Normalized reward curves, on i.i.d. generalization levels, while systematically varying reward stochasticity. X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes normalized rewards. We trained all these agents for a total of 200M steps. The perceptual input to these agents were semantic representations. Agents were evaluated approximately every 60K steps. While performing evaluations, the reward mechanisms were set to the original configuration thus effectively only testing the impact of these perturbations on policy learning.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032958984375,
+    "y1": 571.9935302734375,
+    "y2": 643.75
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 164.64,
+    "y2": 558.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure9-1.png"
+}, {
+  "caption": "Figure 7: Normalized reward curves while systematically varying reward stochasticity. X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes normalized rewards. We trained all these agents for a total of 200M steps. The perceptual input to these agents were semantic representations. While performing evaluations, the reward mechanisms were set to the original configuration thus effectively only testing the impact of these perturbations on policy learning.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 578.653564453125,
+    "y2": 639.4509887695312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 169.92,
+    "y2": 564.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure7-1.png"
+}, {
+  "caption": "Table 4: Outlining the “Figure/Ground” organization of each environment in the Procgen benchmark.",
+  "captionBoundary": {
+    "x1": 65.4800033569336,
+    "x2": 496.2408752441406,
+    "y1": 661.0355834960938,
+    "y2": 667.0380249023438
+  },
+  "figType": "Table",
+  "imageText": ["starpilot", "All", "entities", "share", "the", "same", "ID.", "plunder", "There", "are", "five", "entity", "IDs:", "(1)", "the", "player", "and", "friendly", "ships,", "(2)", "enemy", "ships,", "including", "the", "cue", "ship,", "(3)", "the", "time-countdown", "status", "bar,", "(4)", "the", "points-", "accrued", "status", "bar,", "and", "(5)", "all", "other", "entities.", "ninja", "There", "are", "two", "entity", "IDs:", "(1)", "the", "bar", "indicating", "jump", "charge,", "and", "(2)", "all", "other", "entities.", "miner", "All", "entities", "share", "the", "same", "ID.", "maze", "All", "entities", "share", "the", "same", "ID.", "leaper", "There", "are", "two", "entity", "IDs:", "(1)", "the", "road", "and", "water,", "and", "(2)", "all", "other", "entities.", "jumper", "There", "are", "three", "entity", "IDs:", "(1)", "the", "needle", "of", "the", "compass", "and", "the", "bar", "in-", "dicating", "the", "distance", "to", "the", "goal,", "(2)", "the", "circle", "of", "the", "compass,", "and", "(3)", "all", "other", "entities.", "heist", "There", "are", "four", "entity", "IDs:", "(1-3)", "up", "to", "three", "unique", "keys", "and", "their", "corre-", "sponding", "locks,", "and", "(4)", "all", "other", "entities.", "Image", "Game", "Mask", "Implementation"],
+  "name": "4",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 64.8,
+    "x2": 553.4399999999999,
+    "y1": 141.6,
+    "y2": 650.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Table4-1.png"
+}, {
+  "caption": "Table 1: Outlining the “Semantic” organization of each environment in the Procgen benchmark.",
+  "captionBoundary": {
+    "x1": 65.4800033569336,
+    "x2": 471.1258850097656,
+    "y1": 664.7445678710938,
+    "y2": 670.7470092773438
+  },
+  "figType": "Table",
+  "imageText": ["There", "are", "eight", "entity", "IDs:", "(1)", "the", "player,", "(2)", "player", "projectiles,", "(3)", "reward-", "ing", "objects,", "(4)", "penalizing", "objects,", "(5)", "locks,", "(6)", "locked", "doors,", "(7)", "the", "goal,", "and", "(8)", "barriers", "and", "the", "terrain", "below", "and", "above", "the", "beginning", "and", "end", "of", "each", "episode,", "respectively.", "fruitbot", "dodgeball", "There", "are", "seven", "entity", "IDs:", "(1)", "the", "player,", "(2)", "player", "projectiles,", "(3)", "the", "enemies,", "(4)", "enemy", "projectiles,", "(5)", "the", "locked", "exit,", "(6)", "the", "unlocked", "exit,", "and", "(7)", "the", "walls.", "coinrun", "There", "are", "eight", "entity", "IDs:", "(1)", "the", "player,", "(2)", "enemies,", "(3)", "enemy", "barriers,", "(4)", "saw", "obstacles,", "(5)", "lava", "obstacles,", "(6)", "the", "goal", "star,", "(7)", "crates,", "and", "(8)", "the", "surrounding", "walls", "and", "ground.", "climber", "There", "are", "four", "entity", "IDs:", "(1)", "the", "player,", "(2)", "enemies,", "(3)", "the", "star", "rewards,", "and", "(4)", "the", "surrounding", "walls,", "ground,", "and", "platforms.", "chaser", "There", "are", "seven", "entity", "IDs:", "(1)", "the", "player,", "(2)", "enemies,", "(3)", "enemies", "in", "their", "weakened", "state,", "(4)", "enemy", "eggs,", "(5)", "small", "collectible", "squares,", "(6)", "large", "collectible", "stars,", "and", "(7)", "the", "walls.", "caveflyer", "There", "are", "eight", "entity", "IDs:", "(1)", "the", "player,", "(2)", "enemy", "ships,", "(3)", "player", "pro-", "jectiles,", "(4)", "targets,", "(5)", "the", "goal", "landing", "pad,", "(6)", "meteors,", "(7)", "explosions,", "and", "(8)", "the", "surrounding", "terrain.", "bossfight", "There", "are", "seven", "entity", "IDs:", "(1)", "the", "player,", "(2)", "player", "projectiles,", "(3)", "the", "enemy,", "(4)", "enemy", "projectiles,", "(5)", "the", "enemy’s", "shield,", "(6)", "meteors,", "and", "(7)", "explosions.", "bigfish", "There", "are", "two", "entity", "IDs:", "(1)", "the", "player,", "and", "(2)", "all", "other", "fish.", "Image", "Game", "Mask", "Details"],
+  "name": "1",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 64.8,
+    "x2": 553.4399999999999,
+    "y1": 138.72,
+    "y2": 653.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Table1-1.png"
+}, {
+  "caption": "Figure 5: A subset of games in Procgen see a synergistic benefit from co-training perception and action/policies end-to-end. We compared the magnitude of improvement over baseline (PPO/pixels) agents experienced when they were given an ideal reinforcement learning algorithm (PPG) and perceptual representations (semantic segmentation) to the additive improvement of an agent given PPG over pixels and an agent given PPO and semantic segmentation inputs. Only 6/16 games benefit from co-training.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0035095214844,
+    "y1": 304.9095153808594,
+    "y2": 420.5008544921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 505.44,
+    "y1": 137.76,
+    "y2": 290.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure5-1.png"
+}, {
+  "caption": "Figure 10: Training dRL agents with varying levels of perceptual complexity using the proximal policy gradient algorithm. X-axis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes rewards on training levels. We trained these agents for a total of 100M steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 587.654541015625,
+    "y2": 626.5339965820312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 182.88,
+    "y2": 573.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure10-1.png"
+}, {
+  "caption": "Figure 6: Normalized reward curves while systematically varying perceptual complexity. Xaxis denotes the number of “interactions” an agent performs with its environment during training and Y-axis denotes normalized rewards. We trained all these agents for a total of 200M steps.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 593.3355712890625,
+    "y2": 621.2559814453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 187.68,
+    "y2": 579.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_ElI9znK_eUz-Figure6-1.png"
+}]

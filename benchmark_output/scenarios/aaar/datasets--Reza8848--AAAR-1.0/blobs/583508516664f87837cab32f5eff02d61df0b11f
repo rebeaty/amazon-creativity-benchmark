@@ -1,0 +1,521 @@
+[{
+  "caption": "Table 1: Quantitative results on OpenImages. *: reported as 0.0 due to rounding.",
+  "captionBoundary": {
+    "x1": 347.7860107421875,
+    "x2": 505.4863586425781,
+    "y1": 476.1375427246094,
+    "y2": 492.1029968261719
+  },
+  "figType": "Table",
+  "imageText": ["IC-GAN", "5.9", "±", "0.1", "23.8", "±", "0.1", "M&Ms", "(ours)", "6.1", "±", "0.1", "8.3", "±", "0.1", "256×256", "IC-GAN", "4.8", "±", "0.0*", "19.6", "±", "0.1", "M&Ms", "(ours)", "4.7", "±", "0.0*", "5.3", "±", "0.1", "128×128", "↓FIDx", "↓FIDo"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 506.4,
+    "y1": 504.96,
+    "y2": 602.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table1-1.png"
+}, {
+  "caption": "Table 8: Ablation study of the usage of object (Obj.) features (F) or class labels (C), and to analyze the effect of the scene-object loss weight λ as well as the cardinality ko of the object nearest neighbor set Ao i,c. Note that for λ = 0.0 M&Ms reverts to IC-GAN. All model variations have been trained with one object per background scene. No horizontal flips were used as data augmentation. *: Some non-zero standard deviations are reported as 0.0 due to rounding.",
+  "captionBoundary": {
+    "x1": 327.2558898925781,
+    "x2": 504.0040283203125,
+    "y1": 457.7085266113281,
+    "y2": 573.2999877929688
+  },
+  "figType": "Table",
+  "imageText": ["F", "0.0", "-", "8.6", "±", "0.1", "21.1", "±", "0.1", "F", "0.1", "5", "9.7", "±", "0.0*", "7.1", "±", "0.1", "F", "0.25", "5", "10.7", "±", "0.1", "7.2", "±", "0.0*", "F", "0.5", "5", "11.3", "±", "0.1", "6.6", "±", "0.0*", "F", "0.75", "5", "11.2", "±", "0.0*", "6.1", "±", "0.0*", "F", "0.9", "5", "13.6", "±", "0.1*", "6.1", "±", "0.1", "F", "0.5", "25", "11.0", "±", "0.0*", "7.1", "±", "0.0*", "F", "0.5", "50", "12.3", "±", "0.1", "7.6", "±", "0.0*", "F", "0.5", "5", "11.3", "±", "0.1", "6.6", "±", "0.0*", "C", "0.5", "-", "8.9", "±", "0.1", "5.3", "±", "0.0*", "Obj.", "λ", "ko", "↓FIDx", "↓FIDo"],
+  "name": "8",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 329.76,
+    "x2": 503.03999999999996,
+    "y1": 585.6,
+    "y2": 718.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table8-1.png"
+}, {
+  "caption": "Figure 14: Collage conditionings and their respective generated samples using M&Ms trained with object class labels in the first row, and two conditionings for M&Ms trained with object features instead, in the second row. Both models have been trained on OpenImages500k (128×128). Note that input collages are depicted as RGB overlays.",
+  "captionBoundary": {
+    "x1": 107.9998779296875,
+    "x2": 504.0009765625,
+    "y1": 243.12850952148438,
+    "y2": 282.0069885253906
+  },
+  "figType": "Figure",
+  "imageText": ["Collage", "Sample", "#1", "Sample", "#2", "Collage", "Sample", "#1", "Sample", "#2", "Conditioning", "Sample", "#1", "Sample", "#2", "Sample", "#3", "Sample", "#4", "Sample", "#5"],
+  "name": "14",
+  "page": 24,
+  "regionBoundary": {
+    "x1": 106.56,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 232.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure14-1.png"
+}, {
+  "caption": "Table 9: Comparison with an M&Ms trained on a single or multiple objects per background scene on OpenImages500k (128×128). OT: number of conditioning objects during training, OI: number of conditioning objects during inference. *: Some non-zero standard deviations are reported as 0.0 due to rounding.",
+  "captionBoundary": {
+    "x1": 332.92498779296875,
+    "x2": 505.6521301269531,
+    "y1": 176.93753051757812,
+    "y2": 259.65301513671875
+  },
+  "figType": "Table",
+  "imageText": ["M&Ms", "1", "1", "9.4", "±", "0.1", "5.3", "±", "0.0*", "M&Ms", "5", "1", "6.3", "±", "0.0", "4.5", "±", "0.0", "M&Ms", "1", "5", "9.3", "±", "0.1", "5.4", "±", "0.1", "M&Ms", "2", "5", "5.6", "±", "0.0*", "3.6", "±", "0.0*", "M&Ms", "3", "5", "5.6", "±", "0.0*", "3.7", "±", "0.0*", "M&Ms", "5", "5", "5.6", "±", "0.0*", "3.9", "±", "0.0*", "OT", "OI", "↓FIDx", "↓FIDo"],
+  "name": "9",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 332.64,
+    "x2": 505.44,
+    "y1": 272.64,
+    "y2": 354.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table9-1.png"
+}, {
+  "caption": "Table 10: Feature extractor ablation on OpenImages500k (128 × 128), comparing SwAV, DINO (Caron et al., 2021) and iBOT as feature extractors for both scene and object features. *: Some non-zero standard deviations are reported as 0.0 due to rounding.",
+  "captionBoundary": {
+    "x1": 298.90899658203125,
+    "x2": 505.6559143066406,
+    "y1": 486.9215393066406,
+    "y2": 547.718017578125
+  },
+  "figType": "Table",
+  "imageText": ["M&Ms", "SwAV", "5.6", "±", "0.0*", "3.9", "±", "0.0*", "M&Ms", "DINO", "7.2", "±", "0.0*", "5.5", "±", "0.0*", "M&Ms", "iBOT", "6.8", "±", "0.1", "5.0", "±", "0.1", "Features", "↓FIDx", "↓FIDo"],
+  "name": "10",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 489.12,
+    "y1": 560.64,
+    "y2": 612.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table10-1.png"
+}, {
+  "caption": "Table 4: Links to the assets used in the paper.",
+  "captionBoundary": {
+    "x1": 215.4600067138672,
+    "x2": 396.2314147949219,
+    "y1": 478.3805236816406,
+    "y2": 484.38299560546875
+  },
+  "figType": "Table",
+  "imageText": ["•", "\"DSC09463\"", "by", "Tanner", "Ford", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "15.", "•", "\"IndieWebCamp", "2011", "Food\"", "by", "Aaron", "Parecki", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "15.", "•", "\"DSC_5102\"", "by", "Shane", "Global", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "15.", "•", "\"Lake", "McDonald", "Lodge\"", "by", "GlacierNPS", "is", "marked", "with", "Public", "Domain", "Mark", "1.0.", "Appears", "in", "Figure", "11.", "•", "\"fortune", "telling", "robot\"", "by", "Paul", "Keller", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "10.", "•", "\"Robot\"", "by", "Andy", "Field", "(Field", "Office)", "is", "licensed", "under", "CC", "BY-NC-SA", "2.0.", "Appears", "in", "Figure", "10.", "•", "\"Cacti", "at", "Moorten", "Botanical", "Garden", "-", "Palm", "Springs,", "California\"", "by", "ChrisGoldNY", "is", "licensed", "under", "CC", "BY-NC", "2.0.", "Appears", "in", "Figure", "10.", "•", "\"cacti", "wall\"", "by", "ikarusmedia", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "10.", "•", "\"beach\"", "by", "barnyz", "is", "licensed", "under", "CC", "BY-NC-ND", "2.0.", "Appears", "in", "Figures", "10", "and", "11.", "•", "\"Boston", "at", "Night\"", "by", "ReneS", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "9.", "•", "\"Liberty", "Star", "Schooner", "in", "Boston", "Harbor\"", "by", "massmatt", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figures", "4", "and", "9.", "•", "\"Fritz", "Rebotzky", "house", "-", "2401", "Queets", "Avenue,", "Hoquiam", "WA\"", "by", "JOHN", "LLOYD", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "14.", "•", "\"IMG_3137\"", "by", "Simon", "Davison", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "14.", "•", "\"St.", "Petersburg,", "Undated\"", "by", "Nathan", "Hughes", "Hamilton", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "3b.", "•", "\"Conseil", "Régional", "de", "Haute-Normandie\"", "by", "Frédéric", "BISSON", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "3b.", "•", "\"Alcatraz", "Island\"", "by", "Florian", "Plag", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "3b.", "•", "\"The", "view", "from", "my", "hospital", "room", "\"", "by", "\"Marywhotravels\"", "is", "licensed", "under", "CC", "BY", "2.0.", "Appears", "in", "Figure", "3b."],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.91999999999996,
+    "y1": 38.879999999999995,
+    "y2": 457.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table4-1.png"
+}, {
+  "caption": "Table 5: Assets licensing information.",
+  "captionBoundary": {
+    "x1": 229.98599243164062,
+    "x2": 381.70635986328125,
+    "y1": 611.7635498046875,
+    "y2": 617.7659912109375
+  },
+  "figType": "Table",
+  "imageText": ["IC-GAN", "https://github.com/facebookresearch/ic_gan", "BigGAN", "https://github.com/ajbrock/BigGAN-PyTorch", "SwAV", "https://github.com/facebookresearch/swav", "Faiss", "https://github.com/facebookresearch/faiss", "OpenImages", "(v4)", "https://storage.googleapis.com/openimages/web/index.html", "MS-COCO", "https://cocodataset.org", "DM-GAN", "https://github.com/MinfengZhu/DM-GAN", "Asset", "Link"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 493.44,
+    "y1": 497.28,
+    "y2": 589.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table5-1.png"
+}, {
+  "caption": "Figure 8: Four uncommon collages – with respect to OpenImages (v4) – with overlapping objects derived from the MS-COCO dataset and the corresponding samples from M&Ms. Note that the red boxes are overlaid on collage images to ease image interpretation. Faces in the input and generated images have been blurred out.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0040283203125,
+    "y1": 486.560546875,
+    "y2": 525.4400634765625
+  },
+  "figType": "Figure",
+  "imageText": ["Collage", "Sample", "#1", "Sample", "#2", "Sample", "#3"],
+  "name": "8",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 475.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure8-1.png"
+}, {
+  "caption": "Figure 1: Approaches to controllable scene generation (from top): our approach based on collages (M&Ms), text-to-image model (Make-a-scene (Gafni et al., 2022), samples are a courtesy of the paper authors), BB-to-image model (LostGANv2 (Sun & Wu, 2020)), and Mask-to-image (GauGAN2 (Park et al., 2019)). Note that the models have been trained on different datasets and, as such, GauGAN2 cannot generate people as the model was not trained on a dataset containing this class. Visualization of the input collage to M&Ms is depicted as a collaged RGB image for simplicity.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.24554443359375,
+    "y1": 470.7015686035156,
+    "y2": 531.498046875
+  },
+  "figType": "Figure",
+  "imageText": ["im", "ag", "e", "M", "as", "k-", "to", "-i", "m", "ag", "e", "-t", "o-", "B", "B", "(O", "ur", "s)", "Te", "xt", "-t", "o-", "im", "ag", "e", "A", "field", "in", "the", "mountains", "with", "a", "forest", "in", "the", "back-", "ground,", "with", "a", "person", "in", "sport", "clothes", "on", "the", "bottom-left", "corner", "of", "the", "image", "and", "a", "wooden", "house", "on", "the", "top-right", "cor-", "ner", "of", "the", "image.", "M", "s", "M", "&", "Conditioning", "Sample", "#1", "Sample", "#2", "Sample", "#3"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 500.15999999999997,
+    "y1": 81.6,
+    "y2": 460.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Example of collage conditionings and generated samples of IC-GAN and M&Ms, both trained on OpenImages (256×256). We depict three scenarios: (Collage #1) a collage with one boat object; (Collage #2) a collage where the original object has been replaced with a random object of the same class; (Collage #3) a collage where the original object has been replaced with a random dataset object. In all cases, the bounding box of the randomly sampled object is used. Note that input collages to the M&Ms model are depicted as RGB overlays with red boxes to ease visualization. For IC-GAN, the RGB overlay is used as the input image, and no bounding box information is used.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.1650085449219,
+    "y1": 228.48751831054688,
+    "y2": 300.2439880371094
+  },
+  "figType": "Figure",
+  "imageText": ["s)", "(o", "ur", "M", "s", "M", "&", "A", "N", "IC", "-G", "Collage", "#1", "Generations", "#1", "Collage", "#2", "Generations", "#2", "Collage", "#3", "Generations", "#3"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 499.2,
+    "y1": 82.56,
+    "y2": 214.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure4-1.png"
+}, {
+  "caption": "Table 2: Quantitative results on OpenImages (256×256) when using random collages obtained by altering either the object images or their bounding boxes (BB). Objects can be replaced by another object sampled from: the original object’s neighbourhood (SN), the original object’s class (SC), or the entire dataset of objects (SR). We either keep the BB corresponding to the original object (SO) or use the BB corresponding to the sampled object (SS). *: reported as 0.0 due to rounding.",
+  "captionBoundary": {
+    "x1": 318.8509826660156,
+    "x2": 505.4886779785156,
+    "y1": 316.23553466796875,
+    "y2": 411.9010009765625
+  },
+  "figType": "Table",
+  "imageText": ["ou", "rs", ")", "SN", "SO", "5.9", "±", "0.0*", "8.2", "±", "0.1", "SC", "SO", "9.1", "±", "0.0*", "8.8", "±", "0.1", "SR", "SO", "15.2", "±", "0.1", "11.4", "±", "0.1", "SN", "SS", "5.9", "±", "0.0*", "9.8", "±", "0.1", "SC", "SS", "9.6", "±", "0.0*", "8.3", "±", "0.1", "SR", "SS", "16.0", "±", "0.1", "9.2", "±", "0.1", "M", "s(", "M", "&", "SN", "SO", "7.3", "±", "0.1", "24.5", "±", "0.2", "SC", "SO", "14.9", "±", "0.2", "30.7", "±", "0.3", "SR", "SO", "18.8", "±", "0.1", "33.0", "±", "0.3", "SN", "SS", "6.8", "±", "0.0", "22.6", "±", "0.1", "SC", "SS", "11.1", "±", "0.1", "28.1", "±", "0.2", "SR", "SS", "16.6", "±", "2.8", "30.9", "±", "2.9", "A", "N", "IC", "-G", "Object", "BB", "↓FIDx", "↓FIDo"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 321.59999999999997,
+    "x2": 500.15999999999997,
+    "y1": 424.32,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table2-1.png"
+}, {
+  "caption": "Figure 9: Example of collage conditionings and generated samples of IC-GAN and M&Ms, both trained on OpenImages (256×256). We depict three scenarios: (Collage #1) a collage with original objects; (Collage #2) a collage where the original objects have been replaced with random objects of the same class; (Collage #3) a collage where the original objects have been replaced with a random objects from the dataset. In collages #2 and #3, the bounding box of the randomly sampled object is used. Note that input collages to the M&Ms model are depicted as RGB overlays with red boxes for visualization purposes. Identifiable faces in the input and generated images have been blurred out.",
+  "captionBoundary": {
+    "x1": 107.75090789794922,
+    "x2": 504.1694641113281,
+    "y1": 573.771484375,
+    "y2": 645.5269775390625
+  },
+  "figType": "Figure",
+  "imageText": ["s)", "(o", "ur", "M", "s", "M", "&", "A", "N", "IC", "-G", "N", "M", "&", "M", "s", "(o", "ur", "s)", "(o", "ur", "s)", "IC", "-G", "A", "M", "s", "M", "&", "A", "N", "IC", "-G", "Collage", "#1", "Generations", "#1", "Collage", "#2", "Generations", "#2", "Collage", "#3", "Generations", "#3"],
+  "name": "9",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 499.2,
+    "y1": 177.6,
+    "y2": 560.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure9-1.png"
+}, {
+  "caption": "Figure 2: Images generated with M&Ms from four different collages. We obtained collages from four reference images (leftmost column) coming from OpenImages and MS-COCO. Collages #1, #2 and #3 are obtained by combining only the OpenImages images, while the collage #4 highlights the zero-shot performance of M&Ms as it contains elements both from OpenImages and MS-COCO images. Collage #1 consists of a background scene without added objects. Note that input collages to the model are depicted as RGB overlays. Faces in the input images have been blurred out.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.247314453125,
+    "y1": 342.1775207519531,
+    "y2": 402.9750061035156
+  },
+  "figType": "Figure",
+  "imageText": ["Generations", "#4", "Collage", "#4", "Generations", "#3", "Collage", "#3", "Generations", "#2", "Collage", "#2", "Generations", "#1", "Ref.", "images", "Collage", "#1"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 331.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure2-1.png"
+}, {
+  "caption": "Table 6: Fidelity score – measured with cosine similarity – for images and objects on OpenImages (256×256) when using collages obtained by optionally altering either the object images or their bounding boxes (BB). Objects can be from the original image (SO) or can be replaced by another object sampled from: the original object’s neighbourhood (SN), the original object’s class (SC), or the entire dataset of objects (SR). We either keep the BB corresponding to the original object (SO) or use the BB corresponding to the sampled object (SS).",
+  "captionBoundary": {
+    "x1": 319.4389953613281,
+    "x2": 505.490478515625,
+    "y1": 127.06754302978516,
+    "y2": 233.69195556640625
+  },
+  "figType": "Table",
+  "imageText": ["ou", "rs", ")", "SO", "SO", "0.78", "±", "0.1", "0.65", "±", "0.1", "SN", "SO", "0.77", "±", "0.1", "0.59", "±", "0.1", "SC", "SO", "0.73", "±", "0.1", "0.48", "±", "0.1", "SN", "SS", "0.78", "±", "0.1", "0.64", "±", "0.1", "SC", "SS", "0.76", "±", "0.1", "0.52", "±", "0.1", "SR", "SS", "0.75", "±", "0.1", "0.51", "±", "0.1", "M", "s(", "M", "&", "SO", "SO", "0.78", "±", "0.1", "0.53", "±", "0.2", "SN", "SO", "0.77", "±", "0.1", "0.50", "±", "0.2", "SC", "SO", "0.76", "±", "0.1", "0.45", "±", "0.1", "SN", "SS", "0.78", "±", "0.1", "0.55", "±", "0.2", "SC", "SS", "0.77", "±", "0.1", "0.45", "±", "0.1", "SR", "SS", "0.77", "±", "0.1", "0.44", "±", "0.1", "A", "N", "IC", "-G", "Object", "BB", "↑Fidelityx", "↑Fidelityo"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 321.59999999999997,
+    "x2": 500.15999999999997,
+    "y1": 245.28,
+    "y2": 392.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table6-1.png"
+}, {
+  "caption": "Figure 11: Collage conditionings with rectangle and non-rectangle object masks and the corresponding generated samples obtained with M&Ms, trained on OpenImages (256×256). In Collage #1, the object mask is a rectangle bounding box, illustred by copy-pasting the object in the RGB space. In Collage #2 and #3, despite using the same object features as in Collage #1, the object masks, depicted in black pixels, change shape and size. The generated object roughly adapts to the new object masks.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6553039550781,
+    "y1": 625.2195434570312,
+    "y2": 675.0570068359375
+  },
+  "figType": "Figure",
+  "imageText": ["Collage", "#1", "Generation", "#1", "Collage", "#2", "Generation", "#2", "Collage", "#3", "Generation", "#3"],
+  "name": "11",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 492.0,
+    "y1": 541.4399999999999,
+    "y2": 611.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Collage conditionings with unseen class objects and generated samples obtained with M&Ms, trained on OpenImages (256×256). Collages are obtained by combining images collected in the wild, using the Creative Commons search engine. Cacti and robot objects, classes not present in OpenImages, are used in the first and second row respectively. Note that input collages to the M&Ms model are depicted as RGB overlays with red boxes to ease visualization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0022277832031,
+    "y1": 362.57452392578125,
+    "y2": 412.4119873046875
+  },
+  "figType": "Figure",
+  "imageText": ["Collage", "Generations", "Collage", "Generations"],
+  "name": "10",
+  "page": 22,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 501.12,
+    "y1": 148.32,
+    "y2": 348.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure10-1.png"
+}, {
+  "caption": "Table 11: Impact study on the bounding boxes coordinates used to train M&Ms on OpenImages500k (128×128). GT: ground-truth bounding boxes, RND: random crops, Mask-RCNN (He et al., 2017) predictions and OLN (Kim et al., 2022) predictions. *: Some non-zero standard deviations are reported as 0.0 due to rounding.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 313.7470397949219,
+    "y1": 579.2105712890625,
+    "y2": 650.9669799804688
+  },
+  "figType": "Table",
+  "imageText": ["M&Ms", "GT", "5.6", "±", "0.0*", "3.9", "±", "0.0*", "M&Ms", "RND", "8.5", "±", "0.0*", "12.9", "±", "0.1", "M&Ms", "Mask-RCNN", "13.3", "±", "0.1", "8.7", "±", "0.0*", "M&Ms", "OLN", "18.0", "±", "0.1", "8.6", "±", "0.0*", "Bounding", "Boxes", "↓FIDx", "↓FIDo"],
+  "name": "11",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 311.03999999999996,
+    "y1": 663.84,
+    "y2": 726.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table11-1.png"
+}, {
+  "caption": "Figure 16: Generated images obtained with M&Ms trained on OpenImages (128×128) with groundtruth bounding boxes (GT BBs), random crops (RND BBs), crops predicted by Mask-RCNN (He et al., 2017) (Mask-RCNN BBs) or predicted by OLN (Kim et al., 2022) (OLN BBs). The input conditioning has been built with ground-truth object crops from the training set in an unseen collage combination. Note that input collages are depicted as RGB overlays.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6579284667969,
+    "y1": 514.978515625,
+    "y2": 564.8159790039062
+  },
+  "figType": "Figure",
+  "imageText": ["B", "s", "N", "B", "O", "L", "B", "s", "N", "B", "C", "N", "k-", "R", "M", "as", "B", "s", "D", "B", "R", "N", "Conditioning", "Sample", "#1", "Sample", "#2", "Sample", "#3", "G", "T", "B", "B", "s"],
+  "name": "16",
+  "page": 27,
+  "regionBoundary": {
+    "x1": 117.11999999999999,
+    "x2": 500.15999999999997,
+    "y1": 125.75999999999999,
+    "y2": 504.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure16-1.png"
+}, {
+  "caption": "Figure 5: User-generated collages derived from the MS-COCO dataset, and the corresponding M&Ms generated images. The object combinations and layouts are unseen with respect to the training data. Input collages to the model are depicted as RGB overlays. Faces in the input images have been blurred out.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.745361328125,
+    "y1": 305.4415283203125,
+    "y2": 344.3210144042969
+  },
+  "figType": "Figure",
+  "imageText": ["Collages", "Generations", "#1", "Generations", "#2", "Generations", "#3"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 81.6,
+    "y2": 283.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure5-1.png"
+}, {
+  "caption": "Table 3: Zero-shot FID (FID0) on MSCOCO (Lin et al., 2014) at 256× 256, following (Ramesh et al., 2021). *: Results with filtered dataset. Baselines: DALL-E (Ramesh et al., 2021), GLIDE (Nichol et al., 2022), Make-AScene (Gafni et al., 2022) and unCLIP (Ramesh et al., 2022).",
+  "captionBoundary": {
+    "x1": 325.1080017089844,
+    "x2": 505.4890441894531,
+    "y1": 438.2855224609375,
+    "y2": 504.0639953613281
+  },
+  "figType": "Table",
+  "imageText": ["M&Ms", "91M", "1.7M", "16.7", "DALL-E", "12B", "250M", "∼", "28", "GLIDE", "5B", "250M", "12.2", "Make-A-Scene", "4B", "35M", "11.8*", "unCLIP", "5.2B", "650M", "10.4", "Model", "#", "Params", "#", "Tr.", "data", "FID0"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 324.96,
+    "x2": 504.0,
+    "y1": 516.48,
+    "y2": 595.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table3-1.png"
+}, {
+  "caption": "Table 7: Quantative comparison between M&Ms and LostGANv2 (Sun & Wu, 2020) on the COCOStuff validation set at 256×256. M&Ms is trained on Openimages performs zero-shot inference, while LostGANv2 is trained on COCO-Stuff.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.6512145996094,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["LostGANv2", "37.99", "27.86", "0.73", "0.57", "M&Ms", "(ours)", "34.75", "33.72", "0.80", "0.69", "Method", "↓FIDx", "↓FIDo", "↑Fidelityx", "↑Fidelityo"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 195.84,
+    "x2": 416.15999999999997,
+    "y1": 124.32,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Table7-1.png"
+}, {
+  "caption": "Figure 6: Image and object discriminators architecture for M&Ms at 256×256, that outputs an image score and an object score. As input, the discriminators are given an image and its features, and an object feature vector as well as its bounding box (BB). DBlock: block with a residual connection, where a ReLU (Nair & Hinton, 2010), a convolutional layer, a second ReLU and a second convolutional layer are applied, before optionally downsampling the feature maps. As in BigGAN (Brock et al., 2019), the convolutional (conv) layers and linear layers are spectrally normalized. Attention: global attention block, as used in BigGAN. RoI pooler (Ren et al., 2015) extracts object features, and Global SumPool performs a sum operation over the spatial dimensions. Different colored blocks are aimed at easing the visualization. Feature map sizes are specified below each block.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.74188232421875,
+    "y1": 190.09152221679688,
+    "y2": 294.7239990234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 179.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure6-1.png"
+}, {
+  "caption": "Figure 15: Images from the OpenImages500k (128×128) dataset split with their corresponding bounding boxes (BBs), overlaid as red rectangles, obtained from either the labeled ground-truth data (GT), sampled as random crops (RND), predicted by Mask-RCNN (He et al., 2017) or OLN (Kim et al., 2022).",
+  "captionBoundary": {
+    "x1": 107.67096710205078,
+    "x2": 504.0025329589844,
+    "y1": 398.73748779296875,
+    "y2": 437.6169738769531
+  },
+  "figType": "Figure",
+  "imageText": ["GT", "BBs", "RND", "BBs", "Mask-RCNN", "BBs", "OLN", "BBs"],
+  "name": "15",
+  "page": 26,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 81.6,
+    "y2": 377.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure15-1.png"
+}, {
+  "caption": "Figure 12: Noise interpolation with M&Ms conditioning on a collage built from OpenImages reference images. Generated samples are shown by interpolating noise vectors for the scene (first row), person (second row) and building (third row), with weights 0.0, 0.2, 0.5, 0.8 and 1.0 that balance between two sampled noise vectors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 327.8454895019531,
+    "y2": 366.7249755859375
+  },
+  "figType": "Figure",
+  "imageText": ["Pe", "rs", "on", "B", "ui", "ld", "in", "g", "Collage", "0.0", "0.2", "0.5", "0.8", "1.0", "Sc", "en", "e"],
+  "name": "12",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 498.24,
+    "y1": 125.75999999999999,
+    "y2": 317.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Feature interpolation with M&Ms conditioning on collages built from OpenImages reference images. Element #1 and #2 depict the RGB images corresponding to the features that are being interpolated: background scenes, people and buildings (first, second and third row respectively). Next to these elements, generated samples are shown by using the same noise vectors for scene and objects and performing a linear interpolation between element #1 and #2, with weights 0.0, 0.2, 0.5, 0.8, 1.0, where 0.0 means conditioning on element #1 only, and 1.0 conditioning on element #2. Faces in the input images have been blurred out.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 505.7451477050781,
+    "y1": 602.58251953125,
+    "y2": 674.3379516601562
+  },
+  "figType": "Figure",
+  "imageText": ["Pe", "rs", "on", "B", "ui", "ld", "in", "g", "un", "d", "kg", "ro", "B", "ac", "Element", "#1", "Element", "#2", "0.0", "0.2", "0.5", "0.8", "1.0"],
+  "name": "13",
+  "page": 23,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 426.24,
+    "y2": 591.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure13-1.png"
+}, {
+  "caption": "Figure 7: Five collages derived from the MS-COCO dataset and the corresponding samples from M&Ms. Note that the red boxes are overlaid on collage images to ease image interpretation. Faces in the input images have been blurred out.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9976501464844,
+    "y1": 582.599609375,
+    "y2": 610.52001953125
+  },
+  "figType": "Figure",
+  "imageText": ["Collage", "Sample", "#1", "Sample", "#2", "Sample", "#3"],
+  "name": "7",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 81.6,
+    "y2": 571.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1CHhsUY32a-Figure7-1.png"
+}]

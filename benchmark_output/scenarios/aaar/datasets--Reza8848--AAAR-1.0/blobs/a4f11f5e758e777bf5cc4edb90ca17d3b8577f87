@@ -1,0 +1,161 @@
+[{
+  "caption": "Table 2: Comparisons the convergence when using different f and h on three density ratio models: ”✓” means the generator converges to the data distribution and ”✗” means not converges. For r(x, θ) and r(x, θde), the convergences means the generator parameter (µ, σ) can converge to the true value. For rGAN(x), convergence means the parameter can closely approximate the true value. Visualization results are included in Appendix B.1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0029602050781,
+    "y1": 60.85354995727539,
+    "y2": 110.69097900390625
+  },
+  "figType": "Table",
+  "imageText": ["KL", "Yes", "Yes", "✓", "✓", "✓", "Forward", "KL", "Yes", "No", "✓", "✗", "✗", "Chi-Square", "Yes", "No", "✓", "✗", "✗", "Hellinger", "Yes", "No", "✓", "✗", "✗", "Jensen-Shannon", "Yes", "No", "✓", "✗", "✗", "Exp", "No", "Yes", "✗", "✓", "✓", "if", "f", "convex", "if", "h", "mono", "increase", "r(x,", "θ)", "r(x,", "θde)", "rGAN(x)"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 117.6,
+    "y2": 204.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Table2-1.png"
+}, {
+  "caption": "Table 3: Explicit forms of f and h",
+  "captionBoundary": {
+    "x1": 237.5800018310547,
+    "x2": 374.42047119140625,
+    "y1": 403.93951416015625,
+    "y2": 409.9419860839844
+  },
+  "figType": "Table",
+  "imageText": ["Jensen-Shannon", "(GAN)", "r", "log", "2r", "1+r", "+", "log", "2", "1+r", "−", "exp(u)", "log", "2", "exp(u)", "1+exp(u)", "−", "log", "2", "1+exp(u)", "Exp", "−", "exp(1.5", "log", "r)", "exp(1.5u)", "KL", "−", "log", "r", "u", "Forward", "KL", "r", "log", "r", "−u", "exp(u)", "Chi-Square", "(r", "−", "1)2", "−(exp(u)−", "1)2", "Hellinger", "(", "√", "r", "−", "1)2", "−(", "√", "exp(u)−", "1)2", "f(r)", "h(u),", "u", "=", "log", "r"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 123.83999999999999,
+    "x2": 488.15999999999997,
+    "y1": 428.15999999999997,
+    "y2": 521.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Table3-1.png"
+}, {
+  "caption": "Figure 1: The illustration of a Wasserstein gradient flow and its particle evolution. In Wasserstein space, the blue curve is a gradient flow and the red dotted line is a geodesic. qt evolves along a curve whose tangent vector is given by −∇W2 F(qt) such that the functional is always decreasing with time. Correspondingly, particles evolve in Euclidean space towards the target measure p with the vector field −∇x δF δqt (x). Note that directly minimizing the Wasserstein-2 metric W2(qt, p) instead yields a path {qt}t≥0 along the geodesic connecting q0 and p over Wasserstein space.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 159.19351196289062,
+    "y2": 223.78497314453125
+  },
+  "figType": "Figure",
+  "imageText": ["p", "vt", "=", "−∇x", "δF", "δqt", "(x)", "∣∣∣", "x=xt", "xt", "∼", "qt", "W2(q0,", "p)", "qt", "pq0", "−∇W2", "F(qt)", "Wasserstein", "space:", "Euclidean", "space:"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 461.28,
+    "y1": 59.519999999999996,
+    "y2": 149.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Figure1-1.png"
+}, {
+  "caption": "Figure 2: The plot of different generator losses as a function of d.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 302.04156494140625,
+    "y1": 209.34750366210938,
+    "y2": 226.3089599609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 303.36,
+    "y1": 80.64,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Figure2-1.png"
+}, {
+  "caption": "Figure 3: The plots of the vanilla losses by adding different Cs.",
+  "captionBoundary": {
+    "x1": 313.4070129394531,
+    "x2": 501.5107421875,
+    "y1": 208.92752075195312,
+    "y2": 225.88800048828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 502.08,
+    "y1": 81.6,
+    "y2": 195.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Generated samples with different Cs.",
+  "captionBoundary": {
+    "x1": 211.8479766845703,
+    "x2": 400.152099609375,
+    "y1": 176.37448120117188,
+    "y2": 182.376953125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "C", "=", "0", "(b)", "C", "=", "1", "(c)", "C", "=", "3", "(d)", "C", "=", "5"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 168.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Figure4-1.png"
+}, {
+  "caption": "Table 1: Different types of divergence GANs. f is a convex function and f̃ is the convex conjugate by f̃(d) = supr∈domf{rd− f(r)}.",
+  "captionBoundary": {
+    "x1": 107.99989318847656,
+    "x2": 503.9974365234375,
+    "y1": 310.4303894042969,
+    "y2": 331.3038635253906
+  },
+  "figType": "Table",
+  "imageText": ["Vanilla", "GAN", "log", "σ(d)", "log(1−", "σ(d))", "log", "r(x)", "−", "log(1−", "σ(d))", "Non-saturated", "GAN", "log", "σ(d)", "log(1−", "σ(d))", "log", "r(x)", "log", "σ(d)", "f", "-GAN", "d", "−f̃(d)", "f", "′(r(x))", "d", "b-GAN", "f", "′(d)", "f(d)−", "df", "′(d)", "r(x)", "df", "′(d)−", "f(d)", "Least-square", "GAN", "(d−", "1)2", "d2", "r(x)", "1+r(x)", "−(d−", "1)2", "Generalized", "EBM", "−(d+", "λ)", "−", "exp(−d−", "λ)", "−", "log", "r(x)−", "λ", "exp(−d−", "λ)", "ϕ(d)", "ψ(d)", "d∗(x)", "hT", "(d)"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 491.03999999999996,
+    "y1": 335.52,
+    "y2": 429.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Table1-1.png"
+}, {
+  "caption": "Figure 6: Generated samples via an arbitrary increasing function.",
+  "captionBoundary": {
+    "x1": 176.07901000976562,
+    "x2": 435.92352294921875,
+    "y1": 665.3665771484375,
+    "y2": 671.3690185546875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Generated", "images", "of", "Celeb-A", "(a)", "Generated", "images", "of", "Cifar10"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 136.79999999999998,
+    "y2": 652.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_HVVDVaegjaW-Figure6-1.png"
+}]

@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 8: Additional Trajectory Attribution Results. Here we show randomly chosen trajectory from the top-3 attributed trajectories.a) Grid-world agent suggests taking ‘DOWN’ in cell (3,5) due to the attributed trajectory leading to lava. b) Seaquest agent suggests taking ‘LEFT’ and the corresponding attributed trajectory. c) HalfCheetah agent suggests a particular set of torques and the run found responsible for the same is shown side-by-side.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0042419433594,
+    "y1": 441.53753662109375,
+    "y2": 491.3759765625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "(b)", "(a)", "Attributed", "Trajectory", "ObservationContext", "LEFT", "DOWNRIGHTFIREDOWNRIGHTFIREUPLEFT", "FIRE", "FIRE", "UPLEFT", "Observation", "Attributed", "Trajectory", "Action", "Torques", "bthigh:", "0.9477,", "bshin:", "0.9183,", "bfoot:", "-0.8425,", "fthigh:", "-0.9621,", "fshin:", "-0.9704,", "ffoot:-0.0850", "Attributed", "Trajectory", "State:", "(3,", "5)", "Action:", "DOWN"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 182.88,
+    "y2": 420.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure8-1.png"
+}, {
+  "caption": "Figure 4: Seaquest Trajectory Attribution. The agent (submarine) decides to take ‘left’ for the given observation under the provided context. Top-3 attributed trajectories are shown on the right (for each traj., here we show 6 sampled observations along with actions taken by data collection policy). We can infer from these trajectories how the agent is aligning itself to face enemies coming from left.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0033264160156,
+    "y1": 628.3775634765625,
+    "y2": 678.2160034179688
+  },
+  "figType": "Figure",
+  "imageText": ["ry", "(i", "i)", "Tr", "aj", "ec", "to", "ry", "(i", "ii)", "ec", "to", "Tr", "aj", "(i", ")", "to", "ry", "aj", "ec", "nt", "ex", "t", "Tr", "n", "Co", "O", "bs", "er", "va", "tio", "LEFT", "RIGHT", "UPLEFTFIRE", "DOWNRIGHT", "DOWNLEFT", "DOWNLEFT", "DOWNLEFT", "LEFTFIRE", "RIGHTFIRE", "LEFTFIRE", "LEFTFIRE", "LEFTFIRE", "RIGHTFIRE", "UPLEFT", "DOWNRIGHTFIRE", "DOWNRIGHTFIRE", "FIRE", "FIRE", "UPLEFT"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 151.2,
+    "x2": 465.12,
+    "y1": 432.0,
+    "y2": 610.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure4-1.png"
+}, {
+  "caption": "Figure 2: PCA Plot depicting Clusters of Trajectory Embeddings for a) Grid-world, b) Seaquest, and c) HalfCheetah. We find that these clusters represent semantically meaningful high-level behaviours. A detailed discussion of these findings can be found in Appendix A.6.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 204.47354125976562,
+    "y2": 232.39398193359375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "HalfCheetah", "8", "9", "6", "7", "4", "5", "2", "3", "0", "1", "cj", "2", "ur", "e", "fe", "at", "20", "0", "20", "40", "30", "20", "10", "0", "10", "20", "30", "40", "feature", "1", "(b)", "Seaquest", "6", "7", "4", "5", "2", "3", "0", "1", "cj", "2", "ur", "e", "fe", "at", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "feature", "1", "(a)", "Grid-world", "8", "9", "6", "7", "4", "5", "2", "3", "0", "1", "cj", "0.50", "0.75", "fea", "tur", "e", "2", "0.25", "0.00", "0.25", "0.50", "0.75", "5", "0", "5", "10", "15", "feature", "1"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 501.12,
+    "y1": 85.92,
+    "y2": 191.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Grid-world Trajectory Attribution. RL agent suggests taking action ‘right’ in grid cell (1,1) which is attributed to trajectories (i), (ii) and (iii) (Here a trajectory is annotated by ∧,∨,>,< arrows for ‘up’, ‘down’, ‘right’, ‘left’ actions respectively, along with the time-step (starting with 0) associated with the actions). The figure shows that the action suggestion is influenced by trajectories distant from the cell under consideration.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 359.2865295410156,
+    "y2": 409.12396240234375
+  },
+  "figType": "Figure",
+  "imageText": ["State:", "(1,", "1)", "Action:", "RIGHT", "Trajectory", "(i)", "Trajectory", "(ii)", "Trajectory", "(iii)"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 259.68,
+    "y2": 348.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure3-1.png"
+}, {
+  "caption": "Table 3: Quantitative Analysis of HalfCheetah Trajectory Attribution. The analysis is provided using 5 metrics. Higher the E(V (s0)), better is the trained policy. High E(|∆Qπorig |)) along with high E((πorig(s)− πj(s)) 2) is desirable. The policies with lower Wdist(d̄, d̄j) and high action contrast are given priority while attribution. The cluster attribution distribution is given in the final column.",
+  "captionBoundary": {
+    "x1": 107.99993896484375,
+    "x2": 504.0037841796875,
+    "y1": 462.7814636230469,
+    "y2": 514.5119018554688
+  },
+  "figType": "Table",
+  "imageText": ["orig", "131.5449", "-", "-", "-", "-", "0", "127.1652", "0.5667", "0.6359", "0.2822", "0.0143", "1", "118.5663", "0.4796", "0.5633", "0.0396", "0.0214", "2", "122.0661", "0.6904", "0.9366", "0.0396", "0.1464", "3", "133.4590", "0.5360", "0.6611", "0.0396", "0.1250", "4", "118.3447", "0.5622", "0.6194", "1.0000", "0.0964", "5", "138.7517", "0.6439", "0.8262", "0.0316", "0.0893", "6", "120.7088", "0.4740", "0.4803", "0.8813", "0.0214", "7", "135.6848", "0.5154", "0.5489", "0.0394", "0.2036", "8", "113.3490", "0.7826", "1.0528", "0.7067", "0.1214", "9", "83.6211", "0.9702", "1.3453", "0.0264", "0.1607", "Performance", "Metrics", "π", "E(V", "(s0))", "E(|∆Qπorig", "|))", "E((πorig(s)−", "πj(s))", "2)", "Wdist(d̄,", "d̄j)", "P(cfinal", "=", "cj)"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 142.56,
+    "x2": 466.08,
+    "y1": 527.52,
+    "y2": 669.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Table3-1.png"
+}, {
+  "caption": "Figure 7: HalfCheetah Trajectory Attribution. The figure shows agent suggesting torques on different hinges for current position of the cheetah frame. The decision is influenced by the runs of cheetah shown on the right where the cheetah is getting up from the floor (here we show 5 sampled frames for a trajectory). Context is not shown here because unlike Seaquest environment, HalfCheetah decisions are made directly on a given observation (Puterman, 2014; Kaelbling et al., 1998).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00335693359375,
+    "y1": 263.4945373535156,
+    "y2": 324.29095458984375
+  },
+  "figType": "Figure",
+  "imageText": ["fshin:", "-0.9704,", "ffoot:-0.0850", "Action", "Torques", "bthigh:", "0.9477,", "bshin:", "0.9183,", "bfoot:", "-0.8425,", "fthigh:", "-0.9621,", "ii)", "ry", "(i", "ec", "to", "Tr", "aj", "ry", "(i", ")", "Tr", "aj", "ec", "to", "ry", "(i", "i)", "ec", "to", "Tr", "aj", "Observation"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 245.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure7-1.png"
+}, {
+  "caption": "Figure 1: Trajectory Attribution in Offline RL. First, we encode trajectories in offline data using sequence encoders and then cluster the trajectories using these encodings. Also, we generate a single embedding for the data. Next, we train explanation policies on variants of the original dataset and compute corresponding data embeddings. Finally, we attribute decisions of RL agents trained on entire data to trajectory clusters using action and data embedding distances.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 260.2935485839844,
+    "y2": 310.1309814453125
+  },
+  "figType": "Figure",
+  "imageText": ["…", "Attributed", "Cluster", "Select", "policy", "which", "suggests", "a", "different", "action,", "with", "a", "corresponding", "complementary", "cluster", "embedding", "close", "to", "original", "0", "1", "0…", "0", "1", "0…", "Cn", "0", "1", "0…", "0", "1", "0…", "C2", "0", "1", "0…", "0", "1", "0…", "C1", "𝜋%", "𝜋&", "𝜋#", "𝜋)*+,(𝑠,", "𝑎)", "Corresponding", "Clusters", "Original", "Policy", "Step", "5:", "Cluster", "Attribution", "Explanation", "Policies", "{𝜏!}𝑛", "cluster", "Datasets", "without", "i’th", "Trajectory", "Embeddings", "Trajectory", "Embeddings", "?̅?", "Trajectory", "from", "Training", "Data", "𝑡#", "𝑡&", "𝑡'", "𝑡(𝑡!", "Trajectory", "Clusters", "…", "𝜋#", "𝜋%", "{𝜏!}1", "Step", "4:", "Training", "Explanation", "Policies", "…", "…", "0", "1", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "Step", "3:", "Data", "Embedding", "…", "C1", "C2", "Cn", "……", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "…", "0", "0", "1", "Step", "2:", "Trajectory", "Clustering", "…", "0", "0", "1", "𝜏!:", "(𝑠\",", "𝑎\",", "𝑟\",", "𝑠#,", "𝑎#,", "𝑟#,", "…", ",", "𝑠$,", "𝑎$,", "𝑟$)", "Step", "1:", "Trajectory", "Encoding"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 82.56,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure1-1.png"
+}, {
+  "caption": "Figure 6: Overview of the Grid-world Environment. The aim of the agent is to reach any of the goal states (green squares) by avoiding lava (red square) and going around the impenetrable walls (grey squares). The reward for reaching the goal is +1; if the agent falls into the lava, it is -1. For any other transitions, the agent receives -0.1. The agent is allowed to take up, down, left or right as the action.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 293.2975158691406,
+    "y2": 343.13494873046875
+  },
+  "figType": "Figure",
+  "imageText": ["Action:", "UP", "Wall", "Lava", "Goal", "Agent"],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 206.88,
+    "x2": 400.8,
+    "y1": 170.88,
+    "y2": 282.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure6-1.png"
+}, {
+  "caption": "Table 1: Quantitative Analysis of Grid-world Trajectory Attribution. The analysis is provided using 5 metrics. Higher the E(V (s0)), better is the trained policy. High E(|∆Qπorig |)) along with high E(1(πorig(s) ̸= πj(s)) is desirable. The policies with lower Wdist(d̄, d̄j) and high action contrast are given priority while attribution. The cluster attribution distribution is given in the final column.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 83.53055572509766,
+    "y2": 135.260986328125
+  },
+  "figType": "Table",
+  "imageText": ["orig", "0.3061", "-", "-", "-", "-", "0", "0.3055", "0.0012", "0.0409", "1.0000", "0.0000", "1", "0.3053", "0.0016", "0.0409", "0.0163", "0.0000", "2", "0.3049", "0.0289", "0.1429", "0.0034", "0.0000", "3", "0.2857", "0.0710", "0.1021", "0.0111", "0.3750", "4", "0.2987", "0.0322", "0.1429", "0.0042", "0.1250", "5", "0.3057", "0.0393", "0.0409", "0.0058", "0.0000", "6", "0.3046", "0.0203", "0.1225", "0.0005", "0.5000", "7", "0.3055", "0.0120", "0.0205", "0.0006", "0.0000", "8", "0.3057", "0.0008", "0.0205", "0.0026", "0.0000", "9", "0.3046", "0.0234", "0.1429", "0.1745", "0.0000", "π", "E(V", "(s0))", "E(|∆Qπorig", "|))", "E(1(πorig(s)", "̸=", "πj(s))", "Wdist(d̄,", "d̄j)", "P(cfinal", "=", "cj)"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 144.0,
+    "x2": 466.08,
+    "y1": 147.84,
+    "y2": 280.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Table1-1.png"
+}, {
+  "caption": "Table 2: Quantitative Analysis of Seaquest Trajectory Attribution. The analysis is provided using 5 metrics. Higher the E(V (s0)), better is the trained policy. High E(|∆Qπorig |)) along with high E(1(πorig(s) ̸= πj(s)) is desirable. The policies with lower Wdist(d̄, d̄j) and high action contrast are given priority while attribution. The cluster attribution distribution is given in the final column.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0018310546875,
+    "y1": 294.425537109375,
+    "y2": 335.197021484375
+  },
+  "figType": "Table",
+  "imageText": ["orig", "85.9977", "-", "-", "-", "-", "0", "50.9399", "1.5839", "0.9249", "0.4765", "0.1129", "1", "57.5608", "1.6352", "0.8976", "0.9513", "0.0484", "2", "66.7369", "1.5786", "0.9233", "1.0000", "0.0403", "3", "3.0056", "1.9439", "0.9395", "0.8999", "0.0323", "4", "58.1854", "1.5813", "0.8992", "0.5532", "0.0968", "5", "87.3034", "1.6026", "0.9254", "0.2011", "0.3145", "6", "70.8994", "1.5501", "0.9238", "0.6952", "0.0968", "7", "89.1832", "1.5628", "0.9249", "0.3090", "0.2581", "π", "E(V", "(s0))", "E(|∆Qπorig", "|))", "E(1(πorig(s)", "̸=", "πj(s))", "Wdist(d̄,", "d̄j)", "P(cfinal", "=", "cj)"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 144.0,
+    "x2": 466.08,
+    "y1": 348.0,
+    "y2": 458.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Table2-1.png"
+}, {
+  "caption": "Figure 12: PCA plot depicting Data Embeddings of complementary data sets as well as original data set computed using proposed data encoding. Interestingly, the complementary data sets that could lead to very different behaviours lie close to the original data in the embedding space.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 572.4305419921875,
+    "y2": 600.3510131835938
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "HalfCheetah", "9", "orig", "7", "8", "5", "6", "3", "4", "0", "1", "2", "cj", "2", "ur", "e", "fe", "at", "0.03", "0.02", "0.01", "0.00", "0.01", "0.4", "0.2", "0.0", "0.2", "0.4", "0.6", "0.8", "feature", "1", "(b)", "Seaquest", "orig", "6", "7", "4", "5", "2", "3", "0", "1", "cj", "1e", "3", "2", "ur", "e", "fe", "at", "3", "2", "1", "0", "1", "6", "4", "2", "0", "2", "4", "6", "feature", "1", "1e", "3", "(a)", "Grid-world", "9", "orig", "7", "8", "5", "6", "3", "4", "0", "1", "2", "cj", "1e", "8", "e", "2", "fea", "tur", "2", "1", "0", "1", "2", "0.00", "0.05", "0.10", "0.15", "0.20", "0.25", "feature", "1"],
+  "name": "12",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 501.12,
+    "y1": 453.59999999999997,
+    "y2": 559.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure12-1.png"
+}, {
+  "caption": "Figure 11: High-level Behaviours found in clusters for HalfCheetah formed using trajectory embeddings produced using trajectory transformer. The figure shows 3 example high-level behaviours along with the action description and id of the cluster representing such behaviour.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 365.6695251464844,
+    "y2": 393.5899658203125
+  },
+  "figType": "Figure",
+  "imageText": ["Running", "with", "Head", "Down", "-", "Cluster", "5", "Jumping", "on", "Hind", "Leg", "–", "Cluster", "2", "Forward", "Stride", "–", "Cluster", "9"],
+  "name": "11",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 484.32,
+    "y1": 81.6,
+    "y2": 347.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure11-1.png"
+}, {
+  "caption": "Figure 5: Column (a): An example of the human study experiment where users are required to identify the attributed trajectories that best explain the state-action behavior of the agent. Column (b): Results from our human study experiments show that, on average, 9 humans agree with the trajectories generated by our proposed algorithm.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00115966796875,
+    "y1": 293.9815368652344,
+    "y2": 332.8609619140625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "an", "s", "f", "H", "um", "be", "r", "o", "Nu", "m", "10", "8", "6", "4", "2", "Att", "Traj", "1", "Att", "Traj", "2", "Random", "1", "Random", "2", "0", "(a)"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 498.24,
+    "y1": 171.84,
+    "y2": 288.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure5-1.png"
+}, {
+  "caption": "Figure 9: Cluster Behaviours for Grid-world. The figure shows 3 example high-level behaviours along with the action description and id of the cluster representing such behaviour.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 232.08853149414062,
+    "y2": 249.04998779296875
+  },
+  "figType": "Figure",
+  "imageText": ["Achieving", "Goal", "in", "Top", "right", "corner", "–", "Cluster", "1", "Mid-grid", "journey", "to", "goal", "–", "Cluster", "3", "Falling", "into", "lava", "-", "Cluster", "9"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 112.32,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 215.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure9-1.png"
+}, {
+  "caption": "Figure 10: High-level Behaviours found in clusters for Seaquest formed using trajectory embeddings produced using decision transformer. The figure shows 3 example high-level behaviours along with the action description and id of the cluster representing such behaviour.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0042419433594,
+    "y1": 698.653564453125,
+    "y2": 726.573974609375
+  },
+  "figType": "Figure",
+  "imageText": ["Fighting", "with", "Head", "Out", "–", "Cluster", "7"],
+  "name": "10",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 465.12,
+    "y1": 604.8,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_5Egggz1q575-Figure10-1.png"
+}]

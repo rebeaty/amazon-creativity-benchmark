@@ -1,0 +1,241 @@
+[{
+  "caption": "Table 1: 3D reconstruction results on synthetic test data. We report chamfer distance (CD) ↓ and F-score at threshold 0.01 (F@1%)↑. † with ground truth camera poses.",
+  "captionBoundary": {
+    "x1": 107.9998779296875,
+    "x2": 503.9998779296875,
+    "y1": 601.5292358398438,
+    "y2": 618.4906616210938
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Car", "Chair", "Plane", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "SDF-SRN", "(Lin", "et", "al.,", "2020)†", "9.965", "0.404", "27.562", "0.283", "12.374", "0.459", "TARS-3D", "(Duggal", "&", "Pathak,", "2022)†", "10.175", "0.412", "28.823", "0.272", "11.302", "0.418", "PoinTr", "(Yu", "et", "al.,", "2021)†", "13.249", "0.264", "12.834", "0.352", "3.637", "0.685", "Ours†", "6.181", "0.497", "27.292", "0.343", "4.495", "0.768", "PoinTr", "(Yu", "et", "al.,", "2021)", "56.435", "0.125", "36.714", "0.230", "23.713", "0.302", "Ours", "9.371", "0.439", "32.138", "0.334", "16.562", "0.631"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 623.52,
+    "y2": 718.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Table1-1.png"
+}, {
+  "caption": "Figure 6: Extracted learned template shapes",
+  "captionBoundary": {
+    "x1": 218.41000366210938,
+    "x2": 393.59234619140625,
+    "y1": 557.1185302734375,
+    "y2": 563.1209716796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 421.91999999999996,
+    "y2": 548.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure6-1.png"
+}, {
+  "caption": "Figure 1: We leverage synthetic 3D data to learn a shape prior. Using a pose registration algorithm, we canonicalize partial point clouds to the canonical coordinate frame to generate diverse 3D reconstructions.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 272.4115295410156,
+    "y2": 300.33099365234375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 153.6,
+    "y2": 262.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure1-1.png"
+}, {
+  "caption": "Table 2: 3D reconstruction results on occluded data from the synthetic test set. We report chamfer distance (CD) ↓ and F-score at threshold 0.01 (F@1%)↑. † with ground truth camera poses.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 240.10635375976562,
+    "y2": 257.06781005859375
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Car", "Chair", "Plane", "w.", "gt", "camera", "pose", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "SDF-SRN", "(Lin", "et", "al.,", "2020)†", "25.863", "0.243", "156.825", "0.122", "72.255", "0.256", "TARS-3D", "(Duggal", "&", "Pathak,", "2022)†", "23.806", "0.241", "108.976", "0.131", "58.998", "0.263", "PoinTr", "(Yu", "et", "al.,", "2021)†", "22.110", "0.208", "19.079", "0.297", "6.168", "0.601", "Ours†", "6.457", "0.497", "35.972", "0.297", "15.725", "0.654", "PoinTr", "(Yu", "et", "al.,", "2021)", "59.292", "0.1225", "54.327", "0.184", "37.425", "0.322", "Ours", "11.155", "0.390", "45.886", "0.273", "22.223", "0.580"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 261.59999999999997,
+    "y2": 356.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Table2-1.png"
+}, {
+  "caption": "Figure 3: Qualitative result on the occluded Shapenet dataset.",
+  "captionBoundary": {
+    "x1": 183.46099853515625,
+    "x2": 428.5409851074219,
+    "y1": 589.0015869140625,
+    "y2": 595.0040283203125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 485.28,
+    "y1": 373.91999999999996,
+    "y2": 580.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Qualitative results on the Pascal3D+ (top) and Pix3D (bottom) datasets.",
+  "captionBoundary": {
+    "x1": 143.50100708007812,
+    "x2": 468.50091552734375,
+    "y1": 453.4615173339844,
+    "y2": 459.4639892578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 237.6,
+    "y2": 445.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure4-1.png"
+}, {
+  "caption": "Table 3: 3D reconstruction results on the Pascal3D+ and Pix3D dataset. We report chamfer distance (CD) ↓ and F-score at threshold 1% (F@1%)↑. † with ground truth camera poses.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 86.94351959228516,
+    "y2": 103.90496826171875
+  },
+  "figType": "Table",
+  "imageText": ["Methods", "Car", "Chair", "Plane", "Chair", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "CD", "(↓)", "F@1", "(↑)", "SDF-SRN", "(Lin", "et", "al.,", "2020)†", "16.740", "0.245", "24.374", "0.216", "29.7457", "0.169", "60.432", "0.158", "TARS-3D", "(Duggal", "&", "Pathak,", "2022)†", "19.129", "0.2427", "79.8922", "0.1577", "83.866", "0.140", "55.555", "0.197", "PoinTr", "(Yu", "et", "al.,", "2021)†", "17.859", "0.221", "11.769", "0.302", "4.701", "0.525", "13.092", "0.377", "Ours†", "13.370", "0.302", "16.804", "0.274", "54.286", "0.289", "31.165", "0.335", "PoinTr", "(Yu", "et", "al.,", "2021)", "80.896", "0.064", "21.251", "0.216", "35.095", "0.231", "35.527", "0.283", "Ours", "15.516", "0.283", "17.328", "0.275", "54.849", "0.276", "35.729", "0.335", "Pascal3D+", "Pix3D"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 108.96,
+    "y2": 194.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Table3-1.png"
+}, {
+  "caption": "Figure 2: We train a DIF-Net as our 3D representation on purely synthetic data in an auto-decoder fashion. During inference, we lift the depth image into 3D using the known camera intrinsics and estimate an initial transformation between the camera frame and the canonical frame. We jointly optimize the object pose and 3D shape to fit the partial observation. Trainable parameters/network parts are marked in red.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 222.14352416992188,
+    "y2": 271.98193359375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Additional results on the Pix3D dataset",
+  "captionBoundary": {
+    "x1": 208.1529998779297,
+    "x2": 403.8482666015625,
+    "y1": 499.800537109375,
+    "y2": 505.8030090332031
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 304.8,
+    "x2": 504.0,
+    "y1": 106.56,
+    "y2": 478.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure8-1.png"
+}, {
+  "caption": "Figure 5: Qualitative results on the DDAD dataset.",
+  "captionBoundary": {
+    "x1": 204.8260040283203,
+    "x2": 407.17633056640625,
+    "y1": 276.2455139160156,
+    "y2": 282.24798583984375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 81.6,
+    "y2": 267.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure5-1.png"
+}, {
+  "caption": "Table 4: Ablation of our method with and without pose optimization during inference. Left, we show the ground truth mesh overlayed with the optimized and non-optimized pose. We show the resulting optimized surfaces with and without pose optimization in the middle and right.",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 504.0032958984375,
+    "y1": 330.9535217285156,
+    "y2": 358.87396240234375
+  },
+  "figType": "Table",
+  "imageText": ["Shape", "F1", "0.313", "0.580", "CD", "23.008", "22.223", "Pose", "optim.", "✓"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 457.44,
+    "y1": 363.84,
+    "y2": 516.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Table4-1.png"
+}, {
+  "caption": "Figure 7: Additional results on the Pascal3D+ dataset",
+  "captionBoundary": {
+    "x1": 199.33599853515625,
+    "x2": 412.66510009765625,
+    "y1": 560.5995483398438,
+    "y2": 566.6019897460938
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 108.0,
+    "y2": 546.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_Kn43SKplAn-Figure7-1.png"
+}]

@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 2: Gradient estimators of different losses and choice of Lagrangian multiplier λ.",
+  "captionBoundary": {
+    "x1": 133.97000122070312,
+    "x2": 477.7206726074219,
+    "y1": 205.23348999023438,
+    "y2": 211.2359619140625
+  },
+  "figType": "Table",
+  "imageText": ["ME", "1", "N", "∑", "ai", "∂", "∂θ", "log", "q̂θ,σ", "−", "∂", "∂a", "log", "ξϕ", "∂", "∂θai", "-", "GAN", "1", "N", "∑", "ai", "∂", "∂a", "log(1−", "ξϕ)", "∂", "∂θai", "-", "RKL", "1", "M", "∑", "a∗", "j", "q̂θ,σ", "q̂θ,σ′", "log", "(", "q̂θ,σ", "p", ")", "∂", "∂θ", "log", "q̂θ,σ", "-1", "FKL", "-", "1", "M", "∑", "a∗", "j", "p", "q̂θ,σ′", "∂", "∂θ", "log", "q̂θ,σ", "0", "JS", "1", "2M", "∑", "a∗", "j", "q̂θ,σ", "q̂θ,σ′", "log", "(", "2q̂θ,σ", "p+q̂θ,σ", ")", "∂", "∂θ", "log", "q̂θ,σ", "0", "Loss", "Actor", "Gradient", "Estimator", "λ"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 192.95999999999998,
+    "x2": 417.12,
+    "y1": 80.64,
+    "y2": 189.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Table2-1.png"
+}, {
+  "caption": "Figure 1: Critic classification and actor distribution trained with JS compared with the ground truth. Five example grasps are shown in the problem and their associated locations in the ground truth. The figures show projections onto the x-y plane (top row) and the x-α plane (bottom row).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.7452392578125,
+    "y1": 261.3935241699219,
+    "y2": 289.3139953613281
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "Actor", "x", "(c)", "Critic", "x", "(b)", "Ground", "Truth", "y", "α", "x", "(a)", "Problem"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 161.76,
+    "x2": 453.12,
+    "y1": 84.96,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Figure1-1.png"
+}, {
+  "caption": "Table 4: Hyperparameters",
+  "captionBoundary": {
+    "x1": 253.93600463867188,
+    "x2": 357.7562561035156,
+    "y1": 210.31253051757812,
+    "y2": 216.31500244140625
+  },
+  "figType": "Table",
+  "imageText": ["|Mp|", "160,000", "Positive", "replay", "memory", "size", "|Mn|", "160,000", "Negative", "replay", "memory", "size", "|M|", "320,000", "Total", "replay", "memory", "size", "Parameter", "Value", "Description", "N", "128", "Minibatch", "size", "M", "256", "Resampling", "size", "σ", "diag(0.025,", "0.025,", "0.4,", "0.4)", "KDE", "bandwidth", "σ′", "diag(0.075,", "0.075,", "1.2,", "1.2)", "Sampling", "KDE", "bandwidth"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 154.56,
+    "x2": 457.44,
+    "y1": 109.92,
+    "y2": 199.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Table4-1.png"
+}, {
+  "caption": "Figure 4: Feasible gripper positions (red) for different variations of the shapes (H-shape, 8-shape, Spoon, and T-shape) used in training, with a detailed view of the area between the gripper to the right of each figure.",
+  "captionBoundary": {
+    "x1": 107.7509994506836,
+    "x2": 505.2454528808594,
+    "y1": 186.84353637695312,
+    "y2": 214.76397705078125
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)", "(e)", "(f)", "(g)", "(h)"],
+  "name": "4",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 112.8,
+    "y2": 171.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Before processing, the image is augmented with positional encoding resulting in 5 total channels {r, g, b, x, y}. The input layer (in gray) of the network is a 5x5 embedding layer with stride 3, followed by 7 residual blocks (in yellow) with a bottleneck. The output is processed by 3 layers of \"pixelwise\" shared MLPs (in brown), with the features being concatenated with a latent input (in purple) of length d. The latent input is a random sample from Z for the actor and the action to be evaluated for the critic. Four (for the actor) or three (for the critic) fully connected layers (in blue) output the action and the score, respectively.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6653747558594,
+    "y1": 424.4475402832031,
+    "y2": 496.2040100097656
+  },
+  "figType": "Figure",
+  "imageText": ["FC", "Latent", "Input", "(d)", "(22x22x64)", "(11x11x128)", "Shared", "MLP", "(121x(128+d))", "(128x128x5)", "(43x43x32)", "...", "..."],
+  "name": "5",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 159.35999999999999,
+    "x2": 410.4,
+    "y1": 270.71999999999997,
+    "y2": 409.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Qualitative comparison of the implemented algorithms, showing action heat-maps on three different states, with the last state never been observed during training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9979248046875,
+    "y1": 258.0395202636719,
+    "y2": 275.0009765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Problem", "(b)", "Truth", "(c)", "JS", "(d)", "FKL", "(e)", "RKL", "(f)", "GAN", "(g)", "ME", "Box", "H", "8"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 245.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Figure2-1.png"
+}, {
+  "caption": "Table 1: Non-exhaustive list of f-divergences and the corresponding first derivative for gradient estimators. The f-divergences are obtained by substituting the f functions above in equation 3 and setting t = qθ/p. The conventions for p, q, FKL and RKL assume that p is the target distribution, q is the model, and the FKL divergence is ∫ p log(p/q).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035400390625,
+    "y1": 150.57650756835938,
+    "y2": 189.45501708984375
+  },
+  "figType": "Table",
+  "imageText": [")", "+", "t", "log(t)", "]", "1", "2", "log", "(", "2t", "t+1", ")", "Forward", "Kullback-Leibler", "(FKL)", "−", "log(t)", "−", "1", "t", "Reverse", "Kullback-Leibler", "(RKL)", "t", "log(t)", "log(t)", "+", "1", "t+1", "[", "(t+", "1)", "log", "(", "2", "Jensen-Shannon", "(JS)", "1", "2", "f(t)", "f", "′(t)"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 482.4,
+    "y1": 74.88,
+    "y2": 134.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Table1-1.png"
+}, {
+  "caption": "Table 3: Table with comparison on all shapes with the mean of the grasping success ratio in % on top and the least ranked mode in % on the bottom, with the maximum deviations over the 3 runs in superscript.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 435.8645324707031,
+    "y2": 463.7850036621094
+  },
+  "figType": "Table",
+  "imageText": ["Box", "5.50.8", "6.91.1", "6.81.2", "7.21.4", "0.70.8", "1.31.3", "0.00.0", "0.00.0", "0.00.0", "0.00.0", "T", "11.00.7", "12.30.6", "15.80.6", "15.30.3", "0.40.3", "0.70.4", "1.12.3", "1.42.6", "0.00.0", "0.00.0", "e", "H", "9.70.7", "10.70.3", "9.80.5", "9.40.6", "0.00.0", "0.00.0", "0.20.4", "0.20.3", "0.00.0", "0.00.0", "M", "od", "Avg", "87.80.8", "85.20.8", "83.20.7", "78.80.6", "83.62.1", "81.82.1", "73.32.3", "71.72.7", "86.82.1", "86.41.8", "Box", "62.22.3", "61.72.7", "53.87.4", "52.17.1", "53.52.9", "53.03.4", "34.28.2", "33.17.2", "65.76.9", "65.96.8", "Spoon", "97.40.6", "96.90.5", "93.61.9", "90.62.3", "97.41.1", "97.61.1", "94.72.1", "95.12.3", "92.11.5", "92.21.6", "8", "86.92.3", "82.91.7", "83.40.7", "77.70.7", "82.83.2", "79.22.5", "70.34.5", "66.95.7", "85.50.5", "84.21.9", "T", "96.50.5", "93.31.0", "92.51.0", "88.00.9", "97.60.9", "95.71.2", "81.62.5", "79.71.7", "93.91.9", "93.61.7", "H", "96.01.0", "91.21.3", "92.50.4", "85.41.1", "86.93.6", "83.63.5", "85.82.0", "83.52.7", "96.60.7", "95.91.2", "e", "Sc", "or", "JS*", "JS", "FKL*", "FKL", "RKL*", "RKL", "GAN*", "GAN", "ME*", "ME"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 485.28,
+    "y1": 288.0,
+    "y2": 420.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Table3-1.png"
+}, {
+  "caption": "Figure 3: Gripping rank comparison, with the ratio of picks for each ranked mode or failure in %.",
+  "captionBoundary": {
+    "x1": 111.70501708984375,
+    "x2": 500.2961730957031,
+    "y1": 257.5694885253906,
+    "y2": 263.57196044921875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "H", "Shape", "(b)", "Box", "Shape"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 244.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_P8DHF1Y_dph-Figure3-1.png"
+}]

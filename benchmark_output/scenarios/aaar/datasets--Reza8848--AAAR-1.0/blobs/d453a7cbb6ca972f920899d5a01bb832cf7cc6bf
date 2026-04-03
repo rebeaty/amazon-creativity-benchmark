@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 3: Deep models show the same trends as the linear model. For three sequences of inputs (Table 1), we performed one gradient step and teacher update and then calculated ∇SLr, and ∇SLc at the next step. (a): ∥∇SLc∥F is larger when cos(x̂, x̃) is large (Eq. (5)). (b): The same and different lines do not follow the same order for the reconstruction loss. (c): The direction of ∇SLc is conditioned on cos(x̂, x̃). All together: For ∇SLc, when cos(x̂, x̃) = 1 there tends to be larger move in a negative direction while cos(x̂, x̃) ≈ 0 there tends to be a smaller move in an approximately orthogonal direction.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 213.34054565429688,
+    "y2": 285.096923828125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CosSim(∇SL(t),∇SL(t+1)c", ")", "case", "same", "similar", "diﬀerent", "loss", "type", "reconstruction", "consistency", "RC-MAE", "ri", "ty", "m", "ila", "ne", "si", "co", "si", "1.0", "0.5", "0.0", "−0.5", "1000", "1100", "1200", "1300", "1400", "1500", "1600", "epoch", "(b)", "RC-MAE", "∥∇Lr∥F", "same", "similar", "diﬀerent", "case", "RC-MAE", "(recon.)", "‖∇", "‖", "F", "0.35", "0.30", "0.25", "0.20", "0.15", "0.10", "0", "250", "500", "750", "1000", "1250", "1500", "epoch", "(a)", "RC-MAE", "∥∇Lc∥F", "same", "similar", "diﬀerent", "case", "RC-MAE", "(cons.)", "‖∇", "‖", "F", "0.20", "0.15", "0.10", "0.05", "0.00", "0", "250", "500", "750", "1000", "1250", "1500", "epoch"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 91.67999999999999,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Overview. (a): When the inputs which led to the previous gradients and current gradients are similar, the consistency gradient provides a conditional correction, allowing the student to learn from newer knowledge. (b): ImageNet-1K Fine-tuning top-1 accuracy curve: RC-MAE achieves comparable accuracy (83.4%) at 800 epochs compared to MAE trained for 1600 epochs. (c): in RC-MAE, the reconstructed patches from the student are compared with the original input (reconstruction loss Lr), and with the predicted patches from the teacher (consistency loss Lc).",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 248.93252563476562,
+    "y2": 311.2239074707031
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "RC-MAE", "EMA", "original", "input", "!!\"", "Encoder", "stop-grad", "Decoder", "!!!", "Encoder", "Decodergr", "ad", "Patchify", "&", "random", "masking", "EMA", "ℒ#", "ℒ$", "(b)", "Fine-Tuning", "on", "ImageNet-1K", "MAE", "RC-MAE", "cc", ".", "-1", "A", "T", "op", "tu", "ne", "Fi", "ne", "83.50", "83.25", "83.00", "82.75", "82.50", "82.25", "82.00", "81.75", "81.50", "200", "400", "600", "800", "1000", "1200", "1400", "1600", "Epoch", "(a)", "Gradient", "Correction", "m", "en", "tu", "M", "om", "io", "us", "Pr", "ev", "en", "tum", "M", "om", "ien", "t", "+", "G", "rad", "ucti", "on", "Reco", "nstr", "entum", "M", "om", "ien", "t", "+", "ed", "G", "rad", "Corr", "ect", "Teac", "her", "Consistency", "Gradient", "(Conditional)", "∇#ℒ%", "Reconstruction", "Gradient", "∇#ℒ$"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 86.88,
+    "y2": 236.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Figure1-1.png"
+}, {
+  "caption": "Figure 4: (a): Lr is high for RC-MAE-D compared with MAE, even though RC-MAE-D outperforms MAE in downstream tasks (see Table 2). (b): RC-MAE-D likely causes a conflict between Lr and Lc (described in Appendix C), and the resulting cos(∇Lr,∇Lc) shows a positive bias. Interestingly, RC-MAE-S shows approximately the same distribution as the special cases studied in Fig. 3(c) indicating that the same situations arise in an i.i.d. training setting.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00421142578125,
+    "y1": 235.32357788085938,
+    "y2": 285.16204833984375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Cosine", "similarity", "Reconstruction", "vs.", "Consistency", "gradients", "RC-MAE-D", "RC-MAE-S", "ns", "ity", "y", "De", "ab", "ilit", "Pr", "ob", "5", "4", "3", "2", "1", "0", "0.75", "0.50", "0.25", "0.00", "0.25", "0.50", "0.75", "Cosine", "distribution", "(a)", "Reconstruction", "loss", "MAE", "RC-MAE-D", "RC-MAE-S", "ss", "n", "lo", "ct", "io", "ns", "tru", "Re", "co", "0.45", "0.44", "0.43", "0.42", "0.41", "0.40", "0", "200", "400", "600", "800", "1000", "1200", "1400", "1600", "Epoch"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 152.16,
+    "x2": 460.32,
+    "y1": 87.36,
+    "y2": 226.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Figure4-1.png"
+}, {
+  "caption": "Table 8: Linear Model Experiment Settings",
+  "captionBoundary": {
+    "x1": 214.6439971923828,
+    "x2": 397.3573303222656,
+    "y1": 399.96551513671875,
+    "y2": 405.9679870605469
+  },
+  "figType": "Table",
+  "imageText": ["Runs", "5", "Iterations", "500", "Batch", "Size", "32", "Optimizer", "SGD+Momentum(0.97)", "Learning", "Rate", "0.001", "Teacher", "Momentum", "(α)", "0.9", "Masking", "Ratio", "0.5", "Setting", "Value"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 197.76,
+    "x2": 414.24,
+    "y1": 288.96,
+    "y2": 388.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table8-1.png"
+}, {
+  "caption": "Figure 6: Example of a dataset sampled with the procedure outlined in Appendix E.1. The only difference from the dataset in the experiment is the dimensionality and number of clusters which was minimized for visualization purposes.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 245.28054809570312,
+    "y2": 273.20098876953125
+  },
+  "figType": "Figure",
+  "imageText": ["4", "3", "2", "1", "label", "y", "7.5", "5.0", "2.5", "0.0", "−2.5", "−5.0", "−7.5", "−7.5", "−5.0", "−2.5", "0.0", "2.5", "5.0", "x"],
+  "name": "6",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 216.95999999999998,
+    "x2": 397.44,
+    "y1": 88.8,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Figure6-1.png"
+}, {
+  "caption": "Table 4: End-to-end fine-tuning on ImageNet-1K. All results (top-1 acc.) are trained with 224 × 224 input. MAE (our impl.) were trained using the official code with the training configuration on the same 8 V100-32GB GPUs environment by ourselves. Note that there are reproducing issues.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00054931640625,
+    "y1": 92.68656158447266,
+    "y2": 120.60601806640625
+  },
+  "figType": "Table",
+  "imageText": ["MAE", "(our", "impl.)", "IN1K", "1600", "81.8", "83.4", "85.5", "RC-MAE", "IN1K", "1600", "82.0", "83.6", "86.1", "Supervised.", "(Touvron", "et", "al.,", "2021)", "IN1K", "w/", "labels", "300", "79.9", "81.8", "82.6", "DINO", "(Caron", "et", "al.,", "2021)", "IN1K", "800", "81.5", "82.8", "-", "MoCo", "v3", "(Chen", "et", "al.,", "2021)", "IN1K", "300", "81.4", "83.2", "84.1", "BEiT", "(Bao", "et", "al.,", "2022)", "IN1K+DALLE", "800", "81.7", "83.2", "85.2", "MSN", "(Assran", "et", "al.,", "2022)", "IN1K", "600", "-", "83.4", "-", "iBOT", "(Zhou", "et", "al.,", "2022)", "IN1k", "800", "82.3", "84.0", "84.8", "BootMAE", "(Dong", "et", "al.,", "2022)", "IN1k", "800", "-", "84.2", "85.9", "MAE", "(He", "et", "al.,", "2022)", "IN1K", "1600", "-", "83.6", "85.9", "Method", "Pre-Train", "Data", "Pre-Train", "Epochs", "ViT-S", "ViT-B", "ViT-L"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 491.03999999999996,
+    "y1": 123.36,
+    "y2": 247.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table4-1.png"
+}, {
+  "caption": "Table 11: Linear probing setting.",
+  "captionBoundary": {
+    "x1": 335.385986328125,
+    "x2": 473.5074157714844,
+    "y1": 288.5345153808594,
+    "y2": 294.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["optimizer", "LARS", "base", "learning", "rate", "0.1", "weight", "decay", "0", "batch", "size", "16,384", "learning", "rate", "schedule", "cosine", "decay", "warmup", "epochs", "10", "training", "epochs", "90", "augmentation", "RandomResizedCrop", "Config", "Value", "optimizer", "momentum", "β1,", "β2", "=", "0.9,0.999", "weight", "decay", "0.05", "layer-wise", "lr", "decay", "0.75", "(S),", "0.65", "(B,L)", "base", "learning", "rate", "5e-4", "drop", "path", "0.1", "(S,B),", "0.2", "(L)", "batch", "size", "1024", "learning", "rate", "schedule", "cosine", "decay", "warmup", "epochs", "5", "training", "epochs", "300", "(S),", "100", "(B,L)", "augmentation", "RandAug(9,", "0.5)", "label", "smoothing", "0.1", "mixup", "0.8", "cutmix", "1.0"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 294.24,
+    "y2": 440.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table11-1.png"
+}, {
+  "caption": "Figure 5: Attention maps obtained by thresholding 10% mass of the query patch (8). RCMAE & MAE attend regions more precisely with respect to the query patch while MSN, iBOT, and MoCo v3 are likely to attend the unrelated region with the query patch.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 281.2435302734375,
+    "y2": 309.16400146484375
+  },
+  "figType": "Figure",
+  "imageText": ["RC-MAE", "MAE", "MSN", "iBOT", "MoCo", "v3Query"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 86.88,
+    "y2": 273.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Figure5-1.png"
+}, {
+  "caption": "Table 7: Robustness Evaluation on ImageNet-variants:ImageNet-C (Hendrycks & Dietterich, 2019), ImageNet-A (Hendrycks et al., 2021b), ImageNet-R (Hendrycks et al., 2021a), and ImageNet-Sketch (Wang et al., 2019). Except for ImageNet-C which is measured in terms of mean Corruption Error (mCE), top-1 accuracy is used as the metric for IN-A,-R, and -Sketch.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041198730469,
+    "y1": 319.71453857421875,
+    "y2": 358.593994140625
+  },
+  "figType": "Table",
+  "imageText": ["MAE", "51.7", "35.9", "48.3", "34.5", "RC-MAE", "49.9", "36.5", "49.5", "35.8", "Method", "IN-C", "(mCE", "↓)", "IN-A", "(top-1", "↑)", "IN-R", "(top-1", "↑)", "IN-Sketch", "(top-1", "↑)"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 481.44,
+    "y1": 361.44,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table7-1.png"
+}, {
+  "caption": "Table 13: Total GPU memory usage and throughput using ViT-L backbone. OOM represents that it was not able to run on 8 V100-32GB GPUs due to “Out of memory”.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00152587890625,
+    "y1": 195.67050170898438,
+    "y2": 212.6319580078125
+  },
+  "figType": "Table",
+  "imageText": ["MAE", "84", "103", "140", "213", "533", "853", "1191", "1442", "MSN", "183", "OOM", "OOM", "OOM", "78", "OOM", "OOM", "OOM", "iBOT", "227", "OOM", "OOM", "OOM", "123", "OOM", "OOM", "OOM", "BootMAE", "98", "116", "154", "225", "376", "557", "701", "813", "RC-MAE", "95", "114", "152", "226", "441", "674", "914", "1101", "Batch", "size", "128", "256", "512", "1024", "128", "256", "512", "1024", "GPU", "Memory", "Usage", "(GB)", "Throughput", "(imgs/sec.)"],
+  "name": "13",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 465.12,
+    "y1": 215.51999999999998,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table13-1.png"
+}, {
+  "caption": "Table 12: Comparison between Student vs. Teacher networks on ImageNet-1K evaluation. FT and LN denote fine-tuning and linear probing top-1 accuracies, respectively.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9952697753906,
+    "y1": 92.68656158447266,
+    "y2": 109.64801025390625
+  },
+  "figType": "Table",
+  "imageText": ["Student", "83.48", "96.59", "68.38", "87.88", "Teacher", "83.58", "96.64", "68.41", "87.94", "top-1", "top-5", "top-1", "top-5", "Checkpoint", "FT", "LN"],
+  "name": "12",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 207.84,
+    "x2": 404.15999999999997,
+    "y1": 112.8,
+    "y2": 173.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table12-1.png"
+}, {
+  "caption": "Table 1: Input sequences used in Figs. 2 and 3",
+  "captionBoundary": {
+    "x1": 320.18682861328125,
+    "x2": 489.3897705078125,
+    "y1": 341.6444396972656,
+    "y2": 347.64691162109375
+  },
+  "figType": "Table",
+  "imageText": ["Case", "1", "(x̃,", "x̃)", "same", "input", "twice", "(same)", "Case", "2", "(x̃,", "x̃′)", "same", "input", "with", "a", "different", "mask", "(similar)", "Case", "3", "(x̃,", "x̂)", "different", "inputs", "(different)", "Name", "Input", "Description"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 306.71999999999997,
+    "x2": 502.08,
+    "y1": 349.91999999999996,
+    "y2": 392.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Table1-1.png"
+}, {
+  "caption": "Figure 2: Linear Models: For three sequences of inputs (Table 1), we performed one gradient step and teacher update and then calculated ∇SLr, and ∇SLc at the next step. Fig. 2(a): ∥∇SLc∥2 is larger when cos(x̂, x̃) is large due to (Eq. (5)). Fig. 2(b): The looser bound on ∥∇SLr∥2 (Eq. (9)) shows the opposite line order. Fig. 2(c): ∇SLc shows a conditional direction based on cos(x̂, x̃). Putting it all together: For ∇SLc, a cos(x̂, x̃) = 1 creates a larger move in a negative direction while cos(x̂, x̃) ≈ 0 creates a smaller move in an approximately orthogonal direction.",
+  "captionBoundary": {
+    "x1": 107.99986267089844,
+    "x2": 504.0,
+    "y1": 208.93154907226562,
+    "y2": 269.72894287109375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "CosSim(∇SL(t),∇SL(t+1)c", ")", "student", "teacher", "grad", "type", "same", "similar", "diﬀerent", "input", "type", "Linear", "MAE+Teacher", "ri", "ty", "m", "ila", "ne", "si", "co", "si", "1.0", "0.5", "0.0", "−0.5", "−1.0", "0", "100", "200", "300", "400", "500", "iter", "(b)", "∥∇SLr∥2", "same", "similar", "diﬀerent", "input", "type", "Linear", "MAE+Teacher", "(recon.)", "‖∇", "‖", "2", "600", "400", "200", "0", "0", "100", "200", "300", "400", "500", "iter", "(a)", "∥∇SLc∥2", "same", "similar", "diﬀerent", "input", "type", "Linear", "MAE+Teacher", "(cons.)", "150", "200", "‖∇", "‖", "2", "100", "50", "0", "0", "100", "200", "300", "400", "500", "iter"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 497.28,
+    "y1": 91.67999999999999,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7sn6Vxp92xV-Figure2-1.png"
+}]

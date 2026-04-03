@@ -1,0 +1,107 @@
+{
+  "ID": "QugfmhDu5Y4",
+  "Title": "Self-Paced Learning  Enhanced Physics-informed Neural Networks for Solving Partial Differential Equations",
+  "Keywords": "None",
+  "URL": "https://openreview.net/forum?id=QugfmhDu5Y4",
+  "paper_draft_url": "/references/pdf?id=BA3NSVir4M",
+  "Conferece": "ICLR_2023",
+  "track": "Machine Learning for Sciences (eg biology, physics, health sciences, social sciences, climate/sustainability )",
+  "acceptance": "Reject",
+  "review_scores": "[['1', '1', '4'], ['3', '3', '4'], ['3', '3', '4'], ['2', '1', '5']]",
+  "input": {
+    "source": "CRF",
+    "title": "SELF-PACED LEARNING ENHANCED PHYSICS-",
+    "authors": [],
+    "emails": [],
+    "sections": [
+      {
+        "heading": null,
+        "text": "There is a hit discussion on solving partial differential equation by neural network. The famous PINN (physics-informed neural networks) has drawn worldwide attention since it was put forward. Despite its success in solving nonlinear partial differential equation, the difficulty in converging and the inefficiency in training process are definitely huge concerns. Normally, data for PINN is randomly chosen for a given distribution. Additionally, it\u2019s fitted to a model in a meaningless way. Curriculum Learning is a learning strategy that trains a model from easy samples to hard ones, which represents the meaningful human learning order. Self-paced Learning (SPL) is one of the significant branches of Automatic Curriculum Learning, which takes example-wise the training loss as Difficulty Measurer. SPL is an efficient strategy in enhancing the convergence rate of numerous models. In this paper, we propose a novel SPL-PINN learning framework, with SPL to accelerate the convergence progress of PINN. We demonstrate the effectiveness of SPL-PINN in a typical parabolic equation and Burgers equation."
+      },
+      {
+        "heading": "1 INTRODUCTION",
+        "text": "There is an increasing number of methods for solving partial differential equation. Weinan & Yu (2018) proposed a deep learning-based method, the Deep Rize Method, for solving variational problems, which are derived form partial differential equations. Sirignano & Spiliopoulos (2018) proposed a mesh-free method, the Deep Galerkin Method, to approximate the solution of a partial differential equation by a neural network instead of a linear combination of bias functions. (RAI, 2019) aimed to approximate the solution by neural network as well as the inner physical information. There is much profound research related to PINN, the research topics can be filed to three fields: the application of PINN to a specific problem, the parallel PINN and the acceleration of PINN. Papers related to PINN abound, suggesting that a great burst of creativity has occured since the emergence of PINN. In this paper, we concentrate on how to accelerate the converging rate in the training process. Xiang et al. (2021) proposed a self-adaptive loss function which automatically assigns the weights of different objectives. LIU (2021) is also proposed to automatically adjust the weights of different objectives. Thanasutives et al. (2021) treated it as a multi-task learning problem, they proposed adversarial learning to generate high-loss samples, similarly distributed to the original training distribution. Kim et al. (2020) proposed a dynamic pulling method, enabling PINN to learn dynamics of the governing equations. Yu et al. (2022) assumed that the solution of the given partial differential equation is smooth, so they took the gradient of the PDE residual as part of the loss function.Chiu et al. (2021) proposed a CAN-PINN framework, taking the advantage of automatic differentiation and numerical differentiation, increase the accuracy of PINN. Bischof & Kraus (2021) treated it as a multi-objective problem, proposed a novel self-adaptive loss balancing of PINN with random lookback. Generally, the methods aiming at the inefficiency in training process are treating the weights of different losses. In this paper, we concentrate on the training pattern, fit model form easy samples to hard samples."
+      },
+      {
+        "heading": "2 RELATED WORK",
+        "text": ""
+      },
+      {
+        "heading": "2.1 PHYSICS-INFORMED NEURAL NETWORK",
+        "text": "Physics-informed neural network(RAI, 2019) is a successful mesh-free method for solving partial differential equations. Let\u2019s start by focusing on a general partial differential equation with both initial-value condition and boundary-value condition.\n\u2202tu(t, x) + Lxu(t, x) = f(t, x) (x, t) \u2208 \u2126\u00d7 (0, T ) u(0, x) = g(x) x \u2208 \u2126 u(t, x) = h(t, x) (x, t) \u2208 \u2202\u2126\u00d7 (0, T )\n(1)\nHere u(x, t) is the solution of this initial/boundary problem. L is the differential operator on the variable x. \u2126 is a subset of Rn. PINN approximates u(x, t) by neural network with the physical information instead of traditional finite differential method and finite element method. The loss function can be divided into several parts.\nL = LF + LI + LB (2)\nwhere\nLF = 1\nnF nF\u2211 i=1 |\u2202tunet(tFi , xFi ) + Lxunet(tFi , xFi )\u2212 f(tFi , xFi )|2\nLI = 1\nnI nI\u2211 j=1 |unet(0, xIj )\u2212 g(xIj )|2\nLB = 1\nnB nB\u2211 k=1 |unet(tBk , xBk )\u2212 h(tBk , xBk )\n(3)\nIn PINN, (tFi , x F i ), x I j and (t B k , x B k ) are randomly sampled from a given distribution. Specially, u(t, x) is derived from a back-propagation neural network by minimizing the proposed loss function 2\n\u03b8 = argmin \u03b8 L (4)"
+      },
+      {
+        "heading": "2.2 SELF-PACED LEARNING",
+        "text": "Self-paced Learning(Kumar et al., 2010) is one of the significant branches of Automatic Curriculum Learning(Bengio et al., 2009), which devotes a readily computable example-wise the training loss as Difficulty Measurer, alleviating the lack of how to efficiently identify easy samples.\nLet D = {xi,yi}Ni=1 be the training dataset where xi \u2208 X represents the ith input variable and yi \u2208 Y represents the correspondingly ith output variable. Given the training data, the parameters \u03b8 of a special model are trained by minimizing the defined loss function L. Traditionally, the parameters are trained as follows:\n\u03b8 = min \u03b8 { N\u2211 i=1 L(xi,yi; \u03b8) +R(\u03b8)} (5)\nwhere R(\u00b7) is a Regularizer. SPL introduces SPL-Regularizer to the traditional learning pattern, thus parameters are trained in a meaningful way.\n\u03b8 = min \u03b8 { N\u2211 i=1 viL(xi,yi; \u03b8) + g(vi, \u03bb) (6)\nThe value of each vi is in the interval [0, 1], \u03bb is a barrier which determines the number of easy samples that are selected at each training epoch. There are numerous types of SP-Reqularizer and the corresponding close-formed solutions v\u2217(L, \u03bb) such as Hard-SP-Reqularizer, LinearSP-Reqularizer, Logarithmic-SP-Reqularizer, Mixture-SP-Reqularizer, Mixture2-SP-Reqularizer, Logistic-SP-Reqularizer, Polynomial-SP-Reqularizer.Wang et al. (2022) We choose to use HardSP-Reqularizer to illustrate the efficiency of our method in section 4."
+      },
+      {
+        "heading": "3 THE SPL-PINN FRAMEWORK",
+        "text": "While PINN has shown its remarkably success in solving a variety of forward and inverse partial differential equations, it ignored the learning efficiency of the model itself, which resulting in a great demand for an effective method to solve this defect. Enormous research output was devoted to this topic, mainly motivated by the different weights of losses. Admittedly, the performance and the weights of losses are inextricably interconnected. However, we try to approach the problem from a different viewpoint. Strategies for the difficulty in converging are an important component of PINN, to satisfy the demand, we propose the SPL-PINN framework, which can effectively alleviate the inefficiency of convergence. Given the training data, instead of pull it into PINN in an meaningless way, we choose to fit the model from easy one to hard one, which is eminently suitable for human learning process."
+      },
+      {
+        "heading": "3.1 SPL-PINN LOSS FUNCTION",
+        "text": "In order to accelerate the learning process, we determinate the loss function with a SPL-Regularizer. Samples whether are easy or not are determined by a scalar \u03bb. In order to concisely exploit the SPL-PINN structure, we choose to use the Hard-SP-Reqularizer and its corresponding v\u2217 to control the portion of easy samples that are plugged into the model.\nLoriginal = LF + LI + LB\nL = 1\nN N\u2211 i=1 viLoriginal(zi; \u03b8) + g(vi, \u03bb)\ng(vi, \u03bb) = \u2212\u03bb N\u2211 i=1 vi\nv\u2217i (li;\u03bb) =\n{ 1, li < \u03bb\n0, otherwise\n(7)\nThe specific details are as follows:\n\u2022 vi = 1 means that the ith sample is identified as the easy one, which should be used to train the model.\n\u2022 vi = 0 means that the ith sample is identified as the hard one, which should not be used to train the model.\n\u2022 \u03bb is a threshold, the larger \u03bb means more samples will be selected."
+      },
+      {
+        "heading": "3.2 OVERVIEW OF SPL-PINN",
+        "text": "Normally, the dataset is constructed by randomly sampled from a given distribution. Generally, researchers regard all of the samples have equal contribution to their models. Considering that our deep learning models are finally being used to make effective predictions that solve partial differential equations, especially those equations have physical information, it seams meaningless to some degree to just treat samples equally.\nIn consideration of a human learning habit, which usually starts from simple and general ones then gradually transmits to more complex and specialized ones. For instance, college students normally learn mathematical analysis and algebra at the first semester, later they are available to access real\nand complex analysis, functional analysis. Given the hypothesis that different samples play different role in a model training process. Motivated by the habit of human learning behavior, we propose a novel SPL-PINN framework, which seamlessly integrates PINN and Self-paced Learning.\nWe consider the partial differential equation with both inital-value condition and boundary-value condition that proposed in section 2.1. For the ith sample, firstly we compute its loss function li. Secondly, identifying whether it is an easy sample by v\u2217i (li, \u03bb). Subdataset is constructed by selceted samples. Thirdly, model parameters \u03b8 are renewed by minimizing the loss function L. Finally, after converging in this subdataset, update the threshold \u03bb. The complete procedures are as follows:\nAlgorithm 1 SPL-PINN Input: Input dataset {(tFi , xFi )} nF i=1, {xIj} nI j=1 and {(tBk , xBk )} nB k=1; pace parameter \u03c3 Output: Model parameter \u03b8 1: Initialize \u03b8, \u03bb; 2: while not converged do 3: while not converged do 4: Compute v\u2217i (li, \u03bb) 5: Update \u03b8 = argmin\n\u03b8 L\n6: end while 7: \u03bb\u2190 \u03c3\u03bb 8: end while"
+      },
+      {
+        "heading": "4 EXPERIMENTS",
+        "text": "To illustrate the efficiency of our method in the converging process, we apply SPL-PINN to a typical parabolic equation and Burgers equation. The dataset is constructed by randomly sampled from the uniform distribution."
+      },
+      {
+        "heading": "4.1 HEAT EQUATION",
+        "text": "The heat equation, also known as diffusion equation, is one of typical parabolic equations. It is a widely studied topic and foundational partial diffusion equation, which describes the evolution in time of the density u of some quantity such as heat.\n\u2202u \u2202t \u2212 \u2202\n2u\n\u2202x2 = 0 (x, t) \u2208 (0, 1)\u00d7 (0, 1)\nu(x, 0) = sin(\u03c0x) x \u2208 (0, 1) u(0, t) = u(1, t) = 0 t \u2208 (0, 1)\n(8)\nThe problem stated above has its unique solution:\nu(x, t) = sin(\u03c0x)e\u2212\u03c0 2t (9)\nWe choose the training dataset {(tFi , xFi )} nF i=1, {xIj} nI j=1 and {(tBk , xBk )} nB k=1 which nF = nI = nB = 2000. For a fixed iteration, the profermance of SPL-PINN is better than traditional PINN. For a given training epoch, we compute mean squared error of u(x, t) in test dataset. Mean squared errors of u(x, t) of given epochs are represented in Table 1. Moreover, the solution of 8 and the train losses of PINN and SPL-PINN can be found in 12. We use \u03b4 to measure the residual, \u03b4 = LSPL\u2212PINN\u2212LPINN. Typically, \u03b4 is almost everywhere negative, which is a compelling illustration of the efficiency of our method."
+      },
+      {
+        "heading": "4.2 BURGERS EQUATION",
+        "text": "Burgers equation expresses the propagation and reflection of shock wave. Naturally, it plays a significant role in many applications such as gas dynamics, fluid mechanics, nonlinear acoustics and so on. The equations are as follows:\nFigure 1: the solution u(x, t) of heat eqution by SPL-PINN\nFigure 2: train losses of PINN and SPL-PINN\n\u2202u \u2202t + u \u2202u \u2202x \u2212 \u03c9\u2202\n2u\n\u2202x2 = 0 (x, t) \u2208 (\u22121, 1)\u00d7 (0, 1)\nu(0, x) = \u2212 sin(\u03c0x) x \u2208 (\u22121, 1) u(t,\u22121) = u(t, 1) = 0 t \u2208 (0, 1)\n\u03c9 = 0.01\n\u03c0\n(10)\nWe choose the training dataset {(tFi , xFi )} nF i=1, {xIj} nI j=1 and {(tBk , xBk )} nB k=1 which nF = nI = nB = 2000. Given the training epoch, the mean squared error is presented in Table 2 3 while the solution of 10 solving by SPL-PINN is presented in Figure 3. In addition, the solution of 10 and the train losses of PINN and SPL-PINN can be found in 34. Obviously, the great portion of \u03b4 is under 0."
+      },
+      {
+        "heading": "5 CONCLUSION",
+        "text": "Recently, PINN has gained high attention. There are many researchers devote their efforts on embellishing it. Admittedly, The difficulty in converging is a huge concern. In an attempt to solve the inefficiency of convergence, we propose a noval SPL-PINN framewrok. It is a new training pattern, samples plugged into the model in a meaning way, from easy ones to hard ones. The performance in hear equation and Burgers equation illustrate the effectiveness of this new pattern."
+      },
+      {
+        "heading": "6 FUTURE WORK",
+        "text": "Normally, the loss function of PINN is combined by three parts: the PDE residual, the initial condition residual and the boundary condition residual. Considering the three parts maybe in different magnitude, is it fair to put the equal weights to them? In future, we plan to propose a framework to guarantee the fairness of the weights of different losses."
+      }
+    ],
+    "year": 2022,
+    "abstractText": "There is a hit discussion on solving partial differential equation by neural network. The famous PINN (physics-informed neural networks) has drawn worldwide attention since it was put forward. Despite its success in solving nonlinear partial differential equation, the difficulty in converging and the inefficiency in training process are definitely huge concerns. Normally, data for PINN is randomly chosen for a given distribution. Additionally, it\u2019s fitted to a model in a meaningless way. Curriculum Learning is a learning strategy that trains a model from easy samples to hard ones, which represents the meaningful human learning order. Self-paced Learning (SPL) is one of the significant branches of Automatic Curriculum Learning, which takes example-wise the training loss as Difficulty Measurer. SPL is an efficient strategy in enhancing the convergence rate of numerous models. In this paper, we propose a novel SPL-PINN learning framework, with SPL to accelerate the convergence progress of PINN. We demonstrate the effectiveness of SPL-PINN in a typical parabolic equation and Burgers equation.",
+    "creator": "LaTeX with hyperref"
+  },
+  "output": [
+    [
+      "1. badly written;",
+      "2. limited experiments (only two toy problems);",
+      "3. equations unclear and not well explained;",
+      "4. the \"proposed loss function\" (eq. 4) is completely trivial;",
+      "5. references are incomplete (no authors are given for the main reference);",
+      "6. unclear what lambda is."
+    ],
+    [
+      "1. The experiments are too toy to show the true efficacy of the proposed method.",
+      "2. The hyperparameters of the experiments are hidden, which makes the result uninterpretable.",
+      "3. My main reservation is about the novelty. The proposed method does not contain significant new techniques.",
+      "4. In my opinion, I would like to call it a trick instead of a scientific discovery."
+    ],
+    [
+      "1. The format of the paper seems not ready for ICLR main conference.",
+      "2. The idea is too naive and the experimental part is too simple and lacks deep analyses.",
+      "3. There are too many typos."
+    ],
+    [
+      "1. The paper is not well written.",
+      "2. The proposed SPL loss is essentially using a point-wise weight coefficient. Exact the same idea has been proposed in https://arxiv.org/abs/2009.04544 and https://arxiv.org/abs/2001.04860",
+      "3. No sufficient examples."
+    ]
+  ],
+  "review_num": 4,
+  "item_num": [
+    6,
+    4,
+    3,
+    3
+  ]
+}

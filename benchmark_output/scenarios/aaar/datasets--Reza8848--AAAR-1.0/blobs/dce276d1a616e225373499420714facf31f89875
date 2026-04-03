@@ -1,0 +1,81 @@
+[{
+  "caption": "Figure 1: Gradient estimation accuracy and computation cost in VAE on MNIST. Left and middle: average (per parameter) squared bias and variance of gradient estimators versus temperature. STGS and all GR estimators share the same bias according to the theory but differ in variance. ZGR achieves the lowest bias of this family and has variance lower than GR and GS estimators for any temperature < 0.1 and substantially lower than that of unbiased ARSM. GS estimator is asymptotically unbiased but its variance grows asymptotically as O(1/τ). Right: time of a forward-backward pass on GPU. GS and GS-ST estimators are built-in in pytorch while other estimators are implemented by us in pytorch. ZGR is significantly faster than GR-MC variants and ARSM. Note that the network has only a single layer with 16 8-way categorical variables.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0039367675781,
+    "y1": 188.8643035888672,
+    "y2": 283.015869140625
+  },
+  "figType": "Figure",
+  "imageText": ["30.30", "1.19", "1.31", "6.75", "1.93", "0.83", "0.81", "ARSM", "ST", "ZGR", "GR-MC100", "GR-MC10", "ST-GS", "GS", "Time", "[ms]", "100", "101", "GS", "ST-GS", "GR-MC10", "GR-MC100", "ZGR", "ST", "ARSM", "nc", "e", "Va", "ria", "ag", "e", "Av", "er", "10", "2", "10", "3", "10", "4", "10", "5", "t", "10", "2", "10", "1", "100", "GS", "ST-GS", "GR-MC10", "GR-MC100", "ZGR", "ST", "Bi", "as", "re", "d", "Sq", "ua", "ag", "e", "Av", "er", "10", "5", "10", "6", "10", "7", "10", "8", "t", "10", "2", "10", "1", "100"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.47999999999996,
+    "y1": 81.6,
+    "y2": 177.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EN8YE5dkOO-Figure1-1.png"
+}, {
+  "caption": "Figure 2: MNIST VAE. Training loss versus epochs with batch size 32 (left) and 200 (right), the rest of the setup held fixed. ZGR method performs not worse than the more computationally demanding Gumbel-Rao with 10 or 100 MC samples. For small batch size, the performance of ARSM, GS and GS-ST is clearly affected by their higher variance. The effect is consistent with the comparison of variance in Fig. 1 at t=0.1. The performance of ST, which has the least variance, is affected by its bias for any batch size.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 254.21434020996094,
+    "y2": 315.48992919921875
+  },
+  "figType": "Figure",
+  "imageText": ["130", "140", "GS(t=0.1)", "GS-ST(t=0.1)", "GR-MC(t=0.1,M=10)", "GR-MC(t=0.1,M=100)", "ZGR", "ST", "ARSM", "ZGR", "s=2", "120", "110", "100", "90", "80", "0", "100", "200", "300", "400", "500", "130", "140", "GS(t=0.1)", "GS-ST(t=0.1)", "GR-MC(t=0.1,M=10)", "GR-MC(t=0.1,M=100)", "ZGR", "ST", "ARSM", "ZGR", "s=2", "120", "110", "100", "90", "80", "0", "100", "200", "300", "400", "500", "batch", "size", "=", "32,", "lr", "=", "0.0005", "batch", "size", "=", "200,", "lr", "=", "0.0005"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 83.03999999999999,
+    "y2": 240.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EN8YE5dkOO-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Performance of estimators in stochastic quantization with selected combinations of test functions and injected noise for varied input η of the stochastic quantizer. The dashed blue line is the exact gradient. Red line is the mean of the estimator and the red shaded area shows ±1 std. GR with 100 is able to reduce the variance of GS-ST substantially. ZGR reduces the variance by an edge further while keeping the bias equal to the theoretical bias of GR with zero temperature. The variance of ARSM is substantially higher. Plain ST estimator has a yet smaller variance but a larger bias, which may accumulate during taring.",
+  "captionBoundary": {
+    "x1": 62.137969970703125,
+    "x2": 710.14013671875,
+    "y1": 481.5992736816406,
+    "y2": 520.9569702148438
+  },
+  "figType": "Figure",
+  "imageText": ["0", "1", "2", "3", "0", "1", "2", "3", "0", "1", "2", "3", "0", "1", "2", "3", "0", "1", "2", "3", "0", "1", "2", "3", "la", "r", "g", "u", "ri", "a", "n", "/", "T", "ti", "c", "ad", "ra", "Q", "u", "2", "1", "-1", "-2", "0", "0", "1", "2", "3", "st", "ic", "L", "o", "gi", "d", "/", "m", "oi", "S", "ig", "0", "ti", "c", "og", "is", "/", "L", "ti", "c", "ad", "ra", "Q", "u", "2", "1", "-1", "-2", "0", "GS-ST(t=1)", "GS-ST(t=0.1)", "GR(t=0.1,M=10)", "GR(t=0.1,M=100)", "ZGR", "ARSM", "ST", "U", "nderreview", "as", "a", "conference", "paperatIC", "L", "R", "2023", "0", "1", "2", "L", "in", "ea", "r", "/", "L", "o", "gi", "st", "ic"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 61.919999999999995,
+    "x2": 763.1999999999999,
+    "y1": 87.84,
+    "y2": 480.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EN8YE5dkOO-Figure3-1.png"
+}, {
+  "caption": "Table 1: MNIST test error[%] in deterministic mode (no injected noises at test time) for different bitwidth per weigh and activation (T denotes ternary). Hyperparameters are selected on the validation set. Reference test errors: ReLU 0.69% , Clamp 0.64%.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 83.05235290527344,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["GR(t=0.5,K=10)", "0.57", "0.55", "0.52", "0.69", "GR(t=0.1,K=10)", "0.65", "0.58", "0.61", "0.96", "ZGR", "0.55", "0.66", "0.59", "0.91", "ST", "0.62", "0.54", "0.65", "0.66", "method", "2/2", "T/T", "T/1", "1/1", "Triangular", "Noise", "Relaxation", "Weights", "[bits]", "/", "Activations", "[bits]", "GS(t=2)", "0.80", "0.78", "0.87", "1.11", "GS(t=1)", "0.86", "0.72", "0.98", "0.86", "GS(t=0.5)", "0.94", "0.82", "0.99", "1.18", "GS-ST(t=2)", "0.63", "0.75", "0.70", "0.53", "GS-ST(t=1)", "0.71", "0.76", "0.82", "0.60", "GS-ST(t=0.5)", "0.82", "0.82", "0.88", "1.16", "GR(t=0.5,K=10)", "0.70", "0.79", "0.85", "0.99", "GR(t=0.1,K=10)", "0.80", "1.02", "0.86", "1.04", "ZGR", "0.69", "0.89", "0.97", "0.99", "ST", "0.74", "0.62", "0.68", "0.78", "method", "2/2", "T/T", "T/1", "1/1", "Logistic", "Noise", "Relaxation", "Weights", "[bits]", "/", "Activations", "[bits]"],
+  "name": "1",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 125.28,
+    "y2": 270.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_EN8YE5dkOO-Table1-1.png"
+}]

@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 11: Base certificate weightw+ of the variance-constrained sparsity-aware smoothing certificate for varying distribution parameters. Certifying high robustness to adversarial additions (i.e. obtaining small weights) requires either setting a high probability for random additions or an even higher probability for random deletions.",
+  "captionBoundary": {
+    "x1": 108.00004577636719,
+    "x2": 504.00335693359375,
+    "y1": 450.8785400390625,
+    "y2": 489.75701904296875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Certificate", "weight", "w+", "for", "S", "(", "x,", "θ+,", "0.6", ")", "for", "vary-", "ing", "θ+.", "w", "+", "6", "4", "2", "0", "θ+", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "(a)", "Certificate", "weight", "w+", "for", "S", "(", "x,", "0.01,", "θ−", ")", "for", "varying", "θ−.", "w", "+", "4", "3", "2", "1", "0", "θ−", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0"],
+  "name": "11",
+  "page": 20,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 293.76,
+    "y2": 437.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure11-1.png"
+}, {
+  "caption": "Table 1: Base certificates complying with interface Eq. 2 with parameters w(n) and η(n). Here, yn = fn(x) is the prediction of fn(x) = argmaxy∈Yqn,y . With the l0 certificate, ζ = Varz∼F(x,θ) [gn(z)yn ] refers to the variance of yn’s softmax score.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9998779296875,
+    "y1": 607.716552734375,
+    "y2": 639.427978515625
+  },
+  "figType": "Table",
+  "imageText": [")2)", "2", "(", "qn,yn", "−", "1", "ζ", ")", "ln", "(", "1", "+", "1", "1−θd", "2", "θd", "+", "(θd)", "[gn(z)y]", "ln", "(", "(1−θd)", "2", "l0", "{0,", "1}Din", "→", "∆|Y|", "F", "(x,θ)", "E", "z∼Ψ", "(n)", "x", "Φ−1", "(qn,yn)", "z∼Ψ", "(n)", "x", "[gn(z)", "=", "y]", "1", "λd", "(", "Φ−1", "(qn,yn)", ")2", "l1", "RDin", "→", "Y", "U", "(x,λ)", "Pr", "z∼Ψ", "(n)", "x", "[gn(z)", "=", "y]", "1", "s2", "d", "Norm", "gn", "Ψ", "(n)", "x", "qn,y", "w", "(n)", "d", "η(n)", "l2", "RDin", "→", "Y", "N", "(", "x,", "diag", "(s)2", ")", "Pr"],
+  "name": "1",
+  "page": 29,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 592.3199999999999,
+    "y1": 655.68,
+    "y2": 725.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Table1-1.png"
+}, {
+  "caption": "Figure 1: Localized randomized smoothing applied to semantic segmentation. We assume that the most relevant information for labeling a pixel is contained in other nearby pixels. We partition the input image into multiple grid cells. For each grid cell, we sample noisy images from a different anisotropic distribution that applies more noise to far-away, less relevant cells. Segmenting all noisy images, cropping the result and computing the majority vote yields a local segmentation mask. These per-cell segmentation masks can then be combined into a complete segmentation mask.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 207.76150512695312,
+    "y2": 268.55792236328125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Comparison of our LP-based certificate for localized randomized smoothing to the baselines, using U-Net on Pascal-VOC. Localized smoothing offers a better accuracyrobustness tradeoff for models with mIOU in [19.44%, 55.39%] and can achieve higher ACR.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 302.0415954589844,
+    "y1": 213.42453002929688,
+    "y2": 274.220947265625
+  },
+  "figType": "Figure",
+  "imageText": ["Localized", "LP", "CenterSmooth", "SegCertify*", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "0.8", "0.6", "0.4", "0.2", "0.0", "mIOU", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 298.08,
+    "y1": 85.44,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Certified accuracy of U-Net on PascalVOC. We compare SegCertify* (σ = 0.3) to localized smoothing ((σmin, σmax) = (0.25, 0.7)). Combining the independent certificates (dashed blue line) to our collective approach (solid blue line) outperforms the baseline.",
+  "captionBoundary": {
+    "x1": 309.9580078125,
+    "x2": 504.0002136230469,
+    "y1": 213.42453002929688,
+    "y2": 274.220947265625
+  },
+  "figType": "Figure",
+  "imageText": ["Localized", "LP", "Localized", "Naı̈ve", "SegCertify*", "ra", "cy", "ac", "cu", "tifi", "ed", "C", "er", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Adversarial", "budget", "ϵ", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "1.2"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 313.92,
+    "x2": 500.15999999999997,
+    "y1": 85.92,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure3-1.png"
+}, {
+  "caption": "Figure 12: Certified accuracy of APPNP on Citeseer. We compare the naı̈ve isotropic smoothing certificate of the most robust baseline model (θ−iso = 0.8) to localized smoothing (θ−min = 0.75). Even naı̈vely combining the variance-constrained base certificates (dashed blue line) is sufficient for outperforming the SparseSmooth certificate for 15 deletions or less. Combining the base certificates via our LP (solid blue line) further extends the certifiable radius and significantly increases the certified accuracy for perturbations with 5 or more deletions.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032653808594,
+    "y1": 453.99652099609375,
+    "y2": 514.7939453125
+  },
+  "figType": "Figure",
+  "imageText": ["Localized", "Naı̈ve", "SparseSmooth", "ra", "cy", "Localized", "LP", "ac", "cu", "tifi", "ed", "C", "er", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Number", "of", "adversarial", "deletions", "0", "10", "20", "30", "40", "50"],
+  "name": "12",
+  "page": 21,
+  "regionBoundary": {
+    "x1": 213.6,
+    "x2": 398.4,
+    "y1": 327.36,
+    "y2": 435.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure12-1.png"
+}, {
+  "caption": "Figure 7: Analysis of our LP-based collective certificate using APPNP on Citeseer. We use the sparsity-aware smoothing with S (x, 0.01, θ−) to certify robustness to deletions. In Fig. 7a we use the certificate of Bojchevski et al. (2020) for baseline (identical to Fig. 5a). In Fig. 7b we use variance-constrained certification (see Theorem 5.1) as baseline. In both cases, there are locally smoothed models with a higher accuracy than any of the isotropically smoothed models and significantly larger average certifiable radii.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00341796875,
+    "y1": 357.37451171875,
+    "y2": 418.17095947265625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Using", "variance-constrained", "certification", "for", "the", "naı̈ve", "isotropic", "smoothing", "baseline.", "Localized", "LP", "Variance", "Cert.", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "20", "15", "10", "5", "0", "Accuracy", "0.4", "0.5", "0.6", "0.7", "0.8", "(a)", "Using", "(Bojchevski", "et", "al.,", "2020)", "for", "the", "naı̈ve", "isotropic", "smoothing", "baseline.", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "20", "15", "10", "5", "0", "Accuracy", "0.4", "0.5", "0.6", "0.7", "0.8"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 204.0,
+    "y2": 344.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Comparison of the LP-based collective certificate for localized randomized smoothing to baselines, using DeepLabv3 on Cityscapes. Localized randomized smoothing only offers stronger certificates than SegCertify* for models with mIOU ≤ 0.11.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.0019836425781,
+    "y1": 563.7655639648438,
+    "y2": 624.56201171875
+  },
+  "figType": "Figure",
+  "imageText": ["Localized", "LP", "CenterSmooth", "SegCertify*", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "mIOU", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 329.28,
+    "x2": 501.12,
+    "y1": 453.59999999999997,
+    "y2": 555.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure4-1.png"
+}, {
+  "caption": "Figure 8: Comparison of our LP-based collective certificate for localized randomized smoothing to SparseSmooth, using a 6-layer GCN on Citeseer. We consider both adversarial deletions (Fig. 8a) and additions (Fig. 8b). Some locally smoothed models have a higher accuracy than any of the isotropically smoothed models. However, our certificate only dominates the best isotropically smoothed models when considering robustness to deletions, not when considering robustness to additions. This can either be attributed to a lower locality in deep GCNs or variance-constrained certification yielding weak base certificates for addition when θ+ is small.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 244.56741333007812,
+    "y2": 316.32379150390625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Robustness", "to", "additions,", "using", "S", "(", "x,", "0.01,", "θ−", ")", ".", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "5", "4", "3", "2", "1", "0", "Accuracy", "0.40", "0.45", "0.50", "0.55", "0.60", "0.65", "0.70", "0.75", "0.80", "(a)", "Robustness", "to", "deletions,", "using", "S", "(", "x,", "0.01,", "θ−", ")", ".", "10", "15", "A", "vg", ".c", "er", "t.", "ra", "di", "us", "Localized", "LP", "SparseSmooth", "5", "0", "Accuracy", "0.40", "0.45", "0.50", "0.55", "0.60", "0.65", "0.70", "0.75"],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 501.59999999999997,
+    "y1": 99.84,
+    "y2": 232.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Comparison of our LP-based collective certificate for localized randomized smoothing to center smoothing with CenterSmooth (Kumar & Goldstein, 2021) and SegCertify* (Fischer et al., 2021), using APPNP on Cityscapes. Increasing the number of samples used for certifying each output from 6400 = 153600",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 467.2275390625,
+    "y2": 506.10699462890625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "153600", "samples", "per", "localized", "smoothing", "base", "cer-", "tificate.", "0.8", "1.0", "A", "vg", ".c", "er", "t.", "ra", "di", "us", "Localized", "LP", "CenterSmooth", "SegCertify*", "0.6", "0.4", "0.2", "0.0", "mIOU", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "(a)", "153600", "24", "samples", "per", "localized", "smoothing", "base", "cer-", "tificate.", "Localized", "LP", "CenterSmooth", "SegCertify*", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "mIOU", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 312.47999999999996,
+    "y2": 452.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure6-1.png"
+}, {
+  "caption": "Figure 5: Comparison of our LP-based collective certificate for localized randomized smoothing to Bojchevski et al. (2020), using APPNP on Citeseer. We consider both adversarial deletions (Fig. 5a) and additions (Fig. 5b) of attribute bits. Locally smoothed models offer a better accuracy-robustness tradeoff than any of the baseline models, especially for deletions. Transparent points signal that they are Pareto-dominated by points from the same method.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 230.16842651367188,
+    "y2": 280.005859375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Robustness", "to", "additions,", "using", "S", "(", "x,", "0.01,", "θ−", ")", ".", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "4", "3", "2", "1", "0", "Accuracy", "0.5", "0.6", "0.7", "0.8", "(a)", "Robustness", "to", "deletions,", "using", "S", "(", "x,", "0.01,", "θ−", ")", ".", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "20", "15", "10", "5", "0", "Accuracy", "0.4", "0.5", "0.6", "0.7", "0.8"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 498.24,
+    "y1": 85.92,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure5-1.png"
+}, {
+  "caption": "Figure 9: Comparison of our LP-based collective certificate for localized randomized smoothing to the SparseSmooth (Bojchevski et al., 2020), using APPNP on Cora-ML. We consider both adversarial deletions (Fig. 9a) and additions (Fig. 9b). Some locally smoothed models that have a higher accuracy than any of the isotropically smoothed models. However, our method is only able to dominate all isotropically smoothed models when considering robustness to deletions, not when considering robustness to additions. This can either be attributed to a lower locality in deep GCNs or variance-constrained certification yielding weak base certificates for addition when θ+ is small.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 244.56741333007812,
+    "y2": 316.32379150390625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Robustness", "to", "additions,", "using", "S", "(", "x,", "0.01,", "θ−", ")", ".", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "5", "4", "3", "2", "1", "0", "Accuracy", "0.0", "0.2", "0.4", "0.6", "0.8", "(a)", "Robustness", "to", "deletions,", "using", "S", "(", "x,", "0.01,", "θ−", ")", ".", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "20", "15", "10", "5", "0", "Accuracy", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 99.84,
+    "y2": 232.79999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Comparison of our LP-based collective certificate for localized randomized smoothing to SparseSmooth and to a naı̈ve combination of its base certificates, using GCN and adversarial additions on Citeseer. Fig. 10a shows that the LP-based certificate is outperformed by naı̈ve isotropic smoothing. Fig. 10b shows that this is largely due to the variance-constrained base certificates (green crosses) for adversarial additions being much weaker than the isotropic smoothing certificate of (Bojchevski et al., 2020) in Fig. 10a.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.0047912597656,
+    "y1": 562.6145629882812,
+    "y2": 623.4110107421875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Using", "variance-constrained", "certification", "for", "the", "naı̈ve", "isotropic", "smoothing", "certificate.", "Localized", "LP", "Variance", "Cert.", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "5", "4", "3", "2", "1", "0", "Accuracy", "0.40", "0.45", "0.50", "0.55", "0.60", "0.65", "0.70", "0.75", "0.80", "(a)", "Using", "(Bojchevski", "et", "al.,", "2020)", "for", "the", "naı̈ve", "isotropic", "smoothing", "certificate.", "Localized", "LP", "SparseSmooth", "di", "us", "t.", "ra", ".c", "er", "A", "vg", "5", "4", "3", "2", "1", "0", "Accuracy", "0.40", "0.45", "0.50", "0.55", "0.60", "0.65", "0.70", "0.75", "0.80"],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 408.47999999999996,
+    "y2": 549.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-k7Lvk0GpBl-Figure10-1.png"
+}]

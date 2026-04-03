@@ -1,0 +1,241 @@
+[{
+  "caption": "Figure 4: Pose error versus the number of samples. DiffMimic (4s): rollout 4 seconds of Diffmimic for evaluation. DiffMimic (20s): rollout 20 seconds of Diffmimic for evaluation. In general, DiffMimic allows the policy to generate high-quality motions with less than 3.5 × 107 samples. We refer the readers for more results to the appendix.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032043457031,
+    "y1": 235.46853637695312,
+    "y2": 274.34796142578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 103.67999999999999,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Wallclock training time versus pose error for DiffMimic and AMP. DiffMimic takes half of training time required by AMP to have a comparable result.",
+  "captionBoundary": {
+    "x1": 353.5179748535156,
+    "x2": 504.0029602050781,
+    "y1": 624.4785766601562,
+    "y2": 674.3159790039062
+  },
+  "figType": "Figure",
+  "imageText": ["0.5", "0.6", "Sword", "and", "Shield", "DiffMimic", "AMP", "0.4", "0.3", "0.2", "0.1", "0.0", "0", "2", "4", "6", "8", "10", "Wallclock", "Time", "(hour)"],
+  "name": "5",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 355.68,
+    "x2": 502.08,
+    "y1": 502.08,
+    "y2": 609.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure5-1.png"
+}, {
+  "caption": "Figure 1: Overview of our method. Left: DiffMimic formulates motion mimicking as a straightforward state matching problem and uses analytical gradients to optimize it with off-the-shelf differentiable physics simulators. The formulation results in a simple optimization objective compared to heavy reward engineering in RL-based methods. Middle: DiffMimic is able to mimic highly dynamic skills, e.g., Side-Flip. Right: DiffMimic has a significantly better sample efficiency and time efficiency than state-of-the-art motion mimicking methods. Our approach usually achieves high-quality motion (pose error < 0.15 meter) using less than 2× 107 samples.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 159.37655639648438,
+    "y2": 231.1329345703125
+  },
+  "figType": "Figure",
+  "imageText": ["ℒ", "=", "∑", "𝑠!", "−", "?̂?!", "\"", "\"", "?̂?!", "?̂?!$#", "𝑠!\"#", "𝑠!", "𝑠!$#", "?̂?!\"#"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 148.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure1-1.png"
+}, {
+  "caption": "Table 1: Pose error comparison in meters. Tcycle is the length of the reference motion for a single cycle. The error is averaged on 32 rollout episodes with a maximum length of 20 seconds.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.00372314453125,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["Back-Flip", "1.75", "0.076", "±", "0.021", "0.150", "±", "0.028", "0.097", "±", "0.001", "Cartwheel", "2.72", "0.039", "±", "0.011", "0.067", "±", "0.014", "0.040", "±", "0.007", "Crawl", "2.93", "0.044", "±", "0.001", "0.049", "±", "0.007", "0.037", "±", "0.001", "Dance", "1.62", "0.038", "±", "0.001", "0.055", "±", "0.015", "0.070", "±", "0.003", "Jog", "0.83", "0.029", "±", "0.001", "0.056", "±", "0.001", "0.031", "±", "0.002", "Jump", "1.77", "0.033", "±", "0.001", "0.083", "±", "0.022", "0.025", "±", "0.000", "Roll", "2.02", "0.072", "±", "0.018", "0.088", "±", "0.008", "0.061", "±", "0.007", "Run", "0.80", "0.028", "±", "0.002", "0.075", "±", "0.015", "0.039", "±", "0.000", "Side-Flip", "2.44", "0.191", "±", "0.043", "0.124", "±", "0.012", "0.069", "±", "0.001", "Spin-Kick", "1.28", "0.042", "±", "0.001", "0.058", "±", "0.012", "0.056", "±", "0.000", "Walk", "1.30", "0.018", "±", "0.005", "0.030", "±", "0.001", "0.017", "±", "0.000", "Zombie", "1.68", "0.049", "±", "0.013", "0.058", "±", "0.014", "0.037", "±", "0.002", "Motion", "Tcycle(s)", "DeepMimic", "AMP", "Ours"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 150.72,
+    "x2": 459.35999999999996,
+    "y1": 118.56,
+    "y2": 272.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Table1-1.png"
+}, {
+  "caption": "Table 2: Number of samples required to roll out 20 seconds without falling in (106).",
+  "captionBoundary": {
+    "x1": 138.0240020751953,
+    "x2": 473.9756774902344,
+    "y1": 294.12152099609375,
+    "y2": 300.1239929199219
+  },
+  "figType": "Table",
+  "imageText": ["Back-Flip", "1.75", "31.18", "41.20", "+10.02", "14.88", "-16.30", "Cartwheel", "2.72", "30.45", "17.35", "-13.10", "13.92", "-16.53", "Walk", "1.25", "23.80", "4.08", "-19.72", "7.92", "-15.88", "Run", "0.80", "19.31", "4.11", "-15.20", "8.16", "-11.15", "Jump", "1.77", "25.65", "41.63", "+19.98", "5.28", "-20.37", "Dance", "1.62", "24.59", "10.00", "-14.59", "16.56", "-8.03", "Motion", "Tcycle(s)", "DeepMimic", "Spacetime", "Bound", "Ours"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 456.47999999999996,
+    "y1": 317.76,
+    "y2": 406.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Table2-1.png"
+}, {
+  "caption": "Figure 10: Pose error versus the number of samples. DiffMimic (4s): rollout 4 seconds of Diffmimic for evaluation. DiffMimic (20s): rollout 20 seconds of Diffmimic for evaluation.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.00323486328125,
+    "y1": 500.4364929199219,
+    "y2": 517.39794921875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 104.64,
+    "x2": 499.2,
+    "y1": 109.92,
+    "y2": 486.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure10-1.png"
+}, {
+  "caption": "Figure 2: Computation graph of DiffMimic. An example of demonstration replay during the third step is demonstrated. The demonstration state in the third step is used to replace the simulated state.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 195.92153930664062,
+    "y2": 212.88299560546875
+  },
+  "figType": "Figure",
+  "imageText": ["Demo", "Replay", "Insert", "state", "Backward", "Forward", "Learner", "Trajectory", "Reference", "Trajectory"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure2-1.png"
+}, {
+  "caption": "Figure 6: Qualitative results of three variants of DiffMimic with respect to demonstration replay. The policy trained with full horizon gradient fails to jump up. The policy trained with Demonstration Replay (Random) fails to recover the reference motion faithfully.",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 504.0032958984375,
+    "y1": 256.7245178222656,
+    "y2": 284.64398193359375
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Demonstration", "Replay", "(Random).", "(d)", "Demonstration", "Replay", "(Threshold).", "(a)", "Reference", "motion.", "(b)", "Full", "Horizon", "Gradient."],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 103.67999999999999,
+    "x2": 505.44,
+    "y1": 80.64,
+    "y2": 243.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure6-1.png"
+}, {
+  "caption": "Figure 7: (a)-(b) Comparison between Full Horizon Gradient and truncation length of 10. (c)-(d) Comparison between Demonstration Replay (Random) and Full Horizon Gradient. (e)-(f) Comparison between Demonstration Replay (Random) and Demonstration Replay (Threshold). The blue dotted line denotes 10 minutes in corresponding wallclock time.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.0032653808594,
+    "y1": 519.892578125,
+    "y2": 558.77197265625
+  },
+  "figType": "Figure",
+  "imageText": ["(d)", "(e)", "(f)", "0.5", "0.6", "Cartwheel", "=", "0.1", "=", "0.2", "=", "0.4", "=", "0.05", "0.4", "0.3", "0.2", "0.1", "0.0", "0.00", "0.02", "0.04", "0.06", "0.08", "0.10", "0.12", "0.14", "0.16", "Samples", "(1e8)", "0.5", "0.6", "Backflip", "=", "0.1", "=", "0.2", "=", "0.4", "=", "0.05", "0.4", "0.3", "0.2", "0.1", "0.0", "0.00", "0.02", "0.04", "0.06", "0.08", "0.10", "0.12", "0.14", "0.16", "Samples", "(1e8)", "full", "horizon", "0.5", "0.6", "Cartwheel", "=", "0.01", "=", "0.05", "=", "0.1", "0.4", "0.3", "0.2", "0.1", "0.0", "0.00", "0.02", "0.04", "0.06", "0.08", "0.10", "0.12", "0.14", "0.16", "Samples", "(1e8)", "(a)", "(b)", "(c)", "full", "horizon", "0.5", "0.6", "Backflip", "=", "0.01", "=", "0.05", "=", "0.1", "0.4", "0.3", "0.2", "0.1", "0.0", "0.00", "0.02", "0.04", "0.06", "0.08", "0.10", "0.12", "0.14", "0.16", "Samples", "(1e8)", "0.5", "0.6", "Cartwheel", "trunc10", "full", "horizon", "0.4", "0.3", "0.2", "0.1", "0.0", "0.00", "0.02", "0.04", "0.06", "0.08", "0.10", "0.12", "0.14", "0.16", "Samples", "(1e8)", "0.5", "0.6", "Backflip", "trunc10", "full", "horizon", "0.4", "0.3", "0.2", "0.1", "0.0", "0.00", "0.02", "0.04", "0.06", "0.08", "0.10", "0.12", "0.14", "0.16", "Samples", "(1e8)"],
+  "name": "7",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 302.88,
+    "y2": 506.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure7-1.png"
+}, {
+  "caption": "Figure 8: L2 error per frame in the rollout of the final policy. Although Demonstration Replay (Random) reduces the overall pose error compared to full-horizon optimization, the per-frame loss remains large in certain time steps due to the lack of a constraint. Demonstration Replay (Threshold) alleviates the issue.",
+  "captionBoundary": {
+    "x1": 353.51800537109375,
+    "x2": 504.0030212402344,
+    "y1": 482.3795166015625,
+    "y2": 576.052978515625
+  },
+  "figType": "Figure",
+  "imageText": ["=", "0.4", "=", "0.05", "Backflip", "full", "horizon", "0.00", "0.05", "0.10", "0.15", "0.20", "0.25", "0.30", "0.35", "0", "10", "20", "30", "40", "50", "Frame", "Index"],
+  "name": "8",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 355.68,
+    "x2": 502.08,
+    "y1": 360.0,
+    "y2": 467.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Character performing attack move with a sword and a shield. The reference motion clip is from Reallusion (Reallusion, 2022)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 180.02352905273438,
+    "y2": 196.9849853515625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 169.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure9-1.png"
+}, {
+  "caption": "Figure 3: Illustration of Demonstration Replay, which happens when t=4 where the character is about to fall. The rollout state (in blue) is replaced by the reference state (in red) for the next step.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 191.75753784179688,
+    "y2": 208.718994140625
+  },
+  "figType": "Figure",
+  "imageText": ["t=1t=2t=3t=4t=5t=6t=7"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 465.12,
+    "y1": 80.64,
+    "y2": 172.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_06mk-epSwZ-Figure3-1.png"
+}]

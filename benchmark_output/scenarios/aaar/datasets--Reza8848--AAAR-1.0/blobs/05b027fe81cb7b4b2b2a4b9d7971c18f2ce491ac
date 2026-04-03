@@ -1,0 +1,301 @@
+[{
+  "caption": "Figure 4: An illustration of ProNet. ∥ denotes concatenation. Conv is adapted from the GraphConv layer (Morris et al., 2019) to update node features, and BF is basis functions to embed distances and angles as detailed in Appendix C.",
+  "captionBoundary": {
+    "x1": 246.6020050048828,
+    "x2": 505.7403869628906,
+    "y1": 457.488525390625,
+    "y2": 496.3680114746094
+  },
+  "figType": "Figure",
+  "imageText": ["𝑗", "∈", "𝒩%𝑗", "∈", "𝒩%", "+", "‖", "‖", "‖", "∑", "MLP", "Model:", "Interaction:", "Hier-Geom-MP:", "BF", "BF", "BF", "ConvConv", "𝜒!,", "𝜒\",", "𝜒#,", "𝜒$", "𝜏!,", "𝜏\",", "𝜏#", "𝑑,", "𝜃,", "𝜙,", "𝜏", "𝑑,", "𝜃,", "𝜙,", "𝜏", "𝜏!,", "𝜏\",", "𝜏#", "𝑑,", "𝜃,", "𝜙,", "𝜏", "𝐯!\",", "𝐯#\"", "ℱ", "𝐺", "$%&'/$$/%))", "𝐯!\"*+", "MLPMLP", "MLP", "Conv", "Hier-Geom-MP", "𝐯!\",", "𝐯#\"", "𝐞#!", "ℱ", "𝐺", "$%&'/$$/%))", "Interaction", "Interaction", "Interaction", "𝓕", "𝑮", "𝐛𝐚𝐬𝐞/𝐛𝐛/𝐚𝐥𝐥", "Interaction", "Edge", "features", "Node", "positions", "Output", "Node", "features"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 247.67999999999998,
+    "x2": 502.08,
+    "y1": 316.8,
+    "y2": 454.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Illustration of amino acid structures. The red circles are side chain torsion angles.",
+  "captionBoundary": {
+    "x1": 123.8949966430664,
+    "x2": 488.10772705078125,
+    "y1": 276.0885314941406,
+    "y2": 282.09100341796875
+  },
+  "figType": "Figure",
+  "imageText": ["Alanine", "Cysteine", "Leucine", "𝜒\"", "𝜒!", "𝜒!"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 152.64,
+    "y2": 257.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Figure5-1.png"
+}, {
+  "caption": "Table 7: Atoms for computing the side chain torsion angles for each amino acid.",
+  "captionBoundary": {
+    "x1": 145.7379913330078,
+    "x2": 465.9558410644531,
+    "y1": 302.8365173339844,
+    "y2": 308.8389892578125
+  },
+  "figType": "Table",
+  "imageText": ["ALA", "ARG", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ", "Cβ", ",", "Cγ", ",", "Cδ,", "Nϵ", "Cγ", ",", "Cδ,", "Nϵ,", "Cζ", "Cδ,", "Nϵ,", "Cζ", ",", "Nη1", "ASN", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Oδ1", "ASP", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Oδ1", "CYS", "N,Cα,", "Cβ", ",", "Sγ", "GLN", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ", "Cβ", ",", "Cγ", ",", "Cδ,", "Oϵ1", "GLU", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ", "Cβ", ",", "Cγ", ",", "Cδ,", "Oϵ1", "GLY", "HIS", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Nδ1", "ILE", "N,Cα,", "Cβ", ",", "Cγ1", "Cα,", "Cβ", ",", "Cγ1,", "Cδ1", "LEU", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ1", "LYS", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ", "Cβ", ",", "Cγ", ",", "Cδ,", "Cϵ", "Cγ", ",", "Cδ,", "Cϵ,", "Nζ", "MET", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Sδ", "Cβ", ",", "Cγ", ",", "Sδ,", "Cϵ", "PHE", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ1", "PRO", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ", "SER", "N,Cα,", "Cβ", ",", "Oγ", "THR", "N,Cα,", "Cβ", ",", "Oγ1", "TRP", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ1", "TYR", "N,Cα,", "Cβ", ",", "Cγ", "Cα,", "Cβ", ",", "Cγ", ",", "Cδ1", "VAL", "N,Cα,", "Cβ", ",", "Cγ1", "χ1", "χ2", "χ3", "χ4", "χ5"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 321.59999999999997,
+    "y2": 551.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table7-1.png"
+}, {
+  "caption": "Figure 1: Illustration of hierarchical representations of proteins. Different colors represent different types of amino acids. The filled circles are Cα atoms, and non-filled are other atoms. Each amino acid in the protein has different levels of inner structures. From coarse-grained to fine-grained levels of representations, we can use Cα coordinates, backbone atom coordinates, or all-atom coordinates to represent the protein structure. Note that we treat each amino acid as a node in the graph modeling despite different levels. By doing this, we can effectively make use of the inherent hierarchies within an amino acid. As a result, we achieve three hierarchical levels of representations for the protein. In addition, we obtain a graph with relatively small size as amino acids are usually much less than atoms in a protein. The actual atoms are in 3D, and this illustration uses 2D for simplicity.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.745361328125,
+    "y1": 182.40054321289062,
+    "y2": 276.073974609375
+  },
+  "figType": "Figure",
+  "imageText": ["4", "amino", "acids", "Met", "Ser", "Glu", "All-atom", "level", "Backbone", "level", "Ser", "Amino", "acid", "level"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 132.0,
+    "x2": 472.32,
+    "y1": 67.67999999999999,
+    "y2": 177.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Figure1-1.png"
+}, {
+  "caption": "Table 1: Comparisons of existing protein learning methods. Firstly, when modeling graphs, an amino acid or an atom is treated as a node in different methods. However, using atoms as nodes leads to high complexity. Here n, N , and k denote the number of amino acids, the number of atoms, and the average degree in a 3D protein graph, and N ≫ n. Note that the complexity also depends on the message passing scheme of each method as discussed in existing studies (Liu et al., 2022; Klicpera et al., 2021; Wang et al., 2022). In addition, most existing methods only capture one level of protein structures, and only IEConv (Hermosilla et al., 2021) considers hierarchical relations of proteins using several pooling layers. Our method can learn hierarchical representations at three levels. Lastly, our method can capture 3D structures completely at all levels.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2413024902344,
+    "y1": 567.0575561523438,
+    "y2": 660.7310180664062
+  },
+  "figType": "Table",
+  "imageText": ["→", "All-Atom", "✓", "Amino", "Acid", "✓", "Ours", "Amino", "Acid", "O(nk)", "→", "Backbone", "✓", "✓", "vector-gated", "GVP-GNN", "(Jing", "et", "al.,", "2021a)", "Atom", "O(Nk)", "All-Atom", "✗", "✓", "IEConv", "(Hermosilla", "et", "al.,", "2021)", "Atom", "O(Nk)", "All-Atom", "✓", "✗", "GVP-GNN", "etc.", "(Jing", "et", "al.,", "2021b;", "Ingraham", "et", "al.,", "2019;", "Li", "et", "al.,", "2022)", "Amino", "Acid", "O(nk)", "Backbone", "✗", "✓", "GearNet", "(Zhang", "et", "al.,", "2022)", "Amino", "Acid", "O(nk)", "Amino", "Acid", "✗", "✗", "Method", "Node", "Complexity", "Hierarchical", "Hierarchical", "Complete", "Level", "Relations", "or", "not"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 489.12,
+    "y1": 663.84,
+    "y2": 740.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table1-1.png"
+}, {
+  "caption": "Table 3: Comparisons between ProNet and other methods in terms of computational cost on the Fold dataset using the same Nvidia GeForce RTX 2080 Ti 11GB GPU.",
+  "captionBoundary": {
+    "x1": 266.0889892578125,
+    "x2": 503.9983825683594,
+    "y1": 617.6575927734375,
+    "y2": 645.5780029296875
+  },
+  "figType": "Table",
+  "imageText": ["ProNet-Amino", "Acid", "Amino", "Acid", "32", "5", "∼", "9h", "ProNet-Backbone", "Backbone", "32", "6", "∼", "9h", "ProNet-All-Atom", "All-Atom", "32", "6", "∼", "9h", "GearNet-Edge", "(Zhang", "et", "al.,", "2022)", "Amino", "Acid", "OOM", "–", "–", "GearNet-Edge-IEConv", "(Zhang", "et", "al.,", "2022)", "Amino", "Acid", "OOM", "–", "–", "GVP-GNN", "(Jing", "et", "al.,", "2021b)", "Backbone", "35", "6", "∼", "9h", "IEConv", "(Hermosilla", "et", "al.,", "2021)", "All-Atom", "165", "22", "∼", "24h", "Method", "Hierarchical", "Time", "(sec.)", "Converge", "Level", "Train", "Inference", "Time"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 266.88,
+    "x2": 505.44,
+    "y1": 653.76,
+    "y2": 727.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table3-1.png"
+}, {
+  "caption": "Table 2: Accuracy (%) on fold and reaction classification tasks. The top two results are highlighted as 1st and 2nd.",
+  "captionBoundary": {
+    "x1": 266.0889892578125,
+    "x2": 503.99847412109375,
+    "y1": 422.3895263671875,
+    "y2": 439.35101318359375
+  },
+  "figType": "Table",
+  "imageText": ["ProNet-Amino", "Acid", "86.0", "51.5", "69.9", "99.0", "73.5", "ProNet-Backbone", "86.4", "52.7", "70.3", "99.3", "74.1", "ProNet-All-Atom", "85.6", "52.1", "69.0", "99.0", "73.4", "GCN", "(Kipf", "&", "Welling,", "2017)", "67.3", "16.8", "21.3", "82.8", "40.3", "DeepSF", "(Hou", "et", "al.,", "2018)", "70.9", "17.0", "31.0", "77.0", "41.7", "GVP-GNN", "(Jing", "et", "al.,", "2021b)", "65.5", "16.0", "22.5", "83.8", "40.8", "IEConv", "(Hermosilla", "et", "al.,", "2021)", "87.2", "45.0", "69.7", "98.9", "71.2", "New", "IEConv", "(Hermosilla", "&", "Ropinski,", "2022)", "87.2", "47.6", "70.2", "99.2", "72.3", "HoloProt", "(Somnath", "et", "al.,", "2021)", "78.9", "–", "–", "–", "–", "DWNN", "(Li", "et", "al.,", "2022)", "76.7", "31.8", "37.8", "85.2", "51.5", "GearNet", "(Zhang", "et", "al.,", "2022)", "79.4", "28.4", "42.6", "95.3", "55.4", "GearNet-IEConv", "(Zhang", "et", "al.,", "2022)", "83.7", "42.3", "64.1", "99.1", "68.5", "GearNet-Edge", "(Zhang", "et", "al.,", "2022)", "86.6", "44.0", "66.7", "99.1", "69.9", "GearNet-Edge-IEConv", "(Zhang", "et", "al.,", "2022)", "85.3", "48.3", "70.3", "99.5", "72.7", "Method", "React", "Fold", "Fold", "Sup.", "Fam.", "Avg."],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 267.84,
+    "x2": 504.0,
+    "y1": 445.91999999999996,
+    "y2": 579.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table2-1.png"
+}, {
+  "caption": "Table 4: Results on protein-ligand binding affinity prediction task. The top two results for each metric are highlighted as 1st and 2nd. * denotes methods trained with the complex binding pockets only.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9950256347656,
+    "y1": 555.4125366210938,
+    "y2": 572.3740234375
+  },
+  "figType": "Table",
+  "imageText": ["ProNet-Amino", "Acid", "1.455", "0.536", "0.526", "1.397", "0.741", "0.734", "ProNet-Backbone", "1.458", "0.546", "0.550", "1.349", "0.764", "0.759", "ProNet-All-Atom", "1.463", "0.551", "0.551", "1.343", "0.765", "0.761", "DeepDTA", "(Öztürk", "et", "al.,", "2018)", "1.866", "0.472", "0.471", "1.762", "0.666", "0.663", "Bepler", "and", "Berger", "(2019)", "(Bepler", "&", "Berger,", "2019)", "1.985", "0.165", "0.152", "1.891", "0.249", "0.275", "TAPE", "(Rao", "et", "al.,", "2019)", "1.890", "0.338", "0.286", "1.633", "0.568", "0.571", "ProtTrans", "(Elnaggar", "et", "al.,", "2021)", "1.544", "0.438", "0.434", "1.641", "0.595", "0.588", "MaSIF", "(Gainza", "et", "al.,", "2020)", "1.484", "0.467", "0.455", "1.426", "0.709", "0.701", "IEConv", "(Hermosilla", "et", "al.,", "2021)", "1.554", "0.414", "0.428", "1.473", "0.667", "0.675", "Holoprot-Full", "Surface", "(Somnath", "et", "al.,", "2021)", "1.464", "0.509", "0.500", "1.365", "0.749", "0.742", "Holoprot-Superpixel", "(Somnath", "et", "al.,", "2021)", "1.491", "0.491", "0.482", "1.416", "0.724", "0.715", "Atom3D-3DCNN*", "(Townshend", "et", "al.,", "2021)", "1.416", "0.550", "0.553", "1.621", "0.608", "0.615", "Atom3D-ENN*", "(Townshend", "et", "al.,", "2021)", "1.568", "0.389", "0.408", "1.620", "0.623", "0.633", "Atom3D-GNN*", "(Townshend", "et", "al.,", "2021)", "1.601", "0.545", "0.533", "1.408", "0.743", "0.743", "Method", "Sequence", "Identity", "30%", "Sequence", "Identity", "60%", "RMSE", "Pearson", "Spearman", "RMSE", "Pearson", "Spearman"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 485.28,
+    "y1": 584.64,
+    "y2": 730.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table4-1.png"
+}, {
+  "caption": "Figure 2: Illustrations of our proposed backbone-level representations. (a) Construction of the backbone coordinate system for amino acid i. (b) Computation of the three Euler angles between the backbone coordinate systems for two amino acids i and j. (c) Illustrations of determining the relative rotation between amino acids i and j for existing methods and our proposed method. The purple dashed line indicates how existing methods determine the relative rotation between i and j by computing all backbone torsion angles along the chain. The yellow arrow shows how our method determines the relative rotation between amino acids i and j using only three Euler angles.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.34906005859375,
+    "y1": 182.07455444335938,
+    "y2": 253.83001708984375
+  },
+  "figType": "Figure",
+  "imageText": ["Amino", "Acid", "j", "(c)", "Amino", "Acid", "i", "!3", "i", "!2", "i", "!1", "i", "(b)", "!3", "ij", "!2", "ij", "n!1", "ij", "zj", "yj", "xj", "zi", "yi", "xi", "(a)", "xi", "zi", "tiyi", "C", "C!", "N"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 489.12,
+    "y1": 71.03999999999999,
+    "y2": 178.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Figure2-1.png"
+}, {
+  "caption": "Table 5: Results on the PPI task. The top two results are highlighted as 1st and 2nd.",
+  "captionBoundary": {
+    "x1": 376.9679870605469,
+    "x2": 505.743408203125,
+    "y1": 166.61752319335938,
+    "y2": 194.5369873046875
+  },
+  "figType": "Table",
+  "imageText": ["ProNet-Amino", "Acid", "0.857", "ProNet-Backbone", "0.858", "ProNet-All-Atom", "0.871", "Method", "AUROC", "Atom3D-3DCNN", "(Townshend", "et", "al.,", "2021)", "0.844", "Atom3D-3DGNN", "(Townshend", "et", "al.,", "2021)", "0.669", "GVP-GNN", "(Jing", "et", "al.,", "2021a)", "0.866"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 377.76,
+    "x2": 505.44,
+    "y1": 202.56,
+    "y2": 253.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table5-1.png"
+}, {
+  "caption": "Table 6: Comparison of three all-atom methods on the Fold dataset. The best results are highlighted in the table. All the models are trained using the same computing infrastructure (Nvidia GeForce RTX 2080 TI 11GB) for fair comparison. The training time is the average time per epoch, and the three methods use similar epochs to converge.",
+  "captionBoundary": {
+    "x1": 258.15301513671875,
+    "x2": 505.7467041015625,
+    "y1": 428.3335266113281,
+    "y2": 489.1310119628906
+  },
+  "figType": "Table",
+  "imageText": ["w/o", "hierarchies", "181.2", "18.1", "36.9", "49.5", "94.2", "60.2", "Mainstream", "hierarchical", "148.7", "17.7", "51.5", "68.7", "99.0", "73.1", "ProNet-All-Atom", "32.1", "6.3", "52.1", "69.0", "99.0", "73.4", "Method", "Time", "(sec.)", "Accuracy", "(%)", "Train", "Inference", "Fold", "Sup.", "Fam.", "Avg."],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 262.56,
+    "x2": 499.2,
+    "y1": 492.0,
+    "y2": 545.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table6-1.png"
+}, {
+  "caption": "Table 8: Model and training hyperparameters for our method on different tasks.",
+  "captionBoundary": {
+    "x1": 147.55599975585938,
+    "x2": 464.1374816894531,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Number", "of", "layers", "3,", "4,", "5", "3,", "4,", "5", "3,", "4,", "5", "3,", "4,", "5", "Hidden", "dim", "64,", "128,", "256", "64,", "128,", "256", "64,", "128,", "256", "64,", "128,", "256", "Cutoff", "6,", "8,", "10", "6,", "8,", "10", "6,", "8,", "10", "30", "Dropout", "0.2,", "0.3,", "0.5", "0.2,", "0.3,", "0.5", "0.2,", "0.3", "0", "Epochs", "1000", "400", "300", "20", "Batch", "size", "16,", "32", "16,", "32", "8,", "16,", "32,", "64", "8,", "16,", "32", "Learning", "rate", "1e-4,", "2e-4,", "5e-4", "1e-4,", "2e-4,", "5e-4", "1e-5,", "5e-5,", "1e-4,", "5e-4", "1e-4,", "2e-4,", "5e-4", "Learning", "rate", "decay", "factor", "0.5", "0.5", "0.5", "0.5", "Learning", "rate", "decay", "epochs", "100,", "150,", "200", "50,", "60,", "70,", "80", "50,", "70,", "100", "4,", "8,", "10", "Hyperparameter", "Values/Search", "Space", "Fold", "Reaction", "LBA", "PPI"],
+  "name": "8",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 102.24,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table8-1.png"
+}, {
+  "caption": "Table 9: Results with standard deviation on LBA dataset split by sequence identity 30%. The top two results are highlighted as 1st and 2nd. * denotes methods trained with the complex binding pockets only.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9977722167969,
+    "y1": 240.62753295898438,
+    "y2": 268.5479736328125
+  },
+  "figType": "Table",
+  "imageText": ["ProNet-Amino", "Acid", "1.455", "±", "0.009", "0.536", "±", "0.012", "0.526", "±", "0.012", "ProNet-Backbone", "1.458", "±", "0.003", "0.546", "±", "0.007", "0.550", "±", "0.008", "ProNet-All-Atom", "1.463", "±", "0.001", "0.551", "±", "0.005", "0.551", "±", "0.008", "DeepDTA", "(Öztürk", "et", "al.,", "2018)", "1.866", "±", "0.080", "0.472", "±", "0.022", "0.471", "±", "0.024", "Bepler", "and", "Berger", "(2019)", "(Bepler", "&", "Berger,", "2019)", "1.985", "±", "0.006", "0.165", "±", "0.006", "0.152", "±", "0.024", "TAPE", "(Rao", "et", "al.,", "2019)", "1.890", "±", "0.035", "0.338", "±", "0.044", "0.286", "±", "0.124", "ProtTrans", "(Elnaggar", "et", "al.,", "2021)", "1.544", "±", "0.015", "0.438", "±", "0.053", "0.434", "±", "0.058", "MaSIF", "(Gainza", "et", "al.,", "2020)", "1.484", "±", "0.018", "0.467", "±", "0.020", "0.455", "±", "0.014", "GVP*", "(Jing", "et", "al.,", "2021a)", "1.594", "±", "0.073", "-", "-", "IEConv", "(Hermosilla", "et", "al.,", "2021)", "1.554", "±", "0.016", "0.414", "±", "0.053", "0.428", "±", "0.032", "Holoprot-Full", "Surface", "(Somnath", "et", "al.,", "2021)", "1.464", "±", "0.006", "0.509", "±", "0.002", "0.500", "±", "0.005", "Holoprot-Superpixel", "(Somnath", "et", "al.,", "2021)", "1.491", "±", "0.004", "0.491", "±", "0.014", "0.482", "±", "0.032", "Atom3D-3DCNN*", "(Townshend", "et", "al.,", "2021)", "1.416", "±", "0.021", "0.550", "±", "0.021", "0.553", "±0.009", "Atom3D-ENN*", "(Townshend", "et", "al.,", "2021)", "1.568", "±", "0.012", "0.389", "±", "0.024", "0.408", "±", "0.021", "Atom3D-GNN*", "(Townshend", "et", "al.,", "2021)", "1.601", "±", "0.048", "0.545", "±", "0.027", "0.533", "±", "0.033", "Method", "Sequence", "Identity", "30%", "RMSE", "Pearson", "Spearman"],
+  "name": "9",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 465.12,
+    "y1": 281.28,
+    "y2": 441.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table9-1.png"
+}, {
+  "caption": "Table 10: Results with standard deviation on LBA dataset split by sequence identity 60%. The top two results are highlighted as 1st and 2nd. * denotes methods trained with the complex binding pockets only.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00225830078125,
+    "y1": 457.50653076171875,
+    "y2": 485.427001953125
+  },
+  "figType": "Table",
+  "imageText": ["ProNet-Amino", "Acid", "1.397", "±", "0.018", "0.741", "±", "0.008", "0.734", "±", "0.009", "ProNet-Backbone", "1.349", "±", "0.019", "0.764", "±", "0.006", "0.759", "±", "0.001", "ProNet-All-Atom", "1.343", "±", "0.025", "0.765", "±", "0.009", "0.761", "±", "0.003", "DeepDTA", "(Öztürk", "et", "al.,", "2018)", "1.762", "±", "0.261", "0.666", "±", "0.012", "0.663", "±", "0.015", "Bepler", "and", "Berger", "(2019)", "(Bepler", "&", "Berger,", "2019)", "1.891", "±", "0.004", "0.249", "±", "0.006", "0.275", "±", "0.008", "TAPE", "(Rao", "et", "al.,", "2019)", "1.633", "±", "0.016", "0.568", "±", "0.033", "0.571", "±", "0.021", "ProtTrans", "(Elnaggar", "et", "al.,", "2021)", "1.641", "±", "0.016", "0.595", "±", "0.014", "0.588", "±", "0.009", "MaSIF", "(Gainza", "et", "al.,", "2020)", "1.426", "±", "0.017", "0.709", "±", "0.008", "0.701", "±", "0.001", "IEConv", "(Hermosilla", "et", "al.,", "2021)", "1.473", "±", "0.024", "0.667", "±", "0.011", "0.675", "±", "0.019", "Holoprot-Full", "Surface", "(Somnath", "et", "al.,", "2021)", "1.365", "±", "0.038", "0.749", "±", "0.014", "0.742", "±", "0.011", "Holoprot-Superpixel", "(Somnath", "et", "al.,", "2021)", "1.416", "±", "0.022", "0.724", "±", "0.011", "0.715", "±", "0.006", "Atom3D-3DCNN*", "(Townshend", "et", "al.,", "2021)", "1.621", "±", "0.025", "0.608", "±", "0.020", "0.615", "±", "0.028", "Atom3D-ENN*", "(Townshend", "et", "al.,", "2021)", "1.620", "±", "0.049", "0.623", "±", "0.015", "0.633", "±", "0.021", "Atom3D-GNN*", "(Townshend", "et", "al.,", "2021)", "1.408", "±", "0.069", "0.743", "±", "0.022", "0.743", "±", "0.027", "Method", "Sequence", "Identity", "60%", "RMSE", "Pearson", "Spearman"],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 465.12,
+    "y1": 497.76,
+    "y2": 650.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Table10-1.png"
+}, {
+  "caption": "Figure 3: Illustrations of three kind of all-atom level methods.",
+  "captionBoundary": {
+    "x1": 258.48199462890625,
+    "x2": 503.9437561035156,
+    "y1": 317.9305419921875,
+    "y2": 323.9330139160156
+  },
+  "figType": "Figure",
+  "imageText": ["w/o", "hierarchies", "Mainstream", "hierarchical", "Ours-All-Atom", "Pooling"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 259.68,
+    "x2": 503.03999999999996,
+    "y1": 255.84,
+    "y2": 312.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9X-hgLDLYkQ-Figure3-1.png"
+}]

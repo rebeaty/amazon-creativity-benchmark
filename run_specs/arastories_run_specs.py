@@ -97,7 +97,7 @@ def get_arastories_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4-0125-preview",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "fluency",
@@ -107,7 +107,7 @@ def get_arastories_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4-0125-preview",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "coherence",
@@ -117,7 +117,7 @@ def get_arastories_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4-0125-preview",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "following_instructions",
@@ -127,7 +127,7 @@ def get_arastories_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4-0125-preview",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "consistency",
@@ -137,7 +137,7 @@ def get_arastories_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4-0125-preview",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 256,
                 "metric_name": "variety",

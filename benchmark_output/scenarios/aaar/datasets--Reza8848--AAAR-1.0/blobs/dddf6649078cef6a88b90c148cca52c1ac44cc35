@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 1: Hessian and EF Parameter traces for four classification models. The Hessian and EF traces for the parameters are very similar. For Inception-V3, this holds up to a constant scaling factor.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9998474121094,
+    "y1": 237.09652709960938,
+    "y2": 254.0579833984375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "ResNet-18", "(b)", "ResNet-50", "(c)", "MobileNet-V2", "(d)", "Inception-V3"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 499.2,
+    "y1": 136.79999999999998,
+    "y2": 224.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure1-1.png"
+}, {
+  "caption": "Table 1: Representative examples of the typical speedup associated with using the EF over the Hessian. Iteration times and variances are computed as sample statistics over multiple runs of many iterations, with batch size of 32. The resulting speedup is denoted for a fixed tolerance, which can be practically computed via a moving variation of the mean trace. Early stopping is possible when we first reach the desired tolerance. The measurements were performed on an NVidia 2080Ti GPU.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.3451843261719,
+    "y1": 479.41351318359375,
+    "y2": 529.2509765625
+  },
+  "figType": "Table",
+  "imageText": ["ResNet-18", "0.15", "±", "0.03", "1.09", "±", "0.02", "47.78", "±", "0.03", "186.54", "±", "0.56", "27.67", "±", "5.40", "ResNet-50", "0.31", "±", "0.04", "6.91", "±", "1.52", "152.02", "±", "0.38", "639.13", "±", "1.02", "94.24", "±", "34.06", "MobileNet-V2", "0.24", "±", "0.01", "4.81", "±", "0.38", "58.84", "±", "0.55", "2573.50", "±", "3.06", "894.24", "±", "121.25", "Inception-V3", "0.43", "±", "0.03", "13.62", "±", "0.46", "235.43", "±", "0.21", "905.04", "±", "4.69", "122.06", "±", "14.90", "Estimator", "Variance", "Iteration", "Time", "(ms)", "Relative", "Speedup", "EF", "Hessian", "EF", "Hessian"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 403.68,
+    "y2": 468.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Table1-1.png"
+}, {
+  "caption": "Figure 9: ResNet-18, block 12, quantization distribution analysis showing the validity of the uniform noise assumption.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00030517578125,
+    "y1": 559.217529296875,
+    "y2": 576.1790161132812
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Weight", "Distribution", "(b)", "Quantized", "Weight", "Distribution", "(c)", "Quantization", "Error", "Distribution"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 498.24,
+    "y1": 450.71999999999997,
+    "y2": 546.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure9-1.png"
+}, {
+  "caption": "Table 2: Rank correlation coefficient for each combination of sensitivity and quantization experiment. W/A subscript indicates using only either weights or activations. BN indicates the presence of batch-normalisation within the architecture.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7428283691406,
+    "y1": 523.778564453125,
+    "y2": 551.698974609375
+  },
+  "figType": "Table",
+  "imageText": ["Experiment", "Dataset", "BN", "FIT", "QR", "Noise", "FITW", "QRW", "FITA", "QRA", "BN", "A", "Cifar-10", "✓", "0.89", "0.76", "0.85", "0.87", "0.86", "0.38", "0.36", "0.33", "B", "Cifar-10", "0.77", "0.67", "0.60", "0.65", "0.61", "0.61", "0.60", "-", "C", "Mnist", "✓", "0.86", "0.89", "0.83", "0.72", "0.80", "0.44", "0.39", "0.39", "D", "Mnist", "0.90", "0.58", "0.70", "0.72", "0.72", "0.55", "0.44", "-"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 458.88,
+    "y2": 512.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Table2-1.png"
+}, {
+  "caption": "Figure 2: Comparison between Hessian and EF trace convergence for four classification models.",
+  "captionBoundary": {
+    "x1": 113.906982421875,
+    "x2": 498.0947570800781,
+    "y1": 252.04153442382812,
+    "y2": 258.04400634765625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "ResNet-18", "(b)", "ResNet-50", "(c)", "MobileNet-V2", "(d)", "Inception-V3"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 500.15999999999997,
+    "y1": 90.72,
+    "y2": 237.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure2-1.png"
+}, {
+  "caption": "Table 4: Iteration times associated with the EF and Hessian for a variety of batch sizes, averaged over 3 runs of 200 iterations for each model and batch size.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1708984375,
+    "y1": 359.78753662109375,
+    "y2": 376.7489929199219
+  },
+  "figType": "Table",
+  "imageText": ["16", "135.46", "132.97", "132.58", "133.67", "1.56", "530.60", "537.80", "535.57", "534.66", "3.69", "32", "236.07", "235.14", "235.09", "235.43", "0.55", "901.72", "908.35", "955.94", "905.04", "4.69", "Inception-V3", "4", "56.30", "59.83", "57.00", "57.71", "1.87", "265.04", "276.99", "279.17", "273.73", "7.61", "8", "83.77", "83.21", "82.41", "83.13", "0.68", "325.06", "335.16", "332.37", "330.86", "5.21", "16", "33.85", "33.83", "33.73", "33.80", "0.06", "1,460.03", "1,464.95", "1,460.89", "1,461.96", "2.62", "32", "58.65", "58.80", "59.07", "58.84", "0.21", "2,570.02", "2,575.81", "2,574.66", "2,573.50", "3.06", "MobileNet-V2", "4", "19.32", "19.38", "19.57", "19.42", "0.13", "709.06", "705.77", "704.53", "706.45", "2.34", "8", "21.49", "21.87", "21.96", "21.77", "0.25", "913.47", "917.50", "914.63", "915.20", "2.07", "16", "83.67", "83.54", "82.94", "83.38", "0.39", "332.11", "341.01", "338.11", "337.08", "4.54", "32", "152.44", "151.92", "151.69", "152.02", "0.38", "639.62", "639.82", "637.96", "639.13", "1.02", "ResNet-50", "4", "30.89", "30.77", "30.75", "30.80", "0.07", "150.69", "148.17", "149.08", "149.31", "1.27", "8", "47.90", "48.50", "48.49", "48.30", "0.34", "196.37", "201.74", "200.99", "199.70", "2.91", "16", "24.07", "24.46", "24.12", "24.22", "0.21", "100.01", "95.40", "98.38", "97.93", "2.34", "32", "47.81", "47.77", "47.75", "47.78", "0.03", "186.92", "186.80", "185.90", "186.54", "0.56", "ResNet-18", "4", "11.06", "11.29", "11.29", "11.21", "0.13", "41.91", "40.99", "40.58", "41.16", "0.68", "8", "16.80", "16.86", "16.98", "16.88", "0.09", "62.80", "61.54", "61.16", "61.83", "0.86", "Batch", "Size", "EF", "(ms)", "Hessian", "(ms)", "1", "2", "3", "Mean", "Stdev", "1", "2", "3", "Mean", "Stdev"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 502.08,
+    "y1": 389.76,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Table4-1.png"
+}, {
+  "caption": "Table 3: Estimator Variances associated with the EF and Hessian for a variety of batch sizes, over 3 runs of 200 iterations for each model and batch size.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00030517578125,
+    "y1": 83.53055572509766,
+    "y2": 100.49200439453125
+  },
+  "figType": "Table",
+  "imageText": ["16", "0.89", "0.66", "0.69", "0.75", "0.13", "31.55", "65.36", "109.84", "68.92", "39.26", "32", "0.44", "0.45", "0.39", "0.43", "0.03", "13.81", "13.96", "13.10", "13.62", "0.46", "Inception-V3", "4", "3.97", "3.00", "2.77", "3.24", "0.64", "-", "-", "-", "-", "-", "8", "1.92", "1.24", "1.95", "1.70", "0.40", "-", "-", "-", "-", "-", "16", "0.36", "0.35", "0.37", "0.36", "0.01", "9.36", "10.54", "5,092.34", "9.95", "0.84", "32", "0.25", "0.24", "0.22", "0.24", "0.01", "4.47", "4.75", "5.23", "4.81", "0.38", "MobileNet-V2", "4", "1.18", "1.29", "1.03", "1.17", "0.13", "-", "-", "-", "-", "-", "8", "0.67", "0.61", "0.71", "0.66", "0.05", "17.65", "72.02", "34.19", "41.28", "27.87", "16", "0.55", "0.71", "0.51", "0.59", "0.11", "17.68", "22.41", "14.56", "18.21", "3.95", "32", "0.26", "0.34", "0.32", "0.31", "0.04", "8.60", "5.65", "6.49", "6.91", "1.52", "ResNet-50", "4", "1.81", "2.44", "2.03", "2.10", "0.32", "-", "-", "-", "-", "-", "8", "1.15", "1.06", "1.19", "1.13", "0.07", "22.57", "45.45", "76.14", "48.05", "26.88", "16", "0.33", "0.30", "0.26", "0.30", "0.03", "1.77", "2.32", "2.03", "2.04", "0.27", "32", "0.13", "0.18", "0.15", "0.15", "0.03", "1.09", "1.07", "1.11", "1.09", "0.02", "ResNet-18", "4", "0.82", "0.99", "1.27", "1.03", "0.23", "10.64", "9.77", "6.89", "9.10", "1.96", "8", "0.61", "0.42", "0.61", "0.55", "0.11", "5.01", "4.28", "4.38", "4.56", "0.40", "Batch", "Size", "EF", "Hessian", "1", "2", "3", "Mean", "Stdev", "1", "2", "3", "Mean", "Stdev"],
+  "name": "3",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 112.8,
+    "y2": 339.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Table3-1.png"
+}, {
+  "caption": "Figure 8: Small convolutional classifier architecture used in the experiments detailed in Section 4",
+  "captionBoundary": {
+    "x1": 112.23899841308594,
+    "x2": 499.7641906738281,
+    "y1": 687.111572265625,
+    "y2": 693.114013671875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 186.72,
+    "x2": 425.28,
+    "y1": 567.84,
+    "y2": 676.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure8-1.png"
+}, {
+  "caption": "Figure 6: Overview QAT - Q(θ) is applied during the forward pass, and an STE is used in the backwards pass.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041809082031,
+    "y1": 168.87954711914062,
+    "y2": 185.84100341796875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 245.76,
+    "x2": 366.24,
+    "y1": 80.64,
+    "y2": 158.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure6-1.png"
+}, {
+  "caption": "Figure 7: EF Activation traces for four classification models.",
+  "captionBoundary": {
+    "x1": 184.89100646972656,
+    "x2": 427.1116638183594,
+    "y1": 310.0635070800781,
+    "y2": 316.06597900390625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "ResNet-18", "(b)", "ResNet-50", "(c)", "Mobilenet-V2", "(d)", "Inception-V3"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 500.15999999999997,
+    "y1": 209.76,
+    "y2": 295.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure7-1.png"
+}, {
+  "caption": "Figure 4: EF weight (a) and activation (b) traces for U-Net architecture on the Cityscapes dataset. (c) FIT against mIoU for 50 random MPQ configurations of U-Net on Cityscapes semantic segmentation",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66729736328125,
+    "y1": 700.2645263671875,
+    "y2": 717.2260131835938
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Weight", "Trace", "(b)", "Activation", "Trace", "(c)", "FIT", "against", "mIoU"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 494.4,
+    "y1": 589.92,
+    "y2": 687.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Plots of the chosen predictive heuristic against final model performance.",
+  "captionBoundary": {
+    "x1": 142.39501953125,
+    "x2": 469.60662841796875,
+    "y1": 384.8365173339844,
+    "y2": 390.8389892578125
+  },
+  "figType": "Figure",
+  "imageText": ["FIT", "QR", "Noise", "FITW/HAWQ"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 371.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure3-1.png"
+}, {
+  "caption": "Figure 5: (a) Noise vs parameter magnitude. The line indicates equal magnitude, and is shown for reference. (b) FIT against final training accuracy for experiment D. The correlation coefficient, in this case, is 0.98.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1648864746094,
+    "y1": 390.2055358886719,
+    "y2": 418.125
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "FIT", "against", "training", "accuracy", "on", "experiment", "D", "(a)", "Noise", "vs", "Parameter", "magnitude"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 189.6,
+    "x2": 419.03999999999996,
+    "y1": 274.56,
+    "y2": 377.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PDG4-Y3aboN-Figure5-1.png"
+}]

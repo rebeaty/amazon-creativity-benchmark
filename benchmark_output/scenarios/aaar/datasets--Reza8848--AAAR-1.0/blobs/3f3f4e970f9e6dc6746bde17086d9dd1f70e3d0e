@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 2: An intuitive illustration of the approximation: (a) Stage I and (b) Stage II. The black curves denote the energy functions. Green nodes and brown nodes represent the true energy values and approximated values of neighbors, respectively. Note that the approximated values are obtained based on Taylor series of Eθ(·) at x, as shown in Eq. (7). For clarity, we only show two neighbors of x in this figure, but this illustration can also be extended to include all neighbors.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 645.1455688476562,
+    "y2": 694.9840087890625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 145.92,
+    "x2": 464.15999999999997,
+    "y1": 516.96,
+    "y2": 631.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Figure2-1.png"
+}, {
+  "caption": "Figure 1: Visualization of learned energy functions on 32-dimensional synthetic discrete datasets.",
+  "captionBoundary": {
+    "x1": 291.1520080566406,
+    "x2": 504.00341796875,
+    "y1": 686.0765380859375,
+    "y2": 703.0380249023438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 290.88,
+    "x2": 510.24,
+    "y1": 595.68,
+    "y2": 679.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Figure1-1.png"
+}, {
+  "caption": "Table 1: Results on 32-dimensional synthetic discrete data in terms of MMD. The lower the better. The top two results on each dataset are highlighted as 1st and 2nd.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.74041748046875,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["Ratio", "Matching", "0.01514", "0.10270", "0.11856", "0.02901", "0.31353", "0.05820", "0.00059", "RMwGGIS", "(basic)", "0.01099", "0.09763", "0.11017", "0.03111", "0.27885", "0.05176", "0.00050", "RMwGGIS", "(advanced)", "0.00876", "0.08414", "0.10230", "0.02787", "0.26188", "0.04477", "0.00026", "Method", "2spirals", "8gaussians", "circles", "moons", "pinwheel", "swissroll", "checkerboard"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 112.32,
+    "y2": 160.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Table1-1.png"
+}, {
+  "caption": "Figure 4: Visualization of training data and samples drawn from the energy function learned by our RMwGGIS for graph generation.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.1669616699219,
+    "y1": 329.96453857421875,
+    "y2": 346.9259948730469
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 326.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Figure4-1.png"
+}, {
+  "caption": "Table 5: Comparison between ratio matching and our RMwGGIS on 2spirals datasets with different dimensions in terms of running time and memory usage.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.9989013671875,
+    "y1": 251.14950561523438,
+    "y2": 268.11102294921875
+  },
+  "figType": "Table",
+  "imageText": ["RMwGGIS", "891MB", "893MB", "893MB", "915MB", "919MB", "931MB", "951MB", "Memory", "Saving", "6.9%", "13.4%", "24.9%", "40.8%", "60.3%", "78.0%", "90.1%", "or", "y", "Ratio", "Matching", "957MB", "1031MB", "1189MB", "1545MB", "2315MB", "4237MB", "9633MB", "M", "em", "Ti", "m", "e", "Ratio", "Matching", "63.9ms", "106.5ms", "185.6ms", "372.9ms", "735.2ms", "1390.1ms", "2684.1ms", "RMwGGIS", "41.2ms", "47.2ms", "58.8ms", "86.9ms", "137.7ms", "244.9ms", "434.1ms", "Speedup", "1.6×", "2.3×", "3.2×", "4.3×", "5.3×", "5.7×", "6.2×", "#", "Data", "Dimensions", "32", "64", "128", "256", "512", "1024", "2048"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 269.28,
+    "y2": 354.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Table5-1.png"
+}, {
+  "caption": "Figure 3: Visualization of learned energy functions w.r.t. number of learning iterations on the 256- dimensional 2spirals dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.6539306640625,
+    "y1": 205.25051879882812,
+    "y2": 222.21197509765625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 483.35999999999996,
+    "y1": 80.64,
+    "y2": 191.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Figure3-1.png"
+}, {
+  "caption": "Table 3: Comparison of training Ising models in terms of RMSE and running time.",
+  "captionBoundary": {
+    "x1": 220.2270050048828,
+    "x2": 503.9967956542969,
+    "y1": 295.1495361328125,
+    "y2": 312.1109924316406
+  },
+  "figType": "Table",
+  "imageText": ["Time/iter", "EBM", "(Gibbs)", "263.5ms", "437.3ms", "1113.2ms", "2524.9ms", "4670.1ms", "13.9msEBM", "(GWG)", "37.5ms", "63.4ms", "100.5ms", "222.6ms", "395.7ms", "log(RMSE)", "EBM", "(Gibbs)", "−1.60", "−1.90", "−2.50", "−3.00", "−3.60", "−4.00EBM", "(GWG)", "−4.02", "−4.49", "−4.87", "−4.94", "−5.05", "MCMC", "#Steps", "5", "10", "25", "50", "100", "RMwGGIS"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 222.72,
+    "x2": 499.2,
+    "y1": 314.88,
+    "y2": 359.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Table3-1.png"
+}, {
+  "caption": "Table 2: Graph generation results in terms of MMD. Avg. denotes the average over three MMD results.",
+  "captionBoundary": {
+    "x1": 347.7860107421875,
+    "x2": 505.65863037109375,
+    "y1": 161.94851684570312,
+    "y2": 189.8690185546875
+  },
+  "figType": "Table",
+  "imageText": ["Ratio", "Matching", "0.062", "0.066", "0.008", "0.045", "RMwGGIS", "0.044", "0.059", "0.013", "0.039", "GraphVAE", "0.130", "0.170", "0.050", "0.117", "DeepGMG", "0.040", "0.100", "0.020", "0.053", "GraphRNN", "0.090", "0.220", "0.003", "0.104", "GNF", "0.030", "0.100", "0.001", "0.044", "EDP-GNN", "0.052", "0.093", "0.007", "0.050", "GraphAF", "0.030", "0.110", "0.001", "0.047", "GraphDF", "0.040", "0.130", "0.010", "0.060", "EBM", "(GWG)", "0.093", "0.027", "0.053", "0.058", "Method", "Degree", "Cluster", "Orbit", "Avg."],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 348.96,
+    "x2": 505.44,
+    "y1": 191.04,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Table2-1.png"
+}, {
+  "caption": "Table 4: Comparison of resulting objective values. The top two lowest values on each dataset are highlighted as 1st and 2nd.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0034484863281,
+    "y1": 92.5765151977539,
+    "y2": 109.53802490234375
+  },
+  "figType": "Table",
+  "imageText": ["Ratio", "Matching", "46.02", "39.26", "31.82", "28.57", "28.50", "37.52", "26.05", "RMwGGIS", "(basic)", "26.84", "30.15", "29.89", "27.80", "28.08", "32.20", "26.09", "RMwGGIS", "(advanced)", "27.15", "29.31", "29.54", "27.75", "27.30", "29.45", "26.06", "Method", "2spirals", "8gaussians", "circles", "moons", "pinwheel", "swissroll", "checkerboard"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 112.32,
+    "y2": 161.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_9DZKk85Z4zA-Table4-1.png"
+}]

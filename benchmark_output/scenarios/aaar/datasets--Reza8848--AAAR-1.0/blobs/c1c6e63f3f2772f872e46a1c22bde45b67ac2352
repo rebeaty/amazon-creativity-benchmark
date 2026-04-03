@@ -1,0 +1,381 @@
+[{
+  "caption": "Figure 3: (a) Proposed MocoSFL reduces model divergence. (b) Computation overhead (FLOP counts of inference per image of the online model at client-end) comparison between FL-SSL scheme and MocoSFL schemes. MocoSFL-L: client-side model has L layers.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014343261719,
+    "y1": 196.64151000976562,
+    "y2": 224.56201171875
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "F", "L", "-", "S", "S", "L", "M", "o", "c", "o", "S", "F", "L", "-", "1", "M", "o", "c", "o", "S", "F", "L", "-", "3", "s", "Me", "tric", "1", "2", "0", "0", "1", "6", "0", "0", "4", "0", "0", "8", "0", "0", "3", ".", "2", "M", "F", "L", "O", "P", "s", "/", "i", "m", "a", "g", "e", "M", "e", "m", "o", "r", "y", "(", "M", "B", ")0", "6", ".", "0", "0", ".", "8", "2", "2", "3", ".", "8", "9", "2", "1", ".", "4", "1", "6", "2", "7", ".", "8", "(a)", "S", "y", "n", "c", "F", "r", "e", "q", "=", "1", "S", "y", "n", "c", "F", "r", "e", "q", "=", "5", "S", "y", "n", "c", "F", "r", "e", "q", "=", "1", "0", "en", "ce", "Div", "erg", "1", "0", "0", "9", "0", "F", "L", "-", "S", "S", "L", "M", "o", "c", "o", "S", "F", "L", "-", "5", "M", "o", "c", "o", "S", "F", "L", "-", "3", "M", "o", "c", "o", "S", "F", "L", "-", "1", "0", "2", "4"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 116.16,
+    "x2": 492.0,
+    "y1": 84.0,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure3-1.png"
+}, {
+  "caption": "Figure 9: Details of model inversion attack using L3 inversion model done by an honest-but-curious server.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00421142578125,
+    "y1": 366.8285217285156,
+    "y2": 383.7900085449219
+  },
+  "figType": "Figure",
+  "imageText": ["stride=(2,", "2),", "padding=(1,", "1),", "output_padding=(1,", "1))", "(11):", "BatchNorm2d(64,", "eps=1e-05,", "momentum=0.1,", "affine=True,", "Teaser", "Inversion_Model_L3(", "(m):", "Sequential(", "(0):", "ResBlock(128,", "64", ",", "BN", "=", "True)", "(1):", "ReLU()", "(2):", "ResBlock(64,", "64", ",", "BN", "=", "True)", "(3):", "ReLU()", "(4):", "ResBlock(64,", "64,", "BN", "=", "True)", "(5):", "ReLU()", "(6):", "ResBlock(64,", "64", ",", "BN", "=", "True)", "(7):", "ReLU()", "(8):", "ResBlock(64,", "64", ",", "BN", "=", "True)", "(9):", "ReLU()", "(10):", "ConvTranspose2d(64,", "64,", "kernel_size=(3,", "3),"],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 81.11999999999999,
+    "x2": 444.0,
+    "y1": 397.44,
+    "y2": 539.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Details of L3 inversion model architecture.",
+  "captionBoundary": {
+    "x1": 198.33999633789062,
+    "x2": 413.66162109375,
+    "y1": 657.0465698242188,
+    "y2": 663.0490112304688
+  },
+  "figType": "Figure",
+  "imageText": [")", ")", "track_running_stats=True)", "(15):", "ReLU()", "(16):", "ResBlock(64,", "3", ",", "BN", "=", "True)", "(17):", "Sigmoid()", "stride=(2,", "2),", "padding=(1,", "1),", "output_padding=(1,", "1))", "(14):", "BatchNorm2d(64,", "eps=1e-05,", "momentum=0.1,", "affine=True,", "track_running_stats=True)", "(12):", "ReLU()", "(13):", "ConvTranspose2d(64,", "64,", "kernel_size=(3,", "3),"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 444.0,
+    "y1": 540.96,
+    "y2": 644.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure10-1.png"
+}, {
+  "caption": "Figure 4: Target-aware ResSFL scheme: (1) Target domain data is used in pretraining; (2) Client-side model is frozen during training.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 309.9566955566406,
+    "y1": 419.11651611328125,
+    "y2": 447.0369873046875
+  },
+  "figType": "Figure",
+  "imageText": ["Mix", "𝑿𝒔,𝒒", "∗", "𝑨𝒔,𝒒", "❶", "❷", "initialize", "Clients", "Online", "models", "Freeze", "Resistant", "Feature", "Extractor", "v", "𝐼𝑛𝑓𝑜𝑁𝐶𝐸", "𝑙𝑜𝑠𝑠", "𝑿𝒕,𝒒", "∗", "𝑨𝒕,𝒒", "Simulated", "Attacker", "v", "𝑿𝒔,𝒒", "𝑿𝒕,𝒒", "𝑿𝒔,𝒌+", "𝑿𝒕,𝒌+", "𝑨𝒔,𝒒", "𝑨𝒕,𝒒", "𝑸𝒔", ",", "𝑲𝒔", "+", "𝑸𝒕", ",", "𝑲𝒕", "+", "Tail", "model", "+", "Contrastive", "head", "𝑨𝒔,𝒌+", "𝑨𝒕,𝒌+", "Feature", "Extractor", "v", "v"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 308.15999999999997,
+    "y1": 332.64,
+    "y2": 407.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure4-1.png"
+}, {
+  "caption": "Table 1: Communication overhead per client. FLSSL: 100 times of synchronization; MocoSFL: 200 times of synchronization.",
+  "captionBoundary": {
+    "x1": 313.6130065917969,
+    "x2": 505.6580810546875,
+    "y1": 419.11651611328125,
+    "y2": 447.0369873046875
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-3+TAResSFL", "0.0", "39.1", "39.1", "(0.005x)", "MocoSFL-1+TAResSFL", "0.0", "39.1", "39.1", "(0.005x)", "MocoSFL-3", "57.9", "5000", "5057.9", "(0.612x)", "MocoSFL-1", "1.4", "5000", "5001.4", "(0.605x)", "FL-SSL", "methods", "Zhuang", "et", "al.", "(2022)", "8269.2", "0.0", "8269.2", "(1.000x)", "Weights", "(MB)", "Latent", "Vectors", "(MB)", "Total", "(Relative", "(MB)", "Ratio)", "Communication", "Overhead"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 314.88,
+    "x2": 503.03999999999996,
+    "y1": 332.64,
+    "y2": 408.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table1-1.png"
+}, {
+  "caption": "Table 7: MocoSFL-3’s accuracy performance (ResNet-18 on CIFAR-10) quickly saturates with synchronization frequency when the number of clients is large (so the amount of data in each client is small).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 118.4985122680664,
+    "y2": 146.41900634765625
+  },
+  "figType": "Table",
+  "imageText": ["Non-IID", "Accuracy", "84.75", "87.47", "87.41", "87.38", "1/epoch", "2/epoch", "3/epoch", "5/epoch", "Synchronization", "Frequency"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 168.95999999999998,
+    "x2": 443.03999999999996,
+    "y1": 164.16,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table7-1.png"
+}, {
+  "caption": "Table 8: Performance of “MocoSFL + TAResSFL” using SVHN as source dataset, with 0.0%, 0.5% and 1.0% of CIFAR-10 as target dataset.",
+  "captionBoundary": {
+    "x1": 309.64898681640625,
+    "x2": 505.77520751953125,
+    "y1": 572.3995361328125,
+    "y2": 600.3189697265625
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-3", "Accuracy", "(%)", "79.41", "76.02", "80.19", "Attack", "MSE", "0.041", "0.035", "0.034", "MocoSFL-1", "Accuracy", "(%)", "70.54", "79.26", "74.25", "Attack", "MSE", "0.039", "0.035", "0.037", "Method", "Metric", "Target", "Data", "0.0%", "0.5%", "1.0%"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 310.56,
+    "x2": 502.08,
+    "y1": 489.59999999999997,
+    "y2": 561.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table8-1.png"
+}, {
+  "caption": "Table 9: Performance of “MocoSFL + TAResSFL” using CIFAR-100 as source dataset and 1.0% of CIFAR-10 target dataset as training data, with different bottleneck layer settings.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 303.8171081542969,
+    "y1": 692.6765747070312,
+    "y2": 731.5549926757812
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-3", "Accuracy", "(%)", "80.94", "84.81", "82.39", "Attack", "MSE", "0.050", "0.038", "0.009", "MocoSFL-1", "Accuracy", "(%)", "78.21", "77.86", "76.12", "Attack", "MSE", "0.037", "0.040", "0.020", "Method", "Metric", "Bottleneck", "Layer", "C2S2", "C4S2", "C8S2"],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 301.44,
+    "y1": 609.6,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table9-1.png"
+}, {
+  "caption": "Table 10: Performance of “MocoSFL + TAResSFL” using CIFAR-100 as source dataset and 1.0% of CIFAR-10 target dataset as training data, with different regularization strength λ.",
+  "captionBoundary": {
+    "x1": 309.21099853515625,
+    "x2": 505.65093994140625,
+    "y1": 692.6765747070312,
+    "y2": 731.5549926757812
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-3", "Accuracy", "(%)", "82.58", "84.81", "80.82", "Attack", "MSE", "0.040", "0.038", "0.041", "MocoSFL-1", "Accuracy", "(%)", "79.83", "77.86", "80.43", "Attack", "MSE", "0.019", "0.040", "0.040", "1.0", "2.0", "4.0", "Method", "Metric", "Regularization", "λ"],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 318.71999999999997,
+    "x2": 495.35999999999996,
+    "y1": 615.36,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table10-1.png"
+}, {
+  "caption": "Figure 12: Effect of feature sharing in MocoSFL.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 302.04541015625,
+    "y1": 594.3165283203125,
+    "y2": 600.3189697265625
+  },
+  "figType": "Figure",
+  "imageText": ["Feature", "Sharing", "w/o", "Feature", "Sharing", "Client-5", "Client-100", "%", ")", "cy", "(", "u", "ra", "A", "cc"],
+  "name": "12",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 302.4,
+    "y1": 485.76,
+    "y2": 581.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure12-1.png"
+}, {
+  "caption": "Table 4: Accuracy and MIA resistance performance (Attack MSE) of MocoSFL+TAResSFL. (Averaging 3 random seeds)",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 353.7704772949219,
+    "y1": 651.9955444335938,
+    "y2": 668.95703125
+  },
+  "figType": "Table",
+  "imageText": ["Ground-truth", "MocoSFL", "MocoSFL", "+", "TAResSFL", "MocoSFL-3", "Accuracy", "(%)", "81.19±2.32", "80.51±1.49", "83.13±2.40", "Attack", "MSE", "0.045±0.003", "0.035±0.003", "0.039±0.002", "MocoSFL-1", "Accuracy", "(%)", "81.14±0.47", "80.78±1.34", "79.96±2.96", "Attack", "MSE", "0.039±0.005", "0.033±0.014", "0.039±0.002", "Method", "Metric", "Target", "Data", "0.0%", "0.5%", "1.0%"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 352.32,
+    "y1": 574.56,
+    "y2": 641.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table4-1.png"
+}, {
+  "caption": "Figure 6: Visualization of MIA reconstruct d images using TAResSFL.",
+  "captionBoundary": {
+    "x1": 357.48199462890625,
+    "x2": 505.6506652832031,
+    "y1": 651.9955444335938,
+    "y2": 668.95703125
+  },
+  "figType": "Figure",
+  "imageText": ["Ground-", "Truth", "MocoSFL", "MocoSFL", "+TAResSFL"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 358.56,
+    "x2": 503.03999999999996,
+    "y1": 573.6,
+    "y2": 640.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure6-1.png"
+}, {
+  "caption": "Table 3: MocoSFL cross-client accuracy performance (linear probe accuracy) of ResNet-18 model on CIFAR-10, CIFAR-100 and Imagenet-12 datasets with different number of clients NC .",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0015563964844,
+    "y1": 397.1205139160156,
+    "y2": 415.57598876953125
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-3", "CIFAR-10", "87.29", "87.15", "87.25", "87.10", "85.22", "84.75", "CIFAR-100", "58.41", "58.30", "58.80", "58.69", "58.59", "56.88", "ImageNet-12", "92.08", "92.24", "92.02", "92.60", "91.83", "91.28", "MocoSFL-1", "CIFAR-10", "87.29", "87.38", "87.51", "87.71", "87.39", "86.46", "CIFAR-100", "58.91", "59.15", "58.85", "59.22", "58.90", "56.75", "ImageNet-12", "92.02", "91.73", "91.76", "92.24", "91.44", "91.28", "NC", "=", "100", "NC", "=", "200", "NC", "=", "1000", "NC", "=", "100", "NC", "=", "200", "NC", "=", "1000", "Method", "Dataset", "IID", "non-IID"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 432.96,
+    "y2": 524.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table3-1.png"
+}, {
+  "caption": "Table 11: MocoSFL Semi-supervised learning Performance (Non-IID).",
+  "captionBoundary": {
+    "x1": 163.86900329589844,
+    "x2": 447.8228759765625,
+    "y1": 282.8595275878906,
+    "y2": 288.86199951171875
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-1", "86.28", "89.55", "80.34", "86.09", "84.83", "88.78", "MocoSFL-3", "87.09", "90.33", "81.59", "87.21", "84.65", "88.81", "ResNet-50", "FL-BYOL", "(Zhuang", "et", "al.,", "2022)", "72.52", "80.68", "N/A", "N/A", "N/A", "N/A", "MocoSFL-1", "84.69", "87.05", "76.80", "84.46", "82.27", "86.84", "MocoSFL-3", "84.46", "86.50", "76.70", "84.20", "81.72", "85.91", "ResNet-18", "FL-BYOL", "(Zhuang", "et", "al.,", "2022)", "73.44", "79.49", "N/A", "N/A", "N/A", "N/A", "1%", "10%", "1%", "10%", "1%", "10%", "Arch", "Method", "NC", "=", "5", "NC", "=", "20", "NC", "=", "100"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 492.0,
+    "y1": 169.92,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table11-1.png"
+}, {
+  "caption": "Table 12: Top-1 accuracy comparison under linear evaluation protocol, on 1% and 10% of labeled data for semi-supervised learning on the non-IID setting of CIFAR datasets. MocoSFL outperforms all other methods (number of clients is set to 5).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00262451171875,
+    "y1": 390.1565246582031,
+    "y2": 418.0769958496094
+  },
+  "figType": "Table",
+  "imageText": ["FedCA", "(Zhang", "et", "al.,", "2020)", "ResNet-50", "68.01", "28.50", "36.28", "42.34", "16.48", "22.46", "FedU", "(Zhuang", "et", "al.,", "2021)", "ResNet-50", "83.25", "69.76", "80.25", "61.94", "28.42", "48.42", "FedEMA", "(Zhuang", "et", "al.,", "2022)", "ResNet-50", "84.31", "72.52", "80.68", "62.77", "29.68", "50.75", "MocoSFL-1", "(ours)", "ResNet-50", "90.78", "85.59", "89.81", "67.09", "35.31", "56.97", "MocoSFL-3", "(ours)", "ResNet-50", "90.94", "87.09", "90.33", "66.45", "35.30", "56.98", "MocoSFL-1", "(ours)", "ResNet-18", "87.81", "84.69", "87.05", "58.78", "33.09", "51.59", "MocoSFL-3", "(ours)", "ResNet-18", "87.29", "73.44", "79.49", "57.70", "32.44", "51.21", "FedU", "(Zhuang", "et", "al.,", "2021)", "ResNet-18", "80.52", "69.52", "77.06", "57.21", "29.00", "46.67", "FedEMA", "(Zhuang", "et", "al.,", "2022)", "ResNet-18", "83.34", "73.44", "79.49", "61.78", "33.04", "50.48", "Linear", "1%", "label", "10%", "label", "Linear", "1%", "label", "10%", "label", "Method", "Arch", "CIFAR-10", "(%)", "CIFAR-100", "(%)"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 436.8,
+    "y2": 557.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table12-1.png"
+}, {
+  "caption": "Table 5: MocoSFL Performance (linear probe accuracy) on a ResNet-18 and ResNet-50 models",
+  "captionBoundary": {
+    "x1": 115.11799621582031,
+    "x2": 496.57598876953125,
+    "y1": 405.39154052734375,
+    "y2": 411.3940124511719
+  },
+  "figType": "Table",
+  "imageText": ["MocoSFL-1", "(ResNet-18)", "87.38", "87.81", "87.21", "85.84", "87.29", "87.71", "MocoSFL-3", "(ResNet-18)", "87.09", "87.29", "87.09", "85.32", "87.29", "87.10", "MocoSFL-1", "(ResNet-50)", "90.68", "90.78", "91.07", "89.35", "90.59", "90.96", "MocoSFL-3", "(ResNet-50)", "90.86", "90.94", "90.58", "89.83", "90.67", "90.66", "IID", "Non-IID", "IID", "Non-IID", "IID", "Non-IID", "Method", "NC", "=", "5", "NC", "=", "20", "NC", "=", "100"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 312.47999999999996,
+    "y2": 394.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table5-1.png"
+}, {
+  "caption": "Table 6: MocoSFL-3’s accuracy performance (ResNet-18 on CIFAR-10) varies with batch size. This observation leads to the first principle of hyperparameter choice.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035095214844,
+    "y1": 566.591552734375,
+    "y2": 583.552978515625
+  },
+  "figType": "Table",
+  "imageText": ["IID", "79.66", "85.00", "86.77", "87.49", "86.61", "Non-IID", "74.51", "80.31", "83.14", "84.90", "84.64", "B", "=", "25", "B", "=", "50", "B", "=", "100", "B", "=", "200", "B", "=", "400", "Distribution", "Batch", "Size"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 158.88,
+    "x2": 453.12,
+    "y1": 601.4399999999999,
+    "y2": 661.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Table6-1.png"
+}, {
+  "caption": "Figure 2: MocoSFL scheme. Three highlighted components are (1) latent vector concatenation, (2) shared feature memory, and (3) frequent synchronization.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.66571044921875,
+    "y1": 267.0905456542969,
+    "y2": 284.052001953125
+  },
+  "figType": "Figure",
+  "imageText": ["❸", "❶", "…avg", "❷", "𝑿𝒋", "𝑨𝒒,𝒊", "𝑿𝒊", "Augmentation", "Client", "𝒊", "𝑿𝒒,𝒊", "𝑿𝒌+,𝒊", "Client", "𝑖", "online", "𝑨𝒌+,𝒊", "Client", "𝑖", "momentum", "Concatenate", "Concatenate", "Frequent", "Sync", "𝑨𝒒", "𝑨𝒌+", "𝑨𝒒,𝒋", "Augmentation", "Client", "𝒋", "𝑿𝒒,𝒋", "𝑿𝒌+,𝒋", "Client", "𝑗", "online", "𝑨𝒌+,𝒋", "Client", "𝑗", "momentum", "Server", "𝑲+", "EnQueue", "DeQueue", "𝑵", "Shared", "Feature", "Memory", "𝑸", "𝑲+", "Server", "online", "MocoSFL", "Scheme", "InfoNCE", "Loss", "Server", "momentum", "Wireless", "communication"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 611.52,
+    "y1": 82.56,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure2-1.png"
+}, {
+  "caption": "Figure 11: Overall MocoSFL + TAResSFL scheme.",
+  "captionBoundary": {
+    "x1": 202.56399536132812,
+    "x2": 409.4375,
+    "y1": 391.8825378417969,
+    "y2": 397.885009765625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Transfer", "step:", "MocoSFL", "+", "TAResSFL", "(a)", "Pretraining", "step:", "centralized", "training", "𝑿𝑺", "∗", "𝑨𝑺,𝒌+", "∗", "𝑨𝑺,𝒒", "∗", "MSE", "Model", "L3", "Inversion", "Freeze", "Freeze", "No", "Sync", "is", "needed", "*", "=", "{𝑿𝑺}", "∪", "{𝒑𝑿𝒕}", "(𝒑", "≪", "𝟏)", "+", "Regularization𝑿𝑺", "𝑿𝒋", "Augmentation", "𝑨𝒒,𝒋", "Client", "𝒋", "𝑿𝒌+,𝒋𝑿𝒒,𝒋", "Pretrained", "C-model", "𝑨𝒌+,𝒋", "Wireless", "communication", "𝑿𝒊", "Augmentation", "𝑨𝒒,𝒊", "Client", "𝒊", "𝑿𝒌+,𝒊𝑿𝒒,𝒊", "Pretrained", "C-model", "𝑨𝒌+,𝒊", "𝑨𝒒", "𝑨𝒌+", "Server", "𝑲+", "EnQueue", "DeQueue", "𝑵", "𝑸", "𝑲+", "Server", "online", "InfoNCE", "Loss", "Server", "momentum", "Augmentation", "𝑿𝑺,𝒒", "∗", "𝑿𝑺,𝒌+", "∗", "C-model", "online", "𝑵Server", "C-model", "momentum", "𝑸", "𝑲+", "Tail", "online", "InfoNCE", "Loss", "Tail", "momentum"],
+  "name": "11",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.47999999999999,
+    "x2": 502.08,
+    "y1": 82.56,
+    "y2": 379.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2QGJXyMNoPz-Figure11-1.png"
+}]

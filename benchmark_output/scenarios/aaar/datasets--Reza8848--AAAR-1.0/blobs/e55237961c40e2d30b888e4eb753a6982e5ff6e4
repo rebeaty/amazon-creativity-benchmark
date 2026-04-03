@@ -1,0 +1,501 @@
+[{
+  "caption": "Figure 15: CelebA (64× 64) synthesis samples. N = 4. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 144.12799072265625,
+    "x2": 467.8720397949219,
+    "y1": 333.5375061035156,
+    "y2": 339.5400085449219
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "15",
+  "page": 42,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 108.0,
+    "y2": 320.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure15-1.png"
+}, {
+  "caption": "Figure 16: CelebA (64× 64) synthesis samples. N = 8. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 144.12799072265625,
+    "x2": 467.8720397949219,
+    "y1": 625.6015625,
+    "y2": 631.60400390625
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "16",
+  "page": 42,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 399.84,
+    "y2": 612.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure16-1.png"
+}, {
+  "caption": "Figure 10: Some noise schedules. The dotted lines are the reference baselines, corresponding to the case where ν0 = 10−4, ν(1) = 0.99 (same as the top one).",
+  "captionBoundary": {
+    "x1": 108.00000762939453,
+    "x2": 503.995849609375,
+    "y1": 699.2545166015625,
+    "y2": 717.7109985351562
+  },
+  "figType": "Figure",
+  "imageText": ["Noising", "schedule", "based", "on", "the", "parameters", "ν(0)", "=", "10−3,", "ν(1)", "=", "0.5", "=⇒", "λ(t)", "=", "log(1", "+", "0.0653×", "exp(4.3×", "t))", "schedule", "reference", "10.0", "λ̇(t)/", "sinhλ(t)", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "λ̇(t)", "=", "ξ(t)", "=", "β(t)/", "√", "ν(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "ν(t)", "=", "1−", "ᾱ(t)", "1.00", "0.75", "0.50", "0.25", "0.00", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "β(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noising", "schedule", "based", "on", "the", "parameters", "ν(0)", "=", "5×", "10−4,", "ν(1)", "=", "0.995", "=⇒", "λ(t)", "=", "log(1", "+", "0.0457×", "exp(9.77×", "t))", "schedule", "reference", "10.0", "λ̇(t)/", "sinhλ(t)", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "λ̇(t)", "=", "ξ(t)", "=", "β(t)/", "√", "ν(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "ν(t)", "=", "1−", "ᾱ(t)", "1.00", "0.75", "0.50", "0.25", "0.00", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "β(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noising", "schedule", "based", "on", "the", "parameters", "ν(0)", "=", "10−4,", "ν(1)", "=", "0.995", "=⇒", "λ(t)", "=", "log(1", "+", "0.0202×", "exp(10.6×", "t))", "schedule", "reference", "λ̇(t)/", "sinhλ(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "λ̇(t)", "=", "ξ(t)", "=", "β(t)/", "√", "ν(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "ν(t)", "=", "1−", "ᾱ(t)", "1.00", "0.75", "0.50", "0.25", "0.00", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "schedule", "reference", "β(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "Noising", "schedule", "based", "on", "the", "parameters", "ν(0)", "=", "10−4,", "ν(1)", "=", "0.99", "=⇒", "λ(t)", "=", "log(1", "+", "0.0202×", "exp(9.89×", "t))", "10.0", "λ̇(t)/", "sinhλ(t)", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "λ̇(t)", "=", "ξ(t)", "=", "β(t)/", "√", "ν(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "ν(t)", "=", "1−", "ᾱ(t)", "1.00", "0.75", "0.50", "0.25", "0.00", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0", "β(t)", "10.0", "7.5", "5.0", "2.5", "0.0", "Time", "parameter", "t", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0"],
+  "name": "10",
+  "page": 25,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 499.2,
+    "y1": 346.08,
+    "y2": 683.52
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure10-1.png"
+}, {
+  "caption": "Figure 5: Intuitive reasons why a single point approximation is valid. The case where 1− νt ≈ 0",
+  "captionBoundary": {
+    "x1": 112.68399810791016,
+    "x2": 499.3162841796875,
+    "y1": 165.51852416992188,
+    "y2": 173.0159912109375
+  },
+  "figType": "Figure",
+  "imageText": ["gradient", "∇", "log", "p(xt,", "t)≈", "∇", "log", "p(xt,", "t", "|", "x(i)", "0", ",", "0)", "xt", "1", "−", "νtx", "(i)", "0", "}ni=1", "scaled", "datapoints", "{√"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 150.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure5-1.png"
+}, {
+  "caption": "Figure 24: CIFAR-10 (32× 32) synthesis samples. N = 100. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 133.42398071289062,
+    "x2": 478.5770568847656,
+    "y1": 599.0225830078125,
+    "y2": 605.0250244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "24",
+  "page": 46,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 372.96,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure24-1.png"
+}, {
+  "caption": "Figure 23: CIFAR-10 (32× 32) synthesis samples. N = 20. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 135.91397094726562,
+    "x2": 476.0870666503906,
+    "y1": 306.9525146484375,
+    "y2": 312.9549865722656
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "23",
+  "page": 46,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure23-1.png"
+}, {
+  "caption": "Table 5: Comparison of the image synthesis process. The dataset is CelebA (64 × 64). All the conditions but the sampling algorithm are the same including the random seed. The number of refinement steps is N = 8.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0047607421875,
+    "y1": 670.3535766601562,
+    "y2": 698.2730102539062
+  },
+  "figType": "Table",
+  "imageText": ["Itô-Taylor", "Euler-Maruyama", "Taylor", "(3rd)", "Taylor", "(2nd)", "RK4", "Heun", "DDIM", "Euler", "Itô-Taylor", "Euler-Maruyama", "Taylor", "(3rd)", "Taylor", "(2nd)", "RK4", "Heun", "DDIM", "Euler"],
+  "name": "5",
+  "page": 41,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 461.28,
+    "y1": 113.75999999999999,
+    "y2": 656.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Table5-1.png"
+}, {
+  "caption": "Figure 12: Numerical simulation of Langevin and Fokker-Planck equations. (Top: microscopic particle-wise dynamics) Time evolution of 1000 random samples {x(i) t }1000",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974670410156,
+    "y1": 339.0655517578125,
+    "y2": 361.0790710449219
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 510.24,
+    "y1": 220.79999999999998,
+    "y2": 325.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Force field (potential gradient, score function) −∇U(x), potential function U(x), and the Boltzmann distribution p(x) = 1 Z e −U(x)/D. The scalar potential U(x) is given by eq. (122)",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013732910156,
+    "y1": 199.09652709960938,
+    "y2": 220.86700439453125
+  },
+  "figType": "Figure",
+  "imageText": ["Gradient", "ﬁeld,", "−∇U(x)", "Potential", "function,", "U(x)", "Probability,", "p(x)", "∝", "exp(−U(x)/D)"],
+  "name": "11",
+  "page": 32,
+  "regionBoundary": {
+    "x1": 156.0,
+    "x2": 457.44,
+    "y1": 82.08,
+    "y2": 183.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure11-1.png"
+}, {
+  "caption": "Figure 22: CIFAR-10 (32× 32) synthesis samples. N = 8. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 138.40496826171875,
+    "x2": 473.5960388183594,
+    "y1": 599.0225830078125,
+    "y2": 605.0250244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "22",
+  "page": 45,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 372.96,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure22-1.png"
+}, {
+  "caption": "Figure 21: CIFAR-10(32× 32) synthesis samples. N = 4. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 139.64999389648438,
+    "x2": 472.3510437011719,
+    "y1": 306.9525146484375,
+    "y2": 312.9549865722656
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "21",
+  "page": 45,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure21-1.png"
+}, {
+  "caption": "Figure 19: CelebA (64× 64) synthesis samples. N = 30. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 141.63796997070312,
+    "x2": 470.3630676269531,
+    "y1": 306.947509765625,
+    "y2": 312.95001220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "19",
+  "page": 44,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure19-1.png"
+}, {
+  "caption": "Figure 20: CelebA (64× 64) synthesis samples. N = 100. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 139.14697265625,
+    "x2": 472.85406494140625,
+    "y1": 599.0115356445312,
+    "y2": 605.0140380859375
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "20",
+  "page": 44,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 372.96,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure20-1.png"
+}, {
+  "caption": "Figure 1: Comparison of the synthesis results of CelebA (64 × 64) data. The noise schedule for synthesis was the condition (ii). The number of refinement steps is N = 12.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.16644287109375,
+    "y1": 306.9475402832031,
+    "y2": 323.9079895019531
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure1-1.png"
+}, {
+  "caption": "Figure 2: FID scores (↓) for generated CelebA images (64 × 64).",
+  "captionBoundary": {
+    "x1": 175.94003295898438,
+    "x2": 436.059814453125,
+    "y1": 437.97052001953125,
+    "y2": 443.9729919433594
+  },
+  "figType": "Figure",
+  "imageText": ["Euler", "Taylor", "2nd", "Taylor", "3rd", "DDIM", "Euler-Maruyama", "Itô-Taylor", "Heun", "(NFE=2)", "RK4", "(NFE=4)", "Reﬁnement", "steps", "–", "FID", "(condition", "(ii))", "FI", "D", "50", "40", "30", "20", "10", "0", "0", "4", "8", "121620", "30", "100", "#", "Reﬁnement", "steps", "Euler", "Taylor", "2nd", "Taylor", "3rd", "DDIM", "Euler-Maruyama", "Itô-Taylor", "Heun", "(NFE=2)", "RK4", "(NFE=4)", "Reﬁnement", "steps", "–", "FID", "(condition", "(i))", "FI", "D", "50", "40", "30", "20", "10", "0", "0", "4", "8", "121620", "30", "100", "#", "Reﬁnement", "steps"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 119.52,
+    "x2": 493.44,
+    "y1": 337.91999999999996,
+    "y2": 421.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Cosine similarity between the true gradient and the single point approximation depending on the noise level νt. Dashed curves indicate the lower bounds evaluated in eq. (33).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9971923828125,
+    "y1": 409.22552490234375,
+    "y2": 427.6809997558594
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "CIFAR10", "data.", "3072-dim", "(=", "32×", "32×", "3)", "cosine", "similarity", "(CIFAR-10)", "Phase", "(1)", "Phase", "(2)", "im", "co", "ss", "1.000", "0.998", "0.996", "0.994", "0.992", "ᾱr", "=", "1−", "νr", "10−4", "10−3", "10−2", "10−1", "100", "(a)", "MNIST", "training", "data.", "784-dim", "(=", "28×", "28)", "cosine", "similarity", "(MNIST)", "Phase", "(1)", "Phase", "(2)", "im", "co", "ss", "1.00", "0.99", "0.98", "0.97", "ᾱr", "=", "1−", "νr", "10−3", "10−2", "10−1", "100"],
+  "name": "8",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 121.44,
+    "x2": 490.08,
+    "y1": 282.24,
+    "y2": 396.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure8-1.png"
+}, {
+  "caption": "Figure 7: RelativeL2 distance between the true gradient and the single point approximation depending on the noise level νt. Dashed curves indicate the upper bounds evaluated in eq. (32).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0007629394531,
+    "y1": 226.72555541992188,
+    "y2": 245.1810302734375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "CIFAR10", "data.", "3072-dim", "(=", "32×", "32×", "3)", "Relative", "L2", "Error", "(CIFAR-10)", "Phase", "(1)", "Phase", "(2)", "2", "Er", "ro", "r", "e", "L", "Re", "la", "tiv", "0.125", "0.100", "0.075", "0.050", "0.025", "0.000", "ᾱr", "=", "1−", "νr", "10−4", "10−3", "10−2", "10−1", "100", "(a)", "MNIST", "training", "data.", "784-dim", "(=", "28×", "28)", "Phase", "(1)", "Phase", "(2)", "Relative", "L2", "Error", "(MNIST)", "2", "Er", "ro", "r", "e", "L", "Re", "la", "tiv", "0.25", "0.20", "0.15", "0.10", "0.05", "0.00", "ᾱr", "=", "1−", "νr", "10−3", "10−2", "10−1", "100"],
+  "name": "7",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 99.84,
+    "y2": 213.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure7-1.png"
+}, {
+  "caption": "Figure 9: Entropy of q(x0 | xt) depending on the noise level νt.",
+  "captionBoundary": {
+    "x1": 178.4739990234375,
+    "x2": 433.526611328125,
+    "y1": 591.7255859375,
+    "y2": 599.2219848632812
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "CIFAR10", "data.", "3072-dim", "(=", "32×", "32×", "3)", "Entropy", "of", "q(x0", "|", "xt)", "(CIFAR-10)", "Phase", "(1)", "Phase", "(2)", "py", "En", "tro", "10", "8", "6", "4", "2", "0", "ᾱr", "=", "1−", "νr", "10−4", "10−3", "10−2", "10−1", "100", "(a)", "MNIST", "training", "data.", "784-dim", "(=", "28×", "28)", "Entropy", "of", "q(x0", "|", "xt)", "(MNIST)", "Phase", "(1)", "Phase", "(2)", "py", "En", "tro", "10.0", "7.5", "5.0", "2.5", "0.0", "ᾱr", "=", "1−", "νr", "10−3", "10−2", "10−1", "100"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 121.92,
+    "x2": 490.08,
+    "y1": 464.64,
+    "y2": 578.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure9-1.png"
+}, {
+  "caption": "Figure 18: CelebA (64× 64) synthesis samples. N = 20. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 141.63796997070312,
+    "x2": 470.3630676269531,
+    "y1": 599.0115356445312,
+    "y2": 605.0140380859375
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "18",
+  "page": 43,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 372.96,
+    "y2": 586.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure18-1.png"
+}, {
+  "caption": "Figure 17: CelebA (64× 64) synthesis samples. N = 16. Noise schedule was (ii).",
+  "captionBoundary": {
+    "x1": 141.63796997070312,
+    "x2": 470.3630676269531,
+    "y1": 306.947509765625,
+    "y2": 312.95001220703125
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Taylor", "(2nd)", "(f)", "Taylor", "(3rd)", "(g)", "Euler-Maruyama", "(h)", "Itô-Taylor", "(a)", "Euler", "(b)", "DDIM", "(c)", "Heun", "(NFE=2)", "(d)", "RK4", "(NFE=4)"],
+  "name": "17",
+  "page": 43,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 294.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure17-1.png"
+}, {
+  "caption": "Figure 14: Comparison of the image synthesis process using different step-size schedules. above: constant schedule, below: exponential schedule. The number of refinement steps is N = 8. The synthesis noise schedule was condition (ii).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.3795471191406,
+    "y1": 695.6485595703125,
+    "y2": 723.5679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["Itô-Taylor", "Euler-Maruyama", "Taylor", "(3rd)", "Taylor", "(2nd)", "RK4", "Heun", "DDIM", "Euler", "Itô-Taylor", "Euler-Maruyama", "Taylor", "(3rd)", "Taylor", "(2nd)", "RK4", "Heun", "DDIM", "Euler"],
+  "name": "14",
+  "page": 40,
+  "regionBoundary": {
+    "x1": 125.75999999999999,
+    "x2": 473.28,
+    "y1": 138.72,
+    "y2": 681.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure14-1.png"
+}, {
+  "caption": "Figure 4: FID scores (↓) for generated CIFAR-10 images (32 × 32).",
+  "captionBoundary": {
+    "x1": 170.21603393554688,
+    "x2": 441.7838134765625,
+    "y1": 330.74853515625,
+    "y2": 336.7510070800781
+  },
+  "figType": "Figure",
+  "imageText": ["Euler", "Taylor", "2nd", "Taylor", "3rd", "DDIM", "Euler-Maruyama", "Itô-Taylor", "Heun", "(NFE=2)", "RK4", "(NFE=4)", "Reﬁnement", "steps", "–", "FID", "(condition", "(ii))", "FI", "D", "50", "40", "30", "20", "10", "0", "0", "4", "8", "121620", "30", "100", "#", "Reﬁnement", "steps", "Euler", "Taylor", "2nd", "Taylor", "3rd", "DDIM", "Euler-Maruyama", "Itô-Taylor", "Heun", "(NFE=2)", "RK4", "(NFE=4)", "Reﬁnement", "steps", "–", "FID", "(condition", "(i))", "FI", "D", "50", "40", "30", "20", "10", "0", "0", "4", "8", "121620", "30", "100", "#", "Reﬁnement", "steps"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 119.52,
+    "x2": 493.44,
+    "y1": 230.88,
+    "y2": 314.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Comparison of the synthesis results of CIFAR-10 (32× 32) data. The noise schedule for synthesis was the condition (ii). The number of refinement steps is N = 30.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.16839599609375,
+    "y1": 199.72451782226562,
+    "y2": 216.68597412109375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "DDIM", "(b)", "RK4", "(NFE=4)", "(c)", "Taylor", "(3rd)", "(d)", "Itô-Taylor"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 80.64,
+    "y2": 186.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure3-1.png"
+}, {
+  "caption": "Figure 13: Comparison of numerical solutions of the ODE ẋ = x sin t, x0 = 1.",
+  "captionBoundary": {
+    "x1": 148.6490020751953,
+    "x2": 463.3516540527344,
+    "y1": 598.673583984375,
+    "y2": 606.1699829101562
+  },
+  "figType": "Figure",
+  "imageText": ["Exact", "Euler", "Heun", "RK4", "Taylor", "2nd", "x", "7", "6", "5", "4", "3", "2", "1", "0", "t", "0", "5", "10", "15", "20", "25", "30", "35"],
+  "name": "13",
+  "page": 36,
+  "regionBoundary": {
+    "x1": 156.48,
+    "x2": 459.35999999999996,
+    "y1": 433.91999999999996,
+    "y2": 578.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure13-1.png"
+}, {
+  "caption": "Figure 6: Intuitive reasons why a single point approximation is valid. The case where 1− νt ≈ 1",
+  "captionBoundary": {
+    "x1": 112.68399047851562,
+    "x2": 499.3162841796875,
+    "y1": 160.27249145507812,
+    "y2": 167.76898193359375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Continuous", "case", "xt", "(a)", "Discrete", "case", "xt", "x", "(4)", "0", "x", "(3)", "0", "x", "(2)", "0", "x", "(1)", "0", "x", "(0)", "0"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 80.64,
+    "y2": 146.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_7ks5PS09q1-Figure6-1.png"
+}]

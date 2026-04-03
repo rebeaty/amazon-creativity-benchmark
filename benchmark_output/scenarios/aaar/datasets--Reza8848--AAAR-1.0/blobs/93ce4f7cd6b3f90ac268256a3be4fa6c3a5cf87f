@@ -1,0 +1,221 @@
+[{
+  "caption": "Table 1: The test log likelihood (larger is better) on the synthetic 1D regression experiment. The proposed VNP outperforms previous methods by a large margin. Both the pre-processing transformer and the hierarchical structure improve the expressiveness of function representations.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1674499511719,
+    "y1": 206.93453979492188,
+    "y2": 234.85400390625
+  },
+  "figType": "Table",
+  "imageText": ["HNP-Mod", "1.379±0.001", "0.886±0.039", "1.371±0.004", "0.614±0.053", "1.96", "M", "VNP", "1.377±0.004", "0.901±0.004", "1.376±0.004", "0.716±0.037", "2.29", "M", "Stacked", "ANP", "1.381±0.001", "0.486±0.014", "1.381±0.001", "0.247±0.026", "1.52", "M", "HNP", "1.374±0.002", "0.749±0.013", "1.377±0.001", "0.496±0.073", "1.66", "M", "BANP", "1.380±0.000", "0.267±0.001", "1.380±0.002", "0.072±0.002", "1.58", "M", "ConvNP", "1.382±0.001", "0.275±0.001", "1.383±0.001", "0.081±0.008", "1.97", "M", "context", "target", "context", "target", "CNP", "1.023±0.033", "0.019±0.015", "0.935±0.036", "-0.124±0.010", "0.99", "M", "RBF", "kernel", "GP", "Matern", "kernel", "GP", "Parameters"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Table1-1.png"
+}, {
+  "caption": "Table 2: Ablation study about the detailed hierarchical structure on Matern kernel. Here we also provide the results of test log-likelihood (larger is better).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00341796875,
+    "y1": 309.6535339355469,
+    "y2": 326.614990234375
+  },
+  "figType": "Table",
+  "imageText": ["context", "1.375±0.001", "1.376±0.001", "1.376±0.001", "1.376±0.001", "1.376±0.001", "1.376±0.001", "target", "0.076±0.001", "0.515±0.059", "0.580±0.001", "0.716±0.030", "0.714±0.079", "0.359±0.007", "number", "of", "hierarchical", "blocks", "0", "2", "4", "6", "8", "6", "/", "single", "z"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 501.12,
+    "y1": 252.0,
+    "y2": 298.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Table2-1.png"
+}, {
+  "caption": "Figure 1: The architecture of the proposed Versatile Neural Process. It consists of a bottleneck encoder and a hierarchical latent modulated decoder. At the bottleneck encoder, we encode the input context set into fewer and informative context tokens by a set tokenizer followed by self-attention blocks, which enable tolerable computational complexity and high network capability. The decoder consists of cross-attention module, and our proposed multiple modulated MLP modules, which enhance the model expressiveness to complex signals.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.25152587890625,
+    "y1": 190.69149780273438,
+    "y2": 251.489013671875
+  },
+  "figType": "Figure",
+  "imageText": ["Decoder", "𝑝𝜃(𝑌𝑇|𝑧,", "𝑋𝑇", ",", "𝐷𝐶)", "M", "LPs", "+", "+", "Or", "Or", "Or", "Or", "V", "K", "Q", "Context", "Set", "𝑫𝑪", "=", "(𝑿𝑪,", "𝒀𝑪)", "×", "𝐿𝑠", "×", "𝐿𝑐*", "*", "*", "*", "*", "*", "𝒛𝒌", "Hierarchical", "Latent", "Variables", "Pooling", "Module", "ken", "izer", "Set", "To", "𝑫𝑻", "=", "(𝑿𝑻,", "𝒀𝑻)", "Modulated", "MLP", "Block", "x", "𝐿𝐾", "Context", "Tokens", "V", "K", "Q", "C", "ro", "ss", "A", "tten", "tio", "n", "Self", "A", "tten", "tio", "n", "𝑿𝑻", "3D", "2D", "1D", "Predicted", "Target", "Signals", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LPs", "Bottleneck", "Encoder", "3D", "2D", "1D", "Partial", "Signal", "Observations"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 492.0,
+    "y1": 84.0,
+    "y2": 175.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Figure1-1.png"
+}, {
+  "caption": "Figure 4: Left: Qualitative comparisons with Stacked ANP (Kim et al., 2019). Our HINP presents diverse and realistic image completion results. Right: Quantitative results measured by negative log likelihood (NLL, lower is better).",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 503.997802734375,
+    "y1": 348.90252685546875,
+    "y2": 376.822998046875
+  },
+  "figType": "Figure",
+  "imageText": ["VNP", "(block=6)", "2.78", "VNP", "(block=4)", "2.80", "VNP", "(block=2)", "2.83", "Stacked", "ANP", "2.88", "CelebA64", "NLL", "(lower", "is", "better)", "VNPStacked", "ANP", "3%", "10%", "50%", "Sample2", "Sample1", "Context", "Ground", "Truth", "Context", "Ratio", "3%", "10%", "50%"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 53.28,
+    "x2": 504.0,
+    "y1": 217.92,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Figure4-1.png"
+}, {
+  "caption": "Figure 3: Visualizations of the 1D regression results. VNP delivers diverse function prediction results, while ANP (Kim et al., 2019) tends to underfit the functions at some target locations.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 505.241455078125,
+    "y1": 182.99349975585938,
+    "y2": 199.9539794921875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "Matern", "kernel.", "ANP", "vs.", "our", "VNP.", "(b)", "RBF", "kernel.", "ANP", "vs.", "our", "VNP."],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 507.35999999999996,
+    "y1": 82.56,
+    "y2": 169.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Figure3-1.png"
+}, {
+  "caption": "Figure 5: Visualization of results from our VNP on CelebA64 dataset (Liu et al., 2015). (a) Image Completion. (b) Superresolution to arbitrary size. (c) Handling image completion and superresolution at the same time.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00311279296875,
+    "y1": 192.91250610351562,
+    "y2": 220.8330078125
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Context", "Low", "resolution", "SR", "x", "2", "SR", "x", "4", "SR", "x", "7.2Original", "Context", "Comple", "ion", "x", "1.6", "(b)", "Context", "Low", "res", "lution", "SR", "x", "2", "SR", "x", "4", "SR", "x", "7.2Original", "Context", "Completion", "x", "1.6", "(a)", "Context", "Low", "resolution", "SR", "x", "2", "SR", "x", "4", "SR", "x", "7.2Original", "Context", "Completion", "x", "1.6"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 75.84,
+    "x2": 523.68,
+    "y1": 38.879999999999995,
+    "y2": 179.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Figure5-1.png"
+}, {
+  "caption": "Table 3: Comparing our VNP with stacked ANP (Kim et al., 2019) about the complexity, measure by FLOPs. The bottleneck encoder plays an important role in reducing the computational cost. The statistic in gray is estimated since we have an upper bound limitation of GPU memory.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00018310546875,
+    "y1": 314.863525390625,
+    "y2": 342.78399658203125
+  },
+  "figType": "Table",
+  "imageText": ["Stacked", "ANP", "17.1", "39.8", "198.5", "190.0", "867.2", "12150", "Our", "VNP", "27.6", "27.6", "27.6", "204.5", "204.5", "204.5", "Context", "Ratio", "Context", "Ratio", "0.05", "0.25", "1.0", "0.05", "0.25", "1.0", "GFLOPs", "CelebA64", "CelebA178", "x", "1", "x", "1.6", "x", "1", "x", "1.6", "x", "1", "x", "1.6"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 172.79999999999998,
+    "x2": 439.2,
+    "y1": 235.67999999999998,
+    "y2": 304.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Table3-1.png"
+}, {
+  "caption": "Figure 2: Diagram of the decoder with the hierarchical latent modulated MLPs. .",
+  "captionBoundary": {
+    "x1": 144.92100524902344,
+    "x2": 467.0815734863281,
+    "y1": 207.18753051757812,
+    "y2": 213.19000244140625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Modulated", "MLP", "block.", "𝑹𝑻×𝒅", "𝑹𝟏×𝒅𝒛", "𝑹𝑻×𝒅", "𝑞𝜙", "𝑫𝑻", "=", "(𝑿𝑻,", "𝒀𝑻)", "𝑝𝜓", "෡𝒀𝒌−𝟏෡𝒀𝟎", "෡𝒀𝒌", "𝑿𝑻", "+", "+", "Context", "Tokens", "𝒛𝒌", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LPs", "+", "+", "×", "𝐿𝑐", "𝒛𝟏", "Pooling", "Module", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LPs", "C", "ro", "ss", "A", "tten", "tio", "n", "Q", "K", "V", "෡𝒀𝒌−𝟏", "෡𝒀𝒌", "g", "o", "lin", "P", "o", "s", "M", "LP", "s", "M", "LP", "Pooling", "MLPs", "MLPs", "+", "+", "Latent", "Variables𝒛𝒌", "𝑫𝑻", "=", "(𝑿𝑻,", "𝒀𝑻)", "Hierarchical", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LP", "s", "(a)", "Pipeline", "of", "the", "decoder.", "𝑹𝑻×𝒅", "𝑹𝟏×𝒅𝒛", "𝑹𝑻×𝒅", "𝑞𝜙", "𝑫𝑻", "=", "(𝑿𝑻,", "𝒀𝑻)", "𝑝𝜓", "෡𝒀𝒌−𝟏෡𝒀𝟎", "෡𝒀𝒌", "𝑿𝑻", "+", "+", "Context", "Tokens", "𝒛𝒌", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LPs", "+", "+", "×", "𝐿𝑐", "𝒛𝟏", "Pooling", "Module", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LPs", "C", "ro", "ss", "A", "tten", "tio", "n", "Q", "K", "V", "෡𝒀𝒌−𝟏", "෡𝒀𝒌", "g", "o", "lin", "P", "o", "s", "M", "LP", "s", "M", "LP", "Pooling", "MLPs", "MLPs", "+", "+", "s", "𝑫𝑻", "=", "(𝑿𝑻,", "𝒀𝑻)", "Hierarchical", "Latent", "Variables𝒛𝒌", "M", "o", "d", "-FC", "M", "o", "d", "-FC", "M", "LP"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 533.76,
+    "y1": 79.2,
+    "y2": 194.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Figure2-1.png"
+}, {
+  "caption": "Table 5: Hyper parameters in our experiments.",
+  "captionBoundary": {
+    "x1": 211.37600708007812,
+    "x2": 397.2283020019531,
+    "y1": 668.923583984375,
+    "y2": 674.926025390625
+  },
+  "figType": "Table",
+  "imageText": ["Training", "resources", "1x", "V100", "16GB", "4x", "V100", "16GB", "(CelebA178)", "4x", "V100", "16GB", "MSE", "(Salimans", "et", "al.)", "reconstruction", "term", "Gaussian", "discrete", "logistic", "mixture", "lr", "5e-4", "1e-4", "1e-4", "β", "1", "0.01", "0.001", "batch", "size", "100", "16", "32", "iteration", "number", "0.1", "million", "0.5", "million", "0.1", "million", "model", "size", "2.2M", "56.7M", "34.3M", "Fourier", "features", "✗", "✓", "✓", "1D", "synthetic", "functions", "2D", "images", "3D", "scenes", "Ls", "3", "6", "6", "Lc", "2", "4", "2", "LK", "6", "6", "4", "d", "128", "512", "512", "dz", "16", "64", "64"],
+  "name": "5",
+  "page": 11,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 501.12,
+    "y1": 453.59999999999997,
+    "y2": 658.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Table5-1.png"
+}, {
+  "caption": "Table 4: The quantitative results of one-shot novel view synthesis. We compare the proposed VNP with both deterministic and probabilistic methods. All of these methods are able to produce INRs representing the 3D scenes within few steps.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.0043029785156,
+    "y1": 324.4635314941406,
+    "y2": 352.3840026855469
+  },
+  "figType": "Table",
+  "imageText": ["Our", "VNP", "24.52", "24.07", "19.32", "Probabilistic", "NeRF-VAE", "(Kosiorek", "et", "al.,", "2021)", "21.79", "21.58", "17.15", "Deterministic", "Learned", "Init", "(Chen", "et", "al.,", "2021b)", "22.80", "22.35", "18.85", "Trans-INR", "(Chen", "&", "Wang,", "2022)", "23.78", "22.76", "19.66", "PSNR", "(dB)", "Cars", "Lamps", "Chairs"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 470.4,
+    "y1": 231.84,
+    "y2": 313.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Table4-1.png"
+}, {
+  "caption": "Figure 6: Novel view synthesis on ShapeNet (Chang et al., 2015) Objects. The proposed VNP presents more realistic prediction results than that of NeRF-VAE (Kosiorek et al., 2021) which generates blurred images.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99749755859375,
+    "y1": 182.43850708007812,
+    "y2": 210.3590087890625
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Chairs.", "VNPNeRF-VAEInput", "GT", "VNPNeRF-VAEInput", "GT", "(a)", "Cars.", "VNPNeRF-VAEInput", "GT", "VNPNeRF-VAEInput", "GT"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 505.44,
+    "y1": 83.03999999999999,
+    "y2": 168.95999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2nLeOOfAjK-Figure6-1.png"
+}]

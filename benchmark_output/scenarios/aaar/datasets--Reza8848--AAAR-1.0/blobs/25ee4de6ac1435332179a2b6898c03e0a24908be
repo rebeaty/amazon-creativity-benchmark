@@ -1,0 +1,261 @@
+[{
+  "caption": "Table 4: Architecture of frame comparator. h represents the number of attention heads",
+  "captionBoundary": {
+    "x1": 134.0260009765625,
+    "x2": 477.97540283203125,
+    "y1": 539.53955078125,
+    "y2": 545.5419921875
+  },
+  "figType": "Table",
+  "imageText": ["Transformer", "[", "h", "=", "8", "384", "]", "×", "3", "384", "×", "12", "×", "24", "stage", "operation", "output", "sizes", "input", "-", "768", "×", "12", "×", "24", "DeformConv1", "3", "×3,", "768", "768", "×", "12", "×", "24", "ReLU", "-", "768", "×", "12", "×", "24", "DeformConv2", "3", "×3,", "384", "384", "×", "12", "×", "24"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 202.56,
+    "x2": 409.44,
+    "y1": 442.56,
+    "y2": 528.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table4-1.png"
+}, {
+  "caption": "Table 3: Architecture of visual encoder. h stands for the number of attention heads while ws refers to window size.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9998474121094,
+    "y1": 340.81353759765625,
+    "y2": 357.7750244140625
+  },
+  "figType": "Table",
+  "imageText": ["DownSample2", "384", "384", "×", "12", "×", "24", "SwinBlock3", "[", "h", "=", "12", "ws", "=", "12", "]", "×", "6", "384", "×", "12", "×", "24", "]", "×", "2", "192", "×", "24", "×", "48", "h", "=", "6", "ws", "=", "12", "DownSample1", "192", "192", "×", "24", "×", "48", "SwinBlock2", "[", "]", "×", "2", "96", "×", "48", "×", "96", "h", "=", "3", "ws", "=", "12", "PatchEmbed", "4", "×", "4,", "stride", "4,", "96", "96", "×", "48", "×", "96", "SwinBlock1", "[", "stage", "operation", "output", "sizes", "input", "-", "3", "×", "192", "×", "384"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 195.84,
+    "y2": 329.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table3-1.png"
+}, {
+  "caption": "Figure 1: Illustration about Bicycle Motocross (BMX) sequence on SegTrackv2 (Li et al., 2013). The red boxes and the yellow boxes refer to the arm and the back of the player, respectively. Flowonly method (Yang et al., 2021a) fails to track the same region in a temporal consistent fashion since it derives the foreground region directly from current optical flow. However, our methodology of processing a RGB video clip develops a sense of object permanence and solves the issue.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 266.4385070800781,
+    "y2": 316.27691650390625
+  },
+  "figType": "Figure",
+  "imageText": ["w", "e", "flo", "Ti", "m", "Our", "predictionFlow-only", "predictionOptical", "flowRGB", "frame"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 111.36,
+    "x2": 504.0,
+    "y1": 85.44,
+    "y2": 255.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Figure1-1.png"
+}, {
+  "caption": "Table 1: Ablation studies on temporal fusion (Φtemp), frame comparator (Φcomp), the number of input frames (T ), temporal consistency (Lcons), and entropy loss (Lentro).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9991760253906,
+    "y1": 218.22952270507812,
+    "y2": 236.68499755859375
+  },
+  "figType": "Table",
+  "imageText": ["Ours-F", "✓", "✓", "7", "✗", "✗", "60.4", "Ours-G", "✓", "✓", "7", "✗", "✓", "65.6", "Ours-H", "✓", "✓", "7", "✓", "✗", "69.5", "Ours-D", "✓", "✓", "3", "✓", "✓", "66.4", "Ours-E", "✓", "✓", "5", "✓", "✓", "68.2", "Ours-A", "✓", "✓", "7", "✓", "✓", "73.9", "Ours-B", "-", "✗", "7", "✓", "✓", "fail", "Ours-C", "✗", "✓", "7", "✓", "✓", "68.3", "Model", "Φtemp", "Φcomp", "T", "Lcons", "Lentro", "DAVIS(J", "↑)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table1-1.png"
+}, {
+  "caption": "Table 2: Quantitative comparison on unsupervised video object segmentation. We compare our method on three standard datasets, DAVIS2016, SegTrackv2, and FBMS-59. HA is short for Human Annotation. Sup. refers to the supervision, including None, Synthetic (Syn.), and Ground Truth (GT).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 437.6955261230469,
+    "y2": 476.574951171875
+  },
+  "figType": "Table",
+  "imageText": ["MATNet", "(Zhou", "et", "al.,", "2020)", "✓", "GT", "✓", "✓", "82.4", "50.4", "76.1", "D2Conv3d", "(Schmidt", "et", "al.,", "2022)", "✓", "GT", "✓", "✗", "85.5", "-", "-", "FSEG", "(Dutt", "Jain", "et", "al.,", "2017)", "✓", "GT", "✓", "✓", "70.7", "61.4", "68.4", "COSNet", "(Lu", "et", "al.,", "2019)", "✓", "GT", "✓", "✗", "80.5", "49.7", "75.6", "CIS", "(Yang", "et", "al.,", "2019)", "✗", "None", "✓", "✓", "71.5", "62.5", "63.5", "AMD", "(Liu", "et", "al.,", "2021)", "✗", "None", "✓", "✗", "57.8", "57.0", "47.5", "SIMO", "(Lamdouar", "et", "al.,", "2021)", "✗", "None", "✗", "✓", "67.8", "62.0", "-", "MG", "(Yang", "et", "al.,", "2021a)", "✗", "None", "✗", "✓", "68.3", "58.6", "53.1", "OCLR", "(Xie", "et", "al.,", "2022)", "✗", "Syn.", "✗", "✓", "72.1", "67.6", "65.4", "MOD", "(w/o", "post-processing)", "✗", "None", "✓", "✗", "73.9", "62.2", "61.3", "MOD", "(test-time", "adaptation)", "✗", "None", "✓", "✗", "79.2", "69.4", "66.9", "SAGE", "(Wang", "et", "al.,", "2017)", "✗", "None", "✓", "✓", "42.6", "57.6", "61.2", "NLC", "(Faktor", "&", "Irani,", "2014)", "✗", "None", "✓", "✓", "55.1", "67.2", "51.5", "Training", "Inference", "J", "(Mean)", "↑", "Model", "HA", "Sup.", "RGB", "Flow", "DAVIS2016", "SegTrackv2", "FBMS-59"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 515.04,
+    "y1": 254.39999999999998,
+    "y2": 426.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table2-1.png"
+}, {
+  "caption": "Figure 2: Model architecture. Our model first extracts spatial features of consecutive frames by the frame encoder. To jointly model the temporal relation, we aggregate and interact among the multi-frame features with late-fusion. We randomly pair two frames’ visual representations and pass them into the frame comparator to encode relative motion. Then, we decode the flow from random-paired frames. Through iterative routing, we adopt a dual-layer representation for the flow reconstruction, i.e., outputting the foreground and background flows separately, and composing them with inferred opacity weights. The whole training procedure does not require supervision from any mask annotations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0044250488281,
+    "y1": 262.2915344238281,
+    "y2": 345.00592041015625
+  },
+  "figType": "Figure",
+  "imageText": ["Q,", "K,", "V", "Attention", "V", "K", "Learnable", "Slot", "Queries", "Frame", "Comparator", "Iterative", "Routing", "Concatenate", "Random", "pair", "Deformable", "Broadcasting", "Frame-wise", "Visual", "Representations", "Flow", "Decoder", "Frame", "Comparator", "Temporal", "Fusion", "Visual", "Encoder", "Random", "pair", "Learnable", "Queries", "Iterative", "Routing"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 503.03999999999996,
+    "y1": 81.6,
+    "y2": 251.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Figure2-1.png"
+}, {
+  "caption": "Table 8: Sequence-wise results on FBMS-59.",
+  "captionBoundary": {
+    "x1": 215.61500549316406,
+    "x2": 396.3863830566406,
+    "y1": 593.7035522460938,
+    "y2": 599.7059936523438
+  },
+  "figType": "Table",
+  "imageText": ["tennis", "63.1", "71.1", "frame", "avg.", "61.3", "66.9", "cars1", "66.1", "88.3", "cars10", "31.6", "33.9", "cars4", "72.9", "83.2", "cars5", "81.2", "82.5", "cats01", "80.6", "79.2", "cats03", "62.0", "63.4", "cats06", "40.1", "38.7", "dogs01", "70.6", "61.2", "dogs02", "62.8", "82.2", "farm01", "86.7", "88.9", "giraffes01", "38.6", "52.2", "goats01", "44.8", "45.3", "horses02", "64.4", "77.6", "horses04", "68.5", "73.5", "horses05", "43.7", "49.0", "lion01", "60.1", "71.5", "marple12", "74.7", "80.3", "marple2", "65.0", "71.4", "marple4", "79.1", "91.6", "marple6", "76.0", "85.1", "marple7", "72.5", "55.2", "marple9", "87.5", "97.9", "people03", "76.5", "48.5", "people1", "72.4", "80.8", "people2", "80.9", "83.0", "rabbits02", "50.2", "58.9", "rabbits03", "39.5", "55.7", "rabbits04", "47.0", "53.0", "J", "(Mean)", "↑", "Sequence", "w/o", "post", "proc.", "test-time", "adap.", "camel01", "25.8", "66.9"],
+  "name": "8",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 582.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table8-1.png"
+}, {
+  "caption": "Figure 3: Qualitative results of object video segmentation on DAVIS2016. MG refers to Yang et al. (2021a). Red boxes outline the corresponding difference.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 474.4725341796875,
+    "y2": 491.43402099609375
+  },
+  "figType": "Figure",
+  "imageText": ["G", "G", "T", "O", "ur", "s", "(w", "/o", "p", "os", "t", "p", "ro", "c.", ")", "O", "ur", "s", "(t", "es", "t-", "ti", "m", "e", "ad", "ap", ".)", "ow", "M", "R", "G", "B", "Fl"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 504.0,
+    "y1": 204.0,
+    "y2": 463.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Qualitative results on SegTrackv2. MG refers to Yang et al. (2021a). Red boxes outline the corresponding difference.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 353.3725280761719,
+    "y2": 370.333984375
+  },
+  "figType": "Figure",
+  "imageText": [".)", "ad", "ap", "m", "e", "t-", "ti", "(t", "es", "O", "ur", "s", "oc", ".)", "t", "pr", "p", "os", "(w", "/o", "O", "ur", "s", "G", "T", "M", "G", "Fl", "ow", "R", "G", "B"],
+  "name": "4",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 504.0,
+    "y1": 81.6,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Figure4-1.png"
+}, {
+  "caption": "Table 7: Sequence-wise results on SegTrackv2.",
+  "captionBoundary": {
+    "x1": 211.7239990234375,
+    "x2": 400.2761535644531,
+    "y1": 686.4625244140625,
+    "y2": 692.4649658203125
+  },
+  "figType": "Table",
+  "imageText": ["penguin", "63.5", "62.7", "monkey", "46.8", "77.4", "bird", "of", "paradise", "85.3", "85.4", "frame", "avg.", "62.2", "69.4", "girl", "76.5", "82.3", "cheetah", "18.4", "30.1", "worm", "52.5", "74.3", "parachute", "90.2", "92.0", "monkeydog", "14.3", "31.1", "hummingbird", "61.2", "58.8", "soldier", "66.3", "58.8", "bmx", "73.7", "78.8", "frog", "80.5", "76.3", "drift", "41.7", "40.7", "birdfall", "38.2", "61.5", "J", "(Mean)", "↑", "Sequence", "w/o", "post", "proc.", "test-time", "adap."],
+  "name": "7",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 198.72,
+    "x2": 413.28,
+    "y1": 476.64,
+    "y2": 675.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table7-1.png"
+}, {
+  "caption": "Table 6: Sequence-wise results on DAVIS2016.",
+  "captionBoundary": {
+    "x1": 211.23599243164062,
+    "x2": 400.76446533203125,
+    "y1": 391.3545227050781,
+    "y2": 397.35699462890625
+  },
+  "figType": "Table",
+  "imageText": ["drift-straight", "69.2", "80.0", "car-roundabout", "87.7", "83.9", "paragliding-launch", "62.1", "62.8", "frame", "avg.", "73.9", "79.2", "dog", "80.7", "87.4", "cows", "87.2", "88.8", "goat", "47.5", "80.6", "camel", "85.6", "86.1", "libby", "72.5", "77.7", "parkour", "72.9", "87.9", "soapbox", "84.6", "86.5", "blackswan", "48.9", "46.9", "bmx-trees", "50.1", "55.8", "kite-surf", "55.9", "62.6", "car-shadow", "87.9", "86.9", "breakdance", "82.6", "76.0", "dance-twirl", "82.5", "85.4", "scooter-black", "80.2", "80.3", "drift-chicane", "78.6", "82.2", "motocross-jump", "68.4", "88.9", "horsejump-high", "78.0", "84.3", "J", "(Mean)", "↑", "Sequence", "w/o", "post", "proc.", "test-time", "adap."],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table6-1.png"
+}, {
+  "caption": "Figure 5: Qualitative results on FBMS-59. MG refers to Yang et al. (2021a). Red boxes highlight the corresponding difference.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 555.3585205078125,
+    "y2": 572.3200073242188
+  },
+  "figType": "Figure",
+  "imageText": [".)", "ad", "ap", "m", "e", "t-", "ti", "(t", "es", "O", "ur", "s", "oc", ".)", "t", "pr", "p", "os", "(w", "/o", "O", "ur", "s", "G", "T", "M", "G", "Fl", "ow", "R", "G", "B"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 504.0,
+    "y1": 235.67999999999998,
+    "y2": 544.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Figure5-1.png"
+}, {
+  "caption": "Table 5: Architecture of flow decoder. h stands for the number of attention heads while ws refers to window size.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.999755859375,
+    "y1": 237.47451782226562,
+    "y2": 254.43597412109375
+  },
+  "figType": "Table",
+  "imageText": ["PatchExpand3", "1536", "96", "×", "192", "×", "384", "outConv", "5×", "5,", "stride", "1,", "4", "4", "×", "192", "×", "384", "]", "×", "2", "96", "×", "48", "×", "96", "h", "=", "3", "ws", "=", "12", "PatchExpand2", "384", "96", "×", "48", "×", "96", "SwinBlock3", "[", "]", "×", "2", "192", "×", "24", "×", "48", "h", "=", "6", "ws", "=", "12", "SwinBlock2", "[", "stage", "operation", "output", "sizes", "input", "-", "384", "×", "12", "×", "24", "SwinBlock1", "[", "h", "=", "12", "ws", "=", "12", "]", "×", "2", "384", "×", "12", "×", "24", "PatchExpand1", "768", "192", "×", "24", "×", "48"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K5qR1F14qPE-Table5-1.png"
+}]

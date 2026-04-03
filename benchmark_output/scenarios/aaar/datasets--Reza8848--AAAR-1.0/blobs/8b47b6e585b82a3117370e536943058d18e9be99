@@ -1,0 +1,181 @@
+[{
+  "caption": "Figure 1: Illustration of our proposed game. Both agents can exchange utterances through a shared communication channel. At each step of the conversation, agents can decide to either speak or stay silent. However, information cannot be transmitted if both agents decide to speak at the same time.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.99737548828125,
+    "y1": 543.0645751953125,
+    "y2": 625.7789916992188
+  },
+  "figType": "Figure",
+  "imageText": ["★", "Time", "⬤", "★★", "■", "⬤"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 345.59999999999997,
+    "x2": 502.56,
+    "y1": 417.59999999999997,
+    "y2": 531.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure1-1.png"
+}, {
+  "caption": "Table 1: Metrics for both asymmetric and symmetric game with both standard and reciprocal objective. We report standard deviation across 20 runs.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 503.9967041015625,
+    "y1": 153.40951538085938,
+    "y2": 170.3709716796875
+  },
+  "figType": "Table",
+  "imageText": ["(b)", "Metrics", "for", "the", "symmetric", "game.", "Stand.", "50.60±6.24", "1.42±0.56", "7.00±1.29", "Recip.", "83.63±6.91", "3.07±0.89", "5.34±1.45", "Accuracy", "Overlaps", "#Turns", "(a)", "Metrics", "for", "the", "asymmetric", "game.", "Stand.", "92.63±2.55", "0.00±0.00", "1.00±0.00", "Recip.", "90.10±12.17", "0.77±0.72", "2.05±0.23", "Accuracy", "Overlaps", "#Turns"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 140.64
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Table1-1.png"
+}, {
+  "caption": "Figure 3: Correlation between turn-taking metrics and accuracy in conversations developed by agents for the asymmetric game (p-value < 104).",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 503.9966125488281,
+    "y1": 594.3275756835938,
+    "y2": 622.2470092773438
+  },
+  "figType": "Figure",
+  "imageText": ["Pearson", ":", "0.77", "1.5", "2.0", "2.5", "Turns", "Pearson", ":", "-0.83", "ra", "cy", "Ac", "cu", "100", "95", "90", "85", "80", "1", "2", "Overlaps"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 309.59999999999997,
+    "x2": 500.15999999999997,
+    "y1": 470.4,
+    "y2": 578.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Influence of the overlap model on the emergent protocols for the asymmetric game.",
+  "captionBoundary": {
+    "x1": 120.16899871826172,
+    "x2": 491.8337707519531,
+    "y1": 190.69454956054688,
+    "y2": 196.697021484375
+  },
+  "figType": "Figure",
+  "imageText": ["Turns", "2.0", "1.5", "1.0", "0.5", "0.0", "Standard", "Reciprocal", "Objective", "1.50", "Overlaps", "1.25", "1.00", "0.75", "0.50", "0.25", "0.00", "0.25", "Standard", "Reciprocal", "Objective", "Noise", "Misunderstanding", "Walkie-Talkie", "Accuracy", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Standard", "Reciprocal", "Objective"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 150.23999999999998,
+    "x2": 462.24,
+    "y1": 84.0,
+    "y2": 177.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure7-1.png"
+}, {
+  "caption": "Figure 4: Influence of the overlap model on the emergent protocols for the symmetric game.",
+  "captionBoundary": {
+    "x1": 122.37999725341797,
+    "x2": 489.6213684082031,
+    "y1": 204.17453002929688,
+    "y2": 210.177001953125
+  },
+  "figType": "Figure",
+  "imageText": ["8", "Turns", "6", "4", "2", "Standard", "Reciprocal", "0", "4", "Overlaps", "3", "2", "1", "0", "Standard", "Reciprocal", "Noise", "Misunderstanding", "Walkie-Talkie", "Accuracy", "80", "60", "40", "20", "Standard", "Reciprocal", "0"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 482.4,
+    "y1": 84.0,
+    "y2": 190.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure4-1.png"
+}, {
+  "caption": "Figure 6: Example of question-answer strategy developed by a pair of agents in the asymmetric game with the reciprocal objective. During the first 3 steps, Agent 1 sends the position of the masked attributes: Agent 2 is able to correctly predict the masked positions. Afterward, Agent 2 responds with the missing values, and Agent 1’s accuracy increases accordingly.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 329.94451904296875,
+    "y2": 368.823974609375
+  },
+  "figType": "Figure",
+  "imageText": ["100%", "Accuracy", "(Agent", "1)", "0%", "25%", "50%", "75%", "1", "2", "3", "4", "5", "6", "7", "8", "Communication", "steps", "100%", "Mask", "Prediction", "Accuracy", "(Agent", "2)", "0%", "25%", "50%", "75%", "Agent", "1", "Agent", "2", "100%", "Turn", "0%", "25%", "50%", "75%"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 210.72,
+    "x2": 401.76,
+    "y1": 84.96,
+    "y2": 314.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure6-1.png"
+}, {
+  "caption": "Figure 5: Validation accuracy throughout training with fixed policies. Conversations involving turn-taking (dashed lines) are learned much faster.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 266.3953857421875,
+    "y1": 373.926513671875,
+    "y2": 412.80596923828125
+  },
+  "figType": "Figure",
+  "imageText": ["We", "have", "established", "that", "in", "the", "asymmetric", "setting,", "turn-", "taking", "is", "not", "the", "optimal", "strategy", "for", "solving", "the", "game", "as", "early", "as", "possible", "given", "the", "environmental", "constraints", "of", "a", "shared", "communication", "channel.", "This", "seems", "to", "contradict", "our", "results", "in", "Section", "5.1,", "where", "we", "found", "that", "agents", "en-", "gaging", "in", "turn-taking", "performed", "better", "than", "agents", "relying", "on", "unidirectional", "communication.", "To", "understand", "this", "dis-", "crepancy,", "we", "compare", "the", "performance", "of", "the", "agents", "us-", "ing", "any", "of", "these", "communication", "strategies.", "We", "compare", "four", "protocols:", "the", "two", "hard-coded", "strategies", "QA", "and", "ECC,", "and", "two", "strategies", "learned", "by", "agents", "through", "re-", "inforcement", "learning.", "We", "select", "one", "policy", "where", "agents", "engage", "in", "turn-taking", "(RL-TT)", "and", "one", "where", "only", "uni-", "directional", "communication", "occurs", "(RL-Uni)."],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 276.0,
+    "x2": 504.0,
+    "y1": 276.0,
+    "y2": 426.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure5-1.png"
+}, {
+  "caption": "Figure 2: Overview of a step of the game from the point of view of Agent 1. The agent takes in S1 t−1 and tries to reconstruct the object, yielding reward r1t . Simultaneously, the agent samples an action a1t and observes symbol ŝ2t emitted by agent 2. The conversation state S1 t is updated based on both agent’s actions.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0029296875,
+    "y1": 178.64950561523438,
+    "y2": 251.85491943359375
+  },
+  "figType": "Figure",
+  "imageText": ["Agent", "1", "Agent", "2"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 305.76,
+    "x2": 503.52,
+    "y1": 86.39999999999999,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure2-1.png"
+}, {
+  "caption": "Figure 8: Example of question-answer strategy developed by a pair of agents in the symmetric game with the reciprocal objective. During the first 4 steps, Both agents communicate the positions of their masks. Afterwards, they each respond with the corresponding missing values.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 634.9325561523438,
+    "y2": 662.85302734375
+  },
+  "figType": "Figure",
+  "imageText": ["100%", "Accuracy", "(Agent", "2)", "0%", "25%", "50%", "75%", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10111213141516", "Communication", "steps", "100%", "Mask", "Prediction", "Accuracy", "(Agent", "1)", "0%", "25%", "50%", "75%", "100%", "Accuracy", "(Agent", "1)", "0%", "25%", "50%", "75%", "100%", "Mask", "Prediction", "Accuracy", "(Agent", "2)", "0%", "25%", "50%", "75%", "Agent", "1", "Agent", "2", "100%", "Turn", "0%", "25%", "50%", "75%"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 192.0,
+    "x2": 420.47999999999996,
+    "y1": 149.28,
+    "y2": 618.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GULFHQfgw0g-Figure8-1.png"
+}]

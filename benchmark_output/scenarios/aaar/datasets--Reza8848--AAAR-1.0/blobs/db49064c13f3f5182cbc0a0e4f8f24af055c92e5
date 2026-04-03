@@ -1,0 +1,101 @@
+[{
+  "caption": "Figure 2: Device structures used in the experiments.",
+  "captionBoundary": {
+    "x1": 202.1409912109375,
+    "x2": 409.8611755371094,
+    "y1": 173.95852661132812,
+    "y2": 179.96099853515625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Structure", "of", "a", "5-2", "graphene", "nano-junction.", "2", "0", "2", "8", "6", "4", "2", "0", "2", "4", "6", "(b)", "Structure", "of", "a", "7-4", "graphene", "nano-junction.", "2", "0", "2", "7.5", "5.0", "2.5", "0.0", "2.5", "5.0", "7.5", "(a)", "Structure", "of", "an", "AGNR", "with", "width", "7", "and", "length", "5.", "1", "0", "1", "8", "6", "4", "2", "0", "2", "4", "6"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 156.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LR_KWiUgS8F-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Transmission Quantity Computation with AD-NEGF.",
+  "captionBoundary": {
+    "x1": 179.6649932861328,
+    "x2": 432.33636474609375,
+    "y1": 273.4515686035156,
+    "y2": 279.45404052734375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Seebeck", "coefﬁcient", "and", "differential", "conductance", "calculated", "by", "AD-NEGF.", "dI/dV", "V", "dI", "/d", "1.5", "1.0", "0.5", "0.0", "T(E)", "T(", "E)", "2.5", "2.0", "1.5", "1.0", "0.5", "0.0", "I", "(V)", "I", "(", "V)", "0.3", "0.2", "0.1", "0.0", "0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "V", "(eV)", "Seebeck", "Coefficient", "by", "FD", "Seebeck", "Coefficient", "by", "AD", "S(", "E)", "40", "20", "0", "20", "40", "3", "2", "1", "0", "1", "2", "3", "E", "(ev)", "(a)", "Transmission", "and", "DOS", "calculated", "by", "AD-NEGF", "and", "conﬁrmed", "with", "ASE.", "DOS", "of", "AGNR(7)", "ASE", "AD-NEGF", "DO", "S", "50", "40", "30", "20", "10", "0", "3", "2", "1", "0", "1", "2", "3", "E", "(ev)", "Transmission", "of", "AGNR(7)", "T(", "E)", "4", "3", "2", "1", "0"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 490.56,
+    "y1": 91.67999999999999,
+    "y2": 256.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LR_KWiUgS8F-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Workflow of AD-NEGF. Solid lines indicate the forward simulation flow, where loops denote self-consistent iterations. Dashed lines indicate the gradient backpropagation flow.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99725341796875,
+    "y1": 265.5924987792969,
+    "y2": 282.5530090332031
+  },
+  "figType": "Figure",
+  "imageText": ["𝐻𝐷,", "𝐻𝐿", ",", "𝐻𝑅,", "𝐻𝐿𝐷,", "𝐻𝑅𝐷", "𝐺", "𝑉,", "𝐺", "Σ𝐿", ",", "Σ𝑅", "𝑇(𝐸)(𝑓𝑆", "−", "𝑓𝐷)𝑑𝐸", "+∞", "𝐼", "=", "න", "−∞", "𝑇", "𝐸", "=", "𝑇𝑟𝑎𝑐𝑒", "ΓL𝐺𝐷Γ𝑅𝐺𝐷", "∗", "Compute", "Transport", "Properties", "𝑉", "𝐼𝑚", "𝐺𝐷", "𝐸", "𝑑𝐸", "+∞", "𝜌", "=", "න", "−∞", "𝑔𝑆", "Σ𝐿", "=", "𝐻𝐿𝐷𝑔𝑠𝐻𝐿𝐷", "∗", ",", "Σ𝑅", "=", "𝐻𝑅𝐷𝑔𝑠𝐻𝑅𝐷", "∗", "DeviceLeft", "Electrode", "Right", "Electrode", "𝑔𝑠", "−1", "=", "𝐸𝐼", "−", "𝐻𝐿/𝑅", "−", "𝐸𝐼", "−", "𝐻𝐿𝐷/𝑅𝐷", "𝑔𝑠", "(𝐸𝐼", "−", "𝐻𝐿𝐷/𝑅𝐷", "∗", ")", "Compute", "Electrode", "Self-Energy", "∇2𝑉", "=", "𝜌", "−", "𝜌0", "Compute", "Electrostatic", "Potential", "𝐺𝐷(𝐸)", "=", "𝐸𝐼", "−", "𝐻𝐷", "−", "Σ", "−1", "Σ", "=", "Σ𝐿", "+", "Σ𝑅", "Compute", "Green", "Function"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 141.6,
+    "x2": 464.15999999999997,
+    "y1": 87.84,
+    "y2": 241.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LR_KWiUgS8F-Figure1-1.png"
+}, {
+  "caption": "Figure 5: The fitting loss and the fitted transmission curve of a 5-2 graphene nano-junction.",
+  "captionBoundary": {
+    "x1": 291.52398681640625,
+    "x2": 491.17388916015625,
+    "y1": 271.5635070800781,
+    "y2": 288.5249938964844
+  },
+  "figType": "Figure",
+  "imageText": ["7-4", "(target)", "5-2", "(initial)", "5-2", "(fitted)", "T(", "E)", "3", "2", "1", "0", "4", "2", "0", "2", "4", "E", "(eV)", "lo", "ss", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0", "250", "500", "750", "1000", "1250", "1500", "1750", "iter"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 295.68,
+    "x2": 485.28,
+    "y1": 91.67999999999999,
+    "y2": 251.51999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LR_KWiUgS8F-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Comparison between AD-NEGF and conventional black-box optimization methods in the doping optimization task.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9971923828125,
+    "y1": 302.94451904296875,
+    "y2": 319.906005859375
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Original", "and", "optimized", "transmission", "curves.", "T(", "E)", "1.0", "0.8", "0.6", "0.4", "0.2", ".", "0.0", "0.", "0.4", "0.6", "0.8", "1.0", "E", "(eV)", "Doping", "Based", "on", "Genetic", "Algorithm", "2.5", "3", "2", "1", "0", "1", "2", "3", "0.0", "Doping", "Based", "on", "Bayesian", "Optimization", "2.5", "0.0", "Doping", "Based", "on", "AD-NEGF", "2.5", "0.0", "Before", "Doping", "2.5", "0.0", "(a)", "Loss", "against", "running", "time", "and", "iteration", "steps", "respec-", "tively.", "Bayesian", "Optimization", "AD-NEGF", "based", "Genetic", "Algorithm", "lo", "ss", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0", "20", "40", "60", "80", "100", "step", "lo", "ss", "1.4", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0", "200", "400", "600", "800", "1000", "1200", "time", "(second)"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.47999999999999,
+    "x2": 495.35999999999996,
+    "y1": 93.11999999999999,
+    "y2": 286.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_LR_KWiUgS8F-Figure6-1.png"
+}]

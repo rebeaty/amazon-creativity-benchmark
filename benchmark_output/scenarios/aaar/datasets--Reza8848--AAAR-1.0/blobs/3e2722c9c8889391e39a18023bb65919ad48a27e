@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: The Transformer Architecture Search Space for AutoGTbase and AutoGT.",
+  "captionBoundary": {
+    "x1": 136.70899963378906,
+    "x2": 475.29168701171875,
+    "y1": 78.4565200805664,
+    "y2": 85.9530029296875
+  },
+  "figType": "Table",
+  "imageText": ["#Attention", "Heads", "{2,3,4}", "4", "{6,7,8}", "8", "Attention", "Head", "Dimension", "dk", "{6,8}", "8", "{12,14,16}", "16", "#Layers", "{2,3,4}", "4", "{5,6,7,8}", "8", "Input", "Dimension", "d", "{24,28,32}", "32", "{96,112,128}", "128", "Intermediate", "Dimension", "dt", "{24,28,32}", "32", "{96,112,128}", "128", "Hidden", "Dimension", "dh", "{24,28,32}", "32", "{96,112,128}", "128", "AutoGTbase", "AutoGT", "Choices", "Supernet", "Size", "Choices", "Supernet", "Size"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 477.12,
+    "y1": 92.64,
+    "y2": 185.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table1-1.png"
+}, {
+  "caption": "Figure 2: The framework of our work. Firstly, we construct the searching space for one layer as stated at the left of the figure: we have both transformer architecture hyperparameter as well as graph encoding strategy. Then, we carry out our encoding-aware supernet training method in two stages: on the first stage, we randomly select both architecture hyperparameter (above) and graph encoding strategy (below) and combine them together for supernet as subnet to carry out the training process. While on the second stage, according to using 3 kinds of attention map augmentations or not, we split the supernet into 8 supernets, each inheriting the weight of the supernet before the split, and each training individually adopting random architecture hyperparameter and node attribution augmentations strategy but fixed attention map augmentations strategy. After training 8 supernets separately, we conduct an evolution search on the 8 supernets, evaluating the performance of architecture on its attention map choice’s corresponding supernet. Finally, we obtain our best architecture according to the results on the validation dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0041809082031,
+    "y1": 419.7235412597656,
+    "y2": 546.2739868164062
+  },
+  "figType": "Figure",
+  "imageText": ["…", "…", "Split", "Edge", "Encoding", "SVD-based", "Positional", "Encodings", "…", "Centrality", "Encoding", "…", "One", "Layer", "…", "One", "Layer", "Edge", "Encoding", "Proximity", "Enhanced", "Attention", "Spatial", "Encoding", "Laplacian", "Eigenvector", "SVD-based", "Positional", "Encodings", "Centrality", "Encoding", "Attention", "Mask", "Hop", "FFN", "Embedding", "Mid", "Embedding", "Number", "of", "Heads", "Key", "Query", "Value", "Input", "Embedding", "One", "Layer", "One", "Layer", "Evolution", "Search", "Split", "Spatial", "Encoding", "Attention", "Mask", "Hop", "FFN", "Embedding", "Mid", "Embedding", "Number", "of", "Heads", "Key", "Query", "Value", "Input", "Embedding", "One", "Layer", "SVD-based", "Positional", "Encodings", "Edge", "Encoding", "Proximity", "Enhanced", "Attention", "Spatial", "Encoding", "Centrality", "Encoding", "Laplacian", "Eigenvector", "Attention", "Mask", "Hop", "FFN", "Embedding", "Mid", "Embedding", "Number", "of", "Heads", "Key", "Query", "Value", "Input", "Embedding", "One", "Layer", "…", "…", "Combine", "As", "Final", "Output", "Edge", "Encoding", "Proximity", "Enhanced", "Attention", "Spatial", "Encoding", "Laplacian", "Eigenvector", "SVD-based", "Positional", "Encodings", "Centrality", "Encoding", "Attention", "Mask", "Hop", "FFN", "Embedding", "Mid", "Embedding", "Number", "of", "Heads", "Key", "Query", "Value", "Input", "Embedding", "Encoding-Aware", "Supernet", "Training", "One", "Layer", "One", "Layer"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 200.64,
+    "y2": 413.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Figure2-1.png"
+}, {
+  "caption": "Table 2: Comparison of our proposed unified framework with state-of-the-art graph Transformer models. CE, LE, SVDPE, SE, EE, PEA, AM denote Centrality Encoding, Laplacian Eigenmap, SVD-based Positional Encoding, Spatial Encoding, Edge Encoding, Proximity-Enhanced Attention, and Attention Mask respectively.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2491455078125,
+    "y1": 92.5765151977539,
+    "y2": 131.45599365234375
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "Graph", "Trans", "(Dwivedi", "&", "Bresson,", "2020)", "✓", "✓", "Graphormer", "(Ying", "et", "al.,", "2021)", "✓", "✓", "✓", "EGT", "(Hussain", "et", "al.,", "2021)", "✓", "Gophormer", "(Zhao", "et", "al.,", "2021)", "✓", "CE", "LE", "SVDPE", "SE", "EE", "PEA", "AM"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 132.96,
+    "x2": 479.03999999999996,
+    "y1": 134.4,
+    "y2": 211.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table2-1.png"
+}, {
+  "caption": "Figure 1: The unified graph Transformer search space.",
+  "captionBoundary": {
+    "x1": 276.62200927734375,
+    "x2": 493.7768249511719,
+    "y1": 540.8865966796875,
+    "y2": 546.8890380859375
+  },
+  "figType": "Figure",
+  "imageText": ["Add", "or", "Not", "Add", "or", "NotAdd", "or", "Not", "Add", "or", "Not", "Add", "Attention", "Mask", "Proximity-", "Enhanced", "Multi-Head", "Attention", "Spatial", "Encoding", "Edge", "Encoding", "SVD-based", "Positional", "Encodings", "Laplacian", "Eigenvector", "Augmentations", "Add", "Node", "Attribution", "Attention", "Map", "Augmentations", "Centrality", "Encoding", "Output", "Embedding", "Embedding", "Embedding", "Linear", "Embedding", "Linear", "Attention", "Output", "SoftMax,", "MatMul", "&", "Linear", "Multi-Head", "Attention", "M", "at-M", "ul", "&", "Scale", "Linear", "Linear", "Query", "Key", "Value", "Input", "Embedding", "Add", "&", "Norm", "Transformer", "Architecture", "Feed", "ForwardMulti-Head", "Attention", "Graph", "Specific", "Encoding", "Graphormer"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 288.96,
+    "x2": 481.44,
+    "y1": 367.2,
+    "y2": 533.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Figure1-1.png"
+}, {
+  "caption": "Table 7: Statistics of graph classification datasets (AUC) used to compare AutoGT with baselines. We adopt two datasets with relatively small numbers of graphs (upper part) and one dataset with a larger size (lower part) to demonstrate the efficiency of the proposed AutoGT.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.7410583496094,
+    "y1": 554.83154296875,
+    "y2": 582.7520141601562
+  },
+  "figType": "Table",
+  "imageText": ["OGBG-MolHIV", "41,127", "2", "24.06", "25.95", "9", "3", "OGBG-MolHIV", "1,513", "2", "25.51", "27.47", "9", "3", "OGBG-MolHIV", "2,039", "2", "34.09", "36.86", "9", "3", "Dataset", "#Graph", "#Class", "#Avg.", "Nodes", "#Avg.", "Edges", "#", "Node", "Feature", "#", "Edge", "Feature"],
+  "name": "7",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 505.44,
+    "y1": 585.6,
+    "y2": 643.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table7-1.png"
+}, {
+  "caption": "Table 6: Statistics of graph classification datasets (precision) used to compare AutoGT with baselines. We adopt five datasets with relatively small numbers of graphs (upper part) and one dataset with a larger size (lower part) to demonstrate the efficiency of the proposed AutoGT.",
+  "captionBoundary": {
+    "x1": 107.53199768066406,
+    "x2": 505.742919921875,
+    "y1": 408.6605224609375,
+    "y2": 436.58099365234375
+  },
+  "figType": "Table",
+  "imageText": ["DBLP", "19,456", "2", "10.48", "19.65", "41,325", "3", "COX2_MD", "303", "2", "26.28", "335.12", "7", "5", "BZR_MD", "306", "2", "21.3", "225.06", "8", "5", "PTC_FM", "349", "2", "14.11", "14.48", "18", "4", "DHFR_MD", "393", "2", "23.87", "283.01", "7", "5", "PROTEINS", "1,133", "2", "39.06", "72.82", "3", "0", "Dataset", "#Graph", "#Class", "#Avg.", "Nodes", "#Avg.", "Edges", "#", "Node", "Feature", "#", "Edge", "Feature"],
+  "name": "6",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 496.32,
+    "y1": 437.76,
+    "y2": 526.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table6-1.png"
+}, {
+  "caption": "Table 4: Comparisons of AutoGT against state-of-the-art hand-crafted baselines. We report the area under the curve (AUC) [%] and the standard deviation on all the datasets.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 503.996337890625,
+    "y1": 246.04855346679688,
+    "y2": 263.010009765625
+  },
+  "figType": "Table",
+  "imageText": ["4", "EXPERIMENTS", "AutoGT(ours)", "74.951.02", "76.701.42", "67.291.46", "GIN", "71.112.57", "70.424.78", "63.371.81", "DGCNN", "69.972.16", "75.622.64", "60.921.78", "DiffPool", "74.581.71", "73.874.50", "66.686.08", "GraphSAGE", "67.823.67", "72.911.24", "64.193.50", "Graphormer", "71.892.66", "76.421.67", "66.520.74", "Dataset", "OGBG-MolHIV", "OGBG-MolBACE", "OGBG-MolBBBP"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 451.2,
+    "y1": 265.44,
+    "y2": 385.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table4-1.png"
+}, {
+  "caption": "Table 3: Comparisons of AutoGT against state-of-the-art hand-crafted baselines. We report the average accuracy (%) and the standard deviation on all the datasets. Out-of-time (OOT) indicates the method cannot produce results in 1 GPU day.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0035400390625,
+    "y1": 92.5765151977539,
+    "y2": 120.49700927734375
+  },
+  "figType": "Table",
+  "imageText": ["GT(ours)", "54.4416.84", "63.3311.67", "64.182.60", "65.685.64", "73.943.78", "90.671.01", "AutoGT(ours)", "59.7223.26", "65.9210.00", "65.603.71", "68.225.02", "77.173.40", "91.660.79", "GIN", "45.8214.35", "59.6814.65", "57.878.86", "62.888.26", "73.764.61", "91.180.42", "DGCNN", "54.8118.51", "62.7420.59", "62.173.62", "63.895.91", "72.683.75", "91.570.54", "DiffPool", "51.4514.28", "65.0114.74", "60.165.87", "61.069.42", "73.313.75", "OOT", "GraphSAGE", "49.5912.80", "57.4313.50", "64.173.28", "66.922.35", "67.196.97", "51.010.02", "Graphormer", "56.3915.03", "63.9412.58", "64.887.58", "64.887.58", "75.293.10", "89.362.31", "Dataset", "COX2_MD", "BZR_MD", "PTC_FM", "DHFR_MD", "PROTEINS", "DBLP"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 489.12,
+    "y1": 123.36,
+    "y2": 220.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table3-1.png"
+}, {
+  "caption": "Table 5: The ablation study on the effectiveness of the proposed encoding-aware supernet training strategy. We report the average accuracy[%] with the variance on PROTEINS.",
+  "captionBoundary": {
+    "x1": 345.29400634765625,
+    "x2": 505.6517639160156,
+    "y1": 451.7365417480469,
+    "y2": 501.57501220703125
+  },
+  "figType": "Table",
+  "imageText": ["AutoGT", "77.173.40", "One-Shot", "75.923.10", "Positional-Aware", "76.193.42", "Method", "Accuracy"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 360.0,
+    "x2": 485.28,
+    "y1": 502.56,
+    "y2": 559.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_GcM7qfl5zY-Table5-1.png"
+}]

@@ -1,0 +1,361 @@
+[{
+  "caption": "Table 2: GoBigger challenges. Agents Size denotes the number of agents on the map as Table 1. Map Size denotes the length and width of the map. Food denotes the range of food balls. Thorn denotes the range of thorn balls. Init Size denotes the size of clone balls at their first birth. Limited Frame denotes the number of frames in a game.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.0038757324219,
+    "y1": 83.53055572509766,
+    "y2": 122.40997314453125
+  },
+  "figType": "Table",
+  "imageText": ["4.3", "REWARD", "Large", "maps", "st_t4p3", "4×", "3", "128×", "128", "[800,", "900]", "[9,", "12]", "1000", "14400", "(12min)", "st_t5p3", "5×", "3", "128×", "128", "[900,", "1000]", "[10,", "12]", "1000", "14400", "(12min)", "st_t5p4", "5×", "4", "144×", "144", "[900,", "1000]", "[10,", "12]", "1000", "14400", "(12min)", "st_t6p4", "6×", "4", "144×", "144", "[1000,", "1100]", "[11,", "13]", "1000", "14400", "(12min)", "Small", "maps", "st_t1p1", "1×", "1", "32×", "32", "[65,", "75]", "[1,", "2]", "1000", "3600", "(3min)", "st_t1p2", "1×", "2", "48×", "48", "[130,", "150]", "[2,", "3]", "1000", "3600", "(3min)", "st_t2p1", "2×", "1", "48×", "48", "[130,", "150]", "[2,", "3]", "1000", "3600", "(3min)", "st_t2p2", "2×", "2", "64×", "64", "[260,", "300]", "[3,", "4]", "13000", "3600", "(3min)", "st_t3p2", "3×", "2", "88×", "88", "[500,", "560]", "[5,", "6]", "13000", "3600", "(3min)", "Name", "Agents", "Size", "Map", "Size", "Food", "Thorn", "Init", "Size", "Limited", "Frame"],
+  "name": "2",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 509.28,
+    "y1": 135.35999999999999,
+    "y2": 326.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Table2-1.png"
+}, {
+  "caption": "Table 3: Comparison of the different algorithms of collision detection on different settings. T denotes the number of balls in the gallery. Q denotes the number of balls in the query. C denotes the number of changing balls, which means the number of collisions.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.165283203125,
+    "y1": 313.5725402832031,
+    "y2": 341.4930114746094
+  },
+  "figType": "Table",
+  "imageText": ["Remove", "QuadTree", "48ms", "178ms", "497ms", "2460ms", "8419ms", "Rebuild", "QuadTree", "47ms", "50ms", "339ms", "586ms", "5691ms", "Precision", "14ms", "16ms", "61ms", "86ms", "403ms", "Exhaustive", "688ms", "1067ms", "8384ms", "12426ms", "127000ms", "T=30000", "Q=600", "C=3000", "T=10000", "Q=2000", "C=5000", "T=10000", "Q=1000", "C=2000", "T=3000", "Q=300", "C=1500", "T=3000", "Q=300", "C=600"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 362.88,
+    "y2": 472.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Table3-1.png"
+}, {
+  "caption": "Figure 1: New users can follow the given research workflow, while advanced users can customize the configuration of the environment and define new tasks based on GoBigger. The lower left part shows the basic units (balls) and the related actions. The lower right part shows the training in the league with many games going on at the same time, from where cooperative and competitive behaviors of agents can be observed.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.00201416015625,
+    "y1": 259.7285461425781,
+    "y2": 309.5660095214844
+  },
+  "figType": "Figure",
+  "imageText": ["Different", "policies", "in", "league", "Competition", "Cooperation", "Evaluation", "Public", "LeaderBoard", "Against", "Local", "Bots", "Self", "Play", "/", "League", "Training", "Single", "/", "Multi", "Agent(s)", "Policy", "Optimization", "Observation", "Transform", "Eject", "Split", "Actions", "of", "Balls", "Food", "Clone", "Thorn", "Spore", "Basic", "Units", "Player", "Number", "Research", "Workflow", "in", "GoBiggerCreate", "Environments", "Map", "Size", "64x64", "88x88", "128x128", "2x2", "3x2", "4x3"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 491.03999999999996,
+    "y1": 74.88,
+    "y2": 244.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Agents trained on st_t2p2, st_t3p2, and st_t4p3 with DQN (the first row) and PPO (the second row). Each column (left to right) denotes the score against built-in bots, the average number of eaten food balls, the average number of eaten thorn balls, and the average number of eaten clone balls from teammates.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.172607421875,
+    "y1": 229.14254760742188,
+    "y2": 268.02197265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.88,
+    "x2": 501.12,
+    "y1": 70.56,
+    "y2": 218.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure3-1.png"
+}, {
+  "caption": "Figure 8: Screenshots for one of the action combinations named middle-ejecting. This action combination will make agents gather their size into one big clone ball. (a) The clone ball is ready to eat the thorn ball. (b) After eating the thorn ball, the clone ball is forced to split into several pieces. (c) The agent ejects to the center. (d) The clone balls at the center eat the spore and merges their size together.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.73974609375,
+    "y1": 169.57754516601562,
+    "y2": 219.41497802734375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)"],
+  "name": "8",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 127.67999999999999,
+    "x2": 484.32,
+    "y1": 80.64,
+    "y2": 156.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure8-1.png"
+}, {
+  "caption": "Table 1: Comparison of GoBigger with other related multi-agent simulation environments. Agents Size denotes agent scale in the interactive environment, where M and N mean the number of competitive teams and the agent number in each team, respectively, in the M ×N settings. Actions denotes whether the action space is continuous, discrete, or hybrid. Obs denotes whether to support the partial observation. + in Coop and Comp indicates the importance of cooperation and competition. — means there is no cooperation or competition in the environment.",
+  "captionBoundary": {
+    "x1": 106.00700378417969,
+    "x2": 505.7469482421875,
+    "y1": 83.53055572509766,
+    "y2": 144.3270263671875
+  },
+  "figType": "Table",
+  "imageText": ["GoBigger", "(Ours)", "M", "×N", "Hybrid", "Partial", "+++", "+++", "NeuralMMO", "(Suarez", "et", "al.,", "2021)", "M", "×N", "Discrete", "Partial", "+", "+++", "MAMujoco", "(Peng", "et", "al.,", "2021)", "1×N", "Continuous", "Partial", "+++", "—", "Hide-and-Seek", "(Baker", "et", "al.,", "2019)", "2×N", "Discrete", "Partial", "++", "++", "MPE", "(Mordatch", "&", "Abbeel,", "2017)", "2×N", "Hybrid", "Full", "++", "++", "Bi-DexHands", "(Chen", "et", "al.,", "2022)", "1×N", "Discrete", "Full", "+++", "—", "GRF", "(Kurach", "et", "al.,", "2019)", "2×N", "Discrete", "Partial", "+", "+++", "SMAC", "(Samvelyan", "et", "al.,", "2019)", "2×N", "Discrete", "Partial", "+", "+++", "Agents", "Size", "Actions", "Obs", "Coop", "Comp"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 495.35999999999996,
+    "y1": 156.96,
+    "y2": 304.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Table1-1.png"
+}, {
+  "caption": "Figure 11: Comparing agents w/ or w/o observation from teammates.",
+  "captionBoundary": {
+    "x1": 168.0240020751953,
+    "x2": 443.9780578613281,
+    "y1": 607.1975708007812,
+    "y2": 613.2000122070312
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "st_t4p3.", "(b)", "st_t3p2.", "(a)", "st_t2p2."],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 482.4,
+    "y1": 81.6,
+    "y2": 594.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure11-1.png"
+}, {
+  "caption": "Figure 4: Agents trained on st_t2p2, st_t3p2, and st_t4p3 with QMIX (the first row), VMIX (the second row), MAPPO(the third row), and COMA (the fourth row). Each column (left to right) denotes the score against built-in bots, the average number of eaten food balls, eaten thorn balls, and eaten clone balls from teammates.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.003173828125,
+    "y1": 380.1065368652344,
+    "y2": 418.9859924316406
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 82.56,
+    "y2": 366.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Comparing agents w/ or w/o observation from teammates. Each picture (left to right) denotes the performance of agents on st_t2p2, st_t3p2, and st_t4p3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6681213378906,
+    "y1": 522.631591796875,
+    "y2": 539.593017578125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 426.71999999999997,
+    "y2": 511.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure5-1.png"
+}, {
+  "caption": "Figure 12: Screenshots of cooperating to eat the thorn ball. (a) The clone ball A and B get closed to each other. (b) The clone ball B eject to the A. (c) The clone ball A eat the spore and grow bigger. (d) The clone ball A eat several clone balls from teammates and grow big enough to eat the thorn ball. (e) The clone ball A eat the thorn ball.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.73876953125,
+    "y1": 170.24752807617188,
+    "y2": 209.12701416015625
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)", "(e)"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 156.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure12-1.png"
+}, {
+  "caption": "Figure 14: Screenshots of cooperation between different agents. (a) The clone ball C is ready to eat the thorn ball. (b) The clone balls split into many pieces. (c) The clone balls eject to the center of the agents. (d) The clone balls finally merge into a big one.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00042724609375,
+    "y1": 506.1015319824219,
+    "y2": 534.02099609375
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)", "(d)"],
+  "name": "14",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 499.2,
+    "y1": 398.88,
+    "y2": 492.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure14-1.png"
+}, {
+  "caption": "Figure 13: Screenshots of competition between different agents. (a) The green clone balls find the purple clone balls nearby. (b) The green clone balls split to eat the purple ones. (c) The purple clone balls gather together to avoid being eaten by the green clone balls.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0030822753906,
+    "y1": 356.5265197753906,
+    "y2": 384.4460144042969
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "13",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 223.67999999999998,
+    "y2": 343.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure13-1.png"
+}, {
+  "caption": "Figure 10: Neural network in experiments.",
+  "captionBoundary": {
+    "x1": 220.8800048828125,
+    "x2": 391.1208190917969,
+    "y1": 218.49050903320312,
+    "y2": 224.49298095703125
+  },
+  "figType": "Figure",
+  "imageText": ["C", "MLP", "Feature", "MLP", "MLP", "Resnet", "MLP", "Transformer", "Encoder", "Transformer", "Encoder", "Encoder", "Spatial", "Info", "Team", "Info", "Ball", "Info", "Scalar", "Info"],
+  "name": "10",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 494.4,
+    "y1": 81.6,
+    "y2": 207.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure10-1.png"
+}, {
+  "caption": "Figure 6: Comparing agents with different frequencies of actions on st_t2p2, st_t3p2, and st_t4p3 (left to right). Each line denotes the score against bots with a certain frequency of actions.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.2496643066406,
+    "y1": 177.22653198242188,
+    "y2": 194.18798828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 118.56,
+    "x2": 493.44,
+    "y1": 81.6,
+    "y2": 166.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Comparing agents on the ladder system. The scenario is st_t2p2.",
+  "captionBoundary": {
+    "x1": 157.4980010986328,
+    "x2": 454.5016784667969,
+    "y1": 329.8965148925781,
+    "y2": 335.89898681640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 198.72,
+    "y2": 319.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure7-1.png"
+}, {
+  "caption": "Figure 15: Screenshots of competition between different agents. (a) The bule and green agents are competing for the thorn ball. (b) The green clone balls split to eat the thorn ball. (c) The blue clone balls split and eat the green clone balls and win more score.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00250244140625,
+    "y1": 436.3795166015625,
+    "y2": 464.29901123046875
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "(b)", "(c)"],
+  "name": "15",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 115.67999999999999,
+    "x2": 496.32,
+    "y1": 343.68,
+    "y2": 422.88
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure15-1.png"
+}, {
+  "caption": "Figure 2: Screenshots for the different observation methods of GoBigger. (a) The full view of the game with 4 teams and 3 players in each team. (b) The players in (a) have their observations, and the three figures in each column represent the three players’ view from each team.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99932861328125,
+    "y1": 262.2745056152344,
+    "y2": 290.1940002441406
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "The", "full", "view", "of", "the", "game", "(b)", "The", "partial", "view", "of", "players"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 116.64,
+    "x2": 490.08,
+    "y1": 82.56,
+    "y2": 249.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure2-1.png"
+}, {
+  "caption": "Figure 9: The overview of feature encoder.",
+  "captionBoundary": {
+    "x1": 220.62600708007812,
+    "x2": 391.3749694824219,
+    "y1": 224.23550415039062,
+    "y2": 230.23797607421875
+  },
+  "figType": "Figure",
+  "imageText": ["Model", "Input", "Shared", "Observation", "Food", "Agent", "Agent", "Raw", "Data", "Team1", "Team2", "(𝑥,", "𝑦,", "𝑟,", "𝑥!,", "𝑦!)", "Ball", "Info", "Team", "Info", "Feature", "Extraction", "ity", "Step", "T+1", "veloc", "yStep", "T", "Spatial", "Info", "x", "Rank", "Time", "View", "Size", "Scalar", "Info"],
+  "name": "9",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 494.4,
+    "y1": 80.64,
+    "y2": 213.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NnOZT_CR26Z-Figure9-1.png"
+}]

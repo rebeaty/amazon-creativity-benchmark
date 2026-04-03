@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 3: Comparison of the influence of the cutoff c in Our attack process for σ = 0.5, in terms of the median first and best adversarial example, and the median time for identifying the first adversarial example.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00152587890625,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["CIFAR-10", "0.05", "93.5%", "0.806", "0.756", "1.76", "0.25", "97.5%", "0.904", "0.801", "0.74", "0.5", "97.0%", "1.030", "0.807", "0.65", "0.75", "97.0%", "1.135", "0.814", "0.65", "1.0", "99.0%", "1.220", "0.838", "0.65", "1.5", "98.5%", "1.486", "0.829", "0.65", "3.0", "99.0%", "2.194", "0.845", "0.65", "MNIST", "0.05", "45.0%", "1.646", "1.617", "4.44", "0.25", "65.0%", "1.988", "1.874", "1.51", "0.5", "71.5%", "2.149", "1.942", "1.16", "0.75", "75.0%", "2.345", "1.962", "1.07", "1.0", "75.5%", "2.426", "1.972", "1.07", "1.5", "74.5%", "2.687", "1.993", "0.97", "3.0", "74.0%", "3.257", "2.020", "0.97", "Dataset", "Cutoff", "c", "Successful", "First", "r50", "Best", "r50", "First", "t50", "(s)"],
+  "name": "3",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 451.2,
+    "y1": 124.32,
+    "y2": 300.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Table3-1.png"
+}, {
+  "caption": "Table 1: Performance metrics for MNIST (M), Cifar-10 (C), and Tiny-Imagenet (TI) for varying σ. ‘Success’ and ‘Best’ are the proportion samples for which each attack was success, and outperformed all others. r50 and %-Cohen are the median attack and the size relative to the guarantee of Cohen.",
+  "captionBoundary": {
+    "x1": 106.34600067138672,
+    "x2": 505.7435607910156,
+    "y1": 192.59951782226562,
+    "y2": 222.0140380859375
+  },
+  "figType": "Table",
+  "imageText": ["T-I-1.0", "Ours", "95%", "84%", "1.37", "107%", "4.70", "1.13", "0.44", "PGD", "94%", "1%", "1.80", "161%", "19.51", "1.00", "0.26", "C-W", "100%", "5%", "10.73", "1373%", "14.38", "2.73", "0.02", "Auto", "54%", "11%", "2.29", "100%", "372.23", "1.00", "1.00", "D.Fool", "89%", "0%", "3.44", "577%", "2.72", "1.00", "1.00", "T-I-0.5", "Ours", "94%", "77%", "0.97", "89%", "6.62", "1.18", "0.23", "PGD", "93%", "1%", "1.15", "113%", "18.80", "1.00", "0.17", "C-W", "100%", "6%", "11.79", "1981%", "13.76", "2.45", "0.02", "Auto", "67%", "15%", "1.38", "100%", "360.88", "1.00", "1.00", "D.Fool", "79%", "1%", "2.39", "532%", "1.36", "1.00", "1.00", "C-1.0", "Ours", "100%", "85%", "1.24", "79%", "2.38", "1.13", "0.38", "PGD", "100%", "1%", "1.55", "114%", "9.17", "1.00", "0.22", "C-W", "95%", "0%", "6.76", "775%", "4.43", "2.01", "0.03", "Auto", "74%", "12%", "1.88", "100%", "178.91", "1.00", "1.00", "D.Fool", "98%", "1%", "3.05", "462%", "0.67", "1.00", "1.00", "C-0.5", "Ours", "96%", "83%", "0.85", "69%", "3.34", "1.23", "0.19", "PGD", "95%", "3%", "0.97", "88%", "9.19", "1.00", "0.14", "C-W", "95%", "2%", "6.65", "1104%", "4.58", "2.07", "0.03", "Auto", "85%", "11%", "1.27", "100%", "179.28", "1.00", "1.00", "D.Fool", "90%", "0%", "2.39", "512%", "0.67", "1.00", "1.00", "M-1.0", "Ours", "100%", "89%", "2.41", "66%", "2.87", "1.09", "0.43", "PGD", "98%", "4%", "2.75", "88%", "8.92", "1.00", "0.43", "C-W", "94%", "0%", "8.83", "505%", "4.49", "1.51", "0.03", "Auto", "90%", "6%", "3.05", "100%", "174.08", "1.00", "1.00", "D.Fool", "47%", "0%", "12.80", "1409%", "0.65", "1.00", "1.00", "M-0.5", "Ours", "75%", "71%", "1.95", "67%", "5.49", "1.10", "0.23", "PGD", "65%", "6%", "1.95", "69%", "8.95", "1.00", "0.34", "C-W", "94%", "25%", "8.19", "612%", "5.29", "1.63", "0.02", "Auto", "31%", "2%", "1.95", "100%", "174.87", "1.00", "1.00", "D.Fool", "5%", "1%", "9.20", "2107%", "0.66", "1.00", "1.00", "Categorisation", "Smallest", "Attack", "First", "Attack", "Data", "Attack", "Success", "Best", "r50", "%-Cohen", "Time", "(s)", "Ratio(r50)", "Ratio(Time)"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 508.32,
+    "y1": 233.28,
+    "y2": 621.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Table1-1.png"
+}, {
+  "caption": "Figure 4: Average perturbation radius when σ is estimated by σ̂. Data collected for CIFAR-10 at σ = 1.0.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9998474121094,
+    "y1": 240.93051147460938,
+    "y2": 257.89202880859375
+  },
+  "figType": "Figure",
+  "imageText": ["s", "ad", "iu", "n", "R", "at", "io", "tu", "rb", "P", "er", "ra", "ge", "A", "ve", "1.440", "1.435", "1.430", "1.425", "1.420", "σ̂", "0.6", "0.8", "1.0", "1.2", "1.4"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 179.51999999999998,
+    "x2": 433.44,
+    "y1": 84.0,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Figure4-1.png"
+}, {
+  "caption": "Table 2: Evolution of metrics as a function of the number of samples used to estimate the expectations, as calculated for CIFAR-10 with σ = 0.5. All other experiments in this paper were calculated using 1500 samples for MNIST and CIFAR-10, and 1000 samples for Tiny Imagenet. AutoAttack experiments were excised from these experiments due to the underlying computational cost.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.2447814941406,
+    "y1": 276.7195129394531,
+    "y2": 315.5989990234375
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "r50", "0.94", "0.84", "0.85", "0.82", "0.79", "Attacked", "96%", "97%", "97%", "99%", "98%", "Time", "(s)", "1.2", "1.6", "2.6", "4.5", "7.1", "PGD", "r50", "1.04", "0.94", "0.89", "0.9", "0.87", "Attacked", "95%", "96%", "96%", "96%", "96%", "Time", "(s)", "0.6", "0.8", "1.1", "1.4", "1.9", "C-W", "r50", "6.41", "6.45", "6.46", "6.41", "6.34", "Attacked", "93%", "92%", "93%", "94%", "94%", "Time", "(s)", "1.9", "2.8", "4.0", "5.2", "7.4", "DeepFool", "r50", "2.18", "1.91", "1.83", "1.84", "1.81", "Attacked", "76%", "82%", "81%", "81%", "85%", "Time", "(s)", "0.3", "0.4", "0.7", "0.9", "1.1", "Method", "Metric", "250", "500", "750", "1000", "2000"],
+  "name": "2",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 181.92,
+    "x2": 430.08,
+    "y1": 328.32,
+    "y2": 483.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Table2-1.png"
+}, {
+  "caption": "Figure 3: Per-sample performance of our Certification Aware Attack technique (Red) and PGD (Blue), relative to the magnitude of the L2 norm guarantees provided by Certified Robustness.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.2413635253906,
+    "y1": 654.3805541992188,
+    "y2": 672.8359985351562
+  },
+  "figType": "Figure",
+  "imageText": ["(f)", "Tiny-Imagenet,", "σ", "=", "1.0", "R", "to", "C", "en", "ce", "iﬀ", "er", "%", "-D", "250", "200", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.2", "0.4", "0.6", "0.8", "1.0", "(e)", "Tiny-Imagenet,", "σ", "=", "0.5", "R", "to", "C", "en", "ce", "iﬀ", "er", "%", "-D", "250", "200", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.2", "0.4", "0.6", "0.8", "1.0", "(d)", "CIFAR-10,", "σ", "=", "1.0", "200", "250", "%", "-D", "iﬀ", "er", "en", "ce", "to", "C", "R", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.2", "0.4", "0.6", "0.8", "1.0", "(c)", "CIFAR-10,", "σ", "=", "0.5", "R", "to", "C", "en", "ce", "iﬀ", "er", "%", "-D", "250", "200", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "1.0", "(b)", "MNIST,", "σ", "=", "1.0", "R", "to", "C", "en", "ce", "iﬀ", "er", "%", "-D", "250", "200", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.5", "0.6", "0.7", "0.8", "0.9", "1.0", "(a)", "MNIST,", "σ", "=", "0.5", "R", "to", "C", "en", "ce", "iﬀ", "er", "%", "-D", "250", "200", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.5", "0.6", "0.7", "0.8", "0.9", "1.0"],
+  "name": "3",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 486.24,
+    "y1": 151.2,
+    "y2": 636.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Figure3-1.png"
+}, {
+  "caption": "Figure 1: Percentage distance between constructed adversarial perturbations and the certified radii given by Equation 3, with Our technique in Red and PGD in Blue. Results for CIFAR-10 with σ = 1.0. Additional experimental results are visible in Figure 3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0011901855469,
+    "y1": 223.42855834960938,
+    "y2": 251.3480224609375
+  },
+  "figType": "Figure",
+  "imageText": ["to", "C", "R", "en", "ce", "iﬀ", "er", "%", "-D", "250", "200", "150", "100", "50", "0", "Largest", "Class", "Expectation", "0.2", "0.4", "0.6", "0.8", "1.0"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 226.07999999999998,
+    "x2": 386.4,
+    "y1": 85.92,
+    "y2": 207.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Best achieved Attack Proportion for our new Certification Aware Attack (Blue), PGD (Red), DeepFool (Cyan), Carlini-Wagner (Green), and AutoAttack (Magenta), with the upper bound certified radius in black dots. Dashed lines represent the first identified attack, while solid lines denote the best identified attack.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.0014953613281,
+    "y1": 323.04052734375,
+    "y2": 361.9200134277344
+  },
+  "figType": "Figure",
+  "imageText": ["f)", "T-I,", "σ", "=", "1.0", "Radius", "0", "2", "4", "e)", "T-I,", "σ", "=", "0.5", "Radius", "0", "2", "4", "d)", "CIFAR-10,", "σ", "=", "1.0", "ti", "on", "p", "or", "P", "ro", "ac", "k", "A", "tt", "1.00", "0.75", "0.50", "0.25", "0.00", "Radius", "0", "2", "4", "a)", "MNIST,", "σ", "=", "0.5", "b)", "MNIST,", "σ", "=", "1.0", "c)", "CIFAR-10,", "σ", "=", "0.5", "ti", "on", "p", "or", "P", "ro", "ac", "k", "A", "tt", "1.00", "0.75", "0.50", "0.25", "0.00"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 113.28,
+    "x2": 499.2,
+    "y1": 85.92,
+    "y2": 301.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Figure2-1.png"
+}, {
+  "caption": "Figure 5: Performance of PGD for varying the step-size ϵ. Results for CIFAR-10 at σ = 1.0.",
+  "captionBoundary": {
+    "x1": 121.5469970703125,
+    "x2": 490.4526062011719,
+    "y1": 240.93051147460938,
+    "y2": 246.9329833984375
+  },
+  "figType": "Figure",
+  "imageText": ["t", "B", "es", "ti", "on", "p", "or", "P", "ro", "0.06", "0.05", "0.04", "0.03", "0.02", "0.01", "s", "ad", "iu", "n", "R", "at", "io", "tu", "rb", "P", "er", "ia", "n", "M", "ed", "1.70", "1.68", "1.66", "1.64", "1.62", "1.60", "1.58", "ε×", "255", "10", "15", "20", "25", "30", "35"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 179.51999999999998,
+    "x2": 432.0,
+    "y1": 84.0,
+    "y2": 226.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Performance of AutoAttack for varying ϵ, where ϵ is either set directly or as a multiple of the Cohen certified radius. Results for CIFAR-10 at σ = 1.0.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99664306640625,
+    "y1": 489.10052490234375,
+    "y2": 506.06201171875
+  },
+  "figType": "Figure",
+  "imageText": ["4", "3", "2", "1", "0", "n", "(ε", "=", "Cohen", "×", "n)", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "iu", "s", "R", "ad", "ac", "k", "A", "tt", "ra", "ge", "A", "ve", "4", "3", "2", "1", "0", "ε", "0", "1", "2", "3", "4", "60", "40", "20", "0", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "on", "or", "ti", "ro", "p", "d", "P", "ac", "ke", "A", "tt", "60", "40", "20", "0", "0", "1", "2", "3", "4"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 490.56,
+    "y1": 264.96,
+    "y2": 473.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_AeTl9sbF-VT-Figure6-1.png"
+}]

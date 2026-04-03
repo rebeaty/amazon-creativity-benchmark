@@ -54,7 +54,7 @@ def get_arena_hard_creative_spec() -> RunSpec:
         AnnotatorSpec(
             class_name="llm_judge.generic_llm_judge_annotator.GenericLLMJudgeAnnotator",
             args={
-                "judge_model_name": "openai/gpt-4-turbo",
+                "judge_model_name": "google/gemini-2.0-flash-lite",
                 "judge_temperature": 0.0,
                 "judge_max_new_tokens": 1024,
                 "metric_name": "win_rate",

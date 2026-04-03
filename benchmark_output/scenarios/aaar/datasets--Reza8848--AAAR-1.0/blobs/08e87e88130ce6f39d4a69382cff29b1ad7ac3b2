@@ -1,0 +1,181 @@
+[{
+  "caption": "Table 1: Comparing self-supervised transformers and convnets with SparK pre-training on ImageNet, where all methods fine-tune with resolution of 224. Top-1 accuracy on ImageNet-val is reported. “Extra model” indicates whether an algorithm uses DALL-E’s dVAE (trained on 250 million extra data) in pre-training. Entries with † are quoted from Zhou et al. (2021) or Li et al. (2022). ‡ is our re-implementation using the official codes.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.5993347167969,
+    "y1": 476.1455383300781,
+    "y2": 512.0360107421875
+  },
+  "figType": "Table",
+  "imageText": ["Convolutional", "Backbone", "SparK", "(ours)", "MIM", "1×", "ConvX-S", "84.1", "ConvX-B", "84.8", "Vision", "Transformer", "Backbone", "MoCov3", "(Chen", "et", "al.,", "2021)", "CL", "5.0×", "ViT-S", "81.4", "ViT-B", "83.2", "DINO", "(Caron", "et", "al.,", "2021)", "CL", "9.5×", "ViT-S", "82.0", "ViT-B", "82.8", "BEiT", "(Bao", "et", "al.,", "2021)", "MIM", "2.5×", "✓", "ViT-S", "81.4†", "ViT-B", "83.2", "CIM", "(Fang", "et", "al.,", "2022)", "MIM", "2.5×", "✓", "ViT-S", "81.6", "ViT-B", "83.3", "CAE", "(Chen", "et", "al.,", "2022)", "MIM", "2.5×", "✓", "ViT-S", "81.8", "ViT-B", "83.6", "MAE", "(He", "et", "al.,", "2021)", "MIM", "0.6×", "ViT-S", "81.5‡", "ViT-B", "83.6", "SimMIM", "(Xie", "et", "al.,", "2021)", "MIM", "2.5×", "ViT-S", "81.7", "ViT-B", "83.8", "SimMIM", "(Xie", "et", "al.,", "2021)", "MIM", "2.5×", "Swin-T", "82.2†", "Swin-B", "84.0", "iBOT", "(Zhou", "et", "al.,", "2021)", "MIM+CL", "9.5×", "ViT-S", "82.3", "ViT-B", "84.0", "Enc.", "cost", "Extra", "model", "Small", "Backbone", "Base", "Backbone", "Arch.", "Acc.", "Arch.", "Acc.", "Pre-train", "(PT)", "PT", "task"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 493.44,
+    "y1": 520.8,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Table1-1.png"
+}, {
+  "caption": "Figure 1: Different masking strategies with pixel intensity histograms plotted before (in gray) and after (blue) masking. (b) is a straightforward idea to apply masked modeling to convnets, which results in a distribution shift. (a) corresponds to MAE (He et al., 2021) that has no such side effect thanks to the transformer’s ability to process variable-length input. We propose (c) to adapt convnet to irregular masked input without data distribution shift.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 505.5710144042969,
+    "y1": 224.63650512695312,
+    "y2": 260.5269775390625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 124.8,
+    "x2": 487.2,
+    "y1": 80.64,
+    "y2": 214.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Figure1-1.png"
+}, {
+  "caption": "Table 3: ResNet-50 results on downstream tasks. We thoroughly compare SparK with contrastive learning algorithms. All methods pre-train with 224 resolution. For ImageNet, the same training recipe from Wightman et al. (2021) with 224 fine-tuning is used. For COCO, Mask-RCNN ResNet50-FPN is equally fine-tuned on train2017 for 12 or 24 epochs (1× or 2×), with average precision of detection box and segmentation mask on val2017 reported. SparK is highlighted as the only generative method evaluating Mask-RCNN R50-FPN.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.22308349609375,
+    "y1": 541.8395385742188,
+    "y2": 587.6920166015625
+  },
+  "figType": "Table",
+  "imageText": ["Supervised", "−", "−", "79.8", "38.9", "41.3", "35.4", "37.3", "SimSiam", "(Chen", "&", "He,", "2021)", "Contrastive", "800", "79.1", "−", "−", "−", "−", "MoCo", "(He", "et", "al.,", "2020)", "Contrastive", "800", "−", "38.5", "40.8", "35.1", "36.9", "MoCov2", "(Chen", "et", "al.,", "2020b)", "Contrastive", "1600", "79.8", "40.4", "41.7", "36.4", "37.6", "SimCLR", "(Chen", "et", "al.,", "2020a)", "Contrastive", "4000", "80.0", "−", "−", "−", "−", "InfoMin", "(Tian", "et", "al.,", "2020)", "Contrastive", "800", "−", "40.6", "42.5", "36.7", "38.4", "BYOL", "(Grill", "et", "al.,", "2020)", "Contrastive", "1600", "80.0", "40.4", "42.3", "37.2", "38.3", "SwAV", "(Caron", "et", "al.,", "2020)", "Contrastive", "1200", "80.1", "−", "42.3", "−", "38.2", "Spark", "(ours)", "Generative", "1600", "80.6", "41.6", "43.4", "37.7", "39.4", "Eff.", "epoch", "Cls.", "(Acc.)", "Det.", "(Box)", "Seg.", "(Mask)", "1×", "2×", "1×", "2×", "Pre-train", "(ResNet-50)", "Pre-train", "task"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 120.0,
+    "x2": 489.12,
+    "y1": 596.16,
+    "y2": 734.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Table3-1.png"
+}, {
+  "caption": "Table 2: Thoroughly comparing convnets and transformers on three downstream tasks. For ImageNet, all methods fine-tune with 224 resolution. For COCO, two commonly-used configurations are compared separately for fairness. Average precision (AP) of detection box and segmentation mask on val2017 are reported. “AP75” denotes AP with IOU = 75%. SparK is emphasized as the only method pre-training convolutional models.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 505.5964660644531,
+    "y1": 77.55252838134766,
+    "y2": 113.4429931640625
+  },
+  "figType": "Table",
+  "imageText": ["Base", "backbones", "with", "3×", "Mask-RCNN", "(He", "et", "al.,", "2017)", "and", "FPN", "MoCov3", "(Chen", "et", "al.,", "2021)", "ViT-B", "CL", "1600", "83.2", "47.9", "−", "42.7", "−", "BEiT", "(Bao", "et", "al.,", "2021)", "ViT-B", "MIM", "800", "83.2", "49.8", "−", "44.4", "−", "MAE", "(He", "et", "al.,", "2021)", "ViT-B", "MIM", "1600", "83.6", "50.3", "−", "44.9", "−", "SimMIM", "(Xie", "et", "al.,", "2021)", "Swin-B", "MIM", "800", "84.0", "50.4", "55.5", "44.4", "47.9", "Spark", "(ours)", "ConvX-B", "MIM", "1600", "84.8", "51.2", "56.1", "45.1", "48.9", "Small", "backbones", "with", "3×", "Cascade", "RCNN", "(Cai", "&", "Vasconcelos,", "2018)", "and", "FPN", "Lin", "et", "al.", "(2017)", "Supervised", "(Zhou", "et", "al.,", "2021)", "ViT-S", "Sup.", "300", "79.9", "46.2", "49.6", "40.1", "42.8", "Supervised", "(Liu", "et", "al.,", "2022b)", "ConvX-S", "Sup.", "300", "83.1", "51.9", "56.5", "45.0", "49.1", "iBOT", "(Zhou", "et", "al.,", "2021)", "ViT-S", "M+C", "3200", "82.3", "49.9", "53.9", "43.1", "66.4", "SparK", "(ours)", "ConvX-S", "MIM", "1600", "84.1", "52.8", "57.4", "45.4", "49.6", "epoch", "Cls.", "(Acc.)", "Det.", "Seg.", "APbb", "APbb", "75", "APmk", "APmk", "75", "Eff.2", "Pre-train", "(PT)", "Arch.", "PT", "task"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 498.24,
+    "y1": 121.92,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Table2-1.png"
+}, {
+  "caption": "Table 4: Scaling up SparK with the model size. Top-1 validation accuracy on ImageNet is reported. Absolute improvements over baselines are listed as ∆. The last column highlights if a pre-trained model with a smaller size (e.g., 84.1 of ConvNeXt-S) reaches the baseline performance of a larger size (e.g., 83.8 of ConvNeXt-B).",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.1535949707031,
+    "y1": 421.5055236816406,
+    "y2": 447.4330139160156
+  },
+  "figType": "Table",
+  "imageText": ["Modern", "Architecture", "ConvNext-Small", "50.0", "8.7", "83.1", "84.1", "+1.0", "✓", "ConvNext-Base", "89.0", "15.4", "83.8", "84.8", "+1.0", "✓", "ConvNext-Large", "198", "34.4", "84.3", "85.4", "+1.1", "Basic", "Architecture", "ResNet-50", "25.6", "4.1", "79.8", "80.6", "+0.8", "ResNet-101", "44.5", "7.9", "81.3", "82.2", "+0.9", "✓", "ResNet-152", "60.2", "11.6", "81.8", "82.7", "+0.9", "✓", "ResNet-200", "64.7", "15.1", "82.1", "83.1", "+1.0", "Architecture", "#Para.", "(M)", "FLOPs", "(G)", "Baseline", "Acc.", "(%)", "Spark", "(ours)", "Acc.", "(%)", "∆", "(%)", "Reach", "the", "next", "level"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 144.0,
+    "x2": 466.08,
+    "y1": 456.0,
+    "y2": 592.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Table4-1.png"
+}, {
+  "caption": "Figure 2: Sparse masked modeling with hierarchy. To adapt convolution to irregular masked input, visible patches are gathered into a sparse image and encoded by sparse convolution. To pre-train a hierarchical encoder, we employ a UNet-style architecture to decode multi-scale sparse feature maps, where all empty positions are filled with mask embedding. This “densifying” is necessary to reconstruct a dense image. Only the regression loss on masked patches will be optimized. After pre-training, only the encoder is used for downstream tasks.",
+  "captionBoundary": {
+    "x1": 107.677001953125,
+    "x2": 505.1175231933594,
+    "y1": 234.17153930664062,
+    "y2": 280.02398681640625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 138.72,
+    "x2": 473.28,
+    "y1": 80.64,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Figure2-1.png"
+}, {
+  "caption": "Figure 4: Reconstruction examples by a pre-trained ConvNeXt-Base with a mask ratio of 60%. Images are randomly selected from ImageNet validation set. Several interesting regions are highlighted.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0006103515625,
+    "y1": 551.0975341796875,
+    "y2": 567.06298828125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 403.68,
+    "y2": 539.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Figure4-1.png"
+}, {
+  "caption": "Table 5: Ablation study on the importance of each components in SparK. Experiments are based on ConvNeXt-Small, with ImageNet validation accuracy reported. Our default setting is in row 2. Differences are highlighted in blue. “Pos. Emb.” denotes whether to use positional embedding during the pre-training.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.00439453125,
+    "y1": 75.5605239868164,
+    "y2": 101.48797607421875
+  },
+  "figType": "Table",
+  "imageText": ["4", "w/o", "hierarchy", "sparse", "✗", "✗", "masked", "only", "1600", "83.6", "-0.4", "5", "w/", "Pos.", "Emb.", "sparse", "✓", "✓", "masked", "only", "1600", "83.9", "-0.1", "6", "w/", "more", "loss", "sparse", "✓", "✗", "all", "1600", "83.3", "-0.7", "7", "pre-train", "less", "sparse", "✓", "✗", "masked", "only", "800", "83.7", "-0.3", "3", "zero-outing", "zero-outing", "✓", "✗", "masked", "only", "1600", "83.2", "-0.8", "1", "Supervised", "83.1", "-0.9", "2", "SparK", "(ours)", "sparse", "✓", "✗", "masked", "only", "1600", "84.0", "0.0", "Method", "Masking", "Hierarchy", "Pos.", "Emb.", "Loss", "Epoch", "Acc.", "∆"],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 487.2,
+    "y1": 109.92,
+    "y2": 216.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Table5-1.png"
+}, {
+  "caption": "Figure 3: Using sparse convolution to address “mask pattern vanishing” issue. Three examples of mask are shown. As in left, when computing ordinary “dense” convolution centered at a masked position, the result would be non-zero if the filter covers any non-zero (unmasked) points. Repeating this process will erode masked regions (in white) and dilate unmasked ones (black), leading to the vanishing problem. We use sparse convolution to overcome this undesired property, which skips all masked positions and only computes at unmasked points.",
+  "captionBoundary": {
+    "x1": 107.7040023803711,
+    "x2": 504.0001525878906,
+    "y1": 242.75350952148438,
+    "y2": 288.60699462890625
+  },
+  "figType": "Figure",
+  "imageText": ["(", "become", "fewer", "after", "conv.)m", "output", "is", "1", "centered", "at", "m", "m", "m", "m", "m", "m", "m", "1", "1m", "1", "1", "1", "1", "1", "1", "1", "1", "11", "1", "1", "1", "1", "1", "1", "1", "1", "1", "11", "1", "1", "m", "m", "m", "m", "m", "m", "m", "m", "m", "m", "m", "1m", "1", "1", "1", "1", "1", "1", "11", "1", "1", "1", "1", "1", "1", "1", "1", "11", "1", "pattern", "remains", "the", "same", "thanks", "to", "sparse", "conv.", "pattern", "shrinks", "and", "vanishes", "due", "to", "the", "erosion", "effect", "of", "ordinary", "conv.", "(binary)", "both", "and", "1", "m", "ordinary", "conv.", "computes", "at", "for", "1", "time", "for", "2", "times", "Or", "After", "Sparse", "Conv.", "masked", "unmasked", "m", "1", "m", "1", "and", "skips", "sparse", "conv.", "only", "computes", "at", "for", "1", "time", "for", "2", "times", "Raw", "Mask", "After", "Ordinary", "Conv."],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 139.2,
+    "x2": 473.28,
+    "y1": 81.6,
+    "y2": 231.35999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_NRxydtWup1S-Figure3-1.png"
+}]

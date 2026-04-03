@@ -1,0 +1,361 @@
+[{
+  "caption": "Figure 4: There is no winner in the top vs. bottom battle in SSL. Except for ResNet-ImageNet (top-left), we see no strong trend that suggests either top-heavy or bottom-heavy networks perform better.",
+  "captionBoundary": {
+    "x1": 226.80099487304688,
+    "x2": 504.0007019042969,
+    "y1": 392.73675537109375,
+    "y2": 418.0650329589844
+  },
+  "figType": "Figure",
+  "imageText": ["s", "ar", "am", "m", "p", "Bo", "tto", "0.40", "0.35", "0.30", "0.25", "0.20", "96", "MobileNet-Sports", "95", "94", "93", "92", "10", "15", "20", "25", "Top/Bottom", "Param", "Ratio", "MobileNet-Stanford", "Cars", "29", "28", "27", "26", "25", "10", "15", "20", "25", "Top/Bottom", "Param", "Ratio", "MobileNet-ImageNet", "ra", "cy", "Ac", "cu", "44", "43", "42", "41", "10", "15", "20", "25", "Top/Bottom", "Param", "Ratio", "s", "ar", "am", "m", "p", "Bo", "tto", "2.5", "2.0", "1.5", "1.0", "97.0", "ResNet-Sports", "96.5", "96.0", "95.5", "95.0", "94.5", "10", "15", "20", "25", "Top/Bottom", "Param", "Ratio", "ResNet-Stanford", "Cars", "36.0", "35.5", "35.0", "34.5", "34.0", "10", "15", "20", "25", "Top/Bottom", "Param", "Ratio", "ResNet-ImageNet", "56", "58", "Ac", "cu", "ra", "cy", "54", "10", "15", "20", "25", "Top/Bottom", "Param", "Ratio"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 228.48,
+    "x2": 502.08,
+    "y1": 203.04,
+    "y2": 380.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Samples from datasets used in our study. We choose these datasets because of the apparent domain shift across them. ImageNet contains general yet coarsely categorized images compared to iNat2021, which contains an order of magnitude higher number of fine-grained categories; although some images look similar to each other, every image shown belongs to a different category highlighting the fine-grained nature of this dataset. The downstream datasets, except for CIFAR, are similarly fine-grained but on different domains.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00372314453125,
+    "y1": 228.40975952148438,
+    "y2": 273.6619873046875
+  },
+  "figType": "Figure",
+  "imageText": ["ta", "se", "ts", "S", "m", "al", "l", "d", "ow", "ns", "tre", "am", "d", "at", "as", "et", "s", "g", "da", "in", "in", "et", "ra", "e", "pr", "La", "rg", "ImageNet", "(1.2M", "images,", "1000", "classes)", "iNaturalist", "2021", "(2.7M", "images,", "10000", "classes)", "CIFAR", "(10/100", "classes)", "Oxford", "Flowers", "(102", "classes)", "FGVC", "Aircraft", "(102", "classes)", "CUB", "(200", "classes)", "Stanford", "Cars", "(196", "classes)"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 222.23999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure5-1.png"
+}, {
+  "caption": "Table 4: Supervised performance of searched architectures.",
+  "captionBoundary": {
+    "x1": 193.31199645996094,
+    "x2": 418.6885986328125,
+    "y1": 654.9127197265625,
+    "y2": 660.3150024414062
+  },
+  "figType": "Table",
+  "imageText": ["CUB", "CIFAR10", "CIFAR100", "Food", "Flowers", "Sport", "Cars", "Aircraft", "MobileNetV2", "58.2", "93.7", "71.9", "80.8", "90.0", "94.2", "88.6", "81.4", "Ours", "(ImNet)", "57.9", "93.1", "74.7", "78.1", "96.7", "95.0", "71.0", "75.5", "Ours", "(iNat21)", "64.5", "93.9", "75.8", "81.6", "98.1", "96.3", "72.3", "72.9"],
+  "name": "4",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 672.9599999999999,
+    "y2": 729.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Table4-1.png"
+}, {
+  "caption": "Figure 6: Conventional SSL frameworks learn network weights for a fixed handcrafted architecture (left). We show that learning architecture topologies along with their weights can improve performance in SSL (right).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0008544921875,
+    "y1": 438.1937561035156,
+    "y2": 453.55902099609375
+  },
+  "figType": "Figure",
+  "imageText": ["Self-supervised", "Architectures", "A", "B", "CA/B/C", "Handcrafted", "Architecture", "Architecture", "Search", "Space", "SSL", "+", "Unlabeled", "dataset", "[A", "or", "B", "or", "C]", "y", "Handcrafted", "Self-supervised", "ur", "ac", "A", "cc", "Task", "A", "Task", "B", "Task", "C"],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 160.79999999999998,
+    "x2": 455.03999999999996,
+    "y1": 180.95999999999998,
+    "y2": 423.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure6-1.png"
+}, {
+  "caption": "Figure 11: Dataset performance correlation with 10 different datasets for various MobileNets. We show the model size in terms of parameter counts (x-axis) vs. top-1 accuracy on different datasets obtained from variations of MobileNet-like architectures; all models are pretrained on ImageNet-1K Deng et al. (2009) using SimCLR Chen et al. (2020a) under the same protocol. The solid lines and shaded areas indicate fitted regression models and their confidence intervals.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0031433105469,
+    "y1": 629.6907348632812,
+    "y2": 674.9439697265625
+  },
+  "figType": "Figure",
+  "imageText": ["96.0", "MobileNet-Sports", "(", "=-.08)", "95.5", "95.0", "94.5", "94.0", "93.5", "93.0", "92.5", "92.0", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "38.0", "MobileNet-FGVC", "Aircraft", "(", "=.21)", "37.5", "37.0", "36.5", "36.0", "35.5", "35.0", "34.5", "34.0", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-CIFAR-100", "(", "=-.03)", "54", "53", "52", "51", "50", "49", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-Stanford", "Cars", "(", "=.1)", "29", "28", "27", "26", "25", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-SVHN", "(", "=.16)", "ra", "cy", "Ac", "cu", "68", "66", "64", "62", "60", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-CUB", "(", "=.58)", "22.5", "22.0", "21.5", "21.0", "20.5", "20.0", "Params", "(in", "M)", "MobileNet-MIT67", "(", "=.11)", "61", "60", "59", "58", "57", "Params", "(in", "M)", "56", "MobileNet-Oxford", "Flowers", "(", "=.42)", "88", "87", "86", "85", "Params", "(in", "M)", "MobileNet-Stanford", "Dogs", "(", "=.5)", "39", "38", "37", "36", "35", "Params", "(in", "M)", "MobileNet-ImageNet", "(", "=.37)", "ra", "cy", "Ac", "cu", "44.0", "43.5", "43.0", "42.5", "42.0", "41.5", "41.0", "40.5", "Params", "(in", "M)"],
+  "name": "11",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 499.2,
+    "y1": 461.76,
+    "y2": 616.8
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure11-1.png"
+}, {
+  "caption": "Figure 10: Dataset performance correlation with 10 different datasets for various ResNets. We show the model size in terms of parameter counts (x-axis) vs. top-1 accuracy on different datasets obtained from variations of ResNet-like architectures; all models are pretrained on ImageNet-1K Deng et al. (2009) using SimCLR Chen et al. (2020a) under the same protocol. The solid lines and shaded areas indicate fitted regression models and their confidence intervals.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0025939941406,
+    "y1": 300.7247619628906,
+    "y2": 345.97705078125
+  },
+  "figType": "Figure",
+  "imageText": ["ResNet-Stanford", "Cars", "(", "=-.14)", "36.0", "35.5", "35.0", "34.5", "34.0", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-FGVC", "Aircraft", "(", "=-.37)", "44.0", "43.5", "43.0", "42.5", "42.0", "41.5", "41.0", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "97.0", "ResNet-Sports", "(", "=.04)", "96.5", "96.0", "95.5", "95.0", "94.5", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-Oxford", "Flowers", "(", "=.32)", "94.0", "93.5", "93.0", "92.5", "92.0", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-SVHN", "(", "=.58)", "ra", "cy", "Ac", "cu", "74.0", "73.5", "73.0", "72.5", "72.0", "71.5", "71.0", "70.5", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-CUB", "(", "=.49)", "32.0", "31.5", "31.0", "30.5", "30.0", "Params", "(in", "M)", "29.5", "ResNet-MIT67", "(", "=.57)", "70.5", "70.0", "69.5", "69.0", "68.5", "68.0", "67.5", "67.0", "Params", "(in", "M)", "52.5", "ResNet-Stanford", "Dogs", "(", "=.86)", "52.0", "51.5", "51.0", "50.5", "50.0", "49.5", "Params", "(in", "M)", "ResNet-CIFAR-100", "(", "=.87)", "65", "64", "63", "62", "Params", "(in", "M)", "ResNet-ImageNet", "(", "=.95)", "ra", "cy", "Ac", "cu", "59.0", "58.5", "58.0", "57.5", "57.0", "56.5", "56.0", "Params", "(in", "M)", "55.5"],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 287.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure10-1.png"
+}, {
+  "caption": "Table 1: Self-supervised vs. handcrafted architecture results. We search, pretrain, and evaluate ours on each of the three datasets in the last three columns. †SOTA results (in gray) from Chen et al. (2020a) for ImageNet and Cole et al. (2021) for iNat21 require larger batch sizes and longer training.",
+  "captionBoundary": {
+    "x1": 266.39801025390625,
+    "x2": 504.0044860839844,
+    "y1": 248.94259643554688,
+    "y2": 294.19586181640625
+  },
+  "figType": "Table",
+  "imageText": ["ResNet50", "23.5M", "4096", "1000", "69.3†", "50.6†", "-", "Model", "Params", "Batch", "Epochs", "ImageNet", "iNat21", "iNat21-mini", "MobileV2", "3.5M", "640", "100", "41.9", "30.2", "13.6", "Ours", "3.3M", "640", "100", "55.3", "40.3", "14.7", "ResNet18", "11M", "640", "100", "49.8", "30.3", "20.1", "ResNet50", "23.5M", "640", "100", "58.9", "41.3", "23.4", "Ours", "12-18M", "640", "100", "59.1", "43.8", "25.1"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 268.8,
+    "x2": 503.03999999999996,
+    "y1": 306.71999999999997,
+    "y2": 371.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Table1-1.png"
+}, {
+  "caption": "Table 2: Self-supervised architecture transfer results. We evaluate architectures in the cross-dataset setting, pretraining and evaluating the searched architectures across three datasets (last three columns).",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 504.0050048828125,
+    "y1": 458.15753173828125,
+    "y2": 493.44781494140625
+  },
+  "figType": "Table",
+  "imageText": ["Searched", "on", "Params", "ImageNet", "iNat21", "iNat21-mini", "ImageNet", "12-18M", "59.1", "21.5", "23.9", "iNat21", "12-18M", "58.3", "43.8", "27.9", "iNat21-mini", "12-18M", "58.0", "22.4", "25.1"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 306.71999999999997,
+    "x2": 503.03999999999996,
+    "y1": 500.64,
+    "y2": 540.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Table2-1.png"
+}, {
+  "caption": "Figure 1: ImageNet performance isn’t indicative of downstream performance in SSL. We show rank correlation between each pair of top-1 accuracy on 11 downstream tasks obtained from ImageNet-pretrained ResNets. We see no strong correlation except for ones similar to ImageNet, e.g., CIFAR-10/100 and Dogs120.",
+  "captionBoundary": {
+    "x1": 266.39801025390625,
+    "x2": 504.0032958984375,
+    "y1": 617.6417236328125,
+    "y2": 662.89404296875
+  },
+  "figType": "Figure",
+  "imageText": ["1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "Spearman", "rank", "correlation", "coefficient", "-0.29", "-0.19", "-0.1", "-0.15", "-0.09", "-0.17", "-0.05", "-0.16", "-0.12", "0.12", "1", "-0.24", "-0.38", "-0.37", "-0.38", "-0.34", "-0.15", "-0.15", "-0.22", "0.1", "1", "0.12", "0.08", "0.15", "0.04", "-0.06", "0.05", "-0.01", "0.06", "0.26", "1", "0.1", "-0.12", "0.35", "0.35", "0.27", "0.2", "0.01", "0.2", "0.24", "1", "0.26", "-0.22", "-0.16", "0.43", "0.5", "0.5", "0.38", "0.27", "0.31", "1", "0.24", "0.06", "-0.15", "-0.05", "0.45", "0.6", "0.54", "0.54", "0.33", "1", "0.31", "0.2", "-0.01", "-0.15", "-0.17", "0.51", "0.56", "0.59", "0.53", "1", "0.33", "0.27", "0.01", "0.05", "-0.34", "-0.09", "0.77", "0.85", "0.81", "1", "0.53", "0.54", "0.38", "0.2", "-0.06", "-0.38", "-0.15", "0.77", "0.86", "1", "0.81", "0.59", "0.54", "0.5", "0.27", "0.04", "-0.37", "-0.1", "0.8", "1", "0.86", "0.85", "0.56", "0.6", "0.5", "0.35", "0.15", "-0.38", "-0.19", "1", "0.8", "0.77", "0.77", "0.51", "0.45", "0.43", "0.35", "0.08", "-0.24", "-0.29", "Cars", "Aircraft", "Sports", "Flowers", "SVHN", "CUB", "MIT67", "Dogs", "CIFAR10", "CIFAR100", "ImageNet", "ra", "ft", "Ca", "rs", "Ai", "rc", "ts", "Sp", "or", "er", "s", "Fl", "ow", "67", "CU", "B", "SV", "HN", "M", "IT", "R1", "0", "Do", "gs", "CI", "FA", "R1", "00", "CI", "FA", "eN", "et", "Im", "ag"],
+  "name": "1",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 269.28,
+    "x2": 501.12,
+    "y1": 408.47999999999996,
+    "y2": 607.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure1-1.png"
+}, {
+  "caption": "Figure 2: ImageNet performance is not indicative of downstream performance in SSL. We show linear evaluation top-1 accuracy of ImageNet (x-axis) vs. downstream datasets (y-axis) obtained from variations of ResNet (top) and MobileNet (bottom); all models are pretrained on ImageNet-1K using SimCLR under the same protocol. The solid lines and shaded areas indicate fitted regression models and their confidence intervals.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0008544921875,
+    "y1": 253.35775756835938,
+    "y2": 288.64801025390625
+  },
+  "figType": "Figure",
+  "imageText": ["38.0", "MobileNet-FGVC", "Aircraft", "(", "=.21)", "37.5", "37.0", "36.5", "36.0", "35.5", "35.0", "34.5", "34.0", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-Stanford", "Cars", "(", "=.3)", "29", "28", "27", "26", "25", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-Sports", "(", "=-.11)", "92.0", "92.5", "93.0", "93.5", "94.0", "94.5", "95.0", "95.5", "96.0", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-MIT67", "(", "=.52)", "61", "60", "59", "58", "57", "56", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-CIFAR-100", "(", "=.23)", "ra", "cy", "Ac", "cu", "54", "53", "52", "51", "50", "49", "41", "42", "43", "44", "ImageNet", "Accuracy", "44.0", "ResNet-FGVC", "Aircraft", "(", "=-.24)", "43.5", "43.0", "42.5", "42.0", "41.5", "41.0", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-Stanford", "Cars", "(", "=-.29)", "36.0", "35.5", "35.0", "34.5", "34.0", "56", "57", "58", "59", "ImageNet", "Accuracy", "97.0", "ResNet-Sports", "(", "=.08)", "96.5", "96.0", "95.5", "95.0", "94.5", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-MIT67", "(", "=.51)", "70.5", "70.0", "69.5", "69.0", "68.5", "68.0", "67.5", "67.0", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-CIFAR-100", "(", "=.8)", "ra", "cy", "Ac", "cu", "65", "64", "63", "62", "56", "57", "58", "59", "ImageNet", "Accuracy"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 238.56
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure2-1.png"
+}, {
+  "caption": "Figure 12: Linear and rank correlation of ResNets between different pairs of 11 datasets We show correlation between every pair of top-1 accuracy on 11 downstream tasks obtained from ImageNet-pretrained ResNets. We see no strong correlation except for ones highly similar to the data the models were originally pretrained on, e.g., CIFAR-10/100 and Dogs120.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00091552734375,
+    "y1": 267.6047668457031,
+    "y2": 302.8950500488281
+  },
+  "figType": "Figure",
+  "imageText": ["1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "Spearman", "rank", "correlation", "coefficient", "-0.29", "-0.19", "-0.1", "-0.15", "-0.09", "-0.17", "-0.05", "-0.16", "-0.12", "0.12", "1", "-0.24", "-0.38", "-0.37", "-0.38", "-0.34", "-0.15", "-0.15", "-0.22", "0.1", "1", "0.12", "0.08", "0.15", "0.04", "-0.06", "0.05", "-0.01", "0.06", "0.26", "1", "0.1", "-0.12", "0.35", "0.35", "0.27", "0.2", "0.01", "0.2", "0.24", "1", "0.26", "-0.22", "-0.16", "0.43", "0.5", "0.5", "0.38", "0.27", "0.31", "1", "0.24", "0.06", "-0.15", "-0.05", "0.45", "0.6", "0.54", "0.54", "0.33", "1", "0.31", "0.2", "-0.01", "-0.15", "-0.17", "0.51", "0.56", "0.59", "0.53", "1", "0.33", "0.27", "0.01", "0.05", "-0.34", "-0.09", "0.77", "0.85", "0.81", "1", "0.53", "0.54", "0.38", "0.2", "-0.06", "-0.38", "-0.15", "0.77", "0.86", "1", "0.81", "0.59", "0.54", "0.5", "0.27", "0.04", "-0.37", "-0.1", "0.8", "1", "0.86", "0.85", "0.56", "0.6", "0.5", "0.35", "0.15", "-0.38", "-0.19", "1", "0.8", "0.77", "0.77", "0.51", "0.45", "0.43", "0.35", "0.08", "-0.24", "-0.29", "Cars", "Aircraft", "Sports", "Flowers", "SVHN", "CUB", "MIT67", "Dogs", "CIFAR10", "CIFAR100", "ImageNet", "ra", "ft", "Ca", "rs", "Ai", "rc", "ts", "Sp", "or", "er", "s", "Fl", "ow", "67", "CU", "B", "SV", "HN", "M", "IT", "R1", "0", "Do", "gs", "CI", "FA", "R1", "00", "CI", "FA", "eN", "et", "Im", "ag", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.2", "0.4", "Pearson", "linear", "correlation", "coefficient", "-0.3", "-0.14", "-0.17", "-0.17", "-0.09", "-0.19", "-0.16", "-0.07", "-0.11", "0.07", "1", "-0.16", "-0.41", "-0.41", "-0.35", "-0.36", "-0.2", "-0.23", "-0.14", "0.17", "1", "0.07", "0.1", "-0.01", "0.04", "-0.12", "-0.02", "-0.03", "0.23", "0.07", "1", "0.17", "-0.11", "0.32", "0.48", "0.45", "0.34", "0.22", "0.29", "0.24", "1", "0.07", "-0.14", "-0.07", "0.35", "0.29", "0.37", "0.21", "0.09", "0.27", "1", "0.24", "0.23", "-0.23", "-0.16", "0.37", "0.57", "0.63", "0.55", "0.35", "1", "0.27", "0.29", "-0.03", "-0.2", "-0.19", "0.42", "0.62", "0.57", "0.6", "1", "0.35", "0.09", "0.22", "-0.02", "-0.36", "-0.09", "0.53", "0.81", "0.84", "1", "0.6", "0.55", "0.21", "0.34", "-0.12", "-0.35", "-0.17", "0.6", "0.88", "1", "0.84", "0.57", "0.63", "0.37", "0.45", "0.04", "-0.41", "-0.17", "0.6", "1", "0.88", "0.81", "0.62", "0.57", "0.29", "0.48", "-0.01", "-0.41", "-0.14", "1", "0.6", "0.6", "0.53", "0.42", "0.37", "0.35", "0.32", "0.1", "-0.16", "-0.3", "Cars", "Aircraft", "Sports", "SVHN", "Flowers", "CUB", "MIT67", "Dogs", "CIFAR100", "CIFAR10", "ImageNet", "ra", "ft", "Ca", "rs", "Ai", "rc", "er", "s", "SV", "HN", "Sp", "or", "ts", "Fl", "ow", "67", "CU", "B", "M", "IT", "R1", "00", "Do", "gs", "CI", "FA", "R1", "0", "CI", "FA", "eN", "et", "Im", "ag"],
+  "name": "12",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.16,
+    "x2": 519.84,
+    "y1": 84.0,
+    "y2": 249.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure12-1.png"
+}, {
+  "caption": "Figure 13: Linear and rank correlation of MobileNets between different pairs of 11 datasets We show correlation between every pair of top-1 accuracy on 11 downstream tasks obtained from ImageNet-pretrained MobileNets. The correlation",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0010681152344,
+    "y1": 506.17474365234375,
+    "y2": 531.5030517578125
+  },
+  "figType": "Figure",
+  "imageText": ["1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Spearman", "rank", "correlation", "coefficient", "-0.11", "-0.16", "-0.01", "-0.12", "-0.13", "-0.07", "0.23", "-0.16", "-0.06", "-0.03", "1", "0.21", "0.1", "0.07", "0.33", "0.17", "0.24", "0.35", "0.54", "0.08", "1", "-0.03", "0.23", "0.37", "0.47", "0.47", "0.1", "0.39", "0.57", "0.23", "1", "0.08", "-0.06", "0.3", "0.09", "0.19", "0.33", "0.22", "0.13", "0.55", "1", "0.23", "0.54", "-0.16", "0.39", "0.34", "0.38", "0.41", "0.11", "0.27", "1", "0.55", "0.57", "0.35", "0.23", "0.52", "0.64", "0.56", "0.39", "0.24", "1", "0.27", "0.13", "0.39", "0.24", "-0.07", "0.52", "0.37", "0.26", "0.33", "1", "0.24", "0.11", "0.22", "0.1", "0.17", "-0.13", "0.53", "0.46", "0.52", "1", "0.33", "0.39", "0.41", "0.33", "0.47", "0.33", "-0.12", "0.71", "0.65", "1", "0.52", "0.26", "0.56", "0.38", "0.19", "0.47", "0.07", "-0.01", "0.77", "1", "0.65", "0.46", "0.37", "0.64", "0.34", "0.09", "0.37", "0.1", "-0.16", "1", "0.77", "0.71", "0.53", "0.52", "0.52", "0.39", "0.3", "0.23", "0.21", "-0.11", "Sports", "Aircraft", "CIFAR100", "Cars", "SVHN", "CUB", "MIT67", "CIFAR10", "Flowers", "Dogs", "ImageNet", "ts", "Sp", "or", "ra", "ft", "Ai", "rc", "R1", "00", "CI", "FA", "67", "CU", "B", "SV", "HN", "Ca", "rs", "M", "IT", "R1", "0", "CI", "FA", "er", "s", "Fl", "ow", "eN", "et", "Do", "gs", "Im", "ag", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "Pearson", "linear", "correlation", "coefficient", "-0.01", "-0.1", "-0.01", "-0.01", "-0.05", "-0.02", "-0.08", "-0.11", "0.36", "-0.04", "1", "0.4", "0.4", "0.32", "0.45", "0.55", "0.31", "0.34", "0.68", "0.48", "1", "-0.04", "0.51", "0.44", "0.41", "0.42", "0.53", "0.21", "0.58", "0.57", "1", "0.48", "0.36", "0.58", "0.51", "0.48", "0.45", "0.63", "0.43", "0.52", "1", "0.57", "0.68", "-0.11", "0.61", "0.68", "0.68", "0.64", "0.66", "0.24", "1", "0.52", "0.58", "0.34", "-0.08", "0.62", "0.52", "0.42", "0.42", "0.48", "1", "0.24", "0.43", "0.21", "0.31", "-0.02", "0.71", "0.71", "0.73", "0.66", "1", "0.48", "0.66", "0.63", "0.53", "0.55", "-0.05", "0.72", "0.81", "0.73", "1", "0.66", "0.42", "0.64", "0.45", "0.42", "0.45", "-0.01", "0.82", "0.8", "1", "0.73", "0.73", "0.42", "0.68", "0.48", "0.41", "0.32", "-0.01", "0.9", "1", "0.8", "0.81", "0.71", "0.52", "0.68", "0.51", "0.44", "0.4", "-0.1", "1", "0.9", "0.82", "0.72", "0.71", "0.62", "0.61", "0.58", "0.51", "0.4", "-0.01", "Sports", "Aircraft", "SVHN", "Cars", "CIFAR100", "MIT67", "CIFAR10", "CUB", "Flowers", "Dogs", "ImageNet", "ts", "Sp", "or", "ra", "ft", "Ai", "rc", "R1", "00", "Ca", "rs", "SV", "HN", "CI", "FA", "67", "M", "IT", "R1", "0", "CI", "FA", "er", "s", "CU", "B", "Fl", "ow", "eN", "et", "Do", "gs", "Im", "ag"],
+  "name": "13",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 116.16,
+    "x2": 519.36,
+    "y1": 320.15999999999997,
+    "y2": 488.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure13-1.png"
+}, {
+  "caption": "Figure 8: ImageNet performance correlation with 10 different downstream datasets for various ResNets. We show linear evaluation top-1 accuracy of ImageNet (x-axis) vs. different downstream datasets (y-axis) obtained from variations of ResNet; all models are pretrained on ImageNet-1K Deng et al. (2009) using SimCLR Chen et al. (2020a) under the same protocol. The solid lines and shaded areas indicate fitted regression models and their confidence intervals.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00457763671875,
+    "y1": 300.5767517089844,
+    "y2": 345.82904052734375
+  },
+  "figType": "Figure",
+  "imageText": ["ResNet-Stanford", "Cars", "(", "=-.29)", "36.0", "35.5", "35.0", "34.5", "34.0", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-FGVC", "Aircraft", "(", "=-.24)", "44.0", "43.5", "43.0", "42.5", "42.0", "41.5", "41.0", "56", "57", "58", "59", "ImageNet", "Accuracy", "97.0", "ResNet-Sports", "(", "=.08)", "96.5", "96.0", "95.5", "95.0", "94.5", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-Oxford", "Flowers", "(", "=.35)", "94.0", "93.5", "93.0", "92.5", "92.0", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-SVHN", "(", "=.43)", "ra", "cy", "Ac", "cu", "74.0", "73.5", "73.0", "72.5", "72.0", "71.5", "71.0", "70.5", "56", "57", "58", "59", "ImageNet", "Accuracy", "ResNet-CUB", "(", "=.45)", "32.0", "31.5", "31.0", "30.5", "30.0", "29.5", "ResNet-MIT67", "(", "=.51)", "70.5", "70.0", "69.5", "69.0", "68.5", "68.0", "67.5", "67.0", "52.5", "ResNet-Stanford", "Dogs", "(", "=.77)", "52.0", "51.5", "51.0", "50.5", "50.0", "49.5", "ResNet-CIFAR-10", "(", "=.77)", "86.5", "86.0", "85.5", "85.0", "84.5", "84.0", "ResNet-CIFAR-100", "(", "=.8)", "ra", "cy", "Ac", "cu", "65", "64", "63", "62"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 288.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure8-1.png"
+}, {
+  "caption": "Figure 9: ImageNet performance correlation with 10 different downstream datasets for various MobileNets. We show linear evaluation top-1 accuracy of ImageNet (x-axis) vs. different downstream datasets (y-axis) obtained from variations of MobileNet; all models are pretrained on ImageNet-1K Deng et al. (2009) using SimCLR Chen et al. (2020a) under the same protocol. The solid lines and shaded areas indicate fitted regression models and their confidence intervals.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0043640136719,
+    "y1": 629.8386840820312,
+    "y2": 675.0919799804688
+  },
+  "figType": "Figure",
+  "imageText": ["96.0", "MobileNet-Sports", "(", "=-.11)", "95.5", "95.0", "94.5", "94.0", "93.5", "93.0", "92.5", "92.0", "41", "42", "43", "44", "ImageNet", "Accuracy", "38.0", "MobileNet-FGVC", "Aircraft", "(", "=.21)", "37.5", "37.0", "36.5", "36.0", "35.5", "35.0", "34.5", "34.0", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-CIFAR-100", "(", "=.23)", "54", "53", "52", "51", "50", "49", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-Stanford", "Cars", "(", "=.3)", "29", "28", "27", "26", "25", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-SVHN", "(", "=.39)", "ra", "cy", "Ac", "cu", "68", "66", "64", "62", "60", "41", "42", "43", "44", "ImageNet", "Accuracy", "MobileNet-CUB", "(", "=.52)", "22.5", "22.0", "21.5", "21.0", "20.5", "20.0", "MobileNet-MIT67", "(", "=.52)", "61", "60", "59", "58", "57", "56", "MobileNet-CIFAR-10", "(", "=.53)", "79", "78", "77", "76", "75", "MobileNet-Oxford", "Flowers", "(", "=.71)", "88", "87", "86", "85", "MobileNet-Stanford", "Dogs", "(", "=.77)", "ra", "cy", "Ac", "cu", "39", "38", "37", "36", "35"],
+  "name": "9",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.44,
+    "x2": 499.2,
+    "y1": 461.28,
+    "y2": 617.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure9-1.png"
+}, {
+  "caption": "Table 3: Downstream transfer results. We categorize downstream datasets as in-distribution (green) and outof-distribution (red) relative to the pretraining dataset based on class overlap; best viewed in color. We see that self-supervised architectures generally perform better on in-distribution downstream scenarios.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0013427734375,
+    "y1": 83.4337387084961,
+    "y2": 108.760986328125
+  },
+  "figType": "Table",
+  "imageText": ["Ours", "3-18M", "43.8", "32.7", "24.1", "76.1", "94.7", "39.0", "63.1", "93.1", "20.1", "49.0", "34.9", "iNat21", "ResNet18", "11M", "30.3", "26.1", "19.0", "73.2", "92.8", "31.3", "55.3", "92.1", "18.9", "49.9", "32.7", "ResNet50", "23.5M", "41.3", "31.2", "23.2", "75.1", "95.1", "39.7", "65.1", "94.3", "22.3", "55.0", "37.6", "Ours", "3-18M", "59.1", "34.3", "26.1", "81.8", "92.2", "51.0", "64.7", "94.7", "33.2", "66.1", "39.4", "MobileV2", "3.5M", "41.9", "20.1", "14.2", "75.8", "85.4", "35.7", "51.6", "94.0", "26.4", "57.5", "35.8", "Ours", "3.3M", "55.3", "31.8", "24.4", "78.8", "91.7", "49.2", "61.7", "94.3", "30.4", "62.5", "38.1", "ResNet18", "11M", "49.8", "27.0", "19.0", "79.9", "89.9", "44.1", "55.8", "94.6", "27.8", "62.1", "36.7", "ResNet50", "23.5M", "58.9", "31.4", "24.6", "85.9", "92.8", "52.3", "65.7", "94.3", "35.1", "69.6", "42.0", "ImNet", "Pretrain", "Dataset", "Arch.", "Params", "Pretrain", "Val.", "Set", "CUB", "NABirds", "CIFAR10", "Oxford", "Flowers", "Stanford", "Dogs", "Food101", "Sport", "Stanford", "Cars", "MIT67", "FGVC", "Aircraft"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 115.67999999999999,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Table3-1.png"
+}, {
+  "caption": "Table 5: Licenses of datasets.",
+  "captionBoundary": {
+    "x1": 251.427001953125,
+    "x2": 360.5735778808594,
+    "y1": 129.15170288085938,
+    "y2": 134.553955078125
+  },
+  "figType": "Table",
+  "imageText": ["Dataset", "License", "CIFAR-10", "Krizhevsky", "et", "al.", "(2009)", "MIT", "CIFAR-100", "Krizhevsky", "et", "al.", "(2009)", "MIT", "ImageNet", "Deng", "et", "al.", "(2009)", "BSD", "3-Clause", "Sport8", "Li", "&", "Fei-Fei", "(2007)", "CC0:", "Public", "Domain", "Stanford", "Dogs", "Khosla", "et", "al.", "(2011)", "BSD", "3-Clause", "Stanford", "Cars", "Krause", "et", "al.", "(2013)", "BSD", "3-Clause", "CUB-200", "Welinder", "et", "al.", "(2010)", "Data", "ﬁles", "©", "Original", "Authors", "MIT-67", "Quattoni", "&", "Torralba", "(2009)", "MIT", "SVHN", "Netzer", "et", "al.", "(2011)", "CC0:", "Public", "Domain", "Flowers-102", "Nilsback", "&", "Zisserman", "(2008)", "GNU", "General", "Public", "License,", "version", "2"],
+  "name": "5",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 130.56,
+    "x2": 481.44,
+    "y1": 146.88,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Table5-1.png"
+}, {
+  "caption": "Figure 3: Larger models do not always perform better in SSL. We show the model size in terms of parameter counts (x-axis) vs. top-1 accuracy on different datasets obtained from variations of ResNet (top) and MobileNet (bottom) architectures; all models are pretrained on ImageNet-1K using SimCLR under the same protocol.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00091552734375,
+    "y1": 245.16867065429688,
+    "y2": 270.49591064453125
+  },
+  "figType": "Figure",
+  "imageText": ["38.0", "MobileNet-FGVC", "Aircraft", "(", "=.21)", "37.5", "37.0", "36.5", "36.0", "35.5", "35.0", "34.5", "34.0", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-Stanford", "Cars", "(", "=.1)", "29", "28", "27", "26", "25", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-Sports", "(", "=-.08)", "92.0", "92.5", "93.0", "93.5", "94.0", "94.5", "95.0", "95.5", "96.0", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-CIFAR-100", "(", "=-.03)", "54", "53", "52", "51", "50", "49", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "MobileNet-ImageNet", "(", "=.37)", "40.5", "41.0", "41.5", "42.0", "42.5", "43.0", "43.5", "44.0", "Ac", "cu", "ra", "cy", "2", "3", "4", "5", "6", "7", "Params", "(in", "M)", "44.0", "ResNet-FGVC", "Aircraft", "(", "=-.37)", "43.5", "43.0", "42.5", "42.0", "41.5", "41.0", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-Stanford", "Cars", "(", "=-.14)", "36.0", "35.5", "35.0", "34.5", "34.0", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "97.0", "ResNet-Sports", "(", "=.04)", "96.5", "96.0", "95.5", "95.0", "94.5", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-CIFAR-100", "(", "=.87)", "65", "64", "63", "62", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)", "ResNet-ImageNet", "(", "=.85)", "ra", "cy", "Ac", "cu", "59", "58", "57", "56", "55", "54", "53", "15.0", "17.5", "20.0", "22.5", "25.0", "Params", "(in", "M)"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.0,
+    "y1": 38.879999999999995,
+    "y2": 237.6
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure3-1.png"
+}, {
+  "caption": "Figure 7: Self-supervised architectures for different pretraining datasets. MB3 and MB6 are the mobile inverted convolutions with expansion ratio of 3 and 6 respectively. We see that the majority of the preferred convolutions is MB6 7 × 7 suggesting that the network prefers convolutions with more parameters for the self-supervised regime due to lots of data. For smaller datasets like iNat21Mini, MB6 convolutions are not as strongly preferred.",
+  "captionBoundary": {
+    "x1": 107.99996185302734,
+    "x2": 504.0009460449219,
+    "y1": 340.6567687988281,
+    "y2": 385.9090576171875
+  },
+  "figType": "Figure",
+  "imageText": ["Searched", "architecture", "for", "iNat21Mini", "5", "6", "5x", "M", "B", "7", "3", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "3", "3x", "M", "B", "3", "6", "3x", "M", "B", "5", "3", "5x", "M", "B", "5", "6", "5x", "M", "B", "5", "6", "5x", "M", "B", "7", "3", "7x", "M", "B", "7", "3", "7x", "M", "B", "3", "3", "3x", "M", "B", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "3", "6", "3x", "M", "B", "7", "6", "7x", "M", "B", "3", "3", "3x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "6", "3x", "M", "B", "v3", "x3", "C", "on", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "3", "6", "3x", "M", "B", "7", "3", "7x", "M", "B", "5", "3", "5x", "M", "B", "3", "3", "3x", "M", "B", "Searched", "architecture", "for", "iNat21", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "6", "3x", "M", "B", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "3", "6", "3x", "M", "B", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "3", "3", "3x", "M", "B", "3", "3", "3x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "6", "3x", "M", "B", "7", "6", "7x", "M", "B", "v3", "x3", "C", "on", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "3", "6", "3x", "M", "B", "7", "3", "7x", "M", "B", "5", "3", "5x", "M", "B", "3x", "3", "B", "3", "Searched", "architecture", "for", "ImageNet", "M", "5", "6", "5x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "3", "3x", "M", "B", "5", "6", "5x", "M", "B", "5", "6", "5x", "M", "B", "5", "6", "5x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "6", "3x", "M", "B", "3", "6", "3x", "M", "B", "7", "6", "7x", "M", "B", "5", "6", "5x", "M", "B", "7", "6", "7x", "M", "B", "7", "6", "7x", "M", "B", "3", "6", "3x", "M", "B", "7", "6", "7x", "M", "B", "v3", "x3", "C", "on"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 501.12,
+    "y1": 80.64,
+    "y2": 330.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_1KaSx3GrBBm-Figure7-1.png"
+}]

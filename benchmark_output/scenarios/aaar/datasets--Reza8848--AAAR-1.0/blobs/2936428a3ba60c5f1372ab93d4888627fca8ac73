@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 3: Schema matching in novel environments with size and observation variations. We measure the negative log likelihood (NLL) of observation sequences in a given room under different schemas as the agent does random walks. The schema with the least negative log likelihood (conversely the highest likelihood) is considered the best match. Each panel corresponds to a room of type and size indexed by the column and row headers, respectively. Schemas are trained in medium sized rooms and tested on two other size variations. Error bars are 95% CI of the SEM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033874511719,
+    "y1": 555.3465576171875,
+    "y2": 616.1439819335938
+  },
+  "figType": "Figure",
+  "imageText": ["time", "aliased", "observations", "corresponding", "sequence", "of", "example", "random", "walk", "Schema", "size", "is", "medium", "for", "all", "types.", "schema", "type:", "cylinder", "rectangle", "square", "w.", "h.", "torus", "U-shape", "siz", "e", "room", "type", "m", "la", "rg", "e", "N", "LL", "sm", "al", "l", "m", "ed", "iu", "N", "LL", "N", "LL", "no.", "of", "steps", "no.", "of", "steps", "no.", "of", "steps", "no.", "of", "steps", "no.", "of", "steps", "cylinder", "rectangle", "square", "w.", "hole", "torus", "U-shape", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 484.32,
+    "y1": 312.0,
+    "y2": 534.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure3-1.png"
+}, {
+  "caption": "Figure 8: We measure the negative log likelihood (NLL) of observation sequences in a given room under different schemas, without using the clone structure. Each panel corresponds to a room of type, size indexed by the column and row headers, respectively. Error bars are 95% CI of the SEM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00335693359375,
+    "y1": 295.7745361328125,
+    "y2": 323.69500732421875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 353.76,
+    "y2": 409.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure8-1.png"
+}, {
+  "caption": "Figure 9: Images from the binarized-MNIST dataset used for our schema matching experiments.",
+  "captionBoundary": {
+    "x1": 113.61799621582031,
+    "x2": 498.3836364746094,
+    "y1": 490.2335205078125,
+    "y2": 496.2359924316406
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 149.76,
+    "x2": 462.24,
+    "y1": 412.8,
+    "y2": 468.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Schema recognition for MNIST rooms. We measure the negative log likelihood (NLL) of observation sequences in a given room under different schemas. Each panel corresponds to a test room indexed by its header. Error bars are 95% CI of the SEM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 690.5755615234375,
+    "y2": 718.4959716796875
+  },
+  "figType": "Figure",
+  "imageText": ["9", "8", "7", "6", "5", "4", "3", "2", "1", "0", "schema", "digit", "test", "room", "=", "5", "test", "room", "=", "6", "test", "room", "=", "7", "test", "room", "=", "8", "test", "room", "=", "9", "test", "room", "=", "0", "test", "room", "=", "1", "test", "room", "=", "2", "test", "room", "=", "3", "test", "room", "=", "4", "N", "LL", "N", "LL", "no.", "of", "steps", "no.", "of", "steps", "no.", "of", "steps", "no.", "of", "steps", "no.", "of", "steps", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250", "2", "0", "0", "250"],
+  "name": "10",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 497.28,
+    "y1": 528.0,
+    "y2": 670.0799999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure10-1.png"
+}, {
+  "caption": "Figure 1: Overview of using graph schemas in CSCG model. A. Schemas serve as abstractions that can be matched with new experiences. Multiple schemas can be composed together to model observations that could be aliased. B. Schematic of cloned HMM with multiple cloned states sharing the emissions to model them in different contexts. C. A graphical model of CSCG with action conditioning. D. Schemas in CSCG are extracted from learned models with transitions and emissions, and then unbinding the specific emissions (shown as colors) but keeping the clone structure (shown as node shapes). E. In a novel environment with different observations, the agent navigates and finds the schema that best explains the observations by learning new bindings. F. Planning can be performed in a new room using the matched schema. As the plan is being executed, new observations are used to update the beliefs about current location and re-plan as needed.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.00335693359375,
+    "y1": 602.3955688476562,
+    "y2": 707.0280151367188
+  },
+  "figType": "Figure",
+  "imageText": ["latent", "states", "observations", "xn", "xn+1", "zn", "zn+1", "an", "xn", "xn+1", "zn", "zn+1", "clones", "observations", "es", "rie", "nc", "ex", "pe", "m", "as", "sc", "he", "pl", "an", "1", "re", "-p", "la", "n", "1", "executioninferred", "plan", "*", "*", "*", "*", "*", "*", "**", "start", "goal", "*", "*", "?", "?", "?", "H", "m", "a", "sc", "he", "m", "a", "1", "sc", "he", "m", "a", "2", "sc", "he", "H", "2", "1", "matched", "schema", "with", "learned", "E", "E", "Schema", "matching", "F", "Planning", "to", "goal", "model", "with", "Eenvironment", "w/o", "E", "binding", "new", "environment", "D", "Schema", "extraction"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 142.07999999999998,
+    "x2": 470.4,
+    "y1": 357.59999999999997,
+    "y2": 581.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure1-1.png"
+}, {
+  "caption": "Figure 4: A. An example MNIST digit used to train schemas. B. Negative log-likelihood (NLL) vs no. of steps in the test room corresponding to digit 0. We are able to recognize the correct schema in fewer than 50 steps. Error bars are 95% CI of the SEM. C. The heatmap represents the probability of being in schema 0 at each location in the composed room, averaged over all instances of the agent landing at that location during a random walk of length 20, 000 steps.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0046691894531,
+    "y1": 400.9515380859375,
+    "y2": 450.78997802734375
+  },
+  "figType": "Figure",
+  "imageText": ["0.3", "ty", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0.7", "0.6", "0.5", "0.4", "ab", "ili", "pr", "ob", "0", "oo", "m", "in", "r", "ei", "ng", "of", "b", "lit", "y", "ba", "bi", "P", "ro", "0", "&", "9", "x", "in", "de", "m", "a", "sc", "he", "A", "Example", "MNIST", "room", "C", "Schema", "recognition", "in", "composed", "roomsB", "Schema", "recognition", "test", "room:", "0", "N", "LL", "250no.", "of", "steps", "2", "0", "0"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 460.79999999999995,
+    "y1": 300.47999999999996,
+    "y2": 379.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure4-1.png"
+}, {
+  "caption": "Figure 7: Rooms of different types and sizes used in the schema matching experiments.",
+  "captionBoundary": {
+    "x1": 131.85499572753906,
+    "x2": 480.1475524902344,
+    "y1": 491.2745361328125,
+    "y2": 497.2770080566406
+  },
+  "figType": "Figure",
+  "imageText": ["13", "x", "13", "9", "x", "9", "7", "x", "7", "9", "x", "11", "6", "x", "8", "4", "x", "6", "13", "x", "13", "9", "x", "9", "7", "x", "7", "9", "x", "11", "6", "x", "8", "4", "x", "6", "9", "x", "11", "6", "x", "8", "4", "x", "6", "m", "la", "rg", "e", "sm", "al", "l", "m", "ed", "iu", "cylinder", "rectangle", "square", "with", "hole", "torus", "U-shape", "siz", "e", "room", "type"],
+  "name": "7",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 480.47999999999996,
+    "y1": 286.08,
+    "y2": 469.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure7-1.png"
+}, {
+  "caption": "Table 1: Accuracy of the schema predictions as the agent moves across various locations in composed MNIST rooms. We use the ground truth locations to compute this accuracy. Note that for the composed room experiments, the agent gets two schemas as input (H = 2). Further, the accuracy is the averaged over five repeats of the random walks in each room.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0045471191406,
+    "y1": 629.6355590820312,
+    "y2": 668.5150146484375
+  },
+  "figType": "Table",
+  "imageText": ["Digit", "2", "and", "3", "87.66", "4.14", "Digit", "2", "and", "7", "92.47", "1.51", "Digit", "0", "and", "9", "87.88", "2.77", "Digit", "4", "and", "6", "85.89", "2.58", "Digit", "5", "and", "1", "84.28", "2.74", "Digit", "5", "and", "3", "91.14", "2.76", "Digit", "9", "and", "3", "85.21", "3.87", "Digit", "8", "and", "7", "90.86", "4.04", "Digit", "6", "and", "0", "90.38", "2.79", "Composition", "digits", "Mean", "accuracy", "Standard", "deviation", "of", "accuracy", "(averaged", "over", "five", "runs)"],
+  "name": "1",
+  "page": 12,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 513.12,
+    "y1": 481.91999999999996,
+    "y2": 614.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Table1-1.png"
+}, {
+  "caption": "Figure 5: Schemas enable rapid and robust navigation planning in new environments. A. Shortcut finding with re-planning in a larger room. Given partial observations in a novel room (14×14 square with a 5 × 5 hole that is off-center), the best matching schema (9 × 9 square with a 3 × 3 hole in the center) can be used to rapidly navigate around obstacles and find the shortest path to a goal. B. Shortcut finding performance as measured by the Manhattan distance from the goal and the number of plans/re-plans to reach the goal, as a function of room size. Error bars are 95% CI of the SEM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00384521484375,
+    "y1": 315.8125305175781,
+    "y2": 376.60992431640625
+  },
+  "figType": "Figure",
+  "imageText": ["8", "1", "8", "1", "10", "8", "6", "4", "2", "0", "10", "8", "6", "4", "2", "0", "-2", "0", "2", "4", "6", "8", "-2", "0", "2", "4", "6", "8", "-2", "0", "2", "4", "6", "8", "-2", "0", "2", "4", "6", "8", "w/o", "smoothing", "with", "smoothing", "w/o", "smoothing", "with", "smoothing", "w/o", "smoothing", "with", "smoothing", "w/o", "smoothing", "with", "smoothing", "an", "s", "o", "f", "pl", "N", "o.", "an", "s", "o", "f", "pl", "N", "o.", "k,", "room", "size", "=", "(9+k)x(9+k)", "hole", "size", "=", "(3+k//2)", "x", "(3+k//2)", "k,", "room", "size", "=", "(9+k)x(9+k)", "hole", "size", "=", "(3+k//2)", "x", "(3+k//2)", "k,", "room", "size", "=", "(6+k)x(8+k)", "k,", "room", "size", "=", "(6+k)x(8+k)", "B", "A", "Rectangle", "schema", "of", "medium", "size", "Square", "with", "hole", "schema", "of", "medium", "size", "al", "o", "go", "ce", "t", "ist", "an", "an", "d", "ha", "tt", "M", "an", "al", "o", "go", "ce", "t", "ist", "an", "an", "d", "ha", "tt", "M", "an", "plan", "1", "plan", "2", "plan", "3", "plan", "4", "**", "initial", "pos.", "*", "goalfinal", "pos.", "inferred", "action", "*", "*", "*", "*", "*", "*", "Planning/re-planning", "to", "reach", "goal", "Matching", "schema", "(9", "x", "9)", "Walk", "in", "test", "room", "(14", "x", "14)"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 484.32,
+    "y1": 118.08,
+    "y2": 295.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure5-1.png"
+}, {
+  "caption": "Figure 6: A. Top views of the train and test mazes. B. Schematic of a vector quantizer used to map input images to a discrete space. C. The mapped observations are then used to learn a CSCG for the train maze. D. At test time, the agent quickly learns the emission matrix in the new room and uses the schema to navigate to a goal state.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0020751953125,
+    "y1": 218.04653930664062,
+    "y2": 256.92596435546875
+  },
+  "figType": "Figure",
+  "imageText": ["Learned", "transition", "graph", "io", "ns", "rv", "at", "ob", "se", "inferred", "path", "start", "goal", "re-used", "schema", "er", "ce", "nt", "te", "r", "cl", "us", "ag", "e", "t", "im", "In", "pu", "Vector", "Quantizer", "A", "C", "D", "Shortcut", "finding", "in", "test", "maze", "e", "m", "az", "ai", "n", "e", "Tr", "m", "az", "Te", "st", "B"],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 129.6,
+    "x2": 480.47999999999996,
+    "y1": 82.56,
+    "y2": 197.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure6-1.png"
+}, {
+  "caption": "Figure 2: Performance on MPG and One-shot StreetLearn. A. An example MPG episode and the latent graph learned by the CSCG. B. Average reward in MPG. CSCG performance remains the same after 9 episodes (900 steps), so we plotted the average. EPN performance is shown on evaluation at different stages of training. C. Number of steps to get the reward in subsequent tasks in an episode. CSCG explores first without collecting the reward, so our first task takes longer to complete but subsequent tasks do optimal planning. D. Example One-Shot StreetLearn environment, with agent’s observations. Right panel shows the latent graph learned by CSCG. E. Average reward across 100 episodes of StreetLearn in the test city. Notation is similar to MPG plot. F. Number of steps to get the reward in subsequent tasks in an episode. First few tasks take variable numbers of steps as we collect rewards incidentally. After that, the CSCG agent collects all subsequent rewards in optimal steps. EPN baselines and optimal values for both environments are re-plotted using the data from Ritter et al. (2020). Error bars are 95% CI of the SEM.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00390625,
+    "y1": 279.5875244140625,
+    "y2": 406.13787841796875
+  },
+  "figType": "Figure",
+  "imageText": ["EPN", "CSCG", "oracle", "optim.", "exp.", "within", "each", "task", "exploration.", "+", "optim.", "planning", "ga", "m", "e", "St", "re", "et", "Le", "ar", "n", "in", "g", "la", "nn", "&", "P", "or", "y", "M", "em", "start", "goal", "EPN", "CSCG", "oracle", "Learned", "graph", "Sample", "environment", "Learned", "graph", "D", "E", "F", "A", "B", "C", "ar", "d", "r", "ew", "ra", "ge", "A", "ve", "ar", "d", "r", "ew", "ra", "ge", "A", "ve", "oa", "l", "to", "g", "ep", "s", "o", "f", "st", "N", "o.", "oa", "l", "to", "g", "ep", "s", "o", "f", "st", "N", "o.", "30", "20", "10", "0", "30", "20", "10", "8", "4", "40", "30", "20", "10", "0", "0", "0", "0", "2", "4", "x", "109", "1", "2", "x", "109", "0", "10", "20", "30", "training", "steps", "0", "0", "8", "16", "24", "training", "steps", "task", "no.", "in", "episode", "task", "no.", "in", "episode"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 139.68,
+    "x2": 475.2,
+    "y1": 82.08,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_2T80ygeeWE0-Figure2-1.png"
+}]

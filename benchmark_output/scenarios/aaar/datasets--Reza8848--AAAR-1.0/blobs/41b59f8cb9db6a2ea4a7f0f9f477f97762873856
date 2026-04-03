@@ -1,0 +1,361 @@
+[{
+  "caption": "Table 1: F1-score performance of different methods.",
+  "captionBoundary": {
+    "x1": 201.35299682617188,
+    "x2": 410.3384094238281,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["VG-Trans", "10", "0.903", "0.998", "0.948", "0.972", "0.895", "0.932", "0.930", "0.959", "0.944", "0.984", "0.928", "0.955", "VG-Anomaly-Trans", "10", "0.948", "0.953", "0.950", "0.925", "0.933", "0.938", "0.934", "0.964", "0.949", "0.974", "0.964", "0.969", "Trans", "10", "0.861", "0.802", "0.830", "0.853", "0.748", "0.797", "0.856", "0.813", "0.834", "0.913", "0.568", "0.700", "Anomaly-Trans", "10", "0.888", "0.991", "0.937", "0.894", "0.954", "0.923", "0.921", "0.951", "0.936", "0.941", "0.994", "0.967", "Interfusion", "10", "0.980", "0.883", "0.929", "0.870", "0.854", "0.862", "0.813", "0.927", "0.866", "0.898", "0.885", "0.891", "THOC", "10", "0.943", "0.902", "0.922", "0.798", "0.909", "0.850", "0.884", "0.910", "0.897", "0.921", "0.893", "0.907", "SDFVAE", "10", "0.972", "0.903", "0.936", "0.882", "0.926", "0.903", "0.853", "0.894", "0.873", "0.884", "0.908", "0.896", "GNN", "10", "0.933", "0.902", "0.917", "0.829", "0.964", "0.891", "0.881", "0.889", "0.885", "0.812", "0.944", "0.873", "LOF", "10", "0.667", "0.364", "0.671", "0.563", "0.399", "0.467", "0.477", "0.853", "0.612", "0.589", "0.563", "0.576", "LSTM", "10", "0.585", "0.614", "0.599", "0.786", "0.852", "0.818", "0.855", "0.825", "0.840", "0.894", "0.781", "0.834", "VRNN", "10", "0.957", "0.901", "0.928", "0.970", "0.795", "0.874", "0.884", "0.902", "0.893", "0.805", "0.821", "0.813", "DOMI", "10", "0.938", "0.878", "0.907", "0.943", "0.913", "0.927", "0.896", "0.639", "0.746", "0.864", "0.567", "0.685", "BeatGAN", "10", "0.921", "0.887", "0.904", "0.729", "0.841", "0.781", "0.898", "0.854", "0.875", "0.924", "0.559", "0.696", "OmniAnomaly", "10", "0.983", "0.875", "0.926", "0.837", "0.868", "0.852", "0.890", "0.864", "0.877", "0.925", "0.820", "0.869", "OCSVM", "10", "0.508", "0.640", "0.566", "0.443", "0.767", "0.562", "0.598", "0.868", "0.708", "0.538", "0.591", "0.563", "IsolationForst", "10", "0.496", "0.640", "0.559", "0.423", "0.733", "0.536", "0.539", "0.865", "0.664", "0.524", "0.590", "0.555", "P", "R", "F1_score", "P", "R", "F1_score", "P", "R", "F1_score", "P", "R", "F1_score", "Methods", "Size", "CDN", "SMD", "MSL", "SMAP"],
+  "name": "1",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 107.52,
+    "y2": 273.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table1-1.png"
+}, {
+  "caption": "Figure 4: Visualization of example channels and corresponding relational matrices of xn on SMD machine-2-3 dataset.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 353.21453857421875,
+    "y2": 370.1759948730469
+  },
+  "figType": "Figure",
+  "imageText": ["25", "0", "0.1", "0.2", "0.3", "0.4", "0.5", "0.6", "0.7", "0.8", "0.9", "11", "9", "11", "15", "16", "23", "21", "25", "1", "9", "11", "15", "16", "2321", "25", "21", "23", "16", "15", "11", "9", "1", "C", "h", "a", "n", "n", "e", "l", "Time", "Time", "n", "e", "l", "C", "h", "a", "n"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 502.08,
+    "y1": 281.76,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure4-1.png"
+}, {
+  "caption": "Table 4: Notation table for our paper.",
+  "captionBoundary": {
+    "x1": 237.31300354003906,
+    "x2": 374.37933349609375,
+    "y1": 270.8294982910156,
+    "y2": 276.83197021484375
+  },
+  "figType": "Table",
+  "imageText": ["Ox", "n,", "Oz", "n", "output", "of", "MSA", "block", "for", "z", "and", "x", "O", "output", "of", "MSA", "block", "h̃z", "n,", "h̃x", "n", "dynamic", "latent", "states", "of", "z", "and", "x", "h̃n", "concatenated", "dynamic", "latent", "states", "µx", "t,n,", "σx", "t,n", "statistics", "of", "xt,n", "β", "mapping", "matrix", "between", "ht,n", "and", "xt,n", "µt,n,", "σt,n", "statistics", "of", "zt,n", "xt,n", "generated", "MTS", "at", "each", "timestep", "h̃,", "h", "(dynamic)", "latent", "states", "z̃t,n,", "zt,n", "(Convolutional)", "latent", "variable", "at", "each", "timestep", "Hi", "output", "of", "the", "ith", "head", "Ã,", "A", "(normalized)", "symmetric", "adjacent", "matrix", "s(u,", "v)", "symmetric", "similarity", "function", "of", "u", "and", "v", "Qi,", "Ki,", "Vi", "query,", "key", "and", "value", "of", "the", "ith", "head", "αi", "ith", "channel", "embedding", "of", "inputs", "MTS", "µi,", "σi", "statistics", "of", "αi", "symbol", "meaning", "symbol", "meaning"],
+  "name": "4",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 505.44,
+    "y1": 289.44,
+    "y2": 419.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table4-1.png"
+}, {
+  "caption": "Figure 1: The temporal dependency, channel relationship and stochasticity within MTS.",
+  "captionBoundary": {
+    "x1": 348.093994140625,
+    "x2": 505.4861755371094,
+    "y1": 159.53854370117188,
+    "y2": 185.46697998046875
+  },
+  "figType": "Figure",
+  "imageText": ["R", "elatio", "n", "al", "Temporal", "stochasticity", "el", "an", "n", "C", "h", "Time", "dc", "1dc", "", "1dc", "", "1tx", "", "tx", "1tx", ""],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 350.4,
+    "x2": 512.64,
+    "y1": 77.28,
+    "y2": 156.96
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure1-1.png"
+}, {
+  "caption": "Table 2: Multivariate results with predicted length as {96, 168, 288, 336} on the five datasets and {24,48,96,168} on the Weather dataset, lower scores are better. Metrics are averaged over 5 runs, best results are highlighted in bold.",
+  "captionBoundary": {
+    "x1": 106.08699798583984,
+    "x2": 504.0035400390625,
+    "y1": 83.53055572509766,
+    "y2": 111.45098876953125
+  },
+  "figType": "Table",
+  "imageText": ["96", "0.193", "0.307", "0.201", "0.317", "0.274", "0.368", "0.258", "0.357", "0.312", "0.402", "0.680", "0.645", "168", "0.202", "0.313", "0.232", "0.341", "0.278", "0.377", "0.290", "0.382", "0.318", "0.413", "0.318", "0.368", "288", "0.231", "0.339", "0.234", "0.343", "0.315", "0.410", "0.319", "0.425", "0.353", "0.437", "0.481", "0.612", "336", "0.266", "0.358", "0.270", "0.361", "0.300", "0.394", "0.280", "0.380", "0.350", "0.433", "0.828", "0.727", "ECL", "24", "0.156", "0.237", "0.182", "0.265", "0.213", "0.287", "0.365", "0.405", "0.176", "0.248", "0.575", "0.507", "48", "0.220", "0.264", "0.228", "0.306", "0.335", "0.387", "0.496", "0.485", "0.284", "0.344", "0.622", "0.553", "96", "0.220", "0.273", "0.266", "0.336", "0.300", "0.384", "0.458", "0.490", "0.689", "0.596", "0.594", "0.587", "168", "0.263", "0.327", "0.319", "0.376", "0.429", "0.465", "0.649", "0.573", "0.423", "0.451", "0.676", "0.585", "Weather", "ETTm2", "96", "0.246", "0.320", "0.255", "0.339", "0.365", "0.453", "0.768", "0.642", "0.658", "0.619", "3.142", "1.365", "168", "0.259", "0.322", "0.274", "0.338", "0.681", "0.647", "1.291", "1.173", "1.255", "0.858", "1.502", "1.328", "288", "0.328", "0.365", "0.342", "0.378", "1.047", "0.804", "1.090", "0.806", "2.441", "1.190", "2.856", "1.329", "336", "0.325", "0.370", "0.339", "0.372", "1.438", "0.921", "2.006", "1.334", "2.213", "1.104", "3.259", "1.576", "ETTm1", "96", "0.484", "0.465", "0.481", "0.463", "0.678", "0.614", "0.768", "0.792", "1.433", "0.945", "2.762", "1.542", "168", "0.505", "0.477", "0.573", "0.506", "0.748", "0.634", "0.886", "0.759", "0.915", "0.696", "1.124", "0.897", "288", "0.520", "0.492", "0.634", "0.528", "1.056", "0.789", "1.462", "1.320", "1.820", "1.094", "1.257", "2.076", "336", "0.536", "0.479", "0.541", "0.503", "1.043", "0.759", "1.412", "1.125", "1.004", "0.731", "1.786", "1.598", "96", "0.383", "0.415", "0.380", "0.413", "2.975", "1.359", "3.129", "1.297", "1.656", "1.054", "3.367", "1.982", "168", "0.429", "0.443", "0.457", "0.455", "3.489", "1.515", "4.070", "1.681", "4.660", "1.846", "3.242", "2.513", "288", "0.459", "0.463", "0.470", "0.468", "6.020", "2.030", "7.172", "2.471", "2.730", "1.346", "8.252", "2.665", "336", "0.458", "0.467", "0.471", "0.475", "2.723", "1.340", "3.875", "1.763", "4.028", "1.688", "2.544", "2.591", "ETTh2", "96", "0.420", "0.435", "0.426", "0.442", "0.925", "0.761", "1.008", "0.875", "0.774", "0.637", "1.257", "0.983", "168", "0.458", "0.457", "0.490", "0.481", "0.931", "0.752", "1.002", "0.846", "1.824", "1.138", "1.997", "1.214", "288", "0.502", "0.483", "0.514", "0.494", "1.120", "0.835", "1.141", "0.972", "0.910", "0.700", "1.528", "1.376", "336", "0.494", "0.482", "0.505", "0.484", "1.128", "0.873", "1.362", "0.952", "2.177", "1.280", "2.655", "1.369", "ETTh1", "MSE", "MAE", "MSE", "MAE", "MSE", "MAE", "MSE", "MAE", "MSE", "MAE", "MSE", "MAE", "VG-autoformer", "Autoformer", "Informer", "LogTrans", "Reformer", "LSTNet", "Models", "Metric"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 505.44,
+    "y1": 129.6,
+    "y2": 342.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table2-1.png"
+}, {
+  "caption": "Figure 2: (a) The whole framework of VG-Trans for MTS modeling; (b) Graphical illustration of inference (encoder) and generative (decoder) models (Blocks in gray and green represent input and probabilistic latent variables, while the colourless blocks represents deterministic dynamic latent states.); (c) The detailed structure of adaptive graph Transformer module.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99737548828125,
+    "y1": 206.62655639648438,
+    "y2": 245.5059814453125
+  },
+  "figType": "Figure",
+  "imageText": ["nh", "nx", "Channel", "Embedding", "Positional", "Encoding", "Add", "&", "Normalization", "Graph", "Convolutional", "network", "Add", "&", "Normalization", "Multi-head", "Self-attention", "Add", "&", "Normalization", "Feed", "Forward", "Network", "Add", "&", "Normalization", "Multi-head", "Self-attention", "（c）", "T", "T", "EPN", "G-", "Trans", "nz", "nx", "nh", "Decoder", "nx", "Encoder", "EPN", "Data", "Slicing", "Normalization", "time", "series", "Multivariate", "Data", "Preprocessing", "VG-Trans", "Representation", "Model", "Forecasting", "Anomaly", "detection", "Common", "Tasks", "Embedding", "Reconstruction", "Channel", "Prediction", "latent", "variables", "G-Trans", "Probabilistic", "states", "Dynamic", "latent", "（a）", "（b）"],
+  "name": "2",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 500.15999999999997,
+    "y1": 82.56,
+    "y2": 200.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure2-1.png"
+}, {
+  "caption": "Figure 9: Prediction cases of simple MTS from the ETT, Weather and ECL datasets (from left to right). Top: results of Autoformer; Bottom: results of VG-Autoformer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974670410156,
+    "y1": 266.0215148925781,
+    "y2": 282.9830017089844
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 261.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Prediction cases of complex MTS from the ETT dataset. Top: results of Autoformer; Bottom: results of VG-Autoformer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.8313903808594,
+    "y1": 477.2455139160156,
+    "y2": 494.2070007324219
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 292.8,
+    "y2": 472.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure10-1.png"
+}, {
+  "caption": "Figure 5: Visualizations on ETTh1 dataset of (a) the input MTS under the input-200 setting and the learned relational matrix among different channels; (b), (c), (d): predictions on different channels by autoformer and VG-autoformer.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3434753417969,
+    "y1": 271.6935119628906,
+    "y2": 299.614013671875
+  },
+  "figType": "Figure",
+  "imageText": ["autoformer", "(Bottom)", "by", "autoformer", "(Top)", "and", "VG-", "(d)", "Predictions", "on", "the", "7-st", "channel", "autoformer", "(Bottom)", "by", "autoformer", "(Top)", "and", "VG-", "(c)", "Predictions", "on", "the", "2-st", "channel", "autoformer", "(Bottom)", "by", "autoformer", "(Top)", "and", "VG-", "(b)", "Predictions", "on", "the", "1-st", "channel", "matrix", "(Bottom)", "and", "corresponding", "relational", "(a)", "Input", "MTS", "of", "ETTh1", "(Top)"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure5-1.png"
+}, {
+  "caption": "Figure 6: The influence of embedding size on forecasting.",
+  "captionBoundary": {
+    "x1": 390.614013671875,
+    "x2": 505.4847412109375,
+    "y1": 448.5755310058594,
+    "y2": 464.5400085449219
+  },
+  "figType": "Figure",
+  "imageText": ["4", "8", "16", "24", "32", "E", "M", "A", "0.4", "0.35", "0.3", "0.25", "0.2", "Timestep", "24", "48", "96", "168"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 390.71999999999997,
+    "x2": 504.0,
+    "y1": 372.0,
+    "y2": 445.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure6-1.png"
+}, {
+  "caption": "Figure 11: The influence of balance parameter γ on anomaly detection task.",
+  "captionBoundary": {
+    "x1": 154.82200622558594,
+    "x2": 457.17901611328125,
+    "y1": 226.42855834960938,
+    "y2": 232.4310302734375
+  },
+  "figType": "Figure",
+  "imageText": ["c", "o", "re", "F", "1", "-s"],
+  "name": "11",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 209.28,
+    "x2": 404.15999999999997,
+    "y1": 80.64,
+    "y2": 221.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure11-1.png"
+}, {
+  "caption": "Table 8: Transformer for dynamic latent states",
+  "captionBoundary": {
+    "x1": 213.43299865722656,
+    "x2": 398.2591247558594,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Layer", "Size", "Norm/Act.", "Input", "25+V", "PosEmbd", "256", "Linear_Query", "25+V+256", "Linear_Key", "25+V+256", "Linear_Value", "25+V+256", "Linear+Add", "25+V+256", "BN", "GCN", "using", "α", "Linear+Add", "25+v+256", "BN"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 208.79999999999998,
+    "x2": 406.08,
+    "y1": 107.52,
+    "y2": 206.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table8-1.png"
+}, {
+  "caption": "Figure 8: The detailed structure of VG-Autoformer.",
+  "captionBoundary": {
+    "x1": 202.98699951171875,
+    "x2": 409.0134582519531,
+    "y1": 427.5694885253906,
+    "y2": 433.57196044921875
+  },
+  "figType": "Figure",
+  "imageText": ["o", "n", "ru", "c", "ti", "Variable", "R", "e", "c", "o", "n", "st", "Latent", "Embedding", "Channel", "Multivariate", "time", "series", "Embedding", "Channel", "Forward", "Feed", "Incorporating", "Embedding", "Forward", "Feed", "Decomp", "Series", "Decomp", "Series", "Attention", "Self-", "K", "Q", "V", "Transformer", "Convolutional", "Graph", "Decomp", "Series", "Decomp", "Series", "Attention", "Self-", "K", "Q", "V", "Graph", "Transformer", "Incorporating", "Embedding", "Trend-cyclical", "Init", "Seasonal", "Init", "Embedding", "Guided", "Autoformer", "Decoder", "P", "re", "d", "ic", "tio", "n", "Forward", "Feed", "Forward", "Feed", "Decomp", "Series", "Decomp", "Series", "Decomp", "Series", "Decomp", "Series", "Decomp", "Series", "Correlation", "Auto-", "Correlation", "V", "Auto-", "Q", "K", "K", "Q", "V", "Correlation", "Auto-", "K", "Q", "V", "Autoformer", "Encoder", "Generation", "Guided", "Embedding-"],
+  "name": "8",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 224.64,
+    "y2": 421.91999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure8-1.png"
+}, {
+  "caption": "Table 3: Ablation study of VG-Trans on anomaly detection and forecasting tasks.",
+  "captionBoundary": {
+    "x1": 143.77499389648438,
+    "x2": 467.9180908203125,
+    "y1": 213.55856323242188,
+    "y2": 219.56103515625
+  },
+  "figType": "Table",
+  "imageText": ["✓", "×", "Combined", "0.940", "0.928", "0.935", "0.949", "0.470", "0.506", "0.441", "0.463", "0.537", "0.589", "✓", "✓", "Combined", "0.948", "0.932", "0.944", "0.955", "0.458", "0.502", "0.429", "0.459", "0.505", "0.520", "×", "×", "Reconstruction", "0.910", "0.907", "0.908", "0.923", "-", "-", "-", "-", "-", "-", "×", "×", "Prediction", "0.895", "0.894", "0.902", "0.908", "0.478", "0.509", "0.448", "0.465", "0.547", "0.602", "×", "×", "Combined", "0.919", "0.917", "0.920", "0.931", "-", "-", "-", "-", "-", "-", "Graph", "Transformer", "✓", "×", "Reconstruction", "0.911", "0.907", "0.911", "0.922", "-", "-", "-", "-", "-", "-", "✓", "×", "Combined", "0.922", "0.920", "0.921", "0.937", "-", "-", "-", "-", "-", "-", "×", "×", "Prediction", "0.830", "0.797", "0.834", "0.700", "0.490", "0.514", "0.457", "0.470", "0.573", "0.634", "Transformer", "F1-score", "F1-score", "F1-score", "F1-score", "168", "288", "168", "288", "168", "288", "Embedding", "Guided", "Generation", "Optimization", "Objective", "Anomaly", "Detection", "Forecasting", "CDN", "SMD", "MSL", "SMAP", "ETTh1", "ETTh2", "ETTm1", "Architecture", "Variational", "Generation"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 504.0,
+    "y1": 237.6,
+    "y2": 354.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table3-1.png"
+}, {
+  "caption": "Figure 7: Case study of anomaly scores by Transformer (left), G-Trans (middle) and VG-Trans (right) on machine 2-3 of SMD dataset. Regions highlighted in red and blue represent the groundtruth anomaly segments and misjudgement segments by methods, red lines refer to the threshold selected according to the rule that all anomalies can be detected.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.6651916503906,
+    "y1": 157.97750854492188,
+    "y2": 196.85601806640625
+  },
+  "figType": "Figure",
+  "imageText": ["co", "re", "al", "y", "S", "A", "n", "o", "m", "Time", "0", "-20", "-40", "Time", "Time", "-60", "co", "re", "al", "y", "S", "A", "n", "o", "m", "co", "re", "al", "y", "S", "A", "n", "o", "m", "0", "-20", "-40", "-60", "0", "-20", "-40", "-60"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 114.24,
+    "x2": 504.0,
+    "y1": 86.88,
+    "y2": 146.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Figure7-1.png"
+}, {
+  "caption": "Table 7: MSA and AGCN blocks for inputs and latent variables",
+  "captionBoundary": {
+    "x1": 179.26100158691406,
+    "x2": 432.4305114746094,
+    "y1": 604.7825317382812,
+    "y2": 610.7849731445312
+  },
+  "figType": "Table",
+  "imageText": ["Layer", "Size", "Norm/Act.", "Input", "25/V", "Linear_Query", "25/V", "Linear_Key", "25/V", "Identity_Value", "25/V", "Linear+Add", "25/V", "BN", "GCN", "using", "α", "Linear+Add", "25/V", "BN"],
+  "name": "7",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 208.79999999999998,
+    "x2": 406.08,
+    "y1": 628.8,
+    "y2": 721.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table7-1.png"
+}, {
+  "caption": "Table 5: Basic statistics of anomaly detection datasets",
+  "captionBoundary": {
+    "x1": 198.44500732421875,
+    "x2": 413.2486267089844,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["Anomaly", "ratio", "(%)", "3.44", "4.16", "10.72", "13.13", "Dimensions", "12*36", "28*38", "27*55", "55*25", "Granularity", "(sec)", "60", "60", "60", "60", "Training", "set", "size", "344,843", "708,405", "58,317", "135,181", "Testing", "set", "size", "344,844", "708,420", "73,729", "427,617", "Statistics", "Anomaly", "Detection", "CDN", "SMD", "MSL", "SMAP"],
+  "name": "5",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 465.12,
+    "y1": 107.52,
+    "y2": 193.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table5-1.png"
+}, {
+  "caption": "Table 6: Basic statistics of forecasting datasets.",
+  "captionBoundary": {
+    "x1": 211.72999572753906,
+    "x2": 399.9633483886719,
+    "y1": 212.83151245117188,
+    "y2": 218.833984375
+  },
+  "figType": "Table",
+  "imageText": ["∗", "ETT∗", "means", "the", "full", "benchmark", "of", "ETTh1,", "ETTh2,", "ETTm1", "and", "ETTm2.", "Testing", "set", "size", "2785", "2713", "2593", "2545", "5165", "5093", "4973", "4925", "10516", "10492", "10444", "10372", "Training", "set", "size", "8449", "8377", "8257", "8209", "18221", "18149", "18029", "17981", "36768", "36744", "36696", "36624", "Validation", "set", "size", "2785", "2713", "2593", "2545", "2537", "2465", "2345", "2297", "5247", "5223", "5175", "5103", "Channels", "7", "321", "21", "ETT∗", "ECL", "Weather", "96", "168", "288", "336", "96", "168", "288", "336", "24", "48", "96", "168", "Statistics", "Forecasting"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 504.0,
+    "y1": 236.64,
+    "y2": 339.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_PWWW73yQVp-Table6-1.png"
+}]

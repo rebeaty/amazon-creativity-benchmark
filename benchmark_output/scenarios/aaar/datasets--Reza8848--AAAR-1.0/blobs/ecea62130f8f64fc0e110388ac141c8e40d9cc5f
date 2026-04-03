@@ -1,0 +1,261 @@
+[{
+  "caption": "Figure 6: Visual Transformer (ViT) models vary in curvature for each layer over model depth. All ViT models (standard and DINO, base-patch-16) show output curvature above that of the pixel input. For DINO and standard ViT models, this increase in curvature is consistent throughout the layers. For CrossViT (18 dagger 408) the representation forks in the middle stage. We observe that one path increases in curvature, while the other decreases below input, but after recombination output is curved above pixel input.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 215.58151245117188,
+    "y2": 276.3779296875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure6-1.png"
+}, {
+  "caption": "Figure 7: Segmentation models vary in curvature for each layer over model depth. Curvature is shown for various segmentation model types. Filled circles indicate non-adversarially trained models, and open circles indicate adversarially-trained robust models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032043457031,
+    "y1": 642.9275512695312,
+    "y2": 670.8480224609375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "7",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 508.79999999999995,
+    "y2": 629.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure7-1.png"
+}, {
+  "caption": "Figure 12: Left: While adversarial attacks with greater ϵ strength impart many desirable robustness properties on a network, adversarial training does not improve test accuracy, often decreasing test accuracy on the within-domain test set for a given model. (Data plotted on symlog scale.) Right: While stronger adversarial attacks decrease curvature, improved test accuracy for a model is not predictive of output curvature reduction. Rather, within a given model training/test set, increased test accuracy predicts a smaller curvature reduction in the output layer.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00335693359375,
+    "y1": 640.8665771484375,
+    "y2": 701.6630249023438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "12",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 502.08,
+    "y1": 434.88,
+    "y2": 626.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure12-1.png"
+}, {
+  "caption": "Figure 11: Final stage curvature for a variety of network architecture and training schemes. Model families show very similar curvature to that of their output representation layers 3.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00482177734375,
+    "y1": 320.4105224609375,
+    "y2": 337.37200927734375
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "11",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 106.56,
+    "y2": 306.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure11-1.png"
+}, {
+  "caption": "Figure 1: Illustration of the representation of a discrete video sequence becoming progressively straighter as information is processed through a visual processing pipeline, starting from the highly nonlinear trajectory of typical video frames in pixel space.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00323486328125,
+    "y1": 237.36849975585938,
+    "y2": 265.2889404296875
+  },
+  "figType": "Figure",
+  "imageText": ["Perception,", "Final", "Stage", "Deep", "Network", "V1,", "2nd", "Stage", "Deep", "Network", "Retina,", "1st", "Stage", "Deep", "Network", "Video", "Frames", "in", "Pixel", "Space", "Representation", "Trajectory", "Over", "Time"],
+  "name": "1",
+  "page": 1,
+  "regionBoundary": {
+    "x1": 134.88,
+    "x2": 477.12,
+    "y1": 80.64,
+    "y2": 223.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure1-1.png"
+}, {
+  "caption": "Figure 8: Variants of PredNet models change in curvature for each layer over model depth. Curvature is shown in filled circles for the following standard PredNet models: standard (PredNet L0 KITTI), 5-frame future prediction (PredNet Extrap KITTI), and all-layer-loss (PredNet Lall KITTI). Shown in open circles are two PredNet models trained with straightness terms in the loss function (PredNet L0 R2 straight KITTI and PredNet L0 R3 straight KITTI). All models were trained on the KITTI dataset (Geiger et al., 2012).",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0036315917969,
+    "y1": 494.1865234375,
+    "y2": 554.9830322265625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "8",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 280.8,
+    "y2": 480.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure8-1.png"
+}, {
+  "caption": "Figure 10: Change in curvature for different numbers of principle components. Each subplot shows layer-wise change in curvature. Left is a standard ResNet50 trained on ImageNet (Deng et al., 2009) classification. The natural line is the curvature measures on the natural videos from (Hénaff et al., 2019) that we used for all model analyses in the paper. The contrast and artificial sequences were additional video sequences psychophysically tested by (Hénaff et al., 2019) where humans tend to have little change in curvature for contrast but large increase in curvature for artificial. Right is an adversarially robust (projected gradient descent with l2 norm and ϵ = 3) ResNet50 trained on ImageNet. All rows below the top row show curvature when taking the first 2, 5, 10, and 100 principle components (PCs) of each representation layer activations. For PCs less than the number of frames in each video (11), we performed PCA on the pixel-level video in addition to the model activations when computing the change in curvature. For all PCs, the standard ResNet50 has a higher curvature for natural video sequences than the adversarially robust.",
+  "captionBoundary": {
+    "x1": 107.99990844726562,
+    "x2": 504.0047302246094,
+    "y1": 461.7495422363281,
+    "y2": 588.2989501953125
+  },
+  "figType": "Figure",
+  "imageText": ["Standard-Trained", "ResNet50", "Adversarially-Trained", "ResNet50"],
+  "name": "10",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 105.6,
+    "y2": 447.35999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure10-1.png"
+}, {
+  "caption": "Figure 9: Biologically-inspired network models result in straightened representations compared to input pixels. Non-parametric multi-stage filter models Brucenet and Henaffbio progressively straighten. The VOneNetCornets model straightens the representation in its V1-block up until its noise layer, where curvature increases dramatically and does not recover in downstream convolutional blocks. Adversarially-trained CrossViT model shows progressive straightening.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032653808594,
+    "y1": 677.8665771484375,
+    "y2": 727.7050170898438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "9",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 543.84,
+    "y2": 663.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure9-1.png"
+}, {
+  "caption": "Figure 2: Illustration of how the curvature measure is distinct from cosine similarity. (Left) Three points are sampled along a trajectory in time (xt−1, xt, xt+1). The angle θ between neighboring x samples is their cosine similarity. (Right) Curvature ct is the angle between v1 and vt+1, where vt is the difference between xt and xt−1.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 204.78054809570312,
+    "y2": 245.154052734375
+  },
+  "figType": "Figure",
+  "imageText": ["𝑣𝑡", "𝑐𝑡", "𝑥𝑡+1", "𝜃", "𝑣𝑡+1", "𝑥𝑡−1", "𝑥𝑡"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 153.6,
+    "x2": 454.08,
+    "y1": 90.72,
+    "y2": 178.07999999999998
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Output Representation layer curvature for a variety of network architectures and training schemes. The x-axis ticks describe different models and are formatted as: [architecture] [training scheme] [training dataset]. The datasets are IN:ImageNet (Deng et al., 2009), RIN:RestrictedImageNet (Santurkar et al., 2019),CF:CIFAR10 (Krizhevsky et al., 2014), VOC:PASCAL VOC 2012 (Everingham et al., 2010), CIT:Cityscapes (Cordts et al., 2016), KITTI:KITTI (Geiger et al., 2012). Exact model details can be found in the supplemental data. The y-axis shows curvature of each model at the output representation layer relative to the curvature of the input video. For image classification models the output representation is the penultimate layer (just before classification). This is sometimes referred to as the output layer.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0032958984375,
+    "y1": 470.8825378417969,
+    "y2": 564.5559692382812
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "3",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 256.8,
+    "y2": 456.47999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Deep network models vary in curvature for each layer over model depth. Curvature is shown for a variety of model types. Filled circles indicate non-adversarially trained models, and open circles indicate adversarially-trained robust models. All adversarial models show output curvature below zero, indicating output straightening. All non-adversarial models have output curvature above zero, indicating output representation is less straight than the input pixels; All adversarial models shown have output curvature below zero, indicating output representation is more straight than the input pixels.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0048522949219,
+    "y1": 215.58151245117188,
+    "y2": 287.3369140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "4",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 80.64,
+    "y2": 201.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure4-1.png"
+}, {
+  "caption": "Figure 5: White-box adversarial attacks reduce curvature in the output layer of ResNet. Increased attack strength (ϵ) decreases curvature, with l2 attacks most reducing curvature. Data on symlog x-scale to show ϵ = 0: data to left of line on linear scale to show ϵ = 0, and right of line on log scale.",
+  "captionBoundary": {
+    "x1": 345.6019287109375,
+    "x2": 504.0030212402344,
+    "y1": 596.236572265625,
+    "y2": 678.9509887695312
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 348.96,
+    "x2": 501.12,
+    "y1": 429.59999999999997,
+    "y2": 582.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure5-1.png"
+}, {
+  "caption": "Figure 13: Example Predictions for Original and Straighten PredNet. Both models were trained on the KITTI dataset (Geiger et al., 2012). The straightened PredNet was trained with penalty on its R2 layer if there was high curvature.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 423.60552978515625,
+    "y2": 451.5260009765625
+  },
+  "figType": "Figure",
+  "imageText": ["PredNet", "Straight", "R2", "PredNet", "L0", "MSE:", "0.0235", "MSE:", "0.0209", "Next", "Frame", "Extrapolate", "5", "Frames"],
+  "name": "13",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.96,
+    "x2": 503.03999999999996,
+    "y1": 106.56,
+    "y2": 409.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_4cOfD2qL6T-Figure13-1.png"
+}]

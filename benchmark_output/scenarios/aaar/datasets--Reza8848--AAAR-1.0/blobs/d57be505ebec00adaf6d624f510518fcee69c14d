@@ -1,0 +1,341 @@
+[{
+  "caption": "Figure 1: Overview of the method and latent space representation. We start from an original image Io that can be edited t(·) in various ways: its feature extraction f(t(Io)) spawns the shaded region in the embedding space. The edited versions should be recoverable by nearest neighbor search on quantized representations. In the regular (non-active) case, f(Io) is quantized by the index as . When the image is edited, t(Io) switches cells and the closest neighbor returned by the index is the wrong one . In active indexing: Io is modified in an imperceptible way to generate I⋆ such that f(I⋆) is further away from the boundary. When edited copies f(t(I⋆)) are queried, retrieval errors are significantly reduced.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032653808594,
+    "y1": 661.6947021484375,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": ["f(t(Io))", "f(I*)", "f(t(I*))", "f(Io)", "Approximate", "Search", "Latent", "space", "Activation", "Activated", "image", "Search", "results", "Indexing", "Io", "t(I*)", "Publication", "I*", "Original", "image", "Image", "editing", "Outside", "world", "Index"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 504.0,
+    "y1": 550.56,
+    "y2": 651.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure1-1.png"
+}, {
+  "caption": "Figure 7: Activated images, either with (a) the ℓ∞ ≤ 4 constraint or with (b) our perceptual model (best viewed on screen). We give the corresponding measures between the original and the protected image, as well as the pixel-wise difference. The perturbation on the right is much less perceptible thanks to the perceptual model, even though its ℓ∞ distance with the original image is much higher.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0008544921875,
+    "y1": 370.71673583984375,
+    "y2": 407.0030212402344
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "ℓ∞", "=", "4,", "PSNR", "=", "36.4", "dB,", "SSIM", "=", "0.91", "(b)", "ℓ∞", "=", "23,", "PSNR", "=", "34.4", "dB,", "SSIM", "=", "0.94"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 109.92,
+    "x2": 502.08,
+    "y1": 218.88,
+    "y2": 357.59999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure7-1.png"
+}, {
+  "caption": "Table 1: Comparison of the index performance between activated and passive images. The search is done on a 1M image set and R@1 is averaged over 10k query images submitted to different transformations before search. Random: randomly apply 1 to 4 transformations. Avg.: average on the transformations presented in the table (details in App. B.2). No index: exhaustive brute-force nearest neighbor search. IVF-PQ: IVF4096,PQ8X8 index with k′=1 (16 for IVF-PQ16). IVF-PQ†: IVF512,PQ32X8 with k′ = 32.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00091552734375,
+    "y1": 83.4337387084961,
+    "y2": 128.68597412109375
+  },
+  "figType": "Table",
+  "imageText": ["✓", "1.00", "1.00", "0.99", "1.00", "0.98", "1.00", "1.00", "1.00", "0.75", "0.92", "0.91", "1.00", "0.92", "0.63", "0.94", "✗", "1.00", "1.00", "0.99", "1.00", "0.95", "1.00", "0.99", "1.00", "0.72", "0.87", "0.88", "1.00", "0.87", "0.61", "0.92", "IVF-PQ†", "1.9", "32", "✓", "1.00", "1.00", "1.00", "1.00", "0.98", "1.00", "1.00", "1.00", "0.43", "0.88", "0.75", "1.00", "0.84", "0.50", "0.88", "✗", "1.00", "1.00", "0.90", "1.00", "0.78", "0.99", "0.95", "0.99", "0.35", "0.57", "0.57", "1.00", "0.56", "0.39", "0.79", "IVF-PQ16", "0.42", "8", "✗", "1.00", "0.73", "0.39", "0.73", "0.28", "0.62", "0.48", "0.72", "0.07", "0.14", "0.14", "0.72", "0.14", "0.13", "0.45IVF-PQ", "0.38", "8", "✓", "1.00", "1.00", "0.96", "1.00", "0.92", "1.00", "0.96", "0.99", "0.10", "0.50", "0.29", "1.00", "0.43", "0.32", "0.75", "No", "index", "252", "2048", "✗", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "1.00", "0.90", "0.99", "0.5", "Brig", "ht.", "2.0", "Hue", "0.2", "Blur", "2.0", "JP", "EG", "50", "Rot.", "25", "Rot.", "90", "Crop", "0.5", "Resi", ".", "0.5", "M", "em", "e", "Ran", "do", "m", "Avg", ".", "Brig", "ht.", "2.0", "Con", "tr.", "0.5", "Con", "tr.", "ty", "Ide", "nti", "ted", "Acti", "va", "ec", "tor", "Byte", "s/v", "(m", "s)", "Sea", "rch"],
+  "name": "1",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 503.03999999999996,
+    "y1": 142.07999999999998,
+    "y2": 260.15999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table1-1.png"
+}, {
+  "caption": "Figure 6: A reference image I from DISC21 (R002815.jpg), and the associated perceptual heatmap HJND(I).",
+  "captionBoundary": {
+    "x1": 108.15799713134766,
+    "x2": 503.8426208496094,
+    "y1": 721.470703125,
+    "y2": 727.8690185546875
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 13,
+  "regionBoundary": {
+    "x1": 183.84,
+    "x2": 428.15999999999997,
+    "y1": 576.9599999999999,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure6-1.png"
+}, {
+  "caption": "Table 7: R@1 for different transformations applied before search, when using either watermarking or active indexing. Results are averaged on 1k images. Best result is in bold and second best in italic.",
+  "captionBoundary": {
+    "x1": 107.99993133544922,
+    "x2": 504.0005187988281,
+    "y1": 526.7394409179688,
+    "y2": 542.104736328125
+  },
+  "figType": "Table",
+  "imageText": ["1In", "order", "to", "provide", "error", "correction", "capabilities,", "one", "needs", "longer", "messages.", "This", "makes", "it", "more", "difficult", "to", "insert", "bits:", "in", "our", "experiments,", "with", "64", "bits", "we", "observe", "a", "drastic", "increase", "of", "the", "watermarking", "bit", "error", "rate.", "HiDDeN2", "(Zhu", "et", "al.,", "2018)", "0.94", "0.87", "0.36", "0.85", "0.55", "0.00", "0.81", "0.00", "0.00", "0.00", "0.92", "0.44", "0.77", "0.16", "0.48", "Passive", "indexing", "1.00", "0.73", "0.39", "0.73", "0.28", "0.62", "0.48", "0.72", "0.07", "0.14", "0.14", "0.72", "0.14", "0.13", "0.45", "Active", "indexing", "(ours)", "1.00", "1.00", "0.96", "1.00", "0.92", "1.00", "0.96", "0.99", "0.10", "0.50", "0.29", "1.00", "0.43", "0.32", "0.75", "SSL", "Watermarking", "(Fernandez", "et", "al.,", "2022)", "1.00", "0.98", "0.53", "0.98", "0.63", "0.85", "0.13", "0.00", "0.00", "0.15", "0.11", "0.00", "0.46", "0.07", "0.42", "Hue", "0.2", "Blur", "2.0", "JP", "EG", "50", "Rot.", "25", "Rot.", "90", "Crop", "0.5", "Resi", ".", "0.5", "M", "em", "e", "Ran", "do", "m", "Avg", ".", "2.0", "Brig", "ht.", "0.5", "Brig", "ht.", "2.0", "Con", "tr.", "0.5", "Con", "tr.", "ty", "Ide", "nti"],
+  "name": "7",
+  "page": 17,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 504.47999999999996,
+    "y1": 555.36,
+    "y2": 690.72
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table7-1.png"
+}, {
+  "caption": "Figure 4: PSNR trade-off. As the PSNR decreases, the µAP (orange) gets better, because the distance (blue) between activated representations x and q(x) decreases.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 266.4004211425781,
+    "y1": 691.5827026367188,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": ["Active", "-", "||x", "q(x)||2", "Passive", "Active", "-", "AP", "Passive", "AP", "0.7", "0.6", "0.5", "0.4", "0.3", "0.2", "0.1", "x)", "||2", "||x", "q(", "1.0", "0.9", "0.8", "0.7", "0.6", "0.5", "0.4", "30405060", "PSNR", "(dB)"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 115.19999999999999,
+    "x2": 259.2,
+    "y1": 581.28,
+    "y2": 675.8399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Activated images. Left: reference from DISC (R000643.jpg and R000761.jpg), middle: activated image, right: pixel-wise difference.",
+  "captionBoundary": {
+    "x1": 286.1990051269531,
+    "x2": 504.0028076171875,
+    "y1": 699.9057006835938,
+    "y2": 725.2329711914062
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 290.88,
+    "x2": 499.2,
+    "y1": 579.84,
+    "y2": 689.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure5-1.png"
+}, {
+  "caption": "Table 2: R@1 for different transformations before search. We use our method to activate images for indexing with IVF-PQ, with different neural networks used as feature extractors.",
+  "captionBoundary": {
+    "x1": 107.99999237060547,
+    "x2": 504.0029296875,
+    "y1": 83.4337387084961,
+    "y2": 98.7979736328125
+  },
+  "figType": "Table",
+  "imageText": ["✗", "1.00", "0.25", "0.08", "0.16", "0.01", "0.51", "0.54", "0.84", "0.18", "0.16", "0.23", "0.79", "0.16", "0.18", "0.36ISC-dt1", "EffNetv2", "✓", "1.00", "0.57", "0.16", "0.33", "0.01", "0.88", "0.79", "0.97", "0.20", "0.24", "0.29", "0.97", "0.26", "0.26", "0.49", "ViT-s", "✓", "1.00", "0.99", "0.94", "0.99", "0.92", "0.98", "0.89", "0.99", "0.15", "0.28", "0.63", "0.99", "0.77", "0.32", "0.77", "✗", "1.00", "0.89", "0.71", "0.86", "0.64", "0.75", "0.74", "0.90", "0.14", "0.18", "0.57", "0.88", "0.61", "0.25", "0.65", "DINO", "✗", "1.00", "0.66", "0.65", "0.65", "0.52", "0.71", "0.52", "0.82", "0.07", "0.20", "0.51", "0.84", "0.62", "0.18", "0.57ResNet50", "✓", "1.00", "0.99", "0.88", "0.99", "0.75", "0.93", "0.72", "0.94", "0.08", "0.25", "0.57", "0.99", "0.82", "0.23", "0.72", "ResNext101", "✓", "1.00", "1.00", "0.96", "1.00", "0.90", "0.99", "0.77", "0.97", "0.53", "0.85", "0.64", "1.00", "0.74", "0.37", "0.84", "✗", "1.00", "0.88", "0.68", "0.88", "0.57", "0.84", "0.46", "0.79", "0.46", "0.63", "0.53", "0.80", "0.48", "0.28", "0.66", "SSCD", "✗", "1.00", "0.73", "0.39", "0.73", "0.28", "0.62", "0.48", "0.72", "0.07", "0.14", "0.14", "0.72", "0.14", "0.13", "0.45ResNet50", "✓", "1.00", "1.00", "0.96", "1.00", "0.92", "1.00", "0.96", "0.99", "0.10", "0.50", "0.29", "1.00", "0.43", "0.32", "0.75", "0.5", "Brig", "ht.", "2.0", "Hue", "0.2", "Blur", "2.0", "JP", "EG", "50", "Rot.", "25", "Rot.", "90", "Crop", "0.5", "Resi", ".", "0.5", "M", "em", "e", "Ran", "do", "m", "Avg", ".", "Brig", "ht.", "2.0", "Con", "tr.", "0.5", "Con", "tr.", "ty", "Ide", "nti", "ted", "Acti", "va", "ctu", "re", "Arch", "ite", "Nam", "e"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 502.08,
+    "y1": 113.28,
+    "y2": 266.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table2-1.png"
+}, {
+  "caption": "Figure 9: Example of one activated image at different levels of α.",
+  "captionBoundary": {
+    "x1": 188.4949951171875,
+    "x2": 423.505615234375,
+    "y1": 461.9307556152344,
+    "y2": 467.3330078125
+  },
+  "figType": "Figure",
+  "imageText": ["α=4.74,", "PSNR=39dB", "α=3.55,", "PSNR=41dB", "α=2.66,", "PSNR=43dB", "α=2.00,", "PSNR=46dB", "α=1.50,", "PSNR=49dB", "α=20.0,", "PSNR=27dB", "α=15.0,", "PSNR=29dB", "α=11.3,", "PSNR=31dB", "α=8.43,", "PSNR=34dB", "α=6.32,", "PSNR=36dB"],
+  "name": "9",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 489.12,
+    "y1": 229.92,
+    "y2": 445.44
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure9-1.png"
+}, {
+  "caption": "Figure 10: Example of activated images for α = 3.0. (Left) original images, (Middle) activated images, (Right) pixel-wise difference.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00238037109375,
+    "y1": 711.5077514648438,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 18,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 506.88,
+    "y2": 700.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure10-1.png"
+}, {
+  "caption": "Table 5: R@1 for different transformations applied before search, with either 1 step at learning rate 10, or 10 steps at learning rate 1. Results are averaged on 10k images.",
+  "captionBoundary": {
+    "x1": 108.00003051757812,
+    "x2": 504.003173828125,
+    "y1": 299.57257080078125,
+    "y2": 314.9378356933594
+  },
+  "figType": "Table",
+  "imageText": ["Passive", "-", "1.00", "0.73", "0.39", "0.73", "0.28", "0.62", "0.48", "0.72", "0.07", "0.14", "0.14", "0.72", "0.14", "0.13", "0.45", "Adam,lr=1", "-", "10", "steps", "39.8", "ms/img", "1.00", "1.00", "0.96", "1.00", "0.92", "1.00", "0.96", "0.99", "0.10", "0.50", "0.29", "1.00", "0.43", "0.32", "0.75", "Adam,lr=10", "-", "1", "step", "4.3", "ms/img", "0.99", "0.99", "0.92", "0.99", "0.84", "0.99", "0.95", "0.99", "0.10", "0.39", "0.25", "0.99", "0.36", "0.27", "0.72", "Hue", "0.2", "Blur", "2.0", "JP", "EG", "50", "Rot.", "25", "Rot.", "90", "Crop", "0.5", "Resi", ".", "0.5", "M", "em", "e", "Ran", "do", "m", "Avg", ".", "2.0", "Brig", "ht.", "0.5", "Brig", "ht.", "2.0", "Con", "tr.", "0.5", "Con", "tr.", "ty", "Ide", "nti", "tio", "n", "Acti", "va"],
+  "name": "5",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 114.72,
+    "x2": 503.52,
+    "y1": 327.84,
+    "y2": 387.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table5-1.png"
+}, {
+  "caption": "Table 6: R@1 for different transformations applied before search, with or without EoT when activating the images. Results are averaged on 10k images.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0025634765625,
+    "y1": 629.8216552734375,
+    "y2": 645.1869506835938
+  },
+  "figType": "Table",
+  "imageText": ["Without", "EOT", "40", "ms", "1.00", "1.00", "0.96", "1.00", "0.92", "1.00", "0.96", "0.99", "0.10", "0.50", "0.29", "1.00", "0.43", "0.32", "0.75", "With", "EOT", "870", "ms", "1.00", "1.00", "0.95", "1.00", "0.92", "1.00", "0.95", "0.99", "0.14", "0.64", "0.33", "1.00", "0.45", "0.33", "0.76", "Hue", "0.2", "Blur", "2.0", "JP", "EG", "50", "Rot.", "25", "Rot.", "90", "Crop", "0.5", "Resi", ".", "0.5", "M", "em", "e", "Ran", "do", "m", "Avg", ".", "2.0", "Brig", "ht.", "0.5", "Brig", "ht.", "2.0", "Con", "tr.", "0.5", "Con", "tr.", "ty", "Ide", "nti", "tio", "n", "Acti", "va"],
+  "name": "6",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 495.35999999999996,
+    "y1": 658.0799999999999,
+    "y2": 712.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table6-1.png"
+}, {
+  "caption": "Table 3: R@1 averaged on transformations presented in Tab. 1 and µAP for different indexing structures",
+  "captionBoundary": {
+    "x1": 117.93699645996094,
+    "x2": 494.0645446777344,
+    "y1": 83.4337387084961,
+    "y2": 88.83599853515625
+  },
+  "figType": "Table",
+  "imageText": ["IVF", "1024", "0.32", "ms", "0.47", "0.83", "0.16", "0.43", "OPQ", "8x8", "5.71", "ms", "0.92", "0.94", "0.48", "0.55", "PCA64,", "LSH", "0.99", "ms", "0.72", "0.83", "0.25", "0.39", "Index", "Search", "time", "R@1", "avg.", "µAP", "Passive", "Activated", "Passive", "Activated"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 190.56,
+    "x2": 423.35999999999996,
+    "y1": 101.28,
+    "y2": 158.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table3-1.png"
+}, {
+  "caption": "Figure 10: Example of activated images for α = 3.0. (Left) original images, (Middle) activated images, (Right) pixel-wise difference. Images are R000005.jpg, R000045.jpg, R000076.jpg, R000172.jpg and R000396.jpg.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.00238037109375,
+    "y1": 382.46978759765625,
+    "y2": 397.8350524902344
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "10",
+  "page": 19,
+  "regionBoundary": {
+    "x1": 126.72,
+    "x2": 485.28,
+    "y1": 80.64,
+    "y2": 371.03999999999996
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure10-1.png"
+}, {
+  "caption": "Figure 2: Precision-Recall curve for ICD with 50k queries and 1M reference images (more details for the experimental setup in Sec. 5.1). pivff is the probability of failure of the IVF (Sec. 4.2).",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 286.19891357421875,
+    "y1": 691.2756958007812,
+    "y2": 726.5659790039062
+  },
+  "figType": "Figure",
+  "imageText": ["f", "=", "0.323", "f", "=", "0.133", "1", "pivf", "Passive", "(", "AP=0.130", ")", "Active", "(", "AP=0.308", ")", "1", "pivf", "isi", "on", "Pr", "ec", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0.0", "0.1", "0.2", "0.3", "0.4", "0.5", "Recall"],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 112.8,
+    "x2": 290.4,
+    "y1": 552.0,
+    "y2": 679.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure2-1.png"
+}, {
+  "caption": "Table 4: Illustration of all transformations evaluated in Tab. 1.",
+  "captionBoundary": {
+    "x1": 194.91200256347656,
+    "x2": 417.0904235839844,
+    "y1": 83.4337387084961,
+    "y2": 88.83599853515625
+  },
+  "figType": "Table",
+  "imageText": ["Crop", "0.5", "Resize", "0.5", "Meme", "Random", "Hue", "0.2", "Blur", "2.0", "JPEG", "50", "Rotation", "25", "Rotation", "90", "Identity", "Contrast", "0.5", "Contrast", "2.0", "Brightness", "0.5", "Contrast", "2.0"],
+  "name": "4",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 122.88,
+    "x2": 489.12,
+    "y1": 102.24,
+    "y2": 370.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Table4-1.png"
+}, {
+  "caption": "Figure 8: Average R@1 comparison between active and passive indexing with IVF-PQ.",
+  "captionBoundary": {
+    "x1": 148.49899291992188,
+    "x2": 463.5028076171875,
+    "y1": 721.470703125,
+    "y2": 726.8729858398438
+  },
+  "figType": "Figure",
+  "imageText": ["Passive", "Active", "1.0", "Contrast", "0.8", "0.6", "0.4", "0.2", "0.5", "1.0", "1.50.0", "1.0", "Blur", "0.8", "0.6", "0.4", "0.2", "10", "20", "300.0", "1.0", "Center", "crop", "0.8", "0.6", "0.4", "0.2", "0.2", "0.4", "0.6", "0.8", "1.00.0", "1.0", "Jpeg", "0.8", "0.6", "0.4", "0.2", "20", "40", "60", "80", "1000.0", "1.0", "Brightness", "0.8", "0.6", "0.4", "0.2", "0.5", "1.0", "1.50.0", "1.0", "Resize", "0.8", "0.6", "0.4", "0.2", "0.2", "0.4", "0.6", "0.8", "1.00.0", "1.0", "Hue", "0.8", "0.6", "0.4", "0.2", "0.50", "0.25", "0.00", "0.25", "0.500.0", "1.0", "Rotation", "0.8", "0.6", "0.4", "0.2", "50", "0", "500.0"],
+  "name": "8",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 120.96,
+    "x2": 490.08,
+    "y1": 531.84,
+    "y2": 710.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_K9RHxPpjn2-Figure8-1.png"
+}]

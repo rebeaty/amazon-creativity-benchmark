@@ -1,0 +1,221 @@
+[{
+  "caption": "Figure 1: Comparison of JKO-Flow (proposed) and other flow models. The JKO scheme approximates the transport of a diffusion process and the ResNet is trained block-wise.",
+  "captionBoundary": {
+    "x1": 365.0690002441406,
+    "x2": 505.7396240234375,
+    "y1": 622.1595458984375,
+    "y2": 671.9970092773438
+  },
+  "figType": "Figure",
+  "imageText": ["(a)", "JKO-Flow", "(b)", "Generic", "Flow"],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 364.8,
+    "x2": 505.44,
+    "y1": 413.76,
+    "y2": 613.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Figure1-1.png"
+}, {
+  "caption": "Figure 2: Diagram illustrating trajectory reparametrization and refinement. The original trajectory via Algorithm 1 can be less smooth and yield fast decaying W2 movement, which causes unnecessary computation when training later blocks. The enhanced trajectory is smoother and can be obtained with fewer blocks under more integration steps. It also shows more uniform W2 movement.",
+  "captionBoundary": {
+    "x1": 107.64099884033203,
+    "x2": 504.35064697265625,
+    "y1": 208.19454956054688,
+    "y2": 248.5679931640625
+  },
+  "figType": "Figure",
+  "imageText": ["f2", "p1.5:", "For/back-ward", "f1", "f1", "f2", "p0.5", "f1", "f2", "f3", ":", "Integrator", "step", "nc", "ed", "En", "ha", "in", "al", "O", "rig", "Probability", "Trajectory", "MovementW2", "1", "2", "W2", "Block", "1", "2", "3", "W2", "Block", "p1", "p2", "=", "pZ", "p0", "=", "pX", "p1", "p2", "p3", "=", "pZ", "p0", "=", "pX"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 158.4,
+    "x2": 453.12,
+    "y1": 77.28,
+    "y2": 196.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Figure2-1.png"
+}, {
+  "caption": "Figure 3: Two-dimensional simulated datasets. The generated samples X̂ by JKO-Flow in Figure 3a are closer to the true data X than competitors in Figure 3b—3d. Under the more carefully selected bandwidth via sample median, MMD[m] in (20) by JKO-Flow is also closer to the threshold τ in (21) than others.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.0025634765625,
+    "y1": 465.5615234375,
+    "y2": 504.4410095214844
+  },
+  "figType": "Figure",
+  "imageText": ["(e)", "Fractal", "tree", "(f)", "Olympic", "rings", "(g)", "Checkerboard", "(d)", "W2", "IResNet", "3.34e-03", "3.39e-03", "(c)", "OT-Flow", "7.25e-04", "1.32e-03", "(b)", "FFJORD", "4.10e-04", "8.57e-04", "(a)", "True", "data", "JKO-Flow", "τ", ":", "2.06e-04,", "MMD[m]:", "3.70e-04", "τ", ":", "2.96e-04,", "MMD[c]:", "9.94e-04"],
+  "name": "3",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 496.32,
+    "y1": 264.0,
+    "y2": 450.71999999999997
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Conditional graph node feature generation. Both JKO-Flow and IGNN use residuals blocks with one Chebnet layer composed with two fully-connected layers. “Top j Y ” indicates the distribution X|Y with the j-th most number of observations.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9973449707031,
+    "y1": 183.29855346679688,
+    "y2": 211.218994140625
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Top2", "Y", ":", "JKO-Flow", "τ", ":", "1.30e-02,", "MMD[m]:", "3.65e-02", "τ", ":", "1.69e-02,", "MMD[c]:", "7.50e-02", "(d)", "IGNN", "1.09e-01", "1.53e-01", "(a)", "Top1", "Y", ":", "JKO-Flow", "τ", ":", "2.78e-03,", "MMD[m]:", "2.29e-02", "τ", ":", "3.90e-03,", "MMD[c]:", "3.65e-02", "(b)", "IGNN", "2.60e-02", "3.11e-02"],
+  "name": "4",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 493.44,
+    "y1": 91.67999999999999,
+    "y2": 169.92
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Figure4-1.png"
+}, {
+  "caption": "Table 2: Comparison on high-dimensional real datasets. All competitors are trained after 10 times more passes over the training data (roughly 10 times more iteration), because their performance under the same number of iterations (i.e., batches) as JKO-Flow is not comparable. FFJORD results on BSDS300 are omitted due to incomparably longer training time.",
+  "captionBoundary": {
+    "x1": 107.69100189208984,
+    "x2": 504.16741943359375,
+    "y1": 231.30453491210938,
+    "y2": 270.18402099609375
+  },
+  "figType": "Table",
+  "imageText": ["τ", ":", "1.35e-04", "τ", ":", "9.63e-05", "JKO-Flow", "396K", "0.16", "0.88K", "0.66", "5000", "4.83e-03", "3.03e-03", "OT-Flow", "396K", "3.50", "10.29K", "1.22", "1000", "8.55e-02", "8.44e-02", "W2", "IResNet", "990K", "2.01", "10.29K", "0.70", "1000", "5.52e-01", "6.88e-01", "IResNet", "990K", "3.47", "10.29K", "1.21", "1000", "5.42e-01", "5.95e-01", "BSDS300", "d", "=", "63", "MINIBOONE", "d", "=", "43", "τ", ":", "4.59e-04", "τ", ":", "6.87e-04", "JKO-Flow", "112K", "0.03", "0.34K", "0.30", "2000", "7.97e-04", "1.01e-03", "OT-Flow", "112K", "0.75", "3.39K", "0.80", "2000", "1.23e-03", "1.01e-03", "FFJORD", "112K", "1.74", "3.39K", "1.85", "2000", "5.47e-03", "1.04e-03", "W2", "IResNet", "448K", "0.80", "3.25K", "0.89", "2000", "1.27e-02", "1.03e-03", "IResNet", "448K", "1.32", "3.25K", "1.46", "2000", "2.58e-03", "1.04e-03", "τ", ":", "1.93e-04", "τ", ":", "2.83e-04", "JKO-Flow", "76K", "0.08", "0.76K", "0.38", "5000", "5.96e-04", "1.79e-03", "OT-Flow", "76K", "0.72", "7.60K", "0.34", "5000", "1.51e-03", "3.64e-03", "FFJORD", "76K", "3.49", "7.60K", "1.65", "5000", "3.62e-03", "6.09e-03", "W2", "IResNet", "304K", "0.57", "7.60K", "0.27", "5000", "7.14e-03", "1.50e-02", "IResNet", "304K", "0.86", "7.60K", "0.41", "5000", "3.26e-03", "2.72e-02", "GAS", "d", "=", "8", "τ", ":", "1.75e-04", "τ", ":", "2.84e-04", "JKO-Flow", "76K", "0.12", "0.76K", "0.57", "10000", "8.21e-04", "1.26e-03", "OT-Flow", "76K", "1.21", "7.58K", "0.57", "10000", "5.69e-04", "9.62e-04", "FFJORD", "76K", "3.40", "7.58K", "1.61", "10000", "1.38e-03", "1.98e-03", "W2", "IResNet", "304K", "0.49", "7.58K", "0.23", "10000", "2.76e-03", "2.72e-03", "IResNet", "304K", "0.76", "7.58K", "0.36", "10000", "4.50e-03", "2.49e-02", "POWER", "d", "=", "6", "Time", "(h)", "#", "Iter", "Time/Iter", "(s)", "Batch", "size", "MMD[m]", "MMD[c]", "Data", "Set", "Model", "#", "Param", "Training", "Testing"],
+  "name": "2",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 117.6,
+    "x2": 492.0,
+    "y1": 277.92,
+    "y2": 489.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Table2-1.png"
+}, {
+  "caption": "Figure A.4: Generative quality on high-dimensional datasets via PCA projection. The generative quality in general aligns with the MMD values shown in Table 2.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.9974365234375,
+    "y1": 685.2655639648438,
+    "y2": 702.2269897460938
+  },
+  "figType": "Figure",
+  "imageText": ["(m)", "BSDS300:", "JKO-Flow", "(n)", "OT-Flow", "(o)", "W2", "IResNet", "(p)", "IResNet", "(i)", "Miniboone:", "JKO-Flow", "(j)", "OT-Flow", "(k)", "FFJORD", "(l)", "IResNet", "(e)", "Gas:", "JKO-Flow", "(f)", "OT-Flow", "(g)", "FFJORD", "(h)", "W2", "IResNet", "(a)", "Power:", "JKO-Flow", "(b)", "OT-Flow", "(c)", "FFJORD", "(d)", "W2", "IResNet"],
+  "name": "A.4",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 128.64,
+    "x2": 483.35999999999996,
+    "y1": 399.84,
+    "y2": 672.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-FigureA.4-1.png"
+}, {
+  "caption": "Figure A.3: Rose, enhancement of JKO-Flow over 6 phases. Here, phase 1 is the pre-enhancement phase during which we specify tk = k for training the residual blocks. Phase 6 results are obtained from using Algorithm 2 (modified for probability spaces) 5 times.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.00128173828125,
+    "y1": 297.8695373535156,
+    "y2": 325.7900085449219
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Results", "at", "phase", "6", "(after", "5", "enhancement).", "(b)", "Results", "at", "phase", "1", "(no", "enhancement", "yet).", "(a)", "Losses", "in", "enhancement", "phases."],
+  "name": "A.3",
+  "page": 16,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 120.0,
+    "y2": 283.68
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-FigureA.3-1.png"
+}, {
+  "caption": "Figure 5: Miniboone, enhancement of JKO-Flow over 5 phases. Here, phase 1 is the pre-enhancement phase during which we specify tk = k for training the residual blocks. Phase 5 results are obtained by using Algorithm 2 (modified for probability spaces) 4 times. We see more uniform W2 losses (left column, third row) with fewer blocks after enhancement.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0014953613281,
+    "y1": 253.37655639648438,
+    "y2": 292.2560119628906
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Results", "at", "phase", "5", "(after", "4", "enhancement).", "(b)", "Results", "at", "phase", "1", "(pre-enhancement).", "(a)", "Components", "of", "loss", "(8)", "in", "enhancement", "phases."],
+  "name": "5",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 107.52,
+    "x2": 477.12,
+    "y1": 80.64,
+    "y2": 244.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Figure5-1.png"
+}, {
+  "caption": "Figure 6: MNIST generation by JKO-Flow coupled with a pre-trained auto-encoder.",
+  "captionBoundary": {
+    "x1": 138.44000244140625,
+    "x2": 473.56182861328125,
+    "y1": 708.2725830078125,
+    "y2": 714.2750244140625
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "6",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 137.76,
+    "x2": 475.2,
+    "y1": 634.56,
+    "y2": 697.4399999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-Figure6-1.png"
+}, {
+  "caption": "Figure A.1: Reparametrization of Muller potential in vector space. After 8 enhancement phases (e.g., at phase 9), all arc lengths are approximately uniform in width. Quantitative, there is an 17X reduction in the ratio standard deviation (std.)",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 504.3564758300781,
+    "y1": 569.8745727539062,
+    "y2": 599.0709838867188
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "A.1",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 201.6,
+    "y2": 559.1999999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-FigureA.1-1.png"
+}, {
+  "caption": "Figure A.2: Additional unconditional and conditional generation on simulated datasets.",
+  "captionBoundary": {
+    "x1": 132.0590057373047,
+    "x2": 479.94287109375,
+    "y1": 701.6285400390625,
+    "y2": 707.6309814453125
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "A.2",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 469.91999999999996,
+    "x2": 504.0,
+    "y1": 606.72,
+    "y2": 675.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_-z7O7fk_Cs-FigureA.2-1.png"
+}]

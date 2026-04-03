@@ -1,0 +1,201 @@
+[{
+  "caption": "Figure 1: Latent traversals of a single latent dimension (hair fringes) of DAVA trained on CelebA. DAVA visibly disentangles the fringes from all other facial properties.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 505.74346923828125,
+    "y1": 590.0825805664062,
+    "y2": 607.0440063476562
+  },
+  "figType": "Figure",
+  "imageText": [],
+  "name": "1",
+  "page": 0,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 505.44,
+    "y1": 498.71999999999997,
+    "y2": 579.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure1-1.png"
+}, {
+  "caption": "Figure 3: Spearman rank correlation between various metrics on three different datasets. Correlations take values in the range [−1, 1], where 1 means perfect correlation, 0 means no correlation, and negative values mean anti-correlation. For better readability, we multiplied all values by 100. PIPE and UDR are the corresponding unsupervised metrics. We include reconstruction loss Rec as a trivial unsupervised baseline. DCI, MIG and FVAE are the corresponding supervised metrics. Low or even negative correlations of our metric with UDR show that our metric captures a different aspect of disentanglement. Correlation of our metric with supervised disentanglement metrics is mostly consistent across datasets. We note that the correlation with supervised metrics on the Mpi3d Toy dataset changes direction for both UDR and Rec. The PIPE metric seems to capture a more universal aspect of disentanglement and does not suffer from this issue.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.3528747558594,
+    "y1": 523.7955322265625,
+    "y2": 628.4290161132812
+  },
+  "figType": "Figure",
+  "imageText": ["Mpi3d", "Toy", "54", "-30", "-52", "63", "22", "100", "24", "-11", "-25", "57", "100", "45", "-18", "-57", "100", "-44", "24", "100", "-74", "100", "100", "E", "FV", "A", "R", "R", "ec", "D", "C", "I", "M", "IG", "U", "D", "ur", "s)", "E", "(o", "P", "IP", "AbstractDSprites", "42", "13", "37", "72", "56", "100", "64", "43", "43", "72", "100", "56", "39", "50", "100", "58", "28", "100", "35", "100", "100", "E", "FV", "A", "R", "R", "ec", "D", "C", "I", "M", "IG", "U", "D", "ur", "s)", "E", "(o", "P", "IP", "Shapes3D", "41", "35", "17", "66", "71", "100", "64", "48", "36", "87", "100", "48", "58", "14", "100", "80", "41", "100", "45", "100", "100", "FVAE", "MIG", "DCI", "Rec", "UDR", "PIPE", "(ours)", "E", "FV", "A", "R", "R", "ec", "D", "C", "I", "M", "IG", "U", "D", "ur", "s)", "E", "(o", "P", "IP"],
+  "name": "3",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 504.0,
+    "y1": 358.08,
+    "y2": 509.76
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure3-1.png"
+}, {
+  "caption": "Figure 4: Spearman rank correlation between various disentanglement metrics and down-stream accuracy of the abstract visual reasoning task (Van Steenkiste et al., 2019) after 6,000 training steps for FactorVAE and β-TCVAE. The same metrics as in Figure 3 are evaluated. Correlation for the unsupervised metrics are more sensitive to model architecture than the supervised ones. PIPE shows higher correlation with downstream performance than UDR and clearly outperforms the Rec baseline.",
+  "captionBoundary": {
+    "x1": 108.00099182128906,
+    "x2": 504.00384521484375,
+    "y1": 285.78753662109375,
+    "y2": 335.6260070800781
+  },
+  "figType": "Figure",
+  "imageText": ["AbstractDSprites", "79", "50", "77", "75", "81", "72", "38", "71", "25", "50", "63", "78", "FactorVAE", "β-TCVAE", "Shapes3D", "Supervised", "(For", "context)", "Unsupervised", "(For", "comparison)", "69", "85", "79", "85", "76", "78", "0", "46", "39", "58", "42", "83", "FVAE", "MIG", "DCI", "Rec", "UDR", "PIPE", "(ours)", "FactorVAE", "β-TCVAE"],
+  "name": "4",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 110.39999999999999,
+    "x2": 456.47999999999996,
+    "y1": 162.72,
+    "y2": 271.2
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure4-1.png"
+}, {
+  "caption": "Figure 5: Overview of the composition of DAVA. A discriminator attached to the decoder of a VAE. The goal for the discriminator is to differentiate samples coming from the EP from those coming from the FP.",
+  "captionBoundary": {
+    "x1": 305.6419677734375,
+    "x2": 505.74853515625,
+    "y1": 489.7745361328125,
+    "y2": 539.613037109375
+  },
+  "figType": "Figure",
+  "imageText": ["Dis", "En", "c", "Dec/Gen"],
+  "name": "5",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 312.96,
+    "x2": 480.47999999999996,
+    "y1": 404.64,
+    "y2": 473.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure5-1.png"
+}, {
+  "caption": "Figure 6: Information bottleneck capacity C during training of DAVA for different datasets. Depending on the complexity and structure of the dataset as well as random initialization of the model, a different schedule of C is necessary to achieve best performance. The shaded area denotes one standard deviation across 5 random seeds.",
+  "captionBoundary": {
+    "x1": 306.0,
+    "x2": 505.6500549316406,
+    "y1": 347.5595397949219,
+    "y2": 419.3160095214844
+  },
+  "figType": "Figure",
+  "imageText": ["Shapes3D", "AbstractDSprites", "Mpi3d", "Toy", ")", "e", "(C", "ge", "nc", "iv", "er", "L", "D", "oa", "lK", "Training", "Step", "(·107)", "G", "2", "1.5", "1", "0.5", "0", "0", "1", "2"],
+  "name": "6",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 316.32,
+    "x2": 491.03999999999996,
+    "y1": 187.68,
+    "y2": 333.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure6-1.png"
+}, {
+  "caption": "Table 1: Results Shapes3D",
+  "captionBoundary": {
+    "x1": 252.1230010986328,
+    "x2": 359.56829833984375,
+    "y1": 615.6585693359375,
+    "y2": 621.6610107421875
+  },
+  "figType": "Table",
+  "imageText": ["β-TCVAE", "0.26±0.06", "0.50±0.03", "0.76±0.03", "0.11±0.03", "FactorVAE", "0.20±0.10", "0.41±0.07", "0.78±0.04", "0.22±0.04", "AnnealedVAE", "0.52±0.02", "0.70±0.02", "0.92±0.01", "0.26±0.03", "Ours", "0.62±0.05", "0.78±0.03", "0.82±0.03", "0.61±0.04", "Architecture", "MIG", "DCI", "FVAE", "PIPE"],
+  "name": "1",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 634.56,
+    "y2": 696.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Table1-1.png"
+}, {
+  "caption": "Table 3: Results Mpi3d Toy",
+  "captionBoundary": {
+    "x1": 251.0570068359375,
+    "x2": 360.63433837890625,
+    "y1": 177.61953735351562,
+    "y2": 183.62200927734375
+  },
+  "figType": "Table",
+  "imageText": ["β-TCVAE", "0.11±0.02", "0.23±0.01", "0.39±0.02", "0.09±0.01", "FactorVAE", "0.02±0.01", "0.13±0.00", "0.38±0.02", "(0.99±0.10)", "AnnealedVAE", "0.07±0.03", "0.23±0.02", "0.50±0.02", "0.02±0.01", "Ours", "0.12±0.09", "0.30±0.03", "0.41±0.04", "0.21±0.03", "Architecture", "MIG", "DCI", "FVAE", "PIPE"],
+  "name": "3",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 173.76,
+    "x2": 438.24,
+    "y1": 196.32,
+    "y2": 258.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Table3-1.png"
+}, {
+  "caption": "Figure 7: The FID score (Heusel et al., 2017) measures the distance of two different distributions of images and is commonly used in GAN literature to evaluate the quality of the generator. A low FID indicates that a model generates visually compelling images. We evaluate the FID of image samples from D̃FP of the respective models versus the original image. We note that DAVA achieves a competitive FID with comparatively good PIPE. We removed a small number of bad performing outliers of the baseline models to improve readability.",
+  "captionBoundary": {
+    "x1": 305.5320129394531,
+    "x2": 505.74322509765625,
+    "y1": 550.7765502929688,
+    "y2": 678.6929931640625
+  },
+  "figType": "Figure",
+  "imageText": ["β-TCVAE", "AnnealedVAE", "FactorVAE", "DAVA", "e", "sc", "or", "FI", "D", "PIPE", "metric", "(·10−2)", "130", "120", "110", "100", "90", "80", "0", "0.5", "1", "1.5", "2", "2.5", "3"],
+  "name": "7",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 316.32,
+    "x2": 491.52,
+    "y1": 389.28,
+    "y2": 536.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure7-1.png"
+}, {
+  "caption": "Table 2: Results AbstractDSprites",
+  "captionBoundary": {
+    "x1": 238.08099365234375,
+    "x2": 373.6108703613281,
+    "y1": 83.53055572509766,
+    "y2": 89.53302001953125
+  },
+  "figType": "Table",
+  "imageText": ["β-TCVAE", "0.12±0.01", "0.18±0.01", "0.45±0.02", "0.19±0.01", "FactorVAE", "0.12±0.02", "0.19±0.02", "0.55±0.03", "0.20±0.03", "AnnealedVAE", "0.15±0.01", "0.21±0.01", "0.54±0.02", "0.18±0.01", "Ours", "0.23±0.04", "0.27±0.05", "0.67±0.05", "0.35±0.03", "Architecture", "MIG", "DCI", "FVAE", "PIPE"],
+  "name": "2",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 176.64,
+    "x2": 435.35999999999996,
+    "y1": 102.72,
+    "y2": 164.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Table2-1.png"
+}, {
+  "caption": "Figure 2: Displayed are two models from disentanglement-lib (Locatello et al., 2019b) with different disentanglement performance. The top part shows a badly disentangled model whereas the model on the bottom is disentangled comparably well. In (a) and (c), odd columns show images sampled from the AbstractDSprites dataset, even columns show the respective models reconstruction. (b) and (d) show images generated by the decoder of the respective model given the factorial posterior distribution. While the model on top achieves better reconstructions (a), its generated samples (b) are visibly out of distribution. The bottom model ignores shape in its reconstructions (c), but its generated samples (d) capture the true data distribution more accurately.",
+  "captionBoundary": {
+    "x1": 107.6709976196289,
+    "x2": 505.7418518066406,
+    "y1": 261.1065368652344,
+    "y2": 343.8210144042969
+  },
+  "figType": "Figure",
+  "imageText": ["(c)", "Reconstructed", "samples.", "(d)", "Generated", "samples.", "(a)", "Reconstructed", "samples.", "(b)", "Generated", "samples."],
+  "name": "2",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0,
+    "y1": 90.72,
+    "y2": 248.16
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_CW6KmU5wPh-Figure2-1.png"
+}]

@@ -1,0 +1,281 @@
+[{
+  "caption": "Figure 4: CIFAR10 data distribution on AUM. We use different colors to show data selected by a SOTA method (red), which prunes low-importance (easy) examples first, and our method (green) for a 70% pruning rate. The coreset selected by the SOTA method lack “easy” examples on the right in the high-density region, since they are considered to be of low importance. However, our method provides coverage on highdensity region.",
+  "captionBoundary": {
+    "x1": 325.8009948730469,
+    "x2": 504.00201416015625,
+    "y1": 593.1595458984375,
+    "y2": 708.7509765625
+  },
+  "figType": "Figure",
+  "imageText": ["All", "data", "SOTA", "CCS", "es", "m", "pl", "#E", "xa", "10000", "12500", "15000", "0", "2500", "5000", "7500", "50", "75", "100", "125", "150", "175", "200", "Area", "under", "the", "margin", "(AUM)"],
+  "name": "4",
+  "page": 5,
+  "regionBoundary": {
+    "x1": 338.4,
+    "x2": 492.0,
+    "y1": 473.76,
+    "y2": 570.24
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Figure4-1.png"
+}, {
+  "caption": "Table 7: AUCpr comparison between the vanilla forgetting method and CCS. Coresets obtained by CCS show a lower AUCpr, which suggests better data coverage.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 503.99664306640625,
+    "y1": 531.3975830078125,
+    "y2": 549.85302734375
+  },
+  "figType": "Table",
+  "imageText": ["Forgetting", "0.492", "0.511", "0.551", "0.580", "0.631", "Forgetting", "(CCS)", "0.491", "0.504", "0.529", "0.547", "0.592", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "7",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 175.68,
+    "x2": 433.44,
+    "y1": 552.0,
+    "y2": 599.04
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table7-1.png"
+}, {
+  "caption": "Table 5: Accuracy results on SVHN comparing CCS against other baseline methods. Pruning rate is the fraction of examples that are removed from the original dataset. We report the testing accuracy of the model trained on the pruned dataset. The model trained with the entire dataset has 96.12% accuracy. When we prune out 30% or 40% fraction of data, CCS achieves comparable accuracy. With a 70%, 90%, or 95% pruning rate, CCS outperforms baseline methods by a large margin.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 100.60453033447266,
+    "y2": 150.44293212890625
+  },
+  "figType": "Table",
+  "imageText": ["Forgetting", "(CCS)", "95.96±0.1", "95.5±0.15", "94.56±0.24", "91.49±0.89", "87.78±0.8", "EL2N", "(CCS)", "95.42±0.16", "95.59±0.17", "95.05±0.14", "92±0.60", "88.55±0.78", "AUM", "(CCS)", "96.02±0.19", "95.69±0.18", "94.88±0.41", "92.27±0.67", "88.86±1.11", "Entropy", "95.47±0.45", "94.95±0.14", "93.14±0.55", "81.6±1.65", "54.6±3.88", "Forgetting", "95.57±0.27", "95.37±0.29", "94.76±0.09", "66.57±2.83", "27.95±1.21", "EL2N", "96.05±0.13", "95.61±0.25", "94.87±0.28", "56.53±1.68", "21.05±1.85", "AUM", "95.91±0.38", "95.76±0.10", "94.93±0.17", "52.58±5.98", "21.61±1.68", "Random", "95.38±0.4", "94.81±0.24", "93.39±0.27", "89.58±0.99", "85.34±1.01", "Pruning", "Rate", "30%", "50%", "70%", "90%", "95%"],
+  "name": "5",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 497.28,
+    "y1": 152.64,
+    "y2": 276.0
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table5-1.png"
+}, {
+  "caption": "Table 8: We train ResNet50 with coresets of CIFAR10 selected by the forgetting score calculated on training information with ResNet18. The evaluation results shows that the coresets selected by CCS have good transferability across models.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0032958984375,
+    "y1": 633.37353515625,
+    "y2": 661.2940063476562
+  },
+  "figType": "Table",
+  "imageText": ["Random", "94.53", "92.87", "89.03", "88.48", "78.94", "Forgetting", "95.22", "94.67", "91.95", "71.10", "35.21", "Forgetting", "(CCS)", "95.08", "94.99", "92.84", "89.59", "85.65", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "8",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 175.68,
+    "x2": 433.44,
+    "y1": 663.84,
+    "y2": 722.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table8-1.png"
+}, {
+  "caption": "Table 6: Accuracy results on CINIC10 comparing CCS against other baseline methods. Pruning rate is the fraction of examples that are removed from the original dataset. We report the testing accuracy of the model trained on the pruned dataset. The model trained with the entire dataset has 89.97% accuracy. When we prune out 30% or 40% fraction of data, CCS achieves comparable accuracy. With a 70%, 80%, or 90% pruning rate, CCS outperforms baseline methods by a large margin.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0032958984375,
+    "y1": 310.5215148925781,
+    "y2": 371.31890869140625
+  },
+  "figType": "Table",
+  "imageText": ["Forgetting", "(CCS)", "90.03±0.14", "89.47±0.08", "88.04±0.04", "85.88±0.20", "81.04±0.94", "EL2N", "(CCS)", "89.52±0.11", "88.41±0.17", "87.76±0.12", "86.20±0.17", "83.18±0.56", "AUM", "(CCS)", "90.04±0.09", "89.24±0.11", "87.99±0.04", "85.82±0.27", "81.92±0.44", "Entropy", "89.08±0.11", "86.69±0.21", "82.1±0.15", "77.37±0.51", "67.21±0.89", "Forgetting", "90.07±0.11", "89.68±0.16", "81.96±1.07", "61.26±1.85", "45.06±1.48", "EL2N", "89.93±0.11", "87.65±0.25", "65.10±0.71", "36.09±1.37", "18.50±0.25", "AUM", "90.11±0.04", "89.5±0.16", "66.23±0.69", "33.89±0.7", "18.61±0.15", "Random", "88.88±0.07", "87.64±0.11", "85.13±0.17", "82.63±0.14", "77.31±0.66", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "6",
+  "page": 14,
+  "regionBoundary": {
+    "x1": 111.83999999999999,
+    "x2": 497.28,
+    "y1": 372.47999999999996,
+    "y2": 497.28
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table6-1.png"
+}, {
+  "caption": "Table 2: Accuracy results on CIFAR10 comparing CCS against other baseline methods. Pruning rate is the fraction of examples that are removed from the original dataset. We report the testing accuracy of the model trained on the pruned dataset and highlight The model trained with the entire dataset has 95.23% accuracy. When we prune out 30% or 40% fraction of data, CCS achieves comparable accuracy. With a 70%, 80%, or 90% pruning rate, CCS outperforms baseline methods by a large margin.",
+  "captionBoundary": {
+    "x1": 107.99996948242188,
+    "x2": 504.0032958984375,
+    "y1": 92.6165542602539,
+    "y2": 153.4129638671875
+  },
+  "figType": "Table",
+  "imageText": ["4", "EVALUATION", "Forgetting", "(CCS)", "95.40±0.12", "95.04±0.37", "92.97±0.25", "90.93±0.22", "85.70±0.36", "EL2N", "(CCS)", "94.84±0.15", "94.03±0.24", "92.25±0.24", "89.81±0.30", "86.68±1.25", "AUM", "(CCS)", "95.27±0.06", "94.93±0.18", "93.00±0.16", "90.91±0.27", "86.08±0.61", "Entropy", "94.44±0.2", "92.11±0.47", "85.67±0.71", "79.08±0.36", "66.52±1.08", "Forgetting", "95.36±0.13", "95.29±0.18", "90.56±1.8", "62.74±2.42", "34.03±1.05", "EL2N", "95.44±0.15", "94.61±0.20", "87.48±1.33", "70.32±2.11", "22.33±0.54", "AUM", "95.07±0.24", "95.26±0.15", "91.36±1.4", "57.84±4.1", "28.06±1.09", "Random", "94.33±0.17", "93.4±0.17", "90.94±0.38", "87.98±0.39", "79.04±1.53", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "2",
+  "page": 6,
+  "regionBoundary": {
+    "x1": 108.0,
+    "x2": 497.28,
+    "y1": 156.0,
+    "y2": 309.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table2-1.png"
+}, {
+  "caption": "Figure 1: Existing coreset solutions have better accuracy than random sampling with low pruning rates, but perform worse with high pruning rates.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.9972839355469,
+    "y1": 321.155517578125,
+    "y2": 360.03497314453125
+  },
+  "figType": "Figure",
+  "imageText": ["Random", "Forgetting", "AUM", "Entropy", "ra", "cy", "Ac", "cu", "100", "80", "60", "40", "20", "0", "20", "40", "60", "80", "Data", "Pruning", "Rate", "(%)"],
+  "name": "1",
+  "page": 2,
+  "regionBoundary": {
+    "x1": 348.47999999999996,
+    "x2": 502.08,
+    "y1": 199.2,
+    "y2": 303.36
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Figure1-1.png"
+}, {
+  "caption": "Figure 5: Ablation study on the number of strata (k) and hard cutoff rate (β). We apply CCS with the forgetting score on CIFAR10. Each curve is corresponding to a pruning rate. Different k lead to similar accuracy. The optimal β goes up as the pruning rate increases.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0024108886719,
+    "y1": 495.1095275878906,
+    "y2": 523.0299682617188
+  },
+  "figType": "Figure",
+  "imageText": ["(b)", "Relationship", "between", "β", "and", "accuracy.", "50%", "30%", "90%", "80%", "70%", "ra", "cy", "Ac", "cu", "100", "90", "80", "70", "60", "50", "0", "10", "20", "30", "40", "50", "60", "Hard", "cutoff", "rate", "(%)", "(a)", "Relationship", "between", "k", "and", "accuracy.", "50%", "30%", "90%", "80%", "70%", "ra", "cy", "Ac", "cu", "100", "95", "90", "85", "80", "75", "70", "25", "50", "75", "100", "150", "Number", "of", "strata"],
+  "name": "5",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 146.88,
+    "x2": 466.08,
+    "y1": 358.56,
+    "y2": 478.08
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Figure5-1.png"
+}, {
+  "caption": "Table 3: Accuracy results on CIFAR100 comparing CCS against other baseline methods. Pruning rate is the fraction of examples that are removed from the original dataset. The model trained with the entire dataset has 78.21% accuracy. When we prune out 30% or 40% fraction of data, CCS achieves comparable accuracy. With a 70%, 80%, or 90% pruning rate, CCS outperforms baseline methods by a large margin.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0037536621094,
+    "y1": 92.6165542602539,
+    "y2": 142.4539794921875
+  },
+  "figType": "Table",
+  "imageText": ["Forgetting", "(CCS)", "77.14±0.31", "74.45±0.16", "68.92±0.12", "63.99±0.37", "55.59±0.7", "EL2N", "(CCS)", "75.02±0.12", "72.09±0.53", "67.13±0.22", "61.83±0.93", "52.55±1.63", "AUM", "(CCS)", "76.84±0.25", "73.77±0.21", "68.85±0.08", "63.2±0.54", "55.03±0.72", "Entropy", "72.26±0.08", "63.26±0.29", "50.49±0.88", "41.83±0.33", "28.96±0.78", "Forgetting", "76.91±0.32", "68.6±1.02", "38.06±1.14", "24.23±0.59", "15.93±0.24", "EL2N", "76.25±0.24", "65.90±1.06", "34.42±1.50", "15.51±1.20", "8.36±0.19", "AUM", "76.93±0.32", "67.42±0.49", "30.64±0.58", "16.38±0.4", "8.77±0.35", "Random", "74.59±0.27", "71.07±0.4", "65.3±0.21", "57.36±0.64", "44.76±1.58", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "3",
+  "page": 7,
+  "regionBoundary": {
+    "x1": 113.75999999999999,
+    "x2": 495.35999999999996,
+    "y1": 145.44,
+    "y2": 268.32
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table3-1.png"
+}, {
+  "caption": "Figure 2: The p-r curves of different subsets of CIFAR10 training dataset. The dataset without any pruning has the lowest curve (blue). Forgetting curve (green) and random curve (orange) have a crossover around p = 80%.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.9972839355469,
+    "y1": 592.1255493164062,
+    "y2": 652.9219970703125
+  },
+  "figType": "Figure",
+  "imageText": ["W/o", "Pruning", "Prune", "90%", "(Random)", "Prune", "90%", "(Forgetting)", "us", "r", "Ra", "di", "1.2", "1.0", "0.8", "0.6", "0.4", "0.2", "0.0", "0", "20", "40", "60", "80", "Cover", "percentage", "p", "(%)"],
+  "name": "2",
+  "page": 3,
+  "regionBoundary": {
+    "x1": 348.0,
+    "x2": 502.08,
+    "y1": 463.2,
+    "y2": 568.3199999999999
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Figure2-1.png"
+}, {
+  "caption": "Table 4: Ablation study on different components of coverage-centric coreset select method. We compare the accuracy of different selection methods on the CIFAR10 dataset sorted by forgetting score. We use only stratified sampling and pruning hard examples to select the coreset, respectively. We highlight the best accuracy in bold in each column.",
+  "captionBoundary": {
+    "x1": 108.0,
+    "x2": 504.0033264160156,
+    "y1": 92.6165542602539,
+    "y2": 131.4959716796875
+  },
+  "figType": "Table",
+  "imageText": ["CCS", "(Stratified", "+", "Prune", "hard)", "95.40", "95.04", "92.97", "90.93", "85.7", "Random", "94.33", "93.4", "90.94", "87.98", "79.04", "Forgetting", "95.36", "95.29", "90.56", "62.74", "34.03", "Stratified", "only", "95.23", "95.13", "90.78", "81.82", "59.35", "Prune", "hard", "only", "91.50", "88.46", "85.62", "80.98", "80.62", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "4",
+  "page": 8,
+  "regionBoundary": {
+    "x1": 148.79999999999998,
+    "x2": 461.28,
+    "y1": 134.4,
+    "y2": 228.48
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table4-1.png"
+}, {
+  "caption": "Table 1: AUCpr of different methods with different pruning rates. With low pruning rates (30%, 50%), forgetting and AUM have similar AUCpr to random. With high pruning rates (80%, 90%), forgetting and AUM have larger AUCpr than random, which means worse data coverage.",
+  "captionBoundary": {
+    "x1": 107.9999008178711,
+    "x2": 504.0024108886719,
+    "y1": 279.3384704589844,
+    "y2": 308.7528991699219
+  },
+  "figType": "Table",
+  "imageText": ["Random", "0.496", "0.509", "0.532", "0.552", "0.589", "Forgetting", "0.492", "0.511", "0.551", "0.580", "0.631", "AUM", "0.496", "0.518", "0.558", "0.586", "0.646", "Pruning", "Rate", "30%", "50%", "70%", "80%", "90%"],
+  "name": "1",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 184.79999999999998,
+    "x2": 425.28,
+    "y1": 310.56,
+    "y2": 369.12
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Table1-1.png"
+}, {
+  "caption": "Figure 3: The relationship between AUCpr and accuracy. Different colors stands for different coreset selected methods. A larger circle size indicates a higher pruning ratio on the dataset. Smaller AUCpr often ends up with better accuracy. With high pruning rates (larger balls), forgetting and AUM have a higher AUCpr and worse accuracy.",
+  "captionBoundary": {
+    "x1": 345.60198974609375,
+    "x2": 503.9991149902344,
+    "y1": 529.7005615234375,
+    "y2": 624.8679809570312
+  },
+  "figType": "Figure",
+  "imageText": ["W/o", "Pruning", "Random", "AUM", "Forgetting", "ra", "cy", "Ac", "cu", "100", "20", "30", "40", "50", "60", "70", "80", "90", "0.50", "0.55", "0.60", "0.65", "AUCpr"],
+  "name": "3",
+  "page": 4,
+  "regionBoundary": {
+    "x1": 348.47999999999996,
+    "x2": 501.59999999999997,
+    "y1": 404.64,
+    "y2": 506.4
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Figure3-1.png"
+}, {
+  "caption": "Figure 6: The relationship between AUCpr and accuracy. A larger circle size indicates a higher pruning ratio on the dataset. Compared to the vanilla forgetting method, CCS with the forgetting score achieves a lower AUCpr and better accuracy.",
+  "captionBoundary": {
+    "x1": 107.99998474121094,
+    "x2": 504.0046081542969,
+    "y1": 459.5805358886719,
+    "y2": 488.9949951171875
+  },
+  "figType": "Figure",
+  "imageText": ["W/o", "Pruning", "Random", "Forgetting", "(CCS)", "Forgetting", "ra", "cy", "Ac", "cu", "100", "20", "30", "40", "50", "60", "70", "80", "90", "0.50", "0.55", "0.60", "0.65", "AUCpr"],
+  "name": "6",
+  "page": 15,
+  "regionBoundary": {
+    "x1": 219.84,
+    "x2": 392.15999999999997,
+    "y1": 323.52,
+    "y2": 435.84
+  },
+  "renderDpi": 150,
+  "renderURL": "ICLR_2023_pic_QwKvL6wC8Yi-Figure6-1.png"
+}]
