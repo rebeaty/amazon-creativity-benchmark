@@ -47,7 +47,8 @@ def get_dialogue_diversity_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={}),
+        MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 1}),
+        MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 2}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "coherence_score"}),
     ]
 

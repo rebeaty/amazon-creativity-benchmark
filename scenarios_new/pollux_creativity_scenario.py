@@ -42,6 +42,7 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
+    Output,
     Reference,
     TEST_SPLIT,
     CORRECT_TAG,
@@ -156,7 +157,7 @@ class POLLUXCreativityScenario(Scenario):
             references = []
             if reference_text:
                 references.append(
-                    Reference(output=reference_text, tags=[CORRECT_TAG])
+                    Reference(output=Output(text=reference_text), tags=[CORRECT_TAG])
                 )
 
             # Create instance with metadata for evaluation
@@ -164,21 +165,19 @@ class POLLUXCreativityScenario(Scenario):
                 input=Input(text=prompt),
                 references=references,
                 split=TEST_SPLIT,
+                id=f"{ex['task_type']}_{len(instances)}",
+                extra_data={
+                    'task_type': ex['task_type'],
+                    'task_subtype': ex.get('task_subtype', ''),
+                    'difficulty': ex['difficulty'],
+                    'domain': ex['domain'],
+                    'criteria_name': ex['criteria_name'],
+                    'criteria_description': ex.get('criteria_description', ''),
+                    'rubrics': ex.get('rubrics', ''),
+                    'expected_score': ex['criteria_score'],  # Expert annotation
+                    'is_provocative': ex.get('is_provocative', False),
+                },
             )
-
-            # Add metadata for LLM-as-a-Judge evaluation
-            instance.id = f"{ex['task_type']}_{len(instances)}"
-            instance.extra_data = {
-                'task_type': ex['task_type'],
-                'task_subtype': ex.get('task_subtype', ''),
-                'difficulty': ex['difficulty'],
-                'domain': ex['domain'],
-                'criteria_name': ex['criteria_name'],
-                'criteria_description': ex.get('criteria_description', ''),
-                'rubrics': ex.get('rubrics', ''),
-                'expected_score': ex['criteria_score'],  # Expert annotation
-                'is_provocative': ex.get('is_provocative', False),
-            }
 
             instances.append(instance)
 

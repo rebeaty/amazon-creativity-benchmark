@@ -93,8 +93,26 @@ class CLEFJoker2025Task2Scenario(Scenario):
 
     DATA_FILENAME = "joker_2025_task2_train.json"
 
+    # Directories to search for the data file (in priority order)
+    _SEARCH_DIRS = [
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     "scenarios", "clef_joker_2025_task2"),
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     "data", "clef_joker_2025_task2"),
+    ]
+
     def get_instances(self, output_path: str) -> List[Instance]:
         data_file = os.path.join(output_path, self.DATA_FILENAME)
+
+        # Search alternative locations if not found at the default path
+        if not os.path.exists(data_file):
+            for search_dir in self._SEARCH_DIRS:
+                candidate = os.path.join(search_dir, self.DATA_FILENAME)
+                if os.path.exists(candidate):
+                    os.makedirs(output_path, exist_ok=True)
+                    import shutil
+                    shutil.copy2(candidate, data_file)
+                    break
 
         if not os.path.exists(data_file):
             raise FileNotFoundError(
@@ -102,7 +120,8 @@ class CLEFJoker2025Task2Scenario(Scenario):
                 "The dataset is gated behind CLEF registration. Please:\n"
                 "  1. Register at http://www.joker-project.com/2025/\n"
                 "  2. Download the Task 2 training JSON from Codabench\n"
-                f"  3. Place it at the path above as '{self.DATA_FILENAME}'"
+                f"  3. Place it at the path above as '{self.DATA_FILENAME}'\n"
+                f"  Or place it in one of: {self._SEARCH_DIRS}"
             )
 
         with open(data_file, "r", encoding="utf-8") as f:

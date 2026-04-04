@@ -40,6 +40,7 @@ instance-specific criteria from the 'criteria' field (parsed as dict with keys:
 """
 
 import ast
+import os
 from typing import List
 from datasets import load_dataset
 from helm.benchmark.scenarios.scenario import (
@@ -97,7 +98,7 @@ class CreationMMBenchScenario(Scenario):
             if not self._should_include_task(task_name):
                 continue
 
-            instance = self._create_instance(item)
+            instance = self._create_instance(item, output_path)
             instances.append(instance)
 
         return instances
@@ -130,7 +131,7 @@ class CreationMMBenchScenario(Scenario):
         ]
         return any(keyword in task_name for keyword in professional_keywords)
 
-    def _create_instance(self, item: dict) -> Instance:
+    def _create_instance(self, item: dict, output_path: str) -> Instance:
         """Create a single Instance from a dataset item."""
         # Extract fields
         question = item['question']  # Complete prompt with role, background, instruction

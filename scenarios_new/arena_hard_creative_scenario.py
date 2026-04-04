@@ -77,14 +77,19 @@ class ArenaHardCreativeScenario(Scenario):
 
     def get_instances(self, output_path: str) -> List[Instance]:
         with urllib.request.urlopen(_DATA_URL) as response:
-            lines = response.read().decode("utf-8").splitlines()
+            data = response.read().decode("utf-8")
 
+        # Some prompt fields contain literal newlines, so naive splitlines()
+        # breaks mid-JSON.  Accumulate lines until we get valid JSON.
         instances = []
-        for line in lines:
-            line = line.strip()
-            if not line:
-                continue
-            record = json.loads(line)
+        buf = ""
+        for line in data.splitlines():
+            buf = line if not buf else buf + "\n" + line
+            try:
+                record = json.loads(buf)
+            except json.JSONDecodeError:
+                continue  # incomplete JSON — keep accumulating
+            buf = ""
             if record.get("category") != _CREATIVE_WRITING_CATEGORY:
                 continue
 

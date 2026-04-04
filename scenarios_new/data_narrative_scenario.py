@@ -72,6 +72,7 @@ from helm.benchmark.scenarios.scenario import (
     Input,
     Output,
     Reference,
+    CORRECT_TAG,
     TRAIN_SPLIT,
     TEST_SPLIT,
 )
@@ -172,7 +173,7 @@ class DataNarrativeScenario(Scenario):
 
                 instances.append(Instance(
                     input=Input(text=prompt),
-                    references=[Reference(Output(text=paragraph), tags=[])],
+                    references=[Reference(Output(text=paragraph), tags=[CORRECT_TAG])],
                     split=split,
                     id=instance_id
                 ))

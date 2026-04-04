@@ -105,8 +105,8 @@ Reject"""
             for line in f:
                 item = json.loads(line)
 
-                title = item['title']
-                abstract = item['abstract']
+                title = item.get('title') or ""
+                abstract = item.get('abstract') or ""
                 decision = item['decision']
 
                 # Use exact prompt format from repository

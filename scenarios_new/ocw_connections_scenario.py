@@ -41,6 +41,7 @@ from helm.benchmark.scenarios.scenario import (
     TEST_SPLIT,
     TRAIN_SPLIT,
     VALID_SPLIT,
+    CORRECT_TAG,
 )
 
 
@@ -120,7 +121,7 @@ class OnlyConnectConnectionsScenario(Scenario):
                 instances.append(
                     Instance(
                         input=Input(text=prompt),
-                        references=[Reference(output=Output(text=reference_text), tags=[])],
+                        references=[Reference(output=Output(text=reference_text), tags=[CORRECT_TAG])],
                         split=helm_split,
                     )
                 )

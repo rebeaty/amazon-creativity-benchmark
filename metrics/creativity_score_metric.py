@@ -17,6 +17,7 @@ Adaptation notes vs. the original:
 
 import re
 import string
+import threading
 from itertools import combinations
 from typing import List, Optional
 
@@ -182,11 +183,18 @@ class CreativityScoreMetric(Metric):
         self.model_name = model_name
         self.task = task
         self._model: Optional[object] = None  # lazy-loaded
+        self._lock = threading.Lock()
 
     def _get_model(self):
         if self._model is None:
-            from sentence_transformers import SentenceTransformer
-            self._model = SentenceTransformer(self.model_name)
+            with self._lock:
+                if self._model is None:
+                    from sentence_transformers import SentenceTransformer
+                    self._model = SentenceTransformer(
+                        self.model_name,
+                        device="cpu",
+                        model_kwargs={"low_cpu_mem_usage": False},
+                    )
         return self._model
 
     def evaluate_generation(

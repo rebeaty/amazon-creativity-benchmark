@@ -92,12 +92,17 @@ class CM3DScenario(Scenario):
         if not os.path.exists(images_dir) or len(os.listdir(images_dir)) < 100:
             os.makedirs(images_dir, exist_ok=True)
             zip_path = os.path.join(output_path, "cm3d_images.zip")
-            subprocess.run(
-                ["kaggle", "datasets", "download",
-                 "-d", self.KAGGLE_DATASET,
-                 "-p", output_path],
-                check=True, capture_output=True
-            )
+            try:
+                subprocess.run(
+                    ["kaggle", "datasets", "download",
+                     "-d", self.KAGGLE_DATASET,
+                     "-p", output_path],
+                    check=True, capture_output=True
+                )
+            except (subprocess.CalledProcessError, FileNotFoundError) as e:
+                print(f"WARNING: Kaggle download failed ({e}). "
+                      "Place images manually in {images_dir}.")
+                return images_dir
             # Find and extract the downloaded zip
             for f in os.listdir(output_path):
                 if f.endswith(".zip") and "cm3d" not in f.lower():
@@ -176,6 +181,9 @@ class CM3DScenario(Scenario):
                         tags=[CORRECT_TAG],
                     )
                 ]
+
+            if not os.path.exists(image_path):
+                continue
 
             multimedia_content = MultimediaObject([
                 MediaObject(

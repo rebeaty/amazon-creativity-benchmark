@@ -87,7 +87,7 @@ class ESPDatasetScenario(Scenario):
 
     def download_dataset(self, output_path: str) -> str:
         """Download the ESP dataset JSON file."""
-        dataset_url = "https://raw.githubusercontent.com/JiwanChung/esper/main/data/dataset_v_0_2.json"
+        dataset_url = "https://raw.githubusercontent.com/JiwanChung/esper/master/data/dataset_v_0_2.json"
         dataset_path = os.path.join(output_path, "dataset_v_0_2.json")
 
         ensure_file_downloaded(

@@ -39,6 +39,7 @@ from helm.benchmark.scenarios.scenario import (
     TEST_SPLIT,
     Instance,
     Input,
+    Output,
     Reference,
     Scenario,
 )

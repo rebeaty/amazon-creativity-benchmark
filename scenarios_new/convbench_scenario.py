@@ -82,11 +82,19 @@ class ConvBenchScenario(Scenario):
     tags = ["creativity", "multimodal", "vision", "open_ended"]
 
     def get_instances(self, output_path: str) -> List[Instance]:
-        repo_dir = snapshot_download(
-            repo_id="liushuo12345/ConvBench",
-            repo_type="dataset",
-            cache_dir=output_path,
-        )
+        try:
+            repo_dir = snapshot_download(
+                repo_id="liushuo12345/ConvBench",
+                repo_type="dataset",
+                cache_dir=output_path,
+                local_files_only=True,
+            )
+        except Exception:
+            repo_dir = snapshot_download(
+                repo_id="liushuo12345/ConvBench",
+                repo_type="dataset",
+                cache_dir=output_path,
+            )
 
         xlsx_path = os.path.join(repo_dir, "ConvBench.xlsx")
         df = pd.read_excel(xlsx_path, sheet_name="multi_turn_benchmark")

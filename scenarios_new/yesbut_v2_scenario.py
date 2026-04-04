@@ -285,7 +285,7 @@ class YesButV2Scenario(Scenario):
                 direct_url,
                 headers={"User-Agent": "Mozilla/5.0"},
             )
-            with urllib.request.urlopen(req) as resp:
+            with urllib.request.urlopen(req, timeout=30) as resp:
                 with open(filepath, "wb") as f:
                     f.write(resp.read())
         return filepath
@@ -318,10 +318,13 @@ class YesButV2Scenario(Scenario):
 
         instances = []
         for idx, item in enumerate(dataset):
-            # Download image
-            image_path = self._download_image(
-                item["url"], item["image_file"], images_dir
-            )
+            # Download image — skip on failure
+            try:
+                image_path = self._download_image(
+                    item["url"], item["image_file"], images_dir
+                )
+            except Exception:
+                continue
 
             # Build text prompt
             prompt_text = self._build_prompt(item)

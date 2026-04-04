@@ -89,7 +89,7 @@ class YesButScenario(Scenario):
         instances = []
         for idx, item in enumerate(dataset):
             # Filter by difficulty if specified
-            item_difficulty = item.get('difficulty_in_understanding', '').upper()
+            item_difficulty = (item.get('difficulty_in_understanding') or '').upper()
             if self.difficulty != "all" and item_difficulty != self.difficulty:
                 continue
 
