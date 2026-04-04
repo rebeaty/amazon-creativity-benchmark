@@ -155,17 +155,15 @@ class WritingBenchScenario(Scenario):
                 instance = Instance(
                     input=Input(text=query),
                     references=[],
-                    split=TEST_SPLIT
+                    split=TEST_SPLIT,
+                    extra_data={
+                        "index": item['index'],
+                        "domain1": item['domain1'],
+                        "domain2": item['domain2'],
+                        "language": item['lang'],
+                        "checklist": item['checklist'],
+                    }
                 )
-
-                # Store metadata for evaluation
-                instance.extra_data = {
-                    "index": item['index'],
-                    "domain1": item['domain1'],
-                    "domain2": item['domain2'],
-                    "language": item['lang'],
-                    "checklist": item['checklist']  # 5 evaluation criteria with rubrics
-                }
 
                 instances.append(instance)
 

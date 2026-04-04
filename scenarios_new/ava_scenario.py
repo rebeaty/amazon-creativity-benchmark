@@ -110,12 +110,12 @@ class AVAScenario(Scenario):
         mean_score = np.sum(ratings * counts) / total_votes
         return float(mean_score)
 
-    def _format_prompt(self, image: Image.Image) -> MultimediaObject:
+    def _format_prompt(self, image_path: str) -> MultimediaObject:
         """
         Format the aesthetic rating prompt with image.
 
         Args:
-            image: PIL Image object
+            image_path: Path to saved image file on disk
 
         Returns:
             MultimediaObject containing prompt text and image
@@ -126,9 +126,7 @@ class AVAScenario(Scenario):
             "Provide only a single number between 1 and 10 as your rating:"
         )
 
-        # Create MediaObject for the image
-        # Note: For HuggingFace datasets, images are already PIL Image objects
-        image_media = MediaObject(content_type="image/png", location=image)
+        image_media = MediaObject(content_type="image/jpeg", location=image_path)
 
         # Combine text and image
         return MultimediaObject([prompt_text, image_media])
@@ -224,8 +222,13 @@ class AVAScenario(Scenario):
         for idx in range(num_instances):
             item = dataset[idx]
 
-            # Get image
+            # Get image — save PIL object to disk since MediaObject needs a file path
             image = item['image']
+            images_dir = os.path.join(output_path, "images")
+            os.makedirs(images_dir, exist_ok=True)
+            image_path = os.path.join(images_dir, f"{idx}.jpg")
+            if not os.path.exists(image_path):
+                image.convert("RGB").save(image_path, "JPEG")
 
             # Try to get image ID from metadata first
             image_id = None
@@ -249,7 +252,7 @@ class AVAScenario(Scenario):
             mean_score = self._compute_mean_score(vote_counts)
 
             # Format prompt with image
-            prompt = self._format_prompt(image)
+            prompt = self._format_prompt(image_path)
 
             # Create reference with mean score
             # For regression, the reference is the ground truth numeric value

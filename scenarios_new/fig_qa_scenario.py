@@ -107,26 +107,18 @@ class FigQAScenario(Scenario):
         ending2 = item['ending2']
         label = item.get('labels', -1)
 
-        # Format as multiple choice question
-        # Using A/B format for consistency with HELM multiple choice scenarios
-        prompt = f"{startphrase}\n\nWhich interpretation is correct?\nA. {ending1}\nB. {ending2}\n\nAnswer:"
+        # Input is just the metaphor + question; ADAPT_MULTIPLE_CHOICE_JOINT formats the options
+        prompt = f"{startphrase}\n\nWhich interpretation is correct?"
 
-        # Create references for both options
-        references = []
+        # References contain the actual option texts; the adapter will letter them A/B
         if has_labels and label != -1:
-            # Label 0 means ending1 is correct (option A)
-            # Label 1 means ending2 is correct (option B)
-            correct_answer = "A" if label == 0 else "B"
-
-            # Tag the correct answer
-            ref_a = Reference(Output(text="A"), tags=[CORRECT_TAG] if label == 0 else [])
-            ref_b = Reference(Output(text="B"), tags=[CORRECT_TAG] if label == 1 else [])
+            ref_a = Reference(Output(text=ending1), tags=[CORRECT_TAG] if label == 0 else [])
+            ref_b = Reference(Output(text=ending2), tags=[CORRECT_TAG] if label == 1 else [])
             references = [ref_a, ref_b]
         else:
-            # For test set with hidden labels, include both references without tags
             references = [
-                Reference(Output(text="A"), tags=[]),
-                Reference(Output(text="B"), tags=[])
+                Reference(Output(text=ending1), tags=[]),
+                Reference(Output(text=ending2), tags=[])
             ]
 
         return Instance(

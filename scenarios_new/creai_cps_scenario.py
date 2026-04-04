@@ -44,7 +44,9 @@ from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
+    Output,
     Reference,
+    CORRECT_TAG,
     TEST_SPLIT,
 )
 
@@ -63,7 +65,7 @@ class CREAICPSScenario(Scenario):
 
     def get_instances(self, output_path: str) -> List[Instance]:
         # Load data from local JSON file
-        data_path = os.path.join(os.path.dirname(__file__), "data.json")
+        data_path = os.path.join(os.path.dirname(__file__), "..", "scenarios", "creai_cps", "data.json")
         with open(data_path, 'r') as f:
             data = json.load(f)
 
@@ -85,7 +87,7 @@ class CREAICPSScenario(Scenario):
 
             # Create reference with the LLM-generated response
             # Note: In HELM, references can be LLM-generated for comparison purposes
-            references = [Reference(output=reference_response, tags=[])]
+            references = [Reference(output=Output(text=reference_response), tags=[CORRECT_TAG])]
 
             instances.append(
                 Instance(

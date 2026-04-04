@@ -58,6 +58,7 @@ from helm.benchmark.scenarios.scenario import (
     Input,
     Reference,
     Output,
+    CORRECT_TAG,
     TEST_SPLIT,
     VALID_SPLIT,
 )
@@ -166,7 +167,7 @@ class UnfunCorpusScenario(Scenario):
 
             # Reference is the human-created unfunned headline
             references = [
-                Reference(Output(text=example['unfunned']), tags=[])
+                Reference(Output(text=example['unfunned']), tags=[CORRECT_TAG])
             ]
 
             instances.append(
@@ -183,7 +184,7 @@ class UnfunCorpusScenario(Scenario):
             prompt = self.create_prompt(example['funny'])
 
             references = [
-                Reference(Output(text=example['unfunned']), tags=[])
+                Reference(Output(text=example['unfunned']), tags=[CORRECT_TAG])
             ]
 
             instances.append(

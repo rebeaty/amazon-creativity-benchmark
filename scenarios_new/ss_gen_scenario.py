@@ -48,6 +48,7 @@ from helm.benchmark.scenarios.scenario import (
     Input,
     Output,
     Reference,
+    CORRECT_TAG,
     TRAIN_SPLIT,
     VALID_SPLIT,
     TEST_SPLIT,
@@ -135,7 +136,7 @@ class SSGenScenario(Scenario):
                 # Create instance with reference story
                 instance = Instance(
                     input=Input(text=prompt),
-                    references=[Reference(Output(text=story_content), tags=[])],
+                    references=[Reference(Output(text=story_content), tags=[CORRECT_TAG])],
                     split=split,
                     id=f"{split}_{example_id}",
                 )

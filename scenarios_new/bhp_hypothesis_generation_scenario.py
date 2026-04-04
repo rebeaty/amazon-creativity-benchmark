@@ -62,6 +62,7 @@ from helm.benchmark.scenarios.scenario import (
     Input,
     Reference,
     Output,
+    CORRECT_TAG,
     TEST_SPLIT,
 )
 from helm.common.general import ensure_file_downloaded
@@ -181,7 +182,7 @@ class BHPHypothesisGenerationScenario(Scenario):
 
                 # Reference is the ground truth hypothesis from literature
                 references = [
-                    Reference(Output(text=item['hypothesis']), tags=[])
+                    Reference(Output(text=item['hypothesis']), tags=[CORRECT_TAG])
                 ]
 
                 instances.append(
@@ -202,7 +203,7 @@ class BHPHypothesisGenerationScenario(Scenario):
                 prompt_text = self.create_prompt(item['background'])
 
                 references = [
-                    Reference(Output(text=item['hypothesis']), tags=[])
+                    Reference(Output(text=item['hypothesis']), tags=[CORRECT_TAG])
                 ]
 
                 instances.append(

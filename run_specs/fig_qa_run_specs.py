@@ -14,7 +14,7 @@ def get_fig_qa_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
         class_name="scenarios_new.fig_qa_scenario.FigQAScenario",
-        args={},
+        args={"use_validation_as_test": True},
     )
 
     adapter_spec = AdapterSpec(
@@ -27,7 +27,7 @@ def get_fig_qa_spec() -> RunSpec:
         max_train_instances=5,  # ASSUMPTION: few-shot, TRAIN_SPLIT seen
         num_outputs=1,
         max_tokens=512,
-        temperature=0.7,
+        temperature=0.0,
         stop_sequences=["\n"],
     )
 

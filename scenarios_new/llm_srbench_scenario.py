@@ -106,9 +106,9 @@ class LlmSrbenchScenario(Scenario):
         return [self.subset]
 
     def get_instances(self, output_path: str):
-        dataset_dir = Path(snapshot_download(repo_id=REPO_ID, repo_type="dataset"))
+        dataset_dir = Path(snapshot_download(repo_id=REPO_ID, repo_type="dataset", token=True))
         h5_path = dataset_dir / "lsr_bench_data.hdf5"
-        all_ds = datasets.load_dataset(REPO_ID)
+        all_ds = datasets.load_dataset(REPO_ID, token=True)
 
         instances = []
         with h5py.File(h5_path, "r") as h5:

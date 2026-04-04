@@ -37,6 +37,7 @@ from helm.benchmark.scenarios.scenario import (
     Instance,
     Input,
     Output, Reference,
+    CORRECT_TAG,
     TEST_SPLIT,
 )
 
@@ -89,6 +90,6 @@ class MetaphorGenerationScenario(Scenario):
         prompt = literal_sentence
 
         # Create reference with the ground truth metaphorical sentence
-        references = [Reference(output=Output(text=metaphorical_clean), tags=[])]
+        references = [Reference(output=Output(text=metaphorical_clean), tags=[CORRECT_TAG])]
 
         return Instance(input=Input(text=prompt), references=references, split=TEST_SPLIT)

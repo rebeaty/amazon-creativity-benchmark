@@ -38,8 +38,10 @@ Fields available but not used: Future_Work_extraction, LLM_extracted_review_futu
 """
 
 import json
+import os
 import pandas as pd
 from helm.benchmark.scenarios.scenario import (
+    CORRECT_TAG,
     Scenario,
     Instance,
     Input,
@@ -90,9 +92,10 @@ No long-term future work directions could be derived from the paper."""
     def get_instances(self, output_path: str) -> list[Instance]:
         # Download the NeurIPS dataset file
         data_url = "https://huggingface.co/datasets/iaadlab/FutureGen/resolve/main/df_neurips_future_work_dataset.csv"
-        data_path = ensure_file_downloaded(
+        data_path = os.path.join(output_path, "df_neurips_future_work_dataset.csv")
+        ensure_file_downloaded(
             source_url=data_url,
-            target_path="df_neurips_future_work_dataset.csv",
+            target_path=data_path,
             unpack=False,
         )
 
@@ -124,7 +127,7 @@ No long-term future work directions could be derived from the paper."""
                 prompt = self.PROMPT_SHORT.format(paper_text=paper_text)
 
             # Create reference
-            references = [Reference(Output(text=future_work), tags=[])]
+            references = [Reference(Output(text=future_work), tags=[CORRECT_TAG])]
 
             instances.append(
                 Instance(

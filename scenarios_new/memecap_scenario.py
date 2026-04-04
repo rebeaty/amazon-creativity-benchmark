@@ -31,6 +31,7 @@ import urllib.request
 from typing import List
 
 from helm.benchmark.scenarios.scenario import (
+    CORRECT_TAG,
     Scenario,
     Instance,
     Input,
@@ -144,7 +145,7 @@ class MemecapScenario(Scenario):
                 # Each meme has multiple interpretive captions (typically 3)
                 references = []
                 for caption in item["meme_captions"]:
-                    references.append(Reference(Output(text=caption), tags=[]))
+                    references.append(Reference(Output(text=caption), tags=[CORRECT_TAG]))
 
                 instances.append(
                     Instance(

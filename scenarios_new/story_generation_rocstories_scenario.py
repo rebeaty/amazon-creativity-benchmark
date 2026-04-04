@@ -53,6 +53,7 @@ from helm.benchmark.scenarios.scenario import (
     Reference,
     Output,
     TEST_SPLIT,
+    CORRECT_TAG,
 )
 from helm.common.general import ensure_file_downloaded
 
@@ -83,7 +84,7 @@ class StoryGenerationScenario(Scenario):
 
     def download_dataset(self, output_path: str) -> tuple:
         """Download the ROCStories and WritingPrompts data files."""
-        base_url = "https://raw.githubusercontent.com/ZhuohanX/DeltaScore/main/data/crowdsource"
+        base_url = "https://raw.githubusercontent.com/ZhuohanX/DeltaScore/master/data/crowdsource"
 
         roc_url = f"{base_url}/roc.jsonl"
         wp_url = f"{base_url}/wp.jsonl"
@@ -147,7 +148,7 @@ class StoryGenerationScenario(Scenario):
 
                 # Reference is the human-written story
                 references = [
-                    Reference(Output(text=prompt_data['reference']), tags=[])
+                    Reference(Output(text=prompt_data['reference']), tags=[CORRECT_TAG])
                 ]
 
                 instances.append(
@@ -168,7 +169,7 @@ class StoryGenerationScenario(Scenario):
                 prompt_text = self.create_prompt(prompt_data['prompt'])
 
                 references = [
-                    Reference(Output(text=prompt_data['reference']), tags=[])
+                    Reference(Output(text=prompt_data['reference']), tags=[CORRECT_TAG])
                 ]
 
                 instances.append(

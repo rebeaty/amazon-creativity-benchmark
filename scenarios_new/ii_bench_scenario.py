@@ -41,6 +41,7 @@ dev split (35 examples) as the primary evaluation set, similar to other benchmar
 where test labels are unavailable (e.g., RiddleSense).
 """
 
+import os
 from typing import List
 from datasets import load_dataset
 from helm.benchmark.scenarios.scenario import (
@@ -74,16 +75,23 @@ class IIBenchScenario(Scenario):
         dataset = load_dataset("m-a-p/II-Bench", split="dev")
 
         instances = []
-        for item in dataset:
-            instance = self._create_instance(item)
+        images_dir = os.path.join(output_path, "images")
+        os.makedirs(images_dir, exist_ok=True)
+        for idx, item in enumerate(dataset):
+            instance = self._create_instance(item, output_path, idx)
             instances.append(instance)
 
         return instances
 
-    def _create_instance(self, item: dict) -> Instance:
+    def _create_instance(self, item: dict, output_path: str, idx: int) -> Instance:
         """Create a single Instance from a dataset item."""
         # Extract fields
-        image = item['image']  # PIL Image object
+        pil_image = item['image']  # PIL Image object
+        # Save PIL image to disk so HELM can reference it by path
+        image_path = os.path.join(output_path, "images", f"{idx}.jpg")
+        if not os.path.exists(image_path):
+            pil_image.save(image_path)
+
         question = item['question']
         options = [
             item['option1'],
@@ -111,7 +119,7 @@ class IIBenchScenario(Scenario):
         multimedia_content = MultimediaObject([
             MediaObject(
                 content_type="image/jpeg",
-                location=image  # PIL Image - HELM handles conversion
+                location=image_path
             ),
             MediaObject(
                 content_type="text/plain",

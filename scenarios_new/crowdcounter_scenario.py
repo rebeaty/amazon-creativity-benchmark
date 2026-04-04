@@ -54,6 +54,7 @@ from helm.benchmark.scenarios.scenario import (
     Input,
     Reference,
     Output,
+    CORRECT_TAG,
     TEST_SPLIT,
     VALID_SPLIT,
     TRAIN_SPLIT,
@@ -185,7 +186,7 @@ class CrowdCounterScenario(Scenario):
 
                 # Reference is the ground truth counterspeech
                 references = [
-                    Reference(Output(text=counterspeech), tags=[cs_type])
+                    Reference(Output(text=counterspeech), tags=[CORRECT_TAG, cs_type])
                 ]
 
                 instances.append(

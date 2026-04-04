@@ -93,11 +93,19 @@ class AaarScenario(Scenario):
         self.subtask = subtask
 
     def get_instances(self, output_path: str) -> List[Instance]:
-        repo_dir = snapshot_download(
-            repo_id="Reza8848/AAAR-1.0",
-            repo_type="dataset",
-            cache_dir=output_path,
-        )
+        try:
+            repo_dir = snapshot_download(
+                repo_id="Reza8848/AAAR-1.0",
+                repo_type="dataset",
+                cache_dir=output_path,
+                local_files_only=True,
+            )
+        except Exception:
+            repo_dir = snapshot_download(
+                repo_id="Reza8848/AAAR-1.0",
+                repo_type="dataset",
+                cache_dir=output_path,
+            )
 
         if self.subtask == "experiment_design":
             return self._load_experiment_design(repo_dir)

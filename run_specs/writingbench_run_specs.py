@@ -44,8 +44,6 @@ def get_writingbench_spec() -> RunSpec:
         max_tokens=16000,
         temperature=0.7,
         stop_sequences=[],
-        top_p=0.8,
-        top_k=20,
     )
 
     metric_specs = [

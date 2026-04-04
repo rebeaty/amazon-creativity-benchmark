@@ -34,13 +34,17 @@ Fields used: Problem text (extracted from markdown)
 Fields skipped: None (data is in markdown format)
 """
 
+import os
 import re
 from typing import List
+from urllib.parse import quote
 from helm.benchmark.scenarios.scenario import (
     Scenario,
     Instance,
     Input,
+    Output,
     Reference,
+    CORRECT_TAG,
     TEST_SPLIT,
 )
 from helm.common.general import ensure_file_downloaded
@@ -66,8 +70,8 @@ class DeepMathCreativeScenario(Scenario):
     tags = ["creativity", "mathematics", "reasoning", "multilingual", "chinese"]
 
     # Raw markdown files from GitHub
-    PROOF_PROBLEMS_URL = "https://raw.githubusercontent.com/DeepMathLLM/DeepMath/main/DeepMath-Creative-data/78道证明题.md"
-    COUNTEREXAMPLE_PROBLEMS_URL = "https://raw.githubusercontent.com/DeepMathLLM/DeepMath/main/DeepMath-Creative-data/101道反例题.md"
+    PROOF_PROBLEMS_URL = "https://raw.githubusercontent.com/DeepMathLLM/DeepMath/master/DeepMath-Creative/datasets/" + quote("78道证明题.md")
+    COUNTEREXAMPLE_PROBLEMS_URL = "https://raw.githubusercontent.com/DeepMathLLM/DeepMath/master/DeepMath-Creative/datasets/" + quote("101道反例题.md")
 
     def __init__(self, task_type: str = "all"):
         """
@@ -128,9 +132,10 @@ class DeepMathCreativeScenario(Scenario):
 
         # Load proof problems if requested
         if self.task_type in ["all", "proof"]:
-            proof_file = ensure_file_downloaded(
+            proof_file = os.path.join(output_path, "deepmath_creative_proof.md")
+            ensure_file_downloaded(
                 source_url=self.PROOF_PROBLEMS_URL,
-                target_path="deepmath_creative_proof.md",
+                target_path=proof_file,
                 unpack=False,
             )
 
@@ -145,16 +150,17 @@ class DeepMathCreativeScenario(Scenario):
                 instances.append(
                     Instance(
                         input=Input(text=problem["text"]),
-                        references=[Reference(output=Reference.CORRECT_TAG, tags=[])],
+                        references=[Reference(output=Output(text=""), tags=[CORRECT_TAG])],
                         split=TEST_SPLIT,
                     )
                 )
 
         # Load counterexample problems if requested
         if self.task_type in ["all", "counterexample"]:
-            ce_file = ensure_file_downloaded(
+            ce_file = os.path.join(output_path, "deepmath_creative_counterexample.md")
+            ensure_file_downloaded(
                 source_url=self.COUNTEREXAMPLE_PROBLEMS_URL,
-                target_path="deepmath_creative_counterexample.md",
+                target_path=ce_file,
                 unpack=False,
             )
 
@@ -167,7 +173,7 @@ class DeepMathCreativeScenario(Scenario):
                 instances.append(
                     Instance(
                         input=Input(text=problem["text"]),
-                        references=[Reference(output=Reference.CORRECT_TAG, tags=[])],
+                        references=[Reference(output=Output(text=""), tags=[CORRECT_TAG])],
                         split=TEST_SPLIT,
                     )
                 )
