@@ -80,7 +80,7 @@ Use the metrics-diagnose-fix skill workflow.
 1. READ the diagnosis instructions from the metrics-diagnose-fix skill:
    - Read data/registry/registry_metrics.yaml for "$dataset" to understand each missing metric's type, helm_class, and config
    - Read run_specs/${dataset}_run_specs.py to see current MetricSpecs
-   - Read the scenario file (check scenarios/ and scenarios_new/ directories)
+   - Read the scenario file (check scenarios/ directory)
 
 2. WRITE a diagnosis file to: debugging_scripts/metrics-check/$ASSIGNEE/${dataset}_diagnosis.md
    Include: expected vs actual metrics, root cause analysis, proposed fix.
@@ -92,10 +92,10 @@ Use the metrics-diagnose-fix skill workflow.
    - Verify any HELM class you reference actually exists: python3 -c "from X import Y"
 
 Rules:
-- Only modify files in run_specs/, scenarios/, scenarios_new/, metrics/, eval_scripts/
+- Only modify files in run_specs/, scenarios/, metrics/, eval_scripts/
 - Do NOT modify HELM's installed package files
 - Be surgical — only fix what's broken for missing metrics
-- Do NOT explain. Just read files and make fixes.
+- Update/write the summary file of fixes you made and why, to debugging_scripts/metrics-check/$ASSIGNEE/${dataset}_fixes.md
 PROMPT_EOF
     )
 
@@ -138,6 +138,19 @@ process_one() {
             # All metrics present — PASS
             local elapsed=$(( $(date +%s) - start_time ))
             echo "    [PASS] All metrics present (${elapsed}s, $attempt attempt(s))"
+            echo "    [METRICS] Expected vs present in stats.json:"
+            echo "$check_output" | python3 -c "
+import json, sys
+r = json.load(sys.stdin)
+m1, m2 = r.get('m1', []), r.get('m2', [])
+m2_set = set(m2)
+for m in m1:
+    mark = 'x' if m in m2_set else ' '
+    print(f'      [{mark}] {m}  (expected)')
+for m in m2:
+    if m not in set(m1):
+        print(f'      [x] {m}  (extra, not in m1)')
+"
             python3 "$HELPER" done "$ASSIGNEE" "$dataset"
             echo "    [MOVED] $dataset -> done"
             return 0
