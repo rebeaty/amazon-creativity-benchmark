@@ -2,7 +2,7 @@
 
 ## Project Structure
 - **Evaluation bash scripts**: `eval_scripts/`
-- **Scenario files**: `scenarios_new/`
+- **Scenario files**: `scenarios/`
 - **Run specifications**: `run_specs/`
 - **Dataset-to-metric map**: `data/registry/registry_metrics.yaml`
 - **Dataset-to-inference config map**: `data/registry/registry_inference.yaml`
