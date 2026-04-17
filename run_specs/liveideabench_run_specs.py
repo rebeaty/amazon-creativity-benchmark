@@ -28,7 +28,7 @@ Score 5: Highly creative, original idea demonstrating exceptional generative thi
 def get_liveideabench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.liveideabench_scenario.LiveIdeaBenchScenario",
+        class_name="scenarios.liveideabench_scenario.LiveIdeaBenchScenario",
         args={},
     )
 

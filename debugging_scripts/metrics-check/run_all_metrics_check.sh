@@ -1,0 +1,40 @@
+#!/bin/bash
+
+datasets=(
+    "balderdash"
+    "bhp_hypothesis_generation"
+    "calligrapher"
+    "cm3d"
+    "convbench"
+    "creativemath"
+    "dat_creative_writing"
+    "deep_math"
+    "discovery_bench"
+    "flute_filtered"
+    "fscg8"
+    "future_ideas"
+    "futuregen"
+    "gauss"
+    "humordb"
+    "lcc_metaphor"
+    "macgyver"
+    "metaphoric_analogies"
+    "munch"
+    "ocw_connections"
+    "poetmt"
+    "puntuguese"
+    "rpgbench"
+    "schnovel"
+    "science_analogies"
+    "scimon"
+    "simile_generation"
+    "slang_generation"
+    "textlogo3k"
+    "vietnamese_poem"
+)
+
+for dataset in "${datasets[@]}"; do
+    echo "========== $dataset =========="
+    bash ./debugging_scripts/metrics-check/run_metrics_check.sh swastik "$dataset"
+    echo ""
+done

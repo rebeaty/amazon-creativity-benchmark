@@ -28,7 +28,7 @@ Score 5: Excellent materials design demonstrating deep scientific knowledge and 
 def get_matdesign_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.matdesign_scenario.MatDesignScenario",
+        class_name="scenarios.matdesign_scenario.MatDesignScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_idrbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.idrbench_scenario.IDRBenchScenario",
+        class_name="scenarios.idrbench_scenario.IDRBenchScenario",
         args={},
     )
 

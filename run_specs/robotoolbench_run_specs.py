@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_robotoolbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.robotoolbench_scenario.RoboToolBenchScenario",
+        class_name="scenarios.robotoolbench_scenario.RoboToolBenchScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_unfun_corpus_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.unfun_corpus_scenario.UnfunCorpusScenario",
+        class_name="scenarios.unfun_corpus_scenario.UnfunCorpusScenario",
         args={},
     )
 

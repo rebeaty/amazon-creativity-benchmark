@@ -94,8 +94,7 @@ class FLUTEFilteredScenario(Scenario):
 
             if self.mode == "classification":
                 references = [
-                    Reference(Output(text="Entailment"), tags=[CORRECT_TAG] if item["label"] == "Entailment" else []),
-                    Reference(Output(text="Contradiction"), tags=[CORRECT_TAG] if item["label"] == "Contradiction" else []),
+                    Reference(Output(text=item["label"]), tags=[CORRECT_TAG]),
                 ]
             else:
                 # explanation mode: full reference = label + explanation

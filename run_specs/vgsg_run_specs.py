@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_vgsg_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.vgsg_scenario.VGSGScenario",
+        class_name="scenarios.vgsg_scenario.VGSGScenario",
         args={},
     )
 

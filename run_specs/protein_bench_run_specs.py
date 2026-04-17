@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_protein_bench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.protein_bench_scenario.ProteinBenchScenario",
+        class_name="scenarios.protein_bench_scenario.ProteinBenchScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_sonnet_or_not_bot_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.sonnet_or_not_bot_scenario.SonnetOrNotBotScenario",
+        class_name="scenarios.sonnet_or_not_bot_scenario.SonnetOrNotBotScenario",
         args={},
     )
 

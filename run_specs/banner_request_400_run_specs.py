@@ -28,7 +28,7 @@ Score 5: Excellent, highly creative and persuasive banner copy perfectly suited 
 def get_banner_request_400_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.banner_request_400_scenario.BannerRequest400Scenario",
+        class_name="scenarios.banner_request_400_scenario.BannerRequest400Scenario",
         args={},
     )
 

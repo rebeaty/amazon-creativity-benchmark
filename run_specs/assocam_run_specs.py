@@ -2,7 +2,7 @@
 
 from helm.benchmark.adaptation.adapter_spec import AdapterSpec
 from helm.benchmark.adaptation.adapters.adapter_factory import (
-    ADAPT_MULTIPLE_CHOICE_JOINT,
+    ADAPT_GENERATION,
 )
 from helm.benchmark.metrics.metric import MetricSpec
 from helm.benchmark.run_spec import RunSpec, run_spec_function
@@ -13,12 +13,12 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_assocam_4T1_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.assocam_scenario.AssoCiAmScenario",
+        class_name="scenarios.assocam_scenario.AssoCiAmScenario",
         args={"subtask": "4T1"},
     )
 
     adapter_spec = AdapterSpec(
-        method=ADAPT_MULTIPLE_CHOICE_JOINT,
+        method=ADAPT_GENERATION,
         instructions="",  # NOTE: scenario handles prompting internally
         input_prefix="",
         input_suffix="\n",
@@ -32,7 +32,10 @@ def get_assocam_4T1_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(
+            class_name="helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics",
+            args={},
+        ),
     ]
 
     return RunSpec(
@@ -49,12 +52,12 @@ def get_assocam_4T1_spec() -> RunSpec:
 def get_assocam_7T1_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.assocam_scenario.AssoCiAmScenario",
+        class_name="scenarios.assocam_scenario.AssoCiAmScenario",
         args={"subtask": "7T1"},
     )
 
     adapter_spec = AdapterSpec(
-        method=ADAPT_MULTIPLE_CHOICE_JOINT,
+        method=ADAPT_GENERATION,
         instructions="",  # NOTE: scenario handles prompting internally
         input_prefix="",
         input_suffix="\n",
@@ -68,7 +71,10 @@ def get_assocam_7T1_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(
+            class_name="helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics",
+            args={},
+        ),
     ]
 
     return RunSpec(
@@ -85,12 +91,12 @@ def get_assocam_7T1_spec() -> RunSpec:
 def get_assocam_10T1_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.assocam_scenario.AssoCiAmScenario",
+        class_name="scenarios.assocam_scenario.AssoCiAmScenario",
         args={"subtask": "10T1"},
     )
 
     adapter_spec = AdapterSpec(
-        method=ADAPT_MULTIPLE_CHOICE_JOINT,
+        method=ADAPT_GENERATION,
         instructions="",  # NOTE: scenario handles prompting internally
         input_prefix="",
         input_suffix="\n",
@@ -104,7 +110,10 @@ def get_assocam_10T1_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(
+            class_name="helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics",
+            args={},
+        ),
     ]
 
     return RunSpec(

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_d_humor_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.d_humor_scenario.DHumorDetectionScenario",
+        class_name="scenarios.d_humor_scenario.DHumorDetectionScenario",
         args={},
     )
 

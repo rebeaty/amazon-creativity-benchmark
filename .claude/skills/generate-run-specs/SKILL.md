@@ -104,7 +104,7 @@ defined each LLM-judge metric. Parse this file to get `paper_link` and
 
 ### 1.4 Scenario Files
 
-**Path pattern:** `/home/public/vdeshpan/amazon-creativity-benchmark/scenarios_new/<dataset_name>_scenario.py`
+**Path pattern:** `/home/public/vdeshpan/amazon-creativity-benchmark/scenarios/<dataset_name>_scenario.py`
 
 Each scenario file contains a class inheriting from `helm.benchmark.scenarios.scenario.Scenario`.
 Parse these files to extract:
@@ -149,7 +149,7 @@ def get_<dataset_name>_spec(<params>) -> RunSpec:
 
     # --- 1. ScenarioSpec ---
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.<dataset_name>_scenario.<ClassName>",
+        class_name="scenarios.<dataset_name>_scenario.<ClassName>",
         args={<constructor_args>},
     )
 
@@ -486,7 +486,7 @@ all_datasets = set(inference_registry["datasets"].keys()) | set(metrics_registry
 
 For each `<dataset_name>` in the union of both registries:
 
-1. **Locate** `scenarios_new/<dataset_name>_scenario.py`
+1. **Locate** `scenarios/<dataset_name>_scenario.py`
 2. **Extract** by reading the file:
    - The Scenario class name (e.g. `class AaarScenario(Scenario):`)
    - The `name = "..."` attribute

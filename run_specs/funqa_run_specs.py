@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_funqa_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.funqa_scenario.FunQAScenario",
+        class_name="scenarios.funqa_scenario.FunQAScenario",
         args={},
     )
 

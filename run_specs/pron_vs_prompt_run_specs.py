@@ -50,7 +50,7 @@ Score 5: Highly creative text demonstrating exceptional advertising creativity a
 def get_pron_vs_prompt_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.pron_vs_prompt_scenario.PronVsPromptScenario",
+        class_name="scenarios.pron_vs_prompt_scenario.PronVsPromptScenario",
         args={},
     )
 

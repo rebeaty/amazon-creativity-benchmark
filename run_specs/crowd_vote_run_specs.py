@@ -28,7 +28,7 @@ Score 5: Response would be rated excellent by the vast majority of evaluators
 def get_crowd_vote_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.crowd_vote_scenario.CrowdVoteScenario",
+        class_name="scenarios.crowd_vote_scenario.CrowdVoteScenario",
         args={},
     )
 

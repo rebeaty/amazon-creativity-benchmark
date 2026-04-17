@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_llm_discussion_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.llm_discussion_scenario.LLMDiscussionScenario",
+        class_name="scenarios.llm_discussion_scenario.LLMDiscussionScenario",
         args={},
     )
 

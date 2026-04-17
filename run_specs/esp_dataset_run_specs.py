@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_esp_dataset_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.esp_dataset_scenario.ESPDatasetScenario",
+        class_name="scenarios.esp_dataset_scenario.ESPDatasetScenario",
         args={},
     )
 

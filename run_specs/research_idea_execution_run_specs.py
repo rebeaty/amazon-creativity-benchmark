@@ -50,7 +50,7 @@ Score 5: Excellent quality plan demonstrating exceptional scientific rigor, clar
 def get_research_idea_execution_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.research_idea_execution_scenario.ResearchIdeaExecutionScenario",
+        class_name="scenarios.research_idea_execution_scenario.ResearchIdeaExecutionScenario",
         args={},
     )
 

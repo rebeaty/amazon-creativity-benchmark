@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_neocoder_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.neocoder_scenario.NeocoderScenario",
+        class_name="scenarios.neocoder_scenario.NeocoderScenario",
         args={},
     )
 

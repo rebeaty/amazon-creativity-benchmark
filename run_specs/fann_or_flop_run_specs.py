@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_fann_or_flop_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.fann_or_flop_scenario.FannOrFlopScenario",
+        class_name="scenarios.fann_or_flop_scenario.FannOrFlopScenario",
         args={},
     )
 

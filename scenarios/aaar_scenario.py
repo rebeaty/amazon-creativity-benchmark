@@ -61,6 +61,8 @@ from typing import List
 
 from huggingface_hub import snapshot_download
 
+_HF_TOKEN = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_TOKEN")
+
 from helm.benchmark.scenarios.scenario import (
     Scenario, Instance, Input, Output, Reference,
     CORRECT_TAG, TEST_SPLIT,
@@ -93,18 +95,28 @@ class AaarScenario(Scenario):
         self.subtask = subtask
 
     def get_instances(self, output_path: str) -> List[Instance]:
+        subtask_dir = "Experiment_Design" if self.subtask == "experiment_design" else os.path.join("Paper_Weakness", "ICLR_2023")
+
+        repo_dir = None
         try:
-            repo_dir = snapshot_download(
+            candidate = snapshot_download(
                 repo_id="Reza8848/AAAR-1.0",
                 repo_type="dataset",
                 cache_dir=output_path,
                 local_files_only=True,
+                token=_HF_TOKEN,
             )
+            if os.path.isdir(os.path.join(candidate, subtask_dir)):
+                repo_dir = candidate
         except Exception:
+            pass
+
+        if repo_dir is None:
             repo_dir = snapshot_download(
                 repo_id="Reza8848/AAAR-1.0",
                 repo_type="dataset",
                 cache_dir=output_path,
+                token=_HF_TOKEN,
             )
 
         if self.subtask == "experiment_design":

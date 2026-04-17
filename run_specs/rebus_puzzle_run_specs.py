@@ -28,7 +28,7 @@ Score 5: Answer perfectly and completely decodes the rebus
 def get_rebus_puzzle_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.rebus_puzzle_scenario.RebusPuzzleScenario",
+        class_name="scenarios.rebus_puzzle_scenario.RebusPuzzleScenario",
         args={},
     )
 

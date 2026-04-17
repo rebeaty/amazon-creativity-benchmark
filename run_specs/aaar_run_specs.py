@@ -39,7 +39,7 @@ Score 5: All generated points are precisely entailed by the reference
 def get_aaar_experiment_design_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.aaar_scenario.AaarScenario",
+        class_name="scenarios.aaar_scenario.AaarScenario",
         args={"subtask": "experiment_design"},
     )
 
@@ -59,6 +59,7 @@ def get_aaar_experiment_design_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(class_name="metrics.sentence_bert_metric.SentenceBertMetric", args={"model_name": "all-mpnet-base-v2"}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "recall_gt_entail_score"}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "precision_pred_entail_score"}),
     ]
@@ -100,7 +101,7 @@ def get_aaar_experiment_design_spec() -> RunSpec:
 def get_aaar_paper_weakness_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.aaar_scenario.AaarScenario",
+        class_name="scenarios.aaar_scenario.AaarScenario",
         args={"subtask": "paper_weakness"},
     )
 
@@ -120,6 +121,7 @@ def get_aaar_paper_weakness_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(class_name="metrics.sentence_bert_metric.SentenceBertMetric", args={"model_name": "all-mpnet-base-v2"}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "recall_gt_entail_score"}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "precision_pred_entail_score"}),
     ]

@@ -28,7 +28,7 @@ Score 5: Excellent coherence with perfect narrative flow and consistency
 def get_ss_gen_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.ss_gen_scenario.SSGenScenario",
+        class_name="scenarios.ss_gen_scenario.SSGenScenario",
         args={},
     )
 

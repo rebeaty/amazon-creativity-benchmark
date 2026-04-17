@@ -182,19 +182,25 @@ class CM3DScenario(Scenario):
                     )
                 ]
 
-            if not os.path.exists(image_path):
-                continue
-
-            multimedia_content = MultimediaObject([
-                MediaObject(
-                    content_type="image/jpeg",
-                    location=image_path,
-                ),
-                MediaObject(
-                    content_type="text/plain",
-                    text=prompt_text,
-                ),
-            ])
+            if os.path.exists(image_path):
+                multimedia_content = MultimediaObject([
+                    MediaObject(
+                        content_type="image/jpeg",
+                        location=image_path,
+                    ),
+                    MediaObject(
+                        content_type="text/plain",
+                        text=prompt_text,
+                    ),
+                ])
+            else:
+                # Image not available locally — use text-only input
+                multimedia_content = MultimediaObject([
+                    MediaObject(
+                        content_type="text/plain",
+                        text=prompt_text,
+                    ),
+                ])
 
             instances.append(Instance(
                 input=Input(multimedia_content=multimedia_content),

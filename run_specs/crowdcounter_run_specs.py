@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_crowdcounter_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.crowdcounter_scenario.CrowdCounterScenario",
+        class_name="scenarios.crowdcounter_scenario.CrowdCounterScenario",
         args={},
     )
 

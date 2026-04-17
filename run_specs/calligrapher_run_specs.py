@@ -28,7 +28,7 @@ Score 5: Excellent self-referential text with outstanding aesthetic, creative, a
 def get_calligrapher_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.calligrapher_scenario.CalligrapherScenario",
+        class_name="scenarios.calligrapher_scenario.CalligrapherScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_cii_bench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.cii_bench_scenario.CIIBenchScenario",
+        class_name="scenarios.cii_bench_scenario.CIIBenchScenario",
         args={},
     )
 

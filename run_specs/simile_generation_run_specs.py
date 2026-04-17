@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_simile_generation_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.simile_generation_scenario.SimileGenerationScenario",
+        class_name="scenarios.simile_generation_scenario.SimileGenerationScenario",
         args={},
     )
 

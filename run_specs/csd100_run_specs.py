@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_csd100_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.csd100_scenario.CSD100Scenario",
+        class_name="scenarios.csd100_scenario.CSD100Scenario",
         args={},
     )
 

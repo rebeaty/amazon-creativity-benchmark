@@ -28,7 +28,7 @@ Score 5: Highly creative, original, and imaginatively expressed text
 def get_creatset_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.creatset_scenario.CreataSetScenario",
+        class_name="scenarios.creatset_scenario.CreataSetScenario",
         args={},
     )
 

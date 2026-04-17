@@ -31,8 +31,17 @@ MAX_ATTEMPTS=5                   # Max fix-and-retry cycles per dataset
 EVAL_TIMEOUT=120                 # Seconds before killing a stuck eval run
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
+
+# Detect timeout command (Linux: timeout, Mac w/ coreutils: gtimeout, else: none)
+if command -v timeout >/dev/null 2>&1; then
+    _TIMEOUT_CMD="timeout"
+elif command -v gtimeout >/dev/null 2>&1; then
+    _TIMEOUT_CMD="gtimeout"
+else
+    _TIMEOUT_CMD=""
+fi
 
 
 HELPER="$SCRIPT_DIR/_debug_helper.py"
@@ -101,9 +110,27 @@ run_eval() {
 
     # Run and capture stderr+stdout; kill if it exceeds EVAL_TIMEOUT
     local output rc=0
-    output=$(timeout "$EVAL_TIMEOUT" ./"$eval_script" "$MODEL" "$SUITE" "$MAX_INSTANCES" 2>&1) || rc=$?
-    if [[ $rc -eq 124 ]]; then
-        output="TIMEOUT: eval script exceeded ${EVAL_TIMEOUT}s — treating as data access error"
+    if [[ -n "$_TIMEOUT_CMD" ]]; then
+        output=$($_TIMEOUT_CMD "$EVAL_TIMEOUT" ./"$eval_script" "$MODEL" "$SUITE" "$MAX_INSTANCES" 2>&1) || rc=$?
+        if [[ $rc -eq 124 ]]; then
+            output="TIMEOUT: eval script exceeded ${EVAL_TIMEOUT}s — treating as data access error"
+        fi
+    else
+        # Fallback for systems without timeout (e.g. macOS without coreutils)
+        local tmpfile
+        tmpfile=$(mktemp)
+        ./"$eval_script" "$MODEL" "$SUITE" "$MAX_INSTANCES" > "$tmpfile" 2>&1 &
+        local bg_pid=$!
+        ( sleep "$EVAL_TIMEOUT" && kill "$bg_pid" 2>/dev/null ) &
+        local killer_pid=$!
+        wait "$bg_pid" || rc=$?
+        kill "$killer_pid" 2>/dev/null
+        wait "$killer_pid" 2>/dev/null
+        output=$(cat "$tmpfile")
+        rm -f "$tmpfile"
+        if [[ $rc -eq 143 || $rc -eq 137 ]]; then
+            output="TIMEOUT: eval script exceeded ${EVAL_TIMEOUT}s — treating as data access error"
+        fi
     fi
     echo "$output"
 }
@@ -140,7 +167,7 @@ It produced this error (attempt $attempt of $MAX_ATTEMPTS):
 
 $error_text
 
-Fix the error. Only modify files in scenarios_new/, run_specs/, metrics/, or
+Fix the error. Only modify files in scenarios/, run_specs/, metrics/, or
 eval_scripts/ — do NOT modify HELM's installed package files.
 
 Rules:
@@ -259,7 +286,11 @@ python3 "$HELPER" status "$ASSIGNEE"
 if [[ -n "$SINGLE_DATASET" ]]; then
     DATASETS=("$SINGLE_DATASET")
 else
-    mapfile -t DATASETS < <(python3 -c "
+    # mapfile -t is bash 4+; use while-read for bash 3.2 compatibility (macOS)
+    DATASETS=()
+    while IFS= read -r line; do
+        DATASETS+=("$line")
+    done < <(python3 -c "
 import json
 with open('$SCRIPT_DIR/debug_assignments_pending.json') as f:
     pending = json.load(f)

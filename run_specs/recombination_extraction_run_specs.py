@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_recombination_extraction_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.recombination_extraction_scenario.RecombinationExtractionScenario",
+        class_name="scenarios.recombination_extraction_scenario.RecombinationExtractionScenario",
         args={},
     )
 

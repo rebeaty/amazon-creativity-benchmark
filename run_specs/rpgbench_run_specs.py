@@ -28,7 +28,7 @@ Score 5: Highly interesting, captivating content with exceptional player engagem
 def get_rpgbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.rpgbench_scenario.RpgBenchScenario",
+        class_name="scenarios.rpgbench_scenario.RpgBenchScenario",
         args={},
     )
 

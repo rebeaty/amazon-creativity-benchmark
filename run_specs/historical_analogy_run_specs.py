@@ -28,7 +28,7 @@ Score 5: Excellent analogy that is historically accurate, insightful, and highly
 def get_historical_analogy_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.historical_analogy_scenario.HistoricalAnalogyScenario",
+        class_name="scenarios.historical_analogy_scenario.HistoricalAnalogyScenario",
         args={},
     )
 

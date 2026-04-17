@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_metaphoric_analogies_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.metaphoric_analogies_scenario.MetaphoricAnalogiesScenario",
+        class_name="scenarios.metaphoric_analogies_scenario.MetaphoricAnalogiesScenario",
         args={},
     )
 
@@ -32,7 +32,14 @@ def get_metaphoric_analogies_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(
+            class_name="helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics",
+            args={},
+        ),
+        MetricSpec(
+            class_name="metrics.f1_metric.F1Metric",
+            args={},
+        ),
     ]
 
     return RunSpec(

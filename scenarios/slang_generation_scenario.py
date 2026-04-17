@@ -79,38 +79,31 @@ class SlangGenerationScenario(Scenario):
 
         instances = []
         with open(data_path, encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if not line:
-                    continue
+            # File is a single Python list of (term, definition) tuples
+            entries = ast.literal_eval(f.read())
 
-                # Each line is a Python tuple string: ('term', 'definition')
-                try:
-                    term, definition = ast.literal_eval(line)
-                except (ValueError, SyntaxError):
-                    continue
+        for term, definition in entries:
+            definition = definition.strip()
+            term = term.strip()
+            if not definition or not term:
+                continue
 
-                definition = definition.strip()
-                term = term.strip()
-                if not definition or not term:
-                    continue
+            prompt = (
+                "Generate a novel slang term in English that expresses the "
+                "following definition. Provide: (1) the slang word, "
+                "(2) a brief definition, and (3) a usage example.\n\n"
+                f"Definition: {definition}"
+            )
 
-                prompt = (
-                    "Generate a novel slang term in English that expresses the "
-                    "following definition. Provide: (1) the slang word, "
-                    "(2) a brief definition, and (3) a usage example.\n\n"
-                    f"Definition: {definition}"
-                )
+            # Gold slang term as a soft reference (not unique correct answer)
+            references = [
+                Reference(Output(text=term), tags=[CORRECT_TAG])
+            ]
 
-                # Gold slang term as a soft reference (not unique correct answer)
-                references = [
-                    Reference(Output(text=term), tags=[CORRECT_TAG])
-                ]
-
-                instances.append(Instance(
-                    input=Input(text=prompt),
-                    references=references,
-                    split=TEST_SPLIT,
-                ))
+            instances.append(Instance(
+                input=Input(text=prompt),
+                references=references,
+                split=TEST_SPLIT,
+            ))
 
         return instances

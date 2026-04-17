@@ -28,7 +28,7 @@ Score 5: Excellent completion that seamlessly continues the story with high crea
 def get_fscg8_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.fscg8_scenario.FSCG8Scenario",
+        class_name="scenarios.fscg8_scenario.FSCG8Scenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_graphragbench_wrongone_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.graphragbench-wrongone_scenario.GraphRAGBenchScenario",
+        class_name="scenarios.graphragbench-wrongone_scenario.GraphRAGBenchScenario",
         args={},
     )
 

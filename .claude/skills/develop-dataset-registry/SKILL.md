@@ -25,7 +25,7 @@ at a time — so that partial progress is always saved.
 |------|-----------|
 | Project root | `/home/public/vdeshpan/amazon-creativity-benchmark` |
 | Datasets list (JSON) | `{root}/scenarios/list_of_all_datasets.json` |
-| Per-dataset scenario file | `{root}/scenarios_new/{dataset_name}_scenario.py` |
+| Per-dataset scenario file | `{root}/scenarios/{dataset_name}_scenario.py` |
 | Per-dataset metric notes | `{root}/metric_notes/{dataset_name}_eval_metrics_notes.md` |
 | Per-dataset annotator notes | `{root}/metric_notes/{dataset_name}_annotator_notes.md` |
 | **OUTPUT: Master registry** | `{root}/registry_master.yaml` |
@@ -64,7 +64,7 @@ For each dataset, you need to extract information for all three registries (see 
 below). Use this **strict lookup order** — stop as soon as you find the information:
 
 ```
-PRIORITY 1 → Scenario file:  {root}/scenarios_new/{dataset_name}_scenario.py
+PRIORITY 1 → Scenario file:  {root}/scenarios/{dataset_name}_scenario.py
 PRIORITY 2 → Metric notes:   {root}/metric_notes/{dataset_name}_eval_metrics_notes.md
 PRIORITY 3 → Annotator notes: {root}/metric_notes/{dataset_name}_annotator_notes.md
 PRIORITY 4 → Research paper (URL will be inside the scenario file — use web_fetch)
@@ -75,7 +75,7 @@ PRIORITY 6 → Put null for that field
 ### Detailed lookup instructions
 
 **Priority 1 — Scenario file** (ALWAYS start here):
-- Open `{root}/scenarios_new/{dataset_name}_scenario.py`
+- Open `{root}/scenarios/{dataset_name}_scenario.py`
 - Look for: paper URL, repo URL, modality info (what type of data is loaded as input,
   what type is expected as output), whether reference targets exist (check if `references`
   list is populated in `get_instances`), any generation parameters mentioned in comments
@@ -133,7 +133,7 @@ For each dataset, extract:
 | `input_modality` | enum | One of: `text`, `image`, `audio`, `video`, `multimodal` | Scenario file: inspect what `get_instances` loads as `Input`. If `Input(text=...)` → `text`. If multimedia/image content → `image`. If both text and image → `multimodal` |
 | `output_modality` | enum | One of: `text`, `image`, `audio`, `code`, `structured_json` | Scenario file + paper: what is the model expected to generate? Usually `text` for most creativity tasks |
 | `has_reference_target` | boolean | Are ground-truth reference outputs provided? | Scenario file: check if `references=[Reference(...)]` is populated with actual content in `get_instances`. If references list is empty or not provided → `false` |
-| `scenario_file` | string | Relative path from project root | Always: `scenarios_new/{dataset_name}_scenario.py` |
+| `scenario_file` | string | Relative path from project root | Always: `scenarios/{dataset_name}_scenario.py` |
 
 ### Category 2 — Inference Config (`registry_inference.yaml`)
 
@@ -241,7 +241,7 @@ datasets:
     input_modality: text            # one of: text, image, audio, video, multimodal
     output_modality: text           # one of: text, image, audio, code, structured_json
     has_reference_target: true
-    scenario_file: "scenarios_new/torrance_verbal_scenario.py"
+    scenario_file: "scenarios/torrance_verbal_scenario.py"
 
   # -- Another entry --
   visual_metaphor_gen:
@@ -251,7 +251,7 @@ datasets:
     input_modality: image
     output_modality: text
     has_reference_target: false
-    scenario_file: "scenarios_new/visual_metaphor_gen_scenario.py"
+    scenario_file: "scenarios/visual_metaphor_gen_scenario.py"
 ```
 
 ### Output File 2: `{root}/registry_inference.yaml`
@@ -418,7 +418,7 @@ for dataset_name in datasets:
     info = {}
 
     # Priority 1: scenario file
-    scenario_path = "{root}/scenarios_new/{dataset_name}_scenario.py"
+    scenario_path = "{root}/scenarios/{dataset_name}_scenario.py"
     if file_exists(scenario_path):
         info.update(extract_from_scenario(scenario_path))
 

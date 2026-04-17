@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_proparalogy_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.proparalogy_scenario.ProparaLogyScenario",
+        class_name="scenarios.proparalogy_scenario.ProparaLogyScenario",
         args={},
     )
 

@@ -28,7 +28,7 @@ Score 5: Excellent, highly creative and fully feasible design solution that exce
 def get_conceptual_design_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.conceptual_design_scenario.ConceptualDesignScenario",
+        class_name="scenarios.conceptual_design_scenario.ConceptualDesignScenario",
         args={},
     )
 

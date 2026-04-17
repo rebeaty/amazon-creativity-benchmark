@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_javanese_sundanese_story_cloze_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.javanese_sundanese_story_cloze_scenario.JavaneseSundaneseStoryClozeScenario",
+        class_name="scenarios.javanese_sundanese_story_cloze_scenario.JavaneseSundaneseStoryClozeScenario",
         args={},
     )
 

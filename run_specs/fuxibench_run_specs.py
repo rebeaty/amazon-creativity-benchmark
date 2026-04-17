@@ -28,7 +28,7 @@ Score 5: Text perfectly adheres to all constraints with excellent creative and c
 def get_fuxibench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.fuxibench_scenario.FuxiBenchScenario",
+        class_name="scenarios.fuxibench_scenario.FuxiBenchScenario",
         args={},
     )
 

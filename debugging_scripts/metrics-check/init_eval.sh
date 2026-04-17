@@ -79,9 +79,15 @@ run_eval() {
     fi
 
     local output rc=0
-    output=$(timeout "$EVAL_TIMEOUT" ./"$eval_script" "$MODEL" "$SUITE" "$MAX_INSTANCES" 2>&1) || rc=$?
-    if [[ $rc -eq 124 ]]; then
-        output="TIMEOUT: eval script exceeded ${EVAL_TIMEOUT}s — treating as data access error"
+    local timeout_cmd
+    timeout_cmd=$(command -v timeout 2>/dev/null || command -v gtimeout 2>/dev/null || true)
+    if [[ -n "$timeout_cmd" ]]; then
+        output=$("$timeout_cmd" "$EVAL_TIMEOUT" ./"$eval_script" "$MODEL" "$SUITE" "$MAX_INSTANCES" 2>&1) || rc=$?
+        if [[ $rc -eq 124 ]]; then
+            output="TIMEOUT: eval script exceeded ${EVAL_TIMEOUT}s — treating as data access error"
+        fi
+    else
+        output=$(./"$eval_script" "$MODEL" "$SUITE" "$MAX_INSTANCES" 2>&1) || rc=$?
     fi
     echo "$output"
 }

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_irfl_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.irfl_scenario.IRFLScenario",
+        class_name="scenarios.irfl_scenario.IRFLScenario",
         args={},
     )
 

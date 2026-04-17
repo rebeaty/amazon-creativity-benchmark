@@ -50,7 +50,7 @@ Score 5: Excellent semantic beauty that fully captures the depth and imagery of 
 def get_poetmt_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.poetmt_scenario.PoetMTScenario",
+        class_name="scenarios.poetmt_scenario.PoetMTScenario",
         args={},
     )
 

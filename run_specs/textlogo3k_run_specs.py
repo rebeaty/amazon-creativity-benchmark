@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_textlogo3k_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.textlogo3k_scenario.TextLogo3KScenario",
+        class_name="scenarios.textlogo3k_scenario.TextLogo3KScenario",
         args={},
     )
 

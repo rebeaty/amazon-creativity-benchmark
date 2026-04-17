@@ -39,7 +39,7 @@ Score 5: Highly original, unprecedented concept with exceptional creative novelt
 def get_mops_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.mops_scenario.MoPSPremiseScenario",
+        class_name="scenarios.mops_scenario.MoPSPremiseScenario",
         args={},
     )
 

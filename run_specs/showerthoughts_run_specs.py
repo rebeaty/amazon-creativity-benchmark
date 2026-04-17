@@ -50,7 +50,7 @@ Score 5: Exceptionally clever, insightful thought demonstrating outstanding inte
 def get_showerthoughts_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.showerthoughts_scenario.ShowerthoughtsScenario",
+        class_name="scenarios.showerthoughts_scenario.ShowerthoughtsScenario",
         args={},
     )
 

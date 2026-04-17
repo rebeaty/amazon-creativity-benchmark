@@ -28,7 +28,7 @@ Score 5: Highly creative story that imaginatively weaves geography and culture i
 def get_geo_story_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.geo_story_scenario.GeoStoryScenario",
+        class_name="scenarios.geo_story_scenario.GeoStoryScenario",
         args={},
     )
 

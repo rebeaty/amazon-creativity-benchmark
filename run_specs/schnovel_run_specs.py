@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_schnovel_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.schnovel_scenario.SchNovelScenario",
+        class_name="scenarios.schnovel_scenario.SchNovelScenario",
         args={},
     )
 
@@ -32,7 +32,7 @@ def get_schnovel_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(class_name="metrics.accuracy_metric.AccuracyMetric", args={}),
     ]
 
     return RunSpec(

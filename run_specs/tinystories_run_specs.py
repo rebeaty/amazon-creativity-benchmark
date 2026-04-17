@@ -50,7 +50,7 @@ Score 5: Perfectly consistent story with coherent characters, plot, and setting
 def get_tinystories_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.tinystories_scenario.TinyStoriesScenario",
+        class_name="scenarios.tinystories_scenario.TinyStoriesScenario",
         args={},
     )
 

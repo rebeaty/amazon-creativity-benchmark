@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_balderdash_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.balderdash_scenario.BalderdashScenario",
+        class_name="scenarios.balderdash_scenario.BalderdashScenario",
         args={},
     )
 
@@ -32,7 +32,10 @@ def get_balderdash_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(
+            class_name="helm.benchmark.metrics.basic_metrics.BasicMetric",
+            args={},
+        ),
     ]
 
     return RunSpec(

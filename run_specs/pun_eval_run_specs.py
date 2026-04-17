@@ -28,7 +28,7 @@ Score 5: Excellent pun demonstrating highly clever, original, and funny wordplay
 def get_pun_eval_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.pun_eval_scenario.PunEvalScenario",
+        class_name="scenarios.pun_eval_scenario.PunEvalScenario",
         args={},
     )
 

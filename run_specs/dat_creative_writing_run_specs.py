@@ -28,7 +28,7 @@ Score 5: Highly creative writing demonstrating exceptional divergent thinking an
 def get_dat_creative_writing_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.dat_creative_writing_scenario.DATCreativeWritingScenario",
+        class_name="scenarios.dat_creative_writing_scenario.DATCreativeWritingScenario",
         args={},
     )
 
@@ -47,6 +47,10 @@ def get_dat_creative_writing_spec() -> RunSpec:
     )
 
     metric_specs = [
+        MetricSpec(
+            class_name="metrics.semantic_diversity_metric.SemanticDiversityMetric",
+            args={"model_name": "all-mpnet-base-v2", "mode": "auto"},
+        ),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "llm_judge_creativity"}),
     ]
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_splat_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.splat_scenario.SPLATScenario",
+        class_name="scenarios.splat_scenario.SPLATScenario",
         args={},
     )
 

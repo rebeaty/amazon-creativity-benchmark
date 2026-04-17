@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_v_flute_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.v_flute_scenario.VFluteScenario",
+        class_name="scenarios.v_flute_scenario.VFluteScenario",
         args={},
     )
 

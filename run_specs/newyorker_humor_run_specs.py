@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_newyorker_humor_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.newyorker_humor_scenario.NewYorkerHumorScenario",
+        class_name="scenarios.newyorker_humor_scenario.NewYorkerHumorScenario",
         args={},
     )
 
