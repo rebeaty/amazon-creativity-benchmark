@@ -28,7 +28,7 @@ Score 5: Excellent reconstruction that is perfectly coherent, fluent, and high q
 def get_permpst_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.permpst_scenario.PerMPSTScenario",
+        class_name="scenarios.permpst_scenario.PerMPSTScenario",
         args={},
     )
 

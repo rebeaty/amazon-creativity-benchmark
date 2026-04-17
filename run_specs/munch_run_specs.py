@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_munch_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.munch_scenario.MUNCHScenario",
+        class_name="scenarios.munch_scenario.MUNCHScenario",
         args={},
     )
 

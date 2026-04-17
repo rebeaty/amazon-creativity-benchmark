@@ -28,7 +28,7 @@ Score 5: Highly novel hypothesis presenting a completely original and insightful
 def get_hypogen_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.hypogen_scenario.HypoGenScenario",
+        class_name="scenarios.hypogen_scenario.HypoGenScenario",
         args={},
     )
 

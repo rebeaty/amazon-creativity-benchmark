@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_ocw_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.ocw_scenario.OnlyConnectWallScenario",
+        class_name="scenarios.ocw_scenario.OnlyConnectWallScenario",
         args={},
     )
 

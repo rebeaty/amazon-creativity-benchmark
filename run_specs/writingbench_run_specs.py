@@ -28,7 +28,7 @@ Score 5: Writing excellently meets all requirements with exceptional quality and
 def get_writingbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.writingbench_scenario.WritingBenchScenario",
+        class_name="scenarios.writingbench_scenario.WritingBenchScenario",
         args={},
     )
 

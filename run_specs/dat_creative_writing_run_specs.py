@@ -28,7 +28,7 @@ Score 5: Highly creative writing demonstrating exceptional divergent thinking an
 def get_dat_creative_writing_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.dat_creative_writing_scenario.DATCreativeWritingScenario",
+        class_name="scenarios.dat_creative_writing_scenario.DATCreativeWritingScenario",
         args={},
     )
 

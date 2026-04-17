@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_music_theory_bench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.music_theory_bench_scenario.MusicTheoryBenchScenario",
+        class_name="scenarios.music_theory_bench_scenario.MusicTheoryBenchScenario",
         args={},
     )
 

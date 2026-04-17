@@ -28,7 +28,7 @@ Score 5: Fully correct, scientifically valid and well-supported hypothesis
 def get_discovery_bench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.discovery_bench_scenario.DiscoveryBenchScenario",
+        class_name="scenarios.discovery_bench_scenario.DiscoveryBenchScenario",
         args={},
     )
 

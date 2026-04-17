@@ -28,7 +28,7 @@ Score 5: Solution is fully correct, physically plausible, and creative within co
 def get_macgyver_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.macgyver_scenario.MacgyverScenario",
+        class_name="scenarios.macgyver_scenario.MacgyverScenario",
         args={},
     )
 

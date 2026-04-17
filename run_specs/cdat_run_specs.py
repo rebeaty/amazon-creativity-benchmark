@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_cdat_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.cdat_scenario.CDATScenario",
+        class_name="scenarios.cdat_scenario.CDATScenario",
         args={},
     )
 

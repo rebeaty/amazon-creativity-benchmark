@@ -28,7 +28,7 @@ Score 5: Excellent story demonstrating exceptional narrative craft and literary 
 def get_critics_story_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.critics_story_scenario.CriticsStoryScenario",
+        class_name="scenarios.critics_story_scenario.CriticsStoryScenario",
         args={},
     )
 

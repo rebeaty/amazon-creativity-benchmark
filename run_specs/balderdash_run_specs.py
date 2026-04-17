@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_balderdash_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.balderdash_scenario.BalderdashScenario",
+        class_name="scenarios.balderdash_scenario.BalderdashScenario",
         args={},
     )
 

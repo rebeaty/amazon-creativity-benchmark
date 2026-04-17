@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_ttcw_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.ttcw_scenario.TTCWScenario",
+        class_name="scenarios.ttcw_scenario.TTCWScenario",
         args={},
     )
 

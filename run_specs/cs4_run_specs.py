@@ -28,7 +28,7 @@ Score 5: Highly creative, imaginative content demonstrating exceptional storytel
 def get_cs4_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.cs4_scenario.CS4Scenario",
+        class_name="scenarios.cs4_scenario.CS4Scenario",
         args={},
     )
 

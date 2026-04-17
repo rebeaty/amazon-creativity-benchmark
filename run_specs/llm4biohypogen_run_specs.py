@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_llm4biohypogen_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.llm4biohypogen_scenario.LLM4BioHypoGenScenario",
+        class_name="scenarios.llm4biohypogen_scenario.LLM4BioHypoGenScenario",
         args={},
     )
 

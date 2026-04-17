@@ -50,7 +50,7 @@ Score 5: Hypothesis is easily verifiable with straightforward experimental appro
 def get_hypobench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.hypobench_scenario.HypoBenchScenario",
+        class_name="scenarios.hypobench_scenario.HypoBenchScenario",
         args={},
     )
 

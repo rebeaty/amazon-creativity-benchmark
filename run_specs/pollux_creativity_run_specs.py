@@ -39,7 +39,7 @@ Score 5: Exceptionally original with ideas that are novel and unprecedented
 def get_pollux_creativity_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.pollux_creativity_scenario.POLLUXCreativityScenario",
+        class_name="scenarios.pollux_creativity_scenario.POLLUXCreativityScenario",
         args={},
     )
 

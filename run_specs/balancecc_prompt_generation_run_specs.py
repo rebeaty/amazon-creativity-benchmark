@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_balancecc_prompt_generation_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.balancecc_prompt_generation_scenario.BalanceCCPromptGenerationScenario",
+        class_name="scenarios.balancecc_prompt_generation_scenario.BalanceCCPromptGenerationScenario",
         args={},
     )
 

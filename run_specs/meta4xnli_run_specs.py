@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_meta4xnli_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.meta4xnli_scenario.Meta4XNLIScenario",
+        class_name="scenarios.meta4xnli_scenario.Meta4XNLIScenario",
         args={},
     )
 

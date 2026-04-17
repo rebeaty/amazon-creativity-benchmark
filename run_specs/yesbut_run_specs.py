@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_yesbut_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.yesbut_scenario.YesButScenario",
+        class_name="scenarios.yesbut_scenario.YesButScenario",
         args={},
     )
 

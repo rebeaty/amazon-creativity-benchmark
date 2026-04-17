@@ -28,7 +28,7 @@ Score 5: Highly creative, innovative design demonstrating exceptional architectu
 def get_mineanybuild_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.mineanybuild_scenario.MineAnyBuildScenario",
+        class_name="scenarios.mineanybuild_scenario.MineAnyBuildScenario",
         args={},
     )
 

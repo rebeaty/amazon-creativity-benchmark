@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_clef_joker_2025_task2_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.clef_joker_2025_task2_scenario.CLEFJoker2025Task2Scenario",
+        class_name="scenarios.clef_joker_2025_task2_scenario.CLEFJoker2025Task2Scenario",
         args={},
     )
 

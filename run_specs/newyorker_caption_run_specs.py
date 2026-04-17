@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_newyorker_caption_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.newyorker_caption_scenario.NewYorkerCaptionScenario",
+        class_name="scenarios.newyorker_caption_scenario.NewYorkerCaptionScenario",
         args={},
     )
 

@@ -28,7 +28,7 @@ Score 5: Exceptional literary quality demonstrating mastery of Persian literary 
 def get_cpers_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.cpers_scenario.CPersScenario",
+        class_name="scenarios.cpers_scenario.CPersScenario",
         args={},
     )
 

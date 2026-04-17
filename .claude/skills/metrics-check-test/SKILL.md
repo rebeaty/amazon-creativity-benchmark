@@ -52,8 +52,10 @@ python3 debugging_scripts/metrics-check/metrics_check.py <dataset>
 ## Key Files
 
 - **Registry**: `data/registry/registry_metrics.yaml` — source of truth for expected metrics per dataset
-- **Stats output**: `outputs/first-trial-run/trial/<dataset>:*model=google_gemini-2.5-flash-lite/stats.json`
-- **Helper script**: `debugging_scripts/metrics-check/metrics_check.py`
+- **Stats output (Phase 1 archive)**: `outputs/first-trial-run/trial/<dataset>:*model=google_gemini-2.5-flash-lite/stats.json`
+- **Stats output (fresh runs)**: `benchmark_output/runs/trial/<dataset>:*model=google_gemini-2.5-flash-lite/stats.json`
+- **Helper script**: `debugging_scripts/metrics-check/metrics_check.py` — searches both paths automatically
+- **Note**: `metrics_check.py` unions metrics from both locations, so re-running eval after a fix will be picked up correctly.
 
 ## HELM Infrastructure Metrics (filtered out)
 

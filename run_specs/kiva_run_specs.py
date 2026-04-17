@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_kiva_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.kiva_scenario.KiVAScenario",
+        class_name="scenarios.kiva_scenario.KiVAScenario",
         args={},
     )
 

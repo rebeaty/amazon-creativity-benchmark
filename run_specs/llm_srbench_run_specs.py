@@ -28,7 +28,7 @@ Score 5: Fully correct expression that accurately captures the underlying data p
 def get_llm_srbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.llm_srbench_scenario.LlmSrbenchScenario",
+        class_name="scenarios.llm_srbench_scenario.LlmSrbenchScenario",
         args={},
     )
 

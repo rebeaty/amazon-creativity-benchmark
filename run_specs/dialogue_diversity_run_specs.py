@@ -28,7 +28,7 @@ Score 5: Response is perfectly coherent, natural, and contextually appropriate
 def get_dialogue_diversity_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.dialogue_diversity_scenario.DialogueDiversityScenario",
+        class_name="scenarios.dialogue_diversity_scenario.DialogueDiversityScenario",
         args={},
     )
 

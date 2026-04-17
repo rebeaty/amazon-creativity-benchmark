@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_data_narrative_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.data_narrative_scenario.DataNarrativeScenario",
+        class_name="scenarios.data_narrative_scenario.DataNarrativeScenario",
         args={},
     )
 

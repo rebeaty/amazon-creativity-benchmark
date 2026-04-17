@@ -39,7 +39,7 @@ Score 5: Exceptionally original ideas that are novel, unique, and previously unt
 def get_creative_process_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.creative_process_scenario.CreativeProcessScenario",
+        class_name="scenarios.creative_process_scenario.CreativeProcessScenario",
         args={},
     )
 

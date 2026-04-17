@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_amuse_chord_generation_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.amuse_chord_generation_scenario.AmuseChordGenerationScenario",
+        class_name="scenarios.amuse_chord_generation_scenario.AmuseChordGenerationScenario",
         args={},
     )
 

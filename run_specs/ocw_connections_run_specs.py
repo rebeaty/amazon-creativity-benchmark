@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_ocw_connections_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.ocw_connections_scenario.OnlyConnectConnectionsScenario",
+        class_name="scenarios.ocw_connections_scenario.OnlyConnectConnectionsScenario",
         args={},
     )
 

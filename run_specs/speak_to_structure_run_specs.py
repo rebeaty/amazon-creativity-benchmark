@@ -28,7 +28,7 @@ Score 5: Fully correct structure that perfectly captures the input meaning
 def get_speak_to_structure_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.speak_to_structure_scenario.SpeakToStructureScenario",
+        class_name="scenarios.speak_to_structure_scenario.SpeakToStructureScenario",
         args={},
     )
 

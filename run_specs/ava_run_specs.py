@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_ava_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.ava_scenario.AVAScenario",
+        class_name="scenarios.ava_scenario.AVAScenario",
         args={},
     )
 

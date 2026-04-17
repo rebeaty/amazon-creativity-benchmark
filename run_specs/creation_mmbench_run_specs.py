@@ -28,7 +28,7 @@ Score 5: Excellent creative content that insightfully and creatively responds to
 def get_creation_mmbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.creation_mmbench_scenario.CreationMMBenchScenario",
+        class_name="scenarios.creation_mmbench_scenario.CreationMMBenchScenario",
         args={},
     )
 

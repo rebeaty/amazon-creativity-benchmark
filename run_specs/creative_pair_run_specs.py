@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_creative_pair_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.creative_pair_scenario.CreativePairScenario",
+        class_name="scenarios.creative_pair_scenario.CreativePairScenario",
         args={},
     )
 

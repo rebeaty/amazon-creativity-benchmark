@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_chinese_homophonic_puns_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.chinese_homophonic_puns_scenario.ChineseHomophonicPunsScenario",
+        class_name="scenarios.chinese_homophonic_puns_scenario.ChineseHomophonicPunsScenario",
         args={},
     )
 

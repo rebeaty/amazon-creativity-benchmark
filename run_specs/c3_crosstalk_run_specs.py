@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_c3_crosstalk_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.c3_crosstalk_scenario.C3CrosstalkScenario",
+        class_name="scenarios.c3_crosstalk_scenario.C3CrosstalkScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_memecap_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.memecap_scenario.MemecapScenario",
+        class_name="scenarios.memecap_scenario.MemecapScenario",
         args={},
     )
 

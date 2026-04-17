@@ -31,13 +31,13 @@ MAX_ATTEMPTS=5                   # Max fix-and-retry cycles per dataset
 EVAL_TIMEOUT=120                 # Seconds before killing a stuck eval run
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
 
 
 HELPER="$SCRIPT_DIR/_debug_helper.py"
 INSIGHTS="$SCRIPT_DIR/debugging_w_vijeta.md"
-LOG_DIR="$REPO_ROOT/debug_logs"
+LOG_DIR="$(cd "$SCRIPT_DIR/.." && pwd)/debug_logs"
 mkdir -p "$LOG_DIR"
 
 # ── Args ────────────────────────────────────────────────────────────────────
@@ -140,7 +140,7 @@ It produced this error (attempt $attempt of $MAX_ATTEMPTS):
 
 $error_text
 
-Fix the error. Only modify files in scenarios_new/, run_specs/, metrics/, or
+Fix the error. Only modify files in scenarios/, run_specs/, metrics/, or
 eval_scripts/ — do NOT modify HELM's installed package files.
 
 Rules:

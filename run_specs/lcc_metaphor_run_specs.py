@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_lcc_metaphor_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.lcc_metaphor_scenario.LCCMetaphorScenario",
+        class_name="scenarios.lcc_metaphor_scenario.LCCMetaphorScenario",
         args={},
     )
 

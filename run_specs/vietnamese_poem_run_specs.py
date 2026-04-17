@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_vietnamese_poem_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.vietnamese_poem_scenario.VietnamesePoemScenario",
+        class_name="scenarios.vietnamese_poem_scenario.VietnamesePoemScenario",
         args={},
     )
 
