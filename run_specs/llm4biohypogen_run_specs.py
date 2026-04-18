@@ -32,7 +32,9 @@ def get_llm4biohypogen_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["bleu_4", "rouge_l"]}),
+        # TODO: 'bert_score' requires SummarizationMetric which needs summ_eval package and produces
+        # BERTScore-P/R/F (not 'bert_score') — registry naming error; tell Vijeta
     ]
 
     return RunSpec(
