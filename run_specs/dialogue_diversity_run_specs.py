@@ -28,7 +28,7 @@ Score 5: Response is perfectly coherent, natural, and contextually appropriate
 def get_dialogue_diversity_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.dialogue_diversity_scenario.DialogueDiversityScenario",
+        class_name="scenarios.dialogue_diversity_scenario.DialogueDiversityScenario",
         args={},
     )
 
@@ -49,6 +49,10 @@ def get_dialogue_diversity_spec() -> RunSpec:
     metric_specs = [
         MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 1}),
         MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 2}),
+        MetricSpec(
+            class_name="metrics.semantic_diversity_metric.SemanticDiversityMetric",
+            args={"model_name": "all-mpnet-base-v2", "task": "cwt"},
+        ),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "coherence_score"}),
     ]
 

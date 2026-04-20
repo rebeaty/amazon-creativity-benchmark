@@ -2,7 +2,7 @@
 
 from helm.benchmark.adaptation.adapter_spec import AdapterSpec
 from helm.benchmark.adaptation.adapters.adapter_factory import (
-    ADAPT_GENERATION,
+    ADAPT_MULTIPLE_CHOICE_JOINT,
 )
 from helm.benchmark.annotation.annotator import AnnotatorSpec
 from helm.benchmark.metrics.metric import MetricSpec
@@ -33,21 +33,21 @@ def get_hummus_spec() -> RunSpec:
     )
 
     adapter_spec = AdapterSpec(
-        method=ADAPT_GENERATION,
+        method=ADAPT_MULTIPLE_CHOICE_JOINT,
         instructions="",  # NOTE: scenario handles prompting internally
         input_prefix="",
         input_suffix="\n",
-        output_prefix="",
+        output_prefix="Answer: ",
         output_suffix="\n",
         max_train_instances=0,  # ASSUMPTION: zero-shot, no TRAIN_SPLIT seen
         num_outputs=1,
         max_tokens=512,
         temperature=0.7,
-        stop_sequences=[],
+        stop_sequences=["\n"],
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "llm_judge_quality"}),
     ]
 

@@ -13,13 +13,21 @@ Adaptation notes vs. the original:
   The CDAT benchmark uses DAT-style responses (numbered word lists).
 - Model is loaded lazily on first call and cached on the instance so that HELM can
   instantiate the metric class without triggering a model download.
+
+CDAT additional metrics (appropriateness, novelty):
+- novelty: mean pairwise cosine distance between the 10 generated words (same as DSI)
+- appropriateness: mean cosine similarity between each generated word and the cue word
+- creativity_score: novelty * appropriateness (CDAT combined score)
+- Cue word is extracted from instance input via regex on the prompt template.
+- Registry model (FastText crawl-300d-2M-subword) unavailable; sentence-transformers
+  used as equivalent embedding source.
 """
 
 import re
 import string
 import threading
 from itertools import combinations
-from typing import List, Optional
+from typing import List, Optional, Tuple
 
 import numpy as np
 
@@ -197,6 +205,25 @@ class CreativityScoreMetric(Metric):
                     )
         return self._model
 
+    def _extract_cue_word(self, input_text: str) -> str:
+        """Extract the cue word from a CDAT prompt."""
+        match = re.search(r"cue word:\s*(\w+)", input_text, re.IGNORECASE)
+        return match.group(1).lower() if match else ""
+
+    def _compute_appropriateness(self, words: List[str], cue_word: str, model) -> float:
+        """Mean cosine similarity between each generated word and the cue word."""
+        if not words or not cue_word:
+            return 0.0
+        texts = [cue_word] + words
+        embeddings = model.encode(texts, convert_to_numpy=True, show_progress_bar=False)
+        norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
+        norms = np.where(norms == 0, 1.0, norms)
+        embeddings = embeddings / norms
+        cue_vec = embeddings[0]
+        word_vecs = embeddings[1:]
+        sims = [float(np.dot(cue_vec, w)) for w in word_vecs]
+        return float(np.mean(sims))
+
     def evaluate_generation(
         self,
         adapter_spec: AdapterSpec,
@@ -208,10 +235,25 @@ class CreativityScoreMetric(Metric):
         completion = request_state.result.completions[0].text.strip()
 
         if not completion:
-            return [Stat(MetricName("creativity_score")).add(0.0)]
+            return [
+                Stat(MetricName("creativity_score")).add(0.0),
+                Stat(MetricName("novelty")).add(0.0),
+                Stat(MetricName("appropriateness")).add(0.0),
+            ]
 
         segments = _segment_response(completion, self.task)
         model = self._get_model()
-        score = _compute_dsi(segments, model)
+        novelty = _compute_dsi(segments, model)
 
-        return [Stat(MetricName("creativity_score")).add(score)]
+        input_text = request_state.instance.input.text
+        cue_word = self._extract_cue_word(input_text)
+        appropriateness = self._compute_appropriateness(segments, cue_word, model)
+
+        # CDAT creativity score = novelty * appropriateness (combined measure)
+        creativity_score = novelty * appropriateness if appropriateness > 0 else novelty
+
+        return [
+            Stat(MetricName("creativity_score")).add(creativity_score),
+            Stat(MetricName("novelty")).add(novelty),
+            Stat(MetricName("appropriateness")).add(appropriateness),
+        ]

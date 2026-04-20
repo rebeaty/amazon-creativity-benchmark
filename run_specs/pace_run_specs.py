@@ -33,6 +33,7 @@ def get_pace_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="metrics.type_token_ratio_metric.TypeTokenRatioMetric", args={}),
+        MetricSpec(class_name="metrics.association_distance_metric.AssociationDistanceMetric", args={}),
     ]
 
     return RunSpec(

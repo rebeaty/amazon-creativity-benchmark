@@ -167,6 +167,10 @@ for m in m2:
                 echo "    [NO STATS] No stats.json found — need to run eval first"
                 echo "    [EVAL] Running init_eval.sh..."
                 bash "$INIT_EVAL" "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1
+                # Rule: only this orchestrator decides done/pending, and only
+                # when the metrics check passes. Undo any done-move done by
+                # init_eval.sh so dataset stays in pending until proven good.
+                python3 "$HELPER" pending "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1 || true
                 echo "    [EVAL] Eval finished. Continuing to next attempt..."
                 continue
             fi
@@ -190,14 +194,20 @@ for m in m2:
             echo "" >> "$log_file"
             echo "    [FIX] Claude responded. Re-running eval..."
 
-            # Step 3: Re-run the eval to regenerate stats.json
+            # Step 3: Re-run the eval to regenerate stats.json.
             echo "    [EVAL] Running init_eval.sh..."
             bash "$INIT_EVAL" "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1
+            # Rule: only this orchestrator decides done/pending, and only
+            # when the metrics check passes. Undo any done-move done by
+            # init_eval.sh so dataset stays in pending until proven good.
+            python3 "$HELPER" pending "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1 || true
             echo "    [EVAL] Eval finished. Looping back to metrics check..."
         fi
     done
 
-    # Exhausted all attempts
+    # Exhausted all attempts. init_eval.sh may have moved the dataset to done
+    # during a re-run; put it back in pending so state reflects the real outcome.
+    python3 "$HELPER" pending "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1 || true
     echo "    [FAILED] $dataset — exhausted $MAX_ATTEMPTS attempts"
     echo "    Last log: $log_file"
     return 1

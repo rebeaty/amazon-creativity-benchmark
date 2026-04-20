@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_data_narrative_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.data_narrative_scenario.DataNarrativeScenario",
+        class_name="scenarios.data_narrative_scenario.DataNarrativeScenario",
         args={},
     )
 
@@ -33,6 +33,7 @@ def get_data_narrative_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(class_name="metrics.bert_score_metric.BertScoreMetric", args={"model_type": "bert-base-uncased", "device": "cpu"}),
     ]
 
     return RunSpec(

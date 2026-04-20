@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_story_quality_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.story_quality_scenario.StoryQualityScenario",
+        class_name="scenarios.story_quality_scenario.StoryQualityScenario",
         args={},
     )
 
@@ -33,6 +33,7 @@ def get_story_quality_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="metrics.correlation_metric.CorrelationMetric", args={"correlation_type": "pearson"}),
+        MetricSpec(class_name="metrics.correlation_metric.CorrelationMetric", args={"correlation_type": "spearman"}),
     ]
 
     return RunSpec(

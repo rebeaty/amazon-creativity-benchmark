@@ -25,7 +25,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
 
 REGISTRY_PATH = os.path.join(REPO_ROOT, "data", "registry", "registry_metrics.yaml")
-OUTPUTS_DIR = os.path.join(REPO_ROOT, "outputs", "first-trial-run", "trial")
+OUTPUTS_DIR = os.path.join(REPO_ROOT, "benchmark_output", "runs", "trial")
 
 # HELM infrastructure metrics — always present, never dataset-specific
 HELM_INFRA_METRICS = {

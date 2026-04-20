@@ -2,7 +2,7 @@
 
 from helm.benchmark.adaptation.adapter_spec import AdapterSpec
 from helm.benchmark.adaptation.adapters.adapter_factory import (
-    ADAPT_MULTIPLE_CHOICE_JOINT,
+    ADAPT_GENERATION,
 )
 from helm.benchmark.metrics.metric import MetricSpec
 from helm.benchmark.run_spec import RunSpec, run_spec_function
@@ -18,21 +18,21 @@ def get_mars_spec() -> RunSpec:
     )
 
     adapter_spec = AdapterSpec(
-        method=ADAPT_MULTIPLE_CHOICE_JOINT,
+        method=ADAPT_GENERATION,
         instructions="",  # NOTE: scenario handles prompting internally
         input_prefix="",
         input_suffix="\n",
         output_prefix="Answer: ",
         output_suffix="\n",
-        max_train_instances=5,  # ASSUMPTION: few-shot, TRAIN_SPLIT seen
+        max_train_instances=5,
         num_outputs=1,
-        max_tokens=512,
-        temperature=0.7,
+        max_tokens=50,
+        temperature=0.0,
         stop_sequences=["\n"],
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match"]}),
     ]
 
     return RunSpec(

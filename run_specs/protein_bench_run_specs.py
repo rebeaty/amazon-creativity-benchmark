@@ -33,6 +33,9 @@ def get_protein_bench_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="metrics.validity_metric.ValidityMetric", args={}),
+        MetricSpec(class_name="metrics.protein_bench_metrics.PlddtScoreMetric", args={}),
+        MetricSpec(class_name="metrics.protein_bench_metrics.SctmScoreMetric", args={}),
+        MetricSpec(class_name="metrics.protein_bench_metrics.NoveltyTmScoreMetric", args={}),
     ]
 
     return RunSpec(

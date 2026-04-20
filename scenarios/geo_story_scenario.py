@@ -229,7 +229,7 @@ class GeoStoryScenario(Scenario):
 
             instances.append(Instance(
                 input=Input(text=prompt_text),
-                references=[],
+                references=[Reference(output=Output(text=""), tags=[CORRECT_TAG])],
                 split=TEST_SPLIT,
                 id=f"geo_story_{loc['country_code']}_{loc['name']}",
             ))

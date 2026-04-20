@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_dat_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.dat_scenario.DATScenario",
+        class_name="scenarios.dat_scenario.DATScenario",
         args={},
     )
 
@@ -32,8 +32,10 @@ def get_dat_spec() -> RunSpec:
     )
 
     metric_specs = [
-        # TODO: no metrics in registry, using fallback
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match"]}),
+        MetricSpec(
+            class_name="metrics.semantic_diversity_metric.SemanticDiversityMetric",
+            args={"model_name": "all-MiniLM-L6-v2", "task": "dat"},
+        ),
     ]
 
     return RunSpec(
