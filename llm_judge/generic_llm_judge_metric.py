@@ -10,7 +10,11 @@ from helm.benchmark.metrics.statistic import Stat
 
 
 class GenericLLMJudgeMetric(Metric):
-    """Reads a single numeric annotation produced by GenericLLMJudgeAnnotator."""
+    """Reads a single numeric annotation produced by GenericLLMJudgeAnnotator.
+
+    Annotations are keyed by the annotator's ``self.name``, which
+    GenericLLMJudgeAnnotator sets to ``f"generic_llm_judge_{metric_name}"``.
+    """
 
     def __init__(self, metric_name: str):
         super().__init__()
@@ -24,5 +28,6 @@ class GenericLLMJudgeMetric(Metric):
         eval_cache_path: str,
     ) -> List[Stat]:
         annotations = request_state.annotations or {}
-        score = float(annotations.get(self.metric_name, 0))
+        annotator_output = annotations.get(f"generic_llm_judge_{self.metric_name}", {}) or {}
+        score = float(annotator_output.get(self.metric_name, 0))
         return [Stat(MetricName(self.metric_name)).add(score)]

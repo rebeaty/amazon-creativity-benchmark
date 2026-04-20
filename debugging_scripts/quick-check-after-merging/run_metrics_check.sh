@@ -37,7 +37,7 @@ cd "$REPO_ROOT"
 
 METRICS_CHECK="$SCRIPT_DIR/metrics_check.py"
 INIT_EVAL="$SCRIPT_DIR/init_eval.sh"
-INPUT_LIST="$SCRIPT_DIR/list_good.json"
+INPUT_LIST="$SCRIPT_DIR/list_metric_match.json"
 PASSED_FILE="$SCRIPT_DIR/passed.json"
 FAILED_FILE="$SCRIPT_DIR/failed.json"
 LOG_DIR="$SCRIPT_DIR/logs"

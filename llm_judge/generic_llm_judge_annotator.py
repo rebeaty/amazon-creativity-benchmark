@@ -8,17 +8,18 @@ from helm.clients.auto_client import AutoClient
 from helm.common.request import Request
 
 
+BACKUP_JUDGE_MODEL = "google/gemini-2.5-flash-lite"
+
+
 class GenericLLMJudgeAnnotator(Annotator):
     """Calls an LLM judge once per metric with a rubric-specific prompt.
 
-    Each instance of this annotator handles exactly ONE metric dimension.
-    The annotation key written is the metric_name, so each AnnotatorSpec
-    must use a distinct metric_name.
+    Each instance handles exactly ONE metric dimension. ``self.name`` is set
+    per-instance from ``metric_name`` so multiple annotator specs on the same
+    run do not overwrite each other's annotations in ``request_state.annotations``.
 
     The ``auto_client`` parameter is auto-injected by HELM's AnnotatorFactory.
     """
-
-    name = "generic_llm_judge"
 
     def __init__(
         self,
@@ -35,13 +36,29 @@ class GenericLLMJudgeAnnotator(Annotator):
         self.judge_max_new_tokens = judge_max_new_tokens
         self.metric_name = metric_name
         self.rubric = rubric
+        self.name = f"generic_llm_judge_{metric_name}"
+
+    def _call_judge(self, model_name: str, prompt: str) -> int:
+        request = Request(
+            model=model_name,
+            model_deployment=model_name,
+            prompt=prompt,
+            temperature=self.judge_temperature,
+            max_tokens=self.judge_max_new_tokens,
+            num_completions=1,
+        )
+        result = self._auto_client.make_request(request)
+        if not result.success:
+            raise RuntimeError(f"Judge call failed for model {model_name}")
+        score_text = result.completions[0].text.strip()
+        match = re.search(r'\d+', score_text)
+        return int(match.group()) if match else 0
 
     def annotate(self, request_state: RequestState) -> Dict[str, Any]:
         assert request_state.result is not None
         completion = request_state.result.completions[0].text.strip()
         input_text = request_state.instance.input.text
 
-        # Include reference (baseline) for pairwise comparison if available
         reference_text = ""
         if request_state.instance.references:
             reference_text = request_state.instance.references[0].output.text
@@ -57,23 +74,12 @@ class GenericLLMJudgeAnnotator(Annotator):
             f"Provide only the integer score (e.g., 3):"
         )
 
-        request = Request(
-            model=self.judge_model_name,
-            model_deployment=self.judge_model_name,
-            prompt=prompt,
-            temperature=self.judge_temperature,
-            max_tokens=self.judge_max_new_tokens,
-            num_completions=1,
-        )
-
         try:
-            result = self._auto_client.make_request(request)
-            if not result.success:
-                return {self.metric_name: 0}
-            score_text = result.completions[0].text.strip()
-            match = re.search(r'\d+', score_text)
-            score = int(match.group()) if match else 0
+            score = self._call_judge(self.judge_model_name, prompt)
         except Exception:
-            score = 0
+            try:
+                score = self._call_judge(BACKUP_JUDGE_MODEL, prompt)
+            except Exception:
+                score = -100
 
         return {self.metric_name: score}
