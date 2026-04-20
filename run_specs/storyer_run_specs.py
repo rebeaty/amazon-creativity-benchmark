@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_storyer_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.storyer_scenario.StoryERScenario",
+        class_name="scenarios.storyer_scenario.StoryERScenario",
         args={},
     )
 

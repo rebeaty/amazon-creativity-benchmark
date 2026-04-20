@@ -28,7 +28,7 @@ Score 5: Excellent review demonstrating expert-level technical judgment and dept
 def get_grapheval_iclr_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.grapheval_iclr_scenario.GraphEvalICLRScenario",
+        class_name="scenarios.grapheval_iclr_scenario.GraphEvalICLRScenario",
         args={},
     )
 

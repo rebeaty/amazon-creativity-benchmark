@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_story_generation_rocstories_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.story_generation_rocstories_scenario.StoryGenerationScenario",
+        class_name="scenarios.story_generation_rocstories_scenario.StoryGenerationScenario",
         args={},
     )
 

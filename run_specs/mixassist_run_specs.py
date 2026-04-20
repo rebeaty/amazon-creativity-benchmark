@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_mixassist_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.mixassist_scenario.MixAssistScenario",
+        class_name="scenarios.mixassist_scenario.MixAssistScenario",
         args={},
     )
 

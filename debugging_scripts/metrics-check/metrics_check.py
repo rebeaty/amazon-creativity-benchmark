@@ -65,19 +65,27 @@ def get_registry_metrics(dataset: str) -> list[str]:
 
 
 def find_stats_files(dataset: str, suite: str = "trial", model: str = "google/gemini-2.5-flash-lite") -> list[str]:
-    """Find all stats.json files for a dataset (handles subtasks)."""
+    """Find all stats.json files for a dataset (handles subtasks).
+
+    Searches both the original first-trial-run outputs and the current benchmark_output,
+    preferring newer files when both exist for the same run directory.
+    """
     model_safe = model.replace("/", "_")
+    files: set[str] = set()
 
-    # Pattern: <dataset>:*model=<model_safe>/stats.json  (with or without subtask)
-    pattern = os.path.join(OUTPUTS_DIR, f"{dataset}:*model={model_safe}", "stats.json")
-    files = glob.glob(pattern)
+    search_dirs = [
+        OUTPUTS_DIR,
+        os.path.join(BENCHMARK_RUNS_DIR, suite),
+    ]
 
-    # Also try exact match without wildcard for datasets with no extra params
-    exact = os.path.join(OUTPUTS_DIR, f"{dataset}:model={model_safe}", "stats.json")
-    if os.path.exists(exact) and exact not in files:
-        files.append(exact)
+    for base in search_dirs:
+        pattern = os.path.join(base, f"{dataset}:*model={model_safe}", "stats.json")
+        files.update(glob.glob(pattern))
+        exact = os.path.join(base, f"{dataset}:model={model_safe}", "stats.json")
+        if os.path.exists(exact):
+            files.add(exact)
 
-    return sorted(set(files))
+    return sorted(files)
 
 
 def get_stats_metrics(dataset: str, suite: str = "trial", model: str = "google/gemini-2.5-flash-lite") -> dict:

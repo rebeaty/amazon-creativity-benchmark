@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_puntuguese_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.puntuguese_scenario.PuntugueseScenario",
+        class_name="scenarios.puntuguese_scenario.PuntugueseScenario",
         args={},
     )
 

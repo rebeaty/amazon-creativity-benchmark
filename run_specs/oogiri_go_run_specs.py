@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_oogiri_go_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.oogiri_go_scenario.OogiriGOScenario",
+        class_name="scenarios.oogiri_go_scenario.OogiriGOScenario",
         args={},
     )
 

@@ -39,7 +39,7 @@ Score 5: Perfectly relevant; slang precisely and cleverly captures its intended 
 def get_slang_generation_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.slang_generation_scenario.SlangGenerationScenario",
+        class_name="scenarios.slang_generation_scenario.SlangGenerationScenario",
         args={},
     )
 

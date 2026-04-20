@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_tiger_bench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.tiger_bench_scenario.TIGeRBenchScenario",
+        class_name="scenarios.tiger_bench_scenario.TIGeRBenchScenario",
         args={},
     )
 

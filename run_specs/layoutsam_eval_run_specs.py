@@ -28,7 +28,7 @@ Score 5: Excellent layout description with high spatial accuracy and comprehensi
 def get_layoutsam_eval_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.layoutsam_eval_scenario.LayoutSAMEvalScenario",
+        class_name="scenarios.layoutsam_eval_scenario.LayoutSAMEvalScenario",
         args={},
     )
 

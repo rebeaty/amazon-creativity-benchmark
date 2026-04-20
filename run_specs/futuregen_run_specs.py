@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_futuregen_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.futuregen_scenario.FuturegenScenario",
+        class_name="scenarios.futuregen_scenario.FuturegenScenario",
         args={},
     )
 

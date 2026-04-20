@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_sudoku_bench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.sudoku_bench_scenario.SudokuBenchScenario",
+        class_name="scenarios.sudoku_bench_scenario.SudokuBenchScenario",
         args={},
     )
 

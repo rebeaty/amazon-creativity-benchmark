@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_brainteaser_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.brainteaser_scenario.BrainteaserScenario",
+        class_name="scenarios.brainteaser_scenario.BrainteaserScenario",
         args={},
     )
 
@@ -32,7 +32,7 @@ def get_brainteaser_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match"]}),
     ]
 
     return RunSpec(

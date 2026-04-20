@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_muse_perception_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.muse_perception_scenario.MuSePerceptionScenario",
+        class_name="scenarios.muse_perception_scenario.MuSePerceptionScenario",
         args={},
     )
 

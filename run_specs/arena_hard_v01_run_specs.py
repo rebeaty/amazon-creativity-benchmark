@@ -28,7 +28,7 @@ Score 5: Generated response is significantly better than reference
 def get_arena_hard_v01_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.arena_hard_v01_scenario.ArenaHardV01Scenario",
+        class_name="scenarios.arena_hard_v01_scenario.ArenaHardV01Scenario",
         args={},
     )
 

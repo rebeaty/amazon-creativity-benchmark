@@ -28,7 +28,7 @@ Score 5: Generated response is significantly more creative and higher quality
 def get_arena_hard_creative_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.arena_hard_creative_scenario.ArenaHardCreativeScenario",
+        class_name="scenarios.arena_hard_creative_scenario.ArenaHardCreativeScenario",
         args={},
     )
 

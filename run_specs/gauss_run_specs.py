@@ -28,7 +28,7 @@ Score 7+: Solution is fully correct demonstrating complete mathematical mastery
 def get_gauss_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.gauss_scenario.GAUSSScenario",
+        class_name="scenarios.gauss_scenario.GAUSSScenario",
         args={},
     )
 

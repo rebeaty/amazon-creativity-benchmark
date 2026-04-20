@@ -28,7 +28,7 @@ Score 5: Highly funny, original content demonstrating excellent comedic craft
 def get_hummus_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.hummus_scenario.HummusScenario",
+        class_name="scenarios.hummus_scenario.HummusScenario",
         args={},
     )
 

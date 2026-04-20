@@ -35,7 +35,7 @@ Score 7-10: Fresh perspective, innovative approach while maintaining classic fab
 def get_tinyfabulist_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.tinyfabulist_scenario.TinyFabulistScenario",
+        class_name="scenarios.tinyfabulist_scenario.TinyFabulistScenario",
         args={},
     )
 

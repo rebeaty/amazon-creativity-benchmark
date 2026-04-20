@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_twistlist_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.twistlist_scenario.TwistListScenario",
+        class_name="scenarios.twistlist_scenario.TwistListScenario",
         args={},
     )
 

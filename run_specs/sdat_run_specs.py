@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_sdat_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.sdat_scenario.SDATScenario",
+        class_name="scenarios.sdat_scenario.SDATScenario",
         args={},
     )
 
@@ -32,7 +32,8 @@ def get_sdat_spec() -> RunSpec:
     )
 
     metric_specs = [
-        # TODO: no metrics in registry, using fallback
+        # TODO: model_based metric 'semantic_diversity_score' requires external model
+        # (ibm-granite/granite-embedding-278m-multilingual) — not implementable as MetricSpec
         MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match"]}),
     ]
 

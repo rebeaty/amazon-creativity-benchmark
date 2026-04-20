@@ -28,7 +28,7 @@ Score 5: Highly creative, surprising, and original solution demonstrating except
 def get_creai_cps_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.creai_cps_scenario.CREAICPSScenario",
+        class_name="scenarios.creai_cps_scenario.CREAICPSScenario",
         args={},
     )
 

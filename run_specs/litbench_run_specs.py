@@ -28,7 +28,7 @@ Score 5: Excellent literary response demonstrating deep insight and sophisticate
 def get_litbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.litbench_scenario.LitBenchScenario",
+        class_name="scenarios.litbench_scenario.LitBenchScenario",
         args={},
     )
 

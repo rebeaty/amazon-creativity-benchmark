@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_infochartqa_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.infochartqa_scenario.InfoChartQAScenario",
+        class_name="scenarios.infochartqa_scenario.InfoChartQAScenario",
         args={},
     )
 

@@ -28,7 +28,7 @@ Score 5: Generated response is significantly better than reference
 def get_alpaca_eval_2_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.alpaca_eval_2_scenario.AlpacaEval2Scenario",
+        class_name="scenarios.alpaca_eval_2_scenario.AlpacaEval2Scenario",
         args={},
     )
 

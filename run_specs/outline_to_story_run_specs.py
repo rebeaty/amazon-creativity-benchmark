@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_outline_to_story_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.outline_to_story_scenario.OutlineToStoryScenario",
+        class_name="scenarios.outline_to_story_scenario.OutlineToStoryScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_analobench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.analobench_scenario.AnalobenchScenario",
+        class_name="scenarios.analobench_scenario.AnalobenchScenario",
         args={},
     )
 

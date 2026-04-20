@@ -28,7 +28,7 @@ Score 5: Exceptional insight demonstrating deep understanding and original persp
 def get_artinsight_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.artinsight_scenario.ArtInsightScenario",
+        class_name="scenarios.artinsight_scenario.ArtInsightScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_riddlesense_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.riddlesense_scenario.RiddlesenseScenario",
+        class_name="scenarios.riddlesense_scenario.RiddlesenseScenario",
         args={},
     )
 

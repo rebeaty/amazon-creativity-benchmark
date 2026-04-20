@@ -28,7 +28,7 @@ Score 5: Highly creative, diverse, and original responses demonstrating exceptio
 def get_dpt_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.dpt_scenario.DptScenario",
+        class_name="scenarios.dpt_scenario.DptScenario",
         args={},
     )
 

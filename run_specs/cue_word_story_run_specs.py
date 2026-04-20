@@ -27,7 +27,7 @@ Score 5: Excellent creativity demonstrating outstanding quality
 def get_cue_word_story_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.cue_word_story_scenario.CueWordStoryScenario",
+        class_name="scenarios.cue_word_story_scenario.CueWordStoryScenario",
         args={},
     )
 

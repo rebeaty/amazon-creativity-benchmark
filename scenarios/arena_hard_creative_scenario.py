@@ -81,9 +81,14 @@ class ArenaHardCreativeScenario(Scenario):
 
         # Some prompt fields contain literal newlines, so naive splitlines()
         # breaks mid-JSON.  Accumulate lines until we get valid JSON.
+        # If a new { starts while the buffer is non-empty and unparseable,
+        # discard the broken record and start fresh.
         instances = []
         buf = ""
         for line in data.splitlines():
+            if line.startswith("{") and buf:
+                # New record starting — previous accumulated buf never parsed; discard it
+                buf = ""
             buf = line if not buf else buf + "\n" + line
             try:
                 record = json.loads(buf)

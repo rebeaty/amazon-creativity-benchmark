@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_fig_qa_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.fig_qa_scenario.FigQAScenario",
+        class_name="scenarios.fig_qa_scenario.FigQAScenario",
         args={"use_validation_as_test": True},
     )
 

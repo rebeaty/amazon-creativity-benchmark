@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_miqa_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.miqa_scenario.MiQAScenario",
+        class_name="scenarios.miqa_scenario.MiQAScenario",
         args={},
     )
 

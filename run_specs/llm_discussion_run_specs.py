@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_llm_discussion_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.llm_discussion_scenario.LLMDiscussionScenario",
+        class_name="scenarios.llm_discussion_scenario.LLMDiscussionScenario",
         args={},
     )
 
@@ -32,7 +32,7 @@ def get_llm_discussion_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "quasi_exact_match", "f1_score", "rouge_l", "bleu_1", "bleu_4"]}),
+        MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={"name": "self_bleu"}),
         MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 1}),
         MetricSpec(class_name="metrics.distinct_n_metric.DistinctNMetric", args={"n": 2}),
     ]

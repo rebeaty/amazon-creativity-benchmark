@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_thenextchapter_spec(subset: str = "roc") -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.thenextchapter_scenario.TheNextChapterScenario",
+        class_name="scenarios.thenextchapter_scenario.TheNextChapterScenario",
         args={"subset": subset},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_metaphoric_analogies_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.metaphoric_analogies_scenario.MetaphoricAnalogiesScenario",
+        class_name="scenarios.metaphoric_analogies_scenario.MetaphoricAnalogiesScenario",
         args={},
     )
 

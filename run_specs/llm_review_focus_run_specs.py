@@ -28,7 +28,7 @@ Score 5: Excellent proposal with exceptional clarity, rigor, and potential scien
 def get_llm_review_focus_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.llm_review_focus_scenario.LLMReviewFocusScenario",
+        class_name="scenarios.llm_review_focus_scenario.LLMReviewFocusScenario",
         args={},
     )
 

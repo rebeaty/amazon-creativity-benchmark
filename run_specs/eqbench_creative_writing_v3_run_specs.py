@@ -39,7 +39,7 @@ Score 5: Exceeds all rubric criteria with exceptional literary quality
 def get_eqbench_creative_writing_v3_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.eqbench_creative_writing_v3_scenario.EQBenchCreativeWritingV3Scenario",
+        class_name="scenarios.eqbench_creative_writing_v3_scenario.EQBenchCreativeWritingV3Scenario",
         args={},
     )
 

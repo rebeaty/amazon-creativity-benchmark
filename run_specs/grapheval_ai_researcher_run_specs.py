@@ -28,7 +28,7 @@ Score 5: Excellent analysis demonstrating expert-level research judgment and dep
 def get_grapheval_ai_researcher_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.grapheval_ai_researcher_scenario.GraphEvalAIResearcherScenario",
+        class_name="scenarios.grapheval_ai_researcher_scenario.GraphEvalAIResearcherScenario",
         args={},
     )
 

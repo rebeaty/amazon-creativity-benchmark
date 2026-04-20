@@ -28,7 +28,7 @@ Score 100: Exceptional, insightful, perfectly reasoned and articulated response
 def get_aidanbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.aidanbench_scenario.AidanBenchScenario",
+        class_name="scenarios.aidanbench_scenario.AidanBenchScenario",
         args={},
     )
 

@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_mars_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.mars_scenario.MARSScenario",
+        class_name="scenarios.mars_scenario.MARSScenario",
         args={},
     )
 

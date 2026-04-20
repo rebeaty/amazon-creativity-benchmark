@@ -39,7 +39,7 @@ Score 5: Perfect character consistency with authentic and stable characterizatio
 def get_webnovelbench_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.webnovelbench_scenario.WebNovelBenchScenario",
+        class_name="scenarios.webnovelbench_scenario.WebNovelBenchScenario",
         args={},
     )
 

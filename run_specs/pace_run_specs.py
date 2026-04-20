@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_pace_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.pace_scenario.PACEScenario",
+        class_name="scenarios.pace_scenario.PACEScenario",
         args={},
     )
 

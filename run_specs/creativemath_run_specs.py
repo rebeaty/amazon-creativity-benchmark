@@ -28,7 +28,7 @@ Score 5: Fully correct, mathematically rigorous and valid solution
 def get_creativemath_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.creativemath_scenario.CreativeMathScenario",
+        class_name="scenarios.creativemath_scenario.CreativeMathScenario",
         args={},
     )
 

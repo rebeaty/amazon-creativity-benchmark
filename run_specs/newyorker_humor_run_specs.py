@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_newyorker_humor_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.newyorker_humor_scenario.NewYorkerHumorScenario",
+        class_name="scenarios.newyorker_humor_scenario.NewYorkerHumorScenario",
         args={},
     )
 
@@ -32,8 +32,7 @@ def get_newyorker_humor_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric", args={"names": ["exact_match", "rouge_l"]}),
     ]
 
     return RunSpec(

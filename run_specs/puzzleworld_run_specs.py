@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_puzzleworld_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.puzzleworld_scenario.PuzzleWorldScenario",
+        class_name="scenarios.puzzleworld_scenario.PuzzleWorldScenario",
         args={},
     )
 

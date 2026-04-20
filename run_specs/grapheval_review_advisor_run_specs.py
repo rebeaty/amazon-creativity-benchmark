@@ -28,7 +28,7 @@ Score 5: Excellent advisory demonstrating expert-level judgment and highly usefu
 def get_grapheval_review_advisor_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.grapheval_review_advisor_scenario.GraphEvalReviewAdvisorScenario",
+        class_name="scenarios.grapheval_review_advisor_scenario.GraphEvalReviewAdvisorScenario",
         args={},
     )
 

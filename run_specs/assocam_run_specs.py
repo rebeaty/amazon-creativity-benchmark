@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_assocam_4T1_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.assocam_scenario.AssoCiAmScenario",
+        class_name="scenarios.assocam_scenario.AssoCiAmScenario",
         args={"subtask": "4T1"},
     )
 
@@ -49,7 +49,7 @@ def get_assocam_4T1_spec() -> RunSpec:
 def get_assocam_7T1_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.assocam_scenario.AssoCiAmScenario",
+        class_name="scenarios.assocam_scenario.AssoCiAmScenario",
         args={"subtask": "7T1"},
     )
 
@@ -85,7 +85,7 @@ def get_assocam_7T1_spec() -> RunSpec:
 def get_assocam_10T1_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.assocam_scenario.AssoCiAmScenario",
+        class_name="scenarios.assocam_scenario.AssoCiAmScenario",
         args={"subtask": "10T1"},
     )
 

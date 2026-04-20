@@ -67,7 +67,7 @@ Score 5: Rich, varied language with sophisticated narrative techniques
 def get_arastories_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.arastories_scenario.AraStoriesScenario",
+        class_name="scenarios.arastories_scenario.AraStoriesScenario",
         args={},
     )
 

@@ -39,7 +39,7 @@ Score 5: Perfectly relevant and highly focused on the domain's core challenges
 def get_future_ideas_spec(domain: str = "chemistry") -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.future_ideas_scenario.FutureIdeasScenario",
+        class_name="scenarios.future_ideas_scenario.FutureIdeasScenario",
         args={"domain": domain},
     )
 

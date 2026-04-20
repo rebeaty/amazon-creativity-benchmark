@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_nyt_connections_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.nyt_connections_scenario.NYTConnectionsScenario",
+        class_name="scenarios.nyt_connections_scenario.NYTConnectionsScenario",
         args={},
     )
 

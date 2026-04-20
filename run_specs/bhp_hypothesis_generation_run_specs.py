@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_bhp_hypothesis_generation_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.bhp_hypothesis_generation_scenario.BHPHypothesisGenerationScenario",
+        class_name="scenarios.bhp_hypothesis_generation_scenario.BHPHypothesisGenerationScenario",
         args={},
     )
 

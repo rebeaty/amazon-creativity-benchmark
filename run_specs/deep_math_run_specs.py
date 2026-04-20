@@ -13,7 +13,7 @@ from helm.benchmark.scenarios.scenario import ScenarioSpec
 def get_deep_math_spec() -> RunSpec:
 
     scenario_spec = ScenarioSpec(
-        class_name="scenarios_new.deep_math_scenario.DeepMathCreativeScenario",
+        class_name="scenarios.deep_math_scenario.DeepMathCreativeScenario",
         args={},
     )
 
