@@ -1,125 +1,141 @@
 # Amazon Creativity Benchmark
 
-A pipeline for curating AI creativity benchmarks from academic literature. This project systematically discovers, screens, and catalogs benchmarks that evaluate creative AI capabilities.
-
-## What This Is
-
-This repository contains tools and data for building a comprehensive catalog of AI creativity benchmarks. The pipeline:
-
-1. **Harvests** thousands of papers from Semantic Scholar using targeted queries
-2. **Screens** papers to identify those presenting relevant benchmarks
-3. **Verifies** that identified benchmarks have publicly accessible datasets
-4. **Downloads** PDFs of included papers for detailed analysis
-5. **Extracts** structured metadata about each benchmark
-
-The result is a curated collection of creativity benchmarks with their source papers, ready for further analysis or implementation.
+A HELM-compatible evaluation suite for benchmarking the creative capabilities of language and vision-language models across ~90 creativity datasets (story generation, analogy, humor, puns, scientific hypothesis generation, image captioning, aesthetic judgment, and more).
 
 ---
 
-## Directory Structure
+## Overview
 
-```
-amazon_creativity_benchmark/
-├── README.md
-├── CLAUDE.md                    # Project-wide Claude context
-├── .env.template
-│
-├── curation/                    # 5-stage paper screening pipeline
-│   ├── 01_lit_harvester_s2.py      # Harvest from Semantic Scholar
-│   ├── 02_paper_screener_gpt41.py  # Screen benchmark for relevance
-│   ├── 03_dataset_verifier.py      # Verify public datasets exist
-│   ├── 04_pdf_downloader_gemini.py # Download paper PDFs
-│   └── 05_benchmark_extractor.py   # Extract benchmark metadata
-│
-├── data/
-│   └── onboarding_ready/        # Final screened benchmark list
-│
-└── .claude/skills/benchmark-onboarder/
-    ├── SKILL.md                 # Claude Code skill instructions
-    ├── LEARNINGS.md             # Team-accumulated benchmark quirks
-    ├── TEAM-OVERVIEW.md         # Human team orientation
-    ├── helm-template.md         # HELM Scenario code patterns
-    ├── benchmarks.json          # Benchmark queue with GA assignments
-    └── examples/                # Working scenario examples
-        ├── brainteaser.py
-        ├── analobench.py
-        └── riddlesense.py
-```
+Every dataset in this benchmark is implemented as a HELM [Scenario](https://github.com/stanford-crfm/helm) plus a `RunSpec`, paired with an expected-metrics registry. A single orchestrator script evaluates your chosen model on every dataset in parallel, routes all model calls (including LLM-judge metrics) through [OpenRouter](https://openrouter.ai/), and writes per-dataset results under `benchmark_output/runs/first_full_trial/`.
 
----
+Key files:
 
-## The Curation Pipeline
-
-The curation pipeline consists of five scripts that run in sequence. Each script is checkpointed, so you can resume if interrupted.
-
-### Step 1: Harvest Papers
-```bash
-python curation/01_lit_harvester_s2.py
-```
-Queries Semantic Scholar for papers on AI creativity benchmarks (2018-2025). Uses the Graph API with rate limiting and pagination. Outputs `harvest.jsonl`.
-
-### Step 2: Screen for Benchmarks
-```bash
-python curation/02_paper_screener_gpt41.py
-```
-Uses GPT-4 to evaluate each paper: Does it present a benchmark? Is it about creativity/reasoning? Parallel async processing with checkpointing. Outputs `screened_papers.jsonl`.
-
-### Step 3: Verify Dataset Availability
-```bash
-python curation/03_dataset_verifier.py
-```
-For each screened paper, uses Gemini with Google Search grounding to verify the benchmark has a publicly accessible dataset. Outputs `verified_papers.jsonl`.
-
-### Step 4: Download PDFs
-```bash
-python curation/04_pdf_downloader_gemini.py
-```
-Downloads PDFs for all verified papers. Uses Gemini to find PDF links when direct URLs aren't available. Papers are saved to `data/pdf_cache/` named by their Semantic Scholar ID.
-
-### Step 5: Extract Benchmark Metadata
-```bash
-python curation/05_benchmark_extractor.py
-```
-Reads each PDF and extracts structured metadata: task description, dataset format, evaluation metrics, etc. Uses Gemini-2.5-Pro for extraction. Outputs `extracted_benchmarks.jsonl`.
+| Path | Purpose |
+|---|---|
+| [scenarios/](scenarios/) | One HELM `Scenario` per dataset |
+| [run_specs/](run_specs/) | One `RunSpec` per dataset (metrics + annotators) |
+| [eval_scripts/](eval_scripts/) | Per-dataset eval shell scripts + orchestrator |
+| [data/registry/registry_metrics.yaml](data/registry/registry_metrics.yaml) | Expected metrics per dataset |
+| [data/registry/registry_inference.yaml](data/registry/registry_inference.yaml) | Inference config per dataset |
+| [data/list_dataset_1st_trial.json](data/list_dataset_1st_trial.json) | Datasets the orchestrator iterates over |
 
 ---
 
 ## Setup
 
-### API Keys Required
-
-Copy `.env.template` to `.env` and add your keys:
+### 1. Clone the repository
 
 ```bash
-OPENAI_API_KEY=sk-...      # For paper screening (GPT-4)
-GOOGLE_API_KEY=...         # For verification & extraction (Gemini)
-HF_TOKEN=hf_...            # Optional: for private HuggingFace datasets
+git clone https://github.com/anthropics/amazon-creativity-benchmark.git
+cd amazon-creativity-benchmark
 ```
 
-### Dependencies
+### 2. Create a Python 3.10 environment
 
 ```bash
-pip install openai google-generativeai httpx tenacity
-pip install datasets  # for HuggingFace integration
+conda create --name creativity-bench python=3.10 -y
+conda activate creativity-bench
+```
+
+### 3. Install the package
+
+```bash
+pip install -e ".[eval,dev]"
+```
+
+This installs `crfm-helm>=0.5.12`, data-format libraries (Pillow, h5py, openpyxl, PyYAML), optional eval dependencies (diffusers, clip-score), and pytest.
+
+Verify:
+
+```bash
+python -c "import helm; print(helm.__version__)"
+```
+
+### 4. Configure API keys
+
+All model and judge calls are routed through OpenRouter. Create a local `.env` in the repo root (never commit it):
+
+```bash
+cat > .env << 'EOF'
+export OPENROUTER_API_KEY="sk-or-..."
+EOF
+```
+
+Get a key from https://openrouter.ai/keys. Make sure billing is enabled — OpenRouter is what gives you access to Claude, GPT, Gemini, Llama, and others through a single credential.
+
+Load it into your shell:
+
+```bash
+source .env
+echo "OPENROUTER_API_KEY=${OPENROUTER_API_KEY:0:10}..."
+```
+
+### 5. Quick sanity check
+
+```bash
+python -c "from scenarios import scenario_registry; print('scenarios OK')"
 ```
 
 ---
 
-## Benchmark Onboarding
+## Usage
 
-Once benchmarks are curated, the next step is **onboarding** them into HELM Scenario implementations. This is handled by a Claude Code skill documented in:
+The main entry point is [eval_scripts/00_run_all_parallel.sh](eval_scripts/00_run_all_parallel.sh). It verifies the target model and judge models are reachable on OpenRouter, then runs every dataset listed in `data/list_dataset_1st_trial.json` concurrently.
 
-**[.claude/skills/benchmark-onboarder/](.claude/skills/benchmark-onboarder/)**
+### Command
 
-The skill follows a 5-step workflow:
+```bash
+./eval_scripts/00_run_all_parallel.sh MODEL [MAX_INSTANCES] [PARALLELISM]
+```
 
-1. **Qualify** — Verify it's a creativity benchmark with extractable prompts
-2. **Examine dataset** — Identify fields to use vs. skip
-3. **Check instructions** — Find task wording from paper/README if specified
-4. **Generate scenario** — Produce standardized `scenario.py` following HELM patterns
-5. **Verify** — Confirm code runs, fields map correctly
+| Argument | Required | Default | Description |
+|---|---|---|---|
+| `MODEL` | yes | — | OpenRouter model slug (`vendor/model`) |
+| `MAX_INSTANCES` | no | `-1` (all) | Cap on instances per dataset — useful for smoke tests |
+| `PARALLELISM` | no | `4` | Number of datasets to run concurrently |
 
-See [TEAM-OVERVIEW.md](.claude/skills/benchmark-onboarder/TEAM-OVERVIEW.md) for team workflow and GA assignments.
+### Examples
+
+```bash
+# Full evaluation on all datasets, all instances, 4-way parallel
+./eval_scripts/00_run_all_parallel.sh google/gemini-2.5-flash-lite
+
+# Smoke test: 10 instances per dataset, 8-way parallel
+./eval_scripts/00_run_all_parallel.sh anthropic/claude-sonnet-4 10 8
+
+# Full eval with higher concurrency
+./eval_scripts/00_run_all_parallel.sh openai/gpt-4o -1 16
+```
+
+### What happens when you run it
+
+1. Loads `OPENROUTER_API_KEY` from `.env` (if present).
+2. Fetches OpenRouter's model list and verifies `MODEL` + judge slugs (`openai/gpt-4-1106-preview`, `anthropic/claude-sonnet-4`, `google/gemini-2.5-flash-lite`) are all available. Aborts before spending any tokens if not.
+3. Dispatches each dataset's `eval_scripts/<dataset>.sh` in the background, throttled to `PARALLELISM` workers at a time. HELM downloads any missing dataset data automatically on first run.
+4. Writes per-dataset logs to `benchmark_output/runs/first_full_trial/_orchestrator_logs/<dataset>.log` and final results to `benchmark_output/runs/first_full_trial/<run_dir>/`.
+5. Prints a summary with passed / failed / skipped counts and exits non-zero if anything failed.
+
+### Exit codes
+
+| Code | Meaning |
+|---|---|
+| 0 | All datasets passed |
+| 1 | One or more datasets failed or were skipped (missing per-dataset script) |
+| 2 | Bad arguments, missing `OPENROUTER_API_KEY`, or OpenRouter list fetch failed |
+| 3 | Target `MODEL` not available on OpenRouter |
+| 4 | A required judge model is not available on OpenRouter |
+| 5 | Dataset list file missing |
+| 6 | Dataset list is empty |
+
+### Running a single dataset
+
+To debug or re-run one dataset in isolation:
+
+```bash
+bash eval_scripts/<dataset>.sh "$MODEL" first_full_trial ""
+```
+
+The third argument is `MAX_INSTANCES` (empty = all).
 
 ---
 
