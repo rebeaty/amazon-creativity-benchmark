@@ -4,20 +4,44 @@
 datasets:
   aaar:
     metrics:
-      - name: "sentence_bert_f1"
+      - name: "exact_match"
         in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "sentence_bert_f1"
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.sentence_bert_metric.SentenceBertMetric"
         metric_model: "all-mpnet-base-v2"
       - name: "sentence_bert_precision"
-        in_helm: true
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.sentence_bert_metric.SentenceBertMetric"
         metric_model: "all-mpnet-base-v2"
       - name: "sentence_bert_recall"
-        in_helm: true
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.sentence_bert_metric.SentenceBertMetric"
         metric_model: "all-mpnet-base-v2"
       - name: "recall_gt_entail_score"
         in_helm: false
@@ -212,7 +236,11 @@ datasets:
 
   balderdash:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
         in_helm: true
         type: "formula_based"
         helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
@@ -229,18 +257,34 @@ datasets:
 
   bhp_hypothesis_generation:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bert_score"
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.bert_score_metric.BertScoreMetric"
         metric_model: "bert-base-uncased"
 
   brainteaser:
@@ -301,10 +345,14 @@ datasets:
 
   cii_bench:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   clef_joker_2025_task2:
     metrics:
@@ -319,10 +367,14 @@ datasets:
 
   cm3d:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   conceptual_design:
     metrics:
@@ -340,10 +392,14 @@ datasets:
 
   convbench:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   cpers:
     metrics:
@@ -393,10 +449,14 @@ datasets:
 
   creative_pair:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   creative_process:
     metrics:
@@ -468,11 +528,27 @@ datasets:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   cs4:
     metrics:
@@ -515,10 +591,14 @@ datasets:
 
   d_humor:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   dat:
     metrics:
@@ -545,18 +625,34 @@ datasets:
 
   data_narrative:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bert_score"
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.bert_score_metric.BertScoreMetric"
         metric_model: "bert-base-uncased"
 
   deep_math:
@@ -651,11 +747,36 @@ datasets:
 
   esp_dataset:
     metrics:
+      - name: "exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "bleu_4"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "clip_score"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "expected_clip_score"
+        in_helm: true
+        type: "model_based"
+        helm_class: "helm.benchmark.metrics.image_generation.clip_score_metrics.CLIPScoreMetric"
+        metric_model: "openai/clip-vit-base-patch32"
+      - name: "max_clip_score"
         in_helm: true
         type: "model_based"
         helm_class: "helm.benchmark.metrics.image_generation.clip_score_metrics.CLIPScoreMetric"
@@ -666,11 +787,27 @@ datasets:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   fig_qa:
     metrics:
@@ -684,11 +821,11 @@ datasets:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   fscg8:
     metrics:
@@ -859,10 +996,14 @@ datasets:
 
   hummus:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
       - name: "llm_judge_quality"
         in_helm: false
         type: "llm_judge"
@@ -884,10 +1025,14 @@ datasets:
 
   humordb:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   hypobench:
     metrics:
@@ -936,10 +1081,10 @@ datasets:
 
   ii_bench:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   infochartqa:
     metrics:
@@ -954,28 +1099,32 @@ datasets:
 
   irfl:
     metrics:
-      - name: "accuracy"
-        in_helm: true
-        type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
-
-  javanese_sundanese_story_cloze:
-    metrics:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "accuracy"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+
+  javanese_sundanese_story_cloze:
+    metrics:
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   kiva:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   layoutsam_eval:
     metrics:
@@ -989,14 +1138,18 @@ datasets:
 
   lcc_metaphor:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   litbench:
     metrics:
@@ -1023,16 +1176,11 @@ datasets:
       - name: "bleu_4"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
-        in_helm: true
-        type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
-        metric_model: "bert-base-uncased"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   llm_discussion:
     metrics:
@@ -1089,10 +1237,10 @@ datasets:
 
   mars:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   matdesign:
     metrics:
@@ -1106,58 +1254,86 @@ datasets:
 
   memecap:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   met_meme:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   meta4xnli:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   metaphor_generation:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   metaphoric_analogies:
     metrics:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   mineanybuild:
     metrics:
@@ -1175,14 +1351,14 @@ datasets:
 
   miqa:
     metrics:
-      - name: "exact_match"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "accuracy"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   mixassist:
     metrics:
@@ -1197,14 +1373,14 @@ datasets:
 
   moh_x:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   mops:
     metrics:
@@ -1233,10 +1409,14 @@ datasets:
 
   munch:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   muse_perception:
     metrics:
@@ -1244,21 +1424,37 @@ datasets:
         in_helm: false
         type: "formula_based"
         helm_class: "metrics.correlation_metric.CorrelationMetric"
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   music_theory_bench:
     metrics:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "accuracy"
-        in_helm: true
-        type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   neocoder:
     metrics:
@@ -1273,21 +1469,25 @@ datasets:
 
   newyorker_caption:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   newyorker_humor:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   noveltybench:
     metrics:
@@ -1321,38 +1521,57 @@ datasets:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
-        in_helm: true
-        type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
-        metric_model: "bert-base-uncased"
-
-  oogiri_go:
-    metrics:
-      - name: "accuracy"
-        in_helm: true
-        type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
-
-  outline_to_story:
-    metrics:
-      - name: "bleu_4"
-        in_helm: true
-        type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bert_score"
+        in_helm: false
+        type: "model_based"
+        helm_class: "metrics.bert_score_metric.BertScoreMetric"
+
+  oogiri_go:
+    metrics:
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+
+  outline_to_story:
+    metrics:
+      - name: "exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   pace:
     metrics:
@@ -1455,10 +1674,14 @@ datasets:
 
   proparalogy:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   protein_bench:
     metrics:
@@ -1502,14 +1725,14 @@ datasets:
 
   puntuguese:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   puzzleworld:
     metrics:
@@ -1534,14 +1757,30 @@ datasets:
 
   recombination_extraction:
     metrics:
-      - name: "f1"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "classification_accuracy"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   research_idea_execution:
     metrics:
@@ -1569,14 +1808,14 @@ datasets:
 
   riddlesense:
     metrics:
-      - name: "exact_match"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "accuracy"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   robotoolbench:
     metrics:
@@ -1619,18 +1858,38 @@ datasets:
       - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   schnovel:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   science_analogies:
     metrics:
@@ -1645,19 +1904,34 @@ datasets:
 
   scimon:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bert_score"
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
-        metric_model: "bert-base-uncased"
+        helm_class: "metrics.bert_score_metric.BertScoreMetric"
 
   sdat:
     metrics:
@@ -1721,10 +1995,10 @@ datasets:
 
   sonnet_or_not_bot:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   speak_to_structure:
     metrics:
@@ -1742,18 +2016,34 @@ datasets:
 
   splat:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bert_score"
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.bert_score_metric.BertScoreMetric"
         metric_model: "bert-base-uncased"
 
   ss_gen:
@@ -1798,18 +2088,38 @@ datasets:
 
   storyer:
     metrics:
-      - name: "accuracy"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "rouge_l"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "spearman_correlation"
         in_helm: false
         type: "formula_based"
         helm_class: "metrics.correlation_metric.CorrelationMetric"
-      - name: "rouge_l"
-        in_helm: true
+      - name: "pearson_correlation"
+        in_helm: false
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "metrics.correlation_metric.CorrelationMetric"
 
   sudoku_bench:
     metrics:
@@ -1842,10 +2152,14 @@ datasets:
 
   tiger_bench:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   tinyfabulist:
     metrics:
@@ -1915,29 +2229,45 @@ datasets:
 
   ttcw:
     metrics:
-      - name: "accuracy"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   twistlist:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bert_score"
+        in_helm: false
         type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
+        helm_class: "metrics.bert_score_metric.BertScoreMetric"
         metric_model: "bert-base-uncased"
 
   unfun_corpus:
@@ -1953,15 +2283,14 @@ datasets:
 
   v_flute:
     metrics:
-      - name: "exact_match"
+      - name: "classification_macro_f1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "bert_score"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
+      - name: "classification_micro_f1"
         in_helm: true
-        type: "model_based"
-        helm_class: "helm.benchmark.metrics.summarization_metrics.SummarizationMetric"
-        metric_model: "bert-base-uncased"
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric"
 
   vflute:
     metrics:
@@ -2038,30 +2367,54 @@ datasets:
 
   yesbut:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "f1"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   yesbut_v2:
     metrics:
-      - name: "bleu_4"
+      - name: "exact_match"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "quasi_exact_match"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "f1_score"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
       - name: "rouge_l"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.evaluate_reference_metrics.compute_reference_metrics"
-      - name: "accuracy"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_1"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
+      - name: "bleu_4"
+        in_helm: true
+        type: "formula_based"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"

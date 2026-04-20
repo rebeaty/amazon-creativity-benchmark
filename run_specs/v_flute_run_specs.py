@@ -33,7 +33,6 @@ def get_v_flute_spec() -> RunSpec:
 
     metric_specs = [
         MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
-        MetricSpec(class_name="helm.benchmark.metrics.summarization_metrics.SummarizationMetric", args={"model_name": "bert-base-uncased"}),
     ]
 
     return RunSpec(
