@@ -1,4 +1,5 @@
 #!/bin/bash
+[ -z "$BASH_VERSION" ] && exec bash "$0" "$@"
 # =============================================================================
 # Metrics Check Orchestrator
 #
@@ -63,8 +64,9 @@ ask_claude_to_fix() {
     local m2_json="$4"
     local attempt="$5"
 
-    local prompt
-    prompt=$(cat <<PROMPT_EOF
+    local tmpfile prompt
+    tmpfile=$(mktemp /tmp/metrics_prompt.XXXXXX)
+    cat > "$tmpfile" <<PROMPT_EOF
 You are fixing missing metrics for HELM dataset: "$dataset"
 (attempt $attempt of $MAX_ATTEMPTS)
 
@@ -94,10 +96,11 @@ Use the metrics-diagnose-fix skill workflow.
 Rules:
 - Only modify files in run_specs/, scenarios/, metrics/, eval_scripts/
 - Do NOT modify HELM's installed package files
-- Be surgical — only fix what's broken for missing metrics
+- Be surgical - only fix what's broken for missing metrics
 - Update/write the summary file of fixes you made and why, to debugging_scripts/metrics-check/$ASSIGNEE/${dataset}_fixes.md
 PROMPT_EOF
-    )
+    prompt=$(cat "$tmpfile")
+    rm -f "$tmpfile"
 
     claude -p "$prompt" \
         --max-turns 15 \
@@ -225,7 +228,10 @@ python3 "$HELPER" status "$ASSIGNEE"
 if [[ -n "$SINGLE_DATASET" ]]; then
     DATASETS=("$SINGLE_DATASET")
 else
-    mapfile -t DATASETS < <(python3 -c "
+    DATASETS=()
+    while IFS= read -r d; do
+        DATASETS+=("$d")
+    done < <(python3 -c "
 import json
 with open('$PENDING_FILE') as f:
     pending = json.load(f)

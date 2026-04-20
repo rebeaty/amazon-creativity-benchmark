@@ -25,9 +25,9 @@ Read these files to understand the current state:
 1. `data/registry/registry_metrics.yaml` — find the dataset entry. For each missing metric, note its `name`, `type`, `in_helm`, `helm_class`, and any judge/annotator config fields (`judge_model_name`, `judge_temperature`, `judge_max_new_tokens`, `judge_prompt`).
 2. `run_specs/<dataset>_run_specs.py` — see what MetricSpecs and AnnotatorSpecs are currently defined.
 3. Scenario file — only read this if the run_spec looks correct but the metric is still missing (i.e. diagnosing a **Scenario issue**). Check in order:
-   - `scenarios_new/<dataset>_scenario.py` — primary location on the server (per CLAUDE.md)
+   - `scenarios/<dataset>_scenario.py` — primary location on the server (per CLAUDE.md)
    - `scenarios/<dataset>_scenario.py` — fallback (present in the git clone)
-   - **Note:** The `scenarios_new.*` prefix in run_spec `class_name` fields refers to the `scenarios_new/` directory. On the actual evaluation server (`/home/public/vdeshpan/...`) this directory exists as `scenarios_new/`.
+   - **Note:** The `scenarios.*` prefix in run_spec `class_name` fields refers to the `scenarios/` directory. On the actual evaluation server (`/home/public/vdeshpan/...`) this directory exists as `scenarios/`.
 
 Then write a diagnosis file to:
 ```
@@ -250,7 +250,7 @@ Fix any syntax errors before returning. A broken file will crash the entire eval
 
 ## Rules
 
-- **Only modify** files in `run_specs/`, `scenarios/`, `scenarios_new/`, `metrics/`, or `eval_scripts/`
+- **Only modify** files in `run_specs/`, `scenarios/`, `scenarios/`, `metrics/`, or `eval_scripts/`
 - **Do NOT modify** HELM's installed package files (anything under `site-packages/`)
 - **Do NOT modify** `data/registry/registry_metrics.yaml` — it is the source of truth. If it looks wrong, note it in the diagnosis and ask Vijeta.
 - **Be surgical** — only fix MetricSpecs/AnnotatorSpecs for the missing metrics. Do not touch working ones.

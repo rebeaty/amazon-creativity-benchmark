@@ -53,6 +53,7 @@ Parameters:
 from typing import List
 
 from helm.benchmark.scenarios.scenario import (
+    CORRECT_TAG,
     TEST_SPLIT,
     Instance,
     Input,
@@ -200,16 +201,16 @@ class BalderdashScenario(Scenario):
             word_pairs = _DOMAIN_MAP[self.domain]
 
         instances = []
-        for word, _real_definition in word_pairs:
-            # Real definition intentionally excluded from prompt —
-            # model must invent without knowing the true meaning (game rule).
-            # _real_definition is retained here for judge calibration use only.
+        for word, real_definition in word_pairs:
+            # Real definition excluded from prompt — model must invent (game rule).
+            # Provided as Reference so BasicMetric can compute accuracy (measures
+            # whether the model accidentally generates the true definition).
             prompt = _INSTRUCTION.format(word=word)
 
             instances.append(
                 Instance(
                     input=Input(text=prompt),
-                    references=[],   # No correct answer; LLM-as-judge
+                    references=[Reference(Output(text=real_definition), tags=[CORRECT_TAG])],
                     split=TEST_SPLIT,
                 )
             )

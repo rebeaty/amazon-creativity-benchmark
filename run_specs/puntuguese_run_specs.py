@@ -32,8 +32,8 @@ def get_puntuguese_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(class_name="metrics.accuracy_metric.AccuracyMetric", args={}),
+        MetricSpec(class_name="metrics.f1_metric.F1Metric", args={}),
     ]
 
     return RunSpec(

@@ -32,7 +32,7 @@ def get_humordb_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.classification_metrics.MultipleChoiceClassificationMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.basic_metrics.BasicMetric", args={}),
     ]
 
     return RunSpec(

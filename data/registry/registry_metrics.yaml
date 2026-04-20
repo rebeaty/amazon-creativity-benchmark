@@ -215,7 +215,7 @@ datasets:
       - name: "accuracy"
         in_helm: true
         type: "formula_based"
-        helm_class: "helm.benchmark.metrics.basic_metrics.BasicMetric"
+        helm_class: "helm.benchmark.metrics.basic_metrics.BasicGenerationMetric"
 
   banner_request_400:
     metrics:
