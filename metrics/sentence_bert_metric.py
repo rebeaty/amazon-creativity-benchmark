@@ -1,3 +1,4 @@
+import threading
 from typing import List
 
 import numpy as np
@@ -24,14 +25,16 @@ class SentenceBertMetric(Metric):
         super().__init__()
         self._model_name = model_name
         self._model = None
+        self._model_lock = threading.Lock()
 
     def _get_model(self) -> SentenceTransformer:
         if self._model is None:
-            self._model = SentenceTransformer(
-                self._model_name,
-                device="cpu",
-                model_kwargs={"low_cpu_mem_usage": False},
-            )
+            with self._model_lock:
+                if self._model is None:
+                    self._model = SentenceTransformer(
+                        self._model_name,
+                        device="cpu",
+                    )
         return self._model
 
     @staticmethod

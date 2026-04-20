@@ -81,7 +81,7 @@ class CDATScenario(Scenario):
         Returns:
             List of cue words
         """
-        cues_url = "https://raw.githubusercontent.com/knakajima1225/beyond_divergent_creativity/main/cdat/data/cdat_cues_filtered550.txt"
+        cues_url = "https://raw.githubusercontent.com/knakajima1225/beyond_divergent_creativity/master/cdat/data/cdat_cues_filtered550.txt"
 
         print(f"Downloading CDAT cue words from GitHub...")
         response = urllib.request.urlopen(cues_url)

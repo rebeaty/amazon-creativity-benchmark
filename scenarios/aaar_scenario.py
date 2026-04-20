@@ -97,25 +97,31 @@ class AaarScenario(Scenario):
     def get_instances(self, output_path: str) -> List[Instance]:
         subtask_dir = "Experiment_Design" if self.subtask == "experiment_design" else os.path.join("Paper_Weakness", "ICLR_2023")
 
+        # Resolve the project-level data cache directory relative to this file.
+        _SCENARIO_DIR = os.path.dirname(os.path.abspath(__file__))
+        _DATA_CACHE = os.path.join(_SCENARIO_DIR, "..", "data", "scenarios", "aaar")
+
         repo_dir = None
-        try:
-            candidate = snapshot_download(
-                repo_id="Reza8848/AAAR-1.0",
-                repo_type="dataset",
-                cache_dir=output_path,
-                local_files_only=True,
-                token=_HF_TOKEN,
-            )
-            if os.path.isdir(os.path.join(candidate, subtask_dir)):
-                repo_dir = candidate
-        except Exception:
-            pass
+        for cache_dir in [_DATA_CACHE, output_path]:
+            try:
+                candidate = snapshot_download(
+                    repo_id="Reza8848/AAAR-1.0",
+                    repo_type="dataset",
+                    cache_dir=cache_dir,
+                    local_files_only=True,
+                    token=_HF_TOKEN,
+                )
+                if os.path.isdir(os.path.join(candidate, subtask_dir)):
+                    repo_dir = candidate
+                    break
+            except Exception:
+                pass
 
         if repo_dir is None:
             repo_dir = snapshot_download(
                 repo_id="Reza8848/AAAR-1.0",
                 repo_type="dataset",
-                cache_dir=output_path,
+                cache_dir=_DATA_CACHE,
                 token=_HF_TOKEN,
             )
 
