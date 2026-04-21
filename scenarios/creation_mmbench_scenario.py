@@ -152,12 +152,21 @@ class CreationMMBenchScenario(Scenario):
         # Create multimedia content: images + question text
         multimedia_objects = []
 
+        # Save PIL images to disk (HELM expects file paths, not PIL objects)
+        import os as _os
+        images_dir = _os.path.join(output_path, "images")
+        _os.makedirs(images_dir, exist_ok=True)
+        task_slug = "".join(c if c.isalnum() else "_" for c in task_name)[:60]
+
         # Add all images first
         for idx, img in enumerate(images):
+            image_path = _os.path.join(images_dir, f"{task_slug}_{idx}.jpg")
+            if not _os.path.exists(image_path):
+                img.convert("RGB").save(image_path, "JPEG")
             multimedia_objects.append(
                 MediaObject(
                     content_type="image/jpeg",
-                    location=img  # PIL Image - HELM handles conversion
+                    location=image_path
                 )
             )
 

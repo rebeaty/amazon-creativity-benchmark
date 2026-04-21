@@ -122,7 +122,7 @@ class SudokuBenchScenario(Scenario):
 
 ## Format Explanation ##
 Coordinates:
-- We use r{x}c{y} coordinates. For example, r1c1 is the top-left cell at row 1 column 1, r1c2 is the cell to the right, r2c1 is the cell below, and so on.
+- We use r{{x}}c{{y}} coordinates. For example, r1c1 is the top-left cell at row 1 column 1, r1c2 is the cell to the right, r2c1 is the cell below, and so on.
 
 Visual Elements:
 - Visual elements are described using rxcy coordinates

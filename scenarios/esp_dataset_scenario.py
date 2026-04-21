@@ -44,6 +44,7 @@ from helm.benchmark.scenarios.scenario import (
     Reference,
     Output,
     TEST_SPLIT,
+    CORRECT_TAG,
 )
 from helm.common.media_object import MediaObject, MultimediaObject
 from helm.common.general import ensure_file_downloaded
@@ -155,9 +156,9 @@ class ESPDatasetScenario(Scenario):
                     )
                 ])
 
-                # Reference is the styled caption
+                # Reference is the styled caption (marked CORRECT so reference metrics can compute)
                 references = [
-                    Reference(Output(text=caption), tags=[])
+                    Reference(Output(text=caption), tags=[CORRECT_TAG])
                 ]
 
                 instances.append(

@@ -25,7 +25,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, "..", ".."))
 
 REGISTRY_PATH = os.path.join(REPO_ROOT, "data", "registry", "registry_metrics.yaml")
-OUTPUTS_DIR = os.path.join(REPO_ROOT, "benchmark_output", "runs", "trial")
+BENCHMARK_RUNS_DIR = os.path.join(REPO_ROOT, "benchmark_output", "runs")
+OUTPUTS_DIR = os.path.join(BENCHMARK_RUNS_DIR, "trial")
 
 # HELM infrastructure metrics — always present, never dataset-specific
 HELM_INFRA_METRICS = {
@@ -79,11 +80,12 @@ def find_stats_files(dataset: str, suite: str = "trial", model: str = "google/ge
     ]
 
     for base in search_dirs:
-        pattern = os.path.join(base, f"{dataset}:*model={model_safe}", "stats.json")
-        files.update(glob.glob(pattern))
-        exact = os.path.join(base, f"{dataset}:model={model_safe}", "stats.json")
-        if os.path.exists(exact):
-            files.add(exact)
+        for sep in (":", "_"):
+            pattern = os.path.join(base, f"{dataset}{sep}*model={model_safe}", "stats.json")
+            files.update(glob.glob(pattern))
+            exact = os.path.join(base, f"{dataset}{sep}model={model_safe}", "stats.json")
+            if os.path.exists(exact):
+                files.add(exact)
 
     return sorted(files)
 
