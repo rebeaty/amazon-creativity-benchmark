@@ -1,0 +1,12 @@
+status	dataset	elapsed_s	error_snippet
+PASS	ii_bench	102	
+PASS	irfl	166	
+PASS	banner_request_400	35	
+TIMEOUT	ava	300	(killed at 300s)
+FAIL	creation_mmbench	14	AttributeError: 'JpegImageFile' object has no attribute 'decode'|helm.benchmark.runner.RunnerError: Failed runs: ["creation_mmbench:model=google_gemini-2.5-flash-lite"]|
+FAIL	creative_pair	11	FileNotFoundError: CreativePair dataset not found at benchmark_output\scenariosFAIL	esp_dataset	72	helm.benchmark.runner.RunnerError: Failed runs: ["esp_dataset:model=google_gemini-2.5-flash-lite"]|
+FAIL	muse_perception	9	ValueError: data_path is required. Download MuSe 2024 data via EULA at https://www.muse-challenge.org/ and provide the path to the data package root directory.|helm.benchmark.runner.RunnerError: Faile
+TIMEOUT	puzzleworld	300	(killed at 300s)
+PASS	yesbut	67	
+TIMEOUT	vgsg	301	(killed at 300s)
+FAIL	storyer	11	FileNotFoundError: Rating/Reasoning data file not found: benchmark_output\scenarios\storyer	est_rate_reason_data.json|helm.benchmark.runner.RunnerError: Failed runs: ["storyer:model=google_gemini-2.5

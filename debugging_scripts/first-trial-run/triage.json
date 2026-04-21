@@ -1,0 +1,459 @@
+{
+  "amuse_chord_generation": {
+    "person": "Clin",
+    "category": "TRY_IT",
+    "flags": [
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.jsd_metric.JSDMetric"
+    ]
+  },
+  "noveltybench": {
+    "person": "Clin",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "puzzleworld": {
+    "person": "Clin",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "sudoku_bench": {
+    "person": "Clin",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "tiger_bench": {
+    "person": "Clin",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "ttcw": {
+    "person": "Clin",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "twistlist": {
+    "person": "Clin",
+    "category": "TRY_IT",
+    "flags": [
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.bert_score_metric.BertScoreMetric"
+    ]
+  },
+  "vflute": {
+    "person": "Clin",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "gated_HF"
+    ],
+    "custom_metrics": []
+  },
+  "ava": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "HAS_CUSTOM_METRIC[2]"
+    ],
+    "custom_metrics": [
+      "metrics.mean_absolute_error_metric.MeanAbsoluteErrorMetric",
+      "metrics.correlation_metric.CorrelationMetric"
+    ]
+  },
+  "clef_joker_2025_task2": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "gated_HF"
+    ],
+    "custom_metrics": []
+  },
+  "creation_mmbench": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "creative_pair": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "d_humor": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "gated_HF"
+    ],
+    "custom_metrics": []
+  },
+  "esp_dataset": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "helm.benchmark.metrics.image_generation.clip_score_metrics.CLIPScoreMetric"
+    ]
+  },
+  "litbench": {
+    "person": "Namrata",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "llm_review_focus": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "manual_dl"
+    ],
+    "custom_metrics": []
+  },
+  "muse_perception": {
+    "person": "Namrata",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.correlation_metric.CorrelationMetric"
+    ]
+  },
+  "aidanbench": {
+    "person": "Sai",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "conceptual_design": {
+    "person": "Sai",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "llm_srbench": {
+    "person": "Sai",
+    "category": "SKIP_DATA",
+    "flags": [
+      "gated_HF"
+    ],
+    "custom_metrics": []
+  },
+  "splat": {
+    "person": "Sai",
+    "category": "TRY_IT",
+    "flags": [
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.bert_score_metric.BertScoreMetric"
+    ]
+  },
+  "storyer": {
+    "person": "Sai",
+    "category": "SKIP_DATA",
+    "flags": [
+      "gdrive",
+      "manual_dl",
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.correlation_metric.CorrelationMetric"
+    ]
+  },
+  "funqa": {
+    "person": "Vijeta",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "youtube"
+    ],
+    "custom_metrics": []
+  },
+  "v_flute": {
+    "person": "Vijeta",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "gated_HF"
+    ],
+    "custom_metrics": []
+  },
+  "vgsg": {
+    "person": "Vijeta",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "webnovelbench": {
+    "person": "Vijeta",
+    "category": "SKIP_DATA",
+    "flags": [
+      "gated_HF",
+      "manual_dl",
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.percentile_rank_metric.PercentileRankMetric"
+    ]
+  },
+  "yesbut_v2": {
+    "person": "Vijeta",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "gdrive"
+    ],
+    "custom_metrics": []
+  },
+  "arastories": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "arena_hard_creative": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "arn": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "gdrive"
+    ],
+    "custom_metrics": []
+  },
+  "banner_request_400": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "brainteaser": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "chinese_homophonic_puns": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "creatset": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "crowd_vote": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "youtube"
+    ],
+    "custom_metrics": []
+  },
+  "crowdcounter": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "cs4": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "graphrag_bench": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "graphragbench-wrongone": {
+    "person": "rajkumar",
+    "category": "BROKEN_CODE",
+    "flags": [
+      "MISSING_CODE:run_spec"
+    ],
+    "custom_metrics": []
+  },
+  "humor_transfer": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "ii_bench": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "irfl": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  },
+  "liveideabench": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "llm4biohypogen": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "llm_discussion": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [
+      "HAS_CUSTOM_METRIC[3]"
+    ],
+    "custom_metrics": [
+      "metrics.self_bleu_metric.SelfBleuMetric",
+      "metrics.distinct_n_metric.DistinctNMetric",
+      "metrics.distinct_n_metric.DistinctNMetric"
+    ]
+  },
+  "memecap": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL",
+      "gdrive",
+      "manual_dl"
+    ],
+    "custom_metrics": []
+  },
+  "meta4xnli": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "moh_x": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "gdrive"
+    ],
+    "custom_metrics": []
+  },
+  "music_theory_bench": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "newyorker_humor": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "ocw": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.group_match_score_metric.GroupMatchScoreMetric"
+    ]
+  },
+  "outline_to_story": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "sdat": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "sonnet_or_not_bot": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "speak_to_structure": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [
+      "HAS_CUSTOM_METRIC[1]"
+    ],
+    "custom_metrics": [
+      "metrics.validity_metric.ValidityMetric"
+    ]
+  },
+  "ss_gen": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "thenextchapter": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "tinystories": {
+    "person": "rajkumar",
+    "category": "TRY_IT",
+    "flags": [],
+    "custom_metrics": []
+  },
+  "yesbut": {
+    "person": "rajkumar",
+    "category": "SKIP_DATA",
+    "flags": [
+      "MULTIMODAL"
+    ],
+    "custom_metrics": []
+  }
+}

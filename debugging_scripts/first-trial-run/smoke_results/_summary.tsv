@@ -1,0 +1,34 @@
+status	dataset	elapsed_s	error_snippet
+FAIL	aidanbench	169	Traceback (most recent call last):|helm.benchmark.runner.RunnerError: Failed runs: ["aidanbench:model=google_gemini-2.5-flash-lite"]|
+FAIL	amuse_chord_generation	174	Traceback (most recent call last):|helm.benchmark.runner.RunnerError: Failed runs: ["amuse_chord_generation:model=google_gemini-2.5-flash-lite"]|
+PASS	arastories	36	
+PASS	arena_hard_creative	35	
+PASS	brainteaser	31	
+PASS	chinese_homophonic_puns	32	
+PASS	conceptual_design	56	
+PASS	creatset	48	
+PASS	crowdcounter	51	
+PASS	cs4	38	
+PASS	graphrag_bench	36	
+PASS	humor_transfer	52	
+TIMEOUT	litbench	181	(killed at 180s)
+PASS	liveideabench	24	
+PASS	llm4biohypogen	27	
+PASS	llm_discussion	37	
+PASS	meta4xnli	30	
+PASS	music_theory_bench	35	
+PASS	newyorker_humor	56	
+FAIL	noveltybench	168	Traceback (most recent call last):|helm.benchmark.runner.RunnerError: Failed runs: ["noveltybench:model=google_gemini-2.5-flash-lite"]|
+PASS	ocw	27	
+PASS	outline_to_story	32	
+PASS	sdat	25	
+PASS	sonnet_or_not_bot	42	
+PASS	speak_to_structure	37	
+FAIL	splat	7	Traceback (most recent call last):|helm.benchmark.runner.RunnerError: Failed runs: ["splat:model=google_gemini-2.5-flash-lite"]|
+PASS	ss_gen	24	
+FAIL	sudoku_bench	9	Traceback (most recent call last):|helm.benchmark.runner.RunnerError: Failed runs: ["sudoku_bench:model=google_gemini-2.5-flash-lite"]|
+PASS	thenextchapter	82	
+TIMEOUT	tiger_bench	180	(killed at 180s)
+PASS	tinystories	32	
+PASS	ttcw	35	
+FAIL	twistlist	17	Traceback (most recent call last):|helm.benchmark.runner.RunnerError: Failed runs: ["twistlist:model=google_gemini-2.5-flash-lite"]|
