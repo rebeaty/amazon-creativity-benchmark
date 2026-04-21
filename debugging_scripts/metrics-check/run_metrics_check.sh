@@ -24,6 +24,8 @@ set -uo pipefail
 # ── Config ──────────────────────────────────────────────────────────────────
 MAX_ATTEMPTS=10
 EVAL_TIMEOUT=180                  # Seconds for eval timeout (passed to init_eval.sh)
+MODEL="google/gemini-2.5-flash-lite"
+SUITE="trial"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
@@ -33,6 +35,41 @@ METRICS_CHECK="$SCRIPT_DIR/metrics_check.py"
 HELPER="$SCRIPT_DIR/_debug_helper.py"
 INIT_EVAL="$SCRIPT_DIR/init_eval.sh"
 PENDING_FILE="$SCRIPT_DIR/debug_assignments_pending.json"
+
+# ── Stats.json existence check (reads only from benchmark_output/runs/$SUITE) ─
+stats_json_exists() {
+    local dataset="$1"
+    local model_safe="${MODEL//\//_}"
+    compgen -G "benchmark_output/runs/$SUITE/${dataset}:*model=${model_safe}/stats.json" > /dev/null 2>&1
+}
+
+# ── Run init_eval.sh and classify the outcome ───────────────────────────────
+# Returns:
+#   0 — init_eval ran and stats.json is present
+#   2 — init_eval reported data-access skip (exit 2)
+#   3 — init_eval finished but stats.json is still missing (silent failure)
+run_init_eval() {
+    local dataset="$1"
+    local log_file="$2"
+    bash "$INIT_EVAL" "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1
+    local rc=$?
+    # init_eval.sh may have moved the dataset to done; keep it pending
+    # until the metrics check itself passes.
+    python3 "$HELPER" pending "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1 || true
+    if [[ $rc -eq 2 ]]; then
+        return 2
+    fi
+    if ! stats_json_exists "$dataset"; then
+        return 3
+    fi
+    return 0
+}
+
+# ── Hash the working-tree diff of dirs Claude may edit ──────────────────────
+# Used to detect whether a Claude fix call actually modified any source files.
+code_diff_hash() {
+    git diff run_specs/ scenarios/ metrics/ eval_scripts/ 2>/dev/null | sha256sum | awk '{print $1}'
+}
 
 # ── Args ────────────────────────────────────────────────────────────────────
 ASSIGNEE="${1:?Usage: $0 <Assignee> [dataset|--dry-run]}"
@@ -123,16 +160,39 @@ process_one() {
     echo "  Started:  $(date '+%Y-%m-%d %H:%M:%S')"
     echo "============================================================"
 
+    # Pre-check: if no stats.json exists for this dataset, run the eval
+    # first so the metrics-check workflow has something to compare against.
+    if ! stats_json_exists "$dataset"; then
+        echo "  [PRE-CHECK] No stats.json in benchmark_output/runs/$SUITE/ — running init_eval.sh first..."
+        run_init_eval "$dataset" "$log_file"
+        local pre_rc=$?
+        case $pre_rc in
+            0)
+                echo "  [PRE-CHECK] init_eval.sh finished. Starting metrics-check workflow..."
+                ;;
+            2)
+                echo "  [SKIP] init_eval.sh reported a data-access issue — cannot proceed"
+                return 2
+                ;;
+            3)
+                echo "  [SKIP] init_eval.sh finished but produced no stats.json — cannot proceed"
+                return 2
+                ;;
+        esac
+    fi
+
     local attempt=0
     while (( attempt < MAX_ATTEMPTS )); do
         (( attempt++ ))
         echo ""
         echo "  ── Attempt $attempt / $MAX_ATTEMPTS ──"
 
-        # Step 1: Run the metrics check test
+        # Step 1: Run the metrics check test. Keep stderr out of $check_output
+        # so it stays pure JSON — stderr noise (yaml warnings, etc.) would
+        # otherwise corrupt downstream `json.load` parses.
         echo "    [TEST] Running metrics check..."
         local check_output
-        check_output=$(python3 "$METRICS_CHECK" "$dataset" 2>&1)
+        check_output=$(python3 "$METRICS_CHECK" "$dataset" 2>>"$log_file")
         local check_rc=$?
 
         echo "    $check_output" >> "$log_file"
@@ -169,13 +229,22 @@ for m in m2:
             elif [[ "$status" == "no_stats" ]]; then
                 echo "    [NO STATS] No stats.json found — need to run eval first"
                 echo "    [EVAL] Running init_eval.sh..."
-                bash "$INIT_EVAL" "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1
-                # Rule: only this orchestrator decides done/pending, and only
-                # when the metrics check passes. Undo any done-move done by
-                # init_eval.sh so dataset stays in pending until proven good.
-                python3 "$HELPER" pending "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1 || true
-                echo "    [EVAL] Eval finished. Continuing to next attempt..."
-                continue
+                run_init_eval "$dataset" "$log_file"
+                local eval_rc=$?
+                case $eval_rc in
+                    0)
+                        echo "    [EVAL] Eval finished. Continuing to next attempt..."
+                        continue
+                        ;;
+                    2)
+                        echo "    [SKIP] init_eval.sh reported a data-access issue — skipping"
+                        return 2
+                        ;;
+                    3)
+                        echo "    [SKIP] init_eval.sh finished but produced no stats.json — skipping"
+                        return 2
+                        ;;
+                esac
             fi
         fi
 
@@ -189,22 +258,40 @@ for m in m2:
 
         # Step 2: Ask Claude to diagnose and fix
         if (( attempt < MAX_ATTEMPTS )); then
+            local before_hash after_hash
+            before_hash=$(code_diff_hash)
+
             echo "    [FIX] Sending to Claude Code for diagnosis + fix..."
             local fix_output
             fix_output=$(ask_claude_to_fix "$dataset" "$missing" "$m1" "$m2" "$attempt")
             echo "=== Claude Fix (attempt $attempt) ===" >> "$log_file"
             echo "$fix_output" >> "$log_file"
             echo "" >> "$log_file"
-            echo "    [FIX] Claude responded. Re-running eval..."
+
+            after_hash=$(code_diff_hash)
+            if [[ "$before_hash" == "$after_hash" ]]; then
+                echo "    [ABORT] Claude made no code changes — re-running eval would be pointless"
+                break
+            fi
+            echo "    [FIX] Claude modified source files. Re-running eval..."
 
             # Step 3: Re-run the eval to regenerate stats.json.
             echo "    [EVAL] Running init_eval.sh..."
-            bash "$INIT_EVAL" "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1
-            # Rule: only this orchestrator decides done/pending, and only
-            # when the metrics check passes. Undo any done-move done by
-            # init_eval.sh so dataset stays in pending until proven good.
-            python3 "$HELPER" pending "$ASSIGNEE" "$dataset" >> "$log_file" 2>&1 || true
-            echo "    [EVAL] Eval finished. Looping back to metrics check..."
+            run_init_eval "$dataset" "$log_file"
+            local eval_rc=$?
+            case $eval_rc in
+                0)
+                    echo "    [EVAL] Eval finished. Looping back to metrics check..."
+                    ;;
+                2)
+                    echo "    [SKIP] init_eval.sh reported a data-access issue post-fix — skipping"
+                    return 2
+                    ;;
+                3)
+                    echo "    [SKIP] init_eval.sh finished but produced no stats.json post-fix — skipping"
+                    return 2
+                    ;;
+            esac
         fi
     done
 

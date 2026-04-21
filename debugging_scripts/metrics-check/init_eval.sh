@@ -65,8 +65,8 @@ is_data_access_error() {
 stats_json_exists() {
     local dataset="$1"
     local model_safe="${MODEL//\//_}"
-    compgen -G "benchmark_output/runs/$SUITE/${dataset}:*model=${model_safe}/stats.json" > /dev/null 2>&1 || \
-    compgen -G "outputs/first-trial-run/$SUITE/${dataset}:*model=${model_safe}/stats.json" > /dev/null 2>&1
+    # Only read from benchmark_output/runs/$SUITE — no fallback locations.
+    compgen -G "benchmark_output/runs/$SUITE/${dataset}:*model=${model_safe}/stats.json" > /dev/null 2>&1
 }
 
 # ── Run one eval ────────────────────────────────────────────────────────────
