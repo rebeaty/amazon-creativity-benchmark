@@ -25,14 +25,23 @@ set -uo pipefail
 
 # ── Config ──────────────────────────────────────────────────────────────────
 MODEL="google/gemini-2.5-flash-lite"
-SUITE="trial"
+SUITE="trial_10inst"
 MAX_INSTANCES=10
 MAX_ATTEMPTS=5                   # Max fix-and-retry cycles per dataset
-EVAL_TIMEOUT=120                 # Seconds before killing a stuck eval run
+EVAL_TIMEOUT=300                 # Seconds before killing a stuck eval run (300s to give HF Xet cold-cache downloads room)
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$REPO_ROOT"
+
+# Windows (git-bash): SCRIPT_DIR is mingw-style (/c/...), but Python on Windows
+# can't open that form. Convert to a native path for any inline python scripts.
+# On Linux, cygpath is absent — fall back to SCRIPT_DIR unchanged.
+if command -v cygpath >/dev/null 2>&1; then
+    SCRIPT_DIR_NATIVE="$(cygpath -w "$SCRIPT_DIR" | sed 's/\\/\//g')"
+else
+    SCRIPT_DIR_NATIVE="$SCRIPT_DIR"
+fi
 
 # Detect timeout command (Linux: timeout, Mac w/ coreutils: gtimeout, else: none)
 if command -v timeout >/dev/null 2>&1; then
@@ -58,7 +67,7 @@ if [[ "$SINGLE_DATASET" == "--dry-run" ]]; then
     python3 "$HELPER" status "$ASSIGNEE"
     python3 -c "
 import json
-with open('$SCRIPT_DIR/debug_assignments_pending.json') as f:
+with open('$SCRIPT_DIR_NATIVE/debug_assignments_pending.json') as f:
     pending = json.load(f)
 for d in pending.get('$ASSIGNEE', []):
     print(f'  - {d}')
@@ -67,16 +76,32 @@ for d in pending.get('$ASSIGNEE', []):
 fi
 
 # ── Data-access error patterns (skip, don't retry) ─────────────────────────
+# grep -iE is applied line-by-line, so cross-line patterns (e.g. FileNotFoundError
+# on one line + "Download" on another) need to be split into separate entries.
 DATA_ACCESS_PATTERNS=(
     "DatasetNotFoundError"
     "gated dataset"
+    "dataset is gated"
+    "gated repo"
     "Dataset file not found"
-    "Please download from"
+    "dataset not found at"
+    "Please download"
+    "Please register"
+    "Register at "
     "HTTP Error 401"
     "HTTP Error 403"
+    "HTTP Error 404"
+    "HTTP Error 410"
+    "urllib.error.HTTPError"
+    "cannot access gated"
+    "must authenticate"
     "Repository Not Found"
     "FileNotFoundError.*download"
     "TIMEOUT: eval script exceeded"
+    "EULA"
+    "data_path is required"
+    "repository not found"
+    "provide the path"
 )
 
 is_data_access_error() {
@@ -92,10 +117,14 @@ is_data_access_error() {
 # ── Stats.json check ───────────────────────────────────────────────────────
 stats_json_exists() {
     local dataset="$1"
-    # HELM output dir uses underscores for slashes in model name
+    # HELM output dir uses underscores for slashes in model name.
     local model_safe="${MODEL//\//_}"
-    # Run dirs may include extra params (e.g. subtask=...) between dataset name and model=
-    compgen -G "benchmark_output/runs/$SUITE/${dataset}:*model=${model_safe}/stats.json" > /dev/null 2>&1
+    # Run dirs may include extra params (e.g. subtask=...) between dataset name
+    # and model=. Stock HELM uses ':' as the separator, but our Windows patch
+    # rewrites ':' -> '_' in run-dir names. Accept either.
+    compgen -G "benchmark_output/runs/$SUITE/${dataset}:*model=${model_safe}/stats.json" > /dev/null 2>&1 && return 0
+    compgen -G "benchmark_output/runs/$SUITE/${dataset}_*model=${model_safe}/stats.json" > /dev/null 2>&1 && return 0
+    return 1
 }
 
 # ── Run one eval ────────────────────────────────────────────────────────────
@@ -286,17 +315,18 @@ python3 "$HELPER" status "$ASSIGNEE"
 if [[ -n "$SINGLE_DATASET" ]]; then
     DATASETS=("$SINGLE_DATASET")
 else
-    # mapfile -t is bash 4+; use while-read for bash 3.2 compatibility (macOS)
+    # mapfile -t is bash 4+; use while-read for bash 3.2 compatibility (macOS).
+    # tr -d '\r' strips CRLF line endings emitted by Python on Windows.
     DATASETS=()
     while IFS= read -r line; do
         DATASETS+=("$line")
     done < <(python3 -c "
 import json
-with open('$SCRIPT_DIR/debug_assignments_pending.json') as f:
+with open('$SCRIPT_DIR_NATIVE/debug_assignments_pending.json') as f:
     pending = json.load(f)
 for d in pending.get('$ASSIGNEE', []):
     print(d)
-")
+" | tr -d '\r')
 fi
 
 TOTAL=${#DATASETS[@]}

@@ -79,6 +79,12 @@ class BannerRequest400Scenario(Scenario):
         if os.path.exists(data_dir):
             return data_dir
 
+        # Also check a shared cache so multiple runs don't re-download the 16MB zip.
+        shared_cache = os.path.join("benchmark_output", "scenarios", "banner_request_400")
+        shared_data = os.path.join(shared_cache, "BannerAgency-main", "BannerRequest400")
+        if os.path.exists(shared_data):
+            return shared_data
+
         zip_path = os.path.join(output_path, "BannerAgency.zip")
         if not os.path.exists(zip_path):
             urllib.request.urlretrieve(self.REPO_URL, zip_path)

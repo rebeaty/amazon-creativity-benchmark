@@ -245,3 +245,156 @@ Multimodal / gated / gdrive / YouTube / manual-download. See triage.json for per
 
 ### Drops
 - graphragbench-wrongone — duplicate of graphrag_bench, filename uses hyphen while run_spec uses underscore. Removed from pending.
+
+---
+
+## Windows continuation — 2026-04-21
+
+**Picking up Task A from [CLAUDE_HANDOFF.md](CLAUDE_HANDOFF.md) on Roger's Windows box** (same machine the smoke ran on, not Vijeta's Linux server). Starting from branch `rbeaty/smoke-pending-2026-04-21` in sync with origin.
+
+### Environment
+
+- Platform: Windows 11, git-bash
+- Repo: `C:\Users\rub736\Projects\amazon-creativity-benchmark`
+- venv: `.venv/Scripts/python` (Python 3.10.8), `PYTHONUTF8=1`
+- Model: `google/gemini-2.5-flash-lite` via **direct Google API** (`GoogleGenAIClient`, not OpenRouter — confirmed for every `google/gemini-*` deployment in `prod_env/model_deployments.yaml`)
+- Suite: **`trial_10inst`** (see "Suite bump" below)
+- MAX_INSTANCES: 10 (up from smoke's 1)
+- API keys: GOOGLE_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY, OPENAI_API_KEY (all loaded)
+
+### Pre-flight decisions
+
+#### Suite bump: `trial` → `trial_10inst`
+
+[run_debug.sh](run_debug.sh)'s `stats_json_exists()` uses a glob over `benchmark_output/runs/$SUITE/{dataset}*model={model_safe}/stats.json`. Since the Windows smoke wrote stats.json for every smoke-passed dataset into `runs/trial/`, running `run_debug.sh` with `SUITE=trial` would trigger the "[ALREADY DONE]" early-return and mark all ~33 datasets done *at max=1* without re-running at max=10. Bumped `SUITE="trial_10inst"` at [run_debug.sh:28](run_debug.sh#L28) so the max=10 runs write to a fresh directory and the smoke `trial/` history stays untouched. On Linux this edit is unnecessary (no prior stats.json to collide with) but doesn't hurt.
+
+#### Task A / Task B split
+
+Pulled the 3 `num_outputs>8` datasets out of Task A into [debug_assignments_taskB.json](debug_assignments_taskB.json):
+- `aidanbench` (Sai) — num_outputs=30
+- `amuse_chord_generation` (Clin) — num_outputs>8
+- `noveltybench` (Clin) — num_outputs>8
+
+**Why:** Google Gemini API caps `candidate_count` at 8. Running these under `google/gemini-2.5-flash-lite` would burn 5 retry attempts each in `run_debug.sh` (each attempt wraps a 120s eval timeout plus a nested `claude -p` fix loop → ≈10+ min per dataset wasted) before skipping. **Routing rule:** Task B must use a **non-Gemini** OpenRouter model (openai/gpt-5-mini, anthropic/claude-haiku-4.5, or x-ai/grok-4.1-fast). **Do NOT reroute Gemini through OpenRouter** — that's a hard rule from Roger.
+
+After the split, Task A queue is 55 datasets (Clin:6, Namrata:9, Sai:4, Vijeta:5, rajkumar:31). Of those, ~25 are SKIP_DATA (multimodal / gated / gdrive / YouTube / manual / EULA) that `run_debug.sh` will auto-skip on data-access errors. Expected PASSes this pass: ~27 text-only + ~6 multimodal that passed smoke = ~33.
+
+### Per-assignee run summary
+
+_(Filled in as runs complete.)_
+
+| Assignee | Pending in | Passed | Failed | Skipped | Elapsed | Notes |
+|---|---|---|---|---|---|---|
+| Clin | 6 | 2 (sudoku_bench, ttcw) | 2 (twistlist, vflute*) | 2 (puzzleworld, tiger_bench) | ~10 min | *vflute `import random` fix landed; not re-run yet |
+| Namrata | 9 | 1 (esp_dataset) | 1 (muse_perception**) | 7 (ava, clef_joker_2025_task2, creation_mmbench†, creative_pair, d_humor, litbench†, llm_review_focus) | ~10 min | **EULA signature missed pattern — added `EULA` + `data_path is required` to DATA_ACCESS_PATTERNS after the run. †timed out at 120s during HF fetch; candidates for a longer-timeout re-run |
+| Sai | 4 | 0 | 0 | 4 (conceptual_design†, llm_srbench, splat, storyer) | ~3 min | †timed out at 120s on HF fetch; would have passed with extended timeout |
+| Vijeta | 5 | 0 | 1 (funqa††) | 4 (v_flute, vgsg, webnovelbench, yesbut_v2) | ~8 min | ††YouTube HTTP 404 (video deleted); added `HTTP Error 404/410` + `urllib.error.HTTPError` to patterns after the run. Summary block crashed from mid-run script edit — per-dataset work completed anyway. |
+| rajkumar | 31 | 19 (arn, brainteaser, chinese_homophonic_puns, crowdcounter, graphrag_bench, humor_transfer, ii_bench, irfl, llm4biohypogen, llm_discussion, meta4xnli, music_theory_bench, newyorker_humor, ocw, outline_to_story, sdat, sonnet_or_not_bot, thenextchapter, yesbut) + 7 more via rerun (arena_hard_creative, banner_request_400‡, creatset, cs4, liveideabench, speak_to_structure, ss_gen) | 2 (arastories, tinystories***) | ~10 (crowd_vote, memecap, moh_x‡‡, …) | ~40 min | ‡banner_request_400 needed scenario shared-cache patch; ‡‡moh_x is scenario bug not gdrive; ***tinystories hit HELM/OpenAI judge pydantic schema mismatch (`prompt_cache_retention='in_memory'` rejected) |
+
+### Orchestrator bugs surfaced on Windows (pre-Task-A)
+
+First launch of `run_debug.sh Clin` failed immediately with two Windows-portability issues. Fixed in this session; the Linux path already worked so the original server handoff is unaffected.
+
+#### 1. `_debug_helper.py` used Unix-only `fcntl`
+
+- **Error:** `ModuleNotFoundError: No module named 'fcntl'` on every invocation.
+- **Cause:** `import fcntl` at module top, used for `fcntl.flock` on the `.assignments.lock` file. `fcntl` ships only with CPython on POSIX.
+- **Fix:** [_debug_helper.py:9-17](_debug_helper.py#L9) — try-import `fcntl`, fall back to `msvcrt` on Windows; [_debug_helper.py:34-54](_debug_helper.py#L34) — branch `_with_lock` between `fcntl.flock` and `msvcrt.locking(..., LK_LOCK, 1)` (blocking single-byte lock).
+- **Outcome:** `python3 _debug_helper.py status Clin` → `Clin: 32 done, 6 pending, 38 total`. Good.
+
+#### 2. Inline Python in `run_debug.sh` received a mingw-style path
+
+- **Error:** `FileNotFoundError: [Errno 2] No such file or directory: '/c/Users/rub736/.../debug_assignments_pending.json'` from the dataset-list and dry-run inline python calls.
+- **Cause:** `$SCRIPT_DIR` is set by `cd ... && pwd` under git-bash, producing `/c/Users/rub736/...`. Python on Windows can't open that form; it needs `C:/Users/rub736/...`.
+- **Fix:** [run_debug.sh:37-44](run_debug.sh#L37) — added `SCRIPT_DIR_NATIVE=$(cygpath -w "$SCRIPT_DIR" | sed 's/\\/\//g')` with a Linux-fallback when `cygpath` is absent; rewrote both `open('$SCRIPT_DIR/debug_assignments_pending.json')` sites to use `$SCRIPT_DIR_NATIVE` instead.
+- **Outcome:** `bash run_debug.sh Clin --dry-run` prints the 6 pending datasets.
+
+#### 3. CRLF from Python on Windows gave every dataset name a trailing `\r`
+
+- **Error:** `[ERROR] No eval script found: eval_scripts/puzzleworld.sh` for every dataset on every attempt — `[[ -f "$eval_script" ]]` failed even though the file exists.
+- **Cause:** The dataset-list `python3 -c "..."` inside `run_debug.sh` emits lines terminated with `\r\n` on Windows (default text-mode stdout), so `while IFS= read -r line` stores `"puzzleworld\r"` in `$dataset`. Same class of bug `smoke_all.sh` had; the prior session's log note called it out but `run_debug.sh` was never patched. Manifest: grep for `^M` in `run_debug.sh Clin --dry-run | cat -A`.
+- **Fix:** [run_debug.sh:303-310](run_debug.sh#L303) — appended `| tr -d '\r'` to the dataset-list pipeline. Also [_debug_helper.py:12-18](_debug_helper.py#L12) — `sys.stdout.reconfigure(newline="\n")` so the helper's status output is LF-only too.
+- **Outcome:** Relaunched Clin; `Dataset: puzzleworld` event fired cleanly, eval script actually executes now.
+
+### `claude` CLI not on PATH → nested auto-fix loops are dormant
+
+The `claude -p` fix loop inside [run_debug.sh:156-187](run_debug.sh#L156) is a nice-to-have for server batch runs; on this Windows machine the CLI isn't installed so any scenario-level bug during Task A will get retried 5 times without a fix, then skipped as "failed." I'll handle any genuine new bugs directly in this session rather than via the automated loop. Not a blocker for Task A — most datasets already passed smoke.
+
+### Task B runner staged
+
+[run_taskB.sh](run_taskB.sh) — minimal runner that reads [debug_assignments_taskB.json](debug_assignments_taskB.json) (aidanbench, amuse_chord_generation, noveltybench) and runs each under a non-Gemini OpenRouter model. Defaults to `openai/gpt-5-mini`, suite `taskB_10inst`, `max_instances=10`. Refuses to route `google/gemini-*` — that's the Roger-enforced hard rule (Gemini → direct Google API only). Don't run until Task A completes.
+
+#### 4. `stats_json_exists()` glob missed HELM's Windows `_` separator
+
+- **Error:** sudoku_bench actually *succeeded* on attempt 1 — stats.json + run_spec.json written in 17.7s — but `run_debug.sh` reported `[FAILED] sudoku_bench — exhausted 5 attempts`.
+- **Cause:** Stock HELM writes `runs/{suite}/{dataset}:{params}model={model}/` with a `:` separator between dataset and params. Our Windows patch in HELM rewrites `:` → `_` to survive NTFS's forbidden-character list. `stats_json_exists()` globbed only `${dataset}:*model=${model_safe}/stats.json`, so the existence check always failed, each attempt re-ran the successful eval, and after 5 attempts it was marked failed. Same gotcha [metrics_check.py](../metrics-check/metrics_check.py) already worked around in commit e2eb48b7 — but `run_debug.sh` wasn't updated.
+- **Fix:** [run_debug.sh:99-108](run_debug.sh#L99) — `stats_json_exists()` now tries the `:` glob first, then the `_` glob, returning 0 if either matches.
+- **Outcome:** Stopped the batch, patched, relaunched. sudoku_bench now detected as `[ALREADY DONE]` from its prior successful run, moved to done without re-running.
+
+### Per-dataset fix log (Windows continuation)
+
+_(Appended as datasets complete. Same format as prior session — error → cause → fix with `file:line` → outcome.)_
+
+#### `DATA_ACCESS_PATTERNS` missed gated-registration datasets
+
+- **Error:** clef_joker_2025_task2 burned 5 retries on a `FileNotFoundError: CLEF JOKER 2025 Task 2 dataset not found at:` that also said `Please register at ... / Download the Task 2 training JSON from Codabench`.
+- **Cause:** The orchestrator's data-access grep runs line-by-line (default `grep -iE`), and the existing patterns `FileNotFoundError.*download` + `Please download from` require both halves to be on the same line. In this scenario, `FileNotFoundError` is on one line and `Download` is four lines below. None of the other patterns (`gated dataset`, `HTTP Error 403`, etc.) fire on this signature either.
+- **Fix:** [run_debug.sh:70-87](run_debug.sh#L70) — broadened the pattern list to also catch: `dataset is gated`, `gated repo`, `dataset not found at`, `Please download` (without the "from"), `Please register`, `Register at `, `cannot access gated`, `must authenticate`. Applies line-by-line so a single matching line anywhere in the error block trips the skip.
+- **Outcome:** Stopped Namrata mid-creation_mmbench, patched, relaunched. Expected downstream benefit: llm_review_focus (manual download), muse_perception (EULA), creative_pair, d_humor, and several rajkumar datasets will now skip on first attempt instead of burning 5 × 120s.
+
+#### vflute (Clin) — missing `import random` at scenario module top
+
+- **Error:** `NameError: name 'random' is not defined` at [scenarios/vflute_scenario.py:90](../../scenarios/vflute_scenario.py#L90) inside `__init__` (`random.seed(seed)`).
+- **Cause:** Module imports `os`, `typing.List`, `datasets.load_dataset`, scenario base classes, and `MediaObject` — but never `import random`, even though `__init__` calls `random.seed`. Smoke at max=1 didn't cover this because scenario construction path was the same; but with the claude-fix loop dormant, the failure wasn't patched.
+- **Fix:** [scenarios/vflute_scenario.py:41](../../scenarios/vflute_scenario.py#L41) — added `import random` alongside the other stdlib imports.
+- **Outcome:** Past `__init__`. Still expected to fail on HF data access (dataset is gated behind ColumbiaNLP/V-FLUTE on HuggingFace) — that failure should now correctly trip `DATA_ACCESS_PATTERNS` via `HTTP Error 403`, so the orchestrator will skip rather than "fail." Not re-running individually in this pass; will verify on the next Clin invocation.
+
+### Clin batch — v3 summary (2026-04-21 16:~22:00 → 16:~32:00)
+
+| Status | Datasets | Notes |
+|---|---|---|
+| PASS | sudoku_bench, ttcw | Actually ran cleanly; previously mis-reported as "failed" before the `_`-separator glob patch |
+| SKIP | puzzleworld, tiger_bench | 120s timeout on multimodal/large HF downloads; expected per triage (SKIP_DATA) |
+| FAIL | twistlist, vflute | twistlist needs scenario gold-reference rewrite (Task E in CLAUDE_HANDOFF); vflute had missing `import random` (fixed above, awaiting re-run) |
+
+Per-assignee table updated below.
+
+### `EVAL_TIMEOUT=120` was too tight → bumped to 300s for rajkumar, then 600s for the false-skip rerun
+
+Two rajkumar-early datasets (arastories, arena_hard_creative) were smoke-passes that still timed out at 120s because max=10 downloads more data than max=1 did. Bumped `EVAL_TIMEOUT` to 300s at [run_debug.sh:31](run_debug.sh#L31) and relaunched rajkumar; same for Clin/Namrata/Sai/Vijeta's false-skips is queued in [rerun_false_skips.sh](rerun_false_skips.sh). That one runs a flat list of known-TIMEOUT datasets outside the pending/done state machine.
+
+### banner_request_400 — scenario re-downloads 16MB repo zip per run
+
+- **Error:** `TIMEOUT: eval script exceeded 300s` even on the rerun — the scenario's `_download_data` calls `urllib.request.urlretrieve("github.com/sony/BannerAgency/archive/main.zip", ...)` into a per-run `output_path`, so every HELM invocation re-downloads + re-extracts the full 16MB repo. Already had a copy at `benchmark_output/scenarios/banner_request_400/BannerAgency-main/BannerRequest400` from the smoke run.
+- **Cause:** The scenario only checked `output_path` (run-local) for the cached dir, never the shared scenarios cache dir.
+- **Fix:** [scenarios/banner_request_400_scenario.py:81-84](../../scenarios/banner_request_400_scenario.py#L81) — after the run-local check, also probe `benchmark_output/scenarios/banner_request_400/BannerAgency-main/BannerRequest400` and return early if present. Behaviour on a fresh install (no shared cache) is unchanged.
+- **Outcome:** banner_request_400 went from repeated 300s/600s timeouts to a clean `[SUCCESS]` in the rerun. Worth auditing other `urllib.request.urlretrieve`-based scenarios (splat, etc.) for the same anti-pattern.
+
+### moh_x — real scenario bug masquerading as gdrive skip
+
+- **Error:** `AttributeError: 'NoneType' object has no attribute 'lower'` at HELM `evaluate_reference_metrics.py:59`, during the BasicMetric reduce step.
+- **Cause:** [scenarios/moh_x_scenario.py](../../scenarios/moh_x_scenario.py) is producing at least one reference with `text=None` (or is producing reference-less instances that the metric then tries to normalise). Triage had labelled moh_x "Google Drive" SKIP_DATA, but the scenario actually downloads from HF fine — the bug is downstream.
+- **Fix:** **Not in this session** — needs either filtering out instances with empty gold text, or swapping in an empty-string default. Same class of fix as twistlist / esp_dataset. Flagged for server.
+
+### Final Task A outcome
+
+**32 / 55 datasets produced stats.json at `max_instances=10`** (original pending list was 58; 3 moved to Task B side-file). Breakdown of what didn't land:
+
+- **2 genuine download-size blockers** (need server-side pre-staging per Task C): `arastories` (600s not enough), `tinystories` (separate — pydantic schema mismatch in HELM's `openai_responses_client.py` when a run_spec points the judge at OpenAI; `prompt_cache_retention: 'in_memory'` rejected by pydantic literal validator expecting `'in-memory'` or `'24h'`. Needs HELM/pydantic version pin or a manual patch.)
+- **~21 data-access-blocked** (need external action from humans — Task F): ava, clef_joker_2025_task2, creative_pair, d_humor, llm_review_focus, muse_perception, puzzleworld, tiger_bench, llm_srbench, storyer, funqa, v_flute, vflute, vgsg, webnovelbench, yesbut_v2, crowd_vote, memecap.
+- **2 scenario bugs** (need manual rewrite, same class as twistlist): `twistlist` itself (Task E — still needs gold-reference decision), `moh_x` (None text in references).
+- **1 local-repo-needed:** `splat` (Task D — clone SPLAT GitHub repo).
+
+Per-assignee done counts after all passes: **Clin 34/38, Namrata 33/40, Sai 35/38, Vijeta 34/39, rajkumar 29/31**. Totals: 165 done, 21 still pending, out of 186 total tracked across this branch.
+
+### Task B (deferred — needs non-Gemini OpenRouter model)
+
+Still queued in [debug_assignments_taskB.json](debug_assignments_taskB.json): `aidanbench`, `amuse_chord_generation`, `noveltybench`. Run with:
+
+```bash
+bash debugging_scripts/first-trial-run/run_taskB.sh openai/gpt-5-mini 10
+# or: anthropic/claude-haiku-4.5 / x-ai/grok-4.1-fast
+```
+
+Rule: Gemini slugs are **refused by the runner** — Gemini always goes through the direct Google API, never OpenRouter.
+

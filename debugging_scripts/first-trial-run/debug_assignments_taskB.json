@@ -1,0 +1,10 @@
+{
+  "_comment": "Task B queue: datasets with num_outputs > 8. Google Gemini API caps candidate_count at 8, so these must run under a non-Gemini OpenRouter model (e.g. openai/gpt-5-mini, anthropic/claude-haiku-4.5, x-ai/grok-4.1-fast). See debugging_scripts/first-trial-run/CLAUDE_HANDOFF.md Task B and SESSION_NOTES.md 'Windows continuation — 2026-04-21'. Do NOT reroute Gemini models through OpenRouter.",
+  "Clin": [
+    "amuse_chord_generation",
+    "noveltybench"
+  ],
+  "Sai": [
+    "aidanbench"
+  ]
+}

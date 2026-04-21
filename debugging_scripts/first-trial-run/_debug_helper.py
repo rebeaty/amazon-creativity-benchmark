@@ -9,7 +9,20 @@ Usage:
 import json
 import sys
 import os
-import fcntl
+
+# Ensure LF-only output so git-bash consumers (mapfile / read loops) don't get
+# trailing \r on every line when this runs under a native Windows Python.
+try:
+    sys.stdout.reconfigure(newline="\n")
+except Exception:
+    pass
+
+try:
+    import fcntl  # Unix-only; missing on Windows.
+    _HAS_FCNTL = True
+except ImportError:
+    import msvcrt  # Windows fallback.
+    _HAS_FCNTL = False
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PENDING_FILE = os.path.join(SCRIPT_DIR, "debug_assignments_pending.json")
@@ -32,11 +45,24 @@ def _with_lock(fn):
     """File-lock so concurrent scripts don't corrupt the JSON."""
     os.makedirs(SCRIPT_DIR, exist_ok=True)
     with open(LOCK_FILE, "w") as lf:
-        fcntl.flock(lf, fcntl.LOCK_EX)
-        try:
-            return fn()
-        finally:
-            fcntl.flock(lf, fcntl.LOCK_UN)
+        if _HAS_FCNTL:
+            fcntl.flock(lf, fcntl.LOCK_EX)
+            try:
+                return fn()
+            finally:
+                fcntl.flock(lf, fcntl.LOCK_UN)
+        else:
+            # Windows: LK_LOCK blocks until the lock is available (retries internally).
+            # Lock a single byte at offset 0 (msvcrt.locking locks relative to current pos).
+            lf.write("\0")
+            lf.flush()
+            lf.seek(0)
+            msvcrt.locking(lf.fileno(), msvcrt.LK_LOCK, 1)
+            try:
+                return fn()
+            finally:
+                lf.seek(0)
+                msvcrt.locking(lf.fileno(), msvcrt.LK_UNLCK, 1)
 
 
 def cmd_next(name):
