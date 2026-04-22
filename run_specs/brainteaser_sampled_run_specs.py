@@ -5,14 +5,16 @@ reproducible 200-item sampler applied at the scenario level:
   - brainteaser_sampled_sentence_puzzle
   - brainteaser_sampled_word_puzzle
 
-Metrics / adapter identical to the original [brainteaser_run_specs.py]
-so scores are directly comparable once you pool (or choose to keep
-subtask-level resolution).
+Adapter + metric follow the analobench pattern already in this repo:
+ADAPT_GENERATION + BasicGenerationMetric with exact_match. The scenario
+prompts the model with an explicit "Only generate the letter" note, so
+compliant chat-tuned models emit a single-letter answer that matches
+the gold references (A/B/C/D).
 """
 
 from helm.benchmark.adaptation.adapter_spec import AdapterSpec
 from helm.benchmark.adaptation.adapters.adapter_factory import (
-    ADAPT_MULTIPLE_CHOICE_JOINT,
+    ADAPT_GENERATION,
 )
 from helm.benchmark.metrics.metric import MetricSpec
 from helm.benchmark.run_spec import RunSpec, run_spec_function
@@ -26,23 +28,23 @@ def _build_spec(subtask: str) -> RunSpec:
     )
 
     adapter_spec = AdapterSpec(
-        method=ADAPT_MULTIPLE_CHOICE_JOINT,
+        method=ADAPT_GENERATION,
         instructions="",
         input_prefix="",
         input_suffix="\n",
-        output_prefix="Answer: ",
+        output_prefix="",
         output_suffix="\n",
         max_train_instances=0,
         num_outputs=1,
         max_tokens=512,
         temperature=0.7,
-        stop_sequences=["\n"],
+        stop_sequences=[],
     )
 
     metric_specs = [
         MetricSpec(
             class_name="helm.benchmark.metrics.basic_metrics.BasicGenerationMetric",
-            args={"names": ["exact_match"]},
+            args={"names": ["exact_match", "quasi_exact_match"]},
         ),
     ]
 

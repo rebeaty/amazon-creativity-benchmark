@@ -8,9 +8,11 @@ This is a mirror of [brainteaser_scenario.py] that:
   2. Applies the project-wide reproducible sampler ([scenarios/_sample.py])
      so every model run sees exactly the same items.
 
-The original `brainteaser_scenario.py` is intentionally left untouched.
-Any existing pipelines that rely on the onboarded `brainteaser` scenario
-(single SP pool, no sampling) continue to work.
+Prompting convention follows [analobench_scenario.py] — the in-repo
+pattern that produces meaningful MCQ scores with ADAPT_GENERATION +
+BasicGenerationMetric exact_match. The explicit "Only generate the
+letter without any additional text" instruction is what reliably makes
+chat-tuned models emit a single letter.
 
 Paper: https://arxiv.org/abs/2310.05057 (EMNLP 2023)
 Code:  https://github.com/1171-jpg/BrainTeaser
@@ -60,16 +62,27 @@ class BrainteaserSampledScenario(Scenario):
             shuffled_choices = [original_choices[i] for i in choice_order]
             correct_idx = item["label"]
 
-            prompt = f"Question: {item['question']}\n"
-            for i, choice in enumerate(shuffled_choices):
-                prompt += f"\n{chr(65 + i)}. {choice}"
+            # Prompt follows analobench pattern — explicit "only generate the letter"
+            # forces chat-tuned models to emit a single letter token.
+            options_block = "\n".join(
+                f"{chr(65 + i)}. {choice}" for i, choice in enumerate(shuffled_choices)
+            )
+            prompt = (
+                f"Which of the following is the correct answer to the puzzle below?\n\n"
+                f"Note: Only generate the letter (A, B, C, or D) without any additional text.\n\n"
+                f"Puzzle:\n"
+                f"{item['question']}\n\n"
+                f"Options:\n"
+                f"{options_block}\n\n"
+                f"Answer:"
+            )
 
-            references = []
-            for i in range(4):
-                letter = chr(65 + i)
-                is_correct = (i == correct_idx)
-                tags = [CORRECT_TAG] if is_correct else []
-                references.append(Reference(Output(text=letter), tags=tags))
+            correct_letter = chr(65 + correct_idx)
+            references = [
+                Reference(Output(text=chr(65 + i)),
+                          tags=[CORRECT_TAG] if i == correct_idx else [])
+                for i in range(4)
+            ]
 
             instances.append(Instance(
                 input=Input(text=prompt),
