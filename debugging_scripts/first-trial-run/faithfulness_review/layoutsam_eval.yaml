@@ -1,0 +1,27 @@
+name: layoutsam_eval
+verdict: DIVERGENT
+checks:
+  prompt_matches: false
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Task reframing away from the paper: LayoutSAM-Eval is a Layout-to-Image (L2I) generation benchmark (arXiv:2412.03859). The paper's eval uses VLM-based Yes/No spatial + attribute QA (MiniCPM-V-2.6) plus FID, CLIP, PickScore, IS on generated images (scenarios/layoutsam_eval_scenario.py:17-19 acknowledges this). Scenario reframes it as text-only 'layout -> one-paragraph scene description' (scenarios/layoutsam_eval_scenario.py:21-42, 67-76) — the paper has no such text-only prompt (scenario admits 'No text-only prompt specified in the paper')."
+  - "Metric substitution: paper metrics are VLM QA / FID / CLIP / PickScore / IS on images; run_spec uses a single GenericLLMJudgeMetric 'llm_judge_quality' with a generic 1-5 rubric on spatial accuracy/completeness/clarity (run_specs/layoutsam_eval_run_specs.py:15-24, 49-50). Scenario docstring line 54 also advertises ROUGE-L/BLEU against global_caption but neither is actually registered."
+  - "Reference mismatch: scenario exposes global_caption as a CORRECT_TAG reference (scenarios/layoutsam_eval_scenario.py:115) suggesting reference-based metrics were intended, yet run_spec only wires an LLM judge and the judge rubric never sees the reference — judge scores descriptions in a vacuum without the gold caption."
+  - "Judge config: judge_model_name='openai/gpt-4o', temperature=0.0, max_new_tokens=256 (run_specs/layoutsam_eval_run_specs.py:57-60). Paper does not prescribe an LLM judge at all, so nothing to match against — this is a fully invented eval."
+  - "metric_notes/layoutsam_eval_annotator_notes.md and metric_notes/layoutsam_eval_eval_metrics_notes.md are both empty (1 line each) — no annotator/metric design documented."
+  - "Outputs are shape-reasonable (single-paragraph scene descriptions across gemini/gemma models; scores 1-5 span the rubric, e.g. gemini-2.5-flash id398=4, id3833=5; gemma-3-1b id398=1), but because the task itself is off-paper, high scores do not reflect the paper's L2I quality — they reflect fluent paragraph writing about an abstracted layout."
+fixes_before_run:
+  - severity: blocking
+    action: "Either (a) drop layoutsam_eval from the text-only creativity sweep — it is a layout-to-image generation benchmark and text LLMs cannot produce images, or (b) explicitly relabel this as a new 'layout-to-caption' task (not LayoutSAM-Eval) and document that divergence."
+  - severity: blocking
+    action: "If kept, replace the generic LLM-judge rubric with a reference-aware metric (ROUGE-L/BLEU against global_caption as the scenario docstring already promises, plus a judge that sees the gold caption and the region-wise attribute/spatial claims). Current judge ignores references."
+  - severity: non-blocking
+    action: "Populate metric_notes/layoutsam_eval_annotator_notes.md and metric_notes/layoutsam_eval_eval_metrics_notes.md (both empty) or remove."
+  - severity: non-blocking
+    action: "Reduce scope from full 5,000-row test split for faithfulness iteration (currently every row is instantiated; 5000 LLM-judge calls per model is expensive for a borderline-fit benchmark)."
+notes: "Borderline per NOTES_FOR_VIJETA.md sec 1 — flagged under 'Multimodal layout/design — unclear if they count as text-to-text creativity'. Upstream is explicitly a layout-to-image generation benchmark; HELM integration strips the image-generation half and invents a text-only captioning reframing with no paper provenance, then scores it with a generic LLM rubric that ignores the human-annotated global_caption reference. Flag as borderline-creativity AND divergent-from-paper; recommend drop or full redesign."
+paper_url: "https://arxiv.org/abs/2412.03859"
+reviewed_at: "2026-04-21"

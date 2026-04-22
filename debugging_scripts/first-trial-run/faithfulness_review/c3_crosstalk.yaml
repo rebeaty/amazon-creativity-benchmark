@@ -1,0 +1,26 @@
+name: c3_crosstalk
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "Paper used seq2seq models, not LLMs; no canonical LLM prompt exists. Chinese instruction at c3_crosstalk_scenario.py:120-124 is a reasonable custom zero-shot prompt (documented as such at lines 26-35)."
+  - "run_specs (c3_crosstalk_run_specs.py:35) adds exact_match / quasi_exact_match / f1_score which are inappropriate for open-ended Chinese dialogue; paper reports BLEU, ROUGE, distinct-1/2. bleu_1/bleu_4/rouge_l are included (good) but distinct-1/2 (lexical diversity, emphasized in paper) is absent."
+  - "BLEU/ROUGE in HELM BasicGenerationMetric are whitespace-tokenized and not Chinese-aware; scores will be near-zero/noisy against Chinese gold references."
+  - "metric_notes/c3_crosstalk_annotator_notes.md and c3_crosstalk_eval_metrics_notes.md are empty (1 line each) — human-rating rubric (quality/humor/coherence) is undocumented despite scenario docstring referencing it."
+  - "50 test instances confirmed in display_predictions.json (id2, id4, id10, id11, id22, id27, id28, id31, id33, id38, id41 visible); split logic at scenario.py:99-114 correctly parses 20-utterance dialogues, takes lines 10-19 as gold."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Drop exact_match/quasi_exact_match/f1_score from metric_specs (run_specs:35) — meaningless for this task."
+  - severity: non-blocking
+    action: "Add distinct-1/distinct-2 metric (paper headline metric for lexical diversity) or document why omitted."
+  - severity: non-blocking
+    action: "Populate the two empty metric_notes files with the 5-point human-rating rubric referenced in scenario docstring."
+  - severity: non-blocking
+    action: "Consider a Chinese-aware tokenizer (jieba/char-level) for BLEU/ROUGE, otherwise numbers are uninformative."
+notes: "Data loading and 10-context/10-gold split are faithful to the C3 repo layout. Core faithfulness issue is metric selection: BLEU/ROUGE without Chinese tokenization and inclusion of EM/F1 will produce misleading numbers. Prompt is a reasonable original construction since paper tested seq2seq, not LLMs; documented honestly in the docstring."
+paper_url: "https://arxiv.org/abs/2207.00735"
+reviewed_at: "2026-04-21"

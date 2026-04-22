@@ -1,0 +1,25 @@
+name: cap_metaphor
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: true
+  output_shape_sane: unknown
+gaps:
+  - "No dedicated metric_notes files — cap_metaphor_annotator_notes.md and cap_metaphor_eval_metrics_notes.md do not exist in metric_notes/; rubric lives only in run_specs/cap_run_specs.py:42-58 (shared V7)"
+  - "Referenced source-of-truth files not in tree: human/uva_pilot/scripts/run_all_models_study3.py (scenarios/cap_metaphor_scenario.py:13) and human/uva_pilot/scripts/old/score_quality_v7_pilot.py (run_specs/cap_run_specs.py:4) — cannot verify stems are verbatim or rubric matches human pipeline"
+  - "No display_predictions.json for cap_metaphor under benchmark_output/runs/*/ — benchmark has not been run yet, so output shape unverified"
+  - "Scenario wraps each stem with an added instruction block (scenarios/cap_metaphor_scenario.py:50-58) — departs from the bare-stem human administration; can inflate/suppress quality relative to human baseline"
+  - "Novelty (core CAP metric per run_specs/cap_run_specs.py:10-15) deferred to post-hoc scripts/score_cap_novelty.py — only quality is scored in-run; pool centroid still the UVA pilot proxy, not the 200-model ABC corpus"
+  - "CAP is an internal Beaty-lab pilot; no published paper URL is cited in source"
+fixes_before_run:
+  - severity: non-blocking
+    action: "Add metric_notes/cap_metaphor_annotator_notes.md + cap_metaphor_eval_metrics_notes.md (or a single CAP-wide notes file) documenting the shared V7 judge + deferred novelty"
+  - severity: non-blocking
+    action: "Vendor or link run_all_models_study3.py and score_quality_v7_pilot.py into the repo (or cite a commit hash) so stems/rubric provenance is auditable"
+  - severity: non-blocking
+    action: "Confirm Study 3 humans saw the same instruction preamble; if not, note the prompt-framing divergence in the CAP README caveat"
+notes: "Scenario and run spec are internally consistent with the CAP battery design and the shared V7 quality rubric, judge model, and temp=0 settings match the other four CAP tasks. Main risks are documentation gaps (missing metric_notes, missing referenced human-pipeline scripts) and prompt framing that augments the bare Study 3 stem with task instructions. Output shape cannot be verified since no cap_metaphor run outputs exist yet."
+paper_url: "n/a (internal CAP / UVA pilot Study 3 — no public paper cited in source)"
+reviewed_at: "2026-04-21"

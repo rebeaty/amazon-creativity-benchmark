@@ -1,0 +1,26 @@
+name: cap_sctt
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: true
+  output_shape_sane: true
+gaps:
+  - "scenarios/cap_sctt_scenario.py:2 docstring says 'Scientific Creative Thinking Task' but the task brief calls SCTT 'story/scenario creative thinking test' — verify canonical name with Beaty (items are the scientific-hypothesis stems either way)."
+  - "metric_notes/cap_sctt_annotator_notes.md and metric_notes/cap_sctt_eval_metrics_notes.md do not exist; only the shared run_specs/cap_run_specs.py V7 rubric is documented."
+  - "run_specs/cap_run_specs.py:38-40 judges the whole semicolon-joined completion as a single V7-quality rating, whereas human score_quality_v7_pilot.py judges each idea individually — comment acknowledges this, but per-idea re-judge is not yet implemented."
+  - "scripts/score_cap_novelty.py:24-28 uses the current UVA pilot pool as a proxy centroid rather than the promised 200-model ABC corpus, so novelty values are provisional."
+  - "benchmark_output/runs/trial_cap/cap_sctt_model=google_gemini-2.5-flash-lite/ contains scenario_state.json but no display_predictions.json (HELM summarize likely not run yet)."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Add metric_notes/cap_sctt_{annotator,eval_metrics}_notes.md documenting the V7 quality judge + post-hoc novelty split, matching the pattern used for other datasets."
+  - severity: non-blocking
+    action: "Resolve SCTT naming (Scientific vs Story/Scenario) in the scenario docstring + tags so downstream reporting is unambiguous."
+  - severity: non-blocking
+    action: "Implement the per-idea V7 re-judge referenced in run_specs/cap_run_specs.py:38-40 before final scoring, so LLM quality granularity matches the human pipeline."
+  - severity: non-blocking
+    action: "Run helm-summarize on trial_cap so display_predictions.json is generated for eyeballing."
+notes: "Items are reproduced verbatim from the UVA Study 3 script, prompt scaffold (3-6 ideas, semicolon-separated, novel+scientifically-possible framing) matches the human protocol, and the V7 quality rubric + Gemini judge are intentionally shared with the human scoring pipeline. Main divergences are whole-completion vs per-idea judging and the proxy novelty pool — both acknowledged in comments and non-blocking for a pilot run."
+paper_url: "unpublished (Beaty CAP pilot / UVA Study 3; no public paper URL located in repo)"
+reviewed_at: "2026-04-21"

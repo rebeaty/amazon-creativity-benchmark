@@ -1,0 +1,33 @@
+name: mops
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Scoring-scale mismatch: paper and metric_notes/mops_annotator_notes.md:8-10, 19-41 specify a 0-100 integer scale per dimension (fascination, completeness, originality) with GPT-4-turbo. run_specs/mops_run_specs.py:15-35 instead encodes 1-5 Likert rubrics (_RUBRIC_LLM_JUDGE_FASCINATION, _RUBRIC_LLM_JUDGE_ORIGINALITY). Sampled display_predictions.json confirms scores bounded at 3-5, confirming the 1-5 rubric is in force."
+  - "Missing third dimension: paper evaluates three dimensions (fascination, completeness, originality). run_specs/mops_run_specs.py:60-87 only registers fascination and originality annotators/metrics; completeness is dropped despite being documented in metric_notes/mops_annotator_notes.md:26-32. This is the dimension most specific to MoPS's modular-components claim."
+  - "Rubric wording drift: rubrics in run_specs/mops_run_specs.py:16, 27 repeatedly say 'movie premise or story concept' and reference 'existing films', but the task is story-premise synthesis from ManTle/mops (theme/background/persona/event/ending/twist). The film framing is not in the paper and may bias the judge toward cinematic clichés."
+  - "Reference-based metrics inappropriate: run_specs/mops_run_specs.py:61 registers exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4 against the dataset's single reference premise. The task is open-ended synthesis with many valid surface realizations; the paper does not use n-gram overlap against the reference premise, and near-zero overlap scores on sampled outputs (which are coherent and faithful to components) will be uninformative at best and misleading at worst."
+  - "Diversity metrics omitted: paper's headline claim of superiority is on set-level diversity via 2D semantic breadth/density (ManTle/mops repo README confirms 'Breadth and Density metrics proposed in the paper'). Not implemented; acknowledged in metric_notes/mops_eval_metrics_notes.md/annotator_notes.md:47-49. Per-instance judge scores alone cannot reproduce the paper's primary contribution evaluation."
+  - "Prompt template synthesized: scenarios/mops_scenario.py:56-66 constructs an instruction from scratch ('Given the following story components, write a concise story premise (1-3 sentences)...'). Scenario docstring (lines 10-13) acknowledges the paper does not publish a prompt; this is a reasonable reconstruction but should be documented as a deviation. The _strip_prefix helper (lines 44-49) also silently mutates field content when a module label is embedded in the value."
+  - "Judge prompt templates in metric_notes/mops_annotator_notes.md:19-41 are not actually used; run_specs rubrics are entirely different text with different scale. Annotator notes are orphaned documentation."
+  - "Adapter: temperature=0.7, max_tokens=512, num_outputs=1 (run_specs/mops_run_specs.py:46-58). Paper does not specify generation hyperparams for the model-under-test; sampled predictions look coherent and 1-3 sentences, so output shape is sane. metric_notes/mops_eval_metrics_notes.md is empty (0 bytes)."
+fixes_before_run:
+  - severity: blocking
+    action: "Rewrite rubrics to 0-100 integer scale matching metric_notes/mops_annotator_notes.md and the paper, and update the metric parsing to accept a single integer rather than a 1-5 choice. Remove the 'movie premise / existing films' framing; use 'story premise' consistently."
+  - severity: blocking
+    action: "Add the completeness dimension as a third annotator + metric (rubric from metric_notes/mops_annotator_notes.md:26-32), scoring whether character, setting, event, ending, and twist are present."
+  - severity: blocking
+    action: "Remove BasicGenerationMetric (exact_match/quasi_exact_match/f1_score/rouge_l/bleu_1/bleu_4) or mark all six as non-primary diagnostic metrics. They do not reflect the MoPS evaluation and will dominate leaderboard sort order spuriously."
+  - severity: non-blocking
+    action: "Populate metric_notes/mops_eval_metrics_notes.md (currently empty) with the reconciled judge spec so future audits have a canonical reference."
+  - severity: non-blocking
+    action: "Document that set-level diversity (breadth/density in 2D embedding space) from the paper's Section 4 is not reproduced; report scores as per-instance quality only."
+  - severity: non-blocking
+    action: "Either log when _strip_prefix actually fires on a row, or replace with a no-op after confirming ManTle/mops fields are clean; silent content mutation is a reproducibility hazard."
+notes: "Scenario correctly loads ManTle/mops curated split (100 rows, 14 themes) and wires the six component fields into a coherent synthesis prompt. Sampled predictions from gemini_pro and gemma_3_27b are coherent 1-3 sentence premises integrating all six modules, so the input side is essentially faithful. The metric side is not: scale (1-5 vs 0-100), dimensions (2 of 3), rubric framing (movie vs story), and inclusion of reference-overlap metrics all diverge from the paper. As wired today the run measures a GPT-4-turbo 1-5 rating of movie-ish premise quality plus BLEU/ROUGE noise, not MoPS's fascination/completeness/originality 0-100 protocol or its breadth/density diversity claim. Paper PDF text extraction failed (binary); cross-check used HF dataset page, HF paper abstract, and GAIR-NLP/MoPS repo README."
+paper_url: "https://arxiv.org/abs/2406.05690"
+reviewed_at: "2026-04-21"

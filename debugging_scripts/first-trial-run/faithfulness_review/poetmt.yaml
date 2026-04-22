@@ -1,0 +1,37 @@
+name: poetmt
+verdict: PARTIAL
+checks:
+  prompt_matches: partial
+  data_split_correct: partial
+  metric_matches: partial
+  judge_config_matches: true
+  output_shape_sane: false
+gaps:
+  - "Prompt template awkward: scenarios/poetmt_scenario.py:167-171 uses translate_type=f'{dynasty_name.capitalize()} poetry' (e.g., 'Tang poetry'), producing 'Please translate this classical Chinese poem Tang poetry into an English poem Tang poetry: Poem:{chinese_poem}'. The paper (Appendix B.2, confirmed via arxiv html) uses the same slot-template but 'translate_type' is intended as a poetry-type label (e.g., 'Lüshi', 'Jueju', 'Ci', 'Sanqu'), not dynasty. Sampled outputs show the judged model interpreting 'Tang poetry / Song poetry / Yuan poetry' correctly as dynasty style, so the prompt is readable but lexically non-faithful to the paper's placeholder semantics, and doubles the phrase awkwardly."
+  - "RAG 'Explanation:{rag_context}' field is intentionally omitted (scenario docstring lines 20-21, 166). Paper's headline method is RAT (retrieval-augmented translation) using the 30K-poem knowledge base; baseline-without-RAG is a legitimate configuration but the scenario does not expose the RAG pathway at all, so only the weakest paper condition is reproduced."
+  - "Dataset size mismatch: scenario reports 790 poems (295 Tang + 196 Song + 299 Yuan, lines 30-33). Paper's discourse-level translation set is 608 poems (197 Tang / 189 Song / 222 Yuan) per arxiv html; 758 is the sentence-level adequacy split. The 790 figure appears to be raw jsonl rowcount from andongBlue/PoetMT `all_poems/*.jsonl` which includes entries beyond the discourse eval set. Not a faithfulness break per se, but the evaluated population is larger and differently composed than any table in the paper."
+  - "Reference-overlap metrics: run_specs/poetmt_run_specs.py:72 registers exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4 via BasicGenerationMetric. Paper uses BLEU/BLEU-1..4, COMET (wmt22), and BLEURT (confirmed arxiv html). ROUGE-L and F1 are additions not in the paper; COMET and BLEURT are omitted. exact_match / quasi_exact_match are meaningless on free-form poetic translation and will be ~0."
+  - "Judge rubric wording drift: run_specs/poetmt_run_specs.py:15-46 rubrics use generic phrasing (phonetic beauty, rhythm, structural fidelity, semantic depth) rather than paper's stated criteria (rhyme/meter/rhythm-harmony for BS; line alignment / balanced phrasing / structural consistency for BF; thematic depth / emotional resonance / vivid imagery for BM). Scale (1-5) and judge model (gpt-4) match paper. metric_notes/poetmt_eval_metrics_notes.md:62-81 documents a different prompt template (with source poem + reference translation in the judge context) which is NOT what the rubric-only annotator sends; judge sees only the candidate translation, not the source Chinese or reference, which materially weakens BM/BF/BS grading."
+  - "Output shape bad: sampled display_predictions.json from gemini_pro and gemma_3_27b show predictions dominated by English meta-commentary ('Of course. This is a beautiful...', 'Here are a few English translations...', multi-option analyses, pinyin breakdowns, explanations of choices). The actual translation is buried in ~10-20% of max_tokens=512 output and often truncated mid-poem (e.g., instance poetmt_tang_16 cut mid-line, poetmt_song_415 cut at 'look to heaven's'). There is no extraction step to isolate the English translation before judging, so rubric scores reflect the whole blob including commentary; BLEU/ROUGE will be computed against the commentary+poem mixture vs reference translation and will be severely deflated."
+  - "max_tokens=512 is too small for discourse-level Tang/Song regulated verse plus the commentary models like to emit; this is a generation-config issue interacting with the missing output-extraction step."
+  - "metric_notes/poetmt_annotator_notes.md is empty (0 bytes); all annotator documentation is effectively in the run_specs file."
+fixes_before_run:
+  - severity: blocking
+    action: "Add an output-extraction step (scenario post-processor or annotator preprocessor) that isolates the English translation from the model's surrounding commentary before BLEU/ROUGE/judge scoring, or reframe the prompt to forbid commentary ('Output only the English translation, no preamble or analysis.')."
+  - severity: blocking
+    action: "Raise max_tokens to at least 1024 (preferably 1536) so discourse-level Tang regulated verse does not truncate mid-poem; currently sampled outputs are cut off in the translation itself."
+  - severity: blocking
+    action: "Update judge prompt to include the source Chinese poem and (optionally) the reference translation as context, as documented in metric_notes/poetmt_eval_metrics_notes.md:64-81 and implied by the paper. Scoring BS/BF/BM on an English text with no source grounding is not what the paper measures."
+  - severity: non-blocking
+    action: "Rewrite rubrics to paper's criteria: BS -> rhyme scheme / meter / rhythm harmony; BF -> line alignment / balanced phrasing / structural consistency; BM -> thematic depth / emotional resonance / vivid imagery."
+  - severity: non-blocking
+    action: "Replace or supplement BasicGenerationMetric: drop exact_match/quasi_exact_match (inappropriate); keep BLEU-1/BLEU-4; add BLEU-2/BLEU-3 to match the paper; consider COMET and BLEURT if a neural-metric runner is available; treat ROUGE-L and F1 as diagnostic-only."
+  - severity: non-blocking
+    action: "Fix translate_type: either use the paper's poetry-form labels (Lüshi / Jueju / Ci / Sanqu) from a lookup, or rewrite the prompt to 'Please translate this classical Chinese {dynasty_name} poem into an English poem:' to avoid the double 'Tang poetry ... Tang poetry' artifact."
+  - severity: non-blocking
+    action: "Populate metric_notes/poetmt_annotator_notes.md (empty) with the reconciled judge spec; document deliberate omission of the RAT/RAG pathway so leaderboard readers know this is the baseline-only configuration."
+  - severity: non-blocking
+    action: "Document the dataset discrepancy (790 loaded vs 608 discourse-level in paper Table) in the scenario docstring; decide whether to subset to the paper's evaluation split or keep the larger population and report separately."
+notes: "Scenario cleanly clones andongBlue/PoetMT and loads tang/song/yuan jsonl files with src/ref fields. Prompt template follows paper's Appendix B.2 shape. Judge config (gpt-4, 1-5 scale, temperature 0) matches paper. Three primary failure modes: (1) models emit long English commentary + multiple translations + pinyin analysis instead of a single clean translation, and the benchmark ingests the whole blob; (2) max_tokens=512 truncates discourse-level poems mid-verse; (3) judge rubrics see only the candidate text with no source Chinese or reference, undermining BS/BF/BM scoring validity. Reference-overlap metric set is broader (ROUGE-L/F1/exact_match) and narrower (no COMET/BLEURT) than the paper. RAG pathway intentionally omitted; this is baseline-only reproduction. metric_notes/poetmt_annotator_notes.md is empty. Paper PDF extraction failed (binary); cross-check used arxiv html v3 and andongBlue/PoetMT README."
+paper_url: "https://arxiv.org/abs/2408.09945"
+reviewed_at: "2026-04-21"

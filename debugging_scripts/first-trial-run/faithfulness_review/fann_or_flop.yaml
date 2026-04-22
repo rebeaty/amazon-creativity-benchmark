@@ -1,0 +1,29 @@
+name: fann_or_flop
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Run spec uses BasicGenerationMetric with exact_match/quasi_exact_match/f1/rouge_l/bleu_1/bleu_4 (run_specs/fann_or_flop_run_specs.py:35) — none of these are paper metrics. Paper uses LLM-as-judge (GPT-4o, faithfulness/fluency/overall 1-5), BERTScore via AraBERT, BLEU + chrF++, and mDeBERTa bidirectional NLI entailment."
+  - "annotators=None (run_specs/fann_or_flop_run_specs.py:44) — no LLM judge is wired despite annotator_notes.md documenting the exact GPT-4o rubric. Faithfulness/fluency/overall scores will not be produced."
+  - "Scenario prompt is a custom Arabic instruction (scenarios/fann_or_flop_scenario.py:63-81) acknowledged in the docstring as 'No explicit model prompt specified in the paper' — this is a reasonable stand-in but not paper-faithful."
+  - "BERTScore is AraBERT-based in the paper; HELM BERTScore metric (not even wired here) defaults to English RoBERTa — would need explicit Arabic model config."
+  - "chrF++ and mDeBERTa entailment are not in the metric list at all."
+  - "max_tokens=512 (run_specs/fann_or_flop_run_specs.py:29) is likely too short for verse-by-verse Arabic explanations of full poems; sample predictions (benchmark_output/runs/gemini_pro/.../display_predictions.json) show outputs truncated mid-first-verse, meaning even the current metrics score incomplete generations."
+  - "Temperature 0.7 (run_specs/fann_or_flop_run_specs.py:30) not specified in paper; paper judge is temp 0.0 but generation temp is undocumented."
+  - "Full 6,984-instance train split used without subsampling (scenarios/fann_or_flop_scenario.py:106,138) — judge cost would be very large if judge were wired."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace BasicGenerationMetric names with an Arabic-appropriate suite: wire an LLM judge annotator implementing the GPT-4o rubric in annotator_notes.md (faithfulness/fluency/overall 1-5, temp 0.0) plus BLEU, chrF++, and Arabic BERTScore against raw_explanation."
+  - severity: blocking
+    action: "Raise max_tokens substantially (e.g., 2048-4096) so outputs cover all verses; current 512 causes truncation visible in sample predictions."
+  - severity: non-blocking
+    action: "Consider subsampling before running judge-based eval to control cost on 6,984 instances."
+  - severity: non-blocking
+    action: "Document Arabic BERTScore model (AraBERT) choice in eval_metrics_notes.md (currently empty, 1 line)."
+notes: "Scenario loads dataset and constructs a reasonable Arabic prompt, but the run spec is effectively a placeholder — no judge, no paper metrics, and output truncation at 512 tokens. metric_notes/fann_or_flop_eval_metrics_notes.md is empty. Not safe to run as-is for paper-comparable results."
+paper_url: "https://arxiv.org/abs/2505.18152"
+reviewed_at: "2026-04-21"

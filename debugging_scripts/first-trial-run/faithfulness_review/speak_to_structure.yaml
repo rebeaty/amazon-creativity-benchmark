@@ -1,0 +1,31 @@
+name: speak_to_structure
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Prompt augmentation: scenarios/speak_to_structure_scenario.py:77-85 prepends a custom `_SYSTEM_CONTEXT` (\"You are an expert chemist...\") to every Instruction. Paper (arXiv:2412.14642) evaluates LLMs on the raw Instruction field; this added system preamble changes the elicitation and is not part of the canonical TOMG-Bench prompt."
+  - "Metric drift (critical): paper's headline metrics are Validity (RDKit parseability), Success Rate (constraint satisfaction via RDKit atom/bond counts, SMARTS matching, property calculations), Novelty (vs. ZINC/ChEMBL, MolCustom only), and Similarity (Tanimoto, MolEdit/MolOpt). run_specs/speak_to_structure_run_specs.py:49-52 wires only a generic `ValidityMetric` plus a 1-5 Likert `llm_judge_correctness`. No RDKit-based success rate, no Tanimoto, no novelty, no property-improvement check."
+  - "Validity approximation: `metrics.validity_metric.ValidityMetric` likely implements the Tier-1 regex heuristic from metric_notes (balanced parens/brackets + atom-letter presence) rather than RDKit `Chem.MolFromSmiles`, so Validity numbers are not directly comparable to paper Table 2."
+  - "LLM judge is unsuitable for this task: a 5-point correctness rubric over a SMILES string cannot reliably verify atom counts, functional groups, bond counts, Tanimoto similarity, or logP/QED/MR improvements. The judge in run_specs/speak_to_structure_run_specs.py:58 (openai/gpt-4) substitutes chemistry-aware scoring with a subjective judgment and will produce scores poorly correlated with paper's Success Rate."
+  - "Judge model drift: paper does not use GPT-4-as-judge (success is deterministic via RDKit). Any scalar correctness score from a judge is an orthogonal signal, not a reproduction."
+  - "Subtask-specific evaluation is collapsed: paper reports per-subtask Validity/Success separately across 10 subtasks; run_spec emits a single `llm_judge_correctness` averaged over all subtasks, losing MolCustom vs MolEdit vs MolOpt breakdown."
+  - "Sampling: `max_instances_per_subtask=500` yields 5,000 instances vs paper's full 50,000; acceptable sampling adaptation, but should be logged."
+  - "max_tokens=512 and temperature=0.7 — paper baselines generally use temperature=0.0/1.0 deterministic decoding for reproducibility; 0.7 introduces stochastic SMILES that complicate success-rate comparisons."
+  - "Output shape (display_predictions.json) looks reasonable: single SMILES strings like `CCCCCCCCCCCCCCC`, `CC(C)([NH3+])CS[C@@H]1CCOC2(CCSCC2)C1`; the system preamble successfully suppresses explanatory text."
+  - "Judge scoring suspicious: `CCCCCCCCCCCCCCC` (pentadecane) and `CCCC` (butane) both scored 5 and 3 respectively by the judge without the judge knowing the source constraint; confirms the judge is not reliably checking constraint satisfaction."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace generic ValidityMetric + LLM judge with RDKit-based metrics: (1) SMILES validity via Chem.MolFromSmiles, (2) per-subtask Success Rate using paper's SMARTS tables / atom/bond counting / Tanimoto / property deltas, (3) Novelty for MolCustom, (4) Tanimoto for MolEdit/MolOpt. Without this, results are not TOMG-Bench scores."
+  - severity: blocking
+    action: "Emit per-subtask metric groupings (MolCustom.AtomNum, MolCustom.FunctionalGroup, MolEdit.AddComponent, MolOpt.LogP, ...) rather than a single aggregate."
+  - severity: non-blocking
+    action: "Remove or isolate the _SYSTEM_CONTEXT preamble, or document it clearly as a deviation; rerun at temperature=0.0 for apples-to-apples baseline comparison."
+  - severity: non-blocking
+    action: "Drop the GenericLLMJudgeMetric entirely — it adds noise and is not part of the paper's evaluation protocol."
+notes: "The scenario correctly downloads TOMG-Bench CSVs, preserves the Instruction field, and emits parseable SMILES outputs. However, the evaluation pipeline is a Tier-1 approximation plus an unrelated LLM-judge correctness score, not the paper's RDKit-based Validity/Success Rate/Novelty/Similarity protocol (metric_notes/speak_to_structure_eval_metrics_notes.md:6-15 describes the correct metrics but they are not implemented). Running as-is will not produce numbers comparable to arXiv:2412.14642 Table 2. Treat current outputs as a SMILES-plausibility probe only. Paper access via arXiv abstract only; leaned on annotator notes for metric specifics."
+paper_url: "https://arxiv.org/abs/2412.14642"
+reviewed_at: "2026-04-21"

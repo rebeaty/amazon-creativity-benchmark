@@ -1,0 +1,24 @@
+name: cap_story
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: true
+  output_shape_sane: true
+gaps:
+  - "Triads in scenarios/cap_story_scenario.py:21-27 are hand-written placeholders (pen/paper/story, key/door/lock, bridge/river/cross, mirror/face/reflection, shoe/path/walk) — docstring claims they are 'reproduced verbatim from human/uva_pilot/scripts/run_all_models_study3.py' but that file does not exist in the repo, so the exact Study 3 item set cannot be verified."
+  - "Only the V7 'quality/makes-sense' rubric is scored in-run (run_specs/cap_run_specs.py:42-58, 88-104). Novelty — the primary CAP creativity DV — is deferred to post-hoc scripts/score_cap_novelty.py and is not part of this benchmark's reported metric."
+  - "No metric_notes/cap_story_annotator_notes.md or cap_story_eval_metrics_notes.md exist; CAP battery is documented only in the cap_run_specs.py module docstring."
+  - "display_predictions.json not produced for the trial run (trial_cap/cap_story_model=google_gemini-2.5-flash-lite/ contains scenario_state.json, per_instance_stats.json, stats.json only); shape verified via scenario_state.json instead."
+  - "Trial run used max_eval_instances=1 (scenario_state.json:18); only 1 of 5 triads executed."
+fixes_before_run:
+  - severity: blocking
+    action: "Recover the canonical Study 3 triads from the UVA pilot source (script is referenced but missing) and replace the placeholder list in scenarios/cap_story_scenario.py, or explicitly flag the items as pilot stand-ins in the scenario docstring."
+  - severity: non-blocking
+    action: "Add cap_story-specific metric_notes files documenting that the in-run score is V7 quality only and that novelty is scored post-hoc against the ABC/UVA corpus centroid."
+  - severity: non-blocking
+    action: "Raise max_eval_instances to cover all 5 triads (num_repetitions * 5) so the full item set is exercised."
+notes: "Prompt wording, adapter (temp=0.7, 512 tokens, single-response), and V7 judge (gemini-3-flash-preview, temp=0, 1-7 makes-sense rubric) cleanly match the documented CAP pipeline. Main faithfulness risk is the unverifiable triad list and the fact that the headline CAP creativity metric (novelty vs. pool centroid) is intentionally out-of-band; quality-only scoring understates the construct CAP-Story is designed to measure."
+paper_url: "https://osf.io/preprints/psyarxiv/t63dm"
+reviewed_at: "2026-04-21"

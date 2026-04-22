@@ -1,0 +1,36 @@
+name: research_idea_execution
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Task re-specification (major): paper (arXiv:2506.20803) is an *execution* study — 43 expert researchers spent 100+ hours each executing assigned ideas into 4-page papers, which were then blind-reviewed. The scenario (scenarios/research_idea_execution_scenario.py:1-53) instead asks the model to *peer-review a structured idea* (pre-execution). The bench therefore measures review-writing on ideation-stage ideas, not execution-gap effects. Name 'research_idea_execution' is misleading."
+  - "Data source drift: paper's execution-study reviews live in Execution_Study_Data.zip (Google Drive) and cover executed papers on the 5-dim rubric. Scenario instead loads Ideation_Study_Human_Ideas.zip (file id 1Z2Nd7WNNks-eCoqUgPzx1_ovYqU8OiPx) plus a 10-idea GitHub fallback (ai_researcher/prompts/idea_examples_method.json), which are *ideation-stage* idea specs. Expert reviews referenced in annotator notes (data_points_all_anonymized.json, 398 records) only contain novelty_score + novelty_rationale, not the full 5-dim data (metric_notes/research_idea_execution_annotator_notes.md:68-82)."
+  - "Prompt faithfulness: the review prompt in scenarios/research_idea_execution_scenario.py:97-126 reproduces the Appendix A 5-dimension rubric (Novelty, Excitement, Feasibility, Expected Effectiveness, Overall on 1-10) with per-dimension rationale. The scenario docstring explicitly notes 'no LLM prompt specified in the paper; this scenario uses the evaluation rubric as the prompt basis' (scenario.py:33-34) — reasonable adaptation, but a fabrication-by-adaptation flag."
+  - "Metric drift (blocking): run_specs/research_idea_execution_run_specs.py:71-75 wires three generic llm_judge annotators (novelty, feasibility, quality) each on a 1-5 scale with custom rubrics (lines 15-46) that talk about 'research idea execution plan' quality. This has no correspondence to the paper's 5-dim 1-10 reviewer rubric and drops excitement, expected_effectiveness, overall entirely. Metric names ('llm_judge_quality') do not map to the paper."
+  - "Judge-rubric mismatch: the judge is asked to evaluate 'the generated research idea execution plan' (run_specs:15-46) but the model's output is a *peer review of an idea*, not an execution plan. The judge rubric therefore grades the wrong artifact class; this likely drives the low scores seen in display_predictions (mostly 3/5 novelty, 5/5 feasibility, 2-5/5 quality in gemma_4_26b output)."
+  - "Judge-config drift: single judge openai/gpt-4o at temperature 0.0, max_tokens 512 (run_specs:81-106). Paper used 58 human expert reviewers (avg h-index 7, 15 pubs) — no LLM judge disclosed. Using a single LLM judge is a necessary adaptation but not a jury; the richer annotator_notes judge prompt (metric_notes:23-64 with calibration/reasoning/specificity/coherence on 1-5) is *not* the rubric wired into run_specs."
+  - "Annotator-notes / run-specs divergence: metric_notes/research_idea_execution_annotator_notes.md:14-64 specifies a 4-dim review-quality judge (calibration, reasoning_quality, specificity, coherence on 1-5) referencing expert calibration data. run_specs instead implements three unrelated dims (novelty/feasibility/quality of an 'execution plan'). The documented annotator is not the one actually run."
+  - "metric_notes/research_idea_execution_eval_metrics_notes.md is effectively empty (1 line / 0 usable content) — no eval-metric documentation for the headline scores."
+  - "Adapter: max_tokens=512 (run_specs:66) is tight for a 5-dim review with rationales (~250-400 tokens observed in gemma_4_26b display_predictions); temperature=0.7 reasonable. No stop_sequences; input_suffix='\\n' appends a benign newline."
+  - "Output shape: gemma_4_26b display_predictions.json shows well-formatted 5-dim reviews with per-dim rationales matching the prompt spec; annotations resolve to 'generic_llm_judge_llm_judge_{novelty,feasibility,quality}' ints in 1-5. Shape is internally consistent with the (collapsed) metric wiring."
+  - "Dedup logic keeps only first occurrence of each idea by title (scenario.py:264-276); zip + 10 fallback ideas combined yields an unspecified instance count. No explicit max_instances gate — instance count will vary by Google Drive availability."
+fixes_before_run:
+  - severity: blocking
+    action: "Rename scenario or re-scope: either (a) rebuild around the actual execution study (4-page executed papers from Execution_Study_Data.zip, reviewer panel on 5-dim 1-10) — matching paper's namesake — or (b) rename to 'research_idea_peer_review' and align annotator rubrics with the 5-dim 1-10 ideation rubric the prompt already uses."
+  - severity: blocking
+    action: "Replace the three generic 1-5 annotators (novelty/feasibility/quality of an 'execution plan') with annotators that grade the generated *peer review* — either the paper's 5-dim 1-10 calibration check or the 4-dim review-quality rubric already documented in metric_notes/research_idea_execution_annotator_notes.md:14-64."
+  - severity: blocking
+    action: "Fix judge rubric wording in run_specs/research_idea_execution_run_specs.py:15-46: current text evaluates an 'execution plan' artifact not produced by the task; update to grade review calibration/reasoning on the actual 5-dim peer review output."
+  - severity: non-blocking
+    action: "Raise max_tokens from 512 to ~1024 to avoid truncating 5-dim reviews with rationales (gemma_4_26b outputs already approach the ceiling for the Overall rationale)."
+  - severity: non-blocking
+    action: "Populate metric_notes/research_idea_execution_eval_metrics_notes.md with the actual scoring pipeline; currently 0 bytes of content."
+  - severity: non-blocking
+    action: "Pin instance count (e.g., cap to N ideas after dedup) so scores are reproducible across runs given variable Google Drive download success."
+notes: "Input pipeline (5-dim 1-10 peer-review prompt, structured-idea field extraction, Google Drive + GitHub fallback loaders) is a faithful operationalisation of the paper's Appendix A rubric — though adapted: paper never specifies an LLM prompt. Evaluation pipeline is substantially misaligned: annotators ask an LLM judge to grade an 'execution plan' (artifact the task does not produce) on three 1-5 dims that do not exist in the paper. Scenario also conflates the ideation study (data loaded) with the execution study (paper title). Headline scores measure 'gpt-4o quality/novelty/feasibility rating of a peer review mis-labeled as an execution plan', not the paper's execution-gap metric. Paper full text beyond the abstract was not retrievable via WebFetch; cross-check leaned on the scenario docstring, annotator notes, and abstract."
+paper_url: "https://arxiv.org/abs/2506.20803"
+reviewed_at: "2026-04-21"

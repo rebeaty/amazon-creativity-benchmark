@@ -1,0 +1,31 @@
+name: idrbench
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Paper identity mismatch: scenarios/idrbench_scenario.py:4 cites arXiv:2507.15736 (Shen et al., 'Understanding LLMs' Ability on Interdisciplinary Research', three-task classification benchmark). metric_notes/idrbench_annotator_notes.md:3 instead cites arXiv:2601.06676 (Feng et al., 'IDRBench: Interactive Deep Research Benchmark', a long-form report-generation benchmark). The annotator notes describe a completely different benchmark (15 questions, Accuracy/Completeness/Coherence/Citations 1-5 Likert, GPT-4 judge) that is irrelevant to the implemented IPI/I3/I2R classification scenario."
+  - "Default run spec (run_specs/idrbench_run_specs.py:17) invokes IDRBenchScenario() with no args, so only task='IPI', level='level_1' runs. The I3 (level_1, level_2) and I2R (level_1, level_2) tasks defined in scenarios/idrbench_scenario.py:122-127 are never executed — 4 of 5 dataset splits are silently skipped."
+  - "Metrics drift: run_specs/idrbench_run_specs.py:35 uses BasicGenerationMetric with exact_match/quasi_exact_match/f1_score/rouge_l/bleu_1/bleu_4. Paper's IPI task is a Yes/No classification (accuracy / macro F1), plus a multi-label subject tag and confidence. Because the scenario emits a templated 3-line string ('Your verdict: Yes\\nConfidence score: 95\\nSubject: [...]') and the Reference is bare 'Yes'/'No' (scenario line 354-356), exact_match will be ~0 across the board; ROUGE-L/BLEU are meaningless for a classification label. No verdict-extraction parser is wired up."
+  - "I2R gold-label logic is explicitly flagged as a placeholder: scenarios/idrbench_scenario.py:443-450 always marks 'Paper 1' as correct when any target_paper id exists, with the comment 'Simplified matching logic' and 'would need refinement'. This yields a systematically wrong label distribution; any I2R accuracy is uninterpretable."
+  - "No LLM judge is configured (annotators=None in run_spec), yet metric_notes/idrbench_annotator_notes.md documents a 4-dimension GPT-4 jury. The notes and the run spec are disconnected; even setting aside that the notes describe the wrong benchmark, no annotator is wired in."
+  - "Adapter temperature=0.7 (run_specs/idrbench_run_specs.py:30) for a deterministic Yes/No classification task introduces unnecessary sampling noise; paper uses standard decoding for classification."
+  - "Output shape sanity: display_predictions.json (gemini_flash, gemma_3_27b) show well-formed outputs strictly following the 'Your verdict: / Confidence score: / Subject: [...]' template, so prompt formatting is being respected by models. This is the strongest signal the IPI prompt is faithful."
+  - "Could not fully verify verbatim prompt wording against Appendix A.2.3 (arxiv PDF fetch failed); docstring claims 'exact from paper' but template lines around output format ('Use the template... with no markdown...') in scenario lines 250-256 are scenario-authored scaffolding that may deviate from the paper."
+fixes_before_run:
+  - severity: blocking
+    action: "Rewrite metric_notes/idrbench_annotator_notes.md to describe the correct paper (arXiv:2507.15736, Shen et al.) — the current notes reference a different IDRBench (2601.06676) and will mislead reviewers."
+  - severity: blocking
+    action: "Replace BasicGenerationMetric with a task-appropriate metric: parse 'Your verdict:' line from predicted_text, compare to y_true, and report accuracy + macro-F1 for IPI and I3; parse 'Your choice:' for I2R. Current exact_match/BLEU/ROUGE on free-text will report ~0 and is not informative."
+  - severity: blocking
+    action: "Fix I2R gold-label assignment in scenarios/idrbench_scenario.py:443-450. Match candidates[0/1] against target_paper['id'] explicitly rather than always tagging Paper 1."
+  - severity: non-blocking
+    action: "Expose task and level as run_spec args so I3 (level_1/level_2) and I2R (level_1/level_2) can actually be evaluated; currently only IPI level_1 runs."
+  - severity: non-blocking
+    action: "Drop temperature to 0.0 for the classification tasks to match deterministic Yes/No evaluation conventions."
+notes: "Scenario code structure (prompts, subject list, IDR definition, standards) lines up with the arXiv:2507.15736 task design and the display_predictions outputs show models complying with the template. However, the run_spec wires wrong metrics to free-text outputs, only exercises 1 of 5 splits, has a broken I2R label heuristic, and ships annotator notes that belong to a different paper with the same name. Not safe to run as a faithful IDRBench reproduction until metrics parsing and I2R labels are fixed; as-is, IPI results would be near-zero exact_match noise."
+paper_url: "https://arxiv.org/abs/2507.15736"
+reviewed_at: "2026-04-21"

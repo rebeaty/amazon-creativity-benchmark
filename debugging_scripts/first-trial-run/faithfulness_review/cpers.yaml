@@ -1,0 +1,29 @@
+name: cpers
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Judge model is openai/gpt-4o (cpers_run_specs.py:59), paper specifies Claude 3.7 Sonnet validated via ICC (cpers_annotator_notes.md:13-14)."
+  - "Rubric is a single generic 1-5 literary quality scale (cpers_run_specs.py:15-24); paper prescribes 4 TTCT dimensions x 3 questions (12 items) + rhetorical device detection (cpers_annotator_notes.md:22-97)."
+  - "No rhetorical device annotator (simile/metaphor/hyperbole/antithesis) despite being a core paper finding (cpers_annotator_notes.md:71-97)."
+  - "Full 4,371-item test split is used (cpers_scenario.py:95); paper's human-validated subset is 200 texts; unclear whether full set was scored by the judge in the paper."
+  - "Extra BasicGenerationMetric (exact_match/bleu/rouge) is irrelevant for open-ended creative generation (cpers_run_specs.py:50)."
+  - "cpers_eval_metrics_notes.md is empty (1 line)."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace single-score rubric with the 12-question TTCT scoring prompt from cpers_annotator_notes.md:104-161 and parse dimension averages + overall_creativity."
+  - severity: blocking
+    action: "Add (or swap in) a rhetorical device annotator emitting per-device binary labels per cpers_annotator_notes.md:165-185."
+  - severity: non-blocking
+    action: "Switch judge_model_name to Claude 3.7 Sonnet (or document the substitution and re-run ICC validation)."
+  - severity: non-blocking
+    action: "Drop exact_match/bleu/rouge BasicGenerationMetric; add TTCT dimension-level metrics and device distribution stats."
+  - severity: non-blocking
+    action: "Populate cpers_eval_metrics_notes.md with numeric metric definitions."
+notes: "Scenario loading, Persian prompt template, and temperature=1 align with the paper. However the judge pipeline is materially different: a generic English 1-5 literary-quality rubric with GPT-4o replaces the paper's 12-item TTCT protocol plus rhetorical device detection validated against Claude 3.7 Sonnet. Predictions look sane (Persian text, 1-5 integer scores) but the scores are not the paper's metric."
+paper_url: "https://arxiv.org/abs/2509.18401"
+reviewed_at: "2026-04-21"

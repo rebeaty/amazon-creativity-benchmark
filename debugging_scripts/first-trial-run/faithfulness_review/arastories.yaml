@@ -1,0 +1,24 @@
+name: arastories
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Judge is split into 5 separate per-dimension annotator calls with custom rubrics (run_specs/arastories_run_specs.py:88-147), but paper uses a single GPT-4 call scoring all 5 dimensions at once with the exact template in metric_notes/arastories_annotator_notes.md:13-23."
+  - "Custom 1-5 rubrics per dimension (run_specs/arastories_run_specs.py:15-63) are not from the paper; paper gives dimension definitions only and asks for 'scores directly without explanations'."
+  - "Full dataset is ~2,996 instances across 3 dialects (scenarios/arastories_scenario.py:20-22); paper's test subset is 20 prompts/dialect — running full set is a superset but may inflate judge cost."
+  - "metric_notes/arastories_eval_metrics_notes.md is empty (0 lines) — no eval-metrics spec documented."
+  - "Adapter max_tokens=512, temp=0.7 (run_specs/arastories_run_specs.py:83-84) not verified against paper generation config."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Document that judge is per-dimension (not single-call as in paper) so scores are not directly comparable to paper numbers."
+  - severity: non-blocking
+    action: "Consider subsampling to 20 prompts/dialect to match paper's eval budget, or accept higher cost for full-set coverage."
+  - severity: non-blocking
+    action: "Populate metric_notes/arastories_eval_metrics_notes.md with aggregation strategy (mean per dimension, per dialect)."
+notes: "Scenario loads dataset correctly and uses dataset prompts verbatim; judge model and 5 dimensions match paper. Drift is in judge-call structure (per-dimension vs single-call) and custom rubrics not present in paper. Sample predictions show well-formed Arabic stories with all 5 integer 1-5 annotations populated — safe to run at full scale."
+paper_url: "https://arxiv.org/abs/2407.07551"
+reviewed_at: "2026-04-21"

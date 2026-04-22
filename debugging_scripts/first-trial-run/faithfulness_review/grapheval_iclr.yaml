@@ -1,0 +1,44 @@
+name: grapheval_iclr
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Primary metrics missing: paper evaluates the ICLR Papers task with classification metrics — accuracy, macro precision, macro recall, and macro F1 over the four decision classes (Reject / Accept Poster / Accept Oral / Accept Spotlight), confirmed via arxiv.org/html/2503.12600v2 experimental setup and GitHub README ('accuracy, precision, recall, and F1 Score'). run_specs/grapheval_iclr_run_specs.py:49-51 registers only GenericLLMJudgeMetric (llm_judge_quality, 1-5 Likert over 'review quality'). No accuracy/F1 against the gold 'decision' label is computed despite scenarios/grapheval_iclr_scenario.py:110 attaching the correct decision as a CORRECT_TAG reference."
+  - "Decoding temperature mismatch: paper's hyperparameter config uses temperature=0.1 ('conservative, deterministic') for the LLM baseline call. run_specs line 46 hard-codes temperature=0.7, which substantially increases variance on a 4-class decision task and will degrade accuracy vs paper-reported numbers. This is the same triple-variant concern noted for the sister grapheval_* scenarios: each run_spec picked 0.7 independently without consulting the shared GraphEval hyperparameter table."
+  - "Judge rubric irrelevant to task: _RUBRIC_LLM_JUDGE_QUALITY (run_specs lines 15-24) scores 'accuracy of evaluation, depth of technical understanding, quality of review reasoning' on 1-5. But the model only emits 'Overall Score= N\\n<Decision>' per the scenario prompt (lines 79-86) — there is no review prose to judge for 'depth' or 'reasoning'. Every sampled prediction across gemini-2.5-pro, gemini-2.5-flash, gemma-3-27b display_predictions.json is exactly two lines: score line + decision line. The judge is scoring an artifact that does not contain the content its rubric evaluates, which explains the degenerate 1-4 score spread observed in annotations."
+  - "Judge model legacy: run_specs pins judge_model_name='openai/gpt-4' (deprecated legacy 8k). Same issue as future_ideas / grapheval_ai_researcher — upgrade to gpt-4o or gpt-4-turbo."
+  - "Output shape observed: clean and compliant. predicted_text across all inspected runs is of the form 'Overall Score (0-100)= NN\\n<one of 4 decisions>'. This IS the paper's required format (confirmed via basic_prompt.txt content). Predictions ARE parseable into (score, decision); scenario simply never parses them. gemma-3-27b shows heavy mode-collapse onto 'Accept (Poster)' (matches sister-benchmark pattern); gemini-2.5-pro shows wider spread across all four classes. This heterogeneity would be visible in macro-F1 but is invisible under the current llm_judge_quality metric."
+  - "Data split / prompt: scenario loads the official ICLR_test_set.jsonl (50 papers) from the ulab-uiuc/GraphEval repo (scenario lines 38, 90), matches paper's 50-paper test split. SYSTEM_PROMPT (scenario lines 41-86) is a verbatim copy of Baselines/Prompt/basic_prompt.txt — confirmed by WebFetch. max_train_instances=0 is correct (paper uses the same zero-shot prompt with 4 in-prompt examples; no external few-shot demos). This part is faithful."
+  - "Minor: max_tokens=512 is more than adequate — observed outputs are <20 tokens. No truncation risk here, unlike future_ideas."
+fixes_before_run:
+  - severity: blocking
+    action: "Add a classification metric that parses predicted_text with a regex like r'(Reject|Accept \\(Poster\\)|Accept \\(Oral\\)|Accept \\(Spotlight\\))' and compares to the reference decision. Report accuracy + macro-F1 (and optionally macro-precision/recall) to match the paper's reported metrics. This is the authoritative evaluation for this scenario."
+  - severity: blocking
+    action: "Lower temperature from 0.7 to 0.1 to match the paper's hyperparameter setting. At 0.7 the 4-class decision is noisy and non-comparable to paper-reported baseline numbers."
+  - severity: non-blocking
+    action: "Drop or repurpose the llm_judge_quality metric. The prompt does not elicit a reviewable artifact (no rationale text), so an LLM judge scoring 'depth of reasoning' is measuring nothing. If a secondary metric is wanted, use score-decision-consistency (does the numeric score agree with the stated decision under the paper's implicit mapping?) as an auxiliary check."
+  - severity: non-blocking
+    action: "Upgrade judge_model_name to 'openai/gpt-4o' if the llm-judge path is retained."
+  - severity: non-blocking
+    action: "Consider also reporting score-level metrics (MAE / Spearman-r between predicted 0-100 score and a score derived from the gold decision rank) since the model emits both a score and a class — free secondary signal that's currently discarded."
+notes: |
+  Paper cross-check: https://arxiv.org/abs/2503.12600 (GraphEval; Feng, Sun, You, 2025).
+  Verified via arxiv HTML v2 experimental-setup section and GitHub README:
+    - 50-paper ICLR test set (matches scenario)
+    - temperature=0.1 for LLM calls (scenario uses 0.7 — MISMATCH)
+    - metrics = accuracy + macro-P/R/F1 (scenario uses LLM-judge Likert — MISMATCH)
+    - basic_prompt.txt verbatim reproduced in scenario SYSTEM_PROMPT (MATCH)
+  Sister-scenario concern: this is the third of three GraphEval-family scenarios that independently
+  picked temperature=0.7 and an LLM-judge-quality metric in place of the paper's F1/accuracy. The
+  pattern suggests a shared template was copy-pasted across grapheval_ai_researcher /
+  grapheval_iclr / grapheval_review_advisor without per-scenario metric adaptation. A single fix
+  to the classification-metric path in this file can be ported to the other two.
+  Dataset fields used (paper_id, title, abstract, decision) and skipped (keywords, ratings, year)
+  are correct for the basic-prompt baseline. Labels observed in test JSONL match paper's 4-way
+  decision taxonomy.
+paper_url: "https://arxiv.org/abs/2503.12600"
+reviewed_at: "2026-04-21"

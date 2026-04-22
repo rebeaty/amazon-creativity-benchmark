@@ -1,0 +1,28 @@
+name: pron_vs_prompt
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: partial
+gaps:
+  - "Rubric scale mismatch vs paper: paper/annotator_notes use 0-3 per dimension (relevance 0-4, literary 0/1) grounded in Boden's novelty/surprise/value. run_specs/pron_vs_prompt_run_specs.py:15-46 redefines each dimension on a 1-5 scale, changing both range and anchor semantics. metric_notes/pron_vs_prompt_eval_metrics_notes.md is empty (0 bytes), so no cross-reference documents this drift."
+  - "Rubric content drift: run_spec rubric text frames output as 'promotional or advertising text' (pron_vs_prompt_run_specs.py:16, 27, 38) rather than a ~600-word literary movie-synopsis — wrong task framing for the judge."
+  - "Missing rubric dimensions: paper uses 5 dimensions (attractiveness, originality, relevance, creativity, literary/critic). run_specs registers only 3 (attractiveness, originality, creativity); relevance and literary-quality/anthology/own-voice are dropped (pron_vs_prompt_run_specs.py:71-107)."
+  - "Judge model: run_spec uses openai/gpt-4 at temperature 0.0 (pron_vs_prompt_run_specs.py:81-83); annotator_notes.md:15 recommends GPT-4o. Paper itself used 3 human expert critics, not any LLM — LLM-as-judge is an acknowledged adaptation."
+  - "max_tokens=512 (pron_vs_prompt_run_specs.py:66) truncates ~600-word target: observed outputs in display_predictions.json end mid-sentence (e.g., id26 'dissolving into', id35 'the', id11 'He') for both gemini-2.5-pro and gemma-3-27b — no synopsis reaches the required length."
+  - "Prompt fidelity: scenarios/pron_vs_prompt_scenario.py:66-82 reproduces the GPT-4 English system+user prompt verbatim from 0_GPT4_prompts.ipynb; 60 titles loaded from canonical CSV with language='en' / title_origin='all' defaults — faithful."
+  - "Output shape: judge returned integer scores in {4,5} with near-zero variance across instances in both sampled runs, consistent with a 1-5 scale but providing little discrimination — may reflect both truncation and rubric mismatch."
+fixes_before_run:
+  - severity: blocking
+    action: "Raise max_tokens to ~1200-1500 so models can produce the ~600-word synopsis the prompt asks for; current 512 guarantees truncation and invalidates literary-quality judgments."
+  - severity: blocking
+    action: "Rewrite judge rubrics in run_specs/pron_vs_prompt_run_specs.py to match the paper's 0-3 scale, novel/literary (not 'promotional/advertising') framing, and add the missing Relevance (0-4) and Literary-quality (0/1 anthology + own_voice) dimensions from annotator_notes.md:20-89."
+  - severity: non-blocking
+    action: "Populate metric_notes/pron_vs_prompt_eval_metrics_notes.md with the agreed metric definitions (currently empty) so the judge implementation has a canonical spec to track."
+  - severity: non-blocking
+    action: "Upgrade judge_model_name from openai/gpt-4 to openai/gpt-4o to match annotator_notes.md recommendation, or document the deliberate choice."
+notes: "Prompt and data pipeline are a faithful port of the paper's English condition (60 titles, verbatim system+user text). Evaluation layer diverges substantially: rubric scale (1-5 vs 0-3), rubric framing ('advertising' vs literary synopsis), and dropped dimensions (relevance, literary quality) mean current scores are not comparable to the paper's human-expert results. Compounded by max_tokens=512 truncation, runs cannot validly measure literary quality of ~600-word synopses. Safe as a generation probe once token cap and rubric are fixed; not a reproduction of the paper's findings. Paper PDF was not directly retrievable; cross-check used arXiv abstract, GitHub rubric.json summary in annotator_notes, and two display_predictions.json samples (gemini-2.5-pro, gemma-3-27b)."
+paper_url: "https://arxiv.org/abs/2407.01119"
+reviewed_at: "2026-04-21"

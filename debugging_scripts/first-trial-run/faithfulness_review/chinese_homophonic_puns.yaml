@@ -1,0 +1,23 @@
+name: chinese_homophonic_puns
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "run_specs/chinese_homophonic_puns_run_specs.py:35 uses BasicGenerationMetric (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4) instead of paper's custom SequenceMatcher+fuzzywuzzy fuzzy-similarity metric"
+  - "metric_notes/chinese_homophonic_puns_eval_metrics_notes.md is empty (0 lines) — metric spec undocumented"
+  - "run_specs/chinese_homophonic_puns_run_specs.py:30 temperature=0.7 is noisy for a deterministic short-extraction task (paper implies greedy/0-shot extraction)"
+  - "annotator_notes.md (line 49-53) explicitly warns standard exact_match and BLEU/ROUGE are inappropriate for Chinese 2-4 char extraction, yet run_spec uses exactly those"
+fixes_before_run:
+  - severity: blocking
+    action: "Implement custom fuzzy-similarity metric (SequenceMatcher + fuzzywuzzy.fuzz.ratio, max) per evaluatePunchline.py; replace BasicGenerationMetric"
+  - severity: non-blocking
+    action: "Lower temperature to 0.0 for deterministic extraction"
+  - severity: non-blocking
+    action: "Populate empty eval_metrics_notes.md file"
+notes: "Prompt faithfully adapted from DuanzAI prompt.py zero-shot task_1 template; dataset loads full 1000 examples from the official GitHub raw task_1.json. Outputs across Gemini/Gemma runs produce clean 2-4 char Chinese predictions matching expected shape. Primary gap is metric: paper's fuzzy-similarity scoring is not implemented and standard HELM metrics are known-inappropriate (noted by the annotator notes themselves)."
+paper_url: "https://arxiv.org/abs/2405.15818"
+reviewed_at: "2026-04-21"

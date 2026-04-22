@@ -1,0 +1,46 @@
+name: noveltybench
+verdict: DIVERGENT
+checks:
+  - id: dataset_source
+    description: Loads yimingzhang/novelty-bench from HuggingFace with curated + wildchat splits
+    status: PASS
+    evidence: "scenarios/noveltybench_scenario.py uses load_dataset('yimingzhang/novelty-bench'); default subset='all' yields curated (100) + wildchat (1000)"
+  - id: multi_generation
+    description: Paper requires N distinct outputs per prompt (typically 10) via sampling
+    status: FAIL
+    evidence: "display_predictions.json shows only train_trial_index=0 (single generation per instance). AdapterSpec sets num_outputs=10, but HELM ADAPT_GENERATION treats num_outputs as n completions; output shows only 1 prediction per instance_id — either n-sampling did not execute or display truncates to first. Must verify actual n generations were requested and persisted."
+  - id: sampling_params
+    description: "Temperature > 0 (paper: 0.7-1.0), max_tokens sufficient for completions"
+    status: WARN
+    evidence: "temperature=0.7 OK; max_tokens=512 likely too short (observed outputs truncated mid-sentence, e.g. '**Limitation' cutoff); paper does not cap so aggressively"
+  - id: diversity_metric
+    description: Pairwise distinctness via deberta-v3-large classifier trained on 1k human pairs
+    status: FAIL
+    evidence: "run_specs uses BasicGenerationMetric(exact_match) as TODO fallback; no diversity classifier, no Skywork reward model, no pairwise scoring implemented"
+  - id: quality_metric
+    description: Per-output quality via Skywork-Reward-Gemma-2-27B
+    status: FAIL
+    evidence: "No reward model annotator or metric in run_specs; annotators=None"
+gaps:
+  - "No diversity classifier metric (core paper contribution missing)"
+  - "No quality reward model metric"
+  - "Only single generation per instance in current run output (n=10 not materialized)"
+  - "max_tokens=512 truncates long-form WildChat completions"
+  - "annotator_notes.md is empty (1 line)"
+  - "Cannot reach full paper text to confirm exact N, temperature, max_tokens"
+fixes_before_run:
+  - severity: CRITICAL
+    action: "Implement diversity annotator using deberta-v3-large functional-equivalence classifier (or official novelty-bench repo scorer); compute % distinct pairs across N generations"
+  - severity: CRITICAL
+    action: "Ensure N=10 generations are actually persisted per instance (verify HELM num_outputs propagates to OpenRouter sampling; currently display_predictions shows only 1 per instance_id)"
+  - severity: HIGH
+    action: "Add Skywork-Reward quality metric (or documented fallback) per DARLING protocol"
+  - severity: HIGH
+    action: "Raise max_tokens to >=1024 (or 2048 for WildChat) to avoid mid-sentence truncation that inflates apparent similarity"
+  - severity: MEDIUM
+    action: "Populate noveltybench_annotator_notes.md (currently empty)"
+  - severity: LOW
+    action: "Confirm paper's exact N, temperature from PDF/code before freezing spec"
+notes: "Current implementation is a data-loading shell only: prompts load correctly but neither the diversity classifier nor the quality reward model exists, and the run captured a single generation per prompt rather than the N=10 sample needed for pairwise diversity. Verdict DIVERGENT because core evaluation metrics are entirely absent and multi-generation contract is unmet."
+paper_url: https://arxiv.org/abs/2504.05228
+reviewed_at: "2026-04-21"

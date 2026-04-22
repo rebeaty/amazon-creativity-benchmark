@@ -1,0 +1,35 @@
+name: banner_request_400
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "run_specs/banner_request_400_run_specs.py:15-24 uses a single generic `llm_judge_quality` rubric instead of the paper's 6 dimensions (TAA/LPS/AQS/CTAE/CPYQ/BIS) documented in metric_notes/banner_request_400_annotator_notes.md:9"
+  - "run_specs/banner_request_400_run_specs.py:59 sets judge_temperature=0.0, but annotator_notes.md:10 specifies 0.3 per paper eval.py"
+  - "metric_notes/banner_request_400_eval_metrics_notes.md is 0 bytes (empty) — eval metrics notes never written"
+  - "scenarios/banner_request_400_scenario.py:46-74 uses a home-grown TASK_PROMPT rather than the paper's prompts/foreground_designer_prompt.py verbatim"
+  - "display_predictions show generic/irrelevant outputs across multiple models (gemini_flash returns identical 'too vague' stub for every instance; gemini_pro returns a kitchen-photo description) — logo image and/or prompt text is not reaching the model correctly"
+  - "run_specs/banner_request_400_run_specs.py:44 max_tokens=512 is too small for a full JSON blueprint with elements array"
+  - "run_specs temperature=0.7 (line 45) for a structured JSON generation task is likely too high"
+  - "scenarios/banner_request_400_scenario.py:107 iterates every advertiser x 4 pairs with no subsampling — this yields ~400 instances and is fine for the 400 name, but no max_eval_instances guard"
+fixes_before_run:
+  - severity: blocking
+    action: "Investigate why display_predictions contain generic/off-task responses for multiple models; verify MultimediaObject logo image is being sent and TASK_PROMPT is rendered before full run"
+  - severity: blocking
+    action: "Replace single _RUBRIC_LLM_JUDGE_QUALITY with six AnnotatorSpecs (TAA/LPS/AQS/CTAE/CPYQ/BIS) using rubrics in annotator_notes.md, and corresponding MetricSpecs, to match paper"
+  - severity: blocking
+    action: "Increase max_tokens well beyond 512 (paper outputs are multi-element JSON blueprints, likely 1500-3000+ tokens)"
+  - severity: non-blocking
+    action: "Set judge_temperature=0.3 to match paper eval.py"
+  - severity: non-blocking
+    action: "Lower generation temperature from 0.7 toward 0.2 for structured JSON output"
+  - severity: non-blocking
+    action: "Populate metric_notes/banner_request_400_eval_metrics_notes.md (currently empty)"
+  - severity: non-blocking
+    action: "Either use the paper's foreground_designer_prompt.py verbatim or document the deviation explicitly"
+notes: "Scenario loads data and splits cleanly (TEST_SPLIT only, ~400 instances), and the shared-cache patch (fa01ec93/e62d9976) looks correct. But the run spec collapses the paper's 6-dimension LLM-jury into one generic rubric, and existing trial predictions show the model isn't producing banner blueprints at all — suggesting a broken prompt/image pipeline that would invalidate any full-scale run tomorrow. Do not launch until outputs are verified on-task."
+paper_url: "https://arxiv.org/abs/2503.11060"
+reviewed_at: "2026-04-21"

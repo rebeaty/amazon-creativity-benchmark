@@ -1,0 +1,33 @@
+name: historical_analogy
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: partial
+gaps:
+  - "Prompt adaptation: scenarios/historical_analogy_scenario.py:88-101 uses a one-shot template with COVID-19 -> Spanish flu as the exemplar. The paper/direct_generation.py repo page could not be fetched to verify exact wording (GitHub blob 404 on raw and HTML views), so one-shot vs. zero-shot fidelity is unverified. Annotator notes describe a zero-shot 'You are a historical analogy bot...' framing; the embedded one-shot example may leak Spanish flu (which is the id0 ground-truth-adjacent COVID-19 target) to the model for that specific instance."
+  - "Metric scale drift: run_specs/historical_analogy_run_specs.py:15-24 defines a 1-5 Likert rubric (judge_score_analogy), but the paper's abstract-similarity judge uses a 1-4 scale with specific anchor semantics (same-topic/same-situation distinctions) documented in metric_notes/historical_analogy_annotator_notes.md:36-46. Observed judge_score_analogy values include 5 (benchmark_output/runs/gemini_pro/.../display_predictions.json:10), confirming the 1-5 scale is in use and not reproducing the paper's 1-4 scoring."
+  - "Rubric content differs: paper's judge prompt emphasizes abstract-level similarity (not surface), warns against self-analogy, and scores the 'Process' component of structured Wikipedia-derived summaries (metric_notes/historical_analogy_annotator_notes.md:26-76, 83-90). run_specs rubric asks for 'historical accuracy, appropriateness, insightfulness, persuasiveness' of the analogy in general, a different construct than paper's abstract-process similarity."
+  - "Missing Pass@1 metric: paper's headline metric is Pass@1 via Wikipedia variant matching (metric_notes/historical_analogy_annotator_notes.md:14-18); run_specs/historical_analogy_run_specs.py:49-51 only registers the LLM-judge score. No Jaccard keyword similarity is computed either."
+  - "Missing pre-processing pipeline: paper scores on Wikipedia-summary 4-part features (Summary/Background/Process/Result) extracted by GPT-4 before judging (metric_notes:83-90). The scenario feeds only the raw predicted_text (often the event name alone or runaway generation) and the target_event name as Reference; no feature extraction step."
+  - "Judge model: run_specs uses openai/gpt-4 with temperature=0.0 matching the paper's GPT-4 at ~0 temperature; judge_max_new_tokens=256 is adequate for a single integer score."
+  - "Output shape issue: display_predictions show frequent runaway generations where the model echoes the next case's Input Event verbatim instead of emitting an analogy (e.g. id2/id3 in both gemini_pro and gemma_3_27b runs: predicted_text is the Russian Revolution or Russian interference intro text, scored 1). No stop_sequences are set (run_specs:46), and max_tokens=512 with temperature=0.7 lets the one-shot format drift. The judge then correctly scores these non-answers as 1, but the benchmark is measuring prompt-format failure rather than analogy quality for those instances."
+  - "Dataset size/fields match paper: 20 popular analogies, fields event_name/event_intro/target_event (scenarios:67-78); annotator notes claim an event_type field that does not exist in the repo JSONL (benign documentation drift)."
+fixes_before_run:
+  - severity: blocking
+    action: "Align the rubric scale to paper's 1-4 with anchors from metric_notes/historical_analogy_annotator_notes.md:36-46, or explicitly document the 1-5 deviation. Current 1-5 scores are not comparable to paper results."
+  - severity: blocking
+    action: "Add stop_sequences=['==== case', '\\nInput Event:'] (or remove the one-shot example) in run_specs/historical_analogy_run_specs.py:46 to prevent models from continuing the few-shot format and regurgitating next-case inputs as their 'answer'."
+  - severity: high
+    action: "Implement Pass@1 via Wikipedia variant match as a second metric; it is the paper's primary headline number alongside abstract similarity."
+  - severity: high
+    action: "Reword the judge rubric to score abstract-level similarity between predicted and target analogies (not free-form historical quality), mirroring metric_notes/historical_analogy_annotator_notes.md:26-55. Pass the target_event reference into the judge input."
+  - severity: medium
+    action: "Consider lowering generation temperature (paper uses direct generation, likely temp<=0.3) or at least noting the 0.7 deviation; higher temperature inflates format-drift errors seen in display_predictions."
+  - severity: non-blocking
+    action: "Remove event_type mention from annotator notes or confirm against the live JSONL (only 3 fields exist per WebFetch of the dataset page)."
+notes: "Scenario correctly pulls the 20-item popular_analogy.jsonl and uses the right 3 fields. Key faithfulness issues are: (1) rubric scale changed from 1-4 to 1-5 with different anchors, (2) Pass@1/Wikipedia metric and Jaccard metric are not implemented, (3) the one-shot prompt plus no stop_sequences is causing runaway outputs that auto-score 1 and pollute the metric, and (4) judge rubric measures a different construct than the paper. Full-paper PDF fetch returned binary; cross-check relied on ACL Anthology abstract, GitHub repo landing page, and the local metric_notes which paraphrase evaluation.py. Safe as an exploratory analogy-quality probe; not a faithful reproduction of the paper's scores."
+paper_url: "https://aclanthology.org/2025.acl-long.200/"
+reviewed_at: "2026-04-21"

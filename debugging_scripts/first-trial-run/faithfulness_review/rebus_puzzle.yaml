@@ -1,0 +1,78 @@
+name: rebus_puzzle
+verdict: DIVERGENT
+paper_url: https://arxiv.org/abs/2505.23759
+reviewed_at: "2026-04-21"
+checks:
+  prompt:
+    status: FAITHFUL
+    detail: >
+      Scenario uses the exact PROMPT string from solvers/utils.py in the
+      Kyunnilee/visual_puzzles GitHub repo, requesting a JSON object with
+      'answer' and 'reasoning' keys.
+  data_split:
+    status: FAITHFUL
+    detail: >
+      Loads all 432 puzzles from HuggingFace (Kyunnilee/visual-puzzles, train
+      split) matched against answers.json from GitHub. All assigned TEST_SPLIT.
+      Optional skill-category subset filter supported.
+  metric:
+    status: MOSTLY_FAITHFUL
+    detail: >
+      Paper uses exact-match accuracy (case/space-insensitive) with LLM-judge
+      fallback. Run spec computes exact_match, quasi_exact_match, f1, rouge_l,
+      bleu, plus GPT-4o judge on a 1–5 rubric. Superset of paper metrics;
+      headline metric is ambiguous.
+  judge:
+    status: MOSTLY_FAITHFUL
+    detail: >
+      Uses openai/gpt-4o at temperature 0.0 with a 5-point correctness rubric.
+      Paper's judge prompt is a binary correct/incorrect comparison against
+      ground truth; this scenario's rubric does not reference the ground-truth
+      answer inside the rubric text, so the judge relies on implicit knowledge.
+  output_shape:
+    status: DIVERGENT
+    detail: >
+      All inspected display_predictions.json files (gemini-2.5-flash,
+      gemini-2.5-pro, gemini-3-pro-preview) show IDENTICAL predicted_text
+      across every instance and empty base64_images arrays. Models are
+      responding as if no image were attached ("message came through blank",
+      generic description). Image MediaObject is not being delivered to the
+      model at inference time, and every judge score is 1.
+gaps:
+  - Images not reaching models at inference; predictions degenerate and
+    identical across instances for Gemini family runs.
+  - base64_images is empty in display_predictions.json even though scenario
+    constructs MediaObject with image/png location.
+  - LLM-judge rubric omits the ground-truth answer reference, so judge cannot
+    reliably score correctness.
+  - Generation temperature 0.7 diverges from paper's greedy/deterministic
+    decoding for accuracy evaluation.
+  - Metric suite (EM + QEM + F1 + ROUGE + BLEU + 1–5 judge) is broader than
+    the paper's accuracy metric; headline metric unclear.
+fixes_before_run:
+  - severity: CRITICAL
+    action: >
+      Debug MediaObject image delivery. Verify temp_image_path resolves and
+      that the HELM client for Gemini/Gemma encodes image files into the
+      request. Confirm base64_images populates in display_predictions.json on
+      a 2-instance smoke test before any full run.
+  - severity: HIGH
+    action: >
+      Inject the ground-truth answer into the judge rubric (or switch to a
+      binary correct/incorrect prompt referencing the reference) so the judge
+      scores against truth rather than a priori knowledge.
+  - severity: MEDIUM
+    action: >
+      Lower temperature to 0.0 and align max_tokens with paper settings to
+      match deterministic evaluation conventions for accuracy tasks.
+  - severity: LOW
+    action: >
+      Designate a primary headline metric (exact_match or judge) in run spec
+      / leaderboard config to match paper reporting.
+notes: >
+  Paper is "Puzzled by Puzzles: When Vision-Language Models Can't Take a Hint"
+  (arXiv:2505.23759), Kyunnilee et al. The scenario's prompt, dataset, and
+  skill taxonomy faithfully mirror the released code, but predictions across
+  three inspected model runs are identical degenerate strings, indicating a
+  systemic image-delivery failure at inference; results from any completed
+  run are not interpretable until that is fixed.

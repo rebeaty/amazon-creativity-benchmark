@@ -1,0 +1,31 @@
+name: thenextchapter
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "Prompt drift: The paper (Xie et al., INLG 2023, arxiv:2301.09790) passes conditions directly to models without an instruction wrapper for the LLM baselines (e.g., GPT-3 Davinci is fed the raw condition). scenarios/thenextchapter_scenario.py:67-80,129 prepends subset-specific English instructions ('Continue the following story in a few sentences:', 'Write a short story based on the following prompt:', 'Continue the following news article:'). This is a reasonable modern adaptation but is an added instruction not present in the paper. Docstring acknowledges this (lines 32-33, 'no prompt specified in paper')."
+  - "Metric mismatch vs. paper intent: run_specs/thenextchapter_run_specs.py:35 registers exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4. The paper's headline evaluation is human rating on five 1-5 dimensions (fluency, coherence, relatedness, logicality, interestingness) plus automatic BLEU/ROUGE/METEOR/diversity. EM and QEM are vacuous for open-ended story generation (will be ~0). No LLM-as-judge annotator is wired up despite metric_notes/thenextchapter_annotator_notes.md specifying a complete 5-dimension judge prompt + calibration plan."
+  - "Annotator not registered: annotators=None in run_specs/thenextchapter_run_specs.py:44, yet metric_notes/thenextchapter_annotator_notes.md documents a full GPT-4 judge protocol with 5 dimensions and pre-scored calibration items in HumanEvaluation/inhouse and HumanEvaluation/crowdsource. The judge plan is specified but not executed."
+  - "Empty eval_metrics_notes: metric_notes/thenextchapter_eval_metrics_notes.md exists but is empty (1 line / empty file). No documented rationale for the chosen automatic metrics or deviation from paper."
+  - "Subset coverage and sizes: scenario exposes roc (800), wp (1000), cnn (600) which match the paper's sample_human.txt sizes. No max_instances cap in the run_spec; full sweep is ~2400 instances per subset combination. Reasonable, but not sampled."
+  - "[MALE]/[FEMALE]/[NEUTRAL] placeholders: roc subset conditions contain gender placeholders passed verbatim to the model. Paper also passed these as-is; faithful. Worth noting for judge prompts (annotator notes mention this)."
+  - "Generation config: max_tokens=512, temperature=0.7, num_outputs=1, zero-shot (max_train_instances=0). Temperature unspecified in paper; 0.7 is a standard default. ROC targets ~5-sentence continuations, WP/CNN are longer; 512 is adequate for roc but may truncate longer wp/cnn continuations and bias length-sensitive metrics."
+  - "Output shape (trial_1inst, gemini-2.5-flash-lite): single instance generated a coherent ~3-sentence continuation (~45 words), consistent with roc-style short continuation. Shape sane."
+fixes_before_run:
+  - severity: high
+    action: "Register the GPT-4 LLM-as-judge annotator specified in metric_notes/thenextchapter_annotator_notes.md (5-dimension 1-5 Likert) so the run evaluates what the paper actually measured. EM/QEM should be dropped for open-ended narrative."
+  - severity: high
+    action: "Drop exact_match and quasi_exact_match from the metric list; they are vacuous for open-ended story continuation and clutter the leaderboard."
+  - severity: medium
+    action: "Populate metric_notes/thenextchapter_eval_metrics_notes.md documenting automatic metric choices (BLEU-1/4, ROUGE-L, F1) and their limitations for open-ended generation, plus the deviation from the paper's human-evaluation headline."
+  - severity: medium
+    action: "Raise max_tokens to ~1024 for wp and cnn subsets (or make it subset-conditional) to avoid mid-story truncation; keep 512 acceptable for roc."
+  - severity: low
+    action: "Document the added instruction prefix in the scenario docstring as a deliberate modern-LLM adaptation and note that the paper passed raw conditions; consider offering a 'raw_condition' flag for paper-faithful reproduction."
+notes: "Data loading is clean and subset sizes match the paper's sample_human.txt. Core deviations are (a) added instruction wrappers not used in the paper and (b) metric suite dominated by reference-overlap metrics (plus vacuous EM/QEM) while the paper's headline evaluation was 5-dimension human rating. A complete judge prompt is already drafted in annotator_notes.md but is not wired up (annotators=None). WebFetch of the arxiv abstract was thin; cross-check relied on scenario docstring, annotator_notes.md, and the paper's HumanEvaluation directory structure on GitHub (ZhuohanX/TheNextChapter)."
+paper_url: "https://arxiv.org/abs/2301.09790"
+reviewed_at: "2026-04-21"

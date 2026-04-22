@@ -1,0 +1,30 @@
+name: brainteaser
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: false
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "scenarios/brainteaser_scenario.py:35 loads only SP config; paper evaluates both SP (Sentence Puzzle) and WP (Word Puzzle) — WP is missing entirely"
+  - "scenarios/brainteaser_scenario.py:35 uses split='train'; paper reports results on held-out test set, risk of evaluating on training data"
+  - "run_specs/brainteaser_run_specs.py:30 temperature=0.7 with num_outputs=1; MC accuracy benchmarks conventionally use greedy (temp=0) for determinism"
+  - "run_specs/brainteaser_run_specs.py:31-32 max_tokens=512 + stop_sequences=['\\n'] combined with ADAPT_MULTIPLE_CHOICE_JOINT is mismatched — models emit multi-paragraph CoT ending in '$\\boxed{B}$', exact_match on a single letter will score ~0"
+  - "display_predictions.json shows free-form essays, not letter tokens; no answer-extraction/regex post-processing is configured"
+  - "metric_notes/brainteaser_annotator_notes.md and brainteaser_eval_metrics_notes.md are both empty (0-line files) — no documented rubric"
+  - "scenario drops 'choice_list' field and relies on choice_order+label; verify alignment once against raw dataset to avoid label-shift bug"
+fixes_before_run:
+  - severity: blocking
+    action: "Set temperature=0 and either (a) remove stop_sequences / cap max_tokens=5 to force letter-only output, or (b) add a regex answer extractor before exact_match; current config will produce near-zero scores unrelated to model ability"
+  - severity: blocking
+    action: "Add WP subset (second scenario or subset arg) or document SP-only scope explicitly; current benchmark covers half the paper"
+  - severity: blocking
+    action: "Verify dataset split — confirm 'train' is the intended eval target on tasksource/brainteasers (HF mirror may collapse splits); switch to test split if available"
+  - severity: non-blocking
+    action: "Populate metric_notes/*.md with scoring rubric and human-baseline reference from paper (Table 2)"
+  - severity: non-blocking
+    action: "Sanity-check one instance: compare shuffled_choices[label] against raw item['answer'] to confirm choice_order semantics"
+notes: "Scenario code is clean but the run spec and data split decisions cause material divergence from the paper. The biggest blocker is the prompt/metric mismatch: CoT-style generations cannot be scored by exact_match on a letter, so yesterday's runs likely underreport accuracy severely. SP-only coverage and train-split evaluation are secondary but real faithfulness issues."
+paper_url: "https://arxiv.org/abs/2310.05057"
+reviewed_at: "2026-04-21"

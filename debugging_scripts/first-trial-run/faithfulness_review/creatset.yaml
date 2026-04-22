@@ -1,0 +1,29 @@
+name: creatset
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Judge is pointwise 1-5 English rubric (creatset_run_specs.py:15-24, 51-63); paper/CrEval uses PAIRWISE Chinese prompt '更有创意的回复是：Response X' against the 3-criterion rubric (creatset_annotator_notes.md:18-47)."
+  - "Paper's primary metric is win-rate vs. gen_resp_2 (GPT4o-mini-c) or full 4-model Bradley-Terry pairwise ranking (creatset_annotator_notes.md:70-76); current pipeline generates one solo score per response with no baseline comparison."
+  - "gen_resp_1..4 reference responses and avg_score/labeling human calibration data are read-and-discarded by the scenario (creatset_scenario.py:23-28); no calibration against human Bradley-Terry scores."
+  - "Recommended evaluator CrEval-7b (Aman/CrEval-7b) not wired; only GPT-4o used (creatset_run_specs.py:58)."
+  - "BasicGenerationMetric exact_match/quasi_exact_match/f1/rouge_l/bleu_1/bleu_4 is meaningless for Chinese open-ended creative generation against a single curated reference (creatset_run_specs.py:50)."
+  - "creatset_eval_metrics_notes.md is empty (1 line)."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace pointwise rubric with the verbatim Chinese pairwise judge prompt (creatset_annotator_notes.md:21-40); compare model output R against gen_resp_2 (GPT4o-mini-c) per-instance and report win-rate."
+  - severity: non-blocking
+    action: "Add optional 4-way comparison against gen_resp_1..4 and derive Bradley-Terry win-rates; correlate with avg_score for calibration."
+  - severity: non-blocking
+    action: "Drop BasicGenerationMetric (Chinese BLEU/ROUGE on one curated reference is not informative)."
+  - severity: non-blocking
+    action: "Add CrEval-7b as optional judge (Aman/CrEval-7b) alongside GPT-4o."
+  - severity: non-blocking
+    action: "Populate creatset_eval_metrics_notes.md (win-rate vs. GPT4o-mini-c, Bradley-Terry, correlation with avg_score)."
+notes: "Data loading (hf_hub_download on CreataSet-test_with_labeling_400.jsonl, 50x8 domains), zero-shot adapter, and Chinese instruction-as-input are all faithful. The judge, however, is a generic English 1-5 pointwise creativity rubric with GPT-4o rather than the paper's verbatim Chinese pairwise prompt scored against baseline model responses. Predictions look sane (Chinese output, integer 1-5 annotations) but the reported score is not the paper's win-rate / Bradley-Terry metric and ignores the dataset's human-calibrated pairwise labels."
+paper_url: "https://arxiv.org/abs/2505.19236"
+reviewed_at: "2026-04-21"

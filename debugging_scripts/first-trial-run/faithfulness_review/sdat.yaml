@@ -1,0 +1,43 @@
+name: sdat
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "Metric not implemented (blocking): run_specs/sdat_run_specs.py:37 registers only BasicGenerationMetric(['exact_match']) with no references=[] — exact_match is definitionally 0 for every instance. The paper's scoring (scenarios/sdat_scenario.py:26-31 and metric_notes/sdat_eval_metrics_notes.md:10-22) requires IBM granite-embedding-278m-multilingual to compute mean pairwise cosine dissimilarity over C(10,2)=45 word pairs, then optionally scale×100 and compare to S-DAT percentile table (5%=72.17, 50%=79.11, 95%=86.59). None of this is wired up. The run_spec itself flags this as a TODO at line 35-36."
+  - "No word extractor: metric_notes/sdat_eval_metrics_notes.md:52-67 specifies parsing numbered lists / bullets / comma-separated forms into exactly 10 tokens. display_predictions.json for gemini-2.5-flash-lite shows the expected markdown-numbered form ('1.  Sun\\n2.  Silence\\n...') with a preamble ('Here are 10 words...') that must be stripped. No extractor exists; the paper's 10-word contract is unverifiable against current output."
+  - "Observed determinism across trials (severe reliability defect): trial_10inst/display_predictions.json is byte-identical across id2, id16, id26, id54, id55, id73, id75, id86, id93, id95 — same 'Sun/Silence/Feather/Justice/Ocean/Dream/Stone/Music/Shadow/Kindness' response 10/10 times at temperature=0.7, num_outputs=1. S-DAT's statistical-reliability justification (scenarios/sdat_scenario.py:87-98, 100 instances) collapses to a single sample. Same issue as dat.yaml: HELM request cache is almost certainly keying only on prompt text, which is identical across all 100 instances by design."
+  - "Embedding drift risk: metric_notes explicitly specifies granite-embedding-278m-multilingual (the S-DAT paper's model — 278M params, 11+ languages). If an implementer swaps in all-MiniLM/all-mpnet/GloVe (as happened for dat), scores are no longer on the S-DAT human-calibrated scale and percentile comparisons break. The run_spec comment is clear but the guard is only a TODO."
+  - "Prompt faithfulness: scenarios/sdat_scenario.py:73-81 uses the original Olson et al. 2021 English prompt verbatim, which the S-DAT paper carries forward for English; correct. No multilingual variants are generated despite the paper's 11+ language scope — acceptable as a scoped English subset but worth noting the benchmark only probes the English slice of S-DAT."
+  - "Decoding: temperature=0.7, num_outputs=1, max_tokens=512. No explicit top_p; paper does not specify generation hyperparameters for LLM evaluation, so no clear deviation, but 512 tokens is generous for a 10-word output and allows long preambles (observed) that the (missing) extractor must handle."
+  - "Human baseline not surfaced: percentiles from Haase et al. 2025 validation (N=8,572 from Olson et al. data) are documented in the scenario docstring and metric_notes but not loaded into references or stats, so per-response percentile rank is not computable from current output shape."
+fixes_before_run:
+  - severity: blocking
+    action: "Implement SemanticDistanceMetric using ibm-granite/granite-embedding-278m-multilingual (per metric_notes/sdat_eval_metrics_notes.md:41 and run_specs/sdat_run_specs.py:35-36 TODO). Replace the exact_match MetricSpec. Without this, the 'sdat' column in results is measuring nothing task-relevant."
+  - severity: blocking
+    action: "Add a word-extractor covering the three formats in metric_notes:52-67 (numbered list, bullets, comma-separated), with the edge-case handling at metric_notes:124-143 (wrong count → pad/penalty, duplicates → natural 0 self-distance, OOV, non-compliant). Unit-test on the exact markdown-numbered form observed in display_predictions.json."
+  - severity: blocking
+    action: "Fix the identical-response-across-100-instances issue (same root cause as dat.yaml). Either salt HELM's request cache with instance/trial_idx for repeated-prompt scenarios or disable cache for sdat. Without this fix, 100 instances collapse to 1 sample and the statistical-reliability rationale in sdat_scenario.py:87-98 is void."
+  - severity: non-blocking
+    action: "Wire up S-DAT percentile calibration (metric_notes:100-121, percentile table at sdat_scenario.py:31) so per-response scores can be reported on the human-calibrated scale alongside raw mean-cosine-dissimilarity."
+  - severity: non-blocking
+    action: "Consider adding the multilingual variants (at least a subset of the 11 languages S-DAT validates) to honor the paper's core contribution; current scenario covers only the English slice."
+notes: |
+  sdat_annotator_notes.md is empty (0 lines) — only sdat_eval_metrics_notes.md carries the methodology.
+  Paper cross-check: S-DAT (Haase, Hanel, Pokutta 2025, AAAI/ACM AIES, arXiv:2505.09068) extends the
+  original DAT (Olson et al. 2021 PNAS, https://www.pnas.org/doi/10.1073/pnas.2022340118) from GloVe/English
+  to granite-embedding-278m-multilingual across 11+ languages. Full methodology was not extractable from
+  the arXiv abstract or PDF via WebFetch; cross-referenced against sdat_scenario.py docstring and
+  metric_notes/sdat_eval_metrics_notes.md, which cite the paper consistently (100 trials justification,
+  IBM granite embedding, pairwise cosine dissimilarity over 45 pairs, percentile calibration to
+  Olson N=8,572 dataset, correlations r=.60-.67 with DAT, r=.13-.27 with AUT). The scenario is correctly
+  specified on paper; the run_spec simply has not implemented the metric yet — it ships with a
+  placeholder exact_match that cannot score this task. Until the blocking items above are fixed,
+  sdat results are not interpretable.
+  Same caching/determinism artifact as dat.yaml — likely a HELM-wide issue for num_trials-style
+  identical-prompt benchmarks (also affects any future aut/aut-like repeated-trial scenarios).
+paper_url: "https://arxiv.org/abs/2505.09068"
+reviewed_at: "2026-04-21"

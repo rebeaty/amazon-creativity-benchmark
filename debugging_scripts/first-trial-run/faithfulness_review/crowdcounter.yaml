@@ -1,0 +1,64 @@
+name: crowdcounter
+verdict: DIVERGENT
+scenario: crowdcounter
+paper: "CrowdCounter: A benchmark type-specific multi-target counterspeech dataset (Saha et al., CoNLL 2024)"
+paper_url: https://arxiv.org/abs/2410.01400
+code_url: https://github.com/hate-alert/CrowdCounter
+
+prompt_matches:
+  status: partial
+  notes: |
+    Scenario implements both vanilla and type_specific prompt templates matching
+    repo prompts.py (verbatim phrasing for vanilla; type_specific injects all 6
+    type definitions then the per-instance type directive). However run_spec
+    instantiates CrowdCounterScenario with args={} so defaults apply:
+    prompt_type='vanilla', meaning type-controlled framework is NOT exercised
+    in the current run. Paper evaluates BOTH frameworks; current benchmark
+    only covers vanilla. Adapter also wraps prompts with max_train_instances=5
+    few-shot examples from TRAIN_SPLIT (paper uses zero-shot / fine-tuned models).
+
+data_split_correct:
+  status: partial
+  notes: |
+    Scenario loads Train.json (2,047), Val.json (100), Test.json (1,288) from
+    the official GitHub repo with TRAIN/VALID/TEST_SPLIT tags -> correct source
+    and split assignment. Sizes align with scenario docstring. Trial run samples
+    only 10 test instances (trial_10inst) which is expected for a smoke test.
+    Paper split sizes not explicitly confirmed via WebFetch but match repo.
+
+metric_matches:
+  status: mismatch
+  notes: |
+    Paper's primary evaluation axes are relevance, diversity (Self-BLEU,
+    Distinct-n), and quality (perplexity, grammar). run_spec uses only
+    HELM BasicGenerationMetric names: exact_match, quasi_exact_match,
+    f1_score, rouge_l, bleu_1, bleu_4. ROUGE-L and BLEU are reasonable
+    surface-overlap proxies but miss diversity (Self-BLEU/Distinct-n),
+    quality (perplexity), and type-classification accuracy noted in
+    scenario docstring. Exact-match / quasi-exact-match are near-meaningless
+    for open-ended generation against a single reference.
+
+judge_config_matches:
+  status: n/a
+  notes: |
+    No LLM judge configured (annotators=None). Paper uses automatic metrics
+    plus human evaluation; no judge model is canonical, so absence is
+    acceptable, but no annotator notes exist (metric_notes/*.md files are
+    empty, 1 line each).
+
+output_shape_sane:
+  status: pass
+  notes: |
+    display_predictions.json contains instance_id (crowdcounter_test_<idx>),
+    train_trial_index, predicted_text (free-form counterspeech strings).
+    Predictions are plausible counterspeech responses; one refusal observed
+    (test_668 antisemitic prompt) which is expected model-safety behavior.
+    Several near-duplicate outputs across instances suggest low output
+    diversity with temperature=0.7 for gemini-2.5-flash-lite but shape is valid.
+
+overall: partial
+critical_issues:
+  - Only vanilla prompt framework tested; type_specific framework from paper not run.
+  - Metrics miss paper's core axes (diversity via Self-BLEU/Distinct-n, quality via perplexity); exact_match/quasi_exact_match inappropriate for open-ended generation.
+  - Few-shot max_train_instances=5 diverges from paper's fine-tune / zero-shot setup and leaks TRAIN_SPLIT references into context.
+  - metric_notes/crowdcounter_*.md files are effectively empty (1 line).

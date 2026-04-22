@@ -1,0 +1,62 @@
+name: sonnet_or_not_bot
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt:
+    status: FAITHFUL
+    detail: |
+      Scenario reproduces paper's prompt template verbatim:
+      "Read the following poem and then choose the form of the poem from one
+      of these possible {form_group}: {possible_forms}. All of the poems have
+      been tagged by experts as one of these forms. You must pick one of these
+      options.\n\nPoem Text (in full): {poem_text}\n\nPick ONE of these possible
+      {form_group}: {possible_forms}". Poem text truncated at 5000 chars (paper limit).
+  data_split:
+    status: FAITHFUL
+    detail: |
+      Uses official public-domain release (poetry-evaluation_public-domain-poems.csv,
+      ~1,453 poems) pulled from maria-antoniak/poetry-eval GitHub. All routed to
+      TEST_SPLIT; zero-shot (max_train_instances=0). Filters by form_group arg
+      (default "all"); requires >=2 forms per group for MC viability.
+  metric:
+    status: MOSTLY_FAITHFUL
+    detail: |
+      Uses exact_match via BasicGenerationMetric, aligned with paper's accuracy
+      metric. However, ADAPT_MULTIPLE_CHOICE_JOINT pairs choices with letter labels
+      (A, B, ...), so exact_match targets the letter — paper reports accuracy on
+      the form-name string. Equivalent in MC-joint framing but divergent from
+      paper's free-form "pick ONE" output shape.
+  judge:
+    status: FAITHFUL
+    detail: No LLM judge used; paper also uses deterministic exact-match on form label.
+  output_shape:
+    status: DIVERGENT
+    detail: |
+      Paper asks model to emit a form name (free text pick). Run spec forces
+      MC-joint letter answer with stop_sequences=["\n"] and output_prefix "Answer: ".
+      Observed predictions show models emit long CoT + "**G. sonnet**" style answers;
+      stop="\n" truncates mid-reasoning (see id1166 cut off at "$\boxed{"). temperature=0.7
+      also diverges from typical deterministic classification (paper uses default/greedy).
+gaps:
+  - Prompt passes possible_forms as Python list repr (e.g. "['sonnet', 'ballad']") rather than a natural-language list — likely paper uses comma-joined form.
+  - temperature=0.7 inappropriate for deterministic classification; adds noise to accuracy.
+  - max_tokens=512 + stop="\n" conflict with verbose CoT outputs observed; some instances truncated.
+  - MC-joint letter scoring may disagree with paper's name-string accuracy when model answers with form name only (no letter).
+  - metric_notes/*.md files are empty (0 lines) — no documented rubric beyond code.
+fixes_before_run:
+  - severity: high
+    action: Set temperature=0.0 (or 0.1) to match paper's deterministic classification setup.
+  - severity: medium
+    action: Drop stop_sequences=["\n"] or raise to allow full answer; observed truncation at id1166.
+  - severity: medium
+    action: Verify exact_match target — if ADAPT_MULTIPLE_CHOICE_JOINT scores on letter, confirm paper parity or switch to ADAPT_GENERATION + form-name normalization/extraction.
+  - severity: low
+    action: Format possible_forms as human-readable comma list instead of Python repr to match paper wording.
+  - severity: low
+    action: Populate metric_notes/sonnet_or_not_bot_*.md (currently empty) with scoring rubric.
+notes: |
+  Scenario implementation closely mirrors paper's eval script structure (form_group
+  bucketing, 5000-char truncation, expert form label as gold). Primary risk is
+  adapter/generation-config mismatch (MC-joint + T=0.7 + \n stop) rather than
+  scenario logic. Accuracy metric itself is faithful in spirit.
+paper_url: https://arxiv.org/abs/2406.18906
+reviewed_at: "2026-04-21"

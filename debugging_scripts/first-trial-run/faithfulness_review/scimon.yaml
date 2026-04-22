@@ -1,0 +1,37 @@
+name: scimon
+verdict: DIVERGENT
+checks:
+  prompt_matches: unknown
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - Prompt template is authored by the scenario, not taken from the paper. SciMON (Wang et al., ACL 2024) primarily fine-tunes seq2seq models and does not publish a canonical zero-shot template; the scenario acknowledges this but still produces a single custom instruction ("Based on the above context, write one sentence...") without documenting the choice or comparing to the paper's GPT-3.5/4 zero-shot wording (if any).
+  - rel_sent is used as the sole CORRECT_TAG reference. Scenario docstring itself flags that automatic metrics on rel_sent measure semantic similarity, not novelty, and that the paper's primary evaluation is human judgment of novelty/relevance/technical depth — none of which is implemented here.
+  - Metric set is generic lexical-overlap plus BERTScore (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4, BERTScore). No novelty metric, no retrieval/citation-grounding metric, no LLM-as-judge, no human-eval proxy — so the scenario cannot score the property ("novelty") the paper exists to evaluate. Exact_match/quasi_exact_match on a free-form generation task are near-zero by construction and contribute noise, not signal.
+  - metric_notes/scimon_annotator_notes.md and scimon_eval_metrics_notes.md are empty stub files (1 line each). Evaluation design, rubric provenance, and metric justification fully undocumented.
+  - annotators=None in run_spec despite scenario docstring pointing at annotator_notes.md for novelty-sensitive scoring. Disconnect between intent and wiring.
+  - The "input" field from the dataset (e.g. "grammar is used for OtherScientificTerm") is surfaced verbatim in the prompt as "Relationship: ...". The raw "OtherScientificTerm" token is an IE-extractor tag, not natural language, and leaks evaluation-pipeline metadata into the model's context; a paper-faithful prompt would either translate the relation into prose or drop the type token.
+  - max_tokens=512, temperature=0.7 are not justified against the paper. Gold rel_sent targets are single sentences (~20–40 tokens); 512 invites verbose multi-clause outputs that will be penalized by BLEU/ROUGE against a terse reference, inflating the mismatch between automatic metrics and actual idea quality.
+  - Scenario drops output, neg_sample, forward, cos_sim, and annotation flag fields. Skipping neg_sample is defensible (not in gold_subset) but "output" (the short entity phrase) is discarded without noting that some SciMON evaluations target that field instead of rel_sent — choice of target is a faithfulness decision that should be documented.
+  - Only 10 instances were run in trial_10inst (display_predictions.json has 10 entries) against the 194-instance gold_subset. Expected for a smoke test, but the scenario does not down-sample deterministically; full-run behavior over all 194 has not been audited here.
+  - Inspection of 10 predicted_text entries from gemini-2.5-flash-lite shows the model produces plausible single-sentence scientific-idea descriptions, but several restate the source entity definitionally (id113 "utilizing Generic to ensure the generated programs are executable", id125 "introduces toxic span detection") — which will score well on BERTScore/ROUGE against rel_sent but does not test novelty at all. This is the exact failure mode the paper's human eval is designed to catch and the scenario does not.
+fixes_before_run:
+  - severity: blocking
+    action: Populate metric_notes/scimon_eval_metrics_notes.md and scimon_annotator_notes.md with paper-aligned rationale. At minimum document (a) why rel_sent is the reference target and not "output", (b) which paper-reported metrics are being approximated, (c) acknowledged gap vs. the paper's human novelty/relevance/technical-depth eval.
+  - severity: blocking
+    action: Add a novelty-sensitive metric. Either wire an LLM-as-judge rubric scoring novelty/relevance/technical-depth against the background context (paper's own criteria), or compute n-gram/embedding novelty against the background context as a divergence-from-source proxy. Current metric set cannot distinguish "restated the context" from "proposed a new idea".
+  - severity: non-blocking
+    action: Drop exact_match and quasi_exact_match from metric_specs — they are structurally zero on free-form single-sentence generation and contribute only noise to leaderboards.
+  - severity: non-blocking
+    action: Clean the raw IE tag ("OtherScientificTerm", "Task", "Method", etc.) out of the "Relationship:" line in the prompt, or translate it to prose. Leaking extractor metadata is not paper-faithful and can cue models to the dataset's pipeline.
+  - severity: non-blocking
+    action: Lower max_tokens toward ~80–120 and/or temperature toward 0.3 to better match the single-sentence gold target length; document the choice against the paper's generation setup.
+  - severity: non-blocking
+    action: Document the zero-shot prompt template as a benchmark-authored instruction (scenario already hints at this in a comment but does not mark the prompt as non-paper-faithful in user-facing notes).
+  - severity: non-blocking
+    action: If annotator_notes.md is intended to drive a human-style rubric, wire an annotator in the run_spec (annotators=[...]) rather than leaving annotators=None.
+notes: "Scenario correctly loads 194 human-verified instances from the official gold_subset.zip and routes rel_sent as the CORRECT_TAG reference; display_predictions.json for gemini-2.5-flash-lite on the 10-instance trial shows well-formed single-sentence outputs, so the data pipeline and adapter are functioning. The faithfulness problem is at the evaluation layer: the SciMON paper exists to measure novelty (via human judgment of novelty/relevance/technical-depth), and this run_spec scores only lexical+semantic similarity against a single sentence from the same paper — which cannot separate 'restated the background' from 'proposed a novel idea'. Both metric_notes files are empty stubs, the zero-shot prompt is benchmark-authored without paper justification, and exact_match/quasi_exact_match are inert on this task. Blocking fix is to populate the notes and add at least one novelty-sensitive metric (LLM judge or context-divergence proxy) before quoting SciMON numbers."
+paper_url: https://arxiv.org/abs/2305.14259
+reviewed_at: "2026-04-21"

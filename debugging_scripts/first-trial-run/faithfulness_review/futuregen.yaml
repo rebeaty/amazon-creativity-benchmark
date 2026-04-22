@@ -1,0 +1,30 @@
+name: futuregen
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - Paper evaluates with ROUGE, BLEU, BERTScore AND an LLM-as-judge framework assessing novelty, hallucination, and feasibility; run_spec only uses BasicGenerationMetric (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4).
+  - No BERTScore metric configured despite being a core paper metric.
+  - No LLM-as-judge annotator/metric wired up (annotators=None); judge model (Claude in paper) not configured.
+  - metric_notes/futuregen_annotator_notes.md and futuregen_eval_metrics_notes.md are empty stubs (1 line each) — evaluation design not documented.
+  - max_tokens=512 may truncate RAG prompt outputs (observed outputs cut mid-sentence in display_predictions.json); paper outputs are multi-bullet long-form.
+  - temperature=0.7 unjustified; paper likely uses deterministic/low-temp generation for judge reproducibility (not verified from abstract-only fetch).
+  - Scenario uses full NeurIPS subset (278 papers) as TEST_SPLIT with no held-out train/dev separation documented.
+fixes_before_run:
+  - severity: blocking
+    action: Add LLM-as-judge annotator scoring novelty, hallucination, feasibility (per paper) and wire it into metric_specs; document judge model + rubric in metric_notes files.
+  - severity: blocking
+    action: Add BERTScore metric (helm BERTScoreMetric) to match paper's core automatic metrics.
+  - severity: non-blocking
+    action: Raise max_tokens (e.g., 1024–2048) to prevent truncation of RAG-style bulleted outputs.
+  - severity: non-blocking
+    action: Lower temperature (e.g., 0.0–0.2) or document rationale for 0.7; ensure consistency with judge-based evaluation.
+  - severity: non-blocking
+    action: Populate futuregen_annotator_notes.md and futuregen_eval_metrics_notes.md with paper-aligned rubric and metric definitions.
+notes: Prompt text matches the RAG notebook verbatim and dataset loading from HF is correct, but the evaluation pipeline is substantially under-specified relative to the paper — missing BERTScore and the signature LLM-as-judge (novelty/hallucination/feasibility) framework. Output truncation at 512 tokens is visible in predictions. Blocking fixes are needed before results will be comparable to the paper's reported numbers.
+paper_url: https://arxiv.org/abs/2503.16561
+reviewed_at: "2026-04-21"

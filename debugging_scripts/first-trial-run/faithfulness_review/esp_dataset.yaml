@@ -1,0 +1,27 @@
+name: esp_dataset
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "Prompt format in scenarios/esp_dataset_scenario.py:147-157 is only '\\n{style}:' (e.g. '\\nnews:') alongside the image. This bare-label prompt gives no task instruction; the trial predictions in benchmark_output/runs/trial_10inst/esp_dataset_model=google_gemini-2.5-flash-lite/display_predictions.json show every one of 10 instances returning 'I'm sorry, but you haven't provided any text for me to work with...', confirming the model did not understand the task from the prompt alone."
+  - "Adapter input_suffix='\\n' and output_suffix='\\n' (run_specs/esp_dataset_run_specs.py:24-26) further strip/obscure the multimedia content; combined with the no-instruction prompt this yields empty/refusal outputs across all sampled runs."
+  - "Metric set in run_specs/esp_dataset_run_specs.py:34-37 adds exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4, and CLIPScore. Paper reports BLEU-4/METEOR/CIDEr (per scenario docstring line 26); METEOR and CIDEr are missing and CLIPScore (image-text, not caption-similarity) is not a standard ESP metric."
+  - "No metric_notes/esp_dataset_annotator_notes.md or esp_dataset_eval_metrics_notes.md content — both files exist but are empty (0 lines read)."
+  - "Scenario docstring claims 996 images; no assertion on loaded instance count. Paper/GitHub do not disclose exact count to cross-check and WebFetch of both CVPR page and esper repo did not return prompt-format or metric details to verify the './\\n{style}:' choice."
+  - "Commit e2eb48b7 correctly adds CORRECT_TAG so references are scorable (line 161), but the underlying reference-metric pipeline is moot while predictions are refusals."
+fixes_before_run:
+  - severity: blocking
+    action: "Rewrite the prompt to include an explicit instruction (e.g., 'Write a caption for this image in the following style: {style_description}.'). Current bare '\\n{style}:' yields 100% refusal outputs in the trial."
+  - severity: blocking
+    action: "Verify multimedia image delivery — refusal text ('haven't provided any text') suggests the image MediaObject may not be reaching the model via this adapter path; test with a known-working vision run_spec pattern."
+  - severity: non-blocking
+    action: "Replace/augment metrics with METEOR and CIDEr to match the paper; justify or drop CLIPScore (image-text alignment is orthogonal to stylistic fidelity). exact_match/quasi_exact_match are inappropriate for open-ended stylized generation."
+  - severity: non-blocking
+    action: "Populate metric_notes/esp_dataset_annotator_notes.md and esp_dataset_eval_metrics_notes.md documenting the n-gram metric choice and the absence of a style-classifier judge."
+notes: "Reference tagging fix in e2eb48b7 is correct but insufficient: the prompt is so minimal that Gemini 2.5 Flash Lite returns a generic refusal for every one of the 10 sampled instances, so downstream BLEU/ROUGE/CLIP numbers will all measure refusal text, not stylistic generation. Blocking issue is the prompt (and likely image-delivery) plumbing, not the reference schema."
+paper_url: "https://openaccess.thecvf.com/content/CVPR2023/html/Yu_Fusing_Pre-Trained_Language_Models_With_Multimodal_Prompts_Through_Reinforcement_Learning_CVPR_2023_paper.html"
+reviewed_at: "2026-04-21"

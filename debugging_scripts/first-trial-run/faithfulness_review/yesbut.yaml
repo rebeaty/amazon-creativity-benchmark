@@ -1,0 +1,31 @@
+name: yesbut
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "benchmark_output/runs/trial_10inst/yesbut_model=google_gemini-2.5-flash-lite/display_predictions.json rows 1-71 show identical 'I'm sorry, but you haven't provided any text for me to work with' refusals across all 10 instances; base64_images is [] for every row — the image (and apparently the question text) is not reaching the model at inference time. Same pattern in benchmark_output/runs/trial/yesbut_model=google_gemini-2.5-flash-lite/display_predictions.json."
+  - "scenarios/yesbut_scenario.py:107-116 builds MultimediaObject with image/jpeg + text/plain, but the trial outputs confirm the multimodal payload is not being delivered — identical to the ii_bench failure mode. The text prompt '\\nWhy is this image funny/satirical?' matches the paper's WHYFUNNY_PROMPT, so phrasing is faithful; delivery is broken."
+  - "run_specs/yesbut_run_specs.py:30 sets temperature=0.7; paper's Satirical Image Understanding task is not specified as stochastic — typical VLM generation eval uses temperature=0 (greedy). 0.7 injects variance into BLEU/ROUGE scores."
+  - "run_specs/yesbut_run_specs.py:35 uses BasicGenerationMetric with {exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4}. Paper (EMNLP 2024) benchmarks with automated AND human evaluation, and typically includes BERTScore / GPT-4-as-judge for open-ended satire explanation (free-form, ~1-2 sentence references). exact_match and quasi_exact_match on an open-ended generation task are near-zero by construction and not informative; BERTScore and a semantic judge are missing."
+  - "metric_notes/yesbut_annotator_notes.md and metric_notes/yesbut_eval_metrics_notes.md are both empty (1 line) — no recorded metric rationale or judge spec."
+  - "scenarios/yesbut_scenario.py:96-98 silently drops ~9 examples with no difficulty label; default difficulty='all' is fine but the drop is undocumented in metric_notes."
+  - "scenarios/yesbut_scenario.py:73-83 loads split='train' for a test evaluation; HuggingFace dataset bansalaman18/yesbut ships everything under 'train' so this is the only option, but all 1,084 satirical images are being placed in TEST_SPLIT with no held-out set (acceptable for eval-only, but noted)."
+  - "Paper frames three tasks (Detection, Understanding, Completion); only Understanding (WHYFUNNY) is implemented — scenario header (lines 12-14) correctly scopes to this, but the 1,463 non-satirical distractors and completion pairs are unused, so only ~1/3 of the benchmark surface is covered."
+fixes_before_run:
+  - severity: blocking
+    action: "Diagnose why predicted_text is identical and base64_images is empty across all instances — image and likely prompt text are not being delivered. Verify the MultimediaObject in scenarios/yesbut_scenario.py:107-116 actually flows through ADAPT_GENERATION to the Gemini backend; same root-cause as ii_bench. Test on 2-3 instances before scaling to 1,084."
+  - severity: non-blocking
+    action: "Set temperature=0 in run_specs/yesbut_run_specs.py:30 for deterministic generation; paper does not specify stochastic decoding for the understanding task."
+  - severity: non-blocking
+    action: "Replace {exact_match, quasi_exact_match, f1_score} with semantic metrics suitable for open-ended satire explanation — add BERTScore and a GPT-4/Claude judge (semantic similarity / correctness) alongside ROUGE-L and BLEU. EM/QEM will be ~0 on free-form references and add noise."
+  - severity: non-blocking
+    action: "Populate metric_notes/yesbut_{annotator,eval_metrics}_notes.md with the WHYFUNNY prompt source, metric selection rationale, and the difficulty-filter / no-label-drop behavior."
+  - severity: non-blocking
+    action: "Optionally add Satirical Image Detection (binary) and Completion (2-way MC) run_specs to cover the full paper scope; current implementation is Understanding-only."
+notes: "Prompt wording matches paper's WHYFUNNY_PROMPT and scenario construction is correct in principle, but trial outputs show neither image nor prompt reached the model — every prediction is an identical refusal with empty base64_images. Do not run full 1,084-instance eval until multimodal delivery is fixed and verified. Metrics set also needs semantic-level additions (BERTScore / LLM judge) because the references are free-form sentences."
+paper_url: "https://arxiv.org/abs/2409.13592"
+reviewed_at: "2026-04-21"

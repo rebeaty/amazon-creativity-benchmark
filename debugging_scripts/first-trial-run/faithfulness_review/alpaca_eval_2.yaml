@@ -1,0 +1,30 @@
+name: alpaca_eval_2
+verdict: DIVERGENT
+checks:
+  prompt_matches: false
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "run_specs/alpaca_eval_2_run_specs.py:15-24 defines a 1-5 Likert rubric (_RUBRIC_WIN_RATE), but AlpacaEval 2.0's paper (Dubois et al. 2024) uses a binary pairwise preference between model output and a GPT-4-turbo baseline, not a 1-5 quality rating."
+  - "run_specs/alpaca_eval_2_run_specs.py:50 uses GenericLLMJudgeMetric with metric_name='win_rate', but the scored output (display_predictions.json annotations: win_rate in {1..5}) is a Likert score, not a win/loss. True AlpacaEval WR = fraction of instances where model beats baseline."
+  - "The judge prompt embedded by GenericLLMJudgeAnnotator does not match the official AlpacaEval pairwise template documented in metric_notes/alpaca_eval_2_annotator_notes.md:15-36 (JSON-formatted ranking of model_1 vs model_2). The reference baseline from the dataset is never shown to the judge as 'model_2'."
+  - "Length-Controlled Win Rate (LCWR), the paper's headline metric and the point of the paper, is not computed anywhere. No GLM fit, no length-difference feature, no lcwr field in annotations."
+  - "scenarios/alpaca_eval_2_scenario.py:91 comment claims baseline is 'text_davinci_003 or gpt4', but AlpacaEval 2.0 specifically uses GPT-4-turbo baseline outputs; the downloaded alpaca_eval.json from tatsu-lab default is text_davinci_003 reference. Baseline identity is ambiguous and likely wrong for 2.0 semantics."
+  - "adapter_spec (run_specs:45) uses temperature=0.7 for generation; AlpacaEval convention is model-default sampling for the evaluee but this is borderline, not strictly specified. Judge temperature=0.0 and max_new_tokens=1024 are reasonable."
+  - "Sample predictions (benchmark_output/runs/gemini_lite/alpaca_eval_2_model=google_gemini-2.5-flash-lite/display_predictions.json) show many responses truncated mid-sentence at 512 tokens (max_tokens=512), which disadvantages models on long-form prompts and distorts any length-sensitive metric."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace Likert rubric with the official AlpacaEval pairwise prompt (see annotator_notes.md:15-36). Judge must compare model output vs reference baseline and return a binary preference; metric must be fraction of wins, not mean of 1-5 scores."
+  - severity: blocking
+    action: "Add a length-controlled win rate computation (or explicitly document that only raw WR is reported and rename metric accordingly) so results are not labeled 'alpaca_eval_2' while computing something the paper does not endorse."
+  - severity: blocking
+    action: "Verify which baseline is in the downloaded alpaca_eval.json; if it is text_davinci_003, switch to the AlpacaEval 2.0 baseline (gpt4_turbo reference_outputs) before running."
+  - severity: non-blocking
+    action: "Increase max_tokens (e.g., 2048) to avoid truncating long answers, which biases pairwise judgments."
+  - severity: non-blocking
+    action: "Swap GenericLLMJudgeAnnotator for an AlpacaEval-specific annotator that injects the reference output as model_2 in the official JSON template and randomizes position to reduce order bias."
+notes: "Current implementation does not match the AlpacaEval 2.0 paper: it runs a 1-5 Likert single-response quality rating rather than a pairwise binary preference against a baseline, omits the paper's headline LCWR metric, and probably uses the wrong baseline. Per NOTES_FOR_VIJETA.md, this benchmark is already flagged as borderline-creativity (general instruction-following); faithfulness issues here are substantive and should be fixed before the production run or results should not be reported as AlpacaEval 2.0."
+paper_url: "https://arxiv.org/abs/2404.04475"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,29 @@
+name: fuxibench
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Subset collapse: scenarios/fuxibench_scenario.py declares 5 creative subtasks (ci_gen, couplet_gen, poem_gen, poem_nmt_inv, poem_appre) but run_specs/fuxibench_run_specs.py registers a single run spec with args={} (defaults to ci_gen only). Other four subsets never instantiated; the display_predictions.json output files all show fuxi_CiG_* ids confirming only ci_gen is executed."
+  - "Metric drift (ci_gen, all subsets): paper/notes specify subset-specific metrics — pacc (rule-based cipai template match via FormatEvaluator/cipai2info.json) for ci_gen, cacc for couplet_gen, lacc for poem_gen/poem_nmt_inv, BLEU for poem_appre (metric_notes/fuxibench_eval_metrics_notes.md). Run spec instead applies a single generic 1–5 Likert LLM judge (_RUBRIC_LLM_JUDGE_QUALITY) to whatever subset runs. None of pacc/cacc/lacc/BLEU is implemented."
+  - "Judge model mismatch: annotator_notes specify fine-tuned Qwen2-7B-Instruct (Y/N binary, 89.8% acc, kappa=0.764) as the validated judge for lacc. run_specs uses openai/gpt-4o with a generic 1–5 rubric — different model, different output space, different rubric content (no 包含要点/与标准答案一致/符合事实 criteria)."
+  - "Temperature: adapter sets temperature=0.7 for generation; paper/repo evaluate zero-shot with deterministic decoding (no explicit temperature documented but standard FuxiBench eval is zero-shot CG with default HF generate). 0.7 adds sampling noise not in the reference protocol."
+  - "Few-shot: repo exposes both zero-shot and 5-shot CG variants; scenario/run_spec pick zero-shot (max_train_instances=0). Acceptable but the 5-shot variant is not offered."
+  - "Output shape: display_predictions.json shows Chinese ci poetry outputs with llm_judge_quality integers in 2–4 range — consistent with the generic judge that was actually wired up, but not with paper's binary pacc pass/fail."
+fixes_before_run:
+  - severity: blocking
+    action: "Parameterize run spec by subset (accept subset arg, produce one RunSpec per subtask in SUBSETS) so couplet_gen/poem_gen/poem_nmt_inv/poem_appre actually run."
+  - severity: blocking
+    action: "Implement the paper's metrics: port FormatEvaluator/cipai_utils for pacc (ci_gen), couplet_format_acc for cacc (couplet_gen), SacreBLEU+jieba for BLEU (poem_appre). Without these, results are not comparable to FuxiBench leaderboard."
+  - severity: blocking
+    action: "For poem_gen/poem_nmt_inv, replace the generic 1–5 Likert judge with a binary Y/N lacc judge using the Figure-4 criteria (包含要点, 与标准答案一致, 符合问题和任务要求, 符合事实, 简洁明了), matching lacc_evaluation_api semantics. Prefer fine-tuned Qwen2-7B-Instruct or document the gpt-4o substitution explicitly."
+  - severity: non-blocking
+    action: "Set temperature=0.0 (or document deviation) to align with zero-shot CG reference decoding."
+  - severity: non-blocking
+    action: "Consider adding a 5-shot variant to match the repo's eval_icl.sh path."
+notes: "Only ci_gen is actually exercised in the trial run (display_predictions.json filenames all fuxi_CiG_*), and it is scored by a generic 1–5 quality rubric rather than pacc. The scenario code itself is faithful (exact instruction+input prompt, correct fields, valid GitHub raw data source, TEST split); faithfulness failures are concentrated in run_specs/fuxibench_run_specs.py (single spec, wrong metric, wrong judge). Paper PDF and GitHub README did not yield exact decoding params via WebFetch; cross-check relied on scenario docstring, metric_notes, and annotator_notes which cite paper Section 4.2 and evaluate.py."
+paper_url: "https://arxiv.org/abs/2503.15837"
+reviewed_at: "2026-04-21"

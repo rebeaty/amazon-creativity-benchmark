@@ -1,0 +1,34 @@
+name: pollux_creativity
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Scoring scale mismatch: paper uses 0-4 integer scale per POLLUX rubric (metric_notes/pollux_creativity_annotator_notes.md:17-23), but run_specs/pollux_creativity_run_specs.py:19-34 defines generic 1-5 Likert rubrics for 'creativity' and 'originality'. display_predictions.json confirms outputs in 2/3/4 range, numerically overlapping but semantically misaligned with the paper's 0-4 anchors."
+  - "Criteria mismatch: POLLUX defines ~8 task-specific creativity criteria (Креативность, Драматургия, Выразительность диалога, Качество рифмы, Литературные акценты, Соблюдение образа, Размер стиха, Попадание в жанр) per scenarios/pollux_creativity_scenario.py:80-89 and annotator_notes. run_specs collapses all of this into two generic English rubrics (creativity, originality), ignoring the dataset's per-instance criteria_name/rubrics/criteria_description fields exposed in extra_data (scenarios/pollux_creativity_scenario.py:169-178)."
+  - "Judge model mismatch: paper releases ai-forever/pollux-judge-7b-r and 32b-r as the canonical judges (annotator_notes:25-30); run_specs uses openai/gpt-4 with English rubrics instead of the Russian-native POLLUX judges or GPT-4 with the exact paper prompt (annotator_notes:190-215)."
+  - "Judge prompt language mismatch: POLLUX judge prompt is in Russian and follows the [FEEDBACK]...[RESULT] N [END] format (annotator_notes:190-220). Generic English rubrics used here do not pass instruction/reference_answer/criteria_name/rubrics to the judge, despite those fields being populated in extra_data."
+  - "Missing reference/rubric injection: scenario surfaces ex['criteria_name'], ex['rubrics'], ex['criteria_description'], ex['reference_answer'], and ex['criteria_score'] (expert gold) in extra_data (scenarios/pollux_creativity_scenario.py:169-178), but the generic_llm_judge_annotator is not wired to consume them; no metric computes agreement with the expert criteria_score baseline."
+  - "Deduplication by instruction (scenarios/pollux_creativity_scenario.py:138-144) discards per-criterion annotation multiplicity. Paper's 161,076 samples cover (instruction x model x criterion); keeping only one ex per instruction drops most criteria_name variants for that instruction, so whichever criterion happens to be first is the one retained."
+  - "Generation settings: max_tokens=512 (run_specs:55) likely truncates literary text / story generation tasks; display_predictions.json shows several outputs cut mid-sentence. temperature=0.7 is reasonable for creative tasks."
+  - "Adapter input_suffix='\\n' with empty instructions/prefixes is fine for self-contained Russian instructions."
+  - "Task filter: scenario includes 7 Russian task types (scenarios/pollux_creativity_scenario.py:69-77); docstring lists 6 but code splits 'ИИ как персонаж' into expert + informal variants. Minor doc mismatch, not a faithfulness issue."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace the two generic English rubrics with the exact POLLUX judge prompt (annotator_notes:190-215) using per-instance criteria_name and rubrics from extra_data, and switch the 1-5 scale to 0-4. Require a parser that extracts integer between [RESULT] and [END]."
+  - severity: blocking
+    action: "Either switch judge_model_name to ai-forever/pollux-judge-32b-r (preferred) or keep GPT-4 but supply the Russian-language POLLUX prompt template. openai/gpt-4 with English creativity/originality rubric is not a POLLUX evaluation."
+  - severity: high
+    action: "Add a metric that compares the judge score against extra_data['expected_score'] (expert annotation, 0-4) per criterion — this is the benchmark's actual ground truth and is currently discarded."
+  - severity: high
+    action: "Stop deduping by instruction; instead emit one instance per (instruction, criteria_name) so every expert-annotated criterion is evaluated. Alternatively, emit multiple references per instance tagged by criterion."
+  - severity: medium
+    action: "Raise max_tokens for literary_generation / style_transfer / AI-as-character task types (e.g. 2048) to avoid mid-paragraph truncation visible in display_predictions.json."
+  - severity: low
+    action: "Fix scenario docstring (scenarios/pollux_creativity_scenario.py:11-19) to list 7 task types matching CREATIVE_TASK_TYPES."
+notes: "Scenario correctly pulls ai-forever/POLLUX test split, filters to seven creative task types, and preserves Russian-language instructions verbatim with all expert-annotation metadata attached to each Instance. However, the run_spec does not use any of that metadata: it wires up two generic English Likert rubrics scored 1-5 by GPT-4, which is effectively a different evaluation than POLLUX. The dataset itself is faithful; the evaluation protocol is not. display_predictions.json shows judge outputs clustered at 2-4 (plausible but on the wrong scale and wrong criteria). WebFetch of arXiv abstract confirmed 2,100 prompts, 35 task types, 7B/32B judge release, criteria-driven scoring — consistent with annotator notes but cannot verify exact 0-4 rubric text without full-paper access."
+paper_url: "https://arxiv.org/abs/2505.24616"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,37 @@
+name: hypogen
+verdict: DIVERGENT
+checks:
+  prompt_matches: unknown
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - Paper citation in scenario docstring is wrong. Scenario cites arXiv:2409.04109 ("Can LLMs Generate Novel Research Ideas?" by Si/Yang/Hashimoto) as the HypoGen source, but that is a different paper about human-vs-LLM idea blind review. The actual HypoGen / bit-flip dataset is from UniverseTBD (Astro/AstroLLaMA line), not from 2409.04109. Provenance/citation must be corrected before results are defensible.
+  - Bit/flip role definitions may be inverted. Scenario docstring and prompt assert bit = "conventional wisdom / limitation" and flip = "novel insight". The HuggingFace dataset card (UniverseTBD/hypogen-dr1) describes BIT as "core insight/method description" and FLIP as "problem statement or reframing" — inconsistent with the scenario's prompt framing. If the HF card is authoritative, every prompt is asking the model to generate the wrong field and the reference is mislabeled. Needs verification against the original HypoGen paper PDF (not resolvable from abstract fetch).
+  - No reference string-overlap metric configured. Scenario docstring advertises "Evaluation: open_ended (BLEU, ROUGE against author-written flip)", but run_spec wires only a single LLM-judge novelty metric (llm_judge_novelty) and no BasicGenerationMetric — so BLEU/ROUGE promised in the scenario are not actually computed.
+  - Prompt is a "standard instruction" authored by the scenario (scenario comment admits "paper does not publish exact prompts"). Not verified against paper.
+  - Judge rubric hardcodes judge_model_name="openai/gpt-4" (legacy GPT-4) with no paper justification; paper's evaluation design not documented (no benchmark-specific judge choice or rubric provenance captured).
+  - metric_notes/hypogen_annotator_notes.md and hypogen_eval_metrics_notes.md are empty stub files (1 line each). Evaluation design fully undocumented.
+  - Scenario drops every field except abstract+bit+flip; spark and chain_of_reasoning (both human-labeled narrative fields in the dataset) are discarded without justification. Could plausibly serve as multi-reference ground truth.
+  - max_tokens=512 sometimes truncates mid-sentence (visible in gemma_3_4b display_predictions.json — outputs cut at "Crucially, the weights will be adjusted..."). Paper's gold flips are 195–609 chars, but models emit far longer rationales.
+  - temperature=0.7 unjustified for a single-generation novelty-judge setup; no paper basis.
+  - Potential benchmark redundancy with hypobench. NOTES_FOR_VIJETA.md Section 1 flags "hypogen / hypobench — both hypothesis generation; confirm they're distinct". Verdict from this audit after reading both scenarios: they ARE distinct tasks (hypogen = retrieve/reconstruct a paper's specific flip given its abstract+bit; hypobench = generate N hypotheses that explain labeled observations for 7 real-world tasks, sourced from ChicagoHAI/HypoBench-datasets, arXiv:2504.11524) — different inputs, different references, different paper. So not a duplication in the "drop one" sense. BUT both use identically-named llm_judge_novelty rubrics from different run_specs with slightly different wording, which will be confusing when metrics are aggregated by metric_name across the suite — worth namespacing (e.g., hypogen_novelty vs hypobench_novelty) or at least documenting.
+fixes_before_run:
+  - severity: blocking
+    action: Fix the paper citation in scenarios/hypogen_scenario.py — replace arXiv:2409.04109 with the correct HypoGen source paper, or remove the misleading citation if provenance is unverified.
+  - severity: blocking
+    action: Verify the bit/flip role semantics against the original HypoGen paper PDF. If HF card is correct and scenario prompt inverts the roles, the prompt and reference mapping must be swapped before any results are meaningful.
+  - severity: blocking
+    action: Either add BLEU/ROUGE (BasicGenerationMetric) to match the scenario's own docstring promise, or update the docstring to stop promising metrics the run_spec doesn't compute.
+  - severity: non-blocking
+    action: Populate metric_notes/hypogen_annotator_notes.md and hypogen_eval_metrics_notes.md with paper-aligned rubric provenance, judge choice rationale, and metric definitions.
+  - severity: non-blocking
+    action: Rename llm_judge_novelty metric to hypogen_novelty (or include benchmark namespace) to avoid cross-benchmark metric-name collision with hypobench's same-named metric.
+  - severity: non-blocking
+    action: Raise max_tokens (e.g., 1024) so outputs are not truncated mid-sentence, or add a stop sequence; alternatively lower temperature toward 0 for more paper-like concise flips.
+  - severity: non-blocking
+    action: Document why spark and chain_of_reasoning fields are discarded; consider using them as additional references.
+notes: Scenario loads UniverseTBD/hypogen-dr1 test split (50 examples) correctly and writes a well-formed bit-flip prompt, and display_predictions across all 14 model runs show the judge firing with reasonable integer scores 1–5. But the faithfulness posture has three real issues (a) the cited paper (2409.04109) is not the HypoGen paper, (b) the bit/flip role definitions may be inverted relative to the HF dataset card, and (c) the docstring advertises BLEU/ROUGE that the run_spec does not actually compute — only an LLM-judge novelty score. Separately, hypogen and hypobench are confirmed NOT duplicate datasets (different source papers, different task formulations), so the NOTES_FOR_VIJETA flag resolves to "distinct, keep both", but the llm_judge_novelty metric name collides across them and should be namespaced. All three blocking fixes are cheap; the HF-vs-scenario bit/flip semantics check is the most important one to settle before quoting any HypoGen numbers.
+paper_url: https://arxiv.org/abs/2409.04109
+reviewed_at: "2026-04-21"

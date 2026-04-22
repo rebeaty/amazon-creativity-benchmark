@@ -1,0 +1,31 @@
+name: litbench
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: false
+gaps:
+  - "Primary metric drift: LitBench paper's headline metric is pairwise preference accuracy vs. human labels (Claude-3.7-Sonnet ~73%, trained RMs ~78%). run_specs/litbench_run_specs.py:49-52 registers only a generic 5-point llm_judge_quality rubric (GenericLLMJudgeMetric), which does not compare the prediction against the gold chosen/rejected label at all. No accuracy metric is computed, despite scenarios/litbench_scenario.py:238-247 correctly wiring CORRECT_TAG references to A/B."
+  - "Judge misuse: annotator is openai/gpt-4 with a generic literary-quality rubric (run_specs/litbench_run_specs.py:15-24, 53-64). The paper evaluates the model-under-test AS the judge predicting chosen-vs-rejected; LitBench does not require an external LLM judge over the model's free-text output. The current pipeline ignores the scenario's correct_letter references and instead asks GPT-4 to rate the model's prose quality 1-5."
+  - "Output shape broken: display_predictions.json shows every prediction is 500+ word literary commentary ending mid-sentence (truncated at max_tokens=512) rather than the required 'Preferred: [A or B]'. Adapter uses ADAPT_MULTIPLE_CHOICE_JOINT with temperature=0.7 and stop_sequences=['\\n'], but output_prefix='Answer: ' plus a prompt ending in 'Preferred: [A or B]' creates conflicting instructions; model ignores the format and rambles. Zero predictions in the sampled file contain 'Preferred:' or a clean A/B choice."
+  - "Adapter/temperature mismatch: ADAPT_MULTIPLE_CHOICE_JOINT with max_tokens=512 and temperature=0.7 is inappropriate for a forced-choice A/B task; paper/GitHub dataloader expects a single-token deterministic choice. Temperature should be 0.0 and max_tokens small (e.g. 8)."
+  - "Prompt template adapted: scenarios/litbench_scenario.py:128-141 prepends the writing prompt and a 5-aspect rubric, acknowledged as a deviation from the LLAMA_PROMPT Direct variant in SFTDataLoaderDirect (scenario docstring lines 18-22, 46-48). Minor faithfulness risk but documented."
+  - "Data rehydration dependency: scenario depends on api.pullpush.io (scenarios/litbench_scenario.py:70-73) to rehydrate 2,381 Reddit comments; silent skip on fetch failure (lines 183-184) can shrink N without warning. Paper reports 2,480 test pairs; scenario docstring says 2,381. Discrepancy not explained."
+  - "Stop sequence bug: stop_sequences=['\\n'] combined with a prompt whose final newline precedes 'Preferred:' may cause the model to terminate before producing its answer under some adapters."
+  - "Empty metric notes: metric_notes/litbench_{annotator,eval_metrics}_notes.md are both 0 bytes, so there is no recorded spec for the intended metric; cross-check relied solely on scenario/run_spec code and the arXiv abstract."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace GenericLLMJudgeMetric with a pairwise-accuracy exact-match metric that parses the model's output for A/B and compares to the CORRECT_TAG reference. This is the paper's primary metric."
+  - severity: blocking
+    action: "Remove the GenericLLMJudgeAnnotator entirely (or repurpose it only if running a judge-as-model study). The current generic quality rubric is orthogonal to LitBench."
+  - severity: blocking
+    action: "Fix adapter: set temperature=0.0, max_tokens<=8, and either drop output_prefix='Answer: ' or rewrite PROMPT_TEMPLATE so the final instruction matches the expected answer surface. Verify the model actually emits 'A' or 'B'."
+  - severity: non-blocking
+    action: "Document the 2381-vs-2480 test-set size discrepancy and record per-run count of successfully rehydrated pairs."
+  - severity: non-blocking
+    action: "Populate metric_notes/litbench_{annotator,eval_metrics}_notes.md so future audits have a canonical reference."
+notes: "As wired today, the litbench run does not measure LitBench. It measures GPT-4's 1-5 literary-quality rating of Gemini's free-text commentary on pairs of stories, while ignoring the dataset's gold preference labels entirely. Scenario code correctly constructs the pairwise task with position randomization and CORRECT_TAG references, but no metric consumes them. Must not ship without a pairwise-accuracy metric and adapter fixes."
+paper_url: "https://arxiv.org/abs/2507.00769"
+reviewed_at: "2026-04-21"

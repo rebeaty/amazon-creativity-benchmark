@@ -1,0 +1,30 @@
+name: geo_story
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Paper metrics (lexical uniqueness via corpus-wide IDF from src/measure_uniqueness.py; informativeness via spaCy en_core_web_trf NER count of LOC/FAC/GPE entities from src/measure_informativeness.py; emotion classification via GPT-4 across 5 categories Joy/Hardships/Fear/Sadness/Serenity from src/extract_emotions.py) are NOT implemented. run_specs/geo_story_run_specs.py:49-52 only runs BLEU/ROUGE/F1/exact_match (meaningless here — no references; scenario sets output='' at geo_story_scenario.py:232) plus a single generic LLM-judge creativity rubric. metric_notes/geo_story_eval_metrics_notes.md:55-62 explicitly acknowledges this gap."
+  - "Prompt template verbatim deviations vs. src/prompt_template.json: scenario de-duplicates 'Write a story of a a couple from {}' to 'Write a story of a couple from {}' (geo_story_scenario.py:64), strips trailing space from 'Write a story of a social worker from {} ' (line 68), and adds a trailing period to the travel template 'Tell me some important sites to incorporate into my travel plans to {}' (line 96). Minor — likely typo fixes in the paper's JSON — but not literally identical."
+  - "Judge rubric is a generic 1-5 creativity Likert (run_specs/geo_story_run_specs.py:15-24). The paper does NOT use LLM-as-judge for creativity — its three analyses are IDF uniqueness, NER count, and GPT-4 emotion tagging. The rubric added here is orthogonal to the paper's framework and cannot reproduce the paper's GDP-per-capita correlations (metric_notes/geo_story_eval_metrics_notes.md:50-52)."
+  - "Judge model pinned to openai/gpt-4 at temp=0.0 (run_specs/geo_story_run_specs.py:58-59). Paper uses GPT-4 only for emotion classification (temp=0.7, max_tokens=50 per extract_emotions.py); the repo's gpt-4 choice aligns with the paper's judge model but is applied to a different task than the paper specifies."
+  - "Scenario samples 25 locations per country with seed=100 (geo_story_scenario.py:121,210-213), matching the paper's ~4000 locations × 245 countries scale; sampling is deterministic and reproducible. However, each location is assigned a SINGLE randomly-chosen prompt (line 227) rather than all 21 story prompts ×  all locations, so the ~200K story generations scale reported in the paper abstract is not reproduced — only ~4K generations per subset."
+  - "Default subset='story' pools all 21 story templates together (geo_story_scenario.py:141-144); the paper reports metrics broken down by prompt type (childhood/character/profession/daily_life). The per-subset variants exist (SUBSETS line 116-119) but are not invoked by the default @run_spec_function."
+  - "Adapter uses max_tokens=512, temperature=0.7 (run_specs/geo_story_run_specs.py:44-45). Paper/code do not state an exact max_tokens budget; inspected outputs (e.g. benchmark_output/runs/gemini_flash/.../display_predictions.json) are truncated mid-sentence at ~512 tokens, which could bias uniqueness/informativeness metrics if ever computed downstream."
+fixes_before_run:
+  - severity: blocking
+    action: "Implement the paper's three metrics as HELM metrics/annotators: (a) corpus-wide IDF uniqueness (stopword-filtered, lowercase, score*total_docs normalization per measure_uniqueness.py); (b) spaCy en_core_web_trf NER count of LOC/FAC/GPE minus the anchor city/country (per measure_informativeness.py); (c) GPT-4 emotion tagging with the exact prompt 'Help me identify which of the following emotions: Joy, Hardships, Fear, Sadness, Serenity; are recognized within the story given in the prompt. Only output the names of the emotions found in the prompt.' at temp=0.7, max_tokens=50."
+  - severity: non-blocking
+    action: "Remove BLEU/ROUGE/F1/exact_match from metric_specs — no reference outputs exist (scenario emits Reference(output=Output(text=''))), so these scores are structurally 0 and add noise."
+  - severity: non-blocking
+    action: "Fix prompt template strings to match src/prompt_template.json byte-for-byte (restore 'a a couple', trailing whitespace, and drop added period on the travel attractions template), or document the deviations in metric_notes/geo_story_eval_metrics_notes.md."
+  - severity: non-blocking
+    action: "Expose per-prompt-type subsets as distinct run_specs (story_childhood/character/profession/daily_life) so HELM can surface the paper's per-category analyses; current default collapses them."
+  - severity: non-blocking
+    action: "Raise max_tokens (paper does not cap at 512) or document the cap — several inspected outputs end mid-sentence which will depress downstream NER and IDF scores."
+notes: "Scenario correctly downloads GeoNames cities1000 and countryInfo.txt, joins on country_code, and deterministically samples 25 cities per country with seed=100. Zero-shot, num_outputs=1, temp=0.7 adapter is sensible for creative generation. Inspected display_predictions.json across gemini-2.5-flash, gemma-3-1b, gemma-3-27b show city+country correctly interpolated into prompts, stories ~500 tokens, llm_judge_creativity scores span 3-4 with reasonable variance. Output shape matches sibling GenericLLMJudge tasks in this repo. Paper URL (arxiv.org/abs/2411.07320) PDF was not parseable via WebFetch; verification was cross-checked against the paper's public repo github.com/FLAIR-IISc/richer-countries-have-richer-output (prompt_template.json, measure_uniqueness.py, measure_informativeness.py, extract_emotions.py fetched directly). The faithfulness gap is primarily that HELM implements a generic creativity judge instead of the paper's three domain-specific analyses."
+paper_url: "https://arxiv.org/abs/2411.07320"
+reviewed_at: "2026-04-21"

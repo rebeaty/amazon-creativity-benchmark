@@ -1,0 +1,35 @@
+name: sudoku_bench
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "scenarios/sudoku_bench_scenario.py:125 literal '{{x}}' and '{{y}}' (post e2eb48b7 .format escape) render to the model as '{x}' and '{y}' — the paper's instruction is the concrete token 'rxcy'; current prompt ships 'r{x}c{y}' which is a format-placeholder-looking string that may confuse LLMs and does not match the official ONE_SHOT_VARIANT_PROMPT text"
+  - "run_specs/sudoku_bench_run_specs.py:29 max_tokens=512 is grossly insufficient: the expected answer alone is up to 81 digits, and the prompt explicitly solicits reasoning before the <ANSWER> tag; all 10 trial predictions in display_predictions.json are truncated mid-reasoning with no <ANSWER> tag emitted"
+  - "run_specs/sudoku_bench_run_specs.py:30 temperature=0.7 contradicts deterministic exact-match scoring against a single canonical 81-digit solution; paper reports single-shot average solve rate — greedy (temp=0) is standard"
+  - "run_specs/sudoku_bench_run_specs.py:35 scoring uses BasicGenerationMetric exact_match/quasi_exact_match/f1/rouge/bleu on raw generation — no <ANSWER>...</ANSWER> extractor is registered, so exact_match compares full CoT against the 81-digit solution and will always score 0 even when the model is correct"
+  - "run_specs/sudoku_bench_run_specs.py:18 args={} defaults to subset='challenge_100' only; nikoli_100 and ctc subsets documented in the scenario docstring are never instantiated, so the run cannot reproduce the paper's three reported subset results"
+  - "scenarios/sudoku_bench_scenario.py:169 all instances assigned TEST_SPLIT, but max_train_instances=0 in AdapterSpec is fine; however the docstring calls it 'ONE_SHOT_VARIANT_PROMPT' yet no worked example is provided — it is effectively zero-shot, inconsistent with the 'one-shot' naming"
+  - "metric_notes/sudoku_bench_annotator_notes.md and sudoku_bench_eval_metrics_notes.md are both empty (1 line) — no documented rubric, cell-level accuracy plan, or human baseline"
+  - "benchmark_output/runs/trial*/sudoku_bench_model=google_gemini-2.5-flash-lite/display_predictions.json: 10/10 predictions in trial_10inst are cut off mid-reasoning (no closing <ANSWER>), confirming max_tokens is blocking all answer emission"
+fixes_before_run:
+  - severity: blocking
+    action: "Raise max_tokens to >=8192 (or a reasoner-appropriate limit) so the model can emit reasoning plus the 81-digit <ANSWER> block; current 512 guarantees 0% solve rate"
+  - severity: blocking
+    action: "Add an <ANSWER>(.+?)</ANSWER> regex post-processor and strip whitespace/newlines before exact_match; without extraction scores will be 0 regardless of correctness"
+  - severity: blocking
+    action: "Set temperature=0 for reproducible single-shot solve-rate scoring to match the paper's evaluation protocol"
+  - severity: non-blocking
+    action: "Fix the 'r{{x}}c{{y}}' prompt text: after .format() it becomes 'r{x}c{y}'. Replace with the paper's literal 'rxcy' so the instruction reads naturally and matches ONE_SHOT_VARIANT_PROMPT"
+  - severity: non-blocking
+    action: "Add run_specs for nikoli_100 and ctc subsets (args={'subset': 'nikoli_100'} / 'ctc') to reproduce all three paper subset results; the scenario already supports them"
+  - severity: non-blocking
+    action: "Populate metric_notes/*.md with paper metric (single-shot solve rate / exact-match on 81-digit solution), cell-level partial-credit option, and per-subset baselines reported in the paper"
+  - severity: non-blocking
+    action: "Either add a true worked one-shot example (matching ONE_SHOT_VARIANT_PROMPT) or rename the docstring reference to zero-shot variant prompt to avoid misattribution"
+notes: "Scenario data loading (SakanaAI/Sudoku-Bench HF, split='test'), board ASCII formatting, visual-element serialization, and 81-digit reference solution are all faithful to the paper/repo. However the e2eb48b7 escape patch left a user-visible 'r{x}c{y}' artifact in the prompt (should be literal 'rxcy'). The run config is non-viable: max_tokens=512 truncates every trial output before the <ANSWER> tag, no answer extractor is applied, temp=0.7 is non-deterministic, and only the challenge_100 subset is exercised. All 10 trial predictions are mid-reasoning truncations; current config yields a guaranteed 0% score that reflects harness failure rather than model ability."
+paper_url: "https://arxiv.org/abs/2505.16135"
+reviewed_at: "2026-04-21"

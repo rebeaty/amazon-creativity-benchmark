@@ -1,0 +1,24 @@
+name: balancecc_prompt_generation
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "scenario uses 'Compound Change' in prompt text (line 50) but dataset uses 'Multiple Change' (scenario.py:25) — label/prompt mismatch may confuse model"
+  - "run_specs only uses n-gram overlap metrics (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4) against a single human target prompt (run_specs:35) — inappropriate for open-ended creative generation where many valid paraphrases exist; paper itself uses human user studies, not automatic reference matching"
+  - "no LLM-judge / creativity annotator configured (annotators=None, run_specs:44); metric_notes files are empty (0 lines each), so no documented metric rationale"
+  - "scenario adapts Appendix B.1 prompt for single-prompt generation rather than the paper's batch/multi-editing-type generation — noted in source comments but means prompt_matches only partially"
+  - "task is text-only reformulation of a multimodal video-editing pipeline; without video input or image-grounded judging, creativity signal is weak"
+fixes_before_run:
+  - severity: blocking
+    action: "replace n-gram overlap metrics with an LLM-judge rubric (creativity, fidelity to editing type, fantasy-level calibration) since reference-based overlap penalizes valid creative variation"
+  - severity: non-blocking
+    action: "align editing-type label: either rename prompt's 'Compound Change' to 'Multiple Change' to match dataset, or map dataset label into prompt consistently"
+  - severity: non-blocking
+    action: "populate metric_notes/*.md with rationale before run so downstream analysis knows what n-gram scores mean here"
+notes: "Scenario is a reasonable text-only adaptation of CCEdit's GPT-4V dataset-creation prompt, but BalanceCC's original evaluation is multimodal user studies on edited videos; scoring LLM creative prompts against a single human reference via BLEU/ROUGE is a poor proxy. Borderline-creativity flag (per NOTES_FOR_VIJETA.md) is warranted: this is prompt-engineering for a multimodal video-design pipeline, further from core linguistic creativity than other benchmarks. Predictions look well-formed and on-task."
+paper_url: "https://arxiv.org/abs/2309.16496"
+reviewed_at: "2026-04-21"

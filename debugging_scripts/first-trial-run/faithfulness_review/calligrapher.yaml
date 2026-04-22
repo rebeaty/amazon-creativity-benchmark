@@ -1,0 +1,26 @@
+name: calligrapher
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: false
+gaps:
+  - "Task-model mismatch: paper is a text-to-image diffusion benchmark requiring image generation (scenarios/calligrapher_scenario.py:1-189), but run_spec drives text-only LLM generation (run_specs/calligrapher_run_specs.py:35-47). Evaluated models (gemini/gemma text-chat) cannot produce styled text images."
+  - "Metric substitution: paper's metrics are FID, CLIP style-sim on masked regions, DINO style-sim, and OCR accuracy (metric_notes/calligrapher_eval_metrics_notes.md:7-31). Run_spec replaces all with a GenericLLMJudgeMetric scoring 'poetic quality' / 'self-referential text' (run_specs/calligrapher_run_specs.py:15-24, 49-50) — unrelated to typography style transfer."
+  - "Rubric nonsensical for task: rubric asks about 'self-referential text' and 'linguistic creativity' (run_specs/calligrapher_run_specs.py:15-24), but scenario prompt is literally just \"The text is '{text}'.\" (scenarios/calligrapher_scenario.py:51). Predictions are meta chatbot replies ('Hello! It looks like your message came through blank...') all scoring 1 (benchmark_output/runs/gemini_3_pro/.../display_predictions.json, gemini_2_flash/...)."
+  - "calligrapher_annotator_notes.md is empty (1 line); no annotator design documented."
+  - "Adapter is ADAPT_GENERATION with text-only I/O; images in MultimediaObject are not plumbed to text-only models, so instances degrade to empty prompts (explains identical 'blank message' fallback responses across all 100 self_* instances)."
+fixes_before_run:
+  - severity: blocking
+    action: "Remove calligrapher from the text-only creativity sweep, or gate it behind an image-capable multimodal model list. Text LLMs cannot perform this task."
+  - severity: blocking
+    action: "Replace the LLM-judge rubric and metric with the paper's FID/CLIP/DINO/OCR pipeline on generated images; current rubric evaluates a task the scenario does not prompt for."
+  - severity: non-blocking
+    action: "Populate metric_notes/calligrapher_annotator_notes.md (currently empty) or delete it."
+  - severity: non-blocking
+    action: "Fix scenario prompt to actually describe the image-editing task (current \"The text is '{text}'.\" is the bare diffusion conditioning string, not an instruction)."
+notes: "Borderline-creativity as flagged in NOTES_FOR_VIJETA.md sec 1 — this is multimodal typography/design (image generation), not text-to-text creativity. Even setting the borderline fit aside, the implementation is fundamentally divergent: an image-generation benchmark wired to a text-chat LLM with an unrelated poetic-self-reference judge, producing vacuous identical outputs across the test set."
+paper_url: "https://arxiv.org/abs/2506.24123"
+reviewed_at: "2026-04-21"

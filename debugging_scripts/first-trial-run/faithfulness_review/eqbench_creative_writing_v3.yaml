@@ -1,0 +1,33 @@
+name: eqbench_creative_writing_v3
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Iteration shape drift: scenario creates 3 Instances per prompt (96 total) with num_outputs=1 semantics, but run_specs/eqbench_creative_writing_v3_run_specs.py:54 sets num_outputs=3, meaning each of the 96 instances yields 3 completions (288 completions). Predictions confirm this — display_predictions.json shows single instance_id 'eqbench_cw_v3_9_iter3' with predicted_text containing 3 concatenated stories. The iteration multiplier is applied twice."
+  - "Predicted text concatenation: display_predictions.json 'predicted_text' is a single string containing multiple stories run together with no separator, because num_outputs=3 collapses into one field. This breaks per-iteration scoring — judge sees 3 stories as one artifact, inflating/garbling rubric and elo scores (annotations show one rubric_score per merged blob)."
+  - "Seed modifiers unused: scenario loads 'seed_modifiers' (scenarios/eqbench_creative_writing_v3_scenario.py:111) but does not apply them to the prompt (line 116: prompt_text = writing_prompt). Paper/GitHub methodology varies prompts across iterations via seed modifiers to promote diversity; here all 3 iterations receive identical input, reducing variance."
+  - "min_p=0.1 not wired: metric_notes and scenario docstring both specify min_p=0.1 as a required generation param, but AdapterSpec in run_specs/eqbench_creative_writing_v3_run_specs.py:46-58 does not pass min_p (HELM AdapterSpec has no min_p field; it is silently dropped). Paper parity is compromised for samplers that rely on it."
+  - "Metric scheme mismatch: canonical EQBench v3 uses pairwise Glicko-2 Elo (with margin weighting) anchored to reference models, plus rubric aggregation across 10 criteria on a 0–20 scale per criterion (per the GitHub pipeline). run_specs here uses a single-response LLM-as-judge on a 1–5 Likert for both 'elo_rating' and 'rubric_score' metrics (run_specs/eqbench_creative_writing_v3_run_specs.py:15-35, 61-62). The metric named 'elo_rating' is not an Elo rating — it is a Likert quality score. No pairwise comparisons, no Glicko-2, no normalization."
+  - "Judge rubric abbreviated: canonical rubric enumerates ~10 criteria (character authenticity, originality, coherence, emotional engagement, prose quality, plus slop detection, voice, etc.) with detailed anchors. run_specs rubric strings are 5 generic Likert anchors without per-criterion breakdown or slop penalty (annotator_notes.md:109-113 describes slop detection as part of the benchmark, but it is not implemented)."
+  - "max_tokens=2048 likely truncates: target length is ~1000 words (~1300-1500 tokens), and with num_outputs=3 sharing the same max_tokens budget per completion, outputs at budget limit are truncated — display_predictions.json shows stories ending mid-sentence ('something old' with no terminator)."
+  - "Output shape: 3 models x 96 instances x 3 concatenated completions visible; annotations populated with integer 1–5 scores for both 'elo_rating' and 'rubric_score'. Values in reviewed sample (3, 4, 3) are plausible mid-range Likerts."
+fixes_before_run:
+  - severity: blocking
+    action: "Either drop num_outputs to 1 (scenario already duplicates instances for 3 iterations) or collapse scenario to 32 instances and keep num_outputs=3 — do not do both. Current config produces 288 completions collapsed into 96 concatenated predicted_text fields, which corrupts per-iteration judging."
+  - severity: major
+    action: "Rename the 'elo_rating' metric or implement actual pairwise Glicko-2. A single-response 1–5 Likert scored by one judge is not an Elo rating and should not be reported under that name — it invites false comparability to the EQBench leaderboard."
+  - severity: major
+    action: "Apply seed_modifiers across the 3 iterations per prompt (cycle or sample from the list) so iterations differ as intended."
+  - severity: non-blocking
+    action: "Raise max_tokens to ~4096 to avoid mid-story truncation at ~1000-word target length, especially when num_outputs>1 shares the budget."
+  - severity: non-blocking
+    action: "Expand rubric anchors to mirror the 10-criterion EQBench rubric and add a slop-phrase frequency metric (slop_list.json bigrams/trigrams) for closer parity."
+  - severity: non-blocking
+    action: "Document that min_p=0.1 is not passed through HELM's AdapterSpec and that leaderboard parity therefore cannot be claimed."
+notes: "Scenario faithfully loads the 32 v3 prompts from the official repo and preserves the zero-shot generation task. Core faithfulness issues are in the evaluation layer: the so-called 'elo_rating' metric is not Elo (no pairwise, no Glicko-2), seed_modifiers are ignored, and the num_outputs=3 x 3-iteration duplication concatenates 3 stories into one scored artifact per instance. Treat outputs as a creative-writing Likert rubric probe, not as a reproduction of the EQBench v3 leaderboard. Paper (arXiv:2509.02534) references EQBench as a downstream eval but does not specify implementation; cross-check leaned on the EQ-bench/creative-writing-bench GitHub README."
+paper_url: "https://arxiv.org/abs/2509.02534"
+reviewed_at: "2026-04-21"

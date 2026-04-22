@@ -1,0 +1,34 @@
+name: matdesign
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: false
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: false
+gaps:
+  - Dataset loading is broken/fake. Scenario checks a hardcoded Linux path (/tmp/matdesign_data.json) that never exists on this Windows host, so every run falls back to a SINGLE hardcoded example (the self-healing hydrogel) instead of the paper's 50-example 2024 materials-science dataset. Confirmed in display_predictions.json for every matdesign_model=* run — only instance_id "id0" is present across all 15 model outputs. The scenario's own docstring advertises "50 examples" while the code delivers 1.
+  - Dataset is Excel-format in the upstream repo (Materials Discovery & Design Dataset.xlsx) and the scenario comment acknowledges "The JSON file should be hosted on GitHub... In the actual implementation, convert the Excel file to JSON and host it." No such conversion or hosting was done; BASE_URL is set but never fetched. This is a TODO stub shipped as production code.
+  - Evaluation framework is completely wrong. Paper uses the AccelMat multi-agent system: 3 critic agents (GPT-4o, Claude-3.5-Sonnet, Gemini-1.5-Flash @ temp 0.7) that per-suggestion label "Meets_the_goal_statement_and_satisfies_all_constraints_strictly" YES/NO, a GPT-4o summarizer, up to 5 iterative refinement rounds, then an o1-preview evaluator scoring Concept/Property/Keyword overlap (closeness) plus 6 quality axes (Alignment, Scientific Plausibility, Innovation, Testability, Feasibility, Impact) on 5-point rubrics. Run_spec instead wires a single GenericLLMJudgeMetric with judge_model_name="openai/gpt-4" (legacy GPT-4, not GPT-4o) at temperature 0.0 and a generic 1–5 "quality of materials design" rubric. None of the 3-critic consensus, iterative refinement, concept/property/keyword overlap, or 6-axis quality breakdown are implemented.
+  - Rubric text is generic and paper-unrelated. _RUBRIC_LLM_JUDGE_QUALITY evaluates "scientific accuracy, novelty, completeness, and practical applicability" on a generic 1–5 scale — not tied to the paper's constraint-satisfaction YES/NO criterion or to the 6 AccelMat quality dimensions.
+  - metric_notes/matdesign_eval_metrics_notes.md is an empty stub (1 line). Only the annotator notes file is populated (and it correctly documents the paper's real evaluation — confirming the run_spec diverges from what the maintainer already knew was required).
+  - Output shape unvalidated. Task requires 20 JSON-formatted suggestions per instance; max_tokens=512 is far too short for 20 materials+methods+reasoning blocks. Observed display_predictions truncate mid-second-suggestion in gemini-2.5-flash output (predicted_text cuts at "...the embedded ionic liquid ensures high ionic conductivity and low hysteresis due" with no closing brace). Gemini-2.5-pro output also truncates mid-Suggestion_2. Every model's generation is structurally broken.
+  - judge_max_new_tokens=512 likely too short to fairly evaluate a (truncated) 20-suggestion response.
+  - Paper citation in scenario docstring (arXiv:2501.13299) is correct; repo URL is correct. Provenance itself is fine — the implementation is the problem.
+  - Reference field wraps ground-truth materials+methods into a single Reference with tag "reference_only", which is appropriate (paper explicitly says models should generate NOVEL suggestions, not reproduce), but the reference is never consumed by any metric since only an LLM judge runs.
+fixes_before_run:
+  - severity: blocking
+    action: Convert the upstream Excel dataset (Materials Discovery & Design Dataset.xlsx, 50 rows) to JSON, host it at a stable URL, and make MatDesignScenario.get_instances download it — remove the /tmp/ local path hack and the 1-row hardcoded fallback. Until this is fixed the benchmark is testing a single example.
+  - severity: blocking
+    action: Raise max_tokens well above 512 (20 suggestions × ~100 tokens each ≈ 2000+ tokens minimum; use 4096–8192) so the 20-suggestion JSON is not truncated. Currently every model output is structurally invalid JSON due to mid-generation cutoff.
+  - severity: blocking
+    action: Either implement the paper's AccelMat evaluation (3-critic consensus on YES/NO per suggestion, iterative refinement, final o1-preview scoring on the 3 closeness + 6 quality rubrics) OR explicitly document that HELM is using a simplified single-judge quality score and update the rubric to match the paper's constraint-satisfaction framing (e.g., "fraction of 20 suggestions that meet goal + all constraints strictly"). Current generic 1–5 design-quality rubric is unrelated to the paper.
+  - severity: non-blocking
+    action: Update judge_model_name to gpt-4o (or a current flagship) to match the paper's critic model choice; legacy "openai/gpt-4" is not what AccelMat uses.
+  - severity: non-blocking
+    action: Populate metric_notes/matdesign_eval_metrics_notes.md so the metric design is documented rather than an empty stub.
+  - severity: non-blocking
+    action: If the single-judge simplification is kept, raise judge_max_new_tokens to accommodate evaluating 20 suggestions at once, or batch evaluation per-suggestion.
+notes: MATDESIGN as currently wired is not a faithful implementation of the AccelMat paper. The scenario ships a 1-example hardcoded fallback (because its data source is a /tmp/ path that never exists), and every matdesign_model=* run in benchmark_output/runs contains only instance_id "id0" — so the advertised "50 examples" is effectively 1. On top of that, max_tokens=512 truncates the 20-suggestion JSON mid-output for every model (confirmed in gemini-2.5-pro and gemini-2.5-flash display_predictions, outputs end with no closing brace mid-Suggestion_2), so even that one example produces invalid JSON. The evaluation is a single GenericLLMJudgeMetric with a generic 1–5 "design quality" rubric and gpt-4 judge — bearing no resemblance to the paper's 3-critic consensus + iterative refinement + o1-preview closeness/quality rubrics documented in the (well-populated) annotator_notes.md. The eval_metrics_notes.md is an empty stub. Scenario docstring, paper URL, and reference handling are correct; the dataset plumbing, generation budget, and evaluation design are all blocking issues that must be fixed before any matdesign number can be reported. Annotator notes already document the correct AccelMat design, so the gap is implementation, not design knowledge.
+paper_url: https://arxiv.org/abs/2501.13299
+reviewed_at: "2026-04-21"

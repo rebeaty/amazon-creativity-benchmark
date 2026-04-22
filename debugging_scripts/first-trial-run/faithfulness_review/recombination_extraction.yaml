@@ -1,0 +1,35 @@
+name: recombination_extraction
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: partial
+gaps:
+  - "run_specs/recombination_extraction_run_specs.py:35 uses only BasicGenerationMetric (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4); paper evaluates with JSON-structured soft-matching F1 at 3 levels (classification, entity, relation) using GPT-4o-mini as judge — none of these metrics are faithful"
+  - "scenarios/recombination_extraction_scenario.py:139 gold reference is raw json.dumps(readable_relations) using dataset's 'analogy'/'analogy-src'/'analogy-target' keys, but prompt instructs model to emit 'inspiration'/'inspiration-src'/'inspiration-target'; token-level f1_score/exact_match will be guaranteed-wrong on every inspiration example due to key mismatch"
+  - "no custom metric parses <answer> tags or JSON; display_predictions show models emit '<scratchpad>…</scratchpad><answer>{…}</answer>' (often truncated mid-answer at max_tokens=512) — BasicGenerationMetric scores the entire verbose string against a compact JSON reference"
+  - "run_specs max_tokens=512 is too small: predictions in benchmark_output/runs/gemini_pro/.../display_predictions.json are frequently truncated mid-<answer> block (e.g., id399, id531, id514, id437), invalidating JSON parsing downstream"
+  - "run_specs temperature=0.7; CHIMERA paper evaluates deterministic extraction (temp=0 conventional for structured IE tasks)"
+  - "adapter_spec has max_train_instances=5 (few-shot) but scenario embeds the full PROMPT_E2E verbatim per instance with no demonstration slot; HELM will prepend 5 train examples as raw prompt/reference pairs that do not match the prompt's expected schema, polluting context"
+  - "metric_notes/recombination_extraction_annotator_notes.md is empty (1 line); eval_metrics_notes.md explicitly flags that a custom JSON-parsing metric + GPT-4o-mini soft matcher is required but none is implemented"
+  - "annotators=None; paper's evaluation is LLM-as-judge (GPT-4o-mini) per Appendix — a HELM annotator is required to reproduce HDR/soft-F1"
+fixes_before_run:
+  - severity: blocking
+    action: "Implement a custom metric (e.g., metrics/recombination_extraction_metric.py) that extracts <answer> JSON, normalizes analogy<->inspiration key aliases, and computes: classification accuracy/F1 (empty vs non-empty), entity soft-F1, relation soft-F1 per paper Section 4"
+  - severity: blocking
+    action: "Add GPT-4o-mini annotator for soft entity matching (paper Appendix B); without it F1 at entity/relation levels is not faithful"
+  - severity: blocking
+    action: "Align gold reference keys with prompt vocabulary (map dataset 'analogy'* -> 'inspiration'*) in scenario before emitting Reference, or handle bidirectionally in metric"
+  - severity: blocking
+    action: "Raise max_tokens to >=1024 (scratchpad + JSON answer); current 512 truncates a majority of predictions before <answer> closes"
+  - severity: blocking
+    action: "Set temperature=0 and max_train_instances=0 — PROMPT_E2E is self-contained zero-shot in the paper; few-shot prepending breaks the prompt template"
+  - severity: non-blocking
+    action: "Populate metric_notes/recombination_extraction_annotator_notes.md with the soft-match judge rubric from CHIMERA repo src/util.py"
+  - severity: non-blocking
+    action: "Consider emitting document_class on Instance for direct Level-1 accuracy computation rather than deriving from JSON emptiness"
+notes: "Scenario prompt construction is faithful to PROMPT_E2E from CHIMERA src/util.py, and the train/test split mapping is correct. However the evaluation pipeline is fundamentally misaligned with the paper: BasicGenerationMetric on raw JSON strings cannot capture classification/entity/relation F1, the analogy vs inspiration key mismatch guarantees near-zero f1_score on inspiration cases, max_tokens truncates answers, and few-shot adaptation corrupts the zero-shot prompt. No LLM judge is wired. Needs a custom metric + annotator before results are meaningful."
+paper_url: "https://arxiv.org/abs/2505.20779"
+reviewed_at: "2026-04-21"

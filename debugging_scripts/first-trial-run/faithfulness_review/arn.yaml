@@ -1,0 +1,25 @@
+name: arn
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "run_specs/arn_run_specs.py:30 sets temperature=0.7; paper's binary-accuracy eval typically uses greedy/low-temp decoding, introducing noise"
+  - "run_specs/arn_run_specs.py:35 emits extra generative metrics (f1, rouge_l, bleu) that are meaningless for a 2-choice task; only exact_match is task-appropriate"
+  - "metric_notes/arn_annotator_notes.md and metric_notes/arn_eval_metrics_notes.md are empty (0 lines) - no documented parsing/scoring rationale"
+  - "scenarios/arn_scenario.py:144-150 references are literal '1'/'2', but predictions are free-form template '{{narrative_X, because...}}' (see display_predictions.json) - exact_match will score 0 unless HELM's quasi_exact_match or a post-parser extracts the choice"
+fixes_before_run:
+  - severity: blocking
+    action: "Add a prediction post-processor or custom metric that extracts narrative_1/narrative_2 from the templated output and maps to '1'/'2' before exact_match; otherwise accuracy will be ~0 despite correct answers"
+  - severity: non-blocking
+    action: "Lower temperature to 0.0 for deterministic binary-choice scoring to match paper's evaluation protocol"
+  - severity: non-blocking
+    action: "Drop f1_score/rouge_l/bleu_1/bleu_4 from metric_specs; they are not defined for this task"
+  - severity: non-blocking
+    action: "Populate the two empty metric_notes/*.md files with parsing rules and scoring definition"
+notes: "Prompt text and four-way subset partitioning (near/far x high/low) faithfully match paper Appendix E.2 and the 1,095-triple dataset. Critical risk: reference outputs are '1'/'2' but model emits full templated sentences (confirmed in gemini_pro and trial_10inst display_predictions), so exact_match likely fails without a choice-extraction step. Judge n/a since task is binary multiple choice."
+paper_url: "https://arxiv.org/abs/2310.00996"
+reviewed_at: "2026-04-21"

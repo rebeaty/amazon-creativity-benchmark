@@ -1,0 +1,32 @@
+name: mixassist
+verdict: FAITHFUL_WITH_CAVEATS
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "No paper exists for MixAssist (dataset-only release by Michael Clemens on HuggingFace mclemcrew/MixAssist). Scenario docstring correctly acknowledges this (scenarios/mixassist_scenario.py:3-4). Faithfulness is judged against the dataset README rather than a paper spec, so 'prompt_matches' is inherently an ASSUMPTION — the prompt template (scenarios/mixassist_scenario.py:93-108) was invented by the scenario author."
+  - "Empty metric notes: metric_notes/mixassist_annotator_notes.md and metric_notes/mixassist_eval_metrics_notes.md are both 0 bytes. No recorded rationale for the chosen metric set or for declining to use an LLM judge. Cross-check relied solely on scenario/run_spec code and the HF dataset card."
+  - "Metric set over-broad: run_specs/mixassist_run_specs.py:35 requests exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4 against a single reference human response. Scenario docstring line 45 declares 'Evaluation: open_ended (ROUGE-L, BLEU)'. For open-ended multi-turn dialogue continuation where there is no single correct answer (responses like 'Yeah, yeah, yeah, right there...' vs. 'Bring it down. And now bring in the other one.'), exact_match and quasi_exact_match will be ~0 and uninformative. ROUGE/BLEU against one reference are also known to be weak for dialogue; a semantic-similarity or LLM-judge metric would be more defensible but is not wired."
+  - "Prompt deviation from typical MixAssist usage: the dataset includes audio_file references that are dropped (scenarios/mixassist_scenario.py:36 acknowledges this). The real mixing sessions were audio-grounded — text-only replay loses the acoustic context the human assistant actually had. References like 'Based on the audio segment, the overall mix has...' in gemini_pro display_predictions.json (id107, id112) show models hallucinating specific frequency observations they have no way to verify. This is a fundamental limitation of the text-only framing, not a scenario bug, but should be noted."
+  - "Adapter temperature=0.7 with num_outputs=1 (run_specs/mixassist_run_specs.py:30): reasonable for open-ended generation but introduces run-to-run variance that BLEU/ROUGE against a single reference will amplify. No seed pinning visible."
+  - "max_tokens=512 causes visible truncation mid-sentence on verbose models (gemini_pro id107 ends '...starting around '; gemma_3_1b id37 ends 'I need more'). For reference targets that are typically short conversational turns (1–3 sentences) 512 is overkill; models with verbose priors produce over-long outputs that then truncate, artificially depressing surface-overlap metrics."
+  - "Stop sequences empty (run_specs/mixassist_run_specs.py:31) while the prompt uses 'User:'/'Assistant:' role tags: some models (visible in gemma_3_1b id7) continue the dialogue past the requested turn and emit follow-up 'User:'/'Assistant:' lines, inflating length and degrading overlap metrics. Should set stop_sequences=['\\nUser:', '\\n\\nUser:']."
+  - "has_content filter is sensible and matches scenario docstring (156 test instances retained from 250). Verified in scenario code lines 75-77."
+  - "max_train_instances=0 (zero-shot) is consistent with docstring but means the model never sees the conversational style of the dataset; baseline models answer in meta-analysis mode (gemma_3_1b id26/id37/id24 produce 'Okay, here is a breakdown of the conversation...' rather than in-character assistant turns). A few-shot exemplar or stronger system prompt would better elicit the target register. Current zero-shot framing is faithful to the 'no paper prompt' decision but systematically disadvantages smaller models."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Populate metric_notes/mixassist_{annotator,eval_metrics}_notes.md documenting the ROUGE-L/BLEU choice, the absence of a paper reference, and why no LLM judge is used."
+  - severity: non-blocking
+    action: "Drop exact_match and quasi_exact_match from the metric list — they will be zero and only add noise. Keep rouge_l, bleu_1, bleu_4, f1_score; consider adding a BERTScore or LLM-judge metric for semantic similarity."
+  - severity: non-blocking
+    action: "Add stop_sequences=['\\nUser:', '\\n\\nUser:'] to prevent dialogue continuation past the target turn."
+  - severity: non-blocking
+    action: "Lower max_tokens to ~200 (reference turns are short) or keep 512 but document the truncation behavior."
+  - severity: non-blocking
+    action: "Consider adding an explicit style instruction ('Respond as the assistant would in a natural conversational turn, 1–3 sentences.') to reduce meta-analytic outputs from smaller models."
+notes: "Scenario is internally coherent and honestly documents its assumptions (no paper, invented prompt, text-only despite audio source). Primary concern is measurement validity rather than scenario incorrectness: surface-overlap metrics against a single human reference are a weak signal for open-ended mixing-session dialogue, and the adapter settings (temperature 0.7, empty stop_sequences, max_tokens 512) combine to produce noisy, often truncated outputs. Safe to ship as an exploratory creativity signal; results should not be interpreted as a clean MixAssist benchmark because none exists in the literature."
+paper_url: "N/A — no paper; dataset at https://huggingface.co/datasets/mclemcrew/MixAssist"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,26 @@
+name: analobench
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "run_specs/analobench_run_specs.py:30 temperature=0.7 for a deterministic MC task; paper implies greedy decoding (temp=0)"
+  - "run_specs/analobench_run_specs.py:35 metric bundle includes f1_score/rouge_l/bleu_1/bleu_4 which are not meaningful for single-letter MC answers; exact_match/quasi_exact_match are the correct signal"
+  - "run_specs/analobench_run_specs.py:21 uses ADAPT_GENERATION rather than ADAPT_MULTIPLE_CHOICE_JOINT; predictions include digits ('3','4') alongside letters (A-D), e.g. gemini_lite display_predictions.json ids id299/id76/id278, producing false exact_match misses vs. gold 'A'-'D'"
+  - "metric_notes/analobench_annotator_notes.md and metric_notes/analobench_eval_metrics_notes.md are empty (0 bytes); paper's intended eval setup/metrics were not transcribed for cross-check"
+  - "scenarios/analobench_scenario.py:37 loads T1S1-Subset split='train'; verify paper uses this subset as its test set (name collision risk)"
+fixes_before_run:
+  - severity: non-blocking
+    action: "Set temperature=0 and max_tokens ~8 in adapter_spec for deterministic single-token MC output"
+  - severity: non-blocking
+    action: "Trim metric bundle to ['exact_match','quasi_exact_match']; drop f1/rouge/bleu which are noise on A-D labels"
+  - severity: non-blocking
+    action: "Add post-processing to normalize digit responses ('1'..'4' -> 'A'..'D') OR switch to ADAPT_MULTIPLE_CHOICE_JOINT so the label space is enforced"
+  - severity: non-blocking
+    action: "Populate metric_notes/analobench_*.md with paper-sourced eval setup to enable faithful auditing"
+notes: "Prompt template faithfully mirrors code/t1.py and the dataset/subset load is consistent with the paper. Main drift is adapter-level: generation-mode decoding at temp=0.7 plus a misaligned metric bundle, compounded by models occasionally answering with digits instead of A-D, which will understate exact_match. Valid to run tomorrow but results should be interpreted on exact_match/quasi_exact_match only."
+paper_url: "https://arxiv.org/abs/2402.12370"
+reviewed_at: "2026-04-21"

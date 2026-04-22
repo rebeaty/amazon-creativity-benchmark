@@ -1,0 +1,31 @@
+name: newyorker_humor
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "Run spec uses args={} so only the 'matching' task runs with the default (non-fold) split; the 'ranking' and 'explanation' tasks from the paper are never instantiated despite being implemented in the scenario."
+  - "Paper supports 5-fold cross-validation (matching_1..matching_4 etc.); run_specs does not parameterize cross_val_fold, so only a single split is evaluated."
+  - "Metric spec includes rouge_l, which is meaningless for the matching task (single-letter A-E outputs) and only relevant for the explanation task that is never run."
+  - "Scenario emits TRAIN, VALID, and TEST splits without any max_eval_instances cap; full val=531 and test=528 for matching run unthrottled — paper's evaluation focuses on test split."
+  - "temperature=0.7 and max_tokens=512 are inappropriate for a deterministic multiple-choice task; paper uses argmax/deterministic decoding for MC accuracy."
+  - "Prompt uses textual descriptions (image_description + image_uncanny_description + entities + questions) — faithful to paper's 'from description' text-only variant, but the paper's headline human/CLIP numbers are the 'from pixels' multimodal variant; this should be flagged as the text-only condition."
+  - "No explanation-task annotator/judge configured; paper evaluates explanations via human head-to-head preference (GPT-4 vs human). Even if explanation task were instantiated, exact_match/rouge_l would not reflect the paper's evaluation protocol."
+  - "exact_match likely uses raw reference text (letters A-E) — OK for matching/ranking, but label field for explanation task is a long gold explanation, making exact_match ~0."
+fixes_before_run:
+  - severity: high
+    action: "Add separate run specs (or parameterize via args) for task in {matching, ranking, explanation} and optionally cross_val_fold in {None,1,2,3,4}, so all three paper tasks are evaluated."
+  - severity: high
+    action: "Set temperature=0 (or very low) and max_tokens small (e.g., 4) for matching/ranking; stop_sequences=['\\n'] already present is fine."
+  - severity: high
+    action: "Remove rouge_l from matching/ranking metric spec; only use exact_match. For explanation, add a dedicated LLM-as-judge annotator performing head-to-head preference vs the reference (as in the paper) rather than rouge_l/exact_match."
+  - severity: medium
+    action: "Add max_eval_instances cap and restrict evaluation to TEST_SPLIT (scenario currently enumerates TRAIN/VALID/TEST — TRAIN should be reserved for few-shot demonstrations, not scored)."
+  - severity: low
+    action: "Document clearly in notes that this is the text-only 'from description' condition, not the multimodal pixel condition, and cite paper numbers accordingly."
+notes: "Matching prompt format (A-E choices with cartoon description) matches paper's text-only 'from description' setup. Scenario implementation covers all three tasks but run_spec only triggers default matching. display_predictions.json shows clean single-letter outputs (A-E), confirming MC adapter works. Paper PDF not extractable via WebFetch; arXiv abstract confirms three tasks and accuracy-based evaluation for matching, head-to-head preference for explanations. The biggest faithfulness issue is scope collapse: 1 of 3 tasks, 1 of 5 folds, plus a text-only variant presented without the multimodal context from the paper."
+paper_url: "https://arxiv.org/abs/2209.06293"
+reviewed_at: "2026-04-21"

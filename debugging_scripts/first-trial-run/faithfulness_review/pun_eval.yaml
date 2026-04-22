@@ -1,0 +1,30 @@
+name: pun_eval
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "run_specs/pun_eval_run_specs.py:27-33 registers only task='generation' (default); task='explanation' declared in scenario but no run_spec exposes it, so only one of the two implemented tasks runs"
+  - "run_specs/pun_eval_run_specs.py:51-64 uses a 5-point generic 'llm_judge_quality' rubric; paper's Notebook 6 evaluation is a BINARY pun-detection judge (Choice: pun / non-pun), as documented in metric_notes/pun_eval_annotator_notes.md:27-47. Scores therefore do not correspond to paper's Pun Detection Rate."
+  - "run_specs/pun_eval_run_specs.py:58 judge_model='openai/gpt-4' but annotator_notes.md:20 specifies GPT-4o to match paper lineup"
+  - "run_specs/pun_eval_run_specs.py:50 BasicGenerationMetric (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4) is inappropriate for generation task — scenario comments (line 172) state many valid puns exist per keyword, so BLEU/ROUGE vs single human_text is a weak signal"
+  - "Paper's four core generation metrics (Ambiguity, Distinctiveness, Surprise, Unusualness) are documented in metric_notes/pun_eval_eval_metrics_notes.md but NOT implemented — only pun-detection (and even that as wrong rubric) is wired up"
+  - "run_specs/pun_eval_run_specs.py:45 temperature=0.7 diverges from paper's deterministic judge usage; acceptable for generation but should be 0.0 for judge (judge_temperature=0.0 is set correctly at line 59)"
+  - "No recognition task — correctly skipped per scenario docstring (not a creativity task)"
+fixes_before_run:
+  - severity: blocking
+    action: "Replace generic 5-point rubric with paper's verbatim binary pun-detection prompt (metric_notes/pun_eval_annotator_notes.md:27-41); parse Choice field and score 0/1"
+  - severity: blocking
+    action: "Add separate run_spec for task='explanation' (or parameterize) — scenario supports it but no spec exercises the explanation branch"
+  - severity: non-blocking
+    action: "Switch judge_model_name to 'openai/gpt-4o' to match paper"
+  - severity: non-blocking
+    action: "Implement Ambiguity/Distinctiveness/Surprise/Unusualness per metric_notes/pun_eval_eval_metrics_notes.md (GloVe + unigram LM); currently only pun-detection is planned"
+  - severity: non-blocking
+    action: "Drop exact_match/quasi_exact_match/f1_score from BasicGenerationMetric for generation task (BLEU/ROUGE retained as soft signal is acceptable)"
+notes: "Generation prompt (scenario lines 75-89) and explanation prompt (lines 92-105) copied verbatim from Notebooks 5 (Method 1) and 2 (CoT recognition, side='pun') of github.com/Zhijun-Xu/PunEval. Dataset loaded from official GitHub raw URLs and correctly filtered to 1,457 fully ExPun-annotated entries from the 2,589 SemEval+ExPun pool (hom=1443, het=1146). Predictions in display_predictions.json (gemini-2.5-pro, gemma-3-27b) show clean JSON {\"Sentence\": \"...\"} outputs matching the paper's expected format; llm_judge scores span 1-4 reasonably. Main faithfulness issue is that the wired judge rubric is a generic 5-point quality scale rather than the paper's binary pun-detection classifier, and the explanation task is defined but not exposed via a run_spec."
+paper_url: "https://arxiv.org/abs/2404.13599"
+reviewed_at: "2026-04-21"

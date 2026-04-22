@@ -1,0 +1,42 @@
+name: dat
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "Embedding model drift (primary issue): metric_notes/dat_annotator_notes.md:32-36 and dat_eval_metrics_notes.md both specify GloVe 840B 300d as the required embedding — this is the canonical choice from Olson et al. 2021 PNAS and replicated by Chen & Ding 2023 EMNLP. run_specs/dat_run_specs.py:37 instead uses sentence-transformers all-MiniLM-L6-v2 (384d). SemanticDiversityMetric (metrics/semantic_diversity_metric.py:44-54) is not GloVe-based. Resulting scores are not on the same scale as the published human baseline (mean ~78, SD ~10) or LLM benchmarks (GPT-4 ~90) quoted in the annotator notes."
+  - "Missing Olson-spec validation: metric_notes specifies 'keep first 7 valid unique words' (min threshold) with GloVe-vocabulary OOV-skip before computing pairwise distances. _dat_response_to_words (metrics/creativity_score_metric.py:45-63) does no vocabulary check, no min-7 enforcement, no duplicate dedup beyond list semantics, and no 'return None/NaN' for <7 valid words — it will happily score truncated outputs."
+  - "Segmentation fragility on observed outputs: display_predictions.json shows markdown-bold numbered lists like '1.  **Quantum**\\n2.  **Symphony**...'. _dat_response_to_words splits on '. ' after the first '1.', which parses double-star-wrapped items as 'quantum', 'symphony' etc. reasonably, but the leading preamble ('Here are 10 single-word nouns...') is dropped before '1.' which is correct. Fallback path (comma-split, last-token-per-chunk) would mis-handle the same outputs. Worth unit-testing on the exact observed markdown form."
+  - "Prompt phrasing: scenarios/dat_scenario.py:77-83 uses Chen & Ding 2023's condensed prompt, NOT the fuller Olson 2021 prompt that dat_creative_writing uses. Both are published DAT prompts; the run_spec doc comment correctly attributes it. Acceptable for the Chen & Ding LLM-adaptation but diverges from the canonical human-baseline instruction set."
+  - "Temperature/decoding: run_specs/dat_run_specs.py:29-30 sets temperature=0.7, num_outputs=1, max_tokens=512, matching Chen & Ding 2023 §6 (t=0.7, top_p=0.9 — top_p not set explicitly). num_trials=100 (default in scenario) matches paper protocol."
+  - "Observed determinism across trials: display_predictions.json for gemini-2.5-flash-lite shows byte-identical predictions across multiple instance IDs (id2, id16, id26, id54, id55, id73, id75, id86, id93...) despite temperature=0.7. This is almost certainly a caching/deduplication artifact of identical prompts with a cache-warm client, not a faithfulness bug in scenarios/run_specs — but it defeats DAT's repeated-trial design (each trial should be an independent sample). Verify HELM's request cache is either salted per-instance or disabled for this benchmark."
+  - "Human baseline not loaded: scenario docstring (dat_scenario.py:12) references 'Human baseline data from probing_creativity repository (8,572 responses)' and dataset/human.json, but get_instances does not load or surface any human reference — references=[] everywhere. That's fine for the generation-only design, but percentile comparisons against humans are not computable from the current output shape."
+fixes_before_run:
+  - severity: blocking
+    action: "Swap SemanticDiversityMetric for a GloVe-840B-300d-based DAT scorer as specified in metric_notes/dat_annotator_notes.md:41-52 (avg pairwise cosine distance × 100 on first 7 valid-vocabulary unique words). Without this, reported DAT scores are not the DAT score — they're an embedding-model-specific diversity proxy and cannot be compared to the literature's 0-100 scale or the ~78 human mean."
+  - severity: blocking
+    action: "Investigate the identical-predictions-across-trials issue in display_predictions.json. Confirm whether HELM's request cache is keying only on prompt text (which is identical across all 100 trials by design) and make trial_idx part of the cache key, or disable cache for num_trials-style scenarios."
+  - severity: non-blocking
+    action: "Add min-7-valid-words validation and explicit None/NaN return for under-threshold responses so aggregate means aren't pulled toward 0 by degenerate outputs."
+  - severity: non-blocking
+    action: "Unit-test _dat_response_to_words on the exact markdown-bold numbered-list form observed in display_predictions.json to confirm 10 words are extracted cleanly with punctuation stripped."
+notes: |
+  dat_creative_writing near-duplication (per NOTES_FOR_VIJETA.md:43, §1): CONFIRMED at the 'dat' subset level.
+  dat_creative_writing_scenario.py includes a 'dat' subset (SUBSETS[0]) whose DAT_PROMPT (lines 45-53, from
+  Bellemare et al. 2024 Nature Human Behaviour / DAT_GPT repo) is a slightly longer variant of the same task
+  with the same semantics (10 single-word English nouns, no proper nouns, no specialised vocab) as the
+  standalone dat scenario's Chen & Ding 2023 prompt. The two run_specs also differ on embedding model
+  (all-MiniLM-L6-v2 vs all-mpnet-base-v2) and dat_creative_writing adds an LLM-judge creativity rubric.
+  Recommendation: keep dat_creative_writing for its synopsis/flash_fiction/haiku/dat_strategies subsets
+  (which are genuinely distinct — Bellemare 2024's strategy-guided DAT and open-ended writing tasks)
+  but DROP the bare 'dat' subset from dat_creative_writing to avoid counting the same benchmark twice
+  under different names with different embedding models. Alternatively, make dat_creative_writing re-use
+  the same GloVe-based DAT scorer on its 'dat' subset for internal consistency.
+  Paper cross-check: Olson et al. 2021 PNAS (primary methodology source) and Chen & Ding 2023 EMNLP Findings
+  (LLM-adaptation) both consistently use GloVe 840B 300d with the first-7-valid-unique-words rule; current
+  implementation deviates from both.
+paper_url: "https://aclanthology.org/2023.findings-emnlp.858/"
+reviewed_at: "2026-04-21"

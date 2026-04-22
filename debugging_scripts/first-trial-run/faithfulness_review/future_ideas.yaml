@@ -1,0 +1,43 @@
+name: future_ideas
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: partial
+gaps:
+  - "Primary metrics missing: metric_notes/future_ideas_eval_metrics_notes.md:8-31 designates IAScore (SentenceBERT cosine similarity of generated ideas vs author Future_work) and IDI (1 - mean pairwise cosine sim across generated ideas) as the paper's authoritative metrics. run_specs/future_ideas_run_specs.py:60-63 instead registers two GenericLLMJudgeMetric instances (llm_judge_novelty, llm_judge_relevance). Neither IAScore nor IDI is computed. BLEU/ROUGE/F1 (mentioned in eval_metrics_notes.md:33-37 as soft proxies) are also not wired into metric_specs."
+  - "Human-eval dimension coverage: paper uses novelty + relevance + FEASIBILITY as the three human-judgment axes (metric_notes/future_ideas_eval_metrics_notes.md:41-42, confirmed by paper abstract on arxiv.org/abs/2409.06185). run_specs only implements novelty and relevance; feasibility is silently omitted."
+  - "Prompt source transparency: scenarios/future_ideas_scenario.py:34-48 acknowledges 'Standard instruction format (paper does not publish exact prompts)' and uses an invented instruction. This is honest, but it means the prompt is NOT the paper's prompt — the benchmark measures performance under a reconstructed prompt. Neither arxiv abstract, PDF extract, nor the GitHub README discloses the canonical prompt text, so this is a known unavoidable deviation."
+  - "Paper truncation: scenarios/future_ideas_scenario.py:82 hard-caps paper_text at 2000 words via leading-truncation (keeps first 2000 words). The paper's setup feeds the ENTIRE paper body (full_text_WF) to the LLM — the GitHub data column name itself signals this design. 2000-word cap will drop later sections (methods/results tail, discussion) for long papers, changing what the model conditions on. Trailing truncation would also drop the discussion that most directly cues future work; leading truncation drops intro/related-work which may weaken grounding. Either way, this is a material deviation from the paper's full-text protocol that should be documented and ideally lifted for long-context models."
+  - "Metric name mismatch: run_specs/future_ideas_run_specs.py:39-41 imports ADAPT_GENERATION, sets temperature=0.7, max_tokens=512, num_outputs=1. Paper does not specify decoding params; 0.7/512 is a reasonable default but max_tokens=512 systematically truncates outputs — display_predictions.json across gemini-2.5-flash and gemini-2.5-pro shows every prediction truncated mid-sentence (e.g., 'Investigating the degradation of I' — id48, flash; 'caspase-3, -' — id48, pro). Ideas-per-response is thereby capped by format rather than by model reasoning. Raise max_tokens (paper uses full generation) or accept that IAScore/IDI-style idea counts are confounded."
+  - "Judge config: run_specs pins judge_model_name='openai/gpt-4' (not gpt-4o/gpt-4-turbo), temperature=0.0, max_new_tokens=256. The paper itself does not use an LLM-judge rubric for these dimensions — human annotators score 30 sampled outputs/model/domain on 1-5 scales. So the LLM-judge path in run_specs is a HELM-local substitution, not a paper-faithful reimplementation. The 1-5 rubrics (run_specs lines 15-35) are LLM-adaptations of the paper's human-eval dimensions; rubric wording is reasonable but unsourced from the paper."
+  - "Idea segmentation absent: metric_notes/future_ideas_eval_metrics_notes.md:44-46 explicitly notes 'metric implementation should segment generated output into individual idea sentences before computing IAScore/IDI'. No such segmentation exists in the current pipeline. The LLM-judge sees the whole blob and returns one novelty+one relevance score, so per-idea granularity (central to both IAScore and IDI) is lost."
+  - "Output shape observed (flash, pro, both share): long markdown-structured bulleted lists grouped under Roman-numeral categories, 5-10 idea families each. Reasonable content, but (a) truncated by max_tokens in every sample inspected, (b) not parseable into discrete idea units without a segmenter."
+fixes_before_run:
+  - severity: blocking
+    action: "Implement IAScore and IDI as paper-primary metrics: add a SentenceBERT-based metric that (1) segments predicted_text into idea-sentences (newline+bullet or sent-tokenize), (2) computes mean cosine(sim(gen_idea_i, Future_work_ref)) for IAScore, (3) computes 1 - mean pairwise cosine sim across gen_ideas for IDI. Keep BLEU/ROUGE as secondary."
+  - severity: blocking
+    action: "Raise max_tokens well above 512 (observed truncation on EVERY sampled output in both gemini-2.5-flash and gemini-2.5-pro display_predictions.json). Suggest 2048 or model-max; idea-count is a dependent variable that must not be gated by the token budget."
+  - severity: non-blocking
+    action: "Add a third LLM-judge metric for FEASIBILITY to match the paper's three-dimension human eval (novelty/relevance/feasibility). Rubric should follow the same 1-5 Likert format as the existing two."
+  - severity: non-blocking
+    action: "Either lift the 2000-word paper truncation for long-context judges/generators, OR switch to tail-preserving truncation (keep last 2000 words) on the argument that discussion/conclusion most strongly cues future work. Document the choice in the scenario docstring."
+  - severity: non-blocking
+    action: "Add idea-level segmentation as a shared util so IAScore, IDI, and any per-idea LLM judge all operate on the same parsed idea list. Current whole-blob scoring conflates 'one great idea' with 'ten mediocre ones'."
+  - severity: non-blocking
+    action: "Upgrade judge_model_name from 'openai/gpt-4' to 'openai/gpt-4o' or 'openai/gpt-4-turbo' for cost/quality; gpt-4 (legacy 8k) is deprecated in most harnesses."
+notes: |
+  Paper cross-check: https://arxiv.org/abs/2409.06185 (EMNLP 2025). Abstract confirms IAScore + IDI as
+  automated metrics and novelty/relevance/feasibility as the three human-eval axes. Exact prompt text is
+  NOT disclosed in the paper or GitHub README (verified via WebFetch on both); scenario's invented prompt
+  is therefore an unavoidable reconstruction but should be flagged in run reports.
+  Dataset is loaded correctly from the official RealF xlsx files on GitHub (scenario lines 66-77) with the
+  right columns (full_text_WF as input, Future_work as gold), skipping data-leakage columns (full_text,
+  Response_Chat). 458-paper / 5-domain split matches paper's Table 1.
+  Cross-benchmark note: the paper's own Response_Chat column holds GPT-4/Claude-2/Gemini outputs from the
+  original experiments — these could be used to calibrate expected IAScore/IDI ranges once the metrics are
+  implemented (metric_notes/future_ideas_eval_metrics_notes.md:47-50 already flags this).
+paper_url: "https://arxiv.org/abs/2409.06185"
+reviewed_at: "2026-04-21"

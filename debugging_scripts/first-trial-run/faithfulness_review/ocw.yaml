@@ -1,0 +1,33 @@
+name: ocw
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "metrics/group_match_score_metric.py:28-38 computes a single global Jaccard over the union of all 16 tokens in prediction vs reference — this is NOT the paper's metric. Because both pred_set and ref_set always contain the same 16 clues, Jaccard is ~1.0 regardless of whether groups are correct; the metric is trivially near-perfect and cannot distinguish solved from unsolved walls"
+  - "metrics/group_match_score_metric.py ignores newline-separated group structure entirely; it flattens everything into one set, discarding the 4x4 partition that defines the task"
+  - "Paper's primary metrics (per-group exact-set match 0-4, wall-solved binary) documented in metric_notes/ocw_eval_metrics_notes.md are NOT implemented — documented rubric and code disagree"
+  - "metric_notes/ocw_annotator_notes.md is empty (0 lines) — no annotator rubric recorded (acceptable since task is programmatic, but file should either be populated or removed)"
+  - "run_specs/ocw_run_specs.py:30 temperature=0.7; OCW paper's run_openai.ipynb baseline uses deterministic generation (temperature=0) for reproducibility on a structured puzzle task"
+  - "run_specs/ocw_run_specs.py:27 max_train_instances=5 enables few-shot from TRAIN_SPLIT, but paper reports zero-shot baseline; few-shot demos may leak solution patterns and change the task"
+  - "scenarios/ocw_scenario.py:83 loads train+validation+test but adapter may sample eval instances from any split depending on HELM config — verify test-only evaluation"
+  - "No parsing/post-processing for model output variants noted in metric_notes (Group X: prefixes, connection annotations, hallucinated words, wrong word counts); display_predictions.json shows id99 emits 'n/a\\n\\nHere is your Connecting Wall solution:\\n\\n...' which would break any group-aware parser"
+fixes_before_run:
+  - severity: blocking
+    action: "Replace GroupMatchScoreMetric with a correct implementation: parse prediction into 4 groups (split on newline, then comma), strip 'Group X:' prefixes and connection annotations, compare as sets-of-frozensets against reference groups, report groups_correct (0-4) and wall_solved (0/1) as separate MetricNames per metric_notes/ocw_eval_metrics_notes.md"
+  - severity: blocking
+    action: "Current Jaccard metric returns ~1.0 for any output that echoes the 16 clues and ~0 for malformed output — scores are near-uninterpretable; any headline numbers from this run should be discarded and recomputed after metric fix"
+  - severity: non-blocking
+    action: "Set temperature=0 to match paper's deterministic baseline and improve reproducibility"
+  - severity: non-blocking
+    action: "Reconsider max_train_instances=5 vs paper's zero-shot; if few-shot is intentional, document the deviation"
+  - severity: non-blocking
+    action: "Add a hallucination/format diagnostic (count walls where model outputs words not in the 16 clues, or wrong group count) as reported in paper error analysis"
+  - severity: non-blocking
+    action: "Populate or remove metric_notes/ocw_annotator_notes.md"
+notes: "Prompt, dataset, and scenario construction faithfully follow the paper. The blocker is the metric: a global-Jaccard-over-tokens implementation does not measure grouping accuracy at all — a model that prints the 16 clues in any random order scores the same as a perfect solution. The documented metric (per-group set match + wall-solved) must be implemented before any OCW numbers are reportable. Secondary faithfulness issues (temperature, few-shot) are fixable but not fatal."
+paper_url: "https://arxiv.org/abs/2306.11167"
+reviewed_at: "2026-04-21"

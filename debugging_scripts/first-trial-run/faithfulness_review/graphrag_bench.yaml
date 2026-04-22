@@ -1,0 +1,27 @@
+name: graphrag_bench
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Retrieval context omitted: paper evaluates GraphRAG pipelines where retrieved graph/text context accompanies the question; scenarios/graphrag_bench_scenario.py:18-21,35-37 deliberately drops evidence/evidence_triple and runs zero-shot from question alone. This is explicitly documented but changes the task from graph-grounded generation to open-ended generative capability probe."
+  - "Primary metric mismatch: paper reports answer_correctness + coverage_score via RAGAS LLM-as-judge (metric_notes/graphrag_bench_annotator_notes.md:10-18, 25-29). run_specs/graphrag_bench_run_specs.py:34-36 registers only BasicGenerationMetric (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4). None of these are the paper's metrics; open-ended creative outputs will score near-zero on exact_match/quasi_exact_match. annotators=None (line 44) — no LLM judge wired."
+  - "Judge model absent: paper uses gpt-4-turbo + bge-large-en-v1.5 embeddings; nothing configured in run_spec."
+  - "Dataset counts verified: scenario filters question_type=='Creative Generation' from raw JSON; annotator notes list novel=67, medical=166, total=233. HF dataset card lists ~2k rows per domain across 4 question types, consistent with ~233 Creative Generation items after filtering. Default domain='novel' (67 items) loads unless args override; run_spec passes args={} so only novel subset runs."
+  - "Prompt: question used directly with empty instructions (input_suffix='\\n'); paper provides no explicit template so this is a reasonable default, but temperature=0.7 + max_tokens=512 will truncate long creative outputs (display_predictions show mid-sentence cutoffs at ~512 tokens across id27, id56, id35, id48, id42, id46)."
+  - "Output shape: display_predictions.json across gemini_pro, gemma_3_27b, and others show coherent long-form creative generations (diary entries, press releases, letters) matching the Creative Generation task intent; outputs truncated by max_tokens=512."
+fixes_before_run:
+  - severity: blocking
+    action: "Wire an LLM-as-judge annotator for answer_correctness and coverage_score (RAGAS-style, gpt-4-turbo or substitute) to match the paper's metrics; BasicGenerationMetric alone will not yield interpretable scores for open-ended creative writing."
+  - severity: non-blocking
+    action: "Raise max_tokens from 512 to >=1024 to avoid truncating creative generations (visible in all sampled display_predictions)."
+  - severity: non-blocking
+    action: "Set domain='all' in run_spec args to include both novel (67) and medical (166) subsets for the full 233-item Creative Generation split."
+  - severity: non-blocking
+    action: "Document clearly that dropping retrieval context makes this a zero-shot creative-capability probe and is not comparable to paper-reported GraphRAG leaderboard numbers."
+notes: "Scenario correctly identifies the right paper (arXiv:2506.05690), correctly filters the Creative Generation subset, and correctly documents its departures. The critical faithfulness gap is on the metric side: only surface n-gram metrics are registered, while the paper's LLM-as-judge answer_correctness/coverage_score are described in annotator notes but not implemented (annotators=None). Safe to run as a creative-writing capability probe, but headline scores will not reproduce paper results. eval_metrics_notes.md is an empty file."
+paper_url: "https://arxiv.org/abs/2506.05690"
+reviewed_at: "2026-04-21"

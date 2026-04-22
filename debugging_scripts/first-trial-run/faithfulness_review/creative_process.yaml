@@ -1,0 +1,27 @@
+name: creative_process
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: partial
+gaps:
+  - "run_specs/creative_process_run_specs.py:60-86 scores responses with a generic 1-5 LLM judge for 'creativity' and 'originality' — the paper's entire contribution is process analysis (gte-large embeddings, hierarchical clustering at cutoff=1.14 for VF, semantic-similarity chains, jump_cat/jump_SS, jump profile slope) and NONE of that pipeline is implemented in HELM metrics or anywhere post-hoc in this repo"
+  - "metric_notes/creative_process_annotator_notes.md is empty (0 lines) — only the eval_metrics notes exist, and those describe the paper's real metrics, not the judge actually wired up"
+  - "run_specs/creative_process_run_specs.py:69 sets judge_model_name='openai/gpt-4' — not one of the 8 paper baselines and unrelated to the paper's evaluation (paper uses no LLM judge at all)"
+  - "display_predictions.json shows collapsed outputs: all 5 vf_* instances for gemini-2.5-pro emit the identical 30-animal list despite temperature=0.7; gemma-3-27b-it likewise emits identical lists across reps — repetition-based diversity analysis (the whole point of 5 reps) is defeated, suggesting the sampler is not actually sampling, deterministic caching, or that num_outputs=1 with seed reuse is nulling temperature"
+  - "scenario only instantiates task='vf' by default (run_specs args={}) — aut_brick and aut_paperclip tasks defined in the scenario are never exercised by the run_spec, so 2 of 3 paper tasks are missing from the trial run"
+  - "judge scores are uniformly 1/5 on every single instance across both models checked; judge is giving no signal and is not a faithful stand-in for the paper's quantitative jump-profile metrics"
+fixes_before_run:
+  - severity: blocking
+    action: "replace the generic creativity/originality judge with an embedding-based metric module: load thenlper/gte-large, compute cosine SS between consecutive items, hierarchical-cluster with cutoff 1.14 (VF), emit total_jumps / jump_rate / unique_categories / mean_SS / jump_profile_slope per response sequence — this is the paper's actual evaluation"
+  - severity: blocking
+    action: "diagnose the identical-output issue (verify temperature is propagating to the client call, disable HELM response cache for this run, or bump num_outputs); without real sampling variance the 5-rep design yields nothing"
+  - severity: blocking
+    action: "emit three run_specs (creative_process:task=vf, :task=aut_brick, :task=aut_paperclip) or make the scenario iterate all three tasks so aut_brick and aut_paperclip are actually run"
+  - severity: non-blocking
+    action: "populate metric_notes/creative_process_annotator_notes.md or delete the empty stub; document that no LLM-as-judge is used in the paper"
+notes: "Prompts are verbatim from scripts_LLM/together_call.py and num_instances=5 matches the paper's 5 reps per model-temp combo, so input side is faithful. Evaluation side is entirely wrong: a generic GPT-4 creativity/originality judge replaces the paper's embedding + clustering + jump-profile pipeline, the empty annotator_notes file confirms this was never fleshed out, and trial outputs show the sampler returning identical sequences across reps (killing any diversity signal the metric would measure anyway). Only 1 of 3 paper tasks (vf) was scheduled. Abstract fetched; full PDF not parsed but metric_notes/creative_process_eval_metrics_notes.md already captures the canonical pipeline and the implementation does not match it."
+paper_url: "https://arxiv.org/abs/2405.00899"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,31 @@
+name: simile_generation
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "Prompt is a generic rewrite instruction (scenarios/simile_generation_scenario.py:73-77) that does not constrain output shape; paper's SCOPE model is a fine-tuned BART producing a single rewritten sentence — instruction-tuned chat models here produce multi-option menus instead (benchmark_output/runs/gemini_flash/.../display_predictions.json id114/id62/id33/id40/id86/id71/id134 all return 'Here are a few options...' with bullet lists; gemma_3_27b identical pattern)"
+  - "Scenario strips the bracket markers that delimit the target literal word (scenarios/simile_generation_scenario.py:70 literal.replace('[','').replace(']','')) — paper's SCOPE treats the bracketed token as the literal verb/phrase to be rewritten; removing brackets discards the signal the paper relies on and the prompt never tells the model which word to replace"
+  - "max_tokens=512 and temperature=0.7 with no stop_sequences (run_specs/simile_generation_run_specs.py:29-31) permit and encourage the long multi-option essay outputs observed, making surface-overlap metrics against one-line references largely meaningless"
+  - "Metrics are surface-overlap only: exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4 (run_specs:35). Paper's headline evaluations are (a) human pairwise preference vs literary experts (SCOPE wins 37%), (b) novelty rate (88% novel), (c) downstream story-evocativeness human judgment — none of these have an analogue here"
+  - "No LLM judge / metaphoricity / novelty / semantic-similarity annotator (annotators=None, run_specs:44); the paper's core claim cannot be reproduced from the configured metrics"
+  - "metric_notes/simile_generation_annotator_notes.md and metric_notes/simile_generation_eval_metrics_notes.md are both empty (1-line files) — no documentation of metric choice, BLEU variant, or reference handling"
+  - "max_train_instances=0 with empty adapter instructions (run_specs:23,27) — paper fine-tunes BART on parallel literal-simile corpus; zero-shot chat with in-scenario prompt is not directly comparable and the current prompt produces verbose menus rather than a single simile"
+  - "References are Human1/Human2 only (scenarios:82-84); paper also evaluates against the SCOPE system output — not a faithfulness bug per se, but BLEU against just two references undercounts valid paraphrases"
+fixes_before_run:
+  - severity: blocking
+    action: "Tighten prompt to force a single-line output, e.g., 'Rewrite the following literal sentence as a simile by replacing the bracketed phrase with a like/as comparison. Output only the rewritten sentence, nothing else.' and preserve (do not strip) the brackets so the model knows which span to rewrite"
+  - severity: blocking
+    action: "Reduce max_tokens (e.g., 64) and add stop_sequences=['\\n','\\n\\n'] so outputs are single sentences comparable to the one-line Human1/Human2 references; current 512-token outputs defeat BLEU/ROUGE"
+  - severity: high
+    action: "Populate metric_notes/simile_generation_{annotator,eval_metrics}_notes.md documenting BLEU variant, reference handling, and rationale for surface metrics vs paper's human evaluation"
+  - severity: high
+    action: "Add an LLM-judge annotator for (a) simile presence (contains like/as comparison to a non-literal vehicle), (b) semantic preservation vs literal, (c) novelty — to approximate paper's human preference and novelty metrics"
+  - severity: medium
+    action: "Consider including the SCOPE output column as a third reference to better match paper's multi-reference evaluation setup"
+notes: "Data loading is correct (150-row SimileEMNLP.csv, rows with '------' Human1 filtered, test split only) and matches the paper's evaluation data. The faithfulness failure is in adaptation: the zero-shot prompt with no output-shape constraint causes instruction-tuned models (all Gemini/Gemma variants inspected) to emit 3-5 bulleted simile options with commentary rather than a single rewritten sentence; combined with the removal of the bracket markers (which in the source data indicate the literal target to replace), the BLEU/ROUGE metrics are an extremely weak signal. This is a blocking prompt-format + output-shape issue, not a data issue."
+paper_url: "https://aclanthology.org/2020.emnlp-main.524/"
+reviewed_at: "2026-04-21"

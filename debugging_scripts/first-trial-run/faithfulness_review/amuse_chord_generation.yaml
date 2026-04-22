@@ -1,0 +1,30 @@
+name: amuse_chord_generation
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "run_specs/amuse_chord_generation_run_specs.py:28 num_outputs=30 conflicts with paper's batch-prompting semantics: the paper generates 30 progressions in ONE completion (the prompt itself asks for {num_progressions} diverse progressions), but the adapter additionally samples 30 completions per instance, inflating calls 30x and confusing Self-BLEU granularity."
+  - "run_specs/amuse_chord_generation_run_specs.py:29 max_tokens=512 is too low for 30 four-bar progressions; sample predictions in display_predictions.json (e.g., id158, id83, id101, id118, id228) are visibly truncated mid-progression, which will bias Self-BLEU/JSD downward by dropping late outputs."
+  - "run_specs/amuse_chord_generation_run_specs.py:30 temperature=0.7 diverges from the paper's temperature=1.0 ('to promote creativity and diversity')."
+  - "run_specs/amuse_chord_generation_run_specs.py:36 JSDMetric only configured with n=2 (bigram); paper reports BOTH unigram (Amuse 0.27) and bigram (Amuse 0.46) JSD. Unigram JSD is missing from the metric set."
+  - "Paper evaluates against Hooktheory reference distribution for JSD; metric_notes.md acknowledges this but run_spec does not pass a hooktheory_path arg — confirm metrics/jsd_metric.py loads it internally before the full run."
+  - "Paper LLM is gpt-4o-2024-05-13; this run uses anthropic/claude-haiku-4.5 via OpenRouter (documented constraint due to Gemini's num_outputs<=8 cap). Results will not be directly comparable to paper's 0.30/0.61 Self-BLEU numbers."
+  - "metric_notes/amuse_chord_generation_annotator_notes.md is empty (1 line, effectively blank); no annotator guidance is defined, though this task has no human-judge component so it is acceptable."
+fixes_before_run:
+  - severity: blocking
+    action: "Raise max_tokens from 512 to at least 2048 (30 progressions x ~4 chords x ~5 tokens/chord + newlines). Current truncation is visible in multiple display_predictions entries and will corrupt diversity metrics."
+  - severity: blocking
+    action: "Reconcile num_outputs with batch semantics: either set num_outputs=1 (paper's batch prompting, parse 30 progressions from one completion) OR drop num_progressions to 1 in the scenario prompt and keep num_outputs=30 (conventional prompting baseline). Current config does both simultaneously and Self-BLEU will be computed over the wrong unit."
+  - severity: non-blocking
+    action: "Add a second JSDMetric spec with args={'n': 1} to recover unigram JSD alongside bigram, matching the paper's dual reporting."
+  - severity: non-blocking
+    action: "Bump temperature from 0.7 to 1.0 to match paper's stated config, or document the deviation."
+  - severity: non-blocking
+    action: "Verify metrics/jsd_metric.py loads Hooktheory reference data (path configurable or hard-coded); audit did not inspect that file."
+notes: "Prompt text and dataset (254 suno.wiki keywords, 4 bars, 30 progressions, paper-listed keys/modes) faithfully mirror the Amuse paper's Appendix A.2. Two config issues are blocking: max_tokens=512 truncates outputs mid-progression in the sample predictions, and num_outputs=30 double-counts against the batch-prompt asking for 30 progressions in one completion. Metric args patch (self_bleu + JSD n=2) aligns with paper's bigram JSD but misses unigram JSD; temperature and model choice deviate for documented reasons."
+paper_url: "https://arxiv.org/abs/2412.18940"
+reviewed_at: "2026-04-21"

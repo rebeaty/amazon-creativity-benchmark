@@ -1,0 +1,34 @@
+name: writingbench
+verdict: PARTIAL
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Scope / contamination: scenario runs all 1,000 queries across 6 domains (Academic & Engineering 167, Finance & Business 210, Politics & Law 201, Literature & Arts 183, Education 111, Advertising & Marketing 128) — only the Literature & Arts subset (183) is unambiguously creative. The other 5 domains are professional/technical writing (contracts, financial reports, lesson plans, ad copy) and drift from the project's creativity criterion. Scenario constructor supports a `domain='literature'` filter (scenarios/writingbench_scenario.py:86-115) but run_specs/writingbench_run_specs.py:33 passes `args={}` and runs the full mixed set. BORDERLINE inclusion per NOTES_FOR_VIJETA.md section 1."
+  - "Metric drift (major): paper uses 5 INSTANCE-SPECIFIC criteria per query stored in the `checklist` field, each with its own name, description, and 5 detailed scoring rubrics covering 1-10 integer scores (metric_notes/writingbench_annotator_notes.md:22-59). run_specs/writingbench_run_specs.py:15-24 replaces this with a SINGLE GENERIC 5-point rubric (\"Score 1..Score 5\") assessing overall quality. This collapses 5 dimensions × 1-10 scale → 1 dimension × 1-5 scale and completely discards the per-query `checklist` metadata carried in extra_data. Resulting scores are not comparable to WritingBench leaderboard numbers and lose the instance-specific rubric design that is the paper's main methodological contribution."
+  - "Checklist is loaded but unused: scenario stores `checklist` in extra_data (scenarios/writingbench_scenario.py:164) but the GenericLLMJudgeAnnotator rubric is a static string not templated with per-instance criteria, so the 5 rubrics per query are silently dropped."
+  - "Judge model mismatch: paper specifies Claude models (or a finetuned critic model) as the judge; run_specs/writingbench_run_specs.py:57 uses openai/gpt-4o. Judge temperature 0.0 vs paper's 1.0 (annotator_notes.md:178-183 reports scoring params top_p=0.95, temperature=1.0, max_length=2048); judge_max_new_tokens=1024 matches paper's 2048 order of magnitude but is lower."
+  - "Output format mismatch: paper expects JSON `{score: int 1-10, reason: string}` per criterion; generic judge collects a single score on the 1-5 scale from the rubric (confirmed in display_predictions: `llm_judge_quality: 5` for gemma_4_26b instance id993 — ceiling effect suggests the 5-point ceiling is being hit).  This compresses score resolution and may inflate apparent performance."
+  - "Aggregation: paper aggregates via mean across 5 criteria per instance; here there is one scalar per instance so no intra-instance aggregation happens, and instance-level heterogeneity across 6 domains is averaged uniformly, weighting non-creative domains 4x the literature subset."
+  - "Generation adapter parameters: temperature=0.7, max_tokens=16000 match the paper's generation params (top_p=0.8, top_k=20 not plumbed through AdapterSpec but HELM rarely exposes these)."
+  - "Dataset fetch is correct: downloads benchmark_all.jsonl directly from X-PLUG/WritingBench GitHub raw (scenarios/writingbench_scenario.py:80-127). All 1,000 instances flow to TEST_SPLIT with empty references — appropriate for open-ended generation."
+  - "Output shape sane: display_predictions for gemma_4_26b shows long multi-section writing outputs (lesson plans, papers) consistent with a 16k-token writing benchmark; annotation field populated with llm_judge_quality integer score."
+fixes_before_run:
+  - severity: blocking-for-faithfulness
+    action: "Replace the static generic rubric with a checklist-aware annotator that templates the per-instance 5 criteria (name + 1-2/3-4/5-6/7-8/9-10 rubrics from extra_data.checklist) into the judge prompt matching annotator_notes.md lines 71-130, emits 5 JSON {score, reason} objects per instance on 1-10, and aggregates mean across the 5. This is the paper's defining methodological contribution and is currently bypassed."
+  - severity: blocking-for-creativity-claim
+    action: "Decide at project level: (a) restrict to Literature & Arts via `args={'domain': 'literature'}` for 183 creative queries, or (b) keep full 1,000 and document that 817/1000 instances are professional writing, not creativity. Current default runs the contaminated full set. See NOTES_FOR_VIJETA.md section 1 for team discussion context."
+  - severity: non-blocking
+    action: "Align judge to paper: switch judge_model_name from openai/gpt-4o to a Claude model (paper's choice) or the finetuned CritiqueLLM, raise judge_max_new_tokens to 2048, consider judge_temperature=1.0 (paper default) though 0.0 is a defensible deterministic override."
+  - severity: non-blocking
+    action: "If staying with generic 1-5 rubric for pragmatic reasons, at minimum document in results that this is a coarse quality proxy and NOT the WritingBench score; do not compare to the paper's leaderboard."
+notes: |
+  BORDERLINE benchmark per NOTES_FOR_VIJETA.md: only 18.3% (183/1000) of queries are in the Literature & Arts creative subset; the remaining 817 are academic, business, legal, education, or marketing writing — professional/technical tasks rather than creative generation. Whether this belongs in a creativity benchmark hinges on a team decision.
+  Separate from the scope question, the metric implementation is significantly unfaithful: the paper's core contribution is instance-specific rubric-based scoring using 5 criteria × 10-point scale loaded from the dataset's `checklist` field, and the run_spec discards all of this in favor of a single generic 1-5 rubric via GenericLLMJudgeAnnotator. Scores are therefore neither leaderboard-comparable nor methodologically representative of WritingBench. The scenario does carry `checklist` through extra_data, so retrofitting a faithful annotator is plausible without re-building the data pipeline.
+  Judge is gpt-4o rather than Claude (paper) and is pinned to deterministic temp; max_new_tokens=1024 vs paper 2048.
+  display_predictions for gemma_4_26b id993 (a physics lesson plan — Education domain, not creative) scored llm_judge_quality=5 (rubric ceiling), a likely symptom of the 1-5 scale compressing score resolution.
+paper_url: "https://arxiv.org/abs/2503.05244"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,29 @@
+name: creativemath
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: partial
+gaps:
+  - "Generation prompt (scenarios/creativemath_scenario.py:48-62) matches the paper's load_novel_solution_generation_prompt verbatim including all 5 novelty criteria. Instance expansion (400 problems x k=1..n -> 605) follows the paper."
+  - "max_tokens=512 (run_specs/creativemath_run_specs.py:44) is severely insufficient for competition math solutions (USAMO/IMO proofs). Predictions in benchmark_output/runs/trial_10inst/creativemath_model=google_gemini-2.5-flash-lite/display_predictions.json are visibly truncated mid-sentence at ~500 tokens (e.g. USAMO_1_k1, AMC_8_8_k1, AMC_8_1_k3 cut off before final answer), biasing both correctness and novelty judgements."
+  - "temperature=0.7 is a reasonable default but the paper's per-model generation config is not explicitly matched; no canonical temp is set."
+  - "Metric pipeline drift (major): paper prescribes a 3-stage pipeline — Stage 1 correctness (unanimous YES across 3 judges: Claude-3-Opus, Gemini-1.5-Pro, GPT-4), Stage 2 coarse novelty vs shown refs (majority YES), Stage 3 fine novelty vs withheld refs — producing Correctness Ratio, Novelty Ratio, Novel-Unknown Ratio, and two conditional ratios (metric_notes/creativemath_annotator_notes.md). run_specs/creativemath_run_specs.py only wires a single GenericLLMJudgeMetric with a 1-5 Likert correctness rubric and judge_model_name=openai/gpt-4. No novelty stage, no jury/voting, no YES/NO extraction, no withheld-solution comparison."
+  - "Judge rubric shape differs: paper uses YES/NO binary per stage; HELM run uses 1-5 Likert for correctness only, so downstream Correctness Ratio cannot be recovered without a threshold decision."
+  - "Paper's pre-eval cleanup instruction (remove transition sentences/justifications from model output before judging) is not implemented."
+  - "metric_notes/creativemath_eval_metrics_notes.md is effectively empty (1 line); annotator_notes.md carries all the protocol detail."
+  - "Output shape: predictions contain the expected long CoT solutions with instance_ids of form {competition}_{problem_id}_k{k} matching the scenario. Annotations show generic_llm_judge_llm_judge_correctness scores 1-5 — structurally sane but semantically mismatched to paper metric."
+fixes_before_run:
+  - severity: blocking
+    action: "Raise max_tokens substantially (>=4096, ideally 8192) so competition proofs are not truncated; current 512-token cap makes correctness judgements meaningless for AIME/USAMO/IMO tiers."
+  - severity: blocking
+    action: "Replace the single Likert correctness judge with the paper's 3-stage pipeline (correctness YES/NO -> coarse novelty YES/NO -> fine novelty YES/NO) and compute the 5 ratio metrics. Either use LLMAsJuryAnnotator with 3 judges or explicitly document the single-judge adaptation and rename the metric."
+  - severity: non-blocking
+    action: "Add a preprocessing step to strip transition/justification sentences from predictions prior to judging (paper warning)."
+  - severity: non-blocking
+    action: "Populate metric_notes/creativemath_eval_metrics_notes.md with the metric definitions already stubbed in annotator_notes.md."
+notes: "Scenario faithfully reproduces CreativeMath's prompt, data, and instance expansion. The run_spec, however, collapses the paper's novelty-focused 3-stage jury evaluation into a single 1-5 correctness judge — losing the benchmark's headline Novelty Ratio and Novel-Unknown Ratio. Combined with a 512-token generation cap that truncates most solutions, the current configuration cannot reproduce paper numbers and even the correctness signal is unreliable. Runs in benchmark_output confirm truncation in predicted_text. Paper PDF/GitHub fetch returned only partial info; cross-check relied on annotator_notes.md."
+paper_url: "https://arxiv.org/abs/2407.14910"
+reviewed_at: "2026-04-21"

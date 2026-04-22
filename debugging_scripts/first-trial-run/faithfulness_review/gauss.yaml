@@ -1,0 +1,34 @@
+name: gauss
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Contamination-borderline inclusion (NOTES_FOR_VIJETA.md section 1): GAUSS has 41 graduate-level math problems across 12 skill dimensions; only 3 (categories 12a/12b/12c) are creativity-tagged. The scenario default dimension='12' (scenarios/gauss_scenario.py:88) filters to just those 3, which is the right call for a creativity suite, but leaves n=3 — too small to be statistically meaningful as a standalone creativity benchmark."
+  - "Scenario faithful: dataset loaded from GaussMath/GAUSS (HF), problem_statement passed as prompt with no system preamble, standard_solution stored as CORRECT_TAG reference, rubric + total_score preserved in extra_data (scenarios/gauss_scenario.py:107-156). Matches dataset schema described in paper."
+  - "max_tokens=512 (run_specs/gauss_run_specs.py:44) is far too low for graduate math / SLE-style open exploration. Inspection of benchmark_output/runs/gemini_pro/gauss_model=google_gemini-2.5-pro/display_predictions.json shows 12a and 12b truncated mid-sentence (~500 tokens, visibly cut off before final answer / second solution). Same truncation visible in gemma_3_27b run for 12b. Biases rubric_score downward, especially for 12b (rubric requires 'up to 2 points' for multiple solutions — truncation prevents reaching the second solution)."
+  - "Judge rubric shape mismatch: paper/metric_notes prescribe per-problem variable-point rubrics tied to total_score (1-3 pts; 12a=3, 12b=2, 12c=1) with criterion-specific award rules (e.g. 12c requires the exact equation 2^6 - 63 = 1). run_specs/gauss_run_specs.py:15-24 uses a single generic 0-7+ Likert rubric ignoring total_score and the per-problem rubric text from extra_data. The annotator (GenericLLMJudgeAnnotator) is not configured to thread problem_statement, standard_solution, rubric, or total_score into the judge prompt per metric_notes/gauss_eval_metrics_notes.md."
+  - "Observed rubric_scores in display_predictions.json go up to 4 (gemini_pro 12a) and 3 (gemma_3_27b 12b), exceeding the per-problem total_score (3 and 2 respectively) — confirms the judge is scoring on the generic 0-7 scale rather than the paper's bounded per-problem scale."
+  - "Judge model hardcoded to openai/gpt-4 (run_specs/gauss_run_specs.py:58); paper uses human expert graders following rubrics (metric_notes/gauss_eval_metrics_notes.md §'Human Expert Evaluation'). LLM-as-judge is a documented adaptation, not the paper method."
+  - "BLEU/ROUGE/F1 metrics (run_specs:50) are uninformative for proof-style free-form math solutions and are not used by the paper; harmless but noisy."
+  - "metric_notes/gauss_annotator_notes.md is empty (0 lines) — all protocol detail lives in gauss_eval_metrics_notes.md."
+  - "temperature=0.7 is unusual for math proof generation; paper does not specify a canonical decoding config for third-party evaluation but 0.0 would be more standard for reproducibility."
+fixes_before_run:
+  - severity: blocking
+    action: "Raise max_tokens to >=4096 (ideally 8192) so graduate-level proofs and open-exploration answers aren't truncated; 512 truncates 12a/12b across all observed runs and makes 12b's 'find multiple solutions' rubric unreachable."
+  - severity: blocking
+    action: "Replace the generic 0-7 Likert rubric with a per-instance judge prompt that threads problem_statement, standard_solution, rubric, and total_score from Instance.extra_data (as specified in metric_notes/gauss_eval_metrics_notes.md §'Judge Prompt Template'), and cap the score at total_score per problem. Current setup produces scores exceeding the problem's total_score."
+  - severity: non-blocking
+    action: "Decide whether to keep gauss in the creativity suite at n=3, expand to dimension='all' (41 problems, mostly non-creativity), or drop it per NOTES_FOR_VIJETA.md §1. n=3 is statistically thin; 'all' dilutes creativity focus."
+  - severity: non-blocking
+    action: "Drop BLEU/ROUGE/F1 or down-weight them — token-overlap metrics are meaningless for proof-style generation and absent from the paper."
+  - severity: non-blocking
+    action: "Lower temperature to 0.0 for reproducibility on math proofs, or document the 0.7 choice explicitly."
+  - severity: non-blocking
+    action: "Populate the empty metric_notes/gauss_annotator_notes.md or delete it to avoid confusion."
+notes: "BORDERLINE inclusion flagged in NOTES_FOR_VIJETA.md §1 — only 3/41 problems are creativity-tagged; scenario default correctly filters to those 3, but n=3 is too small for a standalone creativity score and each of the 3 is a different sub-task (open exploration / multi-solution IMO / digit-move puzzle), so scores are not comparable across problems. Scenario loading and prompt construction are faithful to the dataset; the evaluation layer (run_spec) is where faithfulness breaks: a generic 0-7 Likert rubric replaces the paper's per-problem variable-point rubrics with total_score caps, and max_tokens=512 truncates 12a/12b in every inspected run (gemini_pro, gemma_3_27b). Observed rubric scores (e.g. 4 on a problem with total_score=3) exceed the problem's maximum, confirming the judge is not honoring the per-problem bounded scale. WebFetch of the arXiv abstract confirmed 12 dimensions grouped into 3 domains (knowledge/understanding, problem solving/communication, meta-skills/creativity) but the 120-page paper was not fully fetched — scenario docstring and metric_notes carry the protocol detail used for cross-check."
+paper_url: "https://arxiv.org/abs/2509.18122"
+reviewed_at: "2026-04-21"

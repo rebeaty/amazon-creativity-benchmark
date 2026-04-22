@@ -1,0 +1,31 @@
+name: ss_gen
+verdict: PARTIAL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Judge evaluates only 1 of 5 paper dimensions — only Coherence is scored (run_specs/ss_gen_run_specs.py:15-24,49-65). Paper evaluates 5 dimensions: Coherence, Descriptiveness, Empathy, Grammaticality, Relevance (metric_notes/ss_gen_annotator_notes.md:9-14)."
+  - "Judge rubric is a custom 1-5 anchored scale (run_specs/ss_gen_run_specs.py:15-24) not from the paper; paper prompt is not published, so fidelity cannot be verified."
+  - "Missing paper's human-evaluation constraints: Structural Clarity (1-5), Descriptive Orientation / GR-Eight 2:1 ratio (Y/N), Situational Safety (Y/N) — not implemented as auto-checks (metric_notes/ss_gen_annotator_notes.md:35-52)."
+  - "Paper evaluates 200 randomly sampled test stories; scenario loads full 508-instance test split (scenarios/ss_gen_scenario.py:36-38,107-143) — superset, inflates judge cost but does not invalidate."
+  - "metric_notes/ss_gen_eval_metrics_notes.md is empty (0 lines) — no eval-metrics spec documented."
+  - "BasicGenerationMetric includes exact_match/quasi_exact_match/f1_score (run_specs/ss_gen_run_specs.py:50) which are not meaningful for long open-ended story generation; paper reports BLEU-4, ROUGE-1/2/L (scenarios/ss_gen_scenario.py:29). Missing ROUGE-1, ROUGE-2."
+  - "max_train_instances=5 enables 5-shot few-shot from TRAIN_SPLIT (run_specs/ss_gen_run_specs.py:42); paper uses zero-shot title-only prompting per the instruction in Section 4."
+  - "Adapter max_tokens=512 may truncate 200-300 word stories near boundary; temp=0.7 not verified against paper config (run_specs/ss_gen_run_specs.py:44-45)."
+fixes_before_run:
+  - severity: blocking
+    action: "Add annotators for remaining 4 dimensions (Descriptiveness, Empathy, Grammaticality, Relevance) to match paper's 5-dimension GPT-4 eval, or document that only Coherence is scored."
+  - severity: non-blocking
+    action: "Set max_train_instances=0 for zero-shot to match paper Section 4 prompting."
+  - severity: non-blocking
+    action: "Drop exact_match/quasi_exact_match/f1_score from BasicGenerationMetric; add rouge_1, rouge_2 to match paper."
+  - severity: non-blocking
+    action: "Subsample test split to 200 instances to match paper evaluation budget and reduce judge cost."
+  - severity: non-blocking
+    action: "Populate metric_notes/ss_gen_eval_metrics_notes.md with aggregation strategy and paper's reported numbers for comparison."
+notes: "Generation prompt verbatim matches paper Section 4 (scenarios/ss_gen_scenario.py:85-89). Dataset URLs and JSONL loader correct; 5085 total instances load into TRAIN/VALID/TEST as paper specifies. Sample predictions show well-formed 200-300 word social stories scoring 5/5 on coherence across Gemini Pro and Flash-Lite runs. Primary drift: only 1/5 judge dimensions implemented and 5-shot vs zero-shot mismatch."
+paper_url: "https://arxiv.org/abs/2406.15695"
+reviewed_at: "2026-04-21"

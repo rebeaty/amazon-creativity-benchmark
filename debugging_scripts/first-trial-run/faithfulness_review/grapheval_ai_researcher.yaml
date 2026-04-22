@@ -1,0 +1,28 @@
+name: grapheval_ai_researcher
+verdict: METRIC_MISMATCH
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Metric mismatch (primary issue): the GraphEval task is a 4-way paper-decision classification evaluated with F1 / accuracy against the ground-truth `decision` field (Reject / Accept Poster / Oral / Spotlight). run_specs/grapheval_ai_researcher_run_specs.py:49-52 registers only a generic `llm_judge_quality` 1-5 rubric scoring `accuracy, depth of reasoning, relevance, and quality of the research evaluation`. The reference decision is attached to the instance (scenarios/grapheval_ai_researcher_scenario.py:111-112) but is never compared to the model's predicted decision. No classification_accuracy / F1 / exact-match metric is wired up."
+  - "Judge rubric is generic, not task-specific: `_RUBRIC_LLM_JUDGE_QUALITY` scores `research evaluation quality` on a 1-5 scale without access to the ground-truth decision, so the judge cannot assess whether the predicted Accept/Reject label is correct. display_predictions.json confirms judge scores vary 1-4 independent of label correctness (e.g. `Accept (Poster)` gets scores 1, 2, and 4 across instances)."
+  - "Judge model drift: run_specs/grapheval_ai_researcher_run_specs.py:57 hardcodes openai/gpt-4 (not gpt-4o / o1); the original paper reports LLM-as-judge variants with different backbones. Minor but worth noting."
+  - "Output format capture: scenario.py:16-18 says `We extract the decision from model output` but no extraction logic exists in get_instances; the full `predicted_text` (Score + decision) is passed to the judge. Harmless for current pipeline but does not match the stated design."
+  - "Test split is tiny (9 instances; scenario.py:20) — single-run variance is huge, and combined with a 1-5 quality judge the metric carries almost no signal."
+  - "TRIPLE-VARIANT OVER-REPRESENTATION: grapheval_ai_researcher, grapheval_iclr, and grapheval_review_advisor are three subsets of the same ulab-uiuc/GraphEval release (AI_Researcher, ICLR, Review_Advisor) with the same exact prompt and same decision-classification task. Counting all three as independent creativity benchmarks triple-weights one source (NOTES_FOR_VIJETA.md section 1)."
+  - "CREATIVITY-VALUE AMBIGUITY: the task is peer-review decision prediction (pick one of 4 labels given title+abstract). It is a classification/judgment task, not a generative creativity task. Keeping it in the creativity suite likely over-counts `idea evaluation` as `creativity` (NOTES_FOR_VIJETA.md section 1 flag)."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace llm_judge_quality with a classification metric: compare predicted decision (last line of output, strip whitespace) against Reference CORRECT_TAG; compute per-class accuracy and macro-F1. This matches the paper's reported metric and uses the ground-truth label already attached."
+  - severity: blocking
+    action: "If an LLM judge is retained at all, rewrite the rubric to inject the gold decision and score binary correctness + near-miss (Poster vs Oral) rather than generic `quality`."
+  - severity: non-blocking
+    action: "Team-level decision on triple-variant inclusion: either keep one representative subset (probably ICLR, largest N) or explicitly de-weight the three in aggregate leaderboard scoring."
+  - severity: non-blocking
+    action: "Team-level decision on creativity fit: peer-review decision prediction is a judgment task. Consider moving to a `meta-evaluation / judgment` bucket or dropping from the creativity aggregate."
+notes: "Prompt is a verbatim copy of Baselines/Prompt/basic_prompt.txt (cross-checked via raw.githubusercontent.com). Data path (test_set.jsonl from Data/AI_Researcher) and fields (title, abstract, decision) match upstream. Output shape across gemini-2.5-pro, gemini-2.5-flash, and gemma-3-27b is clean two-line `Overall Score (0-100)= NN\\n<decision>` - models follow the format. The faithfulness failure is not at the prompt/data level but at the metric level: the scenario captures the correct label but scores a generic 1-5 quality rubric instead of decision accuracy, so reported numbers do not reflect the paper's task. Combined with the 9-instance test set and the triple-variant issue, this benchmark contributes noisy non-creativity signal to the suite in its current form."
+paper_url: "https://arxiv.org/abs/2503.12600"
+reviewed_at: "2026-04-21"

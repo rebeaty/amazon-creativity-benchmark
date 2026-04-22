@@ -1,0 +1,30 @@
+name: showerthoughts
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "scenarios/showerthoughts_scenario.py:91-96 adapts paper's prompt: original asked for '100 Showerthoughts' with sentence-structure variation (Section 4.1); here modified to single-generation. Documented in docstring lines 37-39, but is a deviation — paper never evaluates one-at-a-time zero-shot outputs."
+  - "Unconditional generation with identical prompt across all 300 instances yields identical outputs per model (display_predictions.json: every instance for gemini-2.5-pro returns the same 'Cleaning your house is just a side quest...' text). References (genuine showerthoughts) serve no functional role — scenario acknowledges this at lines 101-103 but still emits 300 duplicate instances."
+  - "run_specs/showerthoughts_run_specs.py:71-75 implements only 3 of paper's 5 evaluation dimensions (creativity, humor, cleverness); Logical Validity and General Score are documented in metric_notes/showerthoughts_annotator_notes.md:17-21 but NOT wired up as MetricSpec/AnnotatorSpec."
+  - "run_specs/showerthoughts_run_specs.py:15-46 uses 5-point Likert rubrics (1-5), but paper (annotator_notes.md:22) and human baselines (annotator_notes.md:109-116) use a 6-point scale. Scores will not be comparable to paper's Table 2 (Genuine=3.71, ChatGPT=3.23, etc.)."
+  - "run_specs/showerthoughts_run_specs.py:15-46 rubrics are custom-written anchors ('mind-bending', 'comedic quality') rather than paper's verbatim Likert prompts from annotator_notes.md:44-93 ('Rate the following Showerthought on creativity - is it creative, original, and novel?...')."
+  - "run_specs/showerthoughts_run_specs.py:81 judge_model='openai/gpt-4' matches annotator_notes.md:12 but paper itself predates GPT-4o; acceptable."
+  - "scenarios/showerthoughts_scenario.py:59 loads 'roberta_test_data_mixed.ndjson' (test split of detector data with 50/50 genuine/generated); correctly filters to label=='genuine' (line 84). Data handling is faithful."
+  - "metric_notes/showerthoughts_eval_metrics_notes.md exists but is empty (1-line file)."
+  - "adapter_spec temperature=0.7 with num_outputs=1 and identical prompt across instances is why outputs collapse; paper's ChatGPT runs requested 100 diverse showerthoughts in one completion, relying on in-completion diversity that this single-shot setup cannot produce."
+fixes_before_run:
+  - severity: blocking
+    action: "Switch rubric anchors to 6-point scale and replace hand-written rubrics with paper's verbatim prompts (metric_notes/showerthoughts_annotator_notes.md:44-93) so scores map to paper Table 2."
+  - severity: blocking
+    action: "Add Logical Validity and General Score annotators (annotator_notes.md:17-21) — currently only 3/5 paper dimensions evaluated."
+  - severity: blocking
+    action: "Redesign task to avoid 300 identical outputs: either (a) generate N showerthoughts in a single call matching paper's Section 4.1 prompt then split, or (b) vary seed/topic per instance. Current setup produces 1 unique generation judged 300x."
+  - severity: non-blocking
+    action: "Populate metric_notes/showerthoughts_eval_metrics_notes.md or delete it."
+notes: "Scenario correctly downloads the aiintelligentsystems/showerthoughts-dataset test file and filters to genuine entries. References are unused by the task since generation is unconditional — paper used human Showerthoughts only as ground-truth baseline in human survey, not as per-instance reference. Main faithfulness issues: (1) 3/5 evaluation dimensions missing, (2) 5-point rubric diverges from paper's 6-point scale, (3) rubric text is custom not paper-verbatim, (4) unconditional single-shot generation produces duplicate predictions (verified in gemini-2.5-pro display_predictions.json — first 5 instances all identical), making the 300-instance run effectively a single judgment repeated. Paper prompt was for batch-of-100 with diversity instruction; single-generation adaptation breaks the diversity mechanism."
+paper_url: "https://aclanthology.org/2024.starsem-1.23/"
+reviewed_at: "2026-04-21"

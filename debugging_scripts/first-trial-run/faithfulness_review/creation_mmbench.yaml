@@ -1,0 +1,29 @@
+name: creation_mmbench
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "display_predictions.json shows empty base64_images and canned 'no text provided' replies across all instances (benchmark_output/runs/trial_10inst/creation_mmbench_model=google_gemini-2.5-flash-lite/display_predictions.json); multimedia payload is not reaching the model at inference time despite pattern-B disk-path patch (scenarios/creation_mmbench_scenario.py:155-179)"
+  - "Judge rubric is a generic 1-5 creative-quality Likert (run_specs/creation_mmbench_run_specs.py:15-24) instead of the paper's instance-specific dual-evaluation with Visual Factuality Score (1-10) and Reward (-100..+100) using per-instance 'criteria' dict (metric_notes/creation_mmbench_annotator_notes.md:14-40)"
+  - "The instance 'criteria' (subjective requirement / groundtruth alignment) is attached as a Reference but never wired into the judge prompt; GenericLLMJudgeAnnotator ignores it (run_specs/creation_mmbench_run_specs.py:53-64)"
+  - "No dual-evaluation / position-swap pass implemented (required by paper Section 3.3)"
+  - "Judge is text-only GPT-4o with no image passed, so Visual Factuality cannot be assessed"
+  - "max_tokens=512 truncates long creative/professional writing responses (run_specs/creation_mmbench_run_specs.py:44)"
+fixes_before_run:
+  - severity: blocking
+    action: "Diagnose why predictions show 'no text provided' with base64_images=[]: verify that MultimediaObject ordering (images-first then text) is accepted by the Gemini client adapter and that image paths are reachable at inference time; add a smoke test that prints the rendered request for one instance"
+  - severity: blocking
+    action: "Replace generic 1-5 rubric with instance-specific Creation-MMBench judge: pass per-instance criteria ('subjective requirement','groundtruth alignment'), images, reference answer, produce VFS (1-10) and Reward; use gpt-4o-0806"
+  - severity: blocking
+    action: "Implement dual evaluation (swap response/reference positions) and aggregate VFS + Reward"
+  - severity: non-blocking
+    action: "Raise max_tokens (>=2048) to avoid truncating long-form functional/professional writing"
+  - severity: non-blocking
+    action: "Pass images to the judge so Visual Factuality can actually be scored"
+notes: "Scenario loading and data split (765 test) look correct and the pattern-B disk-path patch is in place, but predictions indicate the model is effectively receiving empty input and the judge is a generic quality Likert rather than the paper's instance-specific dual-evaluation VFS/Reward. As configured, this run does not reproduce Creation-MMBench."
+paper_url: "https://arxiv.org/abs/2503.14478"
+reviewed_at: "2026-04-21"

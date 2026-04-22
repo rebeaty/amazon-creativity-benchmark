@@ -1,0 +1,30 @@
+name: music_theory_bench
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "run_specs/music_theory_bench_run_specs.py:30 temperature=0.7 diverges from paper's zero-shot deterministic MC protocol (paper uses greedy/temperature=0 for ChatMusician/GPT-3.5/LLaMA2 accuracy reporting); MC benchmarks should be temperature=0."
+  - "run_specs/music_theory_bench_run_specs.py:31 stop_sequences=['\\n'] combined with adapter output_prefix='Answer: ' is incompatible with models that emit chain-of-thought before the letter. display_predictions.json shows predictions like 'Let's analyze each option...' running 300+ tokens with the final letter buried at the end (e.g., id303 ends '**Therefore, the answer is B.**'); exact_match against 'A'/'B'/'C'/'D' references will score these as incorrect even when the model is right."
+  - "run_specs/music_theory_bench_run_specs.py:29 max_tokens=512 plus the above causes many completions to exhaust tokens mid-reasoning without ever emitting a final letter (e.g., id141 truncates inside ABC notation analysis with no answer)."
+  - "run_specs/music_theory_bench_run_specs.py:34-36 MetricSpec uses BasicGenerationMetric with names=['exact_match']; paper reports accuracy on MC. rajkumar diagnosis note flags that the registry expects compute_reference_metrics for exact_match and BasicMetric for accuracy — current single spec may not emit the 'accuracy' metric the aggregator expects."
+  - "scenarios/music_theory_bench_scenario.py:97 prompt matches ChatMusician eval/configs/datasets/music_theory_bench_ppl_zero_shot.py verbatim; however scenario drops the abc_score field entirely (line 33 comment concedes it is 'sometimes empty, sometimes contains notation'). Questions where abc_score carries the musical example and the stem only references it will be unanswerable."
+  - "run_specs/music_theory_bench_run_specs.py:27 max_train_instances=0 matches paper's zero-shot setting — faithful."
+  - "metric_notes/music_theory_bench_annotator_notes.md and metric_notes/music_theory_bench_eval_metrics_notes.md are both empty (1 line each); no documented metric rationale."
+fixes_before_run:
+  - severity: blocking
+    action: "Set temperature=0 (or 0.0) for deterministic MC scoring; 0.7 injects noise into a task with a single correct letter."
+  - severity: blocking
+    action: "Remove stop_sequences=['\\n'] OR switch adapter to ADAPT_MULTIPLE_CHOICE_SEPARATE_ORIGINAL (likelihood-based scoring per choice) so free-form CoT does not break exact_match. Current config lets models emit 500 tokens of prose that never yield a parseable 'A'/'B'/'C'/'D' against the single-letter references."
+  - severity: blocking
+    action: "Audit abc_score field handling: inspect dataset rows where stem references a score and confirm whether to inline abc_score into the prompt (scenarios/music_theory_bench_scenario.py:102-104 currently skips it)."
+  - severity: non-blocking
+    action: "Fix MetricSpec per rajkumar diagnosis: replace with compute_reference_metrics (for exact_match) and BasicMetric (for accuracy) so expected metrics appear in output."
+  - severity: non-blocking
+    action: "Populate both metric_notes/music_theory_bench_{annotator,eval_metrics}_notes.md with at minimum the accuracy metric definition and scoring rationale."
+notes: "Dataset (m-a-p/MusicTheoryBench, 269 knowledge + 98 reasoning test, 5 dev), prompt text, and zero-shot protocol match the paper/config. Core faithfulness failure is the generation+parsing shape: temperature=0.7 plus stop_sequences=['\\n'] plus single-letter references means models producing CoT answers (as seen in both display_predictions.json files — every sampled completion is verbose prose, often ending with '**B**' or 'the answer is B') will be graded incorrect by exact_match. Scenario also silently drops abc_score, potentially breaking questions that depend on a rendered musical example."
+paper_url: "https://arxiv.org/abs/2402.16153"
+reviewed_at: "2026-04-21"

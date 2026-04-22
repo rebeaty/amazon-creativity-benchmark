@@ -1,0 +1,27 @@
+name: conceptual_design
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Prompt adaptation: paper requests batch of 100 solutions; scenario requests 1 (conceptual_design_scenario.py:16-17, 72-77). Acknowledged in docstring but diverges from source."
+  - "Metrics mismatch: paper uses sentence-embedding novelty/diversity (cosine) vs AMT refs plus expert feasibility/usefulness/novelty ratings; run spec uses exact_match/quasi_exact_match/f1/ROUGE-L/BLEU-1/BLEU-4 (conceptual_design_run_specs.py:50), which are inappropriate for open-ended ideation with many valid refs."
+  - "LLM judge rubric scores generic 'quality (creativity/feasibility/completeness/relevance)' on 1-5 (conceptual_design_run_specs.py:15-24); paper uses separate novelty, feasibility, usefulness dimensions."
+  - "Judge model 'openai/gpt-4' (conceptual_design_run_specs.py:58) is not the paper's methodology — paper relies on human experts, not LLM-as-judge."
+  - "metric_notes/conceptual_design_annotator_notes.md and eval_metrics_notes.md are empty (1 line each) — no documentation."
+  - "Prompt variants 'base/novel/diverse/unique' exist in code but run spec hardcodes default (args={}) — only 'base' is exercised."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace lexical-overlap metrics (BLEU/ROUGE/F1/EM) with embedding-based novelty/diversity against AMT refs per paper, or remove them; they are meaningless for this task."
+  - severity: blocking
+    action: "Split LLM judge rubric into paper-aligned dimensions: novelty, feasibility, usefulness (each 1-5); drop conflated 'quality' score."
+  - severity: non-blocking
+    action: "Populate metric_notes/*.md with judge prompt, rubric provenance, and scoring protocol."
+  - severity: non-blocking
+    action: "Expose prompt_variant via run spec args or emit separate run specs per variant so novel/diverse/unique are actually evaluated."
+notes: "Scenario loads the correct 12 problems and AMT reference CSVs and prompt text derives from the repo's zero_shot.py, but it departs from the paper in both generation regime (single vs. 100) and evaluation (lexical n-gram metrics plus a generic GPT-4 quality judge, instead of embedding novelty/diversity and expert multi-dimensional ratings). Output shape is sensible and judge scores are emitted, but the scoring is not faithful to the source."
+paper_url: "https://arxiv.org/abs/2306.01779"
+reviewed_at: "2026-04-21"

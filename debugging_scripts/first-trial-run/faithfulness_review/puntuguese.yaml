@@ -1,0 +1,30 @@
+name: puntuguese
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "Scenario builds a custom Portuguese-English-mixed prompt ('Text: {text}\\n\\nIs this text humorous?') in English, while the paper's humor recognition experiments are run on Portuguese-native text with fine-tuned encoder classifiers (BERTimbau etc.), not zero-shot English-instructed LLM prompting — prompt faithfulness to paper is only nominal."
+  - "metric_notes/puntuguese_{annotator,eval_metrics}_notes.md are EMPTY (0 lines) — no documented evaluation protocol or annotator config."
+  - "Adapter uses temperature=0.7 and max_tokens=512 for a deterministic binary classification task; should be temperature=0 with tiny max_tokens to force a clean Yes/No."
+  - "display_predictions.json shows severe output-shape problems: many predictions contain long multi-paragraph English explanations after the letter (e.g., 'A. Yes\\n\\n**Explanation:**...'), and at least one double-answer ('A. Yes\\nAnswer: A'). MultipleChoiceClassificationMetric with ADAPT_MULTIPLE_CHOICE_JOINT typically parses leading letter, but stop_sequences=['\\n'] is evidently not stopping generation in these traces — indicates the stop token is being ignored or the model ignored the Answer: prefix convention."
+  - "Paper reports F1=68.9% as baseline from fine-tuned models; run_spec uses MultipleChoiceClassificationMetric which reports accuracy/F1 over MC choices — numbers are not directly comparable to paper's fine-tuned baseline."
+  - "No max_eval_instances cap; entire test split (~980 items given 4,903 total with standard 80/10/10) is evaluated, which is fine for faithfulness but costly."
+  - "Prompt does not include a system/instruction preamble in Portuguese; paper corpus is Portuguese — asking an English question ('Is this text humorous?') about Portuguese text introduces a language-mismatch bias the paper never tested."
+fixes_before_run:
+  - severity: high
+    action: "Set temperature=0 and max_tokens=4 (or similar); verify stop_sequences actually halt generation, or switch to logit-based scoring of the two references ('Yes'/'No') to eliminate free-form explanations."
+  - severity: high
+    action: "Populate metric_notes/puntuguese_annotator_notes.md and puntuguese_eval_metrics_notes.md with the intended metric (accuracy and macro-F1 vs paper's F1=68.9%) and clarify the zero-shot-LLM vs fine-tuned-encoder comparison caveat."
+  - severity: medium
+    action: "Translate the prompt into Portuguese (e.g., 'Texto: {text}\\n\\nEste texto é humorístico?') to match the corpus language; or run both as an ablation."
+  - severity: medium
+    action: "Confirm MultipleChoiceClassificationMetric correctly extracts the first-letter choice from predicted_text containing explanations; if not, add a parser or switch adapter to ADAPT_MULTIPLE_CHOICE_SEPARATE_ORIGINAL (logit scoring)."
+  - severity: low
+    action: "Add max_eval_instances cap (e.g., 500) to control cost; stratify by humorous/non-humorous label for balanced F1."
+notes: "Scenario correctly loads Superar/Puntuguese test split and binarizes label 1/0 to Yes/No references. display_predictions.json across gemini-2.5-pro and gemma-3-27b show that the multiple-choice-joint adapter is not reliably constraining outputs; many traces emit full explanations in English despite stop_sequences=['\\n']. The metric_notes files are empty, so there is no documented expected metric value or annotator config. Paper baseline is F1=68.9% from fine-tuned Portuguese encoders, not LLM zero-shot — faithfulness to the dataset is high, but faithfulness to the paper's evaluation protocol is low. Anthology page for paper returned only abstract-level details via WebFetch."
+paper_url: "https://aclanthology.org/2024.lrec-main.1167/"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,30 @@
+name: llm_discussion
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "scenarios/llm_discussion_scenario.py:52 defaults test='aut' and run_specs/llm_discussion_run_specs.py:15-18 passes args={}, so only AUT (30 items) is evaluated by default — the paper runs all four tests (AUT, Similarities, Instances, Scientific; 120 items total). The scenario supports 'all' but the run_spec never selects it."
+  - "No LLM-as-judge annotator is wired: run_specs/llm_discussion_run_specs.py:34-38 registers only SelfBleuMetric and DistinctNMetric (n=1, n=2), and annotators=None (line 46). The paper's four canonical dimensions (Fluency, Flexibility, Originality, Elaboration) scored by GPT-4/GPT-3.5 are not computed — the metric_notes/llm_discussion_annotator_notes.md:17-19 spec is documented but unimplemented."
+  - "metric_notes/llm_discussion_eval_metrics_notes.md exists but is empty (0 content lines) — eval-side metric documentation is missing."
+  - "Instances are created with references=[] (scenarios/llm_discussion_scenario.py:98, 117, 136, 158), which is correct for open-ended generation, but combined with the missing judge this means there is no ground truth and no rubric-based scoring in the first-trial run."
+  - "AdapterSpec uses max_tokens=512, temperature=0.7, num_outputs=1 (run_specs/llm_discussion_run_specs.py:29-31). Paper-reported generation settings are not verifiable (PDF fetch blocked, GitHub overview uninformative), but 512 tokens can truncate long AUT completions — display_predictions.json from trial_10inst shows AUT outputs cut mid-sentence around items 13-17 in every sampled instance (e.g. id13 rope list ends 'create unique and', id11 calculator ends 'The Musical & Rhythmic'). Fluency counts (if ever judged) will be biased low."
+  - "benchmark_output/runs/trial_10inst/llm_discussion_model=google_gemini-2.5-flash-lite/display_predictions.json contains 10 instances, all AUT objects (umbrella/key/scissors/etc.). Confirms default AUT-only scope and confirms only n=10 of 30 items were run in the trial (max_eval_instances clipping)."
+  - "Self-BLEU and Distinct-n are computed across tokens within a single model response rather than across the set of generated ideas per prompt — appropriate as a diversity proxy but not what the paper's Flexibility dimension measures (distinct conceptual categories judged by LLM)."
+fixes_before_run:
+  - severity: blocking
+    action: "Pass args={'test': 'all'} in run_specs/llm_discussion_run_specs.py so all 120 items across AUT/Similarities/Instances/Scientific are evaluated, matching the paper; current AUT-only run reproduces ~25% of the benchmark."
+  - severity: blocking
+    action: "Wire an LLMAsJuryAnnotator with GPT-4 (or GPT-3.5-turbo) that scores each prediction on Fluency (int), Flexibility (int), Originality (1-5), and Elaboration (1-5) per metric_notes/llm_discussion_annotator_notes.md:57-103. Without it, llm_discussion results cannot be compared to the paper."
+  - severity: non-blocking
+    action: "Raise max_tokens from 512 to 1024-2048 to avoid truncating enumerated responses; the trial shows every AUT completion truncating mid-item, which deflates Fluency/Elaboration."
+  - severity: non-blocking
+    action: "Populate metric_notes/llm_discussion_eval_metrics_notes.md (currently empty) so the eval side is documented alongside the annotator notes."
+  - severity: non-blocking
+    action: "Rerun without max_eval_instances clipping so all 30 items per test-type are scored (trial_10inst only has 10 AUT items)."
+notes: "Scenario faithfully pulls prompts verbatim from the lawraa/LLM-Discussion GitHub JSON files for all four tests, which is the right data source. The faithfulness problem is on the run-spec/metric side: only AUT is selected by default and no LLM judge is attached, so the first-trial run measures token-level Self-BLEU/Distinct-n on AUT-only completions — not the paper's four creativity dimensions across four tests. Predictions are well-formed numbered lists but consistently truncate at 512 tokens. arXiv HTML had no methodology detail; PDF fetch returned binary and could not be parsed, so judge-model choice (GPT-4 vs GPT-3.5) and temperature were not cross-checked against the paper directly — relying on annotator notes as the spec of record."
+paper_url: "https://arxiv.org/abs/2405.06373"
+reviewed_at: "2026-04-21"

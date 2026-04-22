@@ -1,0 +1,29 @@
+name: liveideabench
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Idea-generation prompt in scenarios/liveideabench_scenario.py:39-48 matches the exact idea_prompt.description from utils/prompts.json (reward framing, keyword slot, 100-word cap, originality/feasibility/clarity hint). Input assembly uses input_suffix='\\n' (run_specs/liveideabench_run_specs.py:40) which appends a trailing newline; harmless."
+  - "Keyword set loaded directly from the official keywordsEverywhere20241216.xlsx (scenarios/liveideabench_scenario.py:36, 56-67). Column-B extraction with header skip is correct; expected ~1,180 keywords across 22 domains (matches paper)."
+  - "Metric drift (major): paper evaluates five dimensions (originality, feasibility, fluency, flexibility, clarity) on a 1-10 scale with a dedicated critic prompt plus pairwise-fluency and 30th-percentile-flexibility post-hoc computation (metric_notes/liveideabench_annotator_notes.md:10-66). run_specs/liveideabench_run_specs.py:49-64 instead wires a single generic llm_judge_creativity score on a 1-5 scale with a custom rubric that collapses originality+feasibility+novelty into one ordinal. None of the paper's five dimensions are produced."
+  - "Judge-model drift: paper uses a dynamic top-10 LiveBench panel (claude-3.5-sonnet, gpt-4o, qwen-2.5-72b, deepseek-chat, gemini-2.0-flash-thinking as the disclosed CRITIC_MODELS per metric_notes/liveideabench_annotator_notes.md:7). run_specs uses a single openai/gpt-4 judge at temperature 0.0 (run_specs/liveideabench_run_specs.py:57-58). Single-judge + gpt-4 (non-thinking, non-panel) substantially changes scoring dynamics the paper designed against bias."
+  - "Judge rubric text (run_specs/liveideabench_run_specs.py:15-24) does not match the paper's Nature/Science reviewer persona critic prompt with JSON score block (metric_notes/liveideabench_annotator_notes.md:14-32). No JSON parsing for dimension scores; no pairwise-fluency comparator prompt wired up; flexibility percentile not computed."
+  - "Adapter: max_tokens=512 (run_specs/liveideabench_run_specs.py:44) is ample for the <=100-word outputs; temperature=0.7 is a reasonable creative default but the paper does not pin a single temperature across models. No stop_sequences — acceptable."
+  - "Output shape: display_predictions.json for gemini-2.5-pro shows on-topic, ~100-word Background+Idea responses; annotation key 'generic_llm_judge_llm_judge_creativity.llm_judge_creativity' yields integer 1-5 scores (mostly 4s in sample). Consistent with the collapsed single-score metric, not with the paper's 5-dim 1-10 scores."
+  - "metric_notes/liveideabench_eval_metrics_notes.md is empty (0 bytes); the paper's scoring formulas (flexibility = 30th percentile of other dims, fluency A/B/C/D -> 10/7/4/1 mapping) are only documented in annotator_notes.md:62-66."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace the single llm_judge_creativity annotator with a multi-dimensional annotator that issues the exact critic prompt from metric_notes/liveideabench_annotator_notes.md:14-32, parses the JSON block, and emits originality/feasibility/clarity on 1-10."
+  - severity: blocking
+    action: "Add the pairwise fluency annotator (keyword-grouped A/B/C/D comparator, map to 10/7/4/1) and the post-hoc flexibility metric (30th percentile across dims) to match the paper's five headline scores."
+  - severity: blocking
+    action: "Switch judge_model_name from openai/gpt-4 to the disclosed CRITIC_MODELS panel (claude-3.5-sonnet, gpt-4o, qwen-2.5-72b, deepseek-chat, gemini-2.0-flash-thinking) via jury annotator, or at minimum document a single-judge adaptation and note non-comparability to the LiveIdeaBench leaderboard."
+  - severity: non-blocking
+    action: "Populate metric_notes/liveideabench_eval_metrics_notes.md with the paper's formulas currently only in annotator_notes.md so the eval-metrics file is not empty."
+notes: "Input pipeline (keyword source, prompt wording, zero-shot framing, 100-word constraint) is faithful. Evaluation pipeline is substantially re-specified: a generic 1-5 creativity judge replaces the paper's five-dimension 1-10 jury plus pairwise fluency plus percentile-based flexibility. Current run therefore measures 'a gpt-4 creativity rating of LiveIdeaBench prompts' rather than LiveIdeaBench scores; headline numbers will not be leaderboard-comparable. Paper full text beyond the abstract was not retrievable via WebFetch; cross-check leaned on the annotator notes, utils/prompts.json excerpt, and abstract."
+paper_url: "https://arxiv.org/abs/2412.17596"
+reviewed_at: "2026-04-21"

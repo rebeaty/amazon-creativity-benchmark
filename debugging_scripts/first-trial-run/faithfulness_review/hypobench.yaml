@@ -1,0 +1,44 @@
+name: hypobench
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: partial
+gaps:
+  - "Duplication concern vs hypogen: NOTES_FOR_VIJETA.md:43 flags hypogen/hypobench possible overlap. Verified DISTINCT upstream papers/datasets: hypobench = ChicagoHAI HypoBench (arXiv:2504.11524, 12 tasks observation->hypothesis from labeled examples, datasets repo ChicagoHAI/HypoBench-datasets), hypogen = UniverseTBD/hypogen-dr1 bit-flip from paper abstracts (arXiv:2409.04109). Task formats are different (labeled observation induction vs. abstract bit-flip). NOT a duplicate benchmark. However, the run_specs ARE near-duplicates of each other (same GenericLLMJudgeAnnotator wiring, overlapping novelty rubric text, same generation adapter) — the code-level duplication is real even if the dataset distinction is legitimate."
+  - "Task coverage gap: scenarios/hypobench_scenario.py:64-72 exposes 7 real-world tasks via VALID_TASKS but run_specs/hypobench_run_specs.py:52-55 calls HypoBenchScenario() with args={} — defaults to task='deceptive_reviews' only. Only 1 of 12 paper tasks is actually run. Paper claims 7 real + 5 synthetic (194 datasets); scenario additionally excludes journal_cross/journal_same (scenario:41) and synthetic tasks (scenario:39-40). Single-task run without task parameterization severely undercovers the benchmark."
+  - "Single instance per task: scenario.get_instances (scenarios:106-153) returns exactly ONE Instance (one sampled prompt with num_observations=10 labeled examples). display_predictions.json confirms n=1 (only id0 present across gemini_pro and gemini_flash runs). The paper evaluates across many train/val/test partitions; a single-instance eval produces essentially a single score per model per task and collapses all statistical signal."
+  - "Metric does not match paper: metric_notes/hypobench_eval_metrics_notes.md:16-26 documents paper uses a TWO-STEP pipeline (generate hypothesis -> apply as classifier -> measure accuracy on held-out test) for real tasks, and HDR (LLM-judge semantic match vs. ground_truth_hypotheses) for synthetic tasks. run_specs/hypobench_run_specs.py:72-75 instead registers LLM-judge NOVELTY/SIGNIFICANCE/VERIFIABILITY rubrics on a 1-5 scale. This is a completely different construct than the paper's Accuracy or HDR, and is not a 'proxy' of either. The metric_notes file explicitly says the current implementation is a proxy using ROUGE-L/BERTScore (open_ended) — but the run_specs do not even register open_ended metrics, so the documented proxy isn't running either."
+  - "Judge rubrics mismatched to task: NOVELTY/SIGNIFICANCE/VERIFIABILITY rubrics (run_specs:15-46) describe evaluation of SCIENTIFIC hypotheses; HypoBench real tasks are behavioral/social (deceptive_reviews, stress detection, retweet prediction, AI-content detection). Scoring a 'hotel-review-authenticity decision rule' on 'major scientific breakthroughs' (rubric:34) is a category error. The novelty rubric text is essentially copy-pasted from hypogen_run_specs.py with minor edits, reinforcing the code-duplication flag above."
+  - "Judge config: openai/gpt-4 @ temperature=0.0, max_new_tokens=256 — paper uses GPT-4 judges, so model/temp OK in isolation. Paper's HDR judge prompt is a binary match decision between H_gen and H_gt (metric_notes:37-39); run_specs uses a 1-5 Likert. judge_max_new_tokens=256 adequate for a single integer."
+  - "Reference construction: scenario passes metadata.known_hypotheses as Reference list (scenarios:141-145). These are consumed by an open_ended metric in the paper's proxy design, but no open_ended MetricSpec is registered, so references are ignored by the active GenericLLMJudge metric (which scores the generation alone, not against references)."
+  - "Prompt format: scenario:132-138 assembles system+user via {observations} + 'Generate 5 hypotheses' — matches config.yaml batched_generation templates pulled live from the ChicagoHAI repo (scenarios:62, 109). Prompt fidelity to the paper's Section 3 batched-generation template is reasonable. num_hypotheses hardcoded to 5 (scenario:133) matches paper default."
+  - "Adapter: max_tokens=512 truncates mid-hypothesis in observed runs — display_predictions.json shows predicted_text ending mid-sentence at 'Reviews that describe specific, often minor, functional failures or maintenance issues within the room or' (gemini_flash id0) and 'Truthful reviews' (gemini_pro id0, 5 hypotheses requested but cut off). 512 tokens is insufficient for 5 full hypotheses with rationales; paper's batched generation uses larger budgets."
+  - "Sampling seed: seed=42, num_observations=10 hardcoded (scenarios:80). Paper sweeps K observations and splits; fixed 10 is one point on that curve."
+duplication_concern:
+  is_duplicate_of_hypogen: false
+  reasoning: "Different papers (arXiv:2504.11524 vs arXiv:2409.04109), different data sources (ChicagoHAI/HypoBench-datasets vs UniverseTBD/hypogen-dr1), different task structures (observation induction vs bit-flip from abstract). Legitimate separate benchmarks."
+  code_duplication_flag: true
+  code_duplication_details: "run_specs/hypobench_run_specs.py and run_specs/hypogen_run_specs.py share near-identical AnnotatorSpec scaffolding and novelty rubric wording. hypobench adds two extra rubrics (significance, verifiability) but reuses the hypogen judge pattern. Also both use the 'generic scientific hypothesis' rubric framing despite hypobench tasks being non-scientific (social/behavioral). Indicates copy-paste onboarding where hypogen's scientific-creativity rubric was reused without adapting to HypoBench's decision-rule task format."
+fixes_before_run:
+  - severity: blocking
+    action: "Parameterize the run_spec over VALID_TASKS — generate 7 run_specs (one per real-world task) via run_spec_function args, so hypobench actually covers its 7 real tasks instead of only deceptive_reviews. Update eval_scripts/hypobench.sh accordingly."
+  - severity: blocking
+    action: "Either (a) implement the paper's two-step Accuracy pipeline (generate hypothesis, then run second LLM pass to classify held-out test examples with that hypothesis), or (b) register the documented proxy metrics — ROUGE-L + BERTScore vs. known_hypotheses — via HELM's open_ended MetricSpecs. Current novelty/significance/verifiability scores do not correspond to any paper metric for HypoBench."
+  - severity: blocking
+    action: "Replace the scientific-hypothesis rubric text (run_specs:15-46) with task-appropriate criteria, OR drop the LLM-judge metrics entirely in favor of the paper's pipeline. Scoring 'deceptive reviews' decision rules on 'scientific breakthrough significance' is a category error."
+  - severity: high
+    action: "Increase max_tokens (e.g., 1024-2048) to avoid mid-hypothesis truncation of the requested 5-hypothesis batch; current 512 systematically cuts generations short."
+  - severity: high
+    action: "Expand to multiple instances per task — sample K train/val partitions with different seeds instead of a single instance, so per-task scores have variance and are not point estimates."
+  - severity: medium
+    action: "Add synthetic-task support with HDR metric (metric_notes:29-47) — the 5 synthetic tasks are where the paper's headline 38.8% ground-truth recovery number lives. Currently excluded (scenario:39-40)."
+  - severity: medium
+    action: "Refactor shared GenericLLMJudgeAnnotator wiring between hypogen and hypobench into a helper to reduce rubric-text copy-paste drift that caused the current mismatch."
+  - severity: non-blocking
+    action: "Populate empty metric_notes/hypobench_annotator_notes.md (currently 1-line/empty file) with the judge-prompt specification used by HypoBench paper's HDR LLM judge."
+notes: "HypoBench as implemented is a single-instance, single-task, scientific-novelty-rubric eval — which is neither the paper's Accuracy pipeline nor the HDR metric, and only covers 1 of 7 real-world tasks. The annotator_notes file is empty (1 line), suggesting onboarding was incomplete. Duplication with hypogen flagged in NOTES_FOR_VIJETA.md is NOT a benchmark-level duplicate (distinct papers/datasets) but IS a code-level duplicate — hypogen's scientific-creativity judge was reused verbatim for hypobench's social/behavioral tasks, which is the root cause of the metric mismatch. Arxiv abstract and HypoBench website fetches confirmed 12 tasks (7 real + 5 synthetic) and 'hypothesis discovery rate' as a paper-level metric but did not yield full HDR prompt details; cross-check relied on local metric_notes/hypobench_eval_metrics_notes.md and the ChicagoHAI/HypoBench-datasets repo structure referenced in the scenario. Not a faithful reproduction; treat current scores as uninterpretable relative to paper."
+paper_url: "https://arxiv.org/abs/2504.11524"
+reviewed_at: "2026-04-21"

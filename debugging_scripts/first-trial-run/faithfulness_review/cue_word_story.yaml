@@ -1,0 +1,27 @@
+name: cue_word_story
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Only 4 cue-word triads are exercised (scenarios/cue_word_story_scenario.py:109-130): 'stamp-letter-send', 'petrol-diesel-pump' (low distance) and 'gloom-payment-exist', 'organ-empire-comply' (high distance). The HuggingFace dataset (mismayil/creative_story_generation_dataset) contains 479 pre-generated human+AI stories grouped by these same 4 item_ids, so item coverage matches the paper's pilot set, but the run yields only 4 generations per model (one per triad) — no repetition/sampling for diversity metrics the paper reports."
+  - "Paper (Section 4) rates stories on 4 dimensions (creativity, originality, surprise, effectiveness/value) with 1-5 scales from expert and non-expert raters. run_specs/cue_word_story_run_specs.py:15-23,50-63 implements only a single generic creativity rubric (llm_judge_creativity, 1-5) via GenericLLMJudgeAnnotator — originality/surprise/value dimensions and the paper's specific per-dimension prompt template (metric_notes/cue_word_story_eval_metrics_notes.md:28-39) are not scored."
+  - "Judge model is openai/gpt-4 at temperature 0.0 (run_specs/cue_word_story_run_specs.py:57-58). Paper used human experts + non-experts as the ground truth; GPT-4 LLM-as-judge is a reasonable proxy acknowledged in metric_notes, but no calibration/correlation to human ratings is reported and the rubric text is a generic 1-5 scale, not the paper's dimension-specific anchor language."
+  - "Automated metrics from the paper (n-gram diversity, inverse homogenization, semantic distance of dominant terms, sentence-to-sentence semantic distance, Flesch-Kincaid, POS/dep/constituency complexity) are not implemented — only HELM's basic BLEU-1/BLEU-4/ROUGE-L/F1/exact-match/quasi-exact-match against human reference stories (run_specs/cue_word_story_run_specs.py:49). metric_notes/cue_word_story_eval_metrics_notes.md:47-65 explicitly defers these as future work."
+  - "metric_notes/cue_word_story_annotator_notes.md is empty (0 lines) — annotator configuration is undocumented outside the run_spec itself."
+  - "Reference stories used for BLEU/ROUGE/F1 are filtered to human-authored only (scenarios/cue_word_story_scenario.py:142-146); this is a defensible choice but is not stated in the paper as the intended comparison target — the paper treats human vs. LLM stories symmetrically."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Populate metric_notes/cue_word_story_annotator_notes.md with the judge model, temperature, rubric, and justification for using a single creativity dimension instead of the paper's four."
+  - severity: non-blocking
+    action: "Add annotators for the other three paper dimensions (originality, surprise, effectiveness/value) using the per-dimension rubric template in metric_notes/cue_word_story_eval_metrics_notes.md:28-39, so the HELM run reports the full 4-dimension profile."
+  - severity: non-blocking
+    action: "Consider num_outputs>1 or multiple temperature samples per triad to enable the diversity/novelty metrics the paper reports; with only 1 generation per triad, within-model diversity cannot be computed."
+  - severity: non-blocking
+    action: "Document in the scenario why references are restricted to human-authored stories, and verify that cue-word inclusion (the task's hard constraint) is tracked — currently no metric checks whether the generated story actually contains all three cue words."
+notes: "System + user prompts in scenarios/cue_word_story_scenario.py:70-83 reproduce the repository prompts from github.com/mismayil/creative-story-gen (src/prompts.py) verbatim, including the boring_theme anti-prompts per triad. Adapter is zero-shot generation, temp=0.7, max_tokens=512, num_outputs=1, which is reasonable for creative generation. Sample outputs across gemini-2.5-pro and gemma-3-1b include all three cue words and stay within the ~5-sentence cap, and llm_judge_creativity=5 for all inspected predictions (suggesting ceiling effect / weak judge discrimination on this rubric). Output shape matches other GenericLLMJudge tasks in this repo. Paper abstract (arxiv.org/abs/2411.02316) confirms the 5-sentence cue-word task design but the abstract does not expose the full methodology; deeper verification would require the PDF."
+paper_url: "https://arxiv.org/abs/2411.02316"
+reviewed_at: "2026-04-21"

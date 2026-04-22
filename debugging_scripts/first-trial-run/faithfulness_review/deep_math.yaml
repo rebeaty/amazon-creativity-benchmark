@@ -1,0 +1,25 @@
+name: deep_math
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: partial
+gaps:
+  - "Metric mismatch: paper uses lenient expert/LLM-judge scoring of mathematical correctness emphasizing core solution components (abstract explicit). run_specs/deep_math_run_specs.py:34-36 wires only BasicGenerationMetric with exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4 against EMPTY references (scenarios/deep_math_scenario.py:153,176). These lexical metrics on empty gold will be ~0 and carry no signal."
+  - "No annotator/judge: annotators=None in run_specs/deep_math_run_specs.py:44 despite scenario docstring (lines 23-25) stating evaluation requires expert review or LLM-as-judge."
+  - "Empty metric_notes: metric_notes/deep_math_annotator_notes.md and metric_notes/deep_math_eval_metrics_notes.md are both 1-line/empty files — no judge rubric, no scoring criteria defined."
+  - "max_tokens=512 (run_specs/deep_math_run_specs.py:29) truncates proofs/constructions; observed display_predictions.json outputs for gemini-2.5-pro are visibly cut mid-proof (e.g. id7, id169, id107, id161 end mid-sentence). Paper's O3-Mini 70% number implies full-length constructive answers."
+  - "temperature=0.7 (run_specs/deep_math_run_specs.py:30) is unusual for math proofs; paper does not specify but reproduction typically uses greedy/low-temp. Minor."
+  - "task_type default 'all' yields 179 instances as intended (78 proof + 101 counterexample), matching paper counts. Mixed Chinese/English preserved. Prompts used verbatim (no extra framing) which matches scenario docstring."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace lexical BasicGenerationMetric with an LLM-as-judge annotator that applies the paper's lenient correctness rubric (core solution components, tolerate minor gaps) and emits a 0/1 or graded correctness score; populate metric_notes/*.md with the rubric."
+  - severity: blocking
+    action: "Raise max_tokens substantially (>=4096-8192) so proofs/constructions are not truncated mid-argument; current 512 cap invalidates most outputs."
+  - severity: non-blocking
+    action: "Lower temperature toward 0.0-0.2 for math-correctness evaluation unless paper specifies otherwise."
+notes: "Scenario data loading and prompt construction are faithful (correct URLs, 179 items, bilingual, no extra framing). Evaluation layer is the failure point: empty references + lexical metrics + no judge means the current pipeline cannot measure mathematical correctness at all, and 512-token cap truncates nearly every response. Must not be run as-is for reproduction. Paper abstract accessed; full methodology details (judge model, exact rubric) not in abstract."
+paper_url: "https://arxiv.org/abs/2505.08744"
+reviewed_at: "2026-04-21"

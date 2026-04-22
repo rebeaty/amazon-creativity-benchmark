@@ -1,0 +1,31 @@
+name: irfl
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "scenarios/irfl_scenario.py:178 hardcodes correct answer to position A (correct_index=0) — no shuffling; comment says 'shuffle to randomize position' but code never shuffles. Massive position bias; chance-accuracy ceiling of 100% if model learns to always output A"
+  - "scenarios/irfl_scenario.py:78 only loads idiom-detection-task by default; run_specs/irfl_run_specs.py:18 passes args={} so metaphor/simile/open-simile configs are never evaluated — paper evaluates all three figurative types"
+  - "run_specs/irfl_run_specs.py:30 temperature=0.7 with num_outputs=1 for a deterministic 4-way MC task; paper-style accuracy eval should be greedy (temp=0)"
+  - "run_specs/irfl_run_specs.py:29,31 max_tokens=512 + stop_sequences=['\\n'] with ADAPT_MULTIPLE_CHOICE_JOINT but no answer-extractor; exact_match on letter will fail whenever model emits any prose"
+  - "display_predictions.json (trial and trial_10inst) shows model returned 'Please provide the question or context for the options A, B, C, and D' for every instance — images are not reaching the model (base64_images: []). Multimedia pipeline is broken end-to-end"
+  - "run_specs/irfl_run_specs.py:27 max_train_instances=0 zero-shot is fine, but instructions='' relies entirely on scenario-internal prompt which lacks explicit 'respond with a single letter A/B/C/D' directive"
+  - "metric_notes/irfl_annotator_notes.md and irfl_eval_metrics_notes.md are both empty (0-line files) — no documented rubric or human-baseline reference"
+  - "scenarios/irfl_scenario.py:104 image-existence check uses >10000 files threshold; zip contains 10062 — brittle but likely fine"
+fixes_before_run:
+  - severity: blocking
+    action: "Fix position bias: actually shuffle all_uuids with a per-instance seed and set correct_index to the post-shuffle position; current code gives every instance answer=A"
+  - severity: blocking
+    action: "Diagnose why base64_images is empty in display_predictions.json — MediaObject(location=image_path) is not being encoded/sent to Gemini. Likely a HELM multimedia adapter path issue; without this the benchmark measures text-only refusal, not figurative-image understanding"
+  - severity: blocking
+    action: "Expose config as a run_spec argument and register separate RunSpecs (or a single parameterized one) for idiom, metaphor, simile, open-simile; current setup covers 200/1087 examples"
+  - severity: blocking
+    action: "Set temperature=0 and either cap max_tokens=3 or add a regex extractor for [ABCD] before exact_match; append explicit 'Answer with a single letter (A, B, C, or D).' to the prompt"
+  - severity: non-blocking
+    action: "Populate metric_notes/*.md with 4-way accuracy rubric, per-figurative-type human baselines (97/99.7/100), and 2023 SOTA reference (22/30/66)"
+notes: "Three compounding issues make the current irfl runs uninterpretable: (1) every correct answer is hardcoded to A, so any position-biased model scores 100% and any other scores 0% independent of figurative understanding; (2) images are not actually being delivered to the VLM (empty base64_images, refusal-style text outputs); (3) only 1 of 4 configs runs. Even if multimedia delivery is fixed, the no-shuffle bug invalidates the metric. Data split choice (test) is correct per the HF dataset card."
+paper_url: "https://arxiv.org/abs/2303.15445"
+reviewed_at: "2026-04-21"

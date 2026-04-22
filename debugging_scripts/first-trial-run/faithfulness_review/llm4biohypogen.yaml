@@ -1,0 +1,28 @@
+name: llm4biohypogen
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Judge/annotator NOT wired: run_specs/llm4biohypogen_run_specs.py:46 sets annotators=None. The paper's core evaluation is a GPT-4 judge on 4 dimensions (Novelty, Relevance, Significance, Verifiability, 0-3 scale) per metric_notes/llm4biohypogen_annotator_notes.md, but no LLMAsJuryAnnotator or annotator spec is registered. Only BLEU-4 and ROUGE-L are computed (run_specs/llm4biohypogen_run_specs.py:35), which are secondary metrics in the paper."
+  - "Split coverage: scenario defaults to model_version='gpt-3.5', test_type='seen' (scenarios/llm4biohypogen_scenario.py:71) and run_spec passes args={} (run_specs/llm4biohypogen_run_specs.py:17), so only 1 of 4 splits (gpt-3.5 seen / gpt-3.5 unseen / gpt-4 seen / gpt-4 unseen) is exercised. Paper emphasizes seen-vs-unseen contrast to quantify contamination; this is lost."
+  - "Prompt is hard-coded 5-shot (Table 11) but AdapterSpec has max_train_instances=0 and is labeled zero-shot (run_specs/llm4biohypogen_run_specs.py:27). The 5 few-shot exemplars are baked into the scenario prompt string, which matches paper Table 11, but the run_spec comment is misleading. Temperature=0.7 is a guess; paper does not specify generation temperature for this task."
+  - "bert_score / SelfBLEU missing: annotator_notes lists SelfBLEU as a diversity metric and BERTScore is referenced in code TODO (run_specs/llm4biohypogen_run_specs.py:37-38). Neither is registered. No multi-sample generation (num_outputs=1) so SelfBLEU cannot be computed even if wired."
+  - "Output shape is sane: display_predictions.json (benchmark_output/runs/trial/llm4biohypogen_model=google_gemini-2.5-flash-lite and trial_10inst) show numbered (1)(2)(3) hypothesis lists matching the target format (3 numbered statements per prediction). Data download from TsinghuaC3I/LLM4BioHypoGen GitHub raw URLs appears to work."
+fixes_before_run:
+  - severity: blocking
+    action: "Implement and register LLMAsJuryAnnotator with GPT-4 (or GPT-4o) judge applying the 4-dimension 0-3 rubric from metric_notes/llm4biohypogen_annotator_notes.md:42-66 and expose 4 per-instance scores plus their mean as metrics. Without this, the run does not evaluate the paper's primary metrics."
+  - severity: blocking
+    action: "Expand coverage to all 4 splits by instantiating 4 run specs (gpt-3.5/seen, gpt-3.5/unseen, gpt-4/seen, gpt-4/unseen) or by parameterizing get_llm4biohypogen_spec to accept model_version/test_type; otherwise unseen-contamination analysis from the paper cannot be reproduced."
+  - severity: non-blocking
+    action: "Remove or correct the 'zero-shot' comment at run_specs/llm4biohypogen_run_specs.py:27 - the scenario prompt is explicitly 5-shot per paper Table 11; document this clearly."
+  - severity: non-blocking
+    action: "Resolve the bert_score TODO (run_specs/llm4biohypogen_run_specs.py:37-38) by either registering SummarizationMetric or dropping the note; optionally bump num_outputs and add SelfBLEU for diversity as paper reports."
+  - severity: non-blocking
+    action: "Confirm generation temperature. Paper does not state; temperature=0.7 is reasonable for hypothesis generation but should be recorded as an assumption."
+notes: "Scenario prompt exactly reproduces Table 11 5-shot template and pulls official test splits from the TsinghuaC3I/LLM4BioHypoGen repo, which is the strongest faithful element. The evaluation harness, however, is gutted: the paper's headline evaluation is the 4-dimension GPT-4 judge, and no annotator is registered. Running as-is produces only BLEU-4/ROUGE-L on one of four splits - not a faithful reproduction. Paper abstract access via arXiv succeeded but full-text details (exact judge prompt, temperature) were not retrievable via WebFetch; cross-check relied on annotator_notes.md which cites Section 4.2 of the paper."
+paper_url: "https://arxiv.org/abs/2407.08940"
+reviewed_at: "2026-04-21"

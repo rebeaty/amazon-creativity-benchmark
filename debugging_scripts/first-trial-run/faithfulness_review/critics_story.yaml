@@ -1,0 +1,31 @@
+name: critics_story
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Scenario defines two subsets (generation, judgment) at scenarios/critics_story_scenario.py:95, but run_specs/critics_story_run_specs.py:30-33 instantiates with args={} and therefore only ever runs the 'generation' subset — the paired-judgment task with human ground truth from doc-storygen-v2 (Q1 label) is never executed, so the exact_match-style evaluation against human annotations is dead code."
+  - "Generation instruction in scenarios/critics_story_scenario.py:52-58 is hand-authored ('Given the following story premise, write a detailed story plan…'). The scenario docstring admits the CritiCS paper uses a multi-agent pipeline (Leading/Revising Critics) rather than a single prompt, and no exact single-prompt equivalent exists in the paper — so this prompt is an adaptation, not a reproduction."
+  - "The judgment prompt template (scenarios/critics_story_scenario.py:62-81) deviates from the CritiCS persona_comparision template documented in metric_notes/critics_story_annotator_notes.md:14-35: the repo template collapses the 4 questions (interesting/coherent/creative/premise-closeness) into a single 'which do you prefer' question, and asks for [[A]]/[[B]]/[[C]] verdicts rather than the multi-dimension A/B/C answer set."
+  - "Metric is GenericLLMJudgeMetric with metric_name='llm_judge_quality' and a generic 1-5 literary-quality rubric (run_specs/critics_story_run_specs.py:15-24, 50). The CritiCS paper's actual evaluation is pairwise (Storyline A vs B) across Interesting/Coherent/Creative — a single-output 1-5 quality score does not reproduce that construct."
+  - "Judge model is hardcoded to 'openai/gpt-4' (run_specs/critics_story_run_specs.py:57) matching the paper, but with judge_temperature=0.0 and max_tokens=512 — consistent with paper defaults. However the rubric itself ignores the paper's three CritiCS dimensions and the detailed creativity rubric (Originality/Structure/Ending/Text-quality) described in metric_notes/critics_story_annotator_notes.md:36-59."
+  - "metric_notes/critics_story_eval_metrics_notes.md is empty (1 line) — no documentation of how llm_judge_quality was chosen over the CritiCS-native pairwise-3-dimension metric."
+  - "Generation subset deduplicates by premise (scenarios/critics_story_scenario.py:112-118) yielding up to 6,932 instances from llm-aes/doc-storygen-v2; CritiCS paper used 300 premises from the DOC pipeline (doc-storygen-v2 is a superset), so there is no alignment with the paper's specific premise set."
+  - "display_predictions.json eyeballed for gemini-2.5-flash and gemma-3-27b: instance_ids 'critics_gen_<id>' match the generation-subset format, predicted_text is long-form story plans (setting/characters/plot outline as promised), annotations carry single 'llm_judge_quality' integers in [1..5] — output shape internally consistent but tells us nothing about CritiCS dimensions."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace GenericLLMJudgeMetric 1-5 quality rubric with the CritiCS pairwise persona_comparision judge (Interesting/Coherent/Creative over A vs B pairs), or at minimum split the run into two RunSpecs — one for the 'generation' subset with a pairwise protocol against a baseline, and one for the 'judgment' subset using the scenario's exact_match ground truth that is currently orphaned."
+  - severity: blocking
+    action: "Wire the 'judgment' subset into an actual RunSpec (args={'subset': 'judgment'}) so the human-annotated Q1 labels in doc-storygen-v2 are used for evaluation — this is the only part of the benchmark with paper-aligned ground truth."
+  - severity: non-blocking
+    action: "Populate metric_notes/critics_story_eval_metrics_notes.md documenting the deliberate deviation from the CritiCS 3-dimension pairwise metric and the rationale for llm_judge_quality (if kept)."
+  - severity: non-blocking
+    action: "Align scenarios/critics_story_scenario.py:62-81 with the exact persona_comparision template (all 4 questions, not just overall preference) if the judgment subset is enabled."
+  - severity: non-blocking
+    action: "Document in the scenario docstring that generation uses the full 6,932-premise doc-storygen-v2 superset and is not restricted to the CritiCS-paper 300-premise subset."
+notes: "Scenario is well-structured and dataset loading is correct; problem is the run_spec silently drops the judgment subset (where the real human-annotated ground truth lives) and replaces the CritiCS pairwise 3-dimension evaluation with a generic 1-5 literary-quality LLM-judge rubric. Output shape is sane (long story plans, integer scores 1-5) but the headline number does not measure what the CritiCS paper measures. Adapter settings (temp=0.7, 512 tokens, zero-shot) are reasonable for story generation."
+paper_url: "https://arxiv.org/abs/2410.02428"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,37 @@
+name: unfun_corpus
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "Scenario is zero-shot but paper uses 8-shot prompts with randomly sampled high-quality human edits; the scenario's own docstring explicitly flags this divergence."
+  - "Chat prompt is collapsed into a single string ('You are a helpful assistant... \\n\\n{headline}') rather than a true system+user message pair, and max_train_instances=0 prevents HELM from constructing few-shot demonstrations even if training data were available."
+  - "temperature=0.7 with max_tokens=512 and no stop_sequences encourages verbose, multi-option, markdown-formatted responses — display_predictions.json shows the majority of Gemini outputs are long 'Here are a few options...' lists rather than a single edited headline."
+  - "exact_match / quasi_exact_match will be near zero because predictions contain preambles, multiple candidate headlines, bold/italic markdown, and commentary; the reference is a single short headline."
+  - "BLEU-1/BLEU-4/ROUGE-L/F1 will be heavily diluted by the boilerplate and multi-candidate text; no post-processor extracts a single headline from the model response."
+  - "Paper's evaluation protocol also includes edit distance (token-level similarity to input), a learned humor classifier, and human ratings (realness, funniness, grammaticality, coherence); none are implemented — only surface-form lexical metrics."
+  - "No annotator configured (annotators=None); metric_notes/unfun_corpus_annotator_notes.md and metric_notes/unfun_corpus_eval_metrics_notes.md are empty files."
+  - "Both TEST (375) and VALIDATION (186) splits are emitted and scored together without a max_eval_instances cap; paper reports on the test split."
+fixes_before_run:
+  - severity: high
+    action: "Add a post-processor/annotator that extracts a single candidate headline from verbose responses (strip markdown, preamble, take first bolded/quoted line) before scoring exact_match/BLEU/ROUGE."
+  - severity: high
+    action: "Lower temperature to 0.0 (or <=0.3), reduce max_tokens to ~64, and add stop_sequences=['\\n','\\n\\n'] to force a single-line edited headline as the paper expects."
+  - severity: high
+    action: "Switch the instruction to explicitly request ONE realistic headline only, with no commentary, to eliminate the 'Here are a few options' pattern seen across models."
+  - severity: medium
+    action: "Implement 8-shot few-shot prompting: load training pairs, sample 8 demonstrations per instance, and either route through HELM's adapter (max_train_instances=8 + in-context examples) or build the shots inside create_prompt to match the paper."
+  - severity: medium
+    action: "Add an LLM-as-judge annotator (or edit-distance + humor classifier proxy) scoring realness/funniness/grammaticality/coherence, matching the paper's human-rating rubric."
+  - severity: medium
+    action: "Restrict evaluation to TEST_SPLIT (drop VALID) or add a max_eval_instances cap; current run scores 561 combined instances which is not what the paper reports."
+  - severity: low
+    action: "Populate metric_notes/unfun_corpus_annotator_notes.md and metric_notes/unfun_corpus_eval_metrics_notes.md (both empty)."
+  - severity: low
+    action: "If keeping the 'chat' prompt style, emit an actual system/user message pair via HELM adapter role support rather than concatenating into the user string."
+notes: "Scenario loads test_unique_pairs_no_leakage.tsv (375) and val_unique_pairs_no_leakage.tsv (186) from the paper's GitHub repo — splits match the paper. Prompt wording 'You are a helpful assistant that edits humorous headlines to make them realistic' matches the paper's hit_llm_generation_v2.py system message in structure. Main faithfulness breaks: (1) zero-shot vs paper's 8-shot, (2) decoding settings produce verbose multi-candidate outputs (confirmed in display_predictions.json across gemini-2.5-flash and others) that cannot be fairly scored by lexical metrics, (3) no humor classifier / human-rating surrogate. arxiv full text not extractable via WebFetch (PDF binary)."
+paper_url: "https://arxiv.org/abs/2403.00794"
+reviewed_at: "2026-04-21"

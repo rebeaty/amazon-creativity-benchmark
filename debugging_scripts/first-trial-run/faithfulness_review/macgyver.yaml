@@ -1,0 +1,37 @@
+name: macgyver
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "run_specs/macgyver_run_specs.py:33 instantiates MacgyverScenario with args={} — hard-codes subset='all' and prompt_strategy='vanilla'; the three prompt strategies (vanilla, divergent_convergent, reflection) and four subsets (all, solvable, unsolvable, unconventional) declared in scenarios/macgyver_scenario.py:54-55 are never exercised, so the paper's central comparison across prompting techniques (Appendix D.3, Figures 15-16) is not reproduced"
+  - "scenarios/macgyver_scenario.py:122-131 collapses the paper's two-turn reflection protocol into a single prompt by appending Round-2 instructions after Round-1; paper specifies multi-round conversation where Round 2 sees Round 1's generated solution before verifying (Figure 16). Current single-shot framing cannot replicate iterative reflection even if the strategy were selected"
+  - "run_specs/macgyver_run_specs.py:45 temperature=0.7 with num_outputs=1; paper's GPT-4 baseline collection (code/collect_solutions/collect_GPT4_solutions.py) uses lower/default temperatures for deterministic single-solution generation — non-zero temperature adds noise to an already-small eval"
+  - "run_specs/macgyver_run_specs.py:44 max_tokens=512 is adequate for vanilla but insufficient headroom for divergent_convergent (affordance listing + summary + solution) and reflection (full re-derivation); truncation risk if those strategies are later enabled"
+  - "run_specs/macgyver_run_specs.py:50 BasicGenerationMetric applies exact_match/quasi_exact_match/f1_score to open-ended creative solutions — paper explicitly states (Section 4.2) that automatic n-gram overlap is a weak proxy and relies on human annotation; EM/QEM against a single gold solution will floor near 0 and is not meaningful"
+  - "run_specs/macgyver_run_specs.py:58 judge_model_name='openai/gpt-4' uses legacy GPT-4 rather than gpt-4-turbo/gpt-4o; paper uses GPT-4 as strongest model under test, not as judge, so there is no exact judge-config to match, but rubric granularity diverges"
+  - "run_specs/macgyver_run_specs.py:15-24 rubric is a 1-5 Likert on correctness/feasibility only; metric_notes/macgyver_annotator_notes.md:18-28 lists 8 categorical labels from the paper (efficient, inefficient, infeasible, correct_right_reason, correct_wrong_reason, wrong_partial_correct, wrong_solution, correct_unsolvable). Collapsing to a 5-point scalar loses the unsolvable-detection signal that is the whole point of the 377-problem unsolvable subset"
+  - "metric_notes/macgyver_eval_metrics_notes.md is empty (1 line); no documented rubric or metric rationale committed"
+  - "scenarios/macgyver_scenario.py:154 sets a single gold reference per instance; for unsolvable items the gold 'solution' field describes why it is infeasible — BLEU/ROUGE against such prose is semantically incoherent as a correctness signal"
+  - "display_predictions across gemini_2.5_flash and gemma_3_27b runs show divergent judgments on identical items (e.g. id34 scored 1 vs 5, id268 scored 2 vs 3, id1209 scored 5 vs 1) suggesting the judge is not stable at judge_temperature=0 or the rubric is under-specified for unsolvable-detection cases"
+fixes_before_run:
+  - severity: blocking
+    action: "Parameterize run_specs/macgyver_run_specs.py to accept subset and prompt_strategy args and emit separate RunSpecs per (subset × strategy); at minimum run vanilla on all three subsets and vanilla/divergent_convergent/reflection on the full set to reproduce Table 3 of the paper"
+  - severity: blocking
+    action: "Remove exact_match/quasi_exact_match/f1_score from metric_specs — they are actively misleading on open-ended generations; retain rouge_l/bleu_4 only as auxiliary signals and promote llm_judge to primary"
+  - severity: blocking
+    action: "Redesign judge rubric to emit the 8 categorical labels from metric_notes/macgyver_annotator_notes.md (or at least the binary solvable-correctly-identified flag for unsolvable subset); 1-5 scalar cannot separate 'correctly says unsolvable' from 'wrong solution'"
+  - severity: non-blocking
+    action: "Set temperature=0 (or document why 0.7 is used) and raise max_tokens to >=1024 for divergent_convergent/reflection strategies"
+  - severity: non-blocking
+    action: "Implement true two-turn reflection as a chat transcript (Round 1 generation, then Round 2 verification prompt conditioned on Round 1 output) rather than a single concatenated prompt"
+  - severity: non-blocking
+    action: "Populate metric_notes/macgyver_eval_metrics_notes.md with BLEU/ROUGE baseline numbers from the paper and the human-model agreement statistic"
+  - severity: non-blocking
+    action: "Upgrade judge_model_name to gpt-4o or gpt-4-turbo; legacy 'openai/gpt-4' endpoint has weaker instruction-following on nuanced feasibility judgments"
+notes: "Scenario implementation is faithful to the paper's prompt texts and correctly ingests the xlsx dataset with proper subset filters, but the run spec collapses the paper's 3×4 design matrix (strategies × subsets) into a single vanilla/all configuration and applies exact-match metrics that are definitionally wrong for open-ended creative generation. Cross-model prediction audit shows unstable LLM-judge scoring on unsolvable items, consistent with the rubric gap flagged above. Fix the metric set and parameterize the run spec before trusting leaderboard numbers."
+paper_url: "https://arxiv.org/abs/2311.09682"
+reviewed_at: "2026-04-21"

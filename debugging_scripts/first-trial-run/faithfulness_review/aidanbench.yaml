@@ -1,0 +1,25 @@
+name: aidanbench
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Protocol adaptation: scenario uses single-turn batch prompting (N=30 responses in one shot) rather than the paper's iterative multi-turn loop that stops on coherence<=15 or novelty<=0.15 (scenarios/aidanbench_scenario.py:19-22, 130-136). This is explicitly documented as an adaptation but changes the evaluation semantics."
+  - "Primary metric drift: paper's headline metric is AidanBench Score = count of responses passing both coherence and novelty thresholds. run_specs/aidanbench_run_specs.py:49-52 only registers Self-BLEU (diversity proxy) and a per-response coherence_score via LLM judge. No novelty/embedding-similarity metric and no threshold-based AidanBench Score is computed, despite metric_notes/aidanbench_eval_metrics_notes.md:61-75 describing it."
+  - "Novelty metric missing: paper uses embedding cosine similarity (text-embedding-ada-002) with tau=0.15; no embedding metric is wired up in run_specs/aidanbench_run_specs.py."
+  - "Judge prompt wording differs slightly from the paper/GitHub template in metric_notes/aidanbench_eval_metrics_notes.md:47-57 (paper template embeds the question; run_specs rubric in aidanbench_run_specs.py:15-24 does not reference the question and uses a 5-anchor Likert description). Same 0-100 scale and coherence intent, so task is preserved."
+  - "Judge model: run_specs/aidanbench_run_specs.py:58 uses openai/o1-mini matching paper, but judge_max_new_tokens=64 may truncate reasoning-model outputs; temperature=0.0 is fine (o1 ignores temperature)."
+  - "Output shape: display_predictions.json shows numbered markdown lists with 15-30 items and coherence_score annotations populated (0-100, e.g. 72, 78, 82). Visually consistent with intended batch-mode output."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Document in results that this is a batch-mode adaptation, not the canonical iterative AidanBench Score; headline numbers are not comparable to the GitHub leaderboard."
+  - severity: non-blocking
+    action: "Consider adding an embedding-based pairwise novelty metric and a derived AidanBench-Score-approximation metric (count of responses with coherence>15 AND novelty>0.15) as described in metric_notes/aidanbench_eval_metrics_notes.md:61-75 to better track the paper's primary metric."
+  - severity: non-blocking
+    action: "Raise judge_max_new_tokens above 64 (e.g. 256) to avoid truncating o1-mini's internal reasoning before it emits the integer score."
+notes: "Scenario and run_spec faithfully preserve AidanBench's 66-question set, intent (diverse+coherent idea generation), and judge model choice. Primary deviation is the documented single-turn batch adaptation plus the missing novelty/combined-score metric, which means reported scores proxy diversity+coherence rather than the paper's stopping-count. Safe to run as a creativity diversity/coherence probe, not as a reproduction of AidanBench Score. Paper PDF access was blocked (OpenReview 403); cross-check leaned on GitHub README and annotator notes."
+paper_url: "https://openreview.net/forum?id=fz969ahcvJ"
+reviewed_at: "2026-04-21"

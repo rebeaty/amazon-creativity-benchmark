@@ -1,0 +1,23 @@
+name: creai_cps
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: false
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "data.json contains only 10 items with 5 unique scenarios (duplicated); scenario docstring claims 240 (creai_cps_scenario.py:26). display_predictions.json shows repeated predictions at id1/id3/id5 and id0/id4 confirming duplication."
+  - "Proprietary RoBERTa originality/quality scorers from paper are unavailable; run spec substitutes BLEU/ROUGE/F1 (run_specs/creai_cps_run_specs.py:50) which metric_notes acknowledges 'measure similarity, not creativity'."
+  - "LLM judge uses a generic single-axis 1-5 creativity rubric (run_specs/creai_cps_run_specs.py:15-24); paper rubric covers multiple facets (novelty, appropriateness, effectiveness) per annotator notes."
+  - "creai_cps_annotator_notes.md is empty (0 lines)."
+fixes_before_run:
+  - severity: blocking
+    action: "Regenerate/expand data.json to full 240-item set and de-duplicate scenarios before any scoring run."
+  - severity: non-blocking
+    action: "Populate creai_cps_annotator_notes.md; consider multi-facet rubric (novelty/appropriateness/effectiveness) aligned with paper's Prompts.py criteria."
+  - severity: non-blocking
+    action: "Drop or mark BLEU/ROUGE/F1/exact_match as non-primary since they don't measure creativity; elevate LLM-judge creativity as headline metric."
+notes: "Prompt text matches baseline from Prompts.py verbatim. However, the benchmark dataset is severely truncated (10 items, 5 unique) vs. the 240 claimed in scenario docstring, and the original proprietary RoBERTa scorers are replaced by surface-overlap metrics plus a generic LLM judge. Split is TEST_SPLIT zero-shot which is appropriate, but truncated data invalidates meaningful scoring."
+paper_url: "https://github.com/Beaty-Lab/CREAI-item-generation"
+reviewed_at: "2026-04-21"

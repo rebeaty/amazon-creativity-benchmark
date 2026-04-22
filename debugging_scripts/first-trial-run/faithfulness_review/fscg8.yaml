@@ -1,0 +1,27 @@
+name: fscg8
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: false
+gaps:
+  - "Task-modality mismatch: FSCG-8 (ProCreate, ECCV 2024, arxiv 2408.02226) is a text-to-IMAGE generation benchmark across 8 categories (pokemon, one_piece, amedeo_modigliani, apple, frank_gehry, burberry, nouns, rococo), measuring sample diversity and fidelity of generated images (scenarios/fscg8_scenario.py:1-48). Run_spec drives text-only ADAPT_GENERATION with a text LLM (run_specs/fscg8_run_specs.py:35-47). Text LLMs cannot produce images."
+  - "Metric substitution: paper's metrics are FID, KID, Precision, Recall, Vendi, MSS, CLIP prompt fidelity, SSCD (metric_notes/fscg8_eval_metrics_notes.md:22-41). Run_spec replaces them all with a single GenericLLMJudgeMetric scoring 'fine-grained story completion' quality (run_specs/fscg8_run_specs.py:49-51). None of the paper's diffusion-diversity metrics are implemented."
+  - "Rubric nonsensical for task: rubric text evaluates 'fine-grained story completion... narrative coherence, consistency with the story context' (run_specs/fscg8_run_specs.py:15-24). FSCG-8 prompts are short object/style noun phrases like 'a Rococo style chandelier' or 'an Apple laptop charger' — no story to continue. Rubric appears copy-pasted from another scenario (fine-grained story continuation)."
+  - "Output shape reveals the mismatch concretely: predictions are either empty strings scoring 1 (many amedeo_modigliani/frank_gehry/one_piece instances on gemini-2.5-flash) or off-topic factual chatbot answers ('You're likely thinking of the Apple HomePod...' for instance apple_46 scoring 1; 'Apple silicon M-series chips...' for apple_5) — not story completions, not image generations, not evaluable under the declared rubric."
+  - "fscg8_annotator_notes.md is empty (1 line); no annotator rationale documented."
+  - "Reference images are saved to disk (scenarios/fscg8_scenario.py:140-153) but never compared to model outputs, because no image-based metric is wired in and text models return no images. base64_images is [] on every instance."
+fixes_before_run:
+  - severity: blocking
+    action: "Remove fscg8 from the text-only creativity sweep, or gate it behind a diffusion/image-generation adapter. Text LLMs cannot meaningfully produce the visual outputs FSCG-8 evaluates."
+  - severity: blocking
+    action: "Replace the GenericLLMJudge 'story quality' rubric with the paper's FID/KID/Vendi/MSS/CLIP/SSCD pipeline on generated images, or drop the dataset. The current rubric is from an unrelated story-continuation task and cannot score this prompt type."
+  - severity: non-blocking
+    action: "Populate or delete empty metric_notes/fscg8_annotator_notes.md."
+  - severity: non-blocking
+    action: "If kept for text-only eval as a description/creativity probe, rewrite scenario prompt (e.g., 'Describe a creative {category} concept: {text}') and author a rubric matched to that probe rather than leaving the 'story completion' rubric in place."
+notes: "Flagged borderline in NOTES_FOR_VIJETA.md section 1 (multimodal layout/design group) — FSCG-8 is fundamentally an image-generation benchmark and unlikely to belong in a text-to-text creativity suite. Independent of the borderline fit, the implementation is divergent from the paper in every axis that matters: adapter modality wrong, metrics absent, rubric copy-pasted from an unrelated story-completion task, reference images loaded but unused, predictions empty or off-topic factual replies scoring 1."
+paper_url: "https://arxiv.org/abs/2408.02226"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,24 @@
+name: tinyfabulist
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Paper judge scores 4 dimensions in a single JSON-returning call (grammar, creativity, moral_clarity, adherence_to_prompt) plus best_age_group (metric_notes/tinyfabulist_annotator_notes.md:21-75); implementation runs only 2 separate per-dimension annotator calls for grammar_score and creativity_score (run_specs/tinyfabulist_run_specs.py:56-82) — moral_clarity, adherence_to_prompt, and best_age_group are dropped."
+  - "Custom rubrics in run_specs/tinyfabulist_run_specs.py:15-31 are close to but not verbatim with the evaluator.yaml rubric; missing expert-literary-critic system prompt and JSON-only output instruction (metric_notes/tinyfabulist_annotator_notes.md:14-16)."
+  - "Corpus-level metrics (Self-BLEU, Distinct-1, Flesch Reading Ease) from paper (metric_notes/tinyfabulist_annotator_notes.md:99-106) are not implemented in metric_specs."
+  - "Adapter max_tokens=512 (run_specs/tinyfabulist_run_specs.py:51) may truncate ~250-word fables; observed outputs in display_predictions.json fit but paper generation config is not explicitly verified."
+  - "Scenario prepends SYSTEM_MESSAGE into the user input (scenarios/tinyfabulist_scenario.py:149) rather than using a true system role — behavior-equivalent but not a structural match."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Add annotators for moral_clarity and adherence_to_prompt (and optionally best_age_group) to match paper's 4-dimension scoring before comparing to Table 1 baselines."
+  - severity: non-blocking
+    action: "Consider consolidating into a single JSON-returning judge call to reduce cost and match paper protocol exactly."
+  - severity: non-blocking
+    action: "Add corpus-level metrics (Self-BLEU, Distinct-1, Flesch) as a post-hoc aggregate if diversity/readability comparisons are desired."
+notes: "Scenario correctly downloads the 100 benchmark prompts from the klusai/tinyfabulist GitHub repo (scenarios/tinyfabulist_scenario.py:49-123), matching the paper's Table 1 evaluation set. Judge model (openai/o3-mini-2025-01-31, temp 0.0, 350 tokens) matches paper exactly. Sample predictions show well-formed age-appropriate fables with populated grammar_score and creativity_score annotations. Main drift: only 2 of 4 paper dimensions scored, so results will not be directly comparable to paper baselines — safe to run but with documented caveat."
+paper_url: "https://arxiv.org/abs/2504.20605"
+reviewed_at: "2026-04-21"

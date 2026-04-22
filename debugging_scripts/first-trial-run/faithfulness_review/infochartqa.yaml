@@ -1,0 +1,24 @@
+name: infochartqa
+verdict: NOT_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: true
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "Scope mismatch with creativity benchmark: NOTES_FOR_VIJETA.md flags infochartqa as NOT creativity - it is a pure multimodal chart QA task with 58,857 exact-match questions. The scenario docstring itself states 'Task: Multimodal question answering on infographic charts' (scenarios/infochartqa_scenario.py:8-9)."
+  - "Task is visual recognition / numeric value extraction on charts, not open-ended creative generation. Display predictions confirm this: responses are terse factual answers (e.g. 'Nevada', '310', '19.1', 'Yes/No', 'C') - see benchmark_output/runs/gemini_pro/... and gemma_3_27b/... display_predictions.json."
+  - "Metric is exact_match / quasi_exact_match / f1 / rouge_l / bleu (run_specs/infochartqa_run_specs.py:35) - entirely correctness-based, with no creativity judge or creative-output annotator (annotators=None, line 44). This faithfully reproduces the paper's evaluation but has no bearing on creativity."
+  - "metric_notes/infochartqa_annotator_notes.md and metric_notes/infochartqa_eval_metrics_notes.md are both empty (single-line files), indicating no creativity-oriented evaluation was ever designed for this scenario."
+  - "Scale incompatibility: 58,857 test questions would dominate the suite at substantial API cost while contributing zero creativity signal. Already lists 14 completed runs in benchmark_output/runs/*/infochartqa_model=* - budget already being spent on an out-of-scope task."
+  - "Groups tag includes 'creativity' (run_specs/infochartqa_run_specs.py:43) and scenario tags include 'creativity' (scenarios/infochartqa_scenario.py:64) despite the task being factual chart QA. Tag is misleading - likely auto-added by scenario scaffolding, not reflective of task content."
+  - "Paper (arxiv 2505.19028) confirms the benchmark tests 'visual recognition and reasoning' over infographic charts with pictorial/metaphor elements. Even the 'visual_metaphor' subset (462 Qs) is metaphor *comprehension*, not creative production."
+fixes_before_run:
+  - severity: blocking
+    action: "EXCLUDE infochartqa from the creativity benchmark launch per NOTES_FOR_VIJETA.md contamination flag. Task is multimodal chart QA with exact_match metric - orthogonal to creativity. Drop the run_spec or move it to a separate 'visual_reasoning_controls' suite if retention is desired for discriminant validity."
+  - severity: non-blocking
+    action: "If retained as a control, subsample heavily (58k -> ~500) and remove 'creativity' from the groups/tags list to avoid polluting creativity aggregates."
+notes: "DROP FROM LAUNCH. Scenario faithfully reproduces the paper's chart-QA task (prompt format, exact_match metric, splits all match the HuggingFace dataset card and paper). The unfaithfulness is not to the source paper but to the creativity-benchmark framing: this is a factual visual-QA task mis-tagged as creativity. Predictions across gemini_pro and gemma_3_27b confirm short factual answers (numbers, categorical labels, yes/no). No creative generation, no judge, no annotator - nothing measures creativity. Recommend exclusion. If the team wants visual-reasoning discriminant-validity evidence, a ~500-item subsample would suffice at <1% of current cost."
+paper_url: "https://arxiv.org/abs/2505.19028"
+reviewed_at: "2026-04-21"

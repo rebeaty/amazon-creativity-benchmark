@@ -1,0 +1,31 @@
+name: data_narrative
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Protocol adaptation: paper defines a 6-stage multi-agent iterative refinement pipeline (reflection -> outline -> narration, each with critic/revise) per scenarios/data_narrative_scenario.py:16-22 and metric_notes/data_narrative_annotator_notes.md:12-27. HELM scenario collapses this to single-turn generation (scenarios/data_narrative_scenario.py:24-25, 121-133). Documented adaptation but materially changes task."
+  - "Prompt is a simplified paraphrase (scenarios/data_narrative_scenario.py:126-133), not the verbatim Figure 24 narration-generation prompt from the paper. Loses visualization placeholders, outline-conditioning, and header structure that the paper's narration stage prescribes."
+  - "Primary metric drift: paper uses GPT-4 judge across 4 dimensions (factual accuracy, coherence, comprehensiveness, theme consistency) per metric_notes/data_narrative_annotator_notes.md:34-38. run_specs/data_narrative_run_specs.py:34-37 registers ONLY n-gram overlap metrics (exact_match, quasi_exact_match, f1, rouge_l, bleu_1, bleu_4) plus BertScore. No LLM judge, no factual-accuracy metric, annotators=None (line 45)."
+  - "Factual accuracy is the paper's central concern (annotator notes mark it 'Critical', line 58); unmeasured here. Free-form narratives will pass BLEU/ROUGE while hallucinating numbers - display_predictions.json shows exactly this risk (model invents specific figures like '6.59 in 1950', 'peak around the 2080s') with no factual verifier."
+  - "Output shape issue: display_predictions.json at benchmark_output/runs/trial_10inst/data_narrative_model=google_gemini-2.5-flash-lite shows heavy prompt-conditioned duplication - 5 of 10 instances for story_3 return byte-identical paragraphs because the prompt varies only by segment index while topic/intent/table repeat. Suggests either dataset has redundant segments or scenario is not differentiating seg_idx in the user-visible prompt."
+  - "temperature=0.7 with num_outputs=1 (run_specs/data_narrative_run_specs.py:30) is reasonable for generation but not matched to any paper setting; max_tokens=512 may truncate multi-paragraph narratives the paper expects."
+  - "few-shot max_train_instances=5 from Tableau train (run_specs/data_narrative_run_specs.py:27); paper pipeline is zero-shot agentic, not few-shot single-turn, so few-shot is an unjustified addition."
+  - "Borderline creativity fit: NOTES_FOR_VIJETA.md lines 37, 58 flags data_narrative as borderline (multimodal/design category) and one of the 7 'always-fails' pending investigation. Task is data-to-text faithfulness, closer to factual grounding than open-ended creativity."
+fixes_before_run:
+  - severity: blocking
+    action: "Decide whether data_narrative is kept in the creativity suite at all (NOTES_FOR_VIJETA flags it borderline). If kept, at minimum add an LLM-judge annotator scoring the 4 paper dimensions; otherwise the headline metrics are unfaithful to the paper."
+  - severity: non-blocking
+    action: "Wire up a factual-accuracy judge (table-grounded) given factual accuracy is the paper's critical dimension."
+  - severity: non-blocking
+    action: "Investigate duplicate-paragraph instances in display_predictions.json (test_gapminder_3_* all identical) - confirm whether the scenario should deduplicate or whether prompt lacks segment-discriminating info."
+  - severity: non-blocking
+    action: "Consider raising max_tokens to 1024+ to avoid truncating multi-paragraph narratives; reconsider whether few-shot is appropriate for a data-to-text task whose reference paragraphs vary widely in structure."
+  - severity: non-blocking
+    action: "Replace simplified prompt with the paper's Figure 24 narration prompt (or document the divergence explicitly in results)."
+notes: "BORDERLINE CREATIVITY - flagged by NOTES_FOR_VIJETA.md as multimodal/design-adjacent and a known always-fail needing investigation. Scenario construction (dataset download, splits, few-shot) is clean and documented, but run_spec drops the paper's entire evaluation methodology (GPT-4 judge on 4 dimensions) in favor of n-gram overlap + BertScore. For a data-to-text faithfulness task this is the wrong metric family - models can hallucinate statistics undetected. Recommend either (a) excluding from creativity suite per borderline flag, or (b) adding the 4-dimension LLM judge before relying on results. WebFetch of arxiv/ACL pages returned only abstracts (full-text PDFs exceeded size limit); cross-check leaned on annotator_notes + scenario docstring which already codify the paper's 4 dimensions."
+paper_url: "https://aclanthology.org/2024.emnlp-main.1073/"
+reviewed_at: "2026-04-21"

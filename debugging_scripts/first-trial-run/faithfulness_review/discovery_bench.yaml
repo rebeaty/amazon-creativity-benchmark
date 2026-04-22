@@ -1,0 +1,79 @@
+name: discovery_bench
+verdict: DIVERGENT
+paper_url: https://arxiv.org/abs/2407.01725
+benchmark: discovery_bench
+paper:
+  title: "DiscoveryBench: Towards Data-Driven Discovery with Large Language Models"
+  venue: ICLR 2025
+  url: https://arxiv.org/abs/2407.01725
+  code: https://github.com/allenai/discoverybench
+
+dataset:
+  source: allenai/discoverybench (HuggingFace)
+  split_used: train (25 instances with gold hypotheses)
+  paper_split: real test (264 tasks, held-out leaderboard) + synthetic (903 tasks)
+  faithfulness: PARTIAL
+  notes: |
+    Paper evaluates on the real test split (264 tasks) via leaderboard.
+    Since test split has no public ground-truth hypotheses, scenario uses
+    train split (25 instances) as a proxy. Documented clearly in scenario
+    docstring. This gives a much smaller and non-canonical evaluation set.
+
+task_format:
+  paper: |
+    Task = dataset(s) + metadata + natural-language discovery goal.
+    Agent performs statistical analysis + semantic reasoning with CODE
+    EXECUTION access on CSV data to produce hypothesis.
+  implementation: |
+    Text-only prompt with domain, background knowledge, dataset schema
+    (column names + descriptions), and question. No data rows, no code
+    execution. Model outputs hypothesis as text.
+  faithfulness: DEVIATION
+  severity: MAJOR
+  notes: |
+    Acknowledged in annotator_notes.md ("text-only evaluation tests
+    reasoning from metadata alone, which is a harder task"). This is a
+    fundamentally different task from the paper's pipeline; scores are
+    not comparable to paper's numbers (~25% HMS best).
+
+prompting:
+  zero_shot: true
+  temperature: 0.7
+  max_tokens: 512
+  faithfulness: PARTIAL
+  notes: |
+    Paper uses reasoning frameworks (ReAct, CodeGen, Reflexion) with
+    iterative code execution, not single-shot text generation.
+    max_tokens=512 may truncate detailed hypotheses.
+
+metrics:
+  paper_primary: Hypothesis Matching Score (HMS) - context F1 x mean(var F1 x rel accuracy) via GPT-4 decomposition
+  implemented:
+    - BasicGenerationMetric (exact_match, quasi_exact_match, f1, rouge_l, bleu_1, bleu_4)
+    - GenericLLMJudgeMetric with 1-5 correctness rubric (GPT-4 judge)
+  faithfulness: DEVIATION
+  severity: MAJOR
+  notes: |
+    HMS not implemented. annotator_notes.md acknowledges HMS requires
+    custom decomposition pipeline; falls back to BLEU/ROUGE and a
+    generic 1-5 correctness rubric. The 1-5 rubric does not capture
+    HMS's variable identification / relationship direction / context
+    structure. Predictions confirm judge fires (scores 1-5 observed).
+
+references_handling:
+  correct_answer: query.true_hypothesis (from train queries)
+  faithfulness: FAITHFUL
+
+other_observations:
+  - Scenario skips queries without true_hypothesis (correct filter).
+  - workflow_tags field intentionally omitted (pipeline metadata).
+  - All 25 train items expand into multiple queries per item (observed ~24 instances in predictions).
+
+overall_faithfulness: LOW_TO_MODERATE
+summary: |
+  Implementation is an adapted text-only variant using train split as a
+  proxy. Major deviations: (1) train (25 items) instead of real test
+  (264 tasks); (2) metadata-only prompt instead of code-execution
+  pipeline; (3) LLM 1-5 rubric + BLEU/ROUGE instead of HMS. Deviations
+  are documented in scenario/annotator notes. Results should not be
+  compared to paper leaderboard numbers.

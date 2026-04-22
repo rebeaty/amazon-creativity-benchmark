@@ -1,0 +1,32 @@
+name: humor_transfer
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: true
+  output_shape_sane: false
+gaps:
+  - "Reference labels are 'Yes'/'No' (per paper Appendix C), but models output 'Funny'/'Not Funny' or verbose multi-paragraph reasoning; exact_match/quasi_exact_match will be ~0 regardless of correctness."
+  - "Prompt asks to classify as 'funny or not funny' — instruction wording drives 'Funny'/'Not Funny' responses that do not align with the 'Yes'/'No' reference labels."
+  - "temperature=0.7 and max_tokens=512 for a binary classification task encourages rambling; paper uses deterministic fine-tuned inference."
+  - "No annotator/judge used — relies purely on surface-form metrics (exact_match, f1, rouge_l, bleu) which are ill-suited to a binary label that may be embedded in reasoning."
+  - "run_spec uses args={} so only sarcasm_headlines subset runs; amazon_questions subset is never instantiated."
+  - "metric_notes files (annotator_notes.md, eval_metrics_notes.md) are empty."
+  - "Full test splits are very large (26,709 + 19,142) with no sampling cap — expensive and unaligned with paper's evaluation protocol."
+fixes_before_run:
+  - severity: high
+    action: "Align prompt and references: either change PROMPT_TEMPLATE to request 'Yes'/'No' answers, or change references to 'Funny'/'Not Funny'. Paper's Appendix C uses Yes/No."
+  - severity: high
+    action: "Add an answer-extraction annotator or post-processor that maps free-form responses ('Funny', 'Not funny', 'Yes', reasoning text) to the canonical label before metric scoring."
+  - severity: high
+    action: "Lower temperature to 0 and reduce max_tokens (e.g., 8) to force a short classification; add stop_sequences=['\\n']."
+  - severity: medium
+    action: "Instantiate both subsets by adding subset-parameterized run specs (sarcasm_headlines and amazon_questions) instead of relying on default."
+  - severity: medium
+    action: "Add max_eval_instances cap or stratified sampling to match paper's evaluation size and control cost."
+  - severity: low
+    action: "Populate humor_transfer_annotator_notes.md and humor_transfer_eval_metrics_notes.md (currently empty)."
+notes: "Scenario fetches test splits directly from HF/S3 per paper sources. Prompt structurally matches Alpaca-style Appendix C template. Paper PDF could not be fully extracted via WebFetch; Appendix C verbatim text not verified. Key break: reference label space ('Yes'/'No') does not match what the prompt elicits from models ('Funny'/'Not Funny'), making metrics unreliable. display_predictions.json confirms 'Funny'/'Not Funny' and rambling outputs from gemini-2.5-pro."
+paper_url: "https://arxiv.org/abs/2508.19402"
+reviewed_at: "2026-04-21"

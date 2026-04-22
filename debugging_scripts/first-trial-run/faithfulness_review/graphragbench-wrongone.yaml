@@ -1,0 +1,28 @@
+dataset: graphragbench-wrongone
+verdict: DIVERGENT
+category: confirmed-drop
+paper: "arXiv:2506.02404 (GraphRAG-Bench: domain-specific CS textbook QA)"
+upstream_task: "Fill-in-Blank / MC / Multi-Select / True-False / Open-Ended QA over 20 CS textbooks"
+creativity_relevance: none
+notes: |
+  Dropped 2026-04-21 (see drops.json): duplicate of graphrag_bench pointing at the
+  wrong upstream paper. arXiv:2506.02404 is generic CS-textbook Q&A, not a creative
+  generation benchmark — tagged "creativity" in scenario only by copy-paste, with
+  no creative-generation signal in any of the 5 question types (FB/MC/MS/TF/OE all
+  have deterministic ground-truth answers). Naming linkage is also broken: scenario
+  file uses hyphen (graphragbench-wrongone_scenario.py) while run_spec import path
+  uses the same hyphenated module — Python cannot import a hyphenated module name,
+  so the ScenarioSpec class_name "scenarios.graphragbench-wrongone_scenario.GraphRAGBenchScenario"
+  would fail at load time in a clean environment. stats.json exists only because a
+  prior sweep cached outputs. Metrics are exact_match/F1/ROUGE/BLEU — wrong family
+  for creativity evaluation even if the data were appropriate. Redundant with the
+  correctly-scoped graphrag_bench entry.
+fix:
+  severity: blocking
+  action: "delete scenario + run_spec files, exclude from full launch"
+files:
+  scenario: scenarios/graphragbench-wrongone_scenario.py
+  run_spec: run_specs/graphragbench_wrongone_run_specs.py
+  annotator_notes: metric_notes/graphragbench-wrongone_annotator_notes.md
+  eval_notes: metric_notes/graphragbench-wrongone_eval_metrics_notes.md
+  drops_entry: debugging_scripts/first-trial-run/drops.json

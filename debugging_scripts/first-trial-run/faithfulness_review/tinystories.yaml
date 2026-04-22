@@ -1,0 +1,27 @@
+name: tinystories
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Judge scale is 1-5 per dimension in custom rubrics (run_specs/tinystories_run_specs.py:15-46), but paper uses 1-10 per dimension (metric_notes/tinystories_annotator_notes.md:9, 38); scores are not directly comparable to paper numbers."
+  - "Judge is split into 3 separate per-dimension calls with custom rubrics (run_specs/tinystories_run_specs.py:77-107), but paper uses a single GPT-4 call grading Grammar, Creativity, Consistency, (plot coherence) plus age-group in one pass (metric_notes/tinystories_annotator_notes.md:26-39)."
+  - "Plot coherence and age-group estimation from the paper (metric_notes/tinystories_annotator_notes.md:31, 38) are not implemented — only 3 of 4 scored dimensions plus no age bucket."
+  - "Custom rubric text in run_specs/tinystories_run_specs.py:15-46 is not from the paper; paper uses the student/teacher framing with no fixed rubric anchors (metric_notes/tinystories_annotator_notes.md:14, 21-23)."
+  - "Hardcoded judge_model_name='openai/gpt-4' (run_specs/tinystories_run_specs.py:81,90,99) hits HELM openai_responses_client pydantic bug; session used CREATIVITY_JUDGE_OVERRIDE=anthropic/claude-haiku-4.5 — judge identity differs from paper's GPT-4."
+  - "metric_notes/tinystories_eval_metrics_notes.md is empty — no aggregation spec documented."
+  - "Adapter max_tokens=512, temp=0.7 (run_specs/tinystories_run_specs.py:66-67) not verified against paper generation config."
+  - "Scenario prepends a custom 'Complete the following story...' wrapper (scenarios/tinystories_scenario.py:69-74); paper's format just feeds the beginning — model outputs show leading 'Story beginning:/Story completion:' echo indicating the wrapper leaks into outputs."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Document the 1-5 vs 1-10 scale change and judge-model override so scores are not compared to paper verbatim."
+  - severity: non-blocking
+    action: "Consider consolidating to a single-call judge with the paper's student/teacher framing, plot-coherence, and age-group output."
+  - severity: non-blocking
+    action: "Populate metric_notes/tinystories_eval_metrics_notes.md with aggregation (mean per dimension across 44 prompts)."
+notes: "Scenario downloads the official 44 Evaluation_prompts.yaml correctly and runs zero-shot over the full test set. Sample outputs across gemini_flash and gemma_3_27b are well-formed story completions with all three integer 1-5 annotations populated (grammar/creativity/consistency). Drift is in judge scale (1-5 vs 1-10), per-dimension vs single-call structure, missing plot-coherence and age-group, custom rubrics, and judge-model override — all non-blocking for ranking models relatively."
+paper_url: "https://arxiv.org/abs/2305.07759"
+reviewed_at: "2026-04-21"

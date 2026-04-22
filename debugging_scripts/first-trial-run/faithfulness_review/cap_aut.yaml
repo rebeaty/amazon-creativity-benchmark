@@ -1,0 +1,26 @@
+name: cap_aut
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: true
+  output_shape_sane: true
+gaps:
+  - "metric_notes/cap_aut_annotator_notes.md and metric_notes/cap_aut_eval_metrics_notes.md do not exist (only CAP-family notes missing from metric_notes/)"
+  - "scenarios/cap_aut_scenario.py:20 references human/uva_pilot/scripts/run_all_models_study3.py but that path does not exist in this repo, so the verbatim-item claim cannot be cross-checked locally"
+  - "run_specs/cap_run_specs.py:10-11 notes novelty is NOT scored inside HELM; only the V7 quality judge (1-7 'does it make sense') is run — novelty requires the post-hoc scripts/score_cap_novelty.py pipeline, which the first-trial run does not invoke"
+  - "benchmark_output/runs/trial_cap/cap_aut_model=*/ contains per_instance_stats.json + scenario_state.json but no display_predictions.json (HELM summarization step not run); only 3 instances (max_eval_instances=3) scored — not the full 5-item battery"
+  - "run_specs/cap_run_specs.py:39-40 admits the judge rates the whole semicolon-joined completion rather than per-idea as the human pipeline does, so AUT quality is coarser than the human V7 scoring"
+fixes_before_run:
+  - severity: non-blocking
+    action: "add metric_notes/cap_aut_{annotator,eval_metrics}_notes.md so the family is documented alongside the other 150+ benchmarks"
+  - severity: non-blocking
+    action: "either vendor human/uva_pilot/scripts/run_all_models_study3.py into this repo or update the scenario docstring to point at the canonical external location so item provenance is reproducible"
+  - severity: blocking
+    action: "run scripts/score_cap_novelty.py (or equivalent) post-HELM before reporting cap_aut scores — otherwise only quality, not divergent-thinking novelty, is measured and the benchmark undersells AUT"
+  - severity: non-blocking
+    action: "rerun without max_eval_instances=3 cap so all 5 items × num_repetitions are evaluated, and run the HELM summarize step to emit display_predictions.json"
+notes: "Scenario prompt, 5-item list, and V7 judge rubric line up with Beaty's CAP pilot protocol; this is not backed by an arxiv paper but by the in-house UVA Study 3 pipeline (noted in scenarios/cap_aut_scenario.py:1-21). Quality-only scoring is an intentional HELM-time choice with novelty deferred to a post-hoc script — faithful to the protocol spec but the first-trial outputs are incomplete until that script runs. The trial_cap run also used max_eval_instances=3, clipping the 5-item battery."
+paper_url: "n/a (in-house protocol — human/uva_pilot/scripts/run_all_models_study3.py)"
+reviewed_at: "2026-04-21"

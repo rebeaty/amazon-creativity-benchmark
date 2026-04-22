@@ -1,0 +1,26 @@
+name: arena_hard_creative
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: partial
+  output_shape_sane: true
+gaps:
+  - "Original Arena-Hard is pairwise (win/tie/loss vs baseline) with GPT-4.1/Gemini-2.5; run_specs uses single-response scoring with openai/gpt-4-turbo as judge (arena_hard_creative_run_specs.py:57). Scenario docstring acknowledges divergence (arena_hard_creative_scenario.py:33-34)."
+  - "Rubric in run_specs is a 1-5 comparative scale referencing a 'reference' that is never passed to the judge (arena_hard_creative_run_specs.py:15-24); annotator_notes.md specifies a 4-dimension 1-10 absolute rubric — the two disagree."
+  - "metric_name='win_rate' is a misnomer: returned value is a 1-5 Likert (see display_predictions.json win_rate:3,4,4...); no pairwise wins are computed."
+  - "max_tokens=512 likely truncates long-form creative outputs (observed predictions appear cut off mid-sentence in display_predictions.json)."
+  - "Arena-Hard v2.0 paper/data from lmarena-ai is newer than arXiv 2406.11939 (v1); paper URL references v1, scenario loads v2 data — version mismatch in citation."
+fixes_before_run:
+  - severity: blocking
+    action: "Reconcile rubric: either adopt the 1-10 four-dimension absolute rubric from annotator_notes.md, or remove the 'head-to-head vs reference' framing from _RUBRIC_WIN_RATE since no reference is supplied."
+  - severity: blocking
+    action: "Raise max_tokens well above 512 (e.g. 2048-4096) to avoid truncating creative responses."
+  - severity: non-blocking
+    action: "Rename metric from 'win_rate' to 'quality_score' (or similar) to reflect single-response Likert output."
+  - severity: non-blocking
+    action: "Upgrade judge from gpt-4-turbo to gpt-4o/gpt-4.1 per annotator_notes.md recommendation, or document the deviation."
+notes: "Scenario loading and 250-instance creative_writing filter look correct and predictions have the expected shape with annotations attached. Principal divergence is methodological: this is a single-response Likert eval labeled 'win_rate', not the paper's pairwise ELO protocol. Rubric text and annotator notes disagree on scale and dimensions."
+paper_url: "https://arxiv.org/abs/2406.11939"
+reviewed_at: "2026-04-21"

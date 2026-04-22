@@ -1,0 +1,47 @@
+name: dat_creative_writing
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "Scenario is multi-subset (SUBSETS = dat, dat_thesaurus, dat_etymology, dat_opposites, dat_random, dat_young, synopsis, flash_fiction, haiku) but run_specs/dat_creative_writing_run_specs.py:30-33 instantiates ScenarioSpec with args={}, so only the default subset='dat' is ever executed. All five strategy-DAT subsets and all three writing subsets (synopsis/flash_fiction/haiku) — the whole reason this scenario exists in addition to bare `dat` — are dead code in the current run."
+  - "Prompts: DAT_PROMPT (scenarios/dat_creative_writing_scenario.py:45-53) is verbatim from Bellemare et al. 2024 DAT_GPT (scripts/api_call_dat_gpt4.py). The five DAT_STRATEGY_PROMPTS (lines 55-106) are verbatim from the same source. Writing prompts (lines 108-114) match api_call_gpt4_stories.py. Prompts themselves are faithful."
+  - "Metric drift from spec: metric_notes/dat_creative_writing_eval_metrics_notes.md:5-50 mandates GloVe 840B.300d cosine-distance DAT scoring with first-7-valid-unique-words rule for DAT subsets, and DSI (BERT-large-uncased layers 6-7) + Lziv (antropy.lziv_complexity) for the writing subsets. Actual metric wired in run_spec is SemanticDiversityMetric with all-mpnet-base-v2 — a single sentence-embedding diversity proxy that is neither GloVe-DAT nor DSI-BERT nor Lziv. None of the three canonical metrics (DAT, DSI, Lziv) are implemented for this scenario."
+  - "Cross-check vs dat scenario: the bare 'dat' subset here and the standalone dat scenario (reviewed in dat.yaml) both run on the same DAT task, and neither uses the GloVe-based scorer the metric_notes specify. dat uses all-MiniLM-L6-v2 (384d); dat_creative_writing uses all-mpnet-base-v2 (768d). Not even internally consistent with each other, let alone with the paper. Results from the two runs cannot be pooled."
+  - "Judge config: _RUBRIC_LLM_JUDGE_CREATIVITY (run_specs:15-24) is a generic divergent-thinking rubric but its wording ('connects the given words or concepts') presumes a DAT-style input — it is semantically incoherent when applied to bare 10-word DAT outputs (nothing to 'connect') and would be reasonable only for strategy-DAT or writing subsets. Judge is openai/gpt-4, temp 0, max 256 tokens — matches the project-wide judge convention but paper's flash-fiction rating used GPT-4 at default temperature per metric_notes:92-94. No per-subset rubric differentiation for synopsis/flash_fiction/haiku quality."
+  - "Observed output pathology: benchmark_output/runs/trial_10inst/dat_creative_writing_model=google_gemini-2.5-flash-lite/display_predictions.json contains byte-identical predicted_text for every single dat_* instance_id inspected (dat_2, dat_16, dat_26, dat_54, dat_55, dat_73, dat_75, dat_86, dat_93, dat_95 all emit the same 'Sun, Silence, Feather, Justice, Ocean, Dream, Stone, Music, Shadow, Kindness' list). Same caching/determinism artifact flagged in dat.yaml — identical prompt across 100 trials plus a cache-warm client defeats the num_trials=100 diversity-measurement design."
+  - "Judge score floor: all inspected annotations return llm_judge_creativity=1 (the minimum). This is plausible since the rubric asks about 'connecting concepts' and bare DAT outputs have no connective prose — confirms the rubric mismatch above."
+  - "Near-duplication with dat: CONFIRMED. The 'dat' subset of this scenario (SUBSETS[0]) is semantically identical to the standalone dat scenario at the task level; the only genuinely distinct subsets here are the strategy-DAT (×5) and the writing tasks (×3). Since run_spec executes only the default 'dat' subset, the current configuration is a strict near-duplicate of dat with a different embedding model and an added judge. See notes."
+fixes_before_run:
+  - severity: blocking
+    action: "Expand run_specs/dat_creative_writing_run_specs.py into nine separate run_spec_functions (or one parameterised via subset arg passed to ScenarioSpec) so the strategy-DAT and writing subsets actually execute. As written, 8 of 9 subsets never run."
+  - severity: blocking
+    action: "Replace SemanticDiversityMetric with the three spec metrics: GloVe-840B-300d DAT scorer for dat + dat_{strategies} subsets (matching metric_notes:15-50 and dat.yaml's recommendation), and DSI + Lziv for synopsis/flash_fiction/haiku (metric_notes:61-89). Current scorer does not measure any of the three."
+  - severity: blocking
+    action: "Fix the identical-predictions-across-trials caching issue (same root cause as dat.yaml): either salt HELM's request cache with instance_id or disable cache for this scenario. Without this, the num_instances=100 design produces 1 unique output, not 100."
+  - severity: non-blocking
+    action: "Either drop the bare 'dat' subset from this scenario to avoid double-counting against standalone dat, or give both scenarios the same GloVe-based DAT scorer so they measure the same thing and results are poolable."
+  - severity: non-blocking
+    action: "Differentiate rubrics per subset: bare DAT / strategy-DAT do not have 'concepts to connect' in the output — a creativity-of-word-list rubric is wrong-kind for bare DAT (GloVe distance is the metric there). For writing subsets, use the Johnson-et-al-style narrative quality rubric the paper's GPT-4 ratings used (metric_notes:92-94)."
+notes: |
+  Near-duplication with `dat` (per NOTES_FOR_VIJETA.md:43, §1): CONFIRMED and currently worse than the
+  abstract concern. Because run_specs/dat_creative_writing_run_specs.py hardcodes args={} on the ScenarioSpec,
+  only subset='dat' executes — making this scenario, as wired today, a strict redundant sibling of the
+  standalone dat scenario with (a) a different sentence-embedding model (all-mpnet-base-v2 vs
+  all-MiniLM-L6-v2), (b) an added LLM-judge annotation whose rubric is miscalibrated for bare DAT output,
+  and (c) the same identical-predictions caching bug observed in dat.
+  The scenario file itself has real additive value over dat: the five strategy-DAT prompts and the three
+  writing prompts (synopsis / flash_fiction / haiku) are drawn verbatim from Bellemare et al. 2024
+  (Nature Human Behaviour) and the DAT_GPT repo and are not covered anywhere else. But none of that value
+  reaches the evaluator because the run_spec never instructs the scenario to emit those subsets.
+  Recommendation: expand into nine run_spec variants (or a single parameterised one), wire in
+  GloVe-DAT for the six DAT variants and DSI+Lziv for the three writing variants, drop the redundant
+  'dat' subset (or ensure it uses the exact same scorer as standalone dat), and fix the request-cache
+  issue before treating this benchmark's numbers as meaningful. As currently configured, this run reports
+  a sentence-embedding diversity proxy over 100 byte-identical Gemini outputs on one subset out of nine —
+  it is not the Bellemare 2024 benchmark in any substantive sense.
+paper_url: "https://doi.org/10.1038/s41562-024-02046-9"
+reviewed_at: "2026-04-21"

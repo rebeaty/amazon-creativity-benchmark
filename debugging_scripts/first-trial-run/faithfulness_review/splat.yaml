@@ -1,0 +1,33 @@
+name: splat
+verdict: DIVERGENT
+checks:
+  prompt_matches: false
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "scenarios/splat_scenario.py:22-25 collapses paper's multi-turn player-judge framework into a single-turn direct-explanation task; paper's core contribution is the interactive Q&A protocol with intermediate question-answering accuracy AND final scenario accuracy — the former is impossible to measure here"
+  - "run_specs/splat_run_specs.py:35 scores with BLEU/ROUGE/F1/exact_match/quasi_exact_match + BERTScore; paper uses a judge model (WizardLM-2) to grade final scenario accuracy against reference — n-gram overlap on free-form lateral-thinking explanations is near-meaningless (different surface forms can both be correct)"
+  - "run_specs/splat_run_specs.py:29 max_tokens=512 is truncating long outputs mid-sentence — display_predictions.json id312 and id840 end abruptly ('preying on', 'chosen for the secu'), biasing overlap metrics downward"
+  - "run_specs/splat_run_specs.py:30 temperature=0.7; paper's evaluation protocol implies deterministic scoring against reference — non-determinism adds variance with no stated rationale"
+  - "scenarios/splat_scenario.py:109 no difficulty-stratified reporting despite scenario supporting easy/medium/hard; paper reports per-difficulty breakdowns (Table results)"
+  - "scenarios/splat_scenario.py:86-103 repo discovery via hardcoded path list (/tmp/splat, ../LateralThinking) is brittle; dataset loading tied to session-local clone"
+  - "metric_notes/splat_annotator_notes.md and splat_eval_metrics_notes.md are both empty (1-line/0-content) — no rubric, no judge prompt, no scoring definition"
+  - "display_predictions.json: models produce markdown-heavy, multi-paragraph speculative explanations with headers/bullets — ROUGE/BLEU against a terse reference answer will systematically under-score correct-but-verbose responses"
+fixes_before_run:
+  - severity: blocking
+    action: "Replace n-gram metrics with an LLM-as-judge annotator that grades final-scenario correctness against the reference answer (binary or graded), matching the paper's protocol; document the judge prompt in metric_notes/splat_annotator_notes.md"
+  - severity: blocking
+    action: "Either (a) explicitly document and justify the single-turn simplification as a deliberate deviation from the paper's multi-turn framework, or (b) implement the multi-turn player-judge loop; current silent divergence misrepresents what is being measured"
+  - severity: blocking
+    action: "Raise max_tokens (≥1024) or add a prompt constraint requesting concise answers; ~20% of sampled predictions are mid-sentence truncated"
+  - severity: non-blocking
+    action: "Set temperature=0 for evaluation determinism, or document the sampling choice"
+  - severity: non-blocking
+    action: "Add per-difficulty (easy/medium/hard) result stratification via separate run specs or group tagging to match paper reporting"
+  - severity: non-blocking
+    action: "Populate metric_notes/*.md with scoring rubric, judge config, and paper baselines; replace brittle repo path discovery with a configured dataset location"
+notes: "Data loading and split are fine (all 975 test puzzles, no train leakage). Core faithfulness problem is twofold: (1) the scenario silently reduces the paper's defining multi-turn interactive protocol to a single-turn monologue, and (2) the metric stack (BLEU/ROUGE/BERTScore/EM) cannot validly score lateral-thinking explanation correctness — the paper uses an LLM judge for exactly this reason. Current pipeline will produce numbers, but they will not track the construct the paper claims to measure. Truncation at 512 tokens further corrupts the n-gram scores."
+paper_url: "https://arxiv.org/abs/2410.06733"
+reviewed_at: "2026-04-21"

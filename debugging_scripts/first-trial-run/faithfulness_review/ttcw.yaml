@@ -1,0 +1,33 @@
+name: ttcw
+verdict: NOT_FAITHFUL
+checks:
+  prompt_matches: false
+  data_split_correct: partial
+  metric_matches: partial
+  judge_config_matches: false
+  output_shape_sane: partial
+gaps:
+  - "Construct inversion: the original TTCW (Chakrabarty et al. 2024) has expert humans read a *full story* and answer 14 binary craft questions to evaluate *the story's creativity*. scenarios/ttcw_scenario.py:59-71 instead feeds the evaluated model a plot_summary plus the question and scores it against the expert's verdict — the evaluated model is being used as a judge of stories it cannot actually read, not as a creative writer. This is the wrong direction for a creative-writing benchmark."
+  - "Stimulus is plot_summary, not the story. The Salesforce/ttcw_creativity_eval HF dataset only ships plot_summaries (full text is referenced by external URLs, noted in docstring line 27). TTCW questions such as 'sophisticated use of idiom or metaphor or literary allusion' or 'narrative pacing' are undecidable from a 1–2 sentence plot summary; the task as constructed is near-unanswerable."
+  - "Adapter/prompt conflict: scenarios/ttcw_scenario.py:68-71 already writes a bespoke prompt ending in 'Answer:', but run_specs/ttcw_run_specs.py:21-31 uses ADAPT_MULTIPLE_CHOICE_JOINT with output_prefix='Answer: ', producing a doubled 'Answer:' tail and A./B. options appended after the scenario's own answer line (verified in scenario_state.json:66). Prompt shape is not what either the scenario or the adapter alone was designed for."
+  - "Temperature 0.7 (run_specs/ttcw_run_specs.py:30) for a binary Yes/No classification prediction is inappropriate; original TTCW LLM-as-judge work uses deterministic settings."
+  - "Instance construction duplicates stimulus: scenarios/ttcw_scenario.py:64 creates one instance per expert annotation (3 per dimension) with identical input but potentially different 'correct' label, so the same prompt appears up to 3× with conflicting gold — MultipleChoiceClassificationMetric will score these as independent items, inflating denominator and masking inter-rater disagreement rather than modelling it."
+  - "metric_notes/ttcw_annotator_notes.md and metric_notes/ttcw_eval_metrics_notes.md are both empty (1 line each); no documentation of judge setup, majority-vote aggregation, or the construct mismatch."
+  - "Trial run used max_eval_instances=1 (scenario_state.json:18); only 1 of 2,016 constructed instances executed, so output_shape_sane is only weakly verified. display_predictions.json shows 'B. No' which MC joint parses correctly, but single-sample coverage is inadequate."
+  - "groups=['creativity','ttcw'] (run_specs/ttcw_run_specs.py:43) places this under creativity, but the task as implemented measures judgment-alignment with experts on under-specified stimuli, not creative generation."
+fixes_before_run:
+  - severity: blocking
+    action: "Decide the intended use: either (a) reframe as a creative-writing generation benchmark where the model writes a story and an LLM-as-judge applies the 14 TTCW questions (requires a judge pipeline, not a classification metric), or (b) keep as a judge-alignment probe but acquire full story texts (the dataset provides URLs) and document it explicitly as a judgment task, not a creativity task."
+  - severity: blocking
+    action: "Fix the adapter/prompt collision: either remove the custom 'Answer:' suffix from scenarios/ttcw_scenario.py and let ADAPT_MULTIPLE_CHOICE_JOINT format everything, or switch to ADAPT_GENERATION with exact_match and strip the MC prefixes."
+  - severity: blocking
+    action: "Set temperature=0 for the binary prediction adapter."
+  - severity: non-blocking
+    action: "Aggregate the 3 expert annotations per (story, dimension) into a single gold (majority vote or gold probability) rather than emitting 3 duplicate instances with conflicting labels."
+  - severity: non-blocking
+    action: "Populate metric_notes/ttcw_*.md with the 14 dimensions, the judge-vs-writer framing choice, and how the construct maps to original Chakrabarty et al. protocol."
+  - severity: non-blocking
+    action: "Raise max_eval_instances for a realistic smoke test and re-verify display_predictions shape across dimensions."
+notes: "As implemented, ttcw is a judgment-alignment task on severely under-specified stimuli (plot summaries), not a creativity benchmark. The original TTCW paradigm requires full story text and, for an LLM-as-writer evaluation, the model under test should generate stories while TTCW questions act as the rubric. Current wiring uses the evaluated model as a judge of unreadable stimuli and still mislabels itself as creativity. Prompt double-'Answer:' artifact confirms the MC-joint adapter and bespoke scenario prompt were not co-designed."
+paper_url: "https://arxiv.org/abs/2309.14556"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,25 @@
+name: arena_hard_v01
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: false
+gaps:
+  - "Paper uses PAIRWISE comparison vs GPT-4 baseline; implementation is POINTWISE 1-5 Likert (run_specs/arena_hard_v01_run_specs.py:15-24, _RUBRIC_WIN_RATE)"
+  - "No baseline answers loaded: scenario sets references=[] (scenarios/arena_hard_v01_scenario.py:86-87), so judge cannot compute a true win rate"
+  - "Metric is labeled 'win_rate' but stores 1-5 scores (display_predictions.json: annotations.generic_llm_judge_win_rate.win_rate in {1,2,3,5}) — mis-named, not a win rate"
+  - "Judge prompt in annotator_notes.md:16-35 describes pairwise 'Assistant A/B' template, but run_spec passes the pointwise rubric instead — notes and code disagree"
+  - "max_tokens=512 truncates long coding/math answers (run_specs:44); paper allows longer generations"
+  - "Only turns[0] used; multi-turn prompts in dataset are dropped (scenarios:80-82)"
+fixes_before_run:
+  - severity: blocking
+    action: "Decide: either (a) load GPT-4 baseline answers + switch annotator to pairwise A/B judge to compute true win_rate, or (b) rename metric to 'quality_score_1_5' and accept this as a pointwise variant — current state reports a metric that does not match its name or the paper"
+  - severity: non-blocking
+    action: "Raise max_tokens to >=2048 for coding/math prompts"
+  - severity: non-blocking
+    action: "Reconcile annotator_notes.md pairwise template with the pointwise rubric actually used in the run_spec"
+notes: "Flagged borderline-creativity per NOTES_FOR_VIJETA.md section 1 (generic Chatbot Arena QA mixing coding/math/creative; v0.1 has no creative-writing subset — v2.0 does but is not publicly implemented here). Beyond the contamination concern, the implementation is not faithful to Arena-Hard-Auto: the paper's core methodology is pairwise win-rate vs a GPT-4 baseline, and this run_spec instead emits a 1-5 quality score with no baseline, so leaderboard numbers will not be comparable to any published Arena-Hard result."
+paper_url: "https://github.com/lmarena/arena-hard-auto"
+reviewed_at: "2026-04-21"

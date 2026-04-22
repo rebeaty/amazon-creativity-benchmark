@@ -1,0 +1,35 @@
+name: science_analogies
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "Prompt templates match paper code verbatim: scenarios/science_analogies_scenario.py:47-48 uses prompts_nosrc[0]='Explain {target} using an analogy.' and prompts_wsrc[0]='Explain {target} using an analogy involving {source}.' from plm_generator.py (verified via raw.githubusercontent.com/Bhaavya/InstructGPT-Analogies/main/plm_generator.py)"
+  - "Dataset fields/size match: saqa.txt parsed into (Source, Target, Explanation) triples; nosrc subset dedupes to 109 targets, wsrc keeps 148 rows, consistent with scenario docstring and paper data description"
+  - "Subset selection: run_specs/science_analogies_run_specs.py:17 passes args={} so ScienceAnalogiesScenario defaults to subset='nosrc' (109 instances); wsrc subset (148 instances) is never run despite being implemented"
+  - "Temperature drift: run_specs:30 temperature=0.7 but paper reports best prompts at LOW temperature; plm_generator.py supports temperature=0 (deterministic) and temperature=0.85 (high-variability) modes, not 0.7. Paper abstract explicitly notes 'best prompts tend to be precise imperative statements especially with a low temperature setting'"
+  - "Model mismatch vs paper: paper evaluates text-davinci-001/002 InstructGPT variants; this benchmark evaluates Gemini/Gemma families (expected modernization, but no InstructGPT baseline run)"
+  - "Metric bundle is wrong for open-ended analogy generation: run_specs:35 uses exact_match/quasi_exact_match/f1_score/rouge_l/bleu_1/bleu_4. Paper's actual evaluation is HUMAN rating on four dimensions (meaningfulness, novelty, soundness, comprehensibility) collected via AMT (amt_res.xlsx, amt_src_res dir), plus an automatic 'precision' score over short Explanation snippets. Exact/quasi-exact match on 500+-token free-form analogies will be ~0 for every model; BLEU/ROUGE against a 1-sentence Explanation reference is a poor proxy for the paper's human-eval construct"
+  - "No LLM judge / no human-eval pipeline / no precision-over-explanation metric implemented; the metric_notes/science_analogies_annotator_notes.md and science_analogies_eval_metrics_notes.md files are EMPTY (0 bytes), so paper metrics were never transcribed"
+  - "Output shape: display_predictions show models emitting 500-2000 char multi-analogy essays with headings, bullet tables, and truncation at max_tokens=512 (e.g. gemini_pro id 'saqa_nosrc_chloroplast', 'saqa_nosrc_dna' end mid-sentence). Reference Explanations in saqa.txt are 1-3 sentence chegg/study.com snippets. Mismatch in length/format guarantees BLEU/ROUGE noise floor"
+  - "max_tokens=512 in run_specs:29 is well below plm_generator.py's max_tokens=939; causes mid-analogy truncation visible across display_predictions.json for all 14 models"
+  - "stop_sequences=[] combined with zero-shot single-turn generation is fine (no few-shot bleed issue), but no newline/period stop means verbose models run to the max_tokens cap"
+fixes_before_run:
+  - severity: blocking
+    action: "Replace basic_metrics bundle with paper-aligned eval: either (a) an LLM-judge rubric scoring meaningfulness/novelty/soundness/comprehensibility on 1-5 per paper's AMT dimensions, or (b) a precision metric matching predicted analogy against short reference Explanation (paper's automatic metric). Current exact_match/quasi_exact_match will be ~0 for all models and f1/rouge/bleu against a 1-sentence reference is misleading"
+  - severity: high
+    action: "Lower temperature to 0 (paper's deterministic mode and stated 'best-at-low-temp' finding) OR document the 0.7 deviation explicitly. Consider running both temp=0 and temp=0.85 to mirror paper's two-mode comparison"
+  - severity: high
+    action: "Populate metric_notes/science_analogies_annotator_notes.md and science_analogies_eval_metrics_notes.md with paper's four-dimension AMT rubric and precision computation; currently 0-byte files leave the eval design undocumented"
+  - severity: medium
+    action: "Raise max_tokens to ~939 (paper setting) or add a stop_sequence on double-newline so models are not force-truncated mid-analogy; current outputs are cut off in display_predictions for most models"
+  - severity: medium
+    action: "Add a wsrc run_spec (subset='wsrc', 148 instances) to cover the second half of the paper; scenario already supports it but it is never instantiated"
+  - severity: non-blocking
+    action: "Consider removing exact_match/quasi_exact_match from metric bundle regardless — they are structurally ~0 on free-form analogy text and will only add noise to any leaderboard"
+notes: "Prompt templates and dataset parsing are faithful to plm_generator.py. The scenario and adapter correctly implement zero-shot single-prompt generation on the nosrc subset. Major faithfulness drift is at the metric layer: the paper's core evaluation is four-dimension human rating plus automatic precision over short reference Explanations, but the run registers only exact/quasi-exact/f1/rouge/bleu — all poor fits for the 500-2000 char essay-style outputs models actually produce. Empty metric_notes files confirm paper metrics were never transcribed. Secondary issues: temperature=0.7 vs paper's preferred temp=0, max_tokens=512 truncating outputs, and wsrc subset never run. Safe to execute as an open-ended generation probe; NOT a faithful reproduction of paper's human-eval or precision scores."
+paper_url: "https://aclanthology.org/2022.inlg-main.25/"
+reviewed_at: "2026-04-21"

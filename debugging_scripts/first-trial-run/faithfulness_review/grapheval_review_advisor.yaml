@@ -1,0 +1,27 @@
+name: grapheval_review_advisor
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Metric divergence (triple-variant): paper/repo evaluates Review_Advisor as 4-class decision classification with accuracy, precision, recall, F1 against ground-truth decision labels (Reject / Accept (Poster) / Accept (Oral) / Accept (Spotlight)). run_specs/grapheval_review_advisor_run_specs.py:49-51 discards the labeled reference entirely and instead scores outputs with a GenericLLMJudgeMetric on a generic 1-5 'llm_judge_quality' advisory rubric unrelated to the paper's task."
+  - "Rubric semantically unrelated: _RUBRIC_LLM_JUDGE_QUALITY (run_specs/grapheval_review_advisor_run_specs.py:15-24) asks the judge to rate 'quality of the generated review advisory response' / 'accuracy of advice, relevance to the review context, and overall helpfulness'. The scenario prompt actually asks for a decision classification + 0-100 score, so the judge is evaluating something the model was never instructed to produce and ignoring whether the decision matches the ground truth in scenarios/grapheval_review_advisor_scenario.py:116."
+  - "Reference label wasted: scenario stores the gold decision as a Reference with CORRECT_TAG (scenarios/grapheval_review_advisor_scenario.py:116) but no exact-match / classification metric (ExactMatch, F1, accuracy) is registered to consume it. display_predictions across runs (e.g., gemini_pro id1 -> 'Reject', id27 -> 'Accept (Oral)', id886 -> 'Reject'; gemma_3_27b id27 -> 'Accept (Poster)') are perfectly shaped for string-match classification scoring but are instead scored 1-5 by a generic judge, producing near-random quality numbers (e.g., id27 with identical 'Accept (Oral)'/'Accept (Poster)' outputs receives quality=1; id1 'Reject' receives quality=5)."
+  - "Judge config: openai/gpt-4 @ temp=0.0, max_new_tokens=512 is reasonable in isolation, but the paper never specifies an LLM-judge protocol for Review_Advisor (it uses classification metrics), so there is no paper judge config to match."
+  - "Metric notes are empty: metric_notes/grapheval_review_advisor_annotator_notes.md and metric_notes/grapheval_review_advisor_eval_metrics_notes.md are both 1-line / empty files, so there is no documented justification for replacing the paper's classification metric with an LLM-judge advisory rubric."
+  - "Prompt itself is faithful: SYSTEM_PROMPT in scenarios/grapheval_review_advisor_scenario.py:47-92 is copied from Baselines/Prompt/basic_prompt.txt with the 6 dimensions, 4 few-shot examples, decision distribution note, and output format; titles/abstracts are pulled from ReviewAdvisor_test_set.jsonl (test split, 1025 items). Output shape (Overall Score + decision) is respected by models."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace GenericLLMJudgeMetric with classification metrics that consume the gold decision reference (ExactMatchMetric and/or QuasiExactMatch plus per-class / macro F1) so the run reproduces the paper's accuracy/precision/recall/F1. Strip the predicted_text to the decision line before matching."
+  - severity: blocking
+    action: "Remove or repurpose the AnnotatorSpec / _RUBRIC_LLM_JUDGE_QUALITY block, or re-scope it to a secondary diagnostic. The current rubric scores a construct ('advisory helpfulness') that is orthogonal to the task and actively misranks models that get the decision right but differ in surface wording."
+  - severity: non-blocking
+    action: "Populate metric_notes/grapheval_review_advisor_eval_metrics_notes.md with the paper's metric definition and the 4-class label space so future reviewers can audit faithfulness."
+  - severity: non-blocking
+    action: "Consider also extracting and storing the numeric 0-100 'Overall Score' from the output for a correlation-with-decision diagnostic, matching the paper's score field."
+notes: "Same failure mode as the aligned-case triple-variant concern: prompt is faithfully lifted from the repo, but the scoring layer is a generic advisory LLM-judge that ignores the gold classification label the scenario already supplies. Predictions are clean 'Overall Score = X\\n{Decision}' strings across models, so swapping in an ExactMatch/F1 classification metric is a small mechanical fix that would make the run actually reproduce GraphEval's Review_Advisor evaluation. As currently configured, the reported llm_judge_quality numbers do not measure the paper's task and should not be treated as a Review_Advisor reproduction. Paper PDF body was not fully extractable via WebFetch; cross-check relied on GitHub README (accuracy/precision/recall/F1) and the baseline prompt file already embedded in the scenario."
+paper_url: "https://arxiv.org/abs/2503.12600"
+reviewed_at: "2026-04-21"

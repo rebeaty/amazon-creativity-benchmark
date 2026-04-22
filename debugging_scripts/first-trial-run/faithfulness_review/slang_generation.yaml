@@ -1,0 +1,31 @@
+name: slang_generation
+verdict: PARTIAL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: partial
+  output_shape_sane: partial
+gaps:
+  - "Paper's primary metric is Semantic Novelty (SBERT mean Euclidean distance between generated slang definition and standard dictionary definitions of the generated word) via novelty.py; scenario's metric_notes (metric_notes/slang_generation_eval_metrics_notes.md:7-20) documents this but run_specs (run_specs/slang_generation_run_specs.py:60-63) configures only generic LLM-judge creativity+relevance rubrics — no SBERT novelty, no Morfessor morphological coherence, no BLEU/ROUGE vs gold term"
+  - "metric_notes/slang_generation_annotator_notes.md is empty (0/1 lines) — no documentation of the LLM-judge annotator protocol actually configured in run_specs"
+  - "LLM-judge uses openai/gpt-4 (run_specs:69,79), a legacy model; other creativity tasks in this suite tend to use gpt-4o / stronger judges — the generic rubric also makes no reference to slang-specific criteria (e.g., coinage vs reuse, morphological plausibility, semantic distance from standard sense) from the paper"
+  - "Scenario implements only Freeform mode (scenarios/slang_generation_scenario.py:16-22,91-96); paper systematically compares three modes (freeform/coinage/reuse) — single-mode implementation means we can't reproduce the paper's central human-vs-machine comparison across modes"
+  - "Model outputs are multi-field verbose markdown (predicted_text in benchmark_output/runs/gemini_flash/.../display_predictions.json and gemma_3_27b/.../display_predictions.json include headers, rationale, multiple usage examples, emphasis formatting); paper evaluates on a clean extracted slang word + definition. No output parser is configured to isolate fields (1)/(2)/(3), so any downstream novelty/coherence metric (if added) would fail to find the target word reliably"
+  - "References stored are the gold human slang term with CORRECT_TAG (scenario:99-101) but no surface-overlap metrics (BLEU/ROUGE) are actually in metric_specs — the reference is loaded but never consumed; metric_notes:36-40 says BLEU/ROUGE 'are computed' but run_specs has no such MetricSpec"
+fixes_before_run:
+  - severity: blocking
+    action: "Add a semantic-novelty metric implementing novelty.py (SBERT all-mpnet-base-v2 Euclidean distance between parsed slang definition and WordNet/dictionary senses of the parsed slang word) — this is the paper's primary metric and is currently unimplemented"
+  - severity: high
+    action: "Add an output parser that extracts fields (1) slang word, (2) definition, (3) usage example from the verbose markdown responses before metric computation, else novelty/coherence scores will be computed on noise"
+  - severity: high
+    action: "Populate metric_notes/slang_generation_annotator_notes.md documenting the judge model, rubric wording, score scale, and rationale for using a generic creativity/relevance judge in place of the paper's SBERT-based metric"
+  - severity: medium
+    action: "Either add BLEU-1/BLEU-4/ROUGE-L metric_specs (matching metric_notes:36-40) or remove the soft-reference claim from metric_notes so docs match behavior"
+  - severity: medium
+    action: "Upgrade judge_model_name from openai/gpt-4 to gpt-4o (or suite-standard judge) for consistency with other creativity scenarios, and enrich rubrics with slang-specific criteria (morphological plausibility, semantic distance from conventional sense)"
+  - severity: low
+    action: "Consider adding Coinage and Reuse mode variants to enable the cross-mode comparison that is the paper's central experimental design"
+notes: "Scenario data loading is correct (666 conv_slang.txt entries parsed from the upstream repo, test-only split) and the prompt adapts build_prompt_general() reasonably. The faithfulness gap is in evaluation: run_specs configures two generic LLM-judge rubrics (creativity, relevance) that have no connection to the paper's SBERT-based semantic-novelty or Morfessor-based morphological-coherence metrics. metric_notes.md documents the paper's metrics but the actual MetricSpec list does not implement them, so what will be reported is a pair of generic LLM-judge scores unrelated to Wu & Sun's framework. Outputs across Gemini/Gemma variants are consistently verbose (rationale, multiple examples, markdown headers) — acceptable for an LLM judge but would break any string-parsing metric."
+paper_url: "https://arxiv.org/abs/2502.XXXXX"
+reviewed_at: "2026-04-21"

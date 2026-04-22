@@ -1,0 +1,40 @@
+name: dpt
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Rubric dimension mismatch (primary issue): metric_notes/dpt_annotator_notes.md:17, 27-58 specifies a 5-dimension rubric (originality, cleverness, uncommonness, effectiveness, conciseness) with explicit per-dimension anchors, matching the paper's human-study dimensions (originality, cleverness, uncommonness, remoteness, plus effectiveness). run_specs/dpt_run_specs.py:15-24 instead uses a generic 1-5 'CREATIVITY' rubric copy-pasted from a divergent-thinking judge (referencing 'range' of 'ideas produced', which is wrong for a single-response generation task). The annotator_notes rubric is never actually wired to the annotator."
+  - "Judge model mismatch: annotator_notes.md:15 recommends GPT-4o (per paper, outperformed humans in consistency). run_specs/dpt_run_specs.py:57 configures 'openai/gpt-4' (legacy GPT-4, not GPT-4o). Paper baselines (annotator_notes.md:88-91) are for gpt-4o-mini and claude-3.5-haiku — neither is the judge actually used."
+  - "Dimension collapse not surfaced: paper's key finding (annotator_notes.md:93-96) is that LLM judges collapse originality/cleverness/uncommonness/remoteness to r≈0.99. Using a single 1-5 'creativity' score in the run_spec guarantees collapse by construction — the benchmark cannot replicate the paper's multi-dimension analysis, nor distinguish originality from effectiveness (which the paper treats as a separately rescaled secondary metric, annotator_notes.md:102-103)."
+  - "Prompt wording adapted, not verbatim: scenarios/dpt_scenario.py:87-92 uses an adapted instruction ('Think of a new, creative way... original... practically feasible... 2-4 sentences'). Paper Section 2.1 wording could not be recovered from arXiv abstract or PDF extract; cross-check vs supplemental_materials.pdf in the GitHub repo is recommended before locking this as faithful. The 2-4 sentence length cap is a scenario-level imposition — paper's human study likely had no strict length cap."
+  - "16 design problems: scenarios/dpt_scenario.py:53-76 lists 16 problems split 5/3/8 across accessibility/transportation/environment. Notebook scrape confirms ~14 distinct problem_ids in the public CSV (possibly filtered) with the paper title referencing 16; problem texts look plausible and domain-consistent but exact verbatim match to paper's study instrument could not be verified from the arXiv page."
+  - "Calibration not performed: annotator_notes.md:60-82 describes 830 human-rated responses in cleaned_data_explanations_gold.csv for judge calibration. No calibration code is present in the run_spec; the judge is used cold against a rubric that doesn't match the human-rater dimensions. Reported scores have no known correlation with the paper's human baseline."
+  - "Decoding params: run_specs/dpt_run_specs.py:44-46 uses temperature=0.7, max_tokens=512, num_outputs=1. Paper's LLM-generation protocol not recovered; 0.7 is a conventional creative-writing default and likely acceptable, but should be confirmed."
+  - "Output shape sane: 16 instances × 1 completion = 16 predictions per model. display_predictions.json for gemini-2.5-flash and gemma-3-12b show well-formed 2-4 sentence solutions appropriately targeted to each design problem; judge scores collapsing to '4' across all 16 instances for gemini-2.5-flash is consistent with the dimension-collapse finding but also indicates very low judge discrimination on this rubric."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace _RUBRIC_LLM_JUDGE_CREATIVITY in run_specs/dpt_run_specs.py:15-24 with the 5-dimension rubric from metric_notes/dpt_annotator_notes.md:22-58, and update GenericLLMJudgeAnnotator (or swap to a multi-dimension annotator) to parse and emit the 5 per-dimension scores plus Overall. Without this, the benchmark measures a generic creativity Likert, not the paper's construct."
+  - severity: blocking
+    action: "Change judge_model_name from 'openai/gpt-4' to 'openai/gpt-4o' (annotator_notes recommendation) or to gpt-4o-mini / claude-3.5-haiku to match the paper's reported baselines (Pearson r=0.74-0.76 vs human consensus). Current gpt-4 has no published calibration against the paper's human-rater consensus."
+  - severity: non-blocking
+    action: "Verify the 16 problem texts against supplemental_materials.pdf in the Beaty-Lab repo and replace paraphrases with verbatim paper wording if any drift is found."
+  - severity: non-blocking
+    action: "Verify participant instruction text (scenarios/dpt_scenario.py:87-92) against paper Section 2.1 / supplemental materials, particularly the '2-4 sentences' length cap which may not appear in the original study protocol."
+  - severity: non-blocking
+    action: "Load cleaned_data_explanations_gold.csv (830 rated responses) and compute judge-vs-human Pearson r per dimension at run time; surface as a sanity-check metric alongside the raw judge scores."
+notes: |
+  Paper cross-check: arXiv:2502.03253 abstract confirms facets 'remoteness', 'uncommonness',
+  'cleverness' with originality as aggregate; annotator_notes.md:100-101 correctly maps
+  paper 'remoteness' -> rubric 'uncommonness'. Paper PDF could not be text-extracted via
+  WebFetch (returned binary stream); notebook scrape from the repo confirmed the 4-facet +
+  effectiveness structure matches annotator_notes.md, but the run_spec rubric ignores all
+  of this and uses a generic divergent-thinking Likert, which is the dominant faithfulness
+  bug here. Scenario dataset construction and prompt adaptation are reasonable; the LLM-judge
+  wiring is the part that has drifted from both the paper and the scenario's own
+  annotator_notes.md.
+paper_url: "https://arxiv.org/abs/2502.03253"
+reviewed_at: "2026-04-21"

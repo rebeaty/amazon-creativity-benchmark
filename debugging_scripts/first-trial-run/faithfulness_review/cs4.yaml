@@ -1,0 +1,32 @@
+name: cs4
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Metric replaced: paper's primary metric is constraint satisfaction ratio (per-constraint yes/no via GPT-4) (cs4_annotator_notes.md:11-17,41-54); implementation uses a single generic 1-5 creativity rubric (cs4_run_specs.py:15-24,49-64)."
+  - "Missing paper metrics: Coherence, N-gram Diversity, Perplexity, QUC, RCS (cs4_annotator_notes.md:18-38); none implemented."
+  - "No stratification/reporting by constraint level (7/15/23/31/39) — the core experimental variable of the paper (cs4_annotator_notes.md:84-89,103-106). Scenario stores num_constraints in extra_data (cs4_scenario.py:143-149) but no metric slices on it."
+  - "Judge prompt does not reference the per-constraint list nor require evidence citations as the paper prescribes (cs4_annotator_notes.md:41-54,56-59)."
+  - "max_tokens=512 (cs4_run_specs.py:44) truncates stories mid-sentence (visible in display_predictions.json for gemini-2.5-pro id92 etc.), biasing any creativity/constraint judgment downward."
+  - "Default dataset_type='instruction' (cs4_scenario.py:61) uses only 250/500 instances — Story-based half is excluded unless explicitly overridden."
+  - "cs4_eval_metrics_notes.md is empty (1 line)."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace generic creativity rubric with a per-constraint satisfaction annotator: feed story + numbered constraint list, require yes/no + quoted evidence per constraint, compute satisfied/total (cs4_annotator_notes.md:41-59)."
+  - severity: blocking
+    action: "Raise max_tokens well above 512 (paper stories are long); 512 is causing systematic truncation of outputs before constraints can be satisfied."
+  - severity: non-blocking
+    action: "Add metric slicing by num_constraints (7/15/23/31/39) and by dataset_type (instruction/story) to reproduce the paper's headline finding on specificity degradation."
+  - severity: non-blocking
+    action: "Set dataset_type='both' in scenario args so all 500 instances run, not just 250 instruction-based."
+  - severity: non-blocking
+    action: "Add secondary metrics: n-gram diversity (automatic), generation length, and optionally coherence/QUC/RCS per paper (cs4_annotator_notes.md:93-106)."
+  - severity: non-blocking
+    action: "Populate cs4_eval_metrics_notes.md with numeric metric definitions."
+notes: "Scenario data loading and prompt template ({instruction}\\n\\nConstraints:\\n{list}\\n\\nWrite a story...) match the paper and GitHub source. Instance construction, constraint-level metadata, and TEST_SPLIT are correct. The divergence is entirely on the eval side: the paper's automatic constraint-satisfaction metric — the whole point of CS4 — is replaced by a single generic 1-5 creativity score from GPT-4o, with no per-constraint check, no constraint-level stratification, and a 512-token cap that truncates outputs. Predictions themselves look sane (coherent stories, judge scores are integers 1-5)."
+paper_url: "https://arxiv.org/abs/2410.04197"
+reviewed_at: "2026-04-21"

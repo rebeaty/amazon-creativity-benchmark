@@ -1,0 +1,30 @@
+name: scar
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: partial
+gaps:
+  - "run_specs/scar_run_specs.py:30 temperature=0.7 for a deterministic structured-output task; paper framing (structure abduction with fixed gold mappings) implies greedy decoding (temp=0)"
+  - "run_specs/scar_run_specs.py:35 emits stat 'f1_score' via BasicGenerationMetric, but registry_metrics.yaml:1856 expects stat name 'f1' (token-level F1 from metrics/f1_metric.F1Metric); custom metric class exists but is not wired in -> missing metric at aggregation"
+  - "run_specs/scar_run_specs.py:29 max_tokens=512 with temperature=0.7 lets models produce long CoT/thinking before the list (see gemma_4_26b scar_133 'thinking_text' rambling); no stop_sequences and no post-processing to extract the final [[...]] mapping, so exact_match is brittle against free-form preambles"
+  - "scenarios/scar_scenario.py:153 gold reference is Python str(mappings) which yields single-quoted form (e.g. \"[['Newton', 'Faraday'], ...]\"); model may produce double quotes, different whitespace, or set-equivalent reordering -> set-based P/R/F1 from paper not implemented; exact_match understates performance"
+  - "scenarios/scar_scenario.py:128 items_a/items_b derived from sorted(set(m[0] for m in mappings)) leaks the mapping structure into the prompt via alphabetical ordering of items rather than the paper's original item list; could mildly bias models that align by list position"
+  - "run_specs/scar_run_specs.py:27 max_train_instances=0 (zero-shot); paper's Instruction 1 template is zero-shot-compatible so this is defensible, but paper also reports few-shot/CoT conditions not covered here"
+  - "metric_notes/scar_annotator_notes.md is empty (0 bytes); only scar_eval_metrics_notes.md is populated"
+fixes_before_run:
+  - severity: blocking
+    action: "Add MetricSpec for metrics.f1_metric.F1Metric to run_specs/scar_run_specs.py so the 'f1' stat required by registry_metrics.yaml is produced (diagnosis/fix already drafted in debugging_scripts/metrics-check/clin/scar_fixes.md)"
+  - severity: non-blocking
+    action: "Set temperature=0 and consider stop_sequences=['\\n\\n'] for deterministic structured output; keep max_tokens=512 for long mapping lists (up to 14 pairs)"
+  - severity: non-blocking
+    action: "Implement a SCAR-specific metric that parses the predicted [[a,b],...] list (regex/ast.literal_eval fallback) and computes set-based precision/recall/F1 over unordered pairs, matching the paper's metrics; current token-level f1/rouge/bleu are weak proxies"
+  - severity: non-blocking
+    action: "Normalize gold reference to a canonical form (e.g. sorted list with consistent quoting/whitespace) or switch evaluation to set comparison so surface formatting differences don't penalize correct mappings"
+  - severity: non-blocking
+    action: "Populate metric_notes/scar_annotator_notes.md (currently empty) with paper-sourced annotation/eval details for future audits"
+notes: "Prompt template faithfully reproduces the paper's Instruction 1 format and the full 400-instance test set is used. Main drift is metric plumbing: the registry expects stat 'f1' but run_spec wires BasicGenerationMetric which emits 'f1_score', so one required stat is missing at aggregation (a fix is already drafted). Secondary drift is evaluation shape: exact_match over str(list)-formatted gold will be brittle vs. model formatting and order variation, and the paper's set-based P/R/F1 over mapping pairs is not implemented. Valid to run tomorrow after wiring F1Metric; results should be interpreted on exact_match with the caveat that it undercounts mappings that are semantically correct but formatted differently."
+paper_url: "https://aclanthology.org/2023.findings-emnlp.160"
+reviewed_at: "2026-04-21"

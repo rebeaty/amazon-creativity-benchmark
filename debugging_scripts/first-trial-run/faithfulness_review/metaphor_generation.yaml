@@ -1,0 +1,27 @@
+name: metaphor_generation
+verdict: UNFAITHFUL
+checks:
+  prompt_matches: false
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "Prompt is a bare literal sentence with no instruction (run_specs/metaphor_generation_run_specs.py:22 instructions=''; scenarios/metaphor_generation_scenario.py:90 prompt=literal_sentence) — instruction-tuned models interpret the input as a discussion prompt rather than a metaphor-rewrite task; observed outputs (benchmark_output/runs/gemini_flash/.../display_predictions.json; benchmark_output/runs/gemma_3_27b/.../display_predictions.json) are multi-paragraph essays analyzing the sentence rather than one-line metaphorical rewrites"
+  - "max_tokens=512 and temperature=0.7 (run_specs/metaphor_generation_run_specs.py:29-30) allow and encourage long essay responses; paper targets a single sentence output — no stop_sequences or output-length control"
+  - "Metrics are surface-overlap only (exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4 — run_specs:35); MERMAID paper relies on BLEU plus human preference (66% over baselines), and these overlap metrics are near-meaningless when predictions are 500-token essays vs 1-sentence references"
+  - "metric_notes/metaphor_generation_annotator_notes.md and metric_notes/metaphor_generation_eval_metrics_notes.md are both empty (0/1 lines) — no documentation of metric choice or annotator protocol"
+  - "No LLM judge / semantic-similarity / metaphoricity classifier is configured (annotators=None, run_specs:44); paper's central evaluation (human judgment of metaphoricity) has no analogue here"
+  - "max_train_instances=0 with empty instructions means the model receives zero task signal — paper fine-tunes a seq2seq model on parallel data; zero-shot with no instruction is not a comparable setup and should minimally include an instruction like 'Rewrite the following literal sentence as a metaphorical sentence'"
+fixes_before_run:
+  - severity: blocking
+    action: "Add an explicit instruction (e.g., 'Rewrite the following literal sentence as a metaphorical sentence by replacing the main verb. Output only the rewritten sentence.') in adapter_spec.instructions or as a prompt prefix in the scenario"
+  - severity: blocking
+    action: "Reduce max_tokens (e.g., 64) and/or add stop_sequences=['\\n'] so outputs are single sentences comparable to the 156 one-line references"
+  - severity: high
+    action: "Populate metric_notes/metaphor_generation_{annotator,eval_metrics}_notes.md documenting BLEU variant used, reference-stripping of <V> tags, and rationale for surface metrics vs paper's human evaluation"
+  - severity: high
+    action: "Consider adding an LLM-judge annotator (metaphoricity + semantic-preservation) to approximate the paper's human preference evaluation, since BLEU-1/4 on 156 short references is a weak signal"
+notes: "Scenario data loading is correct (156 test pairs from MetaphorGenNAACL2021 human1test.txt/human2test.txt, <V> tags stripped) and the test-split assignment matches the paper. The faithfulness failure is in adaptation: with an empty instruction, instruction-tuned chat models (all Gemini/Gemma variants inspected) produce long analytical essays rather than metaphorical rewrites, which makes the configured BLEU/ROUGE/F1 metrics uninformative. This is a blocking prompt-format issue, not a data issue."
+paper_url: "https://aclanthology.org/2021.naacl-main.336/"
+reviewed_at: "2026-04-21"

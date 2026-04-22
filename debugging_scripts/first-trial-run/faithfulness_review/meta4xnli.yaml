@@ -1,0 +1,37 @@
+name: meta4xnli
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "run_specs/meta4xnli_run_specs.py:18 passes args={} so only the default subset 'interpretation_en' is instantiated; the other four declared subsets (interpretation_es, interpretation_en_cot, interpretation_es_cot, detection_en) are never run — paper evaluates English+Spanish and both zero-shot+CoT"
+  - "scenarios/meta4xnli_scenario.py:50-53 admits the detection_en prompt is custom-written and NOT from the paper; paper uses fine-tuned encoders with BIO tagging or fine-tuned decoders with constrained decoding, not zero-shot generative listing of metaphor tokens — results will not be comparable to paper numbers"
+  - "run_specs/meta4xnli_run_specs.py:21 uses ADAPT_MULTIPLE_CHOICE_JOINT but scenario builds its own free-text prompt and packs all three labels into References; joint adapter will append a letter-choice block ('A. entailment\\nB. neutral\\nC. contradiction\\nAnswer: ') on top of the scenario's '... -> ...:' prompt — prompt is NOT verbatim Table 29 at inference time"
+  - "run_specs/meta4xnli_run_specs.py:30 temperature=0.7 with num_outputs=1 for a closed-label classification task; paper protocol is deterministic decoding for NLI accuracy"
+  - "run_specs/meta4xnli_run_specs.py:24 input_suffix='\\n' + output_prefix='Answer: ' conflict with the scenario's own '... -> ...:' terminator and the CoT template's 'Answer:' terminator — double 'Answer:' tokens appear in the final prompt under CoT"
+  - "scenarios/meta4xnli_scenario.py:155 references are label strings but the adapter is MC_JOINT; exact_match compares generation to the reference string 'entailment'/'neutral'/'contradiction', so any letter-only output ('A'/'B'/'C') scores 0 — adapter/metric mismatch"
+  - "scenarios/meta4xnli_scenario.py:89-94 CoT examples include trailing periods on 'contradiction.' and 'neutral.' but NOT on 'entailment' — copied verbatim from Table 29 per comment, but this inconsistency may leak format cues"
+  - "metric_notes/meta4xnli_annotator_notes.md and meta4xnli_eval_metrics_notes.md are both empty (1-line/empty files) — no documented rubric, no paper-reported baselines (encoder F1, decoder accuracy) for calibration"
+  - "display_predictions.json shows only 10 instances for trial_10inst (expected) but filenames indicate only interpretation_en ran; no Spanish or CoT or detection outputs exist — consistent with single-subset gap above"
+  - "scenarios/meta4xnli_scenario.py:123 loads split='xnli_test_met' for interpretation which is correct (metaphor-containing test subset, ~580/lang); detection loads 'det_en_finetune' split='test' which is the fine-tuning split, not an independent eval split — acceptable but worth noting"
+fixes_before_run:
+  - severity: blocking
+    action: "Register separate RunSpecs for each of the five SUBSETS (interpretation_en, interpretation_es, interpretation_en_cot, interpretation_es_cot, detection_en) via a subset arg; current config evaluates 1/5 of the declared benchmark"
+  - severity: blocking
+    action: "Switch adapter from ADAPT_MULTIPLE_CHOICE_JOINT to ADAPT_GENERATION so the scenario-built Table-29 prompt is sent verbatim without a synthetic A/B/C letter block appended; keep References as label strings for exact_match"
+  - severity: blocking
+    action: "Set temperature=0, max_tokens~=8, and restrict stop_sequences to ['\\n','.'] for label classification; 0.7/512 is incorrect for deterministic NLI"
+  - severity: blocking
+    action: "Either drop detection_en from the benchmark or flag it explicitly as an 'off-paper generative variant' in run_specs + docs so detection F1 is not compared to the paper's fine-tuned BIO numbers"
+  - severity: non-blocking
+    action: "Remove input_suffix='\\n' and output_prefix='Answer: ' from AdapterSpec (or only set output_prefix for non-CoT subset); scenario terminates the prompt itself with ':' or 'Answer:' and the extra prefix duplicates the cue"
+  - severity: non-blocking
+    action: "Populate metric_notes with paper-reported Meta4XNLI decoder-LLM accuracy baselines (per language, zero-shot vs CoT) and encoder detection F1 (Inv/Oov) to enable calibration against arxiv 2404.07053 Tables 6-10"
+  - severity: non-blocking
+    action: "Add a per-subset breakdown (en vs es, zero-shot vs CoT) to metric output rather than a single aggregate exact_match so crosslingual gap can be reported"
+notes: "Scenario code faithfully reproduces the Table 29 NLI prompt strings (zero-shot and CoT verbatim including idiosyncratic trailing periods), and the data source (HiTZ/meta4xnli int_eval xnli_test_met) + exact_match metric are appropriate for the interpretation task. However, three compounding issues prevent the current runs from being interpretable as a Meta4XNLI replication: (1) only the default English zero-shot subset actually runs — the four other declared subsets are silently dropped because run_specs passes args={}; (2) the adapter is ADAPT_MULTIPLE_CHOICE_JOINT which will overlay an A/B/C letter block on top of the scenario's free-text prompt, so the prompt seen by the model is NOT the Table 29 prompt; (3) the detection_en subset uses a self-admitted custom generative prompt while the paper uses fine-tuned encoders/decoders with BIO/constrained decoding, so any detection F1 here is an off-paper probe, not a paper replication. Temperature 0.7 on a 3-way label task is also wrong. Interpretation data split is correct."
+paper_url: "https://arxiv.org/abs/2404.07053"
+reviewed_at: "2026-04-21"

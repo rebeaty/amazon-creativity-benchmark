@@ -1,0 +1,33 @@
+name: puzzleworld
+verdict: DIVERGENT
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "benchmark_output/runs/trial_10inst/puzzleworld_model=google_gemini-2.5-flash-lite/display_predictions.json: all 10 predictions are identical apology strings ('I'm sorry, but you haven't provided any text...') with base64_images=[] — model received no content; multimedia pipeline is not delivering images (or prompt text) to the model despite scenario attaching MediaObjects"
+  - "scenarios/puzzleworld_scenario.py:159 silently swallows hf_hub_download failures via bare 'except Exception: continue' — if images fail to download, instance proceeds with only the text MediaObject and no indication; masks the exact failure seen in predictions"
+  - "run_specs/puzzleworld_run_specs.py:30 temperature=0.7 with num_outputs=1; paper-style final-answer accuracy benchmarks normally use greedy (temp=0) for deterministic scoring against a single canonical solution"
+  - "run_specs/puzzleworld_run_specs.py:29 max_tokens=512 is likely insufficient for multi-step puzzle CoT the SYSTEM_PROMPT explicitly requests ('write out your steps as you go'); paper's reasoner allows long generations"
+  - "run_specs/puzzleworld_run_specs.py:35 scores with exact_match/quasi_exact_match/f1/rouge/bleu directly on raw generation; paper evaluates 'Answer: <answer>' canonical string — no regex extractor is configured, so exact_match will match the full CoT against a 1-word solution and score ~0 even when the model is correct"
+  - "metric_notes/puzzleworld_annotator_notes.md and puzzleworld_eval_metrics_notes.md are both empty (1 line) — no documented rubric, human baseline, or stepwise-accuracy plan"
+  - "scenario uses single 'train' split for all 667 puzzles (correct per HF repo) but does not implement the paper's stepwise accuracy metric; only final-answer exact_match is attempted"
+  - "difficulty='all' default is fine, but with max=10 the sample is not stratified across easy/medium/hard (paper reports 140/355/172) — trial subset hits only whatever ordering HF returns"
+fixes_before_run:
+  - severity: blocking
+    action: "Diagnose why Gemini returned generic 'no text provided' responses — verify MultimediaObject with image/png + text/plain is being serialized to the Gemini client; base64_images=[] in output suggests HELM is not attaching images at the client layer"
+  - severity: blocking
+    action: "Add 'Answer:' regex extractor before exact_match (e.g., post-process to capture text after final 'Answer:' token) — otherwise all scores will be ~0 regardless of model correctness"
+  - severity: blocking
+    action: "Set temperature=0 for reproducible final-answer scoring; raise max_tokens to >=2048 to accommodate the CoT the system prompt demands"
+  - severity: non-blocking
+    action: "Replace bare 'except Exception' on hf_hub_download with explicit logging + skip-instance, so silent image-download failures surface"
+  - severity: non-blocking
+    action: "Populate metric_notes/*.md with paper metrics (final-answer accuracy, stepwise accuracy), human baseline, and note that stepwise accuracy is not implemented here"
+  - severity: non-blocking
+    action: "Consider per-difficulty run_specs (easy/medium/hard) to match paper's stratified reporting"
+notes: "Scenario prompt construction faithfully reproduces PUZZLE_SYSTEM_PROMPT + PUZZLE_USER_PROMPT from the paper's repo, and uses the correct HF dataset and single train split. But the just-passed max=10 run is a false positive: every prediction is a boilerplate 'no content provided' apology, meaning the model never saw the puzzle (text or images) — the run completed without errors but produced zero signal. Combined with missing answer extraction and temp=0.7, current config cannot measure model ability on this benchmark."
+paper_url: "https://arxiv.org/abs/2506.06211"
+reviewed_at: "2026-04-21"

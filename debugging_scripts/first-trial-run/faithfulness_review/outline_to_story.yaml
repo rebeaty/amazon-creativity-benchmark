@@ -1,0 +1,30 @@
+name: outline_to_story
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: false
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: n/a
+  output_shape_sane: true
+gaps:
+  - "Input construction drift: The O2S paper (arxiv:2101.00822) defines the task as generating multi-paragraph stories from *cascaded events* - sequences of outline events/keywords extracted per paragraph from the reference story (e.g., via keyword extraction). scenarios/outline_to_story_scenario.py:91,98 instead uses the raw Reddit writing prompt as the 'outline'. Raw WritingPrompts prompts are brief premises (e.g., '[WP] Leonardo DiCaprio...torpedoes his career'), not cascaded per-paragraph event outlines. This changes the task from fine-grained controllable generation to standard prompt-conditioned story generation."
+  - "Dataset scope: Paper uses both WritingPrompts AND WikiPlots with paper-specific outline preprocessing (see GitHub repo fangleai/Outline2Story). scenario uses only euclaise/writingprompts with no outline preprocessing (scenarios/outline_to_story_scenario.py:82)."
+  - "Metric mismatch vs. paper intent: run_specs/outline_to_story_run_specs.py:35 uses exact_match, quasi_exact_match, f1_score, rouge_l, bleu_1, bleu_4. For open-ended multi-paragraph creative fiction against a single reference, exact_match/quasi_exact_match will be ~0 and uninformative. The O2S paper reports BLEU plus diversity metrics (distinct-n) and perplexity; no distinct-n/diversity or embedding-based metric is registered. No controllability metric (e.g., outline-coverage) which is central to the paper's fine-grained-control claim."
+  - "Missing metric_notes: metric_notes/outline_to_story_annotator_notes.md and outline_to_story_eval_metrics_notes.md exist but are empty (0/1 lines). No documented rationale for metric choices or deviations from paper."
+  - "Generation length: adapter_spec max_tokens=512 (run_specs/outline_to_story_run_specs.py:29). Paper targets 'multi-paragraph stories in thousands of words'; reference stories in dataset are 500-2000 words per scenario docstring. 512 tokens will truncate outputs well below reference length, biasing BLEU/ROUGE/F1 downward and making length-sensitive metrics unreliable. Observed trial outputs confirm mid-sentence truncation (e.g., o2s_test_10689, o2s_test_12053 cut off mid-paragraph)."
+  - "Split/size: split='test' (15,138 examples) matches HF dataset; max_instances=0 means full eval - reasonable default but expensive. No max in the run_spec args."
+  - "Output shape (trial_10inst): 10 stories generated, all coherent multi-paragraph creative fiction ~450-500 tokens each, ending mid-sentence due to max_tokens cap. Content quality looks fine; shape is sane modulo truncation."
+fixes_before_run:
+  - severity: blocking
+    action: "Decide and document: is this task 'prompt-to-story' (current impl) or faithful 'outline-to-story' (paper)? If the latter, preprocess references to extract cascaded per-paragraph keyword outlines (RAKE or similar) and feed those instead of the raw prompt. If the former, rename the scenario/group to avoid implying O2S-paper reproduction."
+  - severity: high
+    action: "Raise max_tokens substantially (e.g., 2048+) to avoid systematic mid-sentence truncation and length-biased reference metrics, or explicitly downscope to 'story opening generation'."
+  - severity: high
+    action: "Drop exact_match/quasi_exact_match (vacuous for open-ended long-form generation) and add diversity metrics (distinct-1/2) and, if possible, an outline-coverage metric aligned with the paper's controllability claim."
+  - severity: medium
+    action: "Populate the two empty metric_notes files to document the chosen operationalization and any paper deviations."
+  - severity: medium
+    action: "Set max_instances to a finite sampled subset in the run_spec to avoid 15k-instance sweeps unless intended."
+notes: "Scenario loads WritingPrompts cleanly and generation is coherent, but the core task framing deviates from the O2S paper: raw Reddit prompts are used where cascaded per-paragraph event outlines are expected. Combined with a 512-token generation cap against ~1000-word references and reference-overlap metrics tuned for short answers (EM/QEM), the reported numbers will proxy short-form prompt-conditioned generation rather than the paper's fine-grained controllable long-story task. Paper PDF text could not be extracted by WebFetch; cross-check relied on arxiv abstract and GitHub repo README."
+paper_url: "https://arxiv.org/abs/2101.00822"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,29 @@
+name: artinsight
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: true
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: false
+gaps:
+  - "run_specs/artinsight_run_specs.py:15-24 uses a generic 1-5 'art analysis' rubric; paper specifies a 0-16 five-criterion rubric (not-presumptive, not-reductive, sufficient detail, all elements captured, miscellaneous deductions) per metric_notes/artinsight_annotator_notes.md:18-27."
+  - "run_specs/artinsight_run_specs.py:53-64 uses GenericLLMJudgeAnnotator without the 6 few-shot image+description+score exemplars the paper requires (annotator_notes.md:29-36); judge is not primed for calibrated scoring."
+  - "metric_notes/artinsight_eval_metrics_notes.md is empty (1 line) — no eval-metric spec recorded."
+  - "display_predictions.json show identical predicted_text across all 30 instances per model (e.g., gemini_pro rows 5-77, gemma_3_27b rows 5-77); images are not reaching the model or the prompt is ignoring them — outputs describe a photograph of women baking, not children's artwork. base64_images is [] for every row."
+  - "scenarios/artinsight_scenario.py:95-104 prompt is a paraphrase reconstruction, not the verbatim optimal prompt (acknowledged at line 33-34)."
+  - "adapter_spec temperature=0.7 (run_specs:45) differs from paper's deterministic settings; no judge_temperature for scoring matches (0.0) but judge does not receive the image (GenericLLMJudgeAnnotator likely text-only — judge_config_matches fails vision requirement in annotator_notes.md:42-43)."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace generic 1-5 rubric in run_specs/artinsight_run_specs.py with the paper's 0-16 five-criterion rubric and wire a vision-capable judge that receives the artwork image alongside the description."
+  - severity: blocking
+    action: "Investigate why predicted_text is identical across all 30 instances and why base64_images is empty — multimodal input (MultimediaObject in scenarios/artinsight_scenario.py:133-136) is not being delivered to models; fix before eval run."
+  - severity: blocking
+    action: "Add the 6 few-shot exemplars from description_scorer.py to the annotator prompt for calibrated scoring."
+  - severity: non-blocking
+    action: "Populate metric_notes/artinsight_eval_metrics_notes.md with the aggregation spec (mean of 0-16 rubric score across 30 instances)."
+  - severity: non-blocking
+    action: "Attempt to retrieve verbatim optimal system prompt from ArtInsight repo README instead of reconstructing."
+notes: "Rubric mismatch, absent few-shot calibration, and empty base64_images combined with identical per-instance outputs indicate the scenario is not faithfully implemented and models are not actually seeing the artwork. Do not run full eval until multimodal delivery is verified and the rubric is corrected."
+paper_url: "https://arxiv.org/abs/2502.19263"
+reviewed_at: "2026-04-21"

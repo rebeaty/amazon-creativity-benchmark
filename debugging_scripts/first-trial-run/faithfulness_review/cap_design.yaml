@@ -1,0 +1,25 @@
+name: cap_design
+verdict: MOSTLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: true
+  metric_matches: partial
+  judge_config_matches: true
+  output_shape_sane: unknown
+gaps:
+  - "No metric_notes/cap_design_annotator_notes.md or cap_design_eval_metrics_notes.md exist (metric_notes/ has no cap_* files)."
+  - "No benchmark_output/runs/*/cap_design_model=*/ directories exist — benchmark has not been executed, so output shape is unverified."
+  - "Novelty metric is deferred to post-HELM aggregation (scripts/score_cap_novelty.py); only V7 quality judge runs in HELM — run_specs/cap_run_specs.py:88-105."
+  - "Judge sees whole semicolon-joined completion, not per-idea (run_specs/cap_run_specs.py:36-40), diverging slightly from human pipeline which splits on ';'."
+  - "Pool centroid for novelty uses UVA pilot proxy, not the 200-model ABC corpus (run_specs/cap_run_specs.py:13-15)."
+  - "No paper / pilot protocol doc could be fetched; item list traceable only to human/uva_pilot/scripts/run_all_models_study3.py which is not present in this checkout."
+fixes_before_run:
+  - severity: non-blocking
+    action: "Author metric_notes/cap_design_annotator_notes.md and cap_design_eval_metrics_notes.md documenting V7 quality rubric + deferred novelty step."
+  - severity: non-blocking
+    action: "Execute a pilot run to verify display_predictions.json shape and that Gemini-3-flash judge returns parseable 1-7 integers."
+  - severity: non-blocking
+    action: "Confirm human/uva_pilot/scripts/run_all_models_study3.py item list matches scenarios/cap_design_scenario.py:22-28 verbatim (source script not in repo)."
+notes: "Scenario and run spec are internally consistent with the documented UVA pilot Study 3 protocol: 5 design prompts, 3-6 semicolon-separated solutions, V7 quality judge (Gemini-3-flash, temp 0, 1-7 scale) shared across the CAP battery. Faithfulness is capped by missing metric_notes, absent pilot-run outputs, and the source study3 script not being available in this working tree for verbatim cross-check."
+paper_url: "unavailable (internal UVA pilot protocol, no public URL)"
+reviewed_at: "2026-04-21"

@@ -1,0 +1,30 @@
+name: crowd_vote
+verdict: PARTIALLY_FAITHFUL
+checks:
+  prompt_matches: true
+  data_split_correct: partial
+  metric_matches: false
+  judge_config_matches: false
+  output_shape_sane: true
+gaps:
+  - "Dataset substitution: paper uses 100 proprietary brand challenges from Springboards that are not publicly released. scenarios/crowd_vote_scenario.py:29-36 substitutes a curated 100-brand list covering the paper's 12 categories. Task types and counts (100 brands x 3 = 300) match, but specific stimuli differ from original study, so results are not directly comparable."
+  - "Evaluation protocol replaced: paper's primary evaluation is pairwise crowd voting by 678 ad professionals with 11,012 comparisons ranked via Bradley-Terry (metric_notes/crowd_vote_annotator_notes.md:5-11). Scenario uses single-response LLM-as-judge scoring (run_specs/crowd_vote_run_specs.py:49-51). This is a documented adaptation but fundamentally changes the metric from relative preference to absolute quality."
+  - "Judge rubric mismatch: metric_notes/crowd_vote_annotator_notes.md:18-60 specifies a 4-dimension rubric (originality, brand_relevance, creative_potential, conciseness, each 1-5, with GPT-4o as judge). run_specs/crowd_vote_run_specs.py:15-24 actually wires up a single generic 'llm_judge_quality' 1-5 rubric referencing clarity/helpfulness/accuracy/appeal - none of the four intended creativity dimensions are scored."
+  - "Judge model mismatch: annotator notes specify GPT-4o; run_specs/crowd_vote_run_specs.py:57 uses openai/gpt-4 (non-o). Minor but not what notes prescribe."
+  - "metric_notes/crowd_vote_eval_metrics_notes.md is empty (0-1 lines), so eval metric expectations are under-documented beyond annotator_notes.md."
+  - "Prompts verbatim from paper: system prompt and three task templates in scenarios/crowd_vote_scenario.py:111-134 match paper wording (insights <=10 words, ideas/wild_ideas <=50 words)."
+  - "Output shape sane: display_predictions.json across gemma_3_1b and gemini_2.5_flash runs shows plausible brand-specific marketing copy with llm_judge_quality scores 3-5; 300 instances per model as expected."
+fixes_before_run:
+  - severity: blocking
+    action: "Replace the generic llm_judge_quality rubric in run_specs/crowd_vote_run_specs.py with the 4-dimension rubric from metric_notes/crowd_vote_annotator_notes.md (originality, brand_relevance, creative_potential, conciseness on 1-5 scales) so the judge actually measures creativity rather than generic quality."
+  - severity: non-blocking
+    action: "Switch judge_model_name from 'openai/gpt-4' to 'openai/gpt-4o' to match annotator notes, or update notes to reflect the actual judge."
+  - severity: non-blocking
+    action: "Populate metric_notes/crowd_vote_eval_metrics_notes.md with the intended aggregation across dimensions and per-task-type breakouts."
+  - severity: non-blocking
+    action: "For stronger paper alignment, add a pairwise comparison metric (Bradley-Terry over A-vs-B judge votes across models on identical brand/task combinations) as suggested in crowd_vote_annotator_notes.md:86-87."
+  - severity: non-blocking
+    action: "Document brand-list substitution clearly in any results write-up since the original 100-brand set is proprietary and unreleased."
+notes: "Prompt wording and instance count faithfully mirror the paper (300 = 100 brands x 3 task types, exact system + task templates). Key deviations: curated brand list (original proprietary), single-response LLM-as-judge replacing pairwise crowd Bradley-Terry ranking, and -- most importantly -- the implemented rubric is a generic 1-5 quality scale rather than the documented 4-dimension creativity rubric, so current outputs do not measure originality/brand_relevance/creative_potential/conciseness as intended. Output shape sane across inspected runs (gemma_3_1b, gemini_2.5_flash). Paper WebFetch not attempted (deferred tool); cross-check leaned on internal scenario/notes and arXiv id 2509.09702 references."
+paper_url: "https://arxiv.org/abs/2509.09702"
+reviewed_at: "2026-04-21"

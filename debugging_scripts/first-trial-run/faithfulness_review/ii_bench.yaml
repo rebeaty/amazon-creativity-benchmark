@@ -1,0 +1,30 @@
+name: ii_bench
+verdict: DIVERGENT
+checks:
+  prompt_matches: partial
+  data_split_correct: partial
+  metric_matches: true
+  judge_config_matches: n/a
+  output_shape_sane: false
+gaps:
+  - "benchmark_output/runs/trial_10inst/ii_bench_model=google_gemini-2.5-flash-lite/display_predictions.json rows 1-71 show identical predicted_text across all 10 instances ('This is a bit of a trick question!...'); base64_images is [] for every row — the image is not reaching the model and the question text is being stripped/replaced before inference."
+  - "Model replies 'there's no question or context' on every row, confirming both the image AND the question body built in scenarios/ii_bench_scenario.py:108-116 are absent at inference time; only the A-F options and 'Answer:' appear to have been delivered. Multimodal delivery and prompt assembly through MultimediaObject (lines 119-128) are broken."
+  - "scenarios/ii_bench_scenario.py:75 hard-codes split='dev' (35 examples) because test labels are hidden; this is a reasonable fallback (acknowledged at lines 39-41) but diverges from the paper's 1,399-item test evaluation and shrinks the domain-balance design (6 domains, see lines 14-15)."
+  - "run_specs/ii_bench_run_specs.py:30 sets temperature=0.7; II-Bench paper evaluations use deterministic decoding (greedy / temperature=0) for MC accuracy, so scores will have extra variance."
+  - "run_specs/ii_bench_run_specs.py:20-32 uses ADAPT_MULTIPLE_CHOICE_JOINT with output_prefix='Answer: ', while scenarios/ii_bench_scenario.py:116 already appends '\\nAnswer:' to the prompt — the adapter likely double-emits the 'Answer:' cue and/or overrides the scenario prompt, which is consistent with the observed empty-question outputs."
+  - "metric_notes/ii_bench_annotator_notes.md and metric_notes/ii_bench_eval_metrics_notes.md are both empty (1 line) — no recorded metric spec; paper metric is plain MC accuracy, which matches exact_match in principle but is undocumented here."
+  - "CoT flag (scenarios/ii_bench_scenario.py:59-66, 113-114) is wired but run_spec does not pass use_cot; paper's headline comparisons include CoT results, so only the zero-shot condition is covered."
+fixes_before_run:
+  - severity: blocking
+    action: "Diagnose why predicted_text is identical and base64_images is empty across all instances — image + question text are not being delivered. Verify MultimediaObject path in scenarios/ii_bench_scenario.py:119-128 actually flows through the ADAPT_MULTIPLE_CHOICE_JOINT adapter to the Gemini backend; consider ADAPT_GENERATION_MULTIMODAL or a vision-aware MC adapter."
+  - severity: blocking
+    action: "Resolve the prompt-assembly collision: the scenario writes a full 'question + A-F options + Answer:' prompt, but the adapter_spec also sets output_prefix='Answer: ' and uses MC_JOINT formatting that rewrites references. Choose one path (either scenario-built prompt with ADAPT_GENERATION, or let the adapter build the MC prompt from Instance.references) — current setup appears to strip the question body."
+  - severity: non-blocking
+    action: "Set temperature=0 in run_specs/ii_bench_run_specs.py:30 to match deterministic MC evaluation; consider max_tokens=8 for letter-only answers."
+  - severity: non-blocking
+    action: "Populate metric_notes/ii_bench_{annotator,eval_metrics}_notes.md with the accuracy-aggregation spec and note the dev-split substitution."
+  - severity: non-blocking
+    action: "Optionally add a CoT variant run_spec (use_cot=True) to mirror the paper's CoT comparison."
+notes: "Scenario logic and metric (exact_match over A-F) are correct in principle, but the observed outputs demonstrate that neither the image nor the question reaches the model — every instance returns the same 'no question provided' refusal with empty base64_images. Do not run full eval until multimodal + prompt delivery is fixed and verified on a handful of instances."
+paper_url: "https://arxiv.org/abs/2406.05862"
+reviewed_at: "2026-04-21"
