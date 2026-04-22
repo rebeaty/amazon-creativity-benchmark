@@ -1,4 +1,5 @@
 """Generic per-metric LLM-as-Judge annotator for the Amazon Creativity Benchmark."""
+import os
 import re
 from typing import Any, Dict
 
@@ -9,6 +10,27 @@ from helm.common.request import Request
 
 
 BACKUP_JUDGE_MODEL = "google/gemini-2.5-flash-lite"
+
+# If set, ALL judges (regardless of what run_specs say) route to this OpenRouter
+# model via a direct API call. Lets us swap the judge globally without touching
+# 70 run_spec files. Requires OPENROUTER_API_KEY in the environment.
+_JUDGE_OVERRIDE = os.environ.get("CREATIVITY_JUDGE_OVERRIDE", "").strip() or None
+
+
+def _call_openrouter_direct(model: str, prompt: str, temperature: float, max_tokens: int) -> str:
+    """Direct OpenRouter chat-completion call (bypasses HELM's client routing)."""
+    import openai  # transitive dep of crfm-helm
+    api_key = os.environ.get("OPENROUTER_API_KEY")
+    if not api_key:
+        raise RuntimeError("CREATIVITY_JUDGE_OVERRIDE set but OPENROUTER_API_KEY missing")
+    client = openai.OpenAI(api_key=api_key, base_url="https://openrouter.ai/api/v1")
+    resp = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=temperature,
+        max_tokens=max_tokens,
+    )
+    return resp.choices[0].message.content or ""
 
 
 class GenericLLMJudgeAnnotator(Annotator):
@@ -39,18 +61,24 @@ class GenericLLMJudgeAnnotator(Annotator):
         self.name = f"generic_llm_judge_{metric_name}"
 
     def _call_judge(self, model_name: str, prompt: str) -> int:
-        request = Request(
-            model=model_name,
-            model_deployment=model_name,
-            prompt=prompt,
-            temperature=self.judge_temperature,
-            max_tokens=self.judge_max_new_tokens,
-            num_completions=1,
-        )
-        result = self._auto_client.make_request(request)
-        if not result.success:
-            raise RuntimeError(f"Judge call failed for model {model_name}")
-        score_text = result.completions[0].text.strip()
+        # Global override: route ALL judge calls to OpenRouter model override.
+        if _JUDGE_OVERRIDE:
+            score_text = _call_openrouter_direct(
+                _JUDGE_OVERRIDE, prompt, self.judge_temperature, self.judge_max_new_tokens
+            ).strip()
+        else:
+            request = Request(
+                model=model_name,
+                model_deployment=model_name,
+                prompt=prompt,
+                temperature=self.judge_temperature,
+                max_tokens=self.judge_max_new_tokens,
+                num_completions=1,
+            )
+            result = self._auto_client.make_request(request)
+            if not result.success:
+                raise RuntimeError(f"Judge call failed for model {model_name}")
+            score_text = result.completions[0].text.strip()
         match = re.search(r'\d+', score_text)
         return int(match.group()) if match else 0
 

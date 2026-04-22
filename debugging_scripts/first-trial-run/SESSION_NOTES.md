@@ -387,14 +387,123 @@ Two rajkumar-early datasets (arastories, arena_hard_creative) were smoke-passes 
 
 Per-assignee done counts after all passes: **Clin 34/38, Namrata 33/40, Sai 35/38, Vijeta 34/39, rajkumar 29/31**. Totals: 165 done, 21 still pending, out of 186 total tracked across this branch.
 
-### Task B (deferred — needs non-Gemini OpenRouter model)
+### Orphaned scenarios (no run_spec registers them) — follow-up to Vijeta's flag
 
-Still queued in [debug_assignments_taskB.json](debug_assignments_taskB.json): `aidanbench`, `amuse_chord_generation`, `noveltybench`. Run with:
+Vijeta flagged "some benches have code but no run files" — confirmed. A file-level diff of `scenarios/*_scenario.py` vs `run_specs/*_run_specs.py` turns up two orphans on this branch:
+
+| Scenario file | Status | Action |
+|---|---|---|
+| [scenarios/pun2pun_scenario.py](../../scenarios/pun2pun_scenario.py) | No `run_specs/pun2pun_run_specs.py`; no other run_spec references `pun2pun` or `Pun2Pun`. HELM can't register or invoke it, so no stats.json can ever be produced. | Either write a `pun2pun_run_specs.py` (scenario is a cross-lingual pun-translation task, ACL SRW 2025 — real creativity benchmark, worth keeping) **or** delete the scenario file. |
+| [scenarios/graphragbench-wrongone_scenario.py](../../scenarios/graphragbench-wrongone_scenario.py) | Dropped from pending in [drops.json](drops.json) but the scenario `.py` is still sitting in `scenarios/`. Matching run_spec at [run_specs/graphragbench_wrongone_run_specs.py](../../run_specs/graphragbench_wrongone_run_specs.py) uses the **underscore** spelling — they never match. | Delete both the scenario file and the run_spec file. |
+
+No other mismatches found (`comm -23 scenarios run_specs` = these two only). `graphragbench_wrongone` run_spec is the inverse half of the hyphen/underscore split — it references a scenario name that doesn't exist.
+
+### Task B — COMPLETE, 3/3 passed under anthropic/claude-haiku-4.5 via OpenRouter
+
+Ran `aidanbench`, `amuse_chord_generation`, `noveltybench` in `benchmark_output/runs/taskB_10inst/`. First attempts failed for 4 distinct reasons — each fix below.
+
+#### 1. openai/gpt-5-mini → pydantic Response validation error (same bug that blocked tinystories in Task A)
+
+- **Error:** `1 validation error for Response / prompt_cache_retention: Input should be 'in-memory' or '24h' [input_value='in_memory']`.
+- **Cause:** HELM's `openai_responses_client.py` pydantic-validates OpenAI API responses; the server now returns `prompt_cache_retention='in_memory'` (underscore), but the schema literal expects `'in-memory'`/`'24h'`.
+- **Fix:** Switched Task B to `anthropic/claude-haiku-4.5`, which routes via `helm.clients.openrouter_client.OpenRouterClient` (extends the legacy `OpenAIClient`, NOT `OpenAIResponsesClient`). Registered explicit deployments for `openai/gpt-5-mini`, `anthropic/claude-haiku-4.5`, and `x-ai/grok-4.1-fast` in [prod_env/model_deployments.yaml:2-38](../../prod_env/model_deployments.yaml#L2) — all pointing at `OpenRouterClient`.
+
+#### 2. Missing `sacrebleu` dep
+
+- **Error:** `OptionalDependencyNotInstalled: Optional dependency sacrebleu is not installed`.
+- **Cause:** HELM's `disinformation_metrics.py` imports `sacrebleu.metrics.BLEU`; lives in the `[metrics]` extra.
+- **Fix:** `pip install sacrebleu` → 2.6.0.
+
+#### 3. `DisinformationMetric` called without required `name`
+
+- **Error:** `TypeError: DisinformationMetric.__init__() missing 1 required positional argument: 'name'` — happens at metric-construction, AFTER generation + annotation already ran, so every attempt wasted API calls.
+- **Cause:** Both [run_specs/aidanbench_run_specs.py:50](../../run_specs/aidanbench_run_specs.py#L50) and [run_specs/amuse_chord_generation_run_specs.py:35](../../run_specs/amuse_chord_generation_run_specs.py#L35) pass `args={}`. Class requires `name` ∈ {`self_bleu`, `monte_carlo_entropy`}.
+- **Fix:** Both → `args={"name": "self_bleu"}`. Right pick for diversity-focused benchmarks.
+
+#### 4. `JSDMetric` called without required `n` (amuse_chord_generation only)
+
+- **Error:** `TypeError: JSDMetric.__init__() missing 1 required positional argument: 'n'`.
+- **Cause:** [metrics/jsd_metric.py:43](../../metrics/jsd_metric.py#L43) requires `n` (n-gram size for JS divergence).
+- **Fix:** [run_specs/amuse_chord_generation_run_specs.py:36](../../run_specs/amuse_chord_generation_run_specs.py#L36) → `args={"n": 2}` (bigrams — standard for chord-progression diversity).
+
+#### 5. aidanbench's judge hardcoded to `openai/o1-mini` (deprecated at OpenAI)
+
+- **Error:** `OpenAI BadRequestError: The requested model 'o1-mini' does not exist`. Annotation phase, post-generation.
+- **Cause:** [run_specs/aidanbench_run_specs.py:58](../../run_specs/aidanbench_run_specs.py#L58) hardcodes `judge_model_name: "openai/o1-mini"`.
+- **Fix (runtime knob, no run_spec edit):** `CREATIVITY_JUDGE_OVERRIDE=anthropic/claude-haiku-4.5` reroutes ALL judge calls through direct OpenRouter via the shim Roger already built in [llm_judge/generic_llm_judge_annotator.py](../../llm_judge/generic_llm_judge_annotator.py). Exactly what that env var exists for. Note: likely 70+ other run_specs reference deprecated judges; the override handles them all at once.
+
+#### Task B final result
+
+| Dataset | Status | Model | Notes |
+|---|---|---|---|
+| `noveltybench` | PASS | anthropic/claude-haiku-4.5 | Clean on first attempt after model switch |
+| `aidanbench` | PASS (attempt 3) | anthropic/claude-haiku-4.5 | 30-candidate diversity benchmark fully evaluated |
+| `amuse_chord_generation` | PASS (attempt 4) | anthropic/claude-haiku-4.5 | Chord progressions, JSD bigrams |
+
+**Combined Task A + B total: 35 datasets with stats.json at `max_instances=10`.**
+
+### Run it again
 
 ```bash
-bash debugging_scripts/first-trial-run/run_taskB.sh openai/gpt-5-mini 10
-# or: anthropic/claude-haiku-4.5 / x-ai/grok-4.1-fast
+# Task A (Gemini via direct Google API):
+bash debugging_scripts/first-trial-run/run_debug.sh <Assignee>
+# False-skip retry at 600s:
+bash debugging_scripts/first-trial-run/rerun_false_skips.sh
+# Task B (OpenRouter non-Gemini):
+CREATIVITY_JUDGE_OVERRIDE=anthropic/claude-haiku-4.5 \
+  bash debugging_scripts/first-trial-run/run_taskB.sh anthropic/claude-haiku-4.5 10
 ```
 
-Rule: Gemini slugs are **refused by the runner** — Gemini always goes through the direct Google API, never OpenRouter.
+Rule: Gemini slugs are **refused by run_taskB.sh** — Gemini always goes direct Google API, never OpenRouter.
+
+---
+
+## Post-B push — data staging + canonical-missing triage
+
+Decision: push for +20 datasets by pre-staging big HF/GitHub corpora and triaging the 7 canonical-list datasets that were never attempted this trial.
+
+### Bucket 2 — Data pre-stage
+
+Migrated from deprecated `huggingface-cli download` to `hf download`: the old CLI hit a `UnicodeEncodeError: 'charmap' codec` on its own deprecation-warning emoji ⚠️ (Windows cp1252 stdout). `hf download` + `PYTHONUTF8=1` bypass.
+
+| Dataset | Source | Status |
+|---|---|---|
+| `tiger_bench` | HF `leigangqu/TIGeR-Bench` | Pre-staged (cached from a prior smoke attempt; `hf download` completed instantly) |
+| `yesbut_v2` | HF `zhehuderek/YESBUT_Benchmark_V2` | Pre-staged |
+| `vgsg` | HF `tonyhong/vwp` | Pre-staged |
+| `puzzleworld` | HF `hzli1202/PuzzleWorld` | Pre-staged |
+| `ava` | HF `Iceclear/AVA` | In flight (larger image corpus) |
+| `arastories` | GitHub `UBC-NLP/arastories` zip | Pre-staged via `curl` + `unzip` into `benchmark_output/scenarios/arastories/` |
+| `creative_pair` | Dataset not publicly released (Alibaba/USTB) | **Bucket 4 dead end** — needs author email |
+
+Post-stage rerun at `max_instances=10`, extended timeout (600s) expected to land stats.json for the 5 staged multimodal/big datasets.
+
+### Bucket 1 — Engineering wins
+
+#### 1a. SPLAT — cloned, ready
+
+`git clone https://github.com/chenqi008/LateralThinking.git` into repo root. Scenario's `get_instances()` searches `['/tmp/splat', '../../../LateralThinking', './LateralThinking', '../LateralThinking']` and picks up the repo-root clone. `puzzles.xlsx` present. Added `LateralThinking/` to [.gitignore](../../.gitignore).
+
+#### 1b. moh_x — deferred (deeper than anticipated)
+
+Root cause ran deeper than the "None gold reference" hypothesis. The traceback in [evaluate_reference_metrics.py:61](.venv/Lib/site-packages/helm/benchmark/metrics/evaluate_reference_metrics.py#L61) is `f_measure(set(normalize_text(gold).split()), set(normalize_text(pred).split()))` — the `None` is in `pred`, not `gold`. Gemini returned `None`-text completions on ≥1 instance (safety filter or empty response), and HELM's BasicMetric F1 reducer doesn't tolerate None predictions. Scenario's references are perfectly valid (`Output(text="Yes")` / `Output(text="No")` with `CORRECT_TAG`).
+
+Fix options (all >30 min):
+- Patch HELM's `lower()` to return `""` on None (touches sacred HELM code)
+- Add an output_processor metric wrapper that replaces None→""
+- Switch moh_x run_spec to a metric class that handles None
+
+**Deferred.** Logged as a follow-up — the diagnosis is the delivered artifact here.
+
+#### 1c. tinystories — in flight
+
+Rerunning with `CREATIVITY_JUDGE_OVERRIDE=anthropic/claude-haiku-4.5` to bypass HELM's `openai_responses_client.py` pydantic bug on the `openai/gpt-4` judge call. Same pattern that unblocked aidanbench.
+
+#### 1d. Canonical-missing triage — in flight
+
+Running `eval_scripts/{aaar,creativemath,csd100,dat,dat_creative_writing,data_narrative,scimon}.sh` at max=1 to see which actually produce stats.json vs. reveal concrete bugs. Results logged in `debugging_scripts/first-trial-run/run_logs/canonical_*.log` and will be appended here per-dataset.
+
+#### 1e. twistlist — not yet started
+
+Needs the gold-reference design decision (source tweet? human-written twist?). Held until the other pushes finish.
 

@@ -32,8 +32,8 @@ def get_amuse_chord_generation_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={}),
-        MetricSpec(class_name="metrics.jsd_metric.JSDMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={"name": "self_bleu"}),
+        MetricSpec(class_name="metrics.jsd_metric.JSDMetric", args={"n": 2}),
     ]
 
     return RunSpec(

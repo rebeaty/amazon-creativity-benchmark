@@ -47,7 +47,7 @@ def get_aidanbench_spec() -> RunSpec:
     )
 
     metric_specs = [
-        MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={}),
+        MetricSpec(class_name="helm.benchmark.metrics.disinformation_metrics.DisinformationMetric", args={"name": "self_bleu"}),
         MetricSpec(class_name="llm_judge.generic_llm_judge_metric.GenericLLMJudgeMetric", args={"metric_name": "coherence_score"}),
     ]
 
